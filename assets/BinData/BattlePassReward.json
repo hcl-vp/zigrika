@@ -1,0 +1,9367 @@
+[
+  {
+    "BattlePassId": 0,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680,
+      "50001": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 2,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 3,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 4,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 5,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 7,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 8,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 9,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 10,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 11,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 12,
+    "FreeReward": {
+      "50000166": 3
+    },
+    "PayReward": {
+      "50000167": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 13,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 14,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 15,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000014": 100,
+      "36000015": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 16,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 17,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 18,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 19,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 21,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 22,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 23,
+    "FreeReward": {
+      "50000166": 4
+    },
+    "PayReward": {
+      "50000167": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 24,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 25,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 26,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 27,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 28,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 29,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000203": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 31,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 32,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 33,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 34,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 36,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 37,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 38,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 39,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 40,
+    "FreeReward": {
+      "10800": 2
+    },
+    "PayReward": {
+      "10800": 3,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 41,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 42,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 43,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 44,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000014": 50,
+      "50000109": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 46,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 47,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 48,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 49,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 51,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 52,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 53,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 54,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 56,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 57,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 58,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 59,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 61,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 62,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 63,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 64,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 65,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 66,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 67,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 68,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 69,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 0,
+    "Level": 70,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 1,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 2,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 3,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 4,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 5,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 6,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 7,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 2,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 3,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 4,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 5,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 65000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 7,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "43010002": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 8,
+    "FreeReward": {
+      "43020001": 7
+    },
+    "PayReward": {
+      "43020002": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 9,
+    "FreeReward": {
+      "43010001": 9
+    },
+    "PayReward": {
+      "36000001": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 10,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 11,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 12,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 13,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 14,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 15,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50000167": 9
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 16,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 17,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 18,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 19,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 21,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 22,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 23,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 24,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 25,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 26,
+    "FreeReward": {
+      "2": 15000
+    },
+    "PayReward": {
+      "2": 95000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 27,
+    "FreeReward": {
+      "43010002": 6
+    },
+    "PayReward": {
+      "43010003": 7
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 28,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 29,
+    "FreeReward": {
+      "36000001": 5
+    },
+    "PayReward": {
+      "36000002": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000164": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 31,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 32,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 33,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 34,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "50001": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 36,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 37,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 38,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 39,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 40,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 50
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 41,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 42,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010003": 10
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 43,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020003": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 44,
+    "FreeReward": {
+      "36000002": 4
+    },
+    "PayReward": {
+      "36000003": 8
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 1,
+      "36000014": 50
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 46,
+    "FreeReward": {
+      "2": 21000
+    },
+    "PayReward": {
+      "2": 130000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 47,
+    "FreeReward": {
+      "43010003": 4
+    },
+    "PayReward": {
+      "43010004": 6
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 48,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 49,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 51,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 52,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 53,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 54,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 56,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 57,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 58,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 59,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 61,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 62,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 63,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 64,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 65,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 66,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 67,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 68,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 69,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "2": 20000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 8,
+    "Level": 70,
+    "FreeReward": {
+      "2": 5000
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680,
+      "50001": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 2,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 3,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 4,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 5,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 7,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 8,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 9,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 10,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 11,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 12,
+    "FreeReward": {
+      "50000166": 3
+    },
+    "PayReward": {
+      "50000167": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 13,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 14,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 15,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000014": 100,
+      "36000015": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 16,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 17,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 18,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 19,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 21,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 22,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 23,
+    "FreeReward": {
+      "50000166": 4
+    },
+    "PayReward": {
+      "50000167": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 24,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 25,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 26,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 27,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 28,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 29,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000204": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 31,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 32,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 33,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 34,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 36,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 37,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 38,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 39,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 40,
+    "FreeReward": {
+      "10800": 2
+    },
+    "PayReward": {
+      "10800": 3,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 41,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 42,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 43,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 44,
+    "FreeReward": {
+      "50000167": 2
+    },
+    "PayReward": {
+      "50000168": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000014": 50,
+      "50000109": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 46,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 47,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 48,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 49,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 51,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 52,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 53,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 54,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 55,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000168": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 56,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 57,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 58,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 59,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 60,
+    "FreeReward": {
+      "50000167": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000168": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 61,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 62,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 63,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 64,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 65,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 66,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 67,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 68,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 69,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 12,
+    "Level": 70,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 1,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "3": 680,
+      "50001": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 2,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 3,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 4,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 5,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 6,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 7,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 8,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 9,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 10,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 11,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 12,
+    "FreeReward": {
+      "50000405": 3
+    },
+    "PayReward": {
+      "50000406": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 13,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 14,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 15,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000014": 100,
+      "36000015": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 16,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 17,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 18,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 19,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 20,
+    "FreeReward": {
+      "50001": 1
+    },
+    "PayReward": {
+      "10800": 2,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 21,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 22,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 23,
+    "FreeReward": {
+      "50000405": 4
+    },
+    "PayReward": {
+      "50000406": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 24,
+    "FreeReward": {
+      "43010002": 4
+    },
+    "PayReward": {
+      "43010003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 25,
+    "FreeReward": {
+      "36000015": 2
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 26,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 27,
+    "FreeReward": {
+      "36000002": 3
+    },
+    "PayReward": {
+      "36000003": 4
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 28,
+    "FreeReward": {
+      "2": 10000
+    },
+    "PayReward": {
+      "2": 50000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 29,
+    "FreeReward": {
+      "43020002": 4
+    },
+    "PayReward": {
+      "43020003": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 30,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "50000204": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 31,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 32,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 33,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 34,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 35,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000015": 5,
+      "50000109": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 36,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 37,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 38,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 39,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 40,
+    "FreeReward": {
+      "10800": 2
+    },
+    "PayReward": {
+      "10800": 3,
+      "50002": 1
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 41,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 42,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 43,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 44,
+    "FreeReward": {
+      "50000406": 2
+    },
+    "PayReward": {
+      "50000407": 1
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 45,
+    "FreeReward": {
+      "10800": 1
+    },
+    "PayReward": {
+      "36000014": 50,
+      "50000109": 5
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 46,
+    "FreeReward": {
+      "43010003": 3
+    },
+    "PayReward": {
+      "43010004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 47,
+    "FreeReward": {
+      "43020003": 3
+    },
+    "PayReward": {
+      "43020004": 3
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 48,
+    "FreeReward": {
+      "36000003": 2
+    },
+    "PayReward": {
+      "36000004": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 49,
+    "FreeReward": {
+      "2": 30000
+    },
+    "PayReward": {
+      "2": 60000
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 50,
+    "FreeReward": {
+      "50001": 2
+    },
+    "PayReward": {
+      "50002": 1,
+      "36000014": 100
+    },
+    "IsMilestone": true,
+    "IsRemind": true
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 51,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 52,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 53,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 54,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 55,
+    "FreeReward": {
+      "50000406": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000407": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 56,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 57,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 58,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 59,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 60,
+    "FreeReward": {
+      "50000406": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000407": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 61,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 62,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 63,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 64,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 65,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 66,
+    "FreeReward": {
+      "50000084": 2
+    },
+    "PayReward": {
+      "50000084": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 67,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 68,
+    "FreeReward": {
+      "50000086": 2
+    },
+    "PayReward": {
+      "50000085": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 69,
+    "FreeReward": {
+      "50000107": 1
+    },
+    "PayReward": {
+      "50000107": 2
+    },
+    "IsMilestone": false,
+    "IsRemind": false
+  },
+  {
+    "BattlePassId": 13,
+    "Level": 70,
+    "FreeReward": {
+      "50000108": 3
+    },
+    "PayReward": {
+      "36000015": 1,
+      "50000109": 2
+    },
+    "IsMilestone": true,
+    "IsRemind": false
+  }
+]

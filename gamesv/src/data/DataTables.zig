@@ -1,0 +1,232 @@
+const DataTables = @This();
+const std = @import("std");
+const Io = std.Io;
+const Allocator = std.mem.Allocator;
+const ArenaAllocator = std.heap.ArenaAllocator;
+const IndexMap = std.AutoArrayHashMapUnmanaged(i64, usize);
+const pb = @import("proto").pb;
+
+pub const RoleInfo = @import("tables/RoleInfo.zig");
+pub const BaseProperty = @import("tables/BaseProperty.zig");
+pub const FunctionCondition = @import("tables/FunctionCondition.zig");
+pub const RolePropertyGrowth = @import("tables/RolePropertyGrowth.zig");
+pub const InstanceDungeon = @import("tables/InstanceDungeon.zig");
+pub const Buff = @import("tables/Buff.zig");
+pub const SummonCfg = @import("tables/SummonCfg.zig");
+pub const ModelConfigPreload = @import("tables/ModelConfigPreload.zig");
+pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
+pub const RoleSkin = @import("tables/RoleSkin.zig");
+pub const TemplateConfig = @import("tables/TemplateConfig.zig");
+pub const ExploreTools = @import("tables/ExploreTools.zig");
+
+arena: ArenaAllocator,
+role_info: Table(RoleInfo, "Id"),
+base_property: Table(BaseProperty, "Id"),
+function_condition: Table(FunctionCondition, "FunctionId"),
+role_property_growth: Table(RolePropertyGrowth, "Id"),
+instance_dungeon: Table(InstanceDungeon, "Id"),
+buff: Table(Buff, "Id"),
+summon_cfg: Table(SummonCfg, "Id"),
+model_config_preload: Table(ModelConfigPreload, "Id"),
+blueprint_config: Table(BlueprintConfig, "Id"),
+role_skin: Table(RoleSkin, "Id"),
+template_config: Table(TemplateConfig, "Id"),
+explore_tools: Table(ExploreTools, "PhantomSkillId"),
+
+pub fn load(gpa: Allocator, io: Io) !DataTables {
+    var tables: DataTables = undefined;
+
+    tables.arena = ArenaAllocator.init(gpa);
+    errdefer tables.arena.deinit();
+
+    inline for (std.meta.fields(DataTables)) |field| {
+        if (field.type == ArenaAllocator) continue;
+
+        var table: field.type = .init;
+
+        const content = try readEntireFile(gpa, io, "assets/BinData/" ++ field.type.json);
+        defer gpa.free(content);
+
+        table.items = try std.json.parseFromSliceLeaky(
+            @FieldType(field.type, "items"),
+            tables.arena.allocator(),
+            content,
+            .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+        );
+
+        for (table.items, 0..) |item, index| {
+            const key = @field(item, field.type.key);
+            try table.index.put(tables.arena.allocator(), key, index);
+        }
+
+        @field(tables, field.name) = table;
+    }
+
+    return tables;
+}
+
+pub fn deinit(tables: *DataTables) void {
+    tables.arena.deinit();
+}
+
+pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
+    return struct {
+        pub const key = key_field;
+        pub const init: @This() = .{ .items = &.{}, .index = .empty };
+        pub const json = blk: {
+            const t_name = @typeName(T);
+            break :blk t_name[std.mem.findScalarLast(u8, t_name, '.').? + 1 ..] ++ ".json";
+        };
+
+        items: []const T,
+        index: IndexMap,
+
+        pub fn getDataById(table: @This(), id: i32) ?T {
+            return if (table.index.get(id)) |i| table.items[i] else null;
+        }
+    };
+}
+
+fn readEntireFile(gpa: Allocator, io: Io, path: []const u8) ![]const u8 {
+    var file = try Io.Dir.cwd().openFile(io, path, .{});
+    defer file.close(io);
+
+    var reader = file.reader(io, "");
+    return try reader.interface.allocRemaining(gpa, .unlimited);
+}
+
+pub fn getRolePropertyGrowth(tables: *const DataTables, level: i32, breach: i32) ?*const RolePropertyGrowth {
+    for (tables.role_property_growth.items) |*config| {
+        if (config.Level == level and config.BreachLevel == breach)
+            return config;
+    } else return null;
+}
+
+pub fn getProps(tables: *const DataTables, property_id: i32, gpa: Allocator) ![]i32 {
+    const base_property = tables.base_property.getDataById(property_id) orelse return &.{};
+
+    const props = try gpa.alloc(i32, @intFromEnum(pb.EAttributeType.MAX));
+    @memset(props, 0);
+
+    inline for (comptime std.meta.fields(DataTables.BaseProperty)) |field| {
+        if (!@hasField(pb.EAttributeType, field.name)) continue;
+        const attr_type = @field(pb.EAttributeType, field.name);
+
+        props[@intFromEnum(attr_type)] = @field(base_property, field.name);
+    }
+
+    return props;
+}
+
+pub const RoleBuffEntry = struct {
+    id: i64,
+    is_active: bool,
+};
+
+pub fn getRoleAutoBuffs(
+    tables: *const DataTables,
+    role_id: i32,
+    gpa: Allocator,
+) !std.ArrayListUnmanaged(RoleBuffEntry) {
+    const additional_buffs = [_]i64{
+        3003, // Remove wall run prohibition
+        3004, // Remove gliding prohibition
+        3127, // qte energy
+        3134, // dodge energy
+        1213, // Reduce stamina while flying
+        1214, // Reduce stamina while flying in sprint
+        1215, // Reduce stamina while flying up in sprint
+        1216, // Reduce stamina while flying down in sprint
+        1101002011, // 120 charge ultimate skill restores concerto energy
+        1001000000, // Character initial buff mount
+        70000077, // Role-IOU deduction control
+        291724064, // Male MC Tag
+        291724065, // Female MC Tag
+    };
+    const blacklisted_buff_id_combos = [_][]const u8{
+        "666", "990", "777", "095", "402", "403", "302", "291", "98", "009", "020",
+    };
+    const blacklisted_tag_components = [_][]const u8{
+        "Rogue",
+        "肉鸽",
+        "试用",
+        "零能量",
+        "59b4b0a5",
+        "371b7a72",
+        "角色.2f8a917e.状态.4997165f",
+        "角色.2f8a917e.状态.03ca4091",
+    };
+
+    var results: std.ArrayListUnmanaged(RoleBuffEntry) = .empty;
+    errdefer results.deinit(gpa);
+
+    for (tables.buff.items) |*buff| {
+        var id_buf: [20]u8 = undefined;
+        var role_buf: [20]u8 = undefined;
+        const id_str = std.fmt.bufPrint(&id_buf, "{d}", .{buff.Id}) catch continue;
+        const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
+
+        // autobuff
+        if (!std.mem.startsWith(u8, id_str, role_str)) continue;
+        if (id_str.len <= 4) continue;
+        if (buff.DurationPolicy != .Permanent) continue;
+        if (buff.ApplicationSourceTagRequirements.len != 0) continue;
+        if (buff.ApplicationTagRequirements.len != 0) continue;
+        if (buff.PrematureExpirationEffects.len != 0) continue;
+        if (buff.OngoingTagIgnores.len != 0 and
+            buff.OngoingTagRequirements.len == 0 and
+            buff.GameplayCueIds.len != 0) continue;
+        // if (buff.Period != 0.0 and buff.ExtraEffectID != 0) continue;
+
+        // roguelike buff removal
+        const suffix = id_str[4..];
+        const blacklisted_combo = blk: {
+            for (blacklisted_buff_id_combos) |combo| {
+                if (std.mem.startsWith(u8, suffix, combo)) break :blk true;
+            }
+            break :blk false;
+        };
+        if (blacklisted_combo) continue;
+
+        const blacklisted_tag = tag_cond: {
+            for (buff.GrantedTags) |tag| {
+                for (blacklisted_tag_components) |component| {
+                    if (std.mem.find(u8, tag, component) != null) break :tag_cond true;
+                }
+            }
+            break :tag_cond false;
+        };
+        if (blacklisted_tag) continue;
+
+        if (buff.ExtraEffectID == 5) {
+            const valid = buff.ExtraEffectParameters.len > 1 and calc_policy_cond: {
+                const param = buff.ExtraEffectParameters[1];
+                const hash_pos = std.mem.indexOfScalar(u8, param, '#') orelse param.len;
+                const ref_id = std.fmt.parseInt(i64, param[0..hash_pos], 10) catch break :calc_policy_cond true;
+                const ref_buff = tables.buff.getDataById(@intCast(ref_id)) orelse break :calc_policy_cond true;
+                break :calc_policy_cond ref_buff.CalculationPolicy.len > 0 and ref_buff.CalculationPolicy[0] != 0;
+            };
+            if (!valid) continue;
+        }
+
+        // is_buff_active check from wicked
+        const is_active =
+            buff.ModifierMagnitude.len == 0 and
+            buff.BuffAction.len == 0 and
+            buff.OngoingTagRequirements.len == 0 and
+            buff.OngoingTagIgnores.len == 0 and
+            buff.RemovalTagRequirements.len == 0 and
+            buff.RemovalTagIgnores.len == 0 and
+            buff.ApplicationSourceTagIgnores.len == 0 and
+            buff.ApplicationTagIgnores.len == 0 and
+            buff.ExtraEffectRequirements.len == 0;
+
+        try results.append(gpa, .{ .id = buff.Id, .is_active = is_active });
+    }
+
+    for (additional_buffs) |id| {
+        try results.append(gpa, .{ .id = id, .is_active = true });
+    }
+
+    return results;
+}

@@ -1,0 +1,653 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 109100001,
+    "GroupId": 1,
+    "UnlockId": 0,
+    "Mode": 0,
+    "TargetResult": {
+      "0": 300
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 3000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 2000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 1000
+        }
+      }
+    ],
+    "OpenDay": 0,
+    "DropId": 5200400,
+    "BlockNum": 2,
+    "TotalLevelName": "Tetris_LevelName_1",
+    "LevelName": "Tetris_LevelName_10",
+    "LevelDes": "Tetris_LevelDes_10",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 2,
+    "ActivityId": 109100001,
+    "GroupId": 1,
+    "UnlockId": 1,
+    "Mode": 1,
+    "TargetResult": {
+      "0": 400
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 4000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 3000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 2000
+        }
+      }
+    ],
+    "OpenDay": 0,
+    "DropId": 5200408,
+    "BlockNum": 3,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_11",
+    "LevelDes": "Tetris_LevelDes_10",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 3,
+    "ActivityId": 109100001,
+    "GroupId": 2,
+    "UnlockId": 1,
+    "Mode": 0,
+    "TargetResult": {
+      "0": 350
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 3500
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 2000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 1000
+        }
+      }
+    ],
+    "OpenDay": 1,
+    "DropId": 5200401,
+    "BlockNum": 2,
+    "TotalLevelName": "Tetris_LevelName_2",
+    "LevelName": "Tetris_LevelName_20",
+    "LevelDes": "Tetris_LevelDes_20",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 4,
+    "ActivityId": 109100001,
+    "GroupId": 2,
+    "UnlockId": 3,
+    "Mode": 1,
+    "TargetResult": {
+      "0": 450
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 4500
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 3000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 1500
+        }
+      }
+    ],
+    "OpenDay": 1,
+    "DropId": 5200409,
+    "BlockNum": 3,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_21",
+    "LevelDes": "Tetris_LevelDes_20",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 5,
+    "ActivityId": 109100001,
+    "GroupId": 3,
+    "UnlockId": 3,
+    "Mode": 0,
+    "TargetResult": {
+      "1": 20
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "1": 20
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 15
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 10
+        }
+      }
+    ],
+    "OpenDay": 2,
+    "DropId": 5200402,
+    "BlockNum": 2,
+    "TotalLevelName": "Tetris_LevelName_3",
+    "LevelName": "Tetris_LevelName_30",
+    "LevelDes": "Tetris_LevelDes_30",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 6,
+    "ActivityId": 109100001,
+    "GroupId": 3,
+    "UnlockId": 5,
+    "Mode": 1,
+    "TargetResult": {
+      "1": 25
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "1": 25
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 20
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 15
+        }
+      }
+    ],
+    "OpenDay": 2,
+    "DropId": 5200410,
+    "BlockNum": 3,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_31",
+    "LevelDes": "Tetris_LevelDes_30",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 7,
+    "ActivityId": 109100001,
+    "GroupId": 4,
+    "UnlockId": 5,
+    "Mode": 0,
+    "TargetResult": {
+      "5": 12,
+      "6": 12
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "5": 12,
+          "6": 12
+        }
+      },
+      {
+        "MapIntInt": {
+          "5": 8,
+          "6": 8
+        }
+      },
+      {
+        "MapIntInt": {
+          "5": 4,
+          "6": 4
+        }
+      }
+    ],
+    "OpenDay": 3,
+    "DropId": 5200403,
+    "BlockNum": 2,
+    "TotalLevelName": "Tetris_LevelName_4",
+    "LevelName": "Tetris_LevelName_40",
+    "LevelDes": "Tetris_LevelDes_40",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 8,
+    "ActivityId": 109100001,
+    "GroupId": 4,
+    "UnlockId": 7,
+    "Mode": 1,
+    "TargetResult": {
+      "5": 15,
+      "6": 15
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "5": 15,
+          "6": 18
+        }
+      },
+      {
+        "MapIntInt": {
+          "5": 12,
+          "6": 15
+        }
+      },
+      {
+        "MapIntInt": {
+          "5": 8,
+          "6": 12
+        }
+      }
+    ],
+    "OpenDay": 3,
+    "DropId": 5200411,
+    "BlockNum": 3,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_41",
+    "LevelDes": "Tetris_LevelDes_40",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 9,
+    "ActivityId": 109100001,
+    "GroupId": 5,
+    "UnlockId": 7,
+    "Mode": 0,
+    "TargetResult": {
+      "0": 400
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 4000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 3000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 2000
+        }
+      }
+    ],
+    "OpenDay": 4,
+    "DropId": 5200404,
+    "BlockNum": 3,
+    "TotalLevelName": "Tetris_LevelName_5",
+    "LevelName": "Tetris_LevelName_50",
+    "LevelDes": "Tetris_LevelDes_50",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 10,
+    "ActivityId": 109100001,
+    "GroupId": 5,
+    "UnlockId": 9,
+    "Mode": 1,
+    "TargetResult": {
+      "0": 400
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 5000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 4000
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 3000
+        }
+      }
+    ],
+    "OpenDay": 4,
+    "DropId": 5200412,
+    "BlockNum": 4,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_51",
+    "LevelDes": "Tetris_LevelDes_50",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 11,
+    "ActivityId": 109100001,
+    "GroupId": 6,
+    "UnlockId": 9,
+    "Mode": 0,
+    "TargetResult": {
+      "2": 10,
+      "3": 10,
+      "4": 10
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "2": 10,
+          "3": 10,
+          "4": 10
+        }
+      },
+      {
+        "MapIntInt": {
+          "2": 6,
+          "3": 6,
+          "4": 6
+        }
+      },
+      {
+        "MapIntInt": {
+          "2": 3,
+          "3": 3,
+          "4": 3
+        }
+      }
+    ],
+    "OpenDay": 5,
+    "DropId": 5200405,
+    "BlockNum": 3,
+    "TotalLevelName": "Tetris_LevelName_6",
+    "LevelName": "Tetris_LevelName_60",
+    "LevelDes": "Tetris_LevelDes_60",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 12,
+    "ActivityId": 109100001,
+    "GroupId": 6,
+    "UnlockId": 11,
+    "Mode": 1,
+    "TargetResult": {
+      "2": 10,
+      "3": 10,
+      "4": 10
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "2": 12,
+          "3": 15,
+          "4": 18
+        }
+      },
+      {
+        "MapIntInt": {
+          "2": 8,
+          "3": 12,
+          "4": 15
+        }
+      },
+      {
+        "MapIntInt": {
+          "2": 4,
+          "3": 8,
+          "4": 12
+        }
+      }
+    ],
+    "OpenDay": 5,
+    "DropId": 5200413,
+    "BlockNum": 4,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_61",
+    "LevelDes": "Tetris_LevelDes_60",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 13,
+    "ActivityId": 109100001,
+    "GroupId": 7,
+    "UnlockId": 11,
+    "Mode": 0,
+    "TargetResult": {
+      "1": 12,
+      "5": 12,
+      "6": 12
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "1": 12,
+          "5": 12,
+          "6": 12
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 8,
+          "5": 8,
+          "6": 8
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 4,
+          "5": 4,
+          "6": 4
+        }
+      }
+    ],
+    "OpenDay": 6,
+    "DropId": 5200406,
+    "BlockNum": 3,
+    "TotalLevelName": "Tetris_LevelName_7",
+    "LevelName": "Tetris_LevelName_70",
+    "LevelDes": "Tetris_LevelDes_70",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 14,
+    "ActivityId": 109100001,
+    "GroupId": 7,
+    "UnlockId": 13,
+    "Mode": 1,
+    "TargetResult": {
+      "1": 12,
+      "5": 12,
+      "6": 12
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "1": 15,
+          "5": 18,
+          "6": 20
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 12,
+          "5": 15,
+          "6": 18
+        }
+      },
+      {
+        "MapIntInt": {
+          "1": 8,
+          "5": 12,
+          "6": 15
+        }
+      }
+    ],
+    "OpenDay": 6,
+    "DropId": 5200414,
+    "BlockNum": 4,
+    "TotalLevelName": "",
+    "LevelName": "Tetris_LevelName_71",
+    "LevelDes": "Tetris_LevelDes_70",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 544
+  },
+  {
+    "Id": 15,
+    "ActivityId": 109100001,
+    "GroupId": 8,
+    "UnlockId": 13,
+    "Mode": 2,
+    "TargetResult": {
+      "0": 888
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 8888
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 5855
+        }
+      },
+      {
+        "MapIntInt": {
+          "0": 3333
+        }
+      }
+    ],
+    "OpenDay": 6,
+    "DropId": 5200407,
+    "BlockNum": 4,
+    "TotalLevelName": "Tetris_LevelName_8",
+    "LevelName": "Tetris_LevelName_80",
+    "LevelDes": "Tetris_LevelDes_80",
+    "ReduceDiffCnt": [
+      2,
+      4
+    ],
+    "TakeBackCnt": 1,
+    "HelpId": 541
+  },
+  {
+    "Id": 16,
+    "ActivityId": 0,
+    "GroupId": 0,
+    "UnlockId": 0,
+    "Mode": 3,
+    "TargetResult": {
+      "0": 999999
+    },
+    "TargetResults": [
+      {
+        "MapIntInt": {
+          "0": 999999
+        }
+      }
+    ],
+    "OpenDay": 0,
+    "DropId": 0,
+    "BlockNum": 4,
+    "TotalLevelName": "",
+    "LevelName": "",
+    "LevelDes": "",
+    "ReduceDiffCnt": [],
+    "TakeBackCnt": 1,
+    "HelpId": 547
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "ShareType": 1,
+    "Reward": {
+      "3": 20
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 2,
+    "ShareType": 2,
+    "Reward": {
+      "3": 20
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 3,
+    "ShareType": 3,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 4,
+    "ShareType": 3,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 5,
+    "ShareType": 4,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 6,
+    "ShareType": 5,
+    "Reward": {
+      "2": 50000
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 7,
+    "ShareType": 6,
+    "Reward": {
+      "2": 20000
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 8,
+    "ShareType": 7,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
+  }
+]

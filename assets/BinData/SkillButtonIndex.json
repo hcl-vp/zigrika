@@ -1,0 +1,3172 @@
+[
+  {
+    "Id": 0,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [
+      {
+        "ArrayString": [
+          "行为状态.位置状态.攀爬",
+          "辅助机.通用射击.射击瞄准"
+        ]
+      },
+      {
+        "ArrayString": [
+          "行为状态.位置状态.水中",
+          "辅助机.通用射击.射击瞄准"
+        ]
+      }
+    ],
+    "TagDesktopButtonTypeList": [
+      {
+        "ArrayInt": [
+          4,
+          2,
+          7,
+          5
+        ]
+      },
+      {
+        "ArrayInt": [
+          4,
+          5,
+          7
+        ]
+      }
+    ],
+    "TagPadButtonTypeList": [
+      {
+        "ArrayInt": [
+          2,
+          4,
+          -1,
+          7,
+          -1,
+          5,
+          1,
+          -1,
+          11
+        ]
+      },
+      {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1,
+          -1,
+          11
+        ]
+      }
+    ],
+    "DesktopButtonTypeMap": {
+      "10543292": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "11899082": {
+        "ArrayInt": [
+          1,
+          7
+        ]
+      },
+      "19058783": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "35512583": {
+        "ArrayInt": [
+          1,
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "121422825": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "157472352": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "198916650": {
+        "ArrayInt": [
+          4,
+          8
+        ]
+      },
+      "332111384": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "346080557": {
+        "ArrayInt": [
+          6,
+          5,
+          7,
+          8
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "527772422": {
+        "ArrayInt": [
+          1,
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "662082465": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "701626516": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "755426796": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "779079389": {
+        "ArrayInt": [
+          4,
+          12,
+          7,
+          9
+        ]
+      },
+      "851283139": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "859914495": {
+        "ArrayInt": [
+          4,
+          6
+        ]
+      },
+      "868371950": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "957049007": {
+        "ArrayInt": [
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "1338787713": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "1382114369": {
+        "ArrayInt": [
+          4
+        ]
+      },
+      "1519720150": {
+        "ArrayInt": [
+          4,
+          8
+        ]
+      },
+      "1566606455": {
+        "ArrayInt": [
+          3,
+          6,
+          5,
+          7,
+          8
+        ]
+      },
+      "1575281566": {
+        "ArrayInt": [
+          4,
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "1577125226": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "1754192253": {
+        "ArrayInt": [
+          5,
+          7,
+          1
+        ]
+      },
+      "1937468570": {
+        "ArrayInt": [
+          5,
+          7,
+          6,
+          1
+        ]
+      },
+      "2077191201": {
+        "ArrayInt": [
+          1,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "2092030875": {
+        "ArrayInt": [
+          1,
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "2097030355": {
+        "ArrayInt": [
+          1
+        ]
+      },
+      "2129430272": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      },
+      "-943572384": {
+        "ArrayInt": [
+          7,
+          1
+        ]
+      },
+      "-1992333887": {
+        "ArrayInt": [
+          5,
+          7,
+          1
+        ]
+      },
+      "-2027866845": {
+        "ArrayInt": [
+          5,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1785184580": {
+        "ArrayInt": [
+          4,
+          6,
+          5,
+          7,
+          8
+        ]
+      },
+      "-1254507003": {
+        "ArrayInt": [
+          7
+        ]
+      },
+      "-917092479": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-957876939": {
+        "ArrayInt": [
+          4
+        ]
+      },
+      "-1035555519": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1930217202": {
+        "ArrayInt": [
+          1,
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-289289487": {
+        "ArrayInt": [
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-55429165": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-869438579": {
+        "ArrayInt": [
+          4,
+          7,
+          8
+        ]
+      },
+      "-1643050986": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-587831872": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1621701627": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-228101028": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-789916572": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1273752856": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1488309485": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      },
+      "-1197997804": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
+          8
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "11899082": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          -1,
+          1
+        ]
+      },
+      "121422825": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "346080557": {
+        "ArrayInt": [
+          201,
+          1,
+          8,
+          7,
+          5,
+          6,
+          202
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "779079389": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1,
+          9
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "859914495": {
+        "ArrayInt": [
+          4,
+          6,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "1382114369": {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "1519720150": {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          -1,
+          -1,
+          5,
+          8,
+          -1
+        ]
+      },
+      "1575281566": {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1754192253": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "1937468570": {
+        "ArrayInt": [
+          -1,
+          6,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "2097030355": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-943572384": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          -1,
+          1
+        ]
+      },
+      "-1992333887": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1785184580": {
+        "ArrayInt": [
+          201,
+          4,
+          8,
+          7,
+          5,
+          6,
+          202
+        ]
+      },
+      "-1254507003": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "-869438579": {
+        "ArrayInt": [
+          4,
+          -1,
+          8,
+          7,
+          -1,
+          -1,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {
+      "11899082": {
+        "ArrayInt": [
+          1,
+          7
+        ]
+      },
+      "346080557": {
+        "ArrayInt": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          101,
+          104,
+          201,
+          202
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          104
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          104
+        ]
+      },
+      "859914495": {
+        "ArrayInt": [
+          1,
+          4,
+          6
+        ]
+      },
+      "1382114369": {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          104
+        ]
+      },
+      "1519720150": {
+        "ArrayInt": [
+          4,
+          8,
+          5
+        ]
+      },
+      "1575281566": {
+        "ArrayInt": [
+          4,
+          5,
+          7,
+          104
+        ]
+      },
+      "1754192253": {
+        "ArrayInt": [
+          1,
+          5,
+          7,
+          104
+        ]
+      },
+      "1937468570": {
+        "ArrayInt": [
+          1,
+          5,
+          6,
+          7,
+          104
+        ]
+      },
+      "2097030355": {
+        "ArrayInt": [
+          1,
+          -1,
+          -1,
+          104
+        ]
+      },
+      "-943572384": {
+        "ArrayInt": [
+          1,
+          -1,
+          7,
+          104
+        ]
+      },
+      "-1992333887": {
+        "ArrayInt": [
+          1,
+          5,
+          7,
+          104
+        ]
+      },
+      "-2027866845": {
+        "ArrayInt": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          104
+        ]
+      },
+      "-1254507003": {
+        "ArrayInt": [
+          7
+        ]
+      }
+    },
+    "MotorPadButtonTypeMap": {
+      "346080557": {
+        "ArrayInt": [
+          201,
+          1,
+          8,
+          7,
+          5,
+          6,
+          202
+        ]
+      },
+      "859914495": {
+        "ArrayInt": [
+          4,
+          6,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "-1785184580": {
+        "ArrayInt": [
+          201,
+          4,
+          8,
+          7,
+          5,
+          6,
+          202
+        ]
+      }
+    },
+    "MotorJoystickPadButtonTypeMap": {
+      "346080557": {
+        "ArrayInt": [
+          5,
+          1,
+          8,
+          7,
+          -1,
+          6,
+          -1
+        ]
+      },
+      "859914495": {
+        "ArrayInt": [
+          4,
+          6,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "-1785184580": {
+        "ArrayInt": [
+          5,
+          4,
+          8,
+          7,
+          -1,
+          6,
+          -1
+        ]
+      }
+    }
+  },
+  {
+    "Id": 5008,
+    "DesktopButtonTypeList": [
+      4,
+      5
+    ],
+    "PadButtonTypeList": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5009,
+    "DesktopButtonTypeList": [
+      4,
+      5
+    ],
+    "PadButtonTypeList": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5010,
+    "DesktopButtonTypeList": [
+      4,
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5012,
+    "DesktopButtonTypeList": [
+      4
+    ],
+    "PadButtonTypeList": [
+      4
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5011,
+    "DesktopButtonTypeList": [
+      4,
+      5,
+      1
+    ],
+    "PadButtonTypeList": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      5,
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5006,
+    "DesktopButtonTypeList": [
+      5,
+      1
+    ],
+    "PadButtonTypeList": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5007,
+    "DesktopButtonTypeList": [
+      0,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      0,
+      8,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5013,
+    "DesktopButtonTypeList": [
+      5,
+      1
+    ],
+    "PadButtonTypeList": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5014,
+    "DesktopButtonTypeList": [
+      5,
+      1
+    ],
+    "PadButtonTypeList": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5002,
+    "DesktopButtonTypeList": [
+      6,
+      1
+    ],
+    "PadButtonTypeList": [
+      0,
+      6,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5001,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5003,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5004,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5005,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5015,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5016,
+    "DesktopButtonTypeList": [
+      7,
+      6,
+      9,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      9,
+      7,
+      8,
+      5,
+      1,
+      10,
+      11
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5017,
+    "DesktopButtonTypeList": [
+      4,
+      5,
+      7,
+      1
+    ],
+    "PadButtonTypeList": [
+      4,
+      0,
+      0,
+      7,
+      0,
+      5,
+      1,
+      0,
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5018,
+    "DesktopButtonTypeList": [
+      4,
+      6,
+      5,
+      1
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      0,
+      0,
+      0,
+      5,
+      1,
+      0,
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5020,
+    "DesktopButtonTypeList": [
+      4
+    ],
+    "PadButtonTypeList": [
+      4
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 50171,
+    "DesktopButtonTypeList": [
+      4
+    ],
+    "PadButtonTypeList": [
+      4
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5026,
+    "DesktopButtonTypeList": [
+      4,
+      5
+    ],
+    "PadButtonTypeList": [
+      4,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {
+      "443036118": {
+        "ArrayInt": [
+          7,
+          6,
+          9,
+          8
+        ]
+      }
+    },
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5027,
+    "DesktopButtonTypeList": [
+      4,
+      5
+    ],
+    "PadButtonTypeList": [
+      4,
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {
+      "443036118": {
+        "ArrayInt": [
+          7,
+          6,
+          9,
+          8
+        ]
+      }
+    },
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5021,
+    "DesktopButtonTypeList": [
+      4,
+      5
+    ],
+    "PadButtonTypeList": [
+      4,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5022,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5023,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5029,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5030,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5024,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5031,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5032,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5033,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5028,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5034,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5025,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5036,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5037,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5042,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "162505628": {
+        "ArrayInt": [
+          4,
+          12,
+          6
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5043,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "162505628": {
+        "ArrayInt": [
+          4,
+          12,
+          6
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "162505628": {
+        "ArrayInt": [
+          4,
+          12,
+          6
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5044,
+    "DesktopButtonTypeList": [
+      5,
+      6
+    ],
+    "PadButtonTypeList": [
+      5,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {
+      "504239013": {
+        "ArrayInt": [
+          2,
+          7,
+          5,
+          -1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          5,
+          7,
+          -1,
+          -1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          12,
+          6,
+          7
+        ]
+      },
+      "-624589333": {
+        "ArrayInt": [
+          4,
+          12,
+          7
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "162505628": {
+        "ArrayInt": [
+          4,
+          12,
+          6
+        ]
+      },
+      "504239013": {
+        "ArrayInt": [
+          2,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "855966206": {
+        "ArrayInt": [
+          -1,
+          -1,
+          -1,
+          7,
+          -1,
+          5,
+          -1
+        ]
+      },
+      "1892366727": {
+        "ArrayInt": [
+          4,
+          -1,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      },
+      "-1070569477": {
+        "ArrayInt": [
+          4,
+          6,
+          12,
+          7,
+          -1,
+          5,
+          1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5046,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5038,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5039,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5040,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5041,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5049,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  }
+]

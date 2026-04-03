@@ -1,0 +1,102 @@
+[
+  {
+    "Type": 1,
+    "TagText": "Text_GachaTagText1_Text",
+    "TagColor": "12ab54",
+    "TypeText": "Text_GachaTypeText1_Text",
+    "OptionalTitle": "",
+    "OptionalDesc": "",
+    "GachaButtonTip": "",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 2,
+    "TagText": "Text_GachaTagText2_Text",
+    "TagColor": "d99b16",
+    "TypeText": "Text_GachaTypeText2_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc1_Text",
+    "GachaButtonTip": "",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 3,
+    "TagText": "Text_GachaTagText2_Text",
+    "TagColor": "d99b16",
+    "TypeText": "Text_GachaTypeText3_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc2_Text",
+    "GachaButtonTip": "",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 4,
+    "TagText": "",
+    "TagColor": "",
+    "TypeText": "Text_GachaTypeText4_Text",
+    "OptionalTitle": "",
+    "OptionalDesc": "",
+    "GachaButtonTip": "",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 5,
+    "TagText": "",
+    "TagColor": "e0fd40",
+    "TypeText": "Text_GachaTypeText5_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc2_Text",
+    "GachaButtonTip": "Text_GachaButtonTip05_Text",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 6,
+    "TagText": "Text_GachaTagText6_Text",
+    "TagColor": "12ab54",
+    "TypeText": "Text_GachaTypeText6_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc1_Text",
+    "GachaButtonTip": "Text_GachaButtonTip06_Text",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 7,
+    "TagText": "Text_GachaTagText7_Text",
+    "TagColor": "D94282",
+    "TypeText": "Text_GachaTypeText7_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc1_Text",
+    "GachaButtonTip": "Text_GachaButtonTip08_Text",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 8,
+    "TagText": "Text_GachaTagText7_Text",
+    "TagColor": "D94282",
+    "TypeText": "Text_GachaTypeText8_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc2_Text",
+    "GachaButtonTip": "Text_GachaButtonTip07_Text",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 9,
+    "TagText": "Text_GachaTagText8_Text",
+    "TagColor": "01a8f6FF",
+    "TypeText": "Text_GachaTypeText9_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc1_Text",
+    "GachaButtonTip": "Text_GachaButtonTip09_Text",
+    "GachaLimitTip": ""
+  },
+  {
+    "Type": 10,
+    "TagText": "Text_GachaTagText8_Text",
+    "TagColor": "01a8f6FF",
+    "TypeText": "Text_GachaTypeText10_Text",
+    "OptionalTitle": "Text_GachaOptionalTitle1_Text",
+    "OptionalDesc": "Text_GachaOptionalDesc2_Text",
+    "GachaButtonTip": "Text_GachaButtonTip10_Text",
+    "GachaLimitTip": ""
+  }
+]

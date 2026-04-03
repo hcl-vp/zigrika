@@ -1,0 +1,8 @@
+# Build artifacts
+zig-out/
+.zig-cache/
+proto/pb/Molniya.proto
+
+# Persistent state
+state/account/
+state/player/

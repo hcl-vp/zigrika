@@ -1,0 +1,350 @@
+[
+  {
+    "Id": 101,
+    "Name": "DRINKS_DrinkOrnament_Name_101",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC/T_IconC_TJ_orange_UI.T_IconC_TJ_orange_UI",
+    "Mesh": "/Game/Aki/Character/Weapon/Prop/Foods/Drinks/Drinks_Orange/Model/Drinks_Orange.Drinks_Orange",
+    "Scale": {
+      "1207": 100,
+      "1209": 38,
+      "1409": 60
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          0,
+          90,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          60
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          1000,
+          1000,
+          9000
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "MeshTagId": 1
+  },
+  {
+    "Id": 102,
+    "Name": "DRINKS_DrinkOrnament_Name_102",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC/T_IconC_TJ_xiangningcao_UI.T_IconC_TJ_xiangningcao_UI",
+    "Mesh": "/Game/Aki/Character/Weapon/Prop/Foods/Drinks/Drinks_Lemon/Model/Drinks_Lemon.Drinks_Lemon",
+    "Scale": {
+      "1207": 90,
+      "1209": 30,
+      "1409": 60
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          -80,
+          -27,
+          -40
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          35,
+          10,
+          50
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -60,
+          0,
+          -50
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          1000,
+          -2000,
+          2200
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          14000,
+          4000,
+          1600
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -1800,
+          -1300,
+          0
+        ]
+      }
+    },
+    "MeshTagId": 2
+  },
+  {
+    "Id": 103,
+    "Name": "DRINKS_DrinkOrnament_Name_103",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC/T_IconC_TJ_yueguiye_UI.T_IconC_TJ_yueguiye_UI",
+    "Mesh": "/Game/Aki/Character/Weapon/Prop/Foods/Drinks/Drinks_Myrcia/Model/Drinks_Myrcia.Drinks_Myrcia",
+    "Scale": {
+      "1207": 110,
+      "1209": 40,
+      "1409": 70
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          -200,
+          0,
+          -500
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          30,
+          -40
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          -300
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          -1360,
+          0,
+          12000
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          10,
+          2300,
+          -4500
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -2000,
+          -500,
+          -26000
+        ]
+      }
+    },
+    "MeshTagId": 3
+  },
+  {
+    "Id": 104,
+    "Name": "DRINKS_DrinkOrnament_Name_104",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA005_UI.T_IconA_Act_TiaoJiuA005_UI",
+    "Mesh": "/Game/Aki/Character/Weapon/Prop/Foods/Drinks/Drinks_Marshmallow/Model/Drinks_Marshmallow.Drinks_Marshmallow",
+    "Scale": {
+      "1207": 110,
+      "1209": 80,
+      "1409": 100
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          50,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          50,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          9000,
+          0,
+          1300
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          10000,
+          3000,
+          9000
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          9000,
+          4000,
+          1000
+        ]
+      }
+    },
+    "MeshTagId": 4
+  },
+  {
+    "Id": 105,
+    "Name": "DRINKS_DrinkOrnament_Name_106",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA008_UI.T_IconA_Act_TiaoJiuA008_UI",
+    "Mesh": "/Game/Aki/Character/Weapon/Prop/Foods/Drinks/Drinks_StarBubble/Model/Drinks_StarBubble.Drinks_StarBubble",
+    "Scale": {
+      "1207": 100,
+      "1209": 40,
+      "1409": 60
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          40,
+          40,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          1000,
+          3000,
+          9000
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "MeshTagId": 5
+  },
+  {
+    "Id": 0,
+    "Name": "PrefabTextItem_478052678_Text",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/TiaoJiu/T_TiaoJiuTogBEmpty.T_TiaoJiuTogBEmpty",
+    "Mesh": "",
+    "Scale": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "Location": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "Rotation": {
+      "1207": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "MeshTagId": 0
+  }
+]

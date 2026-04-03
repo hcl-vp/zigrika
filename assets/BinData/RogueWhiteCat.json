@@ -1,0 +1,103 @@
+[
+  {
+    "Id": 102600001,
+    "ScoreId": 80100004,
+    "EnergyId": 80100004,
+    "MaxEnergy": 1200,
+    "Insts": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "BossRewards": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206
+    ],
+    "LimitedTimeId": 1078,
+    "Rewards": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "FirstWhiteCatDungeonId": 8407,
+    "RepeatWhiteCatDungeonId": 8408,
+    "WhiteCatFirstOpenCondition": 13020001,
+    "FirstWhiteCatQuestId": 139000039,
+    "WhiteCatRepeatOpenCondition": 13020000,
+    "OpenCondition": {
+      "0": 13020014,
+      "1": 12110047,
+      "2": 0,
+      "3": 13020006,
+      "8": 13020021
+    },
+    "DreamLinkTeleportMarkId": 380035,
+    "TabText": {
+      "1": "Dream_Task_Title01",
+      "2": "Dream_Task_Title02",
+      "3": "Dream_Task_Title03",
+      "4": "Dream_Task_Title04"
+    },
+    "TabIcon": {
+      "1": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconActivityDreamland.SP_IconActivityDreamland",
+      "2": "/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityDreamlandConnect/DreamlandRewardB/SP_RewardBTabIcon3.SP_RewardBTabIcon3",
+      "3": "/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityDreamlandConnect/DreamlandRewardB/SP_RewardBTabIcon2.SP_RewardBTabIcon2",
+      "4": "/Game/Aki/UI/UIResources/UiActivity/Atlas/ActivityDreamlandConnect/DreamlandRewardB/SP_RewardBTabIcon1.SP_RewardBTabIcon1"
+    },
+    "BossTabText": {
+      "1": "Dream_Cat_Challenge_Reward",
+      "2": "Dream_Cat_Integral_Reward"
+    },
+    "PlotRoleLinkAudio": "play_vo_rogue_link_together_01",
+    "BossInstanceList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "WeaponPreviewId": 4201102,
+    "DungeonBaseProgress": 10,
+    "DungeonMaxProgress": 100,
+    "PreloadRoleIds": {
+      "8401": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8402": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8403": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8404": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8405": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8406": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8407": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8408": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8409": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8410": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8411": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8412": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605",
+      "8413": "1603;1205;1302;1203;1105;1504;1501;1502;1604;1605"
+    },
+    "PlotRoleLinkTeam": [
+      1501,
+      1502,
+      1504,
+      1603,
+      1604,
+      1605
+    ]
+  }
+]

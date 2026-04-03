@@ -1,0 +1,72 @@
+{
+    "default": {
+        "CdnUrl": [
+            {
+                "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
+                "weight": "396"
+            },
+            {
+                "url": "https://cdn-qcloud-hw-mc.aki-game.net/prod/client/",
+                "weight": "150"
+            },
+            {
+                "url": "https://cdn-akamai-hw-mc.aki-game.net/prod/client/",
+                "weight": "3768"
+            },
+            {
+                "url": "https://cdn-huoshan-hw-mc.aki-game.net/prod/client/",
+                "weight": "0"
+            },
+            {
+                "url": "https://cdn-aliyun-hw-mc.aki-game.net/prod/client/",
+                "weight": "396"
+            }
+        ],
+        "SecondaryUrl": [],
+        "PriceRatio": 1,
+        "SpeedRatio": 1,
+        "GachaUrl": {
+            "GachaRecord": "http://127.0.0.1:10001",
+            "GachaPoolDetail": "http://127.0.0.1:10001"
+        },
+        "LogReport": {
+            "name": "hw-aki-upload-log-1319073642",
+            "region": "dev-reversedrooms"
+        },
+        "PackageUpdateDescUrl": {
+            "MainUrl": "http://127.0.0.1:10001/force_update/UpdateDesc.html",
+            "SubUrl": "http://127.0.0.1:10001/force_update/UpdateDesc.html"
+        },
+        "PackageUpdateUrl": {
+            "MainUrl": "http://127.0.0.1:10001/force_update/UpdateJs.html",
+            "SubUrl": "http://127.0.0.1:10001/force_update/UpdateJs.html"
+        },
+        "GARUrl": "https://127.0.0.1:10011",
+        "TDCfg": {
+            "URL": "http://127.0.0.1:10001/TDCfg",
+            "AppID": "bf3f44edc6cf43c582e347ba660876c0"
+        },
+        "GmOpen": false,
+        "RptOpen": false,
+        "IosAuditFirstDownloadTip": false,
+        "NoticeUrl": "https://aki-gm-resources.aki-game.net",
+        "MixUri": "bvoRCKl5u8TBBUtPioib2zes7K7i4FQl",
+        "ResUri": "bvoRCKl5u8TBBUtPioib2zes7K7i4FQl",
+        "LoginServers": [
+            {
+                "id": "88662067f00f0fd0946f7f0cf59c95af",
+                "ip": "http://127.0.0.1:10002",
+                "name": "Molniya"
+            }
+        ],
+        "UdpPort": [13100],
+        "PrivateServers": {
+            "enable": false,
+            "serverUrl": ""
+        }
+    },
+    "p1": {
+        "IosAuditFirstDownloadTip": false
+    },
+    "ModifyTime": 1761323046
+}

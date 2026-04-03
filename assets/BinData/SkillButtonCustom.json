@@ -1,0 +1,63 @@
+[
+  {
+    "Id": 110701,
+    "Type": 1,
+    "TagIds": [
+      1933097273,
+      -328548082
+    ],
+    "BuffIds": [
+      11070910001
+    ],
+    "Params": []
+  },
+  {
+    "Id": 110702,
+    "Type": 2,
+    "TagIds": [
+      586736149
+    ],
+    "BuffIds": [],
+    "Params": []
+  },
+  {
+    "Id": 150701,
+    "Type": 3,
+    "TagIds": [
+      1271021040,
+      972522211,
+      -2044964178,
+      -592555498,
+      40422668
+    ],
+    "BuffIds": [
+      1507501005
+    ],
+    "Params": []
+  },
+  {
+    "Id": 1000,
+    "Type": 4,
+    "TagIds": [
+      1023074086,
+      225676701
+    ],
+    "BuffIds": [],
+    "Params": [
+      "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconT70.SP_IconT70",
+      "SkillButton_LongPress_Name"
+    ]
+  },
+  {
+    "Id": 1510801,
+    "Type": 5,
+    "TagIds": [
+      -1488309485,
+      -1620285381
+    ],
+    "BuffIds": [],
+    "Params": [
+      "8"
+    ]
+  }
+]

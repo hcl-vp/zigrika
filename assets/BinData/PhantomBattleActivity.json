@@ -1,0 +1,150 @@
+[
+  {
+    "ActivityId": 105200001,
+    "TimeQuantumId": 5701,
+    "ShopId": 216,
+    "ShopItemId": 72010035,
+    "DustItemId": 72010036,
+    "ExpItemId": 72010037,
+    "Integration": 72010038,
+    "AttackFactor": 1000,
+    "LifeFactor": 1000,
+    "CardGroupNeedNum": 21,
+    "CanBattlePhantomNum": 8,
+    "BattleSlotNum": 12,
+    "FourCostCardCount": 1,
+    "AreaCardCount": 0,
+    "ItemCardMaxCount": 0,
+    "NormalCardCount": 20,
+    "DeckLimit": 10,
+    "CardMinRequired": {
+      "1": 1
+    },
+    "CardMaxLimit": {
+      "3": 19
+    },
+    "GroupNameLimit": [
+      1,
+      20
+    ],
+    "ElementMax": 2,
+    "WeeklyExpLimit": 2000,
+    "MaxItemLimit": {
+      "72010036": 99999999,
+      "72010037": 20000
+    },
+    "QuicklyBuild": [
+      70050,
+      71020,
+      72020,
+      73020,
+      74020,
+      75020,
+      76020
+    ],
+    "BadgeGroupEffects": [
+      101,
+      102,
+      103
+    ],
+    "FuncOpenChallenge": {
+      "1026": 10094,
+      "1027": 10087
+    },
+    "MainRoleList": [
+      1,
+      2,
+      8,
+      9
+    ],
+    "MainRoleSexChange": {
+      "1": 2,
+      "2": 1,
+      "8": 9,
+      "9": 8
+    },
+    "CopyUidPlayer": 0,
+    "CopyUidNpc": 0,
+    "CopyUidDifference": 0,
+    "SlotLongPressTime": 1000,
+    "SlotLongPressStartTime": 250,
+    "SlotLongPressEndTime": 750,
+    "RewardItemId": 0,
+    "RecommendQuestId": 125000125,
+    "RecommendQuestTips": "PhantomBattleRecommendTask_1"
+  },
+  {
+    "ActivityId": 107000001,
+    "TimeQuantumId": 6308,
+    "ShopId": 216,
+    "ShopItemId": 72010040,
+    "DustItemId": 72010041,
+    "ExpItemId": 72010042,
+    "Integration": 72010043,
+    "AttackFactor": 1000,
+    "LifeFactor": 1000,
+    "CardGroupNeedNum": 22,
+    "CanBattlePhantomNum": 8,
+    "BattleSlotNum": 12,
+    "FourCostCardCount": 1,
+    "AreaCardCount": 1,
+    "ItemCardMaxCount": 20,
+    "NormalCardCount": 20,
+    "DeckLimit": 10,
+    "CardMinRequired": {
+      "1": 1
+    },
+    "CardMaxLimit": {
+      "3": 19
+    },
+    "GroupNameLimit": [
+      1,
+      20
+    ],
+    "ElementMax": 2,
+    "WeeklyExpLimit": 2000,
+    "MaxItemLimit": {
+      "72010041": 99999999,
+      "72010042": 10000
+    },
+    "QuicklyBuild": [
+      3017,
+      3005,
+      3006,
+      3007,
+      3008,
+      3009,
+      3010
+    ],
+    "BadgeGroupEffects": [
+      101,
+      102,
+      103
+    ],
+    "FuncOpenChallenge": {
+      "1026": 10094,
+      "1027": 10087
+    },
+    "MainRoleList": [
+      10,
+      11,
+      20,
+      21
+    ],
+    "MainRoleSexChange": {
+      "10": 11,
+      "11": 10,
+      "17": 18,
+      "18": 17
+    },
+    "CopyUidPlayer": 5000,
+    "CopyUidNpc": 10000,
+    "CopyUidDifference": 5000,
+    "SlotLongPressTime": 250,
+    "SlotLongPressStartTime": 250,
+    "SlotLongPressEndTime": 750,
+    "RewardItemId": 44010050,
+    "RecommendQuestId": 192700008,
+    "RecommendQuestTips": "PhantomBattleRecommendTask_1"
+  }
+]

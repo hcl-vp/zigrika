@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "RoleImage": [
+      1409,
+      1608,
+      1207
+    ],
+    "TabNames": {
+      "1": "RogueRes_Task_Type1",
+      "2": "RogueRes_Task_Type2",
+      "3": "RogueRes_Task_Type3",
+      "4": "RogueRes_Task_Type4"
+    }
+  }
+]

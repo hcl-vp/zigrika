@@ -1,0 +1,177 @@
+[
+  {
+    "Id": 2001,
+    "ActivityId": 2701,
+    "InitWeapon": 1003,
+    "TrialRoleId": 8200001,
+    "UnlockConditionId": 12901703,
+    "Maxlevel": 10,
+    "EvolveIds": {
+      "200101": 1,
+      "200102": 5,
+      "200103": 10
+    },
+    "SortId": 3,
+    "RecommendProperty": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "PropertyList": [
+      2,
+      7,
+      8,
+      9,
+      11,
+      190,
+      191,
+      260,
+      259,
+      16,
+      35
+    ],
+    "TemplateId": 227800000,
+    "PropId": 200012
+  },
+  {
+    "Id": 2002,
+    "ActivityId": 2701,
+    "InitWeapon": 1004,
+    "TrialRoleId": 8200002,
+    "UnlockConditionId": 12901701,
+    "Maxlevel": 10,
+    "EvolveIds": {
+      "200201": 1,
+      "200202": 5,
+      "200203": 10
+    },
+    "SortId": 2,
+    "RecommendProperty": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "PropertyList": [
+      2,
+      7,
+      8,
+      9,
+      11,
+      190,
+      191,
+      260,
+      259,
+      16,
+      35
+    ],
+    "TemplateId": 227800002,
+    "PropId": 200011
+  },
+  {
+    "Id": 2003,
+    "ActivityId": 2701,
+    "InitWeapon": 1001,
+    "TrialRoleId": 8200005,
+    "UnlockConditionId": 0,
+    "Maxlevel": 10,
+    "EvolveIds": {
+      "200301": 1,
+      "200302": 5,
+      "200303": 10
+    },
+    "SortId": 1,
+    "RecommendProperty": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "PropertyList": [
+      2,
+      7,
+      8,
+      9,
+      11,
+      190,
+      191,
+      260,
+      259,
+      16,
+      35
+    ],
+    "TemplateId": 227800003,
+    "PropId": 200013
+  },
+  {
+    "Id": 2004,
+    "ActivityId": 2701,
+    "InitWeapon": 1002,
+    "TrialRoleId": 8200004,
+    "UnlockConditionId": 12901705,
+    "Maxlevel": 10,
+    "EvolveIds": {
+      "200401": 1,
+      "200402": 5,
+      "200403": 10
+    },
+    "SortId": 4,
+    "RecommendProperty": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "PropertyList": [
+      2,
+      7,
+      8,
+      9,
+      11,
+      190,
+      191,
+      260,
+      259,
+      16,
+      35
+    ],
+    "TemplateId": 227800004,
+    "PropId": 200014
+  },
+  {
+    "Id": 2005,
+    "ActivityId": 2701,
+    "InitWeapon": 1004,
+    "TrialRoleId": 8200003,
+    "UnlockConditionId": 12901701,
+    "Maxlevel": 10,
+    "EvolveIds": {
+      "200501": 1,
+      "200502": 5,
+      "200503": 10
+    },
+    "SortId": 2,
+    "RecommendProperty": [
+      2,
+      7,
+      8,
+      9
+    ],
+    "PropertyList": [
+      2,
+      7,
+      8,
+      9,
+      11,
+      190,
+      191,
+      260,
+      259,
+      16,
+      35
+    ],
+    "TemplateId": 227800012,
+    "PropId": 200011
+  }
+]

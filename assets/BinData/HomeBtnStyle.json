@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 1,
+    "ResourceId": "BtnHome",
+    "SPNormal": "",
+    "SPHighLighted": "",
+    "SPPressed": "",
+    "SPDisable": ""
+  },
+  {
+    "Id": 2,
+    "ResourceId": "BtnHomeActivity",
+    "SPNormal": "",
+    "SPHighLighted": "",
+    "SPPressed": "",
+    "SPDisable": ""
+  },
+  {
+    "Id": 3,
+    "ResourceId": "BtnHomeActivityB",
+    "SPNormal": "",
+    "SPHighLighted": "",
+    "SPPressed": "",
+    "SPDisable": ""
+  },
+  {
+    "Id": 4,
+    "ResourceId": "BtnHomeActivityB",
+    "SPNormal": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/PrizeDrawing/PrizeDrawingMain/SP_PrizeDrawingMain_BtnHomeNml.SP_PrizeDrawingMain_BtnHomeNml",
+    "SPHighLighted": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/PrizeDrawing/PrizeDrawingMain/SP_PrizeDrawingMain_BtnHomeHover.SP_PrizeDrawingMain_BtnHomeHover",
+    "SPPressed": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity27/PrizeDrawing/PrizeDrawingMain/SP_PrizeDrawingMain_BtnHomePress.SP_PrizeDrawingMain_BtnHomePress",
+    "SPDisable": ""
+  },
+  {
+    "Id": 5,
+    "ResourceId": "BtnHomeActivityB",
+    "SPNormal": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnWhiteNormal.SP_HomeBtnWhiteNormal",
+    "SPHighLighted": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnWhiteHold.SP_HomeBtnWhiteHold",
+    "SPPressed": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnWhitePress.SP_HomeBtnWhitePress",
+    "SPDisable": ""
+  },
+  {
+    "Id": 6,
+    "ResourceId": "BtnHomeActivityB",
+    "SPNormal": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnBlackNormal.SP_HomeBtnBlackNormal",
+    "SPHighLighted": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnBlackHold.SP_HomeBtnBlackHold",
+    "SPPressed": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity30/ActivityInfrastructure/HomeBtn/SP_HomeBtnBlackPress.SP_HomeBtnBlackPress",
+    "SPDisable": ""
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "Id": 1,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 2,
+    "Param1": {
+      "Stage": "Int"
+    },
+    "Param2": {
+      "AddNum": "Int"
+    },
+    "Param3": {}
+  },
+  {
+    "Id": 3,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 4,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 5,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 6,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 7,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 8,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 9,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {
+      "Rarity": "Int"
+    },
+    "Param3": {}
+  },
+  {
+    "Id": 10,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {
+      "Rarity": "Int"
+    },
+    "Param3": {}
+  },
+  {
+    "Id": 11,
+    "Param1": {
+      "CardNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 12,
+    "Param1": {
+      "Stage": "String"
+    },
+    "Param2": {
+      "Rate": "String"
+    },
+    "Param3": {}
+  },
+  {
+    "Id": 13,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 14,
+    "Param1": {
+      "Rate": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  }
+]

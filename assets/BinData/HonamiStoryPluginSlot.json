@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 106200001,
+    "SlotPos": 1,
+    "ConsumeItems": {}
+  },
+  {
+    "Id": 2,
+    "ActivityId": 106200001,
+    "SlotPos": 2,
+    "ConsumeItems": {}
+  },
+  {
+    "Id": 3,
+    "ActivityId": 106200001,
+    "SlotPos": 3,
+    "ConsumeItems": {
+      "80600001": 90
+    }
+  },
+  {
+    "Id": 4,
+    "ActivityId": 106200001,
+    "SlotPos": 4,
+    "ConsumeItems": {
+      "80600001": 2000
+    }
+  },
+  {
+    "Id": 5,
+    "ActivityId": 106200001,
+    "SlotPos": 5,
+    "ConsumeItems": {
+      "80600001": 4000
+    }
+  },
+  {
+    "Id": 6,
+    "ActivityId": 106200001,
+    "SlotPos": 6,
+    "ConsumeItems": {
+      "80600001": 10000
+    }
+  }
+]

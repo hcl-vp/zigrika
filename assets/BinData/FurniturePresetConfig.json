@@ -1,0 +1,324 @@
+[
+  {
+    "AreaId": 101,
+    "Name": "DIY_FoolproofStyle_Title_1",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset01.T_Preset01",
+    "FurniturePlaceInfo": {
+      "691750152": {
+        "ArrayInt": [
+          80830096
+        ]
+      },
+      "691750153": {
+        "ArrayInt": [
+          80830025
+        ]
+      },
+      "691750154": {
+        "ArrayInt": [
+          80830081
+        ]
+      },
+      "691750182": {
+        "ArrayInt": [
+          80830161
+        ]
+      },
+      "691750183": {
+        "ArrayInt": [
+          80830164
+        ]
+      },
+      "691750184": {
+        "ArrayInt": [
+          80830167
+        ]
+      },
+      "691750185": {
+        "ArrayInt": [
+          80830030
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 102,
+    "Name": "DIY_FoolproofStyle_Title_2",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset02.T_Preset02",
+    "FurniturePlaceInfo": {
+      "691750131": {
+        "ArrayInt": [
+          80830091
+        ]
+      },
+      "691750132": {
+        "ArrayInt": [
+          80830094
+        ]
+      },
+      "691750133": {
+        "ArrayInt": [
+          80830108
+        ]
+      },
+      "691750134": {
+        "ArrayInt": [
+          80830012
+        ]
+      },
+      "691750135": {
+        "ArrayInt": [
+          80830064,
+          80830095
+        ]
+      },
+      "691750136": {
+        "ArrayInt": [
+          80830064,
+          80830093
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 103,
+    "Name": "DIY_FoolproofStyle_Title_6",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset03.T_Preset03",
+    "FurniturePlaceInfo": {
+      "691750137": {
+        "ArrayInt": [
+          80830071
+        ]
+      },
+      "691750138": {
+        "ArrayInt": [
+          80830019
+        ]
+      },
+      "691750139": {
+        "ArrayInt": [
+          80830018
+        ]
+      },
+      "691750140": {
+        "ArrayInt": [
+          80830071
+        ]
+      },
+      "691750141": {
+        "ArrayInt": [
+          80830023
+        ]
+      },
+      "691750142": {
+        "ArrayInt": [
+          80830067,
+          80830098
+        ]
+      },
+      "691750143": {
+        "ArrayInt": [
+          80830073
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 104,
+    "Name": "DIY_FoolproofStyle_Title_4",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset04.T_Preset04",
+    "FurniturePlaceInfo": {
+      "691750155": {
+        "ArrayInt": [
+          80830075
+        ]
+      },
+      "691750156": {
+        "ArrayInt": [
+          80830058,
+          80830085
+        ]
+      },
+      "691750157": {
+        "ArrayInt": [
+          80830072
+        ]
+      },
+      "691750158": {
+        "ArrayInt": [
+          80830146
+        ]
+      },
+      "691750159": {
+        "ArrayInt": [
+          80830149
+        ]
+      },
+      "691750160": {
+        "ArrayInt": [
+          80830152
+        ]
+      },
+      "691750161": {
+        "ArrayInt": [
+          80830137
+        ]
+      },
+      "691750162": {
+        "ArrayInt": [
+          80830140
+        ]
+      },
+      "691750163": {
+        "ArrayInt": [
+          80830143
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 105,
+    "Name": "DIY_FoolproofStyle_Title_3",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset05.T_Preset05",
+    "FurniturePlaceInfo": {
+      "691750144": {
+        "ArrayInt": [
+          80830076
+        ]
+      },
+      "691750145": {
+        "ArrayInt": [
+          80830064,
+          80830033
+        ]
+      },
+      "691750146": {
+        "ArrayInt": [
+          80830107
+        ]
+      },
+      "691750147": {
+        "ArrayInt": [
+          80830076
+        ]
+      },
+      "691750148": {
+        "ArrayInt": [
+          80830076
+        ]
+      },
+      "691750149": {
+        "ArrayInt": [
+          80830107
+        ]
+      },
+      "691750150": {
+        "ArrayInt": [
+          80830064,
+          80830033
+        ]
+      },
+      "691750151": {
+        "ArrayInt": [
+          80830076
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 106,
+    "Name": "DIY_FoolproofStyle_Title_5",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset06.T_Preset06",
+    "FurniturePlaceInfo": {
+      "691750164": {
+        "ArrayInt": [
+          80830109
+        ]
+      },
+      "691750165": {
+        "ArrayInt": [
+          80830118
+        ]
+      },
+      "691750166": {
+        "ArrayInt": [
+          80830127
+        ]
+      },
+      "691750167": {
+        "ArrayInt": [
+          80830115
+        ]
+      },
+      "691750168": {
+        "ArrayInt": [
+          80830124
+        ]
+      },
+      "691750169": {
+        "ArrayInt": [
+          80830133
+        ]
+      },
+      "691750170": {
+        "ArrayInt": [
+          80830112
+        ]
+      },
+      "691750171": {
+        "ArrayInt": [
+          80830121
+        ]
+      },
+      "691750172": {
+        "ArrayInt": [
+          80830130
+        ]
+      }
+    }
+  },
+  {
+    "AreaId": 107,
+    "Name": "DIY_FoolproofStyle_Title_7",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity31/SpringFestival/DIY/T_Preset07.T_Preset07",
+    "FurniturePlaceInfo": {
+      "691750173": {
+        "ArrayInt": [
+          80830102
+        ]
+      },
+      "691750174": {
+        "ArrayInt": [
+          80830072
+        ]
+      },
+      "691750175": {
+        "ArrayInt": [
+          80830108
+        ]
+      },
+      "691750176": {
+        "ArrayInt": [
+          80830030
+        ]
+      },
+      "691750177": {
+        "ArrayInt": [
+          80830061,
+          80830085
+        ]
+      },
+      "691750178": {
+        "ArrayInt": [
+          80830061,
+          80830090
+        ]
+      },
+      "691750179": {
+        "ArrayInt": [
+          80830108
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,921 @@
+[
+  {
+    "Id": 40001,
+    "FetterId": 1,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40002,
+    "FetterId": 2,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40003,
+    "FetterId": 3,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40004,
+    "FetterId": 4,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40005,
+    "FetterId": 5,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40006,
+    "FetterId": 6,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40007,
+    "FetterId": 7,
+    "Cost": 4,
+    "LockGroup": [
+      35
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40008,
+    "FetterId": 8,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40009,
+    "FetterId": 9,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40010,
+    "FetterId": 10,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40011,
+    "FetterId": 11,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40012,
+    "FetterId": 12,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40013,
+    "FetterId": 13,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40014,
+    "FetterId": 14,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40016,
+    "FetterId": 16,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40017,
+    "FetterId": 17,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40018,
+    "FetterId": 18,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40019,
+    "FetterId": 19,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40020,
+    "FetterId": 20,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40021,
+    "FetterId": 21,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40022,
+    "FetterId": 22,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40023,
+    "FetterId": 23,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40024,
+    "FetterId": 24,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40025,
+    "FetterId": 25,
+    "Cost": 4,
+    "LockGroup": [
+      35
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40026,
+    "FetterId": 26,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40027,
+    "FetterId": 27,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40028,
+    "FetterId": 28,
+    "Cost": 4,
+    "LockGroup": [],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 40029,
+    "FetterId": 29,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30001,
+    "FetterId": 1,
+    "Cost": 3,
+    "LockGroup": [
+      22
+    ],
+    "DiscardGroup": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30002,
+    "FetterId": 2,
+    "Cost": 3,
+    "LockGroup": [
+      23
+    ],
+    "DiscardGroup": [
+      22,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30003,
+    "FetterId": 3,
+    "Cost": 3,
+    "LockGroup": [
+      24
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30004,
+    "FetterId": 4,
+    "Cost": 3,
+    "LockGroup": [
+      25
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30005,
+    "FetterId": 5,
+    "Cost": 3,
+    "LockGroup": [
+      26
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      27
+    ]
+  },
+  {
+    "Id": 30006,
+    "FetterId": 6,
+    "Cost": 3,
+    "LockGroup": [
+      27
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  {
+    "Id": 30007,
+    "FetterId": 7,
+    "Cost": 3,
+    "LockGroup": [
+      11,
+      10002
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30008,
+    "FetterId": 8,
+    "Cost": 3,
+    "LockGroup": [
+      11,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30009,
+    "FetterId": 9,
+    "Cost": 3,
+    "LockGroup": [],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30010,
+    "FetterId": 10,
+    "Cost": 3,
+    "LockGroup": [
+      22
+    ],
+    "DiscardGroup": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30011,
+    "FetterId": 11,
+    "Cost": 3,
+    "LockGroup": [
+      26
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      27
+    ]
+  },
+  {
+    "Id": 30012,
+    "FetterId": 12,
+    "Cost": 3,
+    "LockGroup": [
+      27
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  {
+    "Id": 30013,
+    "FetterId": 13,
+    "Cost": 3,
+    "LockGroup": [
+      11,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30014,
+    "FetterId": 14,
+    "Cost": 3,
+    "LockGroup": [
+      11,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30016,
+    "FetterId": 16,
+    "Cost": 3,
+    "LockGroup": [
+      25
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30017,
+    "FetterId": 17,
+    "Cost": 3,
+    "LockGroup": [
+      25
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30018,
+    "FetterId": 18,
+    "Cost": 3,
+    "LockGroup": [
+      23
+    ],
+    "DiscardGroup": [
+      22,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30019,
+    "FetterId": 19,
+    "Cost": 3,
+    "LockGroup": [
+      27
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  {
+    "Id": 30020,
+    "FetterId": 20,
+    "Cost": 3,
+    "LockGroup": [
+      24,
+      25
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30021,
+    "FetterId": 21,
+    "Cost": 3,
+    "LockGroup": [
+      25
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30022,
+    "FetterId": 22,
+    "Cost": 3,
+    "LockGroup": [
+      23
+    ],
+    "DiscardGroup": [
+      22,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30023,
+    "FetterId": 23,
+    "Cost": 3,
+    "LockGroup": [
+      27
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  {
+    "Id": 30024,
+    "FetterId": 24,
+    "Cost": 3,
+    "LockGroup": [
+      26
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      27
+    ]
+  },
+  {
+    "Id": 30025,
+    "FetterId": 25,
+    "Cost": 3,
+    "LockGroup": [
+      11,
+      10010
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30026,
+    "FetterId": 26,
+    "Cost": 3,
+    "LockGroup": [
+      26
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      27
+    ]
+  },
+  {
+    "Id": 30027,
+    "FetterId": 27,
+    "Cost": 3,
+    "LockGroup": [
+      23
+    ],
+    "DiscardGroup": [
+      22,
+      24,
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 30028,
+    "FetterId": 28,
+    "Cost": 3,
+    "LockGroup": [],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30029,
+    "FetterId": 29,
+    "Cost": 3,
+    "LockGroup": [
+      25
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      26,
+      27
+    ]
+  },
+  {
+    "Id": 10002,
+    "FetterId": 2,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10003,
+    "FetterId": 3,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10004,
+    "FetterId": 4,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10005,
+    "FetterId": 5,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10006,
+    "FetterId": 6,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10007,
+    "FetterId": 7,
+    "Cost": 1,
+    "LockGroup": [
+      10007,
+      10002,
+      10010
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10008,
+    "FetterId": 8,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10009,
+    "FetterId": 9,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10010,
+    "FetterId": 10,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10011,
+    "FetterId": 11,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10012,
+    "FetterId": 12,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10013,
+    "FetterId": 13,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10014,
+    "FetterId": 14,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10016,
+    "FetterId": 16,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10017,
+    "FetterId": 17,
+    "Cost": 1,
+    "LockGroup": [
+      10007,
+      10002
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10018,
+    "FetterId": 18,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10019,
+    "FetterId": 19,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10020,
+    "FetterId": 20,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10021,
+    "FetterId": 21,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10022,
+    "FetterId": 22,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10023,
+    "FetterId": 23,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10024,
+    "FetterId": 24,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10025,
+    "FetterId": 25,
+    "Cost": 1,
+    "LockGroup": [
+      10007,
+      10002,
+      10010
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10026,
+    "FetterId": 26,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10027,
+    "FetterId": 27,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10028,
+    "FetterId": 28,
+    "Cost": 1,
+    "LockGroup": [],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10029,
+    "FetterId": 29,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 10001,
+    "FetterId": 1,
+    "Cost": 1,
+    "LockGroup": [
+      10007
+    ],
+    "DiscardGroup": []
+  }
+]

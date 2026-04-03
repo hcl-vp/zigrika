@@ -1,0 +1,636 @@
+[
+  {
+    "Id": 1,
+    "Type": 0,
+    "SlotIndex": 0,
+    "IsEnable": false,
+    "Name": "SaveProjectName01",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10,
+          11,
+          12,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27,
+          29
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          12,
+          13
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          4
+        ]
+      }
+    }
+  },
+  {
+    "Id": 2,
+    "Type": 0,
+    "SlotIndex": 1,
+    "IsEnable": false,
+    "Name": "SaveProjectName02",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          7,
+          25
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          14
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          4
+        ]
+      }
+    }
+  },
+  {
+    "Id": 3,
+    "Type": 0,
+    "SlotIndex": 2,
+    "IsEnable": false,
+    "Name": "SaveProjectName03",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          1,
+          10
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 4,
+    "Type": 0,
+    "SlotIndex": 3,
+    "IsEnable": false,
+    "Name": "SaveProjectName04",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          2,
+          18,
+          22,
+          27
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          17
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 5,
+    "Type": 0,
+    "SlotIndex": 4,
+    "IsEnable": false,
+    "Name": "SaveProjectName05",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          3
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          18
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 6,
+    "Type": 0,
+    "SlotIndex": 5,
+    "IsEnable": false,
+    "Name": "SaveProjectName06",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          4,
+          16,
+          17,
+          21,
+          29
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          19
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 7,
+    "Type": 0,
+    "SlotIndex": 6,
+    "IsEnable": false,
+    "Name": "SaveProjectName07",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          5,
+          11,
+          24,
+          26
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          20
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 8,
+    "Type": 0,
+    "SlotIndex": 7,
+    "IsEnable": false,
+    "Name": "SaveProjectName08",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          6,
+          12,
+          19,
+          23
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 9,
+    "Type": 0,
+    "SlotIndex": 8,
+    "IsEnable": false,
+    "Name": "SaveProjectName09",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          7,
+          25
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          22
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 10,
+    "Type": 0,
+    "SlotIndex": 9,
+    "IsEnable": false,
+    "Name": "SaveProjectName10",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10,
+          11,
+          12,
+          16,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          26,
+          27,
+          29
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          9
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "Id": 11,
+    "Type": 0,
+    "SlotIndex": 10,
+    "IsEnable": false,
+    "Name": "SaveProjectName11",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          7,
+          17
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          7
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          1
+        ]
+      }
+    }
+  },
+  {
+    "Id": 12,
+    "Type": 1,
+    "SlotIndex": 0,
+    "IsEnable": false,
+    "Name": "AbandonProjectName01",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          2,
+          3,
+          4
+        ]
+      }
+    }
+  },
+  {
+    "Id": 13,
+    "Type": 1,
+    "SlotIndex": 1,
+    "IsEnable": false,
+    "Name": "AbandonProjectName02",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          1,
+          10
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 14,
+    "Type": 1,
+    "SlotIndex": 2,
+    "IsEnable": false,
+    "Name": "AbandonProjectName03",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          2,
+          18,
+          22,
+          27
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16,
+          18,
+          19,
+          20,
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 15,
+    "Type": 1,
+    "SlotIndex": 3,
+    "IsEnable": false,
+    "Name": "AbandonProjectName04",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          3
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16,
+          17,
+          19,
+          20,
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 16,
+    "Type": 1,
+    "SlotIndex": 4,
+    "IsEnable": false,
+    "Name": "AbandonProjectName05",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          4,
+          16,
+          17,
+          21,
+          29
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16,
+          17,
+          18,
+          20,
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 17,
+    "Type": 1,
+    "SlotIndex": 5,
+    "IsEnable": false,
+    "Name": "AbandonProjectName06",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          5,
+          11,
+          24,
+          26
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16,
+          17,
+          18,
+          19,
+          21
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 18,
+    "Type": 1,
+    "SlotIndex": 6,
+    "IsEnable": false,
+    "Name": "AbandonProjectName07",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          6,
+          12,
+          19,
+          23
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          3
+        ]
+      }
+    }
+  },
+  {
+    "Id": 19,
+    "Type": 0,
+    "SlotIndex": 11,
+    "IsEnable": false,
+    "Name": "SaveProjectName12",
+    "RuleMap": {
+      "28": {
+        "ArrayInt": [
+          5
+        ]
+      },
+      "29": {
+        "ArrayInt": [
+          25
+        ]
+      },
+      "45": {
+        "ArrayInt": [
+          11
+        ]
+      },
+      "46": {
+        "ArrayInt": [
+          1
+        ]
+      }
+    }
+  }
+]

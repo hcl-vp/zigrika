@@ -1,0 +1,262 @@
+[
+  {
+    "Id": 1,
+    "InstId": 8024,
+    "FinishCountType": [
+      "6#1",
+      "2#4"
+    ],
+    "CountTypeA": [
+      "6#1",
+      "2#4",
+      "5#4"
+    ],
+    "DescA": [
+      "RogueResExploreDetails_1",
+      "RogueResExploreDetails_2",
+      "RogueResExploreDetails_3"
+    ],
+    "CountTypeB": [
+      3,
+      4,
+      1,
+      8,
+      9
+    ],
+    "DescB": [
+      "RogueResExploreDetails_4",
+      "RogueResExploreDetails_5",
+      "RogueResExploreDetails_6",
+      "RogueResExploreDetails_7",
+      "RogueResExploreDetails_8"
+    ],
+    "ScoreMap": {
+      "1": 25,
+      "2": 100,
+      "3": 25,
+      "4": 50,
+      "5": 75,
+      "6": 400
+    },
+    "RankMap": {
+      "1": 0,
+      "2": 200,
+      "3": 800,
+      "4": 1350
+    },
+    "DropMap": {
+      "0": 0,
+      "200": 5120736,
+      "800": 5120735,
+      "1350": 5120734
+    }
+  },
+  {
+    "Id": 2,
+    "InstId": 8025,
+    "FinishCountType": [
+      "6#1",
+      "2#4"
+    ],
+    "CountTypeA": [
+      "6#1",
+      "2#4",
+      "5#6"
+    ],
+    "DescA": [
+      "RogueResExploreDetails_1",
+      "RogueResExploreDetails_2",
+      "RogueResExploreDetails_3"
+    ],
+    "CountTypeB": [
+      3,
+      4,
+      1,
+      8,
+      9
+    ],
+    "DescB": [
+      "RogueResExploreDetails_4",
+      "RogueResExploreDetails_5",
+      "RogueResExploreDetails_6",
+      "RogueResExploreDetails_7",
+      "RogueResExploreDetails_8"
+    ],
+    "ScoreMap": {
+      "1": 25,
+      "2": 100,
+      "3": 25,
+      "4": 50,
+      "5": 75,
+      "6": 400
+    },
+    "RankMap": {
+      "1": 0,
+      "2": 200,
+      "3": 800,
+      "4": 1850
+    },
+    "DropMap": {
+      "0": 0,
+      "200": 5120740,
+      "800": 5120739,
+      "1850": 5120738
+    }
+  },
+  {
+    "Id": 3,
+    "InstId": 8026,
+    "FinishCountType": [
+      "6#1",
+      "2#3"
+    ],
+    "CountTypeA": [
+      "6#1",
+      "2#3",
+      "5#4"
+    ],
+    "DescA": [
+      "RogueResExploreDetails_1",
+      "RogueResExploreDetails_2",
+      "RogueResExploreDetails_3"
+    ],
+    "CountTypeB": [
+      3,
+      4,
+      1,
+      8,
+      9
+    ],
+    "DescB": [
+      "RogueResExploreDetails_4",
+      "RogueResExploreDetails_5",
+      "RogueResExploreDetails_6",
+      "RogueResExploreDetails_7",
+      "RogueResExploreDetails_8"
+    ],
+    "ScoreMap": {
+      "1": 25,
+      "2": 100,
+      "3": 25,
+      "4": 50,
+      "5": 75,
+      "6": 400
+    },
+    "RankMap": {
+      "1": 0,
+      "2": 200,
+      "3": 700,
+      "4": 1975
+    },
+    "DropMap": {
+      "0": 0,
+      "200": 5120744,
+      "700": 5120743,
+      "1975": 5120742
+    }
+  },
+  {
+    "Id": 4,
+    "InstId": 8027,
+    "FinishCountType": [
+      "6#1",
+      "2#3"
+    ],
+    "CountTypeA": [
+      "6#1",
+      "2#3",
+      "5#4"
+    ],
+    "DescA": [
+      "RogueResExploreDetails_1",
+      "RogueResExploreDetails_2",
+      "RogueResExploreDetails_3"
+    ],
+    "CountTypeB": [
+      3,
+      4,
+      1,
+      8,
+      9
+    ],
+    "DescB": [
+      "RogueResExploreDetails_4",
+      "RogueResExploreDetails_5",
+      "RogueResExploreDetails_6",
+      "RogueResExploreDetails_7",
+      "RogueResExploreDetails_8"
+    ],
+    "ScoreMap": {
+      "1": 25,
+      "2": 100,
+      "3": 25,
+      "4": 50,
+      "5": 75,
+      "6": 400
+    },
+    "RankMap": {
+      "1": 0,
+      "2": 200,
+      "3": 700,
+      "4": 1800
+    },
+    "DropMap": {
+      "0": 0,
+      "200": 5120744,
+      "700": 5120743,
+      "1975": 5120742
+    }
+  },
+  {
+    "Id": 5,
+    "InstId": 8028,
+    "FinishCountType": [
+      "6#1",
+      "2#7"
+    ],
+    "CountTypeA": [
+      "6#1",
+      "2#7",
+      "5#8"
+    ],
+    "DescA": [
+      "RogueResExploreDetails_1",
+      "RogueResExploreDetails_2",
+      "RogueResExploreDetails_3"
+    ],
+    "CountTypeB": [
+      3,
+      4,
+      1,
+      8,
+      9
+    ],
+    "DescB": [
+      "RogueResExploreDetails_4",
+      "RogueResExploreDetails_5",
+      "RogueResExploreDetails_6",
+      "RogueResExploreDetails_7",
+      "RogueResExploreDetails_8"
+    ],
+    "ScoreMap": {
+      "1": 25,
+      "2": 100,
+      "3": 25,
+      "4": 50,
+      "5": 75,
+      "6": 400
+    },
+    "RankMap": {
+      "1": 0,
+      "2": 400,
+      "3": 1100,
+      "4": 2500
+    },
+    "DropMap": {
+      "0": 0,
+      "200": 5120744,
+      "700": 5120743,
+      "1975": 5120742
+    }
+  }
+]

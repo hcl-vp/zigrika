@@ -1,0 +1,57 @@
+[
+  {
+    "Id": 1,
+    "BattleScoreName": "OnlineGymnasium_RoleDamage",
+    "IsTotalRatio": true,
+    "BaseTitle": "OnlineGymnasium_RoleDamage",
+    "Title": {
+      "0": "OnlineGymnasium_RoleDamage_Title1",
+      "30": "OnlineGymnasium_RoleDamage_Title2",
+      "60": "OnlineGymnasium_RoleDamage_Title3"
+    }
+  },
+  {
+    "Id": 2,
+    "BattleScoreName": "OnlineGymnasium_RoleDeadCount",
+    "IsTotalRatio": false,
+    "BaseTitle": "OnlineGymnasium_RoleDeadCount",
+    "Title": {
+      "0": "OnlineGymnasium_RoleDeadCount_Title1",
+      "3": "OnlineGymnasium_RoleDeadCount_Title2",
+      "6": "OnlineGymnasium_RoleDeadCount_Title3"
+    }
+  },
+  {
+    "Id": 3,
+    "BattleScoreName": "OnlineGymnasium_RoleExtremeDodge",
+    "IsTotalRatio": false,
+    "BaseTitle": "OnlineGymnasium_RoleExtremeDodge",
+    "Title": {
+      "0": "OnlineGymnasium_RoleExtremeDodge_Title1",
+      "10": "OnlineGymnasium_RoleExtremeDodge_Title2",
+      "20": "OnlineGymnasium_RoleExtremeDodge_Title3"
+    }
+  },
+  {
+    "Id": 4,
+    "BattleScoreName": "OnlineGymnasium_RoleHeal",
+    "IsTotalRatio": true,
+    "BaseTitle": "OnlineGymnasium_RoleHeal",
+    "Title": {
+      "0": "OnlineGymnasium_RoleHeal_Title1",
+      "30": "OnlineGymnasium_RoleHeal_Title2",
+      "60": "OnlineGymnasium_RoleHeal_Title3"
+    }
+  },
+  {
+    "Id": 5,
+    "BattleScoreName": "OnlineGymnasium_RoleShieldResist",
+    "IsTotalRatio": true,
+    "BaseTitle": "OnlineGymnasium_RoleShieldResist",
+    "Title": {
+      "0": "OnlineGymnasium_RoleShieldResist_Title1",
+      "30": "OnlineGymnasium_RoleShieldResist_Title2",
+      "60": "OnlineGymnasium_RoleShieldResist_Title3"
+    }
+  }
+]

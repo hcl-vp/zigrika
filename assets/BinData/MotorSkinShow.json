@@ -1,0 +1,87 @@
+[
+  {
+    "Id": 5007,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 300
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon01.T_ShopMotoIcon01",
+    "Name": "ItemInfo_54002_Name",
+    "TypeDescription": "ItemInfo_54002_TypeDescription",
+    "Desc": "ItemInfo_54002_AttributesDescription",
+    "JumpDiyRoot": 2
+  },
+  {
+    "Id": 3050,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp02.T_ShopMotoIconProp02": 1,
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 600
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon04.T_ShopMotoIcon04",
+    "Name": "ItemInfo_54003_Name",
+    "TypeDescription": "ItemInfo_54003_TypeDescription",
+    "Desc": "ItemInfo_54003_AttributesDescription",
+    "JumpDiyRoot": 1
+  },
+  {
+    "Id": 3051,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 300
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon02.T_ShopMotoIcon02",
+    "Name": "ItemInfo_54004_Name",
+    "TypeDescription": "ItemInfo_54004_TypeDescription",
+    "Desc": "ItemInfo_54004_AttributesDescription",
+    "JumpDiyRoot": 2
+  },
+  {
+    "Id": 3052,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 300
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon03.T_ShopMotoIcon03",
+    "Name": "ItemInfo_54005_Name",
+    "TypeDescription": "ItemInfo_54005_TypeDescription",
+    "Desc": "ItemInfo_54005_AttributesDescription",
+    "JumpDiyRoot": 2
+  },
+  {
+    "Id": 3053,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 300
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon05.T_ShopMotoIcon05",
+    "Name": "ItemInfo_54006_Name",
+    "TypeDescription": "ItemInfo_54006_TypeDescription",
+    "Desc": "ItemInfo_54006_AttributesDescription",
+    "JumpDiyRoot": 2
+  },
+  {
+    "Id": 3054,
+    "QualityId": 1,
+    "FreeItem": 3,
+    "ItemCount": {
+      "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIconProp01.T_ShopMotoIconProp01": 3,
+      "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_zcpq_UI.T_IconA_zcpq_UI": 300
+    },
+    "Icon": "/Game/Aki/UI/UIResources/UiShop/Image/Moto/T_ShopMotoIcon06.T_ShopMotoIcon06",
+    "Name": "ItemInfo_54007_Name",
+    "TypeDescription": "ItemInfo_54007_TypeDescription",
+    "Desc": "ItemInfo_54007_AttributesDescription",
+    "JumpDiyRoot": 2
+  }
+]

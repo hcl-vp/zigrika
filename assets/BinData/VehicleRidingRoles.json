@@ -1,0 +1,374 @@
+[
+  {
+    "Id": 1402,
+    "Description": "秧秧",
+    "CreatorId": 36,
+    "TemplateId": 36900018,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1602,
+    "Description": "丹瑾",
+    "CreatorId": 314,
+    "TemplateId": 314900010,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1304,
+    "Description": "今汐",
+    "CreatorId": 314,
+    "TemplateId": 314900009,
+    "SkinTemplates": {
+      "81011304": 314900033
+    },
+    "RegionId": 1001
+  },
+  {
+    "Id": 1104,
+    "Description": "凌阳",
+    "CreatorId": 314,
+    "TemplateId": 314900025,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1301,
+    "Description": "卡卡罗",
+    "CreatorId": 314,
+    "TemplateId": 314900029,
+    "SkinTemplates": {},
+    "RegionId": 1005
+  },
+  {
+    "Id": 1107,
+    "Description": "卡莫拉",
+    "CreatorId": 314,
+    "TemplateId": 314900017,
+    "SkinTemplates": {
+      "81011107": 314850002
+    },
+    "RegionId": 1003
+  },
+  {
+    "Id": 1302,
+    "Description": "吟霖",
+    "CreatorId": 314,
+    "TemplateId": 314900013,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1505,
+    "Description": "守岸人",
+    "CreatorId": 314,
+    "TemplateId": 314900011,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1203,
+    "Description": "安可",
+    "CreatorId": 314,
+    "TemplateId": 314900019,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1206,
+    "Description": "布兰特",
+    "CreatorId": 314,
+    "TemplateId": 314900026,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1404,
+    "Description": "忌炎",
+    "CreatorId": 314,
+    "TemplateId": 314900028,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1105,
+    "Description": "折枝",
+    "CreatorId": 314,
+    "TemplateId": 314900014,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1102,
+    "Description": "散华",
+    "CreatorId": 314,
+    "TemplateId": 314900004,
+    "SkinTemplates": {
+      "81011102": 314900034
+    },
+    "RegionId": 1001
+  },
+  {
+    "Id": 1601,
+    "Description": "桃祈",
+    "CreatorId": 314,
+    "TemplateId": 314900012,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1603,
+    "Description": "椿",
+    "CreatorId": 314,
+    "TemplateId": 314900006,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1606,
+    "Description": "洛可可",
+    "CreatorId": 314,
+    "TemplateId": 314900020,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1303,
+    "Description": "渊武",
+    "CreatorId": 314,
+    "TemplateId": 314900031,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1504,
+    "Description": "灯灯",
+    "CreatorId": 314,
+    "TemplateId": 314900015,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1202,
+    "Description": "炽霞",
+    "CreatorId": 314,
+    "TemplateId": 314900002,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1103,
+    "Description": "白芷",
+    "CreatorId": 314,
+    "TemplateId": 314900022,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1305,
+    "Description": "相里要",
+    "CreatorId": 314,
+    "TemplateId": 314900024,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1403,
+    "Description": "秋水",
+    "CreatorId": 314,
+    "TemplateId": 314900030,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1503,
+    "Description": "维里奈",
+    "CreatorId": 314,
+    "TemplateId": 314900003,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1204,
+    "Description": "莫特斐",
+    "CreatorId": 314,
+    "TemplateId": 314900027,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1506,
+    "Description": "菲比",
+    "CreatorId": 314,
+    "TemplateId": 314900016,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1106,
+    "Description": "釉瑚",
+    "CreatorId": 314,
+    "TemplateId": 314900021,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1405,
+    "Description": "鉴心",
+    "CreatorId": 314,
+    "TemplateId": 314900008,
+    "SkinTemplates": {},
+    "RegionId": 1001
+  },
+  {
+    "Id": 1205,
+    "Description": "长离",
+    "CreatorId": 314,
+    "TemplateId": 314900005,
+    "SkinTemplates": {
+      "81011205": 314850001
+    },
+    "RegionId": 1001
+  },
+  {
+    "Id": 1607,
+    "Description": "坎特蕾拉",
+    "CreatorId": 314,
+    "TemplateId": 314750001,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1407,
+    "Description": "夏空",
+    "CreatorId": 314,
+    "TemplateId": 314800011,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1507,
+    "Description": "赞妮",
+    "CreatorId": 314,
+    "TemplateId": 314900023,
+    "SkinTemplates": {
+      "81011507": 314850006
+    },
+    "RegionId": 1003
+  },
+  {
+    "Id": 1409,
+    "Description": "卡提西亚",
+    "CreatorId": 314,
+    "TemplateId": 314900018,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1207,
+    "Description": "露帕",
+    "CreatorId": 314,
+    "TemplateId": 314850000,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1608,
+    "Description": "弗洛洛",
+    "CreatorId": 314,
+    "TemplateId": 314900007,
+    "SkinTemplates": {},
+    "RegionId": 1005
+  },
+  {
+    "Id": 1306,
+    "Description": "奥古斯塔",
+    "CreatorId": 314,
+    "TemplateId": 314750003,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1410,
+    "Description": "尤诺",
+    "CreatorId": 314,
+    "TemplateId": 314750002,
+    "SkinTemplates": {},
+    "RegionId": 1003
+  },
+  {
+    "Id": 1411,
+    "Description": "仇远",
+    "CreatorId": 314,
+    "TemplateId": 314800012,
+    "SkinTemplates": {
+      "81001411": 314800012
+    },
+    "RegionId": 1001
+  },
+  {
+    "Id": 1208,
+    "Description": "嘉贝莉娜",
+    "CreatorId": 314,
+    "TemplateId": 314800013,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1508,
+    "Description": "千咲",
+    "CreatorId": 314,
+    "TemplateId": 314850003,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  },
+  {
+    "Id": 1307,
+    "Description": "卜灵",
+    "CreatorId": 314,
+    "TemplateId": 314850005,
+    "SkinTemplates": {},
+    "RegionId": 1002
+  },
+  {
+    "Id": 1509,
+    "Description": "琳奈",
+    "CreatorId": 314,
+    "TemplateId": 314700001,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  },
+  {
+    "Id": 1209,
+    "Description": "莫宁",
+    "CreatorId": 314,
+    "TemplateId": 314700002,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  },
+  {
+    "Id": 1210,
+    "Description": "爱弥斯",
+    "CreatorId": 314,
+    "TemplateId": 314750004,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  },
+  {
+    "Id": 1510,
+    "Description": "陆赫斯",
+    "CreatorId": 314,
+    "TemplateId": 314750005,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  },
+  {
+    "Id": 1412,
+    "Description": "西格莉卡",
+    "CreatorId": 234,
+    "TemplateId": 234800000,
+    "SkinTemplates": {},
+    "RegionId": 1004
+  }
+]

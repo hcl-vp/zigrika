@@ -1,0 +1,51 @@
+[
+  {
+    "TpyeID": 1,
+    "UnlockTitle": "Text_BattlePassUnlockTitle1_Text",
+    "UnlockText": "Text_BattlePassUnlockText1_Text",
+    "UnlockReward": {
+      "3": 680,
+      "10800": 7,
+      "50001": 2,
+      "50002": 5,
+      "36000014": 0,
+      "36000015": 0,
+      "50000084": 0,
+      "50000085": 0,
+      "50000109": 0,
+      "50000204": 1,
+      "50000407": 0
+    }
+  },
+  {
+    "TpyeID": 2,
+    "UnlockTitle": "Text_BattlePassUnlockTitle2_Text",
+    "UnlockText": "Text_BattlePassUnlockText2_Text",
+    "UnlockReward": {
+      "3": 680,
+      "10800": 7,
+      "50001": 5,
+      "50002": 5,
+      "36000014": 0,
+      "36000015": 0,
+      "50000084": 0,
+      "50000085": 0,
+      "50000109": 0,
+      "50000204": 1,
+      "50000205": 1,
+      "50000407": 0,
+      "80069017": 1
+    }
+  },
+  {
+    "TpyeID": 3,
+    "UnlockTitle": "Text_BattlePassUnlockTitle3_Text",
+    "UnlockText": "Text_BattlePassUnlockText3_Text",
+    "UnlockReward": {
+      "50001": 3,
+      "36000015": 10,
+      "50000205": 1,
+      "80069017": 1
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "PackageId": 1,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 2,
+    "Capacity": 2000
+  },
+  {
+    "PackageId": 3,
+    "Capacity": 3000
+  },
+  {
+    "PackageId": 4,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 7,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 5,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 6,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 0,
+    "Capacity": 1000
+  },
+  {
+    "PackageId": 9,
+    "Capacity": 1000
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Param1": {
+      "AddNum": "Int"
+    },
+    "Param2": {},
+    "Param3": {}
+  },
+  {
+    "Id": 2,
+    "Param1": {
+      "X": "Int"
+    },
+    "Param2": {
+      "C": "Int"
+    },
+    "Param3": {
+      "N": "Int"
+    }
+  },
+  {
+    "Id": 3,
+    "Param1": {
+      "N": "Int"
+    },
+    "Param2": {
+      "X": "Int"
+    },
+    "Param3": {}
+  },
+  {
+    "Id": 4,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {}
+  }
+]

@@ -1,0 +1,366 @@
+[
+  {
+    "Id": 7,
+    "ShopType": 1,
+    "ShopName": "",
+    "OpenId": 0,
+    "ShowCurrency": [
+      3
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 101,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_101_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 103,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_103_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 104,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_104_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      44010025
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 107,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_107_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 108,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_108_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 6,
+    "ShopType": 1,
+    "ShopName": "",
+    "OpenId": 0,
+    "ShowCurrency": [
+      3
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 109,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_109_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      42500020
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 110,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_110_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 111,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_111_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 113,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_104_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      44010025
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 114,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_114_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 115,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_115_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 116,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_116_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      15
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 117,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_117_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1076"
+  },
+  {
+    "Id": 118,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_118_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1081"
+  },
+  {
+    "Id": 119,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_119_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1086"
+  },
+  {
+    "Id": 120,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_120_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1086"
+  },
+  {
+    "Id": 121,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_121_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1082"
+  },
+  {
+    "Id": 122,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_122_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1089"
+  },
+  {
+    "Id": 123,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_123_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 124,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_124_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 127,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_127_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      27,
+      28
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 128,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_128_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 129,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_129_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 130,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_130_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 2000,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_2000_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 131,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_131_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 140,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_140_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1123"
+  },
+  {
+    "Id": 141,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_141_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1069"
+  },
+  {
+    "Id": 142,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_142_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1086"
+  },
+  {
+    "Id": 143,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_143_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1125"
+  },
+  {
+    "Id": 144,
+    "ShopType": 1,
+    "ShopName": "ShopInfo_144_ShopName",
+    "OpenId": 0,
+    "ShowCurrency": [
+      2
+    ],
+    "DialogueText": "",
+    "UiCamera": "1126"
+  }
+]

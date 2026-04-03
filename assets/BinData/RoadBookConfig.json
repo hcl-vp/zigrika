@@ -1,0 +1,13 @@
+[
+  {
+    "ActivityId": 107600001,
+    "MaxLevel": 10,
+    "ExpItemId": 67,
+    "FinalRewardId": 5180382,
+    "VehicleClassificationName": {
+      "0": "MapTravelType0_Text",
+      "1": "MapTravelType1_Text",
+      "2": "MapTravelType2_Text"
+    }
+  }
+]

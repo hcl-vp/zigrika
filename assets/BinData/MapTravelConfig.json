@@ -1,0 +1,21 @@
+[
+  {
+    "ActivityId": 103200001,
+    "MaxLevel": 10,
+    "ExpItemId": 26,
+    "FinalRewardId": 5080283,
+    "TabName": {
+      "0": "MapTravelType0_Text",
+      "1": "MapTravelType1_Text",
+      "2": "MapTravelType2_Text",
+      "3": "MapTravelType3_Text",
+      "4": "MapTravelType4_Text"
+    },
+    "TabIcon": {
+      "1": "/Game/Aki/UI/UIResources/UiActivity/Image/ThemeActivityMap/T_IconThemeActivity3.T_IconThemeActivity3",
+      "2": "/Game/Aki/UI/UIResources/UiActivity/Image/ThemeActivityMap/T_IconThemeActivity2.T_IconThemeActivity2",
+      "3": "/Game/Aki/UI/UIResources/UiActivity/Image/ThemeActivityMap/T_IconThemeActivity4.T_IconThemeActivity4",
+      "4": "/Game/Aki/UI/UIResources/UiActivity/Image/ThemeActivityMap/T_IconThemeActivity1.T_IconThemeActivity1"
+    }
+  }
+]

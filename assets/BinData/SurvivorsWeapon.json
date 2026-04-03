@@ -1,0 +1,230 @@
+[
+  {
+    "Id": 1001,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901700,
+    "Maxlevel": 15,
+    "BindWeaponsId": [],
+    "EvolveIds": {
+      "100101": 1,
+      "100102": 3,
+      "100103": 7,
+      "100104": 15,
+      "100105": 15
+    },
+    "Name": "SurvivorsWeapon_1001_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon04.T_IconSurvivorWeapon04",
+    "SortId": 1,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800001
+  },
+  {
+    "Id": 1002,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901705,
+    "Maxlevel": 15,
+    "BindWeaponsId": [],
+    "EvolveIds": {
+      "100201": 1,
+      "100202": 3,
+      "100203": 7,
+      "100204": 15,
+      "100205": 15
+    },
+    "Name": "SurvivorsWeapon_1002_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon03.T_IconSurvivorWeapon03",
+    "SortId": 4,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800005
+  },
+  {
+    "Id": 1003,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901703,
+    "Maxlevel": 15,
+    "BindWeaponsId": [],
+    "EvolveIds": {
+      "100301": 1,
+      "100302": 3,
+      "100303": 7,
+      "100304": 15,
+      "100305": 15
+    },
+    "Name": "SurvivorsWeapon_1003_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon05.T_IconSurvivorWeapon05",
+    "SortId": 3,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800006
+  },
+  {
+    "Id": 1004,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901702,
+    "Maxlevel": 15,
+    "BindWeaponsId": [],
+    "EvolveIds": {
+      "100401": 1,
+      "100402": 3,
+      "100403": 7,
+      "100404": 15,
+      "100405": 15
+    },
+    "Name": "SurvivorsWeapon_1004_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon01.T_IconSurvivorWeapon01",
+    "SortId": 2,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800007
+  },
+  {
+    "Id": 1005,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901702,
+    "Maxlevel": 15,
+    "BindWeaponsId": [
+      1002,
+      1003
+    ],
+    "EvolveIds": {
+      "100501": 1,
+      "100502": 3,
+      "100503": 7
+    },
+    "Name": "SurvivorsWeapon_1005_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon02.T_IconSurvivorWeapon02",
+    "SortId": 5,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800008
+  },
+  {
+    "Id": 1006,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901701,
+    "Maxlevel": 15,
+    "BindWeaponsId": [
+      1001,
+      1004
+    ],
+    "EvolveIds": {
+      "100601": 1,
+      "100602": 3,
+      "100603": 7
+    },
+    "Name": "SurvivorsWeapon_1006_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon06.T_IconSurvivorWeapon06",
+    "SortId": 6,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800009
+  },
+  {
+    "Id": 1007,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901700,
+    "Maxlevel": 15,
+    "BindWeaponsId": [
+      1002,
+      1004
+    ],
+    "EvolveIds": {
+      "100701": 1,
+      "100702": 3,
+      "100703": 7
+    },
+    "Name": "SurvivorsWeapon_1007_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon07.T_IconSurvivorWeapon07",
+    "SortId": 7,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800010
+  },
+  {
+    "Id": 1008,
+    "ActivityId": 2701,
+    "UnlockConditionId": 12901703,
+    "Maxlevel": 15,
+    "BindWeaponsId": [
+      1001,
+      1003
+    ],
+    "EvolveIds": {
+      "100801": 1,
+      "100802": 3,
+      "100803": 7
+    },
+    "Name": "SurvivorsWeapon_1008_Name",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorWeapon08.T_IconSurvivorWeapon08",
+    "SortId": 8,
+    "RecommendProperty": [],
+    "PropertyList": [
+      7,
+      8,
+      9,
+      44,
+      11,
+      257,
+      99
+    ],
+    "TemplateId": 227800011
+  }
+]

@@ -1,0 +1,492 @@
+[
+  {
+    "Id": 101,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA004_UI.T_IconA_Act_TiaoJiuA004_UI",
+    "Name": "DRINKS_DrinkBatching_Name_101",
+    "Flavor": {
+      "1": 1
+    },
+    "MeshTagId": 1,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 102,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA001_UI.T_IconA_Act_TiaoJiuA001_UI",
+    "Name": "DRINKS_DrinkBatching_Name_102",
+    "Flavor": {
+      "2": 2
+    },
+    "MeshTagId": 2,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 103,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC/T_IconC_TJ_honyuzhu_UI.T_IconC_TJ_honyuzhu_UI",
+    "Name": "DRINKS_DrinkBatching_Name_103",
+    "Flavor": {
+      "1": 2
+    },
+    "MeshTagId": 3,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 104,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA003_UI.T_IconA_Act_TiaoJiuA003_UI",
+    "Name": "DRINKS_DrinkBatching_Name_104",
+    "Flavor": {
+      "0": 2
+    },
+    "MeshTagId": 4,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 105,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA002_UI.T_IconA_Act_TiaoJiuA002_UI",
+    "Name": "DRINKS_DrinkBatching_Name_105",
+    "Flavor": {
+      "1": 1
+    },
+    "MeshTagId": 5,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 106,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA006_UI.T_IconA_Act_TiaoJiuA006_UI",
+    "Name": "DRINKS_DrinkBatching_Name_106",
+    "Flavor": {
+      "0": 2
+    },
+    "MeshTagId": 6,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Id": 107,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA007_UI.T_IconA_Act_TiaoJiuA007_UI",
+    "Name": "DRINKS_DrinkOrnament_Name_105",
+    "Flavor": {
+      "2": 1
+    },
+    "MeshTagId": 7,
+    "ScaleMap": {
+      "1207": 100,
+      "1209": 80,
+      "1409": 100
+    },
+    "HeighScaleMap": {
+      "1207": 460,
+      "1209": 200,
+      "1409": 270
+    },
+    "PosScaleMap": {
+      "1207": 100,
+      "1209": 100,
+      "1409": 100
+    },
+    "PosOnLiquid1": {
+      "1207": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          -100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          -150,
+          0,
+          0
+        ]
+      }
+    },
+    "PosOnLiquid2": {
+      "1207": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      },
+      "1209": {
+        "ArrayInt": [
+          100,
+          0,
+          0
+        ]
+      },
+      "1409": {
+        "ArrayInt": [
+          150,
+          0,
+          0
+        ]
+      }
+    }
+  }
+]

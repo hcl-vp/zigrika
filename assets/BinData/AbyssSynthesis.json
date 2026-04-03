@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1001,
+    "Quality": 1,
+    "DecomposeInfo": {
+      "80200001": 500
+    }
+  },
+  {
+    "Id": 1002,
+    "Quality": 2,
+    "DecomposeInfo": {
+      "80200001": 1000
+    }
+  },
+  {
+    "Id": 1003,
+    "Quality": 3,
+    "DecomposeInfo": {
+      "80200001": 2000
+    }
+  },
+  {
+    "Id": 1004,
+    "Quality": 4,
+    "DecomposeInfo": {
+      "80200001": 4000
+    }
+  },
+  {
+    "Id": 1005,
+    "Quality": 5,
+    "DecomposeInfo": {
+      "80200001": 8000
+    }
+  },
+  {
+    "Id": 1006,
+    "Quality": 6,
+    "DecomposeInfo": {
+      "80200001": 16000
+    }
+  },
+  {
+    "Id": 1007,
+    "Quality": 7,
+    "DecomposeInfo": {
+      "80200001": 16000
+    }
+  }
+]
