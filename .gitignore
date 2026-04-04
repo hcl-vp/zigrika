@@ -1,7 +1,7 @@
 # Build artifacts
 zig-out/
 .zig-cache/
-proto/pb/Molniya.proto
+proto/pb/WuWa.proto
 
 # Persistent state
 state/account/

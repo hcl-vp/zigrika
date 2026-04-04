@@ -51,6 +51,16 @@ fn init(gpa: Allocator, io: Io, cmd_args: std.process.Args) u8 {
     var net_future = network.bind(io, gpa, &fs, &assets, bind_address) catch return 1; // TODO: retry with a timeout?
     defer net_future.cancel(io);
 
+    std.debug.print(
+        \\ ______ _            _
+        \\|___  /( )  __      ( )|    __
+        \\   / /  |  /  \ |__  | |  //  \
+        \\  / /   | | () ||  \ | | /| () |
+        \\ / /__  |  \__/ |    | | \ \__/
+        \\/_____|(_)    |     (_)|  \   \
+        \\           \__/
+        \\
+    , .{});
     log.info("game server is listening at {f}", .{bind_address});
 
     var sigint = zigaction.Handler(.INT).wait(io);

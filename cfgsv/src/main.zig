@@ -47,6 +47,16 @@ fn init(gpa: Allocator, io: Io, cmd_args: std.process.Args) u8 {
 
     defer server.deinit(io);
 
+    std.debug.print(
+        \\ ______ _            _
+        \\|___  /( )  __      ( )|    __
+        \\   / /  |  /  \ |__  | |  //  \
+        \\  / /   | | () ||  \ | | /| () |
+        \\ / /__  |  \__/ |    | | \ \__/
+        \\/_____|(_)    |     (_)|  \   \
+        \\           \__/
+        \\
+    , .{});
     log.info("config server is listening at {f}", .{address});
 
     var sigint = zigaction.Handler(.INT).wait(io);

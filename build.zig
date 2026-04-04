@@ -7,7 +7,7 @@ pub fn build(b: *std.Build) void {
     const common = b.createModule(.{ .root_source_file = b.path("common/src/root.zig") });
 
     const proto_gen = b.addExecutable(.{
-        .name = "yoshunko-protogen",
+        .name = "wuwa-protogen",
         .root_module = b.createModule(.{
             .root_source_file = b.path("proto/gen/src/main.zig"),
             .optimize = optimize,
@@ -17,10 +17,10 @@ pub fn build(b: *std.Build) void {
 
     var update_src = b.addUpdateSourceFiles();
 
-    if (std.Io.Dir.cwd().access(b.graph.io, "proto/pb/Molniya.proto", .{})) {
+    if (std.Io.Dir.cwd().access(b.graph.io, "proto/pb/WuWa.proto", .{})) {
         const run_proto_gen = b.addRunArtifact(proto_gen);
         run_proto_gen.expectExitCode(0);
-        run_proto_gen.setStdIn(.{ .lazy_path = b.path("proto/pb/Molniya.proto") });
+        run_proto_gen.setStdIn(.{ .lazy_path = b.path("proto/pb/WuWa.proto") });
         const pb_gen = run_proto_gen.captureStdOut(.{ .basename = "aki_generated.zig" });
         update_src.addCopyFileToSource(pb_gen, "proto/src/aki_generated.zig");
     } else |_| {}
@@ -32,7 +32,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const cfgsv = b.addExecutable(.{
-        .name = "molniya-cfgsv",
+        .name = "zigrika-cfgsv",
         .root_module = b.createModule(.{
             .root_source_file = b.path("cfgsv/src/main.zig"),
             .target = target,
@@ -42,7 +42,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const loginsv = b.addExecutable(.{
-        .name = "molniya-loginsv",
+        .name = "zigrika-loginsv",
         .root_module = b.createModule(.{
             .root_source_file = b.path("loginsv/src/main.zig"),
             .target = target,
@@ -52,7 +52,7 @@ pub fn build(b: *std.Build) void {
     });
 
     const gamesv = b.addExecutable(.{
-        .name = "molniya-gamesv",
+        .name = "zigrika-gamesv",
         .root_module = b.createModule(.{
             .root_source_file = b.path("gamesv/src/main.zig"),
             .target = target,

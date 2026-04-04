@@ -1,7 +1,7 @@
 .{
-    .name = .molniya,
+    .name = .zigrika,
     .version = "0.0.1",
     .minimum_zig_version = "0.16.0-dev.1470+32dc46aae",
     .paths = .{""},
-    .fingerprint = 0x8ada3676bfd56d0a,
+    .fingerprint = 0xeb11dece3f690b25,
 }
