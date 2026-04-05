@@ -83,20 +83,16 @@ setTimeout(() => {
 
   const build_custom_entry = () => {
     const b = new Builder(256);
-
     const name_off = b.createString("PrefabTextItem_685566124_Text");
     const option_offs = OPTIONS.map((o) => b.createString(o));
-
     b.startVector(4, option_offs.length, 4);
     for (let i = option_offs.length - 1; i >= 0; i--)
       b.addOffset(option_offs[i]);
     const options_vec = b.endVector();
-
     b.startVector(4, VALUE_RANGE.length, 4);
     for (let i = VALUE_RANGE.length - 1; i >= 0; i--)
       b.addFloat32(VALUE_RANGE[i]);
     const vr_vec = b.endVector();
-
     b.startObject(10);
     b.addFieldInt32(0, 7, 0);
     b.addFieldInt32(1, 6, 0);
@@ -108,47 +104,110 @@ setTimeout(() => {
     b.addFieldInt8(8, 0, 0);
     b.addFieldFloat32(9, 0.1, 0.1);
     const root = b.endObject();
-
     b.finish(root);
     return b.asUint8Array();
   };
 
-  const custom_entry_buffer = build_custom_entry();
+  const TOD_VALUE_TYPE = 8;
+  const TOD_ID = 9;
+  const TOD_MIN = 0;
+  const TOD_MAX = 86400;
+
+  const build_tod_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("PrefabTextItem_2187393050_Text");
+    const opt_offs = [
+      b.createString("TimeOfDay_Options_0"),
+      b.createString("TimeOfDay_Options_1"),
+    ];
+    b.startVector(4, opt_offs.length, 4);
+    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
+    const options_vec = b.endVector();
+    const value_range = [TOD_MIN, TOD_MAX, 0];
+    b.startVector(4, value_range.length, 4);
+    for (let i = value_range.length - 1; i >= 0; i--)
+      b.addFloat32(value_range[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, TOD_ID, 0);
+    b.addFieldInt32(1, TOD_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 1, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
+  const build_effects_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("PrefabTextItem_4019340794_Text");
+    const option_offs = OPTIONS.map((o) => b.createString(o));
+    b.startVector(4, option_offs.length, 4);
+    for (let i = option_offs.length - 1; i >= 0; i--)
+      b.addOffset(option_offs[i]);
+    const options_vec = b.endVector();
+    b.startVector(4, VALUE_RANGE.length, 4);
+    for (let i = VALUE_RANGE.length - 1; i >= 0; i--)
+      b.addFloat32(VALUE_RANGE[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, 8, 0);
+    b.addFieldInt32(1, 7, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 0, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 0.1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
 
   const custom_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(custom_entry_buffer),
+    new ByteBuffer(build_custom_entry()),
   );
+  const tod_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_tod_entry()),
+  );
+  const effects_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_effects_entry()),
+  );
+
+  const extra_entries = [custom_entry, effects_entry, tod_entry];
 
   const photo_original_get_config = configPhotoSetupByValueType.GetConfig.bind(
     configPhotoSetupByValueType,
   );
-
   configPhotoSetupByValueType.GetConfig = (value_type, ...args) => {
     const result = photo_original_get_config(value_type, ...args);
     if (result !== undefined) return result;
-    if (value_type === custom_entry.ValueType) return custom_entry;
-    return result;
+    return extra_entries.find((e) => e.ValueType === value_type);
   };
 
   const photo_original_get_config_list =
     configPhotoSetupAll.GetConfigList.bind(configPhotoSetupAll);
-
   configPhotoSetupAll.GetConfigList = (...args) => {
     const list = photo_original_get_config_list(...args);
     if (!list) return list;
-    const has_entry = list.some((e) => e.ValueType === custom_entry.ValueType);
-    if (has_entry) return list;
-    return [...list, custom_entry];
+    const to_add = extra_entries.filter(
+      (e) => !list.some((x) => x.ValueType === e.ValueType),
+    );
+    return to_add.length ? [...list, ...to_add] : list;
   };
 
   const photograph_config = ConfigManager?.PhotographConfig;
   const original_get_setup =
     photograph_config.GetPhotoSetupConfig.bind(photograph_config);
-
   photograph_config.GetPhotoSetupConfig = (value_type, ...args) => {
     const result = original_get_setup(value_type, ...args);
     if (result !== undefined) return result;
-    if (value_type === custom_entry.ValueType) return custom_entry;
-    return result;
+    return extra_entries.find((e) => e.ValueType === value_type);
   };
 }, 0);

@@ -37,7 +37,8 @@ Start-Process zig -ArgumentList "build run-cfgsv -Doptimize=ReleaseSmall" -NoNew
 
 ### Logging in
 Depending on the version the private server currently targets, you may need to get the client from a third-party (if it's a BETA) OR get the client from Kuro's official launcher (or steam) (if it's LIVE).
-Next, you have to apply the necessary [client patch](https://git.xeondev.com/WavyRooms/helios). It enables debug features and applies the necessary game logic patches for the better experience. Follow the instructions from the patch's README.
+
+Next, you have to apply the necessary [client patch](https://git.xeondev.com/WavyRooms/helios). Follow the instructions from the patch's README.
 
 ## Community
 - [Our Discord Server](https://discord.xeondev.com)

@@ -215,8 +215,16 @@ setTimeout(() => {
       6,
       0,
     );
+    ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption(
+      7,
+      0,
+    );
     return original_u5();
   };
+
+  const TimeOfDayController_1 = require("../Game/Module/TimeOfDay/TimeOfDayController.js");
+  const Protocol_1 = require("../Core/Define/Net/Protocol.js");
+  const EffectSystem_1 = require("../Game/Effect/EffectSystem.js");
 
   ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption =
     function (t, e, o = !1) {
@@ -259,7 +267,6 @@ setTimeout(() => {
           1 === e ? i.SetEntityEnable(r, !0) : i.SetEntityEnable(r, !1);
           break;
         case 6:
-        case 6:
           const view = UiManager_1.UiManager.GetViewByName(
             "FightPhotographView",
           );
@@ -275,6 +282,26 @@ setTimeout(() => {
             }
           }
           break;
+        case 7:
+          const list_of_actors =
+            ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity.GetComponent(
+              21,
+            ).Sau;
+
+          for (const [key, value] of list_of_actors) {
+            var actor = EffectSystem_1.EffectSystem.GetEffectActor(
+              value.EffectViewHandle,
+            );
+            actor.SetActorHiddenInGame(e == true || e === 1);
+          }
+          break;
+        case 8:
+          TimeOfDayController_1.TimeOfDayController.AdjustTime(
+            e,
+            Protocol_1.Aki.Protocol.C4s.Proto_PlayerOperate,
+          );
+          break;
+
         case 2:
           var a =
             ModelManager_1.ModelManager.SceneTeamModel?.GetCurrentEntity?.Id;
