@@ -157,6 +157,7 @@ pub fn getRoleAutoBuffs(
         "23d0723c", // denia forms stuff
         "20b04084", // lynae roguelike
         "8c658780", // mornye roguelik
+        "9296f07f", // amy roguelike
     };
 
     var results: std.ArrayListUnmanaged(RoleBuffEntry) = .empty;
