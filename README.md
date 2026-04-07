@@ -31,8 +31,7 @@ zig build run-gamesv
 # Assuming you have git installed and are using powershell.
 git clone https://git.xeondev.com/WavyRooms/zigrika
 cd zigrika
-./setup-env.ps1 # In case you don't have zig installed, `setup-env.ps1` can do this for you.
-Start-Process zig -ArgumentList "build run-cfgsv -Doptimize=ReleaseSmall" -NoNewWindow; Start-Process zig -ArgumentList "build run-loginsv -Doptimize=ReleaseSmall" -NoNewWindow; zig build run-gamesv -Doptimize=ReleaseSmall
+./start-zigrika.cmd
 ```
 
 ### Logging in
