@@ -1,0 +1,238 @@
+[
+  {
+    "Id": 80871001,
+    "QualityId": 5,
+    "RoleSkinIds": [
+      81001501,
+      81001502,
+      81001604,
+      81001605,
+      81001406,
+      81001408,
+      81011501,
+      81011502,
+      81011605,
+      81011604,
+      81011406,
+      81011408
+    ],
+    "DefaultOrnament": false,
+    "OrGroupId": 1,
+    "Name": "ItemInfo_80004002_Name",
+    "TitleName": "",
+    "SubDecName": "",
+    "TypeDescription": "Ornament_TypeDescription",
+    "AttributesDescription": "ItemInfo_80004002_AttributesDescription",
+    "BgDescription": "ItemInfo_80004002_BgDescription",
+    "ItemAccess": [
+      871006
+    ],
+    "SortIndex": 10,
+    "RedDotDisableRule": 1,
+    "ShowInBag": true,
+    "ObtainedShowDescription": "ItemInfo_80004002_ObtainedShowDescription",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_153_UI.T_IconTask_Task_153_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconTask160/T_IconTask160_Task_153_UI.T_IconTask160_Task_153_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconTask80/T_IconTask80_Task_153_UI.T_IconTask80_Task_153_UI",
+    "ModelId": [
+      80871001,
+      80872001
+    ],
+    "UiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "UiCameraBlend": {},
+    "AllowUiCameraRotate": true,
+    "UiCameraConfig": "角色饰品1",
+    "HideUiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "AllowHideUiCameraRotate": true,
+    "HideUiCameraConfig": "角色饰品2",
+    "OrnamentBuff": [],
+    "OrnamentUiBuff": [],
+    "HideInUi": false,
+    "PreviewTextureInBuyView": "",
+    "UiRoleState": 0,
+    "IsNewTag": true
+  },
+  {
+    "Id": 80871002,
+    "QualityId": 5,
+    "RoleSkinIds": [
+      81001501,
+      81001502,
+      81001604,
+      81001605,
+      81001406,
+      81001408,
+      81011501,
+      81011502,
+      81011605,
+      81011604,
+      81011406,
+      81011408
+    ],
+    "DefaultOrnament": false,
+    "OrGroupId": 1,
+    "Name": "ItemInfo_80004005_Name",
+    "TitleName": "",
+    "SubDecName": "",
+    "TypeDescription": "Ornament_TypeDescription",
+    "AttributesDescription": "ItemInfo_80004005_AttributesDescription",
+    "BgDescription": "ItemInfo_80004005_BgDescription",
+    "ItemAccess": [
+      871003
+    ],
+    "SortIndex": 5,
+    "RedDotDisableRule": 1,
+    "ShowInBag": true,
+    "ObtainedShowDescription": "ItemInfo_80004005_ObtainedShowDescription",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_178_UI.T_IconTask_Task_178_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconTask160/T_IconTask160_Task_178_UI.T_IconTask160_Task_178_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconTask80/T_IconTask80_Task_178_UI.T_IconTask80_Task_178_UI",
+    "ModelId": [
+      80871002,
+      80872002
+    ],
+    "UiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "UiCameraBlend": {},
+    "AllowUiCameraRotate": true,
+    "UiCameraConfig": "角色饰品1",
+    "HideUiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "AllowHideUiCameraRotate": true,
+    "HideUiCameraConfig": "角色饰品2",
+    "OrnamentBuff": [],
+    "OrnamentUiBuff": [],
+    "HideInUi": false,
+    "PreviewTextureInBuyView": "",
+    "UiRoleState": 0,
+    "IsNewTag": true
+  },
+  {
+    "Id": 80871003,
+    "QualityId": 5,
+    "RoleSkinIds": [
+      81001501,
+      81001502,
+      81001604,
+      81001605,
+      81001406,
+      81001408,
+      81011501,
+      81011502,
+      81011605,
+      81011604,
+      81011406,
+      81011408
+    ],
+    "DefaultOrnament": false,
+    "OrGroupId": 1,
+    "Name": "ItemInfo_70320010_Name",
+    "TitleName": "",
+    "SubDecName": "",
+    "TypeDescription": "Ornament_TypeDescription",
+    "AttributesDescription": "ItemInfo_70320010_AttributesDescription",
+    "BgDescription": "ItemInfo_70320010_BgDescription",
+    "ItemAccess": [
+      871004
+    ],
+    "SortIndex": 1,
+    "RedDotDisableRule": 1,
+    "ShowInBag": true,
+    "ObtainedShowDescription": "ItemInfo_70320010_ObtainedShowDescription",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_190_UI.T_IconTask_Task_190_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconTask160/T_IconTask160_Task_190_UI.T_IconTask160_Task_190_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconTask80/T_IconTask80_Task_190_UI.T_IconTask80_Task_190_UI",
+    "ModelId": [
+      80871003,
+      80872003
+    ],
+    "UiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "UiCameraBlend": {},
+    "AllowUiCameraRotate": true,
+    "UiCameraConfig": "角色饰品1",
+    "HideUiCamera": [
+      "Ornaments_Nanzhu_01",
+      "Ornaments_Nvzhu_01"
+    ],
+    "AllowHideUiCameraRotate": true,
+    "HideUiCameraConfig": "角色饰品2",
+    "OrnamentBuff": [],
+    "OrnamentUiBuff": [],
+    "HideInUi": false,
+    "PreviewTextureInBuyView": "",
+    "UiRoleState": 0,
+    "IsNewTag": true
+  },
+  {
+    "Id": 80871004,
+    "QualityId": 5,
+    "RoleSkinIds": [
+      81001501,
+      81001502,
+      81001604,
+      81001605,
+      81001406,
+      81001408,
+      81011501,
+      81011502,
+      81011605,
+      81011604,
+      81011406,
+      81011408
+    ],
+    "DefaultOrnament": false,
+    "OrGroupId": 0,
+    "Name": "ItemInfo_70140035_Name",
+    "TitleName": "",
+    "SubDecName": "",
+    "TypeDescription": "Ornament_TypeDescription",
+    "AttributesDescription": "ItemInfo_70140035_AttributesDescription",
+    "BgDescription": "ItemInfo_70140035_BgDescription",
+    "ItemAccess": [
+      871005
+    ],
+    "SortIndex": 20,
+    "RedDotDisableRule": 1,
+    "ShowInBag": true,
+    "ObtainedShowDescription": "ItemInfo_70140035_ObtainedShowDescription",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_101_UI.T_IconTask_Task_101_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconTask160/T_IconTask160_Task_101_UI.T_IconTask160_Task_101_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconTask80/T_IconTask80_Task_101_UI.T_IconTask80_Task_101_UI",
+    "ModelId": [
+      80871004,
+      80872004
+    ],
+    "UiCamera": [
+      "Ornaments_Nanzhu_02",
+      "Ornaments_Nvzhu_02"
+    ],
+    "UiCameraBlend": {},
+    "AllowUiCameraRotate": true,
+    "UiCameraConfig": "角色饰品1",
+    "HideUiCamera": [
+      "Ornaments_Nanzhu_02",
+      "Ornaments_Nvzhu_02"
+    ],
+    "AllowHideUiCameraRotate": true,
+    "HideUiCameraConfig": "角色饰品2",
+    "OrnamentBuff": [],
+    "OrnamentUiBuff": [],
+    "HideInUi": false,
+    "PreviewTextureInBuyView": "",
+    "UiRoleState": 0,
+    "IsNewTag": true
+  }
+]

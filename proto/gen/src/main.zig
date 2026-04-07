@@ -397,6 +397,7 @@ const TokenStream = struct {
 
     pub fn expect(stream: *TokenStream, comptime token_type: std.meta.Tag(Token)) ?@FieldType(Token, @tagName(token_type)) {
         const token = (stream.next() catch null) orelse {
+            std.log.debug("line number that was naughty: {}", .{stream.line_number});
             std.log.err("unexpected EOF, expected: {}", .{token_type});
             return null;
         };

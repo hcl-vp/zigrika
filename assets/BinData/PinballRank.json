@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Tower": 3,
+    "PassTime": 90,
+    "DisplayThreshold": 1,
+    "PlayerName": "Pinball_Level_TowerRankName01",
+    "RoleList": [
+      "80850009:10",
+      "80850010:10",
+      "80850011:10"
+    ]
+  },
+  {
+    "Id": 2,
+    "Tower": 5,
+    "PassTime": 80,
+    "DisplayThreshold": 2,
+    "PlayerName": "Pinball_Level_TowerRankName02",
+    "RoleList": [
+      "80850017:15",
+      "80850013:15",
+      "80850014:15"
+    ]
+  },
+  {
+    "Id": 3,
+    "Tower": 10,
+    "PassTime": 60,
+    "DisplayThreshold": 3,
+    "PlayerName": "Pinball_Level_TowerRankName03",
+    "RoleList": [
+      "80850018:20",
+      "80850019:20",
+      "80850015:20"
+    ]
+  }
+]

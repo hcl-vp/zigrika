@@ -15,6 +15,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -22,7 +24,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1002,
@@ -40,6 +46,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -47,7 +55,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1003,
@@ -67,6 +79,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -74,7 +88,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1004,
@@ -92,6 +110,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -99,7 +119,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1005,
@@ -117,6 +141,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -124,7 +150,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1006,
@@ -144,6 +174,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -151,7 +183,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1007,
@@ -169,6 +205,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -176,7 +214,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1008,
@@ -194,6 +236,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -201,7 +245,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1009,
@@ -221,6 +269,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -228,7 +278,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1010,
@@ -246,6 +300,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -253,7 +309,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1011,
@@ -271,6 +331,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -278,7 +340,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1012,
@@ -298,6 +364,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -305,7 +373,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1013,
@@ -323,6 +395,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -330,7 +404,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1014,
@@ -348,6 +426,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -355,7 +435,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1015,
@@ -375,6 +459,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -382,7 +468,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2001,
@@ -393,12 +483,14 @@
     "ActionName": "载具子弹跳",
     "SkillId": 10001001,
     "SkillIdTagMap": {
-      "1260062248": 100010017
+      "1260062248": 100010017,
+      "-849916103": 100010018
     },
     "SkillIcon": "",
     "SkillIconTags": [
       1506180277,
-      -1710612785
+      -1710612785,
+      -183192949
     ],
     "EnableTags": [
       -1710612785
@@ -407,17 +499,41 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 1,
+    "AttributeUsageParams": [
+      100
+    ],
     "AttributeId": 0,
     "MaxAttributeId": 0,
-    "AttributeIdTagMap": {},
-    "AttributeEnableTags": [],
+    "AttributeIdTagMap": {
+      "1485864399": {
+        "ArrayInt": [
+          62,
+          61
+        ]
+      }
+    },
+    "AttributeEnableTags": [
+      1485864399
+    ],
     "IsLongPressControlCamera": true,
     "LongPressTime": 300,
     "DynamicEffectTagMap": {
       "1506180277": 1003,
       "-1710612785": 9000002
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [
+      1485864399
+    ],
+    "HideLongPressTags": [
+      1759169559
+    ],
+    "CustomHandleId": 602001,
+    "CustomHandleIds": [
+      602001,
+      602002
+    ]
   },
   {
     "Id": 2002,
@@ -439,6 +555,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -446,7 +564,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2003,
@@ -468,6 +590,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -475,7 +599,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2004,
@@ -486,7 +614,8 @@
     "ActionName": "载具退场技和下车",
     "SkillId": 10001005,
     "SkillIdTagMap": {
-      "162505628": 10001020
+      "162505628": 10001020,
+      "2012149309": 10001009
     },
     "SkillIcon": "",
     "SkillIconTags": [
@@ -501,6 +630,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -510,7 +641,11 @@
     "DynamicEffectTagMap": {
       "51808285": 9000002
     },
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2005,
@@ -520,7 +655,10 @@
     "ActionType": 1,
     "ActionName": "载具漂移",
     "SkillId": -1,
-    "SkillIdTagMap": {},
+    "SkillIdTagMap": {
+      "160596593": 100010019,
+      "-1809415382": 100010020
+    },
     "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorDrift.SP_IconMotorDrift",
     "SkillIconTags": [],
     "EnableTags": [],
@@ -528,14 +666,22 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
     "AttributeEnableTags": [],
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
-    "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "DynamicEffectTagMap": {
+      "160596593": 9000005
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2006,
@@ -547,7 +693,9 @@
     "SkillId": -1,
     "SkillIdTagMap": {},
     "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorJumpNOS.SP_IconMotorJumpNOS",
-    "SkillIconTags": [],
+    "SkillIconTags": [
+      -1809415382
+    ],
     "EnableTags": [],
     "DisableTags": [
       248120534
@@ -555,6 +703,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -562,9 +712,14 @@
     "IsLongPressControlCamera": true,
     "LongPressTime": 300,
     "DynamicEffectTagMap": {
-      "735065266": 9000001
+      "735065266": 9000001,
+      "-836971346": 9000001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2007,
@@ -575,6 +730,7 @@
     "ActionName": "载具探索工具",
     "SkillId": 0,
     "SkillIdTagMap": {
+      "464309691": 100010105,
       "687341218": 10001006,
       "1826011186": 10001029,
       "-1716814103": 10001027,
@@ -582,6 +738,7 @@
     },
     "SkillIcon": "",
     "SkillIconTags": [
+      464309691,
       -1716814103,
       687341218,
       -1955755865,
@@ -627,6 +784,8 @@
     },
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -634,13 +793,18 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {
+      "464309691": 9000003,
       "1628786673": 9000003,
       "-139436970": 1003,
       "-2028614394": 1001,
       "-1294308823": 1003,
       "-1221688283": 1001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2008,
@@ -660,6 +824,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -667,7 +833,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2011,
@@ -678,12 +848,14 @@
     "ActionName": "载具子弹跳",
     "SkillId": 10001001,
     "SkillIdTagMap": {
-      "1260062248": 100010017
+      "1260062248": 100010017,
+      "-849916103": 100010018
     },
     "SkillIcon": "",
     "SkillIconTags": [
       1506180277,
-      -1710612785
+      -1710612785,
+      -183192949
     ],
     "EnableTags": [
       -1710612785
@@ -692,16 +864,41 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 1,
+    "AttributeUsageParams": [
+      100
+    ],
     "AttributeId": 0,
     "MaxAttributeId": 0,
-    "AttributeIdTagMap": {},
-    "AttributeEnableTags": [],
+    "AttributeIdTagMap": {
+      "1485864399": {
+        "ArrayInt": [
+          62,
+          61
+        ]
+      }
+    },
+    "AttributeEnableTags": [
+      1485864399
+    ],
     "IsLongPressControlCamera": true,
     "LongPressTime": 300,
     "DynamicEffectTagMap": {
-      "1506180277": 1003
+      "1506180277": 1003,
+      "-1710612785": 9000002
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [
+      1485864399
+    ],
+    "HideLongPressTags": [
+      1759169559
+    ],
+    "CustomHandleId": 602001,
+    "CustomHandleIds": [
+      602001,
+      602002
+    ]
   },
   {
     "Id": 2012,
@@ -723,6 +920,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -730,7 +929,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2013,
@@ -752,6 +955,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -759,7 +964,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2014,
@@ -785,6 +994,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -794,7 +1005,11 @@
     "DynamicEffectTagMap": {
       "51808285": 9000002
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2015,
@@ -804,7 +1019,10 @@
     "ActionType": 1,
     "ActionName": "载具漂移",
     "SkillId": -1,
-    "SkillIdTagMap": {},
+    "SkillIdTagMap": {
+      "160596593": 100010019,
+      "-1809415382": 100010020
+    },
     "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorDrift.SP_IconMotorDrift",
     "SkillIconTags": [],
     "EnableTags": [],
@@ -812,14 +1030,22 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
     "AttributeEnableTags": [],
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
-    "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "DynamicEffectTagMap": {
+      "160596593": 9000005
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2016,
@@ -831,7 +1057,9 @@
     "SkillId": -1,
     "SkillIdTagMap": {},
     "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorJumpNOS.SP_IconMotorJumpNOS",
-    "SkillIconTags": [],
+    "SkillIconTags": [
+      -1809415382
+    ],
     "EnableTags": [],
     "DisableTags": [
       248120534
@@ -839,6 +1067,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -846,9 +1076,14 @@
     "IsLongPressControlCamera": true,
     "LongPressTime": 300,
     "DynamicEffectTagMap": {
-      "735065266": 9000001
+      "735065266": 9000001,
+      "-836971346": 9000001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2017,
@@ -911,6 +1146,8 @@
     },
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -924,7 +1161,11 @@
       "-1294308823": 1003,
       "-1221688283": 1001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2018,
@@ -944,6 +1185,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -951,7 +1194,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2021,
@@ -974,6 +1221,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -983,7 +1232,11 @@
     "DynamicEffectTagMap": {
       "1506180277": 1003
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 1201,
@@ -1001,6 +1254,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1008,7 +1263,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": true
+    "ShowLongPress": true,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2022,
@@ -1030,6 +1289,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1037,7 +1298,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2023,
@@ -1059,6 +1324,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1066,7 +1333,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2024,
@@ -1092,6 +1363,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1101,7 +1374,11 @@
     "DynamicEffectTagMap": {
       "51808285": 9000002
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2025,
@@ -1119,6 +1396,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1126,7 +1405,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2026,
@@ -1146,6 +1429,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1155,7 +1440,11 @@
     "DynamicEffectTagMap": {
       "735065266": 9000001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2027,
@@ -1217,6 +1506,8 @@
     },
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1230,7 +1521,11 @@
       "-1294308823": 1003,
       "-1221688283": 1001
     },
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2028,
@@ -1250,6 +1545,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1257,7 +1554,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
     "Id": 2019,
@@ -1268,13 +1569,139 @@
     "ActionName": "载具子弹跳1",
     "SkillId": -1,
     "SkillIdTagMap": {},
-    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorGunShot.SP_IconMotorGunShot",
-    "SkillIconTags": [],
+    "SkillIcon": "",
+    "SkillIconTags": [
+      464309691
+    ],
     "EnableTags": [],
     "DisableTags": [],
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {
+      "464309691": 9000003
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [
+      1485864399
+    ],
+    "HideLongPressTags": [
+      193259486,
+      1759169559
+    ],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2009,
+    "TemplateId": 36000052,
+    "Name": "浮游炮攻击",
+    "ButtonType": 4,
+    "ActionType": 4,
+    "ActionName": "载具子弹跳1",
+    "SkillId": -1,
+    "SkillIdTagMap": {},
+    "SkillIcon": "",
+    "SkillIconTags": [
+      464309691
+    ],
+    "EnableTags": [],
+    "DisableTags": [],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {
+      "464309691": 9000003
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [
+      1485864399
+    ],
+    "HideLongPressTags": [
+      193259486,
+      1759169559
+    ],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2031,
+    "TemplateId": 13850009,
+    "Name": "跳跃",
+    "ButtonType": 6,
+    "ActionType": 6,
+    "ActionName": "载具子弹跳",
+    "SkillId": 10001001,
+    "SkillIdTagMap": {
+      "1260062248": 100010017
+    },
+    "SkillIcon": "",
+    "SkillIconTags": [
+      1506180277,
+      -1710612785
+    ],
+    "EnableTags": [
+      -1710612785
+    ],
+    "DisableTags": [],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": true,
+    "LongPressTime": 300,
+    "DynamicEffectTagMap": {
+      "1506180277": 1003
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2032,
+    "TemplateId": 13850009,
+    "Name": "加速",
+    "ButtonType": 201,
+    "ActionType": 0,
+    "ActionName": "",
+    "SkillId": -1,
+    "SkillIdTagMap": {},
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorSpeedUp.SP_IconMotorSpeedUp",
+    "SkillIconTags": [
+      -731604710
+    ],
+    "EnableTags": [],
+    "DisableTags": [
+      248120534
+    ],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1282,11 +1709,262 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   },
   {
-    "Id": 2009,
-    "TemplateId": 36000052,
+    "Id": 2033,
+    "TemplateId": 13850009,
+    "Name": "减速",
+    "ButtonType": 202,
+    "ActionType": 0,
+    "ActionName": "",
+    "SkillId": -1,
+    "SkillIdTagMap": {},
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorSlowDown.SP_IconMotorSlowDown",
+    "SkillIconTags": [
+      1217792559
+    ],
+    "EnableTags": [],
+    "DisableTags": [
+      248120534
+    ],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {},
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2034,
+    "TemplateId": 13850009,
+    "Name": "下车",
+    "ButtonType": 8,
+    "ActionType": 8,
+    "ActionName": "载具退场技和下车",
+    "SkillId": 10001023,
+    "SkillIdTagMap": {},
+    "SkillIcon": "",
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {},
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2035,
+    "TemplateId": 13850009,
+    "Name": "漂移",
+    "ButtonType": 1,
+    "ActionType": 1,
+    "ActionName": "载具漂移",
+    "SkillId": 100011013,
+    "SkillIdTagMap": {},
+    "SkillIcon": "",
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {},
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2036,
+    "TemplateId": 13850009,
+    "Name": "氮气",
+    "ButtonType": 5,
+    "ActionType": 5,
+    "ActionName": "载具氮气",
+    "SkillId": -1,
+    "SkillIdTagMap": {},
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorJumpNOS.SP_IconMotorJumpNOS",
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      248120534
+    ],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": true,
+    "LongPressTime": 300,
+    "DynamicEffectTagMap": {
+      "735065266": 9000001
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2037,
+    "TemplateId": 13850009,
+    "Name": "探索技能",
+    "ButtonType": 7,
+    "ActionType": 7,
+    "ActionName": "载具探索工具",
+    "SkillId": 0,
+    "SkillIdTagMap": {
+      "687341218": 10001006,
+      "1826011186": 10001029,
+      "-1716814103": 10001027,
+      "-1955755865": 10001028
+    },
+    "SkillIcon": "",
+    "SkillIconTags": [
+      -1716814103,
+      687341218,
+      -1955755865,
+      1826011186
+    ],
+    "EnableTags": [],
+    "DisableTags": [
+      162505628
+    ],
+    "DisableSkillIdTags": {
+      "162505628": {
+        "ArrayInt": [
+          2100081,
+          10001012,
+          800002,
+          10001004
+        ]
+      },
+      "-1281364710": {
+        "ArrayInt": [
+          2100081,
+          10001012,
+          800002,
+          10001004
+        ]
+      },
+      "-1699006823": {
+        "ArrayInt": [
+          2100081,
+          10001012,
+          800002,
+          10001004
+        ]
+      },
+      "-1330336472": {
+        "ArrayInt": [
+          2100081,
+          10001012,
+          800002,
+          10001004
+        ]
+      }
+    },
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {
+      "1628786673": 9000003,
+      "-139436970": 1003,
+      "-2028614394": 1001,
+      "-1294308823": 1003,
+      "-1221688283": 1001
+    },
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2038,
+    "TemplateId": 13850009,
+    "Name": "载具空中抬升",
+    "ButtonType": 3,
+    "ActionType": 3,
+    "ActionName": "载具空中抬升",
+    "SkillId": -1,
+    "SkillIdTagMap": {},
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorFrontUp.SP_IconMotorFrontUp",
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      248120534
+    ],
+    "DisableSkillIdTags": {},
+    "IsCdVisible": true,
+    "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 500,
+    "DynamicEffectTagMap": {},
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
+  },
+  {
+    "Id": 2039,
+    "TemplateId": 13850009,
     "Name": "浮游炮攻击",
     "ButtonType": 4,
     "ActionType": 4,
@@ -1300,6 +1978,8 @@
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
     "ElementId": 1,
+    "AttributeUsageMode": 0,
+    "AttributeUsageParams": [],
     "AttributeId": 0,
     "MaxAttributeId": 0,
     "AttributeIdTagMap": {},
@@ -1307,6 +1987,10 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 500,
     "DynamicEffectTagMap": {},
-    "ShowLongPress": false
+    "ShowLongPress": false,
+    "ShowLongPressTags": [],
+    "HideLongPressTags": [],
+    "CustomHandleId": 0,
+    "CustomHandleIds": []
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "Id": 21010066,
+    "SequencePath": "/Game/Aki/Map/Level/Function/ChouKa/Art/Sequence/GachaShowSequence_Weapon.GachaShowSequence_Weapon",
+    "BeforeEndFrame": 150
+  },
+  {
+    "Id": 21010056,
+    "SequencePath": "/Game/Aki/Map/Level/Function/ChouKa/Art/Sequence/GachaShowSequence_Weapon.GachaShowSequence_Weapon",
+    "BeforeEndFrame": 150
+  },
+  {
+    "Id": 3,
+    "SequencePath": "/Game/Aki/Map/Level/Function/ChouKa/Art/Sequence/GachaShowSequence_Weapon.GachaShowSequence_Weapon",
+    "BeforeEndFrame": 190
+  }
+]

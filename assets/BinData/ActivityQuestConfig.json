@@ -638,5 +638,21 @@
     "ConditionId": 0,
     "OpenDay": 0,
     "IsDisplay": true
+  },
+  {
+    "Id": 109800101,
+    "QuestId": 197850001,
+    "ActivityId": 109800001,
+    "ConditionId": 12906028,
+    "OpenDay": 0,
+    "IsDisplay": false
+  },
+  {
+    "Id": 109800102,
+    "QuestId": 197850000,
+    "ActivityId": 109800001,
+    "ConditionId": 12906028,
+    "OpenDay": 0,
+    "IsDisplay": true
   }
 ]

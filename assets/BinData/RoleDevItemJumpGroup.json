@@ -1162,5 +1162,29 @@
       840001
     ],
     "SpecialJumpGroup": 0
+  },
+  {
+    "ItemId": 42601480,
+    "ItemType": 6,
+    "JumpGroup": [
+      840001
+    ],
+    "SpecialJumpGroup": 0
+  },
+  {
+    "ItemId": 42601490,
+    "ItemType": 6,
+    "JumpGroup": [
+      840001
+    ],
+    "SpecialJumpGroup": 0
+  },
+  {
+    "ItemId": 42601500,
+    "ItemType": 6,
+    "JumpGroup": [
+      840001
+    ],
+    "SpecialJumpGroup": 0
   }
 ]

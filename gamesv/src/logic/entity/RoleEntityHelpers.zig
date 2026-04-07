@@ -228,6 +228,9 @@ pub fn createRoleEntity(
             .position_state = 0,
             .position_sub_state = 0,
         },
+        Entity.RoleSkinComponent{
+            .role_skin = 8100 * 10_000 + role,
+        },
     });
 
     var blueprint_configs: std.ArrayList(*const Assets.DataTables.BlueprintConfig) = .empty;

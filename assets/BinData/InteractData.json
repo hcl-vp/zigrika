@@ -91573,7 +91573,7 @@
       ]
     },
     "Icon": "",
-    "TidContent": "",
+    "TidContent": "LevelPlay_42700001_InteractContent_42_1",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -102616,46 +102616,34 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "31beac232ae14c6f81cbacfc5e5e7e31",
+    "Guid": "6217a4798bfd46f8a64e88e8cf99ab47",
     "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.2_莫宁coop",
-        "FlowId": 2,
-        "StateId": 2
-      }
+      "Type": "Actions",
+      "Actions": []
     },
     "Icon": "",
-    "TidContent": "",
+    "TidContent": "LevelPlay_109000080_InteractContent_109_2",
     "Condition": "",
     "UniquenessTest": "",
-    "DoIntactType": "Direct",
+    "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
-    "Guid": "6c9df270e427424088dfdc770519be9d",
+    "Guid": "e7c7ecc4ddf44475a2aebfefa1815276",
     "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.2_莫宁coop",
-        "FlowId": 5,
-        "StateId": 2
-      }
+      "Type": "Actions",
+      "Actions": []
     },
     "Icon": "",
-    "TidContent": "",
+    "TidContent": "LevelPlay_109000080_InteractContent_109_1",
     "Condition": "",
     "UniquenessTest": "",
-    "DoIntactType": "Direct",
+    "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a3ce30cdfafe4de6952f048bae005f88",
@@ -102686,6 +102674,48 @@
         "FlowListName": "剧情_3_1_支线_历程记忆手册_冰川存忆",
         "FlowId": 2,
         "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "31beac232ae14c6f81cbacfc5e5e7e31",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.2_莫宁coop",
+        "FlowId": 2,
+        "StateId": 2
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "6c9df270e427424088dfdc770519be9d",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.2_莫宁coop",
+        "FlowId": 5,
+        "StateId": 2
       }
     },
     "Icon": "",
@@ -102740,13 +102770,13 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "0cd980b3fd86496f8300b9f6a4d272c1",
+    "Guid": "80e7718995b1424f9d1e9e779349a24a",
     "Type": {
       "Type": "Flow",
       "Flow": {
-        "FlowListName": "剧情_3_1_拉海洛主线_下半",
-        "FlowId": 11,
-        "StateId": 1
+        "FlowListName": "剧情_春节活动引导任务第四天",
+        "FlowId": 1,
+        "StateId": 2
       }
     },
     "Icon": "",
@@ -102768,27 +102798,6 @@
         "FlowListName": "剧情_3_1_支线_历程记忆手册_冰川存忆",
         "FlowId": 2,
         "StateId": 7
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "80e7718995b1424f9d1e9e779349a24a",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_春节活动引导任务第四天",
-        "FlowId": 1,
-        "StateId": 2
       }
     },
     "Icon": "",
@@ -102831,6 +102840,27 @@
         "FlowListName": "剧情_3_1_支线_历程记忆手册_冰川存忆",
         "FlowId": 2,
         "StateId": 4
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "0cd980b3fd86496f8300b9f6a4d272c1",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_拉海洛主线_下半",
+        "FlowId": 11,
+        "StateId": 1
       }
     },
     "Icon": "",
@@ -102923,6 +102953,69 @@
     ]
   },
   {
+    "Guid": "12631eb673b941ffb819db2992b6186f",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_181750000_InteractContent_181_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "1fa6074532bf4b3d971c9cb798006214",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_支线_世界上另一个我",
+        "FlowId": 3,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "dd6be3ce9bb94819ab0bc4f55034cbf3",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "InformationView",
+            "BoardId": 102181710
+          },
+          "ActionGuid": "1546dbc86aa049baa41fa1e9383e0d8e",
+          "ActionId": 3000003
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_181750011_InteractContent_181_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "0363e817dde94bc0848af67b6919f793",
     "Type": {
       "Type": "Flow",
@@ -102944,23 +103037,6 @@
     ]
   },
   {
-    "Guid": "12631eb673b941ffb819db2992b6186f",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_181750000_InteractContent_181_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "13e0f191e17742bba9d1cb0505ba03cf",
     "Type": {
       "Type": "Flow",
@@ -102968,27 +103044,6 @@
         "FlowListName": "剧情_3_1_支线_历程记忆手册_冰川存忆",
         "FlowId": 2,
         "StateId": 14
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "1fa6074532bf4b3d971c9cb798006214",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_支线_世界上另一个我",
-        "FlowId": 3,
-        "StateId": 1
       }
     },
     "Icon": "",
@@ -103154,31 +103209,6 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
-  },
-  {
-    "Guid": "dd6be3ce9bb94819ab0bc4f55034cbf3",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OpenSystemBoard",
-          "Params": {
-            "SystemType": "InformationView",
-            "BoardId": 102181710
-          },
-          "ActionGuid": "1546dbc86aa049baa41fa1e9383e0d8e",
-          "ActionId": 3000003
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "Quest_181750011_InteractContent_181_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
   },
   {
     "Guid": "f86103e1d7284d46a5eb27424cacb812",
@@ -103867,32 +103897,6 @@
     ]
   },
   {
-    "Guid": "a662348be217464f82736780b96b57ba",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "ChangeEntityState",
-          "Params": {
-            "Type": "Directly",
-            "EntityId": 686750185,
-            "State": "关卡.Common.状态.激活"
-          },
-          "ActionGuid": "dbb25ce1954d45acbb8cb0e55362c6db",
-          "ActionId": 4000004
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_686750012_InteractContent_686_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 600,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
     "Guid": "15642acdc8b3467e96223858b303a436",
     "Type": {
       "Type": "Actions",
@@ -103954,6 +103958,32 @@
     "UniquenessTest": "",
     "DoIntactType": "Option",
     "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "a662348be217464f82736780b96b57ba",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "ChangeEntityState",
+          "Params": {
+            "Type": "Directly",
+            "EntityId": 686750185,
+            "State": "关卡.Common.状态.激活"
+          },
+          "ActionGuid": "dbb25ce1954d45acbb8cb0e55362c6db",
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_686750012_InteractContent_686_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 600,
     "Duration": "",
     "OptionLockTypeList": ""
   },
@@ -105244,28 +105274,6 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "7b7a3fffef96434a930ad043a0e174e1",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_春节活动引导任务第三天",
-        "FlowId": 2,
-        "StateId": 1,
-        "FlowGuid": "f818e9093bbe40b694e93c069e71c1a6"
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "96fc4cd62cc0439bb356cb4c45294151",
     "Type": {
       "Type": "Actions",
@@ -105294,6 +105302,28 @@
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "7b7a3fffef96434a930ad043a0e174e1",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_春节活动引导任务第三天",
+        "FlowId": 2,
+        "StateId": 1,
+        "FlowGuid": "f818e9093bbe40b694e93c069e71c1a6"
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
   },
   {
     "Guid": "140cb0e7e9ef441bbfd0bc957c3b8a8f",
@@ -106605,6 +106635,31 @@
     ]
   },
   {
+    "Guid": "b82183ca84f44d82831ed6bb6636c13c",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "TeleportDungeon",
+          "Params": {
+            "DungeonId": 9811,
+            "IsRegroup": false
+          },
+          "ActionGuid": "659b688fe2b04571b211e57e3d0312bb",
+          "ActionId": 4000001
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41000001_InteractContent_41_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "12579bd8f3354237862990b2cb680fd8",
     "Type": {
       "Type": "Flow",
@@ -106659,6 +106714,27 @@
     },
     "Icon": "",
     "TidContent": "Quest_108750001_InteractContent_108_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "ee07f0b897334451b777eeef4b2c4743",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_一级POI_生态舱_后日谈",
+        "FlowId": 6,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_108750000_InteractContent_108_1",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -106745,27 +106821,6 @@
     "Range": 600,
     "Duration": "",
     "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "ee07f0b897334451b777eeef4b2c4743",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_一级POI_生态舱_后日谈",
-        "FlowId": 6,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_108750000_InteractContent_108_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
   },
   {
     "Guid": "f093043592004f20b24baed527152832",
@@ -107448,6 +107503,31 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "1ed022f118774daa8900a56df2f7d148",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "TeleportDungeon",
+          "Params": {
+            "DungeonId": 9811,
+            "IsRegroup": false
+          },
+          "ActionGuid": "60eee263dc7045eba678cbb187a407ed",
+          "ActionId": 4000002
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41000001_InteractContent_41_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3e03299d97f748a3b4b20e3c3feda43f",
@@ -108146,252 +108226,6 @@
     ]
   },
   {
-    "Guid": "55b9021f730c4ea1bd74e0c422238f2e",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A3",
-            "EntityIds": [
-              29800053
-            ],
-            "BehaviorTree": 800006
-          },
-          "ActionGuid": "30456eab40ad44b5ba8c453928e97ca4",
-          "ActionId": 4000006
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【跟随+战斗】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_3",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "2af1558476fd44e29de390f35da2e64c",
-          "Timeout": 10,
-          "ActionId": 4000007
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "861a94dd409b4429b6526050426c6118",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A1",
-            "EntityIds": [
-              29800053
-            ],
-            "BehaviorTree": 800008
-          },
-          "ActionGuid": "180a283eb4d54765ac8ea27d1f2a0c0e",
-          "ActionId": 4000009
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【仅战斗】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_4",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "046e1d32bb48419d9b7482bfd654fc04",
-          "Timeout": 10,
-          "ActionId": 4000010
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_3",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "c9f2477bc0494f019d94f8437bb0bdbc",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A5",
-            "EntityIds": [
-              29800062
-            ],
-            "BehaviorTree": 800010
-          },
-          "ActionGuid": "e0c1d57ad5384a4d80da9b87ca71a1e0",
-          "ActionId": 4000014
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【跟随+战斗】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_7",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "0f69971be8e34bd5b17fd68c375964cb",
-          "Timeout": 10,
-          "ActionId": 4000015
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_6",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "d7b7a0617cea43fc8eb09817c7d2423b",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A4",
-            "EntityIds": [
-              29800053
-            ],
-            "BehaviorTree": 800007
-          },
-          "ActionGuid": "5771b49572374bb3ae1fcb911ad984f1",
-          "ActionId": 4000012
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【样条跟随】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_5",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "5fca26bb09884e5d912ed1be9a582d1f",
-          "Timeout": 10,
-          "ActionId": 4000013
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_4",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "dbd2da37110e4efaa201cc259027269e",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A2",
-            "EntityIds": [
-              29800053
-            ],
-            "BehaviorTree": 800005
-          },
-          "ActionGuid": "0c3c91b5baf544a586ddecb27a115466",
-          "ActionId": 4000003
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【仅跟随】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_2",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "1ec329c9f630435690c6063fdcd153f5",
-          "Timeout": 10,
-          "ActionId": 4000004
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "dcc98d00c1534c1f9937e9f7962b06d3",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OverrideAiBehaviorTree",
-          "Params": {
-            "Key": "A6",
-            "EntityIds": [
-              29800053
-            ],
-            "BehaviorTree": 800009
-          },
-          "ActionGuid": "5ba84635bbec4c71a70ecf08fd9484a4",
-          "ActionId": 4000017
-        },
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "AI已切换为【照看NPC】",
-              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_8",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "3617587e578a465480796d95d05235d7",
-          "Timeout": 10,
-          "ActionId": 4000018
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_29800001_InteractContent_29_7",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
     "Guid": "ee2556066b2c458db2b05024311903bd",
     "Type": {
       "Type": "Flow",
@@ -108640,6 +108474,35 @@
     ]
   },
   {
+    "Guid": "efb2156519b9468aa2c33f21881e92b2",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "视差玩法开始",
+              "TidMainText": "LevelPlay_13850008_GeneralFloatingTipMainText_13_5",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "eaeae4f17362410b81526c68751bb8ff",
+          "Timeout": 10,
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_13850008_InteractContent_13_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "2d10d00b970b4053b291f99aa2b619dd",
     "Type": {
       "Type": "Flow",
@@ -108722,6 +108585,252 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "55b9021f730c4ea1bd74e0c422238f2e",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A3",
+            "EntityIds": [
+              29800053
+            ],
+            "BehaviorTree": 800006
+          },
+          "ActionGuid": "30456eab40ad44b5ba8c453928e97ca4",
+          "ActionId": 4000006
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【跟随+战斗】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_3",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "2af1558476fd44e29de390f35da2e64c",
+          "Timeout": 10,
+          "ActionId": 4000007
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "861a94dd409b4429b6526050426c6118",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A1",
+            "EntityIds": [
+              29800053
+            ],
+            "BehaviorTree": 800008
+          },
+          "ActionGuid": "180a283eb4d54765ac8ea27d1f2a0c0e",
+          "ActionId": 4000009
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【仅战斗】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_4",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "046e1d32bb48419d9b7482bfd654fc04",
+          "Timeout": 10,
+          "ActionId": 4000010
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "c9f2477bc0494f019d94f8437bb0bdbc",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A5",
+            "EntityIds": [
+              29800062
+            ],
+            "BehaviorTree": 800010
+          },
+          "ActionGuid": "e0c1d57ad5384a4d80da9b87ca71a1e0",
+          "ActionId": 4000014
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【跟随+战斗】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_7",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "0f69971be8e34bd5b17fd68c375964cb",
+          "Timeout": 10,
+          "ActionId": 4000015
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_6",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "d7b7a0617cea43fc8eb09817c7d2423b",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A4",
+            "EntityIds": [
+              29800053
+            ],
+            "BehaviorTree": 800007
+          },
+          "ActionGuid": "5771b49572374bb3ae1fcb911ad984f1",
+          "ActionId": 4000012
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【样条跟随】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_5",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "5fca26bb09884e5d912ed1be9a582d1f",
+          "Timeout": 10,
+          "ActionId": 4000013
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_4",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "dbd2da37110e4efaa201cc259027269e",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A2",
+            "EntityIds": [
+              29800053
+            ],
+            "BehaviorTree": 800005
+          },
+          "ActionGuid": "0c3c91b5baf544a586ddecb27a115466",
+          "ActionId": 4000003
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【仅跟随】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_2",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "1ec329c9f630435690c6063fdcd153f5",
+          "Timeout": 10,
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "dcc98d00c1534c1f9937e9f7962b06d3",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A6",
+            "EntityIds": [
+              29800053
+            ],
+            "BehaviorTree": 800009
+          },
+          "ActionGuid": "5ba84635bbec4c71a70ecf08fd9484a4",
+          "ActionId": 4000017
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【照看NPC】",
+              "TidMainText": "LevelPlay_29800001_GeneralFloatingTipMainText_29_8",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "3617587e578a465480796d95d05235d7",
+          "Timeout": 10,
+          "ActionId": 4000018
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_29800001_InteractContent_29_7",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5f366c5ce85745f8989968c63c541766",
@@ -109060,6 +109169,21 @@
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Option",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "49849f999ef24967843d5369648efb13",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41850002_InteractContent_41_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
@@ -110345,6 +110469,50 @@
     ]
   },
   {
+    "Guid": "27b492a8d3db4696908a357be9c1d3d8",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "b9a39bc1e786400289eba3caaefa26dd"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_13850010_InteractContent_13_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "3149c15e48ee40e28410ab71c970fd89",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "RogueShop",
+            "BoardId": 0
+          },
+          "ActionId": 4000025
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "dc8e4a290440443295bb2e9cb86a25b8",
     "Type": {
       "Type": "Actions",
@@ -110520,6 +110688,37 @@
     ]
   },
   {
+    "Guid": "01a6f9fce26f4f6193de20ef038fde93",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "Type": 0,
+              "EdTidMainText": "挑战目标提示",
+              "TidMainText": "LevelPlay_41850003_ChallengeConditionMainText_41_1",
+              "EdTidSubText": "附加规则文本",
+              "TidSubText": "LevelPlay_41850003_ChallengeConditionSubText_41_1"
+            }
+          },
+          "ActionGuid": "7c26e02fc46349cebe4457b8b1b5f037",
+          "Timeout": 10,
+          "ActionId": 4000008
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41850003_InteractContent_41_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "bc6f7190cdf84feaaf20b0121033e3a3",
     "Type": {
       "Type": "Flow",
@@ -110539,6 +110738,77 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "bd8742f7e61e4f68b968e477d7dd13a1",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "RemoveFlowInteractOption",
+          "Params": {
+            "Flow": {
+              "FlowListName": "剧情_Default",
+              "FlowId": 1
+            },
+            "EntityId": 41850027,
+            "InteractToken": "l_41850003_token1"
+          },
+          "ActionGuid": "8473d4eb19274f45bea7b61dba679441",
+          "ActionId": 4000011
+        },
+        {
+          "Name": "RemoveFlowInteractOption",
+          "Params": {
+            "Flow": {
+              "FlowListName": "剧情_Default",
+              "FlowId": 1
+            },
+            "EntityId": 41850030,
+            "InteractToken": "l_41850003_token2"
+          },
+          "ActionGuid": "63908ffde3ae4de9845981aa80616e10",
+          "ActionId": 4000012
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41850003_InteractContent_41_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "db9c94109b384901948ffd16ac89499e",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "挑战成功",
+              "TidMainText": "LevelPlay_41850003_ChallengeSuccessMainText_41_2",
+              "Type": 3
+            }
+          },
+          "ActionGuid": "745453ce9c404c549b50428ca58e1760",
+          "Timeout": 10,
+          "ActionId": 4000010
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41850003_InteractContent_41_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "059d67d3f7ce4231b71b8b9bfa8ee2b0",
@@ -111160,6 +111430,36 @@
     ]
   },
   {
+    "Guid": "38d963dfa4f640f787b23756384166bb",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_17850000_InteractContent_17_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "51071e8ca4414e28aa0a3b211e6e844a",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "0861b7f95e594a5697da4aba23fbd31f",
     "Type": {
       "Type": "Flow",
@@ -111460,6 +111760,131 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "49c5b6dbf1894174a0eb785edee16635",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              13850166,
+              13850169
+            ]
+          },
+          "ActionGuid": "d9ec0ee24edf46118045b3198e29f8bd",
+          "ActionId": 4000005
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_13850011_InteractContent_13_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "59ec0649fc99470891405895ab9ef700",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "PlayRegisteredMontage",
+          "Params": {
+            "EntityId": 13850166,
+            "MontageId": 850531,
+            "IsAbpMontage": true,
+            "RepeatTimes": -1
+          },
+          "ActionGuid": "cb74caddd6ce4c94815f2587b4405641",
+          "ActionId": 4000011,
+          "Async": true
+        },
+        {
+          "Name": "VehicleEnter",
+          "Params": {
+            "EnteringTarget": {
+              "Type": "Player",
+              "TargetVehicle": 13850166
+            },
+            "Seat": 0
+          },
+          "ActionGuid": "3d56189ea05746deb1e458116a338e30",
+          "Async": true,
+          "ActionId": 4000006
+        },
+        {
+          "Name": "VehicleEnter",
+          "Params": {
+            "EnteringTarget": {
+              "Type": "Npc",
+              "TargetNpc": 13850169,
+              "TargetVehicle": 13850166
+            },
+            "Seat": 1
+          },
+          "ActionGuid": "be34581051c0470bb9c3a079569d3b09",
+          "Async": true,
+          "ActionId": 4000007
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_13850011_InteractContent_13_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "03bf942a818f4ce0a785cdcd81639283",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "RogueShop",
+            "BoardId": 1
+          },
+          "ActionId": 4000014
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "bb77510a74df47efbbc37ca298ab30ac",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_弹珠引导",
+        "FlowId": 3,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_194850000_InteractContent_194_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "eab57a889715423b8b6cf4a0f103d02f",
@@ -111992,6 +112417,30 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "12b0c436f9d7404fab0d9d278911863f",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "RogueShop",
+            "BoardId": 1
+          },
+          "ActionId": 4000008
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "9ef5f4cf6bf54cbc99047859b47003de",
     "Type": {
       "Type": "Actions",
@@ -112283,6 +112732,123 @@
     ]
   },
   {
+    "Guid": "b77fe49b261d4209b731af40fbfbf0c3",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_42850004_InteractContent_42_1",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CompareVar",
+          "Var1": {
+            "Type": "Boolean",
+            "Source": "Self",
+            "Name": "左边男能否交互"
+          },
+          "Compare": "Eq",
+          "Var2": {
+            "Type": "Boolean",
+            "Source": "Constant",
+            "Value": true
+          }
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "d121763464e44384a60069954e958224",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_42850004_InteractContent_42_3",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CompareVar",
+          "Var1": {
+            "Type": "Boolean",
+            "Source": "Self",
+            "Name": "右边男能否交互"
+          },
+          "Compare": "Eq",
+          "Var2": {
+            "Type": "Boolean",
+            "Source": "Constant",
+            "Value": true
+          }
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "90132c41d91e4100a563764fe880d3cd",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "SetVar",
+          "Params": {
+            "VarLeft": {
+              "Type": "Boolean",
+              "Source": "Self",
+              "Name": "下边男成功交互"
+            },
+            "VarRight": {
+              "Type": "Boolean",
+              "Source": "Constant",
+              "Value": true
+            }
+          },
+          "ActionGuid": "4cd4f7ade5bc4cca9cd588425e187536",
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_42850004_InteractContent_42_2",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CompareVar",
+          "Var1": {
+            "Type": "Boolean",
+            "Source": "Self",
+            "Name": "下边男能否交互"
+          },
+          "Compare": "Eq",
+          "Var2": {
+            "Type": "Boolean",
+            "Source": "Constant",
+            "Value": true
+          }
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "8bf6d369c9a94e06949d2b02b4390566",
     "Type": {
       "Type": "Flow",
@@ -112302,6 +112868,44 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "cfecc7d2ee3e4adca95c1d4d628801f5",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "fdadd878773f406dbc17f43bb49e5708"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_42850001_InteractContent_42_1",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CompareVar",
+          "Var1": {
+            "Type": "Boolean",
+            "Source": "Self",
+            "Name": "能否接任务"
+          },
+          "Compare": "Eq",
+          "Var2": {
+            "Type": "Boolean",
+            "Source": "Constant",
+            "Value": true
+          }
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "29d7d816b840421b9b0bfeb2116c819c",
@@ -112336,6 +112940,27 @@
     },
     "Icon": "",
     "TidContent": "LevelPlay_122000358_InteractContent_198_13",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "ca9906e9072e43ab80424c99baa5ad44",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.3Boss打桩活动",
+        "FlowId": 2,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -112460,6 +113085,45 @@
     ]
   },
   {
+    "Guid": "f315c1d224574ce7852e3d07a5bd9687",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_17850001_InteractContent_17_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b28fb2bf490a40b3b264cc0f90bff2e4",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "RogueAbilitySelect",
+            "BoardId": 0
+          },
+          "ActionId": 4000018
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 200,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "8224d1edea3f40a4b61734a33e0ff066",
     "Type": {
       "Type": "Flow",
@@ -112530,5 +113194,425 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "02cfe303f1d44787827a44d1853fbfe3",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_4",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "0831b90803fd4909831211426e7dddf0",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "086457d212f74e1395e02775cea86f5d",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_14",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "0d1382dde1e044c98cdc7bb9c32fdb04",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_9",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "16857bfbf6934f81a15f71201b248bcf",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_11",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "4248bee0523446a1a2375f94261ed8c2",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "5867e2e32c4a4c68ab860eb48f3a4a1e",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_14",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "5b61e66ab52e47d08145e9404f9fba9a",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_7",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "5d3eb7c54eea48e0916337b17bb7de9b",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_10",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "6b0480555517409f8bad1d49f571412f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_10",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "6f52c625b03a4a33b433b13c575fa0b1",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_11",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "7981db21b67a4955923dbd8eee71d2a4",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_6",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "8c990edd9f1d4b6aa4253d108d34f51a",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_9",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "963aa81f67464f2b8bc0563873b09d36",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "9b55506320a64814a8767d679bbeee21",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_8",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "a0a0a920ac8d410395c5da71280d3ee6",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_12",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b9176df56ff44705a5dd2dbc2a587882",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850007_InteractContent_30_5",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "ca3d9736d8124d3b92a8da26922d6f77",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30850006_InteractContent_30_13",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "ceb2a206253947659ee3991c17346078",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_12",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "e8003f215d8949de843c7f2b08349f3f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_8",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "f9b7d8f8f8e743fab84149e3080c572c",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "963a5549367c41bda6d23e41905ed922"
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_30850005_InteractContent_30_13",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   }
 ]

@@ -1338,5 +1338,53 @@
     ],
     "KeyProperty": 0,
     "PropertyValue": []
+  },
+  {
+    "RoleId": 0,
+    "ProjectGroup": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "WeaponType": 7,
+    "RecommandWeapon": [
+      21020086
+    ],
+    "SkillItemJumpType": [
+      {
+        "ArrayInt": [
+          4,
+          0
+        ]
+      }
+    ],
+    "KeyProperty": 0,
+    "PropertyValue": []
+  },
+  {
+    "RoleId": 1211,
+    "ProjectGroup": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "WeaponType": 10,
+    "RecommandWeapon": [
+      21050076
+    ],
+    "SkillItemJumpType": [
+      {
+        "ArrayInt": [
+          4,
+          0
+        ]
+      }
+    ],
+    "KeyProperty": 0,
+    "PropertyValue": []
   }
 ]

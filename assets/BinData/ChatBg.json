@@ -1,6 +1,8 @@
 [
   {
     "Id": 80820001,
+    "ChatBgPathSmall": "/Game/Aki/UI/UIResources/UiPhoneSystem/Image/T_PhoneSystemIconBg00Small.T_PhoneSystemIconBg00Small",
+    "ChatBgPathBig": "/Game/Aki/UI/UIResources/Common/Image/T_CommonNone_UI.T_CommonNone_UI",
     "ScrollViewBgPath": "/Game/Aki/UI/UIResources/UiPhoneSystem/Image/T_PhoneSystemIconBg00Small.T_PhoneSystemIconBg00Small",
     "ReviewBgPath": "/Game/Aki/UI/UIResources/Common/Image/T_CommonNone_UI.T_CommonNone_UI",
     "SmallViewBgPath": "/Game/Aki/UI/UIResources/Common/Image/T_CommonNone_UI.T_CommonNone_UI",

@@ -417,5 +417,41 @@
     "IsSelectAllUnion": true,
     "IsShowIcon": true,
     "GridType": "UiItem_FliterGridS"
+  },
+  {
+    "Id": 33,
+    "DataType": 21,
+    "RuleList": [
+      52,
+      53
+    ],
+    "IsSupportSelectAll": false,
+    "IsSelectAllUnion": true,
+    "IsShowIcon": true,
+    "GridType": "UiItem_FliterGridS"
+  },
+  {
+    "Id": 34,
+    "DataType": 22,
+    "RuleList": [
+      54,
+      55
+    ],
+    "IsSupportSelectAll": false,
+    "IsSelectAllUnion": true,
+    "IsShowIcon": true,
+    "GridType": "UiItem_FliterGridS"
+  },
+  {
+    "Id": 35,
+    "DataType": 23,
+    "RuleList": [
+      56,
+      57
+    ],
+    "IsSupportSelectAll": false,
+    "IsSelectAllUnion": true,
+    "IsShowIcon": true,
+    "GridType": "UiItem_FliterGridS"
   }
 ]

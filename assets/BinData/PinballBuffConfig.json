@@ -1,0 +1,47 @@
+[
+  {
+    "BuffId": 1160199905,
+    "Sort": 10,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2",
+    "BuffName": "",
+    "BuffDesc": "",
+    "BuffParam": [],
+    "BuffType": 1
+  },
+  {
+    "BuffId": 1160199906,
+    "Sort": 10,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2",
+    "BuffName": "",
+    "BuffDesc": "",
+    "BuffParam": [],
+    "BuffType": 1
+  },
+  {
+    "BuffId": 1160199907,
+    "Sort": 10,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2",
+    "BuffName": "",
+    "BuffDesc": "",
+    "BuffParam": [],
+    "BuffType": 1
+  },
+  {
+    "BuffId": 1110100201,
+    "Sort": 1,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuffXiangliyao.SP_IconBuffXiangliyao",
+    "BuffName": "",
+    "BuffDesc": "",
+    "BuffParam": [],
+    "BuffType": 0
+  },
+  {
+    "BuffId": 1200000001,
+    "Sort": 10,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2",
+    "BuffName": "",
+    "BuffDesc": "",
+    "BuffParam": [],
+    "BuffType": 1
+  }
+]

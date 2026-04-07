@@ -3433,5 +3433,125 @@
     "PreviewCornerMarker": "0",
     "QualityId": 5,
     "PreviewItemAccess": []
+  },
+  {
+    "Id": 30581,
+    "Name": "ItemInfo_50020029_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020029_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_34_UI.T_IconA_shlb_34_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_34_UI.T_IconA220_shlb_34_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_34_UI.T_IconA80_shlb_34_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 2,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30582,
+    "Name": "ItemInfo_50020029_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020029_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_34_UI.T_IconA_shlb_34_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_34_UI.T_IconA220_shlb_34_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_34_UI.T_IconA80_shlb_34_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 3,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30583,
+    "Name": "ItemInfo_50020029_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020029_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_34_UI.T_IconA_shlb_34_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_34_UI.T_IconA220_shlb_34_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_34_UI.T_IconA80_shlb_34_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 4,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30584,
+    "Name": "ItemInfo_50020029_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020029_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_34_UI.T_IconA_shlb_34_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_34_UI.T_IconA220_shlb_34_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_34_UI.T_IconA80_shlb_34_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 5,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30591,
+    "Name": "ItemInfo_50020030_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020030_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_19_UI.T_IconA_shlb_19_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_19_UI.T_IconA220_shlb_19_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_19_UI.T_IconA80_shlb_19_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 2,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30592,
+    "Name": "ItemInfo_50020030_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020030_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_19_UI.T_IconA_shlb_19_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_19_UI.T_IconA220_shlb_19_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_19_UI.T_IconA80_shlb_19_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 3,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30593,
+    "Name": "ItemInfo_50020030_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020030_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_19_UI.T_IconA_shlb_19_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_19_UI.T_IconA220_shlb_19_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_19_UI.T_IconA80_shlb_19_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 4,
+    "PreviewItemAccess": []
+  },
+  {
+    "Id": 30594,
+    "Name": "ItemInfo_50020030_Name",
+    "ShowTypes": [
+      41
+    ],
+    "AttributesDescription": "ItemInfo_50020030_AttributesDescription",
+    "BgDescription": "InpuBoxText_empty",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_19_UI.T_IconA_shlb_19_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA220/T_IconA220_shlb_19_UI.T_IconA220_shlb_19_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_shlb_19_UI.T_IconA80_shlb_19_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 5,
+    "PreviewItemAccess": []
   }
 ]

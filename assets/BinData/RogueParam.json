@@ -33,7 +33,13 @@
     "ValidRoleOpenTimeMap": {},
     "DungeonRoleOpenTimeMap": {},
     "BlackFlowerDropId": 0,
-    "BlackFlowerInstList": []
+    "BlackFlowerInstList": [],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
   {
     "Id": 2,
@@ -73,7 +79,13 @@
       "5200051": 1064
     },
     "BlackFlowerDropId": 0,
-    "BlackFlowerInstList": []
+    "BlackFlowerInstList": [],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
   {
     "Id": 3,
@@ -115,7 +127,13 @@
       "5200063": 1071
     },
     "BlackFlowerDropId": 0,
-    "BlackFlowerInstList": []
+    "BlackFlowerInstList": [],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
   {
     "Id": 4,
@@ -182,6 +200,12 @@
       8021,
       8022,
       8023
+    ],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
     ]
   },
   {
@@ -217,7 +241,13 @@
     "ValidRoleOpenTimeMap": {},
     "DungeonRoleOpenTimeMap": {},
     "BlackFlowerDropId": 0,
-    "BlackFlowerInstList": []
+    "BlackFlowerInstList": [],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
+    ]
   },
   {
     "Id": 6,
@@ -259,6 +289,64 @@
       8021,
       8022,
       8023
+    ],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "Id": 7,
+    "RoguelikeSettleBgS": "/Game/Aki/UI/UIResources/Common/Image/BgCg/T_RogueAccountsBg.T_RogueAccountsBg",
+    "RoguelikeSettleBgNormal": "/Game/Aki/UI/UIResources/Common/Image/BgCg/T_RogueBg.T_RogueBg",
+    "RoguelikeRoomFloatTipsNoHeadIcon": "/Game/Aki/UI/UIResources/UiTips/Atlas/SP_RogueBossIcon.SP_RogueBossIcon",
+    "RoguelikeRoomFloatTipsSpecialIcon": "Game/Aki/UI/UIResources/UiTips/Atlas/SP_RogueSpecialIcon.SP_RogueSpecialIcon",
+    "RoguelikeSettleS": 100,
+    "RoguelikeSettleA": 80,
+    "RoguelikeSettleB": 50,
+    "RoguelikeSettleC": 0,
+    "PointItem": 80100002,
+    "PointItemMaxCount": 100000,
+    "TokenItem": 80100001,
+    "WeekTokenMaxCount": 10000,
+    "SkillPoint": 80100003,
+    "SkillPointMaxCount": 10000,
+    "InsideCurrency": 80100000,
+    "GuideInstArray": [
+      8039
+    ],
+    "GuideInstRoleIdArray": [
+      5200012,
+      5200011
+    ],
+    "DungeonList": [
+      8040,
+      8041,
+      8042,
+      8043
+    ],
+    "ValidRoleOpenTimeMap": {},
+    "DungeonRoleOpenTimeMap": {
+      "5200074": 6601
+    },
+    "BlackFlowerDropId": 0,
+    "BlackFlowerInstList": [
+      8018,
+      8019,
+      8020,
+      8021,
+      8022,
+      8023
+    ],
+    "ElementList": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
     ]
   }
 ]

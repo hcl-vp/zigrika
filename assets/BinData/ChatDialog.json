@@ -13,7 +13,8 @@
     "BgDescription": "",
     "ItemAccess": [],
     "QualityId": 4,
-    "SortId": 1
+    "SortId": 1,
+    "TextColor": "FFFFFF"
   },
   {
     "Id": 80810002,
@@ -29,6 +30,7 @@
     "BgDescription": "",
     "ItemAccess": [],
     "QualityId": 4,
-    "SortId": 2
+    "SortId": 2,
+    "TextColor": "FFFFFF"
   }
 ]

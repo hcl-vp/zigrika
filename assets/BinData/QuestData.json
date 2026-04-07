@@ -64111,6 +64111,7 @@
         "e_8_939750033",
         "e_8_690750080",
         "e_8_690750079",
+        "e_8_187850000",
         "e_8_187750022",
         "e_8_690750038",
         "e_8_114750012",
@@ -64342,6 +64343,7 @@
         "e_8_185750124",
         "e_8_690750080",
         "e_8_690750079",
+        "e_8_187850000",
         "e_8_690750038",
         "e_8_690750040",
         "e_8_690750015",
@@ -71752,7 +71754,6 @@
         "e_906_181700109",
         "e_906_181700116",
         "e_906_181700900",
-        "e_906_181800000",
         "e_906_320700089",
         "e_906_320700092",
         "e_906_320700091",
@@ -80491,6 +80492,10 @@
           {
             "Type": "OpenDate",
             "DateId": 1167
+          },
+          {
+            "Type": "ExploreLevel",
+            "ExploreLevel": 999
           }
         ]
       },
@@ -80586,6 +80591,10 @@
           {
             "Type": "PreQuest",
             "PreQuest": 165800000
+          },
+          {
+            "Type": "ExploreLevel",
+            "ExploreLevel": 999
           }
         ]
       },
@@ -80843,6 +80852,10 @@
           {
             "Type": "PreQuest",
             "PreQuest": 165800001
+          },
+          {
+            "Type": "ExploreLevel",
+            "ExploreLevel": 999
           }
         ]
       },
@@ -86206,6 +86219,97 @@
     }
   },
   {
+    "QuestId": 231850000,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 231850000,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "飞讯接取任务",
+      "TidName": "Quest_231850000_QuestName_231_1",
+      "TidDesc": "Quest_231850000_QuestDesc_231_1",
+      "RewardId": 1001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": [
+          {
+            "Type": "ExploreLevel",
+            "ExploreLevel": 5
+          }
+        ]
+      },
+      "DistributeType": "PhoneMessage",
+      "ActiveActions": []
+    }
+  },
+  {
+    "QuestId": 194850000,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 194850000,
+      "DungeonId": 2522,
+      "Type": 10,
+      "RegionId": 26,
+      "Key": "弹射引导",
+      "TidName": "Quest_194850000_QuestName_194_1",
+      "TidDesc": "Quest_194850000_QuestDesc_194_1",
+      "RewardId": 44001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "Children": [
+        "e_2522_194850005",
+        "e_2522_194850004",
+        "e_2522_194850006"
+      ],
+      "Reference": [
+        "e_2522_194850006",
+        "e_2522_194850005",
+        "e_2522_194850004",
+        "f_194850000_3"
+      ],
+      "ActivityId": 109400001
+    }
+  },
+  {
+    "QuestId": 194850001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 194850001,
+      "DungeonId": 906,
+      "Type": 10,
+      "RegionId": 26,
+      "Key": "弹射引导后日谈",
+      "TidName": "Quest_194850001_QuestName_194_1",
+      "TidDesc": "Quest_194850001_QuestDesc_194_1",
+      "RewardId": 44001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "ActivityId": 109400001,
+      "Children": [
+        "e_906_194850000"
+      ],
+      "Reference": [
+        "e_906_194850000",
+        "f_194850001_2"
+      ]
+    }
+  },
+  {
     "QuestId": 194800008,
     "Data": {
       "ObjType": "Quest",
@@ -86328,6 +86432,70 @@
     }
   },
   {
+    "QuestId": 42850001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 42850001,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "RoleId": "anke",
+      "Key": "动态交互测试",
+      "TidName": "Quest_42850001_QuestName_42_1",
+      "TidDesc": "Quest_42850001_QuestDesc_42_1",
+      "RewardId": 1001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Interact",
+      "IsHideAcceptMarkOnNpc": false,
+      "AddInteractOption": {
+        "EntityId": 42850031,
+        "Option": {
+          "Guid": "cfecc7d2ee3e4adca95c1d4d628801f5",
+          "Type": {
+            "Type": "Flow",
+            "Flow": {
+              "FlowListName": "剧情_Default",
+              "FlowId": 1,
+              "StateId": 1,
+              "FlowGuid": "fdadd878773f406dbc17f43bb49e5708"
+            }
+          },
+          "DoIntactType": "Direct",
+          "Condition": {
+            "Type": 0,
+            "Conditions": [
+              {
+                "Type": "CompareVar",
+                "Var1": {
+                  "Type": "Boolean",
+                  "Source": "Self",
+                  "Name": "能否接任务"
+                },
+                "Compare": "Eq",
+                "Var2": {
+                  "Type": "Boolean",
+                  "Source": "Constant",
+                  "Value": true
+                }
+              }
+            ]
+          },
+          "TidContent": "Quest_42850001_InteractContent_42_1"
+        }
+      },
+      "ActiveActions": [],
+      "Reference": [
+        "e_100_42850031",
+        "f_31000156_1"
+      ]
+    }
+  },
+  {
     "QuestId": 165800026,
     "Data": {
       "ObjType": "Quest",
@@ -86346,6 +86514,10 @@
           {
             "Type": "PreQuest",
             "PreQuest": 165800001
+          },
+          {
+            "Type": "ExploreLevel",
+            "ExploreLevel": 999
           }
         ]
       },
@@ -86356,6 +86528,80 @@
       ],
       "WeakReference": [
         "q_165800001"
+      ]
+    }
+  },
+  {
+    "QuestId": 197850000,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 197850000,
+      "DungeonId": 906,
+      "Type": 10,
+      "RegionId": 26,
+      "Key": "Boss打桩活动引导",
+      "TidName": "Quest_197850000_QuestName_197_1",
+      "TidDesc": "Quest_197850000_QuestDesc_197_1",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {},
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "Reference": [
+        "e_906_197850000",
+        "f_197850000_2"
+      ],
+      "ActivityId": 109800001,
+      "RewardId": 44001
+    }
+  },
+  {
+    "QuestId": 197850001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 197850001,
+      "DungeonId": 906,
+      "Type": 11,
+      "RegionId": 26,
+      "Key": "常驻入口NPC唤醒",
+      "TidName": "Quest_197850001_QuestName_197_2",
+      "TidDesc": "Quest_197850001_QuestDesc_197_2",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {},
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "Children": [
+        "e_906_197850000"
+      ],
+      "Reference": [
+        "e_906_197850000"
+      ],
+      "ActivityId": 109800001
+    }
+  },
+  {
+    "QuestId": 30850005,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 30850005,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "行为树临时存档点测试",
+      "TidName": "Quest_30850005_QuestName_30_1",
+      "TidDesc": "Quest_30850005_QuestDesc_30_1",
+      "OnlineType": "SingleHangUpOnline",
+      "ProvideType": {},
+      "DistributeType": "Passive",
+      "Reference": [
+        "e_100_30850263",
+        "e_100_30850265",
+        "e_100_30850262",
+        "e_100_30850264",
+        "f_31000156_1"
       ]
     }
   },
@@ -86458,6 +86704,33 @@
       ],
       "WeakReference": [
         "q_165800024"
+      ]
+    }
+  },
+  {
+    "QuestId": 121850004,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 121850004,
+      "DungeonId": 8,
+      "Type": 11,
+      "RegionId": 6,
+      "Key": "隐藏椅子支线",
+      "TidName": "Quest_121850004_QuestName_121_1",
+      "TidDesc": "Quest_121850004_QuestDesc_121_1",
+      "OnlineType": "SingleHangUpOnline",
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "System",
+      "ActiveActions": [],
+      "Reference": [
+        "e_8_121750004",
+        "e_8_121750005",
+        "q_121000036"
+      ],
+      "WeakReference": [
+        "q_121000036"
       ]
     }
   },

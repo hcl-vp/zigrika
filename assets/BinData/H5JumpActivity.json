@@ -4,5 +4,11 @@
     "CNRootUrl": "https://mc-act.kurogames-global.com/frostlands-20260107-spXR3tHtjgIF/index.html",
     "OverseaRootUrl": "https://wuwa-act.kurogames-global.com/frostlands-20260107-spXR3tHtjgIF/index.html",
     "BgPath": "UiItem_PipeConnecting"
+  },
+  {
+    "Id": 108400002,
+    "CNRootUrl": "https://mc-act.kurogames-global.com/Anniversary-20260420-zFxFdK3v/index.html",
+    "OverseaRootUrl": "https://wuwa-act.kurogames-global.com/Anniversary-20260420-zFxFdK3v/index.html",
+    "BgPath": "UiItem_AnniversaryRetrospeActivityMain"
   }
 ]

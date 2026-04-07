@@ -1,0 +1,146 @@
+[
+  {
+    "Id": 1,
+    "Key": "Life",
+    "Name": "PropertyIndex_3_Name",
+    "IsPercent": false,
+    "Icon": "",
+    "Desc": "",
+    "KscAttrType": 3
+  },
+  {
+    "Id": 2,
+    "Key": "LifeMax",
+    "Name": "PropertyIndex_2_Name",
+    "IsPercent": false,
+    "Icon": "/Game/Aki/UI/UiResources/Common/Image/IconAttribute/T_Iconpropertygreenlife_UI.T_Iconpropertygreenlife_UI",
+    "Desc": "",
+    "KscAttrType": 2
+  },
+  {
+    "Id": 3,
+    "Key": "Atk",
+    "Name": "PropertyIndex_7_Name",
+    "IsPercent": false,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
+    "Desc": "",
+    "KscAttrType": 7
+  },
+  {
+    "Id": 4,
+    "Key": "Def",
+    "Name": "PropertyIndex_10_Name",
+    "IsPercent": false,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreendefense_UI.T_Iconpropertygreendefense_UI",
+    "Desc": "",
+    "KscAttrType": 10
+  },
+  {
+    "Id": 5,
+    "Key": "EnergyEfficiency",
+    "Name": "PropertyIndex_11_Name",
+    "IsPercent": true,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenenergy_UI.T_Iconpropertygreenenergy_UI",
+    "Desc": "",
+    "KscAttrType": 74
+  },
+  {
+    "Id": 6,
+    "Key": "Crit",
+    "Name": "PropertyIndex_8_Name",
+    "IsPercent": true,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
+    "Desc": "PropertyIndex_8_Dec",
+    "KscAttrType": 8
+  },
+  {
+    "Id": 7,
+    "Key": "CritDamage",
+    "Name": "PropertyIndex_9_Name",
+    "IsPercent": true,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
+    "Desc": "PropertyIndex_9_Dec",
+    "KscAttrType": 9
+  },
+  {
+    "Id": 8,
+    "Key": "DamageChange",
+    "Name": "PropertyIndex_15_Name",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "",
+    "KscAttrType": 15
+  },
+  {
+    "Id": 9,
+    "Key": "DamageChangeAuto",
+    "Name": "Pinball_Character_PropetyName_01",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "Pinball_Character_PropetyDesc_01",
+    "KscAttrType": 201
+  },
+  {
+    "Id": 10,
+    "Key": "DamageChangeStrong",
+    "Name": "Pinball_Character_PropetyName_02",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "Pinball_Character_PropetyDesc_02",
+    "KscAttrType": 202
+  },
+  {
+    "Id": 11,
+    "Key": "DamageChangeSkill",
+    "Name": "Pinball_Character_PropetyName_03",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "Pinball_Character_PropetyDesc_03",
+    "KscAttrType": 203
+  },
+  {
+    "Id": 12,
+    "Key": "DamageChangeSprint",
+    "Name": "Pinball_Character_PropetyName_04",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "Pinball_Character_PropetyDesc_04",
+    "KscAttrType": 204
+  },
+  {
+    "Id": 13,
+    "Key": "DamageChangeSummon",
+    "Name": "PropertyIndex_10_Name",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "",
+    "KscAttrType": 0
+  },
+  {
+    "Id": 14,
+    "Key": "HealEfficiency",
+    "Name": "Pinball_Character_PropetyName_05",
+    "IsPercent": true,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreencure_UI.T_Iconpropertygreencure_UI",
+    "Desc": "",
+    "KscAttrType": 35
+  },
+  {
+    "Id": 15,
+    "Key": "ProtectEfficiency",
+    "Name": "Pinball_Character_PropetyName_06",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "",
+    "KscAttrType": 51
+  },
+  {
+    "Id": 16,
+    "Key": "EnergyRecoverSpeed",
+    "Name": "Pinball_Character_PropetyName_06",
+    "IsPercent": true,
+    "Icon": "",
+    "Desc": "",
+    "KscAttrType": 0
+  }
+]

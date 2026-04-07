@@ -270,5 +270,81 @@
       "200%"
     ],
     "AffixDescSimple": "RogueBuffPool_9126000044004_BuffDesc_0"
+  },
+  {
+    "Id": 6001,
+    "BuffId": [
+      9109121001100
+    ],
+    "AffixDesc": "RogueBuffPool_6001_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_6001_BuffDesc_0"
+  },
+  {
+    "Id": 6002,
+    "BuffId": [
+      9109121001201
+    ],
+    "AffixDesc": "RogueBuffPool_6002_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_6001_BuffDesc_1"
+  },
+  {
+    "Id": 6003,
+    "BuffId": [
+      9109121001301
+    ],
+    "AffixDesc": "RogueBuffPool_6003_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_6001_BuffDesc_2"
+  },
+  {
+    "Id": 6004,
+    "BuffId": [
+      9109121001401
+    ],
+    "AffixDesc": "RogueBuffPool_6004_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_6001_BuffDesc_3"
+  },
+  {
+    "Id": 7001,
+    "BuffId": [
+      9109121002101,
+      9109121002102,
+      9109121002103
+    ],
+    "AffixDesc": "RogueBuffPool_7001_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_7001_BuffDesc_0"
+  },
+  {
+    "Id": 7002,
+    "BuffId": [
+      9109121002201
+    ],
+    "AffixDesc": "RogueBuffPool_7002_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_7001_BuffDesc_1"
+  },
+  {
+    "Id": 7003,
+    "BuffId": [
+      9109121002301,
+      9109121002311
+    ],
+    "AffixDesc": "RogueBuffPool_7003_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_7001_BuffDesc_2"
+  },
+  {
+    "Id": 7004,
+    "BuffId": [
+      9109121002401,
+      9109121002402
+    ],
+    "AffixDesc": "RogueBuffPool_7004_BuffDesc",
+    "AffixDescParam": [],
+    "AffixDescSimple": "RogueBuffPool_7001_BuffDesc_3"
   }
 ]

@@ -107,7 +107,7 @@ pub fn onInitialSceneJoin(
 
         var role_entities: std.ArrayList(Entity) = .empty;
 
-        const roles = [_]i32{ 1412, 1209, 1506 };
+        const roles = [_]i32{ 1211, 1108, 1506 };
         for (roles) |role| {
             const entity = try RoleEntityHelpers.createRoleEntity(
                 fs,
@@ -389,4 +389,8 @@ pub fn afterSceneJoin(
     const debug_disable = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/debug_disable.js");
     defer alloc.gpa.free(debug_disable);
     try conn.push(pb.JSPatchNotify{ .Content = debug_disable }, alloc.arena);
+
+    const watermask_disable = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/main_watermask_disable.js");
+    defer alloc.gpa.free(watermask_disable);
+    try conn.push(pb.JSPatchNotify{ .Content = watermask_disable }, alloc.arena);
 }

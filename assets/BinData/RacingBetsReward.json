@@ -185,5 +185,192 @@
     "TargetReward": {
       "2": 500
     }
+  },
+  {
+    "Id": 22,
+    "SeasonId": 104200002,
+    "Index": 1,
+    "RewardName": "Dango_CurrencyPage_DailyTask_1",
+    "ResetType": 0,
+    "RewardType": 2,
+    "TargetReward": {
+      "43": 500
+    }
+  },
+  {
+    "Id": 23,
+    "SeasonId": 104200002,
+    "Index": 2,
+    "RewardName": "Dango_CurrencyPage_DailyTask_2",
+    "ResetType": 0,
+    "RewardType": 2,
+    "TargetReward": {
+      "43": 1000
+    }
+  },
+  {
+    "Id": 26,
+    "SeasonId": 104200002,
+    "Index": 5,
+    "RewardName": "Dango_RewardPage_Task_1_1",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 27,
+    "SeasonId": 104200002,
+    "Index": 6,
+    "RewardName": "Dango_RewardPage_Task_1_2",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 28,
+    "SeasonId": 104200002,
+    "Index": 7,
+    "RewardName": "Dango_RewardPage_Task_1_3",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 29,
+    "SeasonId": 104200002,
+    "Index": 8,
+    "RewardName": "Dango_RewardPage_Task_1_4",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 30,
+    "SeasonId": 104200002,
+    "Index": 9,
+    "RewardName": "Dango_RewardPage_Task_1_5",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "2": 40000
+    }
+  },
+  {
+    "Id": 31,
+    "SeasonId": 104200002,
+    "Index": 10,
+    "RewardName": "Dango_RewardPage_Task_1_6",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "2": 20000
+    }
+  },
+  {
+    "Id": 33,
+    "SeasonId": 104200002,
+    "Index": 12,
+    "RewardName": "Dango_RewardPage_Task_1_8",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "2": 10000
+    }
+  },
+  {
+    "Id": 35,
+    "SeasonId": 104200002,
+    "Index": 14,
+    "RewardName": "Dango_RewardPage_Task_1_10",
+    "ResetType": 1,
+    "RewardType": 1,
+    "TargetReward": {
+      "2": 10000
+    }
+  },
+  {
+    "Id": 36,
+    "SeasonId": 104200002,
+    "Index": 15,
+    "RewardName": "Dango_RewardPage_Task_2_1",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 37,
+    "SeasonId": 104200002,
+    "Index": 16,
+    "RewardName": "Dango_RewardPage_Task_2_2",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "3": 50
+    }
+  },
+  {
+    "Id": 38,
+    "SeasonId": 104200002,
+    "Index": 17,
+    "RewardName": "Dango_RewardPage_Task_2_3",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "2": 20000
+    }
+  },
+  {
+    "Id": 39,
+    "SeasonId": 104200002,
+    "Index": 18,
+    "RewardName": "Dango_RewardPage_Task_2_4",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "2": 10000
+    }
+  },
+  {
+    "Id": 40,
+    "SeasonId": 104200002,
+    "Index": 19,
+    "RewardName": "Dango_RewardPage_Task_2_5",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "2": 5000
+    }
+  },
+  {
+    "Id": 41,
+    "SeasonId": 104200002,
+    "Index": 20,
+    "RewardName": "Dango_RewardPage_Task_2_6",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "2": 1000
+    }
+  },
+  {
+    "Id": 42,
+    "SeasonId": 104200002,
+    "Index": 21,
+    "RewardName": "Dango_RewardPage_Task_2_7",
+    "ResetType": 1,
+    "RewardType": 3,
+    "TargetReward": {
+      "2": 500
+    }
   }
 ]

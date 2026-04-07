@@ -25,5 +25,14 @@
     "IsInternalBrowser": true,
     "ScoreText": "Activity_104600001_Credit",
     "BgPath": "UiItem_ReferralCampaignMainBg3"
+  },
+  {
+    "Id": 104600004,
+    "RootUrl": "https://mc-act.kurogames-global.com/backtosolaris-20260420-xlel2t0v/index.html",
+    "OverseaRootUrl": "https://wuwa-act.kurogames-global.com/backtosolaris-20260420-xlel2t0v/index.html",
+    "Ps5RootUrl": "",
+    "IsInternalBrowser": true,
+    "ScoreText": "Activity_104600001_Credit",
+    "BgPath": "UiItem_ReferralCampaignMainBg4"
   }
 ]

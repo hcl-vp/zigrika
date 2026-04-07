@@ -1,0 +1,34 @@
+[
+  {
+    "Id": 1,
+    "Name": "ForwardDeviceName",
+    "Description": "ForwardDeviceDec",
+    "IconPath": "",
+    "DefaultSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_Forward.DA_Fx_Group_Tuanzi_Forward",
+    "DynamicSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_JianTou_G.DA_Fx_Group_Tuanzi_JianTou_G"
+  },
+  {
+    "Id": 2,
+    "Name": "BackwardDeviceName",
+    "Description": "BackwardDeviceDec",
+    "IconPath": "",
+    "DefaultSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_Back.DA_Fx_Group_Tuanzi_Back",
+    "DynamicSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_JianTou_R.DA_Fx_Group_Tuanzi_JianTou_R"
+  },
+  {
+    "Id": 3,
+    "Name": "BlackHoleDeviceName",
+    "Description": "BlackHoleDeviceDec",
+    "IconPath": "",
+    "DefaultSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_HeiDong.DA_Fx_Group_Tuanzi_HeiDong",
+    "DynamicSceneEffectPath": "/Game/Aki/Effect/EffectGroup/UI_Scenes/DA_Fx_Group_Tuanzi_HeiDong.DA_Fx_Group_Tuanzi_HeiDong"
+  },
+  {
+    "Id": 4,
+    "Name": "BudawangDeviceName",
+    "Description": "BudawangDeviceDec",
+    "IconPath": "",
+    "DefaultSceneEffectPath": "",
+    "DynamicSceneEffectPath": ""
+  }
+]

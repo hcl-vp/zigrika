@@ -75,6 +75,12 @@ setTimeout(() => {
     return true;
   };
 
+  const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
+  ConfigManager_1.ConfigManager.InstanceDungeonConfig.CheckViewShield =
+    function () {
+      return false;
+    };
+
   const CONFIG_PATH =
     "/Game/Aki/Data/Camera/DA_PhotographCameraConfig.DA_PhotographCameraConfig";
   const MOBILE_CONFIG_PATH =
@@ -168,6 +174,7 @@ setTimeout(() => {
     detach_plot_camera();
   };
 
+  // reattach
   UiCameraPhotographerStructure.prototype.OnDestroy = function () {
     this.YUo();
     const seq = SequenceController_1.SequenceController;
@@ -201,7 +208,6 @@ setTimeout(() => {
         this.CameraNpcSphereTrace &&
           (this.CameraNpcSphereTrace.Dispose(),
           (this.CameraNpcSphereTrace = void 0)));
-      reattach_plot_camera();
     };
     photographer.Initialize = function () {
       // UiManager_1.UiManager.OpenViewAsync("FilterSettingView");
@@ -382,17 +388,20 @@ setTimeout(() => {
     };
 
     const FilterControl = async (_, state) => {
-      if (state === 1) {
-        if (this.FilterOpened === true) {
-          this.FilterOpened = false;
-          await UiManager_1.UiManager.NormalResetToViewAsync(
-            "FightPhotographView",
-          );
-        } else {
-          this.FilterOpened = true;
-          this.SavedFov = photographer.GetFov();
-          ControllerHolder_1.ControllerHolder.FilterSettingController.TryOpenExternalPreparedAsync();
-        }
+      if (state !== 1) return;
+
+      const filter_is_open =
+        UiManager_1.UiManager.IsViewOpen("FilterSettingView");
+
+      if (filter_is_open) {
+        this.FilterOpened = false;
+        await UiManager_1.UiManager.NormalResetToViewAsync(
+          "FightPhotographView",
+        );
+      } else {
+        this.FilterOpened = true;
+        this.SavedFov = photographer.GetFov();
+        ControllerHolder_1.ControllerHolder.FilterSettingController.TryOpenExternalPreparedAsync();
       }
     };
 
@@ -451,6 +460,55 @@ setTimeout(() => {
 
       this.PitchInput = 0;
       this.YawInput = 0;
+    };
+
+    FightPhotographView.prototype.ZQi = function () {
+      const fov_slider = this.GetSlider(10);
+
+      if (
+        PhotographController.CheckIfInNormalCamera() ||
+        PhotographController.CheckIfInFightPhotographCamera()
+      ) {
+        fov_slider.SetMinValue(this.BQd, false, false);
+        fov_slider.SetMaxValue(this.kQd, false, false);
+        this.SetCameraFov(photographer.GetFov(), true);
+      } else if (PhotographController.CheckIfInTogetherCamera()) {
+        fov_slider.SetMinValue(this.BQd, false, false);
+        fov_slider.SetMaxValue(this.kQd, false, false);
+
+        const together_fov = PhotographController.TogetherCameraFov;
+        if (
+          together_fov &&
+          together_fov >= this.BQd &&
+          together_fov <= this.kQd
+        ) {
+          this.SetCameraFov(PhotographController.TogetherCameraFov, true);
+        } else {
+          this.SetCameraFov();
+        }
+      } else {
+        const max_fov = parseInt(PhotographController.MaxFov.Value);
+        const min_fov = parseInt(PhotographController.MinFov.Value);
+        const default_fov = (max_fov - min_fov) / 2 + min_fov;
+
+        fov_slider.SetMinValue(min_fov, false, false);
+        fov_slider.SetMaxValue(max_fov, false, false);
+        fov_slider.SetValue(default_fov, true);
+        this.BQi(default_fov);
+
+        if (Log_1.Log.CheckInfo()) {
+          Log_1.Log.Info(
+            "Photo",
+            45,
+            "实体拍照RefreshFov：",
+            ["MaxValue:", fov_slider.GetMaxValue()],
+            ["MinValue:", fov_slider.GetMinValue()],
+            ["NowValue:", fov_slider.GetValue()],
+            ["max:", max_fov],
+            ["min", min_fov],
+          );
+        }
+      }
     };
 
     photographer.ReceiveTick = function (deltaTime) {
@@ -631,71 +689,20 @@ setTimeout(() => {
       await ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph();
     };
 
+  const original_on_after_destroy = FilterSettingView.prototype.OnAfterDestroy;
+  const original_on_before_destroy =
+    FilterSettingView.prototype.OnBeforeDestroy;
+
   FilterSettingView.prototype.OnAfterDestroy = function () {
-    ControllerHolder_1.ControllerHolder.FilterSettingController?.ApplyFilterSetting();
+    const structure =
+      ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
+    if (structure) structure.FilterOpened = false;
+    original_on_after_destroy.call(this);
   };
 
   FilterSettingView.prototype.OnBeforeDestroy = function () {
     this.VmCache?.OnConfirmClick?.();
-    this.cpu?.Clear();
-    this.cpu = void 0;
-    this.UNd?.ClearChildren();
-    this.UNd = void 0;
-    this.VmCache?.OnViewDestroy?.();
-    this.VmCache = void 0;
-    this.dpu?.CancelAsyncLoad();
-    this.mpu?.CancelAsyncLoad();
-    this.fpu?.CancelAsyncLoad();
-    this.gpu && ((this.gpu.length = 0), (this.gpu = void 0));
-  };
-
-  FightPhotographView.prototype.ZQi = function () {
-    const fov_slider = this.GetSlider(10);
-
-    if (
-      PhotographController.CheckIfInNormalCamera() ||
-      PhotographController.CheckIfInFightPhotographCamera()
-    ) {
-      fov_slider.SetMinValue(this.BQd, false, false);
-      fov_slider.SetMaxValue(this.kQd, false, false);
-      // this.SetCameraFov();
-    } else if (PhotographController.CheckIfInTogetherCamera()) {
-      fov_slider.SetMinValue(this.BQd, false, false);
-      fov_slider.SetMaxValue(this.kQd, false, false);
-
-      const together_fov = PhotographController.TogetherCameraFov;
-      if (
-        together_fov &&
-        together_fov >= this.BQd &&
-        together_fov <= this.kQd
-      ) {
-        this.SetCameraFov(PhotographController.TogetherCameraFov, true);
-      } else {
-        this.SetCameraFov();
-      }
-    } else {
-      const max_fov = parseInt(PhotographController.MaxFov.Value);
-      const min_fov = parseInt(PhotographController.MinFov.Value);
-      const default_fov = (max_fov - min_fov) / 2 + min_fov;
-
-      fov_slider.SetMinValue(min_fov, false, false);
-      fov_slider.SetMaxValue(max_fov, false, false);
-      fov_slider.SetValue(default_fov, true);
-      this.BQi(default_fov);
-
-      if (Log_1.Log.CheckInfo()) {
-        Log_1.Log.Info(
-          "Photo",
-          45,
-          "实体拍照RefreshFov：",
-          ["MaxValue:", fov_slider.GetMaxValue()],
-          ["MinValue:", fov_slider.GetMinValue()],
-          ["NowValue:", fov_slider.GetValue()],
-          ["max:", max_fov],
-          ["min", min_fov],
-        );
-      }
-    }
+    original_on_before_destroy.call(this);
   };
 
   const original_on_before_start_async =

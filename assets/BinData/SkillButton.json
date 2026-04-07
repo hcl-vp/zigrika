@@ -6763,6 +6763,7 @@
       "35512583": 1509031,
       "294175648": 1509063,
       "-789916572": 1509020,
+      "-1476722192": 1509063,
       "-1718607820": 1509055,
       "-1459213240": 1509037
     },
@@ -6799,7 +6800,8 @@
       "917667812": 1002,
       "-789916572": 1509002,
       "-1718607820": 1509001,
-      "-1459213240": 1509001
+      "-1459213240": 1509001,
+      "-1476722192": 1509001
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
@@ -7156,7 +7158,9 @@
     "SkillIdTagMap": {
       "225676701": 12102001,
       "701626516": 12101005,
-      "755426796": 12102006
+      "755426796": 12102006,
+      "-339052857": 12102006,
+      "-1299285633": 12101005
     },
     "SkillIconTags": [
       -624589333,
@@ -7184,7 +7188,9 @@
       "701626516": 1210004,
       "755426796": 1210004,
       "917667812": 1002,
-      "-258147035": 291003
+      "-258147035": 291003,
+      "-339052857": 1210002,
+      "-1299285633": 1210002
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
@@ -8098,6 +8104,140 @@
     "ShowLongPressTags": []
   },
   {
+    "Id": 12111002,
+    "RoleId": 1211,
+    "Name": "攻击",
+    "ButtonType": 4,
+    "ActionType": 4,
+    "SkillId": 1211001,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [
+      -624589333,
+      917667812
+    ],
+    "EnableTags": [],
+    "DisableTags": [
+      866007727,
+      -1976579620
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "917667812": 1002
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 12111004,
+    "RoleId": 1211,
+    "Name": "共鸣技能",
+    "ButtonType": 6,
+    "ActionType": 6,
+    "SkillId": 1211041,
+    "SkillIdTagMap": {
+      "1520676172": 210009,
+      "-1070569477": 210009,
+      "-800441753": 1211048,
+      "-1988384381": 1211047,
+      "-667955792": 1211041,
+      "-1858618066": 1211045
+    },
+    "SkillIconTags": [],
+    "EnableTags": [
+      -1070569477
+    ],
+    "DisableTags": [
+      -2044964178,
+      495657548,
+      1520676172,
+      -1677265791
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -1949137153
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "-800441753": 1211002,
+      "-1988384381": 1211002
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 12111006,
+    "RoleId": 1211,
+    "Name": "共鸣解放",
+    "ButtonType": 8,
+    "ActionType": 8,
+    "SkillId": 1211051,
+    "SkillIdTagMap": {
+      "-1858618066": 1211053
+    },
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -2044964178,
+      -592555498
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -800147974
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 60,
+    "MaxAttributeId": 59,
+    "AttributeIdTagMap": {
+      "903484898": {
+        "ArrayInt": [
+          0,
+          0
+        ]
+      },
+      "-1858618066": {
+        "ArrayInt": [
+          66,
+          65
+        ]
+      }
+    },
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "903484898": 1211011,
+      "-258147035": 291003
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
     "Id": 15101002,
     "RoleId": 1510,
     "Name": "攻击",
@@ -8296,7 +8436,9 @@
     "ButtonType": 8,
     "ActionType": 8,
     "SkillId": 1412301,
-    "SkillIdTagMap": {},
+    "SkillIdTagMap": {
+      "-1029206115": 14123011
+    },
     "SkillIconTags": [],
     "EnableTags": [],
     "DisableTags": [
@@ -8322,6 +8464,107 @@
     "DynamicEffectTagMap": {
       "-258147035": 291003
     },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 100900101,
+    "RoleId": 8004,
+    "Name": "攻击",
+    "ButtonType": 4,
+    "ActionType": 4,
+    "SkillId": 100900101,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      866007727
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {},
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 100900501,
+    "RoleId": 8004,
+    "Name": "共鸣技能",
+    "ButtonType": 6,
+    "ActionType": 6,
+    "SkillId": 100900123,
+    "SkillIdTagMap": {
+      "1790408286": 100900501,
+      "-655682267": 100900511
+    },
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -2044964178,
+      495657548
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -1949137153
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "-655682267": 10090002
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 100900601,
+    "RoleId": 8004,
+    "Name": "共鸣解放",
+    "ButtonType": 8,
+    "ActionType": 8,
+    "SkillId": 100900601,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -2044964178,
+      -592555498
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -800147974
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 60,
+    "MaxAttributeId": 59,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {},
     "CustomHandleId": 0,
     "ShowLongPressTags": []
   },
@@ -8373,6 +8616,142 @@
       "917667812": 1002,
       "1577125226": 1412003,
       "-1197997804": 1412002
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 11081002,
+    "RoleId": 1108,
+    "Name": "攻击",
+    "ButtonType": 4,
+    "ActionType": 4,
+    "SkillId": 1108001,
+    "SkillIdTagMap": {
+      "1110335489": 1108122,
+      "-954798390": 1108005
+    },
+    "SkillIconTags": [
+      -624589333,
+      917667812
+    ],
+    "EnableTags": [],
+    "DisableTags": [
+      866007727,
+      -1976579620
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "917667812": 1002,
+      "1110335489": 1108001,
+      "-954798390": 1108002,
+      "-1148449449": 1108005
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 11081004,
+    "RoleId": 1108,
+    "Name": "共鸣技能",
+    "ButtonType": 6,
+    "ActionType": 6,
+    "SkillId": 1108011,
+    "SkillIdTagMap": {
+      "1520676172": 210009,
+      "2062253766": 1108111,
+      "-1070569477": 210009
+    },
+    "SkillIconTags": [
+      89892375
+    ],
+    "EnableTags": [
+      -1070569477
+    ],
+    "DisableTags": [
+      -2044964178,
+      495657548,
+      1520676172
+    ],
+    "DisableSkillIdTags": {
+      "40422668": {
+        "ArrayInt": [
+          1108011
+        ]
+      }
+    },
+    "VisibleTags": [],
+    "HiddenTags": [
+      -1949137153
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {},
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 11081006,
+    "RoleId": 1108,
+    "Name": "共鸣解放",
+    "ButtonType": 8,
+    "ActionType": 8,
+    "SkillId": 1108031,
+    "SkillIdTagMap": {
+      "2062253766": 1108131
+    },
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -1806205068,
+      -2044964178,
+      -592555498,
+      40422668
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -800147974
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {
+      "2062253766": {
+        "ArrayInt": [
+          60,
+          59
+        ]
+      }
+    },
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 1108006,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "1308453898": 1108003
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []

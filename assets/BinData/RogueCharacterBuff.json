@@ -5,6 +5,7 @@
     "BuffIds": [
       921601000001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601000001_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921601000001_BuffDesc_0",
@@ -17,6 +18,7 @@
     "BuffIds": [
       921601001001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601001001_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921601001001_BuffDesc_0",
@@ -29,6 +31,7 @@
     "BuffIds": [
       921601003001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601003001_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921601003001_BuffDesc_0",
@@ -41,6 +44,7 @@
     "BuffIds": [
       921601004001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601004001_BuffDesc",
     "AffixDescParam": [
       "90%",
@@ -58,6 +62,7 @@
     "BuffIds": [
       921601000021
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601000021_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921601000021_BuffDesc_0",
@@ -70,6 +75,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -84,6 +90,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -98,6 +105,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -112,6 +120,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -126,6 +135,7 @@
     "BuffIds": [
       1402999003
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999003_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -141,6 +151,7 @@
     "BuffIds": [
       1402999004
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999004_BuffDesc",
     "AffixDescParam": [
       "222%",
@@ -156,6 +167,7 @@
     "BuffIds": [
       1402999008
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999008_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1402999008_BuffDesc_0",
@@ -168,6 +180,7 @@
     "BuffIds": [
       900000010027
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -182,6 +195,7 @@
     "BuffIds": [
       900000010028
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -196,6 +210,7 @@
     "BuffIds": [
       900000010029
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -210,6 +225,7 @@
     "BuffIds": [
       921202100013
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100001_BuffDesc",
     "AffixDescParam": [
       "70%",
@@ -225,6 +241,7 @@
     "BuffIds": [
       921202100006
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100002_BuffDesc",
     "AffixDescParam": [
       "300%"
@@ -239,6 +256,7 @@
     "BuffIds": [
       921202100014
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100003_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921202100003_BuffDesc_0",
@@ -251,6 +269,7 @@
     "BuffIds": [
       921202100017
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100004_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921202100004_BuffDesc_0",
@@ -265,6 +284,7 @@
       921202100020,
       921202100022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100007_BuffDesc",
     "AffixDescParam": [
       "10",
@@ -280,6 +300,7 @@
     "BuffIds": [
       921202100020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100007_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921202100007_BuffDesc_0",
@@ -292,6 +313,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -304,6 +326,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -316,6 +339,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -328,6 +352,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -340,6 +365,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -352,6 +378,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -364,6 +391,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -376,6 +404,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -388,6 +417,7 @@
     "BuffIds": [
       1103430116
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430116_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -404,6 +434,7 @@
     "BuffIds": [
       1103430112
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430112_BuffDesc",
     "AffixDescParam": [
       "1",
@@ -420,6 +451,7 @@
     "BuffIds": [
       1103430114
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430114_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -437,6 +469,7 @@
     "BuffIds": [
       1103430115
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430115_BuffDesc",
     "AffixDescParam": [
       "75%",
@@ -453,6 +486,7 @@
     "BuffIds": [
       1103430113
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430113_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1103430113_BuffDesc_0",
@@ -465,6 +499,7 @@
     "BuffIds": [
       1103430118
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430118_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -482,6 +517,7 @@
     "BuffIds": [
       1103430117
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1103430117_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1103430117_BuffDesc_0",
@@ -494,6 +530,7 @@
     "BuffIds": [
       900000010041
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -508,6 +545,7 @@
     "BuffIds": [
       900000010042
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -522,6 +560,7 @@
     "BuffIds": [
       900000010043
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -536,6 +575,7 @@
     "BuffIds": [
       900000010044
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -550,6 +590,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -562,6 +603,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -574,6 +616,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -586,6 +629,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -598,6 +642,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -610,6 +655,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -622,6 +668,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -634,6 +681,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -646,6 +694,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -658,6 +707,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -670,6 +720,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -682,6 +733,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -695,6 +747,7 @@
       1404500006,
       1404500012
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1404500006_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -710,6 +763,7 @@
     "BuffIds": [
       1404500008
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1404500008_BuffDesc",
     "AffixDescParam": [
       "4",
@@ -728,6 +782,7 @@
     "BuffIds": [
       1404500009
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1404500009_BuffDesc",
     "AffixDescParam": [
       "4",
@@ -746,6 +801,7 @@
     "BuffIds": [
       1404500010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1404500010_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -761,6 +817,7 @@
     "BuffIds": [
       1404500011
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1404500011_BuffDesc",
     "AffixDescParam": [
       "30%",
@@ -778,6 +835,7 @@
     "BuffIds": [
       900000010037
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -792,6 +850,7 @@
     "BuffIds": [
       900000010038
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -806,6 +865,7 @@
     "BuffIds": [
       900000010039
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -820,6 +880,7 @@
     "BuffIds": [
       900000010040
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -834,6 +895,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -846,6 +908,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -858,6 +921,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -870,6 +934,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -882,6 +947,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -894,6 +960,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -906,6 +973,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -918,6 +986,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -930,6 +999,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -942,6 +1012,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -954,6 +1025,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -966,6 +1038,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -978,6 +1051,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -990,6 +1064,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1002,6 +1077,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1014,6 +1090,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1026,6 +1103,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -1038,6 +1116,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1050,6 +1129,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1062,6 +1142,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1074,6 +1155,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -1086,6 +1168,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1098,6 +1181,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1110,6 +1194,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1122,6 +1207,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -1134,6 +1220,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1146,6 +1233,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1158,6 +1246,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1170,6 +1259,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -1182,6 +1272,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1194,6 +1285,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1206,6 +1298,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1218,6 +1311,7 @@
     "BuffIds": [
       900410140500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140500_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140500_BuffDesc",
@@ -1230,6 +1324,7 @@
     "BuffIds": [
       900900000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900900000002_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900900000002_BuffDesc",
@@ -1242,6 +1337,7 @@
     "BuffIds": [
       900410140700
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900410140700_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900410140700_BuffDesc",
@@ -1254,6 +1350,7 @@
     "BuffIds": [
       900910000010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900910000010_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_900910000010_BuffDesc",
@@ -1266,6 +1363,7 @@
     "BuffIds": [
       1502700001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700001_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -1282,6 +1380,7 @@
     "BuffIds": [
       1501700010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1501700010_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -1298,6 +1397,7 @@
     "BuffIds": [
       1402999002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999002_BuffDesc",
     "AffixDescParam": [
       "1000%"
@@ -1312,6 +1412,7 @@
     "BuffIds": [
       1402999005
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999005_BuffDesc",
     "AffixDescParam": [
       "340%"
@@ -1326,6 +1427,7 @@
     "BuffIds": [
       1402999007
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1402999007_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -1341,6 +1443,7 @@
     "BuffIds": [
       900000010030
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1355,6 +1458,7 @@
     "BuffIds": [
       900000010032
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1369,6 +1473,7 @@
     "BuffIds": [
       900000010033
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1383,6 +1488,7 @@
     "BuffIds": [
       900000010034
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1397,6 +1503,7 @@
     "BuffIds": [
       900000010035
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1411,6 +1518,7 @@
     "BuffIds": [
       1502700020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700020_BuffDesc",
     "AffixDescParam": [
       "5",
@@ -1428,6 +1536,7 @@
     "BuffIds": [
       1502700040
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700040_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -1443,6 +1552,7 @@
     "BuffIds": [
       1502700050
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700050_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1502700050_BuffDesc_0",
@@ -1455,6 +1565,7 @@
     "BuffIds": [
       1501700060
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1501700060_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1501700060_BuffDesc_0",
@@ -1467,6 +1578,7 @@
     "BuffIds": [
       1502700001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700001_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -1483,6 +1595,7 @@
     "BuffIds": [
       1502700010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700010_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -1499,6 +1612,7 @@
     "BuffIds": [
       1502700020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700020_BuffDesc",
     "AffixDescParam": [
       "5",
@@ -1516,6 +1630,7 @@
     "BuffIds": [
       1502700040
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700040_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -1531,6 +1646,7 @@
     "BuffIds": [
       1502700050
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_1502700050_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_1502700050_BuffDesc_0",
@@ -1543,6 +1659,7 @@
     "BuffIds": [
       921202100030
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100030_BuffDesc",
     "AffixDescParam": [
       "0.2",
@@ -1561,6 +1678,7 @@
     "BuffIds": [
       921202100040
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100040_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921202100040_BuffDesc_0",
@@ -1573,6 +1691,7 @@
     "BuffIds": [
       921202100050
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100050_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921202100050_BuffDesc_0",
@@ -1585,6 +1704,7 @@
     "BuffIds": [
       921202100060
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921202100060_BuffDesc",
     "AffixDescParam": [
       "10%",
@@ -1601,6 +1721,7 @@
     "BuffIds": [
       921601002001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601002001_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -1619,6 +1740,7 @@
       921601001001,
       921601101080
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601001001_BuffDesc",
     "AffixDescParam": [
       "8",
@@ -1636,6 +1758,7 @@
       921601101060,
       921601101061
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601101060_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -1654,6 +1777,7 @@
     "BuffIds": [
       921601101070
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601101070_BuffDesc",
     "AffixDescParam": [
       "100%"
@@ -1668,6 +1792,7 @@
     "BuffIds": [
       921601101080
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921601101080_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_921601101080_BuffDesc_0",
@@ -1681,6 +1806,7 @@
       921302000001,
       921302000002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921302000001_BuffDesc",
     "AffixDescParam": [
       "10%",
@@ -1697,6 +1823,7 @@
     "BuffIds": [
       921302000050
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921302000050_BuffDesc",
     "AffixDescParam": [
       "6"
@@ -1711,6 +1838,7 @@
     "BuffIds": [
       921302000020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921302000020_BuffDesc",
     "AffixDescParam": [
       "400%"
@@ -1726,6 +1854,7 @@
       921302000030,
       921302000031
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921302000030_BuffDesc",
     "AffixDescParam": [
       "30%",
@@ -1742,6 +1871,7 @@
     "BuffIds": [
       921302000040
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_921302000040_BuffDesc",
     "AffixDescParam": [
       "66%",
@@ -1757,6 +1887,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1771,6 +1902,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1785,6 +1917,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1799,6 +1932,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1813,6 +1947,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1827,6 +1962,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1841,6 +1977,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1855,6 +1992,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1869,6 +2007,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1883,6 +2022,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1897,6 +2037,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1911,6 +2052,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -1928,6 +2070,7 @@
       900291000031,
       900291000032
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_140501_BuffDesc",
     "AffixDescParam": [
       "30%",
@@ -1945,6 +2088,7 @@
       900291000010,
       900291000030
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_140502_BuffDesc",
     "AffixDescParam": [
       "80%",
@@ -1962,6 +2106,7 @@
     "BuffIds": [
       900291000020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_140503_BuffDesc",
     "AffixDescParam": [
       "500%"
@@ -1976,6 +2121,7 @@
     "BuffIds": [
       900291000016
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_140504_BuffDesc",
     "AffixDescParam": [
       "25%",
@@ -1992,6 +2138,7 @@
     "BuffIds": [
       900291000006
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_140505_BuffDesc",
     "AffixDescParam": [
       "6",
@@ -2008,6 +2155,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2022,6 +2170,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2036,6 +2185,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2050,6 +2200,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2065,6 +2216,7 @@
       1102912091,
       1102912094
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110201_BuffDesc",
     "AffixDescParam": [
       "5",
@@ -2081,6 +2233,7 @@
       1102912021,
       1102912022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110202_BuffDesc",
     "AffixDescParam": [
       "200%"
@@ -2096,6 +2249,7 @@
       1102912011,
       1102912012
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110203_BuffDesc",
     "AffixDescParam": [
       "5",
@@ -2112,6 +2266,7 @@
       1102912052,
       1102912053
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110204_BuffDesc",
     "AffixDescParam": [
       "10%",
@@ -2128,6 +2283,7 @@
     "BuffIds": [
       1102912046
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110205_BuffDesc",
     "AffixDescParam": [
       "15%",
@@ -2144,6 +2300,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2158,6 +2315,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2172,6 +2330,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2186,6 +2345,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2200,6 +2360,7 @@
     "BuffIds": [
       921304000001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130401_BuffDesc",
     "AffixDescParam": [
       "80%"
@@ -2214,6 +2375,7 @@
     "BuffIds": [
       921304000101
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130402_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -2230,6 +2392,7 @@
     "BuffIds": [
       921304000201
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130403_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -2247,6 +2410,7 @@
     "BuffIds": [
       921304000301
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130404_BuffDesc",
     "AffixDescParam": [
       "20",
@@ -2264,6 +2428,7 @@
     "BuffIds": [
       921304000401
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130405_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -2283,6 +2448,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2297,6 +2463,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2311,6 +2478,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2325,6 +2493,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2339,6 +2508,7 @@
     "BuffIds": [
       921205000001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120501_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_120501_BuffDesc_0",
@@ -2351,6 +2521,7 @@
     "BuffIds": [
       921205000101
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120502_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -2367,6 +2538,7 @@
     "BuffIds": [
       921205000201
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120503_BuffDesc",
     "AffixDescParam": [
       "30",
@@ -2383,6 +2555,7 @@
     "BuffIds": [
       921205000401
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120504_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -2399,6 +2572,7 @@
     "BuffIds": [
       921205000501
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120505_BuffDesc",
     "AffixDescParam": [
       "20"
@@ -2413,6 +2587,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2427,6 +2602,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2441,6 +2617,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2455,6 +2632,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2470,6 +2648,7 @@
       130391200100,
       130391200140
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130301_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2484,6 +2663,7 @@
     "BuffIds": [
       130391200200
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130302_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -2500,6 +2680,7 @@
       130391200300,
       130391200302
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130303_BuffDesc",
     "AffixDescParam": [
       "400%",
@@ -2517,6 +2698,7 @@
       130391200400,
       130391200401
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130304_BuffDesc",
     "AffixDescParam": [
       "30%",
@@ -2535,6 +2717,7 @@
       130391200510,
       130391200520
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130305_BuffDesc",
     "AffixDescParam": [
       "150%"
@@ -2549,6 +2732,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2563,6 +2747,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2577,6 +2762,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2591,6 +2777,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2606,6 +2793,7 @@
       106291200100,
       106291200121
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160201_BuffDesc",
     "AffixDescParam": [
       "200%",
@@ -2622,6 +2810,7 @@
       106291200200,
       106291200220
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160202_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -2641,6 +2830,7 @@
       106291200340,
       106291200320
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160203_BuffDesc",
     "AffixDescParam": [
       "100%",
@@ -2659,6 +2849,7 @@
       106291200410,
       106291200310
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160204_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -2678,6 +2869,7 @@
       106291200500,
       106291200300
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160205_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -2697,6 +2889,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2711,6 +2904,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2725,6 +2919,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2739,6 +2934,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2754,6 +2950,7 @@
       1305999033,
       1305999024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130501_BuffDesc",
     "AffixDescParam": [
       "1",
@@ -2773,6 +2970,7 @@
       1305999034,
       1305999022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130502_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -2794,6 +2992,7 @@
       1305999005,
       1305999007
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130503_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -2814,6 +3013,7 @@
       1305999011,
       1305999012
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130504_BuffDesc",
     "AffixDescParam": [
       "30%",
@@ -2832,6 +3032,7 @@
       1305999001,
       1305999002
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130505_BuffDesc",
     "AffixDescParam": [
       "40%"
@@ -2846,6 +3047,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2860,6 +3062,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2874,6 +3077,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2888,6 +3092,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2902,6 +3107,7 @@
     "BuffIds": [
       921105000101
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110501_BuffDesc",
     "AffixDescParam": [
       "200%",
@@ -2917,6 +3123,7 @@
     "BuffIds": [
       921105000201
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110502_BuffDesc",
     "AffixDescParam": [
       "1",
@@ -2937,6 +3144,7 @@
     "BuffIds": [
       921105000301
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110503_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -2955,6 +3163,7 @@
     "BuffIds": [
       921105000401
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110504_BuffDesc",
     "AffixDescParam": [
       "1",
@@ -2973,6 +3182,7 @@
     "BuffIds": [
       921105000501
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110505_BuffDesc",
     "AffixDescParam": [],
     "AffixDescSimple": "RogueBuffPool_110505_BuffDesc_0",
@@ -2985,6 +3195,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -2999,6 +3210,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3013,6 +3225,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3027,6 +3240,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3041,6 +3255,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3055,6 +3270,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3069,6 +3285,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3083,6 +3300,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3097,6 +3315,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3111,6 +3330,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3125,6 +3345,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3139,6 +3360,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3153,6 +3375,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3167,6 +3390,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3181,6 +3405,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3195,6 +3420,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3209,6 +3435,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3223,6 +3450,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3237,6 +3465,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3251,6 +3480,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3270,6 +3500,7 @@
       1203999025,
       1203999027
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120301_BuffDesc",
     "AffixDescParam": [
       "60%",
@@ -3289,6 +3520,7 @@
       1203999006,
       1203999007
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120302_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -3311,6 +3543,7 @@
       1203999022,
       1203999018
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120303_BuffDesc",
     "AffixDescParam": [
       "300%",
@@ -3333,6 +3566,7 @@
       1203999009,
       1203999025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120304_BuffDesc",
     "AffixDescParam": [
       "60%",
@@ -3351,6 +3585,7 @@
       1203999013,
       1203999015
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120305_BuffDesc",
     "AffixDescParam": [
       "5",
@@ -3366,6 +3601,7 @@
     "BuffIds": [
       1503999022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150301_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -3386,6 +3622,7 @@
       1503999006,
       1503999009
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150302_BuffDesc",
     "AffixDescParam": [
       "850%",
@@ -3405,6 +3642,7 @@
       1503999014,
       1503999024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150303_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -3423,6 +3661,7 @@
       1503999016,
       1503999019
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150304_BuffDesc",
     "AffixDescParam": [
       "12",
@@ -3439,6 +3678,7 @@
       1503999023,
       1503999026
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150305_BuffDesc",
     "AffixDescParam": [
       "30",
@@ -3455,6 +3695,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3469,6 +3710,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3483,6 +3725,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3497,6 +3740,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3512,6 +3756,7 @@
       1106999102,
       1106999112
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110601_BuffDesc",
     "AffixDescParam": [
       "35%",
@@ -3529,6 +3774,7 @@
       1106999202,
       1106999203
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110602_BuffDesc",
     "AffixDescParam": [
       "75%",
@@ -3545,6 +3791,7 @@
       1106999301,
       1106999303
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110603_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -3562,6 +3809,7 @@
       1106999402,
       1106999403
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110604_BuffDesc",
     "AffixDescParam": [
       "60%",
@@ -3581,6 +3829,7 @@
       1106999502,
       1106999503
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110605_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3595,6 +3844,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3609,6 +3859,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3623,6 +3874,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3637,6 +3889,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3655,6 +3908,7 @@
       1505999112,
       1505999123
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150501_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -3678,6 +3932,7 @@
       1505999205,
       1505999201
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150502_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -3696,6 +3951,7 @@
       1505999303,
       1505999204
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150503_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -3716,6 +3972,7 @@
       1505999413,
       1505999423
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150504_BuffDesc",
     "AffixDescParam": [
       "20%",
@@ -3737,6 +3994,7 @@
       1505999502,
       1505999503
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150505_BuffDesc",
     "AffixDescParam": [
       "5%",
@@ -3752,6 +4010,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3766,6 +4025,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3780,6 +4040,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3794,6 +4055,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3808,6 +4070,7 @@
     "BuffIds": [
       1301990020
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130101_BuffDesc",
     "AffixDescParam": [
       "1080%"
@@ -3823,6 +4086,7 @@
       1301990001,
       1301990017
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130102_BuffDesc",
     "AffixDescParam": [
       "720%",
@@ -3842,6 +4106,7 @@
       1301990006,
       1301990014
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130103_BuffDesc",
     "AffixDescParam": [
       "50%",
@@ -3857,6 +4122,7 @@
     "BuffIds": [
       1301990013
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130104_BuffDesc",
     "AffixDescParam": [
       "2800%"
@@ -3871,6 +4137,7 @@
     "BuffIds": [
       1301990015
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_130105_BuffDesc",
     "AffixDescParam": [
       "3",
@@ -3886,6 +4153,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3900,6 +4168,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3914,6 +4183,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3928,6 +4198,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -3942,6 +4213,7 @@
     "BuffIds": [
       1104990001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110401_BuffDesc",
     "AffixDescParam": [
       "14",
@@ -3958,6 +4230,7 @@
     "BuffIds": [
       1104990003
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110402_BuffDesc",
     "AffixDescParam": [
       "10%",
@@ -3975,6 +4248,7 @@
       1104990011,
       1104990012
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110403_BuffDesc",
     "AffixDescParam": [
       "10"
@@ -3992,6 +4266,7 @@
       1104990008,
       1104990016
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110404_BuffDesc",
     "AffixDescParam": [
       "2",
@@ -4009,6 +4284,7 @@
       1104990018,
       1104990010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_110405_BuffDesc",
     "AffixDescParam": [
       "600%",
@@ -4024,6 +4300,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4038,6 +4315,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4052,6 +4330,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4066,6 +4345,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4080,6 +4360,7 @@
     "BuffIds": [
       12049120100
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120401_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -4096,6 +4377,7 @@
     "BuffIds": [
       12049120200
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120402_BuffDesc",
     "AffixDescParam": [
       "12",
@@ -4113,6 +4395,7 @@
     "BuffIds": [
       12049120300
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120403_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -4128,6 +4411,7 @@
     "BuffIds": [
       12049120400
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120404_BuffDesc",
     "AffixDescParam": [
       "40%",
@@ -4143,6 +4427,7 @@
     "BuffIds": [
       12049120500
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_120405_BuffDesc",
     "AffixDescParam": [
       "100%"
@@ -4157,6 +4442,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4171,6 +4457,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4185,6 +4472,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4199,6 +4487,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4213,6 +4502,7 @@
     "BuffIds": [
       1603999101
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160301_BuffDesc",
     "AffixDescParam": [
       "250%"
@@ -4230,6 +4520,7 @@
       1603999203,
       1603999204
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160302_BuffDesc",
     "AffixDescParam": [
       "10",
@@ -4248,6 +4539,7 @@
       1603999204,
       1603999301
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160303_BuffDesc",
     "AffixDescParam": [
       "10"
@@ -4267,6 +4559,7 @@
       1603999422,
       1603999423
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160304_BuffDesc",
     "AffixDescParam": [
       "5%",
@@ -4284,6 +4577,7 @@
       1603999501,
       1603999504
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_160305_BuffDesc",
     "AffixDescParam": [
       "780%",
@@ -4299,6 +4593,7 @@
     "BuffIds": [
       900000010022
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010022_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4313,6 +4608,7 @@
     "BuffIds": [
       900000010023
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010023_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4327,6 +4623,7 @@
     "BuffIds": [
       900000010024
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010024_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4341,6 +4638,7 @@
     "BuffIds": [
       900000010025
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_900000010025_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4356,6 +4654,7 @@
       1504990003,
       1504990012
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150401_BuffDesc",
     "AffixDescParam": [
       "50%"
@@ -4370,6 +4669,7 @@
     "BuffIds": [
       1504990004
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150402_BuffDesc",
     "AffixDescParam": [
       "180%"
@@ -4384,6 +4684,7 @@
     "BuffIds": [
       1504990001
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150403_BuffDesc",
     "AffixDescParam": [
       "10",
@@ -4399,6 +4700,7 @@
     "BuffIds": [
       1504990005
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150404_BuffDesc",
     "AffixDescParam": [
       "6",
@@ -4418,6 +4720,7 @@
       1504990009,
       1504990010
     ],
+    "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150405_BuffDesc",
     "AffixDescParam": [
       "50%",

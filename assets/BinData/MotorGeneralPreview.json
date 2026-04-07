@@ -34,5 +34,38 @@
     "IsFree": false,
     "FreeCamera": "Cam_MotorDIYL",
     "FreeCameraConfig": "摩托车自定义界面"
+  },
+  {
+    "Id": 1003,
+    "Frame": 89400001,
+    "Sticker": [
+      89101013,
+      89102012
+    ],
+    "Decorations": [],
+    "Title": "TotalTopUp_1002_Title",
+    "SubTitle": "TotalTopUp_1002_Subtitle",
+    "IsShowIcon": true,
+    "IconTitle": "TotalTopUp_1002_Props",
+    "Describe": "TotalTopUp_1002_Desc",
+    "CameraId": "Cam_MotorDIYL",
+    "IsFree": true,
+    "FreeCamera": "Cam_MotorDIYL",
+    "FreeCameraConfig": "摩托车自定义界面"
+  },
+  {
+    "Id": 1004,
+    "Frame": 89400001,
+    "Sticker": [],
+    "Decorations": [],
+    "Title": "MotorDecorations_89300002_Name",
+    "SubTitle": "MotorDecorations_Quality5",
+    "IsShowIcon": false,
+    "IconTitle": "",
+    "Describe": "",
+    "CameraId": "Cam_MotorDecoration02",
+    "IsFree": false,
+    "FreeCamera": "Cam_MotorDIYL",
+    "FreeCameraConfig": "摩托车自定义界面"
   }
 ]

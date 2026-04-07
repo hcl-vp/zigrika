@@ -1,0 +1,194 @@
+[
+  {
+    "Id": 1,
+    "OpenDay": 0,
+    "PersonalScore": 0,
+    "Percent": 0,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 2,
+    "OpenDay": 1,
+    "PersonalScore": 0,
+    "Percent": 500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 3,
+    "OpenDay": 2,
+    "PersonalScore": 0,
+    "Percent": 1000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 4,
+    "OpenDay": 3,
+    "PersonalScore": 0,
+    "Percent": 1500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 5,
+    "OpenDay": 4,
+    "PersonalScore": 0,
+    "Percent": 2000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 6,
+    "OpenDay": 5,
+    "PersonalScore": 0,
+    "Percent": 2500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 7,
+    "OpenDay": 6,
+    "PersonalScore": 0,
+    "Percent": 3000,
+    "DropId": 5002,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 8,
+    "OpenDay": 7,
+    "PersonalScore": 0,
+    "Percent": 3500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 9,
+    "OpenDay": 8,
+    "PersonalScore": 0,
+    "Percent": 4000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 10,
+    "OpenDay": 9,
+    "PersonalScore": 0,
+    "Percent": 4500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 11,
+    "OpenDay": 10,
+    "PersonalScore": 0,
+    "Percent": 5000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 12,
+    "OpenDay": 11,
+    "PersonalScore": 0,
+    "Percent": 5500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 13,
+    "OpenDay": 12,
+    "PersonalScore": 0,
+    "Percent": 6000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 14,
+    "OpenDay": 13,
+    "PersonalScore": 0,
+    "Percent": 6500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 15,
+    "OpenDay": 14,
+    "PersonalScore": 0,
+    "Percent": 7000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 16,
+    "OpenDay": 15,
+    "PersonalScore": 0,
+    "Percent": 7500,
+    "DropId": 5200711,
+    "MotorPreviewId": 1003
+  },
+  {
+    "Id": 17,
+    "OpenDay": 16,
+    "PersonalScore": 0,
+    "Percent": 8000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 18,
+    "OpenDay": 17,
+    "PersonalScore": 0,
+    "Percent": 8300,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 19,
+    "OpenDay": 18,
+    "PersonalScore": 0,
+    "Percent": 8500,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 20,
+    "OpenDay": 19,
+    "PersonalScore": 0,
+    "Percent": 8700,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 21,
+    "OpenDay": 20,
+    "PersonalScore": 0,
+    "Percent": 9000,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 22,
+    "OpenDay": 21,
+    "PersonalScore": 0,
+    "Percent": 9300,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 23,
+    "OpenDay": 22,
+    "PersonalScore": 0,
+    "Percent": 9600,
+    "DropId": 0,
+    "MotorPreviewId": 0
+  },
+  {
+    "Id": 24,
+    "OpenDay": 23,
+    "PersonalScore": 0,
+    "Percent": 10000,
+    "DropId": 5210301,
+    "MotorPreviewId": 0
+  }
+]

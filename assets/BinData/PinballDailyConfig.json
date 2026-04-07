@@ -1,0 +1,47 @@
+[
+  {
+    "Id": 1,
+    "LevelCompleteNum": 0,
+    "DailyClearDropId": 20400400
+  },
+  {
+    "Id": 2,
+    "LevelCompleteNum": 4,
+    "DailyClearDropId": 20400401
+  },
+  {
+    "Id": 3,
+    "LevelCompleteNum": 8,
+    "DailyClearDropId": 20400402
+  },
+  {
+    "Id": 4,
+    "LevelCompleteNum": 12,
+    "DailyClearDropId": 20400403
+  },
+  {
+    "Id": 5,
+    "LevelCompleteNum": 16,
+    "DailyClearDropId": 20400404
+  },
+  {
+    "Id": 6,
+    "LevelCompleteNum": 20,
+    "DailyClearDropId": 20400405
+  },
+  {
+    "Id": 7,
+    "LevelCompleteNum": 24,
+    "DailyClearDropId": 20400406
+  },
+  {
+    "Id": 8,
+    "LevelCompleteNum": 28,
+    "DailyClearDropId": 20400407
+  },
+  {
+    "Id": 9,
+    "LevelCompleteNum": 32,
+    "DailyClearDropId": 20400408
+  }
+]

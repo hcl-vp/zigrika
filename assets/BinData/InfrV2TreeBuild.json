@@ -1,0 +1,165 @@
+[
+  {
+    "Id": 1,
+    "MarkId": 3340001,
+    "AreaId": 42001,
+    "DungeonId": 909,
+    "ConditionId": 12904904,
+    "LockJumpId": 868001,
+    "JumpId": 868005,
+    "BuildQuest": 184850000,
+    "BuildConditionQuestId": 219850027,
+    "Requirement": {
+      "80700008": 500
+    },
+    "FireExpReward": {
+      "80700012": 1
+    },
+    "QuestList": [
+      176000004,
+      176700003,
+      176000005
+    ],
+    "FinishCondition": [
+      14021202,
+      14021203,
+      14021303
+    ],
+    "QuestAccessPath": [
+      913008,
+      913009,
+      913014
+    ],
+    "ItemNum": [
+      500,
+      300,
+      200
+    ],
+    "Name": "BuildTree_1_Name",
+    "Description": "BuildTree_1_Des",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BodyCameraSettingsName": "JiJianRoadOne"
+  },
+  {
+    "Id": 2,
+    "MarkId": 3340002,
+    "AreaId": 42002,
+    "DungeonId": 909,
+    "ConditionId": 12904905,
+    "LockJumpId": 868002,
+    "JumpId": 868006,
+    "BuildQuest": 184850001,
+    "BuildConditionQuestId": 219850118,
+    "Requirement": {
+      "80700009": 500
+    },
+    "FireExpReward": {
+      "80700012": 1
+    },
+    "QuestList": [
+      176000005,
+      176700004,
+      176000006
+    ],
+    "FinishCondition": [
+      14021202,
+      14021203,
+      14021303
+    ],
+    "QuestAccessPath": [
+      913008,
+      913009,
+      913014
+    ],
+    "ItemNum": [
+      300,
+      300,
+      200
+    ],
+    "Name": "BuildTree_2_Name",
+    "Description": "BuildTree_2_Des",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BodyCameraSettingsName": "JiJianRoadTwo"
+  },
+  {
+    "Id": 3,
+    "MarkId": 3340003,
+    "AreaId": 42003,
+    "DungeonId": 909,
+    "ConditionId": 12904906,
+    "LockJumpId": 868003,
+    "JumpId": 868007,
+    "BuildQuest": 184850002,
+    "BuildConditionQuestId": 219850032,
+    "Requirement": {
+      "80700010": 500
+    },
+    "FireExpReward": {
+      "80700012": 1
+    },
+    "QuestList": [
+      176000006,
+      176700005,
+      176000007
+    ],
+    "FinishCondition": [
+      14021202,
+      14021203,
+      14021303
+    ],
+    "QuestAccessPath": [
+      913008,
+      913009,
+      913014
+    ],
+    "ItemNum": [
+      500,
+      500,
+      200
+    ],
+    "Name": "BuildTree_3_Name",
+    "Description": "BuildTree_3_Des",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BodyCameraSettingsName": "JiJianRoadThree"
+  },
+  {
+    "Id": 4,
+    "MarkId": 3340004,
+    "AreaId": 42004,
+    "DungeonId": 909,
+    "ConditionId": 12904907,
+    "LockJumpId": 868004,
+    "JumpId": 868008,
+    "BuildQuest": 184850003,
+    "BuildConditionQuestId": 219850033,
+    "Requirement": {
+      "80700011": 500
+    },
+    "FireExpReward": {
+      "80700012": 1
+    },
+    "QuestList": [
+      176000007,
+      313700034
+    ],
+    "FinishCondition": [
+      14021202,
+      14021203,
+      14021303
+    ],
+    "QuestAccessPath": [
+      913008,
+      913009,
+      913014
+    ],
+    "ItemNum": [
+      500,
+      500,
+      200
+    ],
+    "Name": "BuildTree_4_Name",
+    "Description": "BuildTree_4_Des",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BodyCameraSettingsName": "JiJianRoadFour"
+  }
+]

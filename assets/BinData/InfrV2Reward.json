@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 1,
+    "Desc": "Spring26_goods_gameplay01",
+    "ConditionGroup": 14010044,
+    "DropId": 5191101,
+    "SkipType": 2,
+    "SkipParam": [
+      "-221",
+      "521",
+      "364"
+    ]
+  },
+  {
+    "Id": 2,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 2,
+    "Desc": "Spring26_goods_gameplay02",
+    "ConditionGroup": 14010046,
+    "DropId": 5191102,
+    "SkipType": 2,
+    "SkipParam": [
+      "-2780",
+      "-218",
+      "502"
+    ]
+  },
+  {
+    "Id": 3,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 3,
+    "Desc": "Spring26_goods_gameplay03",
+    "ConditionGroup": 12903802,
+    "DropId": 5191103,
+    "SkipType": 0,
+    "SkipParam": []
+  },
+  {
+    "Id": 4,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 4,
+    "Desc": "Spring26_goods_gameplay04",
+    "ConditionGroup": 12903803,
+    "DropId": 5191104,
+    "SkipType": 0,
+    "SkipParam": []
+  },
+  {
+    "Id": 5,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 5,
+    "Desc": "Spring26_goods_gameplay05",
+    "ConditionGroup": 12903804,
+    "DropId": 5191105,
+    "SkipType": 0,
+    "SkipParam": []
+  }
+]

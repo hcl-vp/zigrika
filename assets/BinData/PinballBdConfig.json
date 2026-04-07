@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "BdName": "Pinball_Character_bd01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType1_S.T_IconRoleType1_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleType1.T_IconRoleType1",
+    "BgColor": "FA9D69"
+  },
+  {
+    "Id": 2,
+    "BdName": "Pinball_Character_bd02",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType2_S.T_IconRoleType2_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleType2.T_IconRoleType2",
+    "BgColor": "A2C45F"
+  },
+  {
+    "Id": 3,
+    "BdName": "Pinball_Character_bd03",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType3_S.T_IconRoleType3_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleType3.T_IconRoleType3",
+    "BgColor": "CE9A42"
+  },
+  {
+    "Id": 4,
+    "BdName": "Pinball_Character_bd04",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType4_S.T_IconRoleType4_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleType4.T_IconRoleType4",
+    "BgColor": "8787DE"
+  },
+  {
+    "Id": 5,
+    "BdName": "Pinball_Character_bd05",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType5_S.T_IconRoleType5_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleType5.T_IconRoleType5",
+    "BgColor": "F57DB8"
+  },
+  {
+    "Id": 6,
+    "BdName": "Pinball_Character_bd06",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleTypeTemp_S.T_IconRoleTypeTemp_S",
+    "BigIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleType/T_IconRoleTypeTemp.T_IconRoleTypeTemp",
+    "BgColor": "5CB3C2"
+  }
+]

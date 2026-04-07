@@ -39,6 +39,7 @@ pub const Entity = struct {
     pub const SummonerComponent = @import("component/entity/SummonerComponent.zig");
     pub const FsmComponent = @import("component/entity/FsmComponent.zig");
     pub const VisionSkillComponent = @import("component/entity/VisionSkillComponent.zig");
+    pub const RoleSkinComponent = @import("component/entity/RoleSkinComponent.zig");
 
     index: usize,
     net_id: i64,

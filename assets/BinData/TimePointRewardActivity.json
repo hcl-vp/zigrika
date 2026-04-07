@@ -4,21 +4,39 @@
     "ActivityId": 102000001,
     "RewardItem": {
       "50002": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50002,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 2,
     "ActivityId": 102000001,
     "RewardItem": {
       "50005": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50005,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 3,
     "ActivityId": 102000001,
     "RewardItem": {
       "50001": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50001,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 4,
@@ -26,28 +44,56 @@
     "RewardItem": {
       "50002": 10,
       "82000001": 1
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50002,
+        "Item2": 10
+      },
+      {
+        "Item1": 82000001,
+        "Item2": 1
+      }
+    ]
   },
   {
     "Id": 5,
     "ActivityId": 102000003,
     "RewardItem": {
       "50002": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50002,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 6,
     "ActivityId": 102000003,
     "RewardItem": {
       "50005": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50005,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 7,
     "ActivityId": 102000003,
     "RewardItem": {
       "50001": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50001,
+        "Item2": 10
+      }
+    ]
   },
   {
     "Id": 8,
@@ -55,6 +101,16 @@
     "RewardItem": {
       "50002": 10,
       "50005": 10
-    }
+    },
+    "Rewards": [
+      {
+        "Item1": 50002,
+        "Item2": 10
+      },
+      {
+        "Item1": 50005,
+        "Item2": 10
+      }
+    ]
   }
 ]

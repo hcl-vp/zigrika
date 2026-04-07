@@ -161,7 +161,7 @@ setTimeout(() => {
     b.addFieldOffset(2, name_off, 0);
     b.addFieldInt32(3, 0, 0);
     b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
+    b.addFieldInt32(5, 1, 0);
     b.addFieldOffset(7, vr_vec, 0);
     b.addFieldInt8(8, 0, 0);
     b.addFieldFloat32(9, 0.1, 0.1);

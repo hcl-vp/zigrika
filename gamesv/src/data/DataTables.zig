@@ -81,7 +81,7 @@ pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
         items: []const T,
         index: IndexMap,
 
-        pub fn getDataById(table: @This(), id: i32) ?T {
+        pub fn getDataById(table: @This(), id: i64) ?T {
             return if (table.index.get(id)) |i| table.items[i] else null;
         }
     };
@@ -153,8 +153,10 @@ pub fn getRoleAutoBuffs(
         "零能量",
         "59b4b0a5",
         "371b7a72",
-        "角色.2f8a917e.状态.4997165f",
-        "角色.2f8a917e.状态.03ca4091",
+        "角色.R2T1JiyanMd10011.技能标识.大招状态", // jiyan
+        "23d0723c", // denia forms stuff
+        "20b04084", // lynae roguelike
+        "8c658780", // mornye roguelik
     };
 
     var results: std.ArrayListUnmanaged(RoleBuffEntry) = .empty;
@@ -173,10 +175,6 @@ pub fn getRoleAutoBuffs(
         if (buff.ApplicationSourceTagRequirements.len != 0) continue;
         if (buff.ApplicationTagRequirements.len != 0) continue;
         if (buff.PrematureExpirationEffects.len != 0) continue;
-        if (buff.OngoingTagIgnores.len != 0 and
-            buff.OngoingTagRequirements.len == 0 and
-            buff.GameplayCueIds.len != 0) continue;
-        // if (buff.Period != 0.0 and buff.ExtraEffectID != 0) continue;
 
         // roguelike buff removal
         const suffix = id_str[4..];
@@ -226,6 +224,35 @@ pub fn getRoleAutoBuffs(
 
     for (additional_buffs) |id| {
         try results.append(gpa, .{ .id = id, .is_active = true });
+    }
+
+    // le denia (handle ee id 6 (attribute event))
+    var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
+    defer illegal_ids.deinit(gpa);
+
+    for (results.items) |entry| {
+        const buff = tables.buff.getDataById(@intCast(entry.id)) orelse continue;
+        if (buff.ExtraEffectID != 6) continue;
+        const result_param = if (buff.ExtraEffectParameters.len > 3)
+            buff.ExtraEffectParameters[3]
+        else
+            continue;
+        var it = std.mem.splitScalar(u8, result_param, '#');
+        while (it.next()) |id_str| {
+            const id = std.fmt.parseInt(i64, id_str, 10) catch continue;
+            try illegal_ids.put(gpa, id, {});
+        }
+    }
+
+    if (illegal_ids.count() > 0) {
+        var i: usize = 0;
+        while (i < results.items.len) {
+            if (illegal_ids.contains(results.items[i].id)) {
+                _ = results.swapRemove(i);
+            } else {
+                i += 1;
+            }
+        }
     }
 
     return results;

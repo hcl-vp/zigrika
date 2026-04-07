@@ -31976,6 +31976,20 @@
     "EndState": ""
   },
   {
+    "Id": 850527,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_S/SS1Bozai/BaseAnim/3_3Montage/Rogue_Loop.Rogue_Loop",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850528,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_S/SS1Bozai/BaseAnim/3_3Montage/Rogue_End.Rogue_End",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
     "Id": 800788,
     "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Music_03.Stand_Music_03",
     "MaleVariant": "",
@@ -32235,6 +32249,13 @@
     "EndState": ""
   },
   {
+    "Id": 850529,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleMS/Daniya/CommonAnim/Montage/Sit01.Sit01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
     "Id": 800826,
     "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Montage_Clap_01_End_MaleM.Montage_Clap_01_End_MaleM",
     "MaleVariant": "",
@@ -32288,6 +32309,489 @@
     "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Cheek01.Cheek01",
     "MaleVariant": "",
     "InitState": "stand",
+    "EndState": ""
+  },
+  {
+    "Id": 850530,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/Bingdongguangpian.Bingdongguangpian",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850531,
+    "Montage": "/Game/Aki/Character/NPC/Vehicle/Riding_Action_Montage.Riding_Action_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850532,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850533,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850534,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850535,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850536,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850537,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850538,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850539,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850540,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850541,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850542,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850543,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850544,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850545,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850546,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850547,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850548,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850549,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850550,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850551,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850552,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850553,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850554,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850555,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850556,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850557,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850558,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850559,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850560,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850561,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850562,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850563,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850564,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Confuse_Floor_Montage.Confuse_Floor_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850565,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Cheer_Floor_Montage.Cheer_Floor_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850566,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Stretch_Montage.Stretch_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850567,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Applaud_Montage.Applaud_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850568,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Dance_02.Dance_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850569,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Angry.Angry",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850570,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Shy.Shy",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850571,
+    "Montage": "/Game/Aki/Character/NPC/AlienNPC/Level_A/SA1Riling/CommonAnim/Montage/Wow.Wow",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850572,
+    "Montage": "/Game/Aki/Character/NPC/Animal/NA062/CommonAnim/AM_SM_ShuiJiao_P4.AM_SM_ShuiJiao_P4",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850573,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleMS/Daniya/CommonAnim/Montage/TiltHead.TiltHead",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850574,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850575,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850576,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850577,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850578,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850579,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850580,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850581,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850582,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Call_01.Stand_Call_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850583,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_Cough_01.Stand_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850584,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Cough_01.Sit_Cough_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850585,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_RecordPAD_01.Sit_RecordPAD_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850586,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Sit_Thinker_01.Sit_Thinker_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850587,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WildWriting_01.Stand_WildWriting_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850588,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Stand_WipeSweat_01.Stand_WipeSweat_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850589,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850590,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_WipeSweat_02.Stand_WipeSweat_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850591,
+    "Montage": "/Game/Aki/Character/NPC/Animal/NA068/CommonAnim/Montage/Montage_Idle_01.Montage_Idle_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850592,
+    "Montage": "/Game/Aki/Character/NPC/Animal/NA068/CommonAnim/Montage/Montage_Idle_02.Montage_Idle_02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850593,
+    "Montage": "/Game/Aki/Character/NPC/Animal/NA068/CommonAnim/Montage/Stand_01.Stand_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850594,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/Talk01_Montage.Talk01_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850595,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/Squat02_Montage.Squat02_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850596,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/Showhand01_Montage.Showhand01_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850597,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/SitCalm01_Montage.SitCalm01_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": ""
+  },
+  {
+    "Id": 850598,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Feixue/Body/Montage/SitThinking01_Montage.SitThinking01_Montage",
+    "MaleVariant": "",
+    "InitState": "",
     "EndState": ""
   }
 ]

@@ -260,7 +260,7 @@
       "1"
     ],
     "TipType": 1,
-    "ListenQuestId": 192700024,
+    "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
     "QuestId": 0
@@ -274,7 +274,7 @@
       "1"
     ],
     "TipType": 1,
-    "ListenQuestId": 192700025,
+    "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
     "QuestId": 0
@@ -288,7 +288,7 @@
       "1"
     ],
     "TipType": 1,
-    "ListenQuestId": 192700026,
+    "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
     "QuestId": 0
@@ -1876,6 +1876,104 @@
     "QuestId": 0
   },
   {
+    "Id": 33001,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33002,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33003,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33004,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33005,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33006,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33007,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
     "Id": 32136,
     "WhichChat": 8,
     "FlowParam": [
@@ -1918,11 +2016,641 @@
     "QuestId": 0
   },
   {
+    "Id": 33008,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33009,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33010,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33011,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33012,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33013,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33014,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33015,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33016,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33017,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33018,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33019,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33020,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33021,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33022,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33023,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33024,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33025,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33026,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33027,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33028,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33029,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33030,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33031,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33034,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33035,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33032,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33033,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
     "Id": 32010,
     "WhichChat": 3,
     "FlowParam": [
       "剧情_3_2_拉海洛主线_下半",
       "16",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33036,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33037,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33038,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33039,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33040,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33041,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33042,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33043,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33044,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33045,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33046,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33047,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33048,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33049,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33050,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33051,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33052,
+    "WhichChat": 30,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
       "1"
     ],
     "TipType": 1,

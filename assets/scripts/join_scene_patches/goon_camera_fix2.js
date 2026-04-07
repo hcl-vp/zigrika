@@ -217,10 +217,29 @@ setTimeout(() => {
     );
     ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption(
       7,
-      0,
+      1,
     );
     return original_u5();
   };
+
+  const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
+  ControllerHolder_1.ControllerHolder.PhotographController.InitializeDefaultPhotographOption =
+    function () {
+      for (const o of ConfigManager_1.ConfigManager.PhotographConfig.GetAllPhotoSetupConfig()) {
+        if (o.ValueType === 8) continue;
+        let t = -1;
+        var e = o.Type;
+        (0 === e
+          ? (t = o.DefaultOptionIndex)
+          : 1 === e && (t = o.ValueRange[2]),
+          this.SetPhotographOption(o.ValueType, t, !0));
+      }
+      2 === this.CameraCaptureType && this.SetNpcFocusPhotograph(!0);
+      this.SetPhotographOption(
+        8,
+        ModelManager_1.ModelManager.TimeOfDayModel?.GameTime?.Second,
+      );
+    };
 
   const TimeOfDayController_1 = require("../Game/Module/TimeOfDay/TimeOfDayController.js");
   const Protocol_1 = require("../Core/Define/Net/Protocol.js");
@@ -285,14 +304,14 @@ setTimeout(() => {
         case 7:
           const list_of_actors =
             ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity.GetComponent(
-              21,
+              23,
             ).Sau;
 
           for (const [key, value] of list_of_actors) {
             var actor = EffectSystem_1.EffectSystem.GetEffectActor(
               value.EffectViewHandle,
             );
-            actor.SetActorHiddenInGame(e == true || e === 1);
+            actor?.SetActorHiddenInGame(e == false || e === 0);
           }
           break;
         case 8:

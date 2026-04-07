@@ -138,5 +138,53 @@
       "6": 45000,
       "7": 58000
     }
+  },
+  {
+    "Id": 7,
+    "Param": 4,
+    "InstId": 107700001,
+    "Cond": 0,
+    "MaxLoopCount": 0,
+    "TeamLimit": 3,
+    "Diff": 0,
+    "NewTowerBuffs": [
+      21,
+      18,
+      19,
+      20
+    ],
+    "NewTowerBuffCount": 1,
+    "ScoreLevelRule": {
+      "0": 0,
+      "1": 4800,
+      "2": 7200,
+      "3": 10000
+    }
+  },
+  {
+    "Id": 8,
+    "Param": 4,
+    "InstId": 107700002,
+    "Cond": 12903764,
+    "MaxLoopCount": 99,
+    "TeamLimit": 0,
+    "Diff": 1,
+    "NewTowerBuffs": [
+      21,
+      18,
+      19,
+      20
+    ],
+    "NewTowerBuffCount": 1,
+    "ScoreLevelRule": {
+      "0": 0,
+      "1": 12000,
+      "2": 16000,
+      "3": 21000,
+      "4": 29000,
+      "5": 37000,
+      "6": 45000,
+      "7": 58000
+    }
   }
 ]

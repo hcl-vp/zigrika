@@ -9360,6 +9360,71 @@
     "IsOccupancyFightInput": true
   },
   {
+    "Id": 8070,
+    "ActionName": "一号技能",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagOne",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8071,
+    "ActionName": "二号技能",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagTwo",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8072,
+    "ActionName": "三号技能",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagThree",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8073,
+    "ActionName": "弹珠冲刺",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagFour",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8074,
+    "ActionName": "弹珠挡板",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagFIve",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
     "Id": 2229,
     "ActionName": "UI键盘Z手柄LT",
     "AxisName": "",
@@ -9513,6 +9578,45 @@
     "ReleaseFailureTime": 0,
     "BindButtonTag": "tagR2",
     "ApplicableType": 1,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8035,
+    "ActionName": "攀爬",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagClimb",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8036,
+    "ActionName": "技能1",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagE",
+    "ApplicableType": 0,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8037,
+    "ActionName": "大招",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagR",
+    "ApplicableType": 0,
     "IsOccupancyFightInput": true
   }
 ]

@@ -1,0 +1,9 @@
+[
+  {
+    "InstId": 9811,
+    "RewardGroupId": 1,
+    "MainTitleText": "MapMark_390100_MarkTitle",
+    "AchieveText": "MapMark_390100_MarkDesc",
+    "RewardTitleText": "MapMark_150013_MarkTitle,1;MapMark_150013_MarkTitle,2;MapMark_150013_MarkTitle,3"
+  }
+]

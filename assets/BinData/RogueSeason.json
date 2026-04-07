@@ -5,14 +5,9 @@
     "SeasonName": "8002",
     "PointItem": 80100002,
     "InstanceDungeonEntrance": 8002,
+    "InstanceDungeonList": {},
+    "InstanceDungeonTypeName": {},
     "TabIcon": "",
-    "FirstPassRewardMap": {
-      "8002": 3501,
-      "8003": 3502,
-      "8004": 3503,
-      "8005": 3504,
-      "8006": 3505
-    },
     "ShopId": 201,
     "Achievement": 7,
     "ParamId": 2,
@@ -24,14 +19,9 @@
     "SeasonName": "8002",
     "PointItem": 80100002,
     "InstanceDungeonEntrance": 8002,
+    "InstanceDungeonList": {},
+    "InstanceDungeonTypeName": {},
     "TabIcon": "",
-    "FirstPassRewardMap": {
-      "8007": 3511,
-      "8008": 3512,
-      "8009": 3513,
-      "8010": 3514,
-      "8011": 3515
-    },
     "ShopId": 204,
     "Achievement": 8,
     "ParamId": 2,
@@ -43,14 +33,9 @@
     "SeasonName": "8002",
     "PointItem": 80100002,
     "InstanceDungeonEntrance": 8002,
+    "InstanceDungeonList": {},
+    "InstanceDungeonTypeName": {},
     "TabIcon": "",
-    "FirstPassRewardMap": {
-      "8012": 3511,
-      "8013": 3512,
-      "8014": 3513,
-      "8015": 3514,
-      "8016": 3515
-    },
     "ShopId": 206,
     "Achievement": 9,
     "ParamId": 3,
@@ -62,10 +47,9 @@
     "SeasonName": "8002",
     "PointItem": 80100002,
     "InstanceDungeonEntrance": 8002,
+    "InstanceDungeonList": {},
+    "InstanceDungeonTypeName": {},
     "TabIcon": "",
-    "FirstPassRewardMap": {
-      "8401": 3511
-    },
     "ShopId": 207,
     "Achievement": 10,
     "ParamId": 4,
@@ -77,13 +61,42 @@
     "SeasonName": "8401",
     "PointItem": 80100002,
     "InstanceDungeonEntrance": 8401,
+    "InstanceDungeonList": {},
+    "InstanceDungeonTypeName": {},
     "TabIcon": "",
-    "FirstPassRewardMap": {
-      "8401": 3511
-    },
     "ShopId": 207,
     "Achievement": 10,
     "ParamId": 5,
+    "RogueThemeType": "0"
+  },
+  {
+    "Id": 6,
+    "ActivityId": 100600005,
+    "SeasonName": "8401",
+    "PointItem": 80100002,
+    "InstanceDungeonEntrance": 8003,
+    "InstanceDungeonList": {
+      "1": {
+        "ArrayInt": [
+          8040,
+          8041,
+          8042
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          8043
+        ]
+      }
+    },
+    "InstanceDungeonTypeName": {
+      "1": "Rogue_LevelGroup_1",
+      "2": "Rogue_LevelGroup_2"
+    },
+    "TabIcon": "",
+    "ShopId": 223,
+    "Achievement": 11,
+    "ParamId": 7,
     "RogueThemeType": "0"
   }
 ]

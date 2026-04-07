@@ -1,0 +1,650 @@
+[
+  {
+    "Id": 1,
+    "SimpleCombatSubtypeId": 1001,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 1,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 1
+  },
+  {
+    "Id": 2,
+    "SimpleCombatSubtypeId": 1002,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 2,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 2
+  },
+  {
+    "Id": 3,
+    "SimpleCombatSubtypeId": 1003,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 3,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 3
+  },
+  {
+    "Id": 4,
+    "SimpleCombatSubtypeId": 1004,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 4,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 4
+  },
+  {
+    "Id": 5,
+    "SimpleCombatSubtypeId": 1005,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 5,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 5
+  },
+  {
+    "Id": 6,
+    "SimpleCombatSubtypeId": 1006,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 6,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 6
+  },
+  {
+    "Id": 7,
+    "SimpleCombatSubtypeId": 1007,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 7,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 7
+  },
+  {
+    "Id": 8,
+    "SimpleCombatSubtypeId": 1008,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 8,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 8
+  },
+  {
+    "Id": 9,
+    "SimpleCombatSubtypeId": 1009,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 9,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 9
+  },
+  {
+    "Id": 10,
+    "SimpleCombatSubtypeId": 1010,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 10,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 10
+  },
+  {
+    "Id": 11,
+    "SimpleCombatSubtypeId": 1011,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 11,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 11
+  },
+  {
+    "Id": 12,
+    "SimpleCombatSubtypeId": 1012,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 12,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 12
+  },
+  {
+    "Id": 13,
+    "SimpleCombatSubtypeId": 1013,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 13,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 13
+  },
+  {
+    "Id": 14,
+    "SimpleCombatSubtypeId": 1014,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 14,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 14
+  },
+  {
+    "Id": 15,
+    "SimpleCombatSubtypeId": 1015,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 15,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 15
+  },
+  {
+    "Id": 16,
+    "SimpleCombatSubtypeId": 1016,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 16,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 16
+  },
+  {
+    "Id": 17,
+    "SimpleCombatSubtypeId": 1017,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 17,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 17
+  },
+  {
+    "Id": 18,
+    "SimpleCombatSubtypeId": 1018,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 18,
+    "InitBuffs": [
+      1140100702,
+      1140199801,
+      1140199802
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 18
+  },
+  {
+    "Id": 19,
+    "SimpleCombatSubtypeId": 1101,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 19,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 19
+  },
+  {
+    "Id": 20,
+    "SimpleCombatSubtypeId": 1102,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 20,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 20
+  },
+  {
+    "Id": 21,
+    "SimpleCombatSubtypeId": 1103,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 21,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 21
+  },
+  {
+    "Id": 22,
+    "SimpleCombatSubtypeId": 1104,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 22,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 22
+  },
+  {
+    "Id": 23,
+    "SimpleCombatSubtypeId": 1105,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 23,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 23
+  },
+  {
+    "Id": 24,
+    "SimpleCombatSubtypeId": 1106,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 24,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 24
+  },
+  {
+    "Id": 25,
+    "SimpleCombatSubtypeId": 1107,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 25,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 25
+  },
+  {
+    "Id": 26,
+    "SimpleCombatSubtypeId": 1108,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 26,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 26
+  },
+  {
+    "Id": 27,
+    "SimpleCombatSubtypeId": 1201,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 27,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 27
+  },
+  {
+    "Id": 28,
+    "SimpleCombatSubtypeId": 1202,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 28,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 28
+  },
+  {
+    "Id": 29,
+    "SimpleCombatSubtypeId": 1203,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 29,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 29
+  },
+  {
+    "Id": 30,
+    "SimpleCombatSubtypeId": 1204,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 30,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 30
+  },
+  {
+    "Id": 31,
+    "SimpleCombatSubtypeId": 1205,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 31,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 31
+  },
+  {
+    "Id": 32,
+    "SimpleCombatSubtypeId": 1206,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 32,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 32
+  },
+  {
+    "Id": 33,
+    "SimpleCombatSubtypeId": 1207,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 33,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 33
+  },
+  {
+    "Id": 34,
+    "SimpleCombatSubtypeId": 1303,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 34,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 34
+  },
+  {
+    "Id": 35,
+    "SimpleCombatSubtypeId": 1302,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 35,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 35
+  },
+  {
+    "Id": 36,
+    "SimpleCombatSubtypeId": 1301,
+    "Name": "",
+    "Desc": "",
+    "DescArgs": [],
+    "MonsterType": 36,
+    "InitBuffs": [
+      1140100702,
+      1120199801,
+      1120199802,
+      1120199803,
+      1120199804
+    ],
+    "Deathrattle": 0,
+    "Tag": [],
+    "AttrShow": [],
+    "Prop": 36
+  }
+]

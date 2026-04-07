@@ -1,0 +1,17 @@
+[
+  {
+    "RewardId": 1,
+    "RewardGroupId": 1,
+    "TargetScore": 100
+  },
+  {
+    "RewardId": 2,
+    "RewardGroupId": 1,
+    "TargetScore": 400
+  },
+  {
+    "RewardId": 3,
+    "RewardGroupId": 1,
+    "TargetScore": 800
+  }
+]

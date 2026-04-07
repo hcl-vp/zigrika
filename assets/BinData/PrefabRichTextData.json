@@ -15842,12 +15842,12 @@
   {
     "Id": "Mail_400021_Content",
     "IsIncludeRichText": true,
-    "IsIncludeGameText": true
+    "IsIncludeGameText": false
   },
   {
     "Id": "Mail_400022_Content",
     "IsIncludeRichText": true,
-    "IsIncludeGameText": true
+    "IsIncludeGameText": false
   },
   {
     "Id": "Mail_9_Content",
@@ -112175,11 +112175,6 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "MAIN_YHX_19_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "SLZYDST_10_7",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -136225,6 +136220,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "InfoDisplay_28050004_Text",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "ItemInfo_80601002_AttributesDescription",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -136321,6 +136321,16 @@
   },
   {
     "Id": "Main_Honami_2_8_2_70_27",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_7_144_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_7_152_30",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -144175,6 +144185,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Speaker_250075_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_250079_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "TWTPOI_1_8",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -147000,61 +147020,6 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "GuideTutorialPage_34202_Content",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_48_40",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_979_1",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text59",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text60",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text61",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text67",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text70",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "AreaReportContent_Text74",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "EventJJSPH_5_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "EventJJSPH_6_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "Main_LahaiRoi_3_2_1_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -147265,86 +147230,6 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "PhantomBattleCardCount_736014",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_730016",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_730029",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_730030",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_730031",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_731010",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_732008",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_733014",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_733015",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_734008",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardDurable_736009",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardEffect_720006",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardEffect_726007",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardEffect_733009",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardEffect_733010",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhantomBattleCardEffect_734014",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "RoleSkillInput_1209_DescList_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -147500,6 +147385,151 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "XJXYST_35_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_36",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "GuideTutorialPage_34202_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_48_40",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_979_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text59",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text60",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text61",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text67",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text70",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AreaReportContent_Text74",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "EventJJSPH_5_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "EventJJSPH_6_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardCount_736014",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_730016",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_730029",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_730030",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_730031",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_731010",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_732008",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_733014",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_733015",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_734008",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardDurable_736009",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardEffect_720006",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardEffect_726007",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardEffect_733009",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardEffect_733010",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhantomBattleCardEffect_734014",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "XJXYBGSST_12_4",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -147538,26 +147568,6 @@
     "Id": "XJXYDTK_9_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
-  },
-  {
-    "Id": "XJXYST_35_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_36",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Event_TCTL5_1_31",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Event_TCTL5_1_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
   },
   {
     "Id": "GNNPCXJXY_11_5",
@@ -147630,56 +147640,6 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "PhotoMemory_11001_Desc",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "POI_GDLC_12_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_13_15",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_3_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_3_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_45_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Term700018_Desc",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Term700019_Desc",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Term700020_Desc",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Term700025_Desc",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
     "Id": "XJXYST_22_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -147750,6 +147710,26 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Term700018_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Term700019_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Term700020_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Term700025_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "AreaReportContent_Text57",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -147801,6 +147781,16 @@
   },
   {
     "Id": "BYCZ_48_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_TCTL5_1_31",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_TCTL5_1_7",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -148160,6 +148150,36 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "PhotoMemory_11001_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "POI_GDLC_12_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_13_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_3_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_3_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_45_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "QuestTree_Summary_310010",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
@@ -148171,6 +148191,11 @@
   },
   {
     "Id": "Side_ZHDHS_8_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_250092_Name",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -148296,136 +148321,6 @@
   },
   {
     "Id": "Event_DAZYHQLZDST2_40_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "LevelPlay_181700002_InteractContent_181_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "LevelPlay_181700027_InteractContent_181_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_3_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_3_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_4_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_5_13",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_5_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_5_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_5_9",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "PhotographHandBook_110_Descrtption",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Quest_313700017_QuestScheduleSubTitle_184_12",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Quest_313700018_QuestScheduleSubTitle_184_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Quest_313700021_QuestScheduleSubTitle_184_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_2_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_2_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_4_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_4_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_4_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_6_12",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_6_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_8_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_8_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_8_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_8_5",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -148595,6 +148490,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "LevelPlay_181700002_InteractContent_181_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_181700027_InteractContent_181_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Main_LahaiRoi_3_1_50_29",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -148603,6 +148508,56 @@
     "Id": "Main_LahaiRoi_3_2_3902_31",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_3_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_3_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_4_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_5_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_5_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_5_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_5_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "PhotographHandBook_110_Descrtption",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "PrefabTextItem_2002934041_Text",
@@ -148630,6 +148585,21 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Quest_313700017_QuestScheduleSubTitle_184_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_313700018_QuestScheduleSubTitle_184_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_313700021_QuestScheduleSubTitle_184_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "SDLZXXBST_11_3",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
@@ -148651,6 +148621,61 @@
   },
   {
     "Id": "SDLZXXBST_9_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_2_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_2_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_4_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_4_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_4_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_6_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_6_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_8_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_8_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_8_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_8_5",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -150305,6 +150330,326 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Main_LahaiRoi_ZRJDYKX_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_10_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_11_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_11_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_11_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_11_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_13_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_16_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_16_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_19_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_20_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_20_22",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_24_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_25_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_26_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_27_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_30_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_34_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_38_39",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_38_42",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_39_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_39_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_39_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_4_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_4_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_4_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_4_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_40_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_41_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_41_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_41_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_42_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_43_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_44_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_19",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_25",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_47_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_48_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_48_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_48_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_49_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_5_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_50_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_50_19",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_50_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_28",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_7_41",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_71_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_8_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_8_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_8_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_8_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_9_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_9_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_9_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_9_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_93_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "NPC_HBGC_29_7",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -151450,6 +151795,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Main_LahaiRoi_ZRJDYKX_46_30",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "MSZWZSD_12_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -152310,6 +152660,31 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "InstanceDungeonEntrance_2517_Description",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ItemInfo_50000116_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Main_LahaiRoi_3_1_38_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "NPC_YJYFB_83_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XYDG_8_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Daily_KXYFK_1_20",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -152445,6 +152820,21 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "EventJJSPH_3_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "EventJJSPH_3_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "EventJJSPH_4_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "GhostShipLevelDesc_Text1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -152470,16 +152860,6 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "InstanceDungeonEntrance_2517_Description",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ItemInfo_50000116_AttributesDescription",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
     "Id": "ItemInfo_50000408_AttributesDescription",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -152500,9 +152880,34 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "Main_LahaiRoi_3_1_38_1",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
+    "Id": "Message_Main_LahaiRoi_3_1_3_27",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_4_29",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Message_Main_LahaiRoi_3_1_6_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "MSZWZSD_12_2",
@@ -152650,7 +153055,127 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "NPC_YJYFB_83_3",
+    "Id": "Side_ANHJDCS_2_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_2_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_2_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_2_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_3_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_3_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_3_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_3_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_3_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_4_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_4_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_4_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_5_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_6_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_7_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_7_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_8_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_8_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_8_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_8_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_9_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_9_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_9_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_9_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_ANHJDCS_9_3",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -152785,7 +153310,152 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_XYDG_8_4",
+    "Id": "Side_sixteenbit_10_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_21",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_2_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_4_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_4_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_5_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_5_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_5_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_5_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_5_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_7_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_8_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_sixteenbit_8_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YJYCZNPCST_34_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "STNPC_FGLST_11_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "STNPC_FGLST_19_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "STNPC_FGLST_9_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "STNPC_FGLST_9_9",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -153055,12 +153725,32 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "XJXYDTK_2_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XJXYDTK_24_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "XJXYDTK_24_15",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
     "Id": "XJXYDTK_24_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XJXYDTK_24_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XJXYDTK_24_4",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -153375,17 +154065,7 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "EventJJSPH_3_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "EventJJSPH_3_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "EventJJSPH_4_6",
+    "Id": "MAIN_YHX_19_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -153400,82 +154080,12 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Message_Main_LahaiRoi_3_1_3_27",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_4_29",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_13",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_16",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_17",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Message_Main_LahaiRoi_3_1_6_18",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "Motorcycle_8_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
     "Id": "RLSJWF_5_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_2_11",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_2_15",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_2_16",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_2_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_3_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_3_11",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_3_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_3_3",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -153490,17 +154100,7 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_ANHJDCS_3_9",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "Side_ANHJDCS_4_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_4_16",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -153510,258 +154110,13 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_ANHJDCS_4_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_4_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "Side_ANHJDCS_5_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_5_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_6_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_7_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_7_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_8_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_8_5",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_8_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_8_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_9_13",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_9_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_9_15",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_9_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_ANHJDCS_9_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_10_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_13",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_17",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_20",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_21",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_2_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_4_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_4_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_5_11",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_5_12",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_5_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_5_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_5_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_7_4",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_8_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_sixteenbit_8_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_11",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_15",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_16",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_6",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_YJYCZNPCST_34_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "STNPC_FGLST_11_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "STNPC_FGLST_19_3",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "STNPC_FGLST_9_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "STNPC_FGLST_9_9",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
     "Id": "WeaponConf_21040045_Desc",
     "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "XJXYDTK_2_9",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "XJXYDTK_24_14",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "XJXYDTK_24_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "XJXYDTK_24_4",
-    "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
@@ -155435,9 +155790,24 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_XGLKCP_8_10",
+    "Id": "Activity_103000004_Title",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "BYZF_1_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "BYZF_60_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "BYZF_63_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "Daily_KXYFK_1_5",
@@ -155465,152 +155835,17 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Entity_bac385123761b480eae644f842cf016c6ca109fd043f48b83a71c0210f104f40",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "GNNPCXJXY_23_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
   {
     "Id": "ItemInfo_42601440_BgDescription",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_23_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_962_5",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_968_14",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Quest_146700003_QuestDesc_146_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_1_13",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_3_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_4_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_4_8",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_6_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_CQLDTN_7_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SideCSYH_10_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SidePLJCD_2_18",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "StTWT_74_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "StTWT_75_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "StTWT_86_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "StTWT_87_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_25",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_26",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_29",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_30",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_46",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "ZXZTC_Rinascita_1_48",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Speaker_750512_Name",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Activity_103000004_Title",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "BYZF_1_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "BYZF_60_12",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "BYZF_63_10",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Entity_bac385123761b480eae644f842cf016c6ca109fd043f48b83a71c0210f104f40",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -155625,109 +155860,24 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_1",
+    "Id": "LevelPlay_109000081_QuestScheduleSubTitle_109_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
   },
   {
-    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_2",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_4",
+    "Id": "LevelPlay_109000081_QuestScheduleSubTitle_109_2",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
   {
-    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_6",
+    "Id": "LevelPlay_109000081_QuestScheduleSubTitle_109_4",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
   {
-    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_1",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_2",
+    "Id": "LevelPlay_109000081_QuestScheduleSubTitle_109_6",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
-  },
-  {
-    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_4",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_6",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_3_1_15_30",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Main_LahaiRoi_3_1_37_25",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Main_LahaiRoi_3_2_3_34",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "NPC_NXB_11_12",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_3_24",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "POI_GDLC_43_11",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Quest_226700000_QuestDesc_226_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Quest_226700001_QuestDesc_226_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "SideCSYH_10_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Speaker_100102_Name",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Speaker_100137_Name",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "STNPC_QYYDST_51_7",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "StZLCZ_5_2",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
   },
   {
     "Id": "LevelPlay_222750019_QuestScheduleSubTitle_222_2",
@@ -155803,6 +155953,236 @@
     "Id": "LevelPlay_222750024_QuestScheduleSubTitle_222_3",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_686750010_QuestScheduleSubTitle_686_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_686750011_QuestScheduleSubTitle_686_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Main_LahaiRoi_3_1_15_30",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_1_37_25",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_23_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_3_34",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_962_5",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Main_LahaiRoi_3_2_968_14",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "NPC_NXB_11_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_3_24",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_GDLC_43_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_146700003_QuestDesc_146_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_226700000_QuestDesc_226_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_226700001_QuestDesc_226_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_1_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_3_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_4_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_4_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_6_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_CQLDTN_7_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XGLKCP_8_10",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SideCSYH_10_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SideCSYH_10_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SidePLJCD_2_18",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_100102_Name",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_100137_Name",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_750512_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "STNPC_QYYDST_51_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "StTWT_74_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "StTWT_75_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "StTWT_86_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "StTWT_87_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "StZLCZ_5_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_25",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_26",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_29",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_30",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_46",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ZXZTC_Rinascita_1_48",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "DirectionalFusion_Times_Red",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
   },
   {
     "Id": "HelpText_516_Content",
@@ -155986,11 +156366,6 @@
   },
   {
     "Id": "Skill_1004710_SkillResume",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "DirectionalFusion_Times_Red",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -157620,6 +157995,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "POI_LDDXW_30_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_LDDXW_32_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Event_DAZYHQLZDBC_1_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -157735,12 +158120,22 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "POI_LDDXW_30_3",
+    "Id": "Side_LNCP_17_3",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
-    "Id": "POI_LDDXW_32_3",
+    "Id": "Side_LNCP_26_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_LNCP_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_LNCP_4_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -157845,26 +158240,6 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_LNCP_17_3",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_LNCP_26_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_LNCP_3_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "Side_LNCP_4_1",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
     "Id": "Side_XXSXDYW_6_7",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -157881,6 +158256,81 @@
   },
   {
     "Id": "Side_XXSXDYW_7_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_52_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_52_32",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_52_37",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_52_42",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_22",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_28",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_31",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_37",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_39",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_41",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_44",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_54_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_56_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_61_21",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -158353,6 +158803,51 @@
     "Id": "TowerChallengeBuff_92007146_Desc",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "Zuoyequnxing_65_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_65_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_68_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_68_34",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_69_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_82_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_83_33",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_83_35",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_83_46",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "LevelPlay_686750031_QuestScheduleSubTitle_686_3",
@@ -160420,6 +160915,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "LevelPlay_219000000_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_219000005_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "MAIN_RGLC_10_10",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -160478,6 +160983,26 @@
     "Id": "Term151002_Desc",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_219000006_QuestScheduleSubTitle_219_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_219000007_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_219000008_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_219000010_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "MSRLWF_13_1",
@@ -161720,11 +162245,6 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "ComboTeaching_12100101_DescriptionTitle",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
     "Id": "ComboTeaching_12100102_DescriptionContent",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -161890,11 +162410,6 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Event_WWPDTYP_21_33",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
     "Id": "Event_WWPDTYP_21_36",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -161955,21 +162470,6 @@
     "IsIncludeGameText": false
   },
   {
-    "Id": "GuideTutorialPage_36048_Content",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "GuideTutorialPage_3604802_Content",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "GuideTutorialPage_3604803_Content",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
     "Id": "Main_LahaiRoi_3_2_961_42",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -161981,11 +162481,6 @@
   },
   {
     "Id": "MAIN_YHX_106_46",
-    "IsIncludeRichText": false,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "MAIN_YHX_1111_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -162136,6 +162631,86 @@
   },
   {
     "Id": "SkillInput_1210_DescList_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ComboTeaching_12100101_DescriptionTitle",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Event_WWPDTYP_21_33",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "GuideTutorialPage_36048_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "GuideTutorialPage_3604802_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "GuideTutorialPage_3604803_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "MAIN_YHX_1111_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "MotorFightGame_ItemDesc_116",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "MotorFightGame_ItemDesc_117",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "MotorFightGame_ItemDesc_118",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "MotorFightGame_ItemDesc_119",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RoleSkillInput_1510_DescList_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "RoleSkillInput_1510_DescList_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "RoleSkillInput_1510_SkillDescList_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SkillInput_1510_DescList_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SkillInput_1510_DescList_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SkillInput_1510_DescList_3",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -162391,56 +162966,6 @@
   },
   {
     "Id": "MAIN_YHX_72_4",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "MotorFightGame_ItemDesc_116",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "MotorFightGame_ItemDesc_117",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "MotorFightGame_ItemDesc_118",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "MotorFightGame_ItemDesc_119",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "RoleSkillInput_1510_DescList_1",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "RoleSkillInput_1510_DescList_2",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": true
-  },
-  {
-    "Id": "RoleSkillInput_1510_SkillDescList_2",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "SkillInput_1510_DescList_1",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "SkillInput_1510_DescList_2",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "SkillInput_1510_DescList_3",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -165140,6 +165665,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "LevelPlay_219850001_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "MAIN_YHX_1202_10",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -165560,6 +166090,36 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "PhotoMemory_11201_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PhotoMemory_11202_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PhotoMemory_11203_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PhotoMemory_11204_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PhotoMemory_11205_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PhotoMemory_11206_Tips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Side_YNZJ_4_2",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -165735,6 +166295,36 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Main_LahaiRoi_ZRJDYKX_101_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_65_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_65_23",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_65_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_67_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_67_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "MAIN_YHX_24_25",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -165875,6 +166465,126 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Zuoyequnxing_165_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_165_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_168_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_170_20",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Zuoyequnxing_170_36",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Zuoyequnxing_187_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_187_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_193_33",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_193_36",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_193_37",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_193_45",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_24_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_27_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_28_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_41_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_41_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_29",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_48_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "ConfirmBox_447_Content",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -165923,6 +166633,16 @@
     "Id": "MAIN_YHX_64_22",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_850438_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850439_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "BYCZ_7_1",
@@ -166201,6 +166921,11 @@
   },
   {
     "Id": "Event_WWPDJSBF_2_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Flow_121000009_1983",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -166640,6 +167365,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Zuoyequnxing_106_22",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "LevelPlay_169800001_QuestScheduleSubTitle_316_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -166850,6 +167580,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Zuoyequnxing_79_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "LevelPlay_169800004_QuestScheduleSubTitle_316_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -166941,6 +167676,66 @@
   },
   {
     "Id": "MAIN_YHX_1202_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Skill_1005301_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005302_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005303_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005304_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005305_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005306_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005307_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005309_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Side_SXRWKYXJ_1_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_SXRWKYXJ_23_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_SXRWKYXJ_24_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Side_SXRWKYXJ_4_2",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -167330,6 +168125,61 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Speaker_350185_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850455_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850456_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850457_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850458_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850459_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850460_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850461_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850462_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850463_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850464_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "BYCZ_16_3",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -167648,6 +168498,16 @@
     "Id": "TowerChallengeBuff_92007148_Desc",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_850472_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850478_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "ComboTeaching_12100101_IconText_1",
@@ -168270,6 +169130,191 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Side_HLQK_2_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_HLQK_2_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_232_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_232_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_232_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850010_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850011_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850012_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850013_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850014_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_161850015_QuestScheduleSubTitle_161_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_1_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_11_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_11_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_16_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_18_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_20_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_20_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_23_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_3_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_31_34",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_32_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_32_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_33_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_33_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_34_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_34_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_34_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_34_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_36_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_4_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_5_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_7_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_8_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_8_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "QX_shengtai_1_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -168281,6 +169326,21 @@
   },
   {
     "Id": "LevelPlay_316800116_ChildQuestTip_316_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850489_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850490_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850499_Name",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -169985,6 +171045,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "shengtai_RLZMLX_9_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Speaker_850506_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "FavorWord_141218_Content",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
@@ -170575,6 +171645,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "VisionAssembleHasSave",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "YZJPQH_1_23",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -170710,6 +171785,16 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Main_LahaiRoi_ZRJDYKX_68_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_ZRJDYKX_68_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Morale_32_RoleBuffDesc0_2",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -170797,6 +171882,46 @@
   {
     "Id": "CoopActivity_Text2_603_3",
     "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_693850006_QuestScheduleSubTitle_693_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_693850006_QuestScheduleSubTitle_693_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850006_QuestScheduleSubTitle_693_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850006_QuestScheduleSubTitle_693_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Side_XXTXZ_2_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XXTXZ_2_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XXTXZ_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XXTXZ_5_19",
+    "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
@@ -170901,6 +172026,46 @@
   },
   {
     "Id": "PrefabTextItem_3688022348_Text",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_146_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTH_16_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTH_7_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTHZB_16_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTHZB_43_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTHZB_44_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTHZB_44_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LHYSTTHZB_47_12",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -171650,6 +172815,91 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "AYJJZS_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_13_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_13_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_14_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_17_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_2_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_2_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_2_24",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_20_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_20_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_20_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_21_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_32_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_35_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_35_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_35_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_7_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Main_LahaiRoi_YMDDDTY_53_19",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -171673,6 +172923,76 @@
     "Id": "Main_LahaiRoi_YMDDDTY_9_2",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "AYJJSD_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJSD_9_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJSD_9_19",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJSD_9_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_2_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_2_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_3_27",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_4_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_4_23",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_5_26",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_6_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_7_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJWD_8_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "Event_JZDB_1_13",
@@ -171721,6 +173041,136 @@
   },
   {
     "Id": "MAIN_RGLC_4_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850000_QuestScheduleSubTitle_184_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850000_QuestScheduleSubTitle_184_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850001_QuestScheduleSubTitle_184_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850001_QuestScheduleSubTitle_184_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850002_QuestScheduleSubTitle_184_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850002_QuestScheduleSubTitle_184_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850003_QuestScheduleSubTitle_184_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Quest_184850003_QuestScheduleSubTitle_184_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_23",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_26",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_32",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_2_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_YGJJ_3_14",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_1_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_14_35",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_14_40",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_2_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_2_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_3_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_3_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "XDQY_8_13",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -171825,6 +173275,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Illustration_Progress_Iteration",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Morale_32_FlagDescLv8_2_7",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -171836,6 +173291,16 @@
   },
   {
     "Id": "MusicJet_1003_Plant",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Pinball_Character_level_01",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "shengtai_MHZH_1_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -172156,6 +173621,16 @@
   },
   {
     "Id": "Event_NDZJLLYX_2_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Guide_XDQY_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Guide_XDQY_3_25",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -172670,6 +174145,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "LevelPlay_219850023_QuestScheduleSubTitle_219_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "LHYSTTH2_27_3",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -172766,6 +174246,101 @@
   },
   {
     "Id": "Side_MNCP_25_22",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_17_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_18_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_19_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_19_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_2_17",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_2_22",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_2_24",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_21_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_21_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_21_21",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_22_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_4_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_5_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_XBDXD_9_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "shengtai_LZZQ_1_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Side_mnwjndyj_2_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_mnwjndyj_2_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_mnwjndyj_6_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_mnwjndyj_7_12",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -173050,6 +174625,101 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "FavorGoods_110801_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorGoods_110803_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorGoods_121101_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorGoods_121102_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorGoods_121103_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorRoleInfo_1108_TalentCertification",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorRoleInfo_1108_TalentDoc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorRoleInfo_1211_Influence",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorRoleInfo_1211_TalentCertification",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorRoleInfo_1211_TalentDoc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_110801_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_110802_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_110803_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_110804_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_110805_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_121102_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_121103_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_121104_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorStory_121105_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "GLXXDDD_13_2",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -173115,6 +174785,16 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Main_LahaiRoi_YXBLDHJ_128_37",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Main_LahaiRoi_YXBLDHJ_128_38",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Main_LahaiRoi_YXBLDHJ_21_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -173150,6 +174830,11 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Main_LahaiRoi_YXBLDHJ_4_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Main_LahaiRoi_YXBLDHJ_70_12",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -173171,6 +174856,76 @@
   },
   {
     "Id": "Main_LahaiRoi_YXBLDHJ_78_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_10",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_5",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_6_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_6_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_6_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_6_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_6_5",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_7",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_8",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "RogueHotEntryOverview_Desc_9",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -173810,6 +175565,26 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "LevelPlay_693850009_QuestScheduleSubTitle_693_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_693850009_QuestScheduleSubTitle_693_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850009_QuestScheduleSubTitle_693_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850009_QuestScheduleSubTitle_693_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Side_LNCP_1_16",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -173823,6 +175598,11 @@
     "Id": "Side_LSLCP_34_1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_850589_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "GLXXDDD_1_13",
@@ -174001,6 +175781,41 @@
   },
   {
     "Id": "Main_LahaiRoi_YXBLDHJ_90_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_19_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_2_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_20_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_3_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_8_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_8_7",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -174405,7 +176220,137 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "AnniversaryWelfare_LeftTime_Day",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AnniversaryWelfare_LeftTime_Hour",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AnniversaryWelfare_LeftTime_LessSecond",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AnniversaryWelfare_LeftTime_Second",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110801_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110802_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110803_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110807_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110808_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110810_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110811_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110812_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110814_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110816_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_110818_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_121114_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "FavorWord_121117_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_213850000_QuestScheduleSubTitle_30_11",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850003_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850005_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850007_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850009_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850011_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_213850013_QuestScheduleSubTitle_30_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "POI_PSAYZX_31_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "CoopActivity_Text1_301",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "DayLimitBuy",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -174466,6 +176411,11 @@
   },
   {
     "Id": "Event_NDZJLLYX_2_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Guide_XDQY_2_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -174730,6 +176680,16 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "LevelPlay_692850019_QuestScheduleSubTitle_692_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LimitBuy",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "LoadingTipsText_922301_Title",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -174773,6 +176733,11 @@
     "Id": "MapMark_3240004_MarkDesc",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
+  },
+  {
+    "Id": "MonthLimitBuy",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
   },
   {
     "Id": "QDHDNPCST_5_6",
@@ -175090,6 +177055,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "WeekLimitBuy",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "WheelBattle_1_Boss10_Desc1",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -175158,6 +177128,11 @@
     "Id": "CoopActivity_Upgrade_304",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_1_5",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
   },
   {
     "Id": "FavorWord_141206_Content",
@@ -175305,6 +177280,71 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "LevelPlay_693850010_QuestScheduleSubTitle_693_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_693850010_QuestScheduleSubTitle_693_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850010_QuestScheduleSubTitle_693_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850010_QuestScheduleSubTitle_693_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Event_WRHMJSTM_18_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_19_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Event_WRHMJSTM_7_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "FavorWord_141231_Content",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
@@ -175316,6 +177356,26 @@
   },
   {
     "Id": "HD_JYZDFY_8_16",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_146850011_QuestScheduleSubTitle_146_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_146850011_QuestScheduleSubTitle_146_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_146850011_QuestScheduleSubTitle_146_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_146850011_QuestScheduleSubTitle_146_6",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -175450,6 +177510,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "Speaker_850593_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Term141207_Desc",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -175480,6 +177545,46 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "AYJJST_13_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_17_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_19_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_43_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_43_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_43_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJST_47_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "ItemInfo_71500083_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Main_LahaiRoi_YXBLDHJ_115_4",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -175490,9 +177595,149 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "MonthCardDes_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SIDE_HADSJ_15_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_15_11",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_15_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_16_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_16_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_16_8",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_17_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_2_31",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_4_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_HADSJ_4_20",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
     "Id": "Side_LHSCP_2_31",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
+  },
+  {
+    "Id": "SIDE_SKFHJH_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_1_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_1_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_14_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_21_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_21_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_22_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_22_13",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_23_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SKFHJH_23_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_12_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_12_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_18_4",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_18_9",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_6_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_SYL_9_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
   },
   {
     "Id": "Side_XGLKCP_12_15",
@@ -175501,6 +177746,106 @@
   },
   {
     "Id": "Side_XGLKCP_9_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_10_10",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_10_12",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_10_15",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_10_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_11_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_11_16",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_11_18",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_3_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_3_23",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_5_21",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_7_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_8_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_9_24",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_9_28",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_9_31",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SIDE_XZA_9_34",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "SkillBranch_121101_Left_Desc_Text",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "SkillBranch_121102_Right_Desc_Text",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Speaker_850597_Name",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "ZSPYMP_16_1",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
@@ -175558,6 +177903,31 @@
     "Id": "Skill_1005109_MultiSkillDescribe",
     "IsIncludeRichText": true,
     "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_21_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "BuildTree_1_Des",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "BuildTree_2_Des",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "BuildTree_3_Des",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "BuildTree_4_Des",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
   },
   {
     "Id": "Main_LahaiRoi_YMDDDTY_1_19",
@@ -175655,6 +178025,211 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "InfoDisplay_102176807_Text",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "InfoDisplay_102176808_Text",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_295_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_296_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_297_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_298_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_299_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_300_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005302_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005303_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005304_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005305_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005306_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005307_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005309_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005310_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005310_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_289_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_290_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_291_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_292_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_293_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ResonantChain_294_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005201_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005201_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005202_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005202_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005203_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005203_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005204_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005204_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005205_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005205_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005206_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005206_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005207_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005207_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005209_MultiSkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005209_SkillDescribe",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "Skill_1005209_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "TowerChallengeBuff_92007149_Desc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "AdvertisingActivity_3110605_ContentText",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -175666,6 +178241,96 @@
   },
   {
     "Id": "AdvertisingStory_3110202_ContentText",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "AYJJZS_37_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_47_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_58_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJZS_59_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "BossPilingActivity_DungeonDetail11",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "BossPilingActivity_DungeonSpe01",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "BossPilingActivity_DungeonSpe02",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ConfirmBox_486_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "ConfirmBox_487_Content",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_151850037_QuestScheduleSubTitle_151_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_151850038_QuestScheduleSubTitle_151_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_316850014_ChildQuestTip_316_5",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_316850014_ChildQuestTip_316_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_316850014_ChildQuestTip_316_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_316850014_LevelPlaySubInfoContent_316_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_316850014_LevelPlaySubInfoContent_316_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_316850014_LevelPlaySubInfoContent_316_3",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_316850014_LevelPlaySubInfoContent_316_4",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
   },
@@ -175775,6 +178440,11 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "MapMark_5017_MarkDesc",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Side_MNCP_8_18",
     "IsIncludeRichText": true,
     "IsIncludeGameText": false
@@ -175790,13 +178460,158 @@
     "IsIncludeGameText": true
   },
   {
+    "Id": "Skill_1005301_SkillResume",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Tetristext_04",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
+    "Id": "VillageInfr_Tips_Deliverytips",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "VillageInfr_Tips_Lv",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "VillageInfr_Tree1_Achieve_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree1_Finish_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree1_Tobuilt_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree2_Finish_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree2_Locking_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree2_Tobuilt_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree3_Achieve_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree3_Finish_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree3_Locking_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree4_Achieve_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree4_Finish_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Tree4_Locking_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "VillageInfr_Village_Finish_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_109850019_QuestScheduleSubTitle_693_1",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_109850019_QuestScheduleSubTitle_693_2",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_109850019_QuestScheduleSubTitle_693_4",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_109850019_QuestScheduleSubTitle_693_6",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850011_QuestScheduleSubTitle_693_15",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_693850011_QuestScheduleSubTitle_693_16",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850011_QuestScheduleSubTitle_693_18",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "LevelPlay_693850011_QuestScheduleSubTitle_693_20",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
+    "Id": "PrefabTextItem_377892546_Text",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Skill_1005110_SkillDescribe",
     "IsIncludeRichText": true,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "LevelPlay_692850015_QuestScheduleSubTitle_692_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJGNDB_1_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJGNDB_3_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "AYJJGNDB_4_1",
+    "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
@@ -175805,9 +178620,19 @@
     "IsIncludeGameText": false
   },
   {
+    "Id": "ItemInfo_50000117_AttributesDescription",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
+  },
+  {
     "Id": "Main_LahaiRoi_YXBLDHJ_4_13",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
+  },
+  {
+    "Id": "Side_BYLX_19_5",
+    "IsIncludeRichText": true,
+    "IsIncludeGameText": false
   },
   {
     "Id": "Side_LNCP_11_3",
@@ -175825,27 +178650,72 @@
     "IsIncludeGameText": true
   },
   {
-    "Id": "Side_LHSCP_13_26",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Side_LHSCP_9_3",
-    "IsIncludeRichText": true,
-    "IsIncludeGameText": false
-  },
-  {
-    "Id": "Main_LahaiRoi_YXBLDHJ_110_1",
+    "Id": "Speaker_850618_Name",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
-    "Id": "Main_LahaiRoi_YXBLDHJ_2_3",
+    "Id": "XLLH_3_2",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   },
   {
-    "Id": "Main_LahaiRoi_YXBLDHJ_4_3",
+    "Id": "Zuoyequnxing_206_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_210_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21028_1",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21028_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21028_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21028_6",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21032_3",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21032_7",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21033_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21034_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21035_2",
+    "IsIncludeRichText": false,
+    "IsIncludeGameText": true
+  },
+  {
+    "Id": "Zuoyequnxing_21035_8",
     "IsIncludeRichText": false,
     "IsIncludeGameText": true
   }

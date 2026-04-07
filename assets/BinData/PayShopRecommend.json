@@ -37,7 +37,7 @@
     "TabName": "PrefabTextItem_ZanniSkinRecommend_Text",
     "PrefabPath": "UiItem_ShopSkinZanni",
     "Sort": 201,
-    "Show": true
+    "Show": false
   },
   {
     "Id": 5,
@@ -47,16 +47,6 @@
     "TabName": "PrefabTextItem_WeekCard_Text",
     "PrefabPath": "UiItem_WeeklyCardStore",
     "Sort": 10,
-    "Show": true
-  },
-  {
-    "Id": 6,
-    "RecommendType": 4,
-    "RecommendId": 105100103,
-    "RecommendTexture": "0",
-    "TabName": "PrefabTextItem_MotorSkeleton01_Text",
-    "PrefabPath": "UiItem_ShopSkinMoto",
-    "Sort": 1,
     "Show": true
   }
 ]

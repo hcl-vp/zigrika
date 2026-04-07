@@ -1,0 +1,62 @@
+[
+  {
+    "Level": 1,
+    "ConditionId": 0,
+    "Requirement": {
+      "80700012": 1
+    },
+    "Description": "",
+    "Name": "VillageInfr_Village_1_Name",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BuildSuccessDes": "0",
+    "JumpId": 862027
+  },
+  {
+    "Level": 2,
+    "ConditionId": 0,
+    "Requirement": {
+      "80700012": 1
+    },
+    "Description": "",
+    "Name": "VillageInfr_Village_2_Name",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BuildSuccessDes": "BuildObser_1_Result",
+    "JumpId": 862028
+  },
+  {
+    "Level": 3,
+    "ConditionId": 0,
+    "Requirement": {
+      "80700012": 1
+    },
+    "Description": "",
+    "Name": "VillageInfr_Village_3_Name",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BuildSuccessDes": "BuildObser_2_Result",
+    "JumpId": 862029
+  },
+  {
+    "Level": 4,
+    "ConditionId": 0,
+    "Requirement": {
+      "80700012": 1
+    },
+    "Description": "",
+    "Name": "VillageInfr_Village_4_Name",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BuildSuccessDes": "BuildObser_3_Result",
+    "JumpId": 862030
+  },
+  {
+    "Level": 5,
+    "ConditionId": 0,
+    "Requirement": {
+      "80700012": 1
+    },
+    "Description": "",
+    "Name": "VillageInfr_Village_5_Name",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "BuildSuccessDes": "BuildObser_3_Result",
+    "JumpId": 862030
+  }
+]

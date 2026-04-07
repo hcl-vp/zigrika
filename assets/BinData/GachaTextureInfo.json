@@ -1128,7 +1128,7 @@
     "Id": 21010056,
     "GachaMainViewTexture": "/Game/Aki/UI/UIResources/Common/Image/T_CommonDefault_UI.T_CommonDefault_UI",
     "GachaResultViewTexture": "/Game/Aki/UI/UIResources/Common/Image/Luckdraw/T_Luckdraw21010056_UI.T_Luckdraw21010056_UI",
-    "ShowSequence": 3,
+    "ShowSequence": 21010056,
     "BindPoint": "",
     "IdArray": [],
     "TrialId": 5101103
@@ -1173,7 +1173,7 @@
     "Id": 21010066,
     "GachaMainViewTexture": "/Game/Aki/UI/UIResources/Common/Image/T_CommonDefault_UI.T_CommonDefault_UI",
     "GachaResultViewTexture": "/Game/Aki/UI/UIResources/Common/Image/Luckdraw/T_Luckdraw21010066_UI.T_Luckdraw21010066_UI",
-    "ShowSequence": 3,
+    "ShowSequence": 21010066,
     "BindPoint": "",
     "IdArray": [],
     "TrialId": 5101104

@@ -1,7 +1,7 @@
 [
   {
     "Id": 1,
-    "SeasonId": 104200001,
+    "SeasonId": 104200002,
     "Type": 1,
     "SortId": 1,
     "Name": "Dango_SchedulePage_RaceStatus_A_1",
@@ -22,7 +22,7 @@
   },
   {
     "Id": 2,
-    "SeasonId": 104200001,
+    "SeasonId": 104200002,
     "Type": 1,
     "SortId": 2,
     "Name": "Dango_SchedulePage_RaceStatus_B_1",
@@ -43,7 +43,7 @@
   },
   {
     "Id": 3,
-    "SeasonId": 104200001,
+    "SeasonId": 104200002,
     "Type": 2,
     "SortId": 3,
     "Name": "Dango_SchedulePage_RaceStatus_A_2",
@@ -57,7 +57,7 @@
   },
   {
     "Id": 4,
-    "SeasonId": 104200001,
+    "SeasonId": 104200002,
     "Type": 2,
     "SortId": 4,
     "Name": "Dango_SchedulePage_RaceStatus_B_2",
@@ -71,13 +71,180 @@
   },
   {
     "Id": 5,
-    "SeasonId": 104200001,
+    "SeasonId": 104200002,
     "Type": 3,
     "SortId": 5,
     "Name": "Dango_SchedulePage_RaceStatus_Final",
     "LegMatches": [
       9,
       10
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 1,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 6,
+    "SeasonId": 104200002,
+    "Type": 1,
+    "SortId": 6,
+    "Name": "Dango_SchedulePage_Round1_A",
+    "LegMatches": [
+      11,
+      12
+    ],
+    "DangoList": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      11
+    ],
+    "AdvancedDangoCount": 4,
+    "NextMatchId": 16
+  },
+  {
+    "Id": 7,
+    "SeasonId": 104200002,
+    "Type": 1,
+    "SortId": 7,
+    "Name": "Dango_SchedulePage_Round1_B",
+    "LegMatches": [
+      13,
+      14
+    ],
+    "DangoList": [
+      12,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "AdvancedDangoCount": 4,
+    "NextMatchId": 16
+  },
+  {
+    "Id": 8,
+    "SeasonId": 104200002,
+    "Type": 1,
+    "SortId": 8,
+    "Name": "Dango_SchedulePage_Round1_C",
+    "LegMatches": [
+      15,
+      16
+    ],
+    "DangoList": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "AdvancedDangoCount": 4,
+    "NextMatchId": 16
+  },
+  {
+    "Id": 9,
+    "SeasonId": 104200002,
+    "Type": 4,
+    "SortId": 9,
+    "Name": "Dango_SchedulePage_Round1_X",
+    "LegMatches": [
+      17
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 0,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 10,
+    "SeasonId": 104200002,
+    "Type": 2,
+    "SortId": 10,
+    "Name": "Dango_SchedulePage_Round2_1",
+    "LegMatches": [
+      18
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 3,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 11,
+    "SeasonId": 104200002,
+    "Type": 2,
+    "SortId": 11,
+    "Name": "Dango_SchedulePage_Round2_2",
+    "LegMatches": [
+      19
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 3,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 12,
+    "SeasonId": 104200002,
+    "Type": 2,
+    "SortId": 12,
+    "Name": "Dango_SchedulePage_Round2_3",
+    "LegMatches": [
+      20
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 3,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 13,
+    "SeasonId": 104200002,
+    "Type": 2,
+    "SortId": 13,
+    "Name": "Dango_SchedulePage_Round2_4",
+    "LegMatches": [
+      21
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 3,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 14,
+    "SeasonId": 104200002,
+    "Type": 2,
+    "SortId": 14,
+    "Name": "Dango_SchedulePage_Round2_5",
+    "LegMatches": [
+      22
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 3,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 15,
+    "SeasonId": 104200002,
+    "Type": 4,
+    "SortId": 15,
+    "Name": "Dango_SchedulePage_Round2_X",
+    "LegMatches": [
+      23
+    ],
+    "DangoList": [],
+    "AdvancedDangoCount": 0,
+    "NextMatchId": 0
+  },
+  {
+    "Id": 16,
+    "SeasonId": 104200002,
+    "Type": 3,
+    "SortId": 16,
+    "Name": "Dango_SchedulePage_Round3",
+    "LegMatches": [
+      24
     ],
     "DangoList": [],
     "AdvancedDangoCount": 1,
