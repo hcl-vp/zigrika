@@ -5,7 +5,7 @@ const file_util = @import("../../../fs/file_util.zig");
 const comp_util = @import("../comp_util.zig");
 const mem = @import("../../../mem.zig");
 const pb = @import("proto").pb;
-const RoleSkinComponent = @import("RoleSkinComponent.zig");
+const BaseSkinComponent = @import("BaseSkinComponent.zig");
 
 const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
@@ -30,7 +30,9 @@ player_battle_binder: ?@import("PlayerBattleBinder.zig") = null,
 summoner: ?@import("SummonerComponent.zig") = null,
 fsm: ?@import("FsmComponent.zig") = null,
 vision_skills: ?@import("VisionSkillComponent.zig") = null,
-role_skin: ?RoleSkinComponent = null,
+base_skin: ?BaseSkinComponent = null,
+calabash_skin: ?@import("CalabashSkinComponent.zig") = null,
+weapon_skin: ?@import("WeaponSkinComponent.zig") = null,
 
 pub fn fieldIndexForType(comptime Component: type) usize {
     return comptime fieldByType(Component).@"1";
@@ -193,6 +195,7 @@ pub fn entityToProto(
     net_id: i64,
     alloc: mem.Alloc,
 ) !pb.EntityPb {
+    const base_skin_comp = storage.base_skin orelse BaseSkinComponent{};
     var entity: pb.EntityPb = .{
         .Id = net_id,
         .ConfigId = storage.config.config_id,
@@ -205,7 +208,9 @@ pub fn entityToProto(
         .PlayerId = if (storage.player_id) |comp| comp.id else 0,
         .InitLinearVelocity = .{},
         .Gravity = .{ .X = 0.0, .Y = 0.0, .Z = -1.0 },
-        .RoleSkinId = (storage.role_skin orelse RoleSkinComponent{ .role_skin = 0 }).role_skin,
+        .RoleSkinId = base_skin_comp.role_skin_id,
+        .ParaglidingSkinId = base_skin_comp.paragliding_skin_id,
+        .SoarWingSkinId = base_skin_comp.soar_skin_id,
     };
 
     if (storage.position) |pos_comp| {
@@ -290,6 +295,18 @@ pub fn entityToProto(
     if (storage.vision_skills) |comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .VisionSkillComponent = try comp.toProto() },
+        });
+    }
+
+    if (storage.weapon_skin) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .WeaponSkinComponentPb = try comp.toProto() },
+        });
+    }
+
+    if (storage.calabash_skin) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .CalabashSkinComponentPb = try comp.toProto() },
         });
     }
 

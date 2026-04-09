@@ -1,4 +1,4 @@
-const FsmComponent = @This();
+const Component = @This();
 const pb = @import("proto").pb;
 const mem = @import("../../../mem.zig");
 const std = @import("std");
@@ -8,11 +8,11 @@ hash_code: i32,
 common_hash_code: i32,
 fsms: []pb.DFsm = &.{},
 
-pub fn deinit(comp: *FsmComponent, gpa: std.mem.Allocator) void {
+pub fn deinit(comp: *Component, gpa: std.mem.Allocator) void {
     gpa.free(comp.fsms);
 }
 
-pub fn toProto(comp: FsmComponent) !pb.EntityFsmComponentPb {
+pub fn toProto(comp: Component) !pb.EntityFsmComponentPb {
     return .{
         .HashCode = comp.hash_code,
         .CommonHashCode = comp.common_hash_code,

@@ -12,6 +12,10 @@ pub const RoleInfoModified = struct {
     role_id: i32,
 };
 
+pub const WeaponInfoModified = struct {
+    incr_id: i32,
+};
+
 pub const EntityMovement = struct {
     entity: Entity,
 };

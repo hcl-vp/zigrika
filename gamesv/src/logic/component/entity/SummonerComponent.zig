@@ -1,4 +1,4 @@
-const Summoner = @This();
+const Component = @This();
 const pb = @import("proto").pb;
 const mem = @import("../../../mem.zig");
 
@@ -8,7 +8,7 @@ summon_skill_id: i32 = 0,
 player_id: i32 = 0,
 summon_type: pb.ESummonType = .ESummonTypeDefault,
 
-pub fn toProto(comp: Summoner) !pb.SummonerComponentPb {
+pub fn toProto(comp: Component) !pb.SummonerComponentPb {
     return .{
         .SummonerId = comp.summoner_id,
         .SummonCfgId = comp.summon_cfg_id,

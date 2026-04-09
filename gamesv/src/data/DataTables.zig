@@ -18,6 +18,7 @@ pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
 pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
+pub const WeaponConf = @import("tables/WeaponConf.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -32,6 +33,7 @@ blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
 template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
+weapon_conf: Table(WeaponConf, "ItemId"),
 
 pub fn load(gpa: Allocator, io: Io) !DataTables {
     var tables: DataTables = undefined;

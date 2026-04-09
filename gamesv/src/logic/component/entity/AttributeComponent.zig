@@ -1,11 +1,11 @@
-const AttributeComponent = @This();
+const Component = @This();
 const pb = @import("proto").pb;
 const mem = @import("../../../mem.zig");
 const std = @import("std");
 
 base_prop: []i32 = &.{},
 
-pub fn toProto(comp: AttributeComponent, alloc: mem.Alloc) !pb.AttributeComponentPb {
+pub fn toProto(comp: Component, alloc: mem.Alloc) !pb.AttributeComponentPb {
     var comp_pb: pb.AttributeComponentPb = .{};
 
     inline for (comptime std.meta.fields(pb.EAttributeType), 0..) |field, i| {

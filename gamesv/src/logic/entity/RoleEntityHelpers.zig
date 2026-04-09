@@ -228,8 +228,16 @@ pub fn createRoleEntity(
             .position_state = 0,
             .position_sub_state = 0,
         },
-        Entity.RoleSkinComponent{
-            .role_skin = 8100 * 10_000 + role,
+        Entity.BaseSkinComponent{
+            .role_skin_id = role_info.role_skin_id,
+            .paragliding_skin_id = role_info.paragliding_skin_id,
+            .soar_skin_id = role_info.soar_skin_id,
+        },
+        Entity.WeaponSkinComponent{
+            .skin_id = role_info.weapon_skin_id,
+        },
+        Entity.CalabashSkinComponent{
+            .skin_id = role_info.calabash_skin_id,
         },
     });
 

@@ -14,6 +14,7 @@ exp: i32 = 0,
 breakthrough: i32 = 0,
 skills: ArrayIntInt = &.{},
 phantom: ArrayIntInt = &.{},
+weapon: i32 = 0,
 star: i32 = 0,
 favor: i32 = 0,
 reson: []Reson = &.{},
@@ -24,7 +25,11 @@ add_prop: []i32 = &.{},
 create_time: u32 = 0,
 skill_node_state: []SkillNode = &.{},
 resonant_chain_group_index: i32 = 0,
-skin_id: i32 = 0,
+role_skin_id: i32 = 0,
+paragliding_skin_id: i32 = 0,
+soar_skin_id: i32 = 0,
+weapon_skin_id: i32 = 0,
+calabash_skin_id: i32 = 0, // we are keeping it in roleinfo just incase kuro decides to do more than just rover!
 enable_self_bgm: bool = false,
 
 pub const Reson = struct {
@@ -55,7 +60,7 @@ pub fn toProto(info: RoleInfo, arena: Allocator, id: i32) !pb.RoleInfo {
         .AddProp = try arrayIntIntByIndex(info.add_prop, arena),
         .CreateTime = info.create_time,
         .ResonantChainGroupIndex = info.resonant_chain_group_index,
-        .SkinId = info.skin_id,
+        .SkinId = info.role_skin_id,
         .EnableSelfBgm = info.enable_self_bgm,
     };
 
@@ -143,6 +148,7 @@ pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHas
         var role: RoleInfo = .{
             .level = info.MaxLevel,
             .breakthrough = 6,
+            .role_skin_id = info.SkinId,
         };
 
         try role.resetProperties(gpa, assets, info.Id);

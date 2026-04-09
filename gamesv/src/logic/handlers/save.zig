@@ -5,6 +5,7 @@ const mem = @import("../../mem.zig");
 const comp_util = @import("../component/comp_util.zig");
 const EventQueue = @import("../EventQueue.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 const Scene = @import("../Scene.zig");
 
 pub fn onRoleInfoModified(
@@ -16,6 +17,17 @@ pub fn onRoleInfoModified(
     const role_info = role_comp.role_map.getPtr(event.data.role_id) orelse return;
     const path = try std.fmt.allocPrint(alloc.arena, "player/{}/role/{}", .{ role_comp.player_id, event.data.role_id });
     try comp_util.saveStruct(fs, role_info, path, alloc.arena);
+}
+
+pub fn onWeaponInfoModified(
+    event: EventQueue.Dequeue(.weapon_info_modified),
+    weapon_comp: *const PlayerWeaponComponent,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+) !void {
+    const weapon_info = weapon_comp.weapon_map.getPtr(event.data.incr_id) orelse return;
+    const path = try std.fmt.allocPrint(alloc.arena, "player/{}/weapon/{}", .{ weapon_comp.player_id, event.data.incr_id });
+    try comp_util.saveStruct(fs, weapon_info, path, alloc.arena);
 }
 
 pub fn onEntityMovement(

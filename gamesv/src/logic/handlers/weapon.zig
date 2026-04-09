@@ -40,6 +40,7 @@ pub fn ensureRoleWeapons(
         defer alloc.gpa.free(path);
         try comp_util.saveStruct(fs, weapon, path, alloc.arena);
 
+        role_kv.value_ptr.weapon = incr_id;
         try weapon_comp.weapon_map.put(alloc.gpa, incr_id, weapon);
     }
 }
