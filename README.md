@@ -27,12 +27,7 @@ zig build run-loginsv &
 zig build run-gamesv
 ```
 #### Windows
-```sh
-# Assuming you have git installed and are using powershell.
-git clone https://git.xeondev.com/WavyRooms/zigrika
-cd zigrika
-./start-zigrika.cmd
-```
+Run `setup-zigrika.bat`.
 
 ### Logging in
 Depending on the version the private server currently targets, you may need to get the client from a third-party (if it's a BETA) OR get the client from Kuro's official launcher (or steam) (if it's LIVE).

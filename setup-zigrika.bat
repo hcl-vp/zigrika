@@ -2,12 +2,11 @@
 setlocal
 title Zigging Around
 
-:: Bypasses PowerShell Execution Policy and runs the code below
 powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((Get-Content '%~f0' | Select-Object -Skip 9 | Out-String))"
 pause
 exit /b
 
-# --- HACKERY SHIT ---
+# Powershell Hackery
 $w = $Host.UI.RawUI
 $size = $w.WindowSize
 $size.Width = 120
@@ -57,7 +56,7 @@ Write-Host @"
 "@ -ForegroundColor Gray
 
 Write-Host "`n==============================" -ForegroundColor Cyan
-Write-Host "        ZIGGING AROUND"         -ForegroundColor Magenta
+Write-Host "         ZIGGING AROUND"         -ForegroundColor Magenta
 Write-Host "==============================" -ForegroundColor Cyan
 Write-Host "1) Full Install & Build"
 Write-Host "2) Run Zigrika (You must run 1 before you can use this)"
@@ -67,22 +66,17 @@ $choice = Read-Host "Select an option (1, 2, or 3)"
 
 function Start-And-Arrange-Services {
     $zigrikaPath = Join-Path $currentDir "zigrika"
-
-    # Check if folder exists
     if (!(Test-Path $zigrikaPath)) {
         Write-Host "`nError: Zigrika folder not found. Please run Option 1 first." -ForegroundColor Red
         return $false
     }
 
-    # Manually re-verify and inject Zig path in case the session lost it
     if (!(Get-Command zig -ErrorAction SilentlyContinue)) {
         $foundZig = Get-ChildItem -Path $installDir -Filter "zig.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1
         if ($foundZig) {
-            $env:Path = "$($foundZig.DirectoryName);$env:Path"
-        } else {
-            Write-Host "`nError: Zig compiler not found in $installDir. Please run Option 1." -ForegroundColor Red
-            return $false
+            if ($env:Path -notlike "*$($foundZig.DirectoryName)*") { $env:Path = "$($foundZig.DirectoryName);$env:Path" }
         }
+        else { Write-Host "`nError: Zig not found. Run Option 1." -ForegroundColor Red; return $false }
     }
 
     Write-Host "`nCooking Zigrika..." -ForegroundColor Yellow
@@ -101,87 +95,84 @@ function Start-And-Arrange-Services {
 }
 
 if ($choice -eq "1") {
-    Set-Location $currentDir
     if (!(Get-Command git -ErrorAction SilentlyContinue)) {
         Write-Host "Installing Git..." -ForegroundColor Yellow
         winget install --id Git.Git -e --source winget --accept-package-agreements --accept-source-agreements
         $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
     }
 
-    $zigUrl = "https://ziglang.org/builds/zig-x86_64-windows-0.16.0-dev.3133+5ec8e45f3.zip"
-    $zipFile = "$env:TEMP\zig.zip"
+    if (!(Test-Path "zigrika")) { git clone https://git.xeondev.com/WavyRooms/zigrika | Out-Null }
+
+    $tempJson = "$env:TEMP\zig_index.json"
+    curl.exe -L -s "https://ziglang.org/download/index.json" -o $tempJson
+    $index = Get-Content $tempJson | ConvertFrom-Json
+
+    $zonPath = Join-Path $currentDir "zigrika\build.zig.zon"
+    if (Test-Path $zonPath) {
+        $zonContent = Get-Content $zonPath | Out-String
+        if ($zonContent -match '\.minimum_zig_version\s*=\s*"([^"]+)"') {
+            $minVersion = $Matches[1]
+            $zigUrl = if ($index.$minVersion) { $index.$minVersion."x86_64-windows".tarball } else { $index.master."x86_64-windows".tarball }
+        }
+    }
 
     if (!(Test-Path $installDir)) {
         Write-Host "Downloading Zig..." -ForegroundColor Yellow
-        $oldPref = $ProgressPreference
-        $ProgressPreference = 'SilentlyContinue'
-        Invoke-WebRequest -Uri $zigUrl -OutFile $zipFile
-        Write-Host "Extracting Zig..." -ForegroundColor Yellow
-        New-Item -ItemType Directory -Path $installDir | Out-Null
-        Add-Type -AssemblyName System.IO.Compression.FileSystem
-        [System.IO.Compression.ZipFile]::ExtractToDirectory($zipFile, $installDir)
-        $ProgressPreference = $oldPref
-    }
-
-    $zigBinPath = Get-ChildItem -Path $installDir -Filter "zig.exe" -Recurse | Select-Object -ExpandProperty DirectoryName -First 1
-    $env:Path = "$zigBinPath;$env:Path"
-
-    if (!(Test-Path "zigrika")) {
-        Write-Host "Cloning Zigrika..." -ForegroundColor Yellow
-        git clone https://git.xeondev.com/WavyRooms/zigrika
-    }
-
-    $success = Start-And-Arrange-Services
-
-    if ($success) {
-        Set-Location $currentDir
-        if (!(Test-Path "helios")) {
-            Write-Host "Cloning Helios..." -ForegroundColor Yellow
-            git clone https://git.xeondev.com/WavyRooms/helios
+        curl.exe -L $zigUrl -o "$env:TEMP\zig.zip"
+        if ((Get-Item "$env:TEMP\zig.zip").Length -gt 0) {
+            Write-Host "Extracting Zig..." -ForegroundColor Yellow
+            New-Item -ItemType Directory -Path $installDir -Force | Out-Null
+            tar.exe -xf "$env:TEMP\zig.zip" -C $installDir
         }
+    }
 
-        Set-Location "$currentDir\helios"
+    $zigBinPath = (Get-ChildItem -Path $installDir -Filter "zig.exe" -Recurse | Select-Object -First 1).DirectoryName
+    if ($env:Path -notlike "*$zigBinPath*") { $env:Path = "$zigBinPath;$env:Path" }
+
+    if (Start-And-Arrange-Services) {
+        Set-Location $currentDir
+        if (!(Test-Path "helios")) { git clone https://git.xeondev.com/WavyRooms/helios | Out-Null }
+        Set-Location "helios"
         Write-Host "Cooking Helios..." -ForegroundColor Yellow
         zig build
-
         $binDir = "$currentDir\helios\zig-out\bin"
-        if (!(Test-Path $binDir)) { New-Item -ItemType Directory -Path $binDir | Out-Null }
+        if (!(Test-Path $binDir)) { New-Item -ItemType Directory -Path $binDir -Force | Out-Null }
 
-        Write-Host "fetching rr_fixes_100_p.pak" -ForegroundColor Yellow
-        $pakUrl = "https://git.xeondev.com/RabbyDevs/zigrika-pakfile/releases/download/3.2/rr_fixes_100_p.pak"
-        $oldPref = $ProgressPreference
-        $ProgressPreference = 'SilentlyContinue'
-        Invoke-WebRequest -Uri $pakUrl -OutFile (Join-Path $binDir "rr_fixes_100_p.pak")
-        $ProgressPreference = $oldPref
+        Write-Host "Fetching rr_fixes_100_p.pak...(patch)" -ForegroundColor Yellow
+        curl.exe -L "https://git.xeondev.com/RabbyDevs/zigrika-pakfile/releases/download/3.2/rr_fixes_100_p.pak" -o "$binDir\rr_fixes_100_p.pak"
 
-        if (Test-Path $binDir) { explorer $binDir } else { explorer . }
-
+        explorer $binDir
         (New-Object -ComObject WScript.Shell).AppActivate($PID)
 
-    Write-Host "`n********************************************************************************" -ForegroundColor Cyan
-    Write-Host "COPY ALL HELIOS FILES INTO [Game Directory]/Client/Binaries/Win64" -ForegroundColor White -BackGroundColor Black
-    Write-Host "COPY rr_fixes_100_p.pak INTO [Game Directory]/Client/Content/Paks" -ForegroundColor White -BackGroundColor Black
-    Write-Host "WAIT FOR ALL 3 WINDOWS TO SAY LISTENING" -ForegroundColor White -BackGroundColor Black
-    Write-Host "THEN LAUNCH helios_launcher.exe AS ADMINISTRATOR" -ForegroundColor White -BackGroundColor Black
-    Write-Host "********************************************************************************" -ForegroundColor Cyan
+        Write-Host "`n********************************************************************************" -ForegroundColor Cyan
+        Write-Host "COPY ALL HELIOS FILES INTO [Game Directory]/Client/Binaries/Win64" -ForegroundColor White -BackGroundColor Black
+        Write-Host "COPY rr_fixes_100_p.pak INTO [Game Directory]/Client/Content/Paks" -ForegroundColor White -BackGroundColor Black
+        Write-Host "WAIT FOR ALL 3 WINDOWS TO SAY LISTENING" -ForegroundColor White -BackGroundColor Black
+        Write-Host "THEN LAUNCH helios_launcher.exe AS ADMINISTRATOR" -ForegroundColor White -BackGroundColor Black
+        Write-Host "********************************************************************************" -ForegroundColor Cyan
     }
 }
 elseif ($choice -eq "2") {
-    $success = Start-And-Arrange-Services
-    if ($success) {
-        Write-Host "`nZigrika is served." -ForegroundColor Gray
-    }
+    Start-And-Arrange-Services
 }
 elseif ($choice -eq "3") {
     Write-Host "`n--- Cleanup Options ---" -ForegroundColor Yellow
     Write-Host "1) Keep Git"
-    Write-Host "2) Total Wipe"
+    Write-Host "2) Total Wipe (Uninstall Git)"
     $cleanChoice = Read-Host "Select cleanup mode (1 or 2)"
-    $processes = @("zigrika", "cfgsv", "loginsv", "gamesv", "zig")
-    foreach ($proc in $processes) { Get-Process | Where-Object { $_.ProcessName -like "*$proc*" } | Stop-Process -Force -ErrorAction SilentlyContinue }
+
+    Write-Host "Stopping processes..." -ForegroundColor Gray
+    Get-Process | Where-Object { $_.ProcessName -match "zig|cfgsv|loginsv|gamesv" } | Stop-Process -Force -ErrorAction SilentlyContinue
+
     Set-Location $currentDir
-    $targetDirs = @("$env:USERPROFILE\zig-install", "zigrika", "helios", "$env:TEMP\zig.zip")
+    $targetDirs = @("$env:USERPROFILE\zig-install", "zigrika", "helios", "$env:TEMP\zig.zip", "$env:TEMP\zig_index.json")
     foreach ($item in $targetDirs) { if (Test-Path $item) { Remove-Item -Path $item -Recurse -Force -ErrorAction SilentlyContinue } }
-    if ($cleanChoice -eq "2") { if (Get-Command git -ErrorAction SilentlyContinue) { winget uninstall --id Git.Git -e --source winget } }
+
+    if ($cleanChoice -eq "2") {
+        if (Get-Command git -ErrorAction SilentlyContinue) {
+            Write-Host "Uninstalling Git..." -ForegroundColor Yellow
+            winget uninstall --id Git.Git -e --source winget
+        }
+    }
     Write-Host "Cleanup Complete." -ForegroundColor Green
 }

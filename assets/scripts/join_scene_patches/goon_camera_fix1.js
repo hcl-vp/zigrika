@@ -2,36 +2,109 @@ setTimeout(() => {
   const UE = require("ue");
   const {
     FightPhotoOptionPanel,
-  } = require("../../Module/Photograph/View/Item/FightPhotoOptionPanel.js");
+  } = require("../Game/Module/Photograph/View/Item/FightPhotoOptionPanel.js");
   const {
     PhotographController,
-  } = require("../../Module/Photograph/PhotographController.js");
+  } = require("../Game/Module/Photograph/PhotographController.js");
   const {
     FilterSettingController,
-  } = require("../../Module/Menu/FilterSettingController.js");
-  const {
-    RouletteModel,
-  } = require("../../../Game/Module/Roulette/RouletteModel.js");
+  } = require("../Game/Module/Menu/FilterSettingController.js");
+  const { RouletteModel } = require("../Game/Module/Roulette/RouletteModel.js");
   const {
     FightPhotographView,
-  } = require("../../../Game/Module/Photograph/View/FightPhotographView.js");
+  } = require("../Game/Module/Photograph/View/FightPhotographView.js");
   const {
     FilterSeniorParamSliderItem,
-  } = require("../../../Game/Module/Menu/SubViews/FilterSetting/FilterSeniorParamSliderItem.js");
-  const GenericScrollViewNew_1 = require("../../Module/Util/ScrollView/GenericScrollViewNew.js");
-  const GenericLayout_1 = require("../../Module/Util/Layout/GenericLayout.js");
-  const UiManager_1 = require("../../../Game/Ui/UiManager.js");
-  const ModelManager_1 = require("../../../Game/Manager/ModelManager.js");
-  const EventSystem_1 = require("../../../Game/Common/Event/EventSystem.js");
-  const EventDefine_1 = require("../../../Game/Common/Event/EventDefine.js");
-  const InputDistributeController_1 = require("../../../Game/Ui/InputDistribute/InputDistributeController.js");
-  const InputMappingsDefine_1 = require("../../../Game/Ui/InputDistribute/InputMappingsDefine.js");
-  const SpecialItemController_1 = require("../../../Game/Module/Item/SpecialItem/SpecialItemController.js");
+  } = require("../Game/Module/Menu/SubViews/FilterSetting/FilterSeniorParamSliderItem.js");
+  const GenericScrollViewNew_1 = require("../Game/Module/Util/ScrollView/GenericScrollViewNew.js");
+  const GenericLayout_1 = require("../Game/Module/Util/Layout/GenericLayout.js");
+  const UiManager_1 = require("../Game/Ui/UiManager.js");
+  const ModelManager_1 = require("../Game/Manager/ModelManager.js");
+  const EventSystem_1 = require("../Game/Common/Event/EventSystem.js");
+  const EventDefine_1 = require("../Game/Common/Event/EventDefine.js");
+  const InputDistributeController_1 = require("../Game/Ui/InputDistribute/InputDistributeController.js");
+  const InputMappingsDefine_1 = require("../Game/Ui/InputDistribute/InputMappingsDefine.js");
+  const SpecialItemController_1 = require("../Game/Module/Item/SpecialItem/SpecialItemController.js");
   const SequenceController_1 = require("../Game/Module/Plot/Sequence/SequenceController.js");
-  const Log_1 = require("../../../Core/Common/Log");
+  const Log_1 = require("../Core/Common/Log");
+  const { ControllerManager } = require("../Game/Manager/ControllerManager.js");
   const {
-    ControllerManager,
-  } = require("../../../Game/Manager/ControllerManager.js");
+    SpecialSkillAogusita,
+  } = require("../Game/NewWorld/Character/Common/Component/Skill/SpecialSkill/SpecialSkillAogusita.js");
+
+  SpecialSkillAogusita.prototype.OnStart = function () {
+    var e,
+      t = this.SpecialSkillComponent.Entity;
+    ((this.Hte = t.GetComponent(3)),
+      (this.cBe = t.GetComponent(42)),
+      this.Hte?.IsRoleAndCtrlByMe &&
+        ((this.Nce = t.GetComponent(67)),
+        (e = t.GetComponent(218)),
+        (this.SMd = e?.ListenForTagAddOrRemove(1519720150, this.IMd)),
+        EventSystem_1.EventSystem.Add(
+          EventDefine_1.EEventName.OnChangeRole,
+          this.xie,
+        ),
+        EventSystem_1.EventSystem.Add(
+          EventDefine_1.EEventName.CommonQteStart,
+          this.qsm,
+        ),
+        EventSystem_1.EventSystem.AddWithTarget(
+          t,
+          EventDefine_1.EEventName.CharOnRoleDeadTargetSelf,
+          this.Jze,
+        )));
+  };
+  SpecialSkillAogusita.prototype.OnEnd = function () {
+    (this.Hte?.IsRoleAndCtrlByMe && this.MMd && this.TMd(!0),
+      this.SMd?.EndTask(),
+      (this.SMd = void 0),
+      EventSystem_1.EventSystem.Has(
+        EventDefine_1.EEventName.OnChangeRole,
+        this.xie,
+      ) &&
+        EventSystem_1.EventSystem.Remove(
+          EventDefine_1.EEventName.OnChangeRole,
+          this.xie,
+        ),
+      EventSystem_1.EventSystem.Has(
+        EventDefine_1.EEventName.CommonQteStart,
+        this.qsm,
+      ) &&
+        EventSystem_1.EventSystem.Remove(
+          EventDefine_1.EEventName.CommonQteStart,
+          this.qsm,
+        ),
+      EventSystem_1.EventSystem.HasWithTarget(
+        this.SpecialSkillComponent.Entity,
+        EventDefine_1.EEventName.CharOnRoleDeadTargetSelf,
+        this.Jze,
+      ) &&
+        EventSystem_1.EventSystem.RemoveWithTarget(
+          this.SpecialSkillComponent.Entity,
+          EventDefine_1.EEventName.CharOnRoleDeadTargetSelf,
+          this.Jze,
+        ));
+  };
+
+  SpecialSkillAogusita.prototype.TMd = function (e) {};
+
+  for (const teamItem of ModelManager_1.ModelManager.SceneTeamModel.aPr) {
+    const entity = teamItem.Kpo?.Entity;
+    if (!entity?.Valid) continue;
+
+    const specialSkillComp = entity.GetComponent(284);
+    if (!specialSkillComp) continue;
+
+    const specialSkill = specialSkillComp.SpecialSkill;
+    if (!(specialSkill instanceof SpecialSkillAogusita)) continue;
+
+    EventSystem_1.EventSystem.RemoveWithTarget(
+      entity,
+      EventDefine_1.EEventName.CharBeforeSkillWithTarget,
+      specialSkill.tTu,
+    );
+  }
 
   const ENTITYCAMERA = 70140001;
 
@@ -90,20 +163,20 @@ setTimeout(() => {
 
   const {
     UiCameraPhotographerStructure,
-  } = require("../../../Game/Module/UiCamera/UiCameraStructure/UiCameraPhotographerStructure.js");
-  const MathUtils_1 = require("../../../Core/Utils/MathUtils.js");
-  const GravityUtils_1 = require("../../../Game/Utils/GravityUtils.js");
-  const Global_1 = require("../../../Game/Global.js");
-  const Quat_1 = require("../../../Core/Utils/Math/Quat.js");
-  const ControllerHolder_1 = require("../../../Game/Manager/ControllerHolder.js");
-  const ActorSystem_1 = require("../../../Core/Actor/ActorSystem.js");
-  const Vector_1 = require("../../../Core/Utils/Math/Vector.js");
-  const CommonParamById_1 = require("../../../Core/Define/ConfigCommon/CommonParamById.js");
-  const PhotographDefine_1 = require("../../../Game/Module/Photograph/PhotographDefine.js");
-  const Info_1 = require("../../../Core/Common/Info.js");
-  const ResourceSystem_1 = require("../../../Core/Resource/ResourceSystem.js");
-  const FilterSettingViewModel_1 = require("../../../Game/Module/Menu/SubViews/FilterSetting/FilterSettingViewModel.js");
-  const LguiUtil_1 = require("../../../Game/Module/Util/LguiUtil.js");
+  } = require("../Game/Module/UiCamera/UiCameraStructure/UiCameraPhotographerStructure.js");
+  const MathUtils_1 = require("../Core/Utils/MathUtils.js");
+  const GravityUtils_1 = require("../Game/Utils/GravityUtils.js");
+  const Global_1 = require("../Game/Global.js");
+  const Quat_1 = require("../Core/Utils/Math/Quat.js");
+  const ControllerHolder_1 = require("../Game/Manager/ControllerHolder.js");
+  const ActorSystem_1 = require("../Core/Actor/ActorSystem.js");
+  const Vector_1 = require("../Core/Utils/Math/Vector.js");
+  const CommonParamById_1 = require("../Core/Define/ConfigCommon/CommonParamById.js");
+  const PhotographDefine_1 = require("../Game/Module/Photograph/PhotographDefine.js");
+  const Info_1 = require("../Core/Common/Info.js");
+  const ResourceSystem_1 = require("../Core/Resource/ResourceSystem.js");
+  const FilterSettingViewModel_1 = require("../Game/Module/Menu/SubViews/FilterSetting/FilterSettingViewModel.js");
+  const LguiUtil_1 = require("../Game/Module/Util/LguiUtil.js");
 
   FilterSeniorParamSliderItem.prototype.Refresh = function (t, i, e) {
     ((this.DNd = t),
