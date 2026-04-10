@@ -83,6 +83,12 @@ pub fn onEquipTakeOnRequest(
 
                 equip.weapon_id = old_weapon.id;
                 equip.weapon_breach_level = old_weapon.breach;
+                try scene.saveComponents(
+                    fs,
+                    alloc.gpa,
+                    entity,
+                    &.{Scene.Entity.EquipComponent},
+                );
 
                 try txn.conn.push(pb.EntityEquipChangeNotify{
                     .EntityId = entity.net_id,
@@ -123,6 +129,12 @@ pub fn onEquipTakeOnRequest(
 
             equip.weapon_id = weapon.id;
             equip.weapon_breach_level = weapon.breach;
+            try scene.saveComponents(
+                fs,
+                alloc.gpa,
+                entity,
+                &.{Scene.Entity.EquipComponent},
+            );
 
             try txn.conn.push(pb.EntityEquipChangeNotify{
                 .EntityId = entity.net_id,

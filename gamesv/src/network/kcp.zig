@@ -19,7 +19,7 @@ const IKCP_CMD_WINS: u32 = 84; // cmd: window size (tell)
 const IKCP_ASK_SEND: u32 = 1; // need to send IKCP_CMD_WASK
 const IKCP_ASK_TELL: u32 = 2; // need to send IKCP_CMD_WINS
 const IKCP_WND_SND: u32 = 32;
-const IKCP_WND_RCV: u32 = 128; // must >= max fragment size
+const IKCP_WND_RCV: u32 = 256; // must >= max fragment size
 const IKCP_MTU_DEF: u32 = 1400;
 const IKCP_ACK_FAST: u32 = 3;
 const IKCP_INTERVAL: u32 = 100;
