@@ -93,11 +93,11 @@ pub fn onMovePackagePush(
                 if (controlled_by_player) {
                     for (scene.instance.players) |*player| {
                         if (player.id == sender.id) {
-                            player.rotation = .{ rotation.Pitch, rotation.Yaw, rotation.Roll };
+                            player.rotation = .{ rotation.Roll, rotation.Pitch, rotation.Yaw };
                         }
                     }
                 }
-                position_comp.rotation = .{ rotation.Pitch, rotation.Yaw, rotation.Roll };
+                position_comp.rotation = .{ rotation.Roll, rotation.Pitch, rotation.Yaw };
             }
 
             try events.enqueue(.entity_movement, .{ .entity = entity });

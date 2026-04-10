@@ -214,9 +214,9 @@ pub fn notifyJoinScene(
                     .Z = scene_player.location[2],
                 },
                 .Rotation = .{
-                    .Pitch = scene_player.rotation[0],
-                    .Yaw = scene_player.rotation[1],
-                    .Roll = scene_player.rotation[2],
+                    .Roll = scene_player.rotation[0],
+                    .Pitch = scene_player.rotation[1],
+                    .Yaw = scene_player.rotation[2],
                 },
                 .FightRoleInfos = fight_role_groups,
                 .CurRole = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)].cur_role,

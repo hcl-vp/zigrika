@@ -9,9 +9,10 @@ const std = @import("std");
 const Allocator = std.mem.Allocator;
 const pb = @import("proto").pb;
 const incr = @import("../../fs/incr.zig");
+const BuffAdditionEntry = @import("../../logic/events.zig").BuffAdditionEntry;
 
 pub fn buildFightBuffInfos(
-    role_buffs: std.ArrayListUnmanaged(Assets.DataTables.RoleBuffEntry),
+    role_buffs: std.ArrayListUnmanaged(BuffAdditionEntry),
     net_id: i64,
     scene: *Scene,
     gpa: Allocator,
@@ -20,26 +21,19 @@ pub fn buildFightBuffInfos(
     errdefer infos.deinit(gpa);
     for (role_buffs.items) |entry| {
         scene.*.instance.buff_handle += 1;
-        try infos.append(gpa, .{
-            .HandleId = scene.instance.buff_handle,
-            .BuffId = entry.id,
-            .Level = 1,
-            .StackCount = 1,
-            .InstigatorId = net_id,
-            .EntityId = net_id,
-            .Duration = -1.0,
-            .LeftDuration = -1.0,
-            .IsActive = entry.is_active,
-            .ApplyType = .Common,
-            .MessageId = -1,
-            .ServerId = 0,
-        });
+        try infos.append(gpa, Assets.DataTables.createBuffInformation(
+            scene.instance.buff_handle,
+            entry.id,
+            net_id,
+            net_id,
+            entry.is_active,
+        ));
     }
     return infos.toOwnedSlice(gpa);
 }
 
-pub fn buffListFromIds(allocator: std.mem.Allocator, ids: []const i64) !std.ArrayListUnmanaged(Assets.DataTables.RoleBuffEntry) {
-    var list: std.ArrayListUnmanaged(Assets.DataTables.RoleBuffEntry) = .empty;
+pub fn buffListFromIds(allocator: std.mem.Allocator, ids: []const i64) !std.ArrayListUnmanaged(BuffAdditionEntry) {
+    var list: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
     try list.ensureTotalCapacity(allocator, ids.len);
     for (ids) |id| {
         list.appendAssumeCapacity(.{ .id = id, .is_active = true });
@@ -140,7 +134,8 @@ pub fn createRoleEntity(
     const log = std.log.scoped(.role_entity_creator);
     const role_info = role_comp.role_map.getPtr(role).?;
 
-    var role_autobuffs = try assets.tables.getRoleAutoBuffs(role, alloc.gpa);
+    const weapon = weapon_comp.weapon_map.get(role_info.weapon) orelse unreachable;
+    var role_autobuffs = try assets.tables.getRoleAutoBuffs(role, weapon, alloc.gpa);
     defer role_autobuffs.deinit(alloc.gpa);
 
     const incr_path = try std.fmt.allocPrint(
@@ -214,13 +209,8 @@ pub fn createRoleEntity(
             ),
         },
         Entity.EquipComponent{
-            .weapon_id = blk: {
-                for (weapon_comp.weapon_map.values()) |weapon| {
-                    if (weapon.role_id == role) break :blk weapon.id;
-                }
-                break :blk 0;
-            },
-            .weapon_breach_level = 0,
+            .weapon_id = weapon.id,
+            .weapon_breach_level = weapon.breach,
         },
         Entity.LogicStateComponent{
             .direction_state = 0,

@@ -12,6 +12,7 @@ const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent
 
 pub fn ensureRoleWeapons(
     _: EventQueue.Dequeue(.enter_game),
+    events: *EventQueue,
     fs: *FileSystem,
     alloc: mem.Alloc,
     assets: *const Assets,
@@ -41,6 +42,7 @@ pub fn ensureRoleWeapons(
         try comp_util.saveStruct(fs, weapon, path, alloc.arena);
 
         role_kv.value_ptr.weapon = incr_id;
+        try events.enqueue(.role_info_modified, .{ .role_id = role_kv.key_ptr.* });
         try weapon_comp.weapon_map.put(alloc.gpa, incr_id, weapon);
     }
 }

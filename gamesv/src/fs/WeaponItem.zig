@@ -36,7 +36,7 @@ pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHas
             .level = 1,
             .exp = 0,
             .breach = 0,
-            .reson_level = 0,
+            .reson_level = 1,
         });
     }
 }

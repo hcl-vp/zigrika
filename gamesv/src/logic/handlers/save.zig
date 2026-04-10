@@ -44,3 +44,18 @@ pub fn onEntityMovement(
         &.{Scene.Entity.PositionComponent},
     );
 }
+
+pub fn onBuffChange(
+    event: EventQueue.Dequeue(.buff_change),
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    scene: *Scene,
+) !void {
+    try scene.saveInstance(fs, alloc.gpa);
+    try scene.saveComponents(
+        fs,
+        alloc.gpa,
+        event.data.entity,
+        &.{Scene.Entity.FightBuffComponent},
+    );
+}
