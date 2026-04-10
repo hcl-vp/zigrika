@@ -27,6 +27,7 @@ pub fn onWeaponItemRequest(
     try txn.respond(.{ .WeaponItemList = list });
 }
 
+// TODO: split this into events when implementing role element change
 pub fn onEquipTakeOnRequest(
     txn: *Transaction(pb.EquipTakeOnRequest),
     events: *EventQueue,

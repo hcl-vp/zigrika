@@ -1,7 +1,7 @@
 .{
     .name = .zigrika,
     .version = "0.0.1",
-    .minimum_zig_version = "0.16.0-dev.1470+32dc46aae",
+    .minimum_zig_version = "0.16.0-dev.3133+5ec8e45f3",
     .paths = .{""},
     .fingerprint = 0xeb11dece3f690b25,
 }
