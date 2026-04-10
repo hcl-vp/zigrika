@@ -5,6 +5,7 @@ const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
 const IndexMap = std.AutoArrayHashMapUnmanaged(i64, usize);
 const pb = @import("proto").pb;
+const WeaponItem = @import("../fs/WeaponItem.zig");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
@@ -18,6 +19,8 @@ pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
 pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
+pub const WeaponConf = @import("tables/WeaponConf.zig");
+pub const WeaponReson = @import("tables/WeaponReson.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -32,6 +35,8 @@ blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
 template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
+weapon_conf: Table(WeaponConf, "ItemId"),
+weapon_reson: Table(WeaponReson, "Id"),
 
 pub fn load(gpa: Allocator, io: Io) !DataTables {
     var tables: DataTables = undefined;
@@ -118,16 +123,15 @@ pub fn getProps(tables: *const DataTables, property_id: i32, gpa: Allocator) ![]
     return props;
 }
 
-pub const RoleBuffEntry = struct {
-    id: i64,
-    is_active: bool,
-};
+const BuffAdditionEntry = @import("../logic/events.zig").BuffAdditionEntry;
 
 pub fn getRoleAutoBuffs(
     tables: *const DataTables,
     role_id: i32,
+    weapon: WeaponItem,
     gpa: Allocator,
-) !std.ArrayListUnmanaged(RoleBuffEntry) {
+) !std.ArrayListUnmanaged(BuffAdditionEntry) {
+    const reson_conf = tables.getWeaponReson((tables.weapon_conf.getDataById(weapon.id) orelse unreachable).ResonId, weapon.reson_level) orelse unreachable;
     const additional_buffs = [_]i64{
         3003, // Remove wall run prohibition
         3004, // Remove gliding prohibition
@@ -160,7 +164,7 @@ pub fn getRoleAutoBuffs(
         "9296f07f", // amy roguelike
     };
 
-    var results: std.ArrayListUnmanaged(RoleBuffEntry) = .empty;
+    var results: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
     errdefer results.deinit(gpa);
 
     for (tables.buff.items) |*buff| {
@@ -227,6 +231,10 @@ pub fn getRoleAutoBuffs(
         try results.append(gpa, .{ .id = id, .is_active = true });
     }
 
+    for (reson_conf.Effect) |id| {
+        try results.append(gpa, .{ .id = id, .is_active = true });
+    }
+
     // le denia (handle ee id 6 (attribute event))
     var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
     defer illegal_ids.deinit(gpa);
@@ -257,4 +265,34 @@ pub fn getRoleAutoBuffs(
     }
 
     return results;
+}
+
+pub fn createBuffInformation(
+    handle_id: i32,
+    buff_id: i64,
+    instigator_id: i64,
+    entity_id: i64,
+    is_active: bool,
+) pb.FightBuffInformation {
+    return .{
+        .HandleId = handle_id,
+        .BuffId = buff_id,
+        .Level = 1,
+        .StackCount = 1,
+        .InstigatorId = instigator_id,
+        .EntityId = entity_id,
+        .Duration = -1.0,
+        .LeftDuration = -1.0,
+        .IsActive = is_active,
+        .ApplyType = .Common,
+        .MessageId = -1,
+        .ServerId = 0,
+    };
+}
+
+pub fn getWeaponReson(tables: *const DataTables, reson_id: i32, level: i32) ?*const WeaponReson {
+    for (tables.weapon_reson.items) |*reson| {
+        if (reson.ResonId == reson_id and reson.Level == level) return reson;
+    }
+    return null;
 }

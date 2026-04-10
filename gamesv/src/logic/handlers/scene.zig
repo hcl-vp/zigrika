@@ -214,9 +214,9 @@ pub fn notifyJoinScene(
                     .Z = scene_player.location[2],
                 },
                 .Rotation = .{
-                    .Pitch = scene_player.rotation[0],
-                    .Yaw = scene_player.rotation[1],
-                    .Roll = scene_player.rotation[2],
+                    .Roll = scene_player.rotation[0],
+                    .Pitch = scene_player.rotation[1],
+                    .Yaw = scene_player.rotation[2],
                 },
                 .FightRoleInfos = fight_role_groups,
                 .CurRole = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)].cur_role,
@@ -277,6 +277,11 @@ pub fn formationUpdateNotify(
         for (formation.roles) |maybe_role| {
             const role = maybe_role orelse continue;
 
+            const role_info = role_comp.role_map.get(role.role_id) orelse {
+                log.warn("role {} not found in role_map, skipping", .{role.role_id});
+                continue;
+            };
+
             if (role.entity_id != -1) {
                 if (query.byNetId(role.entity_id)) |comps| {
                     const attribute_comp = comps[1];
@@ -285,23 +290,18 @@ pub fn formationUpdateNotify(
                         .MaxHp = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.LifeMax)],
                         .CurHp = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.Life)],
                         .Level = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.Lv)],
-                        .RoleSkinId = 8100 * 10_000 + role.role_id,
+                        .RoleSkinId = role_info.role_skin_id,
                     });
                     continue;
                 }
             }
-
-            const role_info = role_comp.role_map.get(role.role_id) orelse {
-                log.warn("role {} not found in role_map, skipping", .{role.role_id});
-                continue;
-            };
 
             try role_infos.append(alloc.arena, pb.FormationRoleInfo{
                 .RoleId = role.role_id,
                 .MaxHp = role_info.base_prop[@intFromEnum(pb.EAttributeType.LifeMax)],
                 .CurHp = role_info.base_prop[@intFromEnum(pb.EAttributeType.Life)],
                 .Level = role_info.level,
-                .RoleSkinId = role_info.skin_id,
+                .RoleSkinId = role_info.role_skin_id,
             });
         }
 

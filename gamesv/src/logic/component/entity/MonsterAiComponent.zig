@@ -1,4 +1,4 @@
-const MonsterAi = @This();
+const Component = @This();
 const pb = @import("proto").pb;
 const mem = @import("../../../mem.zig");
 
@@ -7,7 +7,7 @@ hatred_group_id: i64 = 0,
 ai_team_init_id: i32 = 0,
 combat_message_id: i64 = 0,
 
-pub fn toProto(comp: MonsterAi) !pb.MonsterAiComponentPb {
+pub fn toProto(comp: Component) !pb.MonsterAiComponentPb {
     return .{
         .WeaponId = comp.weapon_id,
         .HatredGroupId = comp.hatred_group_id,

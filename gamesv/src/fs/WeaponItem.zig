@@ -29,10 +29,16 @@ pub fn toProto(item: WeaponItem, incr_id: i32) pb.WeaponItem {
 }
 
 pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHashMapUnmanaged(i32, WeaponItem)) !void {
-    // not implemented yet.
-    _ = gpa;
-    _ = assets;
-    _ = map;
+    for (assets.tables.weapon_conf.items) |info| {
+        try map.put(gpa, @intCast(map.entries.len + 1), .{
+            .id = info.ItemId,
+            .func_value = 0,
+            .level = 1,
+            .exp = 0,
+            .breach = 0,
+            .reson_level = 1,
+        });
+    }
 }
 
 pub fn deinit(item: WeaponItem, gpa: Allocator) void {
