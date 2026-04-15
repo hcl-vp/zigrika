@@ -571,8 +571,8 @@
     "Id": 1108002,
     "Name": "绯雪强化重击可用提示",
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_General.NS_Fx_LGUI_Fight_E_General",
-    "ElementId": 0,
-    "Color": "#49A3FF",
+    "ElementId": 1,
+    "Color": "",
     "Scale": 1
   },
   {

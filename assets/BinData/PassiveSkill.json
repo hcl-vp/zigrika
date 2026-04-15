@@ -55576,7 +55576,8 @@
     "SkillAction": "AddBuff",
     "SkillActionParams": [
       "10021000",
-      "10021000"
+      "10021000",
+      "1211702622"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -55872,7 +55873,7 @@
   },
   {
     "Id": 1108501101,
-    "SkillDesc": "固有1-施加冰异常触发器",
+    "SkillDesc": "固有1-施加冰、暗异常触发器",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -55883,7 +55884,7 @@
     "ExecuteType": 0,
     "TriggerPreset": [
       "1",
-      "10011000"
+      "10011000#10061000"
     ],
     "TriggerParams": {},
     "TriggerFormula": "TRUE",
@@ -57423,7 +57424,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "DamageValue>=1\nAND\n(\nDamageID==12119900110\nOR\nDamageID==12119900116\nOR\nDamageID==12119900117\nOR\nDamageID==12119900150\nOR\nDamageID==12119900156\n)",
+    "TriggerFormula": "DamageValue>=1\nAND\nDamageID==1211990011",
     "SubSkillAction": [],
     "InstigatorType": "Victim",
     "SkillAction": "AddBuff",
@@ -57566,7 +57567,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "DamageValue>=1\nAND\n(\nDamageID==12119900110\nOR\nDamageID==12119900116\nOR\nDamageID==12119900117\nOR\nDamageID==12119900150\nOR\nDamageID==12119900156\n)",
+    "TriggerFormula": "DamageValue>=1\nAND\nDamageID==1211990011",
     "SubSkillAction": [],
     "InstigatorType": "Victim",
     "SkillAction": "AddBuff",
@@ -57689,7 +57690,8 @@
     "SkillAction": "AddBuff",
     "SkillActionParams": [
       "1108501121",
-      "1108501123"
+      "1108501123",
+      "1108501131"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -57719,11 +57721,9 @@
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
-      "1108501131",
       "1108501132",
       "1108501510",
       "1108501801",
-      "1108501810",
       "1108501812",
       "1108501820"
     ],
@@ -57756,7 +57756,8 @@
     "SkillAction": "AddBuff",
     "SkillActionParams": [
       "1108501141",
-      "1108501143"
+      "1108501143",
+      "1108501810"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -57848,32 +57849,6 @@
     "CDType": "Owner"
   },
   {
-    "Id": 1108501111,
-    "SkillDesc": "固有1-施加暗异常、爆破染色触发器",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "1",
-      "10061000#3159"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "TRUE",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "Customize",
-    "SkillActionParams": [],
-    "ActionScriptParams": {},
-    "SkillActionScript": "AddBuff2(Attacker, 1108501102,1, Owner)\nAND\nAddBuff2(Owner, 1108501112,1, Owner)",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
     "Id": 1210555007,
     "SkillDesc": "【被动】普攻类型命中监听",
     "CDTime": 0.30000001192092896,
@@ -57925,6 +57900,35 @@
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
     "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1211702206,
+    "SkillDesc": "聚爆效应引爆监听",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "AbnormalTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "2",
+      "2000",
+      "1004"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1211702207"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 1,
     "CDType": "Owner"
   }
 ]

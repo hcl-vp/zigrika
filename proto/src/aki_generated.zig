@@ -24868,1546 +24868,33 @@ pub const dgs = struct {
     pub const fOs_field_number: u32 = 1;
     pub const vOs_field_number: u32 = 13;
 };
-pub const HonamiStoryCustomLoadingPb = struct {
-    pub const LoadingId_field_number: u32 = 1;
-};
-pub const TutorialUnlockRequest = struct {
-    pub const msg_id: u16 = 18049;
-    pub const Id_field_number: u32 = 14;
-};
-pub const ActorVisibleRequest = struct {
-    pub const msg_id: u16 = 23524;
-    pub const Id_field_number: u32 = 6;
-    pub const IsActorVisible_field_number: u32 = 15;
-};
-pub const DeleteVisionEquipGroupRequest = struct {
-    pub const msg_id: u16 = 28071;
-    pub const Index_field_number: u32 = 4;
-};
-pub const MotorTechPb = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const Unlock_field_number: u32 = 3;
-    pub const Current_field_number: u32 = 10;
-    pub const Target_field_number: u32 = 11;
-};
-pub const AfterJoinSceneNotify = struct {
-    pub const msg_id: u16 = 16984;
-};
-pub const Rotator = struct {
-    pub const Pitch_field_number: u32 = 1;
-    pub const Yaw_field_number: u32 = 2;
-    pub const Roll_field_number: u32 = 3;
-};
-pub const CowLevel = struct {
-    pub const LevelScore_field_number: u32 = 1;
-};
-pub const GmLevelActionCtxPb = struct {
-    pub const JsonStr_field_number: u32 = 1;
-};
-pub const SolarSpeedContext = struct {
-    pub const LevelId_field_number: u32 = 1;
-    pub const Score_field_number: u32 = 2;
-    pub const Ranking_field_number: u32 = 3;
-    pub const StartTime_field_number: u32 = 4;
-    pub const LapRecord_field_number: u32 = 5;
-};
-pub const FightFormation = struct {
-    pub const FormationId_field_number: u32 = 1;
-    pub const CurRole_field_number: u32 = 2;
-    pub const RoleIds_field_number: u32 = 3;
-    pub const IsCurrent_field_number: u32 = 4;
-};
-pub const TrapDefenseSpecialCellPbData = struct {
-    pub const ConfigId_field_number: u32 = 1;
-};
-pub const DirectTrainGetPlayerIdRequest = struct {
-    pub const msg_id: u16 = 27593;
-};
-pub const GetFormationDataRequest = struct {
-    pub const msg_id: u16 = 16119;
-};
-pub const AceBlackProductAccountInfo = struct {
-    pub const TdmDeviceId_field_number: u32 = 1;
-    pub const IsRoot_field_number: u32 = 2;
-    pub const IsSimulator_field_number: u32 = 3;
-};
-pub const PhantomArenaCardReward = struct {
-    pub const CardId_field_number: u32 = 1;
-    pub const NeedCount_field_number: u32 = 2;
-    pub const IsTaken_field_number: u32 = 3;
-};
-pub const OneForgeConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const PutVisionGroupToTopRequest = struct {
-    pub const msg_id: u16 = 18124;
-    pub const Index_field_number: u32 = 14;
-};
-pub const AchievementProgress = struct {
-    pub const CurProgress_field_number: u32 = 1;
-    pub const TotalProgress_field_number: u32 = 2;
-};
-pub const CalabashSkinComponentPb = struct {
-    pub const CalabashSkinId_field_number: u32 = 1;
-};
-pub const DrownRequest = struct {
-    pub const msg_id: u16 = 16438;
-};
-pub const DrownEndTeleportRequest = struct {
-    pub const msg_id: u16 = 18623;
-};
-pub const TimelineTrackControlDataPb = struct {
-    pub const ControlPoint_field_number: u32 = 1;
-};
-pub const ResonantChainUnlockRequest = struct {
-    pub const msg_id: u16 = 20307;
-    pub const RoleId_field_number: u32 = 5;
-};
-pub const TimeCheckRequest = struct {
-    pub const msg_id: u16 = 28667;
-    pub const ClientTime_field_number: u32 = 13;
-    pub const TimeDilation_field_number: u32 = 1;
-    pub const FlowTimeDilation_field_number: u32 = 9;
-};
-pub const CiacconaGalChoiceData = struct {
-    pub const ChoiceDataId_field_number: u32 = 1;
-    pub const SecondState_field_number: u32 = 2;
-    pub const FirstState_field_number: u32 = 3;
-};
-pub const DetectionTarget = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const UnlockState_field_number: u32 = 3;
-    pub const RefresherTime_field_number: u32 = 4;
-    pub const DetectionId_field_number: u32 = 5;
-    pub const IsTrace_field_number: u32 = 6;
-};
-pub const RogueSeasonReward = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const IsReceive_field_number: u32 = 2;
-};
-pub const RemoveGameplayEffectNotify = struct {
-    pub const msg_id: u16 = 23315;
-    pub const Handle_field_number: u32 = 5;
-    pub const EntityId_field_number: u32 = 12;
-};
-pub const RoleTagChangeRequest = struct {
-    pub const msg_id: u16 = 15156;
-    pub const TagId_field_number: u32 = 7;
-    pub const TagCount_field_number: u32 = 12;
-};
-pub const RoleRecordComponentPb = struct {
-    pub const IsAutoRole_field_number: u32 = 1;
-    pub const ConstateId_field_number: u32 = 2;
-};
-pub const RoleSkinChangeRequest = struct {
-    pub const msg_id: u16 = 22811;
-    pub const RoleId_field_number: u32 = 9;
-    pub const SkinId_field_number: u32 = 11;
-    pub const IsWearWeaponSkin_field_number: u32 = 15;
-};
-pub const BattleStateChangeRequest = struct {
-    pub const msg_id: u16 = 27310;
-    pub const EntityId_field_number: u32 = 13;
-    pub const InBattle_field_number: u32 = 4;
-};
-pub const SelectDetectionTarget = struct {
-    pub const DetectionId_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const Id_field_number: u32 = 3;
-    pub const IsTrace_field_number: u32 = 4;
-};
-pub const PhantomArenaChallengeInfo = struct {
-    pub const ChallengeInfoId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const CanReChallenge_field_number: u32 = 3;
-    pub const LastCardRoleId_field_number: u32 = 4;
-    pub const LastCardGroupIndex_field_number: u32 = 5;
-    pub const FinishConditions_field_number: u32 = 6;
-    pub const IsUncover_field_number: u32 = 7;
-    pub const IsShow_field_number: u32 = 8;
-};
-pub const AbyssRewardInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const CanGetReward_field_number: u32 = 4;
-    pub const CurrentProgress_field_number: u32 = 6;
-    pub const TargetProgress_field_number: u32 = 7;
-    pub const CanUnlock_field_number: u32 = 9;
-};
-pub const CombinationKey = struct {
-    pub const KeyNameList_field_number: u32 = 1;
-};
-pub const UpdateVoxelEnvRequest = struct {
-    pub const msg_id: u16 = 16014;
-    pub const ServerCaveMode_field_number: u32 = 4;
-};
-pub const BuffStackCountNotify = struct {
-    pub const msg_id: u16 = 29004;
-    Time: ?union(enum) {
-    } = null,
-    gFs: ?union(enum) {
-    } = null,
-    pub const Duration_field_number: u32 = 15;
-    pub const LeftDuration_field_number: u32 = 14;
-    pub const HandleId_field_number: u32 = 13;
-    pub const NewStackCount_field_number: u32 = 7;
-    pub const InstigatorId_field_number: u32 = 10;
-    pub const NotRefreshDuration_field_number: u32 = 12;
-    pub const NotRefreshPeriod_field_number: u32 = 3;
-};
-pub const ConcomitantsComponentPb = struct {
-    pub const VisionEntityId_field_number: u32 = 1;
-    pub const CustomEntityIds_field_number: u32 = 2;
-    pub const PhantomRoleId_field_number: u32 = 3;
-    pub const BossRushId_field_number: u32 = 4;
-};
-pub const TowerLevel = struct {
-    pub const StarByte_field_number: u32 = 1;
-    pub const CostTime_field_number: u32 = 2;
-};
-pub const LogicStateComponentPb = struct {
-    pub const PositionState_field_number: u32 = 1;
-    pub const MoveState_field_number: u32 = 2;
-    pub const DirectionState_field_number: u32 = 3;
-    pub const PositionSubState_field_number: u32 = 4;
-};
-pub const TeleportDataRequest = struct {
-    pub const msg_id: u16 = 23502;
-};
-pub const ModifyEntityCampNotify = struct {
-    pub const msg_id: u16 = 29564;
-    pub const TargetEntityId_field_number: u32 = 13;
-    pub const Camp_field_number: u32 = 2;
-};
-pub const DropVisionItemResult = struct {
-    pub const PlayerId_field_number: u32 = 1;
-    pub const Drop_field_number: u32 = 2;
-};
-pub const TrapDefenseLevelData = struct {
-    pub const ChallengeId_field_number: u32 = 1;
-    pub const CanUnlock_field_number: u32 = 2;
-    pub const TargetProgress_field_number: u32 = 3;
-    pub const IsPassed_field_number: u32 = 4;
-    pub const CanGetReward_field_number: u32 = 5;
-    pub const UnlockTime_field_number: u32 = 6;
-    pub const IsLeaved_field_number: u32 = 7;
-    pub const MaxFinishWaveTimes_field_number: u32 = 8;
-};
-pub const LivenessRequest = struct {
-    pub const msg_id: u16 = 19370;
-};
-pub const BuffEffectRequest = struct {
-    pub const msg_id: u16 = 21268;
-    pub const HandleId_field_number: u32 = 2;
-    pub const Index_field_number: u32 = 14;
-};
-pub const MotorFightLevelPb = struct {
-    pub const LevelId_field_number: u32 = 1;
-    pub const OpenTime_field_number: u32 = 2;
-    pub const Cleared_field_number: u32 = 3;
-    pub const BestScore_field_number: u32 = 4;
-    pub const LastRoleId_field_number: u32 = 5;
-};
-pub const ClientStorageStringData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const RbDefaultBlockPbType = struct {
-    pub const IsMainControl_field_number: u32 = 1;
-};
-pub const UnlockRoleSkinListResponse = struct {
-    pub const msg_id: u16 = 23110;
-    pub const RoleSkinList_field_number: u32 = 4;
-};
-pub const ActivityLinkageRewardData = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-};
-pub const PhantomArenaRoleInfo = struct {
-    pub const RoleInfoId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const IsTaken_field_number: u32 = 3;
-};
-pub const NPCPerformGroupComponentPb = struct {
-    pub const Type_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const DFsmBlackBoard = struct {
-    pub const Key_field_number: u32 = 1;
-    pub const Value_field_number: u32 = 2;
-};
-pub const SendEquipSkinRequest = struct {
-    pub const msg_id: u16 = 17861;
-    pub const RoleId_field_number: u32 = 15;
-};
-pub const GuideInfoRequest = struct {
-    pub const msg_id: u16 = 25411;
-};
-pub const BuffEffectExecutePush = struct {
-    pub const msg_id: u16 = 21178;
-    pub const HandleId_field_number: u32 = 8;
-    pub const Index_field_number: u32 = 9;
-};
-pub const MapTraceInfoRequest = struct {
-    pub const msg_id: u16 = 26117;
-};
-pub const AdventureDetectionConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const EffectBeginTime_field_number: u32 = 2;
-    pub const EffectEndTime_field_number: u32 = 3;
-};
-pub const RTimeStopRequest = struct {
-    pub const msg_id: u16 = 27262;
-    pub const Flag_field_number: u32 = 2;
-    pub const IsStopCharacter_field_number: u32 = 8;
-    pub const Duration_field_number: u32 = 14;
-};
-pub const FloroRanchCommonData = struct {
-    pub const DataId_field_number: u32 = 1;
-    pub const ConditionId_field_number: u32 = 2;
-    pub const IsLocked_field_number: u32 = 3;
-};
-pub const PlayerSceneComponentPb = struct {
-    pub const EntityIds_field_number: u32 = 1;
-};
-pub const LevelPlayStateMsg = struct {
-    pub const LevelPlayEntityId_field_number: u32 = 1;
-    pub const ExploratoryType_field_number: u32 = 2;
-    pub const StateType_field_number: u32 = 3;
-    pub const CompleteNumber_field_number: u32 = 4;
-    pub const IsHide_field_number: u32 = 5;
-    pub const HideGroupInfo_field_number: u32 = 6;
-    pub const IsUnlocked_field_number: u32 = 7;
-    pub const LevelPlayMarkUnlock_field_number: u32 = 8;
-};
-pub const EntityRewardItemPb = struct {
-    pub const HasCount_field_number: u32 = 1;
-    pub const NextResetTime_field_number: u32 = 2;
-};
-pub const BuffEffectCd = struct {
-    pub const BuffId_field_number: u32 = 1;
-    pub const ListCdRemaining_field_number: u32 = 2;
-};
-pub const RoleVisionRecommendAttrRequest = struct {
-    pub const msg_id: u16 = 20768;
-    pub const RoleId_field_number: u32 = 5;
-};
-pub const TowerInfoData = struct {
-    pub const DangerLevel_field_number: u32 = 1;
-    pub const MaxFloor_field_number: u32 = 2;
-};
-pub const TutorialReceiveRequest = struct {
-    pub const msg_id: u16 = 24682;
-    pub const Id_field_number: u32 = 7;
-};
-pub const PbOverRoleRequest = struct {
-    pub const msg_id: u16 = 24459;
-    pub const RoleId_field_number: u32 = 2;
-};
-pub const FormationAttr = struct {
-    pub const AttrId_field_number: u32 = 1;
-    pub const Ratio_field_number: u32 = 2;
-    pub const BaseMaxValue_field_number: u32 = 3;
-    pub const MaxValue_field_number: u32 = 4;
-    pub const CurrentValue_field_number: u32 = 5;
-};
-pub const LineCrossChallengeData = struct {
-    pub const ChallengeId_field_number: u32 = 1;
-    pub const CanGetReward_field_number: u32 = 2;
-    pub const OpenTime_field_number: u32 = 3;
-    pub const RewardDataId_field_number: u32 = 4;
-    pub const EntityConfigId_field_number: u32 = 5;
-    pub const IsPreChallengeState_field_number: u32 = 6;
-};
-pub const WeaponSkinComponentPb = struct {
-    pub const WeaponSkinId_field_number: u32 = 1;
-};
-pub const FlowStartTeleportCtxPb = struct {
-    pub const FlowListName_field_number: u32 = 1;
-    pub const FlowId_field_number: u32 = 2;
-    pub const StateId_field_number: u32 = 3;
-};
-pub const RTimeStopInstPush = struct {
-    pub const msg_id: u16 = 25672;
-    pub const Flag_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 6;
-};
-pub const InfluenceInfo = struct {
-    pub const InfluenceId_field_number: u32 = 1;
-    pub const RewardIndex_field_number: u32 = 2;
-    pub const Relation_field_number: u32 = 3;
-};
-pub const DrinkMixRole = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const FirstPass_field_number: u32 = 2;
-    pub const MaxLike_field_number: u32 = 3;
-    pub const RewardGet_field_number: u32 = 4;
-};
-pub const AchievementInfoRequest = struct {
-    pub const msg_id: u16 = 16404;
-};
-pub const ClientStorageSetData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const SeamlessTeleportFinishConfigPb = struct {
-    pub const IsnotStopScreenEffect_field_number: u32 = 1;
-    pub const EffectExtraState_field_number: u32 = 2;
-};
-pub const SilenceNpcNotify = struct {
-    pub const msg_id: u16 = 15402;
-    pub const vTs_field_number: u32 = 3;
-};
-pub const PassiveSkillAddRequest = struct {
-    pub const msg_id: u16 = 26775;
-    pub const PassiveSkillId_field_number: u32 = 11;
-    pub const TargetEntityId_field_number: u32 = 7;
-};
-pub const EntityOnLandedResponse = struct {
-    pub const msg_id: u16 = 20153;
-};
-pub const HonamiStoryItemCollectionConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-};
-pub const TaskData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 4;
-    pub const Progress_field_number: u32 = 5;
-};
-pub const TrapDefenseBuildingData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const Branch_field_number: u32 = 3;
-    pub const MaxLevel_field_number: u32 = 4;
-    pub const CellPrice_field_number: u32 = 5;
-    pub const OriginalConstructPrice_field_number: u32 = 6;
-    pub const DiscountConstructPrice_field_number: u32 = 7;
-    pub const DeconstructReturn_field_number: u32 = 8;
-};
-pub const SurvivorsPlayerCharacterPbData = struct {
-};
-pub const PushDataCompleteNotify = struct {
-    pub const msg_id: u16 = 113;
-};
-pub const ActivityInviteNewbie = struct {
-    pub const InviteCode_field_number: u32 = 1;
-    pub const Score_field_number: u32 = 2;
-    pub const RedDot_field_number: u32 = 3;
-};
-pub const MonsterWeaponComponentPb = struct {
-    pub const WeaponId_field_number: u32 = 1;
-};
-pub const ChangeStateConfirmPush = struct {
-    pub const msg_id: u16 = 23992;
-    pub const FsmId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 13;
-};
-pub const SceneLoadingFinishRequest = struct {
-    pub const msg_id: u16 = 20074;
-    pub const SceneId_field_number: u32 = 7;
-};
-pub const TalentInfoData = struct {
-    pub const TalentId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const VisionEquipGroupInfoRequest = struct {
-    pub const msg_id: u16 = 18585;
-};
-pub const TrapDefenseAuxiliaryData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const Branch_field_number: u32 = 3;
-    pub const MaxLevel_field_number: u32 = 4;
-};
-pub const MotorDaCtxComponentPb = struct {
-    pub const MotorDaCtxId_field_number: u32 = 1;
-};
-pub const RogueBossInstData = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const CanUnlock_field_number: u32 = 3;
-    pub const UnlockTime_field_number: u32 = 4;
-};
-pub const GachaPoolInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const BeginTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-    pub const Title_field_number: u32 = 4;
-    pub const Description_field_number: u32 = 5;
-    pub const UiType_field_number: u32 = 6;
-    pub const ThemeColor_field_number: u32 = 7;
-    pub const ShowIdList_field_number: u32 = 8;
-    pub const UpList_field_number: u32 = 9;
-    pub const PreviewIdList_field_number: u32 = 10;
-    pub const ComplianceDetail_field_number: u32 = 11;
-};
-pub const ExploreSkillRoulette = struct {
-    pub const SkillIds_field_number: u32 = 1;
-    pub const ExtraItemId_field_number: u32 = 2;
-    pub const ExploreSkill_field_number: u32 = 3;
-};
-pub const FadeBackgroundFadeOutEffectBlackPb = struct {
-    FadeIn: ?union(enum) {
-    } = null,
-    FadeOut: ?union(enum) {
-    } = null,
-    pub const FadeInTime_field_number: u32 = 2;
-    pub const FadeOutTime_field_number: u32 = 3;
-    pub const FadeColor_field_number: u32 = 1;
-};
-pub const InterruptSkillInDelayRequest = struct {
-    pub const msg_id: u16 = 17686;
-    pub const SkillId_field_number: u32 = 14;
-};
-pub const ItemEntry = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const ItemCount_field_number: u32 = 2;
-};
-pub const AccessPathTimeServerConfigRequest = struct {
-    pub const msg_id: u16 = 29406;
-};
-pub const EnergySyncRequest = struct {
-    pub const msg_id: u16 = 15665;
-    pub const EnergyTypes_field_number: u32 = 9;
-};
-pub const EntityActiveRequest = struct {
-    pub const msg_id: u16 = 24300;
-    pub const EntityId_field_number: u32 = 6;
-};
-pub const MonsterInfoPreview = struct {
-    pub const WaveConfigId_field_number: u32 = 1;
-    pub const HpPpb_field_number: u32 = 2;
-    pub const Damage_field_number: u32 = 3;
-    pub const Round_field_number: u32 = 4;
-    pub const IsDead_field_number: u32 = 5;
-};
-pub const ScratchCardRewardData = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-};
-pub const ValidTimeItem = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const IncrId_field_number: u32 = 3;
-    pub const ExpireTime_field_number: u32 = 4;
-};
-pub const EquipComponentPb = struct {
-    pub const WeaponId_field_number: u32 = 1;
-    pub const WeaponBreachLevel_field_number: u32 = 2;
-};
-pub const PlayerBasicInfoGetRequest = struct {
-    pub const msg_id: u16 = 23055;
-    pub const Id_field_number: u32 = 14;
-};
-pub const AdviceRequest = struct {
-    pub const msg_id: u16 = 25455;
-};
-pub const GachaInfoRequest = struct {
-    pub const msg_id: u16 = 19326;
-    pub const Language_field_number: u32 = 13;
-};
-pub const WeaponBreachRequest = struct {
-    pub const msg_id: u16 = 20384;
-    pub const IncId_field_number: u32 = 3;
-};
-pub const PbMailAttachment = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-};
-pub const PreOpenDetections = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const PreOpenId_field_number: u32 = 2;
-    pub const PreOpenBeginTime_field_number: u32 = 3;
-    pub const PreOpenEndTIme_field_number: u32 = 4;
-};
-pub const GameplayTagData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const TagCount_field_number: u32 = 2;
-};
-pub const RemoveBuffByIdS2cRequestNotify = struct {
-    pub const msg_id: u16 = 16647;
-    pub const BuffId_field_number: u32 = 4;
-    pub const StackCount_field_number: u32 = 7;
-    pub const Reason_field_number: u32 = 6;
-};
-pub const LiftComponentPb = struct {
-    pub const Location_field_number: u32 = 1;
-};
-pub const HarvestLevelReward = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const IsOpen_field_number: u32 = 3;
-    pub const Points_field_number: u32 = 4;
-    pub const Diff_field_number: u32 = 5;
-    pub const State_field_number: u32 = 6;
-};
-pub const OneForgeInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const LastRoleId_field_number: u32 = 3;
-    pub const LimitTotalCount_field_number: u32 = 4;
-    pub const LimitForgeCount_field_number: u32 = 5;
-    pub const StartTime_field_number: u32 = 6;
-    pub const EndTime_field_number: u32 = 7;
-};
-pub const PatrolComponentPb = struct {
-    pub const Dir_field_number: u32 = 1;
-};
-pub const DailyQuestTerminateActionCtxPb = struct {
-    pub const QuestId_field_number: u32 = 1;
-};
-pub const SurvivorsGoldenCoinPbData = struct {
-};
-pub const HonamiStoryMascotConfig = struct {
-    pub const MascotId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const HackTargetComponentPb = struct {
-    pub const HackTargetEntityId_field_number: u32 = 1;
-};
-pub const AwardGroupData = struct {
-    pub const GroupId_field_number: u32 = 1;
-    pub const GroupRank_field_number: u32 = 2;
-    pub const CurrentAmount_field_number: u32 = 3;
-    pub const AllAmount_field_number: u32 = 4;
-    pub const RewardItems_field_number: u32 = 5;
-};
-pub const GroupTypesWrapper = struct {
-    pub const GroupTypes_field_number: u32 = 1;
-};
-pub const TeleportTransferRequest = struct {
-    pub const msg_id: u16 = 24519;
-    pub const Id_field_number: u32 = 4;
-};
-pub const RTimeStopInstRequest = struct {
-    pub const msg_id: u16 = 28329;
-    pub const Flag_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 8;
-};
-pub const TowerDefenceInstanceInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Score_field_number: u32 = 2;
-    pub const Rewarded_field_number: u32 = 3;
-    pub const IsPassed_field_number: u32 = 4;
-    pub const UnlockTime_field_number: u32 = 5;
-    pub const MaxScore_field_number: u32 = 6;
-    pub const PassTime_field_number: u32 = 7;
-};
-pub const EntityInteractRequest = struct {
-    pub const msg_id: u16 = 26412;
-    pub const EntityId_field_number: u32 = 8;
-    pub const OptionIndex_field_number: u32 = 2;
-    pub const VisionEntityId_field_number: u32 = 12;
-};
-pub const PlayMontageTaskAndPush = struct {
-    pub const msg_id: u16 = 15890;
-    pub const MontageName_field_number: u32 = 14;
-    pub const MontagePathHash_field_number: u32 = 11;
-    pub const SpeedRatio_field_number: u32 = 5;
-    pub const StartSection_field_number: u32 = 8;
-    pub const StartTimeSeconds_field_number: u32 = 3;
-};
-pub const PhotoMemoryRequest = struct {
-    pub const msg_id: u16 = 26873;
-};
-pub const GetMusicInfoRequest = struct {
-    pub const msg_id: u16 = 27500;
-};
-pub const AnimalDestroyRequest = struct {
-    pub const msg_id: u16 = 25606;
-    pub const EntityId_field_number: u32 = 15;
-};
-pub const PlayerTitleLimitInfo = struct {
-    pub const PlayerTitleId_field_number: u32 = 1;
-    pub const BeginTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const BabelBuff = struct {
-    pub const BuffId_field_number: u32 = 1;
-    pub const Unlocked_field_number: u32 = 2;
-};
-pub const LoadEquipData = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const SkinId_field_number: u32 = 2;
-};
-pub const GameplayCueRequest = struct {
-    pub const msg_id: u16 = 27860;
-    pub const GameplayCueId_field_number: u32 = 11;
-};
-pub const BabelTowerData = struct {
-    pub const BabelTowerLevelId_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const NormalLevelBuffs_field_number: u32 = 3;
-    pub const RoleIds_field_number: u32 = 4;
-    pub const HardLevelBuffs_field_number: u32 = 5;
-    pub const HardLevelItems_field_number: u32 = 6;
-    pub const HardLevelStar_field_number: u32 = 7;
-    pub const HasPassed_field_number: u32 = 8;
-    pub const MaxPassRoleSelection_field_number: u32 = 9;
-    pub const MaxPassBuffSelection_field_number: u32 = 10;
-    pub const MaxPassStar_field_number: u32 = 11;
-};
-pub const ChangeStateConfirmNotify = struct {
-    pub const msg_id: u16 = 21494;
-    pub const FsmId_field_number: u32 = 10;
-    pub const State_field_number: u32 = 9;
-};
-pub const RemoveCombineRelationNotify = struct {
-    pub const msg_id: u16 = 29118;
-    pub const CombineEntity_field_number: u32 = 10;
-    pub const TargetEntity_field_number: u32 = 1;
-};
-pub const PhantomArenaBadgeReward = struct {
-    pub const BadgeRewardId_field_number: u32 = 1;
-    pub const NeedCount_field_number: u32 = 2;
-    pub const IsTaken_field_number: u32 = 3;
-};
-pub const MapTraceRequest = struct {
-    pub const msg_id: u16 = 28912;
-    pub const MarkId_field_number: u32 = 4;
-};
-pub const WeaponConsumeItem = struct {
-    pub const IncId_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const ItemId_field_number: u32 = 3;
-};
-pub const EntityCtxPb = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const IncId_field_number: u32 = 2;
-};
-pub const ShopRecommend = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const RecommendType_field_number: u32 = 2;
-    pub const RecommendId_field_number: u32 = 3;
-    pub const TabName_field_number: u32 = 4;
-    pub const PrefabPath_field_number: u32 = 5;
-    pub const Sort_field_number: u32 = 6;
-    pub const Show_field_number: u32 = 7;
-    pub const TabImage_field_number: u32 = 8;
-};
-pub const AccessPathTimeServerConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const BeginTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const InterruptSkillInDelayPush = struct {
-    pub const msg_id: u16 = 15361;
-    pub const SkillId_field_number: u32 = 8;
-};
-pub const LobbyListRequest = struct {
-    pub const msg_id: u16 = 21431;
-    pub const IsFriend_field_number: u32 = 8;
-};
-pub const DangoMonopolyBoardData = struct {
-    pub const PropertyIds_field_number: u32 = 1;
-    pub const RecordDiceRollTimes_field_number: u32 = 2;
-    pub const RecordTriggerMap_field_number: u32 = 3;
-};
-pub const ParkourActivityChallenge = struct {
-    pub const ChallengeId_field_number: u32 = 1;
-    pub const BeginTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const FlowActionCtxPb = struct {
-    pub const FlowListName_field_number: u32 = 1;
-    pub const FlowId_field_number: u32 = 2;
-    pub const StateId_field_number: u32 = 3;
-    pub const ActionId_field_number: u32 = 4;
-};
-pub const TutorialInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const CreateTime_field_number: u32 = 2;
-    pub const GetAward_field_number: u32 = 3;
-};
-pub const PhantomItemRequest = struct {
-    pub const msg_id: u16 = 26267;
-};
-pub const LongShanMainTaskData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Current_field_number: u32 = 2;
-    pub const Target_field_number: u32 = 3;
-    pub const IsFinished_field_number: u32 = 4;
-    pub const IsTaken_field_number: u32 = 5;
-    pub const Unlock_field_number: u32 = 6;
-    pub const FinishConditions_field_number: u32 = 7;
-    pub const ConditionId_field_number: u32 = 8;
-    pub const ConditionGroupId_field_number: u32 = 9;
-    pub const UnlockConditionFinish_field_number: u32 = 10;
-};
-pub const QuestDestroyActionCtxPb = struct {
-    pub const QuestId_field_number: u32 = 1;
-};
-pub const RemoveGameplayEffectPush = struct {
-    pub const msg_id: u16 = 23896;
-    pub const Handle_field_number: u32 = 11;
-    pub const EntityId_field_number: u32 = 7;
-    pub const IsPrematureRemoval_field_number: u32 = 14;
-    pub const Reason_field_number: u32 = 10;
-};
-pub const MontagePlayNotify = struct {
-    pub const msg_id: u16 = 27102;
-    pub const SkillId_field_number: u32 = 6;
-    pub const MontageIndex_field_number: u32 = 8;
-};
-pub const FlowerPollutionComponentPb = struct {
-    pub const UnPollutionSpline_field_number: u32 = 1;
-};
-pub const AdventureManualRequest = struct {
-    pub const msg_id: u16 = 16997;
-    pub const PlayerId_field_number: u32 = 14;
-};
-pub const EnterAreaRequest = struct {
-    pub const msg_id: u16 = 19992;
-    pub const Id_field_number: u32 = 12;
-    pub const LeaveId_field_number: u32 = 2;
-};
-pub const SceneBlockSplitPlayerNeedBlockPush = struct {
-    pub const msg_id: u16 = 22197;
-    pub const PlayerNeedBlockId_field_number: u32 = 9;
-};
-pub const PassiveSkillRemovePush = struct {
-    pub const msg_id: u16 = 18960;
-    pub const PassiveSkillId_field_number: u32 = 11;
-    pub const TargetEntityId_field_number: u32 = 8;
-};
-pub const PassiveSkillRemoveNotify = struct {
-    pub const msg_id: u16 = 23178;
-    pub const EntityId_field_number: u32 = 1;
-    pub const SkillIdList_field_number: u32 = 7;
-};
-pub const PhantomAutoPutRequest = struct {
-    pub const msg_id: u16 = 24560;
-    pub const RoleId_field_number: u32 = 7;
-    pub const PhantomItemIncrId_field_number: u32 = 1;
-};
-pub const RecoverPropFromServer = struct {
-    pub const AttrId_field_number: u32 = 1;
-    pub const Ratio_field_number: u32 = 2;
-    pub const MaxValue_field_number: u32 = 4;
-    pub const ValueIncrement_field_number: u32 = 5;
-};
-pub const ExitViewDirectionRequest = struct {
-    pub const msg_id: u16 = 16124;
-};
-pub const ValidTimeItemRequest = struct {
-    pub const msg_id: u16 = 22746;
-};
-pub const FurnitureComponentPb = struct {
-    pub const SlotId_field_number: u32 = 1;
-    pub const FurnitureId_field_number: u32 = 2;
-};
-pub const RoguelikeCurrencyNotify = struct {
-    pub const msg_id: u16 = 16446;
-    pub const V2s_field_number: u32 = 15;
-};
-pub const MonsterCaptureComponentPb = struct {
-    pub const TemplateId_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 2;
-    pub const MonsterId_field_number: u32 = 3;
-};
-pub const FriendAllRequest = struct {
-    pub const msg_id: u16 = 24906;
-};
-pub const Int2Bool = struct {
-    pub const First_field_number: u32 = 1;
-    pub const Second_field_number: u32 = 2;
-};
-pub const RoleDevPropsProjectConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const ElementId_field_number: u32 = 2;
-    pub const RoleName_field_number: u32 = 3;
-    pub const RoleExperience_field_number: u32 = 4;
-    pub const RoleGoalLevel_field_number: u32 = 5;
-    pub const WeaponGoalLevel_field_number: u32 = 6;
-    pub const WeaponExperience_field_number: u32 = 7;
-    pub const RoleItemGroup_field_number: u32 = 8;
-    pub const WeaponBreachItemGroup_field_number: u32 = 9;
-    pub const WeaponType_field_number: u32 = 10;
-    pub const SkillItemGroup_field_number: u32 = 11;
-    pub const PrefectSkillLevel_field_number: u32 = 12;
-    pub const RoleHeadIcon_field_number: u32 = 13;
-    pub const RoleHeadIconSmall_field_number: u32 = 14;
-};
-pub const RoleGoDownPush = struct {
-    pub const msg_id: u16 = 24956;
-};
-pub const HonamiStoryEnhanceLevelComponentPb = struct {
-    pub const Level_field_number: u32 = 1;
-};
-pub const HonamiStoryRoleSlot = struct {
-    pub const SlotId_field_number: u32 = 1;
-    pub const IsUnlocked_field_number: u32 = 2;
-};
-pub const ExhibitionComponentPb = struct {
-    pub const ItemId_field_number: u32 = 1;
-};
-pub const MainPhantomRecommendInfo = struct {
-    pub const Usage_field_number: u32 = 1;
-    pub const MonsterId_field_number: u32 = 2;
-    pub const FetterGroupId_field_number: u32 = 3;
-};
-pub const TrapDefenseMonsterPbData = struct {
-    pub const ConfigId_field_number: u32 = 1;
-};
-pub const VehiclePlayerData = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const Seat_field_number: u32 = 2;
-};
-pub const CiacconaGalInspirationData = struct {
-    pub const InspirationCount_field_number: u32 = 1;
-    pub const RefreshTime_field_number: u32 = 2;
-};
-pub const MotorDiyOnwedPb = struct {
-    pub const SkinOwned_field_number: u32 = 2;
-    pub const StickerOnwed_field_number: u32 = 1;
-    pub const DecorationsOwned_field_number: u32 = 3;
-    pub const FrameOwned_field_number: u32 = 4;
-};
-pub const GuideInfoResponse = struct {
-    pub const msg_id: u16 = 19851;
-    pub const GuideGroupFinishList_field_number: u32 = 8;
-};
-pub const RoleSaveInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const WeaponIncId_field_number: u32 = 2;
-    pub const PhantomIncId_field_number: u32 = 3;
-    pub const SkillBranchId_field_number: u32 = 4;
-};
-pub const LivenessTakeRequest = struct {
-    pub const msg_id: u16 = 27483;
-    pub const Ids_field_number: u32 = 1;
-};
-pub const FollowEntityComponentPb = struct {
-    pub const EntityId_field_number: u32 = 1;
-};
-pub const ScratchTicketConditionData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Progress_field_number: u32 = 2;
-    pub const FinishedAchievementNum_field_number: u32 = 3;
-};
-pub const PublicResourceVersionInfo = struct {
-    pub const PublicJsonVersion_field_number: u32 = 1;
-    pub const PublicMiscVersion_field_number: u32 = 2;
-    pub const PublicUniverseEditorVersion_field_number: u32 = 3;
-};
-pub const ArraySkillNode = struct {
-    pub const SkillNodeId_field_number: u32 = 1;
-    pub const IsActive_field_number: u32 = 2;
-    pub const SkillId_field_number: u32 = 3;
-};
-pub const LongArrayBlackboard = struct {
-    pub const Values_field_number: u32 = 1;
-};
-pub const DangoActorData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Record_field_number: u32 = 2;
-    pub const Odds_field_number: u32 = 3;
-};
-pub const AttributeEventEffectData = struct {
-    pub const TriggeredActiveHandles_field_number: u32 = 1;
-};
-pub const VersionInfoPush = struct {
-    pub const msg_id: u16 = 116;
-    pub const AppVersion_field_number: u32 = 1;
-    pub const LauncherVersion_field_number: u32 = 2;
-    pub const ResourceVersion_field_number: u32 = 3;
-};
-pub const AnimationGameplayTagPush = struct {
-    pub const msg_id: u16 = 20822;
-    pub const AddTagIds_field_number: u32 = 9;
-    pub const RemoveTagIds_field_number: u32 = 5;
-};
-pub const HonamiStoryNormalItemInfo = struct {
-};
-pub const GachaUsePoolRequest = struct {
-    pub const msg_id: u16 = 21752;
-    pub const GachaId_field_number: u32 = 4;
-    pub const PoolId_field_number: u32 = 14;
-};
-pub const FragmentMemoryData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Flag_field_number: u32 = 2;
-    pub const FinishTime_field_number: u32 = 3;
-};
-pub const AnimationGameplayTagRequest = struct {
-    pub const msg_id: u16 = 26142;
-    pub const AddTagIds_field_number: u32 = 14;
-    pub const RemoveTagIds_field_number: u32 = 3;
-};
-pub const EntityRemoveInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-};
-pub const SurvivorsLevelInfo = struct {
-    pub const IsUnlocked_field_number: u32 = 1;
-    pub const ConditionGroupId_field_number: u32 = 2;
-    pub const WaveId_field_number: u32 = 3;
-    pub const KillMonsterCount_field_number: u32 = 4;
-    pub const IsFinished_field_number: u32 = 5;
-};
-pub const H5ViewActivityData = struct {
-    pub const RedDot_field_number: u32 = 1;
-};
-pub const PbBattlePassReward = struct {
-    pub const Level_field_number: u32 = 1;
-    pub const ItemId_field_number: u32 = 2;
-    pub const Type_field_number: u32 = 3;
-};
-pub const FishingIllustratedRewardInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const CurrentProgress_field_number: u32 = 2;
-    pub const TargetProgress_field_number: u32 = 3;
-    pub const HasPassed_field_number: u32 = 4;
-    pub const IsTaken_field_number: u32 = 5;
-};
-pub const MonsterAiComponentPb = struct {
-    pub const WeaponId_field_number: u32 = 1;
-    pub const HatredGroupId_field_number: u32 = 2;
-    pub const AiTeamInitId_field_number: u32 = 3;
-    pub const CombatMessageId_field_number: u32 = 4;
-    pub const BasicPerceptionIds_field_number: u32 = 5;
-};
-pub const BattlePassRequest = struct {
-    pub const msg_id: u16 = 19709;
-};
-pub const AnimalPerformComponentPb = struct {
-    pub const AnimalInitialPartIds_field_number: u32 = 1;
-};
-pub const ExitViewDirectionPush = struct {
-    pub const msg_id: u16 = 24222;
-};
-pub const GrapplingHookPointComponentPb = struct {
-    pub const HookLockPointDisabled_field_number: u32 = 1;
-};
-pub const WeatherControlInfoWithoutCheckAsyncResponse = struct {
-    pub const msg_id: u16 = 21508;
-    pub const UnlockedWeatherSwitchConfigIdList_field_number: u32 = 3;
-};
-pub const NewLinkBurstPush = struct {
-    pub const msg_id: u16 = 20068;
-};
-pub const MotorCreateRequest = struct {
-    pub const msg_id: u16 = 15025;
-    pub const IsCreate_field_number: u32 = 14;
-};
-pub const FloorParams = struct {
-    pub const FloorMeshPath_field_number: u32 = 1;
-    pub const FloorMaterialPath_field_number: u32 = 2;
-    pub const PosX_field_number: u32 = 3;
-    pub const PosY_field_number: u32 = 4;
-    pub const FloorAppearTime_field_number: u32 = 5;
-    pub const FloorDisappearTime_field_number: u32 = 6;
-};
-pub const PhantomPropInfo = struct {
-    pub const PhantomPropId_field_number: u32 = 1;
-    pub const Value_field_number: u32 = 2;
-};
-pub const TotalTopUpRewardInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Score_field_number: u32 = 2;
-    pub const RewardContent_field_number: u32 = 3;
-    pub const Status_field_number: u32 = 4;
-};
-pub const FormationRoleInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const MaxHp_field_number: u32 = 2;
-    pub const CurHp_field_number: u32 = 3;
-    pub const Level_field_number: u32 = 4;
-    pub const RoleSkinId_field_number: u32 = 5;
-    pub const SkillBranchId_field_number: u32 = 6;
-};
-pub const PushContextIdNotify = struct {
-    pub const msg_id: u16 = 20393;
-    pub const Id_field_number: u32 = 5;
-};
-pub const ClientStorageLongData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const RoleShowListUpdateRequest = struct {
-    pub const msg_id: u16 = 29652;
-    pub const RoleList_field_number: u32 = 10;
-};
-pub const WuWuTaskPack = struct {
-    pub const WuWuPackageId_field_number: u32 = 1;
-    pub const UnLockTime_field_number: u32 = 2;
-    pub const HadReward_field_number: u32 = 3;
-};
-pub const PhantomCollectProgress = struct {
-    pub const Phantoms_field_number: u32 = 1;
-};
-pub const SimpleTrackReportMsg = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const LevelPlayId_field_number: u32 = 2;
-    pub const GainTreasureCount_field_number: u32 = 3;
-};
-pub const ForgeInfoRequest = struct {
-    pub const msg_id: u16 = 28952;
-};
-pub const RoleFavorListRequest = struct {
-    pub const msg_id: u16 = 24422;
-};
-pub const RecommendFetterGroupInfo = struct {
-    pub const RecommendFetterGroupId_field_number: u32 = 1;
-    pub const CountNeed_field_number: u32 = 2;
-};
-pub const MaterialInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const AssetName_field_number: u32 = 2;
-    pub const IsGroup_field_number: u32 = 3;
-};
-pub const ANStartRequest = struct {
-    pub const msg_id: u16 = 18410;
-    pub const SkillId_field_number: u32 = 2;
-    pub const MontageIndex_field_number: u32 = 5;
-    pub const AnIndex_field_number: u32 = 12;
-};
-pub const PassiveSkillAddPush = struct {
-    pub const msg_id: u16 = 29381;
-    pub const PassiveSkillId_field_number: u32 = 10;
-    pub const TargetEntityId_field_number: u32 = 5;
-};
-pub const CombatMaxCaseMessageRequest = struct {
-    pub const msg_id: u16 = 22264;
-};
-pub const GachaRequest = struct {
-    pub const msg_id: u16 = 24763;
-    pub const GachaId_field_number: u32 = 3;
-    pub const GachaTimes_field_number: u32 = 12;
-};
-pub const MoonChasingTargetGetCountNotify = struct {
-    pub const msg_id: u16 = 18618;
-    pub const TargetGetCount_field_number: u32 = 5;
-};
-pub const BoardGridDynamicConfig = struct {
-    pub const RowIndex_field_number: u32 = 1;
-    pub const ColumnIndex_field_number: u32 = 2;
-    pub const Flags_field_number: u32 = 3;
-};
-pub const ServerPlayStationPlayOnlyStateRequest = struct {
-    pub const msg_id: u16 = 16132;
-};
-pub const FishingTechInfo = struct {
-    pub const NodeId_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const CanUnlock_field_number: u32 = 3;
-};
-pub const MoveSplineConfig = struct {
-    StartPoint: ?union(enum) {
-    } = null,
-    EndPoint: ?union(enum) {
-    } = null,
-    LookDir: ?union(enum) {
-    } = null,
-    Cycle: ?union(enum) {
-    } = null,
-    Circle: ?union(enum) {
-    } = null,
-    pub const StartPointIndex_field_number: u32 = 1;
-    pub const EndPointIndex_field_number: u32 = 2;
-    pub const IsLookDir_field_number: u32 = 3;
-    pub const CycleCount_field_number: u32 = 4;
-    pub const IsCircle_field_number: u32 = 5;
-};
-pub const OneExploreItem = struct {
-    pub const ExploreProgressId_field_number: u32 = 1;
-    pub const ExplorePercent_field_number: u32 = 2;
-    pub const CurCount_field_number: u32 = 3;
-    pub const TotalCount_field_number: u32 = 4;
-    pub const IsLocked_field_number: u32 = 5;
-};
-pub const MoonChasingTrackMoonHandbookRewardNotify = struct {
-    pub const msg_id: u16 = 16652;
-    pub const Ids_field_number: u32 = 7;
-};
-pub const DamageContext = struct {
-    Source: ?union(enum) {
-    } = null,
-    Bullet: ?union(enum) {
-    } = null,
-    Skill: ?union(enum) {
-    } = null,
-    SkillMessage: ?union(enum) {
-    } = null,
-    pub const SourceType_field_number: u32 = 1;
-    pub const BulletId_field_number: u32 = 2;
-    pub const SkillId_field_number: u32 = 4;
-    pub const SkillMessageId_field_number: u32 = 5;
-    pub const BulletTags_field_number: u32 = 3;
-};
-pub const LivenessTask = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Current_field_number: u32 = 2;
-    pub const Target_field_number: u32 = 3;
-    pub const IsFinished_field_number: u32 = 4;
-    pub const IsTaken_field_number: u32 = 5;
-    pub const ConditionFinishState_field_number: u32 = 6;
-};
-pub const HonamiStoryAreaConfig = struct {
-    pub const AreaId_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-    pub const SecreteStatus_field_number: u32 = 3;
-};
-pub const TransformBuffStackNotify = struct {
-    pub const msg_id: u16 = 20850;
-    pub const BuffHandle_field_number: u32 = 1;
-    pub const BuffId_field_number: u32 = 10;
-    pub const BuffStackModifier_field_number: u32 = 12;
-};
-pub const HoldHandComponentPb = struct {
-    pub const TargetEntityId_field_number: u32 = 1;
-    pub const HandType_field_number: u32 = 2;
-    pub const IsFollow_field_number: u32 = 3;
-};
-pub const ArrayIntInt = struct {
-    pub const Key_field_number: u32 = 1;
-    pub const Value_field_number: u32 = 2;
-};
-pub const CiacconaGalEndingData = struct {
-    pub const SubEndingDataId_field_number: u32 = 1;
-    pub const IsRewarded_field_number: u32 = 2;
-};
-pub const FlySkinWearRequest = struct {
-    pub const msg_id: u16 = 28304;
-    pub const RoleId_field_number: u32 = 5;
-    pub const SkinId_field_number: u32 = 13;
-};
-pub const PayShopInfoRequest = struct {
-    pub const msg_id: u16 = 24050;
-    pub const Version_field_number: u32 = 7;
-};
-pub const ChangeStateNotify = struct {
-    pub const msg_id: u16 = 26776;
-    pub const FsmId_field_number: u32 = 1;
-    pub const FromState_field_number: u32 = 3;
-    pub const ToState_field_number: u32 = 14;
-};
-pub const ExchangeRewardResponse = struct {
-    pub const msg_id: u16 = 18898;
-    pub const ExchangeShareData_field_number: u32 = 13;
-    pub const ExchangeRewardData_field_number: u32 = 12;
-};
-pub const RacingBetsTimeTuple = struct {
-    pub const BeginTime_field_number: u32 = 1;
-    pub const EndTime_field_number: u32 = 2;
-};
-pub const IntArrayBlackboard = struct {
-    pub const Values_field_number: u32 = 1;
-};
-pub const WebSignResponse = struct {
-    pub const msg_id: u16 = 24888;
-    pub const NoticeSign_field_number: u32 = 4;
-};
-pub const CharacterBattleStateInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const InBattle_field_number: u32 = 2;
-};
-pub const SoarLevelPlayInfo = struct {
-    pub const SoarLevelPlatId_field_number: u32 = 1;
-    pub const HistorySoarScore_field_number: u32 = 2;
-    pub const ReceiveIds_field_number: u32 = 3;
-};
-pub const DragonPoolInfo = struct {
-    pub const DragonPoolId_field_number: u32 = 1;
-    pub const ActiveStatus_field_number: u32 = 3;
-    pub const Level_field_number: u32 = 4;
-    pub const InjectedCoreItemCount_field_number: u32 = 5;
-};
-pub const DevLoginCheckData = struct {
-    pub const ProtoVersion_field_number: u32 = 1;
-    pub const ProtoMD5_field_number: u32 = 2;
-    pub const ConfigVersion_field_number: u32 = 3;
-    pub const ConfigMD5_field_number: u32 = 4;
-    pub const BranchName_field_number: u32 = 5;
-    pub const ProtoSeedMD5_field_number: u32 = 6;
-};
-pub const HonamiStoryPosInfo = struct {
-    pub const IsCross_field_number: u32 = 1;
-    pub const Posotion_field_number: u32 = 2;
-};
-pub const AdvertisingPageInfo = struct {
-    pub const ActivityId_field_number: u32 = 1;
-    pub const UnlockIndex_field_number: u32 = 2;
-    pub const RewardedIndex_field_number: u32 = 3;
+pub const RoleChangeUnlockNotify = struct {
+    pub const msg_id: u16 = 18445;
+    pub const UnlockRoleIds_field_number: u32 = 10;
+    pub const NextAllowChangeTime_field_number: u32 = 1;
 };
 pub const RoadBookMotorcycleInfo = struct {
     pub const MotorcyclePlayId_field_number: u32 = 1;
     pub const HistorySoarScore_field_number: u32 = 2;
     pub const ReceiveIds_field_number: u32 = 3;
 };
-pub const ActorVisibleNotify = struct {
-    pub const msg_id: u16 = 16228;
-    pub const Id_field_number: u32 = 7;
-    pub const IsActorVisible_field_number: u32 = 13;
+pub const RTimeStopPush = struct {
+    pub const msg_id: u16 = 20755;
+    pub const Flag_field_number: u32 = 15;
+    pub const IsStopCharacter_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 8;
 };
-pub const DailyLevel = struct {
-    pub const RandomLevelId_field_number: u32 = 1;
-    pub const reward_field_number: u32 = 2;
+pub const SimpleCombatSplineMovePbType = struct {
+    pub const ConfigId_field_number: u32 = 3;
 };
-pub const FloroRanchSubDungeonHistoryData = struct {
-    pub const DataId_field_number: u32 = 1;
-    pub const MaxDays_field_number: u32 = 2;
-    pub const MaxCoins_field_number: u32 = 3;
+pub const AnimationGameplayTagRequest = struct {
+    pub const msg_id: u16 = 26142;
+    pub const AddTagIds_field_number: u32 = 14;
+    pub const RemoveTagIds_field_number: u32 = 3;
 };
-pub const RhythmRedDotPb = struct {
-    pub const ReadPlanet_field_number: u32 = 2;
-    pub const ReadSubLevel_field_number: u32 = 4;
-    pub const ReadRole_field_number: u32 = 5;
-};
-pub const ApplyVisionGroupRequest = struct {
-    pub const msg_id: u16 = 26641;
-    pub const Index_field_number: u32 = 2;
-    pub const RoleId_field_number: u32 = 6;
-};
-pub const NewBieCourseActivity = struct {
-    pub const HadTakeReward_field_number: u32 = 1;
-};
-pub const ShortMessageInfo = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const LastConfigId_field_number: u32 = 2;
-    pub const IsRead_field_number: u32 = 3;
-    pub const IsReceived_field_number: u32 = 4;
-    pub const Options_field_number: u32 = 5;
-    pub const UnlockTime_field_number: u32 = 6;
-    pub const IsFinish_field_number: u32 = 7;
-};
-pub const TeleportFinishRequest = struct {
-    pub const msg_id: u16 = 25807;
-};
-pub const LevelPlayDestroyActionCtxPb = struct {
-    pub const LevelPlayId_field_number: u32 = 1;
-};
-pub const TutorialInfoRequest = struct {
-    pub const msg_id: u16 = 19531;
-};
-pub const RoleBrief = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-};
-pub const ClientDataComponentPb = struct {
-    pub const IsStaticInit_field_number: u32 = 1;
-    pub const OwnerId_field_number: u32 = 2;
-    pub const GroupId_field_number: u32 = 3;
-};
-pub const ResonInfo = struct {
-    pub const ResonId_field_number: u32 = 1;
-    pub const IsOpen_field_number: u32 = 2;
-    pub const Increase_field_number: u32 = 3;
-};
-pub const TimePointRewardData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const RewardTime_field_number: u32 = 2;
-    pub const Rewarded_field_number: u32 = 3;
-    pub const CanGetReward_field_number: u32 = 4;
-};
-pub const BuffConsumerComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
-};
-pub const PhantomArenaCardInfo = struct {
-    pub const CardId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const IsCardOutlookUnlock_field_number: u32 = 3;
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopRequest = struct {
-    pub const msg_id: u16 = 17627;
-    pub const Flag_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 6;
-};
-pub const LoadingConfigRequest = struct {
-    pub const msg_id: u16 = 19736;
-};
-pub const CrystalMonsterSlotInfo = struct {
-    pub const EntityIds_field_number: u32 = 1;
-    pub const MonsterType_field_number: u32 = 2;
-};
-pub const AllMsgRequest = struct {
-    pub const msg_id: u16 = 16871;
-};
-pub const BulletPatternPush = struct {
-    pub const msg_id: u16 = 21208;
-    pub const BulletPatternHandleId_field_number: u32 = 6;
-    pub const BulletPatternId_field_number: u32 = 4;
-};
-pub const CharacterDetachRequest = struct {
-    pub const msg_id: u16 = 27381;
-    pub const EntityA_field_number: u32 = 7;
-    pub const EntityB_field_number: u32 = 12;
-};
-pub const PlayMontageTaskAndRequest = struct {
-    pub const msg_id: u16 = 17594;
-    pub const MontageName_field_number: u32 = 9;
-    pub const MontagePathHash_field_number: u32 = 7;
-    pub const SpeedRatio_field_number: u32 = 2;
-    pub const StartSection_field_number: u32 = 14;
-    pub const StartTimeSeconds_field_number: u32 = 10;
-};
-pub const RemoveGameplayEffectRequest = struct {
-    pub const msg_id: u16 = 17540;
-    pub const Handle_field_number: u32 = 7;
-    pub const EntityId_field_number: u32 = 3;
-    pub const IsPrematureRemoval_field_number: u32 = 2;
-};
-pub const RoleSkillBranchModifyRequest = struct {
-    pub const msg_id: u16 = 26040;
-    pub const RoleId_field_number: u32 = 9;
-    pub const SkillBranch_field_number: u32 = 15;
-};
-pub const EnterViewDirectionRequest = struct {
-    pub const msg_id: u16 = 29124;
-};
-pub const EntityFollowTrackRequest = struct {
-    pub const msg_id: u16 = 17222;
-    pub const EntityId_field_number: u32 = 12;
-};
-pub const MoonSignInConfigData = struct {
-    pub const MoonId_field_number: u32 = 1;
-    pub const MoonLabelTopId_field_number: u32 = 2;
-    pub const MoonLabelBottomId_field_number: u32 = 3;
-};
-pub const PartUpdateInfo = struct {
-    pub const PartIndex_field_number: u32 = 1;
-    pub const Activated_field_number: u32 = 2;
-    pub const Reset_field_number: u32 = 3;
-};
-pub const PbUpLevelSkillRequest = struct {
-    pub const msg_id: u16 = 26536;
-    pub const RoleId_field_number: u32 = 8;
-    pub const SkillId_field_number: u32 = 6;
-};
-pub const GetRewardTreasureBoxRequest = struct {
-    pub const msg_id: u16 = 15598;
-    pub const EntityId_field_number: u32 = 14;
-};
-pub const UseSkillFailRequest = struct {
-    pub const msg_id: u16 = 23022;
-    pub const SkillId_field_number: u32 = 12;
-};
-pub const StringArrayBlackboard = struct {
-    pub const Values_field_number: u32 = 1;
-};
-pub const MapCancelTraceRequest = struct {
-    pub const msg_id: u16 = 22542;
-    pub const MarkId_field_number: u32 = 8;
-};
-pub const MotorDiyInfoRequest = struct {
-    pub const msg_id: u16 = 20134;
-};
-pub const StateTagComponentPb = struct {
-    pub const StateTagId_field_number: u32 = 1;
-};
-pub const ItemLockRequest = struct {
-    pub const msg_id: u16 = 15066;
-    pub const ItemId_field_number: u32 = 5;
-    pub const IncrId_field_number: u32 = 2;
-};
-pub const UpdatePlayStationBlockAccountRequest = struct {
-    pub const msg_id: u16 = 16200;
-    pub const BlockedIds_field_number: u32 = 11;
-};
-pub const BoneVisibleData = struct {
-    pub const BoneName_field_number: u32 = 1;
-    pub const HideBone_field_number: u32 = 2;
-};
-pub const UpdateAchievementInfoRequest = struct {
-    pub const msg_id: u16 = 27731;
-};
-pub const LevelPlayCtxPb = struct {
-    pub const LevelPlayId_field_number: u32 = 1;
-};
-pub const SlashAndTowerInfoRequest = struct {
-    pub const msg_id: u16 = 29010;
-};
-pub const RemoveBuffByServerIdS2cRequestNotify = struct {
-    pub const msg_id: u16 = 27201;
-    pub const ServerId_field_number: u32 = 6;
-    pub const StackCount_field_number: u32 = 4;
-    pub const Reason_field_number: u32 = 12;
-};
-pub const MoraleAreaData = struct {
-    pub const AreaDataId_field_number: u32 = 1;
-    pub const ExploreBoxReceivedCount_field_number: u32 = 2;
-};
-pub const DrownNotify = struct {
-    pub const msg_id: u16 = 15958;
-};
-pub const RangeComponentPb = struct {
-    pub const InRangePlayers_field_number: u32 = 1;
-    pub const InRangeEntities_field_number: u32 = 2;
-};
-pub const ClientStorageIntData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const OrderRemoveBuffByTagsRequest = struct {
-    pub const msg_id: u16 = 24311;
-    pub const TagIds_field_number: u32 = 5;
-};
-pub const VisionExploreSkillNotify = struct {
-    pub const msg_id: u16 = 20423;
-    pub const ExploreSkill_field_number: u32 = 6;
-};
-pub const FightRoleInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 2;
-    pub const OnStageWithoutControl_field_number: u32 = 3;
-};
-pub const ClientStorageListData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const LordGymEntranceInfo = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const EffectBeginTime_field_number: u32 = 2;
-    pub const EffectEndTime_field_number: u32 = 3;
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopPush = struct {
-    pub const msg_id: u16 = 29718;
-    pub const Flag_field_number: u32 = 2;
-    pub const Duration_field_number: u32 = 11;
-};
-pub const RbGridPosition = struct {
-    pub const X_field_number: u32 = 1;
-    pub const Y_field_number: u32 = 2;
-};
-pub const BuffStackCountRequest = struct {
-    pub const msg_id: u16 = 16004;
-    pub const HandleId_field_number: u32 = 12;
-    pub const NewStackCount_field_number: u32 = 11;
-    pub const IsPrematureRemoval_field_number: u32 = 7;
-    pub const InstigatorId_field_number: u32 = 13;
-};
-pub const RefreshBuffDurationPush = struct {
-    pub const msg_id: u16 = 18957;
-    pub const BuffIds_field_number: u32 = 6;
-};
-pub const HeartbeatRequest = struct {
-    pub const msg_id: u16 = 1650;
-    pub const AntiData_field_number: u32 = 1;
-};
-pub const PayInfoRequest = struct {
-    pub const msg_id: u16 = 20056;
-    pub const Version_field_number: u32 = 8;
-};
-pub const OrderRemoveBuffNotify = struct {
-    pub const msg_id: u16 = 18842;
-    pub const Id_field_number: u32 = 13;
-    pub const StackCount_field_number: u32 = 5;
-};
-pub const TransferContextId = struct {
-    pub const BulletContextId_field_number: u32 = 1;
-};
-pub const SpecialGachaPair = struct {
-    pub const TypeId_field_number: u32 = 1;
-    pub const GachaId_field_number: u32 = 2;
-};
-pub const NormalLevel = struct {
-    pub const StarByte_field_number: u32 = 1;
-};
-pub const JumpTaskCondInfo = struct {
-    pub const JumpId_field_number: u32 = 1;
-    pub const ConditionGroupIds_field_number: u32 = 2;
-};
-pub const NpcPb = struct {
-    pub const SplineEntityId_field_number: u32 = 2;
-    pub const SpawnEntityId_field_number: u32 = 3;
+pub const RoleElementChangeRequest = struct {
+    pub const msg_id: u16 = 26598;
+    pub const ElementType_field_number: u32 = 7;
 };
 pub const LevelPlayInfo = struct {
     pub const Id_field_number: u32 = 1;
@@ -26416,524 +24903,48 @@ pub const LevelPlayInfo = struct {
     pub const UpdateTime_field_number: u32 = 4;
     pub const GetRewardCount_field_number: u32 = 5;
 };
-pub const GuideFinishRequest = struct {
-    pub const msg_id: u16 = 19558;
-    pub const GroupId_field_number: u32 = 10;
-};
-pub const PayShopPrice = struct {
+pub const DangoActorData = struct {
     pub const Id_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const PromotionCount_field_number: u32 = 3;
+    pub const Record_field_number: u32 = 2;
+    pub const Odds_field_number: u32 = 3;
 };
-pub const AddVisionEquipGroupRequest = struct {
-    pub const msg_id: u16 = 21281;
-    pub const RoleId_field_number: u32 = 10;
-    pub const Name_field_number: u32 = 4;
+pub const PatrolComponentPb = struct {
+    pub const Dir_field_number: u32 = 1;
 };
-pub const DamageCalculationDetails = struct {
-    pub const ABaseAttackValue_field_number: u32 = 1;
-    pub const VEffectiveDefense_field_number: u32 = 2;
-    pub const ADamageFactor_field_number: u32 = 3;
-    pub const ADamageBonusRate_field_number: u32 = 4;
-    pub const ACritChance_field_number: u32 = 5;
-    pub const AWeaknessMasteryCoefficient_field_number: u32 = 6;
-    pub const VMonsterTypeRate_field_number: u32 = 7;
-    pub const ARate_field_number: u32 = 8;
-    pub const VDefFactor_field_number: u32 = 9;
-    pub const VResistanceFactor_field_number: u32 = 10;
-    pub const VbDamageReduce_field_number: u32 = 11;
-    pub const VbElementReduce_field_number: u32 = 12;
-    pub const AEnergyChange_field_number: u32 = 13;
-    pub const WeaknessLvValue_field_number: u32 = 14;
-    pub const VWeaknessBuffStack_field_number: u32 = 15;
-    pub const HitDamageBonusRate_field_number: u32 = 16;
-    pub const WeakDamageBonusRate_field_number: u32 = 17;
+pub const FishingDataRequest = struct {
+    pub const msg_id: u16 = 17444;
 };
-pub const SceneFishPointData = struct {
-    pub const Id_field_number: u32 = 5;
-    pub const EntityConfigId_field_number: u32 = 1;
-    pub const CurCount_field_number: u32 = 2;
-    pub const MaxCount_field_number: u32 = 3;
-    pub const LastUpdateTime_field_number: u32 = 4;
-    pub const NextUpdateTime_field_number: u32 = 6;
-    pub const RefreshTime_field_number: u32 = 7;
-    pub const GamePlayId_field_number: u32 = 8;
-    pub const Interacted_field_number: u32 = 9;
-};
-pub const MatrixInfo = struct {
-    pub const X_field_number: u32 = 1;
-    pub const Y_field_number: u32 = 2;
-};
-pub const RoleTagChangePush = struct {
-    pub const msg_id: u16 = 23294;
-    pub const TagId_field_number: u32 = 9;
-    pub const TagCount_field_number: u32 = 1;
-};
-pub const ClientStorageMapData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const EncircleChallengePb = struct {
-    pub const ChallengeId_field_number: u32 = 1;
-    pub const OpenTime_field_number: u32 = 2;
-    pub const Pass_field_number: u32 = 3;
-    pub const MinStep_field_number: u32 = 5;
-};
-pub const ChangeVisionGroupNameRequest = struct {
-    pub const msg_id: u16 = 25996;
-    pub const Index_field_number: u32 = 15;
-    pub const Name_field_number: u32 = 6;
-};
-pub const ClientStorageBoolData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const UnlockRoleSkinListRequest = struct {
-    pub const msg_id: u16 = 22393;
-};
-pub const CumulativeShopSubTaskData = struct {
-    pub const CanGetReward_field_number: u32 = 1;
-    pub const ProgressCount_field_number: u32 = 2;
-    pub const TotalProgressCount_field_number: u32 = 3;
-};
-pub const PlayerTitleDataRequest = struct {
-    pub const msg_id: u16 = 27684;
-};
-pub const RoleVisionRecommendDataRequest = struct {
-    pub const msg_id: u16 = 20874;
-    pub const RoleId_field_number: u32 = 1;
-};
-pub const RoleConfigInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const SkillBranch_field_number: u32 = 2;
-};
-pub const LevelData = struct {
-    pub const LevelId_field_number: u32 = 1;
-    pub const InstId_field_number: u32 = 2;
-    pub const Roles_field_number: u32 = 3;
-    pub const GroupId_field_number: u32 = 4;
-    pub const IsUnlocked_field_number: u32 = 5;
-};
-pub const ActivateBuffRequest = struct {
-    pub const msg_id: u16 = 28326;
-    pub const Handle_field_number: u32 = 8;
-    pub const On_field_number: u32 = 12;
-};
-pub const ArrayIntDouble = struct {
-    pub const Key_field_number: u32 = 1;
-    pub const Value_field_number: u32 = 2;
-};
-pub const AdviceSetRequest = struct {
-    pub const msg_id: u16 = 18538;
-    pub const IsShow_field_number: u32 = 13;
-};
-pub const AdviceSettingNotify = struct {
-    pub const msg_id: u16 = 27494;
-    pub const IsShow_field_number: u32 = 15;
-};
-pub const InitHonamiActivityRequest = struct {
-    pub const msg_id: u16 = 22306;
-    pub const ActivityId_field_number: u32 = 2;
-};
-pub const RTimeStopPush = struct {
-    pub const msg_id: u16 = 20755;
-    pub const Flag_field_number: u32 = 15;
-    pub const IsStopCharacter_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 8;
-};
-pub const CoopRoleInfo = struct {
-    pub const CoopRoleId_field_number: u32 = 1;
-    pub const RoleLevel_field_number: u32 = 2;
-    pub const RewardLevel_field_number: u32 = 3;
-    pub const FinishTime_field_number: u32 = 4;
-};
-pub const ActiveBuffPush = struct {
-    pub const msg_id: u16 = 17978;
-    pub const Handle_field_number: u32 = 13;
-    pub const On_field_number: u32 = 3;
-};
-pub const BattleStateChangeNotify = struct {
-    pub const msg_id: u16 = 20069;
-    pub const EntityId_field_number: u32 = 14;
-    pub const InBattle_field_number: u32 = 12;
-};
-pub const ChangeStateConfirmRequest = struct {
-    pub const msg_id: u16 = 18906;
-    pub const FsmId_field_number: u32 = 5;
-    pub const State_field_number: u32 = 8;
-};
-pub const DFsmBlackboardCustom = struct {
-    pub const Key_field_number: u32 = 1;
-    pub const Value_field_number: u32 = 2;
-};
-pub const ToughCalcExtraRatioChangeRequest = struct {
-    pub const msg_id: u16 = 23944;
-    pub const Id_field_number: u32 = 9;
-    pub const Duration_field_number: u32 = 6;
-};
-pub const DarkCoastDeliveryRequest = struct {
-    pub const msg_id: u16 = 16579;
-    pub const DragonPoolId_field_number: u32 = 9;
-};
-pub const SummonsComponentPb = struct {
-    pub const Version_field_number: u32 = 1;
-};
-pub const FlowOptionInfo = struct {
-    pub const TalkId_field_number: u32 = 1;
-    pub const OptionIndex_field_number: u32 = 2;
-};
-pub const TrapDefenseAuxiliaryPbData = struct {
-    pub const ConfigId_field_number: u32 = 1;
-};
-pub const RolePhantomEquipInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const PhantomItemIncrId_field_number: u32 = 2;
-};
-pub const GachaConsume = struct {
-    pub const Times_field_number: u32 = 1;
-    pub const Consume_field_number: u32 = 2;
-};
-pub const JSPatchNotify = struct {
-    pub const msg_id: u16 = 24831;
-    pub const Content_field_number: u32 = 1;
-};
-pub const MontagePlayPush = struct {
-    pub const msg_id: u16 = 21158;
-    pub const Name_field_number: u32 = 1;
-    pub const Path_field_number: u32 = 4;
-    pub const SpeedRatio_field_number: u32 = 9;
-    pub const StartSection_field_number: u32 = 13;
-    pub const StartTimeSeconds_field_number: u32 = 12;
-};
-pub const FlagChallengeLevelInfo = struct {
+pub const TotalTopUpRewardInfo = struct {
     pub const Id_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const State_field_number: u32 = 3;
+    pub const Score_field_number: u32 = 2;
+    pub const RewardContent_field_number: u32 = 3;
+    pub const Status_field_number: u32 = 4;
 };
-pub const NormalItem = struct {
+pub const FishingIllustratedRewardInfo = struct {
     pub const Id_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const ExpireTime_field_number: u32 = 4;
-};
-pub const ActivateBuffNotify = struct {
-    pub const msg_id: u16 = 22378;
-    pub const Handle_field_number: u32 = 13;
-    pub const On_field_number: u32 = 9;
-};
-pub const VisionTriggerPush = struct {
-    pub const msg_id: u16 = 28349;
-    pub const VisionId_field_number: u32 = 13;
-};
-pub const AdventureManualDataRequest = struct {
-    pub const msg_id: u16 = 17573;
-    pub const PlayerId_field_number: u32 = 11;
-};
-pub const TowerRolePb = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const LeaveSkillId_field_number: u32 = 2;
-    pub const SkillBranchId_field_number: u32 = 3;
-};
-pub const TriggerExitSkillRequest = struct {
-    pub const msg_id: u16 = 24607;
-    pub const EnterEntityId_field_number: u32 = 9;
-    pub const LeaveEntityId_field_number: u32 = 11;
-};
-pub const QuestFinishActionCtxPb = struct {
-    pub const QuestId_field_number: u32 = 1;
-};
-pub const PinballChapterData = struct {
-    pub const ChapterId_field_number: u32 = 1;
-    pub const UnLockTime_field_number: u32 = 2;
-};
-pub const FeiXuePreheatInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-    pub const QuestUnlockTime_field_number: u32 = 3;
-};
-pub const RoleDevelopConfigRequest = struct {
-    pub const msg_id: u16 = 19369;
-    aVersion: ?union(enum) {
-    } = null,
-    pub const Version_field_number: u32 = 6;
-};
-pub const BulletComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
-};
-pub const FsmConditionPassPush = struct {
-    pub const msg_id: u16 = 18537;
-    pub const FsmId_field_number: u32 = 5;
-    pub const FromState_field_number: u32 = 13;
-    pub const ToState_field_number: u32 = 11;
-    pub const ConditionIndex_field_number: u32 = 6;
-    pub const Value_field_number: u32 = 3;
-};
-pub const PhantomConsumeItem = struct {
-    pub const IncId_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const ItemId_field_number: u32 = 3;
-};
-pub const LoadingConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const BeginTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const Function = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Flag_field_number: u32 = 5;
-};
-pub const PlayerRebackSceneNotify = struct {
-    pub const msg_id: u16 = 23555;
-    pub const EntityId_field_number: u32 = 7;
-};
-pub const IntVector2D = struct {
-    pub const X_field_number: u32 = 1;
-    pub const Y_field_number: u32 = 2;
-};
-pub const HarvestPointReward = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const AbyssDangoRoleData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const EquipItems_field_number: u32 = 3;
-};
-pub const PinballKSCRolePbData = struct {
-};
-pub const RacingBetsOrganInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Point_field_number: u32 = 2;
-};
-pub const GameplayCuePush = struct {
-    pub const msg_id: u16 = 22113;
-    pub const GameplayCueId_field_number: u32 = 11;
-};
-pub const RoleElementChangeRequest = struct {
-    pub const msg_id: u16 = 26598;
-    pub const ElementType_field_number: u32 = 7;
-};
-pub const FlagStrongholdInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const IsPass_field_number: u32 = 2;
-};
-pub const ItemDeprecateRequest = struct {
-    pub const msg_id: u16 = 22055;
-    pub const ItemId_field_number: u32 = 13;
-    pub const IncrId_field_number: u32 = 5;
-};
-pub const InstEnterInfoPb = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const ChallengedTimes_field_number: u32 = 2;
-};
-pub const TowerRequest = struct {
-    pub const msg_id: u16 = 18803;
-};
-pub const ListenInformation = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Range_field_number: u32 = 2;
-};
-pub const PartInformation = struct {
-    pub const PartIndex_field_number: u32 = 1;
-    pub const LifeValue_field_number: u32 = 2;
-    pub const LifeMax_field_number: u32 = 3;
-    pub const Activated_field_number: u32 = 4;
-    pub const PartTag_field_number: u32 = 5;
-};
-pub const PayItemInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const PayId_field_number: u32 = 2;
-    pub const ItemId_field_number: u32 = 3;
-    pub const ItemCount_field_number: u32 = 4;
-    pub const BonusItemCount_field_number: u32 = 5;
-    pub const SpecialBonusItemCount_field_number: u32 = 6;
-    pub const CanSpecialBonus_field_number: u32 = 7;
-    pub const StageImage_field_number: u32 = 8;
-    pub const ProductId_field_number: u32 = 9;
-    pub const Amount_field_number: u32 = 10;
-    pub const ComplianceDetail_field_number: u32 = 11;
-    pub const Quality_field_number: u32 = 12;
-};
-pub const AnimStateChangeInfo = struct {
-    pub const AnimationStates_field_number: u32 = 1;
-    pub const SpecialAnimationStates_field_number: u32 = 2;
-    pub const ModelId_field_number: u32 = 3;
-};
-pub const DFsm = struct {
-    pub const FsmId_field_number: u32 = 1;
-    pub const CurrentState_field_number: u32 = 2;
-    pub const Flag_field_number: u32 = 3;
-    pub const StateElapseTime_field_number: u32 = 6;
-};
-pub const BattleFormation = struct {
-    pub const SelectRoles_field_number: u32 = 1;
-    pub const BuffSelect_field_number: u32 = 2;
-    pub const SkillBranchIds_field_number: u32 = 3;
-};
-pub const JigsawBaseComponentPb = struct {
-    pub const MoveCount_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 2;
-    pub const Winner_field_number: u32 = 3;
-};
-pub const SkillNodeInfo = struct {
-    pub const SubProtocol_field_number: u32 = 1;
-    pub const MontageIndex_field_number: u32 = 2;
-    pub const SpeedRatio_field_number: u32 = 3;
-    pub const SkillSingleId_field_number: u32 = 4;
-    pub const SkillIndex_field_number: u32 = 5;
-    pub const StartSection_field_number: u32 = 6;
-    pub const StartTimeSeconds_field_number: u32 = 7;
-};
-pub const LordGymInfoRequest = struct {
-    pub const msg_id: u16 = 18684;
-};
-pub const PlayerHeadDataResponse = struct {
-    pub const msg_id: u16 = 26241;
-    pub const PlayerHeadDataIds_field_number: u32 = 10;
-};
-pub const GachaReward = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const ItemCount_field_number: u32 = 2;
-};
-pub const BoardGridPositionInfo = struct {
-    pub const Row_field_number: u32 = 1;
-    pub const Column_field_number: u32 = 2;
-    pub const RotAngle_field_number: u32 = 3;
-};
-pub const ExchangeRewardRequest = struct {
-    pub const msg_id: u16 = 29269;
-};
-pub const RoleSkinTrialContentData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const ChallengeState_field_number: u32 = 2;
-};
-pub const PrivateChatDataResponse = struct {
-    pub const msg_id: u16 = 18201;
-    pub const LoadSucc_field_number: u32 = 14;
-};
-pub const ChangeStateRequest = struct {
-    pub const msg_id: u16 = 18520;
-    pub const FsmId_field_number: u32 = 3;
-    pub const FromState_field_number: u32 = 6;
-    pub const ToState_field_number: u32 = 15;
-};
-pub const QuestActiveActionCtxPb = struct {
-    pub const QuestId_field_number: u32 = 1;
-};
-pub const EquipFlySkinData = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const SkinId_field_number: u32 = 2;
-};
-pub const BatchBulletCastComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
-};
-pub const DropCatchLevelInfo = struct {
-    pub const DropCatchId_field_number: u32 = 1;
-    pub const RewardStates_field_number: u32 = 2;
-    pub const UnlockTime_field_number: u32 = 3;
-    pub const Score_field_number: u32 = 4;
-};
-pub const ActivityCorniceMeetingLevelEntryData = struct {
-    pub const MaxScore_field_number: u32 = 1;
-    pub const RemainTime_field_number: u32 = 2;
-    pub const UnlockTime_field_number: u32 = 3;
-    pub const RewardedMap_field_number: u32 = 4;
-};
-pub const RbVisionBlockPbType = struct {
-};
-pub const PreheatSignNodeInfo = struct {
-    pub const PreheatNodeId_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const Rewarded_field_number: u32 = 3;
-};
-pub const PassiveSkillInfo = struct {
-    pub const SkillId_field_number: u32 = 1;
-    pub const SkillCdEndTime_field_number: u32 = 2;
-};
-pub const MailBindInfoRequest = struct {
-    pub const msg_id: u16 = 29187;
-};
-pub const CombatDataMaxResponse = struct {
-};
-pub const ToughCalcExtraRatioChangePush = struct {
-    pub const msg_id: u16 = 15758;
-    pub const Id_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 14;
-};
-pub const WeaponSkinRequest = struct {
-    pub const msg_id: u16 = 26946;
-};
-pub const ActiveBulletHandle = struct {
-    pub const PlayerId_field_number: u32 = 1;
-    pub const HandleId_field_number: u32 = 2;
-};
-pub const VisionSkillInformation = struct {
-    pub const SkillId_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const Quality_field_number: u32 = 3;
-    pub const VisionEntityId_field_number: u32 = 4;
-    pub const Index_field_number: u32 = 5;
-};
-pub const HonamiStoryEquipItemInfo = struct {
-    pub const MainPropLibraryId_field_number: u32 = 1;
-    pub const OriBuffTempId_field_number: u32 = 2;
-    pub const ChildBuffTempId_field_number: u32 = 3;
-};
-pub const SummonInfo = struct {
-    pub const SummonCfgId_field_number: u32 = 1;
-    pub const SummonerId_field_number: u32 = 2;
-    pub const SummonSkillId_field_number: u32 = 3;
-};
-pub const SurvivorsWeaponPbData = struct {
-};
-pub const PlayPointStateAsyncRequest = struct {
-    pub const msg_id: u16 = 16308;
-    pub const InstId_field_number: u32 = 6;
-    pub const ArenaId_field_number: u32 = 7;
-};
-pub const AnimationGameplayTagNotify = struct {
-    pub const msg_id: u16 = 25142;
-    pub const AddTagIds_field_number: u32 = 6;
-    pub const RemoveTagIds_field_number: u32 = 12;
-};
-pub const TransitionFlowPb = struct {
-    pub const FlowListName_field_number: u32 = 1;
-    pub const FlowId_field_number: u32 = 2;
-    pub const StateId_field_number: u32 = 3;
-};
-pub const DetectionUnlock = struct {
-    pub const MonsterDetectionIds_field_number: u32 = 1;
-    pub const DungeonDetectionIds_field_number: u32 = 2;
-    pub const SilentAreaDetectionIds_field_number: u32 = 3;
-};
-pub const WeaponItemRequest = struct {
-    pub const msg_id: u16 = 21432;
-};
-pub const QuestReviewDataRequest = struct {
-    pub const msg_id: u16 = 21741;
-};
-pub const BeControlledComponentPb = struct {
-    pub const PlayerEntityId_field_number: u32 = 1;
-    pub const RelationId_field_number: u32 = 2;
-    pub const IsShow_field_number: u32 = 3;
-    pub const MatchIndex_field_number: u32 = 4;
-    pub const ConstateId_field_number: u32 = 5;
-};
-pub const TransferCtxPb = struct {
-    pub const TeleportId_field_number: u32 = 1;
-};
-pub const MotorFightTalentPb = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Unlock_field_number: u32 = 3;
-    pub const InUse_field_number: u32 = 4;
-};
-pub const ShopTab = struct {
-    pub const ShopId_field_number: u32 = 1;
-    pub const TabId_field_number: u32 = 2;
-    pub const Sort_field_number: u32 = 3;
-    pub const Name_field_number: u32 = 4;
-    pub const Logic_field_number: u32 = 5;
-    pub const Enable_field_number: u32 = 6;
-};
-pub const SceneTraceResponse = struct {
-    pub const msg_id: u16 = 27616;
+    pub const CurrentProgress_field_number: u32 = 2;
+    pub const TargetProgress_field_number: u32 = 3;
+    pub const HasPassed_field_number: u32 = 4;
+    pub const IsTaken_field_number: u32 = 5;
+};
+pub const RecommendFetterGroupInfo = struct {
+    pub const RecommendFetterGroupId_field_number: u32 = 1;
+    pub const CountNeed_field_number: u32 = 2;
+};
+pub const MoraleFlag = struct {
+    pub const FlagId_field_number: u32 = 1;
+    pub const BoxReceivedCount_field_number: u32 = 2;
+    pub const BoxTotalCount_field_number: u32 = 3;
+};
+pub const EquipComponentPb = struct {
+    pub const WeaponId_field_number: u32 = 1;
+    pub const WeaponBreachLevel_field_number: u32 = 2;
+};
+pub const PhantomPutOnRequest = struct {
+    pub const msg_id: u16 = 26444;
+    pub const IncId_field_number: u32 = 10;
+    pub const RoleId_field_number: u32 = 13;
+    pub const Pos_field_number: u32 = 7;
 };
 pub const ApplyBuffS2cRequestNotify = struct {
     pub const msg_id: u16 = 19849;
@@ -26949,37 +24960,72 @@ pub const ApplyBuffS2cRequestNotify = struct {
     pub const IsIterable_field_number: u32 = 9;
     pub const Reason_field_number: u32 = 13;
 };
-pub const NewTrialRoleInfo = struct {
-    pub const TrialRoleId_field_number: u32 = 1;
-    pub const WorldLv_field_number: u32 = 2;
+pub const RemoveBuffByServerIdS2cRequestNotify = struct {
+    pub const msg_id: u16 = 27201;
+    pub const ServerId_field_number: u32 = 6;
+    pub const StackCount_field_number: u32 = 4;
+    pub const Reason_field_number: u32 = 12;
 };
-pub const TransitionWithCharacterDisplayPb = struct {
-    pub const StyllId_field_number: u32 = 1;
+pub const SoarLevelPlayInfo = struct {
+    pub const SoarLevelPlatId_field_number: u32 = 1;
+    pub const HistorySoarScore_field_number: u32 = 2;
+    pub const ReceiveIds_field_number: u32 = 3;
 };
-pub const SunSpiritTakeUpPb = struct {
-    pub const TrapEntityConfigId_field_number: u32 = 1;
-    pub const Index_field_number: u32 = 2;
+pub const FlySkinWearRequest = struct {
+    pub const msg_id: u16 = 28304;
+    pub const RoleId_field_number: u32 = 5;
+    pub const SkinId_field_number: u32 = 13;
 };
-pub const FlySkinWearAllRoleRequest = struct {
-    pub const msg_id: u16 = 27614;
-    pub const SkinId_field_number: u32 = 5;
+pub const FollowEntityComponentPb = struct {
+    pub const EntityId_field_number: u32 = 1;
 };
-pub const InputSettingRequest = struct {
-    pub const msg_id: u16 = 23771;
+pub const AiHateEntity = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const HatredValue_field_number: u32 = 2;
 };
-pub const AudioState = struct {
-    pub const TreeOwnerId_field_number: u32 = 1;
-    pub const TreeIncId_field_number: u32 = 2;
-    pub const GroupType_field_number: u32 = 3;
-    pub const State_field_number: u32 = 4;
+pub const DailyQuestTerminateActionCtxPb = struct {
+    pub const QuestId_field_number: u32 = 1;
 };
-pub const AchievementGroupEntry = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const FinishTime_field_number: u32 = 2;
-    pub const IsReceive_field_number: u32 = 3;
+pub const MapTraceInfoRequest = struct {
+    pub const msg_id: u16 = 26117;
 };
-pub const SceneItemEventListenerComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
+pub const GroupTypesWrapper = struct {
+    pub const GroupTypes_field_number: u32 = 1;
+};
+pub const InfrV2FirePb = struct {
+    pub const FireExp_field_number: u32 = 1;
+    pub const FireLevel_field_number: u32 = 2;
+    pub const FireLevelReachTime_field_number: u32 = 3;
+    pub const FireStatus_field_number: u32 = 4;
+};
+pub const FurnitureDiySlotInfo = struct {
+    pub const SlotEntityCfgId_field_number: u32 = 1;
+    pub const RootFurnitureId_field_number: u32 = 2;
+    pub const SubFurnitureIds_field_number: u32 = 3;
+};
+pub const RTimeStopInstRequest = struct {
+    pub const msg_id: u16 = 28329;
+    pub const Flag_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 8;
+};
+pub const LevelPlayOpenActionCtxPb = struct {
+    pub const LevelPlayId_field_number: u32 = 1;
+};
+pub const AttributesIdsComponentPb = struct {
+    pub const PbSceneItemAttributeIds_field_number: u32 = 1;
+};
+pub const IntArrayBlackboard = struct {
+    pub const Values_field_number: u32 = 1;
+};
+pub const RoleSkinChangeRequest = struct {
+    pub const msg_id: u16 = 22811;
+    pub const RoleId_field_number: u32 = 9;
+    pub const SkinId_field_number: u32 = 11;
+    pub const IsWearWeaponSkin_field_number: u32 = 15;
+};
+pub const RoleVisionMainPhantomRequest = struct {
+    pub const msg_id: u16 = 15818;
+    pub const RoleId_field_number: u32 = 14;
 };
 pub const ApplyGameplayEffectNotify = struct {
     pub const msg_id: u16 = 15233;
@@ -27000,111 +25046,362 @@ pub const ApplyGameplayEffectNotify = struct {
     pub const StackCount_field_number: u32 = 1;
     pub const Trp_field_number: u32 = 10;
 };
-pub const RoleActivateSkillRequest = struct {
-    pub const msg_id: u16 = 19674;
-    pub const RoleId_field_number: u32 = 1;
-    pub const SkillNodeId_field_number: u32 = 13;
-};
-pub const BattleStateChangePush = struct {
-    pub const msg_id: u16 = 24927;
-    pub const EntityId_field_number: u32 = 3;
-    pub const InBattle_field_number: u32 = 1;
-};
-pub const SmartObjectComponent = struct {
-    pub const LastPassIndex_field_number: u32 = 1;
-};
-pub const SceneTraceRequest = struct {
-    pub const msg_id: u16 = 27364;
-    pub const SceneTraceId_field_number: u32 = 8;
-};
-pub const PlacementItemPb = struct {
-    pub const LocatedBoardEntityConfigId_field_number: u32 = 1;
-};
-pub const ExploreProgressRequest = struct {
-    pub const msg_id: u16 = 18897;
-    pub const AreaIds_field_number: u32 = 3;
-};
-pub const ExecuteQteRequest = struct {
-    pub const msg_id: u16 = 21912;
-    pub const DownEntityId_field_number: u32 = 15;
-    pub const UpEntityId_field_number: u32 = 4;
-    pub const FnvHash_field_number: u32 = 11;
-};
-pub const BuffStackCountPush = struct {
-    pub const msg_id: u16 = 16898;
-    pub const HandleId_field_number: u32 = 8;
-    pub const NewStackCount_field_number: u32 = 6;
-    pub const IsPrematureRemoval_field_number: u32 = 3;
-    pub const InstigatorId_field_number: u32 = 15;
-    pub const NotRefreshDuration_field_number: u32 = 12;
-    pub const NotRefreshPeriod_field_number: u32 = 11;
-    pub const Duration_field_number: u32 = 4;
-    pub const Reason_field_number: u32 = 10;
-};
-pub const LevelPlayRewardActionCtxPb = struct {
-    pub const LevelPlayId_field_number: u32 = 1;
-};
-pub const OrderRemoveBuffByTagsNotify = struct {
-    pub const msg_id: u16 = 21684;
-    pub const TagIds_field_number: u32 = 5;
+pub const OneFishingIllustratedData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const MaxSize_field_number: u32 = 2;
+    pub const MinSize_field_number: u32 = 3;
 };
 pub const EntityOnLandedRequest = struct {
     pub const msg_id: u16 = 15755;
     pub const EntityId_field_number: u32 = 6;
 };
-pub const ItemExchangeInfo = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const TodayTimes_field_number: u32 = 2;
-    pub const TotalTimes_field_number: u32 = 3;
-    pub const DailyLimit_field_number: u32 = 4;
-    pub const TotalLimit_field_number: u32 = 5;
+pub const BuffProducerComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
 };
-pub const GivebackInfoRequest = struct {
-    pub const msg_id: u16 = 26055;
-};
-pub const BuffEffectPush = struct {
-    pub const msg_id: u16 = 16133;
-    pub const HandleId_field_number: u32 = 11;
-    pub const Index_field_number: u32 = 4;
-};
-pub const TriggerComponentPb = struct {
-    pub const TriggerCount_field_number: u32 = 1;
-    pub const ExitTriggerCount_field_number: u32 = 2;
-    pub const ConstateId_field_number: u32 = 3;
-};
-pub const ActivityRequest = struct {
-    pub const msg_id: u16 = 16847;
-};
-pub const CombatCommon = struct {
-    pub const PreMessageId_field_number: u32 = 1;
-    pub const MessageId_field_number: u32 = 2;
-    pub const Originator_field_number: u32 = 3;
-    pub const TimeStamp_field_number: u32 = 4;
-    pub const EntityId_field_number: u32 = 5;
-    pub const IsServerRequest_field_number: u32 = 6;
-};
-pub const MailBind = struct {
-    pub const IsBind_field_number: u32 = 1;
-    pub const IsReward_field_number: u32 = 2;
-    pub const CloseTime_field_number: u32 = 3;
+pub const PullingFoundationComponentPb = struct {
+    pub const RelationId_field_number: u32 = 1;
+    pub const MatchIndex_field_number: u32 = 2;
 };
 pub const UnlockDetectionLabelInfo = struct {
     pub const UnlockedGuideIds_field_number: u32 = 1;
     pub const UnlockedDetectionTextIds_field_number: u32 = 2;
 };
-pub const FadeBackgroundFadeInEffectBlackPb = struct {
-    FadeIn: ?union(enum) {
-    } = null,
-    FadeOut: ?union(enum) {
-    } = null,
-    pub const FadeInTime_field_number: u32 = 2;
-    pub const FadeOutTime_field_number: u32 = 3;
-    pub const FadeColor_field_number: u32 = 1;
+pub const LeaveInstEscActionCtxPb = struct {
+    pub const InstanceId_field_number: u32 = 1;
 };
-pub const PhantomIdentifyRequest = struct {
-    pub const msg_id: u16 = 16040;
-    pub const IncrId_field_number: u32 = 9;
-    pub const Count_field_number: u32 = 11;
+pub const TrapDefenseGoldenCoinPbData = struct {
+    pub const ConfigId_field_number: u32 = 1;
+};
+pub const InfluenceInfoRequest = struct {
+    pub const msg_id: u16 = 26034;
+};
+pub const TransferCtxPb = struct {
+    pub const TeleportId_field_number: u32 = 1;
+};
+pub const BattleStateChangeRequest = struct {
+    pub const msg_id: u16 = 27310;
+    pub const EntityId_field_number: u32 = 13;
+    pub const InBattle_field_number: u32 = 4;
+};
+pub const AnimalDestroyRequest = struct {
+    pub const msg_id: u16 = 25606;
+    pub const EntityId_field_number: u32 = 15;
+};
+pub const LivenessTakeRequest = struct {
+    pub const msg_id: u16 = 27483;
+    pub const Ids_field_number: u32 = 1;
+};
+pub const PinballChapterData = struct {
+    pub const ChapterId_field_number: u32 = 1;
+    pub const UnLockTime_field_number: u32 = 2;
+};
+pub const LordGymInfoRequest = struct {
+    pub const msg_id: u16 = 18684;
+};
+pub const BuffDurationNotify = struct {
+    pub const msg_id: u16 = 16694;
+    Time: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
+    pub const Duration_field_number: u32 = 6;
+    pub const LeftDuration_field_number: u32 = 1;
+    pub const HandleId_field_number: u32 = 9;
+};
+pub const EncircleChallengePb = struct {
+    pub const ChallengeId_field_number: u32 = 1;
+    pub const OpenTime_field_number: u32 = 2;
+    pub const Pass_field_number: u32 = 3;
+    pub const MinStep_field_number: u32 = 5;
+};
+pub const ExecuteQteNotify = struct {
+    pub const msg_id: u16 = 19258;
+    pub const DownEntityId_field_number: u32 = 1;
+    pub const UpEntityId_field_number: u32 = 9;
+    pub const FnvHash_field_number: u32 = 13;
+};
+pub const RacingBetsLegMatchData = struct {
+    pub const LegMatchesId_field_number: u32 = 1;
+    pub const DangoId_field_number: u32 = 2;
+    pub const BettingGearId_field_number: u32 = 3;
+    pub const BettingGearCash_field_number: u32 = 4;
+    pub const Odds_field_number: u32 = 5;
+    pub const OddsVersion_field_number: u32 = 6;
+    pub const LeaveCancelNum_field_number: u32 = 7;
+    pub const OddsReward_field_number: u32 = 8;
+};
+pub const CalabashSkinDataRequest = struct {
+    pub const msg_id: u16 = 26810;
+};
+pub const EntityActiveRequest = struct {
+    pub const msg_id: u16 = 24300;
+    pub const EntityId_field_number: u32 = 6;
+};
+pub const Rotator = struct {
+    pub const Pitch_field_number: u32 = 1;
+    pub const Yaw_field_number: u32 = 2;
+    pub const Roll_field_number: u32 = 3;
+};
+pub const SceneBlockSplitPlayerNeedBlockPush = struct {
+    pub const msg_id: u16 = 22197;
+    pub const PlayerNeedBlockId_field_number: u32 = 9;
+};
+pub const SummonsComponentPb = struct {
+    pub const Version_field_number: u32 = 1;
+};
+pub const FormationAttr = struct {
+    pub const AttrId_field_number: u32 = 1;
+    pub const Ratio_field_number: u32 = 2;
+    pub const BaseMaxValue_field_number: u32 = 3;
+    pub const MaxValue_field_number: u32 = 4;
+    pub const CurrentValue_field_number: u32 = 5;
+};
+pub const GetDetectionLabelInfoRequest = struct {
+    pub const msg_id: u16 = 18745;
+};
+pub const ActivityInviteNewbie = struct {
+    pub const InviteCode_field_number: u32 = 1;
+    pub const Score_field_number: u32 = 2;
+    pub const RedDot_field_number: u32 = 3;
+};
+pub const PbBattlePassReward = struct {
+    pub const Level_field_number: u32 = 1;
+    pub const ItemId_field_number: u32 = 2;
+    pub const Type_field_number: u32 = 3;
+};
+pub const WeaponItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const IncrId_field_number: u32 = 2;
+    pub const FuncValue_field_number: u32 = 3;
+    pub const WeaponLevel_field_number: u32 = 4;
+    pub const WeaponExp_field_number: u32 = 5;
+    pub const WeaponBreach_field_number: u32 = 6;
+    pub const WeaponResonLevel_field_number: u32 = 7;
+    pub const RoleId_field_number: u32 = 8;
+};
+pub const PhantomSkinUnlockNotify = struct {
+    pub const msg_id: u16 = 23529;
+    pub const PhantomSkinList_field_number: u32 = 14;
+};
+pub const CombatDataMaxNotify = struct {
+    pub const msg_id: u16 = 17068;
+};
+pub const RacingBetsTimeTuple = struct {
+    pub const BeginTime_field_number: u32 = 1;
+    pub const EndTime_field_number: u32 = 2;
+};
+pub const BattleStateChangeNotify = struct {
+    pub const msg_id: u16 = 20069;
+    pub const EntityId_field_number: u32 = 14;
+    pub const InBattle_field_number: u32 = 12;
+};
+pub const FloorParams = struct {
+    pub const FloorMeshPath_field_number: u32 = 1;
+    pub const FloorMaterialPath_field_number: u32 = 2;
+    pub const PosX_field_number: u32 = 3;
+    pub const PosY_field_number: u32 = 4;
+    pub const FloorAppearTime_field_number: u32 = 5;
+    pub const FloorDisappearTime_field_number: u32 = 6;
+};
+pub const ValidTimeItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const IncrId_field_number: u32 = 3;
+    pub const ExpireTime_field_number: u32 = 4;
+};
+pub const PublicResourceVersionInfo = struct {
+    pub const PublicJsonVersion_field_number: u32 = 1;
+    pub const PublicMiscVersion_field_number: u32 = 2;
+    pub const PublicUniverseEditorVersion_field_number: u32 = 3;
+};
+pub const MotorInfoRequest = struct {
+    pub const msg_id: u16 = 15904;
+};
+pub const CiacconaGalEndingData = struct {
+    pub const SubEndingDataId_field_number: u32 = 1;
+    pub const IsRewarded_field_number: u32 = 2;
+};
+pub const PlayerRebackSceneNotify = struct {
+    pub const msg_id: u16 = 23555;
+    pub const EntityId_field_number: u32 = 7;
+};
+pub const LivenessTask = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Current_field_number: u32 = 2;
+    pub const Target_field_number: u32 = 3;
+    pub const IsFinished_field_number: u32 = 4;
+    pub const IsTaken_field_number: u32 = 5;
+    pub const ConditionFinishState_field_number: u32 = 6;
+};
+pub const CoopRoleInfo = struct {
+    pub const CoopRoleId_field_number: u32 = 1;
+    pub const RoleLevel_field_number: u32 = 2;
+    pub const RewardLevel_field_number: u32 = 3;
+    pub const FinishTime_field_number: u32 = 4;
+};
+pub const AnimationGameplayTagPush = struct {
+    pub const msg_id: u16 = 20822;
+    pub const AddTagIds_field_number: u32 = 9;
+    pub const RemoveTagIds_field_number: u32 = 5;
+};
+pub const PhantomArenaMasterInfo = struct {
+    pub const MasterLevel_field_number: u32 = 1;
+    pub const MasterExp_field_number: u32 = 2;
+    pub const RewardTaken_field_number: u32 = 3;
+    pub const MasterWeeklyExp_field_number: u32 = 4;
+    pub const LastUsedDeckServerId_field_number: u32 = 5;
+    pub const LastUsedCardRoleId_field_number: u32 = 6;
+};
+pub const QuestFinishActionCtxPb = struct {
+    pub const QuestId_field_number: u32 = 1;
+};
+pub const InterruptSkillInDelayPush = struct {
+    pub const msg_id: u16 = 15361;
+    pub const SkillId_field_number: u32 = 8;
+};
+pub const SystemMarkHideInfoPb = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const MapId_field_number: u32 = 2;
+    pub const HideInfo_field_number: u32 = 3;
+};
+pub const CowLevel = struct {
+    pub const LevelScore_field_number: u32 = 1;
+};
+pub const GetRewardTreasureBoxRequest = struct {
+    pub const msg_id: u16 = 15598;
+    pub const EntityId_field_number: u32 = 14;
+};
+pub const TriggerExitSkillRequest = struct {
+    pub const msg_id: u16 = 24607;
+    pub const EnterEntityId_field_number: u32 = 9;
+    pub const LeaveEntityId_field_number: u32 = 11;
+};
+pub const PayShopInfoRequest = struct {
+    pub const msg_id: u16 = 24050;
+    pub const Version_field_number: u32 = 7;
+};
+pub const RefreshVisionEquipGroupData = struct {
+    pub const IncId_field_number: u32 = 1;
+    pub const Name_field_number: u32 = 2;
+};
+pub const VehiclePlayerData = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const Seat_field_number: u32 = 2;
+};
+pub const FormationRoleInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const MaxHp_field_number: u32 = 2;
+    pub const CurHp_field_number: u32 = 3;
+    pub const Level_field_number: u32 = 4;
+    pub const RoleSkinId_field_number: u32 = 5;
+    pub const SkillBranchId_field_number: u32 = 6;
+};
+pub const MoonChasingTrackMoonHandbookRewardNotify = struct {
+    pub const msg_id: u16 = 16652;
+    pub const Ids_field_number: u32 = 7;
+};
+pub const MotorCreateRequest = struct {
+    pub const msg_id: u16 = 15025;
+    pub const IsCreate_field_number: u32 = 14;
+};
+pub const PayShopPrice = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const PromotionCount_field_number: u32 = 3;
+};
+pub const RoleInstanceList = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const CanUnlock_field_number: u32 = 3;
+};
+pub const GuideInfoRequest = struct {
+    pub const msg_id: u16 = 25411;
+};
+pub const BtBloodBathedModeInfo = struct {
+    pub const BtType_field_number: u32 = 1;
+    pub const BtObjId_field_number: u32 = 2;
+    pub const BtObjSetting_field_number: u32 = 3;
+};
+pub const BuffEffectCd = struct {
+    pub const BuffId_field_number: u32 = 1;
+    pub const ListCdRemaining_field_number: u32 = 2;
+};
+pub const SkillComponentPb = struct {
+    pub const SkillId_field_number: u32 = 1;
+    pub const ConstateId_field_number: u32 = 2;
+};
+pub const SignActivity = struct {
+    pub const SignStateList_field_number: u32 = 1;
+};
+pub const PassiveSkillInfo = struct {
+    pub const SkillId_field_number: u32 = 1;
+    pub const SkillCdEndTime_field_number: u32 = 2;
+};
+pub const ItemLockRequest = struct {
+    pub const msg_id: u16 = 15066;
+    pub const ItemId_field_number: u32 = 5;
+    pub const IncrId_field_number: u32 = 2;
+};
+pub const ResonInfo = struct {
+    pub const ResonId_field_number: u32 = 1;
+    pub const IsOpen_field_number: u32 = 2;
+    pub const Increase_field_number: u32 = 3;
+};
+pub const DangoMonopolyBoardData = struct {
+    pub const PropertyIds_field_number: u32 = 1;
+    pub const RecordDiceRollTimes_field_number: u32 = 2;
+    pub const RecordTriggerMap_field_number: u32 = 3;
+};
+pub const ScratchTicketConditionData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Progress_field_number: u32 = 2;
+    pub const FinishedAchievementNum_field_number: u32 = 3;
+};
+pub const LiftComponentPb = struct {
+    pub const Location_field_number: u32 = 1;
+};
+pub const TeleportDataRequest = struct {
+    pub const msg_id: u16 = 23502;
+};
+pub const ICustomScreenBackgroundImagePb = struct {
+    pub const BgPath_field_number: u32 = 1;
+};
+pub const NormalLevel = struct {
+    pub const StarByte_field_number: u32 = 1;
+};
+pub const PinballRoleData = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const RoleLevel_field_number: u32 = 2;
+};
+pub const UseItemProgress = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const PlacementItemPb = struct {
+    pub const LocatedBoardEntityConfigId_field_number: u32 = 1;
+};
+pub const MontagePlayNotify = struct {
+    pub const msg_id: u16 = 27102;
+    pub const SkillId_field_number: u32 = 6;
+    pub const MontageIndex_field_number: u32 = 8;
+};
+pub const PhantomArenaBadge = struct {
+    pub const BadgeId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+};
+pub const BuffConsumerComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
+};
+pub const AchievementInfoRequest = struct {
+    pub const msg_id: u16 = 16404;
+};
+pub const FsmConditionPassRequest = struct {
+    pub const msg_id: u16 = 25878;
+    pub const FsmId_field_number: u32 = 13;
+    pub const FromState_field_number: u32 = 7;
+    pub const ToState_field_number: u32 = 6;
+    pub const ConditionIndex_field_number: u32 = 3;
+    pub const Value_field_number: u32 = 9;
 };
 pub const AbyssChallengeData = struct {
     pub const ChallengeId_field_number: u32 = 1;
@@ -27116,17 +25413,736 @@ pub const AbyssChallengeData = struct {
     pub const MinPassTime_field_number: u32 = 7;
     pub const IsPassed_field_number: u32 = 8;
 };
+pub const TalentInfoData = struct {
+    pub const TalentId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const LoadingConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const TeleportUpdateNotify = struct {
+    pub const msg_id: u16 = 16418;
+    pub const Ids_field_number: u32 = 10;
+};
+pub const ApplyVisionGroupRequest = struct {
+    pub const msg_id: u16 = 26641;
+    pub const Index_field_number: u32 = 2;
+    pub const RoleId_field_number: u32 = 6;
+};
+pub const HonamiStoryEnhanceLevelComponentPb = struct {
+    pub const Level_field_number: u32 = 1;
+};
+pub const SlashAndTowerInfoRequest = struct {
+    pub const msg_id: u16 = 29010;
+};
+pub const ItemExchangeInfo = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const TodayTimes_field_number: u32 = 2;
+    pub const TotalTimes_field_number: u32 = 3;
+    pub const DailyLimit_field_number: u32 = 4;
+    pub const TotalLimit_field_number: u32 = 5;
+};
+pub const OneExploreItem = struct {
+    pub const ExploreProgressId_field_number: u32 = 1;
+    pub const ExplorePercent_field_number: u32 = 2;
+    pub const CurCount_field_number: u32 = 3;
+    pub const TotalCount_field_number: u32 = 4;
+    pub const IsLocked_field_number: u32 = 5;
+};
+pub const QuestDestroyActionCtxPb = struct {
+    pub const QuestId_field_number: u32 = 1;
+};
+pub const Int2Long = struct {
+    pub const First_field_number: u32 = 1;
+    pub const Second_field_number: u32 = 2;
+};
+pub const InputSettingRequest = struct {
+    pub const msg_id: u16 = 23771;
+};
+pub const TrapDefenseBuildingPbData = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const battleLevel_field_number: u32 = 2;
+    pub const ConstructCost_field_number: u32 = 3;
+    pub const DeconstructReturn_field_number: u32 = 4;
+};
+pub const ControlTemporaryTeleportParam = struct {
+    pub const TemporaryTeleportIds_field_number: u32 = 1;
+};
+pub const HonamiStoryItemCollectionConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const FsmConditionPassPush = struct {
+    pub const msg_id: u16 = 18537;
+    pub const FsmId_field_number: u32 = 5;
+    pub const FromState_field_number: u32 = 13;
+    pub const ToState_field_number: u32 = 11;
+    pub const ConditionIndex_field_number: u32 = 6;
+    pub const Value_field_number: u32 = 3;
+};
+pub const EnergyInfo = struct {
+    pub const EnergyCount_field_number: u32 = 1;
+    pub const LastRenewEnergyTime_field_number: u32 = 2;
+    pub const EnergyType_field_number: u32 = 3;
+};
+pub const PhantomArenaCardReward = struct {
+    pub const CardId_field_number: u32 = 1;
+    pub const NeedCount_field_number: u32 = 2;
+    pub const IsTaken_field_number: u32 = 3;
+};
+pub const CumulativeShopTaskData = struct {
+    pub const Current_field_number: u32 = 1;
+    pub const TargetProgress_field_number: u32 = 2;
+};
+pub const ChangeStateRequest = struct {
+    pub const msg_id: u16 = 18520;
+    pub const FsmId_field_number: u32 = 3;
+    pub const FromState_field_number: u32 = 6;
+    pub const ToState_field_number: u32 = 15;
+};
+pub const AwardGroupData = struct {
+    pub const GroupId_field_number: u32 = 1;
+    pub const GroupRank_field_number: u32 = 2;
+    pub const CurrentAmount_field_number: u32 = 3;
+    pub const AllAmount_field_number: u32 = 4;
+    pub const RewardItems_field_number: u32 = 5;
+};
+pub const MoonSignInConfigData = struct {
+    pub const MoonId_field_number: u32 = 1;
+    pub const MoonLabelTopId_field_number: u32 = 2;
+    pub const MoonLabelBottomId_field_number: u32 = 3;
+};
+pub const ParkourActivityChallenge = struct {
+    pub const ChallengeId_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const AdventureDetectionConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const EffectBeginTime_field_number: u32 = 2;
+    pub const EffectEndTime_field_number: u32 = 3;
+};
+pub const SetFocusModeDeterConditionRequest = struct {
+    pub const msg_id: u16 = 20472;
+    pub const DisableId_field_number: u32 = 7;
+};
+pub const ExhibitionComponentPb = struct {
+    pub const ItemId_field_number: u32 = 1;
+};
+pub const UnlockSkinDataNotify = struct {
+    pub const msg_id: u16 = 19117;
+    pub const PhantomSkinList_field_number: u32 = 1;
+    pub const IsLogin_field_number: u32 = 5;
+};
+pub const AchievementGroupEntry = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const FinishTime_field_number: u32 = 2;
+    pub const IsReceive_field_number: u32 = 3;
+};
+pub const GameplayCuePush = struct {
+    pub const msg_id: u16 = 22113;
+    pub const GameplayCueId_field_number: u32 = 11;
+};
+pub const PhantomPolishRequest = struct {
+    pub const msg_id: u16 = 26274;
+    pub const IncrId_field_number: u32 = 3;
+    pub const PhantomMainPropItemId_field_number: u32 = 4;
+};
 pub const DropComponentPb = struct {
     pub const ItemId_field_number: u32 = 1;
     pub const ShowPlanId_field_number: u32 = 2;
     pub const ItemCount_field_number: u32 = 3;
     pub const EntityConfigId_field_number: u32 = 4;
 };
-pub const InfluenceInfoRequest = struct {
-    pub const msg_id: u16 = 26034;
+pub const MontagePlayPush = struct {
+    pub const msg_id: u16 = 21158;
+    pub const Name_field_number: u32 = 1;
+    pub const Path_field_number: u32 = 4;
+    pub const SpeedRatio_field_number: u32 = 9;
+    pub const StartSection_field_number: u32 = 13;
+    pub const StartTimeSeconds_field_number: u32 = 12;
 };
-pub const TowerSeasonUpdateRequest = struct {
-    pub const msg_id: u16 = 23106;
+pub const GetFormationDataRequest = struct {
+    pub const msg_id: u16 = 16119;
+};
+pub const PlayMontageTaskAndPush = struct {
+    pub const msg_id: u16 = 15890;
+    pub const MontageName_field_number: u32 = 14;
+    pub const MontagePathHash_field_number: u32 = 11;
+    pub const SpeedRatio_field_number: u32 = 5;
+    pub const StartSection_field_number: u32 = 8;
+    pub const StartTimeSeconds_field_number: u32 = 3;
+};
+pub const PhantomBattleGuideActivity = struct {
+    pub const QuestId_field_number: u32 = 1;
+    pub const DropId_field_number: u32 = 2;
+    pub const RewardTotalNum_field_number: u32 = 3;
+    pub const SendReward_field_number: u32 = 4;
+    pub const RecordActId_field_number: u32 = 5;
+};
+pub const TowerRequest = struct {
+    pub const msg_id: u16 = 18803;
+};
+pub const BuffStackCountRequest = struct {
+    pub const msg_id: u16 = 16004;
+    pub const HandleId_field_number: u32 = 12;
+    pub const NewStackCount_field_number: u32 = 11;
+    pub const IsPrematureRemoval_field_number: u32 = 7;
+    pub const InstigatorId_field_number: u32 = 13;
+};
+pub const FlyEquipAddNotify = struct {
+    pub const msg_id: u16 = 29389;
+    pub const UnlockFlySkinIds_field_number: u32 = 3;
+};
+pub const GachaRequest = struct {
+    pub const msg_id: u16 = 24763;
+    pub const GachaId_field_number: u32 = 3;
+    pub const GachaTimes_field_number: u32 = 12;
+};
+pub const PhantomConsumeItem = struct {
+    pub const IncId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const ItemId_field_number: u32 = 3;
+};
+pub const ConcomitantsComponentPb = struct {
+    pub const VisionEntityId_field_number: u32 = 1;
+    pub const CustomEntityIds_field_number: u32 = 2;
+    pub const PhantomRoleId_field_number: u32 = 3;
+    pub const BossRushId_field_number: u32 = 4;
+};
+pub const Function = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Flag_field_number: u32 = 5;
+};
+pub const MotorTaskRewardPb = struct {
+    pub const Rewarded_field_number: u32 = 1;
+    pub const WaitReward_field_number: u32 = 2;
+    pub const MaxReward_field_number: u32 = 3;
+};
+pub const AnimalPerformComponentPb = struct {
+    pub const AnimalInitialPartIds_field_number: u32 = 1;
+};
+pub const NewBieCourseActivity = struct {
+    pub const HadTakeReward_field_number: u32 = 1;
+};
+pub const ClientCurrentRoleReportRequest = struct {
+    pub const msg_id: u16 = 22116;
+    pub const PlayerId_field_number: u32 = 6;
+    pub const CurrentRoleId_field_number: u32 = 12;
+    pub const CurrentEntityId_field_number: u32 = 1;
+};
+pub const HeartbeatRequest = struct {
+    pub const msg_id: u16 = 1650;
+    pub const AntiData_field_number: u32 = 1;
+};
+pub const MailBind = struct {
+    pub const IsBind_field_number: u32 = 1;
+    pub const IsReward_field_number: u32 = 2;
+    pub const CloseTime_field_number: u32 = 3;
+};
+pub const LineCrossChallengeData = struct {
+    pub const ChallengeId_field_number: u32 = 1;
+    pub const CanGetReward_field_number: u32 = 2;
+    pub const OpenTime_field_number: u32 = 3;
+    pub const RewardDataId_field_number: u32 = 4;
+    pub const EntityConfigId_field_number: u32 = 5;
+    pub const IsPreChallengeState_field_number: u32 = 6;
+};
+pub const RbDefaultBlockPbType = struct {
+    pub const IsMainControl_field_number: u32 = 1;
+};
+pub const ActorVisiblePush = struct {
+    pub const msg_id: u16 = 25922;
+    pub const Id_field_number: u32 = 13;
+    pub const IsActorVisible_field_number: u32 = 9;
+};
+pub const PinballGroupFormation = struct {
+    pub const LevelGroup_field_number: u32 = 1;
+    pub const RoleIds_field_number: u32 = 2;
+};
+pub const EntityOnLandedResponse = struct {
+    pub const msg_id: u16 = 20153;
+};
+pub const HostTeleportUnlockNotify = struct {
+    pub const msg_id: u16 = 20113;
+    pub const HostPlayerId_field_number: u32 = 1;
+    pub const HostTeleportId_field_number: u32 = 3;
+};
+pub const HackTargetComponentPb = struct {
+    pub const HackTargetEntityId_field_number: u32 = 1;
+};
+pub const FloatArrayBlackboard = struct {
+    pub const Values_field_number: u32 = 1;
+};
+pub const BattlePassRequest = struct {
+    pub const msg_id: u16 = 19709;
+};
+pub const ICustomScreenSpinePb = struct {
+    pub const SpineId_field_number: u32 = 1;
+};
+pub const RogueWeeklyLastInfo = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const CurLayer_field_number: u32 = 2;
+    pub const MaxLayer_field_number: u32 = 3;
+    pub const WorldLevel_field_number: u32 = 4;
+};
+pub const UnlockRoleSkinListRequest = struct {
+    pub const msg_id: u16 = 22393;
+};
+pub const FarmGoldLevelPlayInfo = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const Challenges_field_number: u32 = 3;
+    pub const Points_field_number: u32 = 4;
+    pub const LevelRewardGet_field_number: u32 = 5;
+    pub const Difficulty_field_number: u32 = 6;
+};
+pub const GachaConsume = struct {
+    pub const Times_field_number: u32 = 1;
+    pub const Consume_field_number: u32 = 2;
+};
+pub const WeaponBreachRequest = struct {
+    pub const msg_id: u16 = 20384;
+    pub const IncId_field_number: u32 = 3;
+};
+pub const PushDataCompleteNotify = struct {
+    pub const msg_id: u16 = 113;
+};
+pub const VersionInfoPush = struct {
+    pub const msg_id: u16 = 116;
+    pub const AppVersion_field_number: u32 = 1;
+    pub const LauncherVersion_field_number: u32 = 2;
+    pub const ResourceVersion_field_number: u32 = 3;
+};
+pub const MoonChasingTargetGetCountNotify = struct {
+    pub const msg_id: u16 = 18618;
+    pub const TargetGetCount_field_number: u32 = 5;
+};
+pub const BuffEffectRequest = struct {
+    pub const msg_id: u16 = 21268;
+    pub const HandleId_field_number: u32 = 2;
+    pub const Index_field_number: u32 = 14;
+};
+pub const RhythmRedDotPb = struct {
+    pub const ReadPlanet_field_number: u32 = 2;
+    pub const ReadSubLevel_field_number: u32 = 4;
+    pub const ReadRole_field_number: u32 = 5;
+};
+pub const ChangeStateConfirmRequest = struct {
+    pub const msg_id: u16 = 18906;
+    pub const FsmId_field_number: u32 = 5;
+    pub const State_field_number: u32 = 8;
+};
+pub const CalabashSkinTakeOnRequest = struct {
+    pub const msg_id: u16 = 16996;
+    pub const SkinId_field_number: u32 = 9;
+};
+pub const MailBindInfoRequest = struct {
+    pub const msg_id: u16 = 29187;
+};
+pub const CalabashCfg = struct {
+    pub const LevelUpExp_field_number: u32 = 1;
+    pub const LevelUpCondition_field_number: u32 = 3;
+    pub const CatchGain_field_number: u32 = 4;
+};
+pub const RacingBetsOrganInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Point_field_number: u32 = 2;
+};
+pub const RoleSaveInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const WeaponIncId_field_number: u32 = 2;
+    pub const PhantomIncId_field_number: u32 = 3;
+    pub const SkillBranchId_field_number: u32 = 4;
+};
+pub const EntityRemoveInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+};
+pub const QuestActiveActionCtxPb = struct {
+    pub const QuestId_field_number: u32 = 1;
+};
+pub const BulletPatternNotify = struct {
+    pub const msg_id: u16 = 15414;
+    pub const BulletPatternHandleId_field_number: u32 = 3;
+    pub const BulletPatternId_field_number: u32 = 4;
+};
+pub const PhantomBattleCardSkillUnlockInfo = struct {
+    pub const CardId_field_number: u32 = 1;
+    pub const Unlock_field_number: u32 = 2;
+    pub const TargetNum_field_number: u32 = 3;
+    pub const CurNum_field_number: u32 = 4;
+};
+pub const RoleTagChangeRequest = struct {
+    pub const msg_id: u16 = 15156;
+    pub const TagId_field_number: u32 = 7;
+    pub const TagCount_field_number: u32 = 12;
+};
+pub const WeaponItemRemoveNotify = struct {
+    pub const msg_id: u16 = 23757;
+    pub const WeaponItemIncrIdList_field_number: u32 = 14;
+};
+pub const ChangeStateConfirmPush = struct {
+    pub const msg_id: u16 = 23992;
+    pub const FsmId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 13;
+};
+pub const RoleDevelopConfigRequest = struct {
+    pub const msg_id: u16 = 19369;
+    aVersion: ?union(enum) {
+    } = null,
+    pub const Version_field_number: u32 = 6;
+};
+pub const GrapplingHookPointComponentPb = struct {
+    pub const HookLockPointDisabled_field_number: u32 = 1;
+};
+pub const AceBlackProductAccountInfo = struct {
+    pub const TdmDeviceId_field_number: u32 = 1;
+    pub const IsRoot_field_number: u32 = 2;
+    pub const IsSimulator_field_number: u32 = 3;
+};
+pub const AdvertisingPageInfo = struct {
+    pub const ActivityId_field_number: u32 = 1;
+    pub const UnlockIndex_field_number: u32 = 2;
+    pub const RewardedIndex_field_number: u32 = 3;
+};
+pub const DFsm = struct {
+    pub const FsmId_field_number: u32 = 1;
+    pub const CurrentState_field_number: u32 = 2;
+    pub const Flag_field_number: u32 = 3;
+    pub const StateElapseTime_field_number: u32 = 6;
+};
+pub const WeaponSkinComponentPb = struct {
+    pub const WeaponSkinId_field_number: u32 = 1;
+};
+pub const SendEquipSkinRequest = struct {
+    pub const msg_id: u16 = 17861;
+    pub const RoleId_field_number: u32 = 15;
+};
+pub const EntityLoadCompleteNotify = struct {
+    pub const msg_id: u16 = 17992;
+    pub const PlayerId_field_number: u32 = 9;
+    pub const EntityIds_field_number: u32 = 2;
+    pub const EntityIdsUnload_field_number: u32 = 3;
+};
+pub const PhantomArenaChallengeInfo = struct {
+    pub const ChallengeInfoId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const CanReChallenge_field_number: u32 = 3;
+    pub const LastCardRoleId_field_number: u32 = 4;
+    pub const LastCardGroupIndex_field_number: u32 = 5;
+    pub const FinishConditions_field_number: u32 = 6;
+    pub const IsUncover_field_number: u32 = 7;
+    pub const IsShow_field_number: u32 = 8;
+};
+pub const ActorVisibleNotify = struct {
+    pub const msg_id: u16 = 16228;
+    pub const Id_field_number: u32 = 7;
+    pub const IsActorVisible_field_number: u32 = 13;
+};
+pub const PassiveSkillAddRequest = struct {
+    pub const msg_id: u16 = 26775;
+    pub const PassiveSkillId_field_number: u32 = 11;
+    pub const TargetEntityId_field_number: u32 = 7;
+};
+pub const HonamiStoryRoleSlot = struct {
+    pub const SlotId_field_number: u32 = 1;
+    pub const IsUnlocked_field_number: u32 = 2;
+};
+pub const GuideInfoResponse = struct {
+    pub const msg_id: u16 = 19851;
+    pub const GuideGroupFinishList_field_number: u32 = 8;
+};
+pub const PlayerTitleLimitInfo = struct {
+    pub const PlayerTitleId_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const OneForgeInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const LastRoleId_field_number: u32 = 3;
+    pub const LimitTotalCount_field_number: u32 = 4;
+    pub const LimitForgeCount_field_number: u32 = 5;
+    pub const StartTime_field_number: u32 = 6;
+    pub const EndTime_field_number: u32 = 7;
+};
+pub const BehaviorTreeDeleteNotify = struct {
+    pub const msg_id: u16 = 21397;
+    pub const TreeIncIds_field_number: u32 = 11;
+};
+pub const GachaReward = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const ItemCount_field_number: u32 = 2;
+};
+pub const BattleFormation = struct {
+    pub const SelectRoles_field_number: u32 = 1;
+    pub const BuffSelect_field_number: u32 = 2;
+    pub const SkillBranchIds_field_number: u32 = 3;
+};
+pub const RoleActivateSkillRequest = struct {
+    pub const msg_id: u16 = 19674;
+    pub const RoleId_field_number: u32 = 1;
+    pub const SkillNodeId_field_number: u32 = 13;
+};
+pub const SummonEntityNotify = struct {
+    pub const msg_id: u16 = 27170;
+    pub const SummonerId_field_number: u32 = 15;
+    pub const SummonIds_field_number: u32 = 14;
+};
+pub const EntityStateReadyNotify = struct {
+    pub const msg_id: u16 = 23994;
+    pub const EntityId_field_number: u32 = 6;
+    pub const TagId_field_number: u32 = 10;
+    pub const Ready_field_number: u32 = 15;
+};
+pub const EquipFlySkinData = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const SkinId_field_number: u32 = 2;
+};
+pub const AccessPathTimeServerConfigRequest = struct {
+    pub const msg_id: u16 = 29406;
+};
+pub const ActivateBuffNotify = struct {
+    pub const msg_id: u16 = 22378;
+    pub const Handle_field_number: u32 = 13;
+    pub const On_field_number: u32 = 9;
+};
+pub const OccupationPbInfo = struct {
+    pub const ResourceName_field_number: u32 = 1;
+    pub const NodeId_field_number: u32 = 2;
+    pub const IncId_field_number: u32 = 3;
+};
+pub const TutorialUnlockRequest = struct {
+    pub const msg_id: u16 = 18049;
+    pub const Id_field_number: u32 = 14;
+};
+pub const FlySkinConfigData = struct {
+    pub const SkinId_field_number: u32 = 1;
+    pub const FlySkinId_field_number: u32 = 2;
+};
+pub const CiacconaGalRewardData = struct {
+    pub const RewardDataId_field_number: u32 = 1;
+    pub const CanReceive_field_number: u32 = 2;
+    pub const IsRewarded_field_number: u32 = 3;
+};
+pub const MonsterCaptureComponentPb = struct {
+    pub const TemplateId_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+    pub const MonsterId_field_number: u32 = 3;
+};
+pub const GuessJokerLevelInfo = struct {
+    pub const LevelId_field_number: u32 = 1;
+    pub const LevelPass_field_number: u32 = 2;
+    pub const UnLock_field_number: u32 = 3;
+    pub const RewardGet_field_number: u32 = 4;
+    pub const PlayerWin_field_number: u32 = 5;
+};
+pub const LanguageSettingUpdateRequest = struct {
+    pub const msg_id: u16 = 24556;
+    pub const Language_field_number: u32 = 11;
+};
+pub const FragileChangeRequest = struct {
+    pub const msg_id: u16 = 20921;
+    pub const EntityId_field_number: u32 = 3;
+    pub const Flag_field_number: u32 = 15;
+};
+pub const EquipBuffItem = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Equiped_field_number: u32 = 2;
+};
+pub const EntityPositionRequest = struct {
+    pub const msg_id: u16 = 18176;
+    pub const ConfigId_field_number: u32 = 7;
+    pub const DungeonInstanceId_field_number: u32 = 1;
+};
+pub const MotorDiyOnwedPb = struct {
+    pub const SkinOwned_field_number: u32 = 2;
+    pub const StickerOnwed_field_number: u32 = 1;
+    pub const DecorationsOwned_field_number: u32 = 3;
+    pub const FrameOwned_field_number: u32 = 4;
+};
+pub const DropCatchLevelInfo = struct {
+    pub const DropCatchId_field_number: u32 = 1;
+    pub const RewardStates_field_number: u32 = 2;
+    pub const UnlockTime_field_number: u32 = 3;
+    pub const Score_field_number: u32 = 4;
+};
+pub const ItemEntry = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const ItemCount_field_number: u32 = 2;
+};
+pub const SceneAreaState = struct {
+    pub const AreaId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const MotorFightTalentPb = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Unlock_field_number: u32 = 3;
+    pub const InUse_field_number: u32 = 4;
+};
+pub const FollowShooterComponentPb = struct {
+    pub const PlayerEntityId_field_number: u32 = 1;
+    pub const SummonConfigId_field_number: u32 = 2;
+};
+pub const ClientStorageBoolData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const InterruptSkillInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const SkillId_field_number: u32 = 2;
+    pub const BulletId_field_number: u32 = 3;
+};
+pub const FlagStrongholdInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const IsPass_field_number: u32 = 2;
+};
+pub const RolePhantomEquipInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const PhantomItemIncrId_field_number: u32 = 2;
+};
+pub const TutorialInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const CreateTime_field_number: u32 = 2;
+    pub const GetAward_field_number: u32 = 3;
+};
+pub const CaughtInfo = struct {
+    pub const Attacker_field_number: u32 = 1;
+    pub const CaughtInfoId_field_number: u32 = 2;
+    pub const IsEnd_field_number: u32 = 3;
+    pub const FightState_field_number: u32 = 4;
+};
+pub const LifePointChallengeData = struct {
+    pub const ChallengeId_field_number: u32 = 1;
+    pub const CanGetReward_field_number: u32 = 2;
+    pub const OpenTime_field_number: u32 = 3;
+    pub const RewardId_field_number: u32 = 4;
+    pub const EntityConfigId_field_number: u32 = 5;
+    pub const IsPreChallengeState_field_number: u32 = 6;
+};
+pub const HarvestPointReward = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const GmLevelActionCtxPb = struct {
+    pub const JsonStr_field_number: u32 = 1;
+};
+pub const ToughCalcExtraRatioChangeRequest = struct {
+    pub const msg_id: u16 = 23944;
+    pub const Id_field_number: u32 = 9;
+    pub const Duration_field_number: u32 = 6;
+};
+pub const DoubleInstActivityReward = struct {
+    pub const GetDoubleInstRwdCount_field_number: u32 = 1;
+};
+pub const MotorTaskProcessPb = struct {
+    pub const Current_field_number: u32 = 1;
+    pub const Target_field_number: u32 = 2;
+};
+pub const EnterViewDirectionPush = struct {
+    pub const msg_id: u16 = 19466;
+};
+pub const ActivitySoarData = struct {
+    pub const QuestId_field_number: u32 = 1;
+};
+pub const AdventureManualDataRequest = struct {
+    pub const msg_id: u16 = 17573;
+    pub const PlayerId_field_number: u32 = 11;
+};
+pub const AbyssPluginItemInfo = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const IncrId_field_number: u32 = 3;
+    pub const FuncValue_field_number: u32 = 4;
+};
+pub const CrystalMonsterSlotInfo = struct {
+    pub const EntityIds_field_number: u32 = 1;
+    pub const MonsterType_field_number: u32 = 2;
+};
+pub const RoleShowEntry = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+};
+pub const ProtoKeyRequest = struct {
+    pub const msg_id: u16 = 111;
+    pub const IsLogin_field_number: u32 = 1;
+    pub const TraceId_field_number: u32 = 2;
+};
+pub const AnimationGameplayTagNotify = struct {
+    pub const msg_id: u16 = 25142;
+    pub const AddTagIds_field_number: u32 = 6;
+    pub const RemoveTagIds_field_number: u32 = 12;
+};
+pub const TowerInfoData = struct {
+    pub const DangerLevel_field_number: u32 = 1;
+    pub const MaxFloor_field_number: u32 = 2;
+};
+pub const GetMusicInfoRequest = struct {
+    pub const msg_id: u16 = 27500;
+};
+pub const TrapDefenseAuxiliaryPbData = struct {
+    pub const ConfigId_field_number: u32 = 1;
+};
+pub const TaskData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 4;
+    pub const Progress_field_number: u32 = 5;
+};
+pub const InfrV2InfoRequest = struct {
+    pub const msg_id: u16 = 18209;
+};
+pub const ANStartNotify = struct {
+    pub const msg_id: u16 = 26852;
+    pub const SkillId_field_number: u32 = 4;
+    pub const MontageIndex_field_number: u32 = 14;
+    pub const AnIndex_field_number: u32 = 2;
+};
+pub const RoleSkillBranchModifyRequest = struct {
+    pub const msg_id: u16 = 26040;
+    pub const RoleId_field_number: u32 = 9;
+    pub const SkillBranch_field_number: u32 = 15;
+};
+pub const PbMailAttachment = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const PayInfoRequest = struct {
+    pub const msg_id: u16 = 20056;
+    pub const Version_field_number: u32 = 8;
+};
+pub const LevelPlayRewardActionCtxPb = struct {
+    pub const LevelPlayId_field_number: u32 = 1;
+};
+pub const JigsawBaseComponentPb = struct {
+    pub const MoveCount_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+    pub const Winner_field_number: u32 = 3;
+};
+pub const SurvivorsMonsterPbData = struct {
+    pub const SpawnPointEntityId_field_number: u32 = 1;
+};
+pub const ActorVisibleRequest = struct {
+    pub const msg_id: u16 = 23524;
+    pub const Id_field_number: u32 = 6;
+    pub const IsActorVisible_field_number: u32 = 15;
+};
+pub const ExploreToolAllNotify = struct {
+    pub const msg_id: u16 = 15091;
+    pub const SkillList_field_number: u32 = 12;
+    pub const ExploreSkill_field_number: u32 = 8;
+    pub const NewUnlock_field_number: u32 = 15;
+};
+pub const EntityStateProgress = struct {
+    pub const EntityId_field_number: u32 = 1;
+};
+pub const PlayerSceneComponentPb = struct {
+    pub const EntityIds_field_number: u32 = 1;
+};
+pub const TsAnimNotifyStateAbsoluteTimeStopRequest = struct {
+    pub const msg_id: u16 = 17627;
+    pub const Flag_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 6;
 };
 pub const LevelPlayList = struct {
     pub const Index_field_number: u32 = 1;
@@ -27136,23 +26152,185 @@ pub const LevelPlayList = struct {
     pub const UnlockTime_field_number: u32 = 5;
     pub const PlayTime_field_number: u32 = 6;
 };
-pub const Vector = struct {
-    pub const X_field_number: u32 = 1;
-    pub const Y_field_number: u32 = 2;
-    pub const Z_field_number: u32 = 3;
-};
-pub const ActorVisiblePush = struct {
-    pub const msg_id: u16 = 25922;
-    pub const Id_field_number: u32 = 13;
-    pub const IsActorVisible_field_number: u32 = 9;
-};
-pub const CiacconaGalRewardData = struct {
-    pub const RewardDataId_field_number: u32 = 1;
-    pub const CanReceive_field_number: u32 = 2;
+pub const CiacconaGalSubEndingData = struct {
+    pub const SubEndingDataId_field_number: u32 = 1;
+    pub const IsFinished_field_number: u32 = 2;
     pub const IsRewarded_field_number: u32 = 3;
 };
-pub const OrnamentComponentPb = struct {
-    pub const OrnamentIds_field_number: u32 = 1;
+pub const SceneTraceResponse = struct {
+    pub const msg_id: u16 = 27616;
+};
+pub const MapCancelTraceRequest = struct {
+    pub const msg_id: u16 = 22542;
+    pub const MarkId_field_number: u32 = 8;
+};
+pub const ChangeStateNotify = struct {
+    pub const msg_id: u16 = 26776;
+    pub const FsmId_field_number: u32 = 1;
+    pub const FromState_field_number: u32 = 3;
+    pub const ToState_field_number: u32 = 14;
+};
+pub const TransitionWithCharacterDisplayPb = struct {
+    pub const StyllId_field_number: u32 = 1;
+};
+pub const LongShanMainTaskData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Current_field_number: u32 = 2;
+    pub const Target_field_number: u32 = 3;
+    pub const IsFinished_field_number: u32 = 4;
+    pub const IsTaken_field_number: u32 = 5;
+    pub const Unlock_field_number: u32 = 6;
+    pub const FinishConditions_field_number: u32 = 7;
+    pub const ConditionId_field_number: u32 = 8;
+    pub const ConditionGroupId_field_number: u32 = 9;
+    pub const UnlockConditionFinish_field_number: u32 = 10;
+};
+pub const VisionExploreSkillNotify = struct {
+    pub const msg_id: u16 = 20423;
+    pub const ExploreSkill_field_number: u32 = 6;
+};
+pub const CalabashDevelopConditionState = struct {
+    pub const ConditionId_field_number: u32 = 1;
+    pub const Rewarded_field_number: u32 = 2;
+};
+pub const QuestAcceptActionCtxPb = struct {
+    pub const QuestId_field_number: u32 = 1;
+};
+pub const MapUnlockFieldNotify = struct {
+    pub const msg_id: u16 = 20336;
+    pub const FieldId_field_number: u32 = 9;
+};
+pub const ExecuteQtePush = struct {
+    pub const msg_id: u16 = 17823;
+    pub const DownEntityId_field_number: u32 = 9;
+    pub const UpEntityId_field_number: u32 = 6;
+    pub const FnvHash_field_number: u32 = 15;
+};
+pub const InfrV2OneTree = struct {
+    pub const TreeId_field_number: u32 = 1;
+    pub const status_field_number: u32 = 2;
+    pub const CompleteTime_field_number: u32 = 3;
+    pub const TotalGiftCount_field_number: u32 = 4;
+    pub const LastGiftTime_field_number: u32 = 5;
+};
+pub const BulletPatternPush = struct {
+    pub const msg_id: u16 = 21208;
+    pub const BulletPatternHandleId_field_number: u32 = 6;
+    pub const BulletPatternId_field_number: u32 = 4;
+};
+pub const OrderRemoveBuffNotify = struct {
+    pub const msg_id: u16 = 18842;
+    pub const Id_field_number: u32 = 13;
+    pub const StackCount_field_number: u32 = 5;
+};
+pub const PhantomArenaRoleInfo = struct {
+    pub const RoleInfoId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const IsTaken_field_number: u32 = 3;
+};
+pub const RoleOperateSelfBgmRequest = struct {
+    pub const msg_id: u16 = 26632;
+    pub const RoleId_field_number: u32 = 15;
+    pub const IsOpen_field_number: u32 = 11;
+};
+pub const DetectionTarget = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const UnlockState_field_number: u32 = 3;
+    pub const RefresherTime_field_number: u32 = 4;
+    pub const DetectionId_field_number: u32 = 5;
+    pub const IsTrace_field_number: u32 = 6;
+};
+pub const SunSpiritTakeUpPb = struct {
+    pub const TrapEntityConfigId_field_number: u32 = 1;
+    pub const Index_field_number: u32 = 2;
+};
+pub const EntityFollowTrackRequest = struct {
+    pub const msg_id: u16 = 17222;
+    pub const EntityId_field_number: u32 = 12;
+};
+pub const PlayPointStateAsyncRequest = struct {
+    pub const msg_id: u16 = 16308;
+    pub const InstId_field_number: u32 = 6;
+    pub const ArenaId_field_number: u32 = 7;
+};
+pub const CombatCommon = struct {
+    pub const PreMessageId_field_number: u32 = 1;
+    pub const MessageId_field_number: u32 = 2;
+    pub const Originator_field_number: u32 = 3;
+    pub const TimeStamp_field_number: u32 = 4;
+    pub const EntityId_field_number: u32 = 5;
+    pub const IsServerRequest_field_number: u32 = 6;
+};
+pub const FloroRanchCommonData = struct {
+    pub const DataId_field_number: u32 = 1;
+    pub const ConditionId_field_number: u32 = 2;
+    pub const IsLocked_field_number: u32 = 3;
+};
+pub const GuideTriggerRequest = struct {
+    pub const msg_id: u16 = 28371;
+    pub const GroupId_field_number: u32 = 1;
+};
+pub const VisionEquipGroupInfoRequest = struct {
+    pub const msg_id: u16 = 18585;
+};
+pub const HonamiStoryCustomLoadingPb = struct {
+    pub const LoadingId_field_number: u32 = 1;
+};
+pub const TowerSeasonUpdateRequest = struct {
+    pub const msg_id: u16 = 23106;
+};
+pub const NpcPb = struct {
+    pub const SplineEntityId_field_number: u32 = 2;
+    pub const SpawnEntityId_field_number: u32 = 3;
+};
+pub const ExchangeRewardRequest = struct {
+    pub const msg_id: u16 = 29269;
+};
+pub const RewardItemInfo = struct {
+    pub const ShowPlanId_field_number: u32 = 1;
+    pub const ItemId_field_number: u32 = 2;
+    pub const Count_field_number: u32 = 3;
+    pub const IncrId_field_number: u32 = 4;
+};
+pub const ExploreProgressRequest = struct {
+    pub const msg_id: u16 = 18897;
+    pub const AreaIds_field_number: u32 = 3;
+};
+pub const BoneVisibleData = struct {
+    pub const BoneName_field_number: u32 = 1;
+    pub const HideBone_field_number: u32 = 2;
+};
+pub const BatchBulletCastComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
+};
+pub const CiacconaGalInspirationData = struct {
+    pub const InspirationCount_field_number: u32 = 1;
+    pub const RefreshTime_field_number: u32 = 2;
+};
+pub const GivebackInfoRequest = struct {
+    pub const msg_id: u16 = 26055;
+};
+pub const RoleDevPropsProjectConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const ElementId_field_number: u32 = 2;
+    pub const RoleName_field_number: u32 = 3;
+    pub const RoleExperience_field_number: u32 = 4;
+    pub const RoleGoalLevel_field_number: u32 = 5;
+    pub const WeaponGoalLevel_field_number: u32 = 6;
+    pub const WeaponExperience_field_number: u32 = 7;
+    pub const RoleItemGroup_field_number: u32 = 8;
+    pub const WeaponBreachItemGroup_field_number: u32 = 9;
+    pub const WeaponType_field_number: u32 = 10;
+    pub const SkillItemGroup_field_number: u32 = 11;
+    pub const PrefectSkillLevel_field_number: u32 = 12;
+    pub const RoleHeadIcon_field_number: u32 = 13;
+    pub const RoleHeadIconSmall_field_number: u32 = 14;
+};
+pub const PhantomAutoPutRequest = struct {
+    pub const msg_id: u16 = 24560;
+    pub const RoleId_field_number: u32 = 7;
+    pub const PhantomItemIncrId_field_number: u32 = 1;
 };
 pub const OrderApplyBuffNotify = struct {
     pub const msg_id: u16 = 29498;
@@ -27167,528 +26345,67 @@ pub const OrderApplyBuffNotify = struct {
     pub const StackCount_field_number: u32 = 15;
     pub const IsIterable_field_number: u32 = 14;
 };
-pub const SpringSkipEntry = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const UnLock_field_number: u32 = 2;
-    pub const Finish_field_number: u32 = 3;
+pub const PhantomCollectProgress = struct {
+    pub const Phantoms_field_number: u32 = 1;
 };
-pub const BuffDurationNotify = struct {
-    pub const msg_id: u16 = 16694;
-    Time: ?union(enum) {
-    } = null,
-    gFs: ?union(enum) {
-    } = null,
-    pub const Duration_field_number: u32 = 6;
-    pub const LeftDuration_field_number: u32 = 1;
-    pub const HandleId_field_number: u32 = 9;
+pub const EntityInteractRequest = struct {
+    pub const msg_id: u16 = 26412;
+    pub const EntityId_field_number: u32 = 8;
+    pub const OptionIndex_field_number: u32 = 2;
+    pub const VisionEntityId_field_number: u32 = 12;
 };
-pub const SkillComponentPb = struct {
-    pub const SkillId_field_number: u32 = 1;
-    pub const ConstateId_field_number: u32 = 2;
+pub const AfterJoinSceneNotify = struct {
+    pub const msg_id: u16 = 16984;
 };
-pub const MobileButtonSetting = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Size_field_number: u32 = 2;
-    pub const Transparency_field_number: u32 = 3;
-    pub const ScreenX_field_number: u32 = 4;
-    pub const ScreenY_field_number: u32 = 5;
-    pub const ButtonLevel_field_number: u32 = 6;
-    pub const PanelLevel_field_number: u32 = 7;
+pub const TutorialInfoRequest = struct {
+    pub const msg_id: u16 = 19531;
 };
-pub const ClientCurrentRoleReportRequest = struct {
-    pub const msg_id: u16 = 22116;
-    pub const PlayerId_field_number: u32 = 6;
-    pub const CurrentRoleId_field_number: u32 = 12;
-    pub const CurrentEntityId_field_number: u32 = 1;
-};
-pub const PinballGroupFormation = struct {
-    pub const LevelGroup_field_number: u32 = 1;
-    pub const RoleIds_field_number: u32 = 2;
-};
-pub const EnergyInfo = struct {
-    pub const EnergyCount_field_number: u32 = 1;
-    pub const LastRenewEnergyTime_field_number: u32 = 2;
-    pub const EnergyType_field_number: u32 = 3;
-};
-pub const RacingBetsLegMatchData = struct {
-    pub const LegMatchesId_field_number: u32 = 1;
-    pub const DangoId_field_number: u32 = 2;
-    pub const BettingGearId_field_number: u32 = 3;
-    pub const BettingGearCash_field_number: u32 = 4;
-    pub const Odds_field_number: u32 = 5;
-    pub const OddsVersion_field_number: u32 = 6;
-    pub const LeaveCancelNum_field_number: u32 = 7;
-    pub const OddsReward_field_number: u32 = 8;
-};
-pub const ItemPkgOpenNotify = struct {
-    pub const msg_id: u16 = 19498;
-    pub const OpenPkg_field_number: u32 = 12;
-};
-pub const RogueWeeklyLastInfo = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const CurLayer_field_number: u32 = 2;
-    pub const MaxLayer_field_number: u32 = 3;
-    pub const WorldLevel_field_number: u32 = 4;
-};
-pub const LanguageSettingUpdateRequest = struct {
-    pub const msg_id: u16 = 24556;
-    pub const Language_field_number: u32 = 11;
-};
-pub const ExploreToolAllNotify = struct {
-    pub const msg_id: u16 = 15091;
-    pub const SkillList_field_number: u32 = 12;
-    pub const ExploreSkill_field_number: u32 = 8;
-    pub const NewUnlock_field_number: u32 = 15;
-};
-pub const PhantomArenaBadge = struct {
-    pub const BadgeId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-};
-pub const GlobalFixCtxPb = struct {
-    pub const FixId_field_number: u32 = 1;
-};
-pub const AbyssPluginItemInfo = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const Count_field_number: u32 = 2;
-    pub const IncrId_field_number: u32 = 3;
-    pub const FuncValue_field_number: u32 = 4;
-};
-pub const ICustomScreenTextSettingPb = struct {
-    ShowTextInfo: ?union(enum) {
-    } = null,
-    TextContent: ?union(enum) {
-    } = null,
-    EdTextContent: ?union(enum) {
-    } = null,
-    pub const IsShowTextInfo_field_number: u32 = 1;
-    pub const TidTextContent_field_number: u32 = 2;
-    pub const EdTidTextContent_field_number: u32 = 3;
-};
-pub const SetFocusModeDeterConditionRequest = struct {
-    pub const msg_id: u16 = 20472;
-    pub const DisableId_field_number: u32 = 7;
-};
-pub const NearbyTrackingComponentPb = struct {
-    pub const IsEnable_field_number: u32 = 1;
-};
-pub const StateComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
-};
-pub const ApplyGameplayEffectRequest = struct {
-    pub const msg_id: u16 = 16690;
-    Time: ?union(enum) {
-    } = null,
-    pub const Duration_field_number: u32 = 8;
-    pub const Handle_field_number: u32 = 6;
-    pub const Id_field_number: u32 = 15;
-    pub const Level_field_number: u32 = 7;
-    pub const InstigatorId_field_number: u32 = 2;
-    pub const ApplyType_field_number: u32 = 5;
-    pub const ServerId_field_number: u32 = 12;
-    pub const StackCount_field_number: u32 = 4;
-    pub const IsActive_field_number: u32 = 10;
-};
-pub const Int2Long = struct {
-    pub const First_field_number: u32 = 1;
-    pub const Second_field_number: u32 = 2;
-};
-pub const CaughtInfo = struct {
-    pub const Attacker_field_number: u32 = 1;
-    pub const CaughtInfoId_field_number: u32 = 2;
-    pub const IsEnd_field_number: u32 = 3;
-    pub const FightState_field_number: u32 = 4;
-};
-pub const PhantomPutOnRequest = struct {
-    pub const msg_id: u16 = 26444;
-    pub const IncId_field_number: u32 = 10;
-    pub const RoleId_field_number: u32 = 13;
-    pub const Pos_field_number: u32 = 7;
-};
-pub const OrderRemoveBuffRequest = struct {
-    pub const msg_id: u16 = 17976;
-    pub const Id_field_number: u32 = 3;
-    pub const StackCount_field_number: u32 = 8;
-    pub const Reason_field_number: u32 = 14;
-};
-pub const NormalItemRequest = struct {
-    pub const msg_id: u16 = 17067;
-};
-pub const FsmConditionPassRequest = struct {
-    pub const msg_id: u16 = 25878;
-    pub const FsmId_field_number: u32 = 13;
-    pub const FromState_field_number: u32 = 7;
-    pub const ToState_field_number: u32 = 6;
-    pub const ConditionIndex_field_number: u32 = 3;
-    pub const Value_field_number: u32 = 9;
-};
-pub const PrivateChatHistoryRequest = struct {
-    pub const msg_id: u16 = 25598;
-    pub const TargetUid_field_number: u32 = 9;
-    pub const StartIndex_field_number: u32 = 12;
-};
-pub const FarmGoldLevelPlayInfo = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const Challenges_field_number: u32 = 3;
-    pub const Points_field_number: u32 = 4;
-    pub const LevelRewardGet_field_number: u32 = 5;
-    pub const Difficulty_field_number: u32 = 6;
-};
-pub const TriggerExitSkillPush = struct {
-    pub const msg_id: u16 = 27356;
-    pub const EnterEntityId_field_number: u32 = 11;
-    pub const LeaveEntityId_field_number: u32 = 8;
-};
-pub const FloroRanchSubDungeonData = struct {
-    pub const DataId_field_number: u32 = 1;
-    pub const ConditionId_field_number: u32 = 2;
-    pub const IsLocked_field_number: u32 = 3;
-    pub const IsFinished_field_number: u32 = 4;
-};
-pub const RoleBreakThroughViewRequest = struct {
-    pub const msg_id: u16 = 18328;
-    pub const RoleId_field_number: u32 = 3;
-};
-pub const UpdatePlayStationBlockAccountResponse = struct {
-    pub const msg_id: u16 = 18458;
-};
-pub const FloatArrayBlackboard = struct {
+pub const LongArrayBlackboard = struct {
     pub const Values_field_number: u32 = 1;
 };
-pub const ActivitySoarData = struct {
-    pub const QuestId_field_number: u32 = 1;
+pub const TowerLevel = struct {
+    pub const StarByte_field_number: u32 = 1;
+    pub const CostTime_field_number: u32 = 2;
 };
-pub const MotorDiyEquippedPb = struct {
-    pub const SkinEquipped_field_number: u32 = 1;
-    pub const StickerEquipped_field_number: u32 = 2;
-    pub const DecorationsEquipped_field_number: u32 = 3;
-    pub const FrameEquipped_field_number: u32 = 4;
-};
-pub const WeaponItem = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const IncrId_field_number: u32 = 2;
-    pub const FuncValue_field_number: u32 = 3;
-    pub const WeaponLevel_field_number: u32 = 4;
-    pub const WeaponExp_field_number: u32 = 5;
-    pub const WeaponBreach_field_number: u32 = 6;
-    pub const WeaponResonLevel_field_number: u32 = 7;
-    pub const RoleId_field_number: u32 = 8;
-};
-pub const TrapDefenseBuildingPbData = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const battleLevel_field_number: u32 = 2;
-    pub const ConstructCost_field_number: u32 = 3;
-    pub const DeconstructReturn_field_number: u32 = 4;
-};
-pub const MotorTaskProcessPb = struct {
-    pub const Current_field_number: u32 = 1;
-    pub const Target_field_number: u32 = 2;
-};
-pub const InterruptSkillInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const SkillId_field_number: u32 = 2;
-    pub const BulletId_field_number: u32 = 3;
-};
-pub const HackingComponentPb = struct {
-    pub const EntityIds_field_number: u32 = 1;
-};
-pub const PinballWeapon = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const IncrId_field_number: u32 = 2;
-    pub const FuncValue_field_number: u32 = 3;
-    pub const roleId_field_number: u32 = 4;
-    pub const SubEntryId_field_number: u32 = 5;
-};
-pub const SceneTimeInfo = struct {
-    pub const Hour_field_number: u32 = 1;
-    pub const Minute_field_number: u32 = 2;
-    pub const OwnerTimeClockTimeSpan_field_number: u32 = 3;
-};
-pub const RoleVisionMainPhantomRequest = struct {
-    pub const msg_id: u16 = 15818;
-    pub const RoleId_field_number: u32 = 14;
-};
-pub const PhantomBattleGuideActivity = struct {
-    pub const QuestId_field_number: u32 = 1;
-    pub const DropId_field_number: u32 = 2;
-    pub const RewardTotalNum_field_number: u32 = 3;
-    pub const SendReward_field_number: u32 = 4;
-    pub const RecordActId_field_number: u32 = 5;
-};
-pub const SimpleTrackReportAsyncRequest = struct {
-    pub const msg_id: u16 = 28604;
-};
-pub const CumulativeShopTaskData = struct {
-    pub const Current_field_number: u32 = 1;
-    pub const TargetProgress_field_number: u32 = 2;
-};
-pub const ClientCurrentRoleReportPush = struct {
-    pub const msg_id: u16 = 27197;
-    pub const PlayerId_field_number: u32 = 2;
-    pub const CurrentRoleId_field_number: u32 = 4;
-    pub const CurrentEntityId_field_number: u32 = 6;
-};
-pub const LeaveInstEscActionCtxPb = struct {
-    pub const InstanceId_field_number: u32 = 1;
-};
-pub const EntityPositionRequest = struct {
-    pub const msg_id: u16 = 18176;
-    pub const ConfigId_field_number: u32 = 7;
-    pub const DungeonInstanceId_field_number: u32 = 1;
-};
-pub const AdventureItemData = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const ItemNum_field_number: u32 = 2;
-};
-pub const ICustomScreenBackgroundImagePb = struct {
-    pub const BgPath_field_number: u32 = 1;
-};
-pub const CounterAttackInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const FightState_field_number: u32 = 2;
-    pub const TriggerCounterType_field_number: u32 = 3;
-    pub const CounterAnIndex_field_number: u32 = 4;
-};
-pub const EntityPatrolStopRequest = struct {
-    pub const msg_id: u16 = 27186;
-    pub const EntityId_field_number: u32 = 6;
-};
-pub const SceneAreaState = struct {
-    pub const AreaId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const MonsterBoomPush = struct {
-    pub const msg_id: u16 = 21125;
-    pub const Delay_field_number: u32 = 1;
-};
-pub const WebSignRequest = struct {
-    pub const msg_id: u16 = 16523;
-};
-pub const HeartbeatResponse = struct {
-    pub const msg_id: u16 = 1651;
-};
-pub const PhantomBattleCardSkillUnlockInfo = struct {
-    pub const CardId_field_number: u32 = 1;
-    pub const Unlock_field_number: u32 = 2;
-    pub const TargetNum_field_number: u32 = 3;
-    pub const CurNum_field_number: u32 = 4;
-};
-pub const RoleTrialTask = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const ChallengeState_field_number: u32 = 2;
-};
-pub const MingSuGenInfo = struct {
-    pub const CreatureGenId_field_number: u32 = 1;
-};
-pub const AdvertisingPageData = struct {
-    pub const Show_field_number: u32 = 1;
-    pub const PointTime_field_number: u32 = 2;
-};
-pub const ItemExchangeInfoRequest = struct {
-    pub const msg_id: u16 = 17949;
-};
-pub const PlayerBattleStateChangeNotify = struct {
-    pub const msg_id: u16 = 16643;
-    pub const PlayerId_field_number: u32 = 4;
-    pub const InBattle_field_number: u32 = 7;
-};
-pub const BossPilingLevelInfo = struct {
-    pub const id_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const BossHpNum_field_number: u32 = 3;
-    pub const SelectRoleIds_field_number: u32 = 4;
-};
-pub const RoleInstanceList = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const CanUnlock_field_number: u32 = 3;
-};
-pub const AnimalDropRequest = struct {
-    pub const msg_id: u16 = 17736;
-    pub const EntityId_field_number: u32 = 1;
-};
-pub const AttributesIdsComponentPb = struct {
-    pub const PbSceneItemAttributeIds_field_number: u32 = 1;
-};
-pub const RoadNavMoveData = struct {
-    pub const DestRoadId_field_number: u32 = 1;
-    pub const DestIndex_field_number: u32 = 2;
-    pub const GenRoadId_field_number: u32 = 3;
-    pub const GenRoadIndex_field_number: u32 = 4;
-};
-pub const PrivateChatDataRequest = struct {
-    pub const msg_id: u16 = 17367;
-};
-pub const BuffProducerComponentPb = struct {
-    pub const ConstateId_field_number: u32 = 1;
-};
-pub const QuestAcceptActionCtxPb = struct {
-    pub const QuestId_field_number: u32 = 1;
-};
-pub const GuessJokerLevelInfo = struct {
-    pub const LevelId_field_number: u32 = 1;
-    pub const LevelPass_field_number: u32 = 2;
-    pub const UnLock_field_number: u32 = 3;
-    pub const RewardGet_field_number: u32 = 4;
-    pub const PlayerWin_field_number: u32 = 5;
-};
-pub const MapUnlockFieldInfoRequest = struct {
-    pub const msg_id: u16 = 26261;
-};
-pub const ServerPlayStationPlayOnlyStateResponse = struct {
-    pub const msg_id: u16 = 17551;
-    pub const CrossPlayEnabled_field_number: u32 = 7;
-};
-pub const TempFishPointInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const CurCount_field_number: u32 = 2;
-    pub const MaxCount_field_number: u32 = 3;
-    pub const ConfigId_field_number: u32 = 4;
-    pub const GamePlayId_field_number: u32 = 5;
-};
-pub const ControlTemporaryTeleportParam = struct {
-    pub const TemporaryTeleportIds_field_number: u32 = 1;
-};
-pub const CombatDataMaxNotify = struct {
-    pub const msg_id: u16 = 17068;
-};
-pub const GameplayCueNotify = struct {
-    pub const msg_id: u16 = 22573;
-    pub const GameplayCueId_field_number: u32 = 7;
-};
-pub const PhantomArenaMasterInfo = struct {
-    pub const MasterLevel_field_number: u32 = 1;
-    pub const MasterExp_field_number: u32 = 2;
-    pub const RewardTaken_field_number: u32 = 3;
-    pub const MasterWeeklyExp_field_number: u32 = 4;
-    pub const LastUsedDeckServerId_field_number: u32 = 5;
-    pub const LastUsedCardRoleId_field_number: u32 = 6;
-};
-pub const FishingDataRequest = struct {
-    pub const msg_id: u16 = 17444;
-};
-pub const RoleShowEntry = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-};
-pub const VisionAttrRecommendInfo = struct {
-    pub const AttrType_field_number: u32 = 1;
-    pub const AddType_field_number: u32 = 2;
-    pub const Usage_field_number: u32 = 3;
-};
-pub const HonamiStoryScoreRewardInfo = struct {
-    pub const ScoreRewardId_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
+pub const RoleFavorListRequest = struct {
+    pub const msg_id: u16 = 24422;
 };
 pub const TransitionWithCustomLoadingPb = struct {
     pub const ConfigId_field_number: u32 = 1;
 };
-pub const RoleOperateSelfBgmRequest = struct {
-    pub const msg_id: u16 = 26632;
-    pub const RoleId_field_number: u32 = 15;
-    pub const IsOpen_field_number: u32 = 11;
+pub const WebSignResponse = struct {
+    pub const msg_id: u16 = 24888;
+    pub const NoticeSign_field_number: u32 = 4;
 };
-pub const LifePointChallengeData = struct {
+pub const SilenceNpcNotify = struct {
+    pub const msg_id: u16 = 15402;
+    pub const vTs_field_number: u32 = 3;
+};
+pub const MonsterAiComponentPb = struct {
+    pub const WeaponId_field_number: u32 = 1;
+    pub const HatredGroupId_field_number: u32 = 2;
+    pub const AiTeamInitId_field_number: u32 = 3;
+    pub const CombatMessageId_field_number: u32 = 4;
+    pub const BasicPerceptionIds_field_number: u32 = 5;
+};
+pub const TrapDefenseLevelData = struct {
     pub const ChallengeId_field_number: u32 = 1;
-    pub const CanGetReward_field_number: u32 = 2;
-    pub const OpenTime_field_number: u32 = 3;
-    pub const RewardId_field_number: u32 = 4;
-    pub const EntityConfigId_field_number: u32 = 5;
-    pub const IsPreChallengeState_field_number: u32 = 6;
+    pub const CanUnlock_field_number: u32 = 2;
+    pub const TargetProgress_field_number: u32 = 3;
+    pub const IsPassed_field_number: u32 = 4;
+    pub const CanGetReward_field_number: u32 = 5;
+    pub const UnlockTime_field_number: u32 = 6;
+    pub const IsLeaved_field_number: u32 = 7;
+    pub const MaxFinishWaveTimes_field_number: u32 = 8;
 };
-pub const LevelPlayVarAsyncRequest = struct {
-    pub const msg_id: u16 = 19955;
-    pub const InstId_field_number: u32 = 11;
-    pub const LevelPlayId_field_number: u32 = 7;
+pub const HonamiStoryMascotConfig = struct {
+    pub const MascotId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
 };
-pub const PinballRoleData = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const RoleLevel_field_number: u32 = 2;
-};
-pub const GuideTriggerRequest = struct {
-    pub const msg_id: u16 = 28371;
-    pub const GroupId_field_number: u32 = 1;
-};
-pub const MonsterBoomRequest = struct {
-    pub const msg_id: u16 = 16346;
-    pub const Delay_field_number: u32 = 12;
-};
-pub const VisionTriggerNotify = struct {
-    pub const msg_id: u16 = 29005;
-    pub const VisionId_field_number: u32 = 2;
-};
-pub const SignActivity = struct {
-    pub const SignStateList_field_number: u32 = 1;
-};
-pub const EnterViewDirectionPush = struct {
-    pub const msg_id: u16 = 19466;
-};
-pub const FragileChangeRequest = struct {
-    pub const msg_id: u16 = 20921;
-    pub const EntityId_field_number: u32 = 3;
-    pub const Flag_field_number: u32 = 15;
-};
-pub const ProtoKeyRequest = struct {
-    pub const msg_id: u16 = 111;
-    pub const IsLogin_field_number: u32 = 1;
-    pub const TraceId_field_number: u32 = 2;
-};
-pub const DoubleInstActivityReward = struct {
-    pub const GetDoubleInstRwdCount_field_number: u32 = 1;
-};
-pub const BulletPatternNotify = struct {
-    pub const msg_id: u16 = 15414;
-    pub const BulletPatternHandleId_field_number: u32 = 3;
-    pub const BulletPatternId_field_number: u32 = 4;
-};
-pub const RefreshVisionEquipGroupData = struct {
-    pub const IncId_field_number: u32 = 1;
-    pub const Name_field_number: u32 = 2;
-};
-pub const BabelDebuff = struct {
-    pub const BuffId_field_number: u32 = 1;
-    pub const Unlocked_field_number: u32 = 2;
-};
-pub const CiacconaGalSubEndingData = struct {
-    pub const SubEndingDataId_field_number: u32 = 1;
-    pub const IsFinished_field_number: u32 = 2;
-    pub const IsRewarded_field_number: u32 = 3;
-};
-pub const PlayerHeadDataRequest = struct {
-    pub const msg_id: u16 = 28272;
-};
-pub const MotorTaskRewardPb = struct {
-    pub const Rewarded_field_number: u32 = 1;
-    pub const WaitReward_field_number: u32 = 2;
-    pub const MaxReward_field_number: u32 = 3;
-};
-pub const MonthCardRequest = struct {
-    pub const msg_id: u16 = 27344;
-};
-pub const EntityLoadCompleteNotify = struct {
-    pub const msg_id: u16 = 17992;
-    pub const PlayerId_field_number: u32 = 9;
-    pub const EntityIds_field_number: u32 = 2;
-    pub const EntityIdsUnload_field_number: u32 = 3;
-};
-pub const SecGetReportData2FlowRequest = struct {
-    pub const msg_id: u16 = 16214;
-    pub const ReportData_field_number: u32 = 11;
-};
-pub const WeatherControlInfoWithoutCheckAsyncRequest = struct {
-    pub const msg_id: u16 = 16375;
-};
-pub const ICustomScreenSpinePb = struct {
-    pub const SpineId_field_number: u32 = 1;
-};
-pub const CalabashSkinTakeOnRequest = struct {
-    pub const msg_id: u16 = 16996;
-    pub const SkinId_field_number: u32 = 9;
-};
-pub const OneFishingIllustratedData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const MaxSize_field_number: u32 = 2;
-    pub const MinSize_field_number: u32 = 3;
+pub const MainPhantomRecommendInfo = struct {
+    pub const Usage_field_number: u32 = 1;
+    pub const MonsterId_field_number: u32 = 2;
+    pub const FetterGroupId_field_number: u32 = 3;
 };
 pub const ApplyGameplayEffectPush = struct {
     pub const msg_id: u16 = 23218;
@@ -27706,22 +26423,911 @@ pub const ApplyGameplayEffectPush = struct {
     pub const Reason_field_number: u32 = 1;
     pub const Trp_field_number: u32 = 7;
 };
-pub const UseSkillFailPush = struct {
-    pub const msg_id: u16 = 24908;
-    pub const SkillId_field_number: u32 = 2;
+pub const AttributeEventEffectData = struct {
+    pub const TriggeredActiveHandles_field_number: u32 = 1;
 };
-pub const ExecuteQtePush = struct {
-    pub const msg_id: u16 = 17823;
-    pub const DownEntityId_field_number: u32 = 9;
-    pub const UpEntityId_field_number: u32 = 6;
-    pub const FnvHash_field_number: u32 = 15;
+pub const VisionTriggerNotify = struct {
+    pub const msg_id: u16 = 29005;
+    pub const VisionId_field_number: u32 = 2;
 };
-pub const DrownPush = struct {
-    pub const msg_id: u16 = 17552;
+pub const JumpTaskCondInfo = struct {
+    pub const JumpId_field_number: u32 = 1;
+    pub const ConditionGroupIds_field_number: u32 = 2;
+};
+pub const ValidTimeItemRequest = struct {
+    pub const msg_id: u16 = 22746;
+};
+pub const PinballWeapon = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const IncrId_field_number: u32 = 2;
+    pub const FuncValue_field_number: u32 = 3;
+    pub const roleId_field_number: u32 = 4;
+    pub const SubEntryId_field_number: u32 = 5;
+};
+pub const MonsterWeaponComponentPb = struct {
+    pub const WeaponId_field_number: u32 = 1;
+};
+pub const ThemeCelebration = struct {
+    pub const PersonalRewardIds_field_number: u32 = 1;
+    pub const WorldRewardIds_field_number: u32 = 2;
+};
+pub const ServerPlayStationPlayOnlyStateRequest = struct {
+    pub const msg_id: u16 = 16132;
+};
+pub const LogicStateComponentPb = struct {
+    pub const PositionState_field_number: u32 = 1;
+    pub const MoveState_field_number: u32 = 2;
+    pub const DirectionState_field_number: u32 = 3;
+    pub const PositionSubState_field_number: u32 = 4;
+};
+pub const ClientStorageMapData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const DarkCoastDeliveryRequest = struct {
+    pub const msg_id: u16 = 16579;
+    pub const DragonPoolId_field_number: u32 = 9;
+};
+pub const UpdatePlayStationBlockAccountResponse = struct {
+    pub const msg_id: u16 = 18458;
+};
+pub const FlowActionCtxPb = struct {
+    pub const FlowListName_field_number: u32 = 1;
+    pub const FlowId_field_number: u32 = 2;
+    pub const StateId_field_number: u32 = 3;
+    pub const ActionId_field_number: u32 = 4;
 };
 pub const RoguelikeTokenList = struct {
     pub const Id_field_number: u32 = 1;
     pub const IsReceive_field_number: u32 = 2;
+};
+pub const CardShowEntry = struct {
+    pub const CardId_field_number: u32 = 1;
+    pub const IsRead_field_number: u32 = 2;
+};
+pub const PartUpdateInfo = struct {
+    pub const PartIndex_field_number: u32 = 1;
+    pub const Activated_field_number: u32 = 2;
+    pub const Reset_field_number: u32 = 3;
+};
+pub const OrderRemoveBuffRequest = struct {
+    pub const msg_id: u16 = 17976;
+    pub const Id_field_number: u32 = 3;
+    pub const StackCount_field_number: u32 = 8;
+    pub const Reason_field_number: u32 = 14;
+};
+pub const VisionSkillInformation = struct {
+    pub const SkillId_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const Quality_field_number: u32 = 3;
+    pub const VisionEntityId_field_number: u32 = 4;
+    pub const Index_field_number: u32 = 5;
+};
+pub const AdventureManualRequest = struct {
+    pub const msg_id: u16 = 16997;
+    pub const PlayerId_field_number: u32 = 14;
+};
+pub const BabelDebuff = struct {
+    pub const BuffId_field_number: u32 = 1;
+    pub const Unlocked_field_number: u32 = 2;
+};
+pub const RangeComponentPb = struct {
+    pub const InRangePlayers_field_number: u32 = 1;
+    pub const InRangeEntities_field_number: u32 = 2;
+};
+pub const PhantomPropInfo = struct {
+    pub const PhantomPropId_field_number: u32 = 1;
+    pub const Value_field_number: u32 = 2;
+};
+pub const InterruptSkillInDelayRequest = struct {
+    pub const msg_id: u16 = 17686;
+    pub const SkillId_field_number: u32 = 14;
+};
+pub const FurnitureComponentPb = struct {
+    pub const SlotId_field_number: u32 = 1;
+    pub const FurnitureId_field_number: u32 = 2;
+};
+pub const DFsmBlackBoard = struct {
+    pub const Key_field_number: u32 = 1;
+    pub const Value_field_number: u32 = 2;
+};
+pub const ActivityLinkageRewardData = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const MobileButtonSetting = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Size_field_number: u32 = 2;
+    pub const Transparency_field_number: u32 = 3;
+    pub const ScreenX_field_number: u32 = 4;
+    pub const ScreenY_field_number: u32 = 5;
+    pub const ButtonLevel_field_number: u32 = 6;
+    pub const PanelLevel_field_number: u32 = 7;
+};
+pub const MotorDiyEquippedPb = struct {
+    pub const SkinEquipped_field_number: u32 = 1;
+    pub const StickerEquipped_field_number: u32 = 2;
+    pub const DecorationsEquipped_field_number: u32 = 3;
+    pub const FrameEquipped_field_number: u32 = 4;
+};
+pub const ModifyEntityCampNotify = struct {
+    pub const msg_id: u16 = 29564;
+    pub const TargetEntityId_field_number: u32 = 13;
+    pub const Camp_field_number: u32 = 2;
+};
+pub const OrderRemoveBuffByTagsNotify = struct {
+    pub const msg_id: u16 = 21684;
+    pub const TagIds_field_number: u32 = 5;
+};
+pub const TrapDefenseBuildingData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const Branch_field_number: u32 = 3;
+    pub const MaxLevel_field_number: u32 = 4;
+    pub const CellPrice_field_number: u32 = 5;
+    pub const OriginalConstructPrice_field_number: u32 = 6;
+    pub const DiscountConstructPrice_field_number: u32 = 7;
+    pub const DeconstructReturn_field_number: u32 = 8;
+};
+pub const RemoveCombineRelationNotify = struct {
+    pub const msg_id: u16 = 29118;
+    pub const CombineEntity_field_number: u32 = 10;
+    pub const TargetEntity_field_number: u32 = 1;
+};
+pub const GetItemCount = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const PhantomArenaBadgeReward = struct {
+    pub const BadgeRewardId_field_number: u32 = 1;
+    pub const NeedCount_field_number: u32 = 2;
+    pub const IsTaken_field_number: u32 = 3;
+};
+pub const DrownNotify = struct {
+    pub const msg_id: u16 = 15958;
+};
+pub const LobbyListRequest = struct {
+    pub const msg_id: u16 = 21431;
+    pub const IsFriend_field_number: u32 = 8;
+};
+pub const RemoveGameplayEffectNotify = struct {
+    pub const msg_id: u16 = 23315;
+    pub const Handle_field_number: u32 = 5;
+    pub const EntityId_field_number: u32 = 12;
+};
+pub const WeaponConsumeItem = struct {
+    pub const IncId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const ItemId_field_number: u32 = 3;
+};
+pub const HoldHandComponentPb = struct {
+    pub const TargetEntityId_field_number: u32 = 1;
+    pub const HandType_field_number: u32 = 2;
+    pub const IsFollow_field_number: u32 = 3;
+};
+pub const AudioState = struct {
+    pub const TreeOwnerId_field_number: u32 = 1;
+    pub const TreeIncId_field_number: u32 = 2;
+    pub const GroupType_field_number: u32 = 3;
+    pub const State_field_number: u32 = 4;
+};
+pub const DrownPush = struct {
+    pub const msg_id: u16 = 17552;
+};
+pub const ItemDeprecateRequest = struct {
+    pub const msg_id: u16 = 22055;
+    pub const ItemId_field_number: u32 = 13;
+    pub const IncrId_field_number: u32 = 5;
+};
+pub const SceneTraceRequest = struct {
+    pub const msg_id: u16 = 27364;
+    pub const SceneTraceId_field_number: u32 = 8;
+};
+pub const TimePointRewardData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const RewardTime_field_number: u32 = 2;
+    pub const Rewarded_field_number: u32 = 3;
+    pub const CanGetReward_field_number: u32 = 4;
+};
+pub const CombatDataMaxResponse = struct {
+};
+pub const FloroRanchSubDungeonData = struct {
+    pub const DataId_field_number: u32 = 1;
+    pub const ConditionId_field_number: u32 = 2;
+    pub const IsLocked_field_number: u32 = 3;
+    pub const IsFinished_field_number: u32 = 4;
+};
+pub const AdviceSettingNotify = struct {
+    pub const msg_id: u16 = 27494;
+    pub const IsShow_field_number: u32 = 15;
+};
+pub const CharacterBattleStateInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const InBattle_field_number: u32 = 2;
+};
+pub const PassiveSkillRemoveNotify = struct {
+    pub const msg_id: u16 = 23178;
+    pub const EntityId_field_number: u32 = 1;
+    pub const SkillIdList_field_number: u32 = 7;
+};
+pub const ListenInformation = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Range_field_number: u32 = 2;
+};
+pub const FlowerPollutionComponentPb = struct {
+    pub const UnPollutionSpline_field_number: u32 = 1;
+};
+pub const HonamiStoryPosInfo = struct {
+    pub const IsCross_field_number: u32 = 1;
+    pub const Posotion_field_number: u32 = 2;
+};
+pub const ShieldInfoPb = struct {
+    pub const Handle_field_number: u32 = 1;
+    pub const ConfigId_field_number: u32 = 2;
+    pub const ShieldValue_field_number: u32 = 3;
+    pub const Priority_field_number: u32 = 4;
+    pub const BuffHandle_field_number: u32 = 5;
+    pub const IsValid_field_number: u32 = 6;
+};
+pub const UpdateAchievementInfoRequest = struct {
+    pub const msg_id: u16 = 27731;
+};
+pub const BuffStackCountNotify = struct {
+    pub const msg_id: u16 = 29004;
+    Time: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
+    pub const Duration_field_number: u32 = 15;
+    pub const LeftDuration_field_number: u32 = 14;
+    pub const HandleId_field_number: u32 = 13;
+    pub const NewStackCount_field_number: u32 = 7;
+    pub const InstigatorId_field_number: u32 = 10;
+    pub const NotRefreshDuration_field_number: u32 = 12;
+    pub const NotRefreshPeriod_field_number: u32 = 3;
+};
+pub const BulletComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
+};
+pub const ClientStorageStringData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const UseSkillFailRequest = struct {
+    pub const msg_id: u16 = 23022;
+    pub const SkillId_field_number: u32 = 12;
+};
+pub const AdvertisingPageData = struct {
+    pub const Show_field_number: u32 = 1;
+    pub const PointTime_field_number: u32 = 2;
+};
+pub const QuestReviewDataRequest = struct {
+    pub const msg_id: u16 = 21741;
+};
+pub const BossPilingLevelInfo = struct {
+    pub const id_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const BossHpNum_field_number: u32 = 3;
+    pub const SelectRoleIds_field_number: u32 = 4;
+};
+pub const PhantomArenaCardInfo = struct {
+    pub const CardId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const IsCardOutlookUnlock_field_number: u32 = 3;
+};
+pub const ItemPkgOpenNotify = struct {
+    pub const msg_id: u16 = 19498;
+    pub const OpenPkg_field_number: u32 = 12;
+};
+pub const ClientStorageSetData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const SpringSkipEntry = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const UnLock_field_number: u32 = 2;
+    pub const Finish_field_number: u32 = 3;
+};
+pub const TrapDefenseMonsterPbData = struct {
+    pub const ConfigId_field_number: u32 = 1;
+};
+pub const BabelTowerData = struct {
+    pub const BabelTowerLevelId_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const NormalLevelBuffs_field_number: u32 = 3;
+    pub const RoleIds_field_number: u32 = 4;
+    pub const HardLevelBuffs_field_number: u32 = 5;
+    pub const HardLevelItems_field_number: u32 = 6;
+    pub const HardLevelStar_field_number: u32 = 7;
+    pub const HasPassed_field_number: u32 = 8;
+    pub const MaxPassRoleSelection_field_number: u32 = 9;
+    pub const MaxPassBuffSelection_field_number: u32 = 10;
+    pub const MaxPassStar_field_number: u32 = 11;
+};
+pub const HonamiStoryScoreRewardInfo = struct {
+    pub const ScoreRewardId_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const PlayerBasicInfoGetRequest = struct {
+    pub const msg_id: u16 = 23055;
+    pub const Id_field_number: u32 = 14;
+};
+pub const ClientCurrentRoleReportPush = struct {
+    pub const msg_id: u16 = 27197;
+    pub const PlayerId_field_number: u32 = 2;
+    pub const CurrentRoleId_field_number: u32 = 4;
+    pub const CurrentEntityId_field_number: u32 = 6;
+};
+pub const TransformBuffStackNotify = struct {
+    pub const msg_id: u16 = 20850;
+    pub const BuffHandle_field_number: u32 = 1;
+    pub const BuffId_field_number: u32 = 10;
+    pub const BuffStackModifier_field_number: u32 = 12;
+};
+pub const SceneTimeInfo = struct {
+    pub const Hour_field_number: u32 = 1;
+    pub const Minute_field_number: u32 = 2;
+    pub const OwnerTimeClockTimeSpan_field_number: u32 = 3;
+};
+pub const ClientStorageListData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const PrivateChatDataResponse = struct {
+    pub const msg_id: u16 = 18201;
+    pub const LoadSucc_field_number: u32 = 14;
+};
+pub const AnimalDropRequest = struct {
+    pub const msg_id: u16 = 17736;
+    pub const EntityId_field_number: u32 = 1;
+};
+pub const BoardGridDynamicConfig = struct {
+    pub const RowIndex_field_number: u32 = 1;
+    pub const ColumnIndex_field_number: u32 = 2;
+    pub const Flags_field_number: u32 = 3;
+};
+pub const FadeBackgroundFadeOutEffectBlackPb = struct {
+    FadeIn: ?union(enum) {
+    } = null,
+    FadeOut: ?union(enum) {
+    } = null,
+    pub const FadeInTime_field_number: u32 = 2;
+    pub const FadeOutTime_field_number: u32 = 3;
+    pub const FadeColor_field_number: u32 = 1;
+};
+pub const TempFishPointInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const CurCount_field_number: u32 = 2;
+    pub const MaxCount_field_number: u32 = 3;
+    pub const ConfigId_field_number: u32 = 4;
+    pub const GamePlayId_field_number: u32 = 5;
+};
+pub const PushContextIdNotify = struct {
+    pub const msg_id: u16 = 20393;
+    pub const Id_field_number: u32 = 5;
+};
+pub const FightFormation = struct {
+    pub const FormationId_field_number: u32 = 1;
+    pub const CurRole_field_number: u32 = 2;
+    pub const RoleIds_field_number: u32 = 3;
+    pub const IsCurrent_field_number: u32 = 4;
+};
+pub const TimeCheckRequest = struct {
+    pub const msg_id: u16 = 28667;
+    pub const ClientTime_field_number: u32 = 13;
+    pub const TimeDilation_field_number: u32 = 1;
+    pub const FlowTimeDilation_field_number: u32 = 9;
+};
+pub const SurvivorsWeaponPbData = struct {
+};
+pub const ResonantChainUnlockRequest = struct {
+    pub const msg_id: u16 = 20307;
+    pub const RoleId_field_number: u32 = 5;
+};
+pub const FadeBackgroundFadeInEffectBlackPb = struct {
+    FadeIn: ?union(enum) {
+    } = null,
+    FadeOut: ?union(enum) {
+    } = null,
+    pub const FadeInTime_field_number: u32 = 2;
+    pub const FadeOutTime_field_number: u32 = 3;
+    pub const FadeColor_field_number: u32 = 1;
+};
+pub const InteractProgress = struct {
+    pub const NpcId_field_number: u32 = 1;
+};
+pub const FlagChallengeLevelInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const State_field_number: u32 = 3;
+};
+pub const MoraleAreaData = struct {
+    pub const AreaDataId_field_number: u32 = 1;
+    pub const ExploreBoxReceivedCount_field_number: u32 = 2;
+};
+pub const MatrixInfo = struct {
+    pub const X_field_number: u32 = 1;
+    pub const Y_field_number: u32 = 2;
+};
+pub const MotorTechPb = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const Unlock_field_number: u32 = 3;
+    pub const Current_field_number: u32 = 10;
+    pub const Target_field_number: u32 = 11;
+};
+pub const TransferContextId = struct {
+    pub const BulletContextId_field_number: u32 = 1;
+};
+pub const FishingTechInfo = struct {
+    pub const NodeId_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const CanUnlock_field_number: u32 = 3;
+};
+pub const InstEnterInfoPb = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const ChallengedTimes_field_number: u32 = 2;
+};
+pub const NewTrialRoleInfo = struct {
+    pub const TrialRoleId_field_number: u32 = 1;
+    pub const WorldLv_field_number: u32 = 2;
+};
+pub const AchievementProgress = struct {
+    pub const CurProgress_field_number: u32 = 1;
+    pub const TotalProgress_field_number: u32 = 2;
+};
+pub const BuffEffectPush = struct {
+    pub const msg_id: u16 = 16133;
+    pub const HandleId_field_number: u32 = 11;
+    pub const Index_field_number: u32 = 4;
+};
+pub const ExitViewDirectionPush = struct {
+    pub const msg_id: u16 = 24222;
+};
+pub const ArrayIntInt = struct {
+    pub const Key_field_number: u32 = 1;
+    pub const Value_field_number: u32 = 2;
+};
+pub const HeartbeatResponse = struct {
+    pub const msg_id: u16 = 1651;
+};
+pub const SmartObjectComponent = struct {
+    pub const LastPassIndex_field_number: u32 = 1;
+};
+pub const RbVisionBlockPbType = struct {
+};
+pub const LevelPlayVarAsyncRequest = struct {
+    pub const msg_id: u16 = 19955;
+    pub const InstId_field_number: u32 = 11;
+    pub const LevelPlayId_field_number: u32 = 7;
+};
+pub const CiacconaGalChoiceData = struct {
+    pub const ChoiceDataId_field_number: u32 = 1;
+    pub const SecondState_field_number: u32 = 2;
+    pub const FirstState_field_number: u32 = 3;
+};
+pub const CharacterDetachRequest = struct {
+    pub const msg_id: u16 = 27381;
+    pub const EntityA_field_number: u32 = 7;
+    pub const EntityB_field_number: u32 = 12;
+};
+pub const RefreshBuffDurationPush = struct {
+    pub const msg_id: u16 = 18957;
+    pub const BuffIds_field_number: u32 = 6;
+};
+pub const TimeCheckNotify = struct {
+    pub const msg_id: u16 = 15830;
+    pub const ClientTime_field_number: u32 = 4;
+    pub const ServerTime_field_number: u32 = 3;
+    pub const ServerCombatTime_field_number: u32 = 1;
+    pub const ServerStopTime_field_number: u32 = 12;
+    pub const ServerFlowTimestamp_field_number: u32 = 15;
+};
+pub const ANStartRequest = struct {
+    pub const msg_id: u16 = 18410;
+    pub const SkillId_field_number: u32 = 2;
+    pub const MontageIndex_field_number: u32 = 5;
+    pub const AnIndex_field_number: u32 = 12;
+};
+pub const RemoveGameplayEffectRequest = struct {
+    pub const msg_id: u16 = 17540;
+    pub const Handle_field_number: u32 = 7;
+    pub const EntityId_field_number: u32 = 3;
+    pub const IsPrematureRemoval_field_number: u32 = 2;
+};
+pub const SurvivorsLevelInfo = struct {
+    pub const IsUnlocked_field_number: u32 = 1;
+    pub const ConditionGroupId_field_number: u32 = 2;
+    pub const WaveId_field_number: u32 = 3;
+    pub const KillMonsterCount_field_number: u32 = 4;
+    pub const IsFinished_field_number: u32 = 5;
+};
+pub const UseSkillFailPush = struct {
+    pub const msg_id: u16 = 24908;
+    pub const SkillId_field_number: u32 = 2;
+};
+pub const PrivateChatHistoryRequest = struct {
+    pub const msg_id: u16 = 25598;
+    pub const TargetUid_field_number: u32 = 9;
+    pub const StartIndex_field_number: u32 = 12;
+};
+pub const PbUpLevelSkillRequest = struct {
+    pub const msg_id: u16 = 26536;
+    pub const RoleId_field_number: u32 = 8;
+    pub const SkillId_field_number: u32 = 6;
+};
+pub const OrnamentComponentPb = struct {
+    pub const OrnamentIds_field_number: u32 = 1;
+};
+pub const ChangeVisionGroupNameRequest = struct {
+    pub const msg_id: u16 = 25996;
+    pub const Index_field_number: u32 = 15;
+    pub const Name_field_number: u32 = 6;
+};
+pub const SceneMonsterCreatedMonsterInfo = struct {
+    pub const PrefabId_field_number: u32 = 1;
+    pub const MapId_field_number: u32 = 2;
+    pub const BaseLife_field_number: u32 = 3;
+    pub const State_field_number: u32 = 4;
+};
+pub const DrownRequest = struct {
+    pub const msg_id: u16 = 16438;
+};
+pub const PlayerHeadDataResponse = struct {
+    pub const msg_id: u16 = 26241;
+    pub const PlayerHeadDataIds_field_number: u32 = 10;
+};
+pub const RoleVisionRecommendDataRequest = struct {
+    pub const msg_id: u16 = 20874;
+    pub const RoleId_field_number: u32 = 1;
+};
+pub const WuWuTaskPack = struct {
+    pub const WuWuPackageId_field_number: u32 = 1;
+    pub const UnLockTime_field_number: u32 = 2;
+    pub const HadReward_field_number: u32 = 3;
+};
+pub const MonthCardDailyRewardNotify = struct {
+    pub const msg_id: u16 = 21627;
+    pub const ItemId_field_number: u32 = 4;
+    pub const Count_field_number: u32 = 10;
+    pub const Days_field_number: u32 = 1;
+};
+pub const DirectTrainGetPlayerIdRequest = struct {
+    pub const msg_id: u16 = 27593;
+};
+pub const PartInformation = struct {
+    pub const PartIndex_field_number: u32 = 1;
+    pub const LifeValue_field_number: u32 = 2;
+    pub const LifeMax_field_number: u32 = 3;
+    pub const Activated_field_number: u32 = 4;
+    pub const PartTag_field_number: u32 = 5;
+};
+pub const DailyLevel = struct {
+    pub const RandomLevelId_field_number: u32 = 1;
+    pub const reward_field_number: u32 = 2;
+};
+pub const RbGridPosition = struct {
+    pub const X_field_number: u32 = 1;
+    pub const Y_field_number: u32 = 2;
+};
+pub const HarvestLevelReward = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const IsOpen_field_number: u32 = 3;
+    pub const Points_field_number: u32 = 4;
+    pub const Diff_field_number: u32 = 5;
+    pub const State_field_number: u32 = 6;
+};
+pub const TutorialReceiveRequest = struct {
+    pub const msg_id: u16 = 24682;
+    pub const Id_field_number: u32 = 7;
+};
+pub const PhotoMemoryRequest = struct {
+    pub const msg_id: u16 = 26873;
+};
+pub const UpdateVoxelEnvRequest = struct {
+    pub const msg_id: u16 = 16014;
+    pub const ServerCaveMode_field_number: u32 = 4;
+};
+pub const RogueSeasonReward = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const IsReceive_field_number: u32 = 2;
+};
+pub const RoleGoDownPush = struct {
+    pub const msg_id: u16 = 24956;
+};
+pub const LordGymEntranceInfo = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const EffectBeginTime_field_number: u32 = 2;
+    pub const EffectEndTime_field_number: u32 = 3;
+};
+pub const ClientStorageIntData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const ICustomScreenTextSettingPb = struct {
+    ShowTextInfo: ?union(enum) {
+    } = null,
+    TextContent: ?union(enum) {
+    } = null,
+    EdTextContent: ?union(enum) {
+    } = null,
+    pub const IsShowTextInfo_field_number: u32 = 1;
+    pub const TidTextContent_field_number: u32 = 2;
+    pub const EdTidTextContent_field_number: u32 = 3;
+};
+pub const CommonTagData = struct {
+    pub const TagId_field_number: u32 = 1;
+    pub const RemoveTagIds_field_number: u32 = 2;
+};
+pub const InitHonamiActivityRequest = struct {
+    pub const msg_id: u16 = 22306;
+    pub const ActivityId_field_number: u32 = 2;
+};
+pub const NpcDriveVehicleComponentPb = struct {
+    pub const VehicleCreatureId_field_number: u32 = 1;
+    pub const Seat_field_number: u32 = 2;
+};
+pub const MapUnlockFieldInfoRequest = struct {
+    pub const msg_id: u16 = 26261;
+};
+pub const AdviceRequest = struct {
+    pub const msg_id: u16 = 25455;
+};
+pub const ToughCalcExtraRatioChangePush = struct {
+    pub const msg_id: u16 = 15758;
+    pub const Id_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 14;
+};
+pub const JSPatchNotify = struct {
+    pub const msg_id: u16 = 24831;
+    pub const Content_field_number: u32 = 1;
+};
+pub const UpdatePlayStationBlockAccountRequest = struct {
+    pub const msg_id: u16 = 16200;
+    pub const BlockedIds_field_number: u32 = 11;
+};
+pub const TriggerExitSkillPush = struct {
+    pub const msg_id: u16 = 27356;
+    pub const EnterEntityId_field_number: u32 = 11;
+    pub const LeaveEntityId_field_number: u32 = 8;
+};
+pub const SeamlessTeleportFinishConfigPb = struct {
+    pub const IsnotStopScreenEffect_field_number: u32 = 1;
+    pub const EffectExtraState_field_number: u32 = 2;
+};
+pub const GachaPoolInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+    pub const Title_field_number: u32 = 4;
+    pub const Description_field_number: u32 = 5;
+    pub const UiType_field_number: u32 = 6;
+    pub const ThemeColor_field_number: u32 = 7;
+    pub const ShowIdList_field_number: u32 = 8;
+    pub const UpList_field_number: u32 = 9;
+    pub const PreviewIdList_field_number: u32 = 10;
+    pub const ComplianceDetail_field_number: u32 = 11;
+};
+pub const TimerInfoPb = struct {
+    pub const TimerType_field_number: u32 = 1;
+    pub const NodeId_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+    pub const PauseTime_field_number: u32 = 4;
+};
+pub const RoleTrialTask = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const ChallengeState_field_number: u32 = 2;
+};
+pub const CumulativeShopSubTaskData = struct {
+    pub const CanGetReward_field_number: u32 = 1;
+    pub const ProgressCount_field_number: u32 = 2;
+    pub const TotalProgressCount_field_number: u32 = 3;
+};
+pub const IntVector2D = struct {
+    pub const X_field_number: u32 = 1;
+    pub const Y_field_number: u32 = 2;
+};
+pub const Vector = struct {
+    pub const X_field_number: u32 = 1;
+    pub const Y_field_number: u32 = 2;
+    pub const Z_field_number: u32 = 3;
+};
+pub const DrinkMixRole = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const FirstPass_field_number: u32 = 2;
+    pub const MaxLike_field_number: u32 = 3;
+    pub const RewardGet_field_number: u32 = 4;
+};
+pub const RoleBrief = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+};
+pub const ItemFinishList = struct {
+    pub const ConditionIdList_field_number: u32 = 1;
+};
+pub const ShopRecommend = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const RecommendType_field_number: u32 = 2;
+    pub const RecommendId_field_number: u32 = 3;
+    pub const TabName_field_number: u32 = 4;
+    pub const PrefabPath_field_number: u32 = 5;
+    pub const Sort_field_number: u32 = 6;
+    pub const Show_field_number: u32 = 7;
+    pub const TabImage_field_number: u32 = 8;
+};
+pub const ItemExchangeInfoRequest = struct {
+    pub const msg_id: u16 = 17949;
+};
+pub const UnlockRoleSkinListNofity = struct {
+    pub const msg_id: u16 = 15955;
+    pub const RoleSkinList_field_number: u32 = 14;
+};
+pub const NewLinkBurstPush = struct {
+    pub const msg_id: u16 = 20068;
+};
+pub const WeatherControlInfoWithoutCheckAsyncResponse = struct {
+    pub const msg_id: u16 = 21508;
+    pub const UnlockedWeatherSwitchConfigIdList_field_number: u32 = 3;
+};
+pub const ActivityRequest = struct {
+    pub const msg_id: u16 = 16847;
+};
+pub const MonsterInfoPreview = struct {
+    pub const WaveConfigId_field_number: u32 = 1;
+    pub const HpPpb_field_number: u32 = 2;
+    pub const Damage_field_number: u32 = 3;
+    pub const Round_field_number: u32 = 4;
+    pub const IsDead_field_number: u32 = 5;
+};
+pub const DFsmBlackboardCustom = struct {
+    pub const Key_field_number: u32 = 1;
+    pub const Value_field_number: u32 = 2;
+};
+pub const TransitionFlowPb = struct {
+    pub const FlowListName_field_number: u32 = 1;
+    pub const FlowId_field_number: u32 = 2;
+    pub const StateId_field_number: u32 = 3;
+};
+pub const InfluenceInfo = struct {
+    pub const InfluenceId_field_number: u32 = 1;
+    pub const RewardIndex_field_number: u32 = 2;
+    pub const Relation_field_number: u32 = 3;
+};
+pub const TeleportFinishRequest = struct {
+    pub const msg_id: u16 = 25807;
+};
+pub const BuffStackCountPush = struct {
+    pub const msg_id: u16 = 16898;
+    pub const HandleId_field_number: u32 = 8;
+    pub const NewStackCount_field_number: u32 = 6;
+    pub const IsPrematureRemoval_field_number: u32 = 3;
+    pub const InstigatorId_field_number: u32 = 15;
+    pub const NotRefreshDuration_field_number: u32 = 12;
+    pub const NotRefreshPeriod_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 4;
+    pub const Reason_field_number: u32 = 10;
+};
+pub const RoleSkinTrialContentData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const ChallengeState_field_number: u32 = 2;
+};
+pub const MaterialInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const AssetName_field_number: u32 = 2;
+    pub const IsGroup_field_number: u32 = 3;
+};
+pub const LevelData = struct {
+    pub const LevelId_field_number: u32 = 1;
+    pub const InstId_field_number: u32 = 2;
+    pub const Roles_field_number: u32 = 3;
+    pub const GroupId_field_number: u32 = 4;
+    pub const IsUnlocked_field_number: u32 = 5;
+};
+pub const LoadEquipData = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const SkinId_field_number: u32 = 2;
+};
+pub const PreheatSignNodeInfo = struct {
+    pub const PreheatNodeId_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const Rewarded_field_number: u32 = 3;
+};
+pub const InfrInfoRequest = struct {
+    pub const msg_id: u16 = 22337;
+};
+pub const PassiveSkillAddPush = struct {
+    pub const msg_id: u16 = 29381;
+    pub const PassiveSkillId_field_number: u32 = 10;
+    pub const TargetEntityId_field_number: u32 = 5;
+};
+pub const CompleteInstProgress = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const AccessPathTimeServerConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const MonsterBoomPush = struct {
+    pub const msg_id: u16 = 21125;
+    pub const Delay_field_number: u32 = 1;
+};
+pub const GameplayCueNotify = struct {
+    pub const msg_id: u16 = 22573;
+    pub const GameplayCueId_field_number: u32 = 7;
+};
+pub const SolarSpeedContext = struct {
+    pub const LevelId_field_number: u32 = 1;
+    pub const Score_field_number: u32 = 2;
+    pub const Ranking_field_number: u32 = 3;
+    pub const StartTime_field_number: u32 = 4;
+    pub const LapRecord_field_number: u32 = 5;
+};
+pub const LoadingConfigRequest = struct {
+    pub const msg_id: u16 = 19736;
+};
+pub const WebSignRequest = struct {
+    pub const msg_id: u16 = 16523;
+};
+pub const PinballKSCRolePbData = struct {
+};
+pub const RoleConfigInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const SkillBranch_field_number: u32 = 2;
+};
+pub const MoveSplineConfig = struct {
+    StartPoint: ?union(enum) {
+    } = null,
+    EndPoint: ?union(enum) {
+    } = null,
+    LookDir: ?union(enum) {
+    } = null,
+    Cycle: ?union(enum) {
+    } = null,
+    Circle: ?union(enum) {
+    } = null,
+    pub const StartPointIndex_field_number: u32 = 1;
+    pub const EndPointIndex_field_number: u32 = 2;
+    pub const IsLookDir_field_number: u32 = 3;
+    pub const CycleCount_field_number: u32 = 4;
+    pub const IsCircle_field_number: u32 = 5;
+};
+pub const FeiXuePreheatInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+    pub const QuestUnlockTime_field_number: u32 = 3;
+};
+pub const TrapDefenseAuxiliaryData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const Branch_field_number: u32 = 3;
+    pub const MaxLevel_field_number: u32 = 4;
+};
+pub const TowerRolePb = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const LeaveSkillId_field_number: u32 = 2;
+    pub const SkillBranchId_field_number: u32 = 3;
+};
+pub const SimpleTrackReportMsg = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const LevelPlayId_field_number: u32 = 2;
+    pub const GainTreasureCount_field_number: u32 = 3;
+};
+pub const SceneFishPointData = struct {
+    pub const Id_field_number: u32 = 5;
+    pub const EntityConfigId_field_number: u32 = 1;
+    pub const CurCount_field_number: u32 = 2;
+    pub const MaxCount_field_number: u32 = 3;
+    pub const LastUpdateTime_field_number: u32 = 4;
+    pub const NextUpdateTime_field_number: u32 = 6;
+    pub const RefreshTime_field_number: u32 = 7;
+    pub const GamePlayId_field_number: u32 = 8;
+    pub const Interacted_field_number: u32 = 9;
+};
+pub const ForgeInfoRequest = struct {
+    pub const msg_id: u16 = 28952;
+};
+pub const ClientDataComponentPb = struct {
+    pub const IsStaticInit_field_number: u32 = 1;
+    pub const OwnerId_field_number: u32 = 2;
+    pub const GroupId_field_number: u32 = 3;
 };
 pub const RemoveBuffS2cRequestNotify = struct {
     pub const msg_id: u16 = 16736;
@@ -27729,22 +27335,505 @@ pub const RemoveBuffS2cRequestNotify = struct {
     pub const StackCount_field_number: u32 = 8;
     pub const Reason_field_number: u32 = 11;
 };
-pub const TrapDefenseGoldenCoinPbData = struct {
+pub const CombinationKey = struct {
+    pub const KeyNameList_field_number: u32 = 1;
+};
+pub const ExecuteQteRequest = struct {
+    pub const msg_id: u16 = 21912;
+    pub const DownEntityId_field_number: u32 = 15;
+    pub const UpEntityId_field_number: u32 = 4;
+    pub const FnvHash_field_number: u32 = 11;
+};
+pub const ActivityCorniceMeetingLevelEntryData = struct {
+    pub const MaxScore_field_number: u32 = 1;
+    pub const RemainTime_field_number: u32 = 2;
+    pub const UnlockTime_field_number: u32 = 3;
+    pub const RewardedMap_field_number: u32 = 4;
+};
+pub const CombatMaxCaseMessageRequest = struct {
+    pub const msg_id: u16 = 22264;
+};
+pub const UnlockRoleSkinListResponse = struct {
+    pub const msg_id: u16 = 23110;
+    pub const RoleSkinList_field_number: u32 = 4;
+};
+pub const WeaponSkinDeleteNotify = struct {
+    pub const msg_id: u16 = 20016;
+    pub const RoleId_field_number: u32 = 12;
+    pub const SkinId_field_number: u32 = 8;
+};
+pub const EntityRewardItemPb = struct {
+    pub const HasCount_field_number: u32 = 1;
+    pub const NextResetTime_field_number: u32 = 2;
+};
+pub const TrapDefenseSpecialCellPbData = struct {
     pub const ConfigId_field_number: u32 = 1;
 };
-pub const NpcDriveVehicleComponentPb = struct {
-    pub const VehicleCreatureId_field_number: u32 = 1;
-    pub const Seat_field_number: u32 = 2;
+pub const RogueBossInstData = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const CanUnlock_field_number: u32 = 3;
+    pub const UnlockTime_field_number: u32 = 4;
 };
-pub const PhantomPolishRequest = struct {
-    pub const msg_id: u16 = 26274;
-    pub const IncrId_field_number: u32 = 3;
-    pub const PhantomMainPropItemId_field_number: u32 = 4;
+pub const BuffItem = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const CdTime_field_number: u32 = 3;
 };
-pub const MoraleFlag = struct {
-    pub const FlagId_field_number: u32 = 1;
-    pub const BoxReceivedCount_field_number: u32 = 2;
-    pub const BoxTotalCount_field_number: u32 = 3;
+pub const RoleBreakThroughViewRequest = struct {
+    pub const msg_id: u16 = 18328;
+    pub const RoleId_field_number: u32 = 3;
+};
+pub const PhantomItemRequest = struct {
+    pub const msg_id: u16 = 26267;
+};
+pub const MotorFightLevelPb = struct {
+    pub const LevelId_field_number: u32 = 1;
+    pub const OpenTime_field_number: u32 = 2;
+    pub const Cleared_field_number: u32 = 3;
+    pub const BestScore_field_number: u32 = 4;
+    pub const LastRoleId_field_number: u32 = 5;
+};
+pub const OneForgeConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const RoadNavMoveData = struct {
+    pub const DestRoadId_field_number: u32 = 1;
+    pub const DestIndex_field_number: u32 = 2;
+    pub const GenRoadId_field_number: u32 = 3;
+    pub const GenRoadIndex_field_number: u32 = 4;
+};
+pub const FriendAllRequest = struct {
+    pub const msg_id: u16 = 24906;
+};
+pub const GameplayCueRequest = struct {
+    pub const msg_id: u16 = 27860;
+    pub const GameplayCueId_field_number: u32 = 11;
+};
+pub const ClientStorageLongData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const RoleShowListUpdateRequest = struct {
+    pub const msg_id: u16 = 29652;
+    pub const RoleList_field_number: u32 = 10;
+};
+pub const MotorDaCtxComponentPb = struct {
+    pub const MotorDaCtxId_field_number: u32 = 1;
+};
+pub const DamageContext = struct {
+    Source: ?union(enum) {
+    } = null,
+    Bullet: ?union(enum) {
+    } = null,
+    Skill: ?union(enum) {
+    } = null,
+    SkillMessage: ?union(enum) {
+    } = null,
+    pub const SourceType_field_number: u32 = 1;
+    pub const BulletId_field_number: u32 = 2;
+    pub const SkillId_field_number: u32 = 4;
+    pub const SkillMessageId_field_number: u32 = 5;
+    pub const BulletTags_field_number: u32 = 3;
+};
+pub const CounterAttackInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const FightState_field_number: u32 = 2;
+    pub const TriggerCounterType_field_number: u32 = 3;
+    pub const CounterAnIndex_field_number: u32 = 4;
+};
+pub const FlySkinWearAllRoleRequest = struct {
+    pub const msg_id: u16 = 27614;
+    pub const SkinId_field_number: u32 = 5;
+};
+pub const AbyssRewardInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const CanGetReward_field_number: u32 = 4;
+    pub const CurrentProgress_field_number: u32 = 6;
+    pub const TargetProgress_field_number: u32 = 7;
+    pub const CanUnlock_field_number: u32 = 9;
+};
+pub const SpecialGachaPair = struct {
+    pub const TypeId_field_number: u32 = 1;
+    pub const GachaId_field_number: u32 = 2;
+};
+pub const GachaInfoRequest = struct {
+    pub const msg_id: u16 = 19326;
+    pub const Language_field_number: u32 = 13;
+};
+pub const RoleTagChangePush = struct {
+    pub const msg_id: u16 = 23294;
+    pub const TagId_field_number: u32 = 9;
+    pub const TagCount_field_number: u32 = 1;
+};
+pub const EnergySyncRequest = struct {
+    pub const msg_id: u16 = 15665;
+    pub const EnergyTypes_field_number: u32 = 9;
+};
+pub const HackingComponentPb = struct {
+    pub const EntityIds_field_number: u32 = 1;
+};
+pub const PrivateChatDataRequest = struct {
+    pub const msg_id: u16 = 17367;
+};
+pub const MingSuGenInfo = struct {
+    pub const CreatureGenId_field_number: u32 = 1;
+};
+pub const NPCPerformGroupComponentPb = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const NormalItemRequest = struct {
+    pub const msg_id: u16 = 17067;
+};
+pub const DragonPoolInfo = struct {
+    pub const DragonPoolId_field_number: u32 = 1;
+    pub const ActiveStatus_field_number: u32 = 3;
+    pub const Level_field_number: u32 = 4;
+    pub const InjectedCoreItemCount_field_number: u32 = 5;
+};
+pub const PassiveSkillRemoveRequest = struct {
+    pub const msg_id: u16 = 23245;
+    pub const PassiveSkillId_field_number: u32 = 11;
+    pub const TargetEntityId_field_number: u32 = 5;
+};
+pub const HonamiStoryEquipItemInfo = struct {
+    pub const MainPropLibraryId_field_number: u32 = 1;
+    pub const OriBuffTempId_field_number: u32 = 2;
+    pub const ChildBuffTempId_field_number: u32 = 3;
+};
+pub const AdviceSetRequest = struct {
+    pub const msg_id: u16 = 18538;
+    pub const IsShow_field_number: u32 = 13;
+};
+pub const RTimeStopInstPush = struct {
+    pub const msg_id: u16 = 25672;
+    pub const Flag_field_number: u32 = 11;
+    pub const Duration_field_number: u32 = 6;
+};
+pub const BabelBuff = struct {
+    pub const BuffId_field_number: u32 = 1;
+    pub const Unlocked_field_number: u32 = 2;
+};
+pub const DropVisionItemResult = struct {
+    pub const PlayerId_field_number: u32 = 1;
+    pub const Drop_field_number: u32 = 2;
+};
+pub const EntityCtxPb = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const IncId_field_number: u32 = 2;
+};
+pub const ArrayIntDouble = struct {
+    pub const Key_field_number: u32 = 1;
+    pub const Value_field_number: u32 = 2;
+};
+pub const HonamiStoryAreaConfig = struct {
+    pub const AreaId_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+    pub const SecreteStatus_field_number: u32 = 3;
+};
+pub const PlayerHeadDataRequest = struct {
+    pub const msg_id: u16 = 28272;
+};
+pub const SceneLoadingFinishRequest = struct {
+    pub const msg_id: u16 = 20074;
+    pub const SceneId_field_number: u32 = 7;
+};
+pub const InitRangeRequest = struct {
+    pub const msg_id: u16 = 25016;
+    pub const EntityId_field_number: u32 = 4;
+    pub const EntitiesToRequest_field_number: u32 = 14;
+    pub const IsPlayerInRange_field_number: u32 = 3;
+};
+pub const ShortMessageInfo = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const LastConfigId_field_number: u32 = 2;
+    pub const IsRead_field_number: u32 = 3;
+    pub const IsReceived_field_number: u32 = 4;
+    pub const Options_field_number: u32 = 5;
+    pub const UnlockTime_field_number: u32 = 6;
+    pub const IsFinish_field_number: u32 = 7;
+};
+pub const SummonInfo = struct {
+    pub const SummonCfgId_field_number: u32 = 1;
+    pub const SummonerId_field_number: u32 = 2;
+    pub const SummonSkillId_field_number: u32 = 3;
+};
+pub const RoleRecordComponentPb = struct {
+    pub const IsAutoRole_field_number: u32 = 1;
+    pub const ConstateId_field_number: u32 = 2;
+};
+pub const SkillNodeInfo = struct {
+    pub const SubProtocol_field_number: u32 = 1;
+    pub const MontageIndex_field_number: u32 = 2;
+    pub const SpeedRatio_field_number: u32 = 3;
+    pub const SkillSingleId_field_number: u32 = 4;
+    pub const SkillIndex_field_number: u32 = 5;
+    pub const StartSection_field_number: u32 = 6;
+    pub const StartTimeSeconds_field_number: u32 = 7;
+};
+pub const MonthCardRequest = struct {
+    pub const msg_id: u16 = 27344;
+};
+pub const GuideFinishRequest = struct {
+    pub const msg_id: u16 = 19558;
+    pub const GroupId_field_number: u32 = 10;
+};
+pub const AnimStateChangeInfo = struct {
+    pub const AnimationStates_field_number: u32 = 1;
+    pub const SpecialAnimationStates_field_number: u32 = 2;
+    pub const ModelId_field_number: u32 = 3;
+};
+pub const TimelineTrackControlDataPb = struct {
+    pub const ControlPoint_field_number: u32 = 1;
+};
+pub const PutVisionGroupToTopRequest = struct {
+    pub const msg_id: u16 = 18124;
+    pub const Index_field_number: u32 = 14;
+};
+pub const OrderRemoveBuffByTagsRequest = struct {
+    pub const msg_id: u16 = 24311;
+    pub const TagIds_field_number: u32 = 5;
+};
+pub const EnterViewDirectionRequest = struct {
+    pub const msg_id: u16 = 29124;
+};
+pub const FlagChallengeRoleLevelInfo = struct {
+    pub const PerLevel_field_number: u32 = 1;
+    pub const PerExp_field_number: u32 = 2;
+};
+pub const PrivateTag = struct {
+    pub const PlayerId_field_number: u32 = 1;
+    pub const Tags_field_number: u32 = 31;
+};
+pub const BoardGridPositionInfo = struct {
+    pub const Row_field_number: u32 = 1;
+    pub const Column_field_number: u32 = 2;
+    pub const RotAngle_field_number: u32 = 3;
+};
+pub const WeaponItemRequest = struct {
+    pub const msg_id: u16 = 21432;
+};
+pub const EnterAreaRequest = struct {
+    pub const msg_id: u16 = 19992;
+    pub const Id_field_number: u32 = 12;
+    pub const LeaveId_field_number: u32 = 2;
+};
+pub const PreOpenDetections = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const PreOpenId_field_number: u32 = 2;
+    pub const PreOpenBeginTime_field_number: u32 = 3;
+    pub const PreOpenEndTIme_field_number: u32 = 4;
+};
+pub const ScratchCardRewardData = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+};
+pub const VisionAttrRecommendInfo = struct {
+    pub const AttrType_field_number: u32 = 1;
+    pub const AddType_field_number: u32 = 2;
+    pub const Usage_field_number: u32 = 3;
+};
+pub const MapMarkShowInfo = struct {
+    pub const MarkId_field_number: u32 = 1;
+    pub const ShowFlag_field_number: u32 = 2;
+};
+pub const PbOverRoleRequest = struct {
+    pub const msg_id: u16 = 24459;
+    pub const RoleId_field_number: u32 = 2;
+};
+pub const InfrNotice = struct {
+    pub const RoadId_field_number: u32 = 1;
+    pub const PasserId_field_number: u32 = 2;
+    pub const GiftCount_field_number: u32 = 3;
+    pub const CreateTime_field_number: u32 = 4;
+};
+pub const H5ViewActivityData = struct {
+    pub const RedDot_field_number: u32 = 1;
+};
+pub const SceneItemEventListenerComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
+};
+pub const BattleStateChangePush = struct {
+    pub const msg_id: u16 = 24927;
+    pub const EntityId_field_number: u32 = 3;
+    pub const InBattle_field_number: u32 = 1;
+};
+pub const DeleteVisionEquipGroupRequest = struct {
+    pub const msg_id: u16 = 28071;
+    pub const Index_field_number: u32 = 4;
+};
+pub const FragmentMemoryData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Flag_field_number: u32 = 2;
+    pub const FinishTime_field_number: u32 = 3;
+};
+pub const AllMsgRequest = struct {
+    pub const msg_id: u16 = 16871;
+};
+pub const WeaponSkinRequest = struct {
+    pub const msg_id: u16 = 26946;
+};
+pub const FightRoleInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+    pub const OnStageWithoutControl_field_number: u32 = 3;
+};
+pub const RecoverPropFromServer = struct {
+    pub const AttrId_field_number: u32 = 1;
+    pub const Ratio_field_number: u32 = 2;
+    pub const MaxValue_field_number: u32 = 4;
+    pub const ValueIncrement_field_number: u32 = 5;
+};
+pub const RTimeStopRequest = struct {
+    pub const msg_id: u16 = 27262;
+    pub const Flag_field_number: u32 = 2;
+    pub const IsStopCharacter_field_number: u32 = 8;
+    pub const Duration_field_number: u32 = 14;
+};
+pub const LevelPlayDestroyActionCtxPb = struct {
+    pub const LevelPlayId_field_number: u32 = 1;
+};
+pub const DrownEndTeleportRequest = struct {
+    pub const msg_id: u16 = 18623;
+};
+pub const PhantomIdentifyRequest = struct {
+    pub const msg_id: u16 = 16040;
+    pub const IncrId_field_number: u32 = 9;
+    pub const Count_field_number: u32 = 11;
+};
+pub const TriggerComponentPb = struct {
+    pub const TriggerCount_field_number: u32 = 1;
+    pub const ExitTriggerCount_field_number: u32 = 2;
+    pub const ConstateId_field_number: u32 = 3;
+};
+pub const ExchangeRewardResponse = struct {
+    pub const msg_id: u16 = 18898;
+    pub const ExchangeShareData_field_number: u32 = 13;
+    pub const ExchangeRewardData_field_number: u32 = 12;
+};
+pub const PassiveSkillRemovePush = struct {
+    pub const msg_id: u16 = 18960;
+    pub const PassiveSkillId_field_number: u32 = 11;
+    pub const TargetEntityId_field_number: u32 = 8;
+};
+pub const StringArrayBlackboard = struct {
+    pub const Values_field_number: u32 = 1;
+};
+pub const ServerPlayStationPlayOnlyStateResponse = struct {
+    pub const msg_id: u16 = 17551;
+    pub const CrossPlayEnabled_field_number: u32 = 7;
+};
+pub const AbyssDangoRoleData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const EquipItems_field_number: u32 = 3;
+};
+pub const FanComponentPb = struct {
+    pub const NumOfTurns_field_number: u32 = 1;
+};
+pub const LivenessRequest = struct {
+    pub const msg_id: u16 = 19370;
+};
+pub const FloroRanchSubDungeonHistoryData = struct {
+    pub const DataId_field_number: u32 = 1;
+    pub const MaxDays_field_number: u32 = 2;
+    pub const MaxCoins_field_number: u32 = 3;
+};
+pub const ArraySkillNode = struct {
+    pub const SkillNodeId_field_number: u32 = 1;
+    pub const IsActive_field_number: u32 = 2;
+    pub const SkillId_field_number: u32 = 3;
+};
+pub const PlayerTitleDataRequest = struct {
+    pub const msg_id: u16 = 27684;
+};
+pub const RemoveBuffByIdS2cRequestNotify = struct {
+    pub const msg_id: u16 = 16647;
+    pub const BuffId_field_number: u32 = 4;
+    pub const StackCount_field_number: u32 = 7;
+    pub const Reason_field_number: u32 = 6;
+};
+pub const SurvivorsPlayerCharacterPbData = struct {
+};
+pub const RoleVisionRecommendAttrRequest = struct {
+    pub const msg_id: u16 = 20768;
+    pub const RoleId_field_number: u32 = 5;
+};
+pub const ChangeStateConfirmNotify = struct {
+    pub const msg_id: u16 = 21494;
+    pub const FsmId_field_number: u32 = 10;
+    pub const State_field_number: u32 = 9;
+};
+pub const SurvivorsGoldenCoinPbData = struct {
+};
+pub const FlowOptionInfo = struct {
+    pub const TalkId_field_number: u32 = 1;
+    pub const OptionIndex_field_number: u32 = 2;
+};
+pub const GachaUsePoolRequest = struct {
+    pub const msg_id: u16 = 21752;
+    pub const GachaId_field_number: u32 = 4;
+    pub const PoolId_field_number: u32 = 14;
+};
+pub const MapTraceRequest = struct {
+    pub const msg_id: u16 = 28912;
+    pub const MarkId_field_number: u32 = 4;
+};
+pub const ShopTab = struct {
+    pub const ShopId_field_number: u32 = 1;
+    pub const TabId_field_number: u32 = 2;
+    pub const Sort_field_number: u32 = 3;
+    pub const Name_field_number: u32 = 4;
+    pub const Logic_field_number: u32 = 5;
+    pub const Enable_field_number: u32 = 6;
+};
+pub const WeatherControlInfoWithoutCheckAsyncRequest = struct {
+    pub const msg_id: u16 = 16375;
+};
+pub const ExitViewDirectionRequest = struct {
+    pub const msg_id: u16 = 16124;
+};
+pub const PhantomItemRemoveNotify = struct {
+    pub const msg_id: u16 = 24601;
+    pub const PhantomItemIncrIdList_field_number: u32 = 15;
+};
+pub const HonamiStoryNormalItemInfo = struct {
+};
+pub const GameplayTagData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const TagCount_field_number: u32 = 2;
+};
+pub const TowerDefenceInstanceInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Score_field_number: u32 = 2;
+    pub const Rewarded_field_number: u32 = 3;
+    pub const IsPassed_field_number: u32 = 4;
+    pub const UnlockTime_field_number: u32 = 5;
+    pub const MaxScore_field_number: u32 = 6;
+    pub const PassTime_field_number: u32 = 7;
+};
+pub const GlobalFixCtxPb = struct {
+    pub const FixId_field_number: u32 = 1;
+};
+pub const ApplyGameplayEffectRequest = struct {
+    pub const msg_id: u16 = 16690;
+    Time: ?union(enum) {
+    } = null,
+    pub const Duration_field_number: u32 = 8;
+    pub const Handle_field_number: u32 = 6;
+    pub const Id_field_number: u32 = 15;
+    pub const Level_field_number: u32 = 7;
+    pub const InstigatorId_field_number: u32 = 2;
+    pub const ApplyType_field_number: u32 = 5;
+    pub const ServerId_field_number: u32 = 12;
+    pub const StackCount_field_number: u32 = 4;
+    pub const IsActive_field_number: u32 = 10;
+};
+pub const ActiveBuffPush = struct {
+    pub const msg_id: u16 = 17978;
+    pub const Handle_field_number: u32 = 13;
+    pub const On_field_number: u32 = 3;
 };
 pub const ANStartPush = struct {
     pub const msg_id: u16 = 28589;
@@ -27752,18 +27841,61 @@ pub const ANStartPush = struct {
     pub const MontageIndex_field_number: u32 = 12;
     pub const AnIndex_field_number: u32 = 1;
 };
-pub const FlagChallengeRoleLevelInfo = struct {
-    pub const PerLevel_field_number: u32 = 1;
-    pub const PerExp_field_number: u32 = 2;
+pub const TsAnimNotifyStateAbsoluteTimeStopPush = struct {
+    pub const msg_id: u16 = 29718;
+    pub const Flag_field_number: u32 = 2;
+    pub const Duration_field_number: u32 = 11;
 };
-pub const PassiveSkillRemoveRequest = struct {
-    pub const msg_id: u16 = 23245;
-    pub const PassiveSkillId_field_number: u32 = 11;
-    pub const TargetEntityId_field_number: u32 = 5;
+pub const StateComponentPb = struct {
+    pub const ConstateId_field_number: u32 = 1;
 };
-pub const PrivateTag = struct {
-    pub const PlayerId_field_number: u32 = 1;
-    pub const Tags_field_number: u32 = 31;
+pub const TeleportTransferRequest = struct {
+    pub const msg_id: u16 = 24519;
+    pub const Id_field_number: u32 = 4;
+};
+pub const RemoveGameplayEffectPush = struct {
+    pub const msg_id: u16 = 23896;
+    pub const Handle_field_number: u32 = 11;
+    pub const EntityId_field_number: u32 = 7;
+    pub const IsPrematureRemoval_field_number: u32 = 14;
+    pub const Reason_field_number: u32 = 10;
+};
+pub const AddVisionEquipGroupRequest = struct {
+    pub const msg_id: u16 = 21281;
+    pub const RoleId_field_number: u32 = 10;
+    pub const Name_field_number: u32 = 4;
+};
+pub const ExploreSkillRoulette = struct {
+    pub const SkillIds_field_number: u32 = 1;
+    pub const ExtraItemId_field_number: u32 = 2;
+    pub const ExploreSkill_field_number: u32 = 3;
+};
+pub const FlowStartTeleportCtxPb = struct {
+    pub const FlowListName_field_number: u32 = 1;
+    pub const FlowId_field_number: u32 = 2;
+    pub const StateId_field_number: u32 = 3;
+};
+pub const LevelPlayStateMsg = struct {
+    pub const LevelPlayEntityId_field_number: u32 = 1;
+    pub const ExploratoryType_field_number: u32 = 2;
+    pub const StateType_field_number: u32 = 3;
+    pub const CompleteNumber_field_number: u32 = 4;
+    pub const IsHide_field_number: u32 = 5;
+    pub const HideGroupInfo_field_number: u32 = 6;
+    pub const IsUnlocked_field_number: u32 = 7;
+    pub const LevelPlayMarkUnlock_field_number: u32 = 8;
+};
+pub const CalabashSkinComponentPb = struct {
+    pub const CalabashSkinId_field_number: u32 = 1;
+};
+pub const AdventureItemData = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const ItemNum_field_number: u32 = 2;
+};
+pub const ActivateBuffRequest = struct {
+    pub const msg_id: u16 = 28326;
+    pub const Handle_field_number: u32 = 8;
+    pub const On_field_number: u32 = 12;
 };
 pub const SysBuffInformation = struct {
     pub const ServerId_field_number: u32 = 1;
@@ -27776,295 +27908,182 @@ pub const SysBuffInformation = struct {
     pub const ApplyType_field_number: u32 = 8;
     pub const IsIterable_field_number: u32 = 9;
 };
-pub const PullingFoundationComponentPb = struct {
-    pub const RelationId_field_number: u32 = 1;
-    pub const MatchIndex_field_number: u32 = 2;
+pub const BeControlledComponentPb = struct {
+    pub const PlayerEntityId_field_number: u32 = 1;
+    pub const RelationId_field_number: u32 = 2;
+    pub const IsShow_field_number: u32 = 3;
+    pub const MatchIndex_field_number: u32 = 4;
+    pub const ConstateId_field_number: u32 = 5;
 };
-pub const ThemeCelebration = struct {
-    pub const PersonalRewardIds_field_number: u32 = 1;
-    pub const WorldRewardIds_field_number: u32 = 2;
+pub const MotorDiyInfoRequest = struct {
+    pub const msg_id: u16 = 20134;
 };
-pub const SimpleCombatSplineMovePbType = struct {
-    pub const ConfigId_field_number: u32 = 3;
+pub const RoguelikeCurrencyNotify = struct {
+    pub const msg_id: u16 = 16446;
+    pub const V2s_field_number: u32 = 15;
 };
-pub const FanComponentPb = struct {
-    pub const NumOfTurns_field_number: u32 = 1;
-};
-pub const MotorInfoRequest = struct {
-    pub const msg_id: u16 = 15904;
-};
-pub const LevelPlayOpenActionCtxPb = struct {
+pub const LevelPlayCtxPb = struct {
     pub const LevelPlayId_field_number: u32 = 1;
 };
-pub const ANStartNotify = struct {
-    pub const msg_id: u16 = 26852;
-    pub const SkillId_field_number: u32 = 4;
-    pub const MontageIndex_field_number: u32 = 14;
-    pub const AnIndex_field_number: u32 = 2;
+pub const PlayerBattleStateChangeNotify = struct {
+    pub const msg_id: u16 = 16643;
+    pub const PlayerId_field_number: u32 = 4;
+    pub const InBattle_field_number: u32 = 7;
 };
-pub const SurvivorsMonsterPbData = struct {
-    pub const SpawnPointEntityId_field_number: u32 = 1;
+pub const DetectionUnlock = struct {
+    pub const MonsterDetectionIds_field_number: u32 = 1;
+    pub const DungeonDetectionIds_field_number: u32 = 2;
+    pub const SilentAreaDetectionIds_field_number: u32 = 3;
 };
-pub const CardShowEntry = struct {
-    pub const CardId_field_number: u32 = 1;
-    pub const IsRead_field_number: u32 = 2;
+pub const KillProgress = struct {
+    pub const MonId_field_number: u32 = 1;
+    pub const PrefabNum_field_number: u32 = 2;
+    pub const CurrNum_field_number: u32 = 3;
+    pub const TotalNum_field_number: u32 = 4;
 };
-pub const FurnitureDiySlotInfo = struct {
-    pub const SlotEntityCfgId_field_number: u32 = 1;
-    pub const RootFurnitureId_field_number: u32 = 2;
-    pub const SubFurnitureIds_field_number: u32 = 3;
+pub const NormalItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const ExpireTime_field_number: u32 = 4;
 };
-pub const ExecuteQteNotify = struct {
-    pub const msg_id: u16 = 19258;
-    pub const DownEntityId_field_number: u32 = 1;
-    pub const UpEntityId_field_number: u32 = 9;
-    pub const FnvHash_field_number: u32 = 13;
+pub const Int2Bool = struct {
+    pub const First_field_number: u32 = 1;
+    pub const Second_field_number: u32 = 2;
 };
-pub const AiHateEntity = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const HatredValue_field_number: u32 = 2;
+pub const EntityPatrolStopRequest = struct {
+    pub const msg_id: u16 = 27186;
+    pub const EntityId_field_number: u32 = 6;
 };
-pub const FollowShooterComponentPb = struct {
-    pub const PlayerEntityId_field_number: u32 = 1;
-    pub const SummonConfigId_field_number: u32 = 2;
+pub const PlayMontageTaskAndRequest = struct {
+    pub const msg_id: u16 = 17594;
+    pub const MontageName_field_number: u32 = 9;
+    pub const MontagePathHash_field_number: u32 = 7;
+    pub const SpeedRatio_field_number: u32 = 2;
+    pub const StartSection_field_number: u32 = 14;
+    pub const StartTimeSeconds_field_number: u32 = 10;
 };
-pub const CalabashSkinDataRequest = struct {
-    pub const msg_id: u16 = 26810;
+pub const ActiveBulletHandle = struct {
+    pub const PlayerId_field_number: u32 = 1;
+    pub const HandleId_field_number: u32 = 2;
 };
-pub const GetDetectionLabelInfoRequest = struct {
-    pub const msg_id: u16 = 18745;
+pub const FlySkinEquipData = struct {
+    pub const SkinId_field_number: u32 = 1;
+    pub const RoleIds_field_number: u32 = 2;
+};
+pub const MonsterBoomRequest = struct {
+    pub const msg_id: u16 = 16346;
+    pub const Delay_field_number: u32 = 12;
 };
 pub const ActivityRoleGiveData = struct {
     pub const IsGetReward_field_number: u32 = 1;
 };
-pub const InitRangeRequest = struct {
-    pub const msg_id: u16 = 25016;
-    pub const EntityId_field_number: u32 = 4;
-    pub const EntitiesToRequest_field_number: u32 = 14;
-    pub const IsPlayerInRange_field_number: u32 = 3;
+pub const DevLoginCheckData = struct {
+    pub const ProtoVersion_field_number: u32 = 1;
+    pub const ProtoMD5_field_number: u32 = 2;
+    pub const ConfigVersion_field_number: u32 = 3;
+    pub const ConfigMD5_field_number: u32 = 4;
+    pub const BranchName_field_number: u32 = 5;
+    pub const ProtoSeedMD5_field_number: u32 = 6;
 };
-pub const ShieldInfoPb = struct {
-    pub const Handle_field_number: u32 = 1;
-    pub const ConfigId_field_number: u32 = 2;
-    pub const ShieldValue_field_number: u32 = 3;
-    pub const Priority_field_number: u32 = 4;
-    pub const BuffHandle_field_number: u32 = 5;
-    pub const IsValid_field_number: u32 = 6;
+pub const SimpleTrackReportAsyncRequest = struct {
+    pub const msg_id: u16 = 28604;
 };
-pub const LongShanMainData = struct {
+pub const SecGetReportData2FlowRequest = struct {
+    pub const msg_id: u16 = 16214;
+    pub const ReportData_field_number: u32 = 11;
+};
+pub const BuffEffectExecutePush = struct {
+    pub const msg_id: u16 = 21178;
+    pub const HandleId_field_number: u32 = 8;
+    pub const Index_field_number: u32 = 9;
+};
+pub const PayItemInfo = struct {
     pub const Id_field_number: u32 = 1;
-    pub const Tasks_field_number: u32 = 2;
-    pub const CanUnlock_field_number: u32 = 3;
-    pub const BeginOpenTime_field_number: u32 = 4;
-    pub const EndOpenTime_field_number: u32 = 5;
+    pub const PayId_field_number: u32 = 2;
+    pub const ItemId_field_number: u32 = 3;
+    pub const ItemCount_field_number: u32 = 4;
+    pub const BonusItemCount_field_number: u32 = 5;
+    pub const SpecialBonusItemCount_field_number: u32 = 6;
+    pub const CanSpecialBonus_field_number: u32 = 7;
+    pub const StageImage_field_number: u32 = 8;
+    pub const ProductId_field_number: u32 = 9;
+    pub const Amount_field_number: u32 = 10;
+    pub const ComplianceDetail_field_number: u32 = 11;
+    pub const Quality_field_number: u32 = 12;
 };
-pub const DrinkMixData = struct {
-    pub const RoleLevelInfo_field_number: u32 = 1;
+pub const VisionTriggerPush = struct {
+    pub const msg_id: u16 = 28349;
+    pub const VisionId_field_number: u32 = 13;
 };
-pub const SkinRewardActivityRewardInfo = struct {
-    pub const ConfigId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
+pub const StateTagComponentPb = struct {
+    pub const StateTagId_field_number: u32 = 1;
 };
-pub const InterruptSkillInDelayResponse = struct {
-    pub const msg_id: u16 = 17219;
-    pub const SkillId_field_number: u32 = 15;
+pub const SelectDetectionTarget = struct {
+    pub const DetectionId_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const Id_field_number: u32 = 3;
+    pub const IsTrace_field_number: u32 = 4;
+};
+pub const NearbyTrackingComponentPb = struct {
+    pub const IsEnable_field_number: u32 = 1;
+};
+pub const EntityStaticHookMoveResponse = struct {
+    pub const msg_id: u16 = 17162;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const PbBattlePassRecurringReward = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const ItemId_field_number: u32 = 2;
+    pub const Count_field_number: u32 = 3;
+};
+pub const GachaUsePoolResponse = struct {
+    pub const msg_id: u16 = 28683;
     pub const ErrorCode_field_number: u32 = 7;
 };
-pub const RecoverPropChangedNotify = struct {
-    pub const msg_id: u16 = 24709;
-    pub const Attributes_field_number: u32 = 14;
-    pub const Duration_field_number: u32 = 1;
+pub const PlayerMotionResponse = struct {
+    pub const msg_id: u16 = 22545;
+    pub const ErrorId_field_number: u32 = 9;
 };
-pub const LifePointDrawActivityData = struct {
-    pub const LifePointChallengeData_field_number: u32 = 1;
+pub const TagComponentPb = struct {
+    pub const GameplayTags_field_number: u32 = 1;
+    pub const EntityCommonTags_field_number: u32 = 2;
+    pub const InitGameplayTag_field_number: u32 = 3;
 };
-pub const SwitchLogicStateRequest = struct {
-    pub const msg_id: u16 = 18018;
-    pub const States_field_number: u32 = 10;
-    pub const ClientEntityId_field_number: u32 = 15;
+pub const SwitchCharacterStateRequest = struct {
+    pub const msg_id: u16 = 20754;
+    pub const CombatCommon_field_number: u32 = 12;
+    pub const Id_field_number: u32 = 15;
+    pub const OldState_field_number: u32 = 5;
+    pub const NewState_field_number: u32 = 6;
 };
-pub const FormationAttrRequest = struct {
-    pub const msg_id: u16 = 29242;
-    pub const Duration_field_number: u32 = 3;
-    pub const FormationAttrs_field_number: u32 = 14;
+pub const EncircleActivityPb = struct {
+    pub const Challenges_field_number: u32 = 1;
 };
-pub const AnimalDieResponse = struct {
-    pub const msg_id: u16 = 26306;
-    pub const ErrorCode_field_number: u32 = 1;
+pub const BoneVisibleChangeRequest = struct {
+    pub const msg_id: u16 = 22130;
+    pub const BoneVisibleData_field_number: u32 = 9;
 };
-pub const BoneVisibleChangePush = struct {
-    pub const msg_id: u16 = 17209;
-    pub const BoneVisibleData_field_number: u32 = 12;
-};
-pub const UpdateFormationRequest = struct {
-    pub const msg_id: u16 = 19092;
-    pub const Formations_field_number: u32 = 7;
-};
-pub const SceneItemLifeCycleComponentCreateCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const CaughtPush = struct {
-    pub const msg_id: u16 = 15311;
-    pub const Info_field_number: u32 = 3;
-};
-pub const AnimationStateChangedResponse = struct {
-    pub const msg_id: u16 = 18703;
-    pub const ErrorCode_field_number: u32 = 14;
-};
-pub const AllLimitTimeReward = struct {
-    pub const SignState_field_number: u32 = 1;
-    pub const CurProgress_field_number: u32 = 2;
-    pub const Target_field_number: u32 = 3;
-    pub const ConfigId_field_number: u32 = 4;
-};
-pub const EntityTriggerCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const TriggerEntityIncId_field_number: u32 = 2;
-};
-pub const RoleElementChangeResponse = struct {
-    pub const msg_id: u16 = 21974;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const VisionFetterRecommendInfo = struct {
-    pub const Usage_field_number: u32 = 2;
-    pub const RecommendFetterGroupInfos_field_number: u32 = 3;
-};
-pub const FarmGoldData = struct {
-    pub const PointRewardGet_field_number: u32 = 1;
-    pub const LevelPlayTasks_field_number: u32 = 2;
-};
-pub const MotorCreateResponse = struct {
-    pub const msg_id: u16 = 21276;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const FsmBlackboardNotify = struct {
-    pub const msg_id: u16 = 17802;
-    pub const FsmBlackBoards_field_number: u32 = 14;
-};
-pub const Mp4BackgroundColorPb = struct {
-    pub const FadeIn_field_number: u32 = 1;
-    pub const FadeOut_field_number: u32 = 2;
-};
-pub const CounterAttackPush = struct {
-    pub const msg_id: u16 = 24347;
-    pub const CounterAttackInfo_field_number: u32 = 1;
-};
-pub const FormationAttrResponse = struct {
-    pub const msg_id: u16 = 16663;
-    pub const ErrorCode_field_number: u32 = 13;
-};
-pub const AnimationStateComponentPb = struct {
-    pub const AnimationStates_field_number: u32 = 1;
-    pub const SpecialStates_field_number: u32 = 2;
-    pub const BoneVisibleDatas_field_number: u32 = 3;
-    pub const AnimationTags_field_number: u32 = 4;
+pub const AnimationStateChangedNotify = struct {
+    pub const msg_id: u16 = 26660;
+    pub const CombatCommon_field_number: u32 = 7;
+    pub const Id_field_number: u32 = 11;
+    pub const States_field_number: u32 = 6;
+    pub const TimeStamp_field_number: u32 = 1;
+    pub const SpecialStates_field_number: u32 = 13;
     pub const ModelId_field_number: u32 = 5;
 };
-pub const ActivityLinkageTabData = struct {
-    pub const TabDataId_field_number: u32 = 1;
-    pub const EndTime_field_number: u32 = 2;
-    pub const RewardData_field_number: u32 = 3;
-    pub const IsReceive_field_number: u32 = 4;
-    pub const StartTime_field_number: u32 = 5;
+pub const VisionSkillChangeNotify = struct {
+    pub const msg_id: u16 = 28357;
+    pub const EntityId_field_number: u32 = 3;
+    pub const VisionSkillInfos_field_number: u32 = 2;
 };
-pub const RoleLoadEquipData = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const Pos_field_number: u32 = 2;
-    pub const EquipIncId_field_number: u32 = 3;
+pub const ExploreSkillRouletteUpdateNotify = struct {
+    pub const msg_id: u16 = 22396;
+    pub const RouletteInfo_field_number: u32 = 8;
 };
-pub const ActivityFunPlayChallengeData = struct {
-    pub const ChallengeId_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const RewardStatus_field_number: u32 = 3;
-    pub const FunPlaySharpComment_field_number: u32 = 4;
-    pub const FinishTime_field_number: u32 = 5;
-};
-pub const CharacterBattleStateChangeNotify = struct {
-    pub const msg_id: u16 = 18452;
-    pub const CharacterBattleStateInfo_field_number: u32 = 15;
-};
-pub const NewLinkStateNotify = struct {
-    pub const msg_id: u16 = 25397;
-    pub const LinkConfigId_field_number: u32 = 15;
-    pub const Current_field_number: u32 = 2;
-    pub const PlayerId_field_number: u32 = 13;
-};
-pub const ClientTriggerActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const IsEnter_field_number: u32 = 2;
-};
-pub const PrivateChatRequest = struct {
-    pub const msg_id: u16 = 15995;
-    pub const TargetUid_field_number: u32 = 14;
-    pub const ChatContentType_field_number: u32 = 15;
-    pub const Content_field_number: u32 = 5;
-};
-pub const LordGymPassRecord = struct {
-    pub const LoadGymId_field_number: u32 = 1;
-    pub const PassTime_field_number: u32 = 2;
-    pub const RoleIds_field_number: u32 = 3;
-};
-pub const QuestReviewDataResponse = struct {
-    pub const msg_id: u16 = 23616;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const AdviceSetResponse = struct {
-    pub const msg_id: u16 = 19652;
-    pub const IsShow_field_number: u32 = 11;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const MotorIsEnablePush = struct {
-    pub const msg_id: u16 = 28018;
-    pub const Id_field_number: u32 = 8;
-    pub const IsEnable_field_number: u32 = 2;
-    pub const CombatCommon_field_number: u32 = 7;
-};
-pub const MailBindInfoResponse = struct {
-    pub const msg_id: u16 = 16592;
-    pub const MailBind_field_number: u32 = 4;
-};
-pub const TriggerExitSkillResponse = struct {
-    pub const msg_id: u16 = 18091;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const MonsterDrownRequest = struct {
-    pub const msg_id: u16 = 26760;
-    pub const Pos_field_number: u32 = 1;
-};
-pub const ExecuteQteResponse = struct {
-    pub const msg_id: u16 = 21045;
+pub const PassiveSkillRemoveResponse = struct {
+    pub const msg_id: u16 = 17980;
     pub const ErrorCode_field_number: u32 = 3;
-};
-pub const FragmentMemoryItem = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Data_field_number: u32 = 2;
-    pub const IsUnlock_field_number: u32 = 3;
-};
-pub const BattleStateChangeResponse = struct {
-    pub const msg_id: u16 = 29299;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const EntityIsVisibleNotify = struct {
-    pub const msg_id: u16 = 26786;
-    pub const Id_field_number: u32 = 7;
-    pub const IsVisible_field_number: u32 = 3;
-    pub const CombatCommon_field_number: u32 = 12;
-};
-pub const EnterGameResponse = struct {
-    pub const msg_id: u16 = 106;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const ClientWaitingMode_field_number: u32 = 2;
-    pub const ClientWaitingTime_field_number: u32 = 3;
-    pub const ClientAutoInInterval_field_number: u32 = 4;
-};
-pub const PlayerMotionRequest = struct {
-    pub const msg_id: u16 = 20764;
-    pub const Motion_field_number: u32 = 6;
-};
-pub const FadeBackgroundFadeInEffectPb = struct {
-    FadeInEffectPb: ?union(enum) {
-    } = null,
-    pub const FadeBackgroundFadeInEffectBlackPb_field_number: u32 = 1;
 };
 pub const DrownEndTeleportPush = struct {
     pub const msg_id: u16 = 20549;
@@ -28072,85 +28091,117 @@ pub const DrownEndTeleportPush = struct {
     } = null,
     pub const TeleportPos_field_number: u32 = 11;
 };
-pub const TimelineTrackComponentPb = struct {
-    pub const Index_field_number: u32 = 1;
-    pub const ControlDatas_field_number: u32 = 2;
+pub const TowerDefenseActivityInfo = struct {
+    pub const InstanceInfos_field_number: u32 = 1;
+    pub const RewardedScoreIds_field_number: u32 = 2;
+    pub const TotalScore_field_number: u32 = 3;
+    pub const ShowName_field_number: u32 = 4;
 };
-pub const AiHatePush = struct {
-    pub const msg_id: u16 = 21318;
-    pub const HateList_field_number: u32 = 5;
-};
-pub const SwitchLogicStateResponse = struct {
-    pub const msg_id: u16 = 16747;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const DrownResponse = struct {
-    pub const msg_id: u16 = 22546;
-    pub const ErrorCode_field_number: u32 = 13;
-};
-pub const UpdateSceneDateResponse = struct {
-    pub const msg_id: u16 = 22664;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const CurrDate_field_number: u32 = 4;
-};
-pub const MaterialResponse = struct {
-    pub const msg_id: u16 = 24064;
-    pub const ErrorCode_field_number: u32 = 7;
-};
-pub const CharacterDetachResponse = struct {
-    pub const msg_id: u16 = 16128;
+pub const DestroyBulletResponse = struct {
+    pub const msg_id: u16 = 17203;
     pub const ErrorCode_field_number: u32 = 11;
 };
-pub const SwitchLogicStatePush = struct {
-    pub const msg_id: u16 = 29049;
-    pub const States_field_number: u32 = 2;
-    pub const ClientEntityId_field_number: u32 = 15;
+pub const RbLaserEmitterPbType = struct {
+    pub const LaserPoints_field_number: u32 = 1;
 };
-pub const ApplyGameplayEffectResponse = struct {
-    pub const msg_id: u16 = 21780;
-    pub const ErrorCode_field_number: u32 = 15;
+pub const VectorArrayBlackboard = struct {
+    pub const Values_field_number: u32 = 1;
 };
-pub const EntityRemoveNotify = struct {
-    pub const msg_id: u16 = 20583;
-    pub const RemoveInfos_field_number: u32 = 5;
-    pub const IsRemove_field_number: u32 = 15;
+pub const MarkPointInfo = struct {
+    pub const PosX_field_number: u32 = 1;
+    pub const PosY_field_number: u32 = 2;
+    pub const PosZ_field_number: u32 = 3;
+    pub const ConfigId_field_number: u32 = 4;
+    pub const MarkId_field_number: u32 = 5;
+    pub const IsTrace_field_number: u32 = 6;
+    pub const MarkType_field_number: u32 = 7;
+    pub const MapId_field_number: u32 = 8;
+    pub const IsServerDisable_field_number: u32 = 9;
+    pub const MarkPointState_field_number: u32 = 10;
 };
-pub const PatrolInfoPb = struct {
-    Data: ?union(enum) {
-    } = null,
-    pub const SmartObjectComponent_field_number: u32 = 1;
+pub const FsmCustomBlackboardDatas = struct {
+    pub const BlackboardIntValues_field_number: u32 = 1;
 };
-pub const EntityDestructibleCtxPb = struct {
+pub const BuffStackCountResponse = struct {
+    pub const msg_id: u16 = 17938;
+    pub const ErrorCode_field_number: u32 = 9;
+};
+pub const EntityAfterConditionActionCtxPb = struct {
     pub const EntityCtx_field_number: u32 = 1;
+    pub const PreCondtionListeningIndex_field_number: u32 = 2;
+    pub const AfterCondtionListeningIndex_field_number: u32 = 3;
 };
-pub const OccupiedBoardGridInfo = struct {
-    pub const Pos_field_number: u32 = 1;
-    pub const OccupyingEntityConfigId_field_number: u32 = 2;
-    pub const EntityConfigType_field_number: u32 = 3;
+pub const AllLimitTimeReward = struct {
+    pub const SignState_field_number: u32 = 1;
+    pub const CurProgress_field_number: u32 = 2;
+    pub const Target_field_number: u32 = 3;
+    pub const ConfigId_field_number: u32 = 4;
 };
-pub const BuffEffectResponse = struct {
-    pub const msg_id: u16 = 18157;
-    pub const ErrorCode_field_number: u32 = 4;
+pub const MonsterCreatorProgressSlot = struct {
+    pub const WaveId_field_number: u32 = 1;
+    pub const KillMonIds_field_number: u32 = 2;
+    pub const CurrentWaveEndTime_field_number: u32 = 3;
+    pub const SpawnStepType_field_number: u32 = 4;
+    pub const CreatorEntityConfigId_field_number: u32 = 5;
+    pub const MonsterInfo_field_number: u32 = 6;
 };
-pub const TargetGearHitPartCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const HitPartIndex_field_number: u32 = 2;
+pub const ModifyBulletParamsResponse = struct {
+    pub const msg_id: u16 = 23708;
+    pub const ErrorCode_field_number: u32 = 11;
 };
-pub const EnergyUpdateNotify = struct {
-    pub const msg_id: u16 = 20201;
-    pub const UpdateInfo_field_number: u32 = 7;
+pub const PhantomItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const IncrId_field_number: u32 = 2;
+    pub const FuncValue_field_number: u32 = 3;
+    pub const PhantomLevel_field_number: u32 = 4;
+    pub const PhantomExp_field_number: u32 = 5;
+    pub const PhantomMainProp_field_number: u32 = 6;
+    pub const PhantomSubProp_field_number: u32 = 7;
+    pub const FetterGroupId_field_number: u32 = 8;
+    pub const SkinId_field_number: u32 = 9;
+    pub const UnAckSubProp_field_number: u32 = 10;
+    pub const LockPropIndex_field_number: u32 = 11;
 };
-pub const HitEndPush = struct {
-    pub const msg_id: u16 = 25504;
-    pub const CombatCommon_field_number: u32 = 9;
-    pub const TargetId_field_number: u32 = 4;
+pub const VehiclePb = struct {
+    pub const Source_field_number: u32 = 1;
 };
-pub const LivenessInfo = struct {
-    pub const LivenessCount_field_number: u32 = 1;
-    pub const RewardedLiveness_field_number: u32 = 2;
-    pub const Tasks_field_number: u32 = 3;
-    pub const DayEnd_field_number: u32 = 4;
-    pub const AreaId_field_number: u32 = 5;
+pub const ActivityCorniceMeetingData = struct {
+    pub const UnlockTime_field_number: u32 = 1;
+    pub const LevelEntryData_field_number: u32 = 2;
+};
+pub const FsmBlackboardNotify = struct {
+    pub const msg_id: u16 = 17802;
+    pub const FsmBlackBoards_field_number: u32 = 14;
+};
+pub const PlayMontageTaskAndResponse = struct {
+    pub const msg_id: u16 = 16394;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const TotalTopUpActivityInfo = struct {
+    pub const Score_field_number: u32 = 1;
+    pub const TotalTopUpRewardInfos_field_number: u32 = 2;
+};
+pub const AchievementEntry = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const FinishTime_field_number: u32 = 2;
+    pub const IsReceive_field_number: u32 = 3;
+    pub const Progress_field_number: u32 = 4;
+};
+pub const MonsterBoomResponse = struct {
+    pub const msg_id: u16 = 21128;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const CounterAttackPush = struct {
+    pub const msg_id: u16 = 24347;
+    pub const CounterAttackInfo_field_number: u32 = 1;
+};
+pub const AdventureRewardData = struct {
+    pub const DropId_field_number: u32 = 1;
+    pub const Items_field_number: u32 = 2;
+};
+pub const MailBindInfoResponse = struct {
+    pub const msg_id: u16 = 16592;
+    pub const MailBind_field_number: u32 = 4;
 };
 pub const PrivateChatResponse = struct {
     pub const msg_id: u16 = 23837;
@@ -28159,34 +28210,974 @@ pub const PrivateChatResponse = struct {
     pub const MsgId_field_number: u32 = 12;
     pub const FilterMsg_field_number: u32 = 2;
 };
+pub const ExploreSkillPullGiantCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const GivebackInfoResponse = struct {
+    pub const msg_id: u16 = 20680;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const ApplyBuffS2cResponsePush = struct {
+    pub const msg_id: u16 = 28769;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const Handle_field_number: u32 = 10;
+    pub const IsActive_field_number: u32 = 2;
+};
+pub const WeaponItemResponse = struct {
+    pub const msg_id: u16 = 25866;
+    pub const WeaponItemList_field_number: u32 = 13;
+};
+pub const RTimeStopInstResponse = struct {
+    pub const msg_id: u16 = 21503;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const AiBlackboardCdResponse = struct {
+    pub const msg_id: u16 = 22438;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const FightBuffEffectContext = struct {
+    dRoundAction: ?union(enum) {
+    } = null,
+    Effect: ?union(enum) {
+    } = null,
+    pub const LeftCooldown_field_number: u32 = 1;
+    pub const AttributeEventEffectData_field_number: u32 = 6;
+};
+pub const ClientStorageMapMapData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const SceneItemStateChangeConditionAction = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const StateIndex_field_number: u32 = 2;
+    pub const ConditionIndex_field_number: u32 = 3;
+};
+pub const AttributeChangedResponse = struct {
+    pub const msg_id: u16 = 23612;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const MonsterDrownResponse = struct {
+    pub const msg_id: u16 = 29618;
+    pub const ErrorCode_field_number: u32 = 12;
+};
+pub const PartUpdateRequest = struct {
+    pub const msg_id: u16 = 18661;
+    pub const EntityId_field_number: u32 = 11;
+    pub const PartUpdateInfos_field_number: u32 = 8;
+};
+pub const AccessPathTimeServerConfigResponse = struct {
+    pub const msg_id: u16 = 29143;
+    pub const AccessPathTimeServerConfig_field_number: u32 = 9;
+};
+pub const MotorIsEnablePush = struct {
+    pub const msg_id: u16 = 28018;
+    pub const Id_field_number: u32 = 8;
+    pub const IsEnable_field_number: u32 = 2;
+    pub const CombatCommon_field_number: u32 = 7;
+};
+pub const EntityCommonTagNotify = struct {
+    pub const msg_id: u16 = 20813;
+    pub const Id_field_number: u32 = 6;
+    pub const Tags_field_number: u32 = 2;
+};
+pub const SurvivorsLevelData = struct {
+    ModeInfo: ?union(enum) {
+    } = null,
+    pub const EndlessInfo_field_number: u32 = 4;
+    pub const LevelId_field_number: u32 = 1;
+    pub const OpenTime_field_number: u32 = 2;
+    pub const NormalInfo_field_number: u32 = 3;
+};
+pub const WeaponBreachResponse = struct {
+    pub const msg_id: u16 = 28583;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const IncId_field_number: u32 = 6;
+    pub const WeaponBreach_field_number: u32 = 9;
+};
+pub const MonsterDrownRequest = struct {
+    pub const msg_id: u16 = 26760;
+    pub const Pos_field_number: u32 = 1;
+};
+pub const RbRollMovement = struct {
+    pub const Direction_field_number: u32 = 1;
+};
+pub const AttrData = struct {
+    pub const AttributeType_field_number: u32 = 1;
+    pub const CurrentValue_field_number: u32 = 2;
+    pub const ValueIncrement_field_number: u32 = 3;
+};
+pub const PreheatSignActivityData = struct {
+    pub const PreheatSignNodeInfos_field_number: u32 = 1;
+};
+pub const DynamicEntityRewardCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const ApplyGameplayEffectResponse = struct {
+    pub const msg_id: u16 = 21780;
+    pub const ErrorCode_field_number: u32 = 15;
+};
+pub const RoleSkinChangeResponse = struct {
+    pub const msg_id: u16 = 25479;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const RoleSkillNodeNotify = struct {
+    pub const msg_id: u16 = 16590;
+    pub const RoleId_field_number: u32 = 10;
+    pub const SkillNodeState_field_number: u32 = 11;
+};
+pub const RolePhantomPropInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const BaseProp_field_number: u32 = 2;
+    pub const AddProp_field_number: u32 = 3;
+};
+pub const ActivityMoonSignInData = struct {
+    pub const MoonPhaseSelectList_field_number: u32 = 1;
+    pub const IsGrandReward_field_number: u32 = 2;
+    pub const CurrentMoonId_field_number: u32 = 3;
+};
+pub const VisionSkillComponentPb = struct {
+    pub const VisionSkillInfos_field_number: u32 = 1;
+};
+pub const LifePointDrawActivityData = struct {
+    pub const LifePointChallengeData_field_number: u32 = 1;
+};
+pub const WeaponLevelUpResponse = struct {
+    pub const msg_id: u16 = 19780;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const IncId_field_number: u32 = 2;
+    pub const WeaponLevel_field_number: u32 = 7;
+    pub const WeaponExp_field_number: u32 = 1;
+    pub const ItemMap_field_number: u32 = 8;
+};
+pub const InputAxis = struct {
+    pub const AxisName_field_number: u32 = 1;
+    pub const KeyScaleMap_field_number: u32 = 2;
+    pub const Version_field_number: u32 = 3;
+    pub const InputType_field_number: u32 = 4;
+};
+pub const BattleStateChangeResponse = struct {
+    pub const msg_id: u16 = 29299;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const BookItemInfo = struct {
+    pub const BookItemId_field_number: u32 = 1;
+    pub const BookItemState_field_number: u32 = 2;
+};
+pub const SkinRewardActivityRewardInfo = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const BeamCastHitPlayerActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const SysBuffComponentPb = struct {
+    pub const SysBuffInfos_field_number: u32 = 1;
+};
+pub const DamageExecuteRequest = struct {
+    pub const msg_id: u16 = 18137;
+    pub const DamageId_field_number: u32 = 9;
+    pub const SkillLevel_field_number: u32 = 6;
+    pub const AttackerEntityId_field_number: u32 = 13;
+    pub const TargetEntityId_field_number: u32 = 10;
+    pub const IsAddEnergy_field_number: u32 = 1;
+    pub const IsCounterAttack_field_number: u32 = 11;
+    pub const ForceCritical_field_number: u32 = 7;
+    pub const IsBlocked_field_number: u32 = 12;
+    pub const PartIndex_field_number: u32 = 4;
+    pub const CounterSkillMessageId_field_number: u32 = 15;
+    pub const DamageContext_field_number: u32 = 2;
+    pub const RandomSeed_field_number: u32 = 3;
+    pub const IsBreakWeakness_field_number: u32 = 5;
+};
+pub const SummonerComponentPb = struct {
+    pub const SummonerId_field_number: u32 = 1;
+    pub const SummonCfgId_field_number: u32 = 2;
+    pub const SummonSkillId_field_number: u32 = 3;
+    pub const PlayerId_field_number: u32 = 4;
+    pub const Type_field_number: u32 = 5;
+};
+pub const CalabashSkinTakeOnResponse = struct {
+    pub const msg_id: u16 = 24892;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const SkinId_field_number: u32 = 3;
+};
+pub const FragmentMemoryItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Data_field_number: u32 = 2;
+    pub const IsUnlock_field_number: u32 = 3;
+};
+pub const GameplayCueResponse = struct {
+    pub const msg_id: u16 = 15857;
+    pub const ErrorCode_field_number: u32 = 12;
+};
+pub const ScratchTicketRoundData = struct {
+    pub const RoundId_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const AreaStageRewardDataList_field_number: u32 = 3;
+    pub const LeftRewardItem_field_number: u32 = 4;
+};
+pub const ItemDeprecateResponse = struct {
+    pub const msg_id: u16 = 25040;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const RoleConfigInfoNotify = struct {
+    pub const msg_id: u16 = 20061;
+    pub const RoleConfigs_field_number: u32 = 7;
+};
+pub const LoginResponse = struct {
+    pub const msg_id: u16 = 104;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const ReconnectToken_field_number: u32 = 2;
+    pub const Timestamp_field_number: u32 = 3;
+    pub const Platform_field_number: u32 = 4;
+    pub const ClientWaitingMode_field_number: u32 = 5;
+    pub const ClientWaitingTime_field_number: u32 = 6;
+    pub const ClientAutoInInterval_field_number: u32 = 7;
+    pub const ClientDisplayTime_field_number: u32 = 8;
+};
+pub const InfrFirePb = struct {
+    pub const FireExp_field_number: u32 = 1;
+    pub const FireLevel_field_number: u32 = 2;
+    pub const FireLevelReachTime_field_number: u32 = 3;
+    pub const FireStatus_field_number: u32 = 4;
+};
+pub const RhythmSubLevelPb = struct {
+    pub const SubLevelId_field_number: u32 = 1;
+    pub const Cleared_field_number: u32 = 2;
+    pub const BestScore_field_number: u32 = 3;
+    pub const BestAccuracy_field_number: u32 = 4;
+    pub const BestRank_field_number: u32 = 5;
+};
+pub const TutorialInfoResponse = struct {
+    pub const msg_id: u16 = 22322;
+    pub const UnlockList_field_number: u32 = 10;
+};
+pub const SwitchLogicStateResponse = struct {
+    pub const msg_id: u16 = 16747;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const PbUpLevelRoleResponse = struct {
+    pub const msg_id: u16 = 27676;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const RoleId_field_number: u32 = 3;
+    pub const Exp_field_number: u32 = 4;
+    pub const Level_field_number: u32 = 13;
+    pub const ItemMap_field_number: u32 = 6;
+};
+pub const FlowEndResponse = struct {
+    pub const msg_id: u16 = 25044;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const TrampleDeActiveCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const PatrolInfoPb = struct {
+    Data: ?union(enum) {
+    } = null,
+    pub const SmartObjectComponent_field_number: u32 = 1;
+};
+pub const FavorQuest = struct {
+    pub const Chapter_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const InputAction = struct {
+    pub const ActionName_field_number: u32 = 1;
+    pub const KeyNameList_field_number: u32 = 2;
+    pub const Version_field_number: u32 = 3;
+    pub const InputType_field_number: u32 = 4;
+};
+pub const BroadcastAddBuffFailedNotify = struct {
+    pub const msg_id: u16 = 28514;
+    pub const BuffId_field_number: u32 = 6;
+    pub const StackCount_field_number: u32 = 8;
+    pub const InstigatorId_field_number: u32 = 13;
+    pub const TransferContextId_field_number: u32 = 7;
+};
+pub const HitEndRequest = struct {
+    pub const msg_id: u16 = 26051;
+    pub const CombatCommon_field_number: u32 = 5;
+    pub const TargetId_field_number: u32 = 1;
+};
+pub const EntityInteractResponse = struct {
+    pub const msg_id: u16 = 23767;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const Interacting_field_number: u32 = 9;
+};
+pub const RenjuCompleteActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const Controller_field_number: u32 = 2;
+};
+pub const TetrisLevelInfo = struct {
+    vdC: ?union(enum) {
+    } = null,
+    ehC: ?union(enum) {
+    } = null,
+    thC: ?union(enum) {
+    } = null,
+    pub const DifficultyIdx_field_number: u32 = 2;
+    pub const State_field_number: u32 = 3;
+    pub const UnlockTime_field_number: u32 = 4;
+    pub const Id_field_number: u32 = 1;
+    pub const Results_field_number: u32 = 5;
+};
+pub const ClientStorageMapListData = struct {
+    pub const Data_field_number: u32 = 1;
+};
+pub const PayGiftInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const PayId_field_number: u32 = 2;
+    pub const ItemId_field_number: u32 = 3;
+    pub const ItemCount_field_number: u32 = 4;
+    pub const Sort_field_number: u32 = 5;
+    pub const BuyLimit_field_number: u32 = 6;
+    pub const BoughtCount_field_number: u32 = 7;
+    pub const StageImage_field_number: u32 = 8;
+    pub const BeginTime_field_number: u32 = 9;
+    pub const EndTime_field_number: u32 = 10;
+    pub const ProductId_field_number: u32 = 11;
+    pub const Amount_field_number: u32 = 12;
+    pub const TabId_field_number: u32 = 13;
+    pub const Type_field_number: u32 = 14;
+    pub const Locked_field_number: u32 = 15;
+    pub const IsCanBuy_field_number: u32 = 16;
+    pub const IsRemind_field_number: u32 = 17;
+    pub const BuyCondition_field_number: u32 = 18;
+    pub const CloudGameTime_field_number: u32 = 19;
+    pub const CloudGameIcon_field_number: u32 = 20;
+    pub const Desc_field_number: u32 = 21;
+    pub const UpdateType_field_number: u32 = 22;
+    pub const UpdateTime_field_number: u32 = 23;
+    pub const LastUpdateTime_field_number: u32 = 24;
+    pub const Tag_field_number: u32 = 25;
+    pub const PromotionShow_field_number: u32 = 26;
+    pub const ShowStageImage_field_number: u32 = 27;
+    pub const CurrencyDiscountTags_field_number: u32 = 28;
+    pub const ComplianceDetail_field_number: u32 = 29;
+    pub const Quality_field_number: u32 = 30;
+};
+pub const LevelPlayInfoNotify = struct {
+    pub const msg_id: u16 = 25844;
+    pub const LevelPlayInfo_field_number: u32 = 8;
+};
+pub const PhantomArenaDeckInfo = struct {
+    pub const Name_field_number: u32 = 1;
+    pub const BattleCardIds_field_number: u32 = 2;
+    pub const CanUse_field_number: u32 = 3;
+    pub const LastUseChallengeId_field_number: u32 = 4;
+    pub const Index_field_number: u32 = 5;
+    pub const SkillUnlockInfos_field_number: u32 = 6;
+};
+pub const MowTowerLevelsInfo = struct {
+    pub const BabelTowerLevelId_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const IsUnlock_field_number: u32 = 3;
+    pub const FirstScore_field_number: u32 = 4;
+    pub const SecondScore_field_number: u32 = 9;
+    pub const LevelRewardStatus_field_number: u32 = 5;
+    pub const HardLevelBuffs_field_number: u32 = 6;
+    pub const FirstRoleSelection_field_number: u32 = 7;
+    pub const SecondRoleSelection_field_number: u32 = 8;
+};
+pub const PrivateChatRequest = struct {
+    pub const msg_id: u16 = 15995;
+    pub const TargetUid_field_number: u32 = 14;
+    pub const ChatContentType_field_number: u32 = 15;
+    pub const Content_field_number: u32 = 5;
+};
+pub const OccupiedBoardGridInfo = struct {
+    pub const Pos_field_number: u32 = 1;
+    pub const OccupyingEntityConfigId_field_number: u32 = 2;
+    pub const EntityConfigType_field_number: u32 = 3;
+};
+pub const LanguageSettingUpdateResponse = struct {
+    pub const msg_id: u16 = 27354;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const ActorVisibleResponse = struct {
+    pub const msg_id: u16 = 16769;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const CaughtPush = struct {
+    pub const msg_id: u16 = 15311;
+    pub const Info_field_number: u32 = 3;
+};
+pub const ChatContentProto = struct {
+    pub const SenderUid_field_number: u32 = 1;
+    pub const ChatContentType_field_number: u32 = 2;
+    pub const Content_field_number: u32 = 3;
+    pub const OfflineMsg_field_number: u32 = 4;
+    pub const UtcTime_field_number: u32 = 5;
+    pub const MsgId_field_number: u32 = 6;
+    pub const PsAccountId_field_number: u32 = 7;
+    pub const XboxAccountId_field_number: u32 = 8;
+};
+pub const CaughtNotify = struct {
+    pub const msg_id: u16 = 18619;
+    pub const Info_field_number: u32 = 8;
+};
+pub const PbRoleSkillLevelNotify = struct {
+    pub const msg_id: u16 = 25376;
+    pub const RoleId_field_number: u32 = 15;
+    pub const SkillInfo_field_number: u32 = 14;
+};
+pub const NormalItemResponse = struct {
+    pub const msg_id: u16 = 28483;
+    pub const NormalItemList_field_number: u32 = 15;
+};
+pub const JigsawFoundationUnMatchedActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const MatchedIndex_field_number: u32 = 2;
+};
+pub const GetDetectionLabelInfoResponse = struct {
+    pub const msg_id: u16 = 19890;
+    pub const UnlockLabelInfo_field_number: u32 = 3;
+};
+pub const TimeCheckResponse = struct {
+    pub const msg_id: u16 = 25796;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const ClientTime_field_number: u32 = 8;
+    pub const ServerTime_field_number: u32 = 10;
+    pub const ServerCombatTime_field_number: u32 = 1;
+    pub const ServerStopTime_field_number: u32 = 5;
+    pub const ServerFlowTimestamp_field_number: u32 = 9;
+};
+pub const TeleportTransferResponse = struct {
+    pub const msg_id: u16 = 28143;
+    pub const ErrorCode_field_number: u32 = 4;
+    pub const MapId_field_number: u32 = 13;
+    pub const PosX_field_number: u32 = 10;
+    pub const PosY_field_number: u32 = 1;
+    pub const PosZ_field_number: u32 = 5;
+    pub const Pitch_field_number: u32 = 9;
+    pub const Yaw_field_number: u32 = 12;
+    pub const Roll_field_number: u32 = 3;
+};
+pub const EntityIsVisiblePush = struct {
+    pub const msg_id: u16 = 20489;
+    pub const Id_field_number: u32 = 13;
+    pub const IsVisible_field_number: u32 = 4;
+    pub const CombatCommon_field_number: u32 = 9;
+};
+pub const PbUpLevelRoleRequest = struct {
+    pub const msg_id: u16 = 21664;
+    pub const RoleId_field_number: u32 = 5;
+    pub const ItemList_field_number: u32 = 1;
+};
+pub const ExitViewDirectionResponse = struct {
+    pub const msg_id: u16 = 24259;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const EntityCalabashSkinChangeNotify = struct {
+    pub const msg_id: u16 = 21665;
+    pub const EntityId_field_number: u32 = 1;
+    pub const CalabashSkinCoponent_field_number: u32 = 11;
+};
+pub const AnimationStateInitRequest = struct {
+    pub const msg_id: u16 = 19853;
+    pub const CombatCommon_field_number: u32 = 1;
+    pub const Id_field_number: u32 = 10;
+    pub const States_field_number: u32 = 3;
+    pub const SpecialStates_field_number: u32 = 13;
+    pub const ModelId_field_number: u32 = 4;
+};
+pub const OrderRemoveBuffByTagsResponse = struct {
+    pub const msg_id: u16 = 20255;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const InfrOneRoad = struct {
+    pub const RoadId_field_number: u32 = 1;
+    pub const status_field_number: u32 = 2;
+    pub const CompleteTime_field_number: u32 = 3;
+    pub const TotalGiftCount_field_number: u32 = 4;
+    pub const LastGiftTime_field_number: u32 = 5;
+};
+pub const PlayerMotionRequest = struct {
+    pub const msg_id: u16 = 20764;
+    pub const Motion_field_number: u32 = 6;
+};
+pub const TimelineTrackComponentPb = struct {
+    pub const Index_field_number: u32 = 1;
+    pub const ControlDatas_field_number: u32 = 2;
+};
+pub const ShieldUpdateInfo = struct {
+    pub const Handle_field_number: u32 = 1;
+    pub const ConfigId_field_number: u32 = 2;
+    pub const ShieldValue_field_number: u32 = 3;
+    pub const UpdateType_field_number: u32 = 4;
+};
+pub const InfrTaskPb = struct {
+    pub const TaskId_field_number: u32 = 1;
+    pub const Target_field_number: u32 = 2;
+    pub const status_field_number: u32 = 3;
+};
+pub const NormalInteractCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const OptionIndex_field_number: u32 = 2;
+};
+pub const AnimationStateInitPush = struct {
+    pub const msg_id: u16 = 22857;
+    pub const CombatCommon_field_number: u32 = 9;
+    pub const Id_field_number: u32 = 6;
+    pub const States_field_number: u32 = 13;
+    pub const SpecialStates_field_number: u32 = 14;
+    pub const ModelId_field_number: u32 = 15;
+};
+pub const PrivateChatOperateResponse = struct {
+    pub const msg_id: u16 = 20461;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const JigsawFoundationMatchedConditionActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const MatchedIndex_field_number: u32 = 2;
+    pub const ConditionIndex_field_number: u32 = 3;
+};
+pub const ActivityLineCrossData = struct {
+    pub const Challenges_field_number: u32 = 1;
+};
+pub const ItemExchangeInfoResponse = struct {
+    pub const msg_id: u16 = 18099;
+    pub const ItemExchangeInfos_field_number: u32 = 14;
+};
+pub const TutorialReceiveResponse = struct {
+    pub const msg_id: u16 = 23772;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const ErrorParams_field_number: u32 = 7;
+    pub const ItemMap_field_number: u32 = 11;
+};
+pub const FadeBackgroundFadeInEffectPb = struct {
+    FadeInEffectPb: ?union(enum) {
+    } = null,
+    pub const FadeBackgroundFadeInEffectBlackPb_field_number: u32 = 1;
+};
+pub const EntityIsVisibleNotify = struct {
+    pub const msg_id: u16 = 26786;
+    pub const Id_field_number: u32 = 7;
+    pub const IsVisible_field_number: u32 = 3;
+    pub const CombatCommon_field_number: u32 = 12;
+};
+pub const SceneItemLifeCycleComponentDestroyCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
 pub const AiHateRequest = struct {
     pub const msg_id: u16 = 20649;
     pub const HateList_field_number: u32 = 14;
 };
-pub const AnimationStateInitNotify = struct {
-    pub const msg_id: u16 = 28947;
-    pub const CombatCommon_field_number: u32 = 11;
-    pub const Id_field_number: u32 = 1;
-    pub const States_field_number: u32 = 4;
-    pub const TimeStamp_field_number: u32 = 10;
-    pub const SpecialStates_field_number: u32 = 8;
+pub const PrivateChatOperateRequest = struct {
+    pub const msg_id: u16 = 22965;
+    pub const OperateType_field_number: u32 = 8;
+    pub const TargetPlayerId_field_number: u32 = 6;
+};
+pub const StateChangeActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const StateIndex_field_number: u32 = 2;
+};
+pub const VisionExploreSkillSetResponse = struct {
+    pub const msg_id: u16 = 18563;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const SkillId_field_number: u32 = 15;
+};
+pub const FragileChangeResponse = struct {
+    pub const msg_id: u16 = 15073;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const FormationAttrNotify = struct {
+    pub const msg_id: u16 = 15274;
+    pub const Duration_field_number: u32 = 7;
+    pub const FormationAttrs_field_number: u32 = 12;
+};
+pub const RewardItemInfoList = struct {
+    pub const ItemList_field_number: u32 = 1;
+};
+pub const HitEndPush = struct {
+    pub const msg_id: u16 = 25504;
+    pub const CombatCommon_field_number: u32 = 9;
+    pub const TargetId_field_number: u32 = 4;
+};
+pub const EnergyUpdateNotify = struct {
+    pub const msg_id: u16 = 20201;
+    pub const UpdateInfo_field_number: u32 = 7;
+};
+pub const EntityPatrolStopResponse = struct {
+    pub const msg_id: u16 = 26881;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const AnimationStateChangedPush = struct {
+    pub const msg_id: u16 = 20006;
+    pub const CombatCommon_field_number: u32 = 4;
+    pub const Id_field_number: u32 = 8;
+    pub const States_field_number: u32 = 3;
+    pub const SpecialStates_field_number: u32 = 5;
     pub const ModelId_field_number: u32 = 15;
 };
-pub const BossRushScoreRewardData = struct {
-    pub const RewardDataId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
+pub const RacingBetsSeasonData = struct {
+    pub const CurCash_field_number: u32 = 1;
+    pub const TotalCash_field_number: u32 = 2;
+    pub const RacingBetsLegMatchData_field_number: u32 = 3;
+    pub const HitNum_field_number: u32 = 4;
+};
+pub const FlowOptionInfoList = struct {
+    pub const OptionIndexList_field_number: u32 = 1;
+};
+pub const RTimeStopResponse = struct {
+    pub const msg_id: u16 = 20786;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const UpdateVoxelEnvResponse = struct {
+    pub const msg_id: u16 = 18786;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const ServerCaveMode_field_number: u32 = 13;
+};
+pub const AreaExploreInfo = struct {
+    pub const AreaId_field_number: u32 = 1;
+    pub const ExploreProgress_field_number: u32 = 2;
+    pub const ExplorePercent_field_number: u32 = 3;
 };
 pub const FlySkinWearResponse = struct {
     pub const msg_id: u16 = 23334;
     pub const ErrorCode_field_number: u32 = 1;
 };
-pub const ExploreSkillRouletteUpdateNotify = struct {
-    pub const msg_id: u16 = 22396;
-    pub const RouletteInfo_field_number: u32 = 8;
+pub const MapTraceResponse = struct {
+    pub const msg_id: u16 = 27016;
+    pub const ErrorCode_field_number: u32 = 6;
+    pub const MarkId_field_number: u32 = 8;
 };
-pub const EntityConditionListeningActionCtxPb = struct {
+pub const ExecuteQteResponse = struct {
+    pub const msg_id: u16 = 21045;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const EntityFollowTrackResponse = struct {
+    pub const msg_id: u16 = 18748;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const StorageInfoUpdateResponse = struct {
+    pub const msg_id: u16 = 29067;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const RoleTrialInfoActivity = struct {
+    pub const RoleTrialTask_field_number: u32 = 1;
+};
+pub const RolePassiveSkillInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const PassiveSkillInfoList_field_number: u32 = 2;
+};
+pub const GetMusicInfoResponse = struct {
+    pub const msg_id: u16 = 23549;
+    pub const MusicIds_field_number: u32 = 15;
+    pub const CurMusicId_field_number: u32 = 4;
+    pub const ErrorCode_field_number: u32 = 13;
+    pub const FavoriteMusicList_field_number: u32 = 8;
+};
+pub const SummonResponse = struct {
+    pub const msg_id: u16 = 25321;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const WeaponResonUpResponse = struct {
+    pub const msg_id: u16 = 24656;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const IncId_field_number: u32 = 7;
+    pub const ResonLevel_field_number: u32 = 11;
+};
+pub const AnimalDieResponse = struct {
+    pub const msg_id: u16 = 26306;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const DamageExecuteNotify = struct {
+    pub const msg_id: u16 = 18170;
+    pub const DamageId_field_number: u32 = 15;
+    pub const AttackerEntityId_field_number: u32 = 13;
+    pub const TargetEntityId_field_number: u32 = 5;
+    pub const Damage_field_number: u32 = 6;
+    pub const PartIndex_field_number: u32 = 11;
+    pub const IsCrit_field_number: u32 = 7;
+    pub const KilledTarget_field_number: u32 = 1;
+    pub const ShieldCoverDamage_field_number: u32 = 10;
+    pub const SkillLevel_field_number: u32 = 3;
+    pub const DamageContext_field_number: u32 = 2;
+    pub const ImmuneType_field_number: u32 = 12;
+    pub const ElementType_field_number: u32 = 8;
+    pub const ChangeLife_field_number: u32 = 9;
+    pub const ChangeWeakness_field_number: u32 = 14;
+    pub const Bop_field_number: u32 = 4;
+};
+pub const GatherTaskDoneInfo = struct {
+    pub const TaskId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const AiInformationResponse = struct {
+    pub const msg_id: u16 = 20373;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const PbMoveToPointConfig = struct {
+    pub const TargetPos_field_number: u32 = 1;
+    pub const MoveType_field_number: u32 = 2;
+};
+pub const InfluenceInfoResponse = struct {
+    pub const msg_id: u16 = 17716;
+    pub const InfluenceInfos_field_number: u32 = 9;
+};
+pub const TransitionWithSpecialCustomLoadingPb = struct {
+    LoadingType: ?union(enum) {
+    } = null,
+    pub const HonamiStoryCustomLoadingPb_field_number: u32 = 1;
+};
+pub const PbOverRoleResponse = struct {
+    pub const msg_id: u16 = 19902;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const RoleId_field_number: u32 = 13;
+    pub const Breakthrough_field_number: u32 = 9;
+};
+pub const PartUpdatePush = struct {
+    pub const msg_id: u16 = 26694;
+    pub const EntityId_field_number: u32 = 12;
+    pub const PartUpdateInfos_field_number: u32 = 11;
+};
+pub const NormalItemUpdateNotify = struct {
+    pub const msg_id: u16 = 22488;
+    pub const NormalItemList_field_number: u32 = 2;
+    pub const NoTips_field_number: u32 = 5;
+};
+pub const AiInformationNotify = struct {
+    pub const msg_id: u16 = 27626;
+    pub const AiBlackboardCd_field_number: u32 = 8;
+};
+pub const AdviceSetResponse = struct {
+    pub const msg_id: u16 = 19652;
+    pub const IsShow_field_number: u32 = 11;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const CharacterBattleStateChangeNotify = struct {
+    pub const msg_id: u16 = 18452;
+    pub const CharacterBattleStateInfo_field_number: u32 = 15;
+};
+pub const PhantomLevelUpRequest = struct {
+    pub const msg_id: u16 = 24192;
+    pub const IncId_field_number: u32 = 1;
+    pub const ConsumeList_field_number: u32 = 12;
+    pub const SlotCount_field_number: u32 = 6;
+};
+pub const MotorFightTalentTreePb = struct {
+    pub const Talent_field_number: u32 = 1;
+};
+pub const FsmStateBehaviorResponse = struct {
+    pub const msg_id: u16 = 23304;
+    pub const FsmId_field_number: u32 = 2;
+    pub const State_field_number: u32 = 3;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const AiHateNotify = struct {
+    pub const msg_id: u16 = 25548;
+    pub const HateList_field_number: u32 = 6;
+};
+pub const CaughtRequest = struct {
+    pub const msg_id: u16 = 28718;
+    pub const Info_field_number: u32 = 15;
+};
+pub const LordGymPassRecord = struct {
+    pub const LoadGymId_field_number: u32 = 1;
+    pub const PassTime_field_number: u32 = 2;
+    pub const RoleIds_field_number: u32 = 3;
+};
+pub const TeleportFinishResponse = struct {
+    pub const msg_id: u16 = 25360;
+    pub const ErrorCode_field_number: u32 = 2;
+};
+pub const EntityEquipSkinChangeNotify = struct {
+    pub const msg_id: u16 = 17097;
+    pub const EntityId_field_number: u32 = 8;
+    pub const WeaponSkinComponentPb_field_number: u32 = 2;
+};
+pub const AnimalDropResponse = struct {
+    pub const msg_id: u16 = 25665;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const RemoveGameplayEffectResponse = struct {
+    pub const msg_id: u16 = 26850;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const Handle_field_number: u32 = 12;
+};
+pub const CrystalMonsterInfoPb = struct {
+    pub const SlotInfoList_field_number: u32 = 1;
+};
+pub const EntityIsVisibleRequest = struct {
+    pub const msg_id: u16 = 27946;
+    pub const Id_field_number: u32 = 14;
+    pub const IsVisible_field_number: u32 = 11;
+    pub const CombatCommon_field_number: u32 = 15;
+};
+pub const RoleShowListUpdateResponse = struct {
+    pub const msg_id: u16 = 19592;
+    pub const ErrorCode_field_number: u32 = 9;
+};
+pub const FormationAttrRequest = struct {
+    pub const msg_id: u16 = 29242;
+    pub const Duration_field_number: u32 = 3;
+    pub const FormationAttrs_field_number: u32 = 14;
+};
+pub const UpdateSceneDateResponse = struct {
+    pub const msg_id: u16 = 22664;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const CurrDate_field_number: u32 = 4;
+};
+pub const BossRushScoreRewardData = struct {
+    pub const RewardDataId_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const ExploreSkillActionCtxPb = struct {
     pub const EntityCtx_field_number: u32 = 1;
-    pub const EntityConditionListeningIndex_field_number: u32 = 2;
+};
+pub const ToughCalcExtraRatioChangeResponse = struct {
+    pub const msg_id: u16 = 28215;
+    pub const ErrorCode_field_number: u32 = 9;
+};
+pub const EntityFlySkinChangeData = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const FlySkinConfigData_field_number: u32 = 2;
+};
+pub const PbAdviceContent = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const Id_field_number: u32 = 2;
+    pub const Word_field_number: u32 = 3;
+};
+pub const MotorCreateResponse = struct {
+    pub const msg_id: u16 = 21276;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const ActivityMapExploreData = struct {
+    pub const ActivityTasks_field_number: u32 = 1;
+};
+pub const WeaponLevelUpRequest = struct {
+    pub const msg_id: u16 = 26370;
+    pub const IncId_field_number: u32 = 7;
+    pub const ConsumeList_field_number: u32 = 2;
+};
+pub const GetItemProgress = struct {
+    pub const Info_field_number: u32 = 1;
+};
+pub const NewLinkStateNotify = struct {
+    pub const msg_id: u16 = 25397;
+    pub const LinkConfigId_field_number: u32 = 15;
+    pub const Current_field_number: u32 = 2;
+    pub const PlayerId_field_number: u32 = 13;
+};
+pub const SwitchCharacterStatePush = struct {
+    pub const msg_id: u16 = 29638;
+    pub const CombatCommon_field_number: u32 = 14;
+    pub const Id_field_number: u32 = 4;
+    pub const OldState_field_number: u32 = 11;
+    pub const NewState_field_number: u32 = 13;
+};
+pub const BuffEffectResponse = struct {
+    pub const msg_id: u16 = 18157;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const AnimationGameplayTagResponse = struct {
+    pub const msg_id: u16 = 24651;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const PbRolePropsNotify = struct {
+    pub const msg_id: u16 = 22752;
+    pub const RoleId_field_number: u32 = 3;
+    pub const BaseProp_field_number: u32 = 7;
+    pub const AddProp_field_number: u32 = 13;
+};
+pub const AnimationStateChangedResponse = struct {
+    pub const msg_id: u16 = 18703;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const CalabashDevelopInfo = struct {
+    pub const MonsterId_field_number: u32 = 1;
+    pub const UnlockConditions_field_number: u32 = 2;
+};
+pub const HonamiStoryRoleData = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const RoleSlots_field_number: u32 = 2;
+    pub const DressWeapon_field_number: u32 = 3;
+};
+pub const RoleSkillBranchModifyResponse = struct {
+    pub const msg_id: u16 = 23822;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const FavorItem = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const CreateBulletResponse = struct {
+    pub const msg_id: u16 = 25339;
+    pub const ErrorCode_field_number: u32 = 2;
+};
+pub const SwitchLogicStatePush = struct {
+    pub const msg_id: u16 = 29049;
+    pub const States_field_number: u32 = 2;
+    pub const ClientEntityId_field_number: u32 = 15;
+};
+pub const NormalItemAddNotify = struct {
+    pub const msg_id: u16 = 29252;
+    pub const NormalItemList_field_number: u32 = 9;
+    pub const NoTips_field_number: u32 = 7;
+    pub const Reason_field_number: u32 = 5;
+};
+pub const ItemDict = struct {
+    pub const Items_field_number: u32 = 1;
+};
+pub const BehaviorTreeCtxPb = struct {
+    pub const IncId_field_number: u32 = 1;
+    pub const BtType_field_number: u32 = 2;
+    pub const BtId_field_number: u32 = 3;
+    pub const NodeId_field_number: u32 = 4;
+};
+pub const TowerFloorPb = struct {
+    pub const TowerConfigId_field_number: u32 = 1;
+    pub const Star_field_number: u32 = 2;
+    pub const Formation_field_number: u32 = 4;
+    pub const StarIndex_field_number: u32 = 5;
+    pub const IsQuickPass_field_number: u32 = 6;
+};
+pub const ClientTriggerActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const IsEnter_field_number: u32 = 2;
+};
+pub const Mp4BackgroundColorPb = struct {
+    pub const FadeIn_field_number: u32 = 1;
+    pub const FadeOut_field_number: u32 = 2;
+};
+pub const RecoverPropChangedNotify = struct {
+    pub const msg_id: u16 = 24709;
+    pub const Attributes_field_number: u32 = 14;
+    pub const Duration_field_number: u32 = 1;
+};
+pub const AreaInfo = struct {
+    pub const AreaId_field_number: u32 = 1;
+    pub const Atmosphere_field_number: u32 = 2;
+    pub const FurnitureDiySlotInfos_field_number: u32 = 3;
+};
+pub const EnterViewDirectionResponse = struct {
+    pub const msg_id: u16 = 25415;
+    pub const ErrorCode_field_number: u32 = 15;
+};
+pub const EntityIsVisibleResponse = struct {
+    pub const msg_id: u16 = 27972;
+    pub const ErrorCode_field_number: u32 = 12;
+};
+pub const ActivateBuffResponse = struct {
+    pub const msg_id: u16 = 29570;
+    pub const ErrorCode_field_number: u32 = 15;
+};
+pub const SimpleCombatComponentPb = struct {
+    SplineConfig: ?union(enum) {
+    } = null,
+    SplineMove: ?union(enum) {
+    } = null,
+    pub const SplineConfigId_field_number: u32 = 3;
+    pub const SplineMoveType_field_number: u32 = 6;
+    pub const SubTypeId_field_number: u32 = 1;
+    pub const BuffLayers_field_number: u32 = 4;
+    pub const SimpleCombatEntityAttributePbInfo_field_number: u32 = 5;
+};
+pub const UpdateChildQuestNodeStatusNotify = struct {
+    pub const msg_id: u16 = 24634;
+    pub const TreeOwnerId_field_number: u32 = 10;
+    pub const TreeIncId_field_number: u32 = 4;
+    pub const NodeId_field_number: u32 = 14;
+    pub const Status_field_number: u32 = 11;
 };
 pub const PlayerDetails = struct {
     pub const PlayerId_field_number: u32 = 1;
@@ -28223,6 +29214,60 @@ pub const PlayerDetails = struct {
     pub const MatchXboxUser_field_number: u32 = 32;
     pub const XboxSocialState_field_number: u32 = 33;
 };
+pub const IllustratedEntry = struct {
+    SubType: ?union(enum) {
+    } = null,
+    pub const PhotographSubType_field_number: u32 = 5;
+    pub const Id_field_number: u32 = 1;
+    pub const CreateTime_field_number: u32 = 2;
+    pub const Num_field_number: u32 = 3;
+    pub const IsRead_field_number: u32 = 4;
+};
+pub const AnimalDieRequest = struct {
+    pub const msg_id: u16 = 18443;
+    pub const EntityId_field_number: u32 = 10;
+    pub const Pos_field_number: u32 = 6;
+};
+pub const DrownEndTeleportResponse = struct {
+    pub const msg_id: u16 = 20954;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const RemoveBuffS2cResponsePush = struct {
+    pub const msg_id: u16 = 28391;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const EquipWeaponSkinRequest = struct {
+    pub const msg_id: u16 = 22516;
+    pub const Data_field_number: u32 = 3;
+};
+pub const AnimationStateInitResponse = struct {
+    pub const msg_id: u16 = 21761;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const SwitchCharacterStateResponse = struct {
+    pub const msg_id: u16 = 25352;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const MapCancelTraceResponse = struct {
+    pub const msg_id: u16 = 27482;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const MarkId_field_number: u32 = 15;
+};
+pub const SkillResponse = struct {
+    pub const msg_id: u16 = 16065;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const EntityConditionListeningActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const EntityConditionListeningIndex_field_number: u32 = 2;
+};
+pub const EnterGameResponse = struct {
+    pub const msg_id: u16 = 106;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const ClientWaitingMode_field_number: u32 = 2;
+    pub const ClientWaitingTime_field_number: u32 = 3;
+    pub const ClientAutoInInterval_field_number: u32 = 4;
+};
 pub const FsmStateBehaviorRequest = struct {
     pub const msg_id: u16 = 15791;
     pub const FsmId_field_number: u32 = 4;
@@ -28230,156 +29275,158 @@ pub const FsmStateBehaviorRequest = struct {
     pub const Index_field_number: u32 = 15;
     pub const Type_field_number: u32 = 12;
 };
-pub const CreateBulletResponse = struct {
-    pub const msg_id: u16 = 25339;
-    pub const ErrorCode_field_number: u32 = 2;
-};
-pub const PlayerMotionResponse = struct {
-    pub const msg_id: u16 = 22545;
-    pub const ErrorId_field_number: u32 = 9;
-};
-pub const TutorialInfoResponse = struct {
-    pub const msg_id: u16 = 22322;
-    pub const UnlockList_field_number: u32 = 10;
-};
-pub const HitEndRequest = struct {
-    pub const msg_id: u16 = 26051;
-    pub const CombatCommon_field_number: u32 = 5;
-    pub const TargetId_field_number: u32 = 1;
-};
-pub const MapUnlockFieldInfoResponse = struct {
-    pub const msg_id: u16 = 17075;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const FieldId_field_number: u32 = 15;
-};
-pub const EntityAccessRangeRequest = struct {
-    pub const msg_id: u16 = 26826;
-    pub const EntityId_field_number: u32 = 14;
-    pub const EntitiesToCheck_field_number: u32 = 10;
-    pub const RangeType_field_number: u32 = 15;
-};
-pub const JigsawFoundationUnMatchedActionCtxPb = struct {
+pub const JigsawFoundationMatchedActionCtxPb = struct {
     pub const EntityCtx_field_number: u32 = 1;
     pub const MatchedIndex_field_number: u32 = 2;
 };
-pub const RTimeStopResponse = struct {
-    pub const msg_id: u16 = 20786;
-    pub const ErrorCode_field_number: u32 = 1;
+pub const AdventreTask = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+    pub const AdventreProgress_field_number: u32 = 3;
 };
-pub const TeleportFinishResponse = struct {
-    pub const msg_id: u16 = 25360;
-    pub const ErrorCode_field_number: u32 = 2;
+pub const DrinkMixData = struct {
+    pub const RoleLevelInfo_field_number: u32 = 1;
 };
-pub const InputSettingUpdateResponse = struct {
-    pub const msg_id: u16 = 15542;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const JigsawFoundationMatchedConditionActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const MatchedIndex_field_number: u32 = 2;
-    pub const ConditionIndex_field_number: u32 = 3;
-};
-pub const ClientStorageMapMapData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const CalabashSkinDataResponse = struct {
-    pub const msg_id: u16 = 29749;
-    pub const ErrorCode_field_number: u32 = 10;
-    pub const EquipedSkinId_field_number: u32 = 9;
-    pub const SkinIdList_field_number: u32 = 15;
-};
-pub const WeaponResonUpResponse = struct {
-    pub const msg_id: u16 = 24656;
+pub const EnterAreaResponse = struct {
+    pub const msg_id: u16 = 26533;
     pub const ErrorCode_field_number: u32 = 3;
-    pub const IncId_field_number: u32 = 7;
-    pub const ResonLevel_field_number: u32 = 11;
+    pub const Id_field_number: u32 = 15;
 };
-pub const AnimalDieRequest = struct {
-    pub const msg_id: u16 = 18443;
-    pub const EntityId_field_number: u32 = 10;
-    pub const Pos_field_number: u32 = 6;
+pub const MonsterDrownPush = struct {
+    pub const msg_id: u16 = 25159;
+    pub const Pos_field_number: u32 = 13;
 };
-pub const UpdateVoxelEnvResponse = struct {
-    pub const msg_id: u16 = 18786;
+pub const GuideTriggerResponse = struct {
+    pub const msg_id: u16 = 24756;
     pub const ErrorCode_field_number: u32 = 7;
-    pub const ServerCaveMode_field_number: u32 = 13;
+    pub const ErrorParams_field_number: u32 = 5;
 };
-pub const SkillResponse = struct {
-    pub const msg_id: u16 = 16065;
+pub const DeathStatusInfo = struct {
+    pub const GroupType_field_number: u32 = 1;
+    pub const LivingStatus_field_number: u32 = 2;
+};
+pub const ActivityLinkageTabData = struct {
+    pub const TabDataId_field_number: u32 = 1;
+    pub const EndTime_field_number: u32 = 2;
+    pub const RewardData_field_number: u32 = 3;
+    pub const IsReceive_field_number: u32 = 4;
+    pub const StartTime_field_number: u32 = 5;
+};
+pub const RbBlockIdlePbState = struct {
+    pub const Position_field_number: u32 = 6;
+    pub const Rotation_field_number: u32 = 7;
+};
+pub const RoleElementChangeResponse = struct {
+    pub const msg_id: u16 = 21974;
     pub const ErrorCode_field_number: u32 = 6;
+};
+pub const EntityGroupActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const TriggerIndex_field_number: u32 = 2;
+    pub const IsMatch_field_number: u32 = 3;
+};
+pub const SwitchCharacterStateNotify = struct {
+    pub const msg_id: u16 = 23280;
+    pub const CombatCommon_field_number: u32 = 8;
+    pub const Id_field_number: u32 = 10;
+    pub const OldState_field_number: u32 = 3;
+    pub const NewState_field_number: u32 = 6;
+};
+pub const EntityTriggerCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const TriggerEntityIncId_field_number: u32 = 2;
+};
+pub const GameplayAttributeData = struct {
+    pub const CurrentValue_field_number: u32 = 1;
+    pub const ValueIncrement_field_number: u32 = 2;
+    pub const AttributeType_field_number: u32 = 3;
+};
+pub const PassiveSkillAddResponse = struct {
+    pub const msg_id: u16 = 21626;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const LivenessInfo = struct {
+    pub const LivenessCount_field_number: u32 = 1;
+    pub const RewardedLiveness_field_number: u32 = 2;
+    pub const Tasks_field_number: u32 = 3;
+    pub const DayEnd_field_number: u32 = 4;
+    pub const AreaId_field_number: u32 = 5;
+};
+pub const PartUpdateResponse = struct {
+    pub const msg_id: u16 = 20917;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const RacingBetsRewardData = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+    pub const Progress_field_number: u32 = 3;
+    pub const TargetProgress_field_number: u32 = 4;
+    pub const ConditionFinishState_field_number: u32 = 6;
+};
+pub const ActivityTimePointRewarData = struct {
+    pub const Rewards_field_number: u32 = 1;
+};
+pub const CaughtResponse = struct {
+    pub const msg_id: u16 = 25664;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const ActivityFunPlayChallengeData = struct {
+    pub const ChallengeId_field_number: u32 = 1;
+    pub const UnlockTime_field_number: u32 = 2;
+    pub const RewardStatus_field_number: u32 = 3;
+    pub const FunPlaySharpComment_field_number: u32 = 4;
+    pub const FinishTime_field_number: u32 = 5;
 };
 pub const MapTraceInfoResponse = struct {
     pub const msg_id: u16 = 27257;
     pub const ErrorCode_field_number: u32 = 10;
     pub const MarkIdList_field_number: u32 = 7;
 };
-pub const PbMoveToPointConfig = struct {
-    pub const TargetPos_field_number: u32 = 1;
-    pub const MoveType_field_number: u32 = 2;
+pub const SlashLevelPlayInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const IsLocked_field_number: u32 = 2;
+    pub const FirstScore_field_number: u32 = 3;
+    pub const SecondScore_field_number: u32 = 4;
+    pub const FirstBattle_field_number: u32 = 5;
+    pub const SecondBattle_field_number: u32 = 6;
+    pub const IsPassed_field_number: u32 = 7;
+    pub const IsEasyPass_field_number: u32 = 8;
 };
-pub const OrderApplyBuffResponse = struct {
-    pub const msg_id: u16 = 25059;
-    pub const ErrorCode_field_number: u32 = 2;
+pub const AnimalDestroyResponse = struct {
+    pub const msg_id: u16 = 25399;
+    pub const ErrorCode_field_number: u32 = 10;
 };
-pub const PbAdviceContent = struct {
-    pub const Type_field_number: u32 = 1;
-    pub const Id_field_number: u32 = 2;
-    pub const Word_field_number: u32 = 3;
+pub const RogueWeeklyAward = struct {
+    pub const SignState_field_number: u32 = 1;
+    pub const CurProgress_field_number: u32 = 2;
+    pub const MaxProgress_field_number: u32 = 3;
+    pub const ConfigId_field_number: u32 = 4;
 };
-pub const LivenessTakeResponse = struct {
-    pub const msg_id: u16 = 16676;
-    pub const Ids_field_number: u32 = 4;
-    pub const ErrorCode_field_number: u32 = 13;
+pub const OrderRemoveBuffResponse = struct {
+    pub const msg_id: u16 = 15866;
+    pub const ErrorCode_field_number: u32 = 5;
 };
-pub const MotorFightTalentTreePb = struct {
-    pub const Talent_field_number: u32 = 1;
+pub const LevelGroupData = struct {
+    pub const GroupId_field_number: u32 = 1;
+    pub const OpenTime_field_number: u32 = 2;
+    pub const levels_field_number: u32 = 4;
 };
-pub const SwitchCharacterStatePush = struct {
-    pub const msg_id: u16 = 29638;
-    pub const CombatCommon_field_number: u32 = 14;
-    pub const Id_field_number: u32 = 4;
-    pub const OldState_field_number: u32 = 11;
-    pub const NewState_field_number: u32 = 13;
+pub const RbFloorComponentPb = struct {
+    pub const GamePlayIncId_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const OccupiedCellPositions_field_number: u32 = 3;
 };
-pub const MowTowerLevelsInfo = struct {
-    pub const BabelTowerLevelId_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const IsUnlock_field_number: u32 = 3;
-    pub const FirstScore_field_number: u32 = 4;
-    pub const SecondScore_field_number: u32 = 9;
-    pub const LevelRewardStatus_field_number: u32 = 5;
-    pub const HardLevelBuffs_field_number: u32 = 6;
-    pub const FirstRoleSelection_field_number: u32 = 7;
-    pub const SecondRoleSelection_field_number: u32 = 8;
+pub const EnterGameRequest = struct {
+    pub const msg_id: u16 = 105;
+    pub const SingleInstanceId_field_number: u32 = 1;
+    pub const MultiInstanceId_field_number: u32 = 2;
+    pub const Mode_field_number: u32 = 3;
+    pub const Pos_field_number: u32 = 4;
 };
-pub const DamageExecuteNotify = struct {
-    pub const msg_id: u16 = 18170;
-    pub const DamageId_field_number: u32 = 15;
-    pub const AttackerEntityId_field_number: u32 = 13;
-    pub const TargetEntityId_field_number: u32 = 5;
-    pub const Damage_field_number: u32 = 6;
-    pub const PartIndex_field_number: u32 = 11;
-    pub const IsCrit_field_number: u32 = 7;
-    pub const KilledTarget_field_number: u32 = 1;
-    pub const ShieldCoverDamage_field_number: u32 = 10;
-    pub const SkillLevel_field_number: u32 = 3;
-    pub const DamageContext_field_number: u32 = 2;
-    pub const ImmuneType_field_number: u32 = 12;
-    pub const ElementType_field_number: u32 = 8;
-    pub const ChangeLife_field_number: u32 = 9;
-    pub const ChangeWeakness_field_number: u32 = 14;
-    pub const Bop_field_number: u32 = 4;
-};
-pub const PinballRoles = struct {
-    pub const Roles_field_number: u32 = 1;
-};
-pub const DestroyBulletResponse = struct {
-    pub const msg_id: u16 = 17203;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const InfluenceInfoResponse = struct {
-    pub const msg_id: u16 = 17716;
-    pub const InfluenceInfos_field_number: u32 = 9;
+pub const RoleLoadEquipData = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const Pos_field_number: u32 = 2;
+    pub const EquipIncId_field_number: u32 = 3;
 };
 pub const ActivityPrizeDrawingData = struct {
     pub const ActivityId_field_number: u32 = 1;
@@ -28391,9 +29438,366 @@ pub const ActivityPrizeDrawingData = struct {
     pub const QuestTotalCount_field_number: u32 = 7;
     pub const QuestId_field_number: u32 = 8;
 };
-pub const ExitViewDirectionResponse = struct {
-    pub const msg_id: u16 = 24259;
+pub const ClientCurrentRoleReportResponse = struct {
+    pub const msg_id: u16 = 22232;
+    pub const PlayerId_field_number: u32 = 14;
+    pub const CurrentEntityId_field_number: u32 = 13;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const PartComponentPb = struct {
+    pub const PartLifeInfos_field_number: u32 = 1;
+};
+pub const GridPlacementPbInfo = struct {
+    GridPb: ?union(enum) {
+    } = null,
+    pub const Direction_field_number: u32 = 4;
+    pub const ActorGuide_field_number: u32 = 1;
+    pub const X_field_number: u32 = 2;
+    pub const Y_field_number: u32 = 3;
+};
+pub const ParkourActivity = struct {
+    pub const Challenges_field_number: u32 = 1;
+};
+pub const InputSettingUpdateResponse = struct {
+    pub const msg_id: u16 = 15542;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const AnimationStateComponentPb = struct {
+    pub const AnimationStates_field_number: u32 = 1;
+    pub const SpecialStates_field_number: u32 = 2;
+    pub const BoneVisibleDatas_field_number: u32 = 3;
+    pub const AnimationTags_field_number: u32 = 4;
+    pub const ModelId_field_number: u32 = 5;
+};
+pub const FormationAttrResponse = struct {
+    pub const msg_id: u16 = 16663;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const QuestionaireRewardState = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const InstDataNotify = struct {
+    pub const msg_id: u16 = 19692;
+    pub const EnterInfos_field_number: u32 = 10;
+};
+pub const CalabashSkinDataResponse = struct {
+    pub const msg_id: u16 = 29749;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const EquipedSkinId_field_number: u32 = 9;
+    pub const SkinIdList_field_number: u32 = 15;
+};
+pub const ConditionTask = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Current_field_number: u32 = 2;
+    pub const Target_field_number: u32 = 3;
+    pub const Status_field_number: u32 = 4;
+};
+pub const SwitchLogicStateNotify = struct {
+    pub const msg_id: u16 = 26280;
+    pub const States_field_number: u32 = 2;
+};
+pub const BoneVisibleChangePush = struct {
+    pub const msg_id: u16 = 17209;
+    pub const BoneVisibleData_field_number: u32 = 12;
+};
+pub const GuideFinishResponse = struct {
+    pub const msg_id: u16 = 18087;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const ErrorParams_field_number: u32 = 5;
+};
+pub const FuncOpenNotify = struct {
+    pub const msg_id: u16 = 18552;
+    pub const Func_field_number: u32 = 1;
+};
+pub const GetRewardTreasureBoxResponse = struct {
+    pub const msg_id: u16 = 20676;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const SceneItemLifeCycleComponentCreateCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const ShieldComponentPb = struct {
+    pub const ShieldInfoPbList_field_number: u32 = 1;
+    pub const ShieldValueTotal_field_number: u32 = 2;
+};
+pub const RandomInteractCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const OptionIndex_field_number: u32 = 2;
+};
+pub const ControlParam = struct {
+    Param: ?union(enum) {
+    } = null,
+    pub const TemporaryTeleportParam_field_number: u32 = 2;
+    pub const ControlType_field_number: u32 = 1;
+};
+pub const EntityDestructibleCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const TargetGearHitPartCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const HitPartIndex_field_number: u32 = 2;
+};
+pub const EntityAccessRangeRequest = struct {
+    pub const msg_id: u16 = 26826;
+    pub const EntityId_field_number: u32 = 14;
+    pub const EntitiesToCheck_field_number: u32 = 10;
+    pub const RangeType_field_number: u32 = 15;
+};
+pub const SwitchBattleModeNotify = struct {
+    pub const msg_id: u16 = 15198;
+    pub const ServerControllerModules_field_number: u32 = 13;
+    pub const ClientControllerModules_field_number: u32 = 8;
+};
+pub const ExtraDeadInfo = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const BtBloodBathedModeInfo_field_number: u32 = 1;
+};
+pub const LogicStateInitResponse = struct {
+    pub const msg_id: u16 = 21866;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const ResonantChainUnlockResponse = struct {
+    pub const msg_id: u16 = 24564;
     pub const ErrorCode_field_number: u32 = 6;
+    pub const RoleId_field_number: u32 = 12;
+    pub const ResonantChainGroupIndex_field_number: u32 = 9;
+};
+pub const TriggerExitSkillResponse = struct {
+    pub const msg_id: u16 = 18091;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const ExploreSkillCustomCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const RoleLevelUpViewRequest = struct {
+    pub const msg_id: u16 = 17061;
+    pub const RoleId_field_number: u32 = 15;
+    pub const MaxItemId_field_number: u32 = 1;
+    pub const ItemList_field_number: u32 = 8;
+};
+pub const RemoveBuffByIdS2cResponsePush = struct {
+    pub const msg_id: u16 = 24578;
+    pub const ErrorCode_field_number: u32 = 5;
+};
+pub const SetFocusModeDeterConditionResponse = struct {
+    pub const msg_id: u16 = 22301;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const FadeBackgroundFadeOutEffectPb = struct {
+    FadeOutEffectPb: ?union(enum) {
+    } = null,
+    pub const FadeBackgroundFadeOutEffectBlackPb_field_number: u32 = 1;
+};
+pub const GachaResult = struct {
+    Bottom: ?union(enum) {
+    } = null,
+    pub const BottomExtraReward_field_number: u32 = 3;
+    pub const GachaReward_field_number: u32 = 1;
+    pub const ExtraRewards_field_number: u32 = 2;
+    pub const TransformRewards_field_number: u32 = 4;
+};
+pub const AnimationStateChangedRequest = struct {
+    pub const msg_id: u16 = 15682;
+    pub const CombatCommon_field_number: u32 = 14;
+    pub const Id_field_number: u32 = 12;
+    pub const States_field_number: u32 = 11;
+    pub const SpecialStates_field_number: u32 = 1;
+    pub const ModelId_field_number: u32 = 10;
+};
+pub const FarmGoldData = struct {
+    pub const PointRewardGet_field_number: u32 = 1;
+    pub const LevelPlayTasks_field_number: u32 = 2;
+};
+pub const AnimationStateInitNotify = struct {
+    pub const msg_id: u16 = 28947;
+    pub const CombatCommon_field_number: u32 = 11;
+    pub const Id_field_number: u32 = 1;
+    pub const States_field_number: u32 = 4;
+    pub const TimeStamp_field_number: u32 = 10;
+    pub const SpecialStates_field_number: u32 = 8;
+    pub const ModelId_field_number: u32 = 15;
+};
+pub const InfrV2TreePb = struct {
+    pub const Trees_field_number: u32 = 1;
+    pub const ManualTraceTree_field_number: u32 = 3;
+};
+pub const OrderApplyBuffResponse = struct {
+    pub const msg_id: u16 = 25059;
+    pub const ErrorCode_field_number: u32 = 2;
+};
+pub const EntityRemoveNotify = struct {
+    pub const msg_id: u16 = 20583;
+    pub const RemoveInfos_field_number: u32 = 5;
+    pub const IsRemove_field_number: u32 = 15;
+};
+pub const CharacterLookAtInfo = struct {
+    TargetId: ?union(enum) {
+    } = null,
+    TargetPossition: ?union(enum) {
+    } = null,
+    pub const TargetEntityId_field_number: u32 = 3;
+    pub const TargetPos_field_number: u32 = 4;
+    pub const EntityId_field_number: u32 = 1;
+    pub const TargetType_field_number: u32 = 2;
+};
+pub const RoleConfigInfoUpdateNotify = struct {
+    pub const msg_id: u16 = 28711;
+    pub const RoleConfigs_field_number: u32 = 12;
+};
+pub const TrampleActivateCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const RbBreakableObstaclePbType = struct {
+    pub const LinkPoints_field_number: u32 = 1;
+};
+pub const FightFormationNotifyInfo = struct {
+    pub const FormationId_field_number: u32 = 1;
+    pub const CurRole_field_number: u32 = 2;
+    pub const RoleInfos_field_number: u32 = 3;
+    pub const IsCurrent_field_number: u32 = 4;
+};
+pub const QuestReviewDataResponse = struct {
+    pub const msg_id: u16 = 23616;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const WeaponResonUpRequest = struct {
+    pub const msg_id: u16 = 26585;
+    pub const IncId_field_number: u32 = 6;
+    pub const ConsumeList_field_number: u32 = 12;
+    pub const ConsumeItemList_field_number: u32 = 11;
+};
+pub const TsAnimNotifyStateAbsoluteTimeStopResponse = struct {
+    pub const msg_id: u16 = 18961;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const PartUpdateNotify = struct {
+    pub const msg_id: u16 = 25722;
+    pub const EntityId_field_number: u32 = 8;
+    pub const PartInfos_field_number: u32 = 6;
+};
+pub const FollowerList = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+};
+pub const WeaponItemAddNotify = struct {
+    pub const msg_id: u16 = 18852;
+    pub const WeaponItemList_field_number: u32 = 10;
+    pub const AddFromRole_field_number: u32 = 7;
+    pub const Reason_field_number: u32 = 8;
+};
+pub const MapUnlockFieldInfoResponse = struct {
+    pub const msg_id: u16 = 17075;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const FieldId_field_number: u32 = 15;
+};
+pub const LivenessTakeResponse = struct {
+    pub const msg_id: u16 = 16676;
+    pub const Ids_field_number: u32 = 4;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const RoleFlyEquipChangeNotify = struct {
+    pub const msg_id: u16 = 19090;
+    pub const FlySkinData_field_number: u32 = 5;
+};
+pub const DrownResponse = struct {
+    pub const msg_id: u16 = 22546;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const TeleportDataResponse = struct {
+    pub const msg_id: u16 = 15936;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const Ids_field_number: u32 = 11;
+};
+pub const CostVisionAttrRecommendInfo = struct {
+    pub const Cost_field_number: u32 = 1;
+    pub const GetMainAttrRecommendInfo_field_number: u32 = 2;
+    pub const GetSubAttrRecommendInfo_field_number: u32 = 3;
+};
+pub const SwitchLogicStateRequest = struct {
+    pub const msg_id: u16 = 18018;
+    pub const States_field_number: u32 = 10;
+    pub const ClientEntityId_field_number: u32 = 15;
+};
+pub const EntityGroupFailureCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const AiHatePush = struct {
+    pub const msg_id: u16 = 21318;
+    pub const HateList_field_number: u32 = 5;
+};
+pub const BoneVisibleChangeResponse = struct {
+    pub const msg_id: u16 = 19060;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const UpdateFormationRequest = struct {
+    pub const msg_id: u16 = 19092;
+    pub const Formations_field_number: u32 = 7;
+};
+pub const AiBlackboardsResponse = struct {
+    pub const msg_id: u16 = 26437;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const DailyAdventureActivityTask = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Current_field_number: u32 = 2;
+    pub const Target_field_number: u32 = 3;
+    pub const Status_field_number: u32 = 4;
+};
+pub const ICustomShowUiPb = struct {
+    CustomScreenTextSettingPb: ?union(enum) {
+    } = null,
+    HideCircle: ?union(enum) {
+    } = null,
+    pub const ICustomScreenTextSettingPb_field_number: u32 = 1;
+    pub const IsHideCircle_field_number: u32 = 2;
+};
+pub const RoleDevPropsConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const ProspectBeginTime_field_number: u32 = 2;
+    pub const ProspectEndTime_field_number: u32 = 3;
+    pub const TypeId_field_number: u32 = 4;
+    pub const GachaId_field_number: u32 = 5;
+    pub const SpecialGachaPair_field_number: u32 = 6;
+    pub const SortId_field_number: u32 = 7;
+};
+pub const ButtonEnableResult = struct {
+    pub const Type_field_number: u32 = 2;
+    pub const Enabled_field_number: u32 = 3;
+};
+pub const UpdateNodeStatusNotify = struct {
+    pub const msg_id: u16 = 26330;
+    pub const TreeOwnerId_field_number: u32 = 8;
+    pub const TreeIncId_field_number: u32 = 9;
+    pub const NodeId_field_number: u32 = 5;
+    pub const Status_field_number: u32 = 13;
+};
+pub const VisionFetterRecommendInfo = struct {
+    pub const Usage_field_number: u32 = 2;
+    pub const RecommendFetterGroupInfos_field_number: u32 = 3;
+};
+pub const ValidTimeItemResponse = struct {
+    pub const msg_id: u16 = 26416;
+    pub const ItemList_field_number: u32 = 3;
+};
+pub const RoadNetworkComponentPb = struct {
+    MoveData: ?union(enum) {
+    } = null,
+    pub const NavMoveData_field_number: u32 = 5;
+    pub const DestRoadId_field_number: u32 = 1;
+    pub const DestIndex_field_number: u32 = 2;
+    pub const GenRoadId_field_number: u32 = 3;
+    pub const GenRoadIndex_field_number: u32 = 4;
+};
+pub const BtnStateRequest = struct {
+    pub const msg_id: u16 = 27753;
+    pub const Type_field_number: u32 = 4;
+    pub const Types_field_number: u32 = 9;
+};
+pub const MaterialResponse = struct {
+    pub const msg_id: u16 = 24064;
+    pub const ErrorCode_field_number: u32 = 7;
 };
 pub const ActivityTask = struct {
     pub const Id_field_number: u32 = 1;
@@ -28402,16 +29806,20 @@ pub const ActivityTask = struct {
     pub const Status_field_number: u32 = 4;
     pub const PreItemMap_field_number: u32 = 5;
 };
-pub const TowerFloorPb = struct {
-    pub const TowerConfigId_field_number: u32 = 1;
-    pub const Star_field_number: u32 = 2;
-    pub const Formation_field_number: u32 = 4;
-    pub const StarIndex_field_number: u32 = 5;
-    pub const IsQuickPass_field_number: u32 = 6;
+pub const MotorTechOneTreePb = struct {
+    pub const TreeId_field_number: u32 = 1;
+    pub const Tech_field_number: u32 = 2;
 };
-pub const MonsterBoomResponse = struct {
-    pub const msg_id: u16 = 21128;
-    pub const ErrorCode_field_number: u32 = 3;
+pub const PinballRoles = struct {
+    pub const Roles_field_number: u32 = 1;
+};
+pub const FightPhotoLevelDataUpdateNotify = struct {
+    pub const msg_id: u16 = 20164;
+    pub const levels_field_number: u32 = 1;
+};
+pub const EntityLeaveTriggerCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const TriggerEntityIncId_field_number: u32 = 2;
 };
 pub const OrderApplyBuffRequest = struct {
     pub const msg_id: u16 = 21263;
@@ -28428,455 +29836,29 @@ pub const OrderApplyBuffRequest = struct {
     pub const TransferContextId_field_number: u32 = 6;
     pub const Reason_field_number: u32 = 4;
 };
-pub const DynamicEntityRewardCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const FlowEndResponse = struct {
-    pub const msg_id: u16 = 25044;
-    pub const ErrorCode_field_number: u32 = 13;
-};
-pub const CaughtResponse = struct {
-    pub const msg_id: u16 = 25664;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const FsmStateBehaviorResponse = struct {
-    pub const msg_id: u16 = 23304;
-    pub const FsmId_field_number: u32 = 2;
-    pub const State_field_number: u32 = 3;
-    pub const ErrorCode_field_number: u32 = 14;
-};
-pub const TrampleActivateCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const SwitchRoleResponse = struct {
-    pub const msg_id: u16 = 16993;
-    pub const ErrorCode_field_number: u32 = 7;
-    pub const RoleId_field_number: u32 = 1;
-};
-pub const DErrorResult = struct {
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const ErrorParams_field_number: u32 = 2;
-};
-pub const PartUpdateNotify = struct {
-    pub const msg_id: u16 = 25722;
-    pub const EntityId_field_number: u32 = 8;
-    pub const PartInfos_field_number: u32 = 6;
-};
-pub const FragileChangeResponse = struct {
-    pub const msg_id: u16 = 15073;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const SlashLevelPlayInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const IsLocked_field_number: u32 = 2;
-    pub const FirstScore_field_number: u32 = 3;
-    pub const SecondScore_field_number: u32 = 4;
-    pub const FirstBattle_field_number: u32 = 5;
-    pub const SecondBattle_field_number: u32 = 6;
-    pub const IsPassed_field_number: u32 = 7;
-    pub const IsEasyPass_field_number: u32 = 8;
-};
-pub const AdventreTask = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-    pub const AdventreProgress_field_number: u32 = 3;
-};
-pub const BoneVisibleChangeNotify = struct {
-    pub const msg_id: u16 = 21649;
-    pub const BoneVisibleData_field_number: u32 = 3;
-};
-pub const RbLaserEmitterPbType = struct {
-    pub const LaserPoints_field_number: u32 = 1;
-};
-pub const SummonResponse = struct {
-    pub const msg_id: u16 = 25321;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const BroadcastAddBuffFailedNotify = struct {
-    pub const msg_id: u16 = 28514;
-    pub const BuffId_field_number: u32 = 6;
-    pub const StackCount_field_number: u32 = 8;
-    pub const InstigatorId_field_number: u32 = 13;
-    pub const TransferContextId_field_number: u32 = 7;
-};
-pub const EquipWeaponSkinRequest = struct {
-    pub const msg_id: u16 = 22516;
-    pub const Data_field_number: u32 = 3;
-};
-pub const ICustomShowUiPb = struct {
-    CustomScreenTextSettingPb: ?union(enum) {
-    } = null,
-    HideCircle: ?union(enum) {
-    } = null,
-    pub const ICustomScreenTextSettingPb_field_number: u32 = 1;
-    pub const IsHideCircle_field_number: u32 = 2;
-};
-pub const MapCancelTraceResponse = struct {
-    pub const msg_id: u16 = 27482;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const MarkId_field_number: u32 = 15;
-};
-pub const ProtoKeyResponse = struct {
-    pub const msg_id: u16 = 112;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const Key_field_number: u32 = 3;
-};
-pub const EnterViewDirectionResponse = struct {
-    pub const msg_id: u16 = 25415;
-    pub const ErrorCode_field_number: u32 = 15;
-};
-pub const SimpleCombatComponentPb = struct {
-    SplineConfig: ?union(enum) {
-    } = null,
-    SplineMove: ?union(enum) {
-    } = null,
-    pub const SplineConfigId_field_number: u32 = 3;
-    pub const SplineMoveType_field_number: u32 = 6;
-    pub const SubTypeId_field_number: u32 = 1;
-    pub const BuffLayers_field_number: u32 = 4;
-    pub const SimpleCombatEntityAttributePbInfo_field_number: u32 = 5;
-};
-pub const InstDataNotify = struct {
-    pub const msg_id: u16 = 19692;
-    pub const EnterInfos_field_number: u32 = 10;
-};
-pub const PlayerAccessEffectAreaRequest = struct {
-    pub const msg_id: u16 = 29680;
-    pub const EntityId_field_number: u32 = 9;
-    pub const RangeType_field_number: u32 = 10;
-};
-pub const VisionSkillChangeNotify = struct {
-    pub const msg_id: u16 = 28357;
-    pub const EntityId_field_number: u32 = 3;
-    pub const VisionSkillInfos_field_number: u32 = 2;
-};
-pub const CrystalMonsterInfoPb = struct {
-    pub const SlotInfoList_field_number: u32 = 1;
-};
-pub const TagComponentPb = struct {
-    pub const GameplayTags_field_number: u32 = 1;
-    pub const EntityCommonTags_field_number: u32 = 2;
-    pub const InitGameplayTag_field_number: u32 = 3;
-};
-pub const ItemExchangeInfoResponse = struct {
-    pub const msg_id: u16 = 18099;
-    pub const ItemExchangeInfos_field_number: u32 = 14;
-};
-pub const RoleSkinChangeResponse = struct {
-    pub const msg_id: u16 = 25479;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const BeamCastHitPlayerActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const DailyAdventureActivityTask = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Current_field_number: u32 = 2;
-    pub const Target_field_number: u32 = 3;
-    pub const Status_field_number: u32 = 4;
-};
-pub const AchievementEntry = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const FinishTime_field_number: u32 = 2;
-    pub const IsReceive_field_number: u32 = 3;
-    pub const Progress_field_number: u32 = 4;
-};
-pub const RoleConfigInfoNotify = struct {
-    pub const msg_id: u16 = 20061;
-    pub const RoleConfigs_field_number: u32 = 7;
-};
-pub const GetMusicInfoResponse = struct {
-    pub const msg_id: u16 = 23549;
-    pub const MusicIds_field_number: u32 = 15;
-    pub const CurMusicId_field_number: u32 = 4;
-    pub const ErrorCode_field_number: u32 = 13;
-    pub const FavoriteMusicList_field_number: u32 = 8;
-};
-pub const PartUpdatePush = struct {
-    pub const msg_id: u16 = 26694;
-    pub const EntityId_field_number: u32 = 12;
-    pub const PartUpdateInfos_field_number: u32 = 11;
-};
-pub const GetRewardTreasureBoxResponse = struct {
-    pub const msg_id: u16 = 20676;
-    pub const ErrorCode_field_number: u32 = 1;
-};
-pub const AreaExploreInfo = struct {
-    pub const AreaId_field_number: u32 = 1;
-    pub const ExploreProgress_field_number: u32 = 2;
-    pub const ExplorePercent_field_number: u32 = 3;
-};
-pub const FeiXuePreheatActivityInfo = struct {
-    pub const FeiXuePreheatInfos_field_number: u32 = 1;
-};
-pub const TrampleDeActiveCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const GachaUsePoolResponse = struct {
-    pub const msg_id: u16 = 28683;
+pub const InterruptSkillInDelayResponse = struct {
+    pub const msg_id: u16 = 17219;
+    pub const SkillId_field_number: u32 = 15;
     pub const ErrorCode_field_number: u32 = 7;
 };
-pub const WeaponResonUpRequest = struct {
-    pub const msg_id: u16 = 26585;
-    pub const IncId_field_number: u32 = 6;
-    pub const ConsumeList_field_number: u32 = 12;
-    pub const ConsumeItemList_field_number: u32 = 11;
+pub const PinballWeapons = struct {
+    pub const PinballWeaponList_field_number: u32 = 1;
 };
-pub const InputAxis = struct {
-    pub const AxisName_field_number: u32 = 1;
-    pub const KeyScaleMap_field_number: u32 = 2;
-    pub const Version_field_number: u32 = 3;
-    pub const InputType_field_number: u32 = 4;
+pub const SettingNotify = struct {
+    pub const msg_id: u16 = 22797;
+    pub const MobileButtonSettings_field_number: u32 = 15;
 };
-pub const ChatContentProto = struct {
-    pub const SenderUid_field_number: u32 = 1;
-    pub const ChatContentType_field_number: u32 = 2;
-    pub const Content_field_number: u32 = 3;
-    pub const OfflineMsg_field_number: u32 = 4;
-    pub const UtcTime_field_number: u32 = 5;
-    pub const MsgId_field_number: u32 = 6;
-    pub const PsAccountId_field_number: u32 = 7;
-    pub const XboxAccountId_field_number: u32 = 8;
-};
-pub const MonthCardResponse = struct {
-    pub const msg_id: u16 = 23495;
-    pub const Days_field_number: u32 = 10;
-    pub const IsDailyGot_field_number: u32 = 1;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const StorageInfoUpdateResponse = struct {
-    pub const msg_id: u16 = 29067;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const MotorParkourLevelInfo = struct {
-    pub const MotorParkourId_field_number: u32 = 1;
-    pub const RewardStates_field_number: u32 = 2;
-    pub const UnlockTime_field_number: u32 = 3;
-    pub const BestPassTime_field_number: u32 = 4;
-};
-pub const RbFloorComponentPb = struct {
-    pub const GamePlayIncId_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const OccupiedCellPositions_field_number: u32 = 3;
-};
-pub const ClientStorageMapListData = struct {
-    pub const Data_field_number: u32 = 1;
-};
-pub const RoleDevPropsConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const ProspectBeginTime_field_number: u32 = 2;
-    pub const ProspectEndTime_field_number: u32 = 3;
-    pub const TypeId_field_number: u32 = 4;
-    pub const GachaId_field_number: u32 = 5;
-    pub const SpecialGachaPair_field_number: u32 = 6;
-    pub const SortId_field_number: u32 = 7;
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopResponse = struct {
-    pub const msg_id: u16 = 18961;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const SwitchLogicStateNotify = struct {
-    pub const msg_id: u16 = 26280;
-    pub const States_field_number: u32 = 2;
-};
-pub const TutorialReceiveResponse = struct {
-    pub const msg_id: u16 = 23772;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const ErrorParams_field_number: u32 = 7;
-    pub const ItemMap_field_number: u32 = 11;
-};
-pub const PassiveSkillRemoveResponse = struct {
-    pub const msg_id: u16 = 17980;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const PhantomLevelUpRequest = struct {
-    pub const msg_id: u16 = 24192;
-    pub const IncId_field_number: u32 = 1;
-    pub const ConsumeList_field_number: u32 = 12;
-    pub const SlotCount_field_number: u32 = 6;
-};
-pub const ValidTimeItemResponse = struct {
-    pub const msg_id: u16 = 26416;
-    pub const ItemList_field_number: u32 = 3;
-};
-pub const AnimationStateInitResponse = struct {
-    pub const msg_id: u16 = 21761;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const GameplayAttributeData = struct {
-    pub const CurrentValue_field_number: u32 = 1;
-    pub const ValueIncrement_field_number: u32 = 2;
-    pub const AttributeType_field_number: u32 = 3;
+pub const LoadingConfigResponse = struct {
+    pub const msg_id: u16 = 26376;
+    pub const LoadingConfig_field_number: u32 = 11;
 };
 pub const SceneLoadingFinishResponse = struct {
     pub const msg_id: u16 = 27911;
     pub const ErrorCode_field_number: u32 = 5;
 };
-pub const PartUpdateResponse = struct {
-    pub const msg_id: u16 = 20917;
-    pub const ErrorCode_field_number: u32 = 7;
-};
-pub const SurvivorsLevelData = struct {
-    ModeInfo: ?union(enum) {
-    } = null,
-    pub const EndlessInfo_field_number: u32 = 4;
-    pub const LevelId_field_number: u32 = 1;
-    pub const OpenTime_field_number: u32 = 2;
-    pub const NormalInfo_field_number: u32 = 3;
-};
-pub const ControlParam = struct {
-    Param: ?union(enum) {
-    } = null,
-    pub const TemporaryTeleportParam_field_number: u32 = 2;
-    pub const ControlType_field_number: u32 = 1;
-};
-pub const SceneItemStateChangeConditionAction = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const StateIndex_field_number: u32 = 2;
-    pub const ConditionIndex_field_number: u32 = 3;
-};
-pub const FormationAttrNotify = struct {
-    pub const msg_id: u16 = 15274;
-    pub const Duration_field_number: u32 = 7;
-    pub const FormationAttrs_field_number: u32 = 12;
-};
-pub const SwitchCharacterStateRequest = struct {
-    pub const msg_id: u16 = 20754;
-    pub const CombatCommon_field_number: u32 = 12;
-    pub const Id_field_number: u32 = 15;
-    pub const OldState_field_number: u32 = 5;
-    pub const NewState_field_number: u32 = 6;
-};
-pub const EntityStaticHookMoveResponse = struct {
-    pub const msg_id: u16 = 17162;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const ScratchTicketRoundData = struct {
-    pub const RoundId_field_number: u32 = 1;
-    pub const UnlockTime_field_number: u32 = 2;
-    pub const AreaStageRewardDataList_field_number: u32 = 3;
-    pub const LeftRewardItem_field_number: u32 = 4;
-};
-pub const RacingBetsRewardData = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-    pub const Progress_field_number: u32 = 3;
-    pub const TargetProgress_field_number: u32 = 4;
-    pub const ConditionFinishState_field_number: u32 = 6;
-};
-pub const WeaponLevelUpResponse = struct {
-    pub const msg_id: u16 = 19780;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const IncId_field_number: u32 = 2;
-    pub const WeaponLevel_field_number: u32 = 7;
-    pub const WeaponExp_field_number: u32 = 1;
-    pub const ItemMap_field_number: u32 = 8;
-};
-pub const FightBuffEffectContext = struct {
-    dRoundAction: ?union(enum) {
-    } = null,
-    Effect: ?union(enum) {
-    } = null,
-    pub const LeftCooldown_field_number: u32 = 1;
-    pub const AttributeEventEffectData_field_number: u32 = 6;
-};
-pub const HitEndResponse = struct {
-    pub const msg_id: u16 = 22626;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const LevelGroupData = struct {
-    pub const GroupId_field_number: u32 = 1;
-    pub const OpenTime_field_number: u32 = 2;
-    pub const levels_field_number: u32 = 4;
-};
-pub const ActivateBuffResponse = struct {
-    pub const msg_id: u16 = 29570;
-    pub const ErrorCode_field_number: u32 = 15;
-};
-pub const SetFocusModeDeterConditionResponse = struct {
-    pub const msg_id: u16 = 22301;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const AnimationStateChangedRequest = struct {
-    pub const msg_id: u16 = 15682;
-    pub const CombatCommon_field_number: u32 = 14;
-    pub const Id_field_number: u32 = 12;
-    pub const States_field_number: u32 = 11;
-    pub const SpecialStates_field_number: u32 = 1;
-    pub const ModelId_field_number: u32 = 10;
-};
-pub const AnimalDropResponse = struct {
-    pub const msg_id: u16 = 25665;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const TimeCheckResponse = struct {
-    pub const msg_id: u16 = 25796;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const ClientTime_field_number: u32 = 8;
-    pub const ServerTime_field_number: u32 = 10;
-    pub const ServerCombatTime_field_number: u32 = 1;
-    pub const ServerStopTime_field_number: u32 = 5;
-    pub const ServerFlowTimestamp_field_number: u32 = 9;
-};
-pub const SwitchCharacterStateResponse = struct {
-    pub const msg_id: u16 = 25352;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const FuncOpenNotify = struct {
-    pub const msg_id: u16 = 18552;
-    pub const Func_field_number: u32 = 1;
-};
-pub const BookItemInfo = struct {
-    pub const BookItemId_field_number: u32 = 1;
-    pub const BookItemState_field_number: u32 = 2;
-};
-pub const RenjuCompleteActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const Controller_field_number: u32 = 2;
-};
-pub const DangoMonopolyConfig = struct {
-    pub const TaskId_field_number: u32 = 1;
-    pub const ActivityTaskState_field_number: u32 = 2;
-    pub const Progress_field_number: u32 = 3;
-    pub const TargetProgress_field_number: u32 = 4;
-};
-pub const CalabashSkinTakeOnResponse = struct {
-    pub const msg_id: u16 = 24892;
-    pub const ErrorCode_field_number: u32 = 8;
-    pub const SkinId_field_number: u32 = 3;
-};
-pub const RoleTrialInfoActivity = struct {
-    pub const RoleTrialTask_field_number: u32 = 1;
-};
-pub const LogicStateInitResponse = struct {
-    pub const msg_id: u16 = 21866;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const AnimationStateChangedPush = struct {
-    pub const msg_id: u16 = 20006;
-    pub const CombatCommon_field_number: u32 = 4;
-    pub const Id_field_number: u32 = 8;
-    pub const States_field_number: u32 = 3;
-    pub const SpecialStates_field_number: u32 = 5;
-    pub const ModelId_field_number: u32 = 15;
-};
-pub const DrownEndTeleportResponse = struct {
-    pub const msg_id: u16 = 20954;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const PrivateChatOperateResponse = struct {
-    pub const msg_id: u16 = 20461;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const MonsterDrownResponse = struct {
-    pub const msg_id: u16 = 29618;
-    pub const ErrorCode_field_number: u32 = 12;
-};
-pub const WeaponLevelUpRequest = struct {
-    pub const msg_id: u16 = 26370;
-    pub const IncId_field_number: u32 = 7;
-    pub const ConsumeList_field_number: u32 = 2;
+pub const PassiveSkillItemPb = struct {
+    pub const CombatCommon_field_number: u32 = 1;
+    pub const SkillId_field_number: u32 = 2;
 };
 pub const VisionExploreSkillSetRequest = struct {
     pub const msg_id: u16 = 19509;
@@ -28884,699 +29866,38 @@ pub const VisionExploreSkillSetRequest = struct {
     pub const IsAutoChange_field_number: u32 = 3;
     pub const RouletteType_field_number: u32 = 13;
 };
-pub const AnimalDestroyResponse = struct {
-    pub const msg_id: u16 = 25399;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const PreheatSignActivityData = struct {
-    pub const PreheatSignNodeInfos_field_number: u32 = 1;
-};
-pub const OrderRemoveBuffResponse = struct {
-    pub const msg_id: u16 = 15866;
+pub const ItemLockResponse = struct {
+    pub const msg_id: u16 = 21076;
     pub const ErrorCode_field_number: u32 = 5;
 };
-pub const RoleSkillBranchModifyResponse = struct {
-    pub const msg_id: u16 = 23822;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const VisionSkillComponentPb = struct {
-    pub const VisionSkillInfos_field_number: u32 = 1;
-};
-pub const TeleportTransferResponse = struct {
-    pub const msg_id: u16 = 28143;
-    pub const ErrorCode_field_number: u32 = 4;
-    pub const MapId_field_number: u32 = 13;
-    pub const PosX_field_number: u32 = 10;
-    pub const PosY_field_number: u32 = 1;
-    pub const PosZ_field_number: u32 = 5;
-    pub const Pitch_field_number: u32 = 9;
-    pub const Yaw_field_number: u32 = 12;
-    pub const Roll_field_number: u32 = 3;
-};
-pub const AnimationGameplayTagResponse = struct {
-    pub const msg_id: u16 = 24651;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const AiInformationResponse = struct {
-    pub const msg_id: u16 = 20373;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const CaughtNotify = struct {
-    pub const msg_id: u16 = 18619;
-    pub const Info_field_number: u32 = 8;
-};
-pub const PhantomArenaDeckInfo = struct {
-    pub const Name_field_number: u32 = 1;
-    pub const BattleCardIds_field_number: u32 = 2;
-    pub const CanUse_field_number: u32 = 3;
-    pub const LastUseChallengeId_field_number: u32 = 4;
-    pub const Index_field_number: u32 = 5;
-    pub const SkillUnlockInfos_field_number: u32 = 6;
-};
-pub const JigsawFoundationMatchedActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const MatchedIndex_field_number: u32 = 2;
-};
-pub const ExploreSkillPullGiantCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const LanguageSettingUpdateResponse = struct {
-    pub const msg_id: u16 = 27354;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const GameplayCueResponse = struct {
-    pub const msg_id: u16 = 15857;
-    pub const ErrorCode_field_number: u32 = 12;
-};
-pub const IllustratedEntry = struct {
-    SubType: ?union(enum) {
-    } = null,
-    pub const PhotographSubType_field_number: u32 = 5;
-    pub const Id_field_number: u32 = 1;
-    pub const CreateTime_field_number: u32 = 2;
-    pub const Num_field_number: u32 = 3;
-    pub const IsRead_field_number: u32 = 4;
-};
-pub const ModifyBulletParamsResponse = struct {
-    pub const msg_id: u16 = 23708;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const FadeBackgroundFadeOutEffectPb = struct {
-    FadeOutEffectPb: ?union(enum) {
-    } = null,
-    pub const FadeBackgroundFadeOutEffectBlackPb_field_number: u32 = 1;
-};
-pub const QuestionaireRewardState = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-};
-pub const EnterAreaResponse = struct {
-    pub const msg_id: u16 = 26533;
+pub const HitEndResponse = struct {
+    pub const msg_id: u16 = 22626;
     pub const ErrorCode_field_number: u32 = 3;
-    pub const Id_field_number: u32 = 15;
-};
-pub const WeaponBreachResponse = struct {
-    pub const msg_id: u16 = 28583;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const IncId_field_number: u32 = 6;
-    pub const WeaponBreach_field_number: u32 = 9;
-};
-pub const FsmCustomBlackboardDatas = struct {
-    pub const BlackboardIntValues_field_number: u32 = 1;
-};
-pub const DamageExecuteRequest = struct {
-    pub const msg_id: u16 = 18137;
-    pub const DamageId_field_number: u32 = 9;
-    pub const SkillLevel_field_number: u32 = 6;
-    pub const AttackerEntityId_field_number: u32 = 13;
-    pub const TargetEntityId_field_number: u32 = 10;
-    pub const IsAddEnergy_field_number: u32 = 1;
-    pub const IsCounterAttack_field_number: u32 = 11;
-    pub const ForceCritical_field_number: u32 = 7;
-    pub const IsBlocked_field_number: u32 = 12;
-    pub const PartIndex_field_number: u32 = 4;
-    pub const CounterSkillMessageId_field_number: u32 = 15;
-    pub const DamageContext_field_number: u32 = 2;
-    pub const RandomSeed_field_number: u32 = 3;
-    pub const IsBreakWeakness_field_number: u32 = 5;
-};
-pub const CostVisionAttrRecommendInfo = struct {
-    pub const Cost_field_number: u32 = 1;
-    pub const GetMainAttrRecommendInfo_field_number: u32 = 2;
-    pub const GetSubAttrRecommendInfo_field_number: u32 = 3;
-};
-pub const ItemDeprecateResponse = struct {
-    pub const msg_id: u16 = 25040;
-    pub const ErrorCode_field_number: u32 = 7;
-};
-pub const ActivityCorniceMeetingData = struct {
-    pub const UnlockTime_field_number: u32 = 1;
-    pub const LevelEntryData_field_number: u32 = 2;
-};
-pub const FightFormationNotifyInfo = struct {
-    pub const FormationId_field_number: u32 = 1;
-    pub const CurRole_field_number: u32 = 2;
-    pub const RoleInfos_field_number: u32 = 3;
-    pub const IsCurrent_field_number: u32 = 4;
-};
-pub const MonsterDrownPush = struct {
-    pub const msg_id: u16 = 25159;
-    pub const Pos_field_number: u32 = 13;
-};
-pub const PartUpdateRequest = struct {
-    pub const msg_id: u16 = 18661;
-    pub const EntityId_field_number: u32 = 11;
-    pub const PartUpdateInfos_field_number: u32 = 8;
-};
-pub const RacingBetsSeasonData = struct {
-    pub const CurCash_field_number: u32 = 1;
-    pub const TotalCash_field_number: u32 = 2;
-    pub const RacingBetsLegMatchData_field_number: u32 = 3;
-    pub const HitNum_field_number: u32 = 4;
-};
-pub const PbOverRoleResponse = struct {
-    pub const msg_id: u16 = 19902;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const RoleId_field_number: u32 = 13;
-    pub const Breakthrough_field_number: u32 = 9;
-};
-pub const MotorTechOneTreePb = struct {
-    pub const TreeId_field_number: u32 = 1;
-    pub const Tech_field_number: u32 = 2;
-};
-pub const RotatorArrayBlackboard = struct {
-    pub const Values_field_number: u32 = 1;
 };
 pub const RoleSkinTrialActivity = struct {
     pub const RoleSkinTrialContentData_field_number: u32 = 1;
 };
-pub const BehaviorTreeCtxPb = struct {
-    pub const IncId_field_number: u32 = 1;
-    pub const BtType_field_number: u32 = 2;
-    pub const BtId_field_number: u32 = 3;
-    pub const NodeId_field_number: u32 = 4;
-};
-pub const LoadingConfigResponse = struct {
-    pub const msg_id: u16 = 26376;
-    pub const LoadingConfig_field_number: u32 = 11;
-};
-pub const EntityInteractResponse = struct {
-    pub const msg_id: u16 = 23767;
-    pub const ErrorCode_field_number: u32 = 7;
-    pub const Interacting_field_number: u32 = 9;
-};
-pub const RemoveBuffS2cResponsePush = struct {
-    pub const msg_id: u16 = 28391;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const EnterGameRequest = struct {
-    pub const msg_id: u16 = 105;
-    pub const SingleInstanceId_field_number: u32 = 1;
-    pub const MultiInstanceId_field_number: u32 = 2;
-    pub const Mode_field_number: u32 = 3;
-    pub const Pos_field_number: u32 = 4;
-};
-pub const GivebackInfoResponse = struct {
-    pub const msg_id: u16 = 20680;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const SummonerComponentPb = struct {
-    pub const SummonerId_field_number: u32 = 1;
-    pub const SummonCfgId_field_number: u32 = 2;
-    pub const SummonSkillId_field_number: u32 = 3;
-    pub const PlayerId_field_number: u32 = 4;
-    pub const Type_field_number: u32 = 5;
-};
-pub const EntityIsVisibleResponse = struct {
-    pub const msg_id: u16 = 27972;
-    pub const ErrorCode_field_number: u32 = 12;
-};
-pub const TeleportDataResponse = struct {
-    pub const msg_id: u16 = 15936;
-    pub const ErrorCode_field_number: u32 = 7;
-    pub const Ids_field_number: u32 = 11;
-};
-pub const MapTraceResponse = struct {
-    pub const msg_id: u16 = 27016;
-    pub const ErrorCode_field_number: u32 = 6;
-    pub const MarkId_field_number: u32 = 8;
-};
-pub const MotorSliderCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const IsEnter_field_number: u32 = 2;
-};
-pub const AnimationStateInitPush = struct {
-    pub const msg_id: u16 = 22857;
-    pub const CombatCommon_field_number: u32 = 9;
-    pub const Id_field_number: u32 = 6;
-    pub const States_field_number: u32 = 13;
-    pub const SpecialStates_field_number: u32 = 14;
-    pub const ModelId_field_number: u32 = 15;
-};
-pub const PbUpLevelRoleResponse = struct {
-    pub const msg_id: u16 = 27676;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const RoleId_field_number: u32 = 3;
-    pub const Exp_field_number: u32 = 4;
-    pub const Level_field_number: u32 = 13;
-    pub const ItemMap_field_number: u32 = 6;
-};
-pub const AdventureRewardData = struct {
-    pub const DropId_field_number: u32 = 1;
-    pub const Items_field_number: u32 = 2;
-};
-pub const AiHateResponse = struct {
-    pub const msg_id: u16 = 23084;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const RolePassiveSkillInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const PassiveSkillInfoList_field_number: u32 = 2;
-};
-pub const EncircleActivityPb = struct {
-    pub const Challenges_field_number: u32 = 1;
-};
-pub const PassiveSkillItemPb = struct {
-    pub const CombatCommon_field_number: u32 = 1;
-    pub const SkillId_field_number: u32 = 2;
-};
-pub const BoneVisibleChangeRequest = struct {
-    pub const msg_id: u16 = 22130;
-    pub const BoneVisibleData_field_number: u32 = 9;
-};
-pub const FavorItem = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-};
-pub const VehiclePb = struct {
-    pub const Source_field_number: u32 = 1;
-};
-pub const RoleOperateSelfBgmResponse = struct {
-    pub const msg_id: u16 = 23828;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const RoleId_field_number: u32 = 13;
-    pub const IsOpen_field_number: u32 = 1;
-};
-pub const BoneVisibleChangeResponse = struct {
-    pub const msg_id: u16 = 19060;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const RoleTagChangeResponse = struct {
-    pub const msg_id: u16 = 18604;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const RoadNetworkComponentPb = struct {
-    MoveData: ?union(enum) {
-    } = null,
-    pub const NavMoveData_field_number: u32 = 5;
-    pub const DestRoadId_field_number: u32 = 1;
-    pub const DestIndex_field_number: u32 = 2;
-    pub const GenRoadId_field_number: u32 = 3;
-    pub const GenRoadIndex_field_number: u32 = 4;
-};
-pub const GatherTaskDoneInfo = struct {
-    pub const TaskId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const AnimationStateInitRequest = struct {
-    pub const msg_id: u16 = 19853;
-    pub const CombatCommon_field_number: u32 = 1;
-    pub const Id_field_number: u32 = 10;
-    pub const States_field_number: u32 = 3;
-    pub const SpecialStates_field_number: u32 = 13;
-    pub const ModelId_field_number: u32 = 4;
-};
-pub const ActorVisibleResponse = struct {
-    pub const msg_id: u16 = 16769;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const GetDetectionLabelInfoResponse = struct {
-    pub const msg_id: u16 = 19890;
-    pub const UnlockLabelInfo_field_number: u32 = 3;
-};
-pub const EntityFollowTrackResponse = struct {
-    pub const msg_id: u16 = 18748;
-    pub const ErrorCode_field_number: u32 = 1;
-};
-pub const AccessPathTimeServerConfigResponse = struct {
-    pub const msg_id: u16 = 29143;
-    pub const AccessPathTimeServerConfig_field_number: u32 = 9;
-};
-pub const AiBlackboardCdResponse = struct {
-    pub const msg_id: u16 = 22438;
-    pub const ErrorCode_field_number: u32 = 1;
-};
-pub const RemoveBuffByIdS2cResponsePush = struct {
-    pub const msg_id: u16 = 24578;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const ActivityLineCrossData = struct {
-    pub const Challenges_field_number: u32 = 1;
-};
-pub const DropCatchActivityInfo = struct {
-    pub const DropCatchLevelInfos_field_number: u32 = 1;
-};
-pub const CaughtRequest = struct {
-    pub const msg_id: u16 = 28718;
-    pub const Info_field_number: u32 = 15;
-};
-pub const PayGiftInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const PayId_field_number: u32 = 2;
-    pub const ItemId_field_number: u32 = 3;
-    pub const ItemCount_field_number: u32 = 4;
-    pub const Sort_field_number: u32 = 5;
-    pub const BuyLimit_field_number: u32 = 6;
-    pub const BoughtCount_field_number: u32 = 7;
-    pub const StageImage_field_number: u32 = 8;
-    pub const BeginTime_field_number: u32 = 9;
-    pub const EndTime_field_number: u32 = 10;
-    pub const ProductId_field_number: u32 = 11;
-    pub const Amount_field_number: u32 = 12;
-    pub const TabId_field_number: u32 = 13;
-    pub const Type_field_number: u32 = 14;
-    pub const Locked_field_number: u32 = 15;
-    pub const IsCanBuy_field_number: u32 = 16;
-    pub const IsRemind_field_number: u32 = 17;
-    pub const BuyCondition_field_number: u32 = 18;
-    pub const CloudGameTime_field_number: u32 = 19;
-    pub const CloudGameIcon_field_number: u32 = 20;
-    pub const Desc_field_number: u32 = 21;
-    pub const UpdateType_field_number: u32 = 22;
-    pub const UpdateTime_field_number: u32 = 23;
-    pub const LastUpdateTime_field_number: u32 = 24;
-    pub const Tag_field_number: u32 = 25;
-    pub const PromotionShow_field_number: u32 = 26;
-    pub const ShowStageImage_field_number: u32 = 27;
-    pub const CurrencyDiscountTags_field_number: u32 = 28;
-    pub const ComplianceDetail_field_number: u32 = 29;
-    pub const Quality_field_number: u32 = 30;
+pub const RbJumpMovement = struct {
+    pub const Direction_field_number: u32 = 1;
 };
 pub const AnimStateChangeInfoList = struct {
     pub const EntityId_field_number: u32 = 1;
     pub const AnimStateChangeInfo_field_number: u32 = 2;
 };
-pub const ShieldComponentPb = struct {
-    pub const ShieldInfoPbList_field_number: u32 = 1;
-    pub const ShieldValueTotal_field_number: u32 = 2;
-};
-pub const ResonantChainUnlockResponse = struct {
-    pub const msg_id: u16 = 24564;
-    pub const ErrorCode_field_number: u32 = 6;
-    pub const RoleId_field_number: u32 = 12;
-    pub const ResonantChainGroupIndex_field_number: u32 = 9;
-};
-pub const BtnStateRequest = struct {
-    pub const msg_id: u16 = 27753;
-    pub const Type_field_number: u32 = 4;
-    pub const Types_field_number: u32 = 9;
-};
-pub const EntityAfterConditionActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const PreCondtionListeningIndex_field_number: u32 = 2;
-    pub const AfterCondtionListeningIndex_field_number: u32 = 3;
-};
-pub const RogueWeeklyAward = struct {
-    pub const SignState_field_number: u32 = 1;
-    pub const CurProgress_field_number: u32 = 2;
-    pub const MaxProgress_field_number: u32 = 3;
-    pub const ConfigId_field_number: u32 = 4;
-};
-pub const HonamiStoryRoleData = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const RoleSlots_field_number: u32 = 2;
-    pub const DressWeapon_field_number: u32 = 3;
-};
-pub const TotalTopUpActivityInfo = struct {
-    pub const Score_field_number: u32 = 1;
-    pub const TotalTopUpRewardInfos_field_number: u32 = 2;
-};
-pub const ItemLockResponse = struct {
-    pub const msg_id: u16 = 21076;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const PlayMontageTaskAndResponse = struct {
-    pub const msg_id: u16 = 16394;
-    pub const ErrorCode_field_number: u32 = 14;
-};
-pub const IllustratedInfoRequest = struct {
-    pub const msg_id: u16 = 15380;
-    pub const TypeList_field_number: u32 = 13;
-};
-pub const ExploreSkillActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const SendEquipSkinResponse = struct {
-    pub const msg_id: u16 = 21648;
-    pub const ErrorCode_field_number: u32 = 6;
-};
-pub const RiskHarvestStarRewardInfo = struct {
-    pub const TargetScore_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const EntityIsVisibleRequest = struct {
-    pub const msg_id: u16 = 27946;
-    pub const Id_field_number: u32 = 14;
-    pub const IsVisible_field_number: u32 = 11;
-    pub const CombatCommon_field_number: u32 = 15;
-};
-pub const PinballWeapons = struct {
-    pub const PinballWeaponList_field_number: u32 = 1;
-};
-pub const AiBlackboardsResponse = struct {
-    pub const msg_id: u16 = 26437;
-    pub const ErrorCode_field_number: u32 = 11;
-};
-pub const FlowOptionInfoList = struct {
-    pub const OptionIndexList_field_number: u32 = 1;
-};
-pub const AiHateNotify = struct {
-    pub const msg_id: u16 = 25548;
-    pub const HateList_field_number: u32 = 6;
-};
-pub const GachaResult = struct {
-    Bottom: ?union(enum) {
-    } = null,
-    pub const BottomExtraReward_field_number: u32 = 3;
-    pub const GachaReward_field_number: u32 = 1;
-    pub const ExtraRewards_field_number: u32 = 2;
-    pub const TransformRewards_field_number: u32 = 4;
-};
-pub const TransitionWithSpecialCustomLoadingPb = struct {
-    LoadingType: ?union(enum) {
-    } = null,
-    pub const HonamiStoryCustomLoadingPb_field_number: u32 = 1;
-};
-pub const ApplyBuffS2cResponsePush = struct {
-    pub const msg_id: u16 = 28769;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const Handle_field_number: u32 = 10;
-    pub const IsActive_field_number: u32 = 2;
-};
-pub const FollowerList = struct {
-    pub const Type_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 2;
-};
-pub const RbJumpMovement = struct {
-    pub const Direction_field_number: u32 = 1;
-};
-pub const ToughCalcExtraRatioChangeResponse = struct {
-    pub const msg_id: u16 = 28215;
-    pub const ErrorCode_field_number: u32 = 9;
-};
-pub const ActivityMapExploreData = struct {
-    pub const ActivityTasks_field_number: u32 = 1;
-};
-pub const ClientCurrentRoleReportResponse = struct {
-    pub const msg_id: u16 = 22232;
-    pub const PlayerId_field_number: u32 = 14;
-    pub const CurrentEntityId_field_number: u32 = 13;
-    pub const ErrorCode_field_number: u32 = 4;
-};
-pub const AnimationStateChangedNotify = struct {
-    pub const msg_id: u16 = 26660;
-    pub const CombatCommon_field_number: u32 = 7;
-    pub const Id_field_number: u32 = 11;
-    pub const States_field_number: u32 = 6;
-    pub const TimeStamp_field_number: u32 = 1;
-    pub const SpecialStates_field_number: u32 = 13;
-    pub const ModelId_field_number: u32 = 5;
-};
-pub const PbBattlePassRecurringReward = struct {
-    pub const Type_field_number: u32 = 1;
-    pub const ItemId_field_number: u32 = 2;
-    pub const Count_field_number: u32 = 3;
-};
-pub const EntityPatrolStopResponse = struct {
-    pub const msg_id: u16 = 26881;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const LevelPlayInfoNotify = struct {
-    pub const msg_id: u16 = 25844;
-    pub const LevelPlayInfo_field_number: u32 = 8;
-};
-pub const NormalItemResponse = struct {
-    pub const msg_id: u16 = 28483;
-    pub const NormalItemList_field_number: u32 = 15;
-};
-pub const RbBreakableObstaclePbType = struct {
-    pub const LinkPoints_field_number: u32 = 1;
-};
-pub const AttributeChangedResponse = struct {
-    pub const msg_id: u16 = 23612;
-    pub const ErrorCode_field_number: u32 = 7;
-};
-pub const OrderRemoveBuffByTagsResponse = struct {
-    pub const msg_id: u16 = 20255;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const BuffStackCountResponse = struct {
-    pub const msg_id: u16 = 17938;
-    pub const ErrorCode_field_number: u32 = 9;
-};
-pub const RolePhantomPropInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const BaseProp_field_number: u32 = 2;
-    pub const AddProp_field_number: u32 = 3;
-};
-pub const EntityIsVisiblePush = struct {
-    pub const msg_id: u16 = 20489;
-    pub const Id_field_number: u32 = 13;
-    pub const IsVisible_field_number: u32 = 4;
-    pub const CombatCommon_field_number: u32 = 9;
-};
-pub const VisionExploreSkillSetResponse = struct {
-    pub const msg_id: u16 = 18563;
+pub const RoleTagChangeResponse = struct {
+    pub const msg_id: u16 = 18604;
     pub const ErrorCode_field_number: u32 = 10;
-    pub const SkillId_field_number: u32 = 15;
 };
-pub const PartComponentPb = struct {
-    pub const PartLifeInfos_field_number: u32 = 1;
-};
-pub const RTimeStopInstResponse = struct {
-    pub const msg_id: u16 = 21503;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const HardLevelBuffs = struct {
-    pub const BuffId_field_number: u32 = 1;
-    pub const Slot_field_number: u32 = 2;
-    pub const State_field_number: u32 = 3;
-};
-pub const RbRollMovement = struct {
-    pub const Direction_field_number: u32 = 1;
-};
-pub const EntityLeaveTriggerCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const TriggerEntityIncId_field_number: u32 = 2;
-};
-pub const CharacterAttachResponse = struct {
-    pub const msg_id: u16 = 17300;
-    pub const ErrorCode_field_number: u32 = 7;
-};
-pub const ShieldUpdateInfo = struct {
-    pub const Handle_field_number: u32 = 1;
-    pub const ConfigId_field_number: u32 = 2;
-    pub const ShieldValue_field_number: u32 = 3;
-    pub const UpdateType_field_number: u32 = 4;
-};
-pub const SunSpiritPb = struct {
+pub const EntityMapMarkInfoPb = struct {
     pub const InstId_field_number: u32 = 1;
-    pub const EntityConfigId_field_number: u32 = 2;
-    pub const TakeUpData_field_number: u32 = 3;
+    pub const TemplateId_field_number: u32 = 2;
+    pub const Pos_field_number: u32 = 3;
 };
-pub const LoginResponse = struct {
-    pub const msg_id: u16 = 104;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const ReconnectToken_field_number: u32 = 2;
-    pub const Timestamp_field_number: u32 = 3;
-    pub const Platform_field_number: u32 = 4;
-    pub const ClientWaitingMode_field_number: u32 = 5;
-    pub const ClientWaitingTime_field_number: u32 = 6;
-    pub const ClientAutoInInterval_field_number: u32 = 7;
-    pub const ClientDisplayTime_field_number: u32 = 8;
-};
-pub const PbUpLevelRoleRequest = struct {
-    pub const msg_id: u16 = 21664;
-    pub const RoleId_field_number: u32 = 5;
-    pub const ItemList_field_number: u32 = 1;
-};
-pub const AiInformationNotify = struct {
-    pub const msg_id: u16 = 27626;
-    pub const AiBlackboardCd_field_number: u32 = 8;
-};
-pub const ActivityTimePointRewarData = struct {
-    pub const Rewards_field_number: u32 = 1;
-};
-pub const RoleLevelUpViewRequest = struct {
-    pub const msg_id: u16 = 17061;
-    pub const RoleId_field_number: u32 = 15;
-    pub const MaxItemId_field_number: u32 = 1;
-    pub const ItemList_field_number: u32 = 8;
-};
-pub const ParkourActivity = struct {
-    pub const Challenges_field_number: u32 = 1;
-};
-pub const EntityGroupFailureCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const ActivityMoonSignInData = struct {
-    pub const MoonPhaseSelectList_field_number: u32 = 1;
-    pub const IsGrandReward_field_number: u32 = 2;
-    pub const CurrentMoonId_field_number: u32 = 3;
-};
-pub const EntityGroupActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const TriggerIndex_field_number: u32 = 2;
-    pub const IsMatch_field_number: u32 = 3;
-};
-pub const AttrData = struct {
-    pub const AttributeType_field_number: u32 = 1;
-    pub const CurrentValue_field_number: u32 = 2;
-    pub const ValueIncrement_field_number: u32 = 3;
-};
-pub const EntityEquipChangeNotify = struct {
-    pub const msg_id: u16 = 29352;
-    pub const EntityId_field_number: u32 = 3;
-    pub const EquipComponent_field_number: u32 = 5;
-};
-pub const TetrisLevelInfo = struct {
-    vdC: ?union(enum) {
-    } = null,
-    ehC: ?union(enum) {
-    } = null,
-    thC: ?union(enum) {
-    } = null,
-    pub const DifficultyIdx_field_number: u32 = 2;
-    pub const State_field_number: u32 = 3;
-    pub const UnlockTime_field_number: u32 = 4;
-    pub const Id_field_number: u32 = 1;
-    pub const Results_field_number: u32 = 5;
-};
-pub const ItemDict = struct {
-    pub const Items_field_number: u32 = 1;
-};
-pub const RemoveGameplayEffectResponse = struct {
-    pub const msg_id: u16 = 26850;
-    pub const ErrorCode_field_number: u32 = 8;
-    pub const Handle_field_number: u32 = 12;
-};
-pub const ButtonEnableResult = struct {
-    pub const Type_field_number: u32 = 2;
-    pub const Enabled_field_number: u32 = 3;
-};
-pub const InputAction = struct {
-    pub const ActionName_field_number: u32 = 1;
-    pub const KeyNameList_field_number: u32 = 2;
-    pub const Version_field_number: u32 = 3;
-    pub const InputType_field_number: u32 = 4;
-};
-pub const PhantomCollectReward = struct {
-    Data: ?union(enum) {
-    } = null,
-    pub const Progress_field_number: u32 = 3;
-    pub const Type_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const GuideFinishResponse = struct {
-    pub const msg_id: u16 = 18087;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const ErrorParams_field_number: u32 = 5;
-};
-pub const TowerDefenseActivityInfo = struct {
-    pub const InstanceInfos_field_number: u32 = 1;
-    pub const RewardedScoreIds_field_number: u32 = 2;
-    pub const TotalScore_field_number: u32 = 3;
-    pub const ShowName_field_number: u32 = 4;
-};
-pub const PassiveSkillAddResponse = struct {
-    pub const msg_id: u16 = 21626;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const SysBuffComponentPb = struct {
-    pub const SysBuffInfos_field_number: u32 = 1;
-};
-pub const VectorArrayBlackboard = struct {
-    pub const Values_field_number: u32 = 1;
+pub const MotorParkourLevelInfo = struct {
+    pub const MotorParkourId_field_number: u32 = 1;
+    pub const RewardStates_field_number: u32 = 2;
+    pub const UnlockTime_field_number: u32 = 3;
+    pub const BestPassTime_field_number: u32 = 4;
 };
 pub const UpdateSceneDateRequest = struct {
     pub const msg_id: u16 = 17362;
@@ -29585,463 +29906,123 @@ pub const UpdateSceneDateRequest = struct {
     pub const Minute_field_number: u32 = 1;
     pub const Reason_field_number: u32 = 11;
 };
-pub const ConditionTask = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Current_field_number: u32 = 2;
-    pub const Target_field_number: u32 = 3;
-    pub const Status_field_number: u32 = 4;
+pub const PlayerAccessEffectAreaRequest = struct {
+    pub const msg_id: u16 = 29680;
+    pub const EntityId_field_number: u32 = 9;
+    pub const RangeType_field_number: u32 = 10;
 };
-pub const RbBlockIdlePbState = struct {
-    pub const Position_field_number: u32 = 6;
-    pub const Rotation_field_number: u32 = 7;
-};
-pub const GuideTriggerResponse = struct {
-    pub const msg_id: u16 = 24756;
+pub const SwitchRoleResponse = struct {
+    pub const msg_id: u16 = 16993;
     pub const ErrorCode_field_number: u32 = 7;
-    pub const ErrorParams_field_number: u32 = 5;
+    pub const RoleId_field_number: u32 = 1;
 };
-pub const AreaInfo = struct {
-    pub const AreaId_field_number: u32 = 1;
-    pub const Atmosphere_field_number: u32 = 2;
-    pub const FurnitureDiySlotInfos_field_number: u32 = 3;
-};
-pub const SceneItemLifeCycleComponentDestroyCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const RandomInteractCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const OptionIndex_field_number: u32 = 2;
-};
-pub const StateChangeActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const StateIndex_field_number: u32 = 2;
-};
-pub const GridPlacementPbInfo = struct {
-    GridPb: ?union(enum) {
-    } = null,
-    pub const Direction_field_number: u32 = 4;
-    pub const ActorGuide_field_number: u32 = 1;
-    pub const X_field_number: u32 = 2;
-    pub const Y_field_number: u32 = 3;
-};
-pub const NormalInteractCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const OptionIndex_field_number: u32 = 2;
-};
-pub const PrivateChatOperateRequest = struct {
-    pub const msg_id: u16 = 22965;
-    pub const OperateType_field_number: u32 = 8;
-    pub const TargetPlayerId_field_number: u32 = 6;
-};
-pub const WeaponItemResponse = struct {
-    pub const msg_id: u16 = 25866;
-    pub const WeaponItemList_field_number: u32 = 13;
-};
-pub const SettingNotify = struct {
-    pub const msg_id: u16 = 22797;
-    pub const MobileButtonSettings_field_number: u32 = 15;
-};
-pub const RoleShowListUpdateResponse = struct {
-    pub const msg_id: u16 = 19592;
-    pub const ErrorCode_field_number: u32 = 9;
-};
-pub const FavorQuest = struct {
-    pub const Chapter_field_number: u32 = 1;
-    pub const Status_field_number: u32 = 2;
-};
-pub const PhantomItem = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const IncrId_field_number: u32 = 2;
-    pub const FuncValue_field_number: u32 = 3;
-    pub const PhantomLevel_field_number: u32 = 4;
-    pub const PhantomExp_field_number: u32 = 5;
-    pub const PhantomMainProp_field_number: u32 = 6;
-    pub const PhantomSubProp_field_number: u32 = 7;
-    pub const FetterGroupId_field_number: u32 = 8;
-    pub const SkinId_field_number: u32 = 9;
-    pub const UnAckSubProp_field_number: u32 = 10;
-    pub const LockPropIndex_field_number: u32 = 11;
-};
-pub const SwitchCharacterStateNotify = struct {
-    pub const msg_id: u16 = 23280;
-    pub const CombatCommon_field_number: u32 = 8;
-    pub const Id_field_number: u32 = 10;
-    pub const OldState_field_number: u32 = 3;
-    pub const NewState_field_number: u32 = 6;
+pub const CharacterAttachResponse = struct {
+    pub const msg_id: u16 = 17300;
+    pub const ErrorCode_field_number: u32 = 7;
 };
 pub const GravityFlipComponent = struct {
     pub const Direction_field_number: u32 = 1;
 };
-pub const ExploreSkillCustomCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const RhythmSubLevelPb = struct {
-    pub const SubLevelId_field_number: u32 = 1;
-    pub const Cleared_field_number: u32 = 2;
-    pub const BestScore_field_number: u32 = 3;
-    pub const BestAccuracy_field_number: u32 = 4;
-    pub const BestRank_field_number: u32 = 5;
-};
-pub const TowerAreaPb = struct {
-    pub const AreaNum_field_number: u32 = 1;
-    pub const TowerFloors_field_number: u32 = 2;
-};
-pub const SunSpiritGearComponentPb = struct {
-    pub const TakeUpInfo_field_number: u32 = 1;
-};
-pub const HookLockPointActionCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const InteractionType_field_number: u32 = 2;
-};
-pub const ExploreProgressResponse = struct {
-    pub const msg_id: u16 = 23914;
-    pub const AreaProgress_field_number: u32 = 9;
-};
-pub const CharacterAttachInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const Pos_field_number: u32 = 2;
-    pub const Rot_field_number: u32 = 3;
-    pub const PartIndex_field_number: u32 = 4;
-};
-pub const FsmCustomBlackboardNotify = struct {
-    pub const msg_id: u16 = 25031;
-    pub const FsmCustomBlackboardDatas_field_number: u32 = 5;
-};
-pub const HandInItemChildQuestNodeCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const EquipTakeOnRequest = struct {
-    pub const msg_id: u16 = 25710;
-    pub const Data_field_number: u32 = 8;
-};
-pub const EquipTakeOnNotify = struct {
-    pub const msg_id: u16 = 28407;
-    pub const DataList_field_number: u32 = 14;
-};
-pub const StuckCheckCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-    pub const Index_field_number: u32 = 2;
-};
-pub const PermanentSeasonData = struct {
-    pub const PermanentSeasonDataId_field_number: u32 = 1;
-    pub const SkillDict_field_number: u32 = 2;
-    pub const RogueResEndId_field_number: u32 = 3;
-    pub const RogueResEndAward_field_number: u32 = 4;
-    pub const TrialRoleIds_field_number: u32 = 5;
-    pub const RoleIds_field_number: u32 = 6;
-    pub const EndTime_field_number: u32 = 7;
-    pub const ShopItemCount_field_number: u32 = 8;
-};
-pub const DailyAdventureActivityData = struct {
-    pub const DailyAdventureActivityTasks_field_number: u32 = 1;
-    pub const PtRewardTaken_field_number: u32 = 2;
-};
-pub const MowTowerActivityData = struct {
-    pub const MowTowerLevelsInfo_field_number: u32 = 1;
-};
-pub const TemplateSpawnerActionCtxPb = struct {
-    Type: ?union(enum) {
-    } = null,
-    pub const DestroyType_field_number: u32 = 2;
-    pub const EntityCtx_field_number: u32 = 1;
-};
-pub const AiBlackboardCdRequest = struct {
-    pub const msg_id: u16 = 26974;
-    pub const AiBlackboardCdModify_field_number: u32 = 9;
-    pub const AiBlackboardCdComplete_field_number: u32 = 14;
-};
-pub const MotorDiyPb = struct {
-    pub const MotorDiyOnwer_field_number: u32 = 1;
-    pub const MotorDiyEquipped_field_number: u32 = 2;
-};
-pub const ActivityTurnTableData = struct {
-    pub const IsAllFinish_field_number: u32 = 1;
-    pub const GroupId_field_number: u32 = 2;
-    pub const Rewards_field_number: u32 = 3;
-    pub const TurntableTasks_field_number: u32 = 4;
-};
-pub const PlayerTitleData = struct {
-    pub const PlayerTitleId_field_number: u32 = 1;
-    pub const IsUnlock_field_number: u32 = 2;
-    pub const UnlockTime_field_number: u32 = 3;
-    pub const StarLevel_field_number: u32 = 4;
-    pub const ActivityServerRewardItemData_field_number: u32 = 5;
-};
-pub const PlayEnterOrExitPollutionRangeCtxPb = struct {
-    pub const RangeType_field_number: u32 = 1;
-    pub const EntityCtx_field_number: u32 = 2;
-};
-pub const MonsterGachaDataPb = struct {
-    pub const MonsterCrystalInfoList_field_number: u32 = 1;
-};
-pub const ActivityFunPlayData = struct {
-    pub const ActivityFunPlayChallengeData_field_number: u32 = 1;
-};
-pub const MaterialPush = struct {
-    pub const msg_id: u16 = 21040;
-    pub const MaterialInfo_field_number: u32 = 2;
-    pub const CombatCommon_field_number: u32 = 6;
-};
-pub const ChildQuestNodeEnterActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const AttributeChangedRequest = struct {
-    pub const msg_id: u16 = 17649;
-    pub const Id_field_number: u32 = 1;
-    pub const Attributes_field_number: u32 = 15;
-};
-pub const MaterialRequest = struct {
-    pub const msg_id: u16 = 27611;
-    pub const MaterialInfo_field_number: u32 = 4;
-    pub const CombatCommon_field_number: u32 = 13;
-};
-pub const PrivateChatHistoryContentProto = struct {
-    pub const TargetUid_field_number: u32 = 1;
-    pub const Chats_field_number: u32 = 2;
-    pub const HistoryIsEnd_field_number: u32 = 3;
-    pub const TotalNums_field_number: u32 = 4;
-};
-pub const ApplyVisionGroupResponse = struct {
-    pub const msg_id: u16 = 15842;
-    pub const ErrorCode_field_number: u32 = 2;
-    pub const EquipInfoList_field_number: u32 = 7;
-};
-pub const DoInteractChildQuestNodeCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const FightRoleInfos = struct {
-    pub const GroupType_field_number: u32 = 1;
-    pub const FightRoleInfos_field_number: u32 = 2;
-    pub const CurRole_field_number: u32 = 3;
-    pub const LivingStatus_field_number: u32 = 4;
-    pub const IsFixedLocation_field_number: u32 = 5;
-};
-pub const HonamiStoryItemInfo = struct {
-    ItemInfo: ?union(enum) {
-    } = null,
-    pub const HonamiStoryNormalItemInfo_field_number: u32 = 4;
-    pub const EquipItemInfo_field_number: u32 = 5;
-    pub const IncrId_field_number: u32 = 1;
-    pub const ItemId_field_number: u32 = 2;
-    pub const FuncValue_field_number: u32 = 3;
-};
-pub const SceneItemSplineRuntimeData = struct {
-    Distance: ?union(enum) {
-    } = null,
-    Rot: ?union(enum) {
-    } = null,
-    pub const DistanceAlongPath_field_number: u32 = 1;
-    pub const CurRot_field_number: u32 = 3;
-    pub const CurPos_field_number: u32 = 2;
-};
-pub const PatrolInfoComponentPb = struct {
-    pub const SceneAiEnabled_field_number: u32 = 1;
-    pub const PatrolInfo_field_number: u32 = 2;
-};
-pub const ANStartResponse = struct {
-    pub const msg_id: u16 = 24111;
-    pub const SkillId_field_number: u32 = 4;
-    pub const MontageIndex_field_number: u32 = 13;
-    pub const AnIndex_field_number: u32 = 6;
-    pub const Error_field_number: u32 = 11;
-};
-pub const EntityStaticHookMoveRequest = struct {
-    pub const msg_id: u16 = 19374;
-    Target: ?union(enum) {
-    } = null,
-    pub const TargetEntityId_field_number: u32 = 8;
-    pub const TargetPos_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 2;
-    pub const HookMoveType_field_number: u32 = 4;
-};
-pub const PbUpLevelSkillResponse = struct {
-    pub const msg_id: u16 = 25401;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const RoleId_field_number: u32 = 10;
-    pub const SkillInfo_field_number: u32 = 7;
-};
-pub const Transform = struct {
-    pub const Pos_field_number: u32 = 1;
-    pub const Rot_field_number: u32 = 2;
-};
-pub const EntityLivingStatusNotify = struct {
-    pub const msg_id: u16 = 23551;
-    pub const Id_field_number: u32 = 14;
-    pub const LivingStatus_field_number: u32 = 6;
-    pub const DropVisionItem_field_number: u32 = 9;
-};
-pub const MoveToPointComponentPb = struct {
-    pub const PbMoveToPointConfig_field_number: u32 = 1;
-};
-pub const MotorParkourActivityInfo = struct {
-    pub const MotorParkourLevelInfos_field_number: u32 = 1;
-};
-pub const DeleteVisionEquipGroupResponse = struct {
-    pub const msg_id: u16 = 18164;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const VisionEquipList_field_number: u32 = 3;
-};
-pub const GridObjectComponentPb = struct {
-    pub const InitGridPlacementPbInfo_field_number: u32 = 1;
-};
-pub const RoleActivateSkillResponse = struct {
-    pub const msg_id: u16 = 19247;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const RoleId_field_number: u32 = 8;
-    pub const SkillInfo_field_number: u32 = 12;
-};
-pub const PayGiftShopInfo = struct {
-    pub const Gifts_field_number: u32 = 1;
-    pub const Version_field_number: u32 = 2;
-};
-pub const CiacconaGalChapterData = struct {
-    pub const ChapterDataId_field_number: u32 = 1;
-    pub const CanUnlock_field_number: u32 = 2;
-    pub const CiacconaGalSubEndingData_field_number: u32 = 3;
-    pub const CiacconaGalChoiceData_field_number: u32 = 4;
-};
-pub const PhantomCollectActivity = struct {
-    pub const PhantomCollectRewards_field_number: u32 = 1;
-};
-pub const FollowerComponentPb = struct {
-    pub const FollowerList_field_number: u32 = 1;
-};
-pub const ShieldUpdateNotify = struct {
-    pub const msg_id: u16 = 28980;
-    pub const Shields_field_number: u32 = 7;
-};
-pub const GachaInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const TodayTimes_field_number: u32 = 2;
-    pub const TotalTimes_field_number: u32 = 3;
-    pub const ItemId_field_number: u32 = 4;
-    pub const GachaConsumes_field_number: u32 = 5;
-    pub const UsePoolId_field_number: u32 = 6;
-    pub const Pools_field_number: u32 = 7;
-    pub const BeginTime_field_number: u32 = 8;
-    pub const EndTime_field_number: u32 = 9;
-    pub const DailyLimitTimes_field_number: u32 = 10;
-    pub const TotalLimitTimes_field_number: u32 = 11;
-    pub const ResourcesId_field_number: u32 = 12;
-};
-pub const EntityTimelineTrackCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const GroupIndex_field_number: u32 = 2;
-    pub const ControlPoint_field_number: u32 = 3;
-    pub const EventType_field_number: u32 = 4;
-};
-pub const AiBlackboardCdPush = struct {
-    pub const msg_id: u16 = 26753;
-    pub const AiBlackboardCdModify_field_number: u32 = 15;
-    pub const AiBlackboardCdComplete_field_number: u32 = 9;
-};
-pub const FriendApply = struct {
-    pub const Info_field_number: u32 = 1;
-    pub const CreatedTime_field_number: u32 = 2;
-};
-pub const PhotoMemoryResponse = struct {
-    pub const msg_id: u16 = 24402;
-    pub const Item_field_number: u32 = 14;
-};
-pub const AttributeChangedNotify = struct {
-    pub const msg_id: u16 = 20929;
-    pub const Attributes_field_number: u32 = 13;
-};
-pub const FailedNodeActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const DestroyBulletNotify = struct {
-    pub const msg_id: u16 = 26364;
-    pub const CombatCommon_field_number: u32 = 9;
-    pub const Handle_field_number: u32 = 14;
-    pub const IsCreateSubBullet_field_number: u32 = 7;
-};
-pub const CombinationAxis = struct {
-    pub const AxisName_field_number: u32 = 1;
-    pub const CombinationKeyList_field_number: u32 = 2;
-    pub const Version_field_number: u32 = 3;
-    pub const InputType_field_number: u32 = 4;
-};
-pub const SuccessNodeActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const FlySkinWearAllRoleResponse = struct {
-    pub const msg_id: u16 = 19664;
+pub const RoleOperateSelfBgmResponse = struct {
+    pub const msg_id: u16 = 23828;
     pub const ErrorCode_field_number: u32 = 12;
-    pub const FlySkinData_field_number: u32 = 2;
+    pub const RoleId_field_number: u32 = 13;
+    pub const IsOpen_field_number: u32 = 1;
 };
-pub const PlayPointStateAsyncResponse = struct {
-    pub const msg_id: u16 = 17003;
-    pub const ErrorCode_field_number: u32 = 14;
-    pub const LevelPlayStateDict_field_number: u32 = 1;
+pub const DangoMonopolyConfig = struct {
+    pub const TaskId_field_number: u32 = 1;
+    pub const ActivityTaskState_field_number: u32 = 2;
+    pub const Progress_field_number: u32 = 3;
+    pub const TargetProgress_field_number: u32 = 4;
 };
-pub const RollBlockGamePlayActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-    pub const ParamType_field_number: u32 = 2;
+pub const AiHateResponse = struct {
+    pub const msg_id: u16 = 23084;
+    pub const ErrorCode_field_number: u32 = 8;
 };
-pub const BeamReceiveAction = struct {
-    pub const ReceiveType_field_number: u32 = 1;
-    pub const EntityCtx_field_number: u32 = 2;
+pub const SunSpiritPb = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const EntityConfigId_field_number: u32 = 2;
+    pub const TakeUpData_field_number: u32 = 3;
 };
-pub const DamageExecuteResponse = struct {
-    pub const msg_id: u16 = 15244;
+pub const RiskHarvestStarRewardInfo = struct {
+    pub const TargetScore_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const DropCatchActivityInfo = struct {
+    pub const DropCatchLevelInfos_field_number: u32 = 1;
+};
+pub const MonthCardResponse = struct {
+    pub const msg_id: u16 = 23495;
+    pub const Days_field_number: u32 = 10;
+    pub const IsDailyGot_field_number: u32 = 1;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const ConditionItem = struct {
+    pub const ItemFinishMap_field_number: u32 = 1;
+};
+pub const RoleFlyEquipNotify = struct {
+    pub const msg_id: u16 = 23295;
+    pub const FlySkinEquipData_field_number: u32 = 4;
+};
+pub const HardLevelBuffs = struct {
+    pub const BuffId_field_number: u32 = 1;
+    pub const Slot_field_number: u32 = 2;
+    pub const State_field_number: u32 = 3;
+};
+pub const SendEquipSkinResponse = struct {
+    pub const msg_id: u16 = 21648;
+    pub const ErrorCode_field_number: u32 = 6;
+};
+pub const DErrorResult = struct {
     pub const ErrorCode_field_number: u32 = 1;
-    pub const AttackerEntityId_field_number: u32 = 10;
-    pub const TargetEntityId_field_number: u32 = 2;
-    pub const Damage_field_number: u32 = 6;
-    pub const PartIndex_field_number: u32 = 5;
-    pub const IsCrit_field_number: u32 = 3;
-    pub const KilledTarget_field_number: u32 = 12;
-    pub const ShieldCoverDamage_field_number: u32 = 4;
-    pub const ImmuneType_field_number: u32 = 15;
-    pub const ElementType_field_number: u32 = 14;
-    pub const ChangeLife_field_number: u32 = 13;
-    pub const ChangeWeakness_field_number: u32 = 7;
+    pub const ErrorParams_field_number: u32 = 2;
 };
-pub const ChangeStateConfirmResponse = struct {
-    pub const msg_id: u16 = 21484;
-    pub const FsmId_field_number: u32 = 6;
-    pub const State_field_number: u32 = 8;
-    pub const Error_field_number: u32 = 14;
+pub const BoneVisibleChangeNotify = struct {
+    pub const msg_id: u16 = 21649;
+    pub const BoneVisibleData_field_number: u32 = 3;
 };
-pub const ActivityLongShanMain = struct {
-    pub const StageData_field_number: u32 = 1;
-    pub const ScoreRewardedId_field_number: u32 = 2;
+pub const MotorSliderCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const IsEnter_field_number: u32 = 2;
 };
-pub const PbMailInfo = struct {
+pub const FeiXuePreheatActivityInfo = struct {
+    pub const FeiXuePreheatInfos_field_number: u32 = 1;
+};
+pub const IllustratedInfoRequest = struct {
+    pub const msg_id: u16 = 15380;
+    pub const TypeList_field_number: u32 = 13;
+};
+pub const CharacterDetachResponse = struct {
+    pub const msg_id: u16 = 16128;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const PhantomCollectReward = struct {
+    Data: ?union(enum) {
+    } = null,
+    pub const Progress_field_number: u32 = 3;
+    pub const Type_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
+};
+pub const RotatorArrayBlackboard = struct {
+    pub const Values_field_number: u32 = 1;
+};
+pub const LongShanMainData = struct {
     pub const Id_field_number: u32 = 1;
-    pub const ReceivedTime_field_number: u32 = 2;
-    pub const ReadTime_field_number: u32 = 3;
-    pub const State_field_number: u32 = 4;
-    pub const Level_field_number: u32 = 5;
-    pub const Title_field_number: u32 = 6;
-    pub const Content_field_number: u32 = 7;
-    pub const Sender_field_number: u32 = 8;
-    pub const ValidTime_field_number: u32 = 9;
-    pub const ReadValidTime_field_number: u32 = 10;
-    pub const Attachments_field_number: u32 = 11;
-    pub const ConfigId_field_number: u32 = 12;
-    pub const ExpiryTime_field_number: u32 = 13;
+    pub const Tasks_field_number: u32 = 2;
+    pub const CanUnlock_field_number: u32 = 3;
+    pub const BeginOpenTime_field_number: u32 = 4;
+    pub const EndOpenTime_field_number: u32 = 5;
 };
-pub const ActivityMoraleData = struct {
-    pub const AreaData_field_number: u32 = 1;
-    pub const MoraleProgressReward_field_number: u32 = 2;
-    pub const MoraleFlags_field_number: u32 = 4;
+pub const EntityEquipChangeNotify = struct {
+    pub const msg_id: u16 = 29352;
+    pub const EntityId_field_number: u32 = 3;
+    pub const EquipComponent_field_number: u32 = 5;
 };
-pub const LivenessResponse = struct {
-    pub const msg_id: u16 = 16864;
-    pub const LivenessInfo_field_number: u32 = 1;
-};
-pub const PayInfoResponse = struct {
-    pub const msg_id: u16 = 20931;
-    pub const Infos_field_number: u32 = 11;
-    pub const Version_field_number: u32 = 8;
-    pub const ErrorCode_field_number: u32 = 3;
-};
-pub const EntityAccessInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const RangeType_field_number: u32 = 2;
-    pub const AcessRangeResults_field_number: u32 = 3;
+pub const ProtoKeyResponse = struct {
+    pub const msg_id: u16 = 112;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const Key_field_number: u32 = 3;
 };
 pub const ClientBasicInfo = struct {
     pub const Platform_field_number: u32 = 1;
@@ -30065,160 +30046,51 @@ pub const ClientBasicInfo = struct {
     pub const ClientVersion_field_number: u32 = 19;
     pub const OSVersion_field_number: u32 = 20;
 };
-pub const BlackCoastThemeStageInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Tasks_field_number: u32 = 2;
+pub const EquipWeaponSkinResponse = struct {
+    pub const msg_id: u16 = 29673;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const DataList_field_number: u32 = 12;
 };
-pub const LogicStateInitNotify = struct {
-    pub const msg_id: u16 = 24981;
-    pub const CombatCommon_field_number: u32 = 14;
-    pub const EntityId_field_number: u32 = 8;
-    pub const InitData_field_number: u32 = 6;
+pub const SimpleTrackReportAsyncResponse = struct {
+    pub const msg_id: u16 = 22452;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const SimpleTrackReportMsgs_field_number: u32 = 2;
 };
-pub const SkinRewardActivityData = struct {
-    pub const RewardInfos_field_number: u32 = 1;
-};
-pub const PartComponentInitNotify = struct {
-    pub const msg_id: u16 = 20838;
-    pub const EntityId_field_number: u32 = 9;
-    pub const PartComponent_field_number: u32 = 7;
-};
-pub const ActivityLinkageData = struct {
-    pub const ActivityId_field_number: u32 = 1;
-    pub const Data_field_number: u32 = 2;
-};
-pub const TeamChallengeInfo = struct {
-    pub const RoleSaveInfos_field_number: u32 = 1;
-    pub const BuffIds_field_number: u32 = 2;
-    pub const LastMonsterInfoPreview_field_number: u32 = 3;
-    pub const TeamScore_field_number: u32 = 4;
-};
-pub const PutVisionGroupToTopResponse = struct {
-    pub const msg_id: u16 = 24281;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const VisionEquipList_field_number: u32 = 12;
-};
-pub const AdventureManualData = struct {
-    pub const AdventreTask_field_number: u32 = 1;
-    pub const NowChapter_field_number: u32 = 2;
-    pub const ReceivedChapter_field_number: u32 = 3;
-    pub const UnlockChapters_field_number: u32 = 4;
-    pub const RewardChapters_field_number: u32 = 5;
+pub const FlowEndRequest = struct {
+    pub const msg_id: u16 = 21412;
+    pub const FlowIncId_field_number: u32 = 7;
+    pub const IsSkip_field_number: u32 = 9;
+    pub const OptionInfos_field_number: u32 = 11;
 };
 pub const AddVisionEquipGroupResponse = struct {
     pub const msg_id: u16 = 17170;
     pub const ErrorCode_field_number: u32 = 8;
     pub const VisionEquipList_field_number: u32 = 15;
 };
-pub const PassiveSkillAddNotify = struct {
-    pub const msg_id: u16 = 23868;
-    pub const EntityId_field_number: u32 = 9;
-    pub const PassiveSkillItemPbList_field_number: u32 = 15;
+pub const TetrisActivityInfo = struct {
+    pub const TetrisLevelInfos_field_number: u32 = 1;
 };
-pub const SecGetReportData2FlowResponse = struct {
-    pub const msg_id: u16 = 29654;
-    pub const Error_field_number: u32 = 15;
+pub const RoleVisionMainPhantomResponse = struct {
+    pub const msg_id: u16 = 19195;
+    pub const ErrorCode_field_number: u32 = 2;
+    pub const RecommendInfo_field_number: u32 = 11;
 };
-pub const RhythmShipLevelPb = struct {
-    pub const LevelId_field_number: u32 = 1;
-    pub const RhythmSubLevelPb_field_number: u32 = 2;
-};
-pub const SpringSignData = struct {
-    pub const SpringSignActivityTasks_field_number: u32 = 1;
-    pub const CanInvite_field_number: u32 = 2;
-    pub const DrawRoles_field_number: u32 = 3;
-    pub const SkinReward_field_number: u32 = 4;
-};
-pub const ChildQuestNodeFinishActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const SummonRequestInfo = struct {
-    pub const SummonEntityId_field_number: u32 = 1;
-    pub const SkillId_field_number: u32 = 2;
-    pub const SummonConfigId_field_number: u32 = 3;
-    pub const Pos_field_number: u32 = 4;
-    pub const Rot_field_number: u32 = 5;
-    pub const IsVisible_field_number: u32 = 6;
-};
-pub const AiBlackboardCdNotify = struct {
-    pub const msg_id: u16 = 26317;
-    pub const AiBlackboardCdDel_field_number: u32 = 14;
-    pub const AiBlackboardCdModify_field_number: u32 = 2;
-    pub const AiBlackboardCdComplete_field_number: u32 = 9;
-};
-pub const PlayerAttr = struct {
-    Value: ?union(enum) {
-    } = null,
-    pub const Int32Value_field_number: u32 = 3;
-    pub const StringValue_field_number: u32 = 4;
-    pub const Key_field_number: u32 = 1;
-    pub const ValueType_field_number: u32 = 2;
-};
-pub const DestroyBulletRequest = struct {
-    pub const msg_id: u16 = 27729;
-    pub const CombatCommon_field_number: u32 = 5;
-    pub const Handle_field_number: u32 = 9;
-};
-pub const EntityStaticHookMoveNotify = struct {
-    pub const msg_id: u16 = 22054;
-    Target: ?union(enum) {
-    } = null,
-    pub const TargetEntityId_field_number: u32 = 5;
-    pub const TargetPos_field_number: u32 = 3;
-    pub const EntityId_field_number: u32 = 1;
-    pub const HookMoveType_field_number: u32 = 11;
-};
-pub const DragonPoolDropItems = struct {
-    pub const DragonPoolId_field_number: u32 = 1;
-    pub const DropIds_field_number: u32 = 2;
-    pub const DropItems_field_number: u32 = 3;
-};
-pub const EntityPositionResponse = struct {
-    pub const msg_id: u16 = 25448;
-    pub const ErrorCode_field_number: u32 = 6;
-    pub const Pos_field_number: u32 = 13;
-};
-pub const RogueResTaskThemeData = struct {
-    pub const RogueSignReward_field_number: u32 = 1;
-    pub const RogueResThemeId_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-};
-pub const ICustomScreenTypeBasePb = struct {
-    ScreenPb: ?union(enum) {
-    } = null,
-    pub const ICustomScreenSpinePb_field_number: u32 = 1;
-    pub const ICustomScreenBackgroundImagePb_field_number: u32 = 2;
-};
-pub const PlayerFightFormations = struct {
-    pub const PlayerId_field_number: u32 = 1;
-    pub const Formations_field_number: u32 = 2;
+pub const PackAnimChangedNotify = struct {
+    pub const msg_id: u16 = 21468;
+    pub const EntityAnimState_field_number: u32 = 7;
 };
 pub const ControlInfoNotify = struct {
     pub const msg_id: u16 = 25742;
     pub const ForbidList_field_number: u32 = 1;
 };
-pub const FriendInfo = struct {
-    pub const Info_field_number: u32 = 1;
-    pub const Remark_field_number: u32 = 2;
+pub const ApplyVisionGroupResponse = struct {
+    pub const msg_id: u16 = 15842;
+    pub const ErrorCode_field_number: u32 = 2;
+    pub const EquipInfoList_field_number: u32 = 7;
 };
-pub const TetrisActivityInfo = struct {
-    pub const TetrisLevelInfos_field_number: u32 = 1;
-};
-pub const ModifyBulletParams = struct {
-    pub const CombatCommon_field_number: u32 = 1;
-    pub const Handle_field_number: u32 = 2;
-    pub const TargetId_field_number: u32 = 3;
-};
-pub const RelativeMoveReplaySample = struct {
-    pub const BaseMovementEntityId_field_number: u32 = 1;
-    pub const RelativeLocation_field_number: u32 = 2;
-    pub const RelativeRotation_field_number: u32 = 3;
-};
-pub const CombinationAction = struct {
-    pub const ActionName_field_number: u32 = 1;
-    pub const CombinationKeyList_field_number: u32 = 2;
-    pub const Version_field_number: u32 = 3;
-    pub const InputType_field_number: u32 = 4;
+pub const FsmCustomBlackboardNotify = struct {
+    pub const msg_id: u16 = 25031;
+    pub const FsmCustomBlackboardDatas_field_number: u32 = 5;
 };
 pub const MovementInformation = struct {
     pub const LinearVelocity_field_number: u32 = 1;
@@ -30234,110 +30106,53 @@ pub const MovementInformation = struct {
     pub const IsJump_field_number: u32 = 11;
     pub const HorizontalJumpSpeed_field_number: u32 = 12;
 };
-pub const TestDamageRecordEntity = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const ConfigId_field_number: u32 = 2;
-    pub const BuffIds_field_number: u32 = 3;
-    pub const Attr_field_number: u32 = 4;
+pub const EntityPositionResponse = struct {
+    pub const msg_id: u16 = 25448;
+    pub const ErrorCode_field_number: u32 = 6;
+    pub const Pos_field_number: u32 = 13;
 };
-pub const PackAnimChangedNotify = struct {
-    pub const msg_id: u16 = 21468;
-    pub const EntityAnimState_field_number: u32 = 7;
+pub const BlackCoastThemeStageInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Tasks_field_number: u32 = 2;
+};
+pub const SkinRewardActivityData = struct {
+    pub const RewardInfos_field_number: u32 = 1;
+};
+pub const PartComponentInitNotify = struct {
+    pub const msg_id: u16 = 20838;
+    pub const EntityId_field_number: u32 = 9;
+    pub const PartComponent_field_number: u32 = 7;
+};
+pub const TemplateSpawnerActionCtxPb = struct {
+    Type: ?union(enum) {
+    } = null,
+    pub const DestroyType_field_number: u32 = 2;
+    pub const EntityCtx_field_number: u32 = 1;
+};
+pub const MonsterCreatorProgress = struct {
+    pub const Slots_field_number: u32 = 1;
+    pub const TotalNum_field_number: u32 = 2;
 };
 pub const OneBrochureInfo = struct {
     pub const BrochureId_field_number: u32 = 1;
     pub const BookItemInfos_field_number: u32 = 2;
 };
-pub const ActivityTaskData = struct {
-    pub const ActivityTasks_field_number: u32 = 1;
+pub const PlayPointStateAsyncResponse = struct {
+    pub const msg_id: u16 = 17003;
+    pub const ErrorCode_field_number: u32 = 14;
+    pub const LevelPlayStateDict_field_number: u32 = 1;
 };
-pub const TrapDefenseRewardData = struct {
-    pub const ActivityServerRewardItemData_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
+pub const Transform = struct {
+    pub const Pos_field_number: u32 = 1;
+    pub const Rot_field_number: u32 = 2;
 };
-pub const MaterialNotify = struct {
-    pub const msg_id: u16 = 15158;
-    pub const MaterialInfo_field_number: u32 = 10;
-    pub const CombatCommon_field_number: u32 = 5;
+pub const RelativeMoveReplaySample = struct {
+    pub const BaseMovementEntityId_field_number: u32 = 1;
+    pub const RelativeLocation_field_number: u32 = 2;
+    pub const RelativeRotation_field_number: u32 = 3;
 };
-pub const MotorCycleIpActivityData = struct {
-    pub const TaskDataList_field_number: u32 = 1;
-};
-pub const RoguelikeSeason = struct {
-    pub const SeasonId_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const EndTime_field_number: u32 = 3;
-    pub const RoguelikeTokenList_field_number: u32 = 4;
-    pub const SeasonRewardList_field_number: u32 = 5;
-    pub const TokenItemCount_field_number: u32 = 6;
-    pub const BlackFlowerUseCount_field_number: u32 = 7;
-    pub const BlackFlowerMaxCount_field_number: u32 = 8;
-};
-pub const SceneFishPointInfo = struct {
-    pub const FishPoints_field_number: u32 = 1;
-    pub const TempFishPoints_field_number: u32 = 2;
-};
-pub const GetFormationDataResponse = struct {
-    pub const msg_id: u16 = 22976;
-    pub const ErrorCode_field_number: u32 = 15;
-    pub const Formations_field_number: u32 = 7;
-};
-pub const UseSkillFailResponse = struct {
-    pub const msg_id: u16 = 28669;
-    pub const SkillId_field_number: u32 = 3;
-    pub const Error_field_number: u32 = 4;
-};
-pub const ActionGroupNodeActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const CompositionEnterActionCtxPb = struct {
-    pub const BehaviorTreeCtx_field_number: u32 = 1;
-};
-pub const PbAdvice = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const AreaId_field_number: u32 = 2;
-    pub const Contents_field_number: u32 = 3;
-    pub const UpVote_field_number: u32 = 4;
-};
-pub const DynAttachComponentPb = struct {
-    pub const PbDynAttachEntityConfigId_field_number: u32 = 1;
-    pub const PbDynAttachEntityActorKey_field_number: u32 = 2;
-    pub const Pos_field_number: u32 = 3;
-    pub const Rot_field_number: u32 = 4;
-    pub const PbDynAttachRefActorKey_field_number: u32 = 5;
-};
-pub const WeaponSkinResponse = struct {
-    pub const msg_id: u16 = 22467;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const EquipList_field_number: u32 = 7;
-};
-pub const DamageRecordEntity = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const BuffIds_field_number: u32 = 2;
-    pub const Attr_field_number: u32 = 3;
-    pub const AttrSnapshot_field_number: u32 = 4;
-};
-pub const PrivateMessageNotify = struct {
-    pub const msg_id: u16 = 28773;
-    pub const ChatContent_field_number: u32 = 3;
-};
-pub const PassiveSkillComponentPb = struct {
-    pub const PassiveSkillItemPbList_field_number: u32 = 1;
-};
-pub const RoleVisionMainPhantomResponse = struct {
-    pub const msg_id: u16 = 19195;
-    pub const ErrorCode_field_number: u32 = 2;
-    pub const RecommendInfo_field_number: u32 = 11;
-};
-pub const AllMsgResponse = struct {
-    pub const msg_id: u16 = 25109;
-    pub const ShortMessageInfos_field_number: u32 = 2;
-    pub const BubbleIds_field_number: u32 = 6;
-    pub const BubbleId_field_number: u32 = 12;
-    pub const ChatBgIds_field_number: u32 = 13;
-    pub const ChatBgId_field_number: u32 = 11;
-    pub const ErrCode_field_number: u32 = 1;
+pub const GridObjectComponentPb = struct {
+    pub const InitGridPlacementPbInfo_field_number: u32 = 1;
 };
 pub const SpawnerEntityInfo = struct {
     Group: ?union(enum) {
@@ -30348,30 +30163,155 @@ pub const SpawnerEntityInfo = struct {
     pub const MatrixInfo_field_number: u32 = 3;
     pub const IncId_field_number: u32 = 1;
 };
-pub const EntitySimplyMoveInfo = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const Location_field_number: u32 = 2;
-    pub const Rotation_field_number: u32 = 3;
+pub const SceneFishPointInfo = struct {
+    pub const FishPoints_field_number: u32 = 1;
+    pub const TempFishPoints_field_number: u32 = 2;
+};
+pub const AiBlackboardCdPush = struct {
+    pub const msg_id: u16 = 26753;
+    pub const AiBlackboardCdModify_field_number: u32 = 15;
+    pub const AiBlackboardCdComplete_field_number: u32 = 9;
+};
+pub const AttributeChangedRequest = struct {
+    pub const msg_id: u16 = 17649;
+    pub const Id_field_number: u32 = 1;
+    pub const Attributes_field_number: u32 = 15;
+};
+pub const FollowerComponentPb = struct {
+    pub const FollowerList_field_number: u32 = 1;
+};
+pub const ActivityFishingData = struct {
+    pub const ActivityTaskData_field_number: u32 = 1;
+    pub const MilestoneReward_field_number: u32 = 2;
+    pub const LimitTimeReward_field_number: u32 = 3;
+    pub const LimitTimeEnd_field_number: u32 = 4;
+    pub const MilestoneRewardItemAccumulate_field_number: u32 = 5;
+};
+pub const DoInteractChildQuestNodeCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const LivenessResponse = struct {
+    pub const msg_id: u16 = 16864;
+    pub const LivenessInfo_field_number: u32 = 1;
+};
+pub const ChangeVisionGroupNameResponse = struct {
+    pub const msg_id: u16 = 26063;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const VisionEquipList_field_number: u32 = 2;
+};
+pub const BeamReceiveAction = struct {
+    pub const ReceiveType_field_number: u32 = 1;
+    pub const EntityCtx_field_number: u32 = 2;
 };
 pub const PhantomAutoPutResponse = struct {
     pub const msg_id: u16 = 24742;
     pub const ErrorCode_field_number: u32 = 10;
     pub const EquipInfoList_field_number: u32 = 9;
 };
-pub const HarvestActivity = struct {
-    pub const HarvestPointRewards_field_number: u32 = 1;
-    pub const HarvestLevelRewards_field_number: u32 = 2;
+pub const PrivateMessageNotify = struct {
+    pub const msg_id: u16 = 28773;
+    pub const ChatContent_field_number: u32 = 3;
 };
-pub const UpdateFormationResponse = struct {
-    pub const msg_id: u16 = 22780;
-    pub const ErrorCode_field_number: u32 = 14;
-    pub const Formation_field_number: u32 = 2;
+pub const StuckCheckCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+    pub const Index_field_number: u32 = 2;
+};
+pub const ShieldUpdateNotify = struct {
+    pub const msg_id: u16 = 28980;
+    pub const Shields_field_number: u32 = 7;
+};
+pub const CompositionConditionEnterActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+    pub const ConditionIndex_field_number: u32 = 2;
+};
+pub const InfrLibraryPb = struct {
+    pub const ArchiveTasks_field_number: u32 = 1;
+    pub const PhoneTasks_field_number: u32 = 2;
+    pub const UnreadArchives_field_number: u32 = 3;
+};
+pub const MotorDecalActivityData = struct {
+    pub const ConditionTasks_field_number: u32 = 1;
+};
+pub const AiBlackboardCdRequest = struct {
+    pub const msg_id: u16 = 26974;
+    pub const AiBlackboardCdModify_field_number: u32 = 9;
+    pub const AiBlackboardCdComplete_field_number: u32 = 14;
 };
 pub const ChangeStateResponse = struct {
     pub const msg_id: u16 = 23076;
     pub const FsmId_field_number: u32 = 11;
     pub const Error_field_number: u32 = 6;
     pub const CurrentState_field_number: u32 = 1;
+};
+pub const MonsterGachaDataPb = struct {
+    pub const MonsterCrystalInfoList_field_number: u32 = 1;
+};
+pub const CalabashMsg = struct {
+    pub const Level_field_number: u32 = 1;
+    pub const Exp_field_number: u32 = 2;
+    pub const UnlockedLevels_field_number: u32 = 3;
+    pub const UnlockedDevelopRewards_field_number: u32 = 4;
+    pub const IdentifyGuaranteeCount_field_number: u32 = 5;
+    pub const LowCostGuaranteeCount_field_number: u32 = 6;
+};
+pub const UpdateFormationResponse = struct {
+    pub const msg_id: u16 = 22780;
+    pub const ErrorCode_field_number: u32 = 14;
+    pub const Formation_field_number: u32 = 2;
+};
+pub const PlayEnterOrExitPollutionRangeCtxPb = struct {
+    pub const RangeType_field_number: u32 = 1;
+    pub const EntityCtx_field_number: u32 = 2;
+};
+pub const AttributeChangedNotify = struct {
+    pub const msg_id: u16 = 20929;
+    pub const Attributes_field_number: u32 = 13;
+};
+pub const GetFormationDataResponse = struct {
+    pub const msg_id: u16 = 22976;
+    pub const ErrorCode_field_number: u32 = 15;
+    pub const Formations_field_number: u32 = 7;
+};
+pub const CircumFluenceTaskData = struct {
+    pub const ActivityTasks_field_number: u32 = 1;
+    pub const ClaimedReward_field_number: u32 = 2;
+    pub const TaskScoreRewardId_field_number: u32 = 3;
+    pub const NowOpen_field_number: u32 = 5;
+    pub const EndTime_field_number: u32 = 6;
+    pub const NextRefreshTime_field_number: u32 = 7;
+};
+pub const PbMailInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const ReceivedTime_field_number: u32 = 2;
+    pub const ReadTime_field_number: u32 = 3;
+    pub const State_field_number: u32 = 4;
+    pub const Level_field_number: u32 = 5;
+    pub const Title_field_number: u32 = 6;
+    pub const Content_field_number: u32 = 7;
+    pub const Sender_field_number: u32 = 8;
+    pub const ValidTime_field_number: u32 = 9;
+    pub const ReadValidTime_field_number: u32 = 10;
+    pub const Attachments_field_number: u32 = 11;
+    pub const ConfigId_field_number: u32 = 12;
+    pub const ExpiryTime_field_number: u32 = 13;
+};
+pub const RoleMotion = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const MotionIds_field_number: u32 = 2;
+};
+pub const FailedNodeActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const EntityAccessInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const RangeType_field_number: u32 = 2;
+    pub const AcessRangeResults_field_number: u32 = 3;
+};
+pub const ExploreSkillRouletteSetRequest = struct {
+    pub const msg_id: u16 = 19885;
+    pub const SkillRoulette_field_number: u32 = 2;
+    pub const RouletteType_field_number: u32 = 8;
+    pub const SkillRoulettes_field_number: u32 = 15;
 };
 pub const EntityStaticHookMovePush = struct {
     pub const msg_id: u16 = 20519;
@@ -30382,92 +30322,79 @@ pub const EntityStaticHookMovePush = struct {
     pub const EntityId_field_number: u32 = 3;
     pub const HookMoveType_field_number: u32 = 15;
 };
-pub const CircumFluenceTaskData = struct {
-    pub const ActivityTasks_field_number: u32 = 1;
-    pub const ClaimedReward_field_number: u32 = 2;
-    pub const TaskScoreRewardId_field_number: u32 = 3;
-    pub const NowOpen_field_number: u32 = 5;
-    pub const EndTime_field_number: u32 = 6;
-    pub const NextRefreshTime_field_number: u32 = 7;
-};
-pub const DestroyBulletResponsePush = struct {
-    pub const msg_id: u16 = 17125;
-    pub const CombatCommon_field_number: u32 = 2;
-    pub const Handle_field_number: u32 = 13;
-};
-pub const ActivityFishingData = struct {
-    pub const ActivityTaskData_field_number: u32 = 1;
-    pub const MilestoneReward_field_number: u32 = 2;
-    pub const LimitTimeReward_field_number: u32 = 3;
-    pub const LimitTimeEnd_field_number: u32 = 4;
-    pub const MilestoneRewardItemAccumulate_field_number: u32 = 5;
-};
-pub const MotorDevelopActivityData = struct {
-    pub const Task_field_number: u32 = 1;
-};
-pub const ChangeVisionGroupNameResponse = struct {
-    pub const msg_id: u16 = 26063;
-    pub const ErrorCode_field_number: u32 = 8;
-    pub const VisionEquipList_field_number: u32 = 2;
-};
 pub const PlayFlowChildQuestNodeCtxPb = struct {
     pub const BehaviorTreeCtx_field_number: u32 = 1;
 };
-pub const CoopTaskCompleteInfo = struct {
-    pub const CoopTaskId_field_number: u32 = 1;
-    pub const Task_field_number: u32 = 2;
-    pub const UnLockTime_field_number: u32 = 3;
-    pub const LevelPlay1Done_field_number: u32 = 4;
-    pub const LevelPlay2Done_field_number: u32 = 5;
+pub const RogueResTaskThemeData = struct {
+    pub const RogueSignReward_field_number: u32 = 1;
+    pub const RogueResThemeId_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
 };
-pub const PhantomPutOnResponse = struct {
-    pub const msg_id: u16 = 16177;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const EquipInfoList_field_number: u32 = 1;
+pub const SummonRequestInfo = struct {
+    pub const SummonEntityId_field_number: u32 = 1;
+    pub const SkillId_field_number: u32 = 2;
+    pub const SummonConfigId_field_number: u32 = 3;
+    pub const Pos_field_number: u32 = 4;
+    pub const Rot_field_number: u32 = 5;
+    pub const IsVisible_field_number: u32 = 6;
 };
-pub const AttributeComponentPb = struct {
-    pub const HardnessModeId_field_number: u32 = 2;
-    pub const RageModeId_field_number: u32 = 3;
-    pub const AttrData_field_number: u32 = 4;
+pub const SecGetReportData2FlowResponse = struct {
+    pub const msg_id: u16 = 29654;
+    pub const Error_field_number: u32 = 15;
 };
-pub const TutorialUnlockResponse = struct {
-    pub const msg_id: u16 = 22022;
-    pub const ErrorCode_field_number: u32 = 14;
-    pub const ErrorParams_field_number: u32 = 2;
-    pub const UnLockInfo_field_number: u32 = 3;
+pub const MotorDiyPb = struct {
+    pub const MotorDiyOnwer_field_number: u32 = 1;
+    pub const MotorDiyEquipped_field_number: u32 = 2;
 };
-pub const GatherActivityInfo = struct {
-    pub const GatherTaskDoneInfo_field_number: u32 = 1;
+pub const HarvestActivity = struct {
+    pub const HarvestPointRewards_field_number: u32 = 1;
+    pub const HarvestLevelRewards_field_number: u32 = 2;
 };
-pub const EnergySyncResponse = struct {
-    pub const msg_id: u16 = 22657;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const SyncInfo_field_number: u32 = 14;
+pub const EntityLivingStatusNotify = struct {
+    pub const msg_id: u16 = 23551;
+    pub const Id_field_number: u32 = 14;
+    pub const LivingStatus_field_number: u32 = 6;
+    pub const DropVisionItem_field_number: u32 = 9;
 };
-pub const SimpleTrackReportAsyncResponse = struct {
-    pub const msg_id: u16 = 22452;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const SimpleTrackReportMsgs_field_number: u32 = 2;
+pub const ICustomScreenTypeBasePb = struct {
+    ScreenPb: ?union(enum) {
+    } = null,
+    pub const ICustomScreenSpinePb_field_number: u32 = 1;
+    pub const ICustomScreenBackgroundImagePb_field_number: u32 = 2;
 };
-pub const EquipWeaponSkinResponse = struct {
-    pub const msg_id: u16 = 29673;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const DataList_field_number: u32 = 12;
+pub const ChildQuestNodeEnterActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
 };
-pub const MotorDecalActivityData = struct {
-    pub const ConditionTasks_field_number: u32 = 1;
+pub const TeamChallengeInfo = struct {
+    pub const RoleSaveInfos_field_number: u32 = 1;
+    pub const BuffIds_field_number: u32 = 2;
+    pub const LastMonsterInfoPreview_field_number: u32 = 3;
+    pub const TeamScore_field_number: u32 = 4;
 };
-pub const VisionEquipGroupInfoResponse = struct {
-    pub const msg_id: u16 = 27357;
+pub const PassiveSkillComponentPb = struct {
+    pub const PassiveSkillItemPbList_field_number: u32 = 1;
+};
+pub const MaterialPush = struct {
+    pub const msg_id: u16 = 21040;
+    pub const MaterialInfo_field_number: u32 = 2;
+    pub const CombatCommon_field_number: u32 = 6;
+};
+pub const WeaponSkinResponse = struct {
+    pub const msg_id: u16 = 22467;
     pub const ErrorCode_field_number: u32 = 1;
-    pub const VisionEquipList_field_number: u32 = 15;
+    pub const EquipList_field_number: u32 = 7;
 };
-pub const LogicStateInitRequest = struct {
-    pub const msg_id: u16 = 21983;
-    pub const CombatCommon_field_number: u32 = 15;
-    pub const EntityId_field_number: u32 = 3;
-    pub const InitData_field_number: u32 = 6;
-    pub const ClientEntityId_field_number: u32 = 4;
+pub const MotorParkourActivityInfo = struct {
+    pub const MotorParkourLevelInfos_field_number: u32 = 1;
+};
+pub const SuccessNodeActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const ConditionInfo = struct {
+    pub const FinishConditionMap_field_number: u32 = 2;
+};
+pub const MoveToPointComponentPb = struct {
+    pub const PbMoveToPointConfig_field_number: u32 = 1;
 };
 pub const PassiveSkillNotify = struct {
     pub const msg_id: u16 = 20429;
@@ -30480,31 +30407,68 @@ pub const LogicStateInitPush = struct {
     pub const InitData_field_number: u32 = 14;
     pub const ClientEntityId_field_number: u32 = 15;
 };
-pub const ExploreSkillRouletteSetRequest = struct {
-    pub const msg_id: u16 = 19885;
-    pub const SkillRoulette_field_number: u32 = 2;
-    pub const RouletteType_field_number: u32 = 8;
-    pub const SkillRoulettes_field_number: u32 = 15;
+pub const PrivateChatHistoryContentProto = struct {
+    pub const TargetUid_field_number: u32 = 1;
+    pub const Chats_field_number: u32 = 2;
+    pub const HistoryIsEnd_field_number: u32 = 3;
+    pub const TotalNums_field_number: u32 = 4;
 };
-pub const CompositionConditionEnterActionCtxPb = struct {
+pub const CiacconaGalChapterData = struct {
+    pub const ChapterDataId_field_number: u32 = 1;
+    pub const CanUnlock_field_number: u32 = 2;
+    pub const CiacconaGalSubEndingData_field_number: u32 = 3;
+    pub const CiacconaGalChoiceData_field_number: u32 = 4;
+};
+pub const HandInItemChildQuestNodeCtxPb = struct {
     pub const BehaviorTreeCtx_field_number: u32 = 1;
-    pub const ConditionIndex_field_number: u32 = 2;
 };
-pub const FishingIllustratedInfo = struct {
-    pub const IllustratedList_field_number: u32 = 1;
-    pub const RewardedId_field_number: u32 = 2;
-    pub const UnlockDetections_field_number: u32 = 3;
+pub const ChangeStateConfirmResponse = struct {
+    pub const msg_id: u16 = 21484;
+    pub const FsmId_field_number: u32 = 6;
+    pub const State_field_number: u32 = 8;
+    pub const Error_field_number: u32 = 14;
 };
-pub const FsmConditionPassResponse = struct {
-    pub const msg_id: u16 = 16423;
-    pub const FsmId_field_number: u32 = 4;
-    pub const Error_field_number: u32 = 8;
+pub const CharacterAttachInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const Pos_field_number: u32 = 2;
+    pub const Rot_field_number: u32 = 3;
+    pub const PartIndex_field_number: u32 = 4;
 };
-pub const FlowEndRequest = struct {
-    pub const msg_id: u16 = 21412;
-    pub const FlowIncId_field_number: u32 = 7;
-    pub const IsSkip_field_number: u32 = 9;
-    pub const OptionInfos_field_number: u32 = 11;
+pub const AttributeComponentPb = struct {
+    pub const HardnessModeId_field_number: u32 = 2;
+    pub const RageModeId_field_number: u32 = 3;
+    pub const AttrData_field_number: u32 = 4;
+};
+pub const PlayerAttr = struct {
+    Value: ?union(enum) {
+    } = null,
+    pub const Int32Value_field_number: u32 = 3;
+    pub const StringValue_field_number: u32 = 4;
+    pub const Key_field_number: u32 = 1;
+    pub const ValueType_field_number: u32 = 2;
+};
+pub const PlayerTitleData = struct {
+    pub const PlayerTitleId_field_number: u32 = 1;
+    pub const IsUnlock_field_number: u32 = 2;
+    pub const UnlockTime_field_number: u32 = 3;
+    pub const StarLevel_field_number: u32 = 4;
+    pub const ActivityServerRewardItemData_field_number: u32 = 5;
+};
+pub const SunSpiritGearComponentPb = struct {
+    pub const TakeUpInfo_field_number: u32 = 1;
+};
+pub const PhantomCollectActivity = struct {
+    pub const PhantomCollectRewards_field_number: u32 = 1;
+};
+pub const EntityTimelineTrackCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const GroupIndex_field_number: u32 = 2;
+    pub const ControlPoint_field_number: u32 = 3;
+    pub const EventType_field_number: u32 = 4;
+};
+pub const PhotoMemoryResponse = struct {
+    pub const msg_id: u16 = 24402;
+    pub const Item_field_number: u32 = 14;
 };
 pub const RiskHarvestInstInfo = struct {
     pub const Id_field_number: u32 = 1;
@@ -30515,10 +30479,601 @@ pub const RiskHarvestInstInfo = struct {
     pub const IsFinished_field_number: u32 = 6;
     pub const StarRewardInfos_field_number: u32 = 7;
 };
+pub const AdventureManualData = struct {
+    pub const AdventreTask_field_number: u32 = 1;
+    pub const NowChapter_field_number: u32 = 2;
+    pub const ReceivedChapter_field_number: u32 = 3;
+    pub const UnlockChapters_field_number: u32 = 4;
+    pub const RewardChapters_field_number: u32 = 5;
+};
+pub const PatrolInfoComponentPb = struct {
+    pub const SceneAiEnabled_field_number: u32 = 1;
+    pub const PatrolInfo_field_number: u32 = 2;
+};
+pub const PermanentSeasonData = struct {
+    pub const PermanentSeasonDataId_field_number: u32 = 1;
+    pub const SkillDict_field_number: u32 = 2;
+    pub const RogueResEndId_field_number: u32 = 3;
+    pub const RogueResEndAward_field_number: u32 = 4;
+    pub const TrialRoleIds_field_number: u32 = 5;
+    pub const RoleIds_field_number: u32 = 6;
+    pub const EndTime_field_number: u32 = 7;
+    pub const ShopItemCount_field_number: u32 = 8;
+};
+pub const RoleActivateSkillResponse = struct {
+    pub const msg_id: u16 = 19247;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const RoleId_field_number: u32 = 8;
+    pub const SkillInfo_field_number: u32 = 12;
+};
+pub const PbAdvice = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const AreaId_field_number: u32 = 2;
+    pub const Contents_field_number: u32 = 3;
+    pub const UpVote_field_number: u32 = 4;
+};
+pub const RhythmShipLevelPb = struct {
+    pub const LevelId_field_number: u32 = 1;
+    pub const RhythmSubLevelPb_field_number: u32 = 2;
+};
+pub const PlayerDeadNotify = struct {
+    pub const msg_id: u16 = 25995;
+    pub const PlayerId_field_number: u32 = 14;
+    pub const DelaySeconds_field_number: u32 = 15;
+    pub const IsAutoRevive_field_number: u32 = 13;
+    pub const ReviveId_field_number: u32 = 1;
+    pub const IsLogin_field_number: u32 = 9;
+    pub const IsShowRevive_field_number: u32 = 12;
+    pub const ExtraDeadInfos_field_number: u32 = 5;
+};
+pub const TrapDefenseRewardData = struct {
+    pub const ActivityServerRewardItemData_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+};
+pub const PlayerFightFormations = struct {
+    pub const PlayerId_field_number: u32 = 1;
+    pub const Formations_field_number: u32 = 2;
+};
+pub const ActionGroupNodeActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const EntityStaticHookMoveRequest = struct {
+    pub const msg_id: u16 = 19374;
+    Target: ?union(enum) {
+    } = null,
+    pub const TargetEntityId_field_number: u32 = 8;
+    pub const TargetPos_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+    pub const HookMoveType_field_number: u32 = 4;
+};
+pub const ActivityMoraleData = struct {
+    pub const AreaData_field_number: u32 = 1;
+    pub const MoraleProgressReward_field_number: u32 = 2;
+    pub const MoraleFlags_field_number: u32 = 4;
+};
+pub const DestroyBulletRequest = struct {
+    pub const msg_id: u16 = 27729;
+    pub const CombatCommon_field_number: u32 = 5;
+    pub const Handle_field_number: u32 = 9;
+};
+pub const SceneItemSplineRuntimeData = struct {
+    Distance: ?union(enum) {
+    } = null,
+    Rot: ?union(enum) {
+    } = null,
+    pub const DistanceAlongPath_field_number: u32 = 1;
+    pub const CurRot_field_number: u32 = 3;
+    pub const CurPos_field_number: u32 = 2;
+};
+pub const ActivityLongShanMain = struct {
+    pub const StageData_field_number: u32 = 1;
+    pub const ScoreRewardedId_field_number: u32 = 2;
+};
+pub const DestroyBulletResponsePush = struct {
+    pub const msg_id: u16 = 17125;
+    pub const CombatCommon_field_number: u32 = 2;
+    pub const Handle_field_number: u32 = 13;
+};
+pub const CoopTaskCompleteInfo = struct {
+    pub const CoopTaskId_field_number: u32 = 1;
+    pub const Task_field_number: u32 = 2;
+    pub const UnLockTime_field_number: u32 = 3;
+    pub const LevelPlay1Done_field_number: u32 = 4;
+    pub const LevelPlay2Done_field_number: u32 = 5;
+};
+pub const MotorCycleIpActivityData = struct {
+    pub const TaskDataList_field_number: u32 = 1;
+};
+pub const PayInfoResponse = struct {
+    pub const msg_id: u16 = 20931;
+    pub const Infos_field_number: u32 = 11;
+    pub const Version_field_number: u32 = 8;
+    pub const ErrorCode_field_number: u32 = 3;
+};
+pub const PutVisionGroupToTopResponse = struct {
+    pub const msg_id: u16 = 24281;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const VisionEquipList_field_number: u32 = 12;
+};
+pub const MotorDevelopActivityData = struct {
+    pub const Task_field_number: u32 = 1;
+};
+pub const ANStartResponse = struct {
+    pub const msg_id: u16 = 24111;
+    pub const SkillId_field_number: u32 = 4;
+    pub const MontageIndex_field_number: u32 = 13;
+    pub const AnIndex_field_number: u32 = 6;
+    pub const Error_field_number: u32 = 11;
+};
+pub const CombinationAction = struct {
+    pub const ActionName_field_number: u32 = 1;
+    pub const CombinationKeyList_field_number: u32 = 2;
+    pub const Version_field_number: u32 = 3;
+    pub const InputType_field_number: u32 = 4;
+};
+pub const VisionEquipGroupInfoResponse = struct {
+    pub const msg_id: u16 = 27357;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const VisionEquipList_field_number: u32 = 15;
+};
+pub const CombinationAxis = struct {
+    pub const AxisName_field_number: u32 = 1;
+    pub const CombinationKeyList_field_number: u32 = 2;
+    pub const Version_field_number: u32 = 3;
+    pub const InputType_field_number: u32 = 4;
+};
+pub const TutorialUnlockResponse = struct {
+    pub const msg_id: u16 = 22022;
+    pub const ErrorCode_field_number: u32 = 14;
+    pub const ErrorParams_field_number: u32 = 2;
+    pub const UnLockInfo_field_number: u32 = 3;
+};
+pub const BuffItemNotify = struct {
+    pub const msg_id: u16 = 18294;
+    pub const ItemBuffList_field_number: u32 = 12;
+    pub const EquipItemList_field_number: u32 = 1;
+};
+pub const RollBlockGamePlayActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+    pub const ParamType_field_number: u32 = 2;
+};
+pub const SoarWingOrParaglidingSkinChangeNotify = struct {
+    pub const msg_id: u16 = 26769;
+    pub const FlySkinData_field_number: u32 = 12;
+};
+pub const FishingIllustratedInfo = struct {
+    pub const IllustratedList_field_number: u32 = 1;
+    pub const RewardedId_field_number: u32 = 2;
+    pub const UnlockDetections_field_number: u32 = 3;
+};
+pub const AiBlackboardCdNotify = struct {
+    pub const msg_id: u16 = 26317;
+    pub const AiBlackboardCdDel_field_number: u32 = 14;
+    pub const AiBlackboardCdModify_field_number: u32 = 2;
+    pub const AiBlackboardCdComplete_field_number: u32 = 9;
+};
+pub const FsmConditionPassResponse = struct {
+    pub const msg_id: u16 = 16423;
+    pub const FsmId_field_number: u32 = 4;
+    pub const Error_field_number: u32 = 8;
+};
+pub const PhantomItemAddNotify = struct {
+    pub const msg_id: u16 = 26709;
+    pub const PhantomItemList_field_number: u32 = 2;
+    pub const Reason_field_number: u32 = 12;
+};
+pub const EquipTakeOnNotify = struct {
+    pub const msg_id: u16 = 28407;
+    pub const DataList_field_number: u32 = 14;
+};
+pub const PayGiftShopInfo = struct {
+    pub const Gifts_field_number: u32 = 1;
+    pub const Version_field_number: u32 = 2;
+};
+pub const MaterialRequest = struct {
+    pub const msg_id: u16 = 27611;
+    pub const MaterialInfo_field_number: u32 = 4;
+    pub const CombatCommon_field_number: u32 = 13;
+};
+pub const RolePhantomPropUpdateNotify = struct {
+    pub const msg_id: u16 = 25220;
+    pub const PropInfo_field_number: u32 = 12;
+};
+pub const FriendInfo = struct {
+    pub const Info_field_number: u32 = 1;
+    pub const Remark_field_number: u32 = 2;
+};
+pub const SpringSignData = struct {
+    pub const SpringSignActivityTasks_field_number: u32 = 1;
+    pub const CanInvite_field_number: u32 = 2;
+    pub const DrawRoles_field_number: u32 = 3;
+    pub const SkinReward_field_number: u32 = 4;
+};
+pub const GatherActivityInfo = struct {
+    pub const GatherTaskDoneInfo_field_number: u32 = 1;
+};
+pub const DailyAdventureActivityData = struct {
+    pub const DailyAdventureActivityTasks_field_number: u32 = 1;
+    pub const PtRewardTaken_field_number: u32 = 2;
+};
+pub const ChildQuestNodeFinishActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const PbUpLevelSkillResponse = struct {
+    pub const msg_id: u16 = 25401;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const RoleId_field_number: u32 = 10;
+    pub const SkillInfo_field_number: u32 = 7;
+};
+pub const HonamiStoryItemInfo = struct {
+    ItemInfo: ?union(enum) {
+    } = null,
+    pub const HonamiStoryNormalItemInfo_field_number: u32 = 4;
+    pub const EquipItemInfo_field_number: u32 = 5;
+    pub const IncrId_field_number: u32 = 1;
+    pub const ItemId_field_number: u32 = 2;
+    pub const FuncValue_field_number: u32 = 3;
+};
+pub const ActivityFunPlayData = struct {
+    pub const ActivityFunPlayChallengeData_field_number: u32 = 1;
+};
+pub const MaterialNotify = struct {
+    pub const msg_id: u16 = 15158;
+    pub const MaterialInfo_field_number: u32 = 10;
+    pub const CombatCommon_field_number: u32 = 5;
+};
+pub const UseSkillFailResponse = struct {
+    pub const msg_id: u16 = 28669;
+    pub const SkillId_field_number: u32 = 3;
+    pub const Error_field_number: u32 = 4;
+};
+pub const DragonPoolDropItems = struct {
+    pub const DragonPoolId_field_number: u32 = 1;
+    pub const DropIds_field_number: u32 = 2;
+    pub const DropItems_field_number: u32 = 3;
+};
+pub const AllMsgResponse = struct {
+    pub const msg_id: u16 = 25109;
+    pub const ShortMessageInfos_field_number: u32 = 2;
+    pub const BubbleIds_field_number: u32 = 6;
+    pub const BubbleId_field_number: u32 = 12;
+    pub const ChatBgIds_field_number: u32 = 13;
+    pub const ChatBgId_field_number: u32 = 11;
+    pub const ErrCode_field_number: u32 = 1;
+};
+pub const ExploreProgressResponse = struct {
+    pub const msg_id: u16 = 23914;
+    pub const AreaProgress_field_number: u32 = 9;
+};
+pub const ModifyBulletParams = struct {
+    pub const CombatCommon_field_number: u32 = 1;
+    pub const Handle_field_number: u32 = 2;
+    pub const TargetId_field_number: u32 = 3;
+};
+pub const EntityStaticHookMoveNotify = struct {
+    pub const msg_id: u16 = 22054;
+    Target: ?union(enum) {
+    } = null,
+    pub const TargetEntityId_field_number: u32 = 5;
+    pub const TargetPos_field_number: u32 = 3;
+    pub const EntityId_field_number: u32 = 1;
+    pub const HookMoveType_field_number: u32 = 11;
+};
+pub const DynAttachComponentPb = struct {
+    pub const PbDynAttachEntityConfigId_field_number: u32 = 1;
+    pub const PbDynAttachEntityActorKey_field_number: u32 = 2;
+    pub const Pos_field_number: u32 = 3;
+    pub const Rot_field_number: u32 = 4;
+    pub const PbDynAttachRefActorKey_field_number: u32 = 5;
+};
+pub const DamageExecuteResponse = struct {
+    pub const msg_id: u16 = 15244;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const AttackerEntityId_field_number: u32 = 10;
+    pub const TargetEntityId_field_number: u32 = 2;
+    pub const Damage_field_number: u32 = 6;
+    pub const PartIndex_field_number: u32 = 5;
+    pub const IsCrit_field_number: u32 = 3;
+    pub const KilledTarget_field_number: u32 = 12;
+    pub const ShieldCoverDamage_field_number: u32 = 4;
+    pub const ImmuneType_field_number: u32 = 15;
+    pub const ElementType_field_number: u32 = 14;
+    pub const ChangeLife_field_number: u32 = 13;
+    pub const ChangeWeakness_field_number: u32 = 7;
+};
+pub const LogicStateInitRequest = struct {
+    pub const msg_id: u16 = 21983;
+    pub const CombatCommon_field_number: u32 = 15;
+    pub const EntityId_field_number: u32 = 3;
+    pub const InitData_field_number: u32 = 6;
+    pub const ClientEntityId_field_number: u32 = 4;
+};
+pub const GachaInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const TodayTimes_field_number: u32 = 2;
+    pub const TotalTimes_field_number: u32 = 3;
+    pub const ItemId_field_number: u32 = 4;
+    pub const GachaConsumes_field_number: u32 = 5;
+    pub const UsePoolId_field_number: u32 = 6;
+    pub const Pools_field_number: u32 = 7;
+    pub const BeginTime_field_number: u32 = 8;
+    pub const EndTime_field_number: u32 = 9;
+    pub const DailyLimitTimes_field_number: u32 = 10;
+    pub const TotalLimitTimes_field_number: u32 = 11;
+    pub const ResourcesId_field_number: u32 = 12;
+};
+pub const CompositionEnterActionCtxPb = struct {
+    pub const BehaviorTreeCtx_field_number: u32 = 1;
+};
+pub const TowerAreaPb = struct {
+    pub const AreaNum_field_number: u32 = 1;
+    pub const TowerFloors_field_number: u32 = 2;
+};
+pub const EntitySimplyMoveInfo = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const Location_field_number: u32 = 2;
+    pub const Rotation_field_number: u32 = 3;
+};
+pub const DeleteVisionEquipGroupResponse = struct {
+    pub const msg_id: u16 = 18164;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const VisionEquipList_field_number: u32 = 3;
+};
+pub const EquipTakeOnRequest = struct {
+    pub const msg_id: u16 = 25710;
+    pub const Data_field_number: u32 = 8;
+};
+pub const DestroyBulletNotify = struct {
+    pub const msg_id: u16 = 26364;
+    pub const CombatCommon_field_number: u32 = 9;
+    pub const Handle_field_number: u32 = 14;
+    pub const IsCreateSubBullet_field_number: u32 = 7;
+};
+pub const AliveStatusNotify = struct {
+    pub const msg_id: u16 = 23537;
+    pub const PlayerId_field_number: u32 = 8;
+    pub const Info_field_number: u32 = 13;
+};
+pub const MowTowerActivityData = struct {
+    pub const MowTowerLevelsInfo_field_number: u32 = 1;
+};
+pub const ActivityTaskData = struct {
+    pub const ActivityTasks_field_number: u32 = 1;
+};
+pub const RoguelikeSeason = struct {
+    pub const SeasonId_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const EndTime_field_number: u32 = 3;
+    pub const RoguelikeTokenList_field_number: u32 = 4;
+    pub const SeasonRewardList_field_number: u32 = 5;
+    pub const TokenItemCount_field_number: u32 = 6;
+    pub const BlackFlowerUseCount_field_number: u32 = 7;
+    pub const BlackFlowerMaxCount_field_number: u32 = 8;
+};
+pub const PhantomPutOnResponse = struct {
+    pub const msg_id: u16 = 16177;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const EquipInfoList_field_number: u32 = 1;
+};
+pub const PassiveSkillAddNotify = struct {
+    pub const msg_id: u16 = 23868;
+    pub const EntityId_field_number: u32 = 9;
+    pub const PassiveSkillItemPbList_field_number: u32 = 15;
+};
+pub const ActivityLinkageData = struct {
+    pub const ActivityId_field_number: u32 = 1;
+    pub const Data_field_number: u32 = 2;
+};
+pub const FriendApply = struct {
+    pub const Info_field_number: u32 = 1;
+    pub const CreatedTime_field_number: u32 = 2;
+};
+pub const ActivityTurnTableData = struct {
+    pub const IsAllFinish_field_number: u32 = 1;
+    pub const GroupId_field_number: u32 = 2;
+    pub const Rewards_field_number: u32 = 3;
+    pub const TurntableTasks_field_number: u32 = 4;
+};
+pub const LogicStateInitNotify = struct {
+    pub const msg_id: u16 = 24981;
+    pub const CombatCommon_field_number: u32 = 14;
+    pub const EntityId_field_number: u32 = 8;
+    pub const InitData_field_number: u32 = 6;
+};
+pub const HookLockPointActionCtxPb = struct {
+    pub const EntityCtx_field_number: u32 = 1;
+    pub const InteractionType_field_number: u32 = 2;
+};
+pub const EnergySyncResponse = struct {
+    pub const msg_id: u16 = 22657;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const SyncInfo_field_number: u32 = 14;
+};
+pub const FightRoleInfos = struct {
+    pub const GroupType_field_number: u32 = 1;
+    pub const FightRoleInfos_field_number: u32 = 2;
+    pub const CurRole_field_number: u32 = 3;
+    pub const LivingStatus_field_number: u32 = 4;
+    pub const IsFixedLocation_field_number: u32 = 5;
+};
+pub const FlySkinWearAllRoleResponse = struct {
+    pub const msg_id: u16 = 19664;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const FlySkinData_field_number: u32 = 2;
+};
+pub const ForgeInfoResponse = struct {
+    pub const msg_id: u16 = 24156;
+    pub const ErrorCode_field_number: u32 = 14;
+    pub const ForgeInfoList_field_number: u32 = 4;
+    pub const ForgeConfigs_field_number: u32 = 5;
+    pub const LimitRefreshTime_field_number: u32 = 1;
+};
+pub const ItemRewardNotify = struct {
+    pub const msg_id: u16 = 18574;
+    pub const DropId_field_number: u32 = 1;
+    pub const Reason_field_number: u32 = 6;
+    pub const Magnification_field_number: u32 = 4;
+    pub const DropFrom_field_number: u32 = 5;
+    pub const RewardItems_field_number: u32 = 10;
+};
+pub const MailInfosNotify = struct {
+    pub const msg_id: u16 = 24794;
+    pub const MailInfos_field_number: u32 = 14;
+};
+pub const PlayerBasicInfoGetResponse = struct {
+    pub const msg_id: u16 = 27418;
+    pub const Info_field_number: u32 = 12;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const HitInformation = struct {
+    pub const Originator_field_number: u32 = 1;
+    pub const Id_field_number: u32 = 2;
+    pub const TargetId_field_number: u32 = 3;
+    pub const BulletId_field_number: u32 = 4;
+    pub const HasBeHitData_field_number: u32 = 5;
+    pub const HitEffectPos_field_number: u32 = 6;
+    pub const HitEffectRotate_field_number: u32 = 7;
+    pub const IsShake_field_number: u32 = 8;
+    pub const HitPos_field_number: u32 = 9;
+    pub const EnterFk_field_number: u32 = 10;
+    pub const IsHitWeakness_field_number: u32 = 11;
+    pub const IsTriggerCounterattack_field_number: u32 = 12;
+    pub const VictimRotation_field_number: u32 = 13;
+    pub const IsChangeVictimRotation_field_number: u32 = 14;
+    pub const HitPart_field_number: u32 = 15;
+    pub const IsTriggerVisionCounterAttack_field_number: u32 = 16;
+    pub const SkillId_field_number: u32 = 17;
+    pub const FightState_field_number: u32 = 18;
+    pub const BeHitAnim_field_number: u32 = 19;
+    pub const Source_field_number: u32 = 20;
+    pub const PhantomSkillIdentify_field_number: u32 = 21;
+};
+pub const LordGymInfoResponse = struct {
+    pub const msg_id: u16 = 27569;
+    pub const UnlockLoadGymIds_field_number: u32 = 5;
+    pub const ReadLoadGymIds_field_number: u32 = 15;
+    pub const LordGymPassRecords_field_number: u32 = 4;
+    pub const LordGymEntranceInfos_field_number: u32 = 14;
+};
 pub const GroupFormation = struct {
     pub const PlayerId_field_number: u32 = 1;
     pub const FightRoleInfos_field_number: u32 = 2;
     pub const CurrentGroupType_field_number: u32 = 3;
+};
+pub const TransitionInSeamlessPb = struct {
+    WeatherDaPath: ?union(enum) {
+    } = null,
+    EffectDaPath: ?union(enum) {
+    } = null,
+    Config: ?union(enum) {
+    } = null,
+    pub const TransitionWeatherDaPath_field_number: u32 = 8;
+    pub const SceneEffectDaPath_field_number: u32 = 10;
+    pub const SeamlessTeleportFinishConfig_field_number: u32 = 11;
+    pub const EffectPath_field_number: u32 = 1;
+    pub const LeastTime_field_number: u32 = 2;
+    pub const EffectExpandTime_field_number: u32 = 3;
+    pub const EffectCollapseTime_field_number: u32 = 4;
+    pub const HasFloorParams_field_number: u32 = 5;
+    pub const FloorParams_field_number: u32 = 6;
+    pub const IsTeleportInPlace_field_number: u32 = 7;
+    pub const KeepStates_field_number: u32 = 9;
+};
+pub const MapTravelActivityData = struct {
+    pub const ActivityTasks_field_number: u32 = 1;
+    pub const MonsterGain_field_number: u32 = 2;
+    pub const GetFullReward_field_number: u32 = 3;
+    pub const MapTravelLevel_field_number: u32 = 4;
+    pub const UnlockAreas_field_number: u32 = 5;
+    pub const SoarLevels_field_number: u32 = 6;
+};
+pub const FishingItemInfo = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const IncrId_field_number: u32 = 2;
+    pub const Rotate_field_number: u32 = 4;
+    pub const Pos_field_number: u32 = 5;
+    pub const Size_field_number: u32 = 6;
+    pub const Cup_field_number: u32 = 7;
+    pub const Quality_field_number: u32 = 8;
+    pub const Price_field_number: u32 = 9;
+};
+pub const CumulativeShopTaskConfig = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const CumulativeShopTaskData_field_number: u32 = 3;
+    pub const CumulativeShopSubTaskData_field_number: u32 = 4;
+};
+pub const EquipTakeOnResponse = struct {
+    pub const msg_id: u16 = 20313;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const DataList_field_number: u32 = 7;
+};
+pub const IllustratedClass = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const IllustratedEntryList_field_number: u32 = 2;
+};
+pub const LevelInfo = struct {
+    pub const InstId_field_number: u32 = 1;
+    pub const StartTime_field_number: u32 = 2;
+    pub const IsOpen_field_number: u32 = 3;
+    pub const Score_field_number: u32 = 4;
+    pub const RoleInfo_field_number: u32 = 5;
+    pub const BuffInfo_field_number: u32 = 6;
+    pub const LevelRewardClaimStatus_field_number: u32 = 7;
+    pub const SelectScoreBuffs_field_number: u32 = 8;
+    pub const LevelScoreRewardStatus_field_number: u32 = 9;
+};
+pub const RhythmShipPlanetPb = struct {
+    pub const PlanetId_field_number: u32 = 1;
+    pub const OpenTime_field_number: u32 = 2;
+    pub const RhythmShipLevelPb_field_number: u32 = 3;
+};
+pub const RoleVisionRecommendAttrResponse = struct {
+    pub const msg_id: u16 = 19017;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const VisionAttrRecommendInfos_field_number: u32 = 6;
+};
+pub const RbBlockMovementPbAction = struct {
+    Type: ?union(enum) {
+    } = null,
+    pub const Roll_field_number: u32 = 1;
+    pub const Jump_field_number: u32 = 2;
+};
+pub const MotorTaskPb = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Type_field_number: u32 = 2;
+    pub const Process_field_number: u32 = 3;
+    pub const Reward_field_number: u32 = 4;
+    pub const EndTime_field_number: u32 = 5;
+    pub const StartTime_field_number: u32 = 6;
+};
+pub const WuWuWeekActivity = struct {
+    pub const ConditionTasks_field_number: u32 = 1;
+    pub const TaskPack_field_number: u32 = 2;
+};
+pub const ActivityRogueData = struct {
+    pub const BeginOpenTime_field_number: u32 = 1;
+    pub const EndOpenTime_field_number: u32 = 2;
+    pub const RoguelikeSeason_field_number: u32 = 3;
+};
+pub const TransitionMp4Pb = struct {
+    ScreenColor: ?union(enum) {
+    } = null,
+    pub const AfterTeleportScreenColor_field_number: u32 = 5;
+    pub const ResourePath_field_number: u32 = 1;
+    pub const ReplayWhenReLogin_field_number: u32 = 2;
+    pub const IsFadeInScreenAfterTeleport_field_number: u32 = 3;
+    pub const Mp4BackgroundColor_field_number: u32 = 4;
+};
+pub const CharacterAttachComponentPb = struct {
+    pub const PbCombinePartInfoList_field_number: u32 = 1;
+    pub const PbCombineTargetServerId_field_number: u32 = 2;
+};
+pub const BoardPb = struct {
+    pub const OccupiedGridList_field_number: u32 = 1;
+    pub const DynamicGridConfigs_field_number: u32 = 2;
+    pub const CanMove_field_number: u32 = 3;
 };
 pub const PermanentRogueData = struct {
     pub const msg_id: u16 = 16290;
@@ -30526,33 +31081,100 @@ pub const PermanentRogueData = struct {
     } = null,
     pub const RogueResTaskThemeData_field_number: u32 = 14;
 };
-pub const ActivityRogueData = struct {
-    pub const BeginOpenTime_field_number: u32 = 1;
-    pub const EndOpenTime_field_number: u32 = 2;
-    pub const RoguelikeSeason_field_number: u32 = 3;
+pub const EntitySimplyMoveInfoPackagePush = struct {
+    pub const msg_id: u16 = 25287;
+    pub const MoveInfos_field_number: u32 = 7;
+    pub const SceneOwnerId_field_number: u32 = 2;
+};
+pub const CharacterAttachRequest = struct {
+    pub const msg_id: u16 = 15298;
+    pub const CharacterAttachInfo_field_number: u32 = 13;
+    pub const TargetEntity_field_number: u32 = 3;
+};
+pub const RoadBookActivityInfo = struct {
+    pub const ActivityTasks_field_number: u32 = 1;
+    pub const MonsterGain_field_number: u32 = 2;
+    pub const GetFullReward_field_number: u32 = 3;
+    pub const RoadBookLevel_field_number: u32 = 4;
+    pub const UnLockAreas_field_number: u32 = 5;
+    pub const SoarLevels_field_number: u32 = 6;
 };
 pub const PrivateChatHistoryNotify = struct {
     pub const msg_id: u16 = 26226;
     pub const AllChats_field_number: u32 = 13;
 };
-pub const RhythmShipPlanetPb = struct {
-    pub const PlanetId_field_number: u32 = 1;
-    pub const OpenTime_field_number: u32 = 2;
-    pub const RhythmShipLevelPb_field_number: u32 = 3;
+pub const PbBattlePass = struct {
+    pub const InTimeRange_field_number: u32 = 1;
+    pub const Id_field_number: u32 = 2;
+    pub const Level_field_number: u32 = 3;
+    pub const Exp_field_number: u32 = 4;
+    pub const WeeklyTotalExp_field_number: u32 = 5;
+    pub const PayStatus_field_number: u32 = 6;
+    pub const TakenRewards_field_number: u32 = 7;
+    pub const BeginTime_field_number: u32 = 8;
+    pub const EndTime_field_number: u32 = 9;
+    pub const RecurringRewards_field_number: u32 = 10;
+    pub const HadEnter_field_number: u32 = 11;
 };
-pub const BossPilingActivityInfo = struct {
-    pub const ConditionTasks_field_number: u32 = 1;
-    pub const BossPilingLevelInfos_field_number: u32 = 2;
+pub const PlayerAttrNotify = struct {
+    pub const msg_id: u16 = 21854;
+    pub const Attributes_field_number: u32 = 9;
+};
+pub const FightBuffInformation = struct {
+    pub const HandleId_field_number: u32 = 1;
+    pub const BuffId_field_number: u32 = 2;
+    pub const Level_field_number: u32 = 3;
+    pub const StackCount_field_number: u32 = 4;
+    pub const InstigatorId_field_number: u32 = 5;
+    pub const EntityId_field_number: u32 = 6;
+    pub const ApplyType_field_number: u32 = 7;
+    pub const Duration_field_number: u32 = 8;
+    pub const LeftDuration_field_number: u32 = 9;
+    pub const Context_field_number: u32 = 10;
+    pub const IsActive_field_number: u32 = 11;
+    pub const ServerId_field_number: u32 = 12;
+    pub const MessageId_field_number: u32 = 13;
+    pub const Trp_field_number: u32 = 14;
+};
+pub const LobbyListResponse = struct {
+    pub const msg_id: u16 = 18456;
+    pub const ErrorCode_field_number: u32 = 4;
+    pub const ItemList_field_number: u32 = 6;
+};
+pub const PhantomIdentifyResponse = struct {
+    pub const msg_id: u16 = 15374;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const UpdateInfo_field_number: u32 = 1;
+};
+pub const HonamiStoryDropItemComponentPb = struct {
+    pub const Item_field_number: u32 = 1;
+};
+pub const ActivityWeeklyRogueData = struct {
+    Data: ?union(enum) {
+    } = null,
+    pub const RogueWeeklyLastInfo_field_number: u32 = 3;
+    pub const CycleId_field_number: u32 = 1;
+    pub const Score_field_number: u32 = 2;
+    pub const RogueWeeklyAward_field_number: u32 = 4;
+    pub const MaxScore_field_number: u32 = 7;
+    pub const CurWorldLevel_field_number: u32 = 8;
+    pub const UseFreeCount_field_number: u32 = 9;
+    pub const MaxFreeCount_field_number: u32 = 10;
+};
+pub const SlashAndTowerInfoResponse = struct {
+    pub const msg_id: u16 = 18365;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const SlashLevelPlayInfo_field_number: u32 = 9;
+    pub const RewardsReceived_field_number: u32 = 13;
+    pub const CurSeasonEndTime_field_number: u32 = 5;
+    pub const UpdateSeason_field_number: u32 = 6;
+    pub const CurIsHaveRecord_field_number: u32 = 1;
+    pub const BuffCache_field_number: u32 = 11;
 };
 pub const UpdateAchievementInfoResponse = struct {
     pub const msg_id: u16 = 29698;
     pub const ErrorCode_field_number: u32 = 15;
     pub const AchievementEntryList_field_number: u32 = 7;
-};
-pub const EntitySimplyMoveInfoPackagePush = struct {
-    pub const msg_id: u16 = 25287;
-    pub const MoveInfos_field_number: u32 = 7;
-    pub const SceneOwnerId_field_number: u32 = 2;
 };
 pub const PayShopItem = struct {
     pub const Id_field_number: u32 = 1;
@@ -30592,118 +31214,29 @@ pub const PayShopItem = struct {
     pub const OnceBuyLimit_field_number: u32 = 40;
     pub const IsRecommend_field_number: u32 = 41;
 };
-pub const RoleVisionRecommendAttrResponse = struct {
-    pub const msg_id: u16 = 19017;
-    pub const ErrorCode_field_number: u32 = 8;
-    pub const VisionAttrRecommendInfos_field_number: u32 = 6;
+pub const ModifyBulletParamsPush = struct {
+    pub const msg_id: u16 = 28392;
+    pub const ModifyBulletParams_field_number: u32 = 9;
 };
-pub const PhantomIdentifyResponse = struct {
-    pub const msg_id: u16 = 15374;
-    pub const ErrorCode_field_number: u32 = 7;
-    pub const UpdateInfo_field_number: u32 = 1;
+pub const GachaResponse = struct {
+    pub const msg_id: u16 = 19731;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const GachaResults_field_number: u32 = 15;
 };
-pub const InfrThemeActivityPb = struct {
-    pub const ActivityTaskData_field_number: u32 = 2;
+pub const AddCombineEntitiesRelationNotify = struct {
+    pub const msg_id: u16 = 25338;
+    pub const CharacterAttachInfo_field_number: u32 = 8;
+    pub const TargetEntity_field_number: u32 = 6;
 };
-pub const TowerDifficultyPb = struct {
-    pub const Difficulty_field_number: u32 = 1;
-    pub const RewardIndex_field_number: u32 = 2;
-    pub const TowerAreas_field_number: u32 = 3;
-    pub const MaxStar_field_number: u32 = 4;
+pub const ActivityScratchTicketData = struct {
+    pub const RoundData_field_number: u32 = 1;
+    pub const ConditionData_field_number: u32 = 2;
 };
 pub const EntityAccessRangeResponse = struct {
     pub const msg_id: u16 = 29684;
     pub const ErrorCode_field_number: u32 = 6;
     pub const EntityId_field_number: u32 = 11;
     pub const Info_field_number: u32 = 12;
-};
-pub const RoadBookActivityInfo = struct {
-    pub const ActivityTasks_field_number: u32 = 1;
-    pub const MonsterGain_field_number: u32 = 2;
-    pub const GetFullReward_field_number: u32 = 3;
-    pub const RoadBookLevel_field_number: u32 = 4;
-    pub const UnLockAreas_field_number: u32 = 5;
-    pub const SoarLevels_field_number: u32 = 6;
-};
-pub const PhantomLevelUpResponse = struct {
-    pub const msg_id: u16 = 15998;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const UpdateInfo_field_number: u32 = 11;
-    pub const ItemMap_field_number: u32 = 7;
-};
-pub const MailInfosNotify = struct {
-    pub const msg_id: u16 = 24794;
-    pub const MailInfos_field_number: u32 = 14;
-};
-pub const LobbyListResponse = struct {
-    pub const msg_id: u16 = 18456;
-    pub const ErrorCode_field_number: u32 = 4;
-    pub const ItemList_field_number: u32 = 6;
-};
-pub const RiskHarvestActivityData = struct {
-    pub const InstInfos_field_number: u32 = 1;
-    pub const RewardedScores_field_number: u32 = 2;
-    pub const RewardedBuffGroups_field_number: u32 = 3;
-    pub const UnlockBuffGroups_field_number: u32 = 4;
-    pub const RewardedBuffTypeIds_field_number: u32 = 5;
-};
-pub const LevelInfo = struct {
-    pub const InstId_field_number: u32 = 1;
-    pub const StartTime_field_number: u32 = 2;
-    pub const IsOpen_field_number: u32 = 3;
-    pub const Score_field_number: u32 = 4;
-    pub const RoleInfo_field_number: u32 = 5;
-    pub const BuffInfo_field_number: u32 = 6;
-    pub const LevelRewardClaimStatus_field_number: u32 = 7;
-    pub const SelectScoreBuffs_field_number: u32 = 8;
-    pub const LevelScoreRewardStatus_field_number: u32 = 9;
-};
-pub const InitRangeResponse = struct {
-    pub const msg_id: u16 = 28485;
-    pub const ErrorCode_field_number: u32 = 10;
-    pub const EntityId_field_number: u32 = 13;
-    pub const Info_field_number: u32 = 14;
-    pub const PlayerAccessRangeResult_field_number: u32 = 4;
-};
-pub const ActivityDangoMonopolyData = struct {
-    pub const CurrentBoardId_field_number: u32 = 1;
-    pub const CurrentGridId_field_number: u32 = 2;
-    pub const RewardGridId_field_number: u32 = 3;
-    pub const BoardRewards_field_number: u32 = 4;
-    pub const DangoTaskConfig_field_number: u32 = 5;
-    pub const TaskEndTimeMap_field_number: u32 = 6;
-    pub const UnlockTime_field_number: u32 = 7;
-    pub const BoardMap_field_number: u32 = 8;
-};
-pub const IllustratedClass = struct {
-    pub const Type_field_number: u32 = 1;
-    pub const IllustratedEntryList_field_number: u32 = 2;
-};
-pub const TransitionMp4Pb = struct {
-    ScreenColor: ?union(enum) {
-    } = null,
-    pub const AfterTeleportScreenColor_field_number: u32 = 5;
-    pub const ResourePath_field_number: u32 = 1;
-    pub const ReplayWhenReLogin_field_number: u32 = 2;
-    pub const IsFadeInScreenAfterTeleport_field_number: u32 = 3;
-    pub const Mp4BackgroundColor_field_number: u32 = 4;
-};
-pub const FishingItemInfo = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const IncrId_field_number: u32 = 2;
-    pub const Rotate_field_number: u32 = 4;
-    pub const Pos_field_number: u32 = 5;
-    pub const Size_field_number: u32 = 6;
-    pub const Cup_field_number: u32 = 7;
-    pub const Quality_field_number: u32 = 8;
-    pub const Price_field_number: u32 = 9;
-};
-pub const BtnStateResponse = struct {
-    pub const msg_id: u16 = 15680;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const Type_field_number: u32 = 15;
-    pub const Enabled_field_number: u32 = 14;
-    pub const Result_field_number: u32 = 2;
 };
 pub const RoleLevelUpViewResponse = struct {
     pub const msg_id: u16 = 24708;
@@ -30717,68 +31250,28 @@ pub const RoleLevelUpViewResponse = struct {
     pub const OverflowList_field_number: u32 = 14;
     pub const ItemList_field_number: u32 = 13;
 };
-pub const ModifyBulletParamsPush = struct {
-    pub const msg_id: u16 = 28392;
-    pub const ModifyBulletParams_field_number: u32 = 9;
+pub const TowerDifficultyPb = struct {
+    pub const Difficulty_field_number: u32 = 1;
+    pub const RewardIndex_field_number: u32 = 2;
+    pub const TowerAreas_field_number: u32 = 3;
+    pub const MaxStar_field_number: u32 = 4;
 };
-pub const SummonRequest = struct {
-    pub const msg_id: u16 = 25012;
-    pub const SummonerEntityId_field_number: u32 = 7;
-    pub const SummonInfo_field_number: u32 = 12;
+pub const InfrThemeActivityPb = struct {
+    pub const ActivityTaskData_field_number: u32 = 2;
 };
-pub const ModifyBulletParamsNotify = struct {
-    pub const msg_id: u16 = 15098;
-    pub const ModifyBulletParams_field_number: u32 = 14;
+pub const PhantomPolishResponse = struct {
+    pub const msg_id: u16 = 27935;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const UpdateInfo_field_number: u32 = 8;
 };
-pub const AddCombineEntitiesRelationNotify = struct {
-    pub const msg_id: u16 = 25338;
-    pub const CharacterAttachInfo_field_number: u32 = 8;
-    pub const TargetEntity_field_number: u32 = 6;
+pub const AchievementGroupInfo = struct {
+    pub const AchievementGroupEntry_field_number: u32 = 1;
+    pub const AchievementEntryList_field_number: u32 = 2;
 };
-pub const ActivityScratchTicketData = struct {
-    pub const RoundData_field_number: u32 = 1;
-    pub const ConditionData_field_number: u32 = 2;
-};
-pub const CharacterAttachComponentPb = struct {
-    pub const PbCombinePartInfoList_field_number: u32 = 1;
-    pub const PbCombineTargetServerId_field_number: u32 = 2;
-};
-pub const SlashAndTowerInfoResponse = struct {
-    pub const msg_id: u16 = 18365;
-    pub const ErrorCode_field_number: u32 = 3;
-    pub const SlashLevelPlayInfo_field_number: u32 = 9;
-    pub const RewardsReceived_field_number: u32 = 13;
-    pub const CurSeasonEndTime_field_number: u32 = 5;
-    pub const UpdateSeason_field_number: u32 = 6;
-    pub const CurIsHaveRecord_field_number: u32 = 1;
-    pub const BuffCache_field_number: u32 = 11;
-};
-pub const ActivityWeeklyRogueData = struct {
-    Data: ?union(enum) {
-    } = null,
-    pub const RogueWeeklyLastInfo_field_number: u32 = 3;
-    pub const CycleId_field_number: u32 = 1;
-    pub const Score_field_number: u32 = 2;
-    pub const RogueWeeklyAward_field_number: u32 = 4;
-    pub const MaxScore_field_number: u32 = 7;
-    pub const CurWorldLevel_field_number: u32 = 8;
-    pub const UseFreeCount_field_number: u32 = 9;
-    pub const MaxFreeCount_field_number: u32 = 10;
-};
-pub const RoleBreakThroughViewResponse = struct {
-    pub const msg_id: u16 = 21996;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const LevelLimit_field_number: u32 = 14;
-    pub const UnLockSkillId_field_number: u32 = 11;
-    pub const CostList_field_number: u32 = 15;
-    pub const RewardList_field_number: u32 = 9;
-    pub const FinalProp_field_number: u32 = 13;
-    pub const IsConditionFinish_field_number: u32 = 2;
-};
-pub const BoardPb = struct {
-    pub const OccupiedGridList_field_number: u32 = 1;
-    pub const DynamicGridConfigs_field_number: u32 = 2;
-    pub const CanMove_field_number: u32 = 3;
+pub const FightPhotoActivityData = struct {
+    pub const ActivityId_field_number: u32 = 1;
+    pub const LevelGroups_field_number: u32 = 2;
+    pub const Tasks_field_number: u32 = 4;
 };
 pub const RoleInfo = struct {
     pub const RoleId_field_number: u32 = 1;
@@ -30801,49 +31294,9 @@ pub const RoleInfo = struct {
     pub const SkinId_field_number: u32 = 21;
     pub const EnableSelfBgm_field_number: u32 = 22;
 };
-pub const PlayerBasicInfoGetResponse = struct {
-    pub const msg_id: u16 = 27418;
-    pub const Info_field_number: u32 = 12;
-    pub const ErrorCode_field_number: u32 = 14;
-};
-pub const CharacterAttachRequest = struct {
-    pub const msg_id: u16 = 15298;
-    pub const CharacterAttachInfo_field_number: u32 = 13;
-    pub const TargetEntity_field_number: u32 = 3;
-};
-pub const MotorSummonAndRideNotify = struct {
-    pub const msg_id: u16 = 19928;
-    pub const PlayerId_field_number: u32 = 2;
-    pub const EntityId_field_number: u32 = 6;
-    pub const VehicleIncId_field_number: u32 = 12;
-    pub const Transform_field_number: u32 = 8;
-};
-pub const PhantomPolishResponse = struct {
-    pub const msg_id: u16 = 27935;
-    pub const ErrorCode_field_number: u32 = 7;
-    pub const UpdateInfo_field_number: u32 = 8;
-};
-pub const RoleDevelopConfigs = struct {
-    pub const DevPropsList_field_number: u32 = 1;
-    pub const DevTargetRole_field_number: u32 = 2;
-    pub const DevPropsProjectList_field_number: u32 = 3;
-    pub const Version_field_number: u32 = 4;
-};
-pub const RoleVisionRecommendDataResponse = struct {
-    pub const msg_id: u16 = 26385;
-    pub const ErrorCode_field_number: u32 = 15;
-    pub const VisionFetterRecommendInfo_field_number: u32 = 7;
-};
-pub const EquipTakeOnResponse = struct {
-    pub const msg_id: u16 = 20313;
-    pub const ErrorCode_field_number: u32 = 10;
-    pub const DataList_field_number: u32 = 7;
-};
-pub const RbBlockMovementPbAction = struct {
-    Type: ?union(enum) {
-    } = null,
-    pub const Roll_field_number: u32 = 1;
-    pub const Jump_field_number: u32 = 2;
+pub const ActivityBlackCoastData = struct {
+    pub const StageData_field_number: u32 = 1;
+    pub const RewardIds_field_number: u32 = 2;
 };
 pub const NewTowerClimbingLevelRecord = struct {
     pub const LevelId_field_number: u32 = 1;
@@ -30855,17 +31308,102 @@ pub const NewTowerClimbingLevelRecord = struct {
     pub const RoleEnergyDict_field_number: u32 = 9;
     pub const HistoryScore_field_number: u32 = 10;
 };
-pub const ExploreSkillRouletteSetResponse = struct {
-    pub const msg_id: u16 = 29175;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const SkillRoulette_field_number: u32 = 4;
-    pub const RouletteType_field_number: u32 = 2;
-    pub const SkillRoulettes_field_number: u32 = 8;
+pub const InitRangeResponse = struct {
+    pub const msg_id: u16 = 28485;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const EntityId_field_number: u32 = 13;
+    pub const Info_field_number: u32 = 14;
+    pub const PlayerAccessRangeResult_field_number: u32 = 4;
 };
-pub const FightPhotoActivityData = struct {
-    pub const ActivityId_field_number: u32 = 1;
-    pub const LevelGroups_field_number: u32 = 2;
-    pub const Tasks_field_number: u32 = 4;
+pub const AdventureUpdateNotify = struct {
+    pub const msg_id: u16 = 24121;
+    pub const AdventureManualData_field_number: u32 = 8;
+};
+pub const UpdateFormationNotify = struct {
+    pub const msg_id: u16 = 20781;
+    pub const PlayersFormations_field_number: u32 = 6;
+};
+pub const ActivityAvignon = struct {
+    pub const RewardData_field_number: u32 = 1;
+    pub const StageId_field_number: u32 = 2;
+};
+pub const BossPilingActivityInfo = struct {
+    pub const ConditionTasks_field_number: u32 = 1;
+    pub const BossPilingLevelInfos_field_number: u32 = 2;
+};
+pub const RoleBreakThroughViewResponse = struct {
+    pub const msg_id: u16 = 21996;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const LevelLimit_field_number: u32 = 14;
+    pub const UnLockSkillId_field_number: u32 = 11;
+    pub const CostList_field_number: u32 = 15;
+    pub const RewardList_field_number: u32 = 9;
+    pub const FinalProp_field_number: u32 = 13;
+    pub const IsConditionFinish_field_number: u32 = 2;
+};
+pub const PlayerAccessEffectAreaResponse = struct {
+    pub const msg_id: u16 = 19513;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 4;
+    pub const Info_field_number: u32 = 2;
+};
+pub const ModifyBulletParamsNotify = struct {
+    pub const msg_id: u16 = 15098;
+    pub const ModifyBulletParams_field_number: u32 = 14;
+};
+pub const BtnStateResponse = struct {
+    pub const msg_id: u16 = 15680;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const Type_field_number: u32 = 15;
+    pub const Enabled_field_number: u32 = 14;
+    pub const Result_field_number: u32 = 2;
+};
+pub const ActivityDangoMonopolyData = struct {
+    pub const CurrentBoardId_field_number: u32 = 1;
+    pub const CurrentGridId_field_number: u32 = 2;
+    pub const RewardGridId_field_number: u32 = 3;
+    pub const BoardRewards_field_number: u32 = 4;
+    pub const DangoTaskConfig_field_number: u32 = 5;
+    pub const TaskEndTimeMap_field_number: u32 = 6;
+    pub const UnlockTime_field_number: u32 = 7;
+    pub const BoardMap_field_number: u32 = 8;
+};
+pub const InfrRoadPb = struct {
+    pub const Roads_field_number: u32 = 1;
+    pub const Notices_field_number: u32 = 2;
+    pub const ManualTraceRoad_field_number: u32 = 3;
+    pub const RecommendRoad_field_number: u32 = 4;
+};
+pub const ModifyBulletParamsRequest = struct {
+    pub const msg_id: u16 = 26253;
+    pub const ModifyBulletParams_field_number: u32 = 9;
+};
+pub const MotorSummonAndRidePush = struct {
+    pub const msg_id: u16 = 28891;
+    pub const EntityId_field_number: u32 = 5;
+    pub const VehicleIncId_field_number: u32 = 3;
+    pub const Transform_field_number: u32 = 15;
+};
+pub const RoleDevelopConfigs = struct {
+    pub const DevPropsList_field_number: u32 = 1;
+    pub const DevTargetRole_field_number: u32 = 2;
+    pub const DevPropsProjectList_field_number: u32 = 3;
+    pub const Version_field_number: u32 = 4;
+};
+pub const PhantomLevelUpResponse = struct {
+    pub const msg_id: u16 = 15998;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const UpdateInfo_field_number: u32 = 11;
+    pub const ItemMap_field_number: u32 = 7;
+};
+pub const RhythmTaskPb = struct {
+    pub const TaskType_field_number: u32 = 1;
+    pub const Task_field_number: u32 = 2;
+};
+pub const SummonRequest = struct {
+    pub const msg_id: u16 = 25012;
+    pub const SummonerEntityId_field_number: u32 = 7;
+    pub const SummonInfo_field_number: u32 = 12;
 };
 pub const RacingBetsLegMatch = struct {
     pub const Id_field_number: u32 = 1;
@@ -30878,169 +31416,268 @@ pub const RacingBetsLegMatch = struct {
     pub const MasterLevel_field_number: u32 = 8;
     pub const OrganInfo_field_number: u32 = 9;
 };
-pub const CumulativeShopTaskConfig = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const CumulativeShopTaskData_field_number: u32 = 3;
-    pub const CumulativeShopSubTaskData_field_number: u32 = 4;
-};
-pub const ForgeInfoResponse = struct {
-    pub const msg_id: u16 = 24156;
-    pub const ErrorCode_field_number: u32 = 14;
-    pub const ForgeInfoList_field_number: u32 = 4;
-    pub const ForgeConfigs_field_number: u32 = 5;
-    pub const LimitRefreshTime_field_number: u32 = 1;
-};
-pub const TransitionInSeamlessPb = struct {
-    WeatherDaPath: ?union(enum) {
-    } = null,
-    EffectDaPath: ?union(enum) {
-    } = null,
-    Config: ?union(enum) {
-    } = null,
-    pub const TransitionWeatherDaPath_field_number: u32 = 8;
-    pub const SceneEffectDaPath_field_number: u32 = 10;
-    pub const SeamlessTeleportFinishConfig_field_number: u32 = 11;
-    pub const EffectPath_field_number: u32 = 1;
-    pub const LeastTime_field_number: u32 = 2;
-    pub const EffectExpandTime_field_number: u32 = 3;
-    pub const EffectCollapseTime_field_number: u32 = 4;
-    pub const HasFloorParams_field_number: u32 = 5;
-    pub const FloorParams_field_number: u32 = 6;
-    pub const IsTeleportInPlace_field_number: u32 = 7;
-    pub const KeepStates_field_number: u32 = 9;
-};
-pub const PlayerAccessEffectAreaResponse = struct {
-    pub const msg_id: u16 = 19513;
-    pub const ErrorCode_field_number: u32 = 1;
-    pub const EntityId_field_number: u32 = 4;
-    pub const Info_field_number: u32 = 2;
-};
-pub const WuWuWeekActivity = struct {
-    pub const ConditionTasks_field_number: u32 = 1;
-    pub const TaskPack_field_number: u32 = 2;
-};
-pub const FightBuffInformation = struct {
-    pub const HandleId_field_number: u32 = 1;
-    pub const BuffId_field_number: u32 = 2;
-    pub const Level_field_number: u32 = 3;
-    pub const StackCount_field_number: u32 = 4;
-    pub const InstigatorId_field_number: u32 = 5;
-    pub const EntityId_field_number: u32 = 6;
-    pub const ApplyType_field_number: u32 = 7;
-    pub const Duration_field_number: u32 = 8;
-    pub const LeftDuration_field_number: u32 = 9;
-    pub const Context_field_number: u32 = 10;
-    pub const IsActive_field_number: u32 = 11;
-    pub const ServerId_field_number: u32 = 12;
-    pub const MessageId_field_number: u32 = 13;
-    pub const Trp_field_number: u32 = 14;
-};
-pub const GachaResponse = struct {
-    pub const msg_id: u16 = 19731;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const GachaResults_field_number: u32 = 15;
-};
-pub const MapTravelActivityData = struct {
-    pub const ActivityTasks_field_number: u32 = 1;
-    pub const MonsterGain_field_number: u32 = 2;
-    pub const GetFullReward_field_number: u32 = 3;
-    pub const MapTravelLevel_field_number: u32 = 4;
-    pub const UnlockAreas_field_number: u32 = 5;
-    pub const SoarLevels_field_number: u32 = 6;
-};
-pub const ModifyBulletParamsRequest = struct {
-    pub const msg_id: u16 = 26253;
-    pub const ModifyBulletParams_field_number: u32 = 9;
-};
-pub const LordGymInfoResponse = struct {
-    pub const msg_id: u16 = 27569;
-    pub const UnlockLoadGymIds_field_number: u32 = 5;
-    pub const ReadLoadGymIds_field_number: u32 = 15;
-    pub const LordGymPassRecords_field_number: u32 = 4;
-    pub const LordGymEntranceInfos_field_number: u32 = 14;
-};
-pub const AchievementGroupInfo = struct {
-    pub const AchievementGroupEntry_field_number: u32 = 1;
-    pub const AchievementEntryList_field_number: u32 = 2;
-};
-pub const ActivityAvignon = struct {
-    pub const RewardData_field_number: u32 = 1;
-    pub const StageId_field_number: u32 = 2;
-};
-pub const MotorSummonAndRidePush = struct {
-    pub const msg_id: u16 = 28891;
-    pub const EntityId_field_number: u32 = 5;
-    pub const VehicleIncId_field_number: u32 = 3;
-    pub const Transform_field_number: u32 = 15;
-};
-pub const HitInformation = struct {
-    pub const Originator_field_number: u32 = 1;
-    pub const Id_field_number: u32 = 2;
-    pub const TargetId_field_number: u32 = 3;
-    pub const BulletId_field_number: u32 = 4;
-    pub const HasBeHitData_field_number: u32 = 5;
-    pub const HitEffectPos_field_number: u32 = 6;
-    pub const HitEffectRotate_field_number: u32 = 7;
-    pub const IsShake_field_number: u32 = 8;
-    pub const HitPos_field_number: u32 = 9;
-    pub const EnterFk_field_number: u32 = 10;
-    pub const IsHitWeakness_field_number: u32 = 11;
-    pub const IsTriggerCounterattack_field_number: u32 = 12;
-    pub const VictimRotation_field_number: u32 = 13;
-    pub const IsChangeVictimRotation_field_number: u32 = 14;
-    pub const HitPart_field_number: u32 = 15;
-    pub const IsTriggerVisionCounterAttack_field_number: u32 = 16;
-    pub const SkillId_field_number: u32 = 17;
-    pub const FightState_field_number: u32 = 18;
-    pub const BeHitAnim_field_number: u32 = 19;
-    pub const Source_field_number: u32 = 20;
-    pub const PhantomSkillIdentify_field_number: u32 = 21;
-};
-pub const MotorTaskPb = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Type_field_number: u32 = 2;
-    pub const Process_field_number: u32 = 3;
-    pub const Reward_field_number: u32 = 4;
-    pub const EndTime_field_number: u32 = 5;
-    pub const StartTime_field_number: u32 = 6;
-};
-pub const TestDamageRecordNotify = struct {
-    pub const TimestampMs_field_number: u32 = 8;
-    pub const Entities_field_number: u32 = 3;
-};
-pub const HonamiStoryDropItemComponentPb = struct {
-    pub const Item_field_number: u32 = 1;
-};
-pub const RhythmTaskPb = struct {
-    pub const TaskType_field_number: u32 = 1;
-    pub const Task_field_number: u32 = 2;
-};
 pub const AdviceComponentPb = struct {
     pub const Advice_field_number: u32 = 1;
     pub const PlayerId_field_number: u32 = 2;
     pub const PlayerName_field_number: u32 = 3;
 };
-pub const UpdateFormationNotify = struct {
-    pub const msg_id: u16 = 20781;
-    pub const PlayersFormations_field_number: u32 = 6;
+pub const RoleVisionRecommendDataResponse = struct {
+    pub const msg_id: u16 = 26385;
+    pub const ErrorCode_field_number: u32 = 15;
+    pub const VisionFetterRecommendInfo_field_number: u32 = 7;
 };
-pub const PbBattlePass = struct {
-    pub const InTimeRange_field_number: u32 = 1;
+pub const MotorSummonAndRideNotify = struct {
+    pub const msg_id: u16 = 19928;
+    pub const PlayerId_field_number: u32 = 2;
+    pub const EntityId_field_number: u32 = 6;
+    pub const VehicleIncId_field_number: u32 = 12;
+    pub const Transform_field_number: u32 = 8;
+};
+pub const ExploreSkillRouletteSetResponse = struct {
+    pub const msg_id: u16 = 29175;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const SkillRoulette_field_number: u32 = 4;
+    pub const RouletteType_field_number: u32 = 2;
+    pub const SkillRoulettes_field_number: u32 = 8;
+};
+pub const RiskHarvestActivityData = struct {
+    pub const InstInfos_field_number: u32 = 1;
+    pub const RewardedScores_field_number: u32 = 2;
+    pub const RewardedBuffGroups_field_number: u32 = 3;
+    pub const UnlockBuffGroups_field_number: u32 = 4;
+    pub const RewardedBuffTypeIds_field_number: u32 = 5;
+};
+pub const CreateBulletResponsePush = struct {
+    pub const msg_id: u16 = 26595;
+    ParentHandle: ?union(enum) {
+    } = null,
+    pub const BulletHandle_field_number: u32 = 2;
+    pub const CombatCommon_field_number: u32 = 14;
+    pub const Handle_field_number: u32 = 11;
+    pub const OwnerEntityId_field_number: u32 = 7;
+    pub const BulletId_field_number: u32 = 3;
+    pub const SkillId_field_number: u32 = 5;
+    pub const Location_field_number: u32 = 1;
+    pub const Rotation_field_number: u32 = 12;
+    pub const TargetId_field_number: u32 = 10;
+    pub const SpawnEntityId_field_number: u32 = 4;
+    pub const SpawnVelocityEntityId_field_number: u32 = 13;
+    pub const IsLocal_field_number: u32 = 9;
+    pub const DtType_field_number: u32 = 6;
+    pub const RandomPosOffset_field_number: u32 = 15;
+    pub const RandomInitSpeedOffset_field_number: u32 = 8;
+};
+pub const RogueResTaskData = struct {
+    pub const PermanentRogueData_field_number: u32 = 1;
+    pub const RogueResCollectionState_field_number: u32 = 2;
+};
+pub const CreateBulletRequest = struct {
+    pub const msg_id: u16 = 20960;
+    ParentHandle: ?union(enum) {
+    } = null,
+    pub const BulletHandle_field_number: u32 = 3;
+    pub const CombatCommon_field_number: u32 = 7;
+    pub const Handle_field_number: u32 = 13;
+    pub const OwnerEntityId_field_number: u32 = 9;
+    pub const BulletId_field_number: u32 = 6;
+    pub const SkillId_field_number: u32 = 2;
+    pub const Location_field_number: u32 = 4;
+    pub const Rotation_field_number: u32 = 5;
+    pub const TargetId_field_number: u32 = 11;
+    pub const SpawnEntityId_field_number: u32 = 12;
+    pub const SpawnVelocityEntityId_field_number: u32 = 14;
+    pub const IsLocal_field_number: u32 = 10;
+    pub const DtType_field_number: u32 = 15;
+    pub const RandomPosOffset_field_number: u32 = 1;
+    pub const RandomInitSpeedOffset_field_number: u32 = 8;
+};
+pub const EntityMoveSplineComponentPb = struct {
+    RuntimeData: ?union(enum) {
+    } = null,
+    pub const SceneItemSplineRuntimeData_field_number: u32 = 11;
+    pub const SplineEntityId_field_number: u32 = 1;
+    pub const MoveSplineConfig_field_number: u32 = 2;
+};
+pub const EntityFsmComponentPb = struct {
+    pub const Fsms_field_number: u32 = 1;
+    pub const HashCode_field_number: u32 = 2;
+    pub const CommonHashCode_field_number: u32 = 3;
+    pub const BlackBoard_field_number: u32 = 4;
+    pub const FsmCustomBlackboardDatas_field_number: u32 = 5;
+};
+pub const TowerInfo = struct {
+    pub const CurrentSeason_field_number: u32 = 1;
+    pub const DataSeason_field_number: u32 = 2;
+    pub const TowerDifficulties_field_number: u32 = 3;
+    pub const BeginTime_field_number: u32 = 4;
+    pub const EndTime_field_number: u32 = 5;
+    pub const MaxUnlockDifficulty_field_number: u32 = 6;
+    pub const QuickPassId_field_number: u32 = 7;
+};
+pub const PayShopInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Items_field_number: u32 = 2;
+    pub const UpdateTime_field_number: u32 = 3;
+    pub const LastUpdateTime_field_number: u32 = 4;
+    pub const ShopTabViewType_field_number: u32 = 5;
+    pub const DynamicTabId_field_number: u32 = 6;
+    pub const Sort_field_number: u32 = 7;
+    pub const Money_field_number: u32 = 8;
+    pub const SortRule_field_number: u32 = 9;
+};
+pub const RbItemComponentPb = struct {
+    Type: ?union(enum) {
+    } = null,
+    pub const BreakableObstacleType_field_number: u32 = 3;
+    pub const RbLaserEmitterType_field_number: u32 = 4;
+    pub const GamePlayIncId_field_number: u32 = 1;
+    pub const OccupiedCellPositions_field_number: u32 = 2;
+};
+pub const BeginnerCarnivalData = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const ActivityTaskData_field_number: u32 = 2;
+    pub const JumpTaskIds_field_number: u32 = 3;
+    pub const JumpTaskCondInfos_field_number: u32 = 4;
+};
+pub const RoleFavor = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const Level_field_number: u32 = 2;
+    pub const Exp_field_number: u32 = 3;
+    pub const WordIds_field_number: u32 = 4;
+    pub const StoryIds_field_number: u32 = 5;
+    pub const GoodsIds_field_number: u32 = 6;
+    pub const FavorQuest_field_number: u32 = 7;
+};
+pub const SwitchRoleRequest = struct {
+    pub const msg_id: u16 = 17144;
+    transform: ?union(enum) {
+    } = null,
+    pub const Transform_field_number: u32 = 1;
+    pub const RoleId_field_number: u32 = 5;
+    pub const SwitchType_field_number: u32 = 12;
+    pub const OnStageWithoutControl_field_number: u32 = 9;
+};
+pub const GachaInfoResponse = struct {
+    pub const msg_id: u16 = 16838;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const GachaInfos_field_number: u32 = 10;
+    pub const DailyTotalLeftTimes_field_number: u32 = 7;
+    pub const RecordId_field_number: u32 = 11;
+};
+pub const UpdateGroupFormationNotify = struct {
+    pub const msg_id: u16 = 18080;
+    pub const GroupFormation_field_number: u32 = 1;
+};
+pub const UseSkillInformation = struct {
+    pub const CombatCommon_field_number: u32 = 1;
     pub const Id_field_number: u32 = 2;
-    pub const Level_field_number: u32 = 3;
-    pub const Exp_field_number: u32 = 4;
-    pub const WeeklyTotalExp_field_number: u32 = 5;
-    pub const PayStatus_field_number: u32 = 6;
-    pub const TakenRewards_field_number: u32 = 7;
-    pub const BeginTime_field_number: u32 = 8;
-    pub const EndTime_field_number: u32 = 9;
-    pub const RecurringRewards_field_number: u32 = 10;
-    pub const HadEnter_field_number: u32 = 11;
+    pub const SkillId_field_number: u32 = 3;
+    pub const MovementInformation_field_number: u32 = 4;
+    pub const Location_field_number: u32 = 5;
+    pub const TargetId_field_number: u32 = 6;
+    pub const TimeStamp_field_number: u32 = 7;
+    pub const IsSpecialSkill_field_number: u32 = 8;
+    pub const Duration_field_number: u32 = 9;
+    pub const SkillInterruptLevel_field_number: u32 = 10;
+    pub const FightState_field_number: u32 = 11;
 };
-pub const ActivityBlackCoastData = struct {
-    pub const StageData_field_number: u32 = 1;
-    pub const RewardIds_field_number: u32 = 2;
+pub const CabinInfo = struct {
+    pub const FishingItem_field_number: u32 = 1;
+    pub const CabinShape_field_number: u32 = 2;
+    pub const QuickSellShape_field_number: u32 = 3;
+    pub const NetCabinItems_field_number: u32 = 4;
+    pub const TempCabinItems_field_number: u32 = 5;
+    pub const QuickSellRatio_field_number: u32 = 6;
+};
+pub const PrivateChatHistoryResponse = struct {
+    pub const msg_id: u16 = 19808;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const Data_field_number: u32 = 7;
+};
+pub const CumulativeShopData = struct {
+    pub const ActivityId_field_number: u32 = 2;
+    pub const TaskData_field_number: u32 = 3;
+    pub const TotalScore_field_number: u32 = 4;
+};
+pub const AdviceResponse = struct {
+    pub const msg_id: u16 = 18050;
+    pub const Advices_field_number: u32 = 12;
+    pub const UpVoteIds_field_number: u32 = 9;
+    pub const ErrorCode_field_number: u32 = 11;
+};
+pub const RoleChangeNotify = struct {
+    pub const msg_id: u16 = 26215;
+    pub const SourceRoleId_field_number: u32 = 6;
+    pub const RoleInfo_field_number: u32 = 9;
+};
+pub const SceneFishCageData = struct {
+    pub const Id_field_number: u32 = 5;
+    pub const EntityConfigId_field_number: u32 = 1;
+    pub const MaxCount_field_number: u32 = 2;
+    pub const Items_field_number: u32 = 3;
+    pub const LastUpdateTime_field_number: u32 = 4;
+    pub const NextUpdateTime_field_number: u32 = 6;
+    pub const RefreshTime_field_number: u32 = 7;
+};
+pub const PbGetRoleListNotify = struct {
+    pub const msg_id: u16 = 22031;
+    pub const RoleList_field_number: u32 = 15;
+};
+pub const CalabashMsgNotify = struct {
+    pub const msg_id: u16 = 26576;
+    pub const CalabashMsg_field_number: u32 = 11;
+    pub const CalabashCfg_field_number: u32 = 7;
+};
+pub const RoleCoopActivityData = struct {
+    pub const CoopRoleInfos_field_number: u32 = 2;
+    pub const RewardGetList_field_number: u32 = 3;
+    pub const CoopTaskCompleteInfos_field_number: u32 = 4;
+    pub const PreCompleteIds_field_number: u32 = 5;
+};
+pub const TemplateEntitySpawnerComponentPb = struct {
+    pub const SpawnerType_field_number: u32 = 1;
+    pub const CreateEntityInfos_field_number: u32 = 2;
+};
+pub const RacingBetsGroupMatchInfo = struct {
+    pub const MatchId_field_number: u32 = 1;
+    pub const GroupMatchTime_field_number: u32 = 2;
+    pub const LegMatch_field_number: u32 = 3;
+    pub const PromoteDangoList_field_number: u32 = 4;
+    pub const Dangos_field_number: u32 = 5;
+};
+pub const VarDefinePb = struct {
+    Value: ?union(enum) {
+    } = null,
+    pub const Boolean_field_number: u32 = 2;
+    pub const Int_field_number: u32 = 3;
+    pub const String_field_number: u32 = 4;
+    pub const Float_field_number: u32 = 5;
+    pub const Entity_field_number: u32 = 6;
+    pub const Quest_field_number: u32 = 7;
+    pub const QuestState_field_number: u32 = 8;
+    pub const Transform_field_number: u32 = 9;
+    pub const Prefab_field_number: u32 = 10;
+    pub const VarType_field_number: u32 = 1;
+};
+pub const AdventureManualDataResponse = struct {
+    pub const msg_id: u16 = 28435;
+    pub const ErrorCode_field_number: u32 = 13;
+    pub const AdventureManualData_field_number: u32 = 10;
+};
+pub const MotorTaskTreePb = struct {
+    pub const TreeId_field_number: u32 = 1;
+    pub const Tasks_field_number: u32 = 2;
+    pub const TpRewarded_field_number: u32 = 3;
+};
+pub const DangoAbyssActivityData = struct {
+    pub const RoleList_field_number: u32 = 1;
+    pub const AbyssPluginItemInfo_field_number: u32 = 2;
+    pub const AbyssRewardInfo_field_number: u32 = 3;
+    pub const UnlockChallengeIdList_field_number: u32 = 4;
+    pub const LikeCount_field_number: u32 = 5;
+    pub const AbyssChallengeData_field_number: u32 = 6;
+    pub const StartTime_field_number: u32 = 7;
+    pub const EndTime_field_number: u32 = 8;
 };
 pub const MoveReplaySample = struct {
     pub const LinearVelocity_field_number: u32 = 1;
@@ -31060,55 +31697,8 @@ pub const MoveReplaySample = struct {
     pub const SkillId_field_number: u32 = 15;
     pub const ElapsedLogicTickTime_field_number: u32 = 16;
 };
-pub const RoleFavor = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const Level_field_number: u32 = 2;
-    pub const Exp_field_number: u32 = 3;
-    pub const WordIds_field_number: u32 = 4;
-    pub const StoryIds_field_number: u32 = 5;
-    pub const GoodsIds_field_number: u32 = 6;
-    pub const FavorQuest_field_number: u32 = 7;
-};
-pub const DangoAbyssActivityData = struct {
-    pub const RoleList_field_number: u32 = 1;
-    pub const AbyssPluginItemInfo_field_number: u32 = 2;
-    pub const AbyssRewardInfo_field_number: u32 = 3;
-    pub const UnlockChallengeIdList_field_number: u32 = 4;
-    pub const LikeCount_field_number: u32 = 5;
-    pub const AbyssChallengeData_field_number: u32 = 6;
-    pub const StartTime_field_number: u32 = 7;
-    pub const EndTime_field_number: u32 = 8;
-};
-pub const RoleCoopActivityData = struct {
-    pub const CoopRoleInfos_field_number: u32 = 2;
-    pub const RewardGetList_field_number: u32 = 3;
-    pub const CoopTaskCompleteInfos_field_number: u32 = 4;
-    pub const PreCompleteIds_field_number: u32 = 5;
-};
-pub const PinballLevelData = struct {
-    data: ?union(enum) {
-    } = null,
-    pub const NormalLevel_field_number: u32 = 2;
-    pub const CowLevel_field_number: u32 = 3;
-    pub const TowerLevel_field_number: u32 = 4;
-    pub const DailyLevel_field_number: u32 = 5;
-    pub const ConfigId_field_number: u32 = 1;
-};
-pub const PayShopInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const Items_field_number: u32 = 2;
-    pub const UpdateTime_field_number: u32 = 3;
-    pub const LastUpdateTime_field_number: u32 = 4;
-    pub const ShopTabViewType_field_number: u32 = 5;
-    pub const DynamicTabId_field_number: u32 = 6;
-    pub const Sort_field_number: u32 = 7;
-    pub const Money_field_number: u32 = 8;
-    pub const SortRule_field_number: u32 = 9;
-};
-pub const MotorTaskTreePb = struct {
-    pub const TreeId_field_number: u32 = 1;
-    pub const Tasks_field_number: u32 = 2;
-    pub const TpRewarded_field_number: u32 = 3;
+pub const RbBlockMovingPbState = struct {
+    pub const Action_field_number: u32 = 1;
 };
 pub const CreateBulletNotify = struct {
     pub const msg_id: u16 = 27333;
@@ -31135,131 +31725,33 @@ pub const CreateBulletNotify = struct {
     pub const RandomInitSpeedOffset_field_number: u32 = 179;
     pub const HitCase_field_number: u32 = 12;
 };
-pub const UpdateGroupFormationNotify = struct {
-    pub const msg_id: u16 = 18080;
-    pub const GroupFormation_field_number: u32 = 1;
+pub const HandInInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const FishingItem_field_number: u32 = 2;
 };
-pub const PrivateChatHistoryResponse = struct {
-    pub const msg_id: u16 = 19808;
-    pub const ErrorCode_field_number: u32 = 12;
-    pub const Data_field_number: u32 = 7;
+pub const AchievementInfoResponse = struct {
+    pub const msg_id: u16 = 28277;
+    pub const AchievementGroupInfoList_field_number: u32 = 4;
+    pub const AchievementFinishedStar_field_number: u32 = 7;
+    pub const FinishedAchievementNum_field_number: u32 = 5;
 };
-pub const EntityFsmComponentPb = struct {
-    pub const Fsms_field_number: u32 = 1;
-    pub const HashCode_field_number: u32 = 2;
-    pub const CommonHashCode_field_number: u32 = 3;
-    pub const BlackBoard_field_number: u32 = 4;
-    pub const FsmCustomBlackboardDatas_field_number: u32 = 5;
+pub const SolarisSpeedActivity = struct {
+    pub const SolarSpeedContext_field_number: u32 = 1;
+    pub const ActivityTaskDatas_field_number: u32 = 2;
 };
-pub const BeginnerCarnivalData = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const ActivityTaskData_field_number: u32 = 2;
-    pub const JumpTaskIds_field_number: u32 = 3;
-    pub const JumpTaskCondInfos_field_number: u32 = 4;
-};
-pub const RogueResTaskData = struct {
-    pub const PermanentRogueData_field_number: u32 = 1;
-    pub const RogueResCollectionState_field_number: u32 = 2;
-};
-pub const SceneFishCageData = struct {
-    pub const Id_field_number: u32 = 5;
-    pub const EntityConfigId_field_number: u32 = 1;
-    pub const MaxCount_field_number: u32 = 2;
-    pub const Items_field_number: u32 = 3;
-    pub const LastUpdateTime_field_number: u32 = 4;
-    pub const NextUpdateTime_field_number: u32 = 6;
-    pub const RefreshTime_field_number: u32 = 7;
-};
-pub const VarDefinePb = struct {
-    Value: ?union(enum) {
+pub const PinballLevelData = struct {
+    data: ?union(enum) {
     } = null,
-    pub const Boolean_field_number: u32 = 2;
-    pub const Int_field_number: u32 = 3;
-    pub const String_field_number: u32 = 4;
-    pub const Float_field_number: u32 = 5;
-    pub const Entity_field_number: u32 = 6;
-    pub const Quest_field_number: u32 = 7;
-    pub const QuestState_field_number: u32 = 8;
-    pub const Transform_field_number: u32 = 9;
-    pub const Prefab_field_number: u32 = 10;
-    pub const VarType_field_number: u32 = 1;
+    pub const NormalLevel_field_number: u32 = 2;
+    pub const CowLevel_field_number: u32 = 3;
+    pub const TowerLevel_field_number: u32 = 4;
+    pub const DailyLevel_field_number: u32 = 5;
+    pub const ConfigId_field_number: u32 = 1;
 };
 pub const MotorDiyInfoResponse = struct {
     pub const msg_id: u16 = 25426;
     pub const ErrorCode_field_number: u32 = 14;
     pub const MotorDiy_field_number: u32 = 3;
-};
-pub const TowerInfo = struct {
-    pub const CurrentSeason_field_number: u32 = 1;
-    pub const DataSeason_field_number: u32 = 2;
-    pub const TowerDifficulties_field_number: u32 = 3;
-    pub const BeginTime_field_number: u32 = 4;
-    pub const EndTime_field_number: u32 = 5;
-    pub const MaxUnlockDifficulty_field_number: u32 = 6;
-    pub const QuickPassId_field_number: u32 = 7;
-};
-pub const CabinInfo = struct {
-    pub const FishingItem_field_number: u32 = 1;
-    pub const CabinShape_field_number: u32 = 2;
-    pub const QuickSellShape_field_number: u32 = 3;
-    pub const NetCabinItems_field_number: u32 = 4;
-    pub const TempCabinItems_field_number: u32 = 5;
-    pub const QuickSellRatio_field_number: u32 = 6;
-};
-pub const CreateBulletRequest = struct {
-    pub const msg_id: u16 = 20960;
-    ParentHandle: ?union(enum) {
-    } = null,
-    pub const BulletHandle_field_number: u32 = 3;
-    pub const CombatCommon_field_number: u32 = 7;
-    pub const Handle_field_number: u32 = 13;
-    pub const OwnerEntityId_field_number: u32 = 9;
-    pub const BulletId_field_number: u32 = 6;
-    pub const SkillId_field_number: u32 = 2;
-    pub const Location_field_number: u32 = 4;
-    pub const Rotation_field_number: u32 = 5;
-    pub const TargetId_field_number: u32 = 11;
-    pub const SpawnEntityId_field_number: u32 = 12;
-    pub const SpawnVelocityEntityId_field_number: u32 = 14;
-    pub const IsLocal_field_number: u32 = 10;
-    pub const DtType_field_number: u32 = 15;
-    pub const RandomPosOffset_field_number: u32 = 1;
-    pub const RandomInitSpeedOffset_field_number: u32 = 8;
-};
-pub const HonamiStoryBackpackEntry = struct {
-    pub const Item_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-};
-pub const SwitchRoleRequest = struct {
-    pub const msg_id: u16 = 17144;
-    transform: ?union(enum) {
-    } = null,
-    pub const Transform_field_number: u32 = 1;
-    pub const RoleId_field_number: u32 = 5;
-    pub const SwitchType_field_number: u32 = 12;
-    pub const OnStageWithoutControl_field_number: u32 = 9;
-};
-pub const GachaInfoResponse = struct {
-    pub const msg_id: u16 = 16838;
-    pub const ErrorCode_field_number: u32 = 8;
-    pub const GachaInfos_field_number: u32 = 10;
-    pub const DailyTotalLeftTimes_field_number: u32 = 7;
-    pub const RecordId_field_number: u32 = 11;
-};
-pub const CumulativeShopData = struct {
-    pub const ActivityId_field_number: u32 = 2;
-    pub const TaskData_field_number: u32 = 3;
-    pub const TotalScore_field_number: u32 = 4;
-};
-pub const PbGetRoleListNotify = struct {
-    pub const msg_id: u16 = 22031;
-    pub const RoleList_field_number: u32 = 15;
-};
-pub const AdviceResponse = struct {
-    pub const msg_id: u16 = 18050;
-    pub const Advices_field_number: u32 = 12;
-    pub const UpVoteIds_field_number: u32 = 9;
-    pub const ErrorCode_field_number: u32 = 11;
 };
 pub const DarkCoastDeliveryResponse = struct {
     pub const msg_id: u16 = 29104;
@@ -31269,92 +31761,188 @@ pub const DarkCoastDeliveryResponse = struct {
     pub const ReceivedGuardReward_field_number: u32 = 7;
     pub const LevelGain_field_number: u32 = 5;
 };
-pub const AdventureManualDataResponse = struct {
-    pub const msg_id: u16 = 28435;
-    pub const ErrorCode_field_number: u32 = 13;
-    pub const AdventureManualData_field_number: u32 = 10;
+pub const HonamiStoryBackpackEntry = struct {
+    pub const Item_field_number: u32 = 1;
+    pub const State_field_number: u32 = 2;
 };
-pub const TemplateEntitySpawnerComponentPb = struct {
-    pub const SpawnerType_field_number: u32 = 1;
-    pub const CreateEntityInfos_field_number: u32 = 2;
+pub const HitRequest = struct {
+    pub const msg_id: u16 = 23154;
+    pub const CombatCommon_field_number: u32 = 7;
+    pub const HitInfo_field_number: u32 = 12;
+    pub const SkillMessageId_field_number: u32 = 6;
 };
-pub const RacingBetsGroupMatchInfo = struct {
-    pub const MatchId_field_number: u32 = 1;
-    pub const GroupMatchTime_field_number: u32 = 2;
-    pub const LegMatch_field_number: u32 = 3;
-    pub const PromoteDangoList_field_number: u32 = 4;
-    pub const Dangos_field_number: u32 = 5;
+pub const RoleDevelopConfigResponse = struct {
+    pub const msg_id: u16 = 22426;
+    pub const Configs_field_number: u32 = 9;
+    pub const ErrorCode_field_number: u32 = 8;
 };
-pub const RbBlockMovingPbState = struct {
-    pub const Action_field_number: u32 = 1;
+pub const SceneFishCageInfo = struct {
+    pub const Cages_field_number: u32 = 1;
 };
-pub const CreateBulletResponsePush = struct {
-    pub const msg_id: u16 = 26595;
-    ParentHandle: ?union(enum) {
+pub const HonamiStoryBackpack = struct {
+    pub const BackpackId_field_number: u32 = 1;
+    pub const Width_field_number: u32 = 2;
+    pub const Capacity_field_number: u32 = 3;
+    pub const Items_field_number: u32 = 4;
+};
+pub const IllustratedInfoResponse = struct {
+    pub const msg_id: u16 = 22110;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const ErrorParams_field_number: u32 = 9;
+    pub const IllustratedClassList_field_number: u32 = 7;
+};
+pub const UseSkillRequest = struct {
+    pub const msg_id: u16 = 27845;
+    pub const CombatCommon_field_number: u32 = 2;
+    pub const UseSkillInfo_field_number: u32 = 9;
+    pub const SkillSingleId_field_number: u32 = 13;
+    pub const BattleFlags_field_number: u32 = 11;
+};
+pub const UseSkillNotify = struct {
+    pub const msg_id: u16 = 18257;
+    pub const CombatCommon_field_number: u32 = 8;
+    pub const UseSkillInfo_field_number: u32 = 6;
+    pub const SkillSingleId_field_number: u32 = 5;
+};
+pub const InfrV2Pb = struct {
+    pub const FireInfo_field_number: u32 = 1;
+    pub const TreeInfo_field_number: u32 = 2;
+    pub const RewardScoreIds_field_number: u32 = 3;
+    pub const ConditionTasks_field_number: u32 = 4;
+    pub const TreeFinishCond_field_number: u32 = 5;
+};
+pub const TowerResponse = struct {
+    pub const msg_id: u16 = 18829;
+    pub const TowerInfo_field_number: u32 = 3;
+};
+pub const ActivityComponentPb = struct {
+    Data: ?union(enum) {
     } = null,
-    pub const BulletHandle_field_number: u32 = 2;
-    pub const CombatCommon_field_number: u32 = 14;
-    pub const Handle_field_number: u32 = 11;
-    pub const OwnerEntityId_field_number: u32 = 7;
-    pub const BulletId_field_number: u32 = 3;
-    pub const SkillId_field_number: u32 = 5;
-    pub const Location_field_number: u32 = 1;
-    pub const Rotation_field_number: u32 = 12;
-    pub const TargetId_field_number: u32 = 10;
-    pub const SpawnEntityId_field_number: u32 = 4;
-    pub const SpawnVelocityEntityId_field_number: u32 = 13;
-    pub const IsLocal_field_number: u32 = 9;
-    pub const DtType_field_number: u32 = 6;
-    pub const RandomPosOffset_field_number: u32 = 15;
-    pub const RandomInitSpeedOffset_field_number: u32 = 8;
+    pub const SurvivorsMonsterPbData_field_number: u32 = 2;
+    pub const SurvivorsWeaponPbData_field_number: u32 = 3;
+    pub const SurvivorsPlayerCharacterPbData_field_number: u32 = 4;
+    pub const SurvivorsGoldenCoinPbData_field_number: u32 = 5;
+    pub const PinballKSCRolePbData_field_number: u32 = 6;
+    pub const ConfigId_field_number: u32 = 1;
 };
-pub const HandInInfo = struct {
-    pub const Id_field_number: u32 = 1;
-    pub const FishingItem_field_number: u32 = 2;
+pub const EntityVarComponentPb = struct {
+    pub const Vars_field_number: u32 = 1;
 };
-pub const RbItemComponentPb = struct {
-    Type: ?union(enum) {
+pub const FlagChallengeActivityInfo = struct {
+    pub const ConditionTasks_field_number: u32 = 1;
+    pub const FlagChallengeLevelInfos_field_number: u32 = 2;
+    pub const FlagStrongholdInfos_field_number: u32 = 3;
+    pub const FlagChallengeRoleLevelInfo_field_number: u32 = 4;
+    pub const UnlockTeleporterId_field_number: u32 = 5;
+};
+pub const TowerSeasonUpdateResponse = struct {
+    pub const msg_id: u16 = 21897;
+    Towers: ?union(enum) {
     } = null,
-    pub const BreakableObstacleType_field_number: u32 = 3;
-    pub const RbLaserEmitterType_field_number: u32 = 4;
-    pub const GamePlayIncId_field_number: u32 = 1;
-    pub const OccupiedCellPositions_field_number: u32 = 2;
+    pub const TowerInfo_field_number: u32 = 7;
+    pub const MaxUnlockDifficulty_field_number: u32 = 1;
 };
-pub const EntityMoveSplineComponentPb = struct {
-    RuntimeData: ?union(enum) {
-    } = null,
-    pub const SceneItemSplineRuntimeData_field_number: u32 = 11;
-    pub const SplineEntityId_field_number: u32 = 1;
-    pub const MoveSplineConfig_field_number: u32 = 2;
+pub const DreamLinkActivityData = struct {
+    pub const MaxEnergy_field_number: u32 = 1;
+    pub const SignStateList_field_number: u32 = 3;
+    pub const RoleInstanceList_field_number: u32 = 5;
+    pub const LevelPlayList_field_number: u32 = 6;
+    pub const BossRewardIds_field_number: u32 = 7;
+    pub const AllLimitTimeReward_field_number: u32 = 8;
+    pub const ScoreMap_field_number: u32 = 9;
+    pub const LimitTimeReward_field_number: u32 = 10;
+    pub const LimitTimeEnd_field_number: u32 = 11;
+    pub const RogueBossInstData_field_number: u32 = 12;
+    pub const PlayTime_field_number: u32 = 13;
+    pub const UnlockButtons_field_number: u32 = 14;
 };
-pub const SolarisSpeedActivity = struct {
-    pub const SolarSpeedContext_field_number: u32 = 1;
-    pub const ActivityTaskDatas_field_number: u32 = 2;
+pub const EndSkillNotify = struct {
+    pub const msg_id: u16 = 22558;
+    pub const CombatCommon_field_number: u32 = 13;
+    pub const UseSkillInfo_field_number: u32 = 3;
+    pub const SkillSingleId_field_number: u32 = 7;
 };
-pub const UseSkillInformation = struct {
-    pub const CombatCommon_field_number: u32 = 1;
-    pub const Id_field_number: u32 = 2;
-    pub const SkillId_field_number: u32 = 3;
-    pub const MovementInformation_field_number: u32 = 4;
-    pub const Location_field_number: u32 = 5;
-    pub const TargetId_field_number: u32 = 6;
-    pub const TimeStamp_field_number: u32 = 7;
-    pub const IsSpecialSkill_field_number: u32 = 8;
-    pub const Duration_field_number: u32 = 9;
-    pub const SkillInterruptLevel_field_number: u32 = 10;
-    pub const FightState_field_number: u32 = 11;
+pub const FloroRangeData = struct {
+    pub const FloroRanchCardData_field_number: u32 = 1;
+    pub const FloroRanchUnlockedTechDataIds_field_number: u32 = 2;
+    pub const FloroRanchToyData_field_number: u32 = 3;
+    pub const FloroRanchSkillData_field_number: u32 = 5;
+    pub const FloroRanchMilestoneData_field_number: u32 = 7;
+    pub const FloroRanchRaceData_field_number: u32 = 9;
+    pub const FloroRanchSubDungeonData_field_number: u32 = 10;
+    pub const ConditionTask_field_number: u32 = 11;
+    pub const FloroRanchSubDungeonHistoryData_field_number: u32 = 13;
+    pub const FloroRanchSubDungeonIdsRedDot_field_number: u32 = 14;
+    pub const IsReadComic_field_number: u32 = 15;
+    pub const FloroRangeUnlockTime_field_number: u32 = 16;
+    pub const FloroRangeEndTime_field_number: u32 = 17;
+    pub const InsUnLockCondition_field_number: u32 = 18;
 };
-pub const AchievementInfoResponse = struct {
-    pub const msg_id: u16 = 28277;
-    pub const AchievementGroupInfoList_field_number: u32 = 4;
-    pub const AchievementFinishedStar_field_number: u32 = 7;
-    pub const FinishedAchievementNum_field_number: u32 = 5;
+pub const FsmResetNotify = struct {
+    pub const msg_id: u16 = 22554;
+    pub const EntityFsmComponentPb_field_number: u32 = 9;
+};
+pub const PhantomItemResponse = struct {
+    pub const msg_id: u16 = 15309;
+    pub const PhantomItemList_field_number: u32 = 7;
+    pub const EquipInfoList_field_number: u32 = 12;
+    pub const PropInfo_field_number: u32 = 15;
+    pub const MaxCost_field_number: u32 = 2;
+    pub const PhantomSkinList_field_number: u32 = 6;
+    pub const DirectRefineWeekTimes_field_number: u32 = 5;
+};
+pub const FightBuffComponentPb = struct {
+    pub const FightBuffInfos_field_number: u32 = 1;
+    pub const ListBuffEffectCd_field_number: u32 = 2;
+    pub const ClientBornBuffIds_field_number: u32 = 3;
+    pub const ClientBornMessageId_field_number: u32 = 4;
+};
+pub const HitNotify = struct {
+    pub const msg_id: u16 = 26068;
+    pub const CombatCommon_field_number: u32 = 6;
+    pub const HitInfo_field_number: u32 = 15;
 };
 pub const PlayerTitleDataResponse = struct {
     pub const msg_id: u16 = 28084;
     pub const PlayerTitleData_field_number: u32 = 8;
     pub const ErrorCode_field_number: u32 = 1;
     pub const PlayerTitleLimitInfos_field_number: u32 = 9;
+};
+pub const BattlePassResponse = struct {
+    pub const msg_id: u16 = 22837;
+    pub const BattlePass_field_number: u32 = 3;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const MotorFightActivityPb = struct {
+    pub const MotorFightLevelPb_field_number: u32 = 2;
+    pub const Task_field_number: u32 = 3;
+    pub const TalentTree_field_number: u32 = 4;
+    pub const UnlockedItem_field_number: u32 = 5;
+    pub const UnlockedRole_field_number: u32 = 6;
+};
+pub const HitResponse = struct {
+    pub const msg_id: u16 = 19403;
+    pub const HitInfo_field_number: u32 = 1;
+    pub const ErrorCode_field_number: u32 = 2;
+};
+pub const SurvivorsActivityData = struct {
+    pub const NormalTaskData_field_number: u32 = 1;
+    pub const ScoreTaskDatas_field_number: u32 = 2;
+    pub const UnlockedWeapons_field_number: u32 = 3;
+    pub const UnlockedRoles_field_number: u32 = 4;
+    pub const UnlockedItems_field_number: u32 = 5;
+    pub const TalentTreeNodes_field_number: u32 = 6;
+    pub const SurvivorsChallengeInfos_field_number: u32 = 7;
+};
+pub const PlayerVarNotify = struct {
+    pub const msg_id: u16 = 15451;
+    pub const VarInfos_field_number: u32 = 5;
+};
+pub const FriendAllResponse = struct {
+    pub const msg_id: u16 = 16007;
+    pub const FriendInfoList_field_number: u32 = 1;
+    pub const FriendApplyList_field_number: u32 = 15;
+    pub const ErrorCode_field_number: u32 = 4;
 };
 pub const BabelTowerActivity = struct {
     pub const BabelTowerDataList_field_number: u32 = 1;
@@ -31373,45 +31961,19 @@ pub const TrapDefenseComponentPb = struct {
     pub const GoldenCointPbData_field_number: u32 = 4;
     pub const SpecialCellPbdata_field_number: u32 = 5;
 };
-pub const SceneFishCageInfo = struct {
-    pub const Cages_field_number: u32 = 1;
+pub const CharacterSkillComponentPb = struct {
+    pub const UseSkillInfo_field_number: u32 = 1;
+    pub const MontageIndex_field_number: u32 = 2;
+    pub const MontagePlayTime_field_number: u32 = 3;
+    pub const Section_field_number: u32 = 4;
+    pub const SpeedRatio_field_number: u32 = 5;
+    pub const MessageId_field_number: u32 = 6;
+    pub const MontageContext_field_number: u32 = 7;
 };
-pub const FlagChallengeActivityInfo = struct {
-    pub const ConditionTasks_field_number: u32 = 1;
-    pub const FlagChallengeLevelInfos_field_number: u32 = 2;
-    pub const FlagStrongholdInfos_field_number: u32 = 3;
-    pub const FlagChallengeRoleLevelInfo_field_number: u32 = 4;
-    pub const UnlockTeleporterId_field_number: u32 = 5;
-};
-pub const TowerResponse = struct {
-    pub const msg_id: u16 = 18829;
-    pub const TowerInfo_field_number: u32 = 3;
-};
-pub const FloroRangeData = struct {
-    pub const FloroRanchCardData_field_number: u32 = 1;
-    pub const FloroRanchUnlockedTechDataIds_field_number: u32 = 2;
-    pub const FloroRanchToyData_field_number: u32 = 3;
-    pub const FloroRanchSkillData_field_number: u32 = 5;
-    pub const FloroRanchMilestoneData_field_number: u32 = 7;
-    pub const FloroRanchRaceData_field_number: u32 = 9;
-    pub const FloroRanchSubDungeonData_field_number: u32 = 10;
-    pub const ConditionTask_field_number: u32 = 11;
-    pub const FloroRanchSubDungeonHistoryData_field_number: u32 = 13;
-    pub const FloroRanchSubDungeonIdsRedDot_field_number: u32 = 14;
-    pub const IsReadComic_field_number: u32 = 15;
-    pub const FloroRangeUnlockTime_field_number: u32 = 16;
-    pub const FloroRangeEndTime_field_number: u32 = 17;
-    pub const InsUnLockCondition_field_number: u32 = 18;
-};
-pub const PlayerVarNotify = struct {
-    pub const msg_id: u16 = 15451;
-    pub const VarInfos_field_number: u32 = 5;
-};
-pub const EndSkillNotify = struct {
-    pub const msg_id: u16 = 22558;
-    pub const CombatCommon_field_number: u32 = 13;
-    pub const UseSkillInfo_field_number: u32 = 3;
-    pub const SkillSingleId_field_number: u32 = 7;
+pub const MovingEntityData = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const Originator_field_number: u32 = 2;
+    pub const MoveInfos_field_number: u32 = 3;
 };
 pub const FishingShipInfo = struct {
     pub const SkinId_field_number: u32 = 1;
@@ -31423,145 +31985,71 @@ pub const FishingShipInfo = struct {
     pub const PortId_field_number: u32 = 12;
     pub const LastPortId_field_number: u32 = 13;
 };
-pub const FightBuffComponentPb = struct {
-    pub const FightBuffInfos_field_number: u32 = 1;
-    pub const ListBuffEffectCd_field_number: u32 = 2;
-    pub const ClientBornBuffIds_field_number: u32 = 3;
-    pub const ClientBornMessageId_field_number: u32 = 4;
+pub const MovePackagePush = struct {
+    pub const msg_id: u16 = 29957;
+    pub const MovingEntities_field_number: u32 = 9;
+    pub const SceneOwnerId_field_number: u32 = 13;
 };
-pub const TowerSeasonUpdateResponse = struct {
-    pub const msg_id: u16 = 21897;
-    Towers: ?union(enum) {
-    } = null,
-    pub const TowerInfo_field_number: u32 = 7;
-    pub const MaxUnlockDifficulty_field_number: u32 = 1;
+pub const SkillNotify = struct {
+    pub const msg_id: u16 = 16958;
+    pub const UseSkillInfo_field_number: u32 = 10;
+    pub const SkillNodeInfos_field_number: u32 = 8;
 };
-pub const IllustratedInfoResponse = struct {
-    pub const msg_id: u16 = 22110;
-    pub const ErrorCode_field_number: u32 = 11;
-    pub const ErrorParams_field_number: u32 = 9;
-    pub const IllustratedClassList_field_number: u32 = 7;
+pub const NewTowerClimbingActivityData = struct {
+    pub const CycleId_field_number: u32 = 1;
+    pub const Records_field_number: u32 = 2;
+    pub const ScoreTasks_field_number: u32 = 3;
+    pub const ActivityTasks_field_number: u32 = 4;
+    pub const CycleBeginTime_field_number: u32 = 5;
+    pub const CycleCloseTime_field_number: u32 = 6;
+    pub const SeasonId_field_number: u32 = 7;
+    pub const SeasonBeginTime_field_number: u32 = 8;
+    pub const SeasonCloseTime_field_number: u32 = 9;
+    pub const SeasonTasks_field_number: u32 = 10;
 };
-pub const DreamLinkActivityData = struct {
-    pub const MaxEnergy_field_number: u32 = 1;
-    pub const SignStateList_field_number: u32 = 3;
-    pub const RoleInstanceList_field_number: u32 = 5;
-    pub const LevelPlayList_field_number: u32 = 6;
-    pub const BossRewardIds_field_number: u32 = 7;
-    pub const AllLimitTimeReward_field_number: u32 = 8;
-    pub const ScoreMap_field_number: u32 = 9;
-    pub const LimitTimeReward_field_number: u32 = 10;
-    pub const LimitTimeEnd_field_number: u32 = 11;
-    pub const RogueBossInstData_field_number: u32 = 12;
-    pub const PlayTime_field_number: u32 = 13;
-    pub const UnlockButtons_field_number: u32 = 14;
+pub const MapMarkInfoNotify = struct {
+    pub const msg_id: u16 = 29221;
+    pub const InfoList_field_number: u32 = 5;
+    pub const ShowMarkIds_field_number: u32 = 14;
+    pub const UnlockMarkIds_field_number: u32 = 7;
+    pub const EntityMapMarkInfo_field_number: u32 = 9;
+    pub const SystemMarkHideInfo_field_number: u32 = 10;
+    pub const CompleteMarkIds_field_number: u32 = 15;
 };
-pub const HitNotify = struct {
-    pub const msg_id: u16 = 26068;
-    pub const CombatCommon_field_number: u32 = 6;
-    pub const HitInfo_field_number: u32 = 15;
+pub const FloroRanchActivityData = struct {
+    pub const FloroRangeData_field_number: u32 = 1;
+    pub const UnFinishedSubIns_field_number: u32 = 2;
+    pub const SavedStage_field_number: u32 = 3;
 };
-pub const FriendAllResponse = struct {
-    pub const msg_id: u16 = 16007;
-    pub const FriendInfoList_field_number: u32 = 1;
-    pub const FriendApplyList_field_number: u32 = 15;
-    pub const ErrorCode_field_number: u32 = 4;
+pub const RoleFavorListResponse = struct {
+    pub const msg_id: u16 = 28201;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const FavorList_field_number: u32 = 4;
 };
-pub const HitRequest = struct {
-    pub const msg_id: u16 = 23154;
-    pub const CombatCommon_field_number: u32 = 7;
-    pub const HitInfo_field_number: u32 = 12;
-    pub const SkillMessageId_field_number: u32 = 6;
-};
-pub const BattlePassResponse = struct {
-    pub const msg_id: u16 = 22837;
-    pub const BattlePass_field_number: u32 = 3;
-    pub const ErrorCode_field_number: u32 = 10;
-};
-pub const PhantomItemResponse = struct {
-    pub const msg_id: u16 = 15309;
-    pub const PhantomItemList_field_number: u32 = 7;
-    pub const EquipInfoList_field_number: u32 = 12;
-    pub const PropInfo_field_number: u32 = 15;
-    pub const MaxCost_field_number: u32 = 2;
-    pub const PhantomSkinList_field_number: u32 = 6;
-    pub const DirectRefineWeekTimes_field_number: u32 = 5;
-};
-pub const HitResponse = struct {
-    pub const msg_id: u16 = 19403;
-    pub const HitInfo_field_number: u32 = 1;
-    pub const ErrorCode_field_number: u32 = 2;
-};
-pub const ActivityComponentPb = struct {
-    Data: ?union(enum) {
-    } = null,
-    pub const SurvivorsMonsterPbData_field_number: u32 = 2;
-    pub const SurvivorsWeaponPbData_field_number: u32 = 3;
-    pub const SurvivorsPlayerCharacterPbData_field_number: u32 = 4;
-    pub const SurvivorsGoldenCoinPbData_field_number: u32 = 5;
-    pub const PinballKSCRolePbData_field_number: u32 = 6;
-    pub const ConfigId_field_number: u32 = 1;
-};
-pub const EntityVarComponentPb = struct {
-    pub const Vars_field_number: u32 = 1;
-};
-pub const UseSkillRequest = struct {
-    pub const msg_id: u16 = 27845;
-    pub const CombatCommon_field_number: u32 = 2;
+pub const SkillRequest = struct {
+    pub const msg_id: u16 = 29602;
     pub const UseSkillInfo_field_number: u32 = 9;
-    pub const SkillSingleId_field_number: u32 = 13;
-    pub const BattleFlags_field_number: u32 = 11;
+    pub const SkillNodeInfos_field_number: u32 = 1;
 };
-pub const MovingEntityData = struct {
-    pub const EntityId_field_number: u32 = 1;
-    pub const Originator_field_number: u32 = 2;
-    pub const MoveInfos_field_number: u32 = 3;
+pub const ActivityCiacconaGalData = struct {
+    pub const ChapterData_field_number: u32 = 1;
+    pub const ProgressRewardData_field_number: u32 = 2;
+    pub const EndingData_field_number: u32 = 3;
+    pub const CiacconaGalInspirationData_field_number: u32 = 4;
+    pub const State2Unlock_field_number: u32 = 5;
+    pub const State3Unlock_field_number: u32 = 6;
+    pub const RewardStartTime_field_number: u32 = 7;
+    pub const RewardEndTime_field_number: u32 = 8;
 };
-pub const HonamiStoryBackpack = struct {
-    pub const BackpackId_field_number: u32 = 1;
-    pub const Width_field_number: u32 = 2;
-    pub const Capacity_field_number: u32 = 3;
-    pub const Items_field_number: u32 = 4;
+pub const ActivityPermanentRogueData = struct {
+    pub const PermanentSeasonData_field_number: u32 = 1;
+    pub const RogueResTaskData_field_number: u32 = 2;
 };
-pub const UseSkillNotify = struct {
-    pub const msg_id: u16 = 18257;
-    pub const CombatCommon_field_number: u32 = 8;
-    pub const UseSkillInfo_field_number: u32 = 6;
-    pub const SkillSingleId_field_number: u32 = 5;
-};
-pub const CharacterSkillComponentPb = struct {
-    pub const UseSkillInfo_field_number: u32 = 1;
-    pub const MontageIndex_field_number: u32 = 2;
-    pub const MontagePlayTime_field_number: u32 = 3;
-    pub const Section_field_number: u32 = 4;
-    pub const SpeedRatio_field_number: u32 = 5;
-    pub const MessageId_field_number: u32 = 6;
-    pub const MontageContext_field_number: u32 = 7;
-};
-pub const FsmResetNotify = struct {
-    pub const msg_id: u16 = 22554;
-    pub const EntityFsmComponentPb_field_number: u32 = 9;
-};
-pub const SurvivorsActivityData = struct {
-    pub const NormalTaskData_field_number: u32 = 1;
-    pub const ScoreTaskDatas_field_number: u32 = 2;
-    pub const UnlockedWeapons_field_number: u32 = 3;
-    pub const UnlockedRoles_field_number: u32 = 4;
-    pub const UnlockedItems_field_number: u32 = 5;
-    pub const TalentTreeNodes_field_number: u32 = 6;
-    pub const SurvivorsChallengeInfos_field_number: u32 = 7;
-};
-pub const RoleDevelopConfigResponse = struct {
-    pub const msg_id: u16 = 22426;
-    pub const Configs_field_number: u32 = 9;
-    pub const ErrorCode_field_number: u32 = 8;
-};
-pub const MotorFightActivityPb = struct {
-    pub const MotorFightLevelPb_field_number: u32 = 2;
-    pub const Task_field_number: u32 = 3;
-    pub const TalentTree_field_number: u32 = 4;
-    pub const UnlockedItem_field_number: u32 = 5;
-    pub const UnlockedRole_field_number: u32 = 6;
+pub const EndSkillResponse = struct {
+    pub const msg_id: u16 = 18015;
+    pub const UseSkillInfo_field_number: u32 = 7;
+    pub const SkillSingleId_field_number: u32 = 9;
+    pub const ErrorCode_field_number: u32 = 5;
 };
 pub const ActivityTrapDefenseData = struct {
     pub const TrapDefenseTalentNodeIds_field_number: u32 = 1;
@@ -31579,35 +32067,16 @@ pub const ActivityTrapDefenseData = struct {
     pub const TrapDefenseTotalPoints_field_number: u32 = 13;
     pub const TrapDefenseBdBuffIdUnlocks_field_number: u32 = 14;
 };
-pub const SceneItemBlackboardParam = struct {
-    Value: ?union(enum) {
-    } = null,
-    pub const IntValue_field_number: u32 = 3;
-    pub const IntValues_field_number: u32 = 4;
-    pub const LongValue_field_number: u32 = 5;
-    pub const LongValues_field_number: u32 = 6;
-    pub const BooleanValue_field_number: u32 = 7;
-    pub const StringValue_field_number: u32 = 8;
-    pub const FloatValue_field_number: u32 = 10;
-    pub const FloatValues_field_number: u32 = 11;
-    pub const VectorValue_field_number: u32 = 12;
-    pub const RotatorValue_field_number: u32 = 13;
-    pub const Key_field_number: u32 = 1;
+pub const LevelPlayVarAsyncResponse = struct {
+    pub const msg_id: u16 = 16806;
+    pub const ErrorCode_field_number: u32 = 2;
+    pub const Vars_field_number: u32 = 12;
 };
-pub const FloroRanchActivityData = struct {
-    pub const FloroRangeData_field_number: u32 = 1;
-    pub const UnFinishedSubIns_field_number: u32 = 2;
-    pub const SavedStage_field_number: u32 = 3;
-};
-pub const RoleFavorListResponse = struct {
-    pub const msg_id: u16 = 28201;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const FavorList_field_number: u32 = 4;
-};
-pub const MovePackagePush = struct {
-    pub const msg_id: u16 = 29957;
-    pub const MovingEntities_field_number: u32 = 9;
-    pub const SceneOwnerId_field_number: u32 = 13;
+pub const UseSkillResponse = struct {
+    pub const msg_id: u16 = 22353;
+    pub const UseSkillInfo_field_number: u32 = 13;
+    pub const SkillSingleId_field_number: u32 = 14;
+    pub const ErrorCode_field_number: u32 = 2;
 };
 pub const ScenePlayerInformation = struct {
     pub const PlayerId_field_number: u32 = 1;
@@ -31628,105 +32097,29 @@ pub const ScenePlayerInformation = struct {
     pub const Gravity_field_number: u32 = 17;
     pub const AreaId_field_number: u32 = 18;
 };
-pub const NewTowerClimbingActivityData = struct {
-    pub const CycleId_field_number: u32 = 1;
-    pub const Records_field_number: u32 = 2;
-    pub const ScoreTasks_field_number: u32 = 3;
-    pub const ActivityTasks_field_number: u32 = 4;
-    pub const CycleBeginTime_field_number: u32 = 5;
-    pub const CycleCloseTime_field_number: u32 = 6;
-    pub const SeasonId_field_number: u32 = 7;
-    pub const SeasonBeginTime_field_number: u32 = 8;
-    pub const SeasonCloseTime_field_number: u32 = 9;
-    pub const SeasonTasks_field_number: u32 = 10;
+pub const RoleMotionListNotify = struct {
+    pub const msg_id: u16 = 23883;
+    pub const MotionList_field_number: u32 = 9;
+    pub const RoleConditionInfoMap_field_number: u32 = 4;
 };
-pub const SkillRequest = struct {
-    pub const msg_id: u16 = 29602;
-    pub const UseSkillInfo_field_number: u32 = 9;
-    pub const SkillNodeInfos_field_number: u32 = 1;
-};
-pub const SkillNotify = struct {
-    pub const msg_id: u16 = 16958;
-    pub const UseSkillInfo_field_number: u32 = 10;
-    pub const SkillNodeInfos_field_number: u32 = 8;
-};
-pub const UseSkillResponse = struct {
-    pub const msg_id: u16 = 22353;
-    pub const UseSkillInfo_field_number: u32 = 13;
-    pub const SkillSingleId_field_number: u32 = 14;
-    pub const ErrorCode_field_number: u32 = 2;
-};
-pub const LevelPlayVarAsyncResponse = struct {
-    pub const msg_id: u16 = 16806;
-    pub const ErrorCode_field_number: u32 = 2;
-    pub const Vars_field_number: u32 = 12;
-};
-pub const ActivityPermanentRogueData = struct {
-    pub const PermanentSeasonData_field_number: u32 = 1;
-    pub const RogueResTaskData_field_number: u32 = 2;
-};
-pub const EndSkillResponse = struct {
-    pub const msg_id: u16 = 18015;
-    pub const UseSkillInfo_field_number: u32 = 7;
-    pub const SkillSingleId_field_number: u32 = 9;
-    pub const ErrorCode_field_number: u32 = 5;
-};
-pub const ActivityCiacconaGalData = struct {
-    pub const ChapterData_field_number: u32 = 1;
-    pub const ProgressRewardData_field_number: u32 = 2;
-    pub const EndingData_field_number: u32 = 3;
-    pub const CiacconaGalInspirationData_field_number: u32 = 4;
-    pub const State2Unlock_field_number: u32 = 5;
-    pub const State3Unlock_field_number: u32 = 6;
-    pub const RewardStartTime_field_number: u32 = 7;
-    pub const RewardEndTime_field_number: u32 = 8;
-};
-pub const NewPlayerSupportActivityData = struct {
-    pub const TrialRoleInfoList_field_number: u32 = 1;
-    pub const TaskDataList_field_number: u32 = 2;
-    pub const CurUseTrialRoleId_field_number: u32 = 3;
-    pub const CurUseRoleInfo_field_number: u32 = 4;
-    pub const NewPlayerPoolFinalGachaRoleId_field_number: u32 = 5;
-};
-pub const EndSkillRequest = struct {
-    pub const msg_id: u16 = 27369;
-    pub const CombatCommon_field_number: u32 = 7;
-    pub const UseSkillInfo_field_number: u32 = 14;
-    pub const SkillSingleId_field_number: u32 = 15;
-    pub const Reason_field_number: u32 = 13;
-    pub const InterruptSkillInfo_field_number: u32 = 9;
-};
-pub const MotorPb = struct {
-    pub const MotorLevel_field_number: u32 = 1;
-    pub const MotorExp_field_number: u32 = 2;
-    pub const MotorRewardedLvMax_field_number: u32 = 3;
-    pub const UnlockedTree_field_number: u32 = 4;
-    pub const TreeInUse_field_number: u32 = 5;
-    pub const TaskTrees_field_number: u32 = 6;
-    pub const MotorExpLimitGainDaily_field_number: u32 = 7;
-    pub const MotorExpMonsterDropDailyLimit_field_number: u32 = 8;
-};
-pub const RbBlockPbState = struct {
-    State: ?union(enum) {
+pub const SceneItemBlackboardParam = struct {
+    Value: ?union(enum) {
     } = null,
-    pub const MovingState_field_number: u32 = 1;
-    pub const IdleState_field_number: u32 = 2;
+    pub const IntValue_field_number: u32 = 3;
+    pub const IntValues_field_number: u32 = 4;
+    pub const LongValue_field_number: u32 = 5;
+    pub const LongValues_field_number: u32 = 6;
+    pub const BooleanValue_field_number: u32 = 7;
+    pub const StringValue_field_number: u32 = 8;
+    pub const FloatValue_field_number: u32 = 10;
+    pub const FloatValues_field_number: u32 = 11;
+    pub const VectorValue_field_number: u32 = 12;
+    pub const RotatorValue_field_number: u32 = 13;
+    pub const Key_field_number: u32 = 1;
 };
-pub const EndSkillPush = struct {
-    pub const msg_id: u16 = 15449;
-    pub const CombatCommon_field_number: u32 = 7;
-    pub const UseSkillInfo_field_number: u32 = 3;
-    pub const SkillSingleId_field_number: u32 = 9;
-    pub const Reason_field_number: u32 = 15;
-    pub const InterruptSkillInfo_field_number: u32 = 12;
-};
-pub const PassiveGaSkillComponentPb = struct {
-    pub const SkillInfoList_field_number: u32 = 1;
-    pub const SkillComponentPb_field_number: u32 = 2;
-};
-pub const SceneItemComponentPb = struct {
-    pub const PosSender_field_number: u32 = 1;
-    pub const BlackBoards_field_number: u32 = 2;
+pub const MovePackageNotify = struct {
+    pub const msg_id: u16 = 23098;
+    pub const MovingEntities_field_number: u32 = 2;
 };
 pub const DeviceInputSetting = struct {
     pub const Device_field_number: u32 = 5;
@@ -31736,27 +32129,33 @@ pub const DeviceInputSetting = struct {
     pub const InputCombinationAction_field_number: u32 = 9;
     pub const InputCombinationAxis_field_number: u32 = 10;
 };
-pub const BasicInfoNotify = struct {
-    pub const msg_id: u16 = 22491;
-    pub const Id_field_number: u32 = 14;
-    pub const Attributes_field_number: u32 = 8;
-    pub const MingSuGenInfos_field_number: u32 = 5;
-    pub const DragonPoolInfos_field_number: u32 = 12;
-    pub const RoleShowList_field_number: u32 = 4;
-    pub const CurCardId_field_number: u32 = 6;
-    pub const Birthday_field_number: u32 = 15;
-    pub const CardUnlockList_field_number: u32 = 1;
-    pub const RandomSeed_field_number: u32 = 10;
-    pub const DisplayBirthDay_field_number: u32 = 11;
-    pub const LastModifyNameTime_field_number: u32 = 13;
-    pub const ModifyNameTime_field_number: u32 = 9;
-    pub const BusinessCompliance_field_number: u32 = 2;
-};
 pub const BossRushActivityData = struct {
     pub const LevelDetailInfo_field_number: u32 = 1;
     pub const RewardInfo_field_number: u32 = 2;
     pub const UnlockedBuffIndices_field_number: u32 = 3;
     pub const TaskProgressReward_field_number: u32 = 4;
+};
+pub const EndSkillPush = struct {
+    pub const msg_id: u16 = 15449;
+    pub const CombatCommon_field_number: u32 = 7;
+    pub const UseSkillInfo_field_number: u32 = 3;
+    pub const SkillSingleId_field_number: u32 = 9;
+    pub const Reason_field_number: u32 = 15;
+    pub const InterruptSkillInfo_field_number: u32 = 12;
+};
+pub const EndSkillRequest = struct {
+    pub const msg_id: u16 = 27369;
+    pub const CombatCommon_field_number: u32 = 7;
+    pub const UseSkillInfo_field_number: u32 = 14;
+    pub const SkillSingleId_field_number: u32 = 15;
+    pub const Reason_field_number: u32 = 13;
+    pub const InterruptSkillInfo_field_number: u32 = 9;
+};
+pub const RbBlockPbState = struct {
+    State: ?union(enum) {
+    } = null,
+    pub const MovingState_field_number: u32 = 1;
+    pub const IdleState_field_number: u32 = 2;
 };
 pub const LoginRequest = struct {
     pub const msg_id: u16 = 103;
@@ -31791,8 +32190,56 @@ pub const LoginRequest = struct {
     pub const XboxAccountId_field_number: u32 = 27;
     pub const XboxSocialState_field_number: u32 = 28;
 };
-pub const InputSettingData = struct {
-    pub const InputSettings_field_number: u32 = 1;
+pub const SceneItemComponentPb = struct {
+    pub const PosSender_field_number: u32 = 1;
+    pub const BlackBoards_field_number: u32 = 2;
+};
+pub const BasicInfoNotify = struct {
+    pub const msg_id: u16 = 22491;
+    pub const Id_field_number: u32 = 14;
+    pub const Attributes_field_number: u32 = 8;
+    pub const MingSuGenInfos_field_number: u32 = 5;
+    pub const DragonPoolInfos_field_number: u32 = 12;
+    pub const RoleShowList_field_number: u32 = 4;
+    pub const CurCardId_field_number: u32 = 6;
+    pub const Birthday_field_number: u32 = 15;
+    pub const CardUnlockList_field_number: u32 = 1;
+    pub const RandomSeed_field_number: u32 = 10;
+    pub const DisplayBirthDay_field_number: u32 = 11;
+    pub const LastModifyNameTime_field_number: u32 = 13;
+    pub const ModifyNameTime_field_number: u32 = 9;
+    pub const BusinessCompliance_field_number: u32 = 2;
+};
+pub const PassiveGaSkillComponentPb = struct {
+    pub const SkillInfoList_field_number: u32 = 1;
+    pub const SkillComponentPb_field_number: u32 = 2;
+};
+pub const MotorPb = struct {
+    pub const MotorLevel_field_number: u32 = 1;
+    pub const MotorExp_field_number: u32 = 2;
+    pub const MotorRewardedLvMax_field_number: u32 = 3;
+    pub const UnlockedTree_field_number: u32 = 4;
+    pub const TreeInUse_field_number: u32 = 5;
+    pub const TaskTrees_field_number: u32 = 6;
+    pub const MotorExpLimitGainDaily_field_number: u32 = 7;
+    pub const MotorExpMonsterDropDailyLimit_field_number: u32 = 8;
+};
+pub const InfrV2InfoResponse = struct {
+    pub const msg_id: u16 = 21440;
+    pub const ErrorCode_field_number: u32 = 14;
+    pub const InfrInfo_field_number: u32 = 11;
+};
+pub const NewPlayerSupportActivityData = struct {
+    pub const TrialRoleInfoList_field_number: u32 = 1;
+    pub const TaskDataList_field_number: u32 = 2;
+    pub const CurUseTrialRoleId_field_number: u32 = 3;
+    pub const CurUseRoleInfo_field_number: u32 = 4;
+    pub const NewPlayerPoolFinalGachaRoleId_field_number: u32 = 5;
+};
+pub const RoleFavorListNotify = struct {
+    pub const msg_id: u16 = 19965;
+    pub const FavorList_field_number: u32 = 2;
+    pub const RoleConditionInfoMap_field_number: u32 = 12;
 };
 pub const ActivityRegressData = struct {
     pub const TaskProgressReward_field_number: u32 = 1;
@@ -31814,11 +32261,28 @@ pub const ActivityRegressData = struct {
     pub const CurUseTrialRoleId_field_number: u32 = 18;
     pub const CurUseRoleInfo_field_number: u32 = 19;
 };
+pub const InputSettingData = struct {
+    pub const InputSettings_field_number: u32 = 1;
+};
+pub const InfrPb = struct {
+    pub const FireInfo_field_number: u32 = 1;
+    pub const RoadInfo_field_number: u32 = 2;
+    pub const LibraryInfo_field_number: u32 = 3;
+};
 pub const HonamiStoryPlayerBagInfo = struct {
     pub const Warehouse_field_number: u32 = 1;
     pub const EquipRack_field_number: u32 = 2;
     pub const RoleEquipList_field_number: u32 = 3;
     pub const UnlockedWeaponIds_field_number: u32 = 4;
+};
+pub const MotorInfoResponse = struct {
+    pub const msg_id: u16 = 26084;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const Motor_field_number: u32 = 14;
+};
+pub const InputSettingResponse = struct {
+    pub const msg_id: u16 = 17817;
+    pub const InputSettingData_field_number: u32 = 12;
 };
 pub const RhythmActivityPb = struct {
     pub const RhythmShipPlanetPb_field_number: u32 = 2;
@@ -31827,10 +32291,9 @@ pub const RhythmActivityPb = struct {
     pub const UnlockedRole_field_number: u32 = 6;
     pub const RedDot_field_number: u32 = 7;
 };
-pub const MotorInfoResponse = struct {
-    pub const msg_id: u16 = 26084;
-    pub const ErrorCode_field_number: u32 = 9;
-    pub const Motor_field_number: u32 = 14;
+pub const InputSettingUpdateRequest = struct {
+    pub const msg_id: u16 = 26547;
+    pub const InputSettingData_field_number: u32 = 10;
 };
 pub const TransitionWithSpineLoadingPb = struct {
     BackgroundFadeInEffectPb: ?union(enum) {
@@ -31849,51 +32312,6 @@ pub const TransitionWithSpineLoadingPb = struct {
     pub const ICustomShowUiPb_field_number: u32 = 5;
     pub const StartAkEvent_field_number: u32 = 6;
     pub const ICustomScreenTypeBasePb_field_number: u32 = 1;
-};
-pub const DamageRecordNotify = struct {
-    pub const TimestampMs_field_number: u32 = 6;
-    pub const DamageConfId_field_number: u32 = 11;
-    pub const DamageValue_field_number: u32 = 14;
-    pub const SkillId_field_number: u32 = 13;
-    pub const SkillLevel_field_number: u32 = 12;
-    pub const BulletId_field_number: u32 = 1;
-    pub const DamageSourceType_field_number: u32 = 9;
-    pub const IsCritical_field_number: u32 = 4;
-    pub const Attacker_field_number: u32 = 8;
-    pub const Victim_field_number: u32 = 3;
-    pub const DamageCalculationDetails_field_number: u32 = 10;
-    pub const IsWeakness_field_number: u32 = 5;
-};
-pub const ActivityBetHorsesData = struct {
-    pub const ActivityId_field_number: u32 = 1;
-    pub const StartAndEndTime_field_number: u32 = 2;
-    pub const MatchInfo_field_number: u32 = 3;
-    pub const RacingBetsSeasonData_field_number: u32 = 4;
-    pub const BetsRewardData_field_number: u32 = 5;
-    pub const LegMatchTimeList_field_number: u32 = 6;
-    pub const CloseSettleMenuLegMatchList_field_number: u32 = 7;
-};
-pub const InputSettingResponse = struct {
-    pub const msg_id: u16 = 17817;
-    pub const InputSettingData_field_number: u32 = 12;
-};
-pub const InputSettingUpdateRequest = struct {
-    pub const msg_id: u16 = 26547;
-    pub const InputSettingData_field_number: u32 = 10;
-};
-pub const ClientStorageInfo = struct {
-    Data: ?union(enum) {
-    } = null,
-    pub const MapMapData_field_number: u32 = 3;
-    pub const MapListData_field_number: u32 = 4;
-    pub const MapData_field_number: u32 = 5;
-    pub const ListData_field_number: u32 = 6;
-    pub const SetData_field_number: u32 = 7;
-    pub const BoolData_field_number: u32 = 8;
-    pub const IntData_field_number: u32 = 9;
-    pub const LongData_field_number: u32 = 10;
-    pub const StringData_field_number: u32 = 11;
-    pub const SystemId_field_number: u32 = 1;
 };
 pub const BlackboardParam = struct {
     Value: ?union(enum) {
@@ -31914,13 +32332,28 @@ pub const BlackboardParam = struct {
     pub const Key_field_number: u32 = 1;
     pub const Type_field_number: u32 = 2;
 };
-pub const AiBlackboardsPush = struct {
-    pub const msg_id: u16 = 15693;
-    pub const AiBlackboards_field_number: u32 = 9;
+pub const ActivityBetHorsesData = struct {
+    pub const ActivityId_field_number: u32 = 1;
+    pub const StartAndEndTime_field_number: u32 = 2;
+    pub const MatchInfo_field_number: u32 = 3;
+    pub const RacingBetsSeasonData_field_number: u32 = 4;
+    pub const BetsRewardData_field_number: u32 = 5;
+    pub const LegMatchTimeList_field_number: u32 = 6;
+    pub const CloseSettleMenuLegMatchList_field_number: u32 = 7;
 };
-pub const AiBlackboardsRequest = struct {
-    pub const msg_id: u16 = 20004;
-    pub const AiBlackboards_field_number: u32 = 4;
+pub const ClientStorageInfo = struct {
+    Data: ?union(enum) {
+    } = null,
+    pub const MapMapData_field_number: u32 = 3;
+    pub const MapListData_field_number: u32 = 4;
+    pub const MapData_field_number: u32 = 5;
+    pub const ListData_field_number: u32 = 6;
+    pub const SetData_field_number: u32 = 7;
+    pub const BoolData_field_number: u32 = 8;
+    pub const IntData_field_number: u32 = 9;
+    pub const LongData_field_number: u32 = 10;
+    pub const StringData_field_number: u32 = 11;
+    pub const SystemId_field_number: u32 = 1;
 };
 pub const PayShopInfoResponse = struct {
     pub const msg_id: u16 = 23430;
@@ -31931,12 +32364,37 @@ pub const PayShopInfoResponse = struct {
     pub const PayShopTabData_field_number: u32 = 3;
     pub const PayShopRecommendData_field_number: u32 = 6;
 };
-pub const BlackboardParamComponentPb = struct {
-    pub const BlackboardParams_field_number: u32 = 1;
+pub const ChildQuestNodeProgress = struct {
+    Progress: ?union(enum) {
+    } = null,
+    pub const Kill_field_number: u32 = 1;
+    pub const GetItem_field_number: u32 = 2;
+    pub const MonsterCreator_field_number: u32 = 3;
+    pub const UseItem_field_number: u32 = 4;
+    pub const levelPlayCount_field_number: u32 = 5;
+    pub const Interact_field_number: u32 = 6;
+    pub const CompleteInst_field_number: u32 = 7;
+    pub const EntityStateList_field_number: u32 = 8;
+};
+pub const AiBlackboardsRequest = struct {
+    pub const msg_id: u16 = 20004;
+    pub const AiBlackboards_field_number: u32 = 4;
 };
 pub const StorageInfoUpdateRequest = struct {
     pub const msg_id: u16 = 29291;
     pub const Infos_field_number: u32 = 1;
+};
+pub const InfrInfoResponse = struct {
+    pub const msg_id: u16 = 16009;
+    pub const ErrorCode_field_number: u32 = 13;
+    pub const InfrInfo_field_number: u32 = 7;
+};
+pub const BlackboardParamComponentPb = struct {
+    pub const BlackboardParams_field_number: u32 = 1;
+};
+pub const AiBlackboardsPush = struct {
+    pub const msg_id: u16 = 15693;
+    pub const AiBlackboards_field_number: u32 = 9;
 };
 pub const PhantomArenaActivityData = struct {
     pub const PhantomArenaChallengeInfoList_field_number: u32 = 1;
@@ -31949,6 +32407,20 @@ pub const PhantomArenaActivityData = struct {
     pub const RoleInfo_field_number: u32 = 8;
     pub const DeckInfo_field_number: u32 = 9;
     pub const TimeLimitShopEndTime_field_number: u32 = 10;
+};
+pub const SpringFestivalActivityInfo = struct {
+    pub const AreaInfos_field_number: u32 = 1;
+    pub const UnlockFurnitures_field_number: u32 = 2;
+    pub const DrinkMixData_field_number: u32 = 3;
+    pub const OneBrochureInfos_field_number: u32 = 4;
+    pub const JokerLevelInfos_field_number: u32 = 5;
+    pub const ConditionTasks_field_number: u32 = 6;
+    pub const SpringFunctionIds_field_number: u32 = 7;
+    pub const RewardScoreIds_field_number: u32 = 8;
+    pub const RewardLevelIds_field_number: u32 = 9;
+    pub const Atmosphere_field_number: u32 = 10;
+    pub const AtmosphereLevel_field_number: u32 = 11;
+    pub const SpringSkipEntries_field_number: u32 = 12;
 };
 pub const RbBlockComponentPb = struct {
     Type: ?union(enum) {
@@ -31965,19 +32437,14 @@ pub const RbBlockComponentPb = struct {
     pub const GamePlayIncId_field_number: u32 = 8;
     pub const OccupiedCellPositions_field_number: u32 = 9;
 };
-pub const SpringFestivalActivityInfo = struct {
-    pub const AreaInfos_field_number: u32 = 1;
-    pub const UnlockFurnitures_field_number: u32 = 2;
-    pub const DrinkMixData_field_number: u32 = 3;
-    pub const OneBrochureInfos_field_number: u32 = 4;
-    pub const JokerLevelInfos_field_number: u32 = 5;
-    pub const ConditionTasks_field_number: u32 = 6;
-    pub const SpringFunctionIds_field_number: u32 = 7;
-    pub const RewardScoreIds_field_number: u32 = 8;
-    pub const RewardLevelIds_field_number: u32 = 9;
-    pub const Atmosphere_field_number: u32 = 10;
-    pub const AtmosphereLevel_field_number: u32 = 11;
-    pub const SpringSkipEntries_field_number: u32 = 12;
+pub const ChildQuestNodeInfo = struct {
+    pub const Status_field_number: u32 = 1;
+    pub const Progress_field_number: u32 = 2;
+};
+pub const AiInformation = struct {
+    pub const AiBlackboards_field_number: u32 = 1;
+    pub const HateList_field_number: u32 = 2;
+    pub const AiBlackboardCd_field_number: u32 = 3;
 };
 pub const AdventureManualResponse = struct {
     pub const msg_id: u16 = 15603;
@@ -31993,11 +32460,6 @@ pub const AdventureManualResponse = struct {
     pub const PreOpeDungeonDetections_field_number: u32 = 5;
     pub const PreOpenSilenceAreaDetections_field_number: u32 = 8;
 };
-pub const AiInformation = struct {
-    pub const AiBlackboards_field_number: u32 = 1;
-    pub const HateList_field_number: u32 = 2;
-    pub const AiBlackboardCd_field_number: u32 = 3;
-};
 pub const AiInformationPush = struct {
     pub const msg_id: u16 = 21737;
     pub const AiInfo_field_number: u32 = 14;
@@ -32010,9 +32472,29 @@ pub const PinballActivityData = struct {
     pub const ConditionTasks_field_number: u32 = 5;
     pub const GroupFormations_field_number: u32 = 6;
 };
+pub const NodeInfo = struct {
+    ExtraInfo: ?union(enum) {
+    } = null,
+    pub const ChildQuestNodeInfo_field_number: u32 = 2;
+    pub const Status_field_number: u32 = 1;
+};
 pub const AiInformationRequest = struct {
     pub const msg_id: u16 = 15248;
     pub const AiInfo_field_number: u32 = 3;
+};
+pub const FishingData = struct {
+    pub const Entrusts_field_number: u32 = 3;
+    pub const TraceEntrusts_field_number: u32 = 4;
+    pub const FishingTech_field_number: u32 = 5;
+    pub const ShipInfo_field_number: u32 = 6;
+    pub const IllustratedInfo_field_number: u32 = 7;
+    pub const SceneCages_field_number: u32 = 8;
+    pub const SceneFishPoints_field_number: u32 = 9;
+    pub const NoticeIds_field_number: u32 = 10;
+    pub const HandInInfo_field_number: u32 = 11;
+    pub const UnlockPortId_field_number: u32 = 12;
+    pub const PhantomSkinList_field_number: u32 = 13;
+    pub const EntrustRefreshRatio_field_number: u32 = 14;
 };
 pub const HonamiStoryActivityData = struct {
     pub const PlayerBagInfo_field_number: u32 = 1;
@@ -32030,20 +32512,6 @@ pub const HonamiStoryActivityData = struct {
     pub const ItemCollectionInfos_field_number: u32 = 14;
     pub const TotalRevenue_field_number: u32 = 15;
 };
-pub const FishingData = struct {
-    pub const Entrusts_field_number: u32 = 3;
-    pub const TraceEntrusts_field_number: u32 = 4;
-    pub const FishingTech_field_number: u32 = 5;
-    pub const ShipInfo_field_number: u32 = 6;
-    pub const IllustratedInfo_field_number: u32 = 7;
-    pub const SceneCages_field_number: u32 = 8;
-    pub const SceneFishPoints_field_number: u32 = 9;
-    pub const NoticeIds_field_number: u32 = 10;
-    pub const HandInInfo_field_number: u32 = 11;
-    pub const UnlockPortId_field_number: u32 = 12;
-    pub const PhantomSkinList_field_number: u32 = 13;
-    pub const EntrustRefreshRatio_field_number: u32 = 14;
-};
 pub const FishingDataResponse = struct {
     pub const msg_id: u16 = 17272;
     pub const FishingData_field_number: u32 = 9;
@@ -32052,6 +32520,21 @@ pub const InitHonamiActivityResponse = struct {
     pub const msg_id: u16 = 19957;
     pub const ErrorCode_field_number: u32 = 12;
     pub const HonamiStoryActivityData_field_number: u32 = 9;
+};
+pub const TreeInfo = struct {
+    pub const TreeOwnerId_field_number: u32 = 1;
+    pub const TreeIncId_field_number: u32 = 2;
+    pub const BtType_field_number: u32 = 3;
+    pub const BlackboardId_field_number: u32 = 4;
+    pub const Nodes_field_number: u32 = 5;
+    pub const Vars_field_number: u32 = 6;
+    pub const TimerInfos_field_number: u32 = 7;
+    pub const SuspendType_field_number: u32 = 8;
+    pub const OccupationInfo_field_number: u32 = 9;
+    pub const AudioState_field_number: u32 = 10;
+    pub const IsScreenOccupy_field_number: u32 = 11;
+    pub const CharacterLookAtInfos_field_number: u32 = 12;
+    pub const SuspendNodeId_field_number: u32 = 13;
 };
 pub const TransitionOptionPb = struct {
     Option: ?union(enum) {
@@ -32066,20 +32549,15 @@ pub const TransitionOptionPb = struct {
     pub const TransitionWithSpecialCustomLoadingPb_field_number: u32 = 9;
     pub const TransitionType_field_number: u32 = 1;
 };
-pub const DynamicInteractCtxPb = struct {
-    pub const EntityCtx_field_number: u32 = 1;
-    pub const OptionGuid_field_number: u32 = 2;
-    pub const finalOptionCtx_field_number: u32 = 3;
+pub const BehaviorTreeInfoNotify = struct {
+    pub const msg_id: u16 = 18798;
+    pub const TreeInfos_field_number: u32 = 3;
 };
-pub const DynamicInteractInfo = struct {
-    pub const OptionGuid_field_number: u32 = 1;
-    pub const GameCtx_field_number: u32 = 2;
-    pub const Text_field_number: u32 = 3;
-    pub const DelayRemove_field_number: u32 = 4;
-};
-pub const BubbleInfo = struct {
-    pub const ActionGuid_field_number: u32 = 1;
-    pub const GameCtx_field_number: u32 = 2;
+pub const LeaveSceneNotify = struct {
+    pub const msg_id: u16 = 28439;
+    pub const PlayerId_field_number: u32 = 15;
+    pub const SceneId_field_number: u32 = 3;
+    pub const TransitionOption_field_number: u32 = 2;
 };
 pub const GameCtxPb = struct {
     CtxInfo: ?union(enum) {
@@ -32087,7 +32565,6 @@ pub const GameCtxPb = struct {
     pub const BehaviorTree_field_number: u32 = 2;
     pub const Entity_field_number: u32 = 3;
     pub const NormalInteract_field_number: u32 = 4;
-    pub const DynamicInteract_field_number: u32 = 5;
     pub const RandomInteract_field_number: u32 = 6;
     pub const StateChangeAction_field_number: u32 = 7;
     pub const EntityGroupAction_field_number: u32 = 8;
@@ -32147,6 +32624,39 @@ pub const GameCtxPb = struct {
     pub const ExploreSkillAction_field_number: u32 = 63;
     pub const PollutionRangeAction_field_number: u32 = 64;
     pub const CtxType_field_number: u32 = 1;
+};
+pub const DynamicInteractInfo = struct {
+    pub const OptionGuid_field_number: u32 = 1;
+    pub const GameCtx_field_number: u32 = 2;
+    pub const Text_field_number: u32 = 3;
+    pub const DelayRemove_field_number: u32 = 4;
+};
+pub const BubbleInfo = struct {
+    pub const ActionGuid_field_number: u32 = 1;
+    pub const GameCtx_field_number: u32 = 2;
+};
+pub const LevelEventNotify = struct {
+    pub const msg_id: u16 = 15472;
+    pub const PlayerId_field_number: u32 = 11;
+    pub const IncId_field_number: u32 = 13;
+    pub const GameCtx_field_number: u32 = 2;
+    pub const TotalCount_field_number: u32 = 14;
+    pub const StartIndex_field_number: u32 = 5;
+    pub const EndIndex_field_number: u32 = 6;
+    pub const NeedFinishReq_field_number: u32 = 4;
+};
+pub const FlowStartNotify = struct {
+    pub const msg_id: u16 = 22606;
+    pub const FlowIncId_field_number: u32 = 6;
+    pub const FlowListName_field_number: u32 = 12;
+    pub const FlowId_field_number: u32 = 2;
+    pub const StateId_field_number: u32 = 11;
+    pub const GameCtx_field_number: u32 = 14;
+    pub const PlotMode_field_number: u32 = 9;
+    pub const aAsync_field_number: u32 = 8;
+    pub const IsSkip_field_number: u32 = 13;
+    pub const HasPlotPos_field_number: u32 = 5;
+    pub const PlotCoordinates_field_number: u32 = 1;
 };
 pub const InteractComponentPb = struct {
     pub const DynamicInteractInfos_field_number: u32 = 1;
@@ -32296,6 +32806,17 @@ pub const CombatPushData = struct {
     pub const BulletPatternPush_field_number: u32 = 67;
     pub const CombatCommon_field_number: u32 = 1;
 };
+pub const TeleportNotify = struct {
+    pub const msg_id: u16 = 19037;
+    pub const MapId_field_number: u32 = 12;
+    pub const Pos_field_number: u32 = 8;
+    pub const Rot_field_number: u32 = 13;
+    pub const Gravity_field_number: u32 = 10;
+    pub const Reason_field_number: u32 = 11;
+    pub const GameCtx_field_number: u32 = 4;
+    pub const TransitionOption_field_number: u32 = 2;
+    pub const DisableAutoFade_field_number: u32 = 5;
+};
 pub const CombatRequestData = struct {
     Message: ?union(enum) {
     } = null,
@@ -32411,7 +32932,6 @@ pub const CombatNotifyData = struct {
     pub const MontagePlayNotify_field_number: u32 = 42;
     pub const ANStartNotify_field_number: u32 = 43;
     pub const FsmResetNotify_field_number: u32 = 44;
-    pub const DamageRecordNotify_field_number: u32 = 45;
     pub const AiHateNotify_field_number: u32 = 46;
     pub const FsmBlackboardNotify_field_number: u32 = 47;
     pub const CharacterBattleStateChangeNotify_field_number: u32 = 48;
@@ -32429,7 +32949,6 @@ pub const CombatNotifyData = struct {
     pub const ModifyEntityCampNotify_field_number: u32 = 69;
     pub const AddCombineEntitiesRelationNotify_field_number: u32 = 70;
     pub const RemoveCombineRelationNotify_field_number: u32 = 71;
-    pub const TestDamageRecordNotify_field_number: u32 = 72;
     pub const BuffDurationNotify_field_number: u32 = 73;
     pub const EntityLivingStatusNotify_field_number: u32 = 74;
     pub const NewLinkStateNotify_field_number: u32 = 75;

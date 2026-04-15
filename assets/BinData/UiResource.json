@@ -25817,7 +25817,7 @@
   {
     "Id": "UiView_VillageInfrBuildFinishedTips",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity33/ActivityInfrastructure/UiView_BuildFinishedTips.UiView_BuildFinishedTips",
-    "PcPath": ""
+    "PcPath": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/PC/Activity33/ActivityInfrastructure/PC_UiView_BuildFinishedTips.PC_UiView_BuildFinishedTips"
   },
   {
     "Id": "UiView_VillageInfrWorldBuildInfoView",
@@ -26067,7 +26067,7 @@
   {
     "Id": "UiView_RoguePhantomNewUnlock",
     "Path": "/Game/Aki/UI/UIResources/UiTips/Prefabs/UiView_RogueVisionNewGet.UiView_RogueVisionNewGet",
-    "PcPath": ""
+    "PcPath": "/Game/Aki/UI/UIResources/UiTips/Prefabs/PC/PC_UiView_RogueVisionNewGet.PC_UiView_RogueVisionNewGet"
   },
   {
     "Id": "UiItem_MissionNormal",
@@ -26707,7 +26707,7 @@
   {
     "Id": "UiView_ComicFrame",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity33/CatapultStory/Comic/UiView_ComicFrame.UiView_ComicFrame",
-    "PcPath": ""
+    "PcPath": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/PC/Activity33/CatapultStory/Comic/PC_UiView_ComicFrame.PC_UiView_ComicFrame"
   },
   {
     "Id": "UiItem_ShopSkinMoNing",
@@ -27117,6 +27117,51 @@
   {
     "Id": "T_MapTiles_-4_14_2_UI",
     "Path": "/Game/Aki/UI/UIResources/UiWorldMap/Image/MapTiles/T_MapTiles_-4_14_2_UI.T_MapTiles_-4_14_2_UI",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_FuncIconRole",
+    "Path": "/Game/Aki/UI/UIResources/UiFunc/Atlas/SP_FuncIconRole.SP_FuncIconRole",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_FuncIconRole2",
+    "Path": "/Game/Aki/UI/UIResources/UiFunc/Atlas/SP_FuncIconRole2.SP_FuncIconRole2",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_FightIconResonance",
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Atlas/SP_FightIconResonance.SP_FightIconResonance",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_FightIconResonance2",
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Atlas/SP_FightIconResonance2.SP_FightIconResonance2",
+    "PcPath": ""
+  },
+  {
+    "Id": "UiItem_ItemBaseNew",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity33/CatapultStory/ItemBaseDyn/UiItem_ItemBaseNew.UiItem_ItemBaseNew",
+    "PcPath": ""
+  },
+  {
+    "Id": "UiItem_CutScene_Bubble",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity33/CatapultStory/BattleMain/UiItem_CutScene_Bubble.UiItem_CutScene_Bubble",
+    "PcPath": ""
+  },
+  {
+    "Id": "T_AYTiles_2_-1_jj_2_UI",
+    "Path": "/Game/Aki/UI/UIResources/UiWorldMap/Image/AYTiles/T_AYTiles_2_-1_jj_2_UI.T_AYTiles_2_-1_jj_2_UI",
+    "PcPath": ""
+  },
+  {
+    "Id": "T_AYTiles_2_-1_jj_3_UI",
+    "Path": "/Game/Aki/UI/UIResources/UiWorldMap/Image/AYTiles/T_AYTiles_2_-1_jj_3_UI.T_AYTiles_2_-1_jj_3_UI",
+    "PcPath": ""
+  },
+  {
+    "Id": "UiItem_ShopSkinMotoFeixue",
+    "Path": "/Game/Aki/UI/UIResources/UiShop/Prefabs/ShopSkin/UiItem_ShopSkinMotoFeixue.UiItem_ShopSkinMotoFeixue",
     "PcPath": ""
   }
 ]

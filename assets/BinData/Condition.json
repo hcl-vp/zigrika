@@ -107771,7 +107771,7 @@
   {
     "Id": 12904624,
     "Type": "NewTowerDamage",
-    "NeedNum": 5000000,
+    "NeedNum": 7000000,
     "LimitParams": {
       "Id": "1",
       "SeasonId": "0",
@@ -112250,7 +112250,7 @@
     "NeedNum": 1,
     "LimitParams": {
       "InstanceId": "40202-40203-40214-40215",
-      "RoleId": "1108"
+      "RoleId": "1210"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -112263,7 +112263,7 @@
     "NeedNum": 1,
     "LimitParams": {
       "InstanceId": "40202-40203-40214-40215",
-      "RoleId": "1211"
+      "RoleId": "1510"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -113438,7 +113438,7 @@
   {
     "Id": 12904634,
     "Type": "NewTowerDamage",
-    "NeedNum": 5000000,
+    "NeedNum": 7000000,
     "LimitParams": {
       "Id": "1",
       "SeasonId": "0",

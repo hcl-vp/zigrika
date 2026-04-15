@@ -17858,11 +17858,7 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [
-      12119900110,
-      12119900116,
-      12119900117,
-      12119900150,
-      12119900156
+      1211990011
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconDaniya/SP_IconDaniyaY.SP_IconDaniyaY",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinD1_UI.T_IconYinlinD1_UI",
@@ -17886,12 +17882,11 @@
       "3",
       "12",
       "1",
+      "1",
       "100",
       "25",
       "100",
-      "100",
-      "40",
-      "1"
+      "40"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005307_SkillDescribe",
@@ -17911,12 +17906,11 @@
       "3",
       "12",
       "1",
+      "1",
       "100",
       "25",
       "100",
-      "100",
-      "40",
-      "1"
+      "40"
     ]
   },
   {
@@ -17963,7 +17957,7 @@
     "SkillResume": "Skill_1005309_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
-      "40%",
+      "60%",
       "30",
       "15%",
       "16",
@@ -17972,7 +17966,7 @@
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005309_SkillDescribe",
     "MultiSkillDetailNum": [
-      "40%",
+      "60%",
       "30",
       "15%",
       "16",

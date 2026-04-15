@@ -1049,7 +1049,8 @@
       31000030003,
       31000030005,
       31000030007,
-      31000030010
+      31000030010,
+      31000030012
     ],
     "AddProp": [],
     "EffectDescription": "PhantomFetter_305_EffectDescription",
@@ -1061,8 +1062,12 @@
       "25",
       "1",
       "25%",
-      "30",
+      "6",
       "25%",
+      "15",
+      "4",
+      "0.5",
+      "6",
       "15"
     ],
     "EffectDefineDescription": "PhantomFetter_1_EffectDefineDescription",
@@ -1099,7 +1104,7 @@
     "FetterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElement/T_IconElementIce1.T_IconElementIce1",
     "SimplyEffectDesc": "PhantomFetter_315_SimplyEffectDesc",
     "EffectDescriptionParam": [
-      "15",
+      "20",
       "30"
     ],
     "EffectDefineDescription": "PhantomFetter_1_EffectDefineDescription",

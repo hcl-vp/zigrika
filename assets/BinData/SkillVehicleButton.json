@@ -733,12 +733,14 @@
       "464309691": 100010105,
       "687341218": 10001006,
       "1826011186": 10001029,
+      "-1785184580": 100010105,
       "-1716814103": 10001027,
       "-1955755865": 10001028
     },
     "SkillIcon": "",
     "SkillIconTags": [
       464309691,
+      -1785184580,
       -1716814103,
       687341218,
       -1955755865,
@@ -1096,11 +1098,13 @@
     "SkillIdTagMap": {
       "687341218": 10001006,
       "1826011186": 10001029,
+      "-1785184580": 100010105,
       "-1716814103": 10001027,
       "-1955755865": 10001028
     },
     "SkillIcon": "",
     "SkillIconTags": [
+      -1785184580,
       -1716814103,
       687341218,
       -1955755865,
@@ -1569,7 +1573,7 @@
     "ActionName": "载具子弹跳1",
     "SkillId": -1,
     "SkillIdTagMap": {},
-    "SkillIcon": "",
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorGunShot.SP_IconMotorGunShot",
     "SkillIconTags": [
       464309691
     ],
@@ -1609,7 +1613,7 @@
     "ActionName": "载具子弹跳1",
     "SkillId": -1,
     "SkillIdTagMap": {},
-    "SkillIcon": "",
+    "SkillIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconMotorcycle/SP_IconMotorGunShot.SP_IconMotorGunShot",
     "SkillIconTags": [
       464309691
     ],
