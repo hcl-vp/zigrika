@@ -17,7 +17,7 @@ instance: SceneInstance,
 formation_info: FormationInfo,
 explore_tools_info: ExploreToolsInfo,
 entities: std.MultiArrayList(EntityComponentStorage) = .empty,
-net_id_map: std.AutoArrayHashMapUnmanaged(i64, usize) = .empty,
+net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 
 pub const Entity = struct {
     pub const ConfigComponent = @import("component/entity/ConfigComponent.zig");
@@ -274,10 +274,17 @@ pub fn delete(
     }
 }
 
-pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64, index: i64) !void {
-    var storage = scene.entities.get(index);
+pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
+    const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
+    var storage = scene.entities.get(index);
     storage.deinit(gpa);
+    scene.entities.swapRemove(index);
+    _ = scene.net_id_map.swapRemove(net_id);
+    if (index < scene.entities.len) {
+        const swapped_id = scene.entities.items(.entity_id)[index].net_id;
+        try scene.net_id_map.put(gpa, swapped_id, index);
+    }
 }
 
 pub fn save(scene: *Scene, fs: *FileSystem, gpa: Allocator) !void {
@@ -337,6 +344,7 @@ pub fn saveInstance(scene: *Scene, fs: *FileSystem, gpa: Allocator) !void {
     );
     try comp_util.saveStruct(fs, scene.instance, path, arena.allocator());
 }
+
 pub fn nextEntityId(scene: *Scene, fs: *FileSystem, gpa: Allocator) !i64 {
     const incr_path = try std.fmt.allocPrint(
         gpa,

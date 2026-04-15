@@ -10,14 +10,14 @@ const Value = std.json.Value;
 
 pub fn IntMap(comptime Int: type, comptime T: type) type {
     return struct {
-        map: std.AutoArrayHashMapUnmanaged(Int, T) = .empty,
+        map: std.array_hash_map.Auto(Int, T) = .empty,
 
         pub fn deinit(self: *@This(), allocator: Allocator) void {
             self.map.deinit(allocator);
         }
 
         pub fn jsonParse(allocator: Allocator, source: anytype, options: ParseOptions) !@This() {
-            var map: std.AutoArrayHashMapUnmanaged(Int, T) = .empty;
+            var map: std.array_hash_map.Auto(Int, T) = .empty;
             errdefer map.deinit(allocator);
 
             if (.object_begin != try source.next()) return error.UnexpectedToken;

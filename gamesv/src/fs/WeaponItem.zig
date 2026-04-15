@@ -28,7 +28,7 @@ pub fn toProto(item: WeaponItem, incr_id: i32) pb.WeaponItem {
     };
 }
 
-pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHashMapUnmanaged(i32, WeaponItem)) !void {
+pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.array_hash_map.Auto(i32, WeaponItem)) !void {
     for (assets.tables.weapon_conf.items) |info| {
         try map.put(gpa, @intCast(map.entries.len + 1), .{
             .id = info.ItemId,

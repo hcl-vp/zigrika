@@ -10,7 +10,7 @@ const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
 
 player_id: i32,
-weapon_map: std.AutoArrayHashMapUnmanaged(i32, WeaponItem),
+weapon_map: std.array_hash_map.Auto(i32, WeaponItem),
 
 pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i32) !PlayerWeaponComponent {
     return .{

@@ -139,10 +139,11 @@ pub fn scaleProperties(info: *RoleInfo, assets: *const Assets) void {
 }
 
 fn scaleProperty(value: *i32, ratio: i32) void {
-    value.* = @intFromFloat(@trunc(@as(f32, @floatFromInt(value.*)) * (@as(f32, @floatFromInt(ratio)) / 10000)));
+    const float = @trunc(@as(f32, @floatFromInt(value.*)) * (@as(f32, @floatFromInt(ratio)) / 10000));
+    value.* = @trunc(float);
 }
 
-pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHashMapUnmanaged(i32, RoleInfo)) !void {
+pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.array_hash_map.Auto(i32, RoleInfo)) !void {
     for (assets.tables.role_info.items) |info| {
         if (info.Id < 1000 or info.Id > 1999) continue;
         var role: RoleInfo = .{
