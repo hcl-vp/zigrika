@@ -89,7 +89,7 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
 
     while (true) switch (select.await() catch return) {
         .udp_recv => |result| {
-            select.concurrent(.udp_recv, Io.net.Socket.receive, .{ &socket, io, recv_buffer[0..] }) catch {
+            defer select.concurrent(.udp_recv, Io.net.Socket.receive, .{ &socket, io, recv_buffer[0..] }) catch {
                 log.debug("concurrency is not available, using async instead", .{});
                 select.async(.udp_recv, Io.net.Socket.receive, .{ &socket, io, recv_buffer[0..] });
             };
