@@ -11,35 +11,7 @@ const pb = @import("proto").pb;
 const incr = @import("../../fs/incr.zig");
 const BuffAdditionEntry = @import("../../logic/events.zig").BuffAdditionEntry;
 
-pub fn buildFightBuffInfos(
-    role_buffs: std.ArrayListUnmanaged(BuffAdditionEntry),
-    net_id: i64,
-    scene: *Scene,
-    gpa: Allocator,
-) ![]pb.FightBuffInformation {
-    var infos: std.ArrayList(pb.FightBuffInformation) = .empty;
-    errdefer infos.deinit(gpa);
-    for (role_buffs.items) |entry| {
-        scene.*.instance.buff_handle += 1;
-        try infos.append(gpa, Assets.DataTables.createBuffInformation(
-            scene.instance.buff_handle,
-            entry.id,
-            net_id,
-            net_id,
-            entry.is_active,
-        ));
-    }
-    return infos.toOwnedSlice(gpa);
-}
-
-pub fn buffListFromIds(allocator: std.mem.Allocator, ids: []const i64) !std.ArrayListUnmanaged(BuffAdditionEntry) {
-    var list: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
-    try list.ensureTotalCapacity(allocator, ids.len);
-    for (ids) |id| {
-        list.appendAssumeCapacity(.{ .id = id, .is_active = true });
-    }
-    return list;
-}
+const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
 
 pub fn createConcomitantEntity(
     fs: *FileSystem,
@@ -55,18 +27,8 @@ pub fn createConcomitantEntity(
 ) !Entity {
     const role_info = role_comp.role_map.getPtr(role).?;
 
-    const incr_path = try std.fmt.allocPrint(
-        alloc.gpa,
-        "player/{d}/scene/{d}/entity/next",
-        .{ scene.player_id, scene.instance_id },
-    );
-    defer alloc.gpa.free(incr_path);
-
-    const net_id = try incr.peek(i64, fs, incr_path);
-
     var born_buffs = try buffListFromIds(alloc.gpa, summon_cfg.BornBuffId);
     defer born_buffs.deinit(alloc.gpa);
-    const fight_buff_infos = try buildFightBuffInfos(born_buffs, net_id, scene, alloc.gpa);
 
     const entity = try scene.spawn(alloc.gpa, fs, .{
         Entity.ConfigComponent{
@@ -90,7 +52,7 @@ pub fn createConcomitantEntity(
             },
         },
         Entity.ActorVisibleMarker{},
-        Entity.FightBuffComponent{ .fight_buff_infos = fight_buff_infos },
+        Entity.FightBuffComponent{},
         Entity.AttributeComponent{ .base_prop = try alloc.gpa.dupe(i32, role_info.base_prop) },
         Entity.SummonerComponent{
             .player_id = player_id,
@@ -117,6 +79,11 @@ pub fn createConcomitantEntity(
         },
     });
 
+    const slice = scene.entities.slice();
+
+    const fight_buff_infos = try scene.buildFightBuffInfos(born_buffs, entity.net_id, alloc.gpa);
+    slice.items(.buffs)[entity.index].?.fight_buff_infos = fight_buff_infos;
+
     return entity;
 }
 
@@ -138,16 +105,8 @@ pub fn createRoleEntity(
     var role_autobuffs = try assets.tables.getRoleAutoBuffs(role, weapon, alloc.gpa);
     defer role_autobuffs.deinit(alloc.gpa);
 
-    const incr_path = try std.fmt.allocPrint(
-        alloc.gpa,
-        "player/{d}/scene/{d}/entity/next",
-        .{ scene.player_id, scene.instance_id },
-    );
-    defer alloc.gpa.free(incr_path);
-
-    const net_id = try incr.peek(i64, fs, incr_path);
-
-    const fight_buff_infos = try buildFightBuffInfos(role_autobuffs, net_id, scene, alloc.gpa);
+    const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
+    const is_cur_role = formation.cur_role == role;
 
     const entity = try scene.spawn(alloc.gpa, fs, .{
         Entity.PlayerBattleBinder{
@@ -164,18 +123,17 @@ pub fn createRoleEntity(
         Entity.FightBuffComponent{},
         Entity.PositionComponent{
             .location = .{
-                @floatFromInt(instance_dungeon.BornPosition[0]),
-                @floatFromInt(instance_dungeon.BornPosition[1]),
-                @floatFromInt(instance_dungeon.BornPosition[2]),
+                scene.instance.players[0].location[0],
+                scene.instance.players[0].location[1],
+                scene.instance.players[0].location[2],
             },
             .rotation = .{
-                @floatFromInt(instance_dungeon.BornRotation[0]),
-                @floatFromInt(instance_dungeon.BornRotation[1]),
-                @floatFromInt(instance_dungeon.BornRotation[2]),
+                scene.instance.players[0].rotation[0],
+                scene.instance.players[0].rotation[1],
+                scene.instance.players[0].rotation[2],
             },
         },
         Entity.PlayerIDComponent{ .id = player_id },
-        Entity.VisibleMarker{},
         Entity.ActorVisibleMarker{},
         Entity.DirectControlMarker{},
         Entity.AttributeComponent{ .base_prop = try alloc.gpa.dupe(i32, role_info.base_prop) },
@@ -235,7 +193,7 @@ pub fn createRoleEntity(
     defer blueprint_configs.deinit(alloc.gpa);
 
     for (assets.tables.blueprint_config.items) |*cfg| {
-        if (!std.mem.eql(u8, cfg.EntityType, "Monster")) continue;
+        if (cfg.EntityType != .Monster) continue;
         if (std.mem.indexOf(u8, cfg.BlueprintType, "Player") == null) continue;
         if (std.mem.indexOf(u8, cfg.BlueprintType, "_") == null) continue;
 
@@ -269,7 +227,7 @@ pub fn createRoleEntity(
 
     var concomitants: std.ArrayList(Entity) = .empty;
     defer concomitants.deinit(alloc.gpa);
-    var concomitant_buff_ids: std.AutoArrayHashMapUnmanaged(i64, void) = .empty;
+    var concomitant_buff_ids: std.array_hash_map.Auto(i64, void) = .empty;
     defer concomitant_buff_ids.deinit(alloc.gpa);
     outer: for (blueprint_configs.items) |bp_config| {
         const summon_cfg = blk: {
@@ -303,10 +261,12 @@ pub fn createRoleEntity(
                 summon_cfg,
                 template_config,
                 role,
-                net_id,
+                entity.net_id,
             ));
         }
     }
+
+    const fight_buff_infos = try scene.buildFightBuffInfos(role_autobuffs, entity.net_id, alloc.gpa);
 
     std.mem.sort(pb.FightBuffInformation, fight_buff_infos, {}, struct {
         fn lessThan(_: void, a: pb.FightBuffInformation, b: pb.FightBuffInformation) bool {
@@ -332,7 +292,9 @@ pub fn createRoleEntity(
         for (concomitants.items) |e| ids.appendAssumeCapacity(e.net_id);
         break :blk try ids.toOwnedSlice(alloc.gpa);
     };
-
+    if (is_cur_role) {
+        slice.items(.visible)[entity.index] = .{};
+    }
     const storage = scene.entities.get(entity.index);
     try storage.save(alloc.arena, fs, player_id, scene.instance_id);
     log.debug("buffs: {any}", .{storage.buffs});

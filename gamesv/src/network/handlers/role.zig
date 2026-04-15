@@ -11,8 +11,20 @@ pub fn SwitchRoleRequest(
     fs: *FileSystem,
     alloc: mem.Alloc,
 ) !void {
-    const payload = txn.payload orelse return error.MissingPayload;
-    scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)].cur_role = payload.RoleId;
+    const request: pb.SwitchRoleRequest = txn.payload;
+    const formation = &scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
+    const previous_role = formation.cur_role;
+    formation.cur_role = request.RoleId;
+
+    const slice = scene.entities.slice();
+    for (slice.items(.config), 0..) |config, i| {
+        if (config.config_id == previous_role) {
+            slice.items(.visible)[i] = null;
+        } else if (config.config_id == request.RoleId) {
+            slice.items(.visible)[i] = .{};
+        }
+    }
+
     try scene.save(fs, alloc.gpa);
-    txn.respond(.{ .ErrorCode = .Success, .RoleId = payload.RoleId });
+    txn.respond(.{ .ErrorCode = .Success, .RoleId = request.RoleId });
 }

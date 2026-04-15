@@ -158,30 +158,12 @@ pub fn onUpdateFormationRequest(
                 const storage = scene.entities.get(entity_index);
                 if (storage.concomitant) |concomitant| {
                     for (concomitant.custom_entity_ids) |concom_id| {
-                        const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-                        try Scene.delete(fs, scene.player_id, scene.instance_id, concom_id);
-                        var concom_storage = scene.entities.get(concom_index);
-                        concom_storage.deinit(alloc.gpa);
-                        scene.entities.swapRemove(concom_index);
-                        _ = scene.net_id_map.swapRemove(concom_id);
-                        if (concom_index < scene.entities.len) {
-                            const swapped_id = scene.entities.items(.entity_id)[concom_index].net_id;
-                            try scene.net_id_map.put(alloc.gpa, swapped_id, concom_index);
-                        }
+                        try scene.remove(alloc.gpa, fs, concom_id);
                         try remove_infos.append(alloc.gpa, .{ .EntityId = concom_id });
                     }
                 }
 
-                const fresh_index = scene.net_id_map.get(entity_id) orelse continue;
-                try Scene.delete(fs, scene.player_id, scene.instance_id, entity_id);
-                var storage_mut = scene.entities.get(fresh_index);
-                storage_mut.deinit(alloc.gpa);
-                scene.entities.swapRemove(fresh_index);
-                _ = scene.net_id_map.swapRemove(entity_id);
-                if (fresh_index < scene.entities.len) {
-                    const swapped_id = scene.entities.items(.entity_id)[fresh_index].net_id;
-                    try scene.net_id_map.put(alloc.gpa, swapped_id, fresh_index);
-                }
+                try scene.remove(alloc.gpa, fs, entity_id);
                 try remove_infos.append(alloc.gpa, .{ .EntityId = entity_id });
             }
             remove_notify.RemoveInfos = remove_infos;

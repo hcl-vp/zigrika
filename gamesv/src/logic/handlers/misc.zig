@@ -26,6 +26,10 @@ pub fn pushData(_: EventQueue.Dequeue(.push_data), conn: *Connection, alloc: mem
 
     try conn.push(notify, alloc.arena);
 
+    try conn.push(pb.AdviceSettingNotify{ .IsShow = false }, alloc.arena);
+    try conn.push(pb.ControlInfoNotify{}, alloc.arena);
+    try conn.push(pb.InstDataNotify{}, alloc.arena);
+
     var open_pkg: std.ArrayList(i32) = .empty;
     defer open_pkg.deinit(alloc.gpa);
     for (0..8) |i| {
@@ -34,6 +38,8 @@ pub fn pushData(_: EventQueue.Dequeue(.push_data), conn: *Connection, alloc: mem
     try conn.push(pb.ItemPkgOpenNotify{
         .OpenPkg = open_pkg,
     }, alloc.arena);
+
+    try conn.push(pb.BuffItemNotify{}, alloc.arena);
 
     var update_info: std.ArrayList(pb.EnergyInfo) = .empty;
     defer update_info.deinit(alloc.gpa);
@@ -50,9 +56,6 @@ pub fn pushData(_: EventQueue.Dequeue(.push_data), conn: *Connection, alloc: mem
     try conn.push(pb.EnergyUpdateNotify{
         .UpdateInfo = update_info,
     }, alloc.arena);
-
-    try conn.push(pb.AdviceSettingNotify{ .IsShow = false }, alloc.arena);
-    try conn.push(pb.ControlInfoNotify{}, alloc.arena);
     try conn.push(pb.LevelPlayInfoNotify{}, alloc.arena);
     try conn.push(pb.PlayerVarNotify{}, alloc.arena);
     try conn.push(pb.RoguelikeCurrencyNotify{}, alloc.arena);
@@ -61,6 +64,5 @@ pub fn pushData(_: EventQueue.Dequeue(.push_data), conn: *Connection, alloc: mem
     try conn.push(pb.SettingNotify{}, alloc.arena);
     try conn.push(pb.MoonChasingTrackMoonHandbookRewardNotify{}, alloc.arena);
     try conn.push(pb.MoonChasingTargetGetCountNotify{}, alloc.arena);
-    try conn.push(pb.InstDataNotify{}, alloc.arena);
     try conn.push(pb.SilenceNpcNotify{}, alloc.arena);
 }

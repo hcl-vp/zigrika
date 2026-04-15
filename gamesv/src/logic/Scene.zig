@@ -1,5 +1,7 @@
 const Scene = @This();
 const std = @import("std");
+const pb = @import("proto").pb;
+const Assets = @import("../data/Assets.zig");
 const FileSystem = @import("common").FileSystem;
 const SceneInstance = @import("../fs/SceneInstance.zig");
 const FormationInfo = @import("../fs/FormationInfo.zig");
@@ -355,4 +357,26 @@ pub fn nextEntityId(scene: *Scene, fs: *FileSystem, gpa: Allocator) !i64 {
     defer gpa.free(incr_path);
 
     return try incr.next(i64, fs, incr_path);
+}
+
+const BuffAdditionEntry = @import("../logic/events.zig").BuffAdditionEntry;
+pub fn buildFightBuffInfos(
+    scene: *Scene,
+    role_buffs: std.ArrayListUnmanaged(BuffAdditionEntry),
+    net_id: i64,
+    gpa: Allocator,
+) ![]pb.FightBuffInformation {
+    var infos: std.ArrayList(pb.FightBuffInformation) = .empty;
+    errdefer infos.deinit(gpa);
+    for (role_buffs.items) |entry| {
+        scene.*.instance.buff_handle += 1;
+        try infos.append(gpa, Assets.DataTables.createBuffInformation(
+            scene.instance.buff_handle,
+            entry.id,
+            net_id,
+            net_id,
+            entry.is_active,
+        ));
+    }
+    return infos.toOwnedSlice(gpa);
 }

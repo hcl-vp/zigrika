@@ -3,16 +3,18 @@ const pb = @import("proto").pb;
 const Transaction = @import("../handlers.zig").Transaction;
 const mem = @import("../../mem.zig");
 const State = @import("../State.zig");
+const EventQueue = @import("../../logic/EventQueue.zig");
 
 const log = std.log.scoped(.combat);
 
 const combat_namespaces: []const type = &.{
     @import("role.zig"),
+    @import("damage.zig"),
 };
 
 pub fn CombatRequestTxn(comptime Tag: anytype) type {
     const MessageUnion = @FieldType(pb.CombatRequestData, "Message");
-    const RequestUnion = @FieldType(MessageUnion, @tagName(Tag));
+    const RequestUnion = @typeInfo(@FieldType(MessageUnion, @tagName(Tag))).optional.child;
     const req_name = @tagName(Tag);
     const resp_tag_name = req_name[0 .. req_name.len - "Request".len] ++ "Response";
 
@@ -51,6 +53,7 @@ pub fn dispatch(
     comptime DataType: type,
     data: DataType,
     state: *State,
+    events: *EventQueue,
 ) !?pb.CombatReceiveData {
     const is_request = DataType == pb.CombatRequestData;
 
@@ -87,7 +90,10 @@ pub fn dispatch(
                 args[0] = &txn;
 
                 inline for (comptime std.meta.fields(Args)[1..], 1..) |param, i| {
-                    args[i] = try state.extract(param.type);
+                    if (param.type == *EventQueue)
+                        args[i] = events
+                    else
+                        args[i] = try state.extract(param.type);
                 }
 
                 try @call(.auto, target_fn, args);
@@ -99,7 +105,10 @@ pub fn dispatch(
                 args[0] = inner;
 
                 inline for (comptime std.meta.fields(Args)[1..], 1..) |param, i| {
-                    args[i] = try state.extract(param.type);
+                    if (param.type == *EventQueue)
+                        args[i] = events
+                    else
+                        args[i] = try state.extract(param.type);
                 }
 
                 try @call(.auto, target_fn, args);
@@ -110,7 +119,11 @@ pub fn dispatch(
     }
 }
 
-pub fn onCombatSendPackRequest(txn: *Transaction(pb.CombatSendPackRequest), state: *State) !void {
+pub fn onCombatSendPackRequest(
+    txn: *Transaction(pb.CombatSendPackRequest),
+    state: *State,
+    events: *EventQueue,
+) !void {
     var receive_data_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
 
     for (txn.message.Data.items) |message| {
@@ -118,11 +131,11 @@ pub fn onCombatSendPackRequest(txn: *Transaction(pb.CombatSendPackRequest), stat
         switch (inner) {
             .Push => |maybe_push| {
                 const push = maybe_push orelse continue;
-                _ = try dispatch(pb.CombatPushData, push, state);
+                _ = try dispatch(pb.CombatPushData, push, state, events);
             },
             .Request => |maybe_req| {
                 const req = maybe_req orelse continue;
-                if (try dispatch(pb.CombatRequestData, req, state)) |response| {
+                if (try dispatch(pb.CombatRequestData, req, state, events)) |response| {
                     try receive_data_pack.append(state.arena.allocator(), response);
                 }
             },

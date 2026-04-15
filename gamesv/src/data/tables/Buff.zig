@@ -1,4 +1,6 @@
+const std = @import("std");
 const pb = @import("proto").pb;
+const BuffAdditionEntry = @import("../../logic/events.zig").BuffAdditionEntry;
 
 Id: i64,
 GeDesc: []const u8,
@@ -57,3 +59,12 @@ ExtraEffectProbability: []const u32,
 BuffAction: []const []const u8,
 TagLogic: []const []const u8,
 DeadRemove: bool,
+
+pub fn buffListFromIds(allocator: std.mem.Allocator, ids: []const i64) !std.ArrayListUnmanaged(BuffAdditionEntry) {
+    var list: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
+    try list.ensureTotalCapacity(allocator, ids.len);
+    for (ids) |id| {
+        list.appendAssumeCapacity(.{ .id = id, .is_active = true });
+    }
+    return list;
+}

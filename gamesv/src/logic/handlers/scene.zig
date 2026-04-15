@@ -102,27 +102,6 @@ pub fn onInitialSceneJoin(
         };
         scene.explore_tools_info.active_explore_skill = 1001;
 
-        _ = try PlayerEntityHelpers.createPlayerSceneEntity(fs, &scene, alloc, player_id.id, assets);
-        _ = try PlayerEntityHelpers.createSceneBattleEntity(fs, &scene, alloc, player_id.id, assets);
-
-        var role_entities: std.ArrayList(Entity) = .empty;
-
-        const roles = [_]i32{ 1211, 1108, 1506 };
-        for (roles) |role| {
-            const entity = try RoleEntityHelpers.createRoleEntity(
-                fs,
-                &scene,
-                alloc,
-                player_id.id,
-                assets,
-                role_comp,
-                weapon_comp,
-                instance_dungeon,
-                role,
-            );
-            try role_entities.append(alloc.arena, entity);
-        }
-
         scene.instance.players = try alloc.gpa.alloc(SceneInstance.Player, 1);
         scene.instance.players[0] = .{
             .id = player_id.id,
@@ -138,11 +117,34 @@ pub fn onInitialSceneJoin(
             },
         };
 
+        _ = try PlayerEntityHelpers.createPlayerSceneEntity(fs, &scene, alloc, player_id.id, assets);
+        _ = try PlayerEntityHelpers.createSceneBattleEntity(fs, &scene, alloc, player_id.id, assets);
+
+        var role_entities: std.ArrayList(Entity) = .empty;
+
+        const roles = [_]i32{ 1211, 1108, 1506 };
+
         scene.formation_info.formations = try alloc.gpa.alloc(FormationInfo.Formation, 1);
         scene.formation_info.formations[0] = .{
             .cur_role = roles[0],
             .roles = undefined,
         };
+        scene.formation_info.cur_formation = 0;
+
+        for (roles) |role| {
+            const entity = try RoleEntityHelpers.createRoleEntity(
+                fs,
+                &scene,
+                alloc,
+                player_id.id,
+                assets,
+                role_comp,
+                weapon_comp,
+                instance_dungeon,
+                role,
+            );
+            try role_entities.append(alloc.arena, entity);
+        }
 
         for (role_entities.items, 0..) |item, i| {
             scene.formation_info.formations[0].roles[i] = .{

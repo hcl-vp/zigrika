@@ -3,7 +3,7 @@ const std = @import("std");
 const Io = std.Io;
 const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
-const IndexMap = std.AutoArrayHashMapUnmanaged(i64, usize);
+const IndexMap = std.array_hash_map.Auto(i64, usize);
 const pb = @import("proto").pb;
 const WeaponItem = @import("../fs/WeaponItem.zig");
 
@@ -21,6 +21,12 @@ pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
 pub const WeaponConf = @import("tables/WeaponConf.zig");
 pub const WeaponReson = @import("tables/WeaponReson.zig");
+pub const LevelEntityConfig = @import("tables/LevelEntityConfig.zig");
+pub const Damage = @import("tables/Damage.zig");
+pub const Area = @import("tables/Area.zig");
+pub const InfrV2TreeBuild = @import("tables/InfrV2TreeBuild.zig");
+pub const Teleporter = @import("tables/Teleporter.zig");
+pub const Activity = @import("tables/Activity.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -37,6 +43,63 @@ template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
 weapon_conf: Table(WeaponConf, "ItemId"),
 weapon_reson: Table(WeaponReson, "Id"),
+level_entity_config: Table(LevelEntityConfig, "EntityId"),
+damage: Table(Damage, "Id"),
+area: Table(Area, "AreaId"),
+infr_v2_tree_build: Table(InfrV2TreeBuild, "Id"),
+teleporter: Table(Teleporter, "Id"),
+activity: Table(Activity, "Id"),
+
+fn loadTableItems(
+    comptime T: type,
+    gpa: Allocator,
+    arena: *ArenaAllocator,
+    io: Io,
+    base_path: []const u8,
+) !T {
+    if (readEntireFile(gpa, io, base_path)) |content| {
+        defer gpa.free(content);
+        return try std.json.parseFromSliceLeaky(
+            T,
+            arena.allocator(),
+            content,
+            .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+        );
+    } else |_| {}
+
+    const base = base_path[0 .. base_path.len - ".json".len];
+
+    const Item = std.meta.Child(T);
+    var all_items: std.ArrayListUnmanaged(Item) = .empty;
+    defer all_items.deinit(gpa);
+
+    var chunk: usize = 1;
+    while (true) : (chunk += 1) {
+        var path_buf: [256]u8 = undefined;
+        const path = std.fmt.bufPrint(
+            &path_buf,
+            "{s}_{d}.json",
+            .{ base, chunk },
+        ) catch return error.PathTooLong;
+
+        const content = readEntireFile(gpa, io, path) catch |err| switch (err) {
+            error.FileNotFound => break,
+            else => return err,
+        };
+        defer gpa.free(content);
+
+        const chunk_items = try std.json.parseFromSliceLeaky(
+            T,
+            arena.allocator(),
+            content,
+            .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+        );
+        try all_items.appendSlice(gpa, chunk_items);
+    }
+
+    if (chunk == 1) return error.FileNotFound;
+    return try arena.allocator().dupe(Item, all_items.items);
+}
 
 pub fn load(gpa: Allocator, io: Io) !DataTables {
     var tables: DataTables = undefined;
@@ -48,16 +111,16 @@ pub fn load(gpa: Allocator, io: Io) !DataTables {
         if (field.type == ArenaAllocator) continue;
 
         var table: field.type = .init;
+        const base_path = "assets/BinData/" ++ field.type.json;
 
-        const content = try readEntireFile(gpa, io, "assets/BinData/" ++ field.type.json);
-        defer gpa.free(content);
-
-        table.items = try std.json.parseFromSliceLeaky(
+        const items = try loadTableItems(
             @FieldType(field.type, "items"),
-            tables.arena.allocator(),
-            content,
-            .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+            gpa,
+            &tables.arena,
+            io,
+            base_path,
         );
+        table.items = items;
 
         for (table.items, 0..) |item, index| {
             const key = @field(item, field.type.key);

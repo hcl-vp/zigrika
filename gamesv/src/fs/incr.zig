@@ -19,10 +19,3 @@ pub fn next(comptime T: type, fs: *FileSystem, counter_file: []const u8) !T {
     try lock.unlock(std.fmt.bufPrint(fmt_buf[0..], "{}\n", .{id + 1}) catch unreachable);
     return id;
 }
-
-pub fn peek(comptime T: type, fs: *FileSystem, counter_file: []const u8) !T {
-    const content = try fs.readFile(fs.gpa, counter_file) orelse return 1;
-    defer fs.gpa.free(content);
-    var tokens = std.mem.tokenizeAny(u8, content, " \r\n");
-    return std.fmt.parseInt(T, tokens.next() orelse return error.InvalidCounterFile, 10) catch return error.InvalidCounterFile;
-}

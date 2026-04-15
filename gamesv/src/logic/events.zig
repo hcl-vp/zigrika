@@ -38,3 +38,5 @@ pub const BuffAddition = struct {
 };
 
 pub const BuffChange = struct { entity: Entity };
+
+pub const ChatCommandResponse = struct { content: []const u8 };

@@ -1,9 +1,13 @@
 const std = @import("std");
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
+const State = @import("../State.zig");
+const commands = @import("../../logic/commands.zig");
+const EventQueue = @import("../../logic/EventQueue.zig");
 const Transaction = @import("../handlers.zig").Transaction;
 
 const chat_bot_uid: i32 = @import("friend.zig").bot_details.PlayerId;
+const starter_bot_msg = "use \"help\" to get a list of commands.";
 
 pub fn onPrivateChatDataRequest(
     txn: *Transaction(pb.PrivateChatDataRequest),
@@ -14,7 +18,7 @@ pub fn onPrivateChatDataRequest(
     try chat_content_history.append(alloc.gpa, .{
         .SenderUid = chat_bot_uid,
         .ChatContentType = .Text,
-        .Content = "chat commands are not implemented yet, come back in like a day and git pull",
+        .Content = starter_bot_msg,
         .OfflineMsg = false,
         .UtcTime = 0,
     });
@@ -39,10 +43,22 @@ pub fn onPrivateChatHistoryRequest(
         try txn.conn.push(pb.PrivateMessageNotify{ .ChatContent = .{
             .SenderUid = chat_bot_uid,
             .ChatContentType = .Text,
-            .Content = "chat commands are not implemented yet, come back in like a day and git pull",
+            .Content = starter_bot_msg,
             .OfflineMsg = false,
             .UtcTime = 0,
         } }, alloc.arena);
     }
     try txn.respond(.{});
+}
+
+pub fn onPrivateChatRequest(
+    txn: *Transaction(pb.PrivateChatRequest),
+    state: *State,
+    events: *EventQueue,
+) !void {
+    commands.dispatch(state, events, txn.message.Content) catch |err| {
+        try events.enqueue(.chat_command_response, .{ .content = @errorName(err) });
+    };
+
+    try txn.respond(.{ .TargetUid = txn.message.TargetUid, .FilterMsg = txn.message.Content });
 }
