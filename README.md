@@ -11,7 +11,7 @@ More features are actively being worked on, so stay tuned!
 
 # Getting Started
 ## Requirements
-- Zig 0.16.0-dev.3059 [Linux](https://ziglang.org/builds/zig-x86_64-linux-0.16.0-dev.3059+42e33db9d.tar.xz)/[Windows](https://ziglang.org/builds/zig-x86_64-windows-0.16.0-dev.3059+42e33db9d.zip)
+- Zig 0.16.0 [Linux](https://ziglang.org/download/0.16.0/zig-x86_64-linux-0.16.0.tar.xz)/[Windows](https://ziglang.org/download/0.16.0/zig-x86_64-windows-0.16.0.zip)
 
 #### For additional help, you can join our [discord server](https://discord.xeondev.com)
 

@@ -6,7 +6,7 @@ setlocal EnableExtensions EnableDelayedExpansion
 set "MIN_BUILD=3133"
 set "MAX_BUILD=3133"
 
-set "ZIG_VERSION=0.16.0-dev.3133+5ec8e45f3"
+set "ZIG_VERSION=0.16.0"
 set "ZIG_PLATFORM=x86_64-windows"
 set "ZIG_DIST=zig-%ZIG_PLATFORM%-%ZIG_VERSION%"
 
@@ -15,7 +15,7 @@ set "DIRENV_DIR=%BASE_DIR%\.direnv"
 set "ZIG_DIR=%DIRENV_DIR%\%ZIG_DIST%"
 set "ZIG_EXE=%ZIG_DIR%\zig.exe"
 set "ZIG_ZIP=%DIRENV_DIR%\%ZIG_DIST%.zip"
-set "ZIG_URL=https://ziglang.org/builds/%ZIG_DIST%.zip"
+set "ZIG_URL=https://ziglang.org/download/%ZIG_VERSION%/%ZIG_DIST%.zip"
 
 set "FOUND_ZIG="
 for /f "delims=" %%I in ('where zig 2^>nul') do (
