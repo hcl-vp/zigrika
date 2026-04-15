@@ -393,4 +393,8 @@ pub fn afterSceneJoin(
     const watermask_disable = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/main_watermask_disable.js");
     defer alloc.gpa.free(watermask_disable);
     try conn.push(pb.JSPatchNotify{ .Content = watermask_disable }, alloc.arena);
+
+    const flight_fix = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/flight_fix.js");
+    defer alloc.gpa.free(flight_fix);
+    try conn.push(pb.JSPatchNotify{ .Content = flight_fix }, alloc.arena);
 }
