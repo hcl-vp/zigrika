@@ -19,6 +19,7 @@ const file_util = @import("../../fs/file_util.zig");
 const FormationInfo = @import("../../fs/FormationInfo.zig");
 const RoleInfo = @import("../../fs/RoleInfo.zig");
 const Entity = Scene.Entity;
+const Io = std.Io;
 
 pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !void {
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
@@ -333,14 +334,6 @@ pub fn formationUpdateNotify(
     try conn.push(update_formation_notify, alloc.arena);
 }
 
-fn readEntireFile(gpa: std.mem.Allocator, io: std.Io, path: []const u8) ![]const u8 {
-    var file = try std.Io.Dir.cwd().openFile(io, path, .{});
-    defer file.close(io);
-
-    var reader = file.reader(io, "");
-    return try reader.interface.allocRemaining(gpa, .unlimited);
-}
-
 pub fn afterSceneJoin(
     _: EventQueue.Dequeue(.after_scene_join),
     events: *EventQueue,
@@ -362,7 +355,7 @@ pub fn afterSceneJoin(
     };
     try conn.push(formation_attr_notify, alloc.arena);
 
-    const no_uid_watermark = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/uid_watermark.js");
+    const no_uid_watermark = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, "assets/scripts/join_scene_patches/uid_watermark.js", alloc.gpa, Io.Limit.unlimited);
     defer alloc.gpa.free(no_uid_watermark);
 
     const uid_str = try std.fmt.allocPrint(alloc.gpa, "{d}", .{player_id.id});
@@ -383,7 +376,7 @@ pub fn afterSceneJoin(
     };
 
     for (patch_files) |path| {
-        const content = try readEntireFile(alloc.gpa, fs.io, path);
+        const content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, path, alloc.gpa, Io.Limit.unlimited);
         defer alloc.gpa.free(content);
         try conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena);
     }

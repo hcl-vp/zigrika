@@ -57,7 +57,7 @@ fn loadTableItems(
     io: Io,
     base_path: []const u8,
 ) !T {
-    if (readEntireFile(gpa, io, base_path)) |content| {
+    if (Io.Dir.readFileAlloc(Io.Dir.cwd(), io, base_path, gpa, Io.Limit.unlimited)) |content| {
         defer gpa.free(content);
         return try std.json.parseFromSliceLeaky(
             T,
@@ -82,7 +82,7 @@ fn loadTableItems(
             .{ base, chunk },
         ) catch return error.PathTooLong;
 
-        const content = readEntireFile(gpa, io, path) catch |err| switch (err) {
+        const content = Io.Dir.readFileAlloc(Io.Dir.cwd(), io, path, gpa, Io.Limit.unlimited) catch |err| switch (err) {
             error.FileNotFound => break,
             else => return err,
         };
@@ -153,14 +153,6 @@ pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
             return if (table.index.get(id)) |i| table.items[i] else null;
         }
     };
-}
-
-fn readEntireFile(gpa: Allocator, io: Io, path: []const u8) ![]const u8 {
-    var file = try Io.Dir.cwd().openFile(io, path, .{});
-    defer file.close(io);
-
-    var reader = file.reader(io, "");
-    return try reader.interface.allocRemaining(gpa, .unlimited);
 }
 
 pub fn getRolePropertyGrowth(tables: *const DataTables, level: i32, breach: i32) ?*const RolePropertyGrowth {

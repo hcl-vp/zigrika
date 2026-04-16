@@ -4,14 +4,7 @@ const Connection = @import("../../network/Connection.zig");
 const mem = @import("../../mem.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const FileSystem = @import("common").FileSystem;
-
-fn readEntireFile(gpa: std.mem.Allocator, io: std.Io, path: []const u8) ![]const u8 {
-    var file = try std.Io.Dir.cwd().openFile(io, path, .{});
-    defer file.close(io);
-
-    var reader = file.reader(io, "");
-    return try reader.interface.allocRemaining(gpa, .unlimited);
-}
+const Io = std.Io;
 
 pub const sequence_patch = struct {
     pub const alias = "sp";
@@ -26,7 +19,7 @@ pub const sequence_patch = struct {
         const js_path = try std.fmt.allocPrint(alloc.gpa, "assets/scripts/sequence_patch_profiles/{d}.js", .{mode});
         defer alloc.gpa.free(js_path);
 
-        const js = try readEntireFile(alloc.gpa, fs.io, js_path);
+        const js = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, js_path, alloc.gpa, Io.Limit.unlimited);
         defer alloc.gpa.free(js);
         try conn.push(pb.JSPatchNotify{
             .Content = js,
