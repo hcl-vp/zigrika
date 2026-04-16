@@ -13,5 +13,5 @@ pub fn onTeleportDataRequest(
     for (assets.tables.teleporter.items) |tp| {
         try ids.append(alloc.arena, tp.Id);
     }
-    try txn.respond(.{ .ErrorCode = .Success, .Ids = ids });
+    txn.respond(.{ .ErrorCode = .Success, .Ids = ids });
 }

@@ -32,7 +32,7 @@ pub fn onPrivateChatDataRequest(
         .TotalNums = 1,
     });
     try txn.conn.push(pb.PrivateChatHistoryNotify{ .AllChats = chat_history }, alloc.arena);
-    try txn.respond(.{ .LoadSucc = true });
+    txn.respond(.{ .LoadSucc = true });
 }
 
 pub fn onPrivateChatHistoryRequest(
@@ -48,7 +48,7 @@ pub fn onPrivateChatHistoryRequest(
             .UtcTime = 0,
         } }, alloc.arena);
     }
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onPrivateChatRequest(
@@ -60,5 +60,5 @@ pub fn onPrivateChatRequest(
         try events.enqueue(.chat_command_response, .{ .content = @errorName(err) });
     };
 
-    try txn.respond(.{ .TargetUid = txn.message.TargetUid, .FilterMsg = txn.message.Content });
+    txn.respond(.{ .TargetUid = txn.message.TargetUid, .FilterMsg = txn.message.Content });
 }

@@ -142,5 +142,5 @@ pub fn onCombatSendPackRequest(
         }
     }
 
-    try txn.respond(.{ .ReceivePackNotify = .{ .Data = receive_data_pack } });
+    txn.respond(.{ .ReceivePackNotify = .{ .Data = receive_data_pack } });
 }

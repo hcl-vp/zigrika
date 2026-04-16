@@ -183,7 +183,7 @@ pub fn onActivityRequest(
         EXCLUDED_ACTIVITY.len,
     });
 
-    try txn.respond(.{
+    txn.respond(.{
         .Activities = activity_list,
         .ErrorCode = .Success,
     });

@@ -24,7 +24,7 @@ pub fn onWeaponItemRequest(
         list.appendAssumeCapacity(kv.value_ptr.toProto(kv.key_ptr.*));
     }
 
-    try txn.respond(.{ .WeaponItemList = list });
+    txn.respond(.{ .WeaponItemList = list });
 }
 
 // TODO: split this into events when implementing role element change
@@ -147,5 +147,5 @@ pub fn onEquipTakeOnRequest(
     try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
     try events.enqueue(.weapon_info_modified, .{ .incr_id = data.EquipIncId });
     try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data }, alloc.arena);
-    try txn.respond(.{ .DataList = send_data });
+    txn.respond(.{ .DataList = send_data });
 }

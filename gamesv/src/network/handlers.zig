@@ -56,8 +56,8 @@ pub fn Transaction(comptime T: type) type {
         message: T,
         response: ?Response,
 
-        pub fn respond(txn: *@This(), response: Response) !void {
-            if (txn.response != null) return error.RespondTwice;
+        pub fn respond(txn: *@This(), response: Response) void {
+            if (txn.response != null) unreachable;
             txn.response = response;
         }
     };

@@ -46,7 +46,7 @@ pub fn onFriendAllRequest(
         .Remark = "",
     });
 
-    try txn.respond(.{
+    txn.respond(.{
         .FriendInfoList = friends,
         .ErrorCode = .Success,
     });
@@ -57,7 +57,7 @@ pub fn onPlayerBasicInfoGetRequest(
     _: mem.Alloc,
 ) !void {
     if (txn.message.Id == bot_details.PlayerId) {
-        try txn.respond(.{
+        txn.respond(.{
             .Info = bot_details,
             .ErrorCode = .Success,
         });

@@ -3,8 +3,8 @@ const pb = @import("proto").pb;
 const Transaction = @import("../handlers.zig").Transaction;
 
 pub fn onAdventureManualRequest(txn: *Transaction(pb.AdventureManualRequest)) !void {
-    try txn.respond(.{ .AdventureManualData = .{} });
+    txn.respond(.{ .AdventureManualData = .{} });
 }
 pub fn onAdventureManualDataRequest(txn: *Transaction(pb.AdventureManualDataRequest)) !void {
-    try txn.respond(.{ .AdventureManualData = .{} });
+    txn.respond(.{ .AdventureManualData = .{} });
 }

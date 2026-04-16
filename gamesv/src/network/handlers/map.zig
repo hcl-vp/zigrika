@@ -5,7 +5,7 @@ const Transaction = @import("../handlers.zig").Transaction;
 const Assets = @import("../../data/Assets.zig");
 
 pub fn onMapTraceInfoRequest(txn: *Transaction(pb.MapTraceInfoRequest)) !void {
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onMapUnlockFieldInfoRequest(
@@ -19,7 +19,7 @@ pub fn onMapUnlockFieldInfoRequest(
         try fields.append(alloc.arena, area.AreaId);
     }
 
-    try txn.respond(.{
+    txn.respond(.{
         .ErrorCode = .Success,
         .FieldId = fields,
     });
@@ -32,7 +32,7 @@ pub fn onDarkCoastDeliveryRequest(txn: *Transaction(pb.DarkCoastDeliveryRequest)
         .DropItems = .empty,
     };
 
-    try txn.respond(.{
+    txn.respond(.{
         .ErrorCode = .Success,
         .DragonPoolDropItems = drop_items,
         .DefeatedGuard = .empty,
@@ -48,7 +48,7 @@ pub fn onPlayerAccessEffectAreaRequest(txn: *Transaction(pb.PlayerAccessEffectAr
         .AcessRangeResults = .empty,
     };
 
-    try txn.respond(.{
+    txn.respond(.{
         .ErrorCode = .Success,
         .EntityId = txn.message.EntityId,
         .Info = access_info,
@@ -58,7 +58,7 @@ pub fn onPlayerAccessEffectAreaRequest(txn: *Transaction(pb.PlayerAccessEffectAr
 pub fn onSimpleTrackReportAsyncRequest(
     txn: *Transaction(pb.SimpleTrackReportAsyncRequest),
 ) !void {
-    try txn.respond(.{
+    txn.respond(.{
         .ErrorCode = .Success,
         .SimpleTrackReportMsgs = .empty,
     });
@@ -94,7 +94,7 @@ pub fn onInfrV2InfoRequest(
         },
     };
 
-    try txn.respond(.{
+    txn.respond(.{
         .ErrorCode = .Success,
         .InfrInfo = infr_data,
     });

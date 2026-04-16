@@ -10,11 +10,11 @@ const Entity = Scene.Entity;
 const FileSystem = @import("common").FileSystem;
 
 pub fn onExploreProgressRequest(txn: *Transaction(pb.ExploreProgressRequest)) !void {
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onEnterAreaRequest(txn: *Transaction(pb.EnterAreaRequest)) !void {
-    try txn.respond(.{ .Id = txn.message.Id });
+    txn.respond(.{ .Id = txn.message.Id });
 }
 
 pub fn onVisionExploreSkillSetRequest(
@@ -48,5 +48,5 @@ pub fn onVisionExploreSkillSetRequest(
         }, alloc.arena);
     }
 
-    try txn.respond(.{ .SkillId = txn.message.SkillId });
+    txn.respond(.{ .SkillId = txn.message.SkillId });
 }

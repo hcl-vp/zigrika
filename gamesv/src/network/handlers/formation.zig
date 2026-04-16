@@ -61,7 +61,7 @@ pub fn onFormationAttrRequest(
     } else {
         return error.PlayerNotFoundInScene;
     }
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onUpdateFormationRequest(
@@ -291,7 +291,7 @@ pub fn onUpdateFormationRequest(
 
     try scene.save(fs, alloc.gpa);
     try events.enqueue(.update_formations, .{});
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onFormationDataRequest(
@@ -304,5 +304,5 @@ pub fn onFormationDataRequest(
     const log = std.log.scoped(.formation);
     log.debug("{any}\n", .{fight_formations});
 
-    try txn.respond(.{ .Formations = fight_formations });
+    txn.respond(.{ .Formations = fight_formations });
 }

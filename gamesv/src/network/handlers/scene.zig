@@ -11,11 +11,11 @@ pub fn onSceneTraceRequest(txn: *Transaction(pb.SceneTraceRequest)) !void {
     const log = std.log.scoped(.scene_trace);
     log.debug("trace id: {d}", .{txn.message.SceneTraceId});
 
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onUpdateSceneDateRequest(txn: *Transaction(pb.UpdateSceneDateRequest)) !void {
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onEntityActiveRequest(txn: *Transaction(pb.EntityActiveRequest), entities: Scene.Query(&.{Scene.Entity}), scene: *Scene, alloc: mem.Alloc) !void {
@@ -27,7 +27,7 @@ pub fn onEntityActiveRequest(txn: *Transaction(pb.EntityActiveRequest), entities
 
     const entity_pb = try scene.entities.get(scene_entity.index).entityToProto(scene_entity.net_id, alloc);
 
-    try txn.respond(.{
+    txn.respond(.{
         .IsVisible = entity_pb.IsVisible,
         .Rot = entity_pb.Rot,
         .Pos = entity_pb.Pos,
@@ -36,11 +36,11 @@ pub fn onEntityActiveRequest(txn: *Transaction(pb.EntityActiveRequest), entities
 }
 
 pub fn onPlayerMotionRequest(txn: *Transaction(pb.PlayerMotionRequest)) !void {
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onEntityPositionRequest(txn: *Transaction(pb.EntityPositionRequest)) !void {
-    try txn.respond(.{ .Pos = .{
+    txn.respond(.{ .Pos = .{
         .X = -143200,
         .Y = 63380,
         .Z = 7610,
@@ -48,7 +48,7 @@ pub fn onEntityPositionRequest(txn: *Transaction(pb.EntityPositionRequest)) !voi
 }
 
 pub fn onSceneLoadingFinishRequest(txn: *Transaction(pb.SceneLoadingFinishRequest)) !void {
-    try txn.respond(.{});
+    txn.respond(.{});
 }
 
 pub fn onMovePackagePush(
