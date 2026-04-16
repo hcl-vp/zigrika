@@ -372,31 +372,19 @@ pub fn afterSceneJoin(
     defer alloc.gpa.free(watermark_js);
     try conn.push(pb.JSPatchNotify{ .Content = watermark_js }, alloc.arena);
 
-    const goon_camera1 = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/goon_camera_fix1.js");
-    defer alloc.gpa.free(goon_camera1);
-    try conn.push(pb.JSPatchNotify{ .Content = goon_camera1 }, alloc.arena);
+    const patch_files = [_][]const u8{
+        "assets/scripts/join_scene_patches/goon_camera_fix1.js",
+        "assets/scripts/join_scene_patches/goon_camera_fix2.js",
+        "assets/scripts/join_scene_patches/bindata_patches.js",
+        "assets/scripts/join_scene_patches/censorshipfix.js",
+        "assets/scripts/join_scene_patches/debug_disable.js",
+        "assets/scripts/join_scene_patches/main_watermask_disable.js",
+        "assets/scripts/join_scene_patches/flight_fix.js",
+    };
 
-    const goon_camera2 = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/goon_camera_fix2.js");
-    defer alloc.gpa.free(goon_camera2);
-    try conn.push(pb.JSPatchNotify{ .Content = goon_camera2 }, alloc.arena);
-
-    const bindata_patches = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/bindata_patches.js");
-    defer alloc.gpa.free(bindata_patches);
-    try conn.push(pb.JSPatchNotify{ .Content = bindata_patches }, alloc.arena);
-
-    const censorshipfix = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/censorshipfix.js");
-    defer alloc.gpa.free(censorshipfix);
-    try conn.push(pb.JSPatchNotify{ .Content = censorshipfix }, alloc.arena);
-
-    const debug_disable = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/debug_disable.js");
-    defer alloc.gpa.free(debug_disable);
-    try conn.push(pb.JSPatchNotify{ .Content = debug_disable }, alloc.arena);
-
-    const watermask_disable = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/main_watermask_disable.js");
-    defer alloc.gpa.free(watermask_disable);
-    try conn.push(pb.JSPatchNotify{ .Content = watermask_disable }, alloc.arena);
-
-    const flight_fix = try readEntireFile(alloc.gpa, fs.io, "assets/scripts/join_scene_patches/flight_fix.js");
-    defer alloc.gpa.free(flight_fix);
-    try conn.push(pb.JSPatchNotify{ .Content = flight_fix }, alloc.arena);
+    for (patch_files) |path| {
+        const content = try readEntireFile(alloc.gpa, fs.io, path);
+        defer alloc.gpa.free(content);
+        try conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena);
+    }
 }
