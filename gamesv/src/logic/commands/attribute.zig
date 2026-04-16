@@ -61,7 +61,7 @@ pub const max_attribute = struct {
 
 pub const empty_attribute = struct {
     pub const alias = "empty";
-    pub const description = "set the inputted attribute to its lowest possible value (0).\nusage: max_attribute [config_id] [EAttributeType]\nconfig_id is a number, for example 1108 is hiyuki's config id\nEAttributeType is a number.";
+    pub const description = "set the inputted attribute to its lowest possible value (0).\nusage: empty_attribute [config_id] [EAttributeType]\nconfig_id is a number, for example 1108 is hiyuki's config id\nEAttributeType is a number.";
     pub fn call(
         events: *EventQueue,
         scene: *Scene,
