@@ -45,10 +45,10 @@ pub fn init(
     };
 }
 
-pub fn deinit(s: *State) void {
+pub fn deinit(s: *State, fs: *FileSystem) void {
     s.arena.deinit();
     s.player_components.deinit(s.gpa);
-    if (s.scene) |*scene| scene.deinit(s.gpa);
+    if (s.scene) |*scene| scene.deinit(s.gpa, fs);
 }
 
 pub fn extract(s: *State, comptime T: type) !T {

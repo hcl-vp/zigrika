@@ -27,5 +27,6 @@ pub fn notifyAfterJoinScene(
     conn: *Connection,
     alloc: mem.Alloc,
 ) !void {
+    try conn.push(pb.SwitchBattleModeNotify{}, alloc.arena);
     try conn.push(pb.AfterJoinSceneNotify{}, alloc.arena);
 }

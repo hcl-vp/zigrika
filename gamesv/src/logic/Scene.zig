@@ -126,6 +126,16 @@ pub fn Query(comptime types: []const type) type {
     };
 }
 
+pub fn clear_entities(scene: *Scene, arena: *std.heap.ArenaAllocator, fs: *FileSystem) !void {
+    const entity_dir = try std.fmt.allocPrint(
+        arena.allocator(),
+        "state/player/{d}/scene/{d}/entity",
+        .{ scene.player_id, scene.instance_id },
+    );
+
+    try std.Io.Dir.cwd().deleteTree(fs.io, entity_dir);
+}
+
 pub fn init(
     gpa: Allocator,
     fs: *FileSystem,
@@ -135,7 +145,7 @@ pub fn init(
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
 
-    const instance = try file_util.loadOrCreateZon(
+    var instance = try file_util.loadOrCreateZon(
         SceneInstance,
         gpa,
         arena.allocator(),
@@ -143,6 +153,7 @@ pub fn init(
         "player/{d}/scene/{d}/instance",
         .{ player_id, instance_id },
     );
+    instance.buff_handle = 0;
 
     const formation_info = try file_util.loadOrCreateZon(
         FormationInfo,
@@ -170,14 +181,14 @@ pub fn init(
         .explore_tools_info = explore_tools_info,
     };
 
-    errdefer scene.deinit(gpa);
+    try scene.clear_entities(&arena, fs);
 
-    try scene.loadEntities(gpa, fs);
+    errdefer scene.deinit(gpa, fs);
 
     return scene;
 }
 
-pub fn deinit(scene: *Scene, gpa: Allocator) void {
+pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
     scene.instance.deinit(gpa);
     scene.formation_info.deinit(gpa);
     scene.explore_tools_info.deinit(gpa);
@@ -189,31 +200,10 @@ pub fn deinit(scene: *Scene, gpa: Allocator) void {
 
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
-}
 
-fn loadEntities(scene: *Scene, gpa: Allocator, fs: *FileSystem) !void {
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
-
-    const entity_dir = try std.fmt.allocPrint(
-        arena.allocator(),
-        "player/{d}/scene/{d}/entity/",
-        .{ scene.player_id, scene.instance_id },
-    );
-
-    if (try fs.readDir(entity_dir)) |dir| {
-        defer dir.deinit();
-
-        for (dir.entries) |entry| if (entry.kind == .directory) {
-            const entity_id = std.fmt.parseInt(i64, entry.basename(), 10) catch continue;
-
-            var storage = try EntityComponentStorage.load(gpa, fs, scene.player_id, scene.instance_id, entity_id);
-            errdefer storage.deinit(gpa);
-
-            try scene.net_id_map.put(gpa, entity_id, scene.entities.len);
-            try scene.entities.append(gpa, storage);
-        };
-    }
+    scene.clear_entities(&arena, fs) catch return;
 }
 
 pub fn spawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype) !Entity {

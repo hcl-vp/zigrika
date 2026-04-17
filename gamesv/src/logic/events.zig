@@ -3,7 +3,10 @@ const Entity = @import("Scene.zig").Entity;
 pub const EnterGame = struct {};
 pub const PushData = struct {};
 pub const PushDataComplete = struct {};
-pub const InitialSceneJoin = struct {};
+pub const InitialSceneJoin = struct {
+    location: ?[3]f32 = null,
+    rotation: ?[3]f32 = null,
+};
 pub const SceneSwitch = struct {};
 pub const AfterSceneJoin = struct {};
 pub const UpdateFormations = struct {};

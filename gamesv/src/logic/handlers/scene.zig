@@ -42,23 +42,32 @@ pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !v
     try conn.push(vision_explore_notify, alloc.arena);
 }
 
+fn has_scene_data(fs: *FileSystem, arena: std.mem.Allocator, player_id: i32) bool {
+    const path = std.fmt.allocPrint(arena, "state/player/{d}/scene", .{player_id}) catch return false;
+    const dir = std.Io.Dir.cwd().openDir(fs.io, path, .{ .iterate = true }) catch return false;
+    defer dir.close(fs.io);
+    var it = dir.iterate();
+    while (it.next(fs.io) catch return false) |entry| {
+        if (entry.kind == .directory) return true;
+    }
+    return false;
+}
+
 pub fn onInitialSceneJoin(
-    _: EventQueue.Dequeue(.initial_scene_join),
+    event: EventQueue.Dequeue(.initial_scene_join),
     events: *EventQueue,
     fs: *FileSystem,
     alloc: mem.Alloc,
     player_id: PlayerID,
     assets: *const Assets,
     scene_comp: *PlayerSceneComponent,
-    role_comp: *PlayerRoleComponent,
-    weapon_comp: *PlayerWeaponComponent,
     cur_scene: *?Scene,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
+    const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
 
-    if (cur_scene.* != null) {
-        log.err("player with id {d} is already in scene", .{player_id.id});
-        return;
+    if (cur_scene.*) |*scene| {
+        scene.deinit(alloc.gpa, fs);
     }
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
@@ -71,11 +80,40 @@ pub fn onInitialSceneJoin(
     };
 
     var scene = try Scene.init(alloc.gpa, fs, player_id.id, instance_dungeon.Id);
-    errdefer scene.deinit(alloc.gpa);
+    errdefer scene.deinit(alloc.gpa, fs);
 
     if (scene.instance.players.len == 0) {
         // A new scene. Player should be spawned.
         // TODO: add a check that actually searches for a player with matching ID. However this is only useful for MP, I guess?
+
+        scene.instance.players = try alloc.gpa.alloc(SceneInstance.Player, 1);
+        scene.instance.players[0] = .{
+            .id = player_id.id,
+            .location = event.data.location orelse .{
+                @floatFromInt(instance_dungeon.BornPosition[0]),
+                @floatFromInt(instance_dungeon.BornPosition[1]),
+                @floatFromInt(instance_dungeon.BornPosition[2]),
+            },
+            .rotation = event.data.rotation orelse .{
+                @floatFromInt(instance_dungeon.BornRotation[0]),
+                @floatFromInt(instance_dungeon.BornRotation[1]),
+                @floatFromInt(instance_dungeon.BornRotation[2]),
+            },
+        };
+    } else if (event.data.location) |location| {
+        scene.instance.players[0] = .{
+            .id = player_id.id,
+            .location = location,
+            .rotation = event.data.rotation orelse .{
+                @floatFromInt(instance_dungeon.BornRotation[0]),
+                @floatFromInt(instance_dungeon.BornRotation[1]),
+                @floatFromInt(instance_dungeon.BornRotation[2]),
+            },
+        };
+    }
+
+    if (no_scene_data) {
+        // The first Scene. Basic data should be initialized.
 
         scene.explore_tools_info.unlocked_explore_skills = blk: {
             var list: std.ArrayList(i32) = .empty;
@@ -103,26 +141,6 @@ pub fn onInitialSceneJoin(
         };
         scene.explore_tools_info.active_explore_skill = 1001;
 
-        scene.instance.players = try alloc.gpa.alloc(SceneInstance.Player, 1);
-        scene.instance.players[0] = .{
-            .id = player_id.id,
-            .location = .{
-                @floatFromInt(instance_dungeon.BornPosition[0]),
-                @floatFromInt(instance_dungeon.BornPosition[1]),
-                @floatFromInt(instance_dungeon.BornPosition[2]),
-            },
-            .rotation = .{
-                @floatFromInt(instance_dungeon.BornRotation[0]),
-                @floatFromInt(instance_dungeon.BornRotation[1]),
-                @floatFromInt(instance_dungeon.BornRotation[2]),
-            },
-        };
-
-        _ = try PlayerEntityHelpers.createPlayerSceneEntity(fs, &scene, alloc, player_id.id, assets);
-        _ = try PlayerEntityHelpers.createSceneBattleEntity(fs, &scene, alloc, player_id.id, assets);
-
-        var role_entities: std.ArrayList(Entity) = .empty;
-
         const roles = [_]i32{ 1211, 1108, 1506 };
 
         scene.formation_info.formations = try alloc.gpa.alloc(FormationInfo.Formation, 1);
@@ -132,25 +150,10 @@ pub fn onInitialSceneJoin(
         };
         scene.formation_info.cur_formation = 0;
 
-        for (roles) |role| {
-            const entity = try RoleEntityHelpers.createRoleEntity(
-                fs,
-                &scene,
-                alloc,
-                player_id.id,
-                assets,
-                role_comp,
-                weapon_comp,
-                instance_dungeon,
-                role,
-            );
-            try role_entities.append(alloc.arena, entity);
-        }
-
-        for (role_entities.items, 0..) |item, i| {
+        for (roles, 0..) |role, i| {
             scene.formation_info.formations[0].roles[i] = .{
-                .role_id = roles[i],
-                .entity_id = item.net_id,
+                .role_id = role,
+                .entity_id = -1,
                 .on_stage_without_control = false,
             };
         }
@@ -164,12 +167,18 @@ pub fn onInitialSceneJoin(
 pub fn notifyJoinScene(
     _: EventQueue.Dequeue(.scene_switch),
     events: *EventQueue,
+    fs: *FileSystem,
+    assets: *const Assets,
     conn: *Connection,
     alloc: mem.Alloc,
     player_id: PlayerID,
+    scene_comp: *PlayerSceneComponent,
     basic_comp: *PlayerBasicComponent, // we'll have to be able to query for component of each individual player if we're going to implement MP
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
     scene: *Scene,
 ) !void {
+    const log = std.log.scoped(.scene_join);
     try exploreSkillNotify(alloc, scene, conn);
     var scene_info: pb.SceneInformation = .{
         .InstanceId = scene.instance_id,
@@ -185,21 +194,45 @@ pub fn notifyJoinScene(
         .OwnerTimeClockTimeSpan = scene.instance.time.owner_clock_time_span,
     };
 
+    const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
+        // TODO: fallback to default instance id?
+        log.err(
+            "player({d}) last scene instance id {d} doesn't exist",
+            .{ player_id.id, scene_comp.last_scene_info.instance_id },
+        );
+        return;
+    };
+
     for (scene.instance.players) |scene_player| {
         if (scene_player.id == player_id.id) {
             var fight_role_groups: std.ArrayList(pb.FightRoleInfos) = .empty;
 
-            const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
+            const formation = &scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
             var infos: pb.FightRoleInfos = .{
                 .GroupType = scene_player.group_type,
                 .CurRole = formation.cur_role,
                 .LivingStatus = .Alive, // TODO: keep track of this
             };
 
-            for (formation.roles) |maybe_role| if (maybe_role) |role| {
+            _ = try PlayerEntityHelpers.createPlayerSceneEntity(fs, scene, alloc, player_id.id, assets);
+            _ = try PlayerEntityHelpers.createSceneBattleEntity(fs, scene, alloc, player_id.id, assets);
+
+            for (&formation.roles) |*maybe_role| if (maybe_role.*) |*role| {
+                const entity = try RoleEntityHelpers.createRoleEntity(
+                    fs,
+                    scene,
+                    alloc,
+                    player_id.id,
+                    assets,
+                    role_comp,
+                    weapon_comp,
+                    instance_dungeon,
+                    role.role_id,
+                );
+                role.entity_id = entity.net_id;
                 try infos.FightRoleInfos.append(alloc.arena, .{
                     .RoleId = role.role_id,
-                    .EntityId = role.entity_id,
+                    .EntityId = entity.net_id,
                     .OnStageWithoutControl = role.on_stage_without_control,
                 });
             };
@@ -235,6 +268,7 @@ pub fn notifyJoinScene(
         // Shouldn't happen unless scene instance file is corrupted. Maybe should log it as well?
         return error.PlayerNotFoundInScene;
     }
+    try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};
 

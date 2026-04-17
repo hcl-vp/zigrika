@@ -87,7 +87,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
     var player_id: ?i32 = null;
     var enter: bool = false;
     var state: ?State = null;
-    defer if (state) |*s| s.deinit();
+    defer if (state) |*s| s.deinit(fs);
 
     // TODO: timeout
     while (handle.queue.getOne(handle.io)) |packet| {
