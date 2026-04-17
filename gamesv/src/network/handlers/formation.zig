@@ -40,29 +40,29 @@ fn build_fight_formations(
     return fight_formations;
 }
 
-pub fn onFormationAttrRequest(
-    txn: *Transaction(pb.FormationAttrRequest),
-    alloc: mem.Alloc,
-    scene: *Scene,
-) !void {
-    for (scene.instance.players) |scene_player| {
-        if (scene_player.id == scene.player_id) {
-            for (scene.formation_info.formations) |formation| {
-                for (formation.roles) |_| {
-                    const formation_attr_notify: pb.FormationAttrNotify = .{
-                        .Duration = txn.message.Duration,
-                        .FormationAttrs = txn.message.FormationAttrs,
-                    };
-                    try txn.conn.push(formation_attr_notify, alloc.arena);
-                }
-            }
-            break;
-        }
-    } else {
-        return error.PlayerNotFoundInScene;
-    }
-    txn.respond(.{});
-}
+// pub fn onFormationAttrRequest(
+//     txn: *Transaction(pb.FormationAttrRequest),
+//     alloc: mem.Alloc,
+//     scene: *Scene,
+// ) !void {
+//     for (scene.instance.players) |scene_player| {
+//         if (scene_player.id == scene.player_id) {
+//             for (scene.formation_info.formations) |formation| {
+//                 for (formation.roles) |_| {
+//                     const formation_attr_notify: pb.FormationAttrNotify = .{
+//                         .Duration = txn.message.Duration,
+//                         .FormationAttrs = txn.message.FormationAttrs,
+//                     };
+//                     try txn.conn.push(formation_attr_notify, alloc.arena);
+//                 }
+//             }
+//             break;
+//         }
+//     } else {
+//         return error.PlayerNotFoundInScene;
+//     }
+//     txn.respond(.{});
+// }
 
 pub fn onUpdateFormationRequest(
     txn: *Transaction(pb.UpdateFormationRequest),
