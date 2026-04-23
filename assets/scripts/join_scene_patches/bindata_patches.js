@@ -115,7 +115,7 @@ setTimeout(() => {
 
   const build_tod_entry = () => {
     const b = new Builder(256);
-    const name_off = b.createString("PrefabTextItem_2187393050_Text");
+    const name_off = b.createString("CUSTOM_Time of Day");
     const opt_offs = [
       b.createString("TimeOfDay_Options_0"),
       b.createString("TimeOfDay_Options_1"),
@@ -170,6 +170,196 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
+  const FREEZE_VALUE_TYPE = 9;
+  const FREEZE_ID = 10;
+
+  const build_freeze_toggle_entry = () => {
+    const b = new Builder(512);
+
+    const name_off = b.createString("CUSTOM_Freeze Time");
+    const opt_off_0 = b.createString("FreezeTime_Options_0");
+    const opt_off_1 = b.createString("FreezeTime_Options_1");
+
+    b.startVector(4, 1, 4);
+    b.addInt32(TD_VALUE_TYPE);
+    const int_array_vec = b.endVector();
+
+    b.startObject(1);
+    b.addFieldOffset(0, int_array_vec, 0);
+    const int_array_off = b.endObject();
+
+    b.startObject(2);
+    b.addFieldInt32(0, 1, 0);
+    b.addFieldOffset(1, int_array_off, 0);
+    const dic_entry_off = b.endObject();
+
+    b.startVector(4, 1, 4);
+    b.addOffset(dic_entry_off);
+    const suboptions_vec = b.endVector();
+
+    b.startVector(4, 2, 4);
+    b.addOffset(opt_off_1);
+    b.addOffset(opt_off_0);
+    const options_vec = b.endVector();
+
+    b.startVector(4, 3, 4);
+    b.addFloat32(1);
+    b.addFloat32(1);
+    b.addFloat32(0);
+    const vr_vec = b.endVector();
+
+    b.startObject(10);
+    b.addFieldInt32(0, FREEZE_ID, 0);
+    b.addFieldInt32(1, FREEZE_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 0, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(6, suboptions_vec, 0);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
+  const TD_VALUE_TYPE = 10;
+  const TD_ID = 11;
+  const TD_MIN = 0;
+  const TD_MAX = 2;
+
+  const build_time_dilation_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("CUSTOM_Time Dilation");
+    const opt_offs = [
+      b.createString("TimeDilation_Options_0"),
+      b.createString("TimeDilation_Options_1"),
+    ];
+    b.startVector(4, opt_offs.length, 4);
+    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
+    const options_vec = b.endVector();
+    const value_range = [TD_MIN, TD_MAX, 0];
+    b.startVector(4, value_range.length, 4);
+    for (let i = value_range.length - 1; i >= 0; i--)
+      b.addFloat32(value_range[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, TD_ID, 0);
+    b.addFieldInt32(1, TD_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 1, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 0.01, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
+  const HS_VALUE_TYPE = 11;
+  const HS_ID = 12;
+  const SPEED_MIN = 0.1;
+  const SPEED_MAX = 10;
+
+  const build_hs_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("CUSTOM_Horizontal Speed");
+    const opt_offs = [
+      b.createString("HorizontalSpeed_Options_0"),
+      b.createString("HorizontalSpeed_Options_1"),
+    ];
+    b.startVector(4, opt_offs.length, 4);
+    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
+    const options_vec = b.endVector();
+    const value_range = [SPEED_MIN, SPEED_MAX, 1];
+    b.startVector(4, value_range.length, 4);
+    for (let i = value_range.length - 1; i >= 0; i--)
+      b.addFloat32(value_range[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, HS_ID, 0);
+    b.addFieldInt32(1, HS_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 1, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 0.1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
+  const VS_VALUE_TYPE = 12;
+  const VS_ID = 13;
+
+  const build_vs_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("CUSTOM_Vertical Speed");
+    const opt_offs = [
+      b.createString("VerticalSpeed_Options_0"),
+      b.createString("VerticalSpeed_Options_1"),
+    ];
+    b.startVector(4, opt_offs.length, 4);
+    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
+    const options_vec = b.endVector();
+    const value_range = [SPEED_MIN, SPEED_MAX, 1];
+    b.startVector(4, value_range.length, 4);
+    for (let i = value_range.length - 1; i >= 0; i--)
+      b.addFloat32(value_range[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, VS_ID, 0);
+    b.addFieldInt32(1, VS_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 1, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 0.1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
+  const LS_VALUE_TYPE = 13;
+  const LS_ID = 14;
+
+  const build_ls_entry = () => {
+    const b = new Builder(256);
+    const name_off = b.createString("CUSTOM_Longitudinal Speed");
+    const opt_offs = [
+      b.createString("LongitudinalSpeed_Options_0"),
+      b.createString("LongitudinalSpeed_Options_1"),
+    ];
+    b.startVector(4, opt_offs.length, 4);
+    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
+    const options_vec = b.endVector();
+    const value_range = [SPEED_MIN, SPEED_MAX, 1];
+    b.startVector(4, value_range.length, 4);
+    for (let i = value_range.length - 1; i >= 0; i--)
+      b.addFloat32(value_range[i]);
+    const vr_vec = b.endVector();
+    b.startObject(10);
+    b.addFieldInt32(0, LS_ID, 0);
+    b.addFieldInt32(1, LS_VALUE_TYPE, 0);
+    b.addFieldOffset(2, name_off, 0);
+    b.addFieldInt32(3, 1, 0);
+    b.addFieldOffset(4, options_vec, 0);
+    b.addFieldInt32(5, 0, 1);
+    b.addFieldOffset(7, vr_vec, 0);
+    b.addFieldInt8(8, 0, 0);
+    b.addFieldFloat32(9, 0.1, 0.1);
+    const root = b.endObject();
+    b.finish(root);
+    return b.asUint8Array();
+  };
+
   const custom_entry = PhotoSetup.getRootAsPhotoSetup(
     new ByteBuffer(build_custom_entry()),
   );
@@ -179,8 +369,32 @@ setTimeout(() => {
   const effects_entry = PhotoSetup.getRootAsPhotoSetup(
     new ByteBuffer(build_effects_entry()),
   );
+  const freeze_toggle_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_freeze_toggle_entry()),
+  );
+  const time_dilation_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_time_dilation_entry()),
+  );
+  const horizontal_speed_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_hs_entry()),
+  );
+  const vertical_speed_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_vs_entry()),
+  );
+  const longitudinal_speed_entry = PhotoSetup.getRootAsPhotoSetup(
+    new ByteBuffer(build_ls_entry()),
+  );
 
-  const extra_entries = [custom_entry, effects_entry, tod_entry];
+  const extra_entries = [
+    custom_entry,
+    effects_entry,
+    tod_entry,
+    freeze_toggle_entry,
+    time_dilation_entry,
+    horizontal_speed_entry,
+    vertical_speed_entry,
+    longitudinal_speed_entry,
+  ];
 
   const photo_original_get_config = configPhotoSetupByValueType.GetConfig.bind(
     configPhotoSetupByValueType,

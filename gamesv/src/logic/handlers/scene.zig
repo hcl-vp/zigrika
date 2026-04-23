@@ -126,7 +126,7 @@ pub fn onInitialSceneJoin(
         };
 
         scene.explore_tools_info.roulette = blk: {
-            const additional_roulette: []const i32 = &.{ 1015, 1029 };
+            const additional_roulette: []const i32 = &.{ 1015, 1029, 1009 };
 
             var list: std.ArrayList(i32) = .empty;
             for (assets.tables.explore_tools.items[0..3]) |tool| {
@@ -160,12 +160,14 @@ pub fn onInitialSceneJoin(
     }
 
     try scene.save(fs, alloc.gpa);
-    try events.enqueue(.scene_switch, .{});
+    try events.enqueue(.scene_switch, .{
+        .pending_flow = event.data.pending_flow,
+    });
     cur_scene.* = scene;
 }
 
 pub fn notifyJoinScene(
-    _: EventQueue.Dequeue(.scene_switch),
+    event: EventQueue.Dequeue(.scene_switch),
     events: *EventQueue,
     fs: *FileSystem,
     assets: *const Assets,
@@ -287,7 +289,9 @@ pub fn notifyJoinScene(
         .TransitionOption = .{},
     }, alloc.arena);
 
-    try events.enqueue(.after_scene_join, .{});
+    try events.enqueue(.after_scene_join, .{
+        .pending_flow = event.data.pending_flow,
+    });
 }
 
 pub fn formationUpdateNotify(
@@ -369,13 +373,26 @@ pub fn formationUpdateNotify(
 }
 
 pub fn afterSceneJoin(
-    _: EventQueue.Dequeue(.after_scene_join),
+    event: EventQueue.Dequeue(.after_scene_join),
     events: *EventQueue,
     conn: *Connection,
     fs: *FileSystem,
+    io: Io,
     player_id: PlayerID,
     alloc: mem.Alloc,
 ) !void {
+    try conn.push(pb.AfterJoinSceneNotify{}, alloc.arena);
+    try conn.push(pb.SwitchBattleModeNotify{}, alloc.arena);
+
+    const rtc: Io.Clock = .real;
+    const now_ms = rtc.now(io).toMilliseconds();
+    try conn.push(pb.TimeCheckNotify{
+        .ClientTime = 0,
+        .ServerTime = now_ms,
+        .ServerFlowTimestamp = now_ms,
+        .ServerCombatTime = now_ms,
+        .ServerStopTime = now_ms,
+    }, alloc.arena);
     try events.enqueue(.update_formations, .{});
 
     var formation_attrs: std.ArrayList(pb.FormationAttr) = .empty;
@@ -384,7 +401,7 @@ pub fn afterSceneJoin(
         .{ .AttrId = 10, .Ratio = 2400, .BaseMaxValue = 7000, .MaxValue = 15000, .CurrentValue = 7000 },
     });
     const formation_attr_notify: pb.FormationAttrNotify = .{
-        .Duration = 153485445843,
+        .Duration = 1534854458,
         .FormationAttrs = formation_attrs,
     };
     try conn.push(formation_attr_notify, alloc.arena);
@@ -400,8 +417,7 @@ pub fn afterSceneJoin(
     try conn.push(pb.JSPatchNotify{ .Content = watermark_js }, alloc.arena);
 
     const patch_files = [_][]const u8{
-        "assets/scripts/join_scene_patches/goon_camera_fix1.js",
-        "assets/scripts/join_scene_patches/goon_camera_fix2.js",
+        "assets/scripts/join_scene_patches/goon_camera_fix.js",
         "assets/scripts/join_scene_patches/bindata_patches.js",
         "assets/scripts/join_scene_patches/censorshipfix.js",
         "assets/scripts/join_scene_patches/debug_disable.js",
@@ -413,5 +429,15 @@ pub fn afterSceneJoin(
         const content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, path, alloc.gpa, Io.Limit.unlimited);
         defer alloc.gpa.free(content);
         try conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena);
+    }
+
+    // shitty solution for a shitty problem...
+    if (event.data.pending_flow) |flow| {
+        try conn.push(pb.FlowStartNotify{
+            .FlowIncId = flow.inc_id,
+            .FlowListName = flow.namespace,
+            .FlowId = flow.id,
+            .StateId = flow.state,
+        }, alloc.arena);
     }
 }

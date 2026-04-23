@@ -1,17 +1,17 @@
-const Components = @import("pb_components/Components.zig");
+const Components = @import("entity_components/Components.zig");
 
 pub const Vector = struct {
-    X: f32 = 0,
-    Y: f32 = 0,
-    Z: f32 = 0,
+    X: f32,
+    Y: f32,
+    Z: f32,
 };
 
-Id: i32 = 0,
-EntityId: i64 = 0,
-BlueprintType: []const u8 = &.{},
-InSleep: bool = false,
-IsHidden: bool = false,
-MapId: i32 = 0,
-AreaId: i32 = 0,
-Transform: []Vector = &.{},
-ComponentsData: Components = Components{},
+Id: i32,
+EntityId: i64,
+BlueprintType: []const u8,
+InSleep: bool,
+IsHidden: bool,
+MapId: i32,
+AreaId: i32,
+Transform: []Vector,
+ComponentsData: Components,

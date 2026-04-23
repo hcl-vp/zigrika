@@ -4,6 +4,10 @@ const mem = @import("../../mem.zig");
 const Transaction = @import("../handlers.zig").Transaction;
 const Assets = @import("../../data/Assets.zig");
 
+pub fn onMapTraceRequest(txn: *Transaction(pb.MapTraceRequest)) !void {
+    txn.respond(.{});
+}
+
 pub fn onMapTraceInfoRequest(txn: *Transaction(pb.MapTraceInfoRequest)) !void {
     txn.respond(.{});
 }
@@ -15,14 +19,33 @@ pub fn onMapUnlockFieldInfoRequest(
 ) !void {
     var fields: std.ArrayList(i32) = .empty;
 
-    for (assets.tables.area.items) |area| {
-        try fields.append(alloc.arena, area.AreaId);
+    for (assets.tables.map_fog.items) |fog| {
+        try fields.append(alloc.arena, fog.Fog);
     }
+
+    var multi_maps: std.ArrayList(i32) = .empty;
+    var map_blocks: std.ArrayList(i32) = .empty;
+
+    for (assets.tables.multi_map.items) |multi| {
+        try multi_maps.append(alloc.arena, multi.Id);
+    }
+    for (assets.tables.map_block_info.items) |block| {
+        try map_blocks.append(alloc.arena, block.BlockId);
+    }
+
+    try txn.conn.push(pb.MapUnlockDataNotify{
+        .UnlockMultiMapIds = multi_maps,
+        .UnlockMapBlockIds = map_blocks,
+    }, alloc.arena);
 
     txn.respond(.{
         .ErrorCode = .Success,
         .FieldId = fields,
     });
+}
+
+pub fn onExploreProgressRequest(txn: *Transaction(pb.ExploreProgressRequest)) !void {
+    txn.respond(.{});
 }
 
 pub fn onDarkCoastDeliveryRequest(txn: *Transaction(pb.DarkCoastDeliveryRequest)) !void {

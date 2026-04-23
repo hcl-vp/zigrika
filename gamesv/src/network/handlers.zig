@@ -37,6 +37,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/chat.zig"),
     @import("handlers/friend.zig"),
     @import("handlers/damage.zig"),
+    @import("handlers/flow.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 

@@ -9,6 +9,7 @@ const ExploreToolsInfo = @import("../fs/ExploreToolsInfo.zig");
 const file_util = @import("../fs/file_util.zig");
 const comp_util = @import("component/comp_util.zig");
 const EntityComponentStorage = @import("component/entity/EntityComponentStorage.zig");
+const PlayerSceneComponent = @import("component/player/PlayerSceneComponent.zig");
 const incr = @import("../fs/incr.zig");
 
 const Allocator = std.mem.Allocator;
@@ -294,6 +295,14 @@ pub fn save(scene: *Scene, fs: *FileSystem, gpa: Allocator) !void {
         const entity = scene.entities.get(i);
         try entity.save(arena.allocator(), fs, scene.player_id, scene.instance_id);
     }
+}
+
+pub fn saveLastScene(scene: *Scene, scene_comp: *PlayerSceneComponent, fs: *FileSystem, gpa: Allocator) !void {
+    var arena = std.heap.ArenaAllocator.init(gpa);
+    defer arena.deinit();
+
+    const last_scene_info = try std.fmt.allocPrint(arena.allocator(), "player/{}/last_scene", .{scene.player_id});
+    try comp_util.saveStruct(fs, scene_comp.last_scene_info, last_scene_info, arena.allocator());
 }
 
 pub fn saveEntity(

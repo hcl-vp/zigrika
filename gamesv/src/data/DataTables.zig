@@ -3,7 +3,6 @@ const std = @import("std");
 const Io = std.Io;
 const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
-const IndexMap = std.array_hash_map.Auto(i64, usize);
 const pb = @import("proto").pb;
 const WeaponItem = @import("../fs/WeaponItem.zig");
 
@@ -27,6 +26,10 @@ pub const Area = @import("tables/Area.zig");
 pub const InfrV2TreeBuild = @import("tables/InfrV2TreeBuild.zig");
 pub const Teleporter = @import("tables/Teleporter.zig");
 pub const Activity = @import("tables/Activity.zig");
+pub const MapFog = @import("tables/MapFog.zig");
+pub const MultiMap = @import("tables/MultiMap.zig");
+pub const MapBlockInfo = @import("tables/MapBlockInfo.zig");
+pub const Flow = @import("tables/Flow.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -49,6 +52,10 @@ area: Table(Area, "AreaId"),
 infr_v2_tree_build: Table(InfrV2TreeBuild, "Id"),
 teleporter: Table(Teleporter, "Id"),
 activity: Table(Activity, "Id"),
+map_fog: Table(MapFog, "Fog"),
+multi_map: Table(MultiMap, "Id"),
+map_block_info: Table(MapBlockInfo, "BlockId"),
+flow: Table(Flow, "Id"),
 
 fn loadTableItems(
     comptime T: type,
@@ -138,6 +145,13 @@ pub fn deinit(tables: *DataTables) void {
 }
 
 pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
+    const KeyType = @FieldType(T, key_field);
+    const IndexMap = switch (@typeInfo(KeyType)) {
+        .int, .comptime_int => std.array_hash_map.Auto(KeyType, usize),
+        .pointer => std.StringArrayHashMapUnmanaged(usize),
+        else => @compileError("unsupported key type: " ++ @typeName(KeyType)),
+    };
+
     return struct {
         pub const key = key_field;
         pub const init: @This() = .{ .items = &.{}, .index = .empty };
@@ -149,7 +163,7 @@ pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
         items: []const T,
         index: IndexMap,
 
-        pub fn getDataById(table: @This(), id: i64) ?T {
+        pub fn getDataById(table: @This(), id: KeyType) ?T {
             return if (table.index.get(id)) |i| table.items[i] else null;
         }
     };

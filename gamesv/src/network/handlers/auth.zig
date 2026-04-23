@@ -133,7 +133,7 @@ pub fn handleLoginRequest(ac: AuthContext(pb.LoginRequest), arena: Allocator, fs
     ac.player_id.* = account.player_id;
 
     try ac.respond(pb.LoginResponse{
-        .Timestamp = Io.Clock.real.now(fs.io).toSeconds(),
+        .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
     }, arena);
 }
 

@@ -9,10 +9,6 @@ const sliceToArrayList = @import("../../logic/component/entity/EntityComponentSt
 const Entity = Scene.Entity;
 const FileSystem = @import("common").FileSystem;
 
-pub fn onExploreProgressRequest(txn: *Transaction(pb.ExploreProgressRequest)) !void {
-    txn.respond(.{});
-}
-
 pub fn onEnterAreaRequest(txn: *Transaction(pb.EnterAreaRequest)) !void {
     txn.respond(.{ .Id = txn.message.Id });
 }

@@ -7,10 +7,12 @@ pub const namespaces: []const type = &.{
     @import("commands/entity.zig"),
     @import("commands/echo.zig"),
     @import("commands/help.zig"),
-    @import("commands/sequence_patch.zig"),
     @import("commands/photo.zig"),
     @import("commands/battle.zig"),
     @import("commands/attribute.zig"),
+    @import("commands/map.zig"),
+    @import("commands/flow.zig"),
+    @import("commands/js_patches.zig"),
 };
 
 fn parseArg(comptime T: type, s: []const u8) !T {
