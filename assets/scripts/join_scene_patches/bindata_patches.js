@@ -171,7 +171,7 @@ setTimeout(() => {
   };
 
   const FREEZE_VALUE_TYPE = 9;
-  const FREEZE_ID = 10;
+  const FREEZE_ID = 15;
 
   const build_freeze_toggle_entry = () => {
     const b = new Builder(512);
