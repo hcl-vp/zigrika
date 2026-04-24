@@ -76,7 +76,7 @@
     "Key": "DamageChangeAuto",
     "Name": "Pinball_Character_PropetyName_01",
     "IsPercent": true,
-    "Icon": "",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType1_S.T_IconRoleType1_S",
     "Desc": "Pinball_Character_PropetyDesc_01",
     "KscAttrType": 201
   },
@@ -85,7 +85,7 @@
     "Key": "DamageChangeStrong",
     "Name": "Pinball_Character_PropetyName_02",
     "IsPercent": true,
-    "Icon": "",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType3_S.T_IconRoleType3_S",
     "Desc": "Pinball_Character_PropetyDesc_02",
     "KscAttrType": 202
   },
@@ -94,7 +94,7 @@
     "Key": "DamageChangeSkill",
     "Name": "Pinball_Character_PropetyName_03",
     "IsPercent": true,
-    "Icon": "",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType4_S.T_IconRoleType4_S",
     "Desc": "Pinball_Character_PropetyDesc_03",
     "KscAttrType": 203
   },
@@ -103,7 +103,7 @@
     "Key": "DamageChangeSprint",
     "Name": "Pinball_Character_PropetyName_04",
     "IsPercent": true,
-    "Icon": "",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType2_S.T_IconRoleType2_S",
     "Desc": "Pinball_Character_PropetyDesc_04",
     "KscAttrType": 204
   },
@@ -119,7 +119,7 @@
   {
     "Id": 14,
     "Key": "HealEfficiency",
-    "Name": "Pinball_Character_PropetyName_05",
+    "Name": "PropertyIndex_35_Name",
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreencure_UI.T_Iconpropertygreencure_UI",
     "Desc": "",
@@ -137,10 +137,10 @@
   {
     "Id": 16,
     "Key": "EnergyRecoverSpeed",
-    "Name": "Pinball_Character_PropetyName_06",
-    "IsPercent": true,
-    "Icon": "",
-    "Desc": "",
-    "KscAttrType": 0
+    "Name": "Pinball_Character_PropetyName_07",
+    "IsPercent": false,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenenergy_UI.T_Iconpropertygreenenergy_UI",
+    "Desc": "Pinball_Character_PropetyDesc_07",
+    "KscAttrType": 72
   }
 ]

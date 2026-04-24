@@ -289,39 +289,21 @@
   },
   {
     "Id": 33,
-    "DataId": 5004,
+    "DataId": 5003,
     "TemplateId": 456850004,
-    "SimpleCombatSubtypeId": 5004,
+    "SimpleCombatSubtypeId": 5003,
     "AbsorbEffects": [],
     "ContentType": 2,
     "Deathrattle": 4
   },
   {
     "Id": 34,
-    "DataId": 5005,
+    "DataId": 5004,
     "TemplateId": 456850004,
-    "SimpleCombatSubtypeId": 5005,
+    "SimpleCombatSubtypeId": 5004,
     "AbsorbEffects": [],
     "ContentType": 2,
     "Deathrattle": 5
-  },
-  {
-    "Id": 35,
-    "DataId": 5006,
-    "TemplateId": 456850004,
-    "SimpleCombatSubtypeId": 5006,
-    "AbsorbEffects": [],
-    "ContentType": 2,
-    "Deathrattle": 6
-  },
-  {
-    "Id": 36,
-    "DataId": 5007,
-    "TemplateId": 456850004,
-    "SimpleCombatSubtypeId": 5007,
-    "AbsorbEffects": [],
-    "ContentType": 2,
-    "Deathrattle": 7
   },
   {
     "Id": 0,

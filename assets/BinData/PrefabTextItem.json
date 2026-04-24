@@ -20631,7 +20631,7 @@
     "ItemId": "1597082196",
     "PrefabPathHash": "1461558940",
     "ItemPath": "UiItem_RoleSkillC/TxtSkillLevel",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_1597082196_Text"
   },
   {
     "ItemId": "1604079449",
@@ -41781,7 +41781,7 @@
     "ItemId": "945009647",
     "PrefabPathHash": "169935796",
     "ItemPath": "UiItem_MonthlyCardStore/PnlMonthlyCard/PnlVLayout/TxtCloudExplain",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_945009647_Text"
   },
   {
     "ItemId": "3164872586",
@@ -79821,7 +79821,7 @@
     "ItemId": "224701302",
     "PrefabPathHash": "1097099310",
     "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/UiItem_StripGBtn/PnlLock/PnlKeyLayout/TxtActivated",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_224701302_Text"
   },
   {
     "ItemId": "3584958494",
@@ -81165,7 +81165,7 @@
     "ItemId": "2309550132",
     "PrefabPathHash": "1453632446",
     "ItemPath": "UiItem_DevelopmentPeriodItemB/PnlTowerMovingScore/PnlList/PnlItem/PnlRoundLayout/TxtRoundTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2309550132_Text"
   },
   {
     "ItemId": "1160186860",
@@ -81177,7 +81177,7 @@
     "ItemId": "3176248625",
     "PrefabPathHash": "1453632446",
     "ItemPath": "UiItem_DevelopmentPeriodItemB/PnlTowerMovingScore/PnlList/PnlItem/PnlScoreLayout/TxtScoreTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_3176248625_Text"
   },
   {
     "ItemId": "1312342161",
@@ -83907,7 +83907,7 @@
     "ItemId": "2175916716",
     "PrefabPathHash": "4076698753",
     "ItemPath": "PC_UiView_VisionAtlas_Prefab/UiView_VisionAtlas_Prefab/UiItem_LayerUi/UiItem_VisionAtlas2/UiItem_LayerUi/ContentRight/DefaultScrollView/Viewport/Content/PnlContent/PnlVLayout/PnlEquipment/PnlCost/PnlNum/TxtCost",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2175916716_Text"
   },
   {
     "ItemId": "487518068",
@@ -83919,7 +83919,7 @@
     "ItemId": "572205745",
     "PrefabPathHash": "4076698753",
     "ItemPath": "PC_UiView_VisionAtlas_Prefab/UiView_VisionAtlas_Prefab/UiItem_LayerUi/UiItem_VisionAtlas2/UiItem_LayerUi/PnlHLayout/BtnConfirmB/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_572205745_Text"
   },
   {
     "ItemId": "524601258",
@@ -85053,7 +85053,7 @@
     "ItemId": "1611792364",
     "PrefabPathHash": "1097099310",
     "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlContent/PnlLock/PnlKeyLayout/TxtActivated",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_1611792364_Text"
   },
   {
     "ItemId": "2164195657",
@@ -87705,7 +87705,7 @@
     "ItemId": "2045967011",
     "PrefabPathHash": "548555167",
     "ItemPath": "UiItem_WeaponDetailsB/PanelInf/PanelDetail/PnlTop/name/SprMax/TxtLvMax",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2045967011_Text"
   },
   {
     "ItemId": "2972750464",
@@ -87976,5 +87976,11 @@
     "PrefabPathHash": "3393478576",
     "ItemPath": "UiView_WuwuLogisticsMissionMain/UiItem_LayerUi_Prefab/PnlPivot/PnlEmptyState/TxtUnlockTime",
     "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1654509682",
+    "PrefabPathHash": "2556703957",
+    "ItemPath": "UiItem_RoleDeviceInfo/PnlInfo/PnlDesc/PnlUnder/BtnConfirmB/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_1654509682_Text"
   }
 ]

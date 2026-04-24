@@ -25556,7 +25556,7 @@
     "IsFullScreen": false,
     "CommonPopBg": -1,
     "CommonPopBgKey": "",
-    "ScenePath": "/Game/Aki/Map/UISceneLevel/UI_Scene/UL_UIMap_Monster",
+    "ScenePath": "/Game/Aki/Map/UISceneLevel/UI_Scene/UL_UIMap_Character",
     "IsPermanent": false,
     "StartBlackScreen": {
       "ShowAnimName": "",

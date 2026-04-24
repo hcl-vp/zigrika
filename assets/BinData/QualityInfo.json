@@ -3,7 +3,7 @@
     "Id": 1,
     "Name": "QualityInfo_1_Name",
     "TextColor": "efece1",
-    "DropColor": "efece1",
+    "DropColor": "f9ffff",
     "FrameIconColor": "b3bbc0",
     "BackgroundColor": "7d7e80",
     "PhantomColor": "FFFFFFFF",
@@ -50,13 +50,16 @@
     "PayShopItemQualityTexture": "/Game/Aki/UI/UIResources/UiShop/Image/PaidGift/T_PaidGiftQualityYellow02.T_PaidGiftQualityYellow02",
     "PayShopItemQualityLightTexture": "/Game/Aki/UI/UIResources/UiShop/Image/PaidGift/T_PaidGiftQualityYellow02Light.T_PaidGiftQualityYellow02Light",
     "PayShopItemLineColor": "f7eba6",
-    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGray.T_VisionQuailtyGray"
+    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGray.T_VisionQuailtyGray",
+    "VisionNameColor": "",
+    "ItemTipsEffectColor": "b3bbc0",
+    "TypeAItemTipsEffectColor": "7bcf7d"
   },
   {
     "Id": 2,
     "Name": "QualityInfo_2_Name",
     "TextColor": "efece1",
-    "DropColor": "5cc35e",
+    "DropColor": "7bcf7dff",
     "FrameIconColor": "7bcf7d",
     "BackgroundColor": "569463",
     "PhantomColor": "95FF8DFF",
@@ -103,13 +106,16 @@
     "PayShopItemQualityTexture": "/Game/Aki/UI/UIResources/UiShop/Image/PaidGift/T_PaidGiftQualityYellow03.T_PaidGiftQualityYellow03",
     "PayShopItemQualityLightTexture": "/Game/Aki/UI/UIResources/UiShop/Image/PaidGift/T_PaidGiftQualityYellow03Light.T_PaidGiftQualityYellow03Light",
     "PayShopItemLineColor": "f7eba6",
-    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGreen.T_VisionQuailtyGreen"
+    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGreen.T_VisionQuailtyGreen",
+    "VisionNameColor": "7bcf7dff",
+    "ItemTipsEffectColor": "7bcf7d",
+    "TypeAItemTipsEffectColor": "5198ff"
   },
   {
     "Id": 3,
     "Name": "QualityInfo_3_Name",
     "TextColor": "efece1",
-    "DropColor": "59b4d3",
+    "DropColor": "5198ffff",
     "FrameIconColor": "5198ff",
     "BackgroundColor": "5a73c7",
     "PhantomColor": "8DE2FFFF",
@@ -156,13 +162,16 @@
     "PayShopItemQualityTexture": "",
     "PayShopItemQualityLightTexture": "",
     "PayShopItemLineColor": "",
-    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyBlue.T_VisionQuailtyBlue"
+    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyBlue.T_VisionQuailtyBlue",
+    "VisionNameColor": "5198ffff",
+    "ItemTipsEffectColor": "5198ff",
+    "TypeAItemTipsEffectColor": "c85cff"
   },
   {
     "Id": 4,
     "Name": "QualityInfo_4_Name",
     "TextColor": "ca6dff",
-    "DropColor": "ca6dff",
+    "DropColor": "c85cffff",
     "FrameIconColor": "c85cff",
     "BackgroundColor": "c759c1",
     "PhantomColor": "B279FFFF",
@@ -209,13 +218,16 @@
     "PayShopItemQualityTexture": "",
     "PayShopItemQualityLightTexture": "",
     "PayShopItemLineColor": "",
-    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyPurple.T_VisionQuailtyPurple"
+    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyPurple.T_VisionQuailtyPurple",
+    "VisionNameColor": "c85cffff",
+    "ItemTipsEffectColor": "c85cff",
+    "TypeAItemTipsEffectColor": "f9ee6e"
   },
   {
     "Id": 5,
     "Name": "QualityInfo_5_Name",
     "TextColor": "ffe65a",
-    "DropColor": "ffe65a",
+    "DropColor": "f7eba6ff",
     "FrameIconColor": "f7eba6",
     "BackgroundColor": "e8cb32ff",
     "PhantomColor": "FFB04AFF",
@@ -262,6 +274,9 @@
     "PayShopItemQualityTexture": "",
     "PayShopItemQualityLightTexture": "",
     "PayShopItemLineColor": "",
-    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGold.T_VisionQuailtyGold"
+    "VisionGetTipsBgPath": "/Game/Aki/UI/UIResources/UiTips/Image/VisionlRewardTip/T_VisionQuailtyGold.T_VisionQuailtyGold",
+    "VisionNameColor": "f7eba6ff",
+    "ItemTipsEffectColor": "f9ee6e",
+    "TypeAItemTipsEffectColor": "fe3c43"
   }
 ]

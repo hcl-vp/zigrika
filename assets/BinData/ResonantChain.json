@@ -6537,14 +6537,16 @@
     "BuffIds": [
       1108101102,
       1108501401,
-      1108501406
+      1108501406,
+      1108501420
     ],
     "AddProp": [],
     "ActivateConsume": {
       "10001108": 1
     },
     "AttributesDescriptionParams": [
-      "140%",
+      "125%",
+      "3",
       "4",
       "3",
       "2",
@@ -6564,7 +6566,8 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1108101103,
-      1108501501
+      1108501501,
+      1108501505
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -6641,11 +6644,9 @@
       "10001108": 1
     },
     "AttributesDescriptionParams": [
-      "30%",
+      "500%",
       "40%",
-      "25%",
-      "3",
-      "2"
+      "25%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_FeixueM6_UI.T_IconDevice_FeixueM6_UI"
   },
@@ -6700,7 +6701,7 @@
       "15",
       "10",
       "1%",
-      "25",
+      "20",
       "15",
       "100%",
       "300",

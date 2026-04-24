@@ -24,7 +24,8 @@
     "AttributesDescription": "",
     "ItemAccess": [],
     "ShowInBag": false,
-    "ObtainedShowDescription": ""
+    "ObtainedShowDescription": "",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconMotoDIYSticker732/T_MotoDIYStickerIcon732_56.T_MotoDIYStickerIcon732_56"
   },
   {
     "Id": 89400002,
@@ -53,6 +54,7 @@
       8631027
     ],
     "ShowInBag": true,
-    "ObtainedShowDescription": "MotorFrame_FunctionDes_01"
+    "ObtainedShowDescription": "MotorFrame_FunctionDes_01",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconMotoDIYSticker732/T_MotoDIYStickerIcon732_91.T_MotoDIYStickerIcon732_91"
   }
 ]

@@ -144089,12 +144089,12 @@
     "Max": 3,
     "Min": 0,
     "bListenAttr": true,
-    "bSoftFollow": false,
+    "bSoftFollow": true,
     "bLockRevolution": false,
     "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
+      "X": 1,
+      "Y": 1,
+      "Z": 1
     },
     "LockCamera": false,
     "InterpSpeed": 5,
@@ -144175,7 +144175,7 @@
     "CueType": 0,
     "Comp": 1,
     "CompName": "Mesh",
-    "Socket": "HitCase",
+    "Socket": "Bip001Spine1",
     "Location": {
       "X": 0,
       "Y": 0,
@@ -144398,65 +144398,7 @@
   },
   {
     "Id": 1211210031,
-    "Path": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
-    "CueType": 24,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "1"
-    ],
-    "Group": 0,
-    "Priority": 100
-  },
-  {
-    "Id": 1211210041,
-    "Path": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenshield_UI.T_Iconpropertygreenshield_UI",
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconDaniyaBuff05.T_IconDaniyaBuff05",
     "CueType": 2,
     "Comp": 0,
     "CompName": "Mesh",
@@ -144507,7 +144449,67 @@
     ],
     "Resources": [],
     "Parameters": [
-      "2"
+      "1",
+      "F0744E7F"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1211210041,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconDaniyaBuff04.T_IconDaniyaBuff04",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0",
+      "F0744E7F"
     ],
     "Group": 0,
     "Priority": 100
@@ -145661,6 +145663,179 @@
     "Resources": [],
     "Parameters": [
       "play_vo_feixue_skill_skill06_c"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1211210061,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconDaniyaBuff06.T_IconDaniyaBuff06",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "F0744E7F"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1211300801,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Daniya/DA_Fx_Daniya_R1b_Body_Dis01.DA_Fx_Daniya_R1b_Body_Dis01",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1108009014,
+    "Path": "",
+    "CueType": 21,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "play_vo_feixue_atk_heavyatk02_pro"
     ],
     "Group": 0,
     "Priority": 0

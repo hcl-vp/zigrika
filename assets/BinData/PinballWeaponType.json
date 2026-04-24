@@ -15,13 +15,13 @@
     "Id": 3,
     "Name": "Pinball_Weapon_type03",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/OutSide/SP_IconTitle05.SP_IconTitle05",
-    "Icon2": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeaponType/T_IconWeaponType4.T_IconWeaponType4"
+    "Icon2": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeaponType/T_IconWeaponType3.T_IconWeaponType3"
   },
   {
     "Id": 4,
     "Name": "Pinball_Weapon_type04",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/OutSide/SP_IconTitle03.SP_IconTitle03",
-    "Icon2": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeaponType/T_IconWeaponType3.T_IconWeaponType3"
+    "Icon2": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeaponType/T_IconWeaponType4.T_IconWeaponType4"
   },
   {
     "Id": 5,

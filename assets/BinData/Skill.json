@@ -17288,11 +17288,7 @@
       11081070020,
       11081070011,
       11081070021,
-      11081080010,
-      11081080020,
       11081080030,
-      11081080011,
-      11081080021,
       11081080031,
       11081410010,
       11081410020,
@@ -17368,24 +17364,15 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [
-      11080310010,
-      11080310011,
-      11081310010,
-      11081310020,
-      11081311010,
-      11081311020,
-      11081312010,
-      11081312020,
-      11081313010,
-      11081313020,
-      11081310011,
-      11081310021,
-      11081311011,
-      11081311021,
-      11081312011,
-      11081312021,
-      11081313011,
-      11081313021
+      1108031001,
+      1108131001,
+      1108131002,
+      1108131101,
+      1108131102,
+      1108131201,
+      1108131202,
+      1108131301,
+      1108131302
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeixue/SP_IconFeixueC1.SP_IconFeixueC1",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinA1_UI.T_IconYinlinA1_UI",
@@ -17393,16 +17380,10 @@
     "SkillDescribe": "Skill_1005203_SkillDescribe",
     "SkillResume": "Skill_1005203_SkillResume",
     "SkillTagList": [],
-    "SkillDetailNum": [
-      "1",
-      "0.9"
-    ],
+    "SkillDetailNum": [],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005203_SkillDescribe",
-    "MultiSkillDetailNum": [
-      "1",
-      "0.9"
-    ]
+    "MultiSkillDetailNum": []
   },
   {
     "Id": 1005204,
@@ -17805,13 +17786,21 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "30%",
-      "45"
+      "10",
+      "100%",
+      "10%",
+      "8",
+      "40"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005305_SkillDescribe",
     "MultiSkillDetailNum": [
       "30%",
-      "45"
+      "10",
+      "100%",
+      "10%",
+      "8",
+      "40"
     ]
   },
   {

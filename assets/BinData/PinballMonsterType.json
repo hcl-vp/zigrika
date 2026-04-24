@@ -9,8 +9,8 @@
     "Desc": "MonsterInfo_310000160_UndiscoveredDes",
     "RecommendBd": 1,
     "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_guang/CatapultStory_Lengjing_guang.CatapultStory_Lengjing_guang-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_guang/CatapultStory_Lengjing_guang.CatapultStory_Lengjing_guang-data",
     "DisplayedSkillList": []
   },
   {
@@ -23,8 +23,8 @@
     "Desc": "MonsterInfo_310000170_UndiscoveredDes",
     "RecommendBd": 1,
     "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_yanmie/CatapultStory_Lengjing_yanmie.CatapultStory_Lengjing_yanmie-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_yanmie/CatapultStory_Lengjing_yanmie.CatapultStory_Lengjing_yanmie-data",
     "DisplayedSkillList": []
   },
   {
@@ -37,8 +37,8 @@
     "Desc": "MonsterInfo_310000140_UndiscoveredDes",
     "RecommendBd": 1,
     "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_bing/CatapultStory_Lengjing_bing.CatapultStory_Lengjing_bing-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_bing/CatapultStory_Lengjing_bing.CatapultStory_Lengjing_bing-data",
     "DisplayedSkillList": []
   },
   {
@@ -49,10 +49,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead28.T_IconMonsterHead28",
     "Desc": "MonsterInfo_310000510_UndiscoveredDes",
-    "RecommendBd": 2,
+    "RecommendBd": 1,
     "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_feng/CatapultStory_Lengjing_feng.CatapultStory_Lengjing_feng-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_feng/CatapultStory_Lengjing_feng.CatapultStory_Lengjing_feng-data",
     "DisplayedSkillList": []
   },
   {
@@ -63,10 +63,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead27.T_IconMonsterHead27",
     "Desc": "MonsterInfo_310000150_UndiscoveredDes",
-    "RecommendBd": 3,
+    "RecommendBd": 1,
     "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_huo/CatapultStory_Lengjing_huo.CatapultStory_Lengjing_huo-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Lengjing_huo/CatapultStory_Lengjing_huo.CatapultStory_Lengjing_huo-data",
     "DisplayedSkillList": []
   },
   {
@@ -91,10 +91,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead40.T_IconMonsterHead40",
     "Desc": "MonsterInfo_310000400_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "RecommendBd": 2,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_haide/CatapultStory_Fulingou_haide.CatapultStory_Fulingou_haide-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_haide/CatapultStory_Fulingou_haide.CatapultStory_Fulingou_haide-data",
     "DisplayedSkillList": []
   },
   {
@@ -105,10 +105,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead39.T_IconMonsterHead39",
     "Desc": "MonsterInfo_310000410_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-atlas",
-    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity25/Pasture/ActivityPastureEcho/Pasture_Echo10/Pasture_Echo10.Pasture_Echo10-data",
+    "RecommendBd": 2,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_leifu/CatapultStory_Fulingou_leifu.CatapultStory_Fulingou_leifu-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_leifu/CatapultStory_Fulingou_leifu.CatapultStory_Fulingou_leifu-data",
     "DisplayedSkillList": []
   },
   {
@@ -120,9 +120,9 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead38.T_IconMonsterHead38",
     "Desc": "MonsterInfo_310000420_UndiscoveredDes",
     "RecommendBd": 2,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_laite/CatapultStory_Fulingou_laite.CatapultStory_Fulingou_laite-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou_laite/CatapultStory_Fulingou_laite.CatapultStory_Fulingou_laite-data",
     "DisplayedSkillList": []
   },
   {
@@ -134,9 +134,9 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead29.T_IconMonsterHead29",
     "Desc": "MonsterInfo_310000590_UndiscoveredDes",
     "RecommendBd": 3,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_guang/CatapultStory_Xiaolong_guang.CatapultStory_Xiaolong_guang-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_guang/CatapultStory_Xiaolong_guang.CatapultStory_Xiaolong_guang-data",
     "DisplayedSkillList": []
   },
   {
@@ -147,10 +147,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead31.T_IconMonsterHead31",
     "Desc": "MonsterInfo_310000600_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_yanmie/CatapultStory_Xiaolong_yanmie.CatapultStory_Xiaolong_yanmie-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_yanmie/CatapultStory_Xiaolong_yanmie.CatapultStory_Xiaolong_yanmie-data",
     "DisplayedSkillList": []
   },
   {
@@ -161,10 +161,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead30.T_IconMonsterHead30",
     "Desc": "MonsterInfo_310000570_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_bing/CatapultStory_Xiaolong_bing.CatapultStory_Xiaolong_bing-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_bing/CatapultStory_Xiaolong_bing.CatapultStory_Xiaolong_bing-data",
     "DisplayedSkillList": []
   },
   {
@@ -175,10 +175,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead34.T_IconMonsterHead34",
     "Desc": "MonsterInfo_310000550_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_feng/CatapultStory_Xiaolong_feng.CatapultStory_Xiaolong_feng-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_feng/CatapultStory_Xiaolong_feng.CatapultStory_Xiaolong_feng-data",
     "DisplayedSkillList": []
   },
   {
@@ -189,10 +189,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead32.T_IconMonsterHead32",
     "Desc": "MonsterInfo_310000580_UndiscoveredDes",
-    "RecommendBd": 2,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_huo/CatapultStory_Xiaolong_huo.CatapultStory_Xiaolong_huo-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_huo/CatapultStory_Xiaolong_huo.CatapultStory_Xiaolong_huo-data",
     "DisplayedSkillList": []
   },
   {
@@ -204,9 +204,9 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead33.T_IconMonsterHead33",
     "Desc": "MonsterInfo_310000560_UndiscoveredDes",
     "RecommendBd": 3,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_lei/CatapultStory_Xiaolong_lei.CatapultStory_Xiaolong_lei-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Xiaolong_lei/CatapultStory_Xiaolong_lei.CatapultStory_Xiaolong_lei-data",
     "DisplayedSkillList": []
   },
   {
@@ -217,10 +217,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead37.T_IconMonsterHead37",
     "Desc": "MonsterInfo_310000780_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Mifeng_shou/CatapultStory_Mifeng_shou.CatapultStory_Mifeng_shou-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Mifeng_shou/CatapultStory_Mifeng_shou.CatapultStory_Mifeng_shou-data",
     "DisplayedSkillList": []
   },
   {
@@ -231,10 +231,10 @@
     "BodyType": 1,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead35.T_IconMonsterHead35",
     "Desc": "MonsterInfo_310000770_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Mifeng_pang/CatapultStory_Mifeng_pang.CatapultStory_Mifeng_pang-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_minion/CatapultStory_Mifeng_pang/CatapultStory_Mifeng_pang.CatapultStory_Mifeng_pang-data",
     "DisplayedSkillList": []
   },
   {
@@ -246,7 +246,7 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead17.T_IconMonsterHead17",
     "Desc": "MonsterInfo_310000330_UndiscoveredDes",
     "RecommendBd": 1,
-    "SpineBg": "",
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "SpineAtlasPath": "",
     "SpineSkeletonDataPath": "",
     "DisplayedSkillList": []
@@ -258,11 +258,11 @@
     "RiskType": 2,
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead14.T_IconMonsterHead14",
-    "Desc": "",
-    "RecommendBd": 2,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "Desc": "Pinball_Monster_Desc01",
+    "RecommendBd": 1,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Wuselengjing/CatapultStory_Wuselengjing.CatapultStory_Wuselengjing-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Wuselengjing/CatapultStory_Wuselengjing.CatapultStory_Wuselengjing-data",
     "DisplayedSkillList": []
   },
   {
@@ -273,10 +273,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead11.T_IconMonsterHead11",
     "Desc": "MonsterInfo_320000280_UndiscoveredDes",
-    "RecommendBd": 3,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 2,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou.CatapultStory_Fulingou-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Fulingou/CatapultStory_Fulingou.CatapultStory_Fulingou-data",
     "DisplayedSkillList": []
   },
   {
@@ -285,12 +285,12 @@
     "Name": "MonsterInfo_320000340_Name",
     "RiskType": 2,
     "BodyType": 2,
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead01.T_IconMonsterHead01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead42.T_IconMonsterHead42",
     "Desc": "MonsterInfo_320000340_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Jiaoe/CatapultStory_Jiaoe.CatapultStory_Jiaoe-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Jiaoe/CatapultStory_Jiaoe.CatapultStory_Jiaoe-data",
     "DisplayedSkillList": []
   },
   {
@@ -301,10 +301,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead10.T_IconMonsterHead10",
     "Desc": "MonsterInfo_320000290_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Liulidaoling/CatapultStory_Liulidaoling.CatapultStory_Liulidaoling-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Liulidaoling/CatapultStory_Liulidaoling.CatapultStory_Liulidaoling-data",
     "DisplayedSkillList": []
   },
   {
@@ -315,10 +315,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead13.T_IconMonsterHead13",
     "Desc": "MonsterInfo_320000540_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Tansuizhongji/CatapultStory_Tansuizhongji.CatapultStory_Tansuizhongji-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Tansuizhongji/CatapultStory_Tansuizhongji.CatapultStory_Tansuizhongji-data",
     "DisplayedSkillList": []
   },
   {
@@ -329,10 +329,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead12.T_IconMonsterHead12",
     "Desc": "MonsterInfo_320000530_UndiscoveredDes",
-    "RecommendBd": 2,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Niu/CatapultStory_Niu.CatapultStory_Niu-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Niu/CatapultStory_Niu.CatapultStory_Niu-data",
     "DisplayedSkillList": []
   },
   {
@@ -343,10 +343,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead09.T_IconMonsterHead09",
     "Desc": "MonsterInfo_320000500_UndiscoveredDes",
-    "RecommendBd": 3,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 4,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Shuangziclaw/CatapultStory_Shuangziclaw.CatapultStory_Shuangziclaw-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Shuangziclaw/CatapultStory_Shuangziclaw.CatapultStory_Shuangziclaw-data",
     "DisplayedSkillList": []
   },
   {
@@ -357,10 +357,10 @@
     "BodyType": 2,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead08.T_IconMonsterHead08",
     "Desc": "MonsterInfo_320000490_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "",
-    "SpineAtlasPath": "",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 4,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Shuangzigun/CatapultStory_Shuangzigun.CatapultStory_Shuangzigun-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Elite/CatapultStory_Shuangzigun/CatapultStory_Shuangzigun.CatapultStory_Shuangzigun-data",
     "DisplayedSkillList": []
   },
   {
@@ -371,15 +371,11 @@
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead07.T_IconMonsterHead07",
     "Desc": "MonsterInfo_340000070_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wuwangzhe/CatapultStory_Wuwangzhe.CatapultStory_Wuwangzhe-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wuwangzhe/CatapultStory_Wuwangzhe.CatapultStory_Wuwangzhe-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "RecommendBd": 2,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wuwangzhe/CatapultStory_Wuwangzhe.CatapultStory_Wuwangzhe-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wuwangzhe/CatapultStory_Wuwangzhe.CatapultStory_Wuwangzhe-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 28,
@@ -389,15 +385,11 @@
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead02.T_IconMonsterHead02",
     "Desc": "MonsterInfo_340000100_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hekate/CatapultStory_Hekate.CatapultStory_Hekate-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hekate/CatapultStory_Hekate.CatapultStory_Hekate-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "RecommendBd": 2,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hekate/CatapultStory_Hekate.CatapultStory_Hekate-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hekate/CatapultStory_Hekate.CatapultStory_Hekate-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 29,
@@ -407,15 +399,11 @@
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead04.T_IconMonsterHead04",
     "Desc": "MonsterInfo_340000140_UndiscoveredDes",
-    "RecommendBd": 2,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Rongyaoshixiang/CatapultStory_Rongyaoshixiang.CatapultStory_Rongyaoshixiang-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Rongyaoshixiang/CatapultStory_Rongyaoshixiang.CatapultStory_Rongyaoshixiang-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "RecommendBd": 3,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Rongyaoshixiang/CatapultStory_Rongyaoshixiang.CatapultStory_Rongyaoshixiang-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Rongyaoshixiang/CatapultStory_Rongyaoshixiang.CatapultStory_Rongyaoshixiang-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 30,
@@ -426,14 +414,10 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead05.T_IconMonsterHead05",
     "Desc": "MonsterInfo_340000170_UndiscoveredDes",
     "RecommendBd": 3,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hanpishenwang/CatapultStory_Hanpishenwang.CatapultStory_Hanpishenwang-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hanpishenwang/CatapultStory_Hanpishenwang.CatapultStory_Hanpishenwang-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hanpishenwang/CatapultStory_Hanpishenwang.CatapultStory_Hanpishenwang-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Hanpishenwang/CatapultStory_Hanpishenwang.CatapultStory_Hanpishenwang-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 31,
@@ -443,15 +427,11 @@
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead01.T_IconMonsterHead01",
     "Desc": "MonsterInfo_340000210_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Haiweixia/CatapultStory_Haiweixia.CatapultStory_Haiweixia-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Haiweixia/CatapultStory_Haiweixia.CatapultStory_Haiweixia-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Haiweixia/CatapultStory_Haiweixia.CatapultStory_Haiweixia-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Haiweixia/CatapultStory_Haiweixia.CatapultStory_Haiweixia-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 32,
@@ -461,28 +441,24 @@
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead03.T_IconMonsterHead03",
     "Desc": "MonsterInfo_340000220_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Luxinjihai/CatapultStory_Luxinjihai.CatapultStory_Luxinjihai-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Luxinjihai/CatapultStory_Luxinjihai.CatapultStory_Luxinjihai-data",
-    "SpineSkeletonDataPath": "",
-    "DisplayedSkillList": [
-      1,
-      2,
-      3
-    ]
+    "RecommendBd": 4,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Luxinjihai/CatapultStory_Luxinjihai.CatapultStory_Luxinjihai-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Luxinjihai/CatapultStory_Luxinjihai.CatapultStory_Luxinjihai-data",
+    "DisplayedSkillList": []
   },
   {
     "Id": 33,
     "TemplateId": 456850000,
-    "Name": "MonsterInfo_320000540_Name",
+    "Name": "MonsterInfo_340000260_Name",
     "RiskType": 3,
     "BodyType": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconMonsterHead/T_IconMonsterHead06.T_IconMonsterHead06",
     "Desc": "MonsterInfo_320000540_UndiscoveredDes",
-    "RecommendBd": 1,
-    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wumingtansuozhe/CatapultStory_Wumingtansuozhe.CatapultStory_Wumingtansuozhe-atlas",
-    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wumingtansuozhe/CatapultStory_Wumingtansuozhe.CatapultStory_Wumingtansuozhe-data",
-    "SpineSkeletonDataPath": "",
+    "RecommendBd": 5,
+    "SpineBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
+    "SpineAtlasPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wumingtansuozhe/CatapultStory_Wumingtansuozhe.CatapultStory_Wumingtansuozhe-atlas",
+    "SpineSkeletonDataPath": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Enemy/CatapultStory_Boss/CatapultStory_Wumingtansuozhe/CatapultStory_Wumingtansuozhe.CatapultStory_Wumingtansuozhe-data",
     "DisplayedSkillList": []
   },
   {

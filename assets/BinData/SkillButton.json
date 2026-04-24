@@ -8200,7 +8200,8 @@
     "EnableTags": [],
     "DisableTags": [
       -2044964178,
-      -592555498
+      -592555498,
+      182294104
     ],
     "DisableSkillIdTags": {},
     "VisibleTags": [],
@@ -8628,7 +8629,7 @@
     "ActionType": 4,
     "SkillId": 1108001,
     "SkillIdTagMap": {
-      "1110335489": 1108122,
+      "-1434695101": 1108122,
       "-954798390": 1108005
     },
     "SkillIconTags": [
@@ -8655,8 +8656,8 @@
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
       "917667812": 1002,
-      "1110335489": 1108001,
       "-954798390": 1108002,
+      "-1434695101": 1108001,
       "-1148449449": 1108005
     },
     "CustomHandleId": 0,
@@ -8742,16 +8743,24 @@
           60,
           59
         ]
+      },
+      "-1548441912": {
+        "ArrayInt": [
+          0,
+          0
+        ]
       }
     },
     "AttributeEnableTags": [],
     "FormationAttributeIdTagMap": {},
-    "MaxAttributeBurstEffectId": 1108006,
+    "MaxAttributeBurstEffectId": 0,
     "CdCompletedEffectId": 0,
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
-      "1308453898": 1108003
+      "1308453898": 1108003,
+      "-258147035": 291003,
+      "-1548441912": 1108006
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []

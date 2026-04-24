@@ -8,25 +8,24 @@
     "DailyLevelFuncId": 10151,
     "RoleFuncId": 10152,
     "ShopFuncId": 10153,
-    "DefaultDailyRandomId": 1003,
+    "DefaultDailyRandomId": 1002,
     "ExpItemId": 89500001,
     "WeaponFragmentId": 89500002,
     "MainAttrShowList": [
       2,
       3,
-      5,
       6,
       7,
-      14
+      14,
+      16
     ],
     "AttrShowList": [
       2,
       3,
-      4,
-      5,
       6,
       7,
-      14
+      14,
+      16
     ],
     "BattleAttrShowList": [
       2,
@@ -37,7 +36,8 @@
       10,
       11,
       12,
-      14
+      14,
+      16
     ],
     "ForceKickBallTime": 10
   }

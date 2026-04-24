@@ -7,18 +7,14 @@
       31,
       32,
       33,
-      34,
-      35,
-      36
+      34
     ],
     "SpawnDropWeights": [
-      10,
-      20,
-      20,
-      20,
-      10,
-      5,
-      10
+      65,
+      22,
+      2,
+      7,
+      4
     ],
     "BuffIdList": []
   },
@@ -56,24 +52,6 @@
     "SpawnDropWeights": [],
     "BuffIdList": [
       4
-    ]
-  },
-  {
-    "Id": 6,
-    "Type": 2,
-    "SpawnDrops": [],
-    "SpawnDropWeights": [],
-    "BuffIdList": [
-      5
-    ]
-  },
-  {
-    "Id": 7,
-    "Type": 2,
-    "SpawnDrops": [],
-    "SpawnDropWeights": [],
-    "BuffIdList": [
-      6
     ]
   }
 ]

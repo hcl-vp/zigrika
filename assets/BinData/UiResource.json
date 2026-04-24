@@ -27163,5 +27163,35 @@
     "Id": "UiItem_ShopSkinMotoFeixue",
     "Path": "/Game/Aki/UI/UIResources/UiShop/Prefabs/ShopSkin/UiItem_ShopSkinMotoFeixue.UiItem_ShopSkinMotoFeixue",
     "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum1",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum1.SP_DeviceNum1",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum2",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum2.SP_DeviceNum2",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum3",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum3.SP_DeviceNum3",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum4",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum4.SP_DeviceNum4",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum5",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum5.SP_DeviceNum5",
+    "PcPath": ""
+  },
+  {
+    "Id": "SP_DeviceNum6",
+    "Path": "/Game/Aki/UI/UIResources/UiRole/Atlas/RoleDeviceList/SP_DeviceNum6.SP_DeviceNum6",
+    "PcPath": ""
   }
 ]

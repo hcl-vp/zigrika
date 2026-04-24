@@ -56167,33 +56167,6 @@
     "CDType": "Owner"
   },
   {
-    "Id": 1108501830,
-    "SkillDesc": "共鸣链1-监听脱战",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "LeaveBattleTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "1"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "TRUE",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "1108501831"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
     "Id": 933312200101,
     "SkillDesc": "【护盾】存在护盾时，自身普攻/重击命中时【冰爆】",
     "CDTime": 10,
@@ -56527,37 +56500,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 1211701100,
-    "SkillDesc": "聚爆效应引爆监听",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "AbnormalTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "2",
-      "2000",
-      "1004"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "TRUE",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "1211701101"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 1,
-    "CDType": "Owner"
-  },
-  {
     "Id": 1108501401,
-    "SkillDesc": "共鸣链1-监听脱战",
+    "SkillDesc": "共鸣链2-监听脱战",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -57139,13 +57083,13 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "GetBuffStack(Attacker,920081673)>GetBuffStack(Victim,920081675)",
+    "TriggerFormula": "GetBuffStack(Attacker,920081673)>GetBuffStack(Victim,920081674)",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "Customize",
     "SkillActionParams": [],
     "ActionScriptParams": {},
-    "SkillActionScript": "AddBuff2(Owner,920081674,GetBuffStack(Attacker,920081673)-GetBuffStack(Victim,920081675),Owner)",
+    "SkillActionScript": "AddBuff2(Owner,920081674,GetBuffStack(Attacker,920081673)-GetBuffStack(Victim,920081674),Owner)",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   },
@@ -57929,6 +57873,63 @@
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
     "ActionExecuteFlag": 1,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1108501420,
+    "SkillDesc": "共鸣链2-监听脱战-满豆用",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "LeaveBattleTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "1"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1108501421"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1108501505,
+    "SkillDesc": "3共-监听失去濒死或溺水tag",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "TagTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "行为状态.逻辑状态.濒死",
+      "1",
+      "0",
+      "0"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1108501503"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
     "CDType": "Owner"
   }
 ]

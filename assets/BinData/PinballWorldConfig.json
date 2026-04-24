@@ -20,11 +20,12 @@
     },
     "CameraFov": 90,
     "LaunchSplineYOffset": 0,
-    "FeverBarYOffset": -500,
+    "FeverBarYOffset": -400,
     "ForceLaunchTime": 5000,
     "CommonBuffIconMap": {
-      "1": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2",
-      "2": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff1"
+      "1": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff3.SP_IconBuff3",
+      "2": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff1.SP_IconBuff1",
+      "3": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff2.SP_IconBuff2"
     },
     "FeverBarDissolveRange": [
       0.10000000149011612,
@@ -43,15 +44,15 @@
     "DamageResultSkillRatio": 0.20000000298023224,
     "TipsTime": {
       "0": 1200,
-      "1": 1500,
+      "1": 1000,
       "2": 1000,
       "3": 800,
-      "4": 800,
+      "4": 500,
       "5": 1000,
       "6": 1000
     },
     "RoleChargeMaxBuffId": 1110199904,
-    "SettleDelay": 500,
+    "SettleDelay": 2000,
     "ComboEfficiencyBuffs": {
       "1110101001": 0.6000000238418579
     }

@@ -97730,160 +97730,160 @@
   {
     "UnitId": 2180112,
     "GroupId": 2180112,
-    "MinNum": 8250,
-    "MaxNum": 8250,
+    "MinNum": 11800,
+    "MaxNum": 11800,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180113,
     "GroupId": 2180113,
-    "MinNum": 8700,
-    "MaxNum": 8700,
+    "MinNum": 12450,
+    "MaxNum": 12450,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180114,
     "GroupId": 2180114,
-    "MinNum": 9600,
-    "MaxNum": 9600,
+    "MinNum": 13750,
+    "MaxNum": 13750,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180115,
     "GroupId": 2180115,
-    "MinNum": 5050,
-    "MaxNum": 5050,
+    "MinNum": 7200,
+    "MaxNum": 7200,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180116,
     "GroupId": 2180116,
-    "MinNum": 12950,
-    "MaxNum": 12950,
+    "MinNum": 18550,
+    "MaxNum": 18550,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180117,
     "GroupId": 2180117,
-    "MinNum": 13700,
-    "MaxNum": 13700,
+    "MinNum": 19550,
+    "MaxNum": 19550,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180118,
     "GroupId": 2180118,
-    "MinNum": 15150,
-    "MaxNum": 15150,
+    "MinNum": 21650,
+    "MaxNum": 21650,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180119,
     "GroupId": 2180119,
-    "MinNum": 9520,
-    "MaxNum": 9520,
+    "MinNum": 13600,
+    "MaxNum": 13600,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180120,
     "GroupId": 2180120,
-    "MinNum": 21600,
-    "MaxNum": 21600,
+    "MinNum": 35100,
+    "MaxNum": 35100,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180121,
     "GroupId": 2180121,
-    "MinNum": 22800,
-    "MaxNum": 22800,
+    "MinNum": 37050,
+    "MaxNum": 37050,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180122,
     "GroupId": 2180122,
-    "MinNum": 25200,
-    "MaxNum": 25200,
+    "MinNum": 40950,
+    "MaxNum": 40950,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180123,
     "GroupId": 2180123,
-    "MinNum": 13200,
-    "MaxNum": 13200,
+    "MinNum": 21450,
+    "MaxNum": 21450,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180124,
     "GroupId": 2180124,
-    "MinNum": 33400,
-    "MaxNum": 33400,
+    "MinNum": 48250,
+    "MaxNum": 48250,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180125,
     "GroupId": 2180125,
-    "MinNum": 35250,
-    "MaxNum": 35250,
+    "MinNum": 50900,
+    "MaxNum": 50900,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180126,
     "GroupId": 2180126,
-    "MinNum": 38950,
-    "MaxNum": 38950,
+    "MinNum": 56300,
+    "MaxNum": 56300,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180127,
     "GroupId": 2180127,
-    "MinNum": 24500,
-    "MaxNum": 24500,
+    "MinNum": 35380,
+    "MaxNum": 35380,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180128,
     "GroupId": 2180128,
-    "MinNum": 77400,
-    "MaxNum": 77400,
+    "MinNum": 72550,
+    "MaxNum": 72550,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180129,
     "GroupId": 2180129,
-    "MinNum": 81700,
-    "MaxNum": 81700,
+    "MinNum": 76550,
+    "MaxNum": 76550,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180130,
     "GroupId": 2180130,
-    "MinNum": 90300,
-    "MaxNum": 90300,
+    "MinNum": 84650,
+    "MaxNum": 84650,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180131,
     "GroupId": 2180131,
-    "MinNum": 47300,
-    "MaxNum": 47300,
+    "MinNum": 44300,
+    "MaxNum": 44300,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -97906,32 +97906,32 @@
   {
     "UnitId": 2180203,
     "GroupId": 2180203,
-    "MinNum": 7575,
-    "MaxNum": 7575,
+    "MinNum": 10800,
+    "MaxNum": 10800,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180204,
     "GroupId": 2180204,
-    "MinNum": 11900,
-    "MaxNum": 11900,
+    "MinNum": 17000,
+    "MaxNum": 17000,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180205,
     "GroupId": 2180205,
-    "MinNum": 29000,
-    "MaxNum": 29000,
+    "MinNum": 48000,
+    "MaxNum": 48000,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180206,
     "GroupId": 2180206,
-    "MinNum": 45000,
-    "MaxNum": 45000,
+    "MinNum": 66000,
+    "MaxNum": 66000,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98010,8 +98010,8 @@
   {
     "UnitId": 2181103,
     "GroupId": 2181103,
-    "MinNum": 150,
-    "MaxNum": 150,
+    "MinNum": 200,
+    "MaxNum": 200,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98082,152 +98082,152 @@
   {
     "UnitId": 2181112,
     "GroupId": 2181112,
-    "MinNum": 300,
-    "MaxNum": 300,
+    "MinNum": 500,
+    "MaxNum": 500,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181113,
     "GroupId": 2181113,
-    "MinNum": 300,
-    "MaxNum": 300,
+    "MinNum": 500,
+    "MaxNum": 500,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181114,
     "GroupId": 2181114,
-    "MinNum": 300,
-    "MaxNum": 300,
+    "MinNum": 600,
+    "MaxNum": 600,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181115,
     "GroupId": 2181115,
-    "MinNum": 200,
-    "MaxNum": 200,
+    "MinNum": 240,
+    "MaxNum": 240,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181116,
     "GroupId": 2181116,
-    "MinNum": 500,
-    "MaxNum": 500,
+    "MinNum": 700,
+    "MaxNum": 700,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181117,
     "GroupId": 2181117,
-    "MinNum": 500,
-    "MaxNum": 500,
+    "MinNum": 700,
+    "MaxNum": 700,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181118,
     "GroupId": 2181118,
-    "MinNum": 500,
-    "MaxNum": 500,
+    "MinNum": 800,
+    "MaxNum": 800,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181119,
     "GroupId": 2181119,
-    "MinNum": 300,
-    "MaxNum": 300,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 2181120,
-    "GroupId": 2181120,
-    "MinNum": 750,
-    "MaxNum": 750,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 2181121,
-    "GroupId": 2181121,
-    "MinNum": 750,
-    "MaxNum": 750,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 2181122,
-    "GroupId": 2181122,
-    "MinNum": 750,
-    "MaxNum": 750,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 2181123,
-    "GroupId": 2181123,
     "MinNum": 360,
     "MaxNum": 360,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
-    "UnitId": 2181124,
-    "GroupId": 2181124,
+    "UnitId": 2181120,
+    "GroupId": 2181120,
     "MinNum": 900,
     "MaxNum": 900,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
+    "UnitId": 2181121,
+    "GroupId": 2181121,
+    "MinNum": 900,
+    "MaxNum": 900,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
+    "UnitId": 2181122,
+    "GroupId": 2181122,
+    "MinNum": 1050,
+    "MaxNum": 1050,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
+    "UnitId": 2181123,
+    "GroupId": 2181123,
+    "MinNum": 420,
+    "MaxNum": 420,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
+    "UnitId": 2181124,
+    "GroupId": 2181124,
+    "MinNum": 1300,
+    "MaxNum": 1300,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181125,
     "GroupId": 2181125,
-    "MinNum": 900,
-    "MaxNum": 900,
+    "MinNum": 1300,
+    "MaxNum": 1300,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181126,
     "GroupId": 2181126,
-    "MinNum": 900,
-    "MaxNum": 900,
+    "MinNum": 1350,
+    "MaxNum": 1350,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181127,
     "GroupId": 2181127,
-    "MinNum": 500,
-    "MaxNum": 500,
+    "MinNum": 600,
+    "MaxNum": 600,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181128,
     "GroupId": 2181128,
-    "MinNum": 1500,
-    "MaxNum": 1500,
+    "MinNum": 2000,
+    "MaxNum": 2000,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181129,
     "GroupId": 2181129,
-    "MinNum": 1500,
-    "MaxNum": 1500,
+    "MinNum": 2000,
+    "MaxNum": 2000,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181130,
     "GroupId": 2181130,
-    "MinNum": 1500,
-    "MaxNum": 1500,
+    "MinNum": 2000,
+    "MaxNum": 2000,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98258,32 +98258,32 @@
   {
     "UnitId": 2181203,
     "GroupId": 2181203,
-    "MinNum": 750,
-    "MaxNum": 750,
+    "MinNum": 900,
+    "MaxNum": 900,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181204,
     "GroupId": 2181204,
-    "MinNum": 750,
-    "MaxNum": 750,
+    "MinNum": 900,
+    "MaxNum": 900,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181205,
     "GroupId": 2181205,
-    "MinNum": 1250,
-    "MaxNum": 1250,
+    "MinNum": 1500,
+    "MaxNum": 1500,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181206,
     "GroupId": 2181206,
-    "MinNum": 1250,
-    "MaxNum": 1250,
+    "MinNum": 1500,
+    "MaxNum": 1500,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98410,80 +98410,80 @@
   {
     "UnitId": 21801151,
     "GroupId": 21801151,
-    "MinNum": 5050,
-    "MaxNum": 5050,
+    "MinNum": 7200,
+    "MaxNum": 7200,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801152,
     "GroupId": 21801152,
-    "MinNum": 5050,
-    "MaxNum": 5050,
+    "MinNum": 7200,
+    "MaxNum": 7200,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801191,
     "GroupId": 21801191,
-    "MinNum": 9520,
-    "MaxNum": 9520,
+    "MinNum": 13600,
+    "MaxNum": 13600,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801192,
     "GroupId": 21801192,
-    "MinNum": 4760,
-    "MaxNum": 4760,
+    "MinNum": 6800,
+    "MaxNum": 6800,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801231,
     "GroupId": 21801231,
-    "MinNum": 13200,
-    "MaxNum": 13200,
+    "MinNum": 21450,
+    "MaxNum": 21450,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801232,
     "GroupId": 21801232,
-    "MinNum": 13200,
-    "MaxNum": 13200,
+    "MinNum": 21450,
+    "MaxNum": 21450,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801271,
     "GroupId": 21801271,
-    "MinNum": 24500,
-    "MaxNum": 24500,
+    "MinNum": 35380,
+    "MaxNum": 35380,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801272,
     "GroupId": 21801272,
-    "MinNum": 12250,
-    "MaxNum": 12250,
+    "MinNum": 17690,
+    "MaxNum": 17690,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801311,
     "GroupId": 21801311,
-    "MinNum": 47300,
-    "MaxNum": 47300,
+    "MinNum": 44300,
+    "MaxNum": 44300,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21801312,
     "GroupId": 21801312,
-    "MinNum": 47300,
-    "MaxNum": 47300,
+    "MinNum": 44300,
+    "MaxNum": 44300,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98522,40 +98522,40 @@
   {
     "UnitId": 2180304,
     "GroupId": 2180304,
-    "MinNum": 24000,
-    "MaxNum": 24000,
+    "MinNum": 34375,
+    "MaxNum": 34375,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180305,
     "GroupId": 2180305,
-    "MinNum": 37875,
-    "MaxNum": 37875,
+    "MinNum": 54125,
+    "MaxNum": 54125,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180306,
     "GroupId": 2180306,
-    "MinNum": 63000,
-    "MaxNum": 63000,
+    "MinNum": 102375,
+    "MaxNum": 102375,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180307,
     "GroupId": 2180307,
-    "MinNum": 97375,
-    "MaxNum": 97375,
+    "MinNum": 140750,
+    "MaxNum": 140750,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2180308,
     "GroupId": 2180308,
-    "MinNum": 225750,
-    "MaxNum": 225750,
+    "MinNum": 211625,
+    "MaxNum": 211625,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98570,16 +98570,16 @@
   {
     "UnitId": 21811031,
     "GroupId": 21811031,
-    "MinNum": 150,
-    "MaxNum": 150,
+    "MinNum": 200,
+    "MaxNum": 200,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21811032,
     "GroupId": 21811032,
-    "MinNum": 150,
-    "MaxNum": 150,
+    "MinNum": 200,
+    "MaxNum": 200,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98618,64 +98618,64 @@
   {
     "UnitId": 21811151,
     "GroupId": 21811151,
-    "MinNum": 200,
-    "MaxNum": 200,
+    "MinNum": 240,
+    "MaxNum": 240,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21811152,
     "GroupId": 21811152,
-    "MinNum": 100,
-    "MaxNum": 100,
+    "MinNum": 120,
+    "MaxNum": 120,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21811191,
     "GroupId": 21811191,
-    "MinNum": 300,
-    "MaxNum": 300,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 21811192,
-    "GroupId": 21811192,
-    "MinNum": 150,
-    "MaxNum": 150,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 21811231,
-    "GroupId": 21811231,
     "MinNum": 360,
     "MaxNum": 360,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
-    "UnitId": 21811232,
-    "GroupId": 21811232,
+    "UnitId": 21811192,
+    "GroupId": 21811192,
     "MinNum": 180,
     "MaxNum": 180,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
+    "UnitId": 21811231,
+    "GroupId": 21811231,
+    "MinNum": 420,
+    "MaxNum": 420,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
+    "UnitId": 21811232,
+    "GroupId": 21811232,
+    "MinNum": 210,
+    "MaxNum": 210,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
     "UnitId": 21811271,
     "GroupId": 21811271,
-    "MinNum": 500,
-    "MaxNum": 500,
+    "MinNum": 600,
+    "MaxNum": 600,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 21811272,
     "GroupId": 21811272,
-    "MinNum": 250,
-    "MaxNum": 250,
+    "MinNum": 300,
+    "MaxNum": 300,
     "Interval": 0,
     "DropShowPlan": 1
   },
@@ -98722,48 +98722,48 @@
   {
     "UnitId": 2181304,
     "GroupId": 2181304,
-    "MinNum": 1250,
-    "MaxNum": 1250,
+    "MinNum": 1500,
+    "MaxNum": 1500,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181305,
     "GroupId": 2181305,
-    "MinNum": 1875,
-    "MaxNum": 1875,
-    "Interval": 0,
-    "DropShowPlan": 1
-  },
-  {
-    "UnitId": 2181306,
-    "GroupId": 2181306,
     "MinNum": 2250,
     "MaxNum": 2250,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
+    "UnitId": 2181306,
+    "GroupId": 2181306,
+    "MinNum": 2625,
+    "MaxNum": 2625,
+    "Interval": 0,
+    "DropShowPlan": 1
+  },
+  {
     "UnitId": 2181307,
     "GroupId": 2181307,
-    "MinNum": 3125,
-    "MaxNum": 3125,
+    "MinNum": 3750,
+    "MaxNum": 3750,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181308,
     "GroupId": 2181308,
-    "MinNum": 4000,
-    "MaxNum": 4000,
+    "MinNum": 5000,
+    "MaxNum": 5000,
     "Interval": 0,
     "DropShowPlan": 1
   },
   {
     "UnitId": 2181309,
     "GroupId": 2181309,
-    "MinNum": 1200,
-    "MaxNum": 1200,
+    "MinNum": 1500,
+    "MaxNum": 1500,
     "Interval": 0,
     "DropShowPlan": 1
   },

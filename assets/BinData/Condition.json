@@ -112576,7 +112576,7 @@
   {
     "Id": 12031672,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1001"
     },
@@ -112588,7 +112588,7 @@
   {
     "Id": 12031673,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1002"
     },
@@ -112600,7 +112600,7 @@
   {
     "Id": 12031674,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1003"
     },
@@ -112612,7 +112612,7 @@
   {
     "Id": 12031675,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1004"
     },
@@ -112624,7 +112624,7 @@
   {
     "Id": 12031676,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1005"
     },
@@ -112636,7 +112636,7 @@
   {
     "Id": 12031677,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1006"
     },
@@ -112648,7 +112648,7 @@
   {
     "Id": 12031678,
     "Type": "BossPilingLevelBossHpNum",
-    "NeedNum": 360,
+    "NeedNum": 150,
     "LimitParams": {
       "Id": "1007"
     },

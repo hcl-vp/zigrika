@@ -571,8 +571,8 @@
       2001
     ],
     "MainEntry": 1301,
-    "Name": "Pinball_Weapon_sword_red_name_01",
-    "AttributesDescription": "Pinball_Weapon_sword_red_name_01",
+    "Name": "Pinball_Weapon_gun_green_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_green_name_01",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_1.T_IconWeapon4_1",
     "SortId": 0,
     "FragmentNum": 50
@@ -588,8 +588,8 @@
       2002
     ],
     "MainEntry": 2301,
-    "Name": "Pinball_Weapon_gun_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_gun_green_name_01",
+    "Name": "Pinball_Weapon_gun_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_blue_name_01",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_2.T_IconWeapon4_2",
     "SortId": 0,
     "FragmentNum": 75
@@ -605,8 +605,8 @@
       2003
     ],
     "MainEntry": 3301,
-    "Name": "Pinball_Weapon_gun_blue_name_01",
-    "AttributesDescription": "Pinball_Weapon_gun_blue_name_01",
+    "Name": "Pinball_Weapon_gun_purple_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_purple_name_01",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
     "SortId": 0,
     "FragmentNum": 135
@@ -622,8 +622,8 @@
       2003
     ],
     "MainEntry": 3302,
-    "Name": "Pinball_Weapon_gun_blue_name_02",
-    "AttributesDescription": "Pinball_Weapon_gun_blue_name_02",
+    "Name": "Pinball_Weapon_gun_purple_name_02",
+    "AttributesDescription": "Pinball_Weapon_gun_purple_name_02",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
     "SortId": 0,
     "FragmentNum": 135
@@ -639,8 +639,8 @@
       2003
     ],
     "MainEntry": 3303,
-    "Name": "Pinball_Weapon_gun_blue_name_03",
-    "AttributesDescription": "Pinball_Weapon_gun_blue_name_03",
+    "Name": "Pinball_Weapon_gun_purple_name_03",
+    "AttributesDescription": "Pinball_Weapon_gun_purple_name_03",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
     "SortId": 0,
     "FragmentNum": 135
@@ -656,8 +656,8 @@
       2004
     ],
     "MainEntry": 4301,
-    "Name": "Pinball_Weapon_gun_purple_name_01",
-    "AttributesDescription": "Pinball_Weapon_gun_purple_name_01",
+    "Name": "Pinball_Weapon_gun_gold_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_gold_name_01",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_4.T_IconWeapon4_4",
     "SortId": 0,
     "FragmentNum": 260
@@ -673,8 +673,8 @@
       2004
     ],
     "MainEntry": 4302,
-    "Name": "Pinball_Weapon_gun_purple_name_02",
-    "AttributesDescription": "Pinball_Weapon_gun_purple_name_02",
+    "Name": "Pinball_Weapon_gun_gold_name_02",
+    "AttributesDescription": "Pinball_Weapon_gun_gold_name_02",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_4.T_IconWeapon4_4",
     "SortId": 0,
     "FragmentNum": 260
@@ -690,8 +690,8 @@
       2004
     ],
     "MainEntry": 4303,
-    "Name": "Pinball_Weapon_gun_purple_name_03",
-    "AttributesDescription": "Pinball_Weapon_gun_purple_name_03",
+    "Name": "Pinball_Weapon_gun_gold_name_03",
+    "AttributesDescription": "Pinball_Weapon_gun_gold_name_03",
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_4.T_IconWeapon4_4",
     "SortId": 0,
     "FragmentNum": 260
@@ -1024,153 +1024,153 @@
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 2,
-    "QualityId": 1,
+    "QualityId": 2,
     "PropList": [
-      1001,
-      2001
+      1002,
+      2002
     ],
-    "MainEntry": 1201,
-    "Name": "Pinball_Weapon_sword_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_sword_green_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_1.T_IconWeapon5_1",
+    "MainEntry": 2201,
+    "Name": "Pinball_Weapon_sword_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_sword_blue_name_01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_2.T_IconWeapon5_2",
     "SortId": 0,
-    "FragmentNum": 50
+    "FragmentNum": 75
   },
   {
     "Id": 80869003,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 4,
-    "QualityId": 1,
+    "QualityId": 2,
     "PropList": [
-      1001,
-      2001
+      1002,
+      2002
     ],
-    "MainEntry": 1401,
-    "Name": "Pinball_Weapon_laser_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_laser_green_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon2_1.T_IconWeapon2_1",
+    "MainEntry": 2401,
+    "Name": "Pinball_Weapon_laser_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_laser_blue_name_01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon2_2.T_IconWeapon2_2",
     "SortId": 0,
-    "FragmentNum": 50
+    "FragmentNum": 75
   },
   {
     "Id": 80869004,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 1,
-    "QualityId": 1,
+    "QualityId": 2,
     "PropList": [
-      1001,
-      2001
+      1002,
+      2002
     ],
-    "MainEntry": 1101,
-    "Name": "Pinball_Weapon_knife_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_knife_green_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon1_1.T_IconWeapon1_1",
+    "MainEntry": 2101,
+    "Name": "Pinball_Weapon_knife_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_knife_blue_name_01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon1_2.T_IconWeapon1_2",
     "SortId": 0,
-    "FragmentNum": 50
+    "FragmentNum": 75
   },
   {
     "Id": 80869005,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 3,
-    "QualityId": 2,
+    "QualityId": 3,
     "PropList": [
-      1002,
-      2002
+      1003,
+      2003
     ],
-    "MainEntry": 2301,
-    "Name": "Pinball_Weapon_gun_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_gun_green_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_2.T_IconWeapon4_2",
+    "MainEntry": 3301,
+    "Name": "Pinball_Weapon_gun_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_blue_name_01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
     "SortId": 0,
-    "FragmentNum": 75
+    "FragmentNum": 135
   },
   {
     "Id": 80869006,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 5,
-    "QualityId": 2,
+    "QualityId": 3,
     "PropList": [
-      1002,
-      2002
+      1003,
+      2003
     ],
-    "MainEntry": 2501,
-    "Name": "Pinball_Weapon_staff_blue_name_01",
-    "AttributesDescription": "Pinball_Weapon_staff_blue_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon3_2.T_IconWeapon3_2",
+    "MainEntry": 3502,
+    "Name": "Pinball_Weapon_staff_purple_name_02",
+    "AttributesDescription": "Pinball_Weapon_staff_purple_name_02",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon3_3.T_IconWeapon3_3",
     "SortId": 0,
-    "FragmentNum": 75
+    "FragmentNum": 135
   },
   {
     "Id": 80869007,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 3,
-    "QualityId": 2,
+    "QualityId": 3,
     "PropList": [
-      1002,
-      2002
+      1003,
+      2003
     ],
-    "MainEntry": 2301,
-    "Name": "Pinball_Weapon_gun_green_name_01",
-    "AttributesDescription": "Pinball_Weapon_gun_green_name_01",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_2.T_IconWeapon4_2",
+    "MainEntry": 3301,
+    "Name": "Pinball_Weapon_gun_blue_name_01",
+    "AttributesDescription": "Pinball_Weapon_gun_blue_name_01",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
     "SortId": 0,
-    "FragmentNum": 75
+    "FragmentNum": 135
   },
   {
     "Id": 80869008,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 2,
-    "QualityId": 3,
+    "QualityId": 4,
     "PropList": [
-      1003,
-      2003
+      1004,
+      2004
     ],
-    "MainEntry": 3203,
-    "Name": "Pinball_Weapon_sword_purple_name_03",
-    "AttributesDescription": "Pinball_Weapon_sword_purple_name_03",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_3.T_IconWeapon5_3",
+    "MainEntry": 4203,
+    "Name": "Pinball_Weapon_sword_gold_name_03",
+    "AttributesDescription": "Pinball_Weapon_sword_gold_name_03",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_4.T_IconWeapon5_4",
     "SortId": 0,
-    "FragmentNum": 135
+    "FragmentNum": 260
   },
   {
     "Id": 80869009,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 2,
-    "QualityId": 3,
+    "QualityId": 4,
     "PropList": [
-      1003,
-      2003
+      1004,
+      2004
     ],
-    "MainEntry": 3203,
-    "Name": "Pinball_Weapon_sword_purple_name_03",
-    "AttributesDescription": "Pinball_Weapon_sword_purple_name_03",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_3.T_IconWeapon5_3",
+    "MainEntry": 4203,
+    "Name": "Pinball_Weapon_sword_gold_name_03",
+    "AttributesDescription": "Pinball_Weapon_sword_gold_name_03",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon5_4.T_IconWeapon5_4",
     "SortId": 0,
-    "FragmentNum": 135
+    "FragmentNum": 260
   },
   {
     "Id": 80869010,
     "ActivityId": 109400001,
     "PersonType": 0,
     "Type": 3,
-    "QualityId": 3,
+    "QualityId": 4,
     "PropList": [
-      1003,
-      2003
+      1004,
+      2004
     ],
-    "MainEntry": 3302,
-    "Name": "Pinball_Weapon_gun_blue_name_02",
-    "AttributesDescription": "Pinball_Weapon_gun_blue_name_02",
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_3.T_IconWeapon4_3",
+    "MainEntry": 4302,
+    "Name": "Pinball_Weapon_gun_purple_name_02",
+    "AttributesDescription": "Pinball_Weapon_gun_purple_name_02",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconWeapon/T_IconWeapon4_4.T_IconWeapon4_4",
     "SortId": 0,
-    "FragmentNum": 135
+    "FragmentNum": 260
   },
   {
     "Id": 80869011,

@@ -64,7 +64,7 @@
     "MaxAttributeBurstEffectId": 0,
     "CdCompletedEffectId": 0,
     "IsLongPressControlCamera": false,
-    "LongPressTime": 0,
+    "LongPressTime": 500,
     "DynamicEffectTagMap": {
       "629953454": 12051310,
       "766831878": 1412004,

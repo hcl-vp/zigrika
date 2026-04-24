@@ -204,7 +204,7 @@
   },
   {
     "Id": 203,
-    "KscEntityId": 5008,
+    "KscEntityId": 5009,
     "AttrId": 4001,
     "BornBuff": [],
     "SummonBuffId": 1150199906
@@ -232,9 +232,30 @@
   },
   {
     "Id": 305,
-    "KscEntityId": 1202,
+    "KscEntityId": 12021,
     "AttrId": 4001,
     "BornBuff": [],
     "SummonBuffId": 1150199909
+  },
+  {
+    "Id": 306,
+    "KscEntityId": 6005,
+    "AttrId": 1,
+    "BornBuff": [],
+    "SummonBuffId": 0
+  },
+  {
+    "Id": 307,
+    "KscEntityId": 12031,
+    "AttrId": 4001,
+    "BornBuff": [],
+    "SummonBuffId": 1150199910
+  },
+  {
+    "Id": 308,
+    "KscEntityId": 6006,
+    "AttrId": 1,
+    "BornBuff": [],
+    "SummonBuffId": 1150199907
   }
 ]
