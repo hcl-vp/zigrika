@@ -1072,6 +1072,7 @@ setTimeout(() => {
     async function () {
       await ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph();
       UiManager_1.UiManager.CloseView("FilterSettingView");
+      UiManager_1.UiManager.CloseView("EyeProtectView");
     };
 
   const original_on_after_destroy = FilterSettingView.prototype.OnAfterDestroy;
@@ -1307,8 +1308,8 @@ setTimeout(() => {
     ) {
       const i = new CustomPromise_1.CustomPromise();
       this.$2_.OnLevelShown.Add(() => {
-        // ModelManager_1.ModelManager.PhotographModel.InitFilterPostProcessVolume();
-        // PhotographController_1.PhotographController.InitPostProcessVolBlendWeight();
+        ModelManager_1.ModelManager.PhotographModel.InitFilterPostProcessVolume();
+        PhotographController_1.PhotographController.InitPostProcessVolBlendWeight();
         i.SetResult(void 0);
       });
       await i.Promise;
@@ -1349,8 +1350,8 @@ setTimeout(() => {
 
   ControllerHolder_1.ControllerHolder.PhotographController.SetSingleFilterStrength =
     function () {};
-  ControllerHolder_1.ControllerHolder.PhotographController.InitPostProcessVolBlendWeight =
-    function () {};
+  // ControllerHolder_1.ControllerHolder.PhotographController.InitPostProcessVolBlendWeight =
+  //   function () {};
   ModelManager_1.ModelManager.PhotographModel.SetFilterStrength =
     function () {};
 
@@ -1505,8 +1506,8 @@ setTimeout(() => {
     this.c4_?.Destroy();
     this.E1_?.Destroy();
   };
-  // ModelManager_1.ModelManager.PhotographModel.SetPhotographFilter =
-  //   function () {};
+  ModelManager_1.ModelManager.PhotographModel.SetPhotographFilter =
+    function () {};
   // ModelManager_1.ModelManager.PhotographModel.InitFilterPostProcessVolume =
   //   function () {};
 
@@ -1545,22 +1546,7 @@ setTimeout(() => {
         this.Eqt,
       );
 
-      (UE.KismetSystemLibrary.ExecuteConsoleCommand(
-        GlobalData_1.GlobalData.World,
-        "r.Kuro.KuroEnableScreenFilter 1",
-      ),
-        (this.BQd =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMinFov",
-          )),
-        (this.kQd =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMaxFov",
-          )),
-        (this.Phm =
-          CommonParamById_1.configCommonParamById.GetFloatConfig(
-            "PhotoFightCameraZoomSpeed",
-          ) ?? 1));
+      ControllerHolder_1.ControllerHolder.MenuController.OpenAllFilter();
 
       this.ZQi();
       this.JQi();
@@ -1607,22 +1593,7 @@ setTimeout(() => {
         this.Eqt,
       );
 
-      (UE.KismetSystemLibrary.ExecuteConsoleCommand(
-        GlobalData_1.GlobalData.World,
-        "r.Kuro.KuroEnableScreenFilter 1",
-      ),
-        (this.BQd =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMinFov",
-          )),
-        (this.kQd =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMaxFov",
-          )),
-        (this.Phm =
-          CommonParamById_1.configCommonParamById.GetFloatConfig(
-            "PhotoFightCameraZoomSpeed",
-          ) ?? 1));
+      ControllerHolder_1.ControllerHolder.MenuController.OpenAllFilter();
 
       this.ZQi();
       this.JQi();

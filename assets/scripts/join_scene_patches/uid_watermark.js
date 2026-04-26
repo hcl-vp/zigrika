@@ -18,6 +18,6 @@ setTimeout(() => {
 
     setTimeout(() => {
       UiText.SetUIRelativeLocation(pos);
-    }, 250);
+    }, 500);
   };
 }, 0);
