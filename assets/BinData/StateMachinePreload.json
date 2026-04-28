@@ -251,7 +251,9 @@
       "/Game/Aki/Effect/MaterialController/DA_Character/Daniya/DA_Fx_Group_R2_Buff_UP01.DA_Fx_Group_R2_Buff_UP01",
       "/Game/Aki/Effect/EffectGroup/MB1DaniyaMd00101/DA_Fx_Group_Daniya_MBs_Qiliu01.DA_Fx_Group_Daniya_MBs_Qiliu01",
       "/Game/Aki/Effect/EffectGroup/MB1DaniyaMd00101/DA_Fx_Group_Daniya_MBa_Loop_02_1.DA_Fx_Group_Daniya_MBa_Loop_02_1",
-      "/Game/Aki/Effect/EffectGroup/MB1DaniyaMd00101/DA_Fx_Group_Daniya_MBa_Tanhuan_Loop.DA_Fx_Group_Daniya_MBa_Tanhuan_Loop"
+      "/Game/Aki/Effect/EffectGroup/MB1DaniyaMd00101/DA_Fx_Group_Daniya_MBa_Tanhuan_Loop.DA_Fx_Group_Daniya_MBa_Tanhuan_Loop",
+      "/Game/Aki/Character/Monster/Common/Data/Presets/Paralysis/Camera/M_SizeM_ParalysisCamera.M_SizeM_ParalysisCamera",
+      "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Breaking.DA_Fx_Group_Breaking"
     ]
   },
   {
@@ -375,12 +377,15 @@
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_MBs_Paralysis_Loop.DA_Fx_Group_MingShiHuaShen_MBs_Paralysis_Loop",
+      "/Game/Aki/Effect/MaterialController/DA_Character/MingShiHuaShen/DA_Fx_MSHS_Rim_TanHuan.DA_Fx_MSHS_Rim_TanHuan",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Breaking.DA_Fx_Group_Breaking",
-      "/Game/Aki/Character/Monster/Common/Data/Presets/Paralysis/Camera/M_SizeM_ParalysisCamera.M_SizeM_ParalysisCamera",
+      "/Game/Aki/Effect/MaterialController/DA_Character/MingShiHuaShen/DA_Fx_MSHS_MBs06_Rim_CiBao.DA_Fx_MSHS_MBs06_Rim_CiBao",
       "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_HeXin_Loop_02.DA_Fx_Group_MingShiHuaShen_HeXin_Loop_02",
       "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_Dun_Loop.DA_Fx_Group_MingShiHuaShen_Dun_Loop",
       "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_HeXin_Loop.DA_Fx_Group_MingShiHuaShen_HeXin_Loop",
-      "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_MBs_WP_Loop.DA_Fx_Group_MingShiHuaShen_MBs_WP_Loop"
+      "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_MBs_WP_Loop.DA_Fx_Group_MingShiHuaShen_MBs_WP_Loop",
+      "/Game/Aki/Effect/EffectGroup/MB1MingShiHuaShenMd00601/DA_Fx_Group_MingShiHuaShen_MBs_Wing_Loop.DA_Fx_Group_MingShiHuaShen_MBs_Wing_Loop"
     ]
   },
   {

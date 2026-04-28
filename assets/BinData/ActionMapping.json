@@ -442,7 +442,9 @@
     "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
     "GamepadVersion": 0,
-    "GamepadVersionMap": {}
+    "GamepadVersionMap": {
+      "2": 1
+    }
   },
   {
     "Id": 101,
@@ -4560,6 +4562,36 @@
     "ThaiPcKeys": [],
     "GamepadKeys": [
       "Gamepad_RightShoulder"
+    ],
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "IsIdleAction": false,
+    "KeyboardVersion": 0,
+    "KeyboardVersionMap": {},
+    "GamepadVersion": 0,
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 206,
+    "ActionName": "全量点击继续",
+    "ActionType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": [
+      "SpaceBar",
+      "F"
+    ],
+    "FrancePcKeys": [
+      "SpaceBar",
+      "F"
+    ],
+    "ThaiPcKeys": [
+      "SpaceBar",
+      "F"
+    ],
+    "GamepadKeys": [
+      "Gamepad_FaceButton_Bottom",
+      "Gamepad_FaceButton_Right"
     ],
     "MobileIconPath": "",
     "DisplayName": "",

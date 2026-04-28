@@ -3,7 +3,7 @@
     "BuffId": 1110199801,
     "Sort": 5,
     "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff3.SP_IconBuff3",
-    "BuffName": "Pinball_Character_skill_0302_name",
+    "BuffName": "Pinball_Weapon_personal_03_name_01",
     "BuffDesc": "Pinball_Buff_Description1",
     "BuffParam": [],
     "BuffType": 1
@@ -343,12 +343,12 @@
   },
   {
     "BuffId": 1110199841,
-    "Sort": 1,
+    "Sort": 5,
     "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuffMoning.SP_IconBuffMoning",
-    "BuffName": "Pinball_Character_skill_1302_name",
+    "BuffName": "Pinball_Buff_name14",
     "BuffDesc": "Pinball_Buff_Description41",
     "BuffParam": [],
-    "BuffType": 0
+    "BuffType": 1
   },
   {
     "BuffId": 1110199842,
@@ -448,5 +448,23 @@
     "BuffDesc": "Pinball_Buff_Description52",
     "BuffParam": [],
     "BuffType": 0
+  },
+  {
+    "BuffId": 1110199853,
+    "Sort": 5,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff3.SP_IconBuff3",
+    "BuffName": "Pinball_Weapon_personal_17_name_01",
+    "BuffDesc": "Pinball_Buff_Description53",
+    "BuffParam": [],
+    "BuffType": 1
+  },
+  {
+    "BuffId": 1110199854,
+    "Sort": 5,
+    "BuffIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/BattleMain/IconBuff/SP_IconBuff3.SP_IconBuff3",
+    "BuffName": "Pinball_Character_skill_1302_name",
+    "BuffDesc": "Pinball_Buff_Description53",
+    "BuffParam": [],
+    "BuffType": 1
   }
 ]

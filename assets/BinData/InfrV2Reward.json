@@ -4,39 +4,31 @@
     "ActivityId": 107500003,
     "TabId": 0,
     "Sort": 1,
-    "Desc": "Spring26_goods_gameplay01",
-    "ConditionGroup": 14010044,
-    "DropId": 5191101,
-    "SkipType": 2,
-    "SkipParam": [
-      "-221",
-      "521",
-      "364"
-    ]
+    "Desc": "VillageInfr_goods_01",
+    "ConditionGroup": 12904908,
+    "DropId": 5211101,
+    "SkipType": 0,
+    "SkipParam": []
   },
   {
     "Id": 2,
     "ActivityId": 107500003,
     "TabId": 0,
     "Sort": 2,
-    "Desc": "Spring26_goods_gameplay02",
-    "ConditionGroup": 14010046,
-    "DropId": 5191102,
-    "SkipType": 2,
-    "SkipParam": [
-      "-2780",
-      "-218",
-      "502"
-    ]
+    "Desc": "VillageInfr_goods_02",
+    "ConditionGroup": 12904909,
+    "DropId": 5211102,
+    "SkipType": 0,
+    "SkipParam": []
   },
   {
     "Id": 3,
     "ActivityId": 107500003,
     "TabId": 0,
     "Sort": 3,
-    "Desc": "Spring26_goods_gameplay03",
-    "ConditionGroup": 12903802,
-    "DropId": 5191103,
+    "Desc": "VillageInfr_goods_03",
+    "ConditionGroup": 12904910,
+    "DropId": 5211103,
     "SkipType": 0,
     "SkipParam": []
   },
@@ -45,9 +37,9 @@
     "ActivityId": 107500003,
     "TabId": 0,
     "Sort": 4,
-    "Desc": "Spring26_goods_gameplay04",
-    "ConditionGroup": 12903803,
-    "DropId": 5191104,
+    "Desc": "VillageInfr_goods_04",
+    "ConditionGroup": 12904911,
+    "DropId": 5211104,
     "SkipType": 0,
     "SkipParam": []
   },
@@ -56,9 +48,42 @@
     "ActivityId": 107500003,
     "TabId": 0,
     "Sort": 5,
-    "Desc": "Spring26_goods_gameplay05",
-    "ConditionGroup": 12903804,
-    "DropId": 5191105,
+    "Desc": "VillageInfr_goods_05",
+    "ConditionGroup": 12904900,
+    "DropId": 5211105,
+    "SkipType": 0,
+    "SkipParam": []
+  },
+  {
+    "Id": 6,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 6,
+    "Desc": "VillageInfr_goods_06",
+    "ConditionGroup": 12904901,
+    "DropId": 5211106,
+    "SkipType": 0,
+    "SkipParam": []
+  },
+  {
+    "Id": 7,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 7,
+    "Desc": "VillageInfr_goods_07",
+    "ConditionGroup": 12904902,
+    "DropId": 5211107,
+    "SkipType": 0,
+    "SkipParam": []
+  },
+  {
+    "Id": 8,
+    "ActivityId": 107500003,
+    "TabId": 0,
+    "Sort": 8,
+    "Desc": "VillageInfr_goods_08",
+    "ConditionGroup": 12904903,
+    "DropId": 5211108,
     "SkipType": 0,
     "SkipParam": []
   }

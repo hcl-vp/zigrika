@@ -671,7 +671,8 @@
       "RolePhantomTabView": "10012",
       "RoleFavorTabView": "1001",
       "VisionEquipmentView": "10012",
-      "SkinRootView": "1001"
+      "SkinRootView": "1001",
+      "RoleResonanceTabNewView": "ResoIn"
     },
     "UiCameraDelayTime": 0
   },
@@ -2513,6 +2514,19 @@
     "BodyTargetType": 0,
     "BodyCameraSettingsNameMap": {},
     "DefaultCameraBlendName": "1001",
+    "UiCameraBlendNameMap": {},
+    "UiCameraDelayTime": 0
+  },
+  {
+    "Id": 1169,
+    "ViewName": "VillageInfrWorldBuildView",
+    "DefaultUiCameraSettingsName": "1148",
+    "IsCheckSpecialState": false,
+    "SpecialStateCameraSettingName": "1002",
+    "bPlayLoadingCameraAnimation": true,
+    "BodyTargetType": 2,
+    "BodyCameraSettingsNameMap": {},
+    "DefaultCameraBlendName": "",
     "UiCameraBlendNameMap": {},
     "UiCameraDelayTime": 0
   }

@@ -4086,7 +4086,7 @@
     "BlueprintType": "Monster_branch3.3_003",
     "MarkId": 6561,
     "Name": "MonsterInfo_320000660_Name",
-    "ShowReward": 18010,
+    "ShowReward": 7090,
     "BlueprintTypeList": [
       "Monster_branch3.3_003"
     ],
@@ -4101,19 +4101,17 @@
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32066_UI.T_IconMonsterHead_32066_UI",
     "BeginTimeStamp": 300,
     "LockCon": 0,
-    "MonsterInfoId": 320000650,
+    "MonsterInfoId": 320000660,
     "NightMareDetectionId": 0
   },
   {
     "Id": 340000280,
-    "BlueprintType": "Monster_branch3.3_011",
-    "MarkId": 380108,
+    "BlueprintType": "",
+    "MarkId": 3330002,
     "Name": "MonsterInfo_340000280_Name",
     "ShowReward": 7131,
-    "BlueprintTypeList": [
-      "Monster_branch3.3_011"
-    ],
-    "EntityConfigId": 0,
+    "BlueprintTypeList": [],
+    "EntityConfigId": 161850063,
     "DangerType": 3,
     "TypeDescription2": 15,
     "AttributesDescriptionLock": "MonsterInfo_340000280_UndiscoveredDes",

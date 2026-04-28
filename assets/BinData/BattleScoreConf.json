@@ -1033,5 +1033,10 @@
     "Id": 23001,
     "Type": 10,
     "LevelGroupId": 29
+  },
+  {
+    "Id": 903,
+    "Type": 1,
+    "LevelGroupId": 1
   }
 ]

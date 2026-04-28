@@ -30,7 +30,7 @@
     "Id": 104200002,
     "MoneyId": 43,
     "MoneyUpperLimitCount": 99999999,
-    "EndReward": 70130016,
+    "EndReward": 70130017,
     "GroupMatches": [
       6,
       7,
@@ -58,7 +58,7 @@
     "DungeonEntranceId": 8801,
     "ButtleScreenCD": 2,
     "RandomSeedIndex": 1001,
-    "EndMailId": 400023,
+    "EndMailId": 400038,
     "CalcRankDelay": 3
   }
 ]

@@ -1340,7 +1340,7 @@
     "PropertyValue": []
   },
   {
-    "RoleId": 0,
+    "RoleId": 1211,
     "ProjectGroup": [
       1001,
       1002,
@@ -1348,9 +1348,11 @@
       1004,
       1005
     ],
-    "WeaponType": 7,
+    "WeaponType": 10,
     "RecommandWeapon": [
-      21020086
+      21050076,
+      21050015,
+      21050074
     ],
     "SkillItemJumpType": [
       {
@@ -1364,7 +1366,7 @@
     "PropertyValue": []
   },
   {
-    "RoleId": 1211,
+    "RoleId": 1108,
     "ProjectGroup": [
       1001,
       1002,
@@ -1372,9 +1374,11 @@
       1004,
       1005
     ],
-    "WeaponType": 10,
+    "WeaponType": 7,
     "RecommandWeapon": [
-      21050076
+      21020086,
+      21020015,
+      21020094
     ],
     "SkillItemJumpType": [
       {

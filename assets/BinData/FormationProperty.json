@@ -614,27 +614,28 @@
     "InitRecoveryRate": 2000,
     "InitMax": 10000,
     "MarkTag": [
-      "角色.Common.c7f43df1.3b8cd371.f4121d33.94743750"
+      "角色.Common.c7f43df1.3b8cd371.f4121d33.94743750",
+      "行为状态.位置状态.空中"
     ],
-    "ResistTag": [],
+    "ResistTag": [
+      "角色.Common.c7f43df1.3b8cd371.ea03d05b"
+    ],
     "TriggerRange1": {
       "Min": 0,
-      "Max": 2500
+      "Max": 100
     },
     "TriggerType1": 0,
     "TriggerEffect1": 0,
     "TriggerEffectParams1": [
-      7100000047
+      7100000051
     ],
     "TriggerRange2": {
-      "Min": 0,
-      "Max": 100
+      "Min": 9999,
+      "Max": 10000
     },
     "TriggerType2": 0,
     "TriggerEffect2": 0,
-    "TriggerEffectParams2": [
-      7100000051
-    ],
+    "TriggerEffectParams2": [],
     "TriggerRange3": {
       "Min": 9999,
       "Max": 10000

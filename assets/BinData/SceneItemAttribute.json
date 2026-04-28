@@ -66,5 +66,9 @@
   {
     "Description": "镜子机关表现",
     "CreatorId": 36
+  },
+  {
+    "Description": "通用辅助机锁定表现",
+    "CreatorId": 36
   }
 ]

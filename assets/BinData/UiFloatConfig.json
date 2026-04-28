@@ -1198,7 +1198,7 @@
   },
   {
     "ViewName": "PinballRoleSkillMaxTipsView",
-    "Area": "PinballTips",
+    "Area": "Center",
     "Priority": 0,
     "OnlyShowInMain": true,
     "RootItemIndex": 0,
@@ -1216,7 +1216,7 @@
   },
   {
     "ViewName": "PinballBossSkillTipsView",
-    "Area": "PinballTips",
+    "Area": "Top",
     "Priority": 0,
     "OnlyShowInMain": true,
     "RootItemIndex": 0,
@@ -1236,6 +1236,24 @@
     "ViewName": "PinballBossComingTipsView",
     "Area": "PinballTips",
     "Priority": 0,
+    "OnlyShowInMain": true,
+    "RootItemIndex": 0,
+    "IsWaitNormal": true,
+    "HideInPureMode": false
+  },
+  {
+    "ViewName": "ActivityUnlockTipCatapultStoryView",
+    "Area": "Top",
+    "Priority": 20,
+    "OnlyShowInMain": true,
+    "RootItemIndex": 0,
+    "IsWaitNormal": true,
+    "HideInPureMode": false
+  },
+  {
+    "ViewName": "TaskEndTips",
+    "Area": "Center",
+    "Priority": 5,
     "OnlyShowInMain": true,
     "RootItemIndex": 0,
     "IsWaitNormal": true,

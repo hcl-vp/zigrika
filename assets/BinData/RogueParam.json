@@ -310,9 +310,9 @@
     "PointItem": 80100002,
     "PointItemMaxCount": 100000,
     "TokenItem": 80100001,
-    "WeekTokenMaxCount": 10000,
+    "WeekTokenMaxCount": 8000,
     "SkillPoint": 80100003,
-    "SkillPointMaxCount": 10000,
+    "SkillPointMaxCount": 9500,
     "InsideCurrency": 80100000,
     "GuideInstArray": [
       8039

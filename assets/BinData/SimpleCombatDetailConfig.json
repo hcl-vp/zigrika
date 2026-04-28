@@ -1596,7 +1596,7 @@
     "SimpleCombatId": 850001,
     "SubTypeId": 1018,
     "PrefabPath": "",
-    "DaPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Monster/DA_Monster_Dingdongdong.DA_Monster_Dingdongdong",
+    "DaPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Monster/Dingdongdong/DA_Monster_Dingdongdong.DA_Monster_Dingdongdong",
     "PropertyId": 0
   },
   {

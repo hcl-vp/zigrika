@@ -3565,7 +3565,7 @@
     "SprintEnergyMax": 40000,
     "SprintEnergyRecoverSpeed": 2000,
     "SprintEnergyEfficiency": 0,
-    "FeverEnergy": 0,
+    "FeverEnergy": 20000,
     "FeverEnergyMax": 60000,
     "FeverEnergyRecoverSpeed": 1000,
     "FeverEnergyCostSpeed": 5000,

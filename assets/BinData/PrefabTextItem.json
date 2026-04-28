@@ -21342,12 +21342,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "521951560",
-    "PrefabPathHash": "416193719",
-    "ItemPath": "UiView_RoleSuccess_Effect/UiItem_LayerBg/UiItem_ComSuccessful/PnlAni/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "3570062609",
     "PrefabPathHash": "416193719",
     "ItemPath": "UiView_RoleSuccess_Effect/UiItem_LayerUi/PnlBottom/TxtTips",
@@ -34914,18 +34908,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3560665557",
-    "PrefabPathHash": "3980488035",
-    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlState/PnlTwo/BtnSecGo/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_3560665557_Text"
-  },
-  {
-    "ItemId": "114739772",
-    "PrefabPathHash": "3980488035",
-    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlState/PnlTwo/BtnSecTrack/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "818740274",
     "PrefabPathHash": "3980488035",
     "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlTrackAactivedTip/PnlHLayout/TxtActivated",
@@ -35538,30 +35520,6 @@
     "Text": "PrefabTextItem_246833343_Text"
   },
   {
-    "ItemId": "839301008",
-    "PrefabPathHash": "1010027633",
-    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS2/PnlAdjust/BtnConfirmA/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3615238439",
-    "PrefabPathHash": "1010027633",
-    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS2/PnlAdjust/BtnConfirmA/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "522004820",
-    "PrefabPathHash": "1010027633",
-    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS2/PnlAdjust/BtnConfirmA/PnlLayout/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3710088423",
-    "PrefabPathHash": "1010027633",
-    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS2/PnlAdjust/BtnConfirmA/PnlLayout/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "3906890577",
     "PrefabPathHash": "1010027633",
     "ItemPath": "UiItem_ConfirmMultipleTips/TxtDescript",
@@ -35889,12 +35847,6 @@
     "ItemId": "391931081",
     "PrefabPathHash": "2284532475",
     "ItemPath": "UiView_DreamlandRewardB/PnlInfo/UiItem_CaptionList/PnlCaption/PnlTitle/UITextActor89",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1815469548",
-    "PrefabPathHash": "4273936459",
-    "ItemPath": "UiView_Muppet/UiItem_LayerUi/UiView_PopupL2/UiItem_LayerUi_Prefab/PnlContent/PnlBottom/BtnConfirmA/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -71970,12 +71922,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "390030016",
-    "PrefabPathHash": "1057924595",
-    "ItemPath": "UiItem_H5Main/PnlFull/PnlLeave/BtnFunctionA2/PnlKey/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "3747691759",
     "PrefabPathHash": "3980488035",
     "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlLayout/ScrollView/Viewport/Content/PnlProgress/PnlListLayout/PnlList/TxtL",
@@ -71985,18 +71931,6 @@
     "ItemId": "1129555914",
     "PrefabPathHash": "3980488035",
     "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlLayout/ScrollView/Viewport/Content/PnlProgress/PnlProgressTitle/TxtProgressTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "729193773",
-    "PrefabPathHash": "711438580",
-    "ItemPath": "UiItem_MapTipsB/PnlTips/PnlBottom/PnlBottomBtn/PnlBottomLayout/PnlState/BtnPopupRConfirmE/PnlAdjust/BtnSecConfirmL/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4286999097",
-    "PrefabPathHash": "711438580",
-    "ItemPath": "UiItem_MapTipsB/PnlTips/PnlBottom/PnlBottomBtn/PnlBottomLayout/PnlState/BtnPopupRConfirmE/PnlAdjust/BtnSecConfirmR/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -76237,7 +76171,7 @@
   },
   {
     "ItemId": "3541432369",
-    "PrefabPathHash": "0",
+    "PrefabPathHash": "3225332042",
     "ItemPath": "UiView_Collect/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/TxtTitle",
     "Text": "PrefabTextItem_3541432369_Text"
   },
@@ -76400,7 +76334,7 @@
   {
     "ItemId": "3364169899",
     "PrefabPathHash": "1697785989",
-    "ItemPath": "UiView_LahailoSing/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/UIContainerActor2086/LoopScrollView/Viewport/Content/UiItem_ItemBaseA/PnlItem/TxtName",
+    "ItemPath": "UiView_LahailoSing/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/TxtTitle",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -78207,18 +78141,6 @@
     "ItemId": "2492143973",
     "PrefabPathHash": "2651952908",
     "ItemPath": "UiView_DIYAreaSelect/UiItem_LayerUi_Prefab/PnlRight/PnlLayout/BtnAactivedB/PnlPivot/PnlKeyLayout/TxtActivated",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3713335924",
-    "PrefabPathHash": "288702839",
-    "ItemPath": "UiView_EchoFilterPopup/UiItem_LayerUi_Prefab/PnlPopup/PnlButtonLayout/BtnConfirmBaseDiscard/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1650773984",
-    "PrefabPathHash": "288702839",
-    "ItemPath": "UiView_EchoFilterPopup/UiItem_LayerUi_Prefab/PnlPopup/PnlButtonLayout/BtnConfirmBaseLock/PnlPivot/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -80787,7 +80709,7 @@
     "ItemId": "613455261",
     "PrefabPathHash": "234494362",
     "ItemPath": "UiView_BossPilingBossSelect/PnlInfo/PnlDefeatNum/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "BossPilingActivity_Main05"
   },
   {
     "ItemId": "1585545809",
@@ -83172,24 +83094,6 @@
     "Text": "PrefabTextItem_2752900287_Text"
   },
   {
-    "ItemId": "2871099249",
-    "PrefabPathHash": "678656528",
-    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog/PnlTog/TxtNor",
-    "Text": "PrefabTextItem_2871099249_Text"
-  },
-  {
-    "ItemId": "2299917558",
-    "PrefabPathHash": "678656528",
-    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog/PnlTog/TxtSle",
-    "Text": "PrefabTextItem_2299917558_Text"
-  },
-  {
-    "ItemId": "1559288663",
-    "PrefabPathHash": "678656528",
-    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog/TxtTips",
-    "Text": "PrefabTextItem_1559288663_Text"
-  },
-  {
     "ItemId": "4184473141",
     "PrefabPathHash": "1769979463",
     "ItemPath": "PnlCoopLevelTab/PnlTagNew/TxtNew",
@@ -83319,13 +83223,13 @@
     "ItemId": "2033399574",
     "PrefabPathHash": "1223106363",
     "ItemPath": "UiView_ChooseRole/UiItem_LayerUi_Prefab/PnlRight/PnlVert/PnlRoleTabLayout/PnlRoleTabItem/PnlLayout/TxtTabDescription",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2033399574_Text"
   },
   {
     "ItemId": "2551227619",
     "PrefabPathHash": "1223106363",
     "ItemPath": "UiView_ChooseRole/UiItem_LayerUi_Prefab/PnlRight/PnlVert/SvSkillInformation/Viewport/Content/PnlSkillDescription/PnlTitle/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2551227619_Text"
   },
   {
     "ItemId": "3994585863",
@@ -83337,13 +83241,13 @@
     "ItemId": "570868512",
     "PrefabPathHash": "1223106363",
     "ItemPath": "UiView_ChooseRole/UiItem_LayerUi_Prefab/PnlRight/PnlVert/SvSkillInformation/Viewport/Content/PnlSkillDescription/TxtSkillDescription",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_570868512_Text"
   },
   {
     "ItemId": "3656575450",
     "PrefabPathHash": "1223106363",
     "ItemPath": "UiView_ChooseRole/UiItem_LayerUi_Prefab/PnlRight/UiItem_GameConsoleBg/PnlTopHor/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_3656575450_Text"
   },
   {
     "ItemId": "4268654196",
@@ -83583,7 +83487,7 @@
     "ItemId": "4089026500",
     "PrefabPathHash": "2443656693",
     "ItemPath": "UiItem_CubeResult/PnlRecord/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_4089026500_Text"
   },
   {
     "ItemId": "1519091691",
@@ -83595,7 +83499,7 @@
     "ItemId": "2784651479",
     "PrefabPathHash": "2443656693",
     "ItemPath": "UiItem_CubeResult/Uiitem_ResultNewTag/TxtNew",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2784651479_Text"
   },
   {
     "ItemId": "2880090687",
@@ -83799,7 +83703,7 @@
     "ItemId": "2052783163",
     "PrefabPathHash": "2515663149",
     "ItemPath": "UiView_CubeLevel/UiItem_LayerUi_Prefab/PnlSpeed/TxtTips",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2052783163_Text"
   },
   {
     "ItemId": "771933076",
@@ -83859,12 +83763,6 @@
     "ItemId": "1289707076",
     "PrefabPathHash": "1462896855",
     "ItemPath": "UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/Sv_Info/Viewport/Content/PnlBuildTitle/PnlTitleDesc/TxtBuildTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "614555747",
-    "PrefabPathHash": "1462896855",
-    "ItemPath": "UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/Sv_Info/Viewport/Content/PnlDescItem/TxtDescItemTitle",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -83973,7 +83871,7 @@
     "ItemId": "2042301041",
     "PrefabPathHash": "2251351473",
     "ItemPath": "UiView_BuildFinishedTips/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/PnlAlpha/TxtClose",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2042301041_Text"
   },
   {
     "ItemId": "3732249632",
@@ -84399,7 +84297,7 @@
     "ItemId": "833481634",
     "PrefabPathHash": "3592403649",
     "ItemPath": "UiView_InfrastructureReward/UiItem_LayerUi_Prefab/ScrollRewardList/Viewport/Content/PnlRewardItem/UiItem_StripFBtn2/BtnSecConfirmE/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_833481634_Text"
   },
   {
     "ItemId": "2718194852",
@@ -84822,12 +84720,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3290544117",
-    "PrefabPathHash": "379308486",
-    "ItemPath": "UiItem_WeaponDetails/PanelInf/PanelInf/PnlTop/PanelExp/ExpTxt",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "345643273",
     "PrefabPathHash": "379308486",
     "ItemPath": "UiItem_WeaponDetails/PanelInf/PanelInf/PnlTop/PanelStar/BreachLvTxt",
@@ -85173,7 +85065,7 @@
     "ItemId": "3601497342",
     "PrefabPathHash": "399386823",
     "ItemPath": "UiView_Explore/UiItem_LayerUi_Prefab/PnlMain/PnlVert/PnlBtn/UiItem_HightLightTips/PnlOffset/PnlTxt/TxtDescript",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_3601497342_Text"
   },
   {
     "ItemId": "2836434350",
@@ -85509,7 +85401,7 @@
     "ItemId": "514904590",
     "PrefabPathHash": "1378560535",
     "ItemPath": "UiView_SelectSingleRoleA/UiItem_LayerUi_Prefab/PnlInfo/PnlR/PnlTop/PnlLayout/PnlTagHor/PnlTagItem/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_2460830504_Text"
   },
   {
     "ItemId": "4110325039",
@@ -85536,22 +85428,10 @@
     "Text": "BossPilingActivity_Buff03"
   },
   {
-    "ItemId": "3740131857",
-    "PrefabPathHash": "787206118",
-    "ItemPath": "UiItem_TeamRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlState/PnlBg/SprAdd/TxtTips",
-    "Text": "PrefabTextItem_3740131857_Text"
-  },
-  {
     "ItemId": "1483042457",
     "PrefabPathHash": "566610821",
     "ItemPath": "UiView_MowingTowerModeInfo/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/PnlRight/ScrollInfoLayout/Viewport/Content/PnlDescProperty/PnlItemLayout/UiItem_PropertyItem/TxtDesc",
     "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "349257775",
-    "PrefabPathHash": "1173902870",
-    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/PnlStickerGroup/TxtTitle",
-    "Text": "PrefabTextItem_349257775_Text"
   },
   {
     "ItemId": "3744247499",
@@ -85689,13 +85569,13 @@
     "ItemId": "3712782703",
     "PrefabPathHash": "618494775",
     "ItemPath": "UiView_CatapultStoryOpeningTips/UiItem_LayerBg_Prefab/PnlTips/PnlFront/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_3712782703_Text"
   },
   {
     "ItemId": "26700665",
     "PrefabPathHash": "618494775",
     "ItemPath": "UiView_CatapultStoryOpeningTips/UiItem_LayerBg_Prefab/PnlTips/PnlFront/TxtTips",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_26700665_Text"
   },
   {
     "ItemId": "2302963859",
@@ -86037,7 +85917,7 @@
     "ItemId": "557075039",
     "PrefabPathHash": "2326509807",
     "ItemPath": "UiView_RogueBufflInfo33/PnlInfo/PnlTop/UiItem_Caption/PnlTitle/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_557075039_Text"
   },
   {
     "ItemId": "3253868451",
@@ -86484,69 +86364,81 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "557956571",
-    "PrefabPathHash": "4163082280",
-    "ItemPath": "BtnChapterPageRole/PnlOffset/TxtTitle",
-    "Text": "PrefabTextItem_557956571_Text"
-  },
-  {
-    "ItemId": "2711203788",
-    "PrefabPathHash": "1524703755",
-    "ItemPath": "BtnChapterRewardLimited/PnlOffset/PnlTextLayout/TxtRewardProgressLimited",
+    "ItemId": "1677839721",
+    "PrefabPathHash": "755987298",
+    "ItemPath": "UiItem_RaceEnvironmentTips/PnlTips/PnlBG/TxtTipsDescript",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "1814147334",
-    "PrefabPathHash": "1524703755",
-    "ItemPath": "BtnChapterRewardLimited/PnlOffset/PnlTextLayout/TxtTitle",
-    "Text": "PrefabTextItem_1814147334_Text"
-  },
-  {
-    "ItemId": "2057853439",
-    "PrefabPathHash": "498669307",
-    "ItemPath": "FightSkillShipBar/PnlTag/TxtNum",
+    "ItemId": "1448469417",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlCd/SprCDCount",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3584705365",
-    "PrefabPathHash": "2229189758",
-    "ItemPath": "FightSkillTag/PnlOffset/PnlTag/TxtNum",
+    "ItemId": "3506828913",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlCd/SprCDCount",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "730775876",
-    "PrefabPathHash": "204178574",
-    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlCd/SprCDCount",
+    "ItemId": "851884524",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlVLayout/TxtSkillName",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "1171723108",
-    "PrefabPathHash": "204178574",
-    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlCd/SprCDCount",
+    "ItemId": "3725059745",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_3725059745_Text"
+  },
+  {
+    "ItemId": "2421120472",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlCd/SprCDCount",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "2471247226",
-    "PrefabPathHash": "204178574",
-    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_2471247226_Text"
-  },
-  {
-    "ItemId": "2817300277",
-    "PrefabPathHash": "204178574",
-    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_2817300277_Text"
-  },
-  {
-    "ItemId": "2810634287",
-    "PrefabPathHash": "883542490",
-    "ItemPath": "PC_UiItem_RoleAttribute/UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenL/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "ItemId": "3850364787",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlCd/SprCDCount",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3895146599",
-    "PrefabPathHash": "883542490",
-    "ItemPath": "PC_UiItem_RoleAttribute/UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenR/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "ItemId": "684710523",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_684710523_Text"
+  },
+  {
+    "ItemId": "1718465175",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4221206107",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom3/PnlAdapt/PnlCd/SprCDCount",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "104182609",
+    "PrefabPathHash": "2619390850",
+    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom3/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1399923931",
+    "PrefabPathHash": "4199554196",
+    "ItemPath": "UiItem_PhoneSystemChatLeft/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3468840148",
+    "PrefabPathHash": "1591216504",
+    "ItemPath": "UiItem_PhoneSystemChatRight/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -86724,51 +86616,9 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3068943036",
-    "PrefabPathHash": "1798237271",
-    "ItemPath": "PnlBtnAndCostS/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4268062598",
-    "PrefabPathHash": "636420692",
-    "ItemPath": "PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "372041851",
-    "PrefabPathHash": "3611365402",
-    "ItemPath": "PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlRight/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "2659337456",
     "PrefabPathHash": "1149601234",
     "ItemPath": "TogTickB/PnlHLayout/TxtSelectAll",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3360563910",
-    "PrefabPathHash": "1132830969",
-    "ItemPath": "UiItem_Active/LoopScrollView/Viewport/Content/PnlItem/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_3360563910_Text"
-  },
-  {
-    "ItemId": "1170790259",
-    "PrefabPathHash": "1132830969",
-    "ItemPath": "UiItem_Active/PnlBottom/PnlGift/PnlItem/PnlGiftItem/PnlGift/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3009127693",
-    "PrefabPathHash": "2145117729",
-    "ItemPath": "UiItem_ActivityCatapultStoryGuide/PnlInfo/PnlVLayout/BtnChapterReward/PnlOffset/PnlTextLayout/PnlLayout/TxtRewardProgress",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "169552637",
-    "PrefabPathHash": "2145117729",
-    "ItemPath": "UiItem_ActivityCatapultStoryGuide/PnlInfo/PnlVLayout/BtnChapterRewardLimited2/PnlOffset/PnlTextLayout/PnlLayout/TxtRewardProgress",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -86784,28 +86634,568 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
+    "ItemId": "2794742260",
+    "PrefabPathHash": "3980488035",
+    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlLayout/ScrollView/Viewport/Content/PnlProgress/PnlDescLayout/TxtComDescript",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3540876397",
+    "PrefabPathHash": "1002104721",
+    "ItemPath": "UiView_ArchiveChip/UiItem_LayerUi_Prefab/UiItem_CommonNoneTip_Prefab/UiItem_Empty/PnlVert/TxtDescriptA",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1156620131",
+    "PrefabPathHash": "1002104721",
+    "ItemPath": "UiView_ArchiveChip/UiItem_LayerUi_Prefab/UiItem_CommonNoneTip_Prefab/UiItem_Empty/PnlVert/TxtDescriptB",
+    "Text": "PrefabTextItem_1156620131_Text"
+  },
+  {
+    "ItemId": "94545311",
+    "PrefabPathHash": "3069283719",
+    "ItemPath": "UiView_PhoneSystemSet/UiItem_LayerUi_Prefab/PnlVLayout/PnlHLayput/PnlRight/PnlOffsetR/PnlRB/SvDefault/Viewport/Content/PnlWindow/PnlChat/PnlContent/UiItem_PhoneSystemChatLeft/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
+    "Text": "PrefabTextItem_94545311_Text"
+  },
+  {
+    "ItemId": "3887779152",
+    "PrefabPathHash": "3069283719",
+    "ItemPath": "UiView_PhoneSystemSet/UiItem_LayerUi_Prefab/PnlVLayout/PnlHLayput/PnlRight/PnlOffsetR/PnlRB/SvDefault/Viewport/Content/PnlWindow/PnlChat/PnlContent/UiItem_PhoneSystemChatRight/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2838775605",
+    "PrefabPathHash": "3393478576",
+    "ItemPath": "UiView_WuwuLogisticsMissionMain/UiItem_LayerUi_Prefab/PnlPivot/PnlEmptyState/TxtUnlockTime",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "557956571",
+    "PrefabPathHash": "4163082280",
+    "ItemPath": "BtnChapterPageRole/PnlOffset/TxtTitle",
+    "Text": "PrefabTextItem_557956571_Text"
+  },
+  {
+    "ItemId": "2711203788",
+    "PrefabPathHash": "1524703755",
+    "ItemPath": "BtnChapterRewardLimited/PnlOffset/PnlTextLayout/TxtRewardProgressLimited",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1814147334",
+    "PrefabPathHash": "1524703755",
+    "ItemPath": "BtnChapterRewardLimited/PnlOffset/PnlTextLayout/TxtTitle",
+    "Text": "PrefabTextItem_1814147334_Text"
+  },
+  {
+    "ItemId": "3009127693",
+    "PrefabPathHash": "2145117729",
+    "ItemPath": "UiItem_ActivityCatapultStoryGuide/PnlInfo/PnlVLayout/BtnChapterReward/PnlOffset/PnlTextLayout/PnlLayout/TxtRewardProgress",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "169552637",
+    "PrefabPathHash": "2145117729",
+    "ItemPath": "UiItem_ActivityCatapultStoryGuide/PnlInfo/PnlVLayout/BtnChapterRewardLimited2/PnlOffset/PnlTextLayout/PnlLayout/TxtRewardProgress",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1923474371",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/Buff",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1951836351",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/MonsterCriticalDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2830907676",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/MonsterDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "597389192",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/OwnCriticalDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "462826994",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/OwnDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2073169390",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialCriticalDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1441725950",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "842981831",
+    "PrefabPathHash": "422946154",
+    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialTraceDamage",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "951164082",
+    "PrefabPathHash": "912944692",
+    "ItemPath": "UiItem_LevelDetailTips/PnlBottom/PnlReward/PnlHorLayout/TxtDailyDoing",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2965112507",
+    "PrefabPathHash": "453998511",
+    "ItemPath": "UiView_Inventory_EchoPlanSet_CostSet/UiItem_LayerUi_Prefab/PnlRight/PnlVLayout/PnlPlanTitle/PnlDefault/TxtActivation",
+    "Text": "PhantomProject_PlanRunning"
+  },
+  {
+    "ItemId": "3152599865",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlBossTxt/TxtBoss",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "501944099",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlBossTxt/TxtBossTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "663596596",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlLevelTxt/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2204480000",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlLevelTxt/TxtLevelTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3005887429",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlSubTitle/TxtSubTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1069563323",
+    "PrefabPathHash": "1449224932",
+    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlTitle/TxtTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2158351333",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlButtom/BtnCancel/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2158351333_Text"
+  },
+  {
+    "ItemId": "1763914456",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlButtom/BtnConfirm/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_1763914456_Text"
+  },
+  {
+    "ItemId": "2826489395",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlPix/TxtFilterTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2938910262",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlSetBar/DescriScroll/Viewport/Content/TogItemBar/PnlOffset/TxtSettingNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "413070505",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlSetBar/DescriScroll/Viewport/Content/TogItemBar/PnlOffset/TxtSettingTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4262918801",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/TogTopTabItemH/PnlItemLayout/TogItem01/PnlLayout/TxtName",
+    "Text": "PrefabTextItem_4262918801_Text"
+  },
+  {
+    "ItemId": "3780750478",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/TogTopTabItemH/PnlItemLayout/TogItem02/PnlLayout/TxtName",
+    "Text": "PrefabTextItem_3780750478_Text"
+  },
+  {
+    "ItemId": "510658227",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/UiItem_PhotoSetC/PnlHLayout/TxtSettingTitle",
+    "Text": "PrefabTextItem_510658227_Text"
+  },
+  {
+    "ItemId": "3441839965",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/UiItem_PhotoSetC/TxtSettingNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2070808429",
+    "PrefabPathHash": "767056288",
+    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlPoint/TxtNum",
+    "Text": "PrefabTextItem_2070808429_Text"
+  },
+  {
+    "ItemId": "3694738853",
+    "PrefabPathHash": "3645035661",
+    "ItemPath": "UiView_BossrushRewardA/UiItem_LayerUi_Prefab/TxtTime",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1019337646",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/BtnLikeCount/PnlLikeCount/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "622765667",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlBg/PnlMatching/TxtTime",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2806613376",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlBg/PnlMatching/TxtTips",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "636453116",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlDead/SprDead/TxtDead",
+    "Text": "PrefabTextItem_636453116_Text"
+  },
+  {
+    "ItemId": "3433888173",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlDisabled/SprDisabled/TxtDisabled",
+    "Text": "PrefabTextItem_3433888173_Text"
+  },
+  {
+    "ItemId": "404397141",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlChange/PnlLeft/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1414299211",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlChange/PnlRight/TxtNextNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4154876675",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlRed/TxtRed",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1814783656",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlVert/PnlTag/TxtTag",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2596154731",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlVert/PnlTag/TxtTag",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2154686479",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/PnlHor/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3642363166",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1223526796",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlVert/TxtPSID",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2611235816",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlWarn/SprWarn/TxtWarn",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2243547451",
+    "PrefabPathHash": "820562888",
+    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlRoleInfo/PnlRight/SvBuff/Viewport/Content/PnlBuffDescriptionItem/PnlTitle/PnlHor/TxtBuffNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3584705365",
+    "PrefabPathHash": "2229189758",
+    "ItemPath": "FightSkillTag/PnlOffset/PnlTag/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2057853439",
+    "PrefabPathHash": "498669307",
+    "ItemPath": "FightSkillShipBar/PnlTag/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3189003062",
+    "PrefabPathHash": "1812972090",
+    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/PnlHor/PnlLevel/TxtLevel",
+    "Text": "PrefabTextItem_3189003062_Text"
+  },
+  {
+    "ItemId": "2480618374",
+    "PrefabPathHash": "3033432808",
+    "ItemPath": "UiItem_CubeCountdownTips/TxtTips",
+    "Text": "PrefabTextItem_2480618374_Text"
+  },
+  {
+    "ItemId": "3068943036",
+    "PrefabPathHash": "1798237271",
+    "ItemPath": "PnlBtnAndCostS/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2810634287",
+    "PrefabPathHash": "883542490",
+    "ItemPath": "PC_UiItem_RoleAttribute/UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenL/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3895146599",
+    "PrefabPathHash": "883542490",
+    "ItemPath": "PC_UiItem_RoleAttribute/UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenR/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "279712701",
+    "PrefabPathHash": "3371778257",
+    "ItemPath": "UiView_ComActivityPanel/UiItem_LayerUi/UiItem_ComTabList/PnlVert/PnlTop/UiItem_DropdownA/BtnDropDown/PnlOffset/PnlContent/TxtContent",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3618794121",
+    "PrefabPathHash": "1848398352",
+    "ItemPath": "UiView_LimitedTimeReward/UiItem_LayerUi_Prefab/PnlBottom/TxtBottomDoing",
+    "Text": "PrefabTextItem_3618794121_Text"
+  },
+  {
+    "ItemId": "4268062598",
+    "PrefabPathHash": "636420692",
+    "ItemPath": "PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3360563910",
+    "PrefabPathHash": "1132830969",
+    "ItemPath": "UiItem_Active/LoopScrollView/Viewport/Content/PnlItem/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_3360563910_Text"
+  },
+  {
+    "ItemId": "737782196",
+    "PrefabPathHash": "2344650116",
+    "ItemPath": "UiItem_Completion/PnlRight/PnlTop/PnlProgress/PnlExp/TxtNum/TxtNum2",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1378081328",
+    "PrefabPathHash": "2344650116",
+    "ItemPath": "UiItem_Completion/UiItem_Left/SvList/Viewport/Content/PnlItem/PnlDevelopmentGuidItem2/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_1378081328_Text"
+  },
+  {
+    "ItemId": "2180940069",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2180940069_Text"
+  },
+  {
+    "ItemId": "2851898258",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2851898258_Text"
+  },
+  {
+    "ItemId": "3903168040",
+    "PrefabPathHash": "1173902870",
+    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/BtnSecConfirmB/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_3903168040_Text"
+  },
+  {
+    "ItemId": "2582905314",
+    "PrefabPathHash": "1173902870",
+    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/BtnSecConfirmE/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2582905314_Text"
+  },
+  {
+    "ItemId": "4149550951",
+    "PrefabPathHash": "1173902870",
+    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/PnlLock/TxtLock",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "661482331",
+    "PrefabPathHash": "1173902870",
+    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "730775876",
+    "PrefabPathHash": "204178574",
+    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlCd/SprCDCount",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1171723108",
+    "PrefabPathHash": "204178574",
+    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlCd/SprCDCount",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2471247226",
+    "PrefabPathHash": "204178574",
+    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_2471247226_Text"
+  },
+  {
+    "ItemId": "2817300277",
+    "PrefabPathHash": "204178574",
+    "ItemPath": "PC_UiItem_CubeLevelFight/PnlHor/PC_FightSkill1/FightSkill1/PnlAdapt/PnlVLayout/TxtSkillName",
+    "Text": "PrefabTextItem_2817300277_Text"
+  },
+  {
+    "ItemId": "1373043851",
+    "PrefabPathHash": "2443656693",
+    "ItemPath": "UiItem_CubeResult/PnlVert/PnlNone/UiItem_Empty2/PnlVert/TxtDescriptA",
+    "Text": "PrefabTextItem_1373043851_Text"
+  },
+  {
+    "ItemId": "1000533497",
+    "PrefabPathHash": "2443656693",
+    "ItemPath": "UiItem_CubeResult/PnlVert/PnlNone/UiItem_Empty2/PnlVert/TxtDescriptB",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2493587518",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3311337843",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4139333085",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1377647146",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4079811801",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "571373053",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3108088987",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "378027360",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3266278539",
+    "PrefabPathHash": "1453632446",
+    "ItemPath": "UiItem_DevelopmentPeriodItemB/PnlOffset/PnlIntegral/PnlHlayout/TxtIntegralValue2",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3804770611",
+    "PrefabPathHash": "1894892879",
+    "ItemPath": "UiItem_WeaponTips/TxtDebug",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3217952518",
+    "PrefabPathHash": "2702075538",
+    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlMultiNum/NumCtrl/TxtNum100",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3266593089",
+    "PrefabPathHash": "2702075538",
+    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlMultiNum/NumCtrl/TxtNum90",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1522324314",
+    "PrefabPathHash": "2702075538",
+    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlName/PnlNameOffset/TxtLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "433716577",
+    "PrefabPathHash": "2702075538",
+    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlName/PnlNameOffset/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1170790259",
+    "PrefabPathHash": "1132830969",
+    "ItemPath": "UiItem_Active/PnlBottom/PnlGift/PnlItem/PnlGiftItem/PnlGift/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
     "ItemId": "3055989026",
     "PrefabPathHash": "1604758694",
     "ItemPath": "UiItem_BattleRelivePopup/PnlAdjust/BtnConfirmBaseR/PnlOffset/PnlHorLayout/TxtName",
     "Text": "PrefabTextItem_3055989026_Text"
-  },
-  {
-    "ItemId": "1470779294",
-    "PrefabPathHash": "1043848132",
-    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2516049402",
-    "PrefabPathHash": "1043848132",
-    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/Viewport/Content/Txtgongnen",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "401509054",
-    "PrefabPathHash": "1043848132",
-    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/Viewport/Content/UiItem_Paragraph/Txt1",
-    "Text": "PrefabTextItem_Default_Text"
   },
   {
     "ItemId": "3795093597",
@@ -87090,334 +87480,88 @@
     "Text": "PrefabTextItem_389162183_Text"
   },
   {
-    "ItemId": "737782196",
-    "PrefabPathHash": "2344650116",
-    "ItemPath": "UiItem_Completion/PnlRight/PnlTop/PnlProgress/PnlExp/TxtNum/TxtNum2",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1378081328",
-    "PrefabPathHash": "2344650116",
-    "ItemPath": "UiItem_Completion/UiItem_Left/SvList/Viewport/Content/PnlItem/PnlDevelopmentGuidItem2/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_1378081328_Text"
-  },
-  {
-    "ItemId": "2480618374",
-    "PrefabPathHash": "3033432808",
-    "ItemPath": "UiItem_CubeCountdownTips/TxtTips",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1448469417",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlCd/SprCDCount",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3506828913",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlCd/SprCDCount",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "851884524",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3725059745",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom1/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_3725059745_Text"
-  },
-  {
-    "ItemId": "2421120472",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlCd/SprCDCount",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3850364787",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlCd/SprCDCount",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "684710523",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_684710523_Text"
-  },
-  {
-    "ItemId": "1718465175",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom2/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4221206107",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom3/PnlAdapt/PnlCd/SprCDCount",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "104182609",
-    "PrefabPathHash": "2619390850",
-    "ItemPath": "UiItem_CubeLevelFight/PnlVert/BtnCom3/PnlAdapt/PnlVLayout/TxtSkillName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1373043851",
-    "PrefabPathHash": "2443656693",
-    "ItemPath": "UiItem_CubeResult/PnlVert/PnlNone/UiItem_Empty2/PnlVert/TxtDescriptA",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1000533497",
-    "PrefabPathHash": "2443656693",
-    "ItemPath": "UiItem_CubeResult/PnlVert/PnlNone/UiItem_Empty2/PnlVert/TxtDescriptB",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1923474371",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/Buff",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1951836351",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/MonsterCriticalDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2830907676",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/MonsterDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "597389192",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/OwnCriticalDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "462826994",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/OwnDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2073169390",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialCriticalDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1441725950",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "842981831",
-    "PrefabPathHash": "422946154",
-    "ItemPath": "UiItem_DamageViewCatapultStory_Num_Prefab/SpecialTraceDamage",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "949645760",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlLeft/PnlTabRoleDev/UiItem_StripF2/PnlVert/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2742187893",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlLeft/PnlTabRoleDev/UiItem_StripF2/PnlVert/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2754756333",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlLeft/PnlTabRoleDev/UiItem_StripF2/UiItem_RoleDevelopTag/PnlOffset/TxtTagState",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2180940069",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_2180940069_Text"
-  },
-  {
-    "ItemId": "2493587518",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3311337843",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4139333085",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1377647146",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/LoppSvInfoA/Viewport/Content/PnlContainerItem/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2851898258",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_2851898258_Text"
-  },
-  {
-    "ItemId": "4079811801",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "571373053",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft6/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3108088987",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "378027360",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/MultiSvInfoB/Viewport/Content/PnlDevelopmentGuidItem/PnlOffset/PnlContent/PnlLeft7/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2320306351",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlChooseRole/BtnChoose/PnlOffset/PnlContent/TxtContent",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3114449247",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlChooseRole/UiItem_Empty/PnlVert/TxtDescriptA",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "69985592",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlChooseRole/UiItem_Empty/PnlVert/TxtDescriptB",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2394025959",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlLeft/TxtMatDescript",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2664058371",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlLeft/TxtMatLimit",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "377905812",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlRight/BtnConfirmNewC/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3322958322",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlRight/PnlFull/UITextActor533",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3283471345",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlSubTitle/PnlLayout/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2645789534",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlSubTitle/PnlSwitch/TxtSwitchState",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2080705919",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlWpRecommend/BtnFunctionI/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "924678707",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlRoleMat/PnlWpRecommend/TxtMatLimit",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3144011301",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlVision/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1003142177",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlVision/PnlSubTitle/PnlLayout/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1547676785",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlVision/PnlSubTitle/PnlSwitch/TxtSwitchState",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "553772143",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlVision/PnlWpRecommend/TxtVisionName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2868370895",
-    "PrefabPathHash": "1097099310",
-    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlRoleDev/PnlList/MultiSvInfoB/Viewport/Content/PnlVision/PnlWpRecommend/TxtVisionName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "3146231747",
     "PrefabPathHash": "1453632446",
     "ItemPath": "UiItem_DevelopmentPeriodItemB/PnlOffset/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_3146231747_Text"
   },
   {
-    "ItemId": "3266278539",
-    "PrefabPathHash": "1453632446",
-    "ItemPath": "UiItem_DevelopmentPeriodItemB/PnlOffset/PnlIntegral/PnlHlayout/TxtIntegralValue2",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "251180652",
     "PrefabPathHash": "53795287",
     "ItemPath": "UiItem_EchoSetCodePopup/PnlInfo/PnlImportCode/BtnConfirmA/PnlCtrl/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_251180652_Text"
+  },
+  {
+    "ItemId": "744864414",
+    "PrefabPathHash": "4069302504",
+    "ItemPath": "UiItem_PlanVision/PnlGoal/PnlCurrentGoal/PnlOffset/PnlRight/PnlNotObtained/TxtNotObtained",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3919530720",
+    "PrefabPathHash": "3439299348",
+    "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponDevelop/PnlPos/PnlCurrentGoal/PnlOffset/PnlRight/PnlNotObtained/TxtNotObtained",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3521559582",
+    "PrefabPathHash": "4166442131",
+    "ItemPath": "UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenL/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1863862975",
+    "PrefabPathHash": "4166442131",
+    "ItemPath": "UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenR/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1612372541",
+    "PrefabPathHash": "820562888",
+    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/PnlTog/TxtNor",
+    "Text": "PrefabTextItem_1612372541_Text"
+  },
+  {
+    "ItemId": "151412124",
+    "PrefabPathHash": "820562888",
+    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/PnlTog/TxtSle",
+    "Text": "PrefabTextItem_151412124_Text"
+  },
+  {
+    "ItemId": "40542480",
+    "PrefabPathHash": "820562888",
+    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/TxtTips",
+    "Text": "PrefabTextItem_40542480_Text"
+  },
+  {
+    "ItemId": "521621995",
+    "PrefabPathHash": "1808576733",
+    "ItemPath": "UiItem_WelfareBCard/PnlOffset/PnlBtn/PnlFinishTxt/TxtReward",
+    "Text": "PrefabTextItem_521621995_Text"
+  },
+  {
+    "ItemId": "372041851",
+    "PrefabPathHash": "3611365402",
+    "ItemPath": "PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlRight/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1470779294",
+    "PrefabPathHash": "1043848132",
+    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/TxtTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2516049402",
+    "PrefabPathHash": "1043848132",
+    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/Viewport/Content/Txtgongnen",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "401509054",
+    "PrefabPathHash": "1043848132",
+    "ItemPath": "UiItem_CatapultStoryHelp_Prefab/PanelInf/UiItem_help/Viewport/Content/UiItem_Paragraph/Txt1",
+    "Text": "PrefabTextItem_Default_Text"
   },
   {
     "ItemId": "157099958",
@@ -87430,30 +87574,6 @@
     "PrefabPathHash": "53795287",
     "ItemPath": "UiItem_EchoSetCodePopup/PnlInfo/PnlMyCode/PnlHor/BtnUpdate/PnlPivot/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_3477939625_Text"
-  },
-  {
-    "ItemId": "951164082",
-    "PrefabPathHash": "912944692",
-    "ItemPath": "UiItem_LevelDetailTips/PnlBottom/PnlReward/PnlHorLayout/TxtDailyDoing",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2794742260",
-    "PrefabPathHash": "3980488035",
-    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlLayout/ScrollView/Viewport/Content/PnlProgress/PnlDescLayout/TxtComDescript",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1399923931",
-    "PrefabPathHash": "4199554196",
-    "ItemPath": "UiItem_PhoneSystemChatLeft/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3468840148",
-    "PrefabPathHash": "1591216504",
-    "ItemPath": "UiItem_PhoneSystemChatRight/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
-    "Text": "PrefabTextItem_Default_Text"
   },
   {
     "ItemId": "875634937",
@@ -87504,12 +87624,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "744864414",
-    "PrefabPathHash": "4069302504",
-    "ItemPath": "UiItem_PlanVision/PnlGoal/PnlCurrentGoal/PnlOffset/PnlRight/PnlNotObtained/TxtNotObtained",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "4009124951",
     "PrefabPathHash": "4069302504",
     "ItemPath": "UiItem_PlanVision/PnlVisionRecommend/PnlSuitLayout/PnlSuit/PnlSuitLayout/PnlVisionSuit/PnlOffset/PnlRight/BtnConfirmNewCBlack4/PnlPivot/PnlLayout/TxtConfirm",
@@ -87528,12 +87642,6 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3919530720",
-    "PrefabPathHash": "3439299348",
-    "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponDevelop/PnlPos/PnlCurrentGoal/PnlOffset/PnlRight/PnlNotObtained/TxtNotObtained",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "505629956",
     "PrefabPathHash": "3439299348",
     "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponDevelop/PnlPos/PnlVLayout/PnlDetailLayout/PnlRoleDetailList/UiItem_StripHBtn/PnlOffset/PnlRight/BtnConfirmNewCBlack/PnlPivot/PnlLayout/TxtConfirm",
@@ -87549,126 +87657,6 @@
     "ItemId": "2551387812",
     "PrefabPathHash": "3439299348",
     "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponRecommend/PnlPos/PnlCurrentGoal/PnlOffset/PnlRight/BtnConfirmNewCReward2/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2620207500",
-    "PrefabPathHash": "3439299348",
-    "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponRecommend/PnlPos/PnlVLayout/PnlCurrentGoal/PnlOffset/PnlRight/BtnMoonCard/PnlOffset/PnlHLayout/TxtNotObtained",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1677839721",
-    "PrefabPathHash": "755987298",
-    "ItemPath": "UiItem_RaceEnvironmentTips/PnlTips/PnlBG/TxtTipsDescript",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3521559582",
-    "PrefabPathHash": "4166442131",
-    "ItemPath": "UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenL/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1863862975",
-    "PrefabPathHash": "4166442131",
-    "ItemPath": "UiItem_RoleAttribute/PnlLevelUpTen/PnlLevelUpTenR/BtnConfirmBase2/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1698762293",
-    "PrefabPathHash": "2556703957",
-    "ItemPath": "UiItem_RoleDeviceInfo/PnlInfo/PnlUnder/BtnSecConfirmB/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_1698762293_Text"
-  },
-  {
-    "ItemId": "1019337646",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/BtnLikeCount/PnlLikeCount/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "622765667",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlBg/PnlMatching/TxtTime",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2806613376",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlBg/PnlMatching/TxtTips",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "636453116",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlDead/SprDead/TxtDead",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3433888173",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlDisabled/SprDisabled/TxtDisabled",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "404397141",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlChange/PnlLeft/TxtNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1414299211",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlChange/PnlRight/TxtNextNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4154876675",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlEnergy/PnlRed/TxtRed",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1814783656",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlVert/PnlTag/TxtTag",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2596154731",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/PnlVert/PnlTag/TxtTag",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3189003062",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/PnlHor/PnlLevel/TxtLevel",
-    "Text": "PrefabTextItem_3189003062_Text"
-  },
-  {
-    "ItemId": "2154686479",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/PnlHor/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3642363166",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlInfo/UiItem_RoleDetail/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1223526796",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlVert/TxtPSID",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2611235816",
-    "PrefabPathHash": "1812972090",
-    "ItemPath": "UiItem_TeamCelebrationRoleSlot/UiItem_ChoiceBtn/PnlRoleItem/BtnRole/PnlPreVIew/PnlWarn/SprWarn/TxtWarn",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -87732,238 +87720,10 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "3804770611",
-    "PrefabPathHash": "1894892879",
-    "ItemPath": "UiItem_WeaponTips/TxtDebug",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "521621995",
-    "PrefabPathHash": "1808576733",
-    "ItemPath": "UiItem_WelfareBCard/PnlOffset/PnlBtn/PnlFinishTxt/TxtReward",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3540876397",
-    "PrefabPathHash": "1002104721",
-    "ItemPath": "UiView_ArchiveChip/UiItem_LayerUi_Prefab/UiItem_CommonNoneTip_Prefab/UiItem_Empty/PnlVert/TxtDescriptA",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1156620131",
-    "PrefabPathHash": "1002104721",
-    "ItemPath": "UiView_ArchiveChip/UiItem_LayerUi_Prefab/UiItem_CommonNoneTip_Prefab/UiItem_Empty/PnlVert/TxtDescriptB",
-    "Text": "PrefabTextItem_1156620131_Text"
-  },
-  {
-    "ItemId": "1612372541",
-    "PrefabPathHash": "820562888",
-    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/PnlTog/TxtNor",
-    "Text": "PrefabTextItem_1612372541_Text"
-  },
-  {
-    "ItemId": "151412124",
-    "PrefabPathHash": "820562888",
-    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/PnlTog/TxtSle",
-    "Text": "PrefabTextItem_151412124_Text"
-  },
-  {
-    "ItemId": "40542480",
-    "PrefabPathHash": "820562888",
-    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlBottom/PnlRightLayout/UiItem_Tog/TxtTips",
-    "Text": "PrefabTextItem_40542480_Text"
-  },
-  {
-    "ItemId": "2243547451",
-    "PrefabPathHash": "820562888",
-    "ItemPath": "UiView_BattlePause/UiItem_LayerUi_Prefab/PnlRoleInfo/PnlRight/SvBuff/Viewport/Content/PnlBuffDescriptionItem/PnlTitle/PnlHor/TxtBuffNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3152599865",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlBossTxt/TxtBoss",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "501944099",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlBossTxt/TxtBossTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "663596596",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlLevelTxt/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2204480000",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlLevelTxt/TxtLevelTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3005887429",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlSubTitle/TxtSubTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1069563323",
-    "PrefabPathHash": "1449224932",
-    "ItemPath": "UiView_BossPilingChallengeDetail/PnlInfo/PnlR/SvDefault/Viewport/Content/PnlItem2/PnlTitle/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3694738853",
-    "PrefabPathHash": "3645035661",
-    "ItemPath": "UiView_BossrushRewardA/UiItem_LayerUi_Prefab/TxtTime",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "279712701",
-    "PrefabPathHash": "3371778257",
-    "ItemPath": "UiView_ComActivityPanel/UiItem_LayerUi/UiItem_ComTabList/PnlVert/PnlTop/UiItem_DropdownA/BtnDropDown/PnlOffset/PnlContent/TxtContent",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3217952518",
-    "PrefabPathHash": "2702075538",
-    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlMultiNum/NumCtrl/TxtNum100",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "3266593089",
-    "PrefabPathHash": "2702075538",
-    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlMultiNum/NumCtrl/TxtNum90",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "1522324314",
-    "PrefabPathHash": "2702075538",
-    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlName/PnlNameOffset/TxtLevel",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "433716577",
-    "PrefabPathHash": "2702075538",
-    "ItemPath": "UiView_Fight_Plot/PnlPivot/PnlBossHp/UiItem_BossStateMultiLayer_Prefab/PnlName/PnlNameOffset/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2158351333",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlButtom/BtnCancel/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_2158351333_Text"
-  },
-  {
-    "ItemId": "1763914456",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlButtom/BtnConfirm/PnlPivot/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_1763914456_Text"
-  },
-  {
-    "ItemId": "2826489395",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlPix/TxtFilterTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2938910262",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlSetBar/DescriScroll/Viewport/Content/TogItemBar/PnlOffset/TxtSettingNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "413070505",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/PnlSetBar/DescriScroll/Viewport/Content/TogItemBar/PnlOffset/TxtSettingTitle",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "4262918801",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/TogTopTabItemH/PnlItemLayout/TogItem01/PnlLayout/TxtName",
-    "Text": "PrefabTextItem_4262918801_Text"
-  },
-  {
-    "ItemId": "3780750478",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/TogTopTabItemH/PnlItemLayout/TogItem02/PnlLayout/TxtName",
-    "Text": "PrefabTextItem_3780750478_Text"
-  },
-  {
-    "ItemId": "510658227",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/UiItem_PhotoSetC/PnlHLayout/TxtSettingTitle",
-    "Text": "PrefabTextItem_510658227_Text"
-  },
-  {
-    "ItemId": "3441839965",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlHide/UiItem_PhotoSetC/TxtSettingNum",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "2070808429",
-    "PrefabPathHash": "767056288",
-    "ItemPath": "UiView_FilterSet/PnlInfo/PnlLeft/PnlSet/PnlPoint/TxtNum",
-    "Text": "PrefabTextItem_2070808429_Text"
-  },
-  {
-    "ItemId": "2965112507",
-    "PrefabPathHash": "453998511",
-    "ItemPath": "UiView_Inventory_EchoPlanSet_CostSet/UiItem_LayerUi_Prefab/PnlRight/PnlVLayout/PnlPlanTitle/PnlDefault/TxtActivation",
-    "Text": "PhantomProject_PlanRunning"
-  },
-  {
-    "ItemId": "3618794121",
-    "PrefabPathHash": "1848398352",
-    "ItemPath": "UiView_LimitedTimeReward/UiItem_LayerUi_Prefab/PnlBottom/TxtBottomDoing",
-    "Text": "PrefabTextItem_3618794121_Text"
-  },
-  {
-    "ItemId": "3903168040",
-    "PrefabPathHash": "1173902870",
-    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/BtnSecConfirmB/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_3903168040_Text"
-  },
-  {
-    "ItemId": "2582905314",
-    "PrefabPathHash": "1173902870",
-    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/BtnSecConfirmE/PnlLayout/TxtConfirm",
-    "Text": "PrefabTextItem_2582905314_Text"
-  },
-  {
-    "ItemId": "4149550951",
-    "PrefabPathHash": "1173902870",
-    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/PnlLock/TxtLock",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "661482331",
-    "PrefabPathHash": "1173902870",
-    "ItemPath": "UiView_MotoLinkageReward/UiItem_LayerUi_Prefab/PnlPivot/PnlContent/RewardItemScroll/Viewport/Content/PnlQuestItemB/UiItem_StripFBtn/TxtName",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
-    "ItemId": "94545311",
-    "PrefabPathHash": "3069283719",
-    "ItemPath": "UiView_PhoneSystemSet/UiItem_LayerUi_Prefab/PnlVLayout/PnlHLayput/PnlRight/PnlOffsetR/PnlRB/SvDefault/Viewport/Content/PnlWindow/PnlChat/PnlContent/UiItem_PhoneSystemChatLeft/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
-    "Text": "PrefabTextItem_94545311_Text"
-  },
-  {
-    "ItemId": "3887779152",
-    "PrefabPathHash": "3069283719",
-    "ItemPath": "UiView_PhoneSystemSet/UiItem_LayerUi_Prefab/PnlVLayout/PnlHLayput/PnlRight/PnlOffsetR/PnlRB/SvDefault/Viewport/Content/PnlWindow/PnlChat/PnlContent/UiItem_PhoneSystemChatRight/PnlChat/PnlVLayout/PnlPlayerName/TxtPlayerName02",
-    "Text": "PrefabTextItem_Default_Text"
-  },
-  {
     "ItemId": "4155332621",
     "PrefabPathHash": "1776560575",
     "ItemPath": "UiView_ProjectorMain/UiItem_LayerUi_Prefab/PnlPivot/UiItem_Caption/PnlTitle/TxtTitle",
-    "Text": "PrefabTextItem_Default_Text"
+    "Text": "PrefabTextItem_4155332621_Text"
   },
   {
     "ItemId": "3995088015",
@@ -87972,9 +87732,327 @@
     "Text": "PrefabTextItem_Default_Text"
   },
   {
-    "ItemId": "2838775605",
-    "PrefabPathHash": "3393478576",
-    "ItemPath": "UiView_WuwuLogisticsMissionMain/UiItem_LayerUi_Prefab/PnlPivot/PnlEmptyState/TxtUnlockTime",
+    "ItemId": "3150797060",
+    "PrefabPathHash": "3521111633",
+    "ItemPath": "UiView_WeaponDecompose/UiItem_LayerUi_Prefab/PnlRight/PnlBottom/BtnConfirmBase3/PnlPivot/PnlLayout/PnlText/TxtConfirm",
+    "Text": "PrefabTextItem_3150797060_Text"
+  },
+  {
+    "ItemId": "948453164",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/PnlBottom/PnlTips/PnlBuildLevel/TxtBuildInfoTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1509638245",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/PnlBottom/PnlTips/PnlClearState/TxtClearTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3941843044",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/PnlBottom/PnlTips/PnlCurrProgress/PnlInfo/TxtProgressTitle",
+    "Text": "PrefabTextItem_855467094_Text"
+  },
+  {
+    "ItemId": "1355360262",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/PnlBottom/PnlTips/PnlCurrProgress/PnlInfo/TxtProgressValue",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3545391170",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/PnlBottom/PnlTips/PnlMaxLevel/TxtProgressTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2293401769",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/Sv_Info/Viewport/Content/PnlBuildTitle/PnlTitleDesc/TxtBuildTitle",
+    "Text": "PrefabTextItem_2293401769_Text"
+  },
+  {
+    "ItemId": "492266815",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/Sv_Info/Viewport/Content/PnlDescItem/TxtDescItemTitle",
+    "Text": "PrefabTextItem_1772298043_Text"
+  },
+  {
+    "ItemId": "2392457446",
+    "PrefabPathHash": "1922202945",
+    "ItemPath": "UiView_WorldBuildInfoView/UiItem_LayerUi_Prefab/UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlTop/PnlTitle/TxtBuildName",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4240717826",
+    "PrefabPathHash": "1900239678",
+    "ItemPath": "PC_UiItem_RogueStore/UiItem_RogueStore/UiItem_LayerUi_Prefab/UiItem_WorldLeftPopup/PnlContent/PnlRougeElementInfo/PnlInfo/TogElementInfo/PnlElementList/PnlElementItem/TexElementNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3128717460",
+    "PrefabPathHash": "1900239678",
+    "ItemPath": "PC_UiItem_RogueStore/UiItem_RogueStore/UiItem_LayerUi_Prefab/UiItem_WorldLeftPopup/PnlContent/PnlRougeElementInfo/PnlInfo/TogElementInfo/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2100572894",
+    "PrefabPathHash": "1900239678",
+    "ItemPath": "PC_UiItem_RogueStore/UiItem_RogueStore/UiItem_LayerUi_Prefab/UiItem_WorldLeftPopup/PnlContent/PnlRougeElementInfo/PnlInfo/UiItem_HoverTipsB/SprInfoBg/PnlInfo/PnlTiitle/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "796988296",
+    "PrefabPathHash": "1900239678",
+    "ItemPath": "PC_UiItem_RogueStore/UiItem_RogueStore/UiItem_LayerUi_Prefab/UiItem_WorldLeftPopup/PnlContent/PnlRougeElementInfo/PnlInfo/UiItem_HoverTipsB/SprInfoBg/PnlInfo/PnlTiitle/TxtTitle",
+    "Text": "PrefabTextItem_796988296_Text"
+  },
+  {
+    "ItemId": "942911702",
+    "PrefabPathHash": "1900239678",
+    "ItemPath": "PC_UiItem_RogueStore/UiItem_RogueStore/UiItem_LayerUi_Prefab/UiItem_WorldLeftPopup/PnlContent/PnlRougeElementInfo/PnlInfo/UiItem_HoverTipsB/SprInfoBg/PnlInfo/TxtDesc",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "614555747",
+    "PrefabPathHash": "1462896855",
+    "ItemPath": "UiItem_InfrastructureBuildPopup/PnlOffset/PnlTips/PnlInfo/PnlBuildInfo/Sv_Info/Viewport/Content/PnlDescItem/TxtDescItemTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3752991859",
+    "PrefabPathHash": "3439299348",
+    "ItemPath": "UiItem_PlanWeapon/UiItem_PlanWeaponRecommend/PnlPos/PnlVLayout/PnlCurrentGoal/PnlOffset/PnlRight/BtnConfirmNewC/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "305841026",
+    "PrefabPathHash": "678656528",
+    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog2/PnlTog/TxtNor",
+    "Text": "PrefabTextItem_305841026_Text"
+  },
+  {
+    "ItemId": "1255498020",
+    "PrefabPathHash": "678656528",
+    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog2/PnlTog/TxtSle",
+    "Text": "PrefabTextItem_1255498020_Text"
+  },
+  {
+    "ItemId": "77130721",
+    "PrefabPathHash": "678656528",
+    "ItemPath": "UiView_CatapultStorySettlement/UiItem_LayerUi_Prefab/UiItem_Tog2/TxtTips",
+    "Text": "PrefabTextItem_77130721_Text"
+  },
+  {
+    "ItemId": "1942019722",
+    "PrefabPathHash": "719326509",
+    "ItemPath": "UiView_RogueSkill/UiItem_LayerUi_Prefab/PnlInfo/PnlAactivedB/PnlKeyLayout/TxtActivated",
+    "Text": "PrefabTextItem_1942019722_Text"
+  },
+  {
+    "ItemId": "1897880724",
+    "PrefabPathHash": "3474943057",
+    "ItemPath": "UiView_VisionRefiningResult/PnlInfo/PnlStepB/TxtLeftNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "460282847",
+    "PrefabPathHash": "3474943057",
+    "ItemPath": "UiView_VisionRefiningResult/PnlInfo/PnlStepB/TxtRightNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3960036437",
+    "PrefabPathHash": "1461558940",
+    "ItemPath": "UiItem_RoleSkillC/PnlCanvs/PnlLevel/TxtSkillLevel",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3948340992",
+    "PrefabPathHash": "3875630860",
+    "ItemPath": "PnlActivityInfrastructureTag/TxtTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2944906659",
+    "PrefabPathHash": "1097099310",
+    "ItemPath": "UiItem_DevelopmentComPage/PnlVertical/PnlBeginSupportTitle/PnlTitle/PnlTitle/BtnStyleB1New/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2944906659_Text"
+  },
+  {
+    "ItemId": "3060396489",
+    "PrefabPathHash": "4069302504",
+    "ItemPath": "UiItem_PlanVision/PnlVisionRecommend/PnlSuitLayout/PnlSuit/PnlSuitLayout/PnlVisionSuit/PnlOffset/PnlLeft/TxtMatLimit",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "41281266",
+    "PrefabPathHash": "1726341890",
+    "ItemPath": "UiItem_SoundRemnantArenaPopupInputA/BtnPopupCofirmS/PnlAdjust/BtnConfirm/PnlCtrl/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "594094716",
+    "PrefabPathHash": "357755568",
+    "ItemPath": "UiItem_ComicC4_4/TxtDialogue1",
+    "Text": "PrefabTextItem_594094716_Text"
+  },
+  {
+    "ItemId": "422806855",
+    "PrefabPathHash": "3980488035",
+    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlBottomLayout/PnlState/PnlTwo/BtnConfirmGo/PnlCtrl/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_422806855_Text"
+  },
+  {
+    "ItemId": "3364459340",
+    "PrefabPathHash": "3980488035",
+    "ItemPath": "UiItem_MapTipsA/PnlTips/PnlBottom/PnlBottomLayout/PnlState/PnlTwo/BtnConfirmTrack/PnlCtrl/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_3364459340_Text"
+  },
+  {
+    "ItemId": "3894271756",
+    "PrefabPathHash": "711438580",
+    "ItemPath": "UiItem_MapTipsB/PnlTips/PnlBottom/PnlBottomBtn/PnlBottomLayout/PnlState/BtnPopupRConfirmE/PnlAdjust/BtnConfirmL/PnlCtrl/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_3894271756_Text"
+  },
+  {
+    "ItemId": "2415279068",
+    "PrefabPathHash": "711438580",
+    "ItemPath": "UiItem_MapTipsB/PnlTips/PnlBottom/PnlBottomBtn/PnlBottomLayout/PnlState/BtnPopupRConfirmE/PnlAdjust/BtnConfirmR/PnlCtrl/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_2415279068_Text"
+  },
+  {
+    "ItemId": "911180000",
+    "PrefabPathHash": "1896727768",
+    "ItemPath": "UiView_BattleTeam/PnlInfo/PnlLeftBtn/BtnDetail/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_911180000_Text"
+  },
+  {
+    "ItemId": "3742493679",
+    "PrefabPathHash": "1896727768",
+    "ItemPath": "UiView_BattleTeam/PnlInfo/PnlLeftBtn/BtnRecommend/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_3742493679_Text"
+  },
+  {
+    "ItemId": "4179514358",
+    "PrefabPathHash": "288702839",
+    "ItemPath": "UiView_EchoFilterPopup/UiItem_LayerUi_Prefab/PnlPopup/PnlButtonLayout/BtnConfirmNewB/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2751154258",
+    "PrefabPathHash": "288702839",
+    "ItemPath": "UiView_EchoFilterPopup/UiItem_LayerUi_Prefab/PnlPopup/PnlButtonLayout/BtnConfirmNewB2/PnlPivot/PnlLayout/TxtConfirm",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "269747892",
+    "PrefabPathHash": "3465107148",
+    "ItemPath": "PnlTagSupplement/TxtContent",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1519894760",
+    "PrefabPathHash": "333713954",
+    "ItemPath": "UiItem_RoleSkillTreeDetail/PnlFull/PnlSkillRecomTog/PnlHLayout/BtnHelpA/PnlPos/PnlTips/UIContainerActor1911/TogOption/TxtOption",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3367623758",
+    "PrefabPathHash": "333713954",
+    "ItemPath": "UiItem_RoleSkillTreeDetail/PnlFull/PnlSkillRecomTog/PnlHLayout/BtnHelpA/PnlPos/PnlTips/UIContainerActor1911/TogOption/TxtOption",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3306631238",
+    "PrefabPathHash": "3045092628",
+    "ItemPath": "PC_UiItem_NavigationGuide/UiItem_NavigationGuide/UiItem_ComActivityInfo/PnlTitle/UiItem_ComActivityTitle/PnlTogType/PnlType01/TxtType01",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1376201152",
+    "PrefabPathHash": "3045092628",
+    "ItemPath": "PC_UiItem_NavigationGuide/UiItem_NavigationGuide/UiItem_ComActivityInfo/PnlTitle/UiItem_ComActivityTitle/PnlTogType/PnlType02/TxtType02",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1250000624",
+    "PrefabPathHash": "2899358652",
+    "ItemPath": "PC_UiView_CelebrationGuideMain/UiView_CelebrationGuideMain/UiItem_LayerUi_Prefab/UiItem_ComActivityInfo/PnlTitle/UiItem_ComActivityTitle/PnlTogType/PnlType01/TxtType01",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4053100540",
+    "PrefabPathHash": "2899358652",
+    "ItemPath": "PC_UiView_CelebrationGuideMain/UiView_CelebrationGuideMain/UiItem_LayerUi_Prefab/UiItem_ComActivityInfo/PnlTitle/UiItem_ComActivityTitle/PnlTogType/PnlType02/TxtType02",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4031890456",
+    "PrefabPathHash": "181599790",
+    "ItemPath": "PC_UiView_OnlineSearch_Prefab/UiView_OnlineSearch_Prefab/UiItem_LayerUi/In/TaskScroll/Viewport/QuestTypeListPanel/UiItem_OnlineItem/UiItem_ComPlayer2/PnlMask/PnlLeftInfo/PnlVert/TexIcon/TxtNum",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3982109475",
+    "PrefabPathHash": "1010027633",
+    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS/PnlAdjust/BtnConfirmL/PnlCtrl/PnlCostL/PnlHor/TxtNumL",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4235731750",
+    "PrefabPathHash": "1010027633",
+    "ItemPath": "UiItem_ConfirmMultipleTips/BtnPopupCofirmS/PnlAdjust/BtnConfirmR/PnlCtrl/PnlCostR/PnlHor/TxtNumR",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1223523077",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelBtn/BtnConfirmB/PnlPivot/PnlLayout/UiItem_HotKey2/PnlHotkey/Txt",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3727988033",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelBtn/BtnConfirmB/PnlPivot/PnlLayout/UiItem_HotKey3/PnlHotkey/Txt",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1720414281",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelBtn/UiItem_RoleComOccupy/PnlOffset/TxtEquip",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3824324476",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelInf/PnlTop/PanelEle/PnlLayout/TogLockB/UiItem_HotKey/PnlHotkey/Txt",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "1320639900",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelInf/SvInfo/Viewport/Content/UiItem_RoleComAtriEquip/TxtEquip",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "2720439334",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelInf/UiItem_RoleComAtriMain/PnlAtriItem/PnlInfo/TxtAttributeTxt",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3314881046",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelInf/UiItem_RoleComAtriMain/PnlAtriItem/TxtNumBerNewTxt",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4219542508",
+    "PrefabPathHash": "2680255413",
+    "ItemPath": "PC_UiView_WeaponName_Prefab/UiView_WeaponName_Prefab/UiItem_WeaponDetails/PanelInf/PanelInf/UiItem_RoleComAtriMain/PnlAtriItem/TxtNumber",
     "Text": "PrefabTextItem_Default_Text"
   },
   {
@@ -87982,5 +88060,23 @@
     "PrefabPathHash": "2556703957",
     "ItemPath": "UiItem_RoleDeviceInfo/PnlInfo/PnlDesc/PnlUnder/BtnConfirmB/PnlPivot/PnlLayout/TxtConfirm",
     "Text": "PrefabTextItem_1654509682_Text"
+  },
+  {
+    "ItemId": "4168286056",
+    "PrefabPathHash": "3315147359",
+    "ItemPath": "PC_UiView_Collect/UiView_Collect/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/TxtTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "4263384708",
+    "PrefabPathHash": "3699288893",
+    "ItemPath": "PC_UiView_LahailoSing/UiView_LahailoSing/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/TxtTitle",
+    "Text": "PrefabTextItem_Default_Text"
+  },
+  {
+    "ItemId": "3545920849",
+    "PrefabPathHash": "3699288893",
+    "ItemPath": "PC_UiView_LahailoSing/UiView_LahailoSing/UiItem_LayerUi/UiItem_WorldLeftPopup/PnlInfo/UIContainerActor2086/LoopScrollView/Viewport/Content/UiItem_ItemBaseA/PnlItem/TxtName",
+    "Text": "PrefabTextItem_Default_Text"
   }
 ]

@@ -8764,5 +8764,106 @@
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
+  },
+  {
+    "Id": 100901101,
+    "RoleId": 8005,
+    "Name": "攻击",
+    "ButtonType": 4,
+    "ActionType": 4,
+    "SkillId": 100900101,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      866007727
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {},
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 100901501,
+    "RoleId": 8005,
+    "Name": "共鸣技能",
+    "ButtonType": 6,
+    "ActionType": 6,
+    "SkillId": 100900123,
+    "SkillIdTagMap": {
+      "1790408286": 100900501,
+      "-655682267": 100900511
+    },
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -2044964178,
+      495657548
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -1949137153
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "-655682267": 10090002
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 100901601,
+    "RoleId": 8005,
+    "Name": "共鸣解放",
+    "ButtonType": 8,
+    "ActionType": 8,
+    "SkillId": 100900601,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [],
+    "EnableTags": [],
+    "DisableTags": [
+      -2044964178,
+      -592555498
+    ],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [],
+    "HiddenTags": [
+      -800147974
+    ],
+    "IsCdVisible": true,
+    "AttributeId": 60,
+    "MaxAttributeId": 59,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {},
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
   }
 ]

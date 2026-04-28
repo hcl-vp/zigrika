@@ -187,7 +187,7 @@
     "WaveCondition": 0,
     "ConditionSpawnIds": [],
     "MonsterSpawnGroup": [
-      22
+      21
     ]
   },
   {
@@ -198,8 +198,8 @@
     "WaveCondition": 0,
     "ConditionSpawnIds": [],
     "MonsterSpawnGroup": [
-      23,
-      22
+      22,
+      23
     ]
   },
   {

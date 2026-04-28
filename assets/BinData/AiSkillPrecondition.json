@@ -20814,7 +20814,7 @@
     "Id": 77090002,
     "DistanceRange": {
       "Min": 200,
-      "Max": 1000
+      "Max": 1700
     },
     "AngleRange": {
       "Min": -90,
@@ -20826,7 +20826,7 @@
     },
     "HeightRange": {
       "Min": -600,
-      "Max": 600
+      "Max": 800
     },
     "NeedTag": "",
     "NeedTarget": true
@@ -20910,7 +20910,7 @@
     },
     "HeightRange": {
       "Min": -600,
-      "Max": 600
+      "Max": 800
     },
     "NeedTag": "怪物.e3069ea9.8cda4c5d",
     "NeedTarget": true

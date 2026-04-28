@@ -1393,5 +1393,14 @@
     "ExitEvent": "",
     "ResetEvent": "",
     "MusicResetEvent": ""
+  },
+  {
+    "Id": 1580,
+    "Name": "InstanceTree_3_3_Institute",
+    "Event": "map_main_3_3_institute",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
   }
 ]

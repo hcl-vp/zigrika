@@ -600,7 +600,7 @@
     "BaseDesc": "RogueTalentTreeDesc_603_Desc",
     "Args": [],
     "Params": [
-      "25"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff10.SP_RogueSkill_Buff10",
     "TalentName": "RogueTalentTreeDesc_603_Name"
@@ -610,7 +610,7 @@
     "BaseDesc": "RogueTalentTreeDesc_604_Desc",
     "Args": [],
     "Params": [
-      "40"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff13.SP_RogueSkill_Buff13",
     "TalentName": "RogueTalentTreeDesc_604_Name"
@@ -620,7 +620,7 @@
     "BaseDesc": "RogueTalentTreeDesc_605_Desc",
     "Args": [],
     "Params": [
-      "10"
+      "4%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_VIT.T_RogueSkill_VIT",
     "TalentName": "RogueTalentTreeDesc_605_Name"
@@ -630,7 +630,7 @@
     "BaseDesc": "RogueTalentTreeDesc_606_Desc",
     "Args": [],
     "Params": [
-      "20"
+      "10%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_MoneyUp.T_RogueSkill_MoneyUp",
     "TalentName": "RogueTalentTreeDesc_606_Name"
@@ -649,7 +649,9 @@
     "Id": 608,
     "BaseDesc": "RogueTalentTreeDesc_608_Desc",
     "Args": [],
-    "Params": [],
+    "Params": [
+      "1"
+    ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff3.SP_RogueSkill_Buff3",
     "TalentName": "RogueTalentTreeDesc_608_Name"
   },
@@ -658,7 +660,7 @@
     "BaseDesc": "RogueTalentTreeDesc_609_Desc",
     "Args": [],
     "Params": [
-      "30"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_HP.SP_RogueSkill_HP",
     "TalentName": "RogueTalentTreeDesc_609_Name"
@@ -668,7 +670,7 @@
     "BaseDesc": "RogueTalentTreeDesc_610_Desc",
     "Args": [],
     "Params": [
-      "25"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_DPSPower.SP_RogueSkill_DPSPower",
     "TalentName": "RogueTalentTreeDesc_610_Name"
@@ -678,7 +680,7 @@
     "BaseDesc": "RogueTalentTreeDesc_611_Desc",
     "Args": [],
     "Params": [
-      "4"
+      "2%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/AnniversaryCelebration/SkillIcon/T_SkillIcon09.T_SkillIcon09",
     "TalentName": "RogueTalentTreeDesc_611_Name"
@@ -688,7 +690,7 @@
     "BaseDesc": "RogueTalentTreeDesc_612_Desc",
     "Args": [],
     "Params": [
-      "40"
+      "30%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_VIT.T_RogueSkill_VIT",
     "TalentName": "RogueTalentTreeDesc_612_Name"
@@ -698,7 +700,7 @@
     "BaseDesc": "RogueTalentTreeDesc_613_Desc",
     "Args": [],
     "Params": [
-      "30"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_CD.SP_RogueSkill_CD",
     "TalentName": "RogueTalentTreeDesc_613_Name"
@@ -708,7 +710,7 @@
     "BaseDesc": "RogueTalentTreeDesc_614_Desc",
     "Args": [],
     "Params": [
-      "100"
+      "50"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStorySkillTree/T_SkillIcon15.T_SkillIcon15",
     "TalentName": "RogueTalentTreeDesc_614_Name"
@@ -718,7 +720,7 @@
     "BaseDesc": "RogueTalentTreeDesc_615_Desc",
     "Args": [],
     "Params": [
-      "30"
+      "15%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_MoneyUp.T_RogueSkill_MoneyUp",
     "TalentName": "RogueTalentTreeDesc_615_Name"
@@ -737,7 +739,9 @@
     "Id": 617,
     "BaseDesc": "RogueTalentTreeDesc_617_Desc",
     "Args": [],
-    "Params": [],
+    "Params": [
+      "1"
+    ],
     "TalentIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStorySkillTree/T_SkillIcon05.T_SkillIcon05",
     "TalentName": "RogueTalentTreeDesc_617_Name"
   },
@@ -746,7 +750,7 @@
     "BaseDesc": "RogueTalentTreeDesc_618_Desc",
     "Args": [],
     "Params": [
-      "1"
+      "50%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_HPPower.T_RogueSkill_HPPower",
     "TalentName": "RogueTalentTreeDesc_618_Name"
@@ -756,7 +760,7 @@
     "BaseDesc": "RogueTalentTreeDesc_619_Desc",
     "Args": [],
     "Params": [
-      "100"
+      "100%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff8.SP_RogueSkill_Buff8",
     "TalentName": "RogueTalentTreeDesc_619_Name"
@@ -786,7 +790,7 @@
     "BaseDesc": "RogueTalentTreeDesc_622_Desc",
     "Args": [],
     "Params": [
-      "100"
+      "50%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff9.SP_RogueSkill_Buff9",
     "TalentName": "RogueTalentTreeDesc_622_Name"
@@ -796,7 +800,7 @@
     "BaseDesc": "RogueTalentTreeDesc_623_Desc",
     "Args": [],
     "Params": [
-      "50"
+      "30%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff8.SP_RogueSkill_Buff8",
     "TalentName": "RogueTalentTreeDesc_623_Name"
@@ -806,7 +810,7 @@
     "BaseDesc": "RogueTalentTreeDesc_624_Desc",
     "Args": [],
     "Params": [
-      "30"
+      "50%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_CD.SP_RogueSkill_CD",
     "TalentName": "RogueTalentTreeDesc_624_Name"
@@ -816,7 +820,7 @@
     "BaseDesc": "RogueTalentTreeDesc_625_Desc",
     "Args": [],
     "Params": [
-      "40"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff13.SP_RogueSkill_Buff13",
     "TalentName": "RogueTalentTreeDesc_625_Name"
@@ -826,7 +830,7 @@
     "BaseDesc": "RogueTalentTreeDesc_626_Desc",
     "Args": [],
     "Params": [
-      "25"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff10.SP_RogueSkill_Buff10",
     "TalentName": "RogueTalentTreeDesc_626_Name"
@@ -836,7 +840,7 @@
     "BaseDesc": "RogueTalentTreeDesc_627_Desc",
     "Args": [],
     "Params": [
-      "30"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_HP.SP_RogueSkill_HP",
     "TalentName": "RogueTalentTreeDesc_627_Name"
@@ -846,7 +850,7 @@
     "BaseDesc": "RogueTalentTreeDesc_628_Desc",
     "Args": [],
     "Params": [
-      "25"
+      "25%"
     ],
     "TalentIcon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_DPSPower.SP_RogueSkill_DPSPower",
     "TalentName": "RogueTalentTreeDesc_628_Name"

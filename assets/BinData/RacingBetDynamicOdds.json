@@ -15459,7 +15459,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1719,
@@ -15468,7 +15468,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1720,
@@ -15477,7 +15477,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 1721,
@@ -15486,7 +15486,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 1722,
@@ -15495,7 +15495,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 1723,
@@ -15504,7 +15504,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 1724,
@@ -15513,7 +15513,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 1725,
@@ -15522,7 +15522,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 1726,
@@ -15531,7 +15531,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 1727,
@@ -15540,7 +15540,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 1728,
@@ -15549,7 +15549,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 1729,
@@ -15558,7 +15558,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 1730,
@@ -15567,7 +15567,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 1731,
@@ -15576,7 +15576,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 1732,
@@ -15585,7 +15585,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 1733,
@@ -15594,7 +15594,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 1734,
@@ -15603,7 +15603,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 1735,
@@ -15612,7 +15612,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 1736,
@@ -15621,7 +15621,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 1737,
@@ -15630,7 +15630,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 1738,
@@ -15639,7 +15639,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 1739,
@@ -15648,7 +15648,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 1740,
@@ -15657,7 +15657,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 1741,
@@ -15666,7 +15666,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 1742,
@@ -15675,7 +15675,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 1743,
@@ -15684,7 +15684,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 1744,
@@ -15693,7 +15693,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 1745,
@@ -15702,7 +15702,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 1746,
@@ -15711,7 +15711,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1747,
@@ -15720,7 +15720,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1748,
@@ -15729,7 +15729,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1749,
@@ -15738,7 +15738,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1750,
@@ -15747,7 +15747,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1751,
@@ -15756,7 +15756,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1752,
@@ -15765,7 +15765,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1753,
@@ -15774,7 +15774,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1754,
@@ -15783,7 +15783,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 1755,
@@ -15792,7 +15792,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 1756,
@@ -15801,7 +15801,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 1757,
@@ -15810,7 +15810,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 1758,
@@ -15819,7 +15819,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1759,
@@ -15828,7 +15828,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1760,
@@ -15837,7 +15837,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1761,
@@ -15846,7 +15846,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1762,
@@ -15855,7 +15855,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1763,
@@ -15864,7 +15864,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1764,
@@ -15873,7 +15873,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1765,
@@ -15882,7 +15882,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1766,
@@ -15891,7 +15891,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1767,
@@ -15900,7 +15900,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1768,
@@ -15909,7 +15909,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1769,
@@ -15918,7 +15918,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1770,
@@ -15927,7 +15927,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1771,
@@ -15936,7 +15936,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1772,
@@ -15945,7 +15945,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1773,
@@ -15954,7 +15954,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1774,
@@ -15963,7 +15963,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1775,
@@ -15972,7 +15972,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1776,
@@ -15981,7 +15981,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1777,
@@ -15990,7 +15990,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1778,
@@ -15999,7 +15999,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1779,
@@ -16008,7 +16008,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1780,
@@ -16017,7 +16017,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1781,
@@ -16026,7 +16026,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1782,
@@ -16035,7 +16035,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1783,
@@ -16044,7 +16044,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1784,
@@ -16053,7 +16053,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1785,
@@ -16062,7 +16062,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1786,
@@ -16071,7 +16071,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1787,
@@ -16080,7 +16080,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1788,
@@ -16089,7 +16089,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1789,
@@ -16098,7 +16098,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1790,
@@ -16107,7 +16107,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1791,
@@ -16116,7 +16116,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1792,
@@ -16125,7 +16125,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1793,
@@ -16134,7 +16134,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1794,
@@ -16143,7 +16143,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1795,
@@ -16152,7 +16152,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1796,
@@ -16161,7 +16161,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1797,
@@ -16170,7 +16170,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1798,
@@ -16179,7 +16179,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1799,
@@ -16188,7 +16188,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1800,
@@ -16197,7 +16197,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1801,
@@ -16206,7 +16206,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1802,
@@ -16215,7 +16215,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1803,
@@ -16224,7 +16224,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1804,
@@ -16233,7 +16233,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1805,
@@ -16242,7 +16242,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1806,
@@ -16251,7 +16251,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1807,
@@ -16260,7 +16260,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1808,
@@ -16269,7 +16269,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1809,
@@ -16278,7 +16278,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1810,
@@ -16287,7 +16287,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1811,
@@ -16296,7 +16296,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1812,
@@ -16305,7 +16305,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1813,
@@ -16314,7 +16314,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1814,
@@ -16323,7 +16323,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1815,
@@ -16332,7 +16332,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1816,
@@ -16341,7 +16341,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1817,
@@ -16350,7 +16350,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1818,
@@ -16359,7 +16359,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1819,
@@ -16368,7 +16368,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1820,
@@ -16377,7 +16377,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1821,
@@ -16386,7 +16386,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 1822,
@@ -16395,7 +16395,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 1823,
@@ -16404,7 +16404,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 1824,
@@ -16413,7 +16413,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 1825,
@@ -16422,7 +16422,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 1826,
@@ -16431,7 +16431,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 1827,
@@ -16440,7 +16440,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 1828,
@@ -16449,7 +16449,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 1829,
@@ -16458,7 +16458,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 1830,
@@ -16467,7 +16467,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 1831,
@@ -16476,7 +16476,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 1832,
@@ -16485,7 +16485,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 1833,
@@ -16494,7 +16494,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 1834,
@@ -16503,7 +16503,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 1835,
@@ -16512,7 +16512,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 1836,
@@ -16521,7 +16521,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 1837,
@@ -16530,7 +16530,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 1838,
@@ -16539,7 +16539,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 1839,
@@ -16548,7 +16548,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 1840,
@@ -16557,7 +16557,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 1841,
@@ -16566,7 +16566,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 1842,
@@ -16575,7 +16575,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 1843,
@@ -16584,7 +16584,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 1844,
@@ -16593,7 +16593,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 1845,
@@ -16602,7 +16602,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 1846,
@@ -16611,7 +16611,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 1847,
@@ -16620,7 +16620,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1848,
@@ -16629,7 +16629,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1849,
@@ -16638,7 +16638,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1850,
@@ -16647,7 +16647,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1851,
@@ -16656,7 +16656,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1852,
@@ -16665,7 +16665,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1853,
@@ -16674,7 +16674,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1854,
@@ -16683,7 +16683,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1855,
@@ -16692,7 +16692,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 1856,
@@ -16701,7 +16701,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 1857,
@@ -16710,7 +16710,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 1858,
@@ -16719,7 +16719,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 1859,
@@ -16728,7 +16728,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1860,
@@ -16737,7 +16737,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1861,
@@ -16746,7 +16746,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1862,
@@ -16755,7 +16755,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1863,
@@ -16764,7 +16764,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1864,
@@ -16773,7 +16773,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1865,
@@ -16782,7 +16782,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1866,
@@ -16791,7 +16791,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1867,
@@ -16800,7 +16800,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1868,
@@ -16809,7 +16809,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1869,
@@ -16818,7 +16818,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1870,
@@ -16827,7 +16827,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1871,
@@ -16836,7 +16836,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1872,
@@ -16845,7 +16845,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1873,
@@ -16854,7 +16854,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1874,
@@ -16863,7 +16863,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1875,
@@ -16872,7 +16872,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1876,
@@ -16881,7 +16881,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1877,
@@ -16890,7 +16890,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1878,
@@ -16899,7 +16899,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1879,
@@ -16908,7 +16908,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1880,
@@ -16917,7 +16917,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1881,
@@ -16926,7 +16926,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1882,
@@ -16935,7 +16935,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1883,
@@ -16944,7 +16944,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1884,
@@ -16953,7 +16953,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1885,
@@ -16962,7 +16962,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1886,
@@ -16971,7 +16971,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1887,
@@ -16980,7 +16980,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1888,
@@ -16989,7 +16989,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1889,
@@ -16998,7 +16998,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1890,
@@ -17007,7 +17007,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1891,
@@ -17016,7 +17016,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1892,
@@ -17025,7 +17025,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1893,
@@ -17034,7 +17034,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1894,
@@ -17043,7 +17043,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1895,
@@ -17052,7 +17052,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1896,
@@ -17061,7 +17061,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1897,
@@ -17070,7 +17070,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1898,
@@ -17079,7 +17079,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1899,
@@ -17088,7 +17088,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1900,
@@ -17097,7 +17097,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1901,
@@ -17106,7 +17106,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1902,
@@ -17115,7 +17115,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1903,
@@ -17124,7 +17124,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1904,
@@ -17133,7 +17133,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1905,
@@ -17142,7 +17142,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1906,
@@ -17151,7 +17151,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1907,
@@ -17160,7 +17160,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1908,
@@ -17169,7 +17169,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1909,
@@ -17178,7 +17178,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1910,
@@ -17187,7 +17187,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1911,
@@ -17196,7 +17196,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1912,
@@ -17205,7 +17205,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1913,
@@ -17214,7 +17214,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1914,
@@ -17223,7 +17223,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1915,
@@ -17232,7 +17232,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1916,
@@ -17241,7 +17241,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1917,
@@ -17250,7 +17250,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1918,
@@ -17259,7 +17259,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1919,
@@ -17268,7 +17268,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1920,
@@ -17277,7 +17277,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1921,
@@ -17286,7 +17286,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 1922,
@@ -17295,7 +17295,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 1923,
@@ -17304,7 +17304,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 1924,
@@ -17313,7 +17313,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 1925,
@@ -17322,7 +17322,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 1926,
@@ -17331,7 +17331,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 1927,
@@ -17340,7 +17340,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 1928,
@@ -17349,7 +17349,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 1929,
@@ -17358,7 +17358,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 1930,
@@ -17367,7 +17367,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 1931,
@@ -17376,7 +17376,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 1932,
@@ -17385,7 +17385,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 1933,
@@ -17394,7 +17394,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 1934,
@@ -17403,7 +17403,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 1935,
@@ -17412,7 +17412,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 1936,
@@ -17421,7 +17421,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 1937,
@@ -17430,7 +17430,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 1938,
@@ -17439,7 +17439,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 1939,
@@ -17448,7 +17448,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 1940,
@@ -17457,7 +17457,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 1941,
@@ -17466,7 +17466,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 1942,
@@ -17475,7 +17475,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 1943,
@@ -17484,7 +17484,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 1944,
@@ -17493,7 +17493,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 1945,
@@ -17502,7 +17502,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 1946,
@@ -17511,7 +17511,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 1947,
@@ -17520,7 +17520,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 1948,
@@ -17529,7 +17529,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1949,
@@ -17538,7 +17538,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1950,
@@ -17547,7 +17547,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1951,
@@ -17556,7 +17556,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1952,
@@ -17565,7 +17565,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1953,
@@ -17574,7 +17574,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1954,
@@ -17583,7 +17583,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1955,
@@ -17592,7 +17592,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 1956,
@@ -17601,7 +17601,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 1957,
@@ -17610,7 +17610,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 1958,
@@ -17619,7 +17619,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 1959,
@@ -17628,7 +17628,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 1960,
@@ -17637,7 +17637,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1961,
@@ -17646,7 +17646,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1962,
@@ -17655,7 +17655,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1963,
@@ -17664,7 +17664,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1964,
@@ -17673,7 +17673,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1965,
@@ -17682,7 +17682,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1966,
@@ -17691,7 +17691,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1967,
@@ -17700,7 +17700,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1968,
@@ -17709,7 +17709,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1969,
@@ -17718,7 +17718,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1970,
@@ -17727,7 +17727,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1971,
@@ -17736,7 +17736,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1972,
@@ -17745,7 +17745,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1973,
@@ -17754,7 +17754,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1974,
@@ -17763,7 +17763,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1975,
@@ -17772,7 +17772,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1976,
@@ -17781,7 +17781,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1977,
@@ -17790,7 +17790,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1978,
@@ -17799,7 +17799,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1979,
@@ -17808,7 +17808,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1980,
@@ -17817,7 +17817,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1981,
@@ -17826,7 +17826,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1982,
@@ -17835,7 +17835,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1983,
@@ -17844,7 +17844,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1984,
@@ -17853,7 +17853,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1985,
@@ -17862,7 +17862,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1986,
@@ -17871,7 +17871,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1987,
@@ -17880,7 +17880,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1988,
@@ -17889,7 +17889,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1989,
@@ -17898,7 +17898,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1990,
@@ -17907,7 +17907,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1991,
@@ -17916,7 +17916,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1992,
@@ -17925,7 +17925,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1993,
@@ -17934,7 +17934,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1994,
@@ -17943,7 +17943,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1995,
@@ -17952,7 +17952,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1996,
@@ -17961,7 +17961,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1997,
@@ -17970,7 +17970,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1998,
@@ -17979,7 +17979,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 1999,
@@ -17988,7 +17988,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2000,
@@ -17997,7 +17997,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2001,
@@ -18006,7 +18006,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2002,
@@ -18015,7 +18015,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2003,
@@ -18024,7 +18024,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2004,
@@ -18033,7 +18033,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2005,
@@ -18042,7 +18042,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2006,
@@ -18051,7 +18051,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2007,
@@ -18060,7 +18060,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2008,
@@ -18069,7 +18069,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2009,
@@ -18078,7 +18078,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2010,
@@ -18087,7 +18087,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2011,
@@ -18096,7 +18096,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2012,
@@ -18105,7 +18105,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2013,
@@ -18114,7 +18114,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2014,
@@ -18123,7 +18123,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2015,
@@ -18132,7 +18132,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2016,
@@ -18141,7 +18141,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2017,
@@ -18150,7 +18150,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2018,
@@ -18159,7 +18159,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2019,
@@ -18168,7 +18168,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2020,
@@ -18177,7 +18177,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2021,
@@ -18186,7 +18186,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2022,
@@ -18195,7 +18195,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2023,
@@ -18204,7 +18204,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 2024,
@@ -18213,7 +18213,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 2025,
@@ -18222,7 +18222,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 2026,
@@ -18231,7 +18231,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 2027,
@@ -18240,7 +18240,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 2028,
@@ -18249,7 +18249,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 2029,
@@ -18258,7 +18258,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 2030,
@@ -18267,7 +18267,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 2031,
@@ -18276,7 +18276,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 2032,
@@ -18285,7 +18285,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 2033,
@@ -18294,7 +18294,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 2034,
@@ -18303,7 +18303,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 2035,
@@ -18312,7 +18312,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 2036,
@@ -18321,7 +18321,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 2037,
@@ -18330,7 +18330,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 2038,
@@ -18339,7 +18339,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 2039,
@@ -18348,7 +18348,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 2040,
@@ -18357,7 +18357,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 2041,
@@ -18366,7 +18366,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 2042,
@@ -18375,7 +18375,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 2043,
@@ -18384,7 +18384,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 2044,
@@ -18393,7 +18393,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 2045,
@@ -18402,7 +18402,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 2046,
@@ -18411,7 +18411,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 2047,
@@ -18420,7 +18420,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 2048,
@@ -18429,7 +18429,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 2049,
@@ -18438,7 +18438,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2050,
@@ -18447,7 +18447,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2051,
@@ -18456,7 +18456,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2052,
@@ -18465,7 +18465,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2053,
@@ -18474,7 +18474,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2054,
@@ -18483,7 +18483,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2055,
@@ -18492,7 +18492,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2056,
@@ -18501,7 +18501,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2057,
@@ -18510,7 +18510,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 2058,
@@ -18519,7 +18519,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 2059,
@@ -18528,7 +18528,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 2060,
@@ -18537,7 +18537,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 2061,
@@ -18546,7 +18546,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2062,
@@ -18555,7 +18555,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2063,
@@ -18564,7 +18564,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2064,
@@ -18573,7 +18573,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2065,
@@ -18582,7 +18582,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2066,
@@ -18591,7 +18591,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2067,
@@ -18600,7 +18600,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2068,
@@ -18609,7 +18609,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2069,
@@ -18618,7 +18618,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2070,
@@ -18627,7 +18627,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2071,
@@ -18636,7 +18636,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2072,
@@ -18645,7 +18645,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2073,
@@ -18654,7 +18654,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2074,
@@ -18663,7 +18663,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2075,
@@ -18672,7 +18672,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2076,
@@ -18681,7 +18681,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2077,
@@ -18690,7 +18690,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2078,
@@ -18699,7 +18699,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2079,
@@ -18708,7 +18708,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2080,
@@ -18717,7 +18717,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2081,
@@ -18726,7 +18726,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2082,
@@ -18735,7 +18735,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2083,
@@ -18744,7 +18744,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2084,
@@ -18753,7 +18753,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2085,
@@ -18762,7 +18762,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2086,
@@ -18771,7 +18771,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2087,
@@ -18780,7 +18780,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2088,
@@ -18789,7 +18789,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2089,
@@ -18798,7 +18798,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2090,
@@ -18807,7 +18807,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2091,
@@ -18816,7 +18816,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2092,
@@ -18825,7 +18825,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2093,
@@ -18834,7 +18834,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2094,
@@ -18843,7 +18843,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2095,
@@ -18852,7 +18852,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2096,
@@ -18861,7 +18861,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2097,
@@ -18870,7 +18870,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2098,
@@ -18879,7 +18879,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2099,
@@ -18888,7 +18888,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2100,
@@ -18897,7 +18897,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2101,
@@ -18906,7 +18906,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2102,
@@ -18915,7 +18915,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2103,
@@ -18924,7 +18924,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2104,
@@ -18933,7 +18933,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2105,
@@ -18942,7 +18942,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2106,
@@ -18951,7 +18951,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2107,
@@ -18960,7 +18960,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2108,
@@ -18969,7 +18969,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2109,
@@ -18978,7 +18978,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2110,
@@ -18987,7 +18987,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2111,
@@ -18996,7 +18996,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2112,
@@ -19005,7 +19005,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2113,
@@ -19014,7 +19014,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2114,
@@ -19023,7 +19023,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2115,
@@ -19032,7 +19032,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2116,
@@ -19041,7 +19041,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2117,
@@ -19050,7 +19050,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2118,
@@ -19059,7 +19059,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2119,
@@ -19068,7 +19068,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2120,
@@ -19077,7 +19077,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2121,
@@ -19086,7 +19086,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2122,
@@ -19095,7 +19095,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2123,
@@ -19104,7 +19104,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2124,
@@ -19113,7 +19113,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 2125,
@@ -19122,7 +19122,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 2126,
@@ -19131,7 +19131,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 2127,
@@ -19140,7 +19140,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 2128,
@@ -19149,7 +19149,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 2129,
@@ -19158,7 +19158,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 2130,
@@ -19167,7 +19167,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 2131,
@@ -19176,7 +19176,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 2132,
@@ -19185,7 +19185,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 2133,
@@ -19194,7 +19194,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 2134,
@@ -19203,7 +19203,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 2135,
@@ -19212,7 +19212,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 2136,
@@ -19221,7 +19221,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 2137,
@@ -19230,7 +19230,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 2138,
@@ -19239,7 +19239,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 2139,
@@ -19248,7 +19248,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 2140,
@@ -19257,7 +19257,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 2141,
@@ -19266,7 +19266,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 2142,
@@ -19275,7 +19275,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 2143,
@@ -19284,7 +19284,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 2144,
@@ -19293,7 +19293,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 2145,
@@ -19302,7 +19302,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 2146,
@@ -19311,7 +19311,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 2147,
@@ -19320,7 +19320,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 2148,
@@ -19329,7 +19329,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 2149,
@@ -19338,7 +19338,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 2150,
@@ -19347,7 +19347,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2151,
@@ -19356,7 +19356,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2152,
@@ -19365,7 +19365,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2153,
@@ -19374,7 +19374,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2154,
@@ -19383,7 +19383,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2155,
@@ -19392,7 +19392,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2156,
@@ -19401,7 +19401,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2157,
@@ -19410,7 +19410,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2158,
@@ -19419,7 +19419,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 2159,
@@ -19428,7 +19428,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 2160,
@@ -19437,7 +19437,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 2161,
@@ -19446,7 +19446,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 2162,
@@ -19455,7 +19455,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2163,
@@ -19464,7 +19464,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2164,
@@ -19473,7 +19473,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2165,
@@ -19482,7 +19482,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2166,
@@ -19491,7 +19491,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2167,
@@ -19500,7 +19500,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2168,
@@ -19509,7 +19509,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2169,
@@ -19518,7 +19518,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2170,
@@ -19527,7 +19527,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2171,
@@ -19536,7 +19536,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2172,
@@ -19545,7 +19545,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2173,
@@ -19554,7 +19554,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2174,
@@ -19563,7 +19563,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2175,
@@ -19572,7 +19572,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2176,
@@ -19581,7 +19581,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2177,
@@ -19590,7 +19590,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2178,
@@ -19599,7 +19599,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2179,
@@ -19608,7 +19608,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2180,
@@ -19617,7 +19617,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2181,
@@ -19626,7 +19626,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2182,
@@ -19635,7 +19635,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2183,
@@ -19644,7 +19644,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2184,
@@ -19653,7 +19653,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2185,
@@ -19662,7 +19662,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2186,
@@ -19671,7 +19671,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2187,
@@ -19680,7 +19680,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2188,
@@ -19689,7 +19689,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2189,
@@ -19698,7 +19698,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2190,
@@ -19707,7 +19707,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2191,
@@ -19716,7 +19716,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2192,
@@ -19725,7 +19725,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2193,
@@ -19734,7 +19734,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2194,
@@ -19743,7 +19743,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2195,
@@ -19752,7 +19752,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2196,
@@ -19761,7 +19761,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2197,
@@ -19770,7 +19770,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2198,
@@ -19779,7 +19779,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2199,
@@ -19788,7 +19788,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2200,
@@ -19797,7 +19797,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2201,
@@ -19806,7 +19806,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2202,
@@ -19815,7 +19815,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2203,
@@ -19824,7 +19824,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2204,
@@ -19833,7 +19833,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2205,
@@ -19842,7 +19842,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2206,
@@ -19851,7 +19851,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2207,
@@ -19860,7 +19860,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2208,
@@ -19869,7 +19869,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2209,
@@ -19878,7 +19878,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2210,
@@ -19887,7 +19887,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2211,
@@ -19896,7 +19896,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2212,
@@ -19905,7 +19905,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2213,
@@ -19914,7 +19914,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2214,
@@ -19923,7 +19923,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2215,
@@ -19932,7 +19932,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2216,
@@ -19941,7 +19941,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2217,
@@ -19950,7 +19950,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2218,
@@ -19959,7 +19959,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2219,
@@ -19968,7 +19968,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2220,
@@ -19977,7 +19977,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2221,
@@ -19986,7 +19986,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2222,
@@ -19995,7 +19995,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2223,
@@ -20004,7 +20004,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2224,
@@ -20013,7 +20013,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 153
   },
   {
     "Id": 2225,
@@ -20022,7 +20022,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 150
   },
   {
     "Id": 2226,
@@ -20031,7 +20031,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 146
   },
   {
     "Id": 2227,
@@ -20040,7 +20040,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 141
   },
   {
     "Id": 2228,
@@ -20049,7 +20049,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 135
   },
   {
     "Id": 2229,
@@ -20058,7 +20058,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 129
   },
   {
     "Id": 2230,
@@ -20067,7 +20067,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 120
   },
   {
     "Id": 2231,
@@ -20076,7 +20076,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 111
   },
   {
     "Id": 2232,
@@ -20085,7 +20085,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 99
   },
   {
     "Id": 2233,
@@ -20094,7 +20094,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 84
   },
   {
     "Id": 2234,
@@ -20103,7 +20103,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 75
   },
   {
     "Id": 2235,
@@ -20112,7 +20112,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 68
   },
   {
     "Id": 2236,
@@ -20121,7 +20121,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 60
   },
   {
     "Id": 2237,
@@ -20130,7 +20130,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 54
   },
   {
     "Id": 2238,
@@ -20139,7 +20139,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 50
   },
   {
     "Id": 2239,
@@ -20148,7 +20148,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 45
   },
   {
     "Id": 2240,
@@ -20157,7 +20157,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 42
   },
   {
     "Id": 2241,
@@ -20166,7 +20166,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 39
   },
   {
     "Id": 2242,
@@ -20175,7 +20175,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 36
   },
   {
     "Id": 2243,
@@ -20184,7 +20184,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 35
   },
   {
     "Id": 2244,
@@ -20193,7 +20193,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 33
   },
   {
     "Id": 2245,
@@ -20202,7 +20202,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 32
   },
   {
     "Id": 2246,
@@ -20211,7 +20211,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 30
   },
   {
     "Id": 2247,
@@ -20220,7 +20220,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 29
   },
   {
     "Id": 2248,
@@ -20229,7 +20229,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 27
   },
   {
     "Id": 2249,
@@ -20238,7 +20238,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 26
   },
   {
     "Id": 2250,
@@ -20247,7 +20247,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 24
   },
   {
     "Id": 2251,
@@ -20256,7 +20256,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2252,
@@ -20265,7 +20265,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2253,
@@ -20274,7 +20274,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2254,
@@ -20283,7 +20283,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2255,
@@ -20292,7 +20292,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2256,
@@ -20301,7 +20301,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2257,
@@ -20310,7 +20310,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2258,
@@ -20319,7 +20319,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 23
   },
   {
     "Id": 2259,
@@ -20328,7 +20328,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 21
   },
   {
     "Id": 2260,
@@ -20337,7 +20337,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 20
   },
   {
     "Id": 2261,
@@ -20346,7 +20346,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 18
   },
   {
     "Id": 2262,
@@ -20355,7 +20355,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 17
   },
   {
     "Id": 2263,
@@ -20364,7 +20364,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2264,
@@ -20373,7 +20373,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2265,
@@ -20382,7 +20382,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2266,
@@ -20391,7 +20391,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2267,
@@ -20400,7 +20400,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2268,
@@ -20409,7 +20409,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2269,
@@ -20418,7 +20418,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2270,
@@ -20427,7 +20427,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2271,
@@ -20436,7 +20436,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2272,
@@ -20445,7 +20445,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2273,
@@ -20454,7 +20454,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2274,
@@ -20463,7 +20463,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2275,
@@ -20472,7 +20472,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2276,
@@ -20481,7 +20481,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2277,
@@ -20490,7 +20490,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2278,
@@ -20499,7 +20499,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2279,
@@ -20508,7 +20508,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2280,
@@ -20517,7 +20517,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2281,
@@ -20526,7 +20526,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2282,
@@ -20535,7 +20535,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2283,
@@ -20544,7 +20544,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2284,
@@ -20553,7 +20553,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2285,
@@ -20562,7 +20562,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2286,
@@ -20571,7 +20571,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2287,
@@ -20580,7 +20580,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2288,
@@ -20589,7 +20589,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2289,
@@ -20598,7 +20598,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2290,
@@ -20607,7 +20607,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2291,
@@ -20616,7 +20616,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2292,
@@ -20625,7 +20625,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2293,
@@ -20634,7 +20634,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2294,
@@ -20643,7 +20643,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2295,
@@ -20652,7 +20652,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2296,
@@ -20661,7 +20661,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2297,
@@ -20670,7 +20670,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2298,
@@ -20679,7 +20679,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2299,
@@ -20688,7 +20688,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2300,
@@ -20697,7 +20697,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2301,
@@ -20706,7 +20706,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2302,
@@ -20715,7 +20715,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2303,
@@ -20724,7 +20724,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2304,
@@ -20733,7 +20733,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2305,
@@ -20742,7 +20742,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2306,
@@ -20751,7 +20751,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2307,
@@ -20760,7 +20760,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2308,
@@ -20769,7 +20769,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2309,
@@ -20778,7 +20778,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2310,
@@ -20787,7 +20787,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2311,
@@ -20796,7 +20796,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2312,
@@ -20805,7 +20805,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2313,
@@ -20814,7 +20814,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2314,
@@ -20823,7 +20823,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2315,
@@ -20832,7 +20832,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2316,
@@ -20841,7 +20841,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2317,
@@ -20850,7 +20850,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2318,
@@ -20859,7 +20859,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2319,
@@ -20868,7 +20868,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2320,
@@ -20877,7 +20877,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2321,
@@ -20886,7 +20886,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2322,
@@ -20895,7 +20895,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2323,
@@ -20904,7 +20904,7 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 15
   },
   {
     "Id": 2324,
@@ -20913,7 +20913,7 @@
       0,
       1
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 255
   },
   {
     "Id": 2325,
@@ -20922,7 +20922,7 @@
       1,
       2
     ],
-    "DynamicOdds": 102
+    "DynamicOdds": 255
   },
   {
     "Id": 2326,
@@ -20931,7 +20931,7 @@
       2,
       3
     ],
-    "DynamicOdds": 100
+    "DynamicOdds": 250
   },
   {
     "Id": 2327,
@@ -20940,7 +20940,7 @@
       3,
       4
     ],
-    "DynamicOdds": 97
+    "DynamicOdds": 243
   },
   {
     "Id": 2328,
@@ -20949,7 +20949,7 @@
       4,
       5
     ],
-    "DynamicOdds": 94
+    "DynamicOdds": 235
   },
   {
     "Id": 2329,
@@ -20958,7 +20958,7 @@
       5,
       6
     ],
-    "DynamicOdds": 90
+    "DynamicOdds": 225
   },
   {
     "Id": 2330,
@@ -20967,7 +20967,7 @@
       6,
       7
     ],
-    "DynamicOdds": 86
+    "DynamicOdds": 215
   },
   {
     "Id": 2331,
@@ -20976,7 +20976,7 @@
       7,
       8
     ],
-    "DynamicOdds": 80
+    "DynamicOdds": 200
   },
   {
     "Id": 2332,
@@ -20985,7 +20985,7 @@
       8,
       9
     ],
-    "DynamicOdds": 74
+    "DynamicOdds": 185
   },
   {
     "Id": 2333,
@@ -20994,7 +20994,7 @@
       9,
       10
     ],
-    "DynamicOdds": 66
+    "DynamicOdds": 165
   },
   {
     "Id": 2334,
@@ -21003,7 +21003,7 @@
       10,
       11
     ],
-    "DynamicOdds": 56
+    "DynamicOdds": 140
   },
   {
     "Id": 2335,
@@ -21012,7 +21012,7 @@
       11,
       12
     ],
-    "DynamicOdds": 50
+    "DynamicOdds": 125
   },
   {
     "Id": 2336,
@@ -21021,7 +21021,7 @@
       12,
       13
     ],
-    "DynamicOdds": 45
+    "DynamicOdds": 113
   },
   {
     "Id": 2337,
@@ -21030,7 +21030,7 @@
       13,
       14
     ],
-    "DynamicOdds": 40
+    "DynamicOdds": 100
   },
   {
     "Id": 2338,
@@ -21039,7 +21039,7 @@
       14,
       15
     ],
-    "DynamicOdds": 36
+    "DynamicOdds": 90
   },
   {
     "Id": 2339,
@@ -21048,7 +21048,7 @@
       15,
       16
     ],
-    "DynamicOdds": 33
+    "DynamicOdds": 83
   },
   {
     "Id": 2340,
@@ -21057,7 +21057,7 @@
       16,
       17
     ],
-    "DynamicOdds": 30
+    "DynamicOdds": 75
   },
   {
     "Id": 2341,
@@ -21066,7 +21066,7 @@
       17,
       18
     ],
-    "DynamicOdds": 28
+    "DynamicOdds": 70
   },
   {
     "Id": 2342,
@@ -21075,7 +21075,7 @@
       18,
       19
     ],
-    "DynamicOdds": 26
+    "DynamicOdds": 65
   },
   {
     "Id": 2343,
@@ -21084,7 +21084,7 @@
       19,
       20
     ],
-    "DynamicOdds": 24
+    "DynamicOdds": 60
   },
   {
     "Id": 2344,
@@ -21093,7 +21093,7 @@
       20,
       21
     ],
-    "DynamicOdds": 23
+    "DynamicOdds": 58
   },
   {
     "Id": 2345,
@@ -21102,7 +21102,7 @@
       21,
       22
     ],
-    "DynamicOdds": 22
+    "DynamicOdds": 55
   },
   {
     "Id": 2346,
@@ -21111,7 +21111,7 @@
       22,
       23
     ],
-    "DynamicOdds": 21
+    "DynamicOdds": 53
   },
   {
     "Id": 2347,
@@ -21120,7 +21120,7 @@
       23,
       24
     ],
-    "DynamicOdds": 20
+    "DynamicOdds": 50
   },
   {
     "Id": 2348,
@@ -21129,7 +21129,7 @@
       24,
       25
     ],
-    "DynamicOdds": 19
+    "DynamicOdds": 48
   },
   {
     "Id": 2349,
@@ -21138,7 +21138,7 @@
       25,
       26
     ],
-    "DynamicOdds": 18
+    "DynamicOdds": 45
   },
   {
     "Id": 2350,
@@ -21147,7 +21147,7 @@
       26,
       27
     ],
-    "DynamicOdds": 17
+    "DynamicOdds": 43
   },
   {
     "Id": 2351,
@@ -21156,7 +21156,7 @@
       27,
       28
     ],
-    "DynamicOdds": 16
+    "DynamicOdds": 40
   },
   {
     "Id": 2352,
@@ -21165,7 +21165,7 @@
       28,
       29
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2353,
@@ -21174,7 +21174,7 @@
       29,
       30
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2354,
@@ -21183,7 +21183,7 @@
       30,
       31
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2355,
@@ -21192,7 +21192,7 @@
       31,
       32
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2356,
@@ -21201,7 +21201,7 @@
       32,
       33
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2357,
@@ -21210,7 +21210,7 @@
       33,
       34
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2358,
@@ -21219,7 +21219,7 @@
       34,
       35
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2359,
@@ -21228,7 +21228,7 @@
       35,
       36
     ],
-    "DynamicOdds": 15
+    "DynamicOdds": 38
   },
   {
     "Id": 2360,
@@ -21237,7 +21237,7 @@
       36,
       37
     ],
-    "DynamicOdds": 14
+    "DynamicOdds": 35
   },
   {
     "Id": 2361,
@@ -21246,7 +21246,7 @@
       37,
       38
     ],
-    "DynamicOdds": 13
+    "DynamicOdds": 33
   },
   {
     "Id": 2362,
@@ -21255,7 +21255,7 @@
       38,
       39
     ],
-    "DynamicOdds": 12
+    "DynamicOdds": 30
   },
   {
     "Id": 2363,
@@ -21264,7 +21264,7 @@
       39,
       40
     ],
-    "DynamicOdds": 11
+    "DynamicOdds": 28
   },
   {
     "Id": 2364,
@@ -21273,7 +21273,7 @@
       40,
       41
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2365,
@@ -21282,7 +21282,7 @@
       41,
       42
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2366,
@@ -21291,7 +21291,7 @@
       42,
       43
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2367,
@@ -21300,7 +21300,7 @@
       43,
       44
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2368,
@@ -21309,7 +21309,7 @@
       44,
       45
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2369,
@@ -21318,7 +21318,7 @@
       45,
       46
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2370,
@@ -21327,7 +21327,7 @@
       46,
       47
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2371,
@@ -21336,7 +21336,7 @@
       47,
       48
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2372,
@@ -21345,7 +21345,7 @@
       48,
       49
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2373,
@@ -21354,7 +21354,7 @@
       49,
       50
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2374,
@@ -21363,7 +21363,7 @@
       50,
       51
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2375,
@@ -21372,7 +21372,7 @@
       51,
       52
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2376,
@@ -21381,7 +21381,7 @@
       52,
       53
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2377,
@@ -21390,7 +21390,7 @@
       53,
       54
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2378,
@@ -21399,7 +21399,7 @@
       54,
       55
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2379,
@@ -21408,7 +21408,7 @@
       55,
       56
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2380,
@@ -21417,7 +21417,7 @@
       56,
       57
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2381,
@@ -21426,7 +21426,7 @@
       57,
       58
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2382,
@@ -21435,7 +21435,7 @@
       58,
       59
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2383,
@@ -21444,7 +21444,7 @@
       59,
       60
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2384,
@@ -21453,7 +21453,7 @@
       60,
       61
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2385,
@@ -21462,7 +21462,7 @@
       61,
       62
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2386,
@@ -21471,7 +21471,7 @@
       62,
       63
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2387,
@@ -21480,7 +21480,7 @@
       63,
       64
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2388,
@@ -21489,7 +21489,7 @@
       64,
       65
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2389,
@@ -21498,7 +21498,7 @@
       65,
       66
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2390,
@@ -21507,7 +21507,7 @@
       66,
       67
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2391,
@@ -21516,7 +21516,7 @@
       67,
       68
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2392,
@@ -21525,7 +21525,7 @@
       68,
       69
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2393,
@@ -21534,7 +21534,7 @@
       69,
       70
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2394,
@@ -21543,7 +21543,7 @@
       70,
       71
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2395,
@@ -21552,7 +21552,7 @@
       71,
       72
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2396,
@@ -21561,7 +21561,7 @@
       72,
       73
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2397,
@@ -21570,7 +21570,7 @@
       73,
       74
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2398,
@@ -21579,7 +21579,7 @@
       74,
       75
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2399,
@@ -21588,7 +21588,7 @@
       75,
       76
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2400,
@@ -21597,7 +21597,7 @@
       76,
       77
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2401,
@@ -21606,7 +21606,7 @@
       77,
       78
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2402,
@@ -21615,7 +21615,7 @@
       78,
       79
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2403,
@@ -21624,7 +21624,7 @@
       79,
       80
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2404,
@@ -21633,7 +21633,7 @@
       80,
       81
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2405,
@@ -21642,7 +21642,7 @@
       81,
       82
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2406,
@@ -21651,7 +21651,7 @@
       82,
       83
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2407,
@@ -21660,7 +21660,7 @@
       83,
       84
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2408,
@@ -21669,7 +21669,7 @@
       84,
       85
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2409,
@@ -21678,7 +21678,7 @@
       85,
       86
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2410,
@@ -21687,7 +21687,7 @@
       86,
       87
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2411,
@@ -21696,7 +21696,7 @@
       87,
       88
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2412,
@@ -21705,7 +21705,7 @@
       88,
       89
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2413,
@@ -21714,7 +21714,7 @@
       89,
       90
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2414,
@@ -21723,7 +21723,7 @@
       90,
       91
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2415,
@@ -21732,7 +21732,7 @@
       91,
       92
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2416,
@@ -21741,7 +21741,7 @@
       92,
       93
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2417,
@@ -21750,7 +21750,7 @@
       93,
       94
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2418,
@@ -21759,7 +21759,7 @@
       94,
       95
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2419,
@@ -21768,7 +21768,7 @@
       95,
       96
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2420,
@@ -21777,7 +21777,7 @@
       96,
       97
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2421,
@@ -21786,7 +21786,7 @@
       97,
       98
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2422,
@@ -21795,7 +21795,7 @@
       98,
       99
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2423,
@@ -21804,7 +21804,7 @@
       99,
       100
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   },
   {
     "Id": 2424,
@@ -21813,6 +21813,6 @@
       100,
       101
     ],
-    "DynamicOdds": 10
+    "DynamicOdds": 25
   }
 ]

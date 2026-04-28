@@ -48,5 +48,35 @@
     "PrefabPath": "UiItem_WeeklyCardStore",
     "Sort": 10,
     "Show": true
+  },
+  {
+    "Id": 6,
+    "RecommendType": 4,
+    "RecommendId": 105100103,
+    "RecommendTexture": "0",
+    "TabName": "PrefabTextItem_MotorSkeleton01_Text",
+    "PrefabPath": "UiItem_ShopSkinMoto",
+    "Sort": 40,
+    "Show": true
+  },
+  {
+    "Id": 7,
+    "RecommendType": 4,
+    "RecommendId": 105100108,
+    "RecommendTexture": "0",
+    "TabName": "PrefabTextItem_MotorSkeleton02_Text",
+    "PrefabPath": "UiItem_ShopSkinMotoFeixue",
+    "Sort": 30,
+    "Show": true
+  },
+  {
+    "Id": 8,
+    "RecommendType": 2,
+    "RecommendId": 106100006,
+    "RecommendTexture": "0",
+    "TabName": "PrefabTextItem_MoningSkinRecommend_Text",
+    "PrefabPath": "UiItem_ShopSkinMoNing",
+    "Sort": 1,
+    "Show": true
   }
 ]

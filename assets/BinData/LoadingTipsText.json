@@ -2684,8 +2684,8 @@
     "LevelAreaId": 2013,
     "ImageId": 201306,
     "Weight": 10,
-    "Title": "LoadingTipsText_201306_Title",
-    "TipsText": "LoadingTipsText_201306_TipsText"
+    "Title": "LoadingTipsText_610401_Title",
+    "TipsText": "LoadingTipsText_610401_TipsText"
   },
   {
     "Id": 610001,
@@ -2726,14 +2726,6 @@
     "Weight": 10,
     "Title": "LoadingTipsText_610401_Title",
     "TipsText": "LoadingTipsText_610401_TipsText"
-  },
-  {
-    "Id": 610501,
-    "LevelAreaId": 6105,
-    "ImageId": 610501,
-    "Weight": 10,
-    "Title": "LoadingTipsText_610501_Title",
-    "TipsText": "LoadingTipsText_610501_TipsText"
   },
   {
     "Id": 610601,

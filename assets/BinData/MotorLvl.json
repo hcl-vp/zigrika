@@ -31,7 +31,8 @@
       "8": 5000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 2,
@@ -65,7 +66,8 @@
       "8": 5000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 3,
@@ -99,7 +101,8 @@
       "8": 5000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 4,
@@ -133,7 +136,8 @@
       "8": 6000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 5,
@@ -167,7 +171,8 @@
       "8": 6000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 6,
@@ -201,7 +206,8 @@
       "8": 6000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 7,
@@ -235,7 +241,8 @@
       "8": 6000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 8,
@@ -269,7 +276,8 @@
       "8": 7000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 9,
@@ -303,7 +311,8 @@
       "8": 7000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 10,
@@ -337,7 +346,8 @@
       "8": 7000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 11,
@@ -371,7 +381,8 @@
       "8": 7000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 12,
@@ -405,7 +416,8 @@
       "8": 7000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 13,
@@ -439,7 +451,8 @@
       "8": 7700
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 14,
@@ -473,7 +486,8 @@
       "8": 7700
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 15,
@@ -507,7 +521,8 @@
       "8": 7700
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 16,
@@ -541,7 +556,8 @@
       "8": 7700
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 17,
@@ -575,7 +591,8 @@
       "8": 7700
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 18,
@@ -609,7 +626,8 @@
       "8": 9000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 19,
@@ -643,7 +661,8 @@
       "8": 9000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   },
   {
     "Level": 20,
@@ -677,6 +696,7 @@
       "8": 9000
     },
     "MotorShieldRecoverRate": 1000,
-    "MotorShieldCoolDown": 3
+    "MotorShieldCoolDown": 3,
+    "SoaringEnergy": 100
   }
 ]

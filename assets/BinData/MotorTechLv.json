@@ -298,11 +298,5 @@
     "Desc": "MotorBike_TechTree_300040_Desc",
     "Consume": 1,
     "Effect": 300040
-  },
-  {
-    "Id": 300050,
-    "Desc": "MotorBike_TechTree_300050_Desc",
-    "Consume": 1,
-    "Effect": 300050
   }
 ]

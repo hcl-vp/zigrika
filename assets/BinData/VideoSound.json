@@ -1080,6 +1080,30 @@
     "EndMoment": -1
   },
   {
+    "CaptionId": 137,
+    "CgName": "C0026",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_c0026.play_all_sound_c0026",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 138,
+    "CgName": "M0346",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0346.play_all_sound_m0346",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 139,
+    "CgName": "M3_5_09_1",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m3_5_09_1.play_all_sound_m3_5_09_1",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
     "CaptionId": 140,
     "CgName": "M0349",
     "GirlOrBoy": 2,
@@ -1113,6 +1137,30 @@
   },
   {
     "CaptionId": 144,
+    "CgName": "M0357",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0357.play_all_sound_m0357",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 145,
+    "CgName": "C0027",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m3_6_26.play_all_sound_m3_6_26",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 146,
+    "CgName": "C0028",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_c0028.play_all_sound_c0028",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 147,
     "CgName": "M0355",
     "GirlOrBoy": 2,
     "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0355.play_all_sound_m0355",
@@ -1120,10 +1168,26 @@
     "EndMoment": -1
   },
   {
-    "CaptionId": 145,
-    "CgName": "M0357",
+    "CaptionId": 148,
+    "CgName": "M0366",
     "GirlOrBoy": 2,
-    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0357.play_all_sound_m0357",
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0366.play_all_sound_m0366",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 149,
+    "CgName": "M0355_Loading",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_m0355_loading.play_all_sound_m0355_loading",
+    "StartMoment": 0,
+    "EndMoment": -1
+  },
+  {
+    "CaptionId": 150,
+    "CgName": "P0048",
+    "GirlOrBoy": 2,
+    "EventPath": "/Game/Aki/WwiseAudio/Events/play_all_sound_p0048.play_all_sound_p0048",
     "StartMoment": 0,
     "EndMoment": -1
   }

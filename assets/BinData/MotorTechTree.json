@@ -23,13 +23,13 @@
   },
   {
     "Id": 30000,
-    "UnlockCondition": 0,
+    "UnlockCondition": 13041008,
     "Order": 2,
     "TpItemId": 73,
-    "TaskLimitPointNum": 18,
+    "TaskLimitPointNum": 15,
     "Name": "MotorBike_TechTree_30000_Name",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMotorcycleSkill/T_IconMotorT.T_IconMotorT",
-    "Icon512": "/Game/Aki/UI/UIResources/Common/Image/IconMotorcycleSkill256/T_IconMotorcycleSkill256_1.T_IconMotorcycleSkill256_1",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMotorcycleSkill/T_IconMotorT4.T_IconMotorT4",
+    "Icon512": "/Game/Aki/UI/UIResources/Common/Image/IconMotorcycleSkill256/T_IconMotorcycleSkill256_3.T_IconMotorcycleSkill256_3",
     "ComUiType": 2
   }
 ]

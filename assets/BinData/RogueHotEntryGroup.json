@@ -6,7 +6,11 @@
       5
     ],
     "Group2": [],
-    "Group3": [],
+    "Group3": [
+      101,
+      102,
+      103
+    ],
     "Rate": 11000,
     "RateColor": "acacac",
     "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultGreen.T_RogueResultGreen",
@@ -55,9 +59,9 @@
       17
     ],
     "Rate": 15000,
-    "RateColor": "be71ff",
-    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultPurple.T_RogueResultPurple",
-    "SettleTextColor": "635db3",
+    "RateColor": "73bdd5",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultGreen.T_RogueResultGreen",
+    "SettleTextColor": "478e60",
     "SettleAudioState": 3
   },
   {
@@ -70,9 +74,9 @@
       20
     ],
     "Rate": 17000,
-    "RateColor": "be71ff",
-    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultPurple.T_RogueResultPurple",
-    "SettleTextColor": "635db3",
+    "RateColor": "73bdd5",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultGreen.T_RogueResultGreen",
+    "SettleTextColor": "478e60",
     "SettleAudioState": 3
   },
   {
@@ -85,10 +89,10 @@
     ],
     "Group3": [],
     "Rate": 20000,
-    "RateColor": "be71ff",
-    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultPurple.T_RogueResultPurple",
-    "SettleTextColor": "635db3",
-    "SettleAudioState": 2
+    "RateColor": "73bdd5",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultGreen.T_RogueResultGreen",
+    "SettleTextColor": "478e60",
+    "SettleAudioState": 3
   },
   {
     "GroupId": 7,
@@ -103,9 +107,9 @@
       21
     ],
     "Rate": 25000,
-    "RateColor": "ff5857",
-    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultRed.T_RogueResultRed",
-    "SettleTextColor": "b94f4e",
+    "RateColor": "be71ff",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultPurple.T_RogueResultPurple",
+    "SettleTextColor": "635db3",
     "SettleAudioState": 2
   },
   {
@@ -120,10 +124,10 @@
       22
     ],
     "Rate": 30000,
-    "RateColor": "ff5857",
-    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultRed.T_RogueResultRed",
-    "SettleTextColor": "b94f4e",
-    "SettleAudioState": 1
+    "RateColor": "be71ff",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultPurple.T_RogueResultPurple",
+    "SettleTextColor": "635db3",
+    "SettleAudioState": 2
   },
   {
     "GroupId": 9,
@@ -132,7 +136,19 @@
     ],
     "Group2": [],
     "Group3": [
-      19,
+      19
+    ],
+    "Rate": 40000,
+    "RateColor": "ff5857",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultRed.T_RogueResultRed",
+    "SettleTextColor": "b94f4e",
+    "SettleAudioState": 1
+  },
+  {
+    "GroupId": 10,
+    "Group1": [],
+    "Group2": [],
+    "Group3": [
       23
     ],
     "Rate": 45000,
@@ -140,5 +156,16 @@
     "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultRed.T_RogueResultRed",
     "SettleTextColor": "b94f4e",
     "SettleAudioState": 1
+  },
+  {
+    "GroupId": 11,
+    "Group1": [],
+    "Group2": [],
+    "Group3": [],
+    "Rate": 10000,
+    "RateColor": "acacac",
+    "SettleIcon": "/Game/Aki/UI/UIResources/UiRogue/Image/Result/T_RogueResultGreen.T_RogueResultGreen",
+    "SettleTextColor": "478e60",
+    "SettleAudioState": 4
   }
 ]

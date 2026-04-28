@@ -136,7 +136,9 @@
     "Desc": "Dango_SkillPage_SkillDes_18",
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_18",
     "SkillEffect": 18,
-    "Params": []
+    "Params": [
+      "32"
+    ]
   },
   {
     "Id": 20,
@@ -146,7 +148,7 @@
     "SkillEffect": 20,
     "Params": [
       "2",
-      "1"
+      "-1"
     ]
   },
   {
@@ -156,7 +158,7 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_25",
     "SkillEffect": 25,
     "Params": [
-      "50"
+      "100"
     ]
   },
   {
@@ -204,9 +206,9 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_16",
     "SkillEffect": 16,
     "Params": [
-      "1",
+      "3",
       "2",
-      "3"
+      "1"
     ]
   },
   {
@@ -227,6 +229,7 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_19",
     "SkillEffect": 19,
     "Params": [
+      "3",
       "1"
     ]
   },
@@ -247,7 +250,7 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_22",
     "SkillEffect": 22,
     "Params": [
-      "1"
+      "2"
     ]
   },
   {
@@ -257,7 +260,7 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_23",
     "SkillEffect": 23,
     "Params": [
-      "1"
+      "2"
     ]
   },
   {
@@ -267,7 +270,7 @@
     "ActivateDesc": "Dango_SkillPage_SkillShortDes_24",
     "SkillEffect": 24,
     "Params": [
-      "2"
+      "3"
     ]
   },
   {

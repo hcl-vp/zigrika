@@ -2,6 +2,7 @@
   {
     "Id": 1,
     "DataType": 1,
+    "PrefabType": 0,
     "RuleList": [
       1,
       2,
@@ -15,6 +16,7 @@
   {
     "Id": 2,
     "DataType": 2,
+    "PrefabType": 0,
     "RuleList": [
       22,
       23,
@@ -29,6 +31,7 @@
   {
     "Id": 3,
     "DataType": 3,
+    "PrefabType": 0,
     "RuleList": [
       22,
       23,
@@ -43,6 +46,7 @@
   {
     "Id": 4,
     "DataType": 4,
+    "PrefabType": 0,
     "RuleList": [
       22,
       23,
@@ -57,6 +61,7 @@
   {
     "Id": 5,
     "DataType": 12,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -72,6 +77,7 @@
   {
     "Id": 6,
     "DataType": 6,
+    "PrefabType": 0,
     "RuleList": [
       11,
       21
@@ -84,6 +90,7 @@
   {
     "Id": 7,
     "DataType": 7,
+    "PrefabType": 0,
     "RuleList": [
       12
     ],
@@ -95,6 +102,7 @@
   {
     "Id": 8,
     "DataType": 8,
+    "PrefabType": 0,
     "RuleList": [
       13
     ],
@@ -106,6 +114,7 @@
   {
     "Id": 9,
     "DataType": 9,
+    "PrefabType": 0,
     "RuleList": [
       15
     ],
@@ -117,6 +126,7 @@
   {
     "Id": 10,
     "DataType": 10,
+    "PrefabType": 0,
     "RuleList": [
       16
     ],
@@ -128,6 +138,7 @@
   {
     "Id": 11,
     "DataType": 11,
+    "PrefabType": 0,
     "RuleList": [
       17
     ],
@@ -139,6 +150,7 @@
   {
     "Id": 12,
     "DataType": 12,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -154,6 +166,7 @@
   {
     "Id": 13,
     "DataType": 12,
+    "PrefabType": 0,
     "RuleList": [
       26,
       2
@@ -166,6 +179,7 @@
   {
     "Id": 14,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -181,6 +195,7 @@
   {
     "Id": 15,
     "DataType": 1,
+    "PrefabType": 0,
     "RuleList": [
       1,
       2,
@@ -194,6 +209,7 @@
   {
     "Id": 16,
     "DataType": 14,
+    "PrefabType": 0,
     "RuleList": [
       33
     ],
@@ -205,6 +221,7 @@
   {
     "Id": 17,
     "DataType": 15,
+    "PrefabType": 0,
     "RuleList": [
       35,
       36,
@@ -219,6 +236,7 @@
   {
     "Id": 18,
     "DataType": 16,
+    "PrefabType": 0,
     "RuleList": [
       1,
       2
@@ -231,6 +249,7 @@
   {
     "Id": 19,
     "DataType": 17,
+    "PrefabType": 0,
     "RuleList": [
       39,
       40,
@@ -245,6 +264,7 @@
   {
     "Id": 20,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -260,6 +280,7 @@
   {
     "Id": 21,
     "DataType": 17,
+    "PrefabType": 0,
     "RuleList": [
       39,
       40,
@@ -274,6 +295,7 @@
   {
     "Id": 22,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -289,6 +311,7 @@
   {
     "Id": 23,
     "DataType": 18,
+    "PrefabType": 0,
     "RuleList": [
       11,
       21
@@ -301,6 +324,7 @@
   {
     "Id": 24,
     "DataType": 19,
+    "PrefabType": 0,
     "RuleList": [
       26,
       2
@@ -313,6 +337,7 @@
   {
     "Id": 25,
     "DataType": 20,
+    "PrefabType": 0,
     "RuleList": [
       26,
       2
@@ -325,6 +350,7 @@
   {
     "Id": 26,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -340,6 +366,7 @@
   {
     "Id": 27,
     "DataType": 19,
+    "PrefabType": 0,
     "RuleList": [
       47,
       2
@@ -352,6 +379,7 @@
   {
     "Id": 28,
     "DataType": 18,
+    "PrefabType": 0,
     "RuleList": [
       11,
       48
@@ -364,6 +392,7 @@
   {
     "Id": 29,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -378,6 +407,7 @@
   {
     "Id": 30,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -392,6 +422,7 @@
   {
     "Id": 31,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -406,6 +437,7 @@
   {
     "Id": 32,
     "DataType": 13,
+    "PrefabType": 1,
     "RuleList": [
       32,
       28,
@@ -421,6 +453,7 @@
   {
     "Id": 33,
     "DataType": 21,
+    "PrefabType": 0,
     "RuleList": [
       52,
       53
@@ -433,6 +466,7 @@
   {
     "Id": 34,
     "DataType": 22,
+    "PrefabType": 0,
     "RuleList": [
       54,
       55
@@ -445,6 +479,7 @@
   {
     "Id": 35,
     "DataType": 23,
+    "PrefabType": 0,
     "RuleList": [
       56,
       57

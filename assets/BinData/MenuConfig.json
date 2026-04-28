@@ -2663,7 +2663,7 @@
       "MenuConfig_72_OptionsName_4",
       "MenuConfig_72_OptionsName_3",
       "MenuConfig_72_OptionsName_2",
-      "MenuConfig_72_OptionsName_6"
+      "MenuConfig_72_OptionsName_10"
     ],
     "OptionsValue": [
       99,
@@ -9132,15 +9132,15 @@
     "SliderDefault": 0,
     "OptionsDefault": 0,
     "MainType": 2,
-    "SubName": "MenuConfig_45_SubName",
-    "SubType": 0,
+    "SubName": "MenuConfig_70_SubName",
+    "SubType": 3,
     "NeedScale": false,
-    "SubSort": 2,
+    "SubSort": 3,
     "SubImage": "/Game/Aki/UI/UIResources/UiSet/Atlas/SP_SETzidingyi.SP_SETzidingyi",
     "Name": "MenuConfig_20004_Name",
     "Platform": 0,
     "Device": "isNotCloudGame",
-    "FunctionSort": 4,
+    "FunctionSort": 8,
     "FunctionImage": "/Game/Aki/UI/UIResources/UiSet/Atlas/SP_SETzidingyi.SP_SETzidingyi",
     "SetType": 2,
     "IsDataCache": true,
@@ -9176,7 +9176,7 @@
     "ClickedTipsMap": {},
     "ClickedTips": "0",
     "BlockOnIosCheckServer": false,
-    "DetailText": "",
+    "DetailText": "MenuConfig_20004_Desc",
     "DetailPop": 0,
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
@@ -9217,7 +9217,9 @@
     "BtnDisableTipsEnable": false,
     "OpenView": "",
     "RelationFunction": [],
-    "DisableValue": [],
+    "DisableValue": [
+      1
+    ],
     "DisableFunction": [
       11
     ],

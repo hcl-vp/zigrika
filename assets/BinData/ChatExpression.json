@@ -1475,12 +1475,5 @@
     "Name": "ChatExpression_212_Name",
     "ExpressionTexturePath": "/Game/Aki/UI/UIResources/Common/Image/IconChatEmoticon/T_ChatEmo_Simple_05.T_ChatEmo_Simple_05",
     "MaleVariant": ""
-  },
-  {
-    "Id": 213,
-    "GroupId": 13,
-    "Name": "ChatExpression_213_Name",
-    "ExpressionTexturePath": "/Game/Aki/UI/UIResources/Common/Image/IconChatEmoticon/T_ChatEmo_E_02.T_ChatEmo_E_02",
-    "MaleVariant": "/Game/Aki/UI/UIResources/Common/Image/IconChatEmoticon/T_ChatEmo_D_01.T_ChatEmo_D_01"
   }
 ]

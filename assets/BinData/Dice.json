@@ -62,8 +62,8 @@
     "DicePointSixIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt06.T_DiceTxt06",
     "DiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DicePurple.T_DicePurple",
     "RollDiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DicePurpleA.T_DicePurpleA",
-    "DiceColor": "R=0.590001,G=0.000000,B=2.000000,A=0.000000",
-    "DiceNumColor": "R=0.107667,G=0.000000,B=1.000000,A=0.000000",
+    "DiceColor": "R=0.9375,G=0.08952,B=0.296942,A=1.0",
+    "DiceNumColor": "R=0.244792,G=0.04393,B=0.140487,A=1.0",
     "DiceHighLightColor": "R=50.000000,G=3.540617,B=6.527028,A=0.000000",
     "FacesNum": 12
   },
@@ -81,7 +81,7 @@
     "RollDiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceRedA.T_DiceRedA",
     "DiceColor": "R=0.791667,G=0.051299,B=0.000000,A=0.000000",
     "DiceNumColor": "R=1.000000,G=0.597127,B=0.245097,A=0.000000",
-    "DiceHighLightColor": "R=30.000000,G=19.032824,B=0.000000,A=0.000000",
+    "DiceHighLightColor": "R=10.000000,G=6.344275,B=0.000000,A=0.000000",
     "FacesNum": 12
   },
   {
@@ -104,18 +104,18 @@
   {
     "Id": 1007,
     "Icon": "Dango_Name_Budawang",
-    "Num": 3,
+    "Num": 6,
     "DicePointOneIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt01.T_DiceTxt01",
     "DicePointTwoIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt02.T_DiceTxt02",
     "DicePointThreeIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt03.T_DiceTxt03",
     "DicePointFourIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt04.T_DiceTxt04",
     "DicePointFiveIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt05.T_DiceTxt05",
     "DicePointSixIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceTxt06.T_DiceTxt06",
-    "DiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceWhite.T_DiceWhite",
-    "RollDiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceWhiteA.T_DiceWhiteA",
-    "DiceColor": "R=1.800000,G=1.780612,B=1.734375,A=0.000000",
-    "DiceNumColor": "R=0.260417,G=0.217076,B=0.072399,A=0.000000",
-    "DiceHighLightColor": "R=0.000000,G=0.000000,B=0.000000,A=0.000000",
-    "FacesNum": 12
+    "DiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceAbu.T_DiceAbu",
+    "RollDiceBackgroundIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRacehorse/T_DiceAbuA.T_DiceAbuA",
+    "DiceColor": "R=0.590001,G=0.000000,B=2.000000,A=0.000000",
+    "DiceNumColor": "R=0.107667,G=0.000000,B=1.000000,A=0.000000",
+    "DiceHighLightColor": "R=50.000000,G=3.540617,B=6.527028,A=0.000000",
+    "FacesNum": 6
   }
 ]

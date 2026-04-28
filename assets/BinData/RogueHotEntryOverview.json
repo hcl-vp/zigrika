@@ -100,5 +100,32 @@
       "RogueHotEntryOverview_Desc_10"
     ],
     "SortId": 10
+  },
+  {
+    "Id": 11,
+    "Type": 1,
+    "ParamShowPercent": [],
+    "Desc": [
+      "RogueHotEntryOverview_Desc_11"
+    ],
+    "SortId": 11
+  },
+  {
+    "Id": 12,
+    "Type": 1,
+    "ParamShowPercent": [],
+    "Desc": [
+      "RogueHotEntryOverview_Desc_12"
+    ],
+    "SortId": 12
+  },
+  {
+    "Id": 13,
+    "Type": 1,
+    "ParamShowPercent": [],
+    "Desc": [
+      "RogueHotEntryOverview_Desc_13"
+    ],
+    "SortId": 13
   }
 ]

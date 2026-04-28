@@ -6,7 +6,8 @@
     "IsPercent": false,
     "Icon": "",
     "Desc": "",
-    "KscAttrType": 3
+    "KscAttrType": 3,
+    "ShowCoefficient": 1
   },
   {
     "Id": 2,
@@ -15,7 +16,8 @@
     "IsPercent": false,
     "Icon": "/Game/Aki/UI/UiResources/Common/Image/IconAttribute/T_Iconpropertygreenlife_UI.T_Iconpropertygreenlife_UI",
     "Desc": "",
-    "KscAttrType": 2
+    "KscAttrType": 2,
+    "ShowCoefficient": 1
   },
   {
     "Id": 3,
@@ -24,7 +26,8 @@
     "IsPercent": false,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
     "Desc": "",
-    "KscAttrType": 7
+    "KscAttrType": 7,
+    "ShowCoefficient": 1
   },
   {
     "Id": 4,
@@ -33,7 +36,8 @@
     "IsPercent": false,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreendefense_UI.T_Iconpropertygreendefense_UI",
     "Desc": "",
-    "KscAttrType": 10
+    "KscAttrType": 10,
+    "ShowCoefficient": 1
   },
   {
     "Id": 5,
@@ -42,7 +46,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenenergy_UI.T_Iconpropertygreenenergy_UI",
     "Desc": "",
-    "KscAttrType": 74
+    "KscAttrType": 74,
+    "ShowCoefficient": 1
   },
   {
     "Id": 6,
@@ -51,7 +56,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
     "Desc": "PropertyIndex_8_Dec",
-    "KscAttrType": 8
+    "KscAttrType": 8,
+    "ShowCoefficient": 1
   },
   {
     "Id": 7,
@@ -60,7 +66,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
     "Desc": "PropertyIndex_9_Dec",
-    "KscAttrType": 9
+    "KscAttrType": 9,
+    "ShowCoefficient": 1
   },
   {
     "Id": 8,
@@ -69,7 +76,8 @@
     "IsPercent": true,
     "Icon": "",
     "Desc": "",
-    "KscAttrType": 15
+    "KscAttrType": 15,
+    "ShowCoefficient": 1
   },
   {
     "Id": 9,
@@ -78,7 +86,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType1_S.T_IconRoleType1_S",
     "Desc": "Pinball_Character_PropetyDesc_01",
-    "KscAttrType": 201
+    "KscAttrType": 201,
+    "ShowCoefficient": 1
   },
   {
     "Id": 10,
@@ -87,7 +96,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType3_S.T_IconRoleType3_S",
     "Desc": "Pinball_Character_PropetyDesc_02",
-    "KscAttrType": 202
+    "KscAttrType": 202,
+    "ShowCoefficient": 1
   },
   {
     "Id": 11,
@@ -96,7 +106,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType4_S.T_IconRoleType4_S",
     "Desc": "Pinball_Character_PropetyDesc_03",
-    "KscAttrType": 203
+    "KscAttrType": 203,
+    "ShowCoefficient": 1
   },
   {
     "Id": 12,
@@ -105,7 +116,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/IconRoleTypeS/T_IconRoleType2_S.T_IconRoleType2_S",
     "Desc": "Pinball_Character_PropetyDesc_04",
-    "KscAttrType": 204
+    "KscAttrType": 204,
+    "ShowCoefficient": 1
   },
   {
     "Id": 13,
@@ -114,7 +126,8 @@
     "IsPercent": true,
     "Icon": "",
     "Desc": "",
-    "KscAttrType": 0
+    "KscAttrType": 0,
+    "ShowCoefficient": 1
   },
   {
     "Id": 14,
@@ -123,7 +136,8 @@
     "IsPercent": true,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreencure_UI.T_Iconpropertygreencure_UI",
     "Desc": "",
-    "KscAttrType": 35
+    "KscAttrType": 35,
+    "ShowCoefficient": 1
   },
   {
     "Id": 15,
@@ -132,7 +146,8 @@
     "IsPercent": true,
     "Icon": "",
     "Desc": "",
-    "KscAttrType": 51
+    "KscAttrType": 51,
+    "ShowCoefficient": 1
   },
   {
     "Id": 16,
@@ -141,6 +156,7 @@
     "IsPercent": false,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenenergy_UI.T_Iconpropertygreenenergy_UI",
     "Desc": "Pinball_Character_PropetyDesc_07",
-    "KscAttrType": 72
+    "KscAttrType": 72,
+    "ShowCoefficient": 100
   }
 ]

@@ -6248,8 +6248,8 @@
     "IncreaseRateWhenDecreasing": 1,
     "MinClearTime": 1000,
     "DisengageDistanceRange": {
-      "Min": 5000,
-      "Max": 6000
+      "Min": 30000,
+      "Max": 35000
     },
     "DisengageTimeRange": {
       "Min": 40000,
@@ -6264,8 +6264,8 @@
       "Max": 2000
     },
     "DisengageBornDistance": {
-      "Min": 10000,
-      "Max": 11000
+      "Min": 30000,
+      "Max": 35000
     },
     "MaxMoveFromBorn": -1,
     "ExcludeTag": "行为状态.逻辑状态.隐身",

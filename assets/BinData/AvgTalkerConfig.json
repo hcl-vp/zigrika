@@ -138,5 +138,19 @@
     "IsGroup": false,
     "SpineAtlas": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Zhezhi/CatapultStory_Zhezhi.CatapultStory_Zhezhi-atlas",
     "SpineSkeletonData": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Zhezhi/CatapultStory_Zhezhi.CatapultStory_Zhezhi-data"
+  },
+  {
+    "Id": 850021,
+    "Name": "莫宁",
+    "IsGroup": false,
+    "SpineAtlas": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Moning/CatapultStory_Moning.CatapultStory_Moning-atlas",
+    "SpineSkeletonData": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Moning/CatapultStory_Moning.CatapultStory_Moning-data"
+  },
+  {
+    "Id": 850022,
+    "Name": "爱弥斯",
+    "IsGroup": false,
+    "SpineAtlas": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Aimisi/CatapultStory_Aimisi.CatapultStory_Aimisi-atlas",
+    "SpineSkeletonData": "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity33/CatapultStory/CatapultStory_Role/CatapultStory_Aimisi/CatapultStory_Aimisi.CatapultStory_Aimisi-data"
   }
 ]

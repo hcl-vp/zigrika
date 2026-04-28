@@ -1579,8 +1579,8 @@
       1,
       2
     ],
-    "DetectionId": 30015005,
-    "ConditionGroup": 12401022,
+    "DetectionId": 30015001,
+    "ConditionGroup": 12401018,
     "TeleportEntityId": 0,
     "DungeonEntranceId": 0,
     "InstanceID": 1101018,
@@ -1614,6 +1614,21 @@
     "TeleportEntityId": 0,
     "DungeonEntranceId": 0,
     "InstanceID": 1101024,
+    "Spoiler": true
+  },
+  {
+    "Id": 500071,
+    "SoundAreaType": 1,
+    "PlayType": 0,
+    "PlayTypeArray": [
+      1,
+      2
+    ],
+    "DetectionId": 30015002,
+    "ConditionGroup": 12401019,
+    "TeleportEntityId": 0,
+    "DungeonEntranceId": 0,
+    "InstanceID": 1101019,
     "Spoiler": true
   }
 ]

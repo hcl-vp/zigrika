@@ -35,9 +35,8 @@
       "Pinball_BattleSettlement_FailText01"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXiangliyao.SP_IconSkillXiangliyao",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole04.T_ReleaseRole04",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0102_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4001,
     "BornBuff": [
       1110200201
@@ -82,12 +81,12 @@
       "Pinball_BattleSettlement_FailText02"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillZhezhi.SP_IconSkillZhezhi",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole05.T_ReleaseRole05",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0202_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4002,
     "BornBuff": [
-      1110200301
+      1110200301,
+      1110199908
     ],
     "LeaderBuff": [
       1110100301
@@ -129,9 +128,8 @@
       "Pinball_BattleSettlement_FailText03"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillQiuyuan.SP_IconSkillQiuyuan",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole11.T_ReleaseRole11",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0302_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4003,
     "BornBuff": [
       1110200101
@@ -176,11 +174,12 @@
       "Pinball_BattleSettlement_FailText04"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillJiyan.SP_IconSkillJiyan",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole01.T_ReleaseRole01",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0402_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4004,
-    "BornBuff": [],
+    "BornBuff": [
+      1110200401
+    ],
     "LeaderBuff": [
       1110100401
     ]
@@ -221,12 +220,12 @@
       "Pinball_BattleSettlement_FailText05"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillChangli.SP_IconSkillChangli",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole03.T_ReleaseRole03",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0502_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4005,
     "BornBuff": [
-      1110200501
+      1110200501,
+      1110199908
     ],
     "LeaderBuff": [
       1110100501
@@ -268,9 +267,8 @@
       "Pinball_BattleSettlement_FailText06"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillJinxi.SP_IconSkillJinxi",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole02.T_ReleaseRole02",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0602_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4006,
     "BornBuff": [
       1110200601
@@ -315,9 +313,8 @@
       "Pinball_BattleSettlement_FailText07"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillJiabeilina.SP_IconSkillJiabeilina",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole10.T_ReleaseRole10",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0702_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4007,
     "BornBuff": [
       1110200701
@@ -362,9 +359,8 @@
       "Pinball_BattleSettlement_FailText08"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillLupa.SP_IconSkillLupa",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole07.T_ReleaseRole07",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0802_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4008,
     "BornBuff": [
       1110200801
@@ -409,12 +405,12 @@
       "Pinball_BattleSettlement_FailText09"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillYounuo.SP_IconSkillYounuo",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole09.T_ReleaseRole09",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0902_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4009,
     "BornBuff": [
-      1110201101
+      1110201101,
+      1110199908
     ],
     "LeaderBuff": [
       1110101101
@@ -456,9 +452,8 @@
       "Pinball_BattleSettlement_FailText10"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXiakong.SP_IconSkillXiakong",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole06.T_ReleaseRole06",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1002_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4010,
     "BornBuff": [
       1110201001
@@ -503,9 +498,8 @@
       "Pinball_BattleSettlement_FailText11"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillAogusita.SP_IconSkillAogusita",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole08.T_ReleaseRole08",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1102_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4011,
     "BornBuff": [
       1110200901
@@ -550,9 +544,8 @@
       "Pinball_BattleSettlement_FailText12"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillQianxiao.SP_IconSkillQianxiao",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole12.T_ReleaseRole12",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1202_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4012,
     "BornBuff": [
       1110201201
@@ -597,9 +590,8 @@
       "Pinball_BattleSettlement_FailText13"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillMoning.SP_IconSkillMoning",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole14.T_ReleaseRole14",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1302_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4013,
     "BornBuff": [
       1110201301
@@ -644,9 +636,8 @@
       "Pinball_BattleSettlement_FailText14"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillLinnai.SP_IconSkillLinnai",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole13.T_ReleaseRole13",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1402_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4014,
     "BornBuff": [
       1110201401
@@ -691,9 +682,8 @@
       "Pinball_BattleSettlement_FailText15"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillDaniya.SP_IconSkillDaniya",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole18.T_ReleaseRole18",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1502_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4015,
     "BornBuff": [
       1110201501
@@ -738,12 +728,12 @@
       "Pinball_BattleSettlement_FailText16"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillLuhesi.SP_IconSkillLuhesi",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole16.T_ReleaseRole16",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1602_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4016,
     "BornBuff": [
-      1110201601
+      1110201601,
+      1110199908
     ],
     "LeaderBuff": [
       1110101601
@@ -785,9 +775,8 @@
       "Pinball_BattleSettlement_FailText17"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillAimisi.SP_IconSkillAimisi",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole15.T_ReleaseRole15",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1702_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4017,
     "BornBuff": [
       1110201701
@@ -832,12 +821,12 @@
       "Pinball_BattleSettlement_FailText18"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXigelika.SP_IconSkillXigelika",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole17.T_ReleaseRole17",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1802_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4018,
     "BornBuff": [
-      1110201801
+      1110201801,
+      1110199908
     ],
     "LeaderBuff": [
       1110101801
@@ -879,14 +868,15 @@
       "Pinball_BattleSettlement_FailText19"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillFeixue.SP_IconSkillFeixue",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole19.T_ReleaseRole19",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1902_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4019,
     "BornBuff": [
       1110201901
     ],
-    "LeaderBuff": []
+    "LeaderBuff": [
+      1110101901
+    ]
   },
   {
     "Id": 80850101,
@@ -924,9 +914,8 @@
       "Pinball_BattleSettlement_FailText01"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXiangliyao.SP_IconSkillXiangliyao",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole04.T_ReleaseRole04",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0102_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4001,
     "BornBuff": [
       1110200201
@@ -971,11 +960,12 @@
       "Pinball_BattleSettlement_FailText04"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillJiyan.SP_IconSkillJiyan",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole01.T_ReleaseRole01",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0402_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4004,
-    "BornBuff": [],
+    "BornBuff": [
+      1110200401
+    ],
     "LeaderBuff": [
       1110100401
     ]
@@ -1016,9 +1006,8 @@
       "Pinball_BattleSettlement_FailText07"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillJiabeilina.SP_IconSkillJiabeilina",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole10.T_ReleaseRole10",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0702_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4007,
     "BornBuff": [
       1110200701
@@ -1063,9 +1052,8 @@
       "Pinball_BattleSettlement_FailText05"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillChangli.SP_IconSkillChangli",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole03.T_ReleaseRole03",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0502_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4005,
     "BornBuff": [
       1110200501
@@ -1110,9 +1098,8 @@
       "Pinball_BattleSettlement_FailText11"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillAogusita.SP_IconSkillAogusita",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole08.T_ReleaseRole08",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1102_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4011,
     "BornBuff": [
       1110200901
@@ -1157,9 +1144,8 @@
       "Pinball_BattleSettlement_FailText10"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXiakong.SP_IconSkillXiakong",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole06.T_ReleaseRole06",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1002_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4010,
     "BornBuff": [
       1110201001
@@ -1204,9 +1190,8 @@
       "Pinball_BattleSettlement_FailText09"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillYounuo.SP_IconSkillYounuo",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole09.T_ReleaseRole09",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_0902_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4009,
     "BornBuff": [
       1110201101
@@ -1251,9 +1236,8 @@
       "Pinball_BattleSettlement_FailText12"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillQianxiao.SP_IconSkillQianxiao",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole12.T_ReleaseRole12",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1202_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4012,
     "BornBuff": [
       1110201201
@@ -1298,9 +1282,8 @@
       "Pinball_BattleSettlement_FailText13"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillMoning.SP_IconSkillMoning",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole14.T_ReleaseRole14",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1302_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4013,
     "BornBuff": [
       1110201301
@@ -1345,9 +1328,8 @@
       "Pinball_BattleSettlement_FailText18"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillXigelika.SP_IconSkillXigelika",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole17.T_ReleaseRole17",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1802_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4018,
     "BornBuff": [
       1110201801
@@ -1392,9 +1374,8 @@
       "Pinball_BattleSettlement_FailText14"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillLinnai.SP_IconSkillLinnai",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole13.T_ReleaseRole13",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1402_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4014,
     "BornBuff": [
       1110201401
@@ -1439,9 +1420,8 @@
       "Pinball_BattleSettlement_FailText15"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillDaniya.SP_IconSkillDaniya",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole18.T_ReleaseRole18",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1502_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4015,
     "BornBuff": [
       1110201501
@@ -1486,9 +1466,8 @@
       "Pinball_BattleSettlement_FailText16"
     ],
     "RoleSkillIcon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity33/CatapultStory/IconSkill/SP_IconSkillLuhesi.SP_IconSkillLuhesi",
-    "RoleSkillReleaseIcon": "",
+    "RoleSkillReleaseIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/ReleaseRole/T_ReleaseRole16.T_ReleaseRole16",
     "RoleSkillReleaseDesc": "Pinball_Character_skill_1602_name",
-    "RoleSkillReadyDesc": "",
     "KscEntityId": 4016,
     "BornBuff": [
       1110201601

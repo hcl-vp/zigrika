@@ -1,5 +1,10 @@
 [
   {
+    "Id": 1,
+    "ActivityId": 102000005,
+    "IconPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/AnniversaryCelebration/ItemTex/T_AnniversaryCelebrationItem3.T_AnniversaryCelebrationItem3"
+  },
+  {
     "Id": 2,
     "ActivityId": 109400001,
     "IconPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/AnniversaryCelebration/ItemTex/T_AnniversaryCelebrationItem1.T_AnniversaryCelebrationItem1"

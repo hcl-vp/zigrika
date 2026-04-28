@@ -24,10 +24,11 @@
     "Id": 3,
     "ProperDesc": "Pinball_Weapon_entry_charctersub03",
     "ProperVal": [
-      "15%",
       "5%",
       "9",
-      "4"
+      "4",
+      "15%",
+      "12"
     ],
     "Buff": 1110300101,
     "KscAttrType": 0,
@@ -87,7 +88,8 @@
     "ProperDesc": "Pinball_Weapon_entry_charctersub08",
     "ProperVal": [
       "45%",
-      "10%"
+      "10%",
+      "12"
     ],
     "Buff": 1110300801,
     "KscAttrType": 0,
@@ -97,8 +99,8 @@
     "Id": 9,
     "ProperDesc": "Pinball_Weapon_entry_charctersub09",
     "ProperVal": [
-      "5",
-      "25%",
+      "8%",
+      "1",
       "90%"
     ],
     "Buff": 1110301101,
@@ -120,7 +122,8 @@
     "Id": 11,
     "ProperDesc": "Pinball_Weapon_entry_charctersub11",
     "ProperVal": [
-      "50%"
+      "50%",
+      "20%"
     ],
     "Buff": 1110300901,
     "KscAttrType": 0,
@@ -191,8 +194,8 @@
     "Id": 17,
     "ProperDesc": "Pinball_Weapon_entry_charctersub17",
     "ProperVal": [
-      "1",
-      "600%",
+      "3%",
+      "60",
       "60%",
       "50%"
     ],
@@ -204,9 +207,9 @@
     "Id": 18,
     "ProperDesc": "Pinball_Weapon_entry_charctersub18",
     "ProperVal": [
-      "100",
-      "60%",
-      "10"
+      "65",
+      "90%",
+      "20"
     ],
     "Buff": 1110301801,
     "KscAttrType": 0,
@@ -385,7 +388,7 @@
     "Id": 3403,
     "ProperDesc": "Pinball_Weapon_entry_main3403",
     "ProperVal": [
-      "50"
+      "30"
     ],
     "Buff": 1180000016,
     "KscAttrType": 0,
@@ -416,7 +419,7 @@
     "Id": 3503,
     "ProperDesc": "Pinball_Weapon_entry_main3503",
     "ProperVal": [
-      "30"
+      "12"
     ],
     "Buff": 1180000019,
     "KscAttrType": 0,
@@ -449,7 +452,7 @@
     "Id": 3103,
     "ProperDesc": "Pinball_Weapon_entry_main3103",
     "ProperVal": [
-      "30"
+      "12"
     ],
     "Buff": 1180000022,
     "KscAttrType": 0,
@@ -548,7 +551,7 @@
     "Id": 4403,
     "ProperDesc": "Pinball_Weapon_entry_main3403",
     "ProperVal": [
-      "75"
+      "45"
     ],
     "Buff": 1180000031,
     "KscAttrType": 0,
@@ -579,7 +582,7 @@
     "Id": 4503,
     "ProperDesc": "Pinball_Weapon_entry_main3503",
     "ProperVal": [
-      "50"
+      "18"
     ],
     "Buff": 1180000034,
     "KscAttrType": 0,
@@ -612,7 +615,7 @@
     "Id": 4103,
     "ProperDesc": "Pinball_Weapon_entry_main3103",
     "ProperVal": [
-      "45"
+      "18"
     ],
     "Buff": 1180000037,
     "KscAttrType": 0,

@@ -7438,22 +7438,6 @@
     "TimeDilation": 1
   },
   {
-    "Id": 477,
-    "Title": "ConfirmBox_1_Title",
-    "Content": "ConfirmBox_477_Content",
-    "SecondaryContent": "",
-    "ButtonText": [
-      "ConfirmBox_1_ButtonText_0",
-      "ConfirmBox_1_ButtonText_1"
-    ],
-    "DelayTime": 0,
-    "DelayButtonIndex": 0,
-    "NeedMaskClose": false,
-    "UiShowType": 0,
-    "NeedClose": true,
-    "TimeDilation": 1
-  },
-  {
     "Id": 478,
     "Title": "ConfirmBox_1_Title",
     "Content": "RogueChooseCharacter_Confirm",
@@ -7602,15 +7586,15 @@
     "Content": "ConfirmBox_470_Content",
     "SecondaryContent": "",
     "ButtonText": [
-      "ConfirmBox_470_ButtonText_0",
-      "ConfirmBox_470_ButtonText_1"
+      "ConfirmBox_470_ButtonText_1",
+      "ConfirmBox_470_ButtonText_0"
     ],
     "DelayTime": 0,
     "DelayButtonIndex": 0,
     "NeedMaskClose": false,
     "UiShowType": 0,
     "NeedClose": true,
-    "TimeDilation": 1
+    "TimeDilation": 0
   },
   {
     "Id": 492,
@@ -7627,5 +7611,21 @@
     "UiShowType": 0,
     "NeedClose": true,
     "TimeDilation": 0
+  },
+  {
+    "Id": 497,
+    "Title": "ConfirmBox_497_Title",
+    "Content": "ConfirmBox_497_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": true,
+    "UiShowType": 3,
+    "NeedClose": true,
+    "TimeDilation": 1
   }
 ]

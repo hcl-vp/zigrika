@@ -51,12 +51,12 @@
     "Id": 9,
     "CondType": 3,
     "CondDesc": "Pinball_Level_Conditon03",
-    "NeedNum": 640
+    "NeedNum": 360
   },
   {
     "Id": 10,
     "CondType": 3,
     "CondDesc": "Pinball_Level_Conditon03",
-    "NeedNum": 720
+    "NeedNum": 540
   }
 ]

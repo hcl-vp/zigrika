@@ -244,7 +244,7 @@
   {
     "Id": 2001,
     "PhantomItem": 60000422,
-    "UnlockInst": 8040,
+    "UnlockInst": 0,
     "UnlockTips": "",
     "Quality": 1,
     "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_999_UI.T_IconMonsterHead_999_UI",
@@ -254,18 +254,29 @@
   },
   {
     "Id": 2002,
-    "PhantomItem": 60000372,
+    "PhantomItem": 60200105,
     "UnlockInst": 0,
     "UnlockTips": "",
     "Quality": 1,
-    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_992_UI.T_IconMonsterHead_992_UI",
-    "PokemonName": "RogueBuffPool_938000501001_BuffName",
-    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_9_UI.T_IconMonsterPile_9_UI",
-    "PokemonSkillDesc": "RoguePokemonDesc_wugui"
+    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_SG_34017_UI.T_IconMonsterHead_SG_34017_UI",
+    "PokemonName": "RogueBuffPool_shenwang_BuffName",
+    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_15_UI.T_IconMonsterPile_15_UI",
+    "PokemonSkillDesc": "RoguePokemonDesc_shenwang"
   },
   {
     "Id": 2003,
-    "PhantomItem": 60000322,
+    "PhantomItem": 60200104,
+    "UnlockInst": 0,
+    "UnlockTips": "",
+    "Quality": 1,
+    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34025_0_UI.T_IconMonsterHead_34025_0_UI",
+    "PokemonName": "RogueBuffPool_xjlm_BuffName",
+    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_14_UI.T_IconMonsterPile_14_UI",
+    "PokemonSkillDesc": "RoguePokemonDesc_xjlm"
+  },
+  {
+    "Id": 2004,
+    "PhantomItem": 60200102,
     "UnlockInst": 0,
     "UnlockTips": "",
     "Quality": 1,
@@ -275,21 +286,10 @@
     "PokemonSkillDesc": "RoguePokemonDesc_motor"
   },
   {
-    "Id": 2004,
-    "PhantomItem": 60000222,
-    "UnlockInst": 8041,
-    "UnlockTips": "",
-    "Quality": 1,
-    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_226_UI.T_IconMonsterHead_226_UI",
-    "PokemonName": "RogueBuffPool_9126000043_BuffName",
-    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_12_UI.T_IconMonsterPile_12_UI",
-    "PokemonSkillDesc": "RoguePokemonDesc_linren"
-  },
-  {
     "Id": 2005,
     "PhantomItem": 60200101,
-    "UnlockInst": 8042,
-    "UnlockTips": "",
+    "UnlockInst": 8040,
+    "UnlockTips": "Rogue_Pokemon_UnlockTips_1",
     "Quality": 1,
     "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_998_1_UI.T_IconMonsterHead_998_1_UI",
     "PokemonName": "RogueBuffPool_9126000044_BuffName",
@@ -298,24 +298,24 @@
   },
   {
     "Id": 2006,
-    "PhantomItem": 60200105,
-    "UnlockInst": 8042,
-    "UnlockTips": "",
+    "PhantomItem": 60000372,
+    "UnlockInst": 8041,
+    "UnlockTips": "Rogue_Pokemon_UnlockTips_2",
     "Quality": 1,
-    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_SG_34017_UI.T_IconMonsterHead_SG_34017_UI",
-    "PokemonName": "RogueBuffPool_shenwang_BuffName",
-    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_12_UI.T_IconMonsterPile_12_UI",
-    "PokemonSkillDesc": "RoguePokemonDesc_shenwang"
+    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_992_UI.T_IconMonsterHead_992_UI",
+    "PokemonName": "RogueBuffPool_938000501001_BuffName",
+    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_9_UI.T_IconMonsterPile_9_UI",
+    "PokemonSkillDesc": "RoguePokemonDesc_wugui"
   },
   {
     "Id": 2007,
-    "PhantomItem": 60200104,
+    "PhantomItem": 60000222,
     "UnlockInst": 8042,
-    "UnlockTips": "",
+    "UnlockTips": "Rogue_Pokemon_UnlockTips_3",
     "Quality": 1,
-    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_SG_34025_UI.T_IconMonsterHead_SG_34025_UI",
-    "PokemonName": "RogueBuffPool_xjlm_BuffName",
-    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_13_UI.T_IconMonsterPile_13_UI",
-    "PokemonSkillDesc": "RoguePokemonDesc_xjlm"
+    "PokemonIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_226_UI.T_IconMonsterHead_226_UI",
+    "PokemonName": "RogueBuffPool_9126000043_BuffName",
+    "PokemonSettleIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterPile/T_IconMonsterPile_12_UI.T_IconMonsterPile_12_UI",
+    "PokemonSkillDesc": "RoguePokemonDesc_linren"
   }
 ]

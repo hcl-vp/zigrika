@@ -34,7 +34,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
     "NextLevelId": 1002,
     "RecommendLevel": 1,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_01.T_danzhu_Tanban_Vfx_Cire_Mat_01"
   },
   {
     "Id": 1002,
@@ -71,7 +72,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
     "NextLevelId": 1003,
     "RecommendLevel": 1,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_01.T_danzhu_Tanban_Vfx_Cire_Mat_01"
   },
   {
     "Id": 1003,
@@ -108,7 +110,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
     "NextLevelId": 1004,
     "RecommendLevel": 1,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_01.T_danzhu_Tanban_Vfx_Cire_Mat_01"
   },
   {
     "Id": 1004,
@@ -145,7 +148,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg1.T_BattleMainBg1",
     "NextLevelId": 0,
     "RecommendLevel": 1,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_01.T_danzhu_Tanban_Vfx_Cire_Mat_01"
   },
   {
     "Id": 1005,
@@ -187,7 +191,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 1006,
     "RecommendLevel": 6,
-    "AvgStyle": 2
+    "AvgStyle": 2,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 1006,
@@ -210,7 +215,8 @@
       80850004,
       80850005,
       80850006,
-      80850007
+      80850007,
+      80850001
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -225,7 +231,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 1007,
     "RecommendLevel": 7,
-    "AvgStyle": 2
+    "AvgStyle": 2,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 1007,
@@ -263,7 +270,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 1008,
     "RecommendLevel": 8,
-    "AvgStyle": 2
+    "AvgStyle": 2,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 1008,
@@ -301,7 +309,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 0,
     "RecommendLevel": 10,
-    "AvgStyle": 2
+    "AvgStyle": 2,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 1009,
@@ -339,7 +348,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 1010,
     "RecommendLevel": 11,
-    "AvgStyle": 3
+    "AvgStyle": 3,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 1010,
@@ -377,7 +387,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 1011,
     "RecommendLevel": 12,
-    "AvgStyle": 3
+    "AvgStyle": 3,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 1011,
@@ -415,7 +426,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 1012,
     "RecommendLevel": 13,
-    "AvgStyle": 3
+    "AvgStyle": 3,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 1012,
@@ -453,7 +465,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 0,
     "RecommendLevel": 15,
-    "AvgStyle": 3
+    "AvgStyle": 3,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 1013,
@@ -495,7 +508,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 1014,
     "RecommendLevel": 16,
-    "AvgStyle": 4
+    "AvgStyle": 4,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 1014,
@@ -518,7 +532,8 @@
       80850008,
       80850009,
       80850010,
-      80850011
+      80850011,
+      80850007
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -533,7 +548,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 1015,
     "RecommendLevel": 17,
-    "AvgStyle": 4
+    "AvgStyle": 4,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 1015,
@@ -571,7 +587,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 1016,
     "RecommendLevel": 18,
-    "AvgStyle": 4
+    "AvgStyle": 4,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 1016,
@@ -609,7 +626,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 0,
     "RecommendLevel": 20,
-    "AvgStyle": 4
+    "AvgStyle": 4,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 1017,
@@ -647,7 +665,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 1018,
     "RecommendLevel": 21,
-    "AvgStyle": 5
+    "AvgStyle": 5,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 1018,
@@ -685,7 +704,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 1019,
     "RecommendLevel": 22,
-    "AvgStyle": 5
+    "AvgStyle": 5,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 1019,
@@ -723,7 +743,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 1020,
     "RecommendLevel": 23,
-    "AvgStyle": 5
+    "AvgStyle": 5,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 1020,
@@ -761,7 +782,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 0,
     "RecommendLevel": 25,
-    "AvgStyle": 5
+    "AvgStyle": 5,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 1021,
@@ -803,7 +825,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 1022,
     "RecommendLevel": 26,
-    "AvgStyle": 6
+    "AvgStyle": 6,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 1022,
@@ -826,7 +849,8 @@
       80850012,
       80850013,
       80850017,
-      80850018
+      80850018,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -841,7 +865,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 1023,
     "RecommendLevel": 27,
-    "AvgStyle": 6
+    "AvgStyle": 6,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 1023,
@@ -864,7 +889,8 @@
       80850012,
       80850013,
       80850017,
-      80850018
+      80850018,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -879,7 +905,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 1024,
     "RecommendLevel": 28,
-    "AvgStyle": 6
+    "AvgStyle": 6,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 1024,
@@ -898,7 +925,8 @@
       80850012,
       80850013,
       80850017,
-      80850018
+      80850018,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -917,7 +945,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 0,
     "RecommendLevel": 30,
-    "AvgStyle": 6
+    "AvgStyle": 6,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 1025,
@@ -939,7 +968,6 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
       80850019
     ],
     "TrailRole": [
@@ -959,7 +987,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 1026,
     "RecommendLevel": 31,
-    "AvgStyle": 7
+    "AvgStyle": 7,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 1026,
@@ -981,8 +1010,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -997,7 +1026,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 1027,
     "RecommendLevel": 32,
-    "AvgStyle": 7
+    "AvgStyle": 7,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 1027,
@@ -1019,8 +1049,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1035,7 +1065,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 1028,
     "RecommendLevel": 33,
-    "AvgStyle": 7
+    "AvgStyle": 7,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 1028,
@@ -1053,8 +1084,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1073,7 +1104,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 0,
     "RecommendLevel": 35,
-    "AvgStyle": 7
+    "AvgStyle": 7,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 1029,
@@ -1095,8 +1127,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1111,7 +1143,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 1030,
     "RecommendLevel": 36,
-    "AvgStyle": 8
+    "AvgStyle": 8,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 1030,
@@ -1133,8 +1166,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850018
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1149,7 +1182,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 1031,
     "RecommendLevel": 37,
-    "AvgStyle": 8
+    "AvgStyle": 8,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 1031,
@@ -1171,8 +1205,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850018
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1187,7 +1221,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 1032,
     "RecommendLevel": 38,
-    "AvgStyle": 8
+    "AvgStyle": 8,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 1032,
@@ -1205,8 +1240,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850018
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1225,7 +1260,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 0,
     "RecommendLevel": 40,
-    "AvgStyle": 8
+    "AvgStyle": 8,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 3001,
@@ -1240,12 +1276,7 @@
     "Desc": "Pinball_Level_Desc33",
     "Icon": "待补充",
     "StarCond": [],
-    "RecommendRole": [
-      80850014,
-      80850015,
-      80850016,
-      80850019
-    ],
+    "RecommendRole": [],
     "TrailRole": [],
     "ScoreDesc": "Pinball_Level_MaterialLevelDesc",
     "ScoreLevelReward": {},
@@ -1258,8 +1289,9 @@
     "FailTipsTxt": "Pinball_jiesuan_tishi",
     "LevelBg": "",
     "NextLevelId": 0,
-    "RecommendLevel": 0,
-    "AvgStyle": 1
+    "RecommendLevel": 36,
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": ""
   },
   {
     "Id": 2001,
@@ -1279,9 +1311,10 @@
       7
     ],
     "RecommendRole": [
-      80850001,
-      80850002,
-      80850003
+      80850004,
+      80850005,
+      80850006,
+      80850007
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1296,7 +1329,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 2002,
     "RecommendLevel": 15,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 2002,
@@ -1317,9 +1351,10 @@
       7
     ],
     "RecommendRole": [
-      80850001,
-      80850002,
-      80850003
+      80850004,
+      80850005,
+      80850006,
+      80850007
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1334,7 +1369,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 2003,
     "RecommendLevel": 15,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 2003,
@@ -1373,7 +1409,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 2004,
     "RecommendLevel": 25,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 2004,
@@ -1412,7 +1449,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 2005,
     "RecommendLevel": 25,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 2005,
@@ -1436,7 +1474,8 @@
       80850012,
       80850013,
       80850017,
-      80850018
+      80850018,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1451,7 +1490,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 2006,
     "RecommendLevel": 35,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 2006,
@@ -1474,8 +1514,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850009
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1490,7 +1530,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 2007,
     "RecommendLevel": 35,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 2007,
@@ -1513,8 +1554,8 @@
     "RecommendRole": [
       80850014,
       80850015,
-      80850016,
-      80850019
+      80850019,
+      80850018
     ],
     "TrailRole": [],
     "ScoreDesc": "",
@@ -1529,7 +1570,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 2008,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 2008,
@@ -1548,7 +1590,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850004,
+      80850005,
+      80850006,
+      80850007
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1562,7 +1609,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg2.T_BattleMainBg2",
     "NextLevelId": 2009,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_02.T_danzhu_Tanban_Vfx_Cire_Mat_02"
   },
   {
     "Id": 2009,
@@ -1581,7 +1629,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850004,
+      80850005,
+      80850006,
+      80850007
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1595,7 +1648,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg3.T_BattleMainBg3",
     "NextLevelId": 2010,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_03.T_danzhu_Tanban_Vfx_Cire_Mat_03"
   },
   {
     "Id": 2010,
@@ -1614,7 +1668,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850008,
+      80850009,
+      80850010,
+      80850011
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1628,7 +1687,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg4.T_BattleMainBg4",
     "NextLevelId": 2011,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_04.T_danzhu_Tanban_Vfx_Cire_Mat_04"
   },
   {
     "Id": 2011,
@@ -1647,7 +1707,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850008,
+      80850009,
+      80850010,
+      80850011
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1661,7 +1726,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg5.T_BattleMainBg5",
     "NextLevelId": 2012,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_05.T_danzhu_Tanban_Vfx_Cire_Mat_05"
   },
   {
     "Id": 2012,
@@ -1680,7 +1746,13 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850012,
+      80850013,
+      80850017,
+      80850018,
+      80850009
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1694,7 +1766,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg6.T_BattleMainBg6",
     "NextLevelId": 2013,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_06.T_danzhu_Tanban_Vfx_Cire_Mat_06"
   },
   {
     "Id": 2013,
@@ -1713,7 +1786,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850014,
+      80850015,
+      80850019,
+      80850009
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1727,7 +1805,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg7.T_BattleMainBg7",
     "NextLevelId": 2014,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_07.T_danzhu_Tanban_Vfx_Cire_Mat_07"
   },
   {
     "Id": 2014,
@@ -1746,7 +1825,12 @@
       8,
       7
     ],
-    "RecommendRole": [],
+    "RecommendRole": [
+      80850014,
+      80850015,
+      80850019,
+      80850018
+    ],
     "TrailRole": [],
     "ScoreDesc": "",
     "ScoreLevelReward": {},
@@ -1760,7 +1844,8 @@
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
     "NextLevelId": 2015,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   },
   {
     "Id": 2015,
@@ -1791,8 +1876,9 @@
     "FormationGroup": 7,
     "FailTipsTxt": "Pinball_jiesuan_tishi",
     "LevelBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/CatapultStory/BttleMain/BattleSceneBg/T_BattleMainBg8.T_BattleMainBg8",
-    "NextLevelId": 2016,
+    "NextLevelId": 0,
     "RecommendLevel": 40,
-    "AvgStyle": 1
+    "AvgStyle": 1,
+    "FeverBarMaterialPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/BluePrint/Object/IconTest/T_danzhu_Tanban_Vfx_Cire_Mat_08.T_danzhu_Tanban_Vfx_Cire_Mat_08"
   }
 ]

@@ -4449,7 +4449,7 @@
     "Level": 2,
     "LowerUpperLimits": [
       90,
-      160
+      150
     ],
     "BuffTime": 0,
     "Bgm": ""
@@ -4459,7 +4459,7 @@
     "GroupId": 29,
     "Level": 3,
     "LowerUpperLimits": [
-      160,
+      150,
       240
     ],
     "BuffTime": 0,

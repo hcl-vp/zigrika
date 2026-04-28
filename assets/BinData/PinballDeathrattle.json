@@ -53,5 +53,33 @@
     "BuffIdList": [
       4
     ]
+  },
+  {
+    "Id": 41,
+    "Type": 3,
+    "SpawnDrops": [],
+    "SpawnDropWeights": [],
+    "BuffIdList": []
+  },
+  {
+    "Id": 42,
+    "Type": 3,
+    "SpawnDrops": [],
+    "SpawnDropWeights": [],
+    "BuffIdList": []
+  },
+  {
+    "Id": 43,
+    "Type": 3,
+    "SpawnDrops": [],
+    "SpawnDropWeights": [],
+    "BuffIdList": []
+  },
+  {
+    "Id": 44,
+    "Type": 3,
+    "SpawnDrops": [],
+    "SpawnDropWeights": [],
+    "BuffIdList": []
   }
 ]

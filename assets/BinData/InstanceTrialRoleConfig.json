@@ -3532,12 +3532,12 @@
   {
     "Id": 1573,
     "MaleFormation": [
-      1816051005,
-      11080005
+      1814061005,
+      11081005
     ],
     "FemaleFormation": [
-      1816051005,
-      11080005
+      1814061005,
+      11081005
     ],
     "MaleDelayFormation": [],
     "FemaleDelayFormation": [],
@@ -3650,7 +3650,7 @@
   {
     "Id": 1575,
     "MaleFormation": [
-      80041005
+      80051005
     ],
     "FemaleFormation": [
       80041005
@@ -3664,10 +3664,10 @@
   {
     "Id": 1547,
     "MaleFormation": [
-      11080005
+      11081005
     ],
     "FemaleFormation": [
-      11080005
+      11081005
     ],
     "MaleDelayFormation": [],
     "FemaleDelayFormation": [],
@@ -3730,5 +3730,59 @@
     "OnlyTrial": true,
     "AutoChange": true,
     "ShowInEntrance": false
+  },
+  {
+    "Id": 82041,
+    "MaleFormation": [
+      11087004,
+      15097104,
+      15087104
+    ],
+    "FemaleFormation": [
+      11087004,
+      15097104,
+      15087104
+    ],
+    "MaleDelayFormation": [],
+    "FemaleDelayFormation": [],
+    "OnlyTrial": true,
+    "AutoChange": true,
+    "ShowInEntrance": true
+  },
+  {
+    "Id": 82042,
+    "MaleFormation": [
+      12117004,
+      12107004,
+      15087104
+    ],
+    "FemaleFormation": [
+      12117004,
+      12107004,
+      15087104
+    ],
+    "MaleDelayFormation": [],
+    "FemaleDelayFormation": [],
+    "OnlyTrial": true,
+    "AutoChange": true,
+    "ShowInEntrance": true
+  },
+  {
+    "Id": 82043,
+    "MaleFormation": [
+      12097106,
+      15097104,
+      14107104
+    ],
+    "FemaleFormation": [
+      12097106,
+      15097104,
+      14107104
+    ],
+    "MaleDelayFormation": [],
+    "FemaleDelayFormation": [],
+    "OnlyTrial": true,
+    "AutoChange": true,
+    "ShowInEntrance": true
   }
 ]

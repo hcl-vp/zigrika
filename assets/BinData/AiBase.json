@@ -9571,7 +9571,7 @@
     "SubBehaviorConfigs": {
       "AiSense": "80034",
       "AiHate": "80034",
-      "AiWander": "2",
+      "AiWander": "3",
       "AiBattleWander": "80034",
       "AiBaseSkill": "80034"
     },
@@ -11260,7 +11260,7 @@
     "SubBehaviorConfigs": {
       "AiSense": "80034",
       "AiHate": "80034",
-      "AiWander": "2",
+      "AiWander": "3",
       "AiBattleWander": "80034",
       "AiBaseSkill": "800341"
     },

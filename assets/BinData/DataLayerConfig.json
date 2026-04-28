@@ -2734,5 +2734,50 @@
     "InitLoad": false,
     "OnlyActor": false,
     "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 850054,
+    "DataLayer": "DataLayerRuntime_DLTask_33Senlin04",
+    "CnName": "森林poi点位1向日葵",
+    "LevelId": 909,
+    "InitLoad": false,
+    "OnlyActor": false,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 850055,
+    "DataLayer": "DataLayerRuntime_DLTask_33ZX05",
+    "CnName": "3.3上半主线遮蔽山洞裂缝资产",
+    "LevelId": 909,
+    "InitLoad": true,
+    "OnlyActor": false,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 850056,
+    "DataLayer": "DataLayerRuntime_DLTask_33ZX06",
+    "CnName": "3.3上半主线山洞裂隙内部资产",
+    "LevelId": 909,
+    "InitLoad": false,
+    "OnlyActor": false,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 850057,
+    "DataLayer": "DataLayerRuntime_DLTask_33ZX09",
+    "CnName": "3.3上半主线封存地冰块",
+    "LevelId": 909,
+    "InitLoad": true,
+    "OnlyActor": false,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 850059,
+    "DataLayer": "DataLayerRuntime_DLTask_31Chezhanwai03",
+    "CnName": "3.3主线隧者消失后的水体",
+    "LevelId": 8,
+    "InitLoad": false,
+    "OnlyActor": false,
+    "EnableSwitchNavMesh": false
   }
 ]

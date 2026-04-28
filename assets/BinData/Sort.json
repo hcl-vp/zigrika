@@ -897,7 +897,8 @@
   {
     "Id": 49,
     "FrontSortList": [
-      2
+      2,
+      3
     ],
     "BaseSortList": [
       1
@@ -910,6 +911,7 @@
   {
     "Id": 50,
     "FrontSortList": [
+      4,
       3
     ],
     "BaseSortList": [

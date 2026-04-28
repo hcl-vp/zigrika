@@ -20197,427 +20197,6 @@
     "SummonAddBuff": []
   },
   {
-    "Id": 11080101,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108001,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108001"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080102,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108002,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108002"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080103,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108003,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108003"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080201,
-    "CompleteCondition": 6,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      0
-    ],
-    "FailedCondition": [],
-    "FailDelay": 0,
-    "FailedParam": [],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080301,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108011,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108011"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080302,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108003,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108003"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080401,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108005,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108005"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080501,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108031,
-      0
-    ],
-    "FailedCondition": [],
-    "FailDelay": 0,
-    "FailedParam": [],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080601,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108101,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108101"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080701,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108106,
-      0.27
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108106"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080801,
-    "CompleteCondition": 6,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      0
-    ],
-    "FailedCondition": [],
-    "FailDelay": 0,
-    "FailedParam": [],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080901,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108111,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108111"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11080902,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108112,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108112"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081001,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108101,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108101"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081002,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108121,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108121"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081101,
-    "CompleteCondition": 5,
-    "CompleteDelay": 0,
-    "CompleteParam": "[角色.40663597.01f6790c.3e331601]",
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108111#1108123"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081102,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108124,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108124"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081103,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108124,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108124"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081104,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108124,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108124"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081201,
-    "CompleteCondition": 0,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      1108107,
-      0
-    ],
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108107"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11081301,
-    "CompleteCondition": 5,
-    "CompleteDelay": 0,
-    "CompleteParam": "[角色.40663597.f3ea1890.bf9fa687]",
-    "FailedCondition": [
-      0
-    ],
-    "FailDelay": 0,
-    "FailedParam": [
-      "1108131#1108132"
-    ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
     "Id": 12110101,
     "CompleteCondition": 0,
     "CompleteDelay": 0,
@@ -20989,6 +20568,434 @@
     "SummonAddBuff": []
   },
   {
+    "Id": 11080101,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108001,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108001"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080102,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108002,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108002"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080103,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108003,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108003"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080201,
+    "CompleteCondition": 6,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      0
+    ],
+    "FailedCondition": [],
+    "FailDelay": 0,
+    "FailedParam": [],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080301,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108011,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108011"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080302,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108003,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108003"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080401,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108005,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108005"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080501,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108031,
+      0
+    ],
+    "FailedCondition": [],
+    "FailDelay": 0,
+    "FailedParam": [],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080601,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108101,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108101"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080701,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108106,
+      0.27
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108106"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080801,
+    "CompleteCondition": 6,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      0
+    ],
+    "FailedCondition": [],
+    "FailDelay": 0,
+    "FailedParam": [],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080901,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108111,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108111"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11080902,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108112,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108112"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081001,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108101,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108101"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081002,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108121,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108121"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081101,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108123,
+      0
+    ],
+    "FailedCondition": [
+      0,
+      1
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108111#1108123"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081102,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108124,
+      0
+    ],
+    "FailedCondition": [
+      0,
+      6
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108124"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081103,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108124,
+      0
+    ],
+    "FailedCondition": [
+      0,
+      6
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108124"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081104,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108124,
+      0
+    ],
+    "FailedCondition": [
+      0,
+      6
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108124"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081201,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1108107,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108107"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11081301,
+    "CompleteCondition": 5,
+    "CompleteDelay": 0,
+    "CompleteParam": "[角色.40663597.f3ea1890.bf9fa687]",
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1108131#1108132"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
     "Id": 11080202,
     "CompleteCondition": 0,
     "CompleteDelay": 0,
@@ -20997,7 +21004,8 @@
       0
     ],
     "FailedCondition": [
-      0
+      0,
+      6
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -21102,7 +21110,8 @@
       0
     ],
     "FailedCondition": [
-      0
+      0,
+      6
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -21123,7 +21132,8 @@
       0
     ],
     "FailedCondition": [
-      0
+      0,
+      6
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -21144,7 +21154,8 @@
       0
     ],
     "FailedCondition": [
-      0
+      0,
+      6
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -21169,7 +21180,7 @@
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1108122"
+      "1108122#1108121"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -21190,7 +21201,7 @@
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1108122"
+      "1108122#1108121"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -21211,7 +21222,7 @@
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1108122"
+      "1108122#1108121"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],

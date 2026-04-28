@@ -170,5 +170,16 @@
       "MaterialEffect": "/Game/Aki/Effect/MaterialController/DA_Lord/ME1DaFeiEMd00501/DA_Fx_DaFeiE_MEs02_Phantom2_Diss.DA_Fx_DaFeiE_MEs02_Phantom2_Diss",
       "EndRule": 1
     }
+  },
+  {
+    "Id": 850006,
+    "Name": "3.3木头人死亡特效",
+    "Type": 0,
+    "Data": {
+      "ParticleEffect": "/Game/Aki/Effect/EffectGroup/Common/Nabomo/DA_Fx_Group_Nabomo_Xiaoshi1.DA_Fx_Group_Nabomo_Xiaoshi1",
+      "Type": 0,
+      "MaterialEffect": "/Game/Aki/Effect/EffectGroup/Common/Nabomo/DA_Fx_Group_Nabomo_Death.DA_Fx_Group_Nabomo_Death",
+      "EndRule": 1
+    }
   }
 ]

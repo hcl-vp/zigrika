@@ -14,7 +14,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 2,
@@ -31,7 +31,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 3,
@@ -48,7 +48,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 4,
@@ -65,7 +65,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 5,
@@ -82,7 +82,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 6,
@@ -99,7 +99,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 7,
@@ -116,7 +116,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 8,
@@ -133,7 +133,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 9,
@@ -150,7 +150,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 10,
@@ -167,7 +167,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 11,
@@ -184,7 +184,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 12,
@@ -201,7 +201,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 13,
@@ -218,7 +218,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 14,
@@ -235,7 +235,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 15,
@@ -252,7 +252,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 16,
@@ -269,7 +269,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 17,
@@ -286,7 +286,7 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 18,
@@ -303,12 +303,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 19,
-    "Life": 1545,
-    "LifeMax": 1545,
+    "Life": 965,
+    "LifeMax": 965,
     "Atk": 16,
     "Def": 1520,
     "Crit": 0,
@@ -320,12 +320,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 210
+    "ProtectMax": 1
   },
   {
     "Id": 20,
-    "Life": 2008,
-    "LifeMax": 2008,
+    "Life": 1568,
+    "LifeMax": 1568,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -337,12 +337,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 21,
-    "Life": 2703,
-    "LifeMax": 2703,
+    "Life": 2111,
+    "LifeMax": 2111,
     "Atk": 9,
     "Def": 1520,
     "Crit": 0,
@@ -354,12 +354,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 22,
-    "Life": 1545,
-    "LifeMax": 1545,
+    "Life": 1206,
+    "LifeMax": 1206,
     "Atk": 16,
     "Def": 1520,
     "Crit": 0,
@@ -371,12 +371,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 23,
-    "Life": 2703,
-    "LifeMax": 2703,
+    "Life": 2111,
+    "LifeMax": 2111,
     "Atk": 9,
     "Def": 1520,
     "Crit": 0,
@@ -388,12 +388,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 24,
-    "Life": 2703,
-    "LifeMax": 2703,
+    "Life": 2111,
+    "LifeMax": 2111,
     "Atk": 9,
     "Def": 1520,
     "Crit": 0,
@@ -405,13 +405,13 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 25,
-    "Life": 1200,
-    "LifeMax": 1200,
-    "Atk": 16,
+    "Life": 965,
+    "LifeMax": 965,
+    "Atk": 12,
     "Def": 1520,
     "Crit": 0,
     "CritDamage": 0,
@@ -422,13 +422,13 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 26,
-    "Life": 1200,
-    "LifeMax": 1200,
-    "Atk": 16,
+    "Life": 965,
+    "LifeMax": 965,
+    "Atk": 12,
     "Def": 1520,
     "Crit": 0,
     "CritDamage": 0,
@@ -439,12 +439,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 631
+    "ProtectMax": 1
   },
   {
     "Id": 27,
-    "Life": 2897,
-    "LifeMax": 2897,
+    "Life": 2462,
+    "LifeMax": 2462,
     "Atk": 16,
     "Def": 1520,
     "Crit": 0,
@@ -456,12 +456,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 28,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -473,12 +473,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 29,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -490,12 +490,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 30,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -507,12 +507,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 31,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -524,12 +524,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 32,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -541,12 +541,12 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 33,
-    "Life": 3766,
-    "LifeMax": 3766,
+    "Life": 3201,
+    "LifeMax": 3201,
     "Atk": 12,
     "Def": 1520,
     "Crit": 0,
@@ -558,11 +558,11 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 1578
+    "ProtectMax": 1
   },
   {
     "Id": 34,
-    "Life": 789,
+    "Life": 154,
     "LifeMax": 154,
     "Atk": 13,
     "Def": 1520,
@@ -575,11 +575,11 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 789
+    "ProtectMax": 1
   },
   {
     "Id": 35,
-    "Life": 2367,
+    "Life": 1030,
     "LifeMax": 1030,
     "Atk": 13,
     "Def": 1520,
@@ -592,11 +592,11 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 2367
+    "ProtectMax": 1
   },
   {
     "Id": 36,
-    "Life": 4735,
+    "Life": 2060,
     "LifeMax": 2060,
     "Atk": 13,
     "Def": 1520,
@@ -609,6 +609,6 @@
     "DamageReduceSkill": 0,
     "DamageReduceSprint": 0,
     "DamageReduceSummon": 0,
-    "ProtectMax": 4735
+    "ProtectMax": 1
   }
 ]

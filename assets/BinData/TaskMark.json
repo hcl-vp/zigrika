@@ -1957,5 +1957,47 @@
     "RingColor": "#FF8D65",
     "SmallHaloColor": "#B06747",
     "LargeHaloColor": "#945840"
+  },
+  {
+    "MarkId": 1022,
+    "QuestId": 0,
+    "MarkPic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Activity_CubeNor.SP_IconMap_Activity_CubeNor",
+    "MarkAcceptablePic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Activity_CubeNor.SP_IconMap_Activity_CubeNor",
+    "NpcTaskIcon": "/Game/Aki/UI/UIResources/Common/Image/Mission/T_IconMechanics.T_IconMechanics",
+    "IconDistant": 0,
+    "TrackTextStartEffectColor": "",
+    "ShowRange": [
+      15,
+      9999
+    ],
+    "ShowPriority": 9,
+    "Scale": 0.8999999761581421,
+    "FxScale": 1,
+    "MarkRingPic": "",
+    "MarkIcon": "",
+    "RingColor": "",
+    "SmallHaloColor": "",
+    "LargeHaloColor": ""
+  },
+  {
+    "MarkId": 1023,
+    "QuestId": 0,
+    "MarkPic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Activity_CubeEndless.SP_IconMap_Activity_CubeEndless",
+    "MarkAcceptablePic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Activity_CubeEndless.SP_IconMap_Activity_CubeEndless",
+    "NpcTaskIcon": "/Game/Aki/UI/UIResources/Common/Image/Mission/T_IconMechanics.T_IconMechanics",
+    "IconDistant": 0,
+    "TrackTextStartEffectColor": "",
+    "ShowRange": [
+      15,
+      9999
+    ],
+    "ShowPriority": 9,
+    "Scale": 0.8999999761581421,
+    "FxScale": 1,
+    "MarkRingPic": "",
+    "MarkIcon": "",
+    "RingColor": "",
+    "SmallHaloColor": "",
+    "LargeHaloColor": ""
   }
 ]

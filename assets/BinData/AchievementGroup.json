@@ -497,7 +497,7 @@
   {
     "Id": 7014,
     "Category": 11,
-    "Sort": 1,
+    "Sort": 4,
     "Name": "AchievementGroup_6_Name",
     "SmallIcon": "",
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconRogueChallenge.SP_IconRogueChallenge",
@@ -519,7 +519,7 @@
   {
     "Id": 7016,
     "Category": 11,
-    "Sort": 4,
+    "Sort": 1,
     "Name": "AchievementGroup_6_Name",
     "SmallIcon": "",
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconRogueRoleComplete.SP_IconRogueRoleComplete",

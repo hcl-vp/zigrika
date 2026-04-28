@@ -3439,32 +3439,8 @@
   {
     "TaskId": 8601,
     "StageId": 86,
-    "TaskName": "DisiGaodiTask_8601_TaskName",
-    "SortId": 8601,
-    "TaskReward": {
-      "3": 30,
-      "76": 10,
-      "42601490": 5
-    },
-    "JumpId": 914017
-  },
-  {
-    "TaskId": 8602,
-    "StageId": 86,
-    "TaskName": "DisiGaodiTask_8602_TaskName",
-    "SortId": 8602,
-    "TaskReward": {
-      "3": 20,
-      "76": 10,
-      "41100072": 20
-    },
-    "JumpId": 914018
-  },
-  {
-    "TaskId": 8603,
-    "StageId": 86,
     "TaskName": "DisiGaodiTask_8603_TaskName",
-    "SortId": 8603,
+    "SortId": 8601,
     "TaskReward": {
       "3": 20,
       "76": 10,
@@ -3473,15 +3449,39 @@
     "JumpId": 914019
   },
   {
-    "TaskId": 8604,
+    "TaskId": 8602,
+    "StageId": 86,
+    "TaskName": "DisiGaodiTask_8601_TaskName",
+    "SortId": 8602,
+    "TaskReward": {
+      "3": 30,
+      "76": 10,
+      "42601490": 5
+    },
+    "JumpId": 914017
+  },
+  {
+    "TaskId": 8603,
     "StageId": 86,
     "TaskName": "DisiGaodiTask_8604_TaskName",
-    "SortId": 8604,
+    "SortId": 8603,
     "TaskReward": {
       "2": 50000,
       "76": 5
     },
     "JumpId": 914020
+  },
+  {
+    "TaskId": 8604,
+    "StageId": 86,
+    "TaskName": "DisiGaodiTask_8602_TaskName",
+    "SortId": 8604,
+    "TaskReward": {
+      "3": 20,
+      "76": 10,
+      "41100072": 20
+    },
+    "JumpId": 914018
   },
   {
     "TaskId": 33001,
@@ -3611,7 +3611,7 @@
     "TaskReward": {
       "3": 50
     },
-    "JumpId": 850035
+    "JumpId": 850617
   },
   {
     "TaskId": 33014,
@@ -3671,7 +3671,7 @@
     "TaskReward": {
       "3": 200
     },
-    "JumpId": 850617
+    "JumpId": 850065
   },
   {
     "TaskId": 33020,
@@ -3681,7 +3681,7 @@
     "TaskReward": {
       "3": 100
     },
-    "JumpId": 850065
+    "JumpId": 850606
   },
   {
     "TaskId": 33021,
@@ -3701,7 +3701,7 @@
     "TaskReward": {
       "3": 100
     },
-    "JumpId": 850606
+    "JumpId": 850065
   },
   {
     "TaskId": 33023,
@@ -3711,7 +3711,7 @@
     "TaskReward": {
       "3": 50
     },
-    "JumpId": 850065
+    "JumpId": 850615
   },
   {
     "TaskId": 33024,
@@ -3721,7 +3721,7 @@
     "TaskReward": {
       "3": 50
     },
-    "JumpId": 850065
+    "JumpId": 850615
   },
   {
     "TaskId": 33025,
@@ -3731,7 +3731,7 @@
     "TaskReward": {
       "3": 250
     },
-    "JumpId": 850618
+    "JumpId": 850615
   },
   {
     "TaskId": 33026,
@@ -3741,7 +3741,7 @@
     "TaskReward": {
       "3": 250
     },
-    "JumpId": 850618
+    "JumpId": 850613
   },
   {
     "TaskId": 33027,
@@ -3751,6 +3751,6 @@
     "TaskReward": {
       "3": 150
     },
-    "JumpId": 850621
+    "JumpId": 850613
   }
 ]

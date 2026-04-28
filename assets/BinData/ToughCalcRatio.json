@@ -58,5 +58,10 @@
     "Id": 800383,
     "RatioNormal": 100000,
     "RatioSpecial": 100000
+  },
+  {
+    "Id": 800384,
+    "RatioNormal": 3000,
+    "RatioSpecial": 5000
   }
 ]

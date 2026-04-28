@@ -4884,6 +4884,34 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/zhezhi/DA_Skill_SummonBuffForZhezhi.DA_Skill_SummonBuffForZhezhi"
   },
   {
+    "Id": 1170000003,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/yuonuo/DA_Yuonuo_Group_Baoji.DA_Yuonuo_Group_Baoji"
+  },
+  {
+    "Id": 1150199906,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Changli_SummonLink.Captain_Changli_SummonLink"
+  },
+  {
+    "Id": 1170000004,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/linnai/DA_Linnai_Group_Buff01.DA_Linnai_Group_Buff01"
+  },
+  {
+    "Id": 1170000005,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/daniya/DA_Daniya_Group_Buff01.DA_Daniya_Group_Buff01"
+  },
+  {
+    "Id": 1150199907,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/lupa/DA_Skill_SummonBuffForLupa.DA_Skill_SummonBuffForLupa"
+  },
+  {
+    "Id": 1150199908,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiakong/DA_Skill_SummonBuffForXiakong.DA_Skill_SummonBuffForXiakong"
+  },
+  {
+    "Id": 1170000006,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/moning/DA_Moning_Skill_Buff01.DA_Moning_Skill_Buff01"
+  },
+  {
     "Id": 1110100101,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Qiuyuan_Group.Captain_Qiuyuan_Group"
   },
@@ -5064,20 +5092,8 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Feixue_ListenFever.Weapon_Feixue_ListenFever"
   },
   {
-    "Id": 1150199906,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Changli_SummonLink.Captain_Changli_SummonLink"
-  },
-  {
-    "Id": 1150199907,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/lupa/DA_Skill_SummonBuffForLupa.DA_Skill_SummonBuffForLupa"
-  },
-  {
-    "Id": 1150199908,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiakong/DA_Skill_SummonBuffForXiakong.DA_Skill_SummonBuffForXiakong"
-  },
-  {
     "Id": 1160199902,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/Huixue/DropItem_HealGroup.DropItem_HealGroup"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/Huixue/DropItem_Heal.DropItem_Heal"
   },
   {
     "Id": 1160199903,
@@ -5089,95 +5105,19 @@
   },
   {
     "Id": 1160199905,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/SkillEnergy/DropItem_SkillEnergyGroup.DropItem_SkillEnergyGroup"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/SkillEnergy/DropItem_SkillEnergy.DropItem_SkillEnergy"
   },
   {
     "Id": 1160199906,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/FeverEnergy/DropItem_FeverEnergyGroup.DropItem_FeverEnergyGroup"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/FeverEnergy/DropItem_FeverEnergy.DropItem_FeverEnergy"
   },
   {
     "Id": 1160199907,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/Fuhe/DropItem_FuheGroup.DropItem_FuheGroup"
-  },
-  {
-    "Id": 1170000003,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/yuonuo/DA_Yuonuo_Group_Baoji.DA_Yuonuo_Group_Baoji"
-  },
-  {
-    "Id": 1170000004,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/linnai/DA_Linnai_Group_Buff01.DA_Linnai_Group_Buff01"
-  },
-  {
-    "Id": 1170000005,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/daniya/DA_Daniya_Group_Buff01.DA_Daniya_Group_Buff01"
-  },
-  {
-    "Id": 1170000006,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/moning/DA_Moning_Skill_Buff01.DA_Moning_Skill_Buff01"
-  },
-  {
-    "Id": 1110199904,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_SkillReady.DA_Common_SkillReady"
-  },
-  {
-    "Id": 1110199905,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_PlayerTrail.DA_Common_PlayerTrail"
-  },
-  {
-    "Id": 1110199906,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_PlayerRushTrail.DA_Common_PlayerRushTrail"
-  },
-  {
-    "Id": 1110100401,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Jiyan_ListenSkill.Captain_Jiyan_ListenSkill"
-  },
-  {
-    "Id": 1110100901,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Augusta_ListenSkill_01.Captain_Augusta_ListenSkill_01"
-  },
-  {
-    "Id": 1110101101,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Younuo_ListenSkill_01.Captain_Younuo_ListenSkill_01"
-  },
-  {
-    "Id": 1110101701,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Aimisi_AddBuff.Captain_Aimisi_AddBuff"
-  },
-  {
-    "Id": 1110201001,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Xiakong_ListenSkill_01.Beidong_Xiakong_ListenSkill_01"
-  },
-  {
-    "Id": 1120199801,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_BornEffect.Boss_BornEffect"
-  },
-  {
-    "Id": 1120199802,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_BreakListen.Boss_BreakListen"
-  },
-  {
-    "Id": 1120199803,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_DeathListen.Boss_DeathListen"
-  },
-  {
-    "Id": 1120199804,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_ShieldListen.Boss_ShieldListen"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Diaoluowu/Fuhe/DropItem_Fuhe_FeverEnergy.DropItem_Fuhe_FeverEnergy"
   },
   {
     "Id": 1140100702,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Common_HPCheck.Common_HPCheck"
-  },
-  {
-    "Id": 1140199801,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Monster_BornEffect.Monster_BornEffect"
-  },
-  {
-    "Id": 1140199802,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Monster_DeathListen.Monster_DeathListen"
-  },
-  {
-    "Id": 1150199909,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Boss/Hekate/Monste_Hekate_SummonLink.Monste_Hekate_SummonLink"
   },
   {
     "Id": 1180000001,
@@ -5233,7 +5173,7 @@
   },
   {
     "Id": 1180000014,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_80864301.KSC_DA_Buff_WithEffect_80864301"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_808643011.KSC_DA_Buff_WithEffect_808643011"
   },
   {
     "Id": 1180000015,
@@ -5273,7 +5213,7 @@
   },
   {
     "Id": 1180000024,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_80863302.KSC_DA_Buff_WithEffect_80863302"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_ListenEvent_80863302.KSC_DA_Buff_ListenEvent_80863302"
   },
   {
     "Id": 1180000025,
@@ -5293,7 +5233,7 @@
   },
   {
     "Id": 1180000029,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_80864401.KSC_DA_Buff_WithEffect_80864401"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_808644012.KSC_DA_Buff_WithEffect_808644012"
   },
   {
     "Id": 1180000030,
@@ -5333,7 +5273,7 @@
   },
   {
     "Id": 1180000039,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_WithEffect_80863402.KSC_DA_Buff_WithEffect_80863402"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_ListenEvent_80863402.KSC_DA_Buff_ListenEvent_80863402"
   },
   {
     "Id": 1180000040,
@@ -5404,6 +5344,10 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_ModifyAttr_80901008.KSC_DA_Buff_ModifyAttr_80901008"
   },
   {
+    "Id": 1150199909,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Boss/Hekate/Monste_Hekate_SummonLink.Monste_Hekate_SummonLink"
+  },
+  {
     "Id": 1200000001,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_ModifyAttr_80902001.KSC_DA_Buff_ModifyAttr_80902001"
   },
@@ -5428,12 +5372,108 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/KSC_DA_Buff_ModifyAttr_80902006.KSC_DA_Buff_ModifyAttr_80902006"
   },
   {
-    "Id": 1110199907,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_ListenPlayer_PowerAttack01.DA_Common_ListenPlayer_PowerAttack01"
+    "Id": 1110199904,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_SkillReady.DA_Common_SkillReady"
   },
   {
-    "Id": 1110199908,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_HealerCheckGroup.DA_Common_HealerCheckGroup"
+    "Id": 1110199905,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_PlayerTrail.DA_Common_PlayerTrail"
+  },
+  {
+    "Id": 1110199906,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_PlayerRushTrail.DA_Common_PlayerRushTrail"
+  },
+  {
+    "Id": 1120199801,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_BornEffect.Boss_BornEffect"
+  },
+  {
+    "Id": 1120199802,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_BreakListen.Boss_BreakListen"
+  },
+  {
+    "Id": 1120199803,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_DeathListen.Boss_DeathListen"
+  },
+  {
+    "Id": 1120199804,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Boss_ShieldListen.Boss_ShieldListen"
+  },
+  {
+    "Id": 1140199801,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Monster_BornEffect.Monster_BornEffect"
+  },
+  {
+    "Id": 1140199802,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Tongyong/Monster_DeathListen.Monster_DeathListen"
+  },
+  {
+    "Id": 1110100401,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Jiyan_ListenSkill_Group.Captain_Jiyan_ListenSkill_Group"
+  },
+  {
+    "Id": 1110100901,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Augusta_ListenSkill_01.Captain_Augusta_ListenSkill_01"
+  },
+  {
+    "Id": 1110101101,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Younuo_ListenSkill_01.Captain_Younuo_ListenSkill_01"
+  },
+  {
+    "Id": 1110101701,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Aimisi_AddBuff.Captain_Aimisi_AddBuff"
+  },
+  {
+    "Id": 1110201001,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Xiakong_ListenSkill_01.Beidong_Xiakong_ListenSkill_01"
+  },
+  {
+    "Id": 1110200401,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Jiyan_Charge_AddBuff.Beidong_Jiyan_Charge_AddBuff"
+  },
+  {
+    "Id": 1170000007,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Xiakong_Dmg.Beidong_Xiakong_Dmg"
+  },
+  {
+    "Id": 1170000008,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/jiyan/DA_Jiyan_Charge_Group_Buff.DA_Jiyan_Charge_Group_Buff"
+  },
+  {
+    "Id": 1110300201,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Xiangliyao_GroupTag.Weapon_Xiangliyao_GroupTag"
+  },
+  {
+    "Id": 1110300401,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Jiyan_ListenSkill.Weapon_Jiyan_ListenSkill"
+  },
+  {
+    "Id": 1110301001,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Xiakong_GroupTag.Weapon_Xiakong_GroupTag"
+  },
+  {
+    "Id": 1110301301,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Moning_ListenSkill.Weapon_Moning_ListenSkill"
+  },
+  {
+    "Id": 1110301501,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Daniya_ListenSkill_Group.Weapon_Daniya_ListenSkill_Group"
+  },
+  {
+    "Id": 1170000009,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiangliyao/DA_Xiangliyao_Group_WeaponBuff.DA_Xiangliyao_Group_WeaponBuff"
+  },
+  {
+    "Id": 1170000010,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiakong/DA_Xiakong_Group_Buff02_Weapon.DA_Xiakong_Group_Buff02_Weapon"
+  },
+  {
+    "Id": 1170000011,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/daniya/DA_Daniya_Group_Buff02.DA_Daniya_Group_Buff02"
+  },
+  {
+    "Id": 1150199910,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Boss/Rongyaoshixiang/KSC_DA_Buff_SummonLink_skill01_RYSX.KSC_DA_Buff_SummonLink_skill01_RYSX"
   },
   {
     "Id": 1110199801,
@@ -5509,7 +5549,7 @@
   },
   {
     "Id": 1110199819,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/changli/DA_Changli_Skill_Buff01_Life.DA_Changli_Skill_Buff01_Life"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/changli/DA_Changli_Skill_Buff01_Group.DA_Changli_Skill_Buff01_Group"
   },
   {
     "Id": 1110199820,
@@ -5644,59 +5684,47 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Luhesi_DmgUp.Captain_Luhesi_DmgUp"
   },
   {
+    "Id": 1170000012,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/yuonuo/DA_Yuonuo_Bullet_Tag.DA_Yuonuo_Bullet_Tag"
+  },
+  {
+    "Id": 1110199907,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_ListenPlayer_PowerAttack01.DA_Common_ListenPlayer_PowerAttack01"
+  },
+  {
     "Id": 1110101901,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Captain/Captain_Feixue_CaptainTag.Captain_Feixue_CaptainTag"
   },
   {
-    "Id": 1110200401,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Jiyan_Charge_AddBuff.Beidong_Jiyan_Charge_AddBuff"
+    "Id": 1110199908,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/common/DA_Common_HealerCheckGroup.DA_Common_HealerCheckGroup"
   },
   {
-    "Id": 1110300201,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Xiangliyao_GroupTag.Weapon_Xiangliyao_GroupTag"
+    "Id": 1170000013,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/yuonuo/DA_Yuonuo_Weapon_Group_Baoji.DA_Yuonuo_Weapon_Group_Baoji"
   },
   {
-    "Id": 1110300401,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Jiyan_ListenSkill.Weapon_Jiyan_ListenSkill"
+    "Id": 1120199805,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Boss/Boss_ShieldMaxDelay.Boss_ShieldMaxDelay"
   },
   {
-    "Id": 1110301001,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Xiakong_GroupTag.Weapon_Xiakong_GroupTag"
+    "Id": 1120199806,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Monster/Boss/Elite_ShieldMaxDelay.Elite_ShieldMaxDelay"
   },
   {
-    "Id": 1110301301,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Moning_ListenSkill.Weapon_Moning_ListenSkill"
-  },
-  {
-    "Id": 1110301501,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Daniya_ListenSkill_Group.Weapon_Daniya_ListenSkill_Group"
-  },
-  {
-    "Id": 1150199910,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Entity/Enemy/Boss/Rongyaoshixiang/KSC_DA_Buff_SummonLink_skill01_RYSX.KSC_DA_Buff_SummonLink_skill01_RYSX"
-  },
-  {
-    "Id": 1170000007,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Beidong/Beidong_Xiakong_Dmg.Beidong_Xiakong_Dmg"
-  },
-  {
-    "Id": 1170000008,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/jiyan/DA_Jiyan_Charge_Group_Buff.DA_Jiyan_Charge_Group_Buff"
-  },
-  {
-    "Id": 1170000009,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiangliyao/DA_Xiangliyao_Group_WeaponBuff.DA_Xiangliyao_Group_WeaponBuff"
-  },
-  {
-    "Id": 1170000010,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/xiakong/DA_Xiakong_Group_Buff02_Weapon.DA_Xiakong_Group_Buff02_Weapon"
-  },
-  {
-    "Id": 1170000011,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/daniya/DA_Daniya_Group_Buff02.DA_Daniya_Group_Buff02"
-  },
-  {
-    "Id": 1170000012,
+    "Id": 1170000014,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/yuonuo/DA_Yuonuo_Weapon_Zidan.DA_Yuonuo_Weapon_Zidan"
+  },
+  {
+    "Id": 1110199853,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Beidong/Weapon/Weapon_Aimisi_SkillDmgUp.Weapon_Aimisi_SkillDmgUp"
+  },
+  {
+    "Id": 1110199854,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/moning/DA_Moning_DazhaoBuff_SkillDmgUp.DA_Moning_DazhaoBuff_SkillDmgUp"
+  },
+  {
+    "Id": 1170000015,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_3Pinball/Buff/Player/jiyan/DA_Jiyan_ListenChuantou_Group.DA_Jiyan_ListenChuantou_Group"
   }
 ]

@@ -5,11 +5,11 @@
     "Requirement": {
       "80700012": 1
     },
-    "Description": "",
+    "Description": "PrefabTextItem_1238722214_Text",
     "Name": "VillageInfr_Village_1_Name",
-    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/ActivityInfrastructure/BuildPopup/PopMap/T_ActivityInfrastructurePopMap3.T_ActivityInfrastructurePopMap3",
     "BuildSuccessDes": "0",
-    "JumpId": 862027
+    "JumpId": 868009
   },
   {
     "Level": 2,
@@ -17,11 +17,11 @@
     "Requirement": {
       "80700012": 1
     },
-    "Description": "",
+    "Description": "PrefabTextItem_1238722214_Text",
     "Name": "VillageInfr_Village_2_Name",
-    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/ActivityInfrastructure/BuildPopup/PopMap/T_ActivityInfrastructurePopMap3.T_ActivityInfrastructurePopMap3",
     "BuildSuccessDes": "BuildObser_1_Result",
-    "JumpId": 862028
+    "JumpId": 868009
   },
   {
     "Level": 3,
@@ -29,11 +29,11 @@
     "Requirement": {
       "80700012": 1
     },
-    "Description": "",
+    "Description": "PrefabTextItem_1238722214_Text",
     "Name": "VillageInfr_Village_3_Name",
-    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/ActivityInfrastructure/BuildPopup/PopMap/T_ActivityInfrastructurePopMap3.T_ActivityInfrastructurePopMap3",
     "BuildSuccessDes": "BuildObser_2_Result",
-    "JumpId": 862029
+    "JumpId": 868009
   },
   {
     "Level": 4,
@@ -41,11 +41,11 @@
     "Requirement": {
       "80700012": 1
     },
-    "Description": "",
+    "Description": "PrefabTextItem_1238722214_Text",
     "Name": "VillageInfr_Village_4_Name",
-    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/ActivityInfrastructure/BuildPopup/PopMap/T_ActivityInfrastructurePopMap3.T_ActivityInfrastructurePopMap3",
     "BuildSuccessDes": "BuildObser_3_Result",
-    "JumpId": 862030
+    "JumpId": 868009
   },
   {
     "Level": 5,
@@ -53,10 +53,10 @@
     "Requirement": {
       "80700012": 1
     },
-    "Description": "",
+    "Description": "PrefabTextItem_1238722214_Text",
     "Name": "VillageInfr_Village_5_Name",
-    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity30/ActivityInfrastructure/Map/MiniMap/T_InfrastructureMiniMap1.T_InfrastructureMiniMap1",
+    "InfoPicturePath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity33/ActivityInfrastructure/BuildPopup/PopMap/T_ActivityInfrastructurePopMap3.T_ActivityInfrastructurePopMap3",
     "BuildSuccessDes": "BuildObser_3_Result",
-    "JumpId": 862030
+    "JumpId": 868009
   }
 ]

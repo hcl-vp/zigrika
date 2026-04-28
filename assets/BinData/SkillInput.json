@@ -2795,15 +2795,6 @@
     "Description": "SkillInput_1211_DescList_3"
   },
   {
-    "Id": 121107,
-    "InputArray": [],
-    "SkillArray": [],
-    "ImageArray": [
-      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeDaniya4.T_RoleSkillTreeDaniya4"
-    ],
-    "Description": "SkillInput_1211_DescList_4"
-  },
-  {
     "Id": 110801,
     "InputArray": [
       "攻击"
@@ -2895,5 +2886,14 @@
       "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeFeixue3.T_RoleSkillTreeFeixue3"
     ],
     "Description": "SkillInput_1108_DescList_3"
+  },
+  {
+    "Id": 121107,
+    "InputArray": [],
+    "SkillArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeDaniya4.T_RoleSkillTreeDaniya4"
+    ],
+    "Description": "SkillInput_1211_DescList_4"
   }
 ]

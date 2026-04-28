@@ -30,14 +30,14 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
     "LevelName": "BossPilingActivity_DungeonName02",
     "Bg": "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/Activity/Activity33/BossPiling/T_BossPilingBoss06.T_BossPilingBoss06",
-    "ToggleLock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33013.T_Boss_33013",
-    "ToggleUnlock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33013.T_Boss_33013",
+    "ToggleLock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33013_1.T_Boss_33013_1",
+    "ToggleUnlock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33013_1.T_Boss_33013_1",
     "TaskIndexTex": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComRomeText_01.T_ComRomeText_01",
     "LevelMechanism1": "BossPilingActivity_DungeonDetail06",
     "LevelMechanism2": "BossPilingActivity_DungeonDetail08",
@@ -77,7 +77,7 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
@@ -124,7 +124,7 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
@@ -171,7 +171,7 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
@@ -218,7 +218,7 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
@@ -265,7 +265,7 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
@@ -312,14 +312,14 @@
     "RecommendLevel": 90,
     "Achievement": [
       90,
-      160,
+      150,
       240,
       360
     ],
     "LevelName": "BossPilingActivity_DungeonName06",
     "Bg": "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/Activity/Activity33/BossPiling/T_BossPilingBoss05.T_BossPilingBoss05",
-    "ToggleLock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34017.T_Boss_34017",
-    "ToggleUnlock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34017.T_Boss_34017",
+    "ToggleLock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34017_1.T_Boss_34017_1",
+    "ToggleUnlock": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34017_1.T_Boss_34017_1",
     "TaskIndexTex": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComRomeText_07.T_ComRomeText_07",
     "LevelMechanism1": "BossPilingActivity_DungeonDetail06",
     "LevelMechanism2": "BossPilingActivity_DungeonDetail08",

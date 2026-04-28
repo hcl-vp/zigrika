@@ -2160,6 +2160,42 @@
     "Aspect": 2.38
   },
   {
+    "CgId": 397,
+    "BelongBranch": 5,
+    "CgName": "M0346",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_2/M0346/M0346_Nvzhu.M0346_Nvzhu",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 398,
+    "BelongBranch": 5,
+    "CgName": "M0346",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_2/M0346/M0346_Nanzhu.M0346_Nanzhu",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 399,
+    "BelongBranch": 5,
+    "CgName": "C0026",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_2/C0026/C0026.C0026",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 400,
+    "BelongBranch": 5,
+    "CgName": "C0026",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_2/C0026/C0026.C0026",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
     "CgId": 401,
     "BelongBranch": 5,
     "CgName": "M0376",
@@ -2309,7 +2345,7 @@
     "CgName": "M0355",
     "GirlOrBoy": 0,
     "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0355/M0355_Nvzhu.M0355_Nvzhu",
-    "CanSkip": false,
+    "CanSkip": true,
     "Aspect": 2.38
   },
   {
@@ -2318,7 +2354,7 @@
     "CgName": "M0355",
     "GirlOrBoy": 1,
     "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0355/M0355_Nanzhu.M0355_Nanzhu",
-    "CanSkip": false,
+    "CanSkip": true,
     "Aspect": 2.38
   },
   {
@@ -2340,6 +2376,24 @@
     "Aspect": 2.38
   },
   {
+    "CgId": 422,
+    "BelongBranch": 5,
+    "CgName": "M3_5_09_1",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelB_Seq/Main/Section3_2/M3_5_09_1/M3_5_09_1.M3_5_09_1",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 423,
+    "BelongBranch": 5,
+    "CgName": "M3_5_09_1",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelB_Seq/Main/Section3_2/M3_5_09_1/M3_5_09_1.M3_5_09_1",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
     "CgId": 424,
     "BelongBranch": 4,
     "CgName": "M3_6_23",
@@ -2354,6 +2408,60 @@
     "CgName": "M3_6_23",
     "GirlOrBoy": 1,
     "CgFile": "/Game/Aki/Sequence/LevelB_Seq/Main/Section3_3/M3_6_23/M3_6_23.M3_6_23",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 436,
+    "BelongBranch": 6,
+    "CgName": "M0366",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0366/M0366.M0366",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 437,
+    "BelongBranch": 6,
+    "CgName": "M0366",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0366/M0366.M0366",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 438,
+    "BelongBranch": 4,
+    "CgName": "M0355_Loading",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0355/M0355_Loading.M0355_Loading",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 439,
+    "BelongBranch": 4,
+    "CgName": "M0355_Loading",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/Main/03_3/M0355/M0355_Loading.M0355_Loading",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 448,
+    "BelongBranch": 6,
+    "CgName": "P0048",
+    "GirlOrBoy": 1,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/POI/03_3/P0048/P0048_Nanzhu.P0048_Nanzhu",
+    "CanSkip": false,
+    "Aspect": 2.38
+  },
+  {
+    "CgId": 449,
+    "BelongBranch": 6,
+    "CgName": "P0048",
+    "GirlOrBoy": 0,
+    "CgFile": "/Game/Aki/Sequence/LevelA_Seq/POI/03_3/P0048/P0048_Nvzhu.P0048_Nvzhu",
     "CanSkip": false,
     "Aspect": 2.38
   }

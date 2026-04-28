@@ -441,7 +441,7 @@
     "FetterGroupDesc": "PrefabTextItem_Empty_Text",
     "SortId": 31,
     "FetterElementColor": "FFFFFF00",
-    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriLife.T_IconElementAttriLife",
-    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Life.T_IconElementAttri128_Life"
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriSupport1.T_IconElementAttriSupport1",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Support1.T_IconElementAttri128_Support1"
   }
 ]

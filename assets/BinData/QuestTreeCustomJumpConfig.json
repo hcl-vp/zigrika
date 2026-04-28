@@ -75,8 +75,8 @@
     "Id": 850008,
     "QuestId": 108750000,
     "PreConditionType": "PreLevelPlay",
-    "JumpType": "HelpWindow",
-    "ParamsId": 400,
+    "JumpType": "OpenBoard",
+    "ParamsId": 915008,
     "CustomTextKey": "QuestTree_CustomCondition_330301_1"
   },
   {
@@ -98,7 +98,7 @@
   {
     "Id": 850012,
     "QuestId": 170700000,
-    "PreConditionType": "PreQuest",
+    "PreConditionType": "SystemState",
     "JumpType": "OpenBoard",
     "ParamsId": 8630001,
     "CustomTextKey": "QuestTree_CustomCondition_340105_1"
@@ -126,5 +126,37 @@
     "JumpType": "OpenBoard",
     "ParamsId": 8630005,
     "CustomTextKey": "QuestTree_CustomCondition_340103_1"
+  },
+  {
+    "Id": 850016,
+    "QuestId": 211850003,
+    "PreConditionType": "PreChildQuest",
+    "JumpType": "OpenBoard",
+    "ParamsId": 916002,
+    "CustomTextKey": "QuestTree_CustomCondition_340503_1"
+  },
+  {
+    "Id": 850017,
+    "QuestId": 211850006,
+    "PreConditionType": "PreQuest",
+    "JumpType": "OpenBoard",
+    "ParamsId": 916002,
+    "CustomTextKey": "QuestTree_CustomCondition_340504_1"
+  },
+  {
+    "Id": 850018,
+    "QuestId": 181700016,
+    "PreConditionType": "PreQuest",
+    "JumpType": "OpenBoard",
+    "ParamsId": 8630008,
+    "CustomTextKey": "QuestTree_CustomCondition_340101_1"
+  },
+  {
+    "Id": 850019,
+    "QuestId": 121850001,
+    "PreConditionType": "PreChildQuest",
+    "JumpType": "OpenBoard",
+    "ParamsId": 916003,
+    "CustomTextKey": "QuestTree_CustomCondition_340501_1"
   }
 ]

@@ -338,9 +338,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure111_UI.T_Treasure111_UI",
     "Name": "FavorGoods_130602_Title",
     "BriefDescribe": "RougeMiraclecreation_13001001_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "1",
+      "3.5%"
+    ],
     "Describe": "RougeMiraclecreation_13001001_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "1",
+      "3.5%"
+    ],
     "StoryDescribe": "FavorGoods_130602_Content",
     "ColorType": 0
   },
@@ -353,9 +359,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure107_UI.T_Treasure107_UI",
     "Name": "FavorGoods_160803_Title",
     "BriefDescribe": "RougeMiraclecreation_13001002_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "30%"
+    ],
     "Describe": "RougeMiraclecreation_13001002_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "30%"
+    ],
     "StoryDescribe": "FavorGoods_160803_Content",
     "ColorType": 0
   },
@@ -368,9 +378,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure24_UI.T_Treasure24_UI",
     "Name": "FavorGoods_160203_Title",
     "BriefDescribe": "RougeMiraclecreation_13001003_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "1",
+      "25"
+    ],
     "Describe": "RougeMiraclecreation_13001003_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "1",
+      "25"
+    ],
     "StoryDescribe": "FavorGoods_160203_Content",
     "ColorType": 0
   },
@@ -383,9 +399,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure93_UI.T_Treasure93_UI",
     "Name": "FavorGoods_160703_Title",
     "BriefDescribe": "RougeMiraclecreation_13001004_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "1",
+      "5%",
+      "1%"
+    ],
     "Describe": "RougeMiraclecreation_13001004_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "1",
+      "5%",
+      "1%"
+    ],
     "StoryDescribe": "FavorGoods_160703_Content",
     "ColorType": 0
   },
@@ -398,9 +422,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure103_UI.T_Treasure103_UI",
     "Name": "FavorGoods_120701_Title",
     "BriefDescribe": "RougeMiraclecreation_13001005_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "2",
+      "1"
+    ],
     "Describe": "RougeMiraclecreation_13001005_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "2",
+      "1"
+    ],
     "StoryDescribe": "FavorGoods_120701_Content",
     "ColorType": 0
   },
@@ -413,9 +443,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure94_UI.T_Treasure94_UI",
     "Name": "FavorGoods_150702_Title",
     "BriefDescribe": "RougeMiraclecreation_13002001_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "2"
+    ],
     "Describe": "RougeMiraclecreation_13002001_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "2"
+    ],
     "StoryDescribe": "FavorGoods_150702_Content",
     "ColorType": 0
   },
@@ -428,9 +462,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure71_UI.T_Treasure71_UI",
     "Name": "FavorGoods_150502_Title",
     "BriefDescribe": "RougeMiraclecreation_13002002_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "50%"
+    ],
     "Describe": "RougeMiraclecreation_13002002_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "50%"
+    ],
     "StoryDescribe": "FavorGoods_150502_Content",
     "ColorType": 0
   },
@@ -458,9 +496,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure115_UI.T_Treasure115_UI",
     "Name": "FavorGoods_141002_Title",
     "BriefDescribe": "RougeMiraclecreation_13002004_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "5",
+      "20"
+    ],
     "Describe": "RougeMiraclecreation_13002004_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "5",
+      "20"
+    ],
     "StoryDescribe": "FavorGoods_141002_Content",
     "ColorType": 0
   },
@@ -473,9 +517,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure90_UI.T_Treasure90_UI",
     "Name": "FavorGoods_150603_Title",
     "BriefDescribe": "RougeMiraclecreation_13002005_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "75%"
+    ],
     "Describe": "RougeMiraclecreation_13002005_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "75%"
+    ],
     "StoryDescribe": "FavorGoods_150603_Content",
     "ColorType": 0
   },
@@ -488,25 +536,14 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure128_UI.T_Treasure128_UI",
     "Name": "FavorGoods_150902_Title",
     "BriefDescribe": "RougeMiraclecreation_13002006_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "100"
+    ],
     "Describe": "RougeMiraclecreation_13002006_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "100"
+    ],
     "StoryDescribe": "FavorGoods_150902_Content",
-    "ColorType": 0
-  },
-  {
-    "Id": 13003001,
-    "Category": 1,
-    "DefaultLevel": 0,
-    "Level": 2,
-    "MaxLevel": 2,
-    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB11.T_HonamiStoryItemIconB11",
-    "Name": "HonamiStoryItemCollection_4_Name",
-    "BriefDescribe": "RougeMiraclecreation_13003001_BriefDescribe",
-    "BriefDescParam": [],
-    "Describe": "RougeMiraclecreation_13003001_Describe",
-    "DescParam": [],
-    "StoryDescribe": "HonamiStoryItemCollection_4_Desc",
     "ColorType": 0
   },
   {
@@ -518,9 +555,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure86_UI.T_Treasure86_UI",
     "Name": "FavorGoods_120601_Title",
     "BriefDescribe": "RougeMiraclecreation_13003003_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "300"
+    ],
     "Describe": "RougeMiraclecreation_13003003_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "300"
+    ],
     "StoryDescribe": "FavorGoods_120601_Content",
     "ColorType": 0
   },
@@ -533,9 +574,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure43_UI.T_Treasure43_UI",
     "Name": "FavorGoods_120403_Title",
     "BriefDescribe": "RougeMiraclecreation_13004001_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "100%",
+      "40%"
+    ],
     "Describe": "RougeMiraclecreation_13004001_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "100%",
+      "40%"
+    ],
     "StoryDescribe": "FavorGoods_120403_Content",
     "ColorType": 1
   },
@@ -548,9 +595,19 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure126_UI.T_Treasure126_UI",
     "Name": "FavorGoods_150801_Title",
     "BriefDescribe": "RougeMiraclecreation_13004002_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "5%",
+      "10%",
+      "10%",
+      "10%"
+    ],
     "Describe": "RougeMiraclecreation_13004002_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "5%",
+      "10%",
+      "10%",
+      "10%"
+    ],
     "StoryDescribe": "FavorGoods_150801_Content",
     "ColorType": 1
   },
@@ -561,12 +618,22 @@
     "Level": 3,
     "MaxLevel": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure4_UI.T_Treasure4_UI",
-    "Name": "RougeMiraclecreation_13004003_Name",
+    "Name": "FavorGoods_130201_Title",
     "BriefDescribe": "RougeMiraclecreation_13004003_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "45",
+      "100%",
+      "45",
+      "100%"
+    ],
     "Describe": "RougeMiraclecreation_13004003_Describe",
-    "DescParam": [],
-    "StoryDescribe": "RougeMiraclecreation_13004003_StoryDescribe",
+    "DescParam": [
+      "45",
+      "100%",
+      "45",
+      "100%"
+    ],
+    "StoryDescribe": "FavorGoods_130201_Content",
     "ColorType": 1
   },
   {
@@ -578,9 +645,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure76_UI.T_Treasure76_UI",
     "Name": "FavorGoods_160302_Title",
     "BriefDescribe": "RougeMiraclecreation_13004004_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "20",
+      "50%"
+    ],
     "Describe": "RougeMiraclecreation_13004004_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "20",
+      "50%"
+    ],
     "StoryDescribe": "FavorGoods_160302_Content",
     "ColorType": 1
   },
@@ -593,9 +666,13 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure118_UI.T_Treasure118_UI",
     "Name": "FavorGoods_141103_Title",
     "BriefDescribe": "RougeMiraclecreation_13005001_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "300%"
+    ],
     "Describe": "RougeMiraclecreation_13005001_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "300%"
+    ],
     "StoryDescribe": "FavorGoods_141103_Content",
     "ColorType": 0
   },
@@ -608,9 +685,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure81_UI.T_Treasure81_UI",
     "Name": "FavorGoods_160603_Title",
     "BriefDescribe": "RougeMiraclecreation_13005002_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "50",
+      "200%"
+    ],
     "Describe": "RougeMiraclecreation_13005002_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "50",
+      "200%"
+    ],
     "StoryDescribe": "FavorGoods_160603_Content",
     "ColorType": 0
   },
@@ -618,16 +701,28 @@
     "Id": 13005003,
     "Category": 1,
     "DefaultLevel": 0,
-    "Level": 2,
-    "MaxLevel": 2,
+    "Level": 3,
+    "MaxLevel": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure84_UI.T_Treasure84_UI",
     "Name": "FavorGoods_110703_Title",
     "BriefDescribe": "RougeMiraclecreation_13005003_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "15",
+      "2%",
+      "100%",
+      "3",
+      "20%"
+    ],
     "Describe": "RougeMiraclecreation_13005003_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "15",
+      "2%",
+      "100%",
+      "3",
+      "20%"
+    ],
     "StoryDescribe": "FavorGoods_110703_Content",
-    "ColorType": 0
+    "ColorType": 2
   },
   {
     "Id": 13005004,
@@ -638,9 +733,19 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure96_UI.T_Treasure96_UI",
     "Name": "FavorGoods_140702_Title",
     "BriefDescribe": "RougeMiraclecreation_13005004_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "10",
+      "2000%",
+      "2",
+      "1"
+    ],
     "Describe": "RougeMiraclecreation_13005004_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "10",
+      "2000%",
+      "2",
+      "1"
+    ],
     "StoryDescribe": "FavorGoods_140702_Content",
     "ColorType": 2
   },
@@ -653,9 +758,21 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure139_UI.T_Treasure139_UI",
     "Name": "FavorGoods_151002_Title",
     "BriefDescribe": "RougeMiraclecreation_13005005_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "75%",
+      "1",
+      "15",
+      "1",
+      "1"
+    ],
     "Describe": "RougeMiraclecreation_13005005_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "75%",
+      "1",
+      "15",
+      "1",
+      "1"
+    ],
     "StoryDescribe": "FavorGoods_151002_Content",
     "ColorType": 2
   },
@@ -668,9 +785,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure131_UI.T_Treasure131_UI",
     "Name": "FavorGoods_120903_Title",
     "BriefDescribe": "RougeMiraclecreation_13005006_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "4",
+      "45%",
+      "4"
+    ],
     "Describe": "RougeMiraclecreation_13005006_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "4",
+      "45%",
+      "4"
+    ],
     "StoryDescribe": "FavorGoods_120903_Content",
     "ColorType": 2
   },
@@ -683,9 +808,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure101_UI.T_Treasure101_UI",
     "Name": "FavorGoods_140902_Title",
     "BriefDescribe": "RougeMiraclecreation_13005007_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "50%",
+      "75%"
+    ],
     "Describe": "RougeMiraclecreation_13005007_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "50%",
+      "75%"
+    ],
     "StoryDescribe": "FavorGoods_140902_Content",
     "ColorType": 2
   },
@@ -698,9 +829,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure59_UI.T_Treasure59_UI",
     "Name": "FavorGoods_120503_Title",
     "BriefDescribe": "RougeMiraclecreation_13005008_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "5%",
+      "5"
+    ],
     "Describe": "RougeMiraclecreation_13005008_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "5%",
+      "5"
+    ],
     "StoryDescribe": "FavorGoods_120503_Content",
     "ColorType": 2
   },
@@ -713,9 +850,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB01.T_HonamiStoryItemIconB01",
     "Name": "HonamiStoryItemCollection_9_Name",
     "BriefDescribe": "RougeMiraclecreation_13006001_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "16",
+      "150%",
+      "10"
+    ],
     "Describe": "RougeMiraclecreation_13006001_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "16",
+      "150%",
+      "10"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_9_Desc",
     "ColorType": 2
   },
@@ -728,9 +873,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB03.T_HonamiStoryItemIconB03",
     "Name": "HonamiStoryItemCollection_8_Name",
     "BriefDescribe": "RougeMiraclecreation_13006002_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "6",
+      "225%",
+      "3"
+    ],
     "Describe": "RougeMiraclecreation_13006002_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "6",
+      "225%",
+      "3"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_8_Desc",
     "ColorType": 2
   },
@@ -743,9 +896,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB12.T_HonamiStoryItemIconB12",
     "Name": "HonamiStoryItemCollection_11_Name",
     "BriefDescribe": "RougeMiraclecreation_13006003_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "2000%",
+      "10",
+      "2"
+    ],
     "Describe": "RougeMiraclecreation_13006003_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "2000%",
+      "10",
+      "2"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_11_Desc",
     "ColorType": 2
   },
@@ -758,9 +919,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB04.T_HonamiStoryItemIconB04",
     "Name": "HonamiStoryItemCollection_3_Name",
     "BriefDescribe": "RougeMiraclecreation_13006004_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "8",
+      "550%",
+      "10"
+    ],
     "Describe": "RougeMiraclecreation_13006004_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "8",
+      "550%",
+      "10"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_3_Desc",
     "ColorType": 2
   },
@@ -773,9 +942,19 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB10.T_HonamiStoryItemIconB10",
     "Name": "HonamiStoryItemCollection_5_Name",
     "BriefDescribe": "RougeMiraclecreation_13006005_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "20%",
+      "60%",
+      "10",
+      "10"
+    ],
     "Describe": "RougeMiraclecreation_13006005_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "20%",
+      "60%",
+      "10",
+      "10"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_5_Desc",
     "ColorType": 2
   },
@@ -788,9 +967,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB06.T_HonamiStoryItemIconB06",
     "Name": "HonamiStoryItemCollection_10_Name",
     "BriefDescribe": "RougeMiraclecreation_13006006_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "4500%",
+      "10"
+    ],
     "Describe": "RougeMiraclecreation_13006006_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "4500%",
+      "10"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_10_Desc",
     "ColorType": 2
   },
@@ -803,41 +988,17 @@
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity28/HonamiStory/HonamiStoryItemIcon/T_HonamiStoryItemIconB05.T_HonamiStoryItemIconB05",
     "Name": "HonamiStoryItemCollection_6_Name",
     "BriefDescribe": "RougeMiraclecreation_13006007_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "10",
+      "20%"
+    ],
     "Describe": "RougeMiraclecreation_13006007_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "10",
+      "20%"
+    ],
     "StoryDescribe": "HonamiStoryItemCollection_6_Desc",
     "ColorType": 2
-  },
-  {
-    "Id": 13003004,
-    "Category": 1,
-    "DefaultLevel": 0,
-    "Level": 2,
-    "MaxLevel": 2,
-    "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure21_UI.T_Treasure21_UI",
-    "Name": "FavorGoods_150301_Title",
-    "BriefDescribe": "RougeMiraclecreation_13003004_BriefDescribe",
-    "BriefDescParam": [],
-    "Describe": "RougeMiraclecreation_13003004_Describe",
-    "DescParam": [],
-    "StoryDescribe": "FavorGoods_150301_Content",
-    "ColorType": 0
-  },
-  {
-    "Id": 13003005,
-    "Category": 1,
-    "DefaultLevel": 0,
-    "Level": 2,
-    "MaxLevel": 2,
-    "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure22_UI.T_Treasure22_UI",
-    "Name": "FavorGoods_110203_Title",
-    "BriefDescribe": "RougeMiraclecreation_13003005_BriefDescribe",
-    "BriefDescParam": [],
-    "Describe": "RougeMiraclecreation_13003005_Describe",
-    "DescParam": [],
-    "StoryDescribe": "FavorGoods_110203_Content",
-    "ColorType": 0
   },
   {
     "Id": 13003006,
@@ -848,9 +1009,15 @@
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure142_UI.T_Treasure142_UI",
     "Name": "FavorGoods_141203_Title",
     "BriefDescribe": "RougeMiraclecreation_13003006_BriefDescribe",
-    "BriefDescParam": [],
+    "BriefDescParam": [
+      "50%",
+      "1"
+    ],
     "Describe": "RougeMiraclecreation_13003006_Describe",
-    "DescParam": [],
+    "DescParam": [
+      "50%",
+      "1"
+    ],
     "StoryDescribe": "FavorGoods_141203_Content",
     "ColorType": 0
   },
@@ -860,12 +1027,39 @@
     "DefaultLevel": 0,
     "Level": 3,
     "MaxLevel": 3,
+    "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure134_UI.T_Treasure138_UI",
+    "Name": "FavorGoods_121001_Title",
+    "BriefDescribe": "RougeMiraclecreation_13005009_BriefDescribe",
+    "BriefDescParam": [
+      "120%",
+      "20"
+    ],
+    "Describe": "RougeMiraclecreation_13005009_Describe",
+    "DescParam": [
+      "120%",
+      "20"
+    ],
+    "StoryDescribe": "FavorGoods_121001_Content",
+    "ColorType": 2
+  },
+  {
+    "Id": 13007000,
+    "Category": 1,
+    "DefaultLevel": 0,
+    "Level": 3,
+    "MaxLevel": 3,
     "Icon": "/Game/Aki/UI/UIResources/UiRole/Image/Treasure/T_Treasure134_UI.T_Treasure134_UI",
     "Name": "FavorGoods_121003_Title",
-    "BriefDescribe": "RougeMiraclecreation_13005009_BriefDescribe",
-    "BriefDescParam": [],
-    "Describe": "RougeMiraclecreation_13005009_Describe",
-    "DescParam": [],
+    "BriefDescribe": "RougeMiraclecreation_13007000_BriefDescribe",
+    "BriefDescParam": [
+      "20%",
+      "5"
+    ],
+    "Describe": "RougeMiraclecreation_13007000_Describe",
+    "DescParam": [
+      "20%",
+      "5"
+    ],
     "StoryDescribe": "FavorGoods_121003_Content",
     "ColorType": 2
   }

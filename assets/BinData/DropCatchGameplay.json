@@ -799,8 +799,7 @@
             "CommandName": "ShowLeftMsg",
             "Params": {
               "Type": "Gameplay",
-              "TextId": "CoinCatch_StageSwitch_2",
-              "Duration": 999
+              "TextId": "CoinCatch_StageSwitch_2"
             }
           }
         ]
@@ -1010,16 +1009,14 @@
       {
         "Time": 25,
         "Commands": [
-          [
-            {
-              "CommandName": "ShowLeftMsg",
-              "Params": {
-                "Type": "Gameplay",
-                "TextId": "CoinCatch_LevelAbility_2",
-                "Duration": 10
-              }
+          {
+            "CommandName": "ShowLeftMsg",
+            "Params": {
+              "Type": "Gameplay",
+              "TextId": "CoinCatch_LevelAbility_2",
+              "Duration": 10
             }
-          ],
+          },
           {
             "CommandName": "ConvertDropItem",
             "Params": {
@@ -1036,37 +1033,31 @@
       {
         "Time": 39.5,
         "Commands": [
-          [
-            {
-              "CommandName": "ShowLeftMsg",
-              "Params": {
-                "Type": "Gameplay",
-                "TextId": "CoinCatch_StageSwitch_1",
-                "Duration": 2
-              }
+          {
+            "CommandName": "ShowLeftMsg",
+            "Params": {
+              "Type": "Gameplay",
+              "TextId": "CoinCatch_StageSwitch_1",
+              "Duration": 2
             }
-          ]
+          }
         ]
       },
       {
         "Time": 50,
         "Commands": [
-          [
-            {
-              "CommandName": "ShowLeftMsg",
-              "Params": {
-                "Type": "Gameplay",
-                "TextId": "CoinCatch_LevelAbility_1",
-                "Duration": 999
-              }
+          {
+            "CommandName": "ShowLeftMsg",
+            "Params": {
+              "Type": "Gameplay",
+              "TextId": "CoinCatch_LevelAbility_1"
             }
-          ],
+          },
           {
             "CommandName": "ModifyEnergyGetRate",
             "Params": {
               "Type": "Rate",
-              "Value": 3,
-              "Duration": 999
+              "Value": 3
             }
           }
         ]
@@ -1279,16 +1270,14 @@
             "CommandName": "ShowLeftMsg",
             "Params": {
               "Type": "Gameplay",
-              "TextId": "CoinCatch_LevelAbility_1",
-              "Duration": 999
+              "TextId": "CoinCatch_LevelAbility_1"
             }
           },
           {
             "CommandName": "ModifyEnergyGetRate",
             "Params": {
               "Type": "Rate",
-              "Value": 3,
-              "Duration": 999
+              "Value": 3
             }
           }
         ]
@@ -1598,16 +1587,14 @@
             "CommandName": "ShowLeftMsg",
             "Params": {
               "Type": "Gameplay",
-              "TextId": "CoinCatch_LevelAbility_1",
-              "Duration": 999
+              "TextId": "CoinCatch_LevelAbility_1"
             }
           },
           {
             "CommandName": "ModifyEnergyGetRate",
             "Params": {
               "Type": "Rate",
-              "Value": 3,
-              "Duration": 9999
+              "Value": 3
             }
           }
         ]
@@ -1796,7 +1783,7 @@
           {
             "CommandName": "SetInputEnabled",
             "Params": {
-              "Enabled": true
+              "Enabled": false
             }
           },
           {

@@ -155576,8 +155576,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155603,8 +155609,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155629,8 +155641,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155655,8 +155673,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155681,8 +155705,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155749,6 +155779,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 10261001,
@@ -155759,6 +155792,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155779,6 +155815,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 10261001,
@@ -155789,6 +155828,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155808,6 +155850,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -155818,6 +155863,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155837,6 +155885,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -155848,6 +155899,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155920,8 +155974,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155946,8 +156006,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -155973,8 +156039,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156000,8 +156072,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156027,8 +156105,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156054,8 +156138,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156083,7 +156173,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_6b4fe6e2231d41d1c955fccac7350bf1091ca2098a1630f72f050c69d6d427f2",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156133,7 +156223,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_6b4fe6e2231d41d1c955fccac7350bf1091ca2098a1630f72f050c69d6d427f2",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156183,7 +156273,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_f7974c0291310b90385fa091725a959622c497e1759b160cbe6b5595a9571b33",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156331,7 +156421,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_c8f609cb139d2972e651d25576a117e5e5f1d7995cf1082f09acc24d3a9b3523",
+                  "TidContent": "Entity_f7974c0291310b90385fa091725a959622c497e1759b160cbe6b5595a9571b33",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156380,7 +156470,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_c8f609cb139d2972e651d25576a117e5e5f1d7995cf1082f09acc24d3a9b3523",
+                  "TidContent": "Entity_f7974c0291310b90385fa091725a959622c497e1759b160cbe6b5595a9571b33",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156429,7 +156519,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_c8f609cb139d2972e651d25576a117e5e5f1d7995cf1082f09acc24d3a9b3523",
+                  "TidContent": "Entity_f7974c0291310b90385fa091725a959622c497e1759b160cbe6b5595a9571b33",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156478,7 +156568,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_f7974c0291310b90385fa091725a959622c497e1759b160cbe6b5595a9571b33",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156528,7 +156618,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_02443043f12574ed29adab11edac76073f0bd6ae6c09f36f7b2e83eea60706a3",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156578,7 +156668,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_02443043f12574ed29adab11edac76073f0bd6ae6c09f36f7b2e83eea60706a3",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156628,7 +156718,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_6b4fe6e2231d41d1c955fccac7350bf1091ca2098a1630f72f050c69d6d427f2",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156678,7 +156768,7 @@
             "InteractComponent": {
               "Options": [
                 {
-                  "TidContent": "Entity_46eb6d8216a486b251e8c7848d7fa11a639c3363cdac14da3d8b2b0e0ba6df16",
+                  "TidContent": "Entity_6b4fe6e2231d41d1c955fccac7350bf1091ca2098a1630f72f050c69d6d427f2",
                   "Type": {
                     "Type": "Actions",
                     "Actions": [
@@ -156773,11 +156863,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156803,11 +156899,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156832,11 +156934,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156859,6 +156967,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -156870,6 +156981,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156892,6 +157006,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -156903,6 +157020,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -156975,11 +157095,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157005,11 +157131,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157034,11 +157166,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157064,11 +157202,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157094,11 +157238,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157165,6 +157315,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157175,6 +157328,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157195,6 +157351,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157205,6 +157364,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157224,6 +157386,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157234,6 +157399,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157256,6 +157424,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -157267,6 +157438,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157339,11 +157513,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157368,11 +157548,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157398,11 +157584,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157428,11 +157620,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157458,11 +157656,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157488,11 +157692,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157560,6 +157770,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157570,6 +157783,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157589,6 +157805,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157599,6 +157818,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157619,6 +157841,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157629,6 +157854,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157651,6 +157879,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157661,6 +157892,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157683,6 +157917,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -157693,6 +157930,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157765,11 +158005,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157794,11 +158040,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157824,11 +158076,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157854,11 +158112,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157884,11 +158148,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157955,6 +158225,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -157966,6 +158239,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -157986,6 +158262,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -157997,6 +158276,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158017,6 +158299,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -158028,6 +158313,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158050,6 +158338,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -158061,6 +158352,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158134,11 +158428,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158164,11 +158464,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158193,11 +158499,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158222,11 +158534,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158252,11 +158570,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158282,11 +158606,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158359,11 +158689,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158388,11 +158724,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158418,11 +158760,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158445,6 +158793,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -158455,6 +158806,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -158477,6 +158831,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -158487,6 +158844,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159403,6 +159763,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159414,6 +159777,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159434,6 +159800,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159445,6 +159814,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159464,6 +159836,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159475,6 +159850,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159495,6 +159873,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159506,6 +159887,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159526,6 +159910,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159537,6 +159924,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159602,6 +159992,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159613,6 +160006,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159633,6 +160029,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -159644,6 +160043,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159663,6 +160065,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -159674,6 +160079,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159694,6 +160102,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -159705,6 +160116,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159772,6 +160186,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159783,6 +160200,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159802,6 +160222,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159813,6 +160236,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159833,6 +160259,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159844,6 +160273,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159864,6 +160296,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159875,6 +160310,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159895,6 +160333,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159906,6 +160347,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -159926,6 +160370,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -159937,6 +160384,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160004,6 +160454,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160015,6 +160468,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160035,6 +160491,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160046,6 +160505,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160065,6 +160527,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160076,6 +160541,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160096,6 +160564,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160107,6 +160578,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160127,6 +160601,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160138,6 +160615,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160205,6 +160685,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160216,6 +160699,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160236,6 +160722,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160247,6 +160736,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160266,6 +160758,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160277,6 +160772,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160297,6 +160795,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160308,6 +160809,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160328,6 +160832,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -160339,6 +160846,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160404,6 +160914,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160415,6 +160928,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160435,6 +160951,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160446,6 +160965,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160465,6 +160987,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160476,6 +161001,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160496,6 +161024,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160507,6 +161038,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160575,6 +161109,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160586,6 +161123,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160606,6 +161146,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160617,6 +161160,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160636,6 +161182,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160647,6 +161196,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160666,6 +161218,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160677,6 +161232,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160697,6 +161255,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160708,6 +161269,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160728,6 +161292,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160739,6 +161306,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160806,6 +161376,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -160816,6 +161389,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160836,6 +161412,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -160846,6 +161425,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160866,6 +161448,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160877,6 +161462,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160896,6 +161484,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160907,6 +161498,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -160927,6 +161521,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -160938,6 +161535,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161005,6 +161605,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -161016,6 +161619,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161036,6 +161642,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -161047,6 +161656,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161066,6 +161678,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -161077,6 +161692,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161097,6 +161715,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -161108,6 +161729,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161128,6 +161752,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -161139,6 +161766,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161204,6 +161834,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161214,6 +161847,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161234,6 +161870,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161244,6 +161883,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161263,6 +161905,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161273,6 +161918,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161293,6 +161941,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161303,6 +161954,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161370,6 +162024,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161381,6 +162038,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161400,6 +162060,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161411,6 +162074,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161431,6 +162097,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161442,6 +162111,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161462,6 +162134,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161473,6 +162148,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161493,6 +162171,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161504,6 +162185,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161524,6 +162208,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "VisionCaptureComponent": {
               "Disabled": true
             },
@@ -161535,6 +162222,9 @@
               "Level": 90,
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114102
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161602,6 +162292,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161612,6 +162305,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161638,11 +162334,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161669,11 +162371,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161694,6 +162402,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -161704,6 +162415,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161730,11 +162444,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114103
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161813,6 +162533,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161839,11 +162562,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161869,11 +162598,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161900,11 +162635,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -161931,11 +162672,17 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114100
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162001,6 +162748,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162012,6 +162762,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162037,8 +162790,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162063,8 +162822,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162090,8 +162855,14 @@
               "WorldLevelBonusId": 90020106,
               "MonsterPropExtraRateId": 30114101
             },
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "RewardComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162159,6 +162930,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162170,6 +162944,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162190,6 +162967,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162201,6 +162981,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162221,6 +163004,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162232,6 +163018,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162252,6 +163041,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162263,6 +163055,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162283,6 +163078,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162294,6 +163092,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162313,6 +163114,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162324,6 +163128,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162391,6 +163198,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162402,6 +163212,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162422,6 +163235,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -162432,6 +163248,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162452,6 +163271,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "Level": 90,
               "WorldLevelBonusId": 90020106,
@@ -162462,6 +163284,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162482,6 +163307,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162493,6 +163321,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
@@ -162513,6 +163344,9 @@
             "Scale": {}
           },
           "ComponentsData": {
+            "BaseInfoComponent": {
+              "Category": {}
+            },
             "AttributeComponent": {
               "MonsterPropGrowthId": 3001,
               "Level": 90,
@@ -162524,6 +163358,9 @@
             },
             "VisionCaptureComponent": {
               "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
             }
           }
         }
