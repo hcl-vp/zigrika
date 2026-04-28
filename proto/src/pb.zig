@@ -41566,12 +41566,12 @@ pub const EAttributeType = enum(i32) {
     HealChange = 35,
     HealedChange = 36,
     DamageReducePhys = 37,
-    DamageReduceElement1 = 38,
-    DamageReduceElement2 = 39,
-    DamageReduceElement3 = 40,
-    DamageReduceElement4 = 41,
-    DamageReduceElement5 = 42,
-    DamageReduceElement6 = 43,
+    ment1 = 38,
+    ment2 = 39,
+    ment3 = 40,
+    ment4 = 41,
+    ment5 = 42,
+    ment6 = 43,
     SpecialEnergy5Max = 44,
     SpecialEnergy5 = 45,
     ReactionChange3 = 46,
@@ -48319,4 +48319,13 @@ pub const JoinSceneNotify = struct {
     SceneInfo: ?SceneInformation = null,
     MaxEntityId: i64 = 0,
     TransitionOption: ?TransitionOptionPb = null,
+};
+pub const ClientPullResourcePackageRequest = struct {
+    pub const default: @This() = .{};
+    holder: bool = false,
+};
+pub const ClientPullResourcePackageResponse = struct {
+    pub const default: @This() = .{};
+    FinishMp4QuestIds: std.ArrayList(i32) = .empty,
+    NeedConfirmQuestIds: std.ArrayList(i32) = .empty,
 };

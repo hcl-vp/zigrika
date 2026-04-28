@@ -33322,3 +33322,12 @@ pub const JoinSceneNotify = struct {
     pub const MaxEntityId_field_number: u32 = 13;
     pub const TransitionOption_field_number: u32 = 10;
 };
+pub const ClientPullResourcePackageRequest = struct {
+    pub const msg_id: u16 = 15325;
+    pub const holder_field_number: u32 = 14;
+};
+pub const ClientPullResourcePackageResponse = struct {
+    pub const msg_id: u16 = 21639;
+    pub const FinishMp4QuestIds_field_number: u32 = 9;
+    pub const NeedConfirmQuestIds_field_number: u32 = 14;
+};
