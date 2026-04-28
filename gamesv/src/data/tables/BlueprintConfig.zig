@@ -139,6 +139,7 @@ EntityType: enum(u8) {
     Npc,
     Npc2,
     OrientationUnlockStatue,
+    PathDrivenActorSpawner,
     PasserbyNpc,
     Paver,
     PerformanceOptimizer,
@@ -247,6 +248,14 @@ EntityType: enum(u8) {
     WaterSpout,
     Weapon,
     WindSource,
+
+    pub fn jsonParse(allocator: std.mem.Allocator, source: anytype, options: std.json.ParseOptions) !@This() {
+        const str = try std.json.innerParse([]const u8, allocator, source, options);
+        return std.meta.stringToEnum(@This(), str) orelse {
+            std.log.err("unknown enum tag: {s}", .{str});
+            return error.InvalidEnumTag;
+        };
+    }
 },
 EntityLogic: enum(u8) {
     Item,
@@ -259,6 +268,14 @@ EntityLogic: enum(u8) {
     ServerOnly,
     Custom,
     SimpleCombat,
+
+    pub fn jsonParse(allocator: std.mem.Allocator, source: anytype, options: std.json.ParseOptions) !@This() {
+        const str = try std.json.innerParse([]const u8, allocator, source, options);
+        return std.meta.stringToEnum(@This(), str) orelse {
+            std.log.err("unknown enum tag: {s}", .{str});
+            return error.InvalidEnumTag;
+        };
+    }
 },
 ModelId: i32,
 HalfHeight: i32,
