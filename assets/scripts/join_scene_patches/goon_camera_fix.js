@@ -725,7 +725,7 @@ setTimeout(() => {
       if (photographer.CameraCaptureType === 1) {
         photographer.AddCameraArmPitchInput(e);
       } else {
-        photographer.MoveRight(e / 1.5);
+        photographer.MoveRight(e);
       }
     };
 
