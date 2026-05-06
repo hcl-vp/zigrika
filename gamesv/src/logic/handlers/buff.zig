@@ -2,6 +2,7 @@ const std = @import("std");
 const pb = @import("proto").pb;
 const EventQueue = @import("../EventQueue.zig");
 const Scene = @import("../Scene.zig");
+const Assets = @import("../../data/Assets.zig");
 const Entity = Scene.Entity;
 const mem = @import("../../mem.zig");
 const Connection = @import("../../network/Connection.zig");
@@ -11,7 +12,7 @@ pub fn removeBuffFromEntity(
     conn: *Connection,
     events: *EventQueue,
     alloc: mem.Alloc,
-    query: Scene.Query(&.{*Entity.FightBuffComponent}),
+    query: Scene.Query(&.{ *Entity.FightBuffComponent, *Entity.AttributeComponent }),
 ) !void {
     const log = std.log.scoped(.buff_removal);
     const item = query.byEntityHandle(event.data.entity) orelse return;
@@ -49,7 +50,7 @@ pub fn addBuffToEntity(
     events: *EventQueue,
     scene: *Scene,
     alloc: mem.Alloc,
-    query: Scene.Query(&.{*Entity.FightBuffComponent}),
+    query: Scene.Query(&.{ *Entity.FightBuffComponent, *Entity.AttributeComponent }),
 ) !void {
     const log = std.log.scoped(.buff_addition);
     const item = query.byEntityHandle(event.data.target) orelse return;

@@ -38,7 +38,7 @@ pub fn fieldIndexForType(comptime Component: type) usize {
     return comptime fieldByType(Component).@"1";
 }
 
-fn fieldByType(comptime Component: type) struct { std.builtin.Type.StructField, usize } {
+pub fn fieldByType(comptime Component: type) struct { std.builtin.Type.StructField, usize } {
     inline for (comptime std.meta.fields(EntityComponentStorage), 0..) |field, i| {
         if (*field.type == Component) return .{ field, i };
 
@@ -147,7 +147,7 @@ pub fn savePartial(
     }
 }
 
-fn saveComponent(
+pub fn saveComponent(
     component: anytype,
     arena: Allocator,
     fs: *FileSystem,

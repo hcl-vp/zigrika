@@ -38,6 +38,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/friend.zig"),
     @import("handlers/damage.zig"),
     @import("handlers/flow.zig"),
+    @import("handlers/buff.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 
@@ -162,6 +163,16 @@ pub fn dispatchMessage(
     state: *State,
     message: Message,
 ) !void {
+    if (state.scene != null) {
+        var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
+        event_queue.enqueue(.tick_time, .{}) catch |err| {
+            log.err("failed to tick time: {t}", .{err});
+        };
+
+        logic_handlers.drainEventQueue(&event_queue, state) catch |err| {
+            log.err("failed to execute tick event chain: {t}", .{err});
+        };
+    }
     const message_id = std.enums.fromInt(MessageId, message.header.getMessageId()) orelse return error.HandlerNotFound;
     const rpc_id = switch (message.header) {
         .request => |request| request.rpc_id,

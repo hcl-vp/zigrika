@@ -1,4 +1,5 @@
 const Entity = @import("Scene.zig").Entity;
+const std = @import("std");
 
 // shitty solution for a shitty problem...
 pub const PendingFlow = struct {
@@ -56,3 +57,5 @@ pub const BuffAddition = struct {
 pub const BuffChange = struct { entity: Entity };
 
 pub const ChatCommandResponse = struct { content: []const u8 };
+
+pub const TickTime = struct {};

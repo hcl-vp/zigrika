@@ -4,8 +4,8 @@ const mem = @import("../../mem.zig");
 const FileSystem = @import("common").FileSystem;
 const sliceToArrayList = @import("../component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Assets = @import("../../data/Assets.zig");
-const RoleEntityHelpers = @import("../entity/RoleEntityHelpers.zig");
-const PlayerEntityHelpers = @import("../entity/PlayerEntityHelpers.zig");
+const RoleEntityTemplates = @import("../templates/RoleEntityTemplates.zig");
+const PlayerEntityTemplates = @import("../templates/PlayerEntityTemplates.zig");
 const EventQueue = @import("../EventQueue.zig");
 const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
@@ -216,11 +216,11 @@ pub fn notifyJoinScene(
                 .LivingStatus = .Alive, // TODO: keep track of this
             };
 
-            _ = try PlayerEntityHelpers.createPlayerSceneEntity(fs, scene, alloc, player_id.id, assets);
-            _ = try PlayerEntityHelpers.createSceneBattleEntity(fs, scene, alloc, player_id.id, assets);
+            _ = try PlayerEntityTemplates.createPlayerSceneEntity(fs, scene, alloc, player_id.id, assets);
+            _ = try PlayerEntityTemplates.createSceneBattleEntity(fs, scene, alloc, player_id.id, assets);
 
             for (&formation.roles) |*maybe_role| if (maybe_role.*) |*role| {
-                const entity = try RoleEntityHelpers.createRoleEntity(
+                const entity = try RoleEntityTemplates.createRoleEntity(
                     fs,
                     scene,
                     alloc,
@@ -328,9 +328,9 @@ pub fn formationUpdateNotify(
                     const attribute_comp = comps[1];
                     try role_infos.append(alloc.arena, pb.FormationRoleInfo{
                         .RoleId = role.role_id,
-                        .MaxHp = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.LifeMax)],
-                        .CurHp = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.Life)],
-                        .Level = attribute_comp.base_prop[@intFromEnum(pb.EAttributeType.Lv)],
+                        .MaxHp = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.LifeMax)].current,
+                        .CurHp = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.Life)].current,
+                        .Level = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.Lv)].current,
                         .RoleSkinId = role_info.role_skin_id,
                     });
                     continue;

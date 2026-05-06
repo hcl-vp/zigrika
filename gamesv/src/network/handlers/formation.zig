@@ -9,7 +9,7 @@ const EventQueue = @import("../../logic/EventQueue.zig");
 const Transaction = @import("../handlers.zig").Transaction;
 const FormationInfo = @import("../../fs/FormationInfo.zig");
 const FileSystem = @import("common").FileSystem;
-const RoleEntityHelpers = @import("../../logic/entity/RoleEntityHelpers.zig");
+const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const EntityComponentStorage = @import("../../logic/component/entity/EntityComponentStorage.zig");
@@ -178,7 +178,7 @@ pub fn onUpdateFormationRequest(
             defer concom_entity_pbs.deinit(alloc.gpa);
 
             for (added_roles.items) |role_id| {
-                const entity = try RoleEntityHelpers.createRoleEntity(
+                const entity = try RoleEntityTemplates.createRoleEntity(
                     fs,
                     scene,
                     alloc,

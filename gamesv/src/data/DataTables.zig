@@ -5,6 +5,7 @@ const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
 const pb = @import("proto").pb;
 const WeaponItem = @import("../fs/WeaponItem.zig");
+const ConcertoExceptions: []const i32 = @import("./zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
@@ -30,6 +31,11 @@ pub const MapFog = @import("tables/MapFog.zig");
 pub const MultiMap = @import("tables/MultiMap.zig");
 pub const MapBlockInfo = @import("tables/MapBlockInfo.zig");
 pub const Flow = @import("tables/Flow.zig");
+pub const ResonantChain = @import("tables/ResonantChain.zig");
+pub const RogueResCharacterBuff = @import("tables/RogueResCharacterBuff.zig");
+pub const HonamiStoryEffect = @import("tables/HonamiStoryEffect.zig");
+pub const ComboTeaching = @import("tables/ComboTeaching.zig");
+pub const EntitySkillPreload = @import("tables/EntitySkillPreload.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -56,6 +62,11 @@ map_fog: Table(MapFog, "Fog"),
 multi_map: Table(MultiMap, "Id"),
 map_block_info: Table(MapBlockInfo, "BlockId"),
 flow: Table(Flow, "Id"),
+resonant_chain: Table(ResonantChain, "Id"),
+rogue_res_buff: Table(RogueResCharacterBuff, "Id"),
+honami_story_effect: Table(HonamiStoryEffect, "Id"),
+combo_teaching: Table(ComboTeaching, "Id"),
+entity_skill_preload: Table(EntitySkillPreload, "Id"),
 
 fn loadTableItems(
     comptime T: type,
@@ -210,7 +221,6 @@ pub fn getRoleAutoBuffs(
         1214, // Reduce stamina while flying in sprint
         1215, // Reduce stamina while flying up in sprint
         1216, // Reduce stamina while flying down in sprint
-        1101002011, // 120 charge ultimate skill restores concerto energy
         1001000000, // Character initial buff mount
         70000077, // Role-IOU deduction control
         291724064, // Male MC Tag
@@ -245,7 +255,7 @@ pub fn getRoleAutoBuffs(
         // autobuff
         if (!std.mem.startsWith(u8, id_str, role_str)) continue;
         if (id_str.len <= 4) continue;
-        if (buff.DurationPolicy != .Permanent) continue;
+        if (buff.DurationPolicy != .Infinite) continue;
         if (buff.ApplicationSourceTagRequirements.len != 0) continue;
         if (buff.ApplicationTagRequirements.len != 0) continue;
         if (buff.PrematureExpirationEffects.len != 0) continue;
@@ -300,14 +310,60 @@ pub fn getRoleAutoBuffs(
         try results.append(gpa, .{ .id = id, .is_active = true });
     }
 
+    if (std.mem.findScalar(i32, ConcertoExceptions, role_id) == null) {
+        try results.append(gpa, .{ .id = 1101002011, .is_active = true });
+    }
+
     for (reson_conf.Effect) |id| {
         try results.append(gpa, .{ .id = id, .is_active = true });
     }
 
-    // le denia (handle ee id 6 (attribute event))
     var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
     defer illegal_ids.deinit(gpa);
 
+    // resonant chain buff removal
+    for (tables.resonant_chain.items) |chain| {
+        if (chain.GroupId != role_id) continue;
+        for (chain.BuffIds) |buff_id| {
+            try illegal_ids.put(gpa, buff_id, {});
+        }
+    }
+
+    // further rogue buff removal
+    for (tables.rogue_res_buff.items) |rogue_char_buffs| {
+        var buff_id_buf: [20]u8 = undefined;
+        var role_buf: [20]u8 = undefined;
+        const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
+        const buff_id_str = std.fmt.bufPrint(&buff_id_buf, "{d}", .{rogue_char_buffs.BuffId}) catch continue;
+        if (std.mem.startsWith(u8, buff_id_str, role_str)) {
+            try illegal_ids.put(gpa, rogue_char_buffs.BuffId, {});
+        }
+        for (rogue_char_buffs.BuffIds) |buff_id| {
+            var bid_buf: [20]u8 = undefined;
+            const bid_str = std.fmt.bufPrint(&bid_buf, "{d}", .{buff_id}) catch continue;
+            if (std.mem.startsWith(u8, bid_str, role_str)) {
+                try illegal_ids.put(gpa, buff_id, {});
+            }
+        }
+    }
+
+    // honami
+    for (tables.honami_story_effect.items) |honami| {
+        for (honami.Param) |param| {
+            if (param.len < 7) continue;
+            const id = std.fmt.parseInt(i64, param, 10) catch continue;
+            try illegal_ids.put(gpa, id, {});
+        }
+    }
+
+    // combo teaching buff removal
+    for (tables.combo_teaching.items) |combo| {
+        for (combo.AddBuffID) |buff_id| {
+            try illegal_ids.put(gpa, buff_id, {});
+        }
+    }
+
+    // le denia (handle ee id 6 (attribute event))
     for (results.items) |entry| {
         const buff = tables.buff.getDataById(@intCast(entry.id)) orelse continue;
         if (buff.ExtraEffectID != 6) continue;

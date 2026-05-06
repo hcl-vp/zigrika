@@ -26,6 +26,23 @@ pub const sequence_patch = struct {
     }
 };
 
+pub const reset_cd = struct {
+    pub const alias = "rcd";
+    pub const description = "resets the cooldown of all skills on the team.\nusage: reset_cd";
+    pub fn call(
+        events: *EventQueue,
+        conn: *Connection,
+        alloc: mem.Alloc,
+        io: Io,
+    ) !void {
+        try conn.push(pb.JSPatchNotify{
+            .Content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), io, "assets/scripts/misc_patches/cd_ender.js", alloc.arena, Io.Limit.unlimited),
+        }, alloc.arena);
+
+        try events.enqueue(.chat_command_response, .{ .content = "successfully reset cooldown." });
+    }
+};
+
 pub const weather = struct {
     pub const alias = "wx";
     pub const description = "sets the current weather to the inputted id.\nusage: weather [id]";

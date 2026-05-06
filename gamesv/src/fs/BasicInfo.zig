@@ -20,7 +20,7 @@ attributes: struct {
         break :blk count;
     };
 
-    level: i32 = 60,
+    level: i32 = 80,
     exp: i32 = 0,
     coin: i32 = 777777,
     rare_coin: i32 = 777777,
@@ -30,8 +30,8 @@ attributes: struct {
     name: []const u8 = "ReversedRooms",
     sign: []const u8 = "discord.gg/reversedrooms",
     sex: i32 = 0,
-    origin_world_level: i32 = 1,
-    cur_world_level: i32 = 1,
+    origin_world_level: i32 = 8,
+    cur_world_level: i32 = 8,
     world_level_time_stamp: i32 = 0,
     cash_coin: i32 = 777777,
     world_permission: i32 = 0,

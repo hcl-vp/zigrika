@@ -10,6 +10,7 @@ const log = std.log.scoped(.combat);
 const combat_namespaces: []const type = &.{
     @import("role.zig"),
     @import("damage.zig"),
+    @import("buff.zig"),
 };
 
 pub fn CombatRequestTxn(comptime Tag: anytype) type {
@@ -107,6 +108,8 @@ pub fn dispatch(
                 inline for (comptime std.meta.fields(Args)[1..], 1..) |param, i| {
                     if (param.type == *EventQueue)
                         args[i] = events
+                    else if (param.type == ?pb.CombatCommon)
+                        args[i] = data.CombatCommon
                     else
                         args[i] = try state.extract(param.type);
                 }
