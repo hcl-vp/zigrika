@@ -39,6 +39,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/damage.zig"),
     @import("handlers/flow.zig"),
     @import("handlers/buff.zig"),
+    @import("handlers/time.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 

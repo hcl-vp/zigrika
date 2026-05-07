@@ -11,6 +11,7 @@ const combat_namespaces: []const type = &.{
     @import("role.zig"),
     @import("damage.zig"),
     @import("buff.zig"),
+    @import("time.zig"),
 };
 
 pub fn CombatRequestTxn(comptime Tag: anytype) type {

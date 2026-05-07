@@ -76,6 +76,7 @@ pub fn createConcomitantEntity(
             .hatred_group_id = 0,
             .weapon_id = 0,
         },
+        Entity.EquipComponent{},
         Entity.CharacterAttachComponent{
             .pb_combine_part_info_list = &.{},
             .pb_combine_target_server_id = 0,

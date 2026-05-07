@@ -63,3 +63,20 @@ pub const weather = struct {
         try events.enqueue(.chat_command_response, .{ .content = "set weather successfully" });
     }
 };
+
+pub const timer_bind = struct {
+    pub const alias = "tbind";
+    pub const description = "adds the timer keybinding to your current binds, Z to stop timer, Y to start/restart timer.\nusage: timer_bind";
+    pub fn call(
+        events: *EventQueue,
+        conn: *Connection,
+        alloc: mem.Alloc,
+        io: Io,
+    ) !void {
+        try conn.push(pb.JSPatchNotify{
+            .Content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), io, "assets/scripts/misc_patches/timer_bind.js", alloc.arena, Io.Limit.unlimited),
+        }, alloc.arena);
+
+        try events.enqueue(.chat_command_response, .{ .content = "successfully binded." });
+    }
+};

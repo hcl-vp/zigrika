@@ -191,9 +191,9 @@ pub fn notifyJoinScene(
     };
 
     scene_info.TimeInfo = .{
-        .Hour = scene.instance.time.hour,
-        .Minute = scene.instance.time.minute,
-        .OwnerTimeClockTimeSpan = scene.instance.time.owner_clock_time_span,
+        .Hour = scene.instance.map_time.hour,
+        .Minute = scene.instance.map_time.minute,
+        .OwnerTimeClockTimeSpan = scene.instance.map_time.owner_clock_time_span,
     };
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
@@ -375,6 +375,7 @@ pub fn formationUpdateNotify(
 pub fn afterSceneJoin(
     event: EventQueue.Dequeue(.after_scene_join),
     events: *EventQueue,
+    scene: *Scene,
     conn: *Connection,
     fs: *FileSystem,
     io: Io,
@@ -386,12 +387,17 @@ pub fn afterSceneJoin(
 
     const rtc: Io.Clock = .real;
     const now_ms = rtc.now(io).toMilliseconds();
+    scene.scene_time = .{
+        .timestamp = now_ms,
+        .last_packet_time = now_ms,
+        .dilation = 1.0,
+    };
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,
-        .ServerFlowTimestamp = now_ms,
         .ServerCombatTime = now_ms,
         .ServerStopTime = now_ms,
+        .ServerFlowTimestamp = scene.scene_time.timestamp,
     }, alloc.arena);
     try events.enqueue(.update_formations, .{});
 

@@ -48329,3 +48329,7 @@ pub const ClientPullResourcePackageResponse = struct {
     FinishMp4QuestIds: std.ArrayList(i32) = .empty,
     NeedConfirmQuestIds: std.ArrayList(i32) = .empty,
 };
+pub const TimeStopPush = struct {
+    pub const default: @This() = .{};
+    TimeDilation: f32 = 0,
+};

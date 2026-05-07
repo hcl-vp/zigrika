@@ -33331,3 +33331,7 @@ pub const ClientPullResourcePackageResponse = struct {
     pub const FinishMp4QuestIds_field_number: u32 = 9;
     pub const NeedConfirmQuestIds_field_number: u32 = 14;
 };
+pub const TimeStopPush = struct {
+    pub const msg_id: u16 = 20369;
+    pub const TimeDilation_field_number: u32 = 9;
+};

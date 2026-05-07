@@ -92,6 +92,8 @@ setTimeout(() => {
   const {
     PhotographSetupView,
   } = require("Game/Module/Photograph/View/PhotographSetupView.js");
+  const TimeUtil_1 = require("Game/Common/TimeUtil.js");
+  const TimerSystem_1 = require("Core/Timer/TimerSystem.js");
 
   const plot_view_manager = PlotController_1.PlotController.PlotViewManager;
 

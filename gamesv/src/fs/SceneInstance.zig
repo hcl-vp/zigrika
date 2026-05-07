@@ -7,10 +7,10 @@ pub const default: SceneInstance = .{};
 
 owner_id: i32 = 0,
 buff_handle: i32 = 0,
-time: Time = .{},
+map_time: MapTime = .{},
 players: []Player = &.{},
 
-pub const Time = struct {
+pub const MapTime = struct {
     hour: i32 = 8,
     minute: i32 = 0,
     owner_clock_time_span: i64 = 0,

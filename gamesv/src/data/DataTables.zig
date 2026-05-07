@@ -5,7 +5,7 @@ const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
 const pb = @import("proto").pb;
 const WeaponItem = @import("../fs/WeaponItem.zig");
-const ConcertoExceptions: []const i32 = @import("./zon/concerto_exceptions.zon");
+const ConcertoExceptions: []const i32 = @import("zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
