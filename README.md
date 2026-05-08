@@ -28,10 +28,10 @@ zig build run-gamesv
 ```
 #### Windows
 ```sh
-# Assuming you have git installed and are using powershell.
+# Assuming you have git installed and are using cmd or powershell.
 git clone https://git.xeondev.com/WavyRooms/zigrika
 cd zigrika
-./start-zigrika.cmd
+start start-zigrika.cmd
 ```
 
 ### Logging in
