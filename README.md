@@ -33,7 +33,6 @@ git clone https://git.xeondev.com/WavyRooms/zigrika
 cd zigrika
 ./start-zigrika.cmd
 ```
-Or use Denuwo's script in #how-to-ps, found in our Discord (see Community).
 
 ### Logging in
 Depending on the version the private server currently targets, you may need to get the client from a third-party (if it's a BETA) OR get the client from Kuro's official launcher (or steam) (if it's LIVE).
