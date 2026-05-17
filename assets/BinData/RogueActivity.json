@@ -38,5 +38,13 @@
       "RoguelikeActivityView"
     ],
     "ActivityResource": "UiItem_ActivityRogueE"
+  },
+  {
+    "Id": 100600006,
+    "FunctionType": 2,
+    "FunctionParams": [
+      "RoguelikeActivityView"
+    ],
+    "ActivityResource": "UiItem_ActivityRogueE"
   }
 ]

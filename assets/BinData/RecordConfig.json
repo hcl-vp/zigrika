@@ -1886,5 +1886,14 @@
     },
     "ProgressNeed": 1,
     "SaveRecord": true
+  },
+  {
+    "Id": 30201,
+    "LimitParams": {
+      "quality": "5",
+      "level": "25"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
   }
 ]

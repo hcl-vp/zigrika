@@ -3632,7 +3632,7 @@
     "AxisName": "",
     "AxisDirection": 0,
     "TextId": "LinkTips",
-    "Type": "InteractReleaseWithoutInterrupt",
+    "Type": "InteractRelease",
     "LongPressTime": 0,
     "ReleaseFailureTime": 0,
     "BindButtonTag": "",
@@ -9204,19 +9204,6 @@
     "IsOccupancyFightInput": true
   },
   {
-    "Id": 2042,
-    "ActionName": "UI键盘E手柄RB",
-    "AxisName": "",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "ClickButtonRelease",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tag6",
-    "ApplicableType": 2,
-    "IsOccupancyFightInput": true
-  },
-  {
     "Id": 1341,
     "ActionName": "UI键盘R手柄X",
     "AxisName": "",
@@ -9226,6 +9213,19 @@
     "LongPressTime": 0,
     "ReleaseFailureTime": 0,
     "BindButtonTag": "tag3c",
+    "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 2042,
+    "ActionName": "UI键盘E手柄RB",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButtonRelease",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tag6",
     "ApplicableType": 2,
     "IsOccupancyFightInput": true
   },
@@ -9851,6 +9851,45 @@
     "ReleaseFailureTime": 0,
     "BindButtonTag": "NaviGroup4a",
     "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 3142,
+    "ActionName": "",
+    "AxisName": "UiMoveForward",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ShowOnly",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "",
+    "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 9002,
+    "ActionName": "",
+    "AxisName": "WheelAxis",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ShowOnly",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "",
+    "ApplicableType": 1,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 9024,
+    "ActionName": "UI左键点击",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "LongPress",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagMouseL",
+    "ApplicableType": 1,
     "IsOccupancyFightInput": true
   }
 ]

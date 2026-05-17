@@ -14,6 +14,48 @@
     "QuestId": 0
   },
   {
+    "Id": 34001,
+    "WhichChat": 3,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 34002,
+    "WhichChat": 4,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "2",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 34003,
+    "WhichChat": 5,
+    "FlowParam": [
+      "剧情_3_0_上半主线短信",
+      "2",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
     "Id": 30005,
     "WhichChat": 30,
     "FlowParam": [
@@ -840,6 +882,34 @@
     "QuestId": 0
   },
   {
+    "Id": 34004,
+    "WhichChat": 18,
+    "FlowParam": [
+      "剧情_3_0_上半主线短信",
+      "1",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 34005,
+    "WhichChat": 36,
+    "FlowParam": [
+      "剧情_3_0_上半主线短信",
+      "4",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
     "Id": 31001,
     "WhichChat": 37,
     "FlowParam": [
@@ -859,6 +929,20 @@
     "FlowParam": [
       "剧情_3_0_引导任务_关闭开关是打开开关",
       "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 34006,
+    "WhichChat": 11,
+    "FlowParam": [
+      "剧情_3_0_上半主线短信",
+      "6",
       "1"
     ],
     "TipType": 1,
@@ -1352,6 +1436,20 @@
       "1"
     ],
     "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 34008,
+    "WhichChat": 55,
+    "FlowParam": [
+      "剧情_3_1_拉海洛主线_上半_1",
+      "1",
+      "1"
+    ],
+    "TipType": 3,
     "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
@@ -2658,6 +2756,48 @@
     "FinallPopType": 0,
     "DropId": 0,
     "QuestId": 183000000
+  },
+  {
+    "Id": 34007,
+    "WhichChat": 80,
+    "FlowParam": [
+      "剧情_3_0_上半主线短信",
+      "5",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33053,
+    "WhichChat": 3,
+    "FlowParam": [
+      "剧情_3_0_一级POI_天文台主线任务",
+      "1",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 33054,
+    "WhichChat": 3,
+    "FlowParam": [
+      "剧情_3_0_一级POI_天文台主线任务",
+      "3",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
   },
   {
     "Id": 33055,

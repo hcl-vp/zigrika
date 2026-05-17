@@ -49,7 +49,10 @@
     "PreviewTextureInBuyView": "/Game/Aki/UI/UIResources/Common/Image/Skin/AccessoriesItem/T_AccessoriesItemSkin_80870001.T_AccessoriesItemSkin_80870001",
     "UiRoleState": 0,
     "IsNewTag": true,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Role/T_ShopRoleSkinChangli.T_ShopRoleSkinChangli",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "ShopPreviewSubTitle_80870001",
+    "PopPreviewTexture": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Accessories/T_ShopItemAccessoriesSkin_Kelaita.T_ShopItemAccessoriesSkin_Kelaita"
   },
   {
     "Id": 80870004,
@@ -97,7 +100,10 @@
     "PreviewTextureInBuyView": "/Game/Aki/UI/UIResources/Common/Image/Skin/AccessoriesItem/T_AccessoriesItemSkin_80870004.T_AccessoriesItemSkin_80870004",
     "UiRoleState": 0,
     "IsNewTag": true,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Accessories/T_ShopRoleAccessoriesSkin_Kelaita.T_ShopRoleAccessoriesSkin_Kelaita",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "ShopPreviewSubTitle_80870004",
+    "PopPreviewTexture": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Accessories/T_ShopItemAccessoriesSkin_Kelaita.T_ShopItemAccessoriesSkin_Kelaita"
   },
   {
     "Id": 80870005,
@@ -147,7 +153,10 @@
     "PreviewTextureInBuyView": "/Game/Aki/UI/UIResources/Common/Image/Skin/AccessoriesItem/T_AccessoriesItemSkin_80870005.T_AccessoriesItemSkin_80870005",
     "UiRoleState": 13,
     "IsNewTag": true,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   },
   {
     "Id": 80871001,
@@ -209,7 +218,10 @@
     "PreviewTextureInBuyView": "",
     "UiRoleState": 0,
     "IsNewTag": false,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   },
   {
     "Id": 80871002,
@@ -271,7 +283,10 @@
     "PreviewTextureInBuyView": "",
     "UiRoleState": 0,
     "IsNewTag": false,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   },
   {
     "Id": 80871003,
@@ -333,7 +348,10 @@
     "PreviewTextureInBuyView": "",
     "UiRoleState": 0,
     "IsNewTag": false,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   },
   {
     "Id": 80871004,
@@ -395,7 +413,10 @@
     "PreviewTextureInBuyView": "",
     "UiRoleState": 0,
     "IsNewTag": false,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   },
   {
     "Id": 80870006,
@@ -443,6 +464,9 @@
     "PreviewTextureInBuyView": "",
     "UiRoleState": 0,
     "IsNewTag": false,
-    "ShowUseButton": true
+    "PreviewTextureInPayShop": "",
+    "ShowUseButton": true,
+    "ShopPreviewSubTitle": "",
+    "PopPreviewTexture": ""
   }
 ]

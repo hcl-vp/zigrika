@@ -28,6 +28,13 @@
     "TargetReward": 5070443
   },
   {
+    "Id": 105,
+    "ActivityId": 102600001,
+    "TargetName": "ConditionGroup_12200105_HintText",
+    "Type": 1,
+    "TargetReward": 5070444
+  },
+  {
     "Id": 201,
     "ActivityId": 102600001,
     "TargetName": "ConditionGroup_12200106_HintText",
@@ -54,6 +61,20 @@
     "TargetName": "ConditionGroup_12200109_HintText",
     "Type": 2,
     "TargetReward": 5070448
+  },
+  {
+    "Id": 205,
+    "ActivityId": 102600001,
+    "TargetName": "ConditionGroup_12200110_HintText",
+    "Type": 2,
+    "TargetReward": 5070449
+  },
+  {
+    "Id": 206,
+    "ActivityId": 102600001,
+    "TargetName": "ConditionGroup_12200111_HintText",
+    "Type": 2,
+    "TargetReward": 5070450
   },
   {
     "Id": 301,
@@ -105,27 +126,6 @@
     "TargetReward": 5070458
   },
   {
-    "Id": 205,
-    "ActivityId": 102600001,
-    "TargetName": "ConditionGroup_12200110_HintText",
-    "Type": 2,
-    "TargetReward": 5070449
-  },
-  {
-    "Id": 206,
-    "ActivityId": 102600001,
-    "TargetName": "ConditionGroup_12200111_HintText",
-    "Type": 2,
-    "TargetReward": 5070450
-  },
-  {
-    "Id": 501,
-    "ActivityId": 102600001,
-    "TargetName": "ConditionGroup_12100028_HintText",
-    "Type": 5,
-    "TargetReward": 5070490
-  },
-  {
     "Id": 402,
     "ActivityId": 102600001,
     "TargetName": "ConditionGroup_12200120_HintText",
@@ -168,10 +168,10 @@
     "TargetReward": 5070464
   },
   {
-    "Id": 105,
+    "Id": 501,
     "ActivityId": 102600001,
-    "TargetName": "ConditionGroup_12200105_HintText",
-    "Type": 1,
-    "TargetReward": 5070444
+    "TargetName": "ConditionGroup_12100028_HintText",
+    "Type": 5,
+    "TargetReward": 5070490
   }
 ]

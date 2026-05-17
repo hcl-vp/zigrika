@@ -167,126 +167,136 @@
   {
     "BitId": 34,
     "QuestId": 915000004,
-    "HasRefResource": 1
+    "HasRefResource": 0
   },
   {
     "BitId": 35,
     "QuestId": 915700000,
-    "HasRefResource": 1
+    "HasRefResource": 0
   },
   {
     "BitId": 36,
+    "QuestId": 159000000,
+    "HasRefResource": 0
+  },
+  {
+    "BitId": 37,
     "QuestId": 102000000,
     "HasRefResource": 1
   },
   {
-    "BitId": 37,
+    "BitId": 38,
     "QuestId": 119000000,
     "HasRefResource": 1
   },
   {
-    "BitId": 38,
+    "BitId": 39,
     "QuestId": 121850000,
     "HasRefResource": 1
   },
   {
-    "BitId": 39,
+    "BitId": 40,
     "QuestId": 139000025,
     "HasRefResource": 1
   },
   {
-    "BitId": 40,
+    "BitId": 41,
     "QuestId": 139000026,
     "HasRefResource": 1
   },
   {
-    "BitId": 41,
+    "BitId": 42,
     "QuestId": 140000004,
     "HasRefResource": 1
   },
   {
-    "BitId": 42,
+    "BitId": 43,
     "QuestId": 147000005,
     "HasRefResource": 1
   },
   {
-    "BitId": 43,
+    "BitId": 44,
     "QuestId": 158800019,
     "HasRefResource": 1
   },
   {
-    "BitId": 44,
+    "BitId": 45,
     "QuestId": 165000003,
     "HasRefResource": 1
   },
   {
-    "BitId": 45,
+    "BitId": 46,
     "QuestId": 165000004,
     "HasRefResource": 1
   },
   {
-    "BitId": 46,
+    "BitId": 47,
     "QuestId": 165800000,
     "HasRefResource": 1
   },
   {
-    "BitId": 47,
+    "BitId": 48,
     "QuestId": 168000001,
     "HasRefResource": 1
   },
   {
-    "BitId": 48,
+    "BitId": 49,
     "QuestId": 168800009,
     "HasRefResource": 1
   },
   {
-    "BitId": 49,
+    "BitId": 50,
     "QuestId": 173800000,
     "HasRefResource": 1
   },
   {
-    "BitId": 50,
+    "BitId": 51,
     "QuestId": 175000000,
     "HasRefResource": 1
   },
   {
-    "BitId": 51,
+    "BitId": 52,
     "QuestId": 189000000,
     "HasRefResource": 1
   },
   {
-    "BitId": 52,
+    "BitId": 53,
     "QuestId": 221800001,
     "HasRefResource": 1
   },
   {
-    "BitId": 53,
+    "BitId": 54,
     "QuestId": 880000044,
     "HasRefResource": 1
   },
   {
-    "BitId": 54,
+    "BitId": 55,
     "QuestId": 886000001,
     "HasRefResource": 1
   },
   {
-    "BitId": 55,
+    "BitId": 56,
     "QuestId": 936000002,
     "HasRefResource": 1
   },
   {
-    "BitId": 56,
+    "BitId": 57,
+    "QuestId": 159000001,
+    "HasRefResource": 0
+  },
+  {
+    "BitId": 58,
+    "QuestId": 125000129,
+    "HasRefResource": 0
+  },
+  {
+    "BitId": 59,
     "QuestId": 915000001,
     "HasRefResource": 1
   },
   {
-    "BitId": 57,
+    "BitId": 60,
     "QuestId": 915000003,
     "HasRefResource": 1
-  },
-  {
-    "BitId": 58,
-    "QuestId": 183000000,
-    "HasRefResource": 0
   }
 ]

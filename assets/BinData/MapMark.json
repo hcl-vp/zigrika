@@ -9353,7 +9353,7 @@
     "GameplayLockJumpId": 0,
     "AreaShowText": [],
     "IsDisableGameplayFinishIcon": false,
-    "MultiFloorShowCondition": 0,
+    "MultiFloorShowCondition": 1,
     "IsDisableBtnGoto": false
   },
   {
@@ -64629,7 +64629,7 @@
     ],
     "LockMarkPic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Play_04_UI.SP_IconMap_Play_04_UI",
     "UnlockMarkPic": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMap_Play_04_UI.SP_IconMap_Play_04_UI",
-    "ShowCondition": -1,
+    "ShowCondition": 0,
     "FogShow": 1,
     "MapShow": 3,
     "Scale": 0.800000011920929,
@@ -100777,7 +100777,7 @@
     "CornerScale": 0.699999988079071,
     "FirstReward": 0,
     "Reward": 0,
-    "MultiMapFloorId": 0,
+    "MultiMapFloorId": 131,
     "ConnetMultiMapFloorId": [],
     "TrackHudEnable": 1,
     "TrackAutoCancelDistance": 400,

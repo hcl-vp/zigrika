@@ -5731,7 +5731,7 @@
     "BuffIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_Act_Xia04_UI.T_IconA_Act_Xia04_UI",
     "BuffDesc": "RogueBuffPool_332113_BuffDesc",
     "BuffDescParam": [
-      "10%"
+      "50%"
     ],
     "BuffDescSimple": "RogueBuffPool_332113_BuffDesc_0",
     "BuffName": "RogueBuffPool_332113_BuffName",
@@ -6231,9 +6231,9 @@
   },
   {
     "Id": 333113,
-    "BuffId": 0,
+    "BuffId": 933312302501,
     "PerIds": [],
-    "EffectId": 13023113,
+    "EffectId": 0,
     "PerkType": 2,
     "Quality": 3,
     "BuffElement": {
@@ -6571,7 +6571,7 @@
   },
   {
     "Id": 334104,
-    "BuffId": 933312402520,
+    "BuffId": 912312000020,
     "PerIds": [],
     "EffectId": 0,
     "PerkType": 2,
@@ -6613,7 +6613,7 @@
   },
   {
     "Id": 334106,
-    "BuffId": 933312402514,
+    "BuffId": 900114000030,
     "PerIds": [],
     "EffectId": 0,
     "PerkType": 2,
@@ -6655,7 +6655,7 @@
   },
   {
     "Id": 334108,
-    "BuffId": 933312402516,
+    "BuffId": 933312402514,
     "PerIds": [],
     "EffectId": 0,
     "PerkType": 2,
@@ -7686,6 +7686,7 @@
     "BuffIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity31/SpringFestival/T_IconA_Act_TiaoJiuA004_UI.T_IconA_Act_TiaoJiuA004_UI",
     "BuffDesc": "RogueBuffPool_336107_BuffDesc",
     "BuffDescParam": [
+      "20",
       "1"
     ],
     "BuffDescSimple": "RogueBuffPool_336107_BuffDesc_0",

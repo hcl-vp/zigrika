@@ -180,21 +180,6 @@
     ]
   },
   {
-    "RoleId": 1304,
-    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyJinxi.T_ActivityRoleOntrialHalfBodyJinxi",
-    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueJinxi.T_ActivityRoleOntrialVagueJinxi",
-    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabJinxi.T_ActivityRoleOntrialTabJinxi",
-    "UiConfigId": 3,
-    "Introduction": "FavorRoleInfo_1304_Info",
-    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Jinxi/Portraits_Jinxi.Portraits_Jinxi-data",
-    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Jinxi/Portraits_Jinxi.Portraits_Jinxi-atlas",
-    "SpineParam": [
-      -150,
-      -440,
-      0.44999998807907104
-    ]
-  },
-  {
     "RoleId": 1102,
     "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodySanhua.T_ActivityRoleOntrialHalfBodySanhua",
     "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueSanhua.T_ActivityRoleOntrialVagueSanhua",
@@ -210,21 +195,6 @@
     ]
   },
   {
-    "RoleId": 1205,
-    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyChangli.T_ActivityRoleOntrialHalfBodyChangli",
-    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueChangli.T_ActivityRoleOntrialVagueChangli",
-    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabChangli.T_ActivityRoleOntrialTabChangli",
-    "UiConfigId": 2,
-    "Introduction": "FavorRoleInfo_1205_Info",
-    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Changli/Portraits_Changli.Portraits_Changli-data",
-    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Changli/Portraits_Changli.Portraits_Changli-atlas",
-    "SpineParam": [
-      -120,
-      -440,
-      0.44999998807907104
-    ]
-  },
-  {
     "RoleId": 1305,
     "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyXiangliyao.T_ActivityRoleOntrialHalfBodyXiangliyao",
     "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueXiangliyao.T_ActivityRoleOntrialVagueXiangliyao",
@@ -237,21 +207,6 @@
       -170,
       -700,
       0.5
-    ]
-  },
-  {
-    "RoleId": 1105,
-    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyZhezhi.T_ActivityRoleOntrialHalfBodyZhezhi",
-    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueZhezhi.T_ActivityRoleOntrialVagueZhezhi",
-    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabZhezhi.T_ActivityRoleOntrialTabZhezhi",
-    "UiConfigId": 0,
-    "Introduction": "FavorRoleInfo_1105_Info",
-    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Zhezhi/Portraits_Zhezhi.Portraits_Zhezhi-data",
-    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Zhezhi/Portraits_Zhezhi.Portraits_Zhezhi-atlas",
-    "SpineParam": [
-      -40,
-      -660,
-      0.5600000023841858
     ]
   },
   {
@@ -315,6 +270,36 @@
     ]
   },
   {
+    "RoleId": 1304,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyJinxi.T_ActivityRoleOntrialHalfBodyJinxi",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueJinxi.T_ActivityRoleOntrialVagueJinxi",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabJinxi.T_ActivityRoleOntrialTabJinxi",
+    "UiConfigId": 3,
+    "Introduction": "FavorRoleInfo_1304_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Jinxi/Portraits_Jinxi.Portraits_Jinxi-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Jinxi/Portraits_Jinxi.Portraits_Jinxi-atlas",
+    "SpineParam": [
+      -150,
+      -440,
+      0.44999998807907104
+    ]
+  },
+  {
+    "RoleId": 1105,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyZhezhi.T_ActivityRoleOntrialHalfBodyZhezhi",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueZhezhi.T_ActivityRoleOntrialVagueZhezhi",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabZhezhi.T_ActivityRoleOntrialTabZhezhi",
+    "UiConfigId": 0,
+    "Introduction": "FavorRoleInfo_1105_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Zhezhi/Portraits_Zhezhi.Portraits_Zhezhi-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Zhezhi/Portraits_Zhezhi.Portraits_Zhezhi-atlas",
+    "SpineParam": [
+      -40,
+      -660,
+      0.5600000023841858
+    ]
+  },
+  {
     "RoleId": 1506,
     "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyFeibi.T_ActivityRoleOntrialHalfBodyFeibi",
     "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueFeibi.T_ActivityRoleOntrialVagueFeibi",
@@ -341,6 +326,21 @@
     "SpineParam": [
       90,
       -660,
+      0.44999998807907104
+    ]
+  },
+  {
+    "RoleId": 1205,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyChangli.T_ActivityRoleOntrialHalfBodyChangli",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueChangli.T_ActivityRoleOntrialVagueChangli",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabChangli.T_ActivityRoleOntrialTabChangli",
+    "UiConfigId": 2,
+    "Introduction": "FavorRoleInfo_1205_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Changli/Portraits_Changli.Portraits_Changli-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Changli/Portraits_Changli.Portraits_Changli-atlas",
+    "SpineParam": [
+      -120,
+      -440,
       0.44999998807907104
     ]
   },
@@ -621,6 +621,51 @@
     "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabDaNiYa.T_ActivityRoleOntrialTabDaNiYa",
     "UiConfigId": 0,
     "Introduction": "FavorRoleInfo_1211_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-atlas",
+    "SpineParam": [
+      -150,
+      -440,
+      0.44999998807907104
+    ]
+  },
+  {
+    "RoleId": 1511,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyDaNiYa.T_ActivityRoleOntrialHalfBodyDaNiYa",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueDaNiYa.T_ActivityRoleOntrialVagueDaNiYa",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabDaNiYa.T_ActivityRoleOntrialTabDaNiYa",
+    "UiConfigId": 0,
+    "Introduction": "FavorRoleInfo_1511_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-atlas",
+    "SpineParam": [
+      -150,
+      -440,
+      0.44999998807907104
+    ]
+  },
+  {
+    "RoleId": 1308,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyDaNiYa.T_ActivityRoleOntrialHalfBodyDaNiYa",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueDaNiYa.T_ActivityRoleOntrialVagueDaNiYa",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabDaNiYa.T_ActivityRoleOntrialTabDaNiYa",
+    "UiConfigId": 0,
+    "Introduction": "FavorRoleInfo_1308_Info",
+    "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-data",
+    "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-atlas",
+    "SpineParam": [
+      -150,
+      -440,
+      0.44999998807907104
+    ]
+  },
+  {
+    "RoleId": 1109,
+    "RoleStand": "/Game/Aki/UI/UIResources/UiActivity/Image/RoleHalfBody/T_ActivityRoleOntrialHalfBodyDaNiYa.T_ActivityRoleOntrialHalfBodyDaNiYa",
+    "RoleStand2": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialVagueDaNiYa.T_ActivityRoleOntrialVagueDaNiYa",
+    "RoleIcon": "/Game/Aki/UI/UIResources/UiActivity/Image/ActivityRoleOntrial/T_ActivityRoleOntrialTabDaNiYa.T_ActivityRoleOntrialTabDaNiYa",
+    "UiConfigId": 0,
+    "Introduction": "FavorRoleInfo_1511_Info",
     "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-data",
     "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_DaNiYa/Portraits_DaNiYa.Portraits_DaNiYa-atlas",
     "SpineParam": [

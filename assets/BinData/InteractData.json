@@ -92635,9 +92635,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "01173237d7404466a1fdda8f2afaaf73",
@@ -93401,9 +93399,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d906ea3d601d4dc4b305cda394fbddf5",
@@ -93543,9 +93539,7 @@
     "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "485aa7f06acf4898950f6c2df20d4f13",
@@ -93865,9 +93859,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0b6d01dba38f4ac6aab902390bc6c647",
@@ -108335,367 +108327,6 @@
     ]
   },
   {
-    "Guid": "ee2556066b2c458db2b05024311903bd",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_2_拉海洛主线_下半",
-        "FlowId": 3,
-        "StateId": 9
-      }
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_165000005_InteractContent_165_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "70523ef91aca45bc8ed63dc140518285",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_拉海洛主线_上半_2",
-        "FlowId": 21,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_114000031_InteractContent_120_25",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "33b9d3aa2be84276b09552aca58614eb",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_2_拉海洛主线_下半",
-        "FlowId": 11,
-        "StateId": 2
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "7b12c7b2dc5c4f16bbb7a7b4ef1b701f",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_165000004_InteractContent_165_9",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "b5b6ae8b96f14d4393b0c8d4a48220d9",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "b97e835408494f1a9823413efb67962a",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "DestroyEntity",
-          "Params": {
-            "EntityIds": [
-              165800022,
-              165800021
-            ]
-          },
-          "ActionGuid": "2efca13392eb4ada85520aef8b19d4fc",
-          "ActionId": 4000134
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_165000004_InteractContent_165_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "f9d20e295f0c46b0b8afc46e12189dcd",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "DestroyEntity",
-          "Params": {
-            "EntityIds": [
-              165800279,
-              165800276,
-              165800092,
-              165800281,
-              165800282
-            ]
-          },
-          "ActionGuid": "8d1e24548dba4800a1d914220d02dd1d",
-          "ActionId": 4000087
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_165000004_InteractContent_165_16",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "0e6e3e8aecbf4feca70f7a885294ebb9",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "LeisureInteract",
-          "Params": {
-            "Option": {
-              "Type": "SitDown"
-            },
-            "SceneEntity": 168800070
-          },
-          "ActionId": 3000003,
-          "ActionGuid": "fc20d19eaedd42fd8bc5583c59b9b1c9"
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "Quest_165800024_InteractContent_168_1",
-    "Condition": {
-      "Type": 0,
-      "Conditions": [
-        {
-          "Type": "CheckPlayerStateRestriction",
-          "RestrictionId": 2
-        }
-      ]
-    },
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 200,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "8874e87603c94e7fa944bf7f3a916ad0",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_冰封王座玩法",
-        "FlowId": 7,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "a6eb468c4e2d4fd18a692256457414db",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_冰封王座玩法",
-        "FlowId": 7,
-        "StateId": 2
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "b244e57f3cd541d49b59c0fafe57f13a",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_1_冰封王座玩法",
-        "FlowId": 7,
-        "StateId": 3
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "efb2156519b9468aa2c33f21881e92b2",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "CommonTip",
-          "Params": {
-            "TipOption": {
-              "EdTidMainText": "视差玩法开始",
-              "TidMainText": "LevelPlay_13850008_GeneralFloatingTipMainText_13_5",
-              "Type": 9
-            }
-          },
-          "ActionGuid": "eaeae4f17362410b81526c68751bb8ff",
-          "Timeout": 10,
-          "ActionId": 4000004
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_13850008_InteractContent_13_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "2d10d00b970b4053b291f99aa2b619dd",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_V3.2音游西格莉卡定镜",
-        "FlowId": 2,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "ecee8fd126a04bd48f1cf1d52eac69fb",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_V3.2音游陆赫斯定镜",
-        "FlowId": 2,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "015fae81ac6c45aea6ae9232ec91be5f",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.1菲茨的引路人",
-        "FlowId": 4,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_194750010_InteractContent_194_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "4bfff82f51ae4f6da9605bceb7fd14b2",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.1菲茨的引路人",
-        "FlowId": 7,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_194750010_InteractContent_194_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "55b9021f730c4ea1bd74e0c422238f2e",
     "Type": {
       "Type": "Actions",
@@ -108942,6 +108573,367 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "ee2556066b2c458db2b05024311903bd",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_2_拉海洛主线_下半",
+        "FlowId": 3,
+        "StateId": 9
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_165000005_InteractContent_165_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "70523ef91aca45bc8ed63dc140518285",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_拉海洛主线_上半_2",
+        "FlowId": 21,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_114000031_InteractContent_120_25",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "0e6e3e8aecbf4feca70f7a885294ebb9",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "LeisureInteract",
+          "Params": {
+            "Option": {
+              "Type": "SitDown"
+            },
+            "SceneEntity": 168800070
+          },
+          "ActionId": 3000003,
+          "ActionGuid": "fc20d19eaedd42fd8bc5583c59b9b1c9"
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_165800024_InteractContent_168_1",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CheckPlayerStateRestriction",
+          "RestrictionId": 2
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 200,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "33b9d3aa2be84276b09552aca58614eb",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_2_拉海洛主线_下半",
+        "FlowId": 11,
+        "StateId": 2
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "7b12c7b2dc5c4f16bbb7a7b4ef1b701f",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_165000004_InteractContent_165_9",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b5b6ae8b96f14d4393b0c8d4a48220d9",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b97e835408494f1a9823413efb67962a",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "DestroyEntity",
+          "Params": {
+            "EntityIds": [
+              165800022,
+              165800021
+            ]
+          },
+          "ActionGuid": "2efca13392eb4ada85520aef8b19d4fc",
+          "ActionId": 4000134
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_165000004_InteractContent_165_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "f9d20e295f0c46b0b8afc46e12189dcd",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "DestroyEntity",
+          "Params": {
+            "EntityIds": [
+              165800279,
+              165800276,
+              165800092,
+              165800281,
+              165800282
+            ]
+          },
+          "ActionGuid": "8d1e24548dba4800a1d914220d02dd1d",
+          "ActionId": 4000087
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_165000004_InteractContent_165_16",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "8874e87603c94e7fa944bf7f3a916ad0",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_冰封王座玩法",
+        "FlowId": 7,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "a6eb468c4e2d4fd18a692256457414db",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_冰封王座玩法",
+        "FlowId": 7,
+        "StateId": 2
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "b244e57f3cd541d49b59c0fafe57f13a",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_1_冰封王座玩法",
+        "FlowId": 7,
+        "StateId": 3
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "2d10d00b970b4053b291f99aa2b619dd",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_V3.2音游西格莉卡定镜",
+        "FlowId": 2,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "ecee8fd126a04bd48f1cf1d52eac69fb",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_V3.2音游陆赫斯定镜",
+        "FlowId": 2,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "efb2156519b9468aa2c33f21881e92b2",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "视差玩法开始",
+              "TidMainText": "LevelPlay_13850008_GeneralFloatingTipMainText_13_5",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "eaeae4f17362410b81526c68751bb8ff",
+          "Timeout": 10,
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_13850008_InteractContent_13_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "015fae81ac6c45aea6ae9232ec91be5f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.1菲茨的引路人",
+        "FlowId": 4,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_194750010_InteractContent_194_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "4bfff82f51ae4f6da9605bceb7fd14b2",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.1菲茨的引路人",
+        "FlowId": 7,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_194750010_InteractContent_194_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
     "Guid": "4467ae47773c41118288a39e51b94417",
     "Type": {
       "Type": "Flow",
@@ -108958,30 +108950,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "b132d54892bf43879f97613029a164ee",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_3_拉海洛主线_上半序章",
-        "FlowId": 4,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5f366c5ce85745f8989968c63c541766",
@@ -109058,6 +109027,25 @@
     },
     "Icon": "",
     "TidContent": "LevelPlay_29800001_InteractContent_29_9",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b132d54892bf43879f97613029a164ee",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_3_拉海洛主线_上半序章",
+        "FlowId": 4,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -109148,9 +109136,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "db69153382284b4bb2de8ca83b5f78b2",
@@ -109516,9 +109502,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "317010f6053f469db8ddf7b5aa304abb",
@@ -109725,6 +109709,14 @@
           },
           "ActionGuid": "73ff5047b3fd410dbba22847fcb367cd",
           "ActionId": 4000035
+        },
+        {
+          "Name": "SetTimeLockState",
+          "Params": {
+            "LockState": "Unlock"
+          },
+          "ActionGuid": "50c2206fd12a44d989ae541bfe31c6c0",
+          "ActionId": 4000037
         },
         {
           "Name": "DestroyEntity",
@@ -110289,7 +110281,7 @@
           "Name": "SetPlayerOperationRestriction",
           "Params": {
             "Type": "DisableAll",
-            "DisplayMode": "HideUi"
+            "DisplayMode": "ShowUi"
           },
           "ActionGuid": "a43a43d7a244430ea9536708f25e0cc2",
           "ActionId": 3000088
@@ -110325,9 +110317,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "98bf9a08bec047449bcd46a8682f12a9",
@@ -110338,7 +110328,7 @@
           "Name": "SetPlayerOperationRestriction",
           "Params": {
             "Type": "DisableAll",
-            "DisplayMode": "HideUi"
+            "DisplayMode": "ShowUi"
           },
           "ActionGuid": "f1cf0c64b2ad455fa036859cb4769cb0",
           "ActionId": 3000005
@@ -110414,9 +110404,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0ed366aff5674155a62cf9cafa99519a",
@@ -111006,9 +110994,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4437f71a16a54b08ad1375393e42c7fd",
@@ -111110,9 +111096,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "36b9dd83c483402a85e324fe56c736a3",
@@ -111309,9 +111293,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0397c3bce3be4273b89b619984ff12d6",
@@ -111375,9 +111357,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "68faab0d80e949c6bf93b174377e9246",
@@ -111396,9 +111376,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f01b02f338ee49c78b63322c65ff592c",
@@ -111417,9 +111395,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "285c68869f354af7a901f1ab8c4fb1f0",
@@ -111633,9 +111609,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5663fb03ebb24ba2b26751dc9bd7aa0d",
@@ -111655,9 +111629,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "01a6f9fce26f4f6193de20ef038fde93",
@@ -111836,9 +111808,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e169a3763dac4a07a26b608747388b58",
@@ -111868,9 +111838,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "059d67d3f7ce4231b71b8b9bfa8ee2b0",
@@ -112538,9 +112506,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e8b17ccc2dfd4de5ae6f6bf321ac7b27",
@@ -112566,9 +112532,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "51071e8ca4414e28aa0a3b211e6e844a",
@@ -112801,9 +112765,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "34ea3bb430b14d248c9bd58a17134f09",
@@ -112822,9 +112784,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4147c4beba0c43e599065ab4b675eda7",
@@ -112900,9 +112860,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0d2f18dddf8c4692b74da75b0fc2f727",
@@ -113405,6 +113363,25 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "eab57a889715423b8b6cf4a0f103d02f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.2学园庆典对话",
+        "FlowId": 69,
+        "StateId": 2
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_320800004_InteractContent_320_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
     "OptionLockTypeList": [
       "OnMotor"
     ]
@@ -113499,27 +113476,6 @@
     ]
   },
   {
-    "Guid": "eab57a889715423b8b6cf4a0f103d02f",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.2学园庆典对话",
-        "FlowId": 69,
-        "StateId": 2
-      }
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_320800004_InteractContent_320_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "26ef79e7396e4394b4fa3d8f8115f44f",
     "Type": {
       "Type": "Flow",
@@ -113536,9 +113492,7 @@
     "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "40b6c387ef7d4642b81453ccacbd9acf",
@@ -113557,9 +113511,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "64c48d659ad94330ba74ccc09f952bf9",
@@ -113578,9 +113530,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6893fa0de09e40d8b4dab8f5053d23ef",
@@ -113599,9 +113549,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b226336212274f488f5f017d7c43a8f7",
@@ -113647,9 +113595,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e7b4b84d5f864cdbbe0652a8615dfbdb",
@@ -113668,9 +113614,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f7a64b43ced143559d6ecfba18ec0777",
@@ -113685,9 +113629,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f85080cdb4c54c1ba99ca59a58456978",
@@ -113706,9 +113648,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "08652943a9e84a13a152ce4954552dc8",
@@ -114255,9 +114195,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b5ba2c00a3c54d83883d7f4871b09fce",
@@ -114294,9 +114232,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9ef5f4cf6bf54cbc99047859b47003de",
@@ -114742,6 +114678,27 @@
     ]
   },
   {
+    "Guid": "6846c0390f8242a09f2fb888be84f602",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_3_支线_历程手册_毕业旅行",
+        "FlowId": 3,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
     "Guid": "b77fe49b261d4209b731af40fbfbf0c3",
     "Type": {
       "Type": "Actions",
@@ -114806,27 +114763,6 @@
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "6846c0390f8242a09f2fb888be84f602",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_3_支线_历程手册_毕业旅行",
-        "FlowId": 3,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
   },
   {
     "Guid": "90132c41d91e4100a563764fe880d3cd",
@@ -115503,17 +115439,6 @@
           },
           "ActionGuid": "5f1273a4d1dc4bf38e76e1cabfd7e534",
           "ActionId": 3000141
-        },
-        {
-          "Name": "AddBuffToPlayer",
-          "Params": {
-            "BuffIds": [
-              640031076,
-              640031092
-            ]
-          },
-          "ActionGuid": "27e1efd59bcd495abf869264abf47180",
-          "ActionId": 3000088
         },
         {
           "Name": "FadeOutScreen",
@@ -116559,9 +116484,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7058a20cc97d440d97a3bd4e12be9de3",
@@ -116622,9 +116545,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "cf28077ce9c64021b5500f9b78820254",
@@ -116696,9 +116617,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c1205179219d4a22b04f682bb13cce4f",
@@ -116762,9 +116681,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2a1290b6865f498587ab97975a1b4f6b",
@@ -116902,17 +116819,15 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
-    "Guid": "413a31de03d44682bc1e15b8611ef79c",
+    "Guid": "466cda99d4014a5ea01382fe6a9bdbcc",
     "Type": {
       "Type": "Flow",
       "Flow": {
-        "FlowListName": "剧情_3_3_支线_恒黯的视线",
-        "FlowId": 15,
+        "FlowListName": "剧情_3.3_日灵棺_基建生态",
+        "FlowId": 23,
         "StateId": 1
       }
     },
@@ -116923,17 +116838,73 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
-    "Guid": "466cda99d4014a5ea01382fe6a9bdbcc",
+    "Guid": "a6527e814f454e35b02bb516cbc0b9ec",
     "Type": {
       "Type": "Flow",
       "Flow": {
         "FlowListName": "剧情_3.3_日灵棺_基建生态",
-        "FlowId": 23,
+        "FlowId": 31,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b3c99b51c168452a9f52b975dccc9158",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.3_日灵棺_基建生态",
+        "FlowId": 29,
+        "StateId": 1,
+        "FlowGuid": "49976c432d6641d68156f9c820839b22"
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "e94706911b8c4af9b128dac0495ef195",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.3_日灵棺_基建生态",
+        "FlowId": 25,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "413a31de03d44682bc1e15b8611ef79c",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_3_支线_恒黯的视线",
+        "FlowId": 15,
         "StateId": 1
       }
     },
@@ -116987,76 +116958,12 @@
     ]
   },
   {
-    "Guid": "a6527e814f454e35b02bb516cbc0b9ec",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.3_日灵棺_基建生态",
-        "FlowId": 31,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "b3c99b51c168452a9f52b975dccc9158",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.3_日灵棺_基建生态",
-        "FlowId": 29,
-        "StateId": 1,
-        "FlowGuid": "49976c432d6641d68156f9c820839b22"
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "bb0cf94822084bbabc5663ec065e7e5a",
     "Type": {
       "Type": "Flow",
       "Flow": {
         "FlowListName": "剧情_3_3_支线_恒黯的视线",
         "FlowId": 13,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "e94706911b8c4af9b128dac0495ef195",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.3_日灵棺_基建生态",
-        "FlowId": 25,
         "StateId": 1
       }
     },
@@ -117304,9 +117211,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "48de412399d044d2ada0a859028574af",
@@ -117332,9 +117237,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ca39e3308b2747f8b2853f0e23889615",
@@ -117360,9 +117263,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1079c6869e564c70a3aa4ab4a77b39ab",
@@ -117482,9 +117383,7 @@
     "DoIntactType": "Direct",
     "Range": 300,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3b073482ca2043f280bcfbbb0d92fde8",
@@ -117519,9 +117418,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1c8c03448d464e6cafee9d16c25263d3",
@@ -117540,9 +117437,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "708387b791844ee1bd41449ad4b2838e",
@@ -117561,9 +117456,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1258bb9697924daf946b3bf23f39642a",
@@ -117825,9 +117718,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0ed652bbf1784004b26846395e9d2b02",
@@ -117853,9 +117744,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "182dad6ea3684d48973ae1806aa9459d",
@@ -117881,9 +117770,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "33a0ba4c94fe40adb4503a4d6894de0f",
@@ -117909,9 +117796,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "40bb58227c0b4ba7ab5fccb949e952a0",
@@ -117937,9 +117822,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8d68c679b1454f1ba138b68122859f85",
@@ -117965,9 +117848,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9895058cfb9446669f72f0d53da2efed",
@@ -118019,9 +117900,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b5a660190bae41a3b3bf1d5caee69c9e",
@@ -118047,9 +117926,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "cace53799efc43c3a31d2c0e760b86f2",
@@ -118075,9 +117952,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d27b24ea970b4e2c989286c87367ebef",
@@ -118103,9 +117978,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ecbd620218174f658f794b017dfb221d",
@@ -118146,9 +118019,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "fe7fab00a9e744a495a24f24780e1f10",
@@ -118174,9 +118045,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "06e6f6bd4ec94e90995ae5eb216d3d06",
@@ -118463,9 +118332,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4a440601b57b4570bce953d6327a508d",
@@ -118736,9 +118603,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7292498f499349db881184127ac77672",
@@ -118836,9 +118701,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "18e95b2901ff43eb954f287b1244d288",
@@ -118946,9 +118809,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ec3145b378834d23aed37c077912bd94",
@@ -118974,9 +118835,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0a728d88461b4729ac03121ef9844fe7",
@@ -118995,9 +118854,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "159c1ca94f7c4970bbbfaab0307eac16",
@@ -119023,9 +118880,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5f7ecdcd8a0f41808843c88657de6d82",
@@ -119051,9 +118906,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d883e99cfa5b4d8c99edf6f847cb001c",
@@ -119079,9 +118932,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1b7725dc9abb4871bcf56c5d1fa6eeeb",
@@ -119372,9 +119223,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1d5b0e53ac844892b8e8bdfd9760fd5a",
@@ -119400,9 +119249,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6bf429458eb04779896d50086fc83452",
@@ -119452,9 +119299,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7f470cd9097b4d788597c65a977acaf4",
@@ -119480,9 +119325,90 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "7b90d5392bdb40b3933a22cc67e5a1c1",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30700007_InteractContent_30_1",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CheckVehicleCondition",
+          "Condition": {
+            "TargetVehicle": 30700126,
+            "Type": "UsingVehicle",
+            "Seat": 0,
+            "CheckIsBeingUsed": false
+          }
+        },
+        {
+          "Type": "CheckVehicleCondition",
+          "Condition": {
+            "Type": "PlayerInVehicle",
+            "CheckType": false,
+            "VehicleType": "CyberpunkShareEmptyVehicle"
+          }
+        },
+        {
+          "Type": "CheckPlayerStateRestriction",
+          "RestrictionId": 2
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "85fad6a335764944b8420da99a5f90a1",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30700007_InteractContent_30_2",
+    "Condition": {
+      "Type": 0,
+      "Conditions": [
+        {
+          "Type": "CheckVehicleCondition",
+          "Condition": {
+            "TargetVehicle": 30700126,
+            "Type": "UsingVehicle",
+            "Seat": 0,
+            "CheckIsBeingUsed": true
+          }
+        }
+      ]
+    },
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "ef169870559e47f0a31b4d14255c8db1",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_30700007_InteractContent_30_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2ede1548f6d24cceb3cb504ea9396ae7",
@@ -119508,9 +119434,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a158b6cb06d44971a0abdb5adfa720c7",
@@ -119578,9 +119502,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "681a6f98dda64dba8f69e9f5505d10e9",
@@ -119720,9 +119642,7 @@
     "DoIntactType": "Direct",
     "Range": 200,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "aa4ec3a14f9d48a49889faaef8faefa7",
@@ -119737,9 +119657,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "af7b7b1b4fe146338a1855d88dfa1bab",
@@ -119754,9 +119672,7 @@
     "DoIntactType": "Direct",
     "Range": 200,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "dd0fb18963074578985d079e61f1e05e",
@@ -119797,9 +119713,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "87a4e3c12e434464923b07713ecd085c",
@@ -119818,9 +119732,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "691eb923531b453a9fdebc2ed6f0535d",
@@ -119846,9 +119758,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d5c0d1db6dec4f97b8446d5a9d762fd3",
@@ -119867,9 +119777,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d8b9da145547440481d580dd002fba60",
@@ -119888,9 +119796,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ee7c172d97b24d219e1ac023a2c35a0d",
@@ -119909,9 +119815,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6cb85a93dbf2443580787e3c526af95b",
@@ -119930,9 +119834,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "104db9a1b24044c18c6bd07a87aa024b",
@@ -119951,9 +119853,37 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "103ef9a09e8d4a9c947871358ba8aa7f",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "f2b915a0a2a340ca881ac662286fb575",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8472f81e67b1408c97945d7ea2c0c5f2",
@@ -119972,9 +119902,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "116e3b0a133c478abeb3b1cb4bbd3e47",
@@ -119993,9 +119921,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2b6e238271ae4d9cb4559046a97f3a7f",
@@ -120011,6 +119937,186 @@
           },
           "ActionGuid": "280c38fdfd894b5385436c1a305f377b",
           "ActionId": 3000121
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "52f658c717a94492bd5fd3a3994f324a",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_ZHX_TEST_3.4",
+        "FlowId": 1,
+        "StateId": 1,
+        "FlowGuid": "e812095c9b754d8f9103e8c41112f674"
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "abebdf3b559f4db6aebbe123c9050c7e",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_ZHX_TEST_3.4",
+        "FlowId": 1,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "11d64036efff4faeaf68cbc5d0730820",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "TeleportDungeon",
+          "Params": {
+            "DungeonId": 9815,
+            "IsRegroup": false
+          },
+          "ActionGuid": "90191b3fd69d4353986f360a50a5b5cb",
+          "ActionId": 4000001
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_41700003_InteractContent_41_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b19dacc9b5a146e0ad2466f2067f81ce",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "RogueActivatePortal",
+          "Params": {},
+          "ActionGuid": "bac1734f626344b19ba09b8275f6c3aa",
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2e1d201800d242e098318557fa09998a",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "FadeInScreen",
+          "Params": {
+            "Ease": {
+              "Type": 2,
+              "Duration": 1
+            },
+            "ScreenType": "Black"
+          },
+          "ActionGuid": "a2a95dc0b4524fe996b5a85cfa066c6e",
+          "ActionId": 4000085
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_245700002_InteractContent_245_10",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2f66871efaf046cea90fdf4fb4f64677",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "RogueActivatePortal",
+          "Params": {},
+          "ActionGuid": "ed4d78a83092438da7ace0c6383ccd4b",
+          "ActionId": 4000048
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "9af94249b8854624a2da5cae3d82a6f3",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "RogueActivatePortal",
+          "Params": {},
+          "ActionGuid": "fa758022a1ee4257acb7c78d3c0c4c60",
+          "ActionId": 4000024
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "d7d2054e47b44e16a05fb080d62b36a9",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "RogueActivatePortal",
+          "Params": {},
+          "ActionGuid": "558a050487b54e319997761f40ad4827",
+          "ActionId": 4000036
         }
       ]
     },

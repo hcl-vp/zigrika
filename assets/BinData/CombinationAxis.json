@@ -18,9 +18,7 @@
     },
     "MobileIconPath": "",
     "DisplayName": "",
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -42,9 +40,25 @@
     },
     "MobileIconPath": "",
     "DisplayName": "",
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 3,
+    "AxisName": "UiLookInOut",
+    "AxisType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeyMap": {},
+    "GamepadKeyMap": {
+      "Gamepad_RightY": "Gamepad_LeftShoulder"
+    },
+    "SecondaryKeyScaleMap": {
+      "Gamepad_RightY": 1
+    },
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "KeyboardVersionMap": {},
     "GamepadVersionMap": {}
   }
 ]

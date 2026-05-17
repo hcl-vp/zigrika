@@ -163366,5 +163366,1026 @@
         }
       }
     ]
+  },
+  {
+    "Id": 401700024,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.2_604_Monster_branch3.2_002",
+          "Name": "TsEntity_精英_帽子人",
+          "Id": 1700000,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": 400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "AttributeComponent": {
+              "PropertyId": 700080436,
+              "MonsterPropGrowthId": null
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700001,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700002,
+                    1700000
+                  ]
+                },
+                {
+                  "Id": 1,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      0
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700003
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.2_604_Monster_branch3.2_002",
+          "Name": "TsEntity_精英_帽子人1",
+          "Id": 1700002,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": -400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "AttributeComponent": {
+              "PropertyId": 700080436,
+              "MonsterPropGrowthId": null
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster112",
+          "Name": "TsEntity_领主_无常鹭_爬塔专用",
+          "Id": 1700003,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080437
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "Id": 401700025,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch2.0_Monster_Tower1",
+          "Name": "TsEntity_领主_平原骨龙_爬塔专用",
+          "Id": 1700000,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 1000
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080449
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700001,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700000
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "Id": 401700026,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700001,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700002
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster116",
+          "Name": "TsEntity_领主_飞廉之猩_爬塔专用",
+          "Id": 1700002,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080438
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001,
+              "InitGasTag": [
+                "怪物.common.关卡.难度AI分类.爬塔"
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "Id": 401700027,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_014",
+          "Name": "TsEntity_精英_火_机械麝牛1",
+          "Id": 1700000,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": -400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080439,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.0_678_Monster_monster3_3",
+          "Name": "TsEntity_精英_火_追猎者",
+          "Id": 1700001,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 600
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080440,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.2_670_Monster_Branch3.2_008",
+          "Name": "TsEntity_领主_无铭探索者_爬塔",
+          "Id": 1700002,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080441
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_014",
+          "Name": "TsEntity_精英_火_机械麝牛",
+          "Id": 1700003,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": 400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080439,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700004,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700000,
+                    1700003
+                  ]
+                },
+                {
+                  "Id": 1,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      0
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700001
+                  ]
+                },
+                {
+                  "Id": 2,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      1
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700002
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "Id": 401700028,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_007",
+          "Name": "TsEntity_小怪_雷_颤栗战士",
+          "Id": 1700000,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 320,
+              "Y": 130
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080443,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_007",
+          "Name": "TsEntity_小怪_雷_颤栗战士1",
+          "Id": 1700001,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 300,
+              "Y": -100
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080443,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_007",
+          "Name": "TsEntity_小怪_雷_颤栗战士3",
+          "Id": 1700002,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 320,
+              "Y": 710
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080443,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700003,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700005,
+                    1700000,
+                    1700001,
+                    1700004,
+                    1700002,
+                    1700006
+                  ]
+                },
+                {
+                  "Id": 1,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      0
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700009,
+                    1700010
+                  ]
+                },
+                {
+                  "Id": 2,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      1
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700008
+                  ]
+                },
+                {
+                  "Id": 3,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      2
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700007
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_007",
+          "Name": "TsEntity_小怪_雷_颤栗战士2",
+          "Id": 1700004,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 320,
+              "Y": -650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080443,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.0_678_Monster_monster3_2",
+          "Name": "TsEntity_精英_探隧重机1",
+          "Id": 1700005,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": -400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080442,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "branch3.0_678_Monster_monster3_2",
+          "Name": "TsEntity_精英_探隧重机",
+          "Id": 1700006,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": 400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080442,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster108",
+          "Name": "TsEntity_领主_朔雷之鳞_爬塔专用",
+          "Id": 1700007,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080446
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001,
+              "InitGasTag": [
+                "系统.活动.0d3d9ccc"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster173",
+          "Name": "TsEntity_精英_黑白骑士",
+          "Id": 1700008,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 600
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080445
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_016",
+          "Name": "TsEntity_精英_雷_机械麋鹿1",
+          "Id": 1700009,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": -400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080444,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_Branch3.0_016",
+          "Name": "TsEntity_精英_雷_机械麋鹿",
+          "Id": 1700010,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 500,
+              "Y": 400
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080444,
+              "MonsterPropGrowthId": null
+            },
+            "RewardComponent": {
+              "Disabled": true
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "Id": 401700029,
+    "Entities": [
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Gameplay101",
+          "Name": "TsEntity_特殊_刷怪器",
+          "Id": 1700000,
+          "Transform": {
+            "Pos": {},
+            "Rot": {},
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "SpawnMonsterComponent": {
+              "SpawnMonsterConfigs": [
+                {
+                  "Id": 0,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": []
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700002
+                  ]
+                },
+                {
+                  "Id": 1,
+                  "DelayTime": 0,
+                  "PreCondition": {
+                    "Type": "DependOnPreceding",
+                    "Ids": [
+                      0
+                    ]
+                  },
+                  "CompleteCondition": {
+                    "Type": 0
+                  },
+                  "TargetsToAwake": [
+                    1700001
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster109",
+          "Name": "TsEntity_领主_云闪之鳞_爬塔专用",
+          "Id": 1700001,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 600
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080448
+            },
+            "VisionCaptureComponent": {
+              "Disabled": true
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001,
+              "InitGasTag": [
+                "系统.活动.0d3d9ccc"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "EntityData": {
+          "ObjType": "Entity",
+          "BlueprintType": "Monster_branch3.1_020",
+          "Name": "TsEntity_领主_毒液_爬塔专用",
+          "Id": 1700002,
+          "InSleep": true,
+          "Transform": {
+            "Pos": {
+              "X": 650
+            },
+            "Rot": {
+              "Z": -180
+            },
+            "Scale": {}
+          },
+          "ComponentsData": {
+            "AttributeComponent": {
+              "PropertyId": 700080447
+            },
+            "MonsterComponent": {
+              "SpecialHateAndSenseConfig": 750001
+            }
+          }
+        }
+      }
+    ]
   }
 ]

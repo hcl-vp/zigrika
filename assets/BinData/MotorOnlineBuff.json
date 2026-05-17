@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "InstId": 9011,
+    "TriggerRank": 3,
+    "BroadcastGroup": 0
+  },
+  {
+    "Id": 2,
+    "InstId": 9011,
+    "TriggerRank": 3,
+    "BroadcastGroup": 0
+  },
+  {
+    "Id": 3,
+    "InstId": 9011,
+    "TriggerRank": 2,
+    "BroadcastGroup": 0
+  }
+]

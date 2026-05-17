@@ -20,9 +20,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -46,9 +44,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -70,9 +66,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -96,9 +90,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -116,9 +108,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -136,9 +126,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -165,9 +153,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -191,9 +177,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -215,9 +199,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -241,9 +223,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -267,9 +247,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -293,9 +271,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -319,9 +295,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -345,9 +319,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -369,9 +341,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -393,9 +363,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -419,9 +387,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -439,9 +405,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {
       "2": 1
     }
@@ -467,12 +431,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -496,9 +458,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -522,12 +482,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -551,9 +509,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -577,9 +533,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -603,9 +557,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -627,9 +579,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -647,9 +597,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -671,9 +619,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -698,9 +644,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -724,9 +668,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -748,9 +690,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -774,9 +714,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -798,9 +736,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -822,9 +758,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -846,9 +780,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -870,9 +802,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -894,9 +824,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -920,9 +848,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -944,9 +870,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -971,9 +895,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -997,9 +919,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1024,9 +944,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -1050,9 +968,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1074,9 +990,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1098,9 +1012,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1122,9 +1034,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1146,9 +1056,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1170,9 +1078,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1194,9 +1100,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1220,11 +1124,9 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 1,
     "KeyboardVersionMap": {
       "0": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1251,12 +1153,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1283,12 +1183,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1315,12 +1213,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1347,12 +1243,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1374,9 +1268,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1398,9 +1290,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1425,9 +1315,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1451,9 +1339,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1477,9 +1363,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1503,9 +1387,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1529,9 +1411,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1555,9 +1435,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1581,9 +1459,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1607,9 +1483,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1633,9 +1507,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1660,9 +1532,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -1688,9 +1558,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1714,9 +1582,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1741,9 +1607,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -1769,9 +1633,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1798,9 +1660,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1816,9 +1676,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1834,9 +1692,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1854,9 +1710,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1880,9 +1734,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1900,9 +1752,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1920,9 +1770,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1940,9 +1788,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1961,9 +1807,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -1982,9 +1826,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2003,9 +1845,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2027,9 +1867,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2051,9 +1889,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2078,9 +1914,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 2,
     "GamepadVersionMap": {
       "0": 2
     }
@@ -2106,9 +1940,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2127,9 +1959,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2148,9 +1978,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2174,12 +2002,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2203,12 +2029,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2232,12 +2056,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2261,12 +2083,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2288,9 +2108,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2312,9 +2130,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2338,9 +2154,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2362,9 +2176,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2388,9 +2200,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2414,9 +2224,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2440,9 +2248,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2466,9 +2272,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2490,9 +2294,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2514,9 +2316,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2540,9 +2340,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2566,9 +2364,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2592,9 +2388,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2616,9 +2410,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2642,9 +2434,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2668,9 +2458,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2694,9 +2482,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2720,9 +2506,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2746,9 +2530,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2772,9 +2554,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2798,9 +2578,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2824,9 +2602,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2848,9 +2624,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2872,9 +2646,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2896,9 +2668,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2920,9 +2690,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2944,9 +2712,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2968,9 +2734,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -2992,9 +2756,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3016,9 +2778,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3042,9 +2802,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3066,9 +2824,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3095,9 +2851,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3121,9 +2875,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3147,9 +2899,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3167,9 +2917,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3193,9 +2941,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3219,9 +2965,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3245,9 +2989,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3272,9 +3014,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3298,9 +3038,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3322,9 +3060,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3348,9 +3084,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3374,9 +3108,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3400,9 +3132,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3426,9 +3156,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3453,12 +3181,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3483,12 +3209,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3513,12 +3237,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3543,12 +3265,10 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {
       "0": 1,
       "2": 1
     },
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3573,9 +3293,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3600,9 +3318,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3626,9 +3342,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3646,9 +3360,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3666,9 +3378,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3692,9 +3402,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3718,9 +3426,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3738,9 +3444,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3764,9 +3468,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3790,9 +3492,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3816,9 +3516,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3842,9 +3540,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3868,9 +3564,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3894,9 +3588,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3918,9 +3610,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3947,9 +3637,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3971,9 +3659,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -3995,9 +3681,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4019,9 +3703,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4045,9 +3727,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4069,9 +3749,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4093,9 +3771,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4117,9 +3793,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4143,9 +3817,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4163,9 +3835,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4189,9 +3859,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4213,9 +3881,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4233,9 +3899,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4259,9 +3923,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4283,9 +3945,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4309,9 +3969,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4335,9 +3993,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4361,9 +4017,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4387,9 +4041,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4413,9 +4065,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": true,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4439,9 +4089,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4465,9 +4113,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4491,9 +4137,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4520,9 +4164,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4546,9 +4188,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4566,9 +4206,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   },
   {
@@ -4596,9 +4234,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersion": 0,
     "KeyboardVersionMap": {},
-    "GamepadVersion": 0,
     "GamepadVersionMap": {}
   }
 ]

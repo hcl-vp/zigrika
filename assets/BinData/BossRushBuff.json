@@ -584,6 +584,23 @@
     ]
   },
   {
+    "Id": 64,
+    "BuffId": [
+      "622920098"
+    ],
+    "PassiveSkill": [],
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredhot_UI.T_Iconpropertyredhot_UI",
+    "Name": "bossrush_27_title",
+    "PopDescIdList": [],
+    "BuffTitle": "",
+    "BuffDesc": "",
+    "BuffDescParam": [],
+    "Description": "bossrush2_101_desc",
+    "DescriptionParam": [
+      "[20,3,20,10,10,20]"
+    ]
+  },
+  {
     "Id": 47,
     "BuffId": [
       "622920124",
@@ -829,23 +846,6 @@
     "Description": "bossrush2_27_desc",
     "DescriptionParam": [
       "[20,3]"
-    ]
-  },
-  {
-    "Id": 64,
-    "BuffId": [
-      "622920098"
-    ],
-    "PassiveSkill": [],
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredhot_UI.T_Iconpropertyredhot_UI",
-    "Name": "bossrush_27_title",
-    "PopDescIdList": [],
-    "BuffTitle": "",
-    "BuffDesc": "",
-    "BuffDescParam": [],
-    "Description": "bossrush2_101_desc",
-    "DescriptionParam": [
-      "[20,3,20,10,10,20]"
     ]
   },
   {

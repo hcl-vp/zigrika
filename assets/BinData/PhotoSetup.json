@@ -9,6 +9,7 @@
       "PhotoSetup_1_Options_1"
     ],
     "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 0,
     "SubOptions": {},
     "ValueRange": [
       0,
@@ -16,7 +17,9 @@
       50
     ],
     "IsReverseSet": false,
-    "ChangeValue": 0.1
+    "ChangeValue": 0.1,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
   },
   {
     "Id": 3,
@@ -28,6 +31,7 @@
       "PhotoSetup_3_Options_1"
     ],
     "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 0,
     "SubOptions": {},
     "ValueRange": [
       0,
@@ -35,7 +39,9 @@
       50
     ],
     "IsReverseSet": false,
-    "ChangeValue": 0.1
+    "ChangeValue": 0.1,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
   },
   {
     "Id": 4,
@@ -47,6 +53,7 @@
       "PhotoSetup_4_Options_1"
     ],
     "DefaultOptionIndex": 0,
+    "DefaultDropDownIndex": 0,
     "SubOptions": {
       "0": {
         "ArrayInt": [
@@ -61,7 +68,9 @@
       50
     ],
     "IsReverseSet": false,
-    "ChangeValue": 0.1
+    "ChangeValue": 0.1,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
   },
   {
     "Id": 5,
@@ -73,6 +82,7 @@
       "开启"
     ],
     "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 0,
     "SubOptions": {},
     "ValueRange": [
       0,
@@ -80,7 +90,9 @@
       400
     ],
     "IsReverseSet": false,
-    "ChangeValue": 5
+    "ChangeValue": 5,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
   },
   {
     "Id": 6,
@@ -92,6 +104,7 @@
       "开启"
     ],
     "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 0,
     "SubOptions": {},
     "ValueRange": [
       0.10000000149011612,
@@ -99,6 +112,80 @@
       0.10000000149011612
     ],
     "IsReverseSet": true,
-    "ChangeValue": 0.1
+    "ChangeValue": 0.1,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
+  },
+  {
+    "Id": 7,
+    "ValueType": 6,
+    "Name": "PhotoSetup_7_Name",
+    "Type": 0,
+    "Options": [
+      "PhotoSetup_7_Options_0",
+      "PhotoSetup_7_Options_1"
+    ],
+    "DefaultOptionIndex": 0,
+    "DefaultDropDownIndex": 0,
+    "SubOptions": {
+      "0": {
+        "ArrayInt": [
+          7
+        ]
+      }
+    },
+    "ValueRange": [
+      0,
+      100,
+      50
+    ],
+    "IsReverseSet": false,
+    "ChangeValue": 0.1,
+    "IsShowRedDot": true,
+    "IsLocalStorage": false
+  },
+  {
+    "Id": 8,
+    "ValueType": 7,
+    "Name": "PhotoSetup_8_Name",
+    "Type": 3,
+    "Options": [
+      "PhotoSetup_7_Options_0",
+      "PhotoSetup_7_Options_1"
+    ],
+    "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 0,
+    "SubOptions": {},
+    "ValueRange": [
+      -45,
+      45,
+      0
+    ],
+    "IsReverseSet": false,
+    "ChangeValue": 1,
+    "IsShowRedDot": false,
+    "IsLocalStorage": false
+  },
+  {
+    "Id": 9,
+    "ValueType": 8,
+    "Name": "PhotoSetup_9_Name",
+    "Type": 2,
+    "Options": [
+      "关闭",
+      "开启"
+    ],
+    "DefaultOptionIndex": 1,
+    "DefaultDropDownIndex": 1,
+    "SubOptions": {},
+    "ValueRange": [
+      0,
+      100,
+      50
+    ],
+    "IsReverseSet": false,
+    "ChangeValue": 0.1,
+    "IsShowRedDot": true,
+    "IsLocalStorage": true
   }
 ]

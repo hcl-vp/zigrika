@@ -175,160 +175,6 @@
     "DesText": "BabelDebuff_10010072_BuffDesc"
   },
   {
-    "Id": 10000021,
-    "GroupId": 1000002,
-    "DifficultPreLevel": [
-      1001
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconNor/T_IconLock.T_IconLock",
-    "NameText": "BabelDebuff_10000021_BuffName",
-    "DesText": "BabelDebuff_10000021_BuffDesc"
-  },
-  {
-    "Id": 10000051,
-    "GroupId": 1000005,
-    "DifficultPreLevel": [
-      1008
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_007.T_IconLevelBuff_007",
-    "NameText": "BabelDebuff_10000051_BuffName",
-    "DesText": "BabelDebuff_10000051_BuffDesc"
-  },
-  {
-    "Id": 10000052,
-    "GroupId": 1000005,
-    "DifficultPreLevel": [
-      1008
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000052_BuffName",
-    "DesText": "BabelDebuff_10000052_BuffDesc"
-  },
-  {
-    "Id": 10000061,
-    "GroupId": 1000006,
-    "DifficultPreLevel": [
-      1003
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_HPPower.T_RogueSkill_HPPower",
-    "NameText": "BabelDebuff_10000061_BuffName",
-    "DesText": "BabelDebuff_10000061_BuffDesc"
-  },
-  {
-    "Id": 10000062,
-    "GroupId": 1000006,
-    "DifficultPreLevel": [
-      1003
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_HP.T_RogueSkill_HP",
-    "NameText": "BabelDebuff_10000062_BuffName",
-    "DesText": "BabelDebuff_10000062_BuffDesc"
-  },
-  {
-    "Id": 10000071,
-    "GroupId": 1000007,
-    "DifficultPreLevel": [
-      1006
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconSkill/T_FightTiLi_UI.T_FightTiLi_UI",
-    "NameText": "BabelDebuff_10000071_BuffName",
-    "DesText": "BabelDebuff_10000071_BuffDesc"
-  },
-  {
-    "Id": 10000072,
-    "GroupId": 1000007,
-    "DifficultPreLevel": [
-      1006
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconSkill/T_FightTiLi_UI.T_FightTiLi_UI",
-    "NameText": "BabelDebuff_10000072_BuffName",
-    "DesText": "BabelDebuff_10000072_BuffDesc"
-  },
-  {
-    "Id": 10000081,
-    "GroupId": 1000008,
-    "DifficultPreLevel": [
-      1007
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
-    "NameText": "BabelDebuff_10000081_BuffName",
-    "DesText": "BabelDebuff_10000081_BuffDesc"
-  },
-  {
-    "Id": 10000082,
-    "GroupId": 1000008,
-    "DifficultPreLevel": [
-      1007
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
-    "NameText": "BabelDebuff_10000082_BuffName",
-    "DesText": "BabelDebuff_10000082_BuffDesc"
-  },
-  {
-    "Id": 10000011,
-    "GroupId": 1000001,
-    "DifficultPreLevel": [
-      1005
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_022.T_IconLevelBuff_022",
-    "NameText": "BabelDebuff_10000011_BuffName",
-    "DesText": "BabelDebuff_10000011_BuffDesc"
-  },
-  {
-    "Id": 10000012,
-    "GroupId": 1000001,
-    "DifficultPreLevel": [
-      1005
-    ],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_022.T_IconLevelBuff_022",
-    "NameText": "BabelDebuff_10000012_BuffName",
-    "DesText": "BabelDebuff_10000012_BuffDesc"
-  },
-  {
-    "Id": 10050011,
-    "GroupId": 1005001,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconRogueEntry/T_RogueEntry_5.T_RogueEntry_5",
-    "NameText": "BabelDebuff_10010051_BuffName",
-    "DesText": "BabelDebuff_10010051_BuffDesc"
-  },
-  {
     "Id": 10010081,
     "GroupId": 1001008,
     "DifficultPreLevel": [
@@ -948,6 +794,160 @@
     "DesText": "BabelDebuff_10040082_BuffDesc"
   },
   {
+    "Id": 10000011,
+    "GroupId": 1000001,
+    "DifficultPreLevel": [
+      1005
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_022.T_IconLevelBuff_022",
+    "NameText": "BabelDebuff_10000011_BuffName",
+    "DesText": "BabelDebuff_10000011_BuffDesc"
+  },
+  {
+    "Id": 10000012,
+    "GroupId": 1000001,
+    "DifficultPreLevel": [
+      1005
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_022.T_IconLevelBuff_022",
+    "NameText": "BabelDebuff_10000012_BuffName",
+    "DesText": "BabelDebuff_10000012_BuffDesc"
+  },
+  {
+    "Id": 10000021,
+    "GroupId": 1000002,
+    "DifficultPreLevel": [
+      1001
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconNor/T_IconLock.T_IconLock",
+    "NameText": "BabelDebuff_10000021_BuffName",
+    "DesText": "BabelDebuff_10000021_BuffDesc"
+  },
+  {
+    "Id": 10000051,
+    "GroupId": 1000005,
+    "DifficultPreLevel": [
+      1008
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_007.T_IconLevelBuff_007",
+    "NameText": "BabelDebuff_10000051_BuffName",
+    "DesText": "BabelDebuff_10000051_BuffDesc"
+  },
+  {
+    "Id": 10000052,
+    "GroupId": 1000005,
+    "DifficultPreLevel": [
+      1008
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000052_BuffName",
+    "DesText": "BabelDebuff_10000052_BuffDesc"
+  },
+  {
+    "Id": 10000061,
+    "GroupId": 1000006,
+    "DifficultPreLevel": [
+      1003
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_HPPower.T_RogueSkill_HPPower",
+    "NameText": "BabelDebuff_10000061_BuffName",
+    "DesText": "BabelDebuff_10000061_BuffDesc"
+  },
+  {
+    "Id": 10000062,
+    "GroupId": 1000006,
+    "DifficultPreLevel": [
+      1003
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconRogue/T_RogueSkill_HP.T_RogueSkill_HP",
+    "NameText": "BabelDebuff_10000062_BuffName",
+    "DesText": "BabelDebuff_10000062_BuffDesc"
+  },
+  {
+    "Id": 10000071,
+    "GroupId": 1000007,
+    "DifficultPreLevel": [
+      1006
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconSkill/T_FightTiLi_UI.T_FightTiLi_UI",
+    "NameText": "BabelDebuff_10000071_BuffName",
+    "DesText": "BabelDebuff_10000071_BuffDesc"
+  },
+  {
+    "Id": 10000072,
+    "GroupId": 1000007,
+    "DifficultPreLevel": [
+      1006
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconSkill/T_FightTiLi_UI.T_FightTiLi_UI",
+    "NameText": "BabelDebuff_10000072_BuffName",
+    "DesText": "BabelDebuff_10000072_BuffDesc"
+  },
+  {
+    "Id": 10000081,
+    "GroupId": 1000008,
+    "DifficultPreLevel": [
+      1007
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
+    "NameText": "BabelDebuff_10000081_BuffName",
+    "DesText": "BabelDebuff_10000081_BuffDesc"
+  },
+  {
+    "Id": 10000082,
+    "GroupId": 1000008,
+    "DifficultPreLevel": [
+      1007
+    ],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
+    "NameText": "BabelDebuff_10000082_BuffName",
+    "DesText": "BabelDebuff_10000082_BuffDesc"
+  },
+  {
+    "Id": 10050011,
+    "GroupId": 1005001,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconRogueEntry/T_RogueEntry_5.T_RogueEntry_5",
+    "NameText": "BabelDebuff_10010051_BuffName",
+    "DesText": "BabelDebuff_10010051_BuffDesc"
+  },
+  {
     "Id": 10050021,
     "GroupId": 1005002,
     "DifficultPreLevel": [],
@@ -1443,6 +1443,17 @@
     "DesText": "BabelDebuff_10000052_BuffDesc"
   },
   {
+    "Id": 11050071,
+    "GroupId": 1105007,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
+    "NameText": "BabelDebuff_10000110_BuffName",
+    "DesText": "BabelDebuff_10000139_BuffDesc"
+  },
+  {
     "Id": 11050011,
     "GroupId": 1105001,
     "DifficultPreLevel": [],
@@ -1456,6 +1467,45 @@
     "DesText": "BabelDebuff_10000140_BuffDesc"
   },
   {
+    "Id": 11050081,
+    "GroupId": 1105008,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 12
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_032.T_IconLevelBuff_032",
+    "NameText": "BabelDebuff_10000112_BuffName",
+    "DesText": "BabelDebuff_10000141_BuffDesc"
+  },
+  {
+    "Id": 11050091,
+    "GroupId": 1105009,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1114": 0
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconJiyan/T_IconJiyanD2.T_IconJiyanD2",
+    "NameText": "BabelDebuff_10000113_BuffName",
+    "DesText": "BabelDebuff_10000142_BuffDesc"
+  },
+  {
+    "Id": 11050101,
+    "GroupId": 1105010,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1114": 0
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_033.T_IconLevelBuff_033",
+    "NameText": "BabelDebuff_10000114_BuffName",
+    "DesText": "BabelDebuff_10000143_BuffDesc"
+  },
+  {
     "Id": 11050021,
     "GroupId": 1105002,
     "DifficultPreLevel": [],
@@ -1467,6 +1517,45 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconRogueEntry/T_RogueEntry_6.T_RogueEntry_6",
     "NameText": "BabelDebuff_10000115_BuffName",
     "DesText": "BabelDebuff_10000084_BuffDesc"
+  },
+  {
+    "Id": 11050111,
+    "GroupId": 1105011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 22
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_034.T_IconLevelBuff_034",
+    "NameText": "BabelDebuff_10000116_BuffName",
+    "DesText": "BabelDebuff_10000144_BuffDesc"
+  },
+  {
+    "Id": 11050121,
+    "GroupId": 1105012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 12
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_035.T_IconLevelBuff_035",
+    "NameText": "BabelDebuff_10000117_BuffName",
+    "DesText": "BabelDebuff_10000145_BuffDesc"
+  },
+  {
+    "Id": 11050131,
+    "GroupId": 1105013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 12
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_036.T_IconLevelBuff_036",
+    "NameText": "BabelDebuff_10000118_BuffName",
+    "DesText": "BabelDebuff_10000146_BuffDesc"
   },
   {
     "Id": 11050031,
@@ -1521,6 +1610,30 @@
     "DesText": "BabelDebuff_10000088_BuffDesc"
   },
   {
+    "Id": 11050141,
+    "GroupId": 1105014,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1114": 0
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_037.T_IconLevelBuff_037",
+    "NameText": "BabelDebuff_10000123_BuffName",
+    "DesText": "BabelDebuff_10000147_BuffDesc"
+  },
+  {
+    "Id": 11060081,
+    "GroupId": 1106008,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
+    "NameText": "BabelDebuff_10000124_BuffName",
+    "DesText": "BabelDebuff_10000138_BuffDesc"
+  },
+  {
     "Id": 11060011,
     "GroupId": 1106001,
     "DifficultPreLevel": [],
@@ -1534,6 +1647,19 @@
     "DesText": "BabelDebuff_10000089_BuffDesc"
   },
   {
+    "Id": 11060091,
+    "GroupId": 1106009,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 12
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_038.T_IconLevelBuff_038",
+    "NameText": "BabelDebuff_10000126_BuffName",
+    "DesText": "BabelDebuff_10000163_BuffDesc"
+  },
+  {
     "Id": 11060021,
     "GroupId": 1106002,
     "DifficultPreLevel": [],
@@ -1545,6 +1671,45 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_011.T_IconLevelBuff_011",
     "NameText": "BabelDebuff_10000127_BuffName",
     "DesText": "BabelDebuff_10000090_BuffDesc"
+  },
+  {
+    "Id": 11060101,
+    "GroupId": 1106010,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 22
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconRogueEntry/T_RogueEntry_5.T_RogueEntry_5",
+    "NameText": "BabelDebuff_10000128_BuffName",
+    "DesText": "BabelDebuff_10000164_BuffDesc"
+  },
+  {
+    "Id": 11060111,
+    "GroupId": 1106011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 22
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconJianxin/T_IconJianxinM3.T_IconJianxinM3",
+    "NameText": "BabelDebuff_10000129_BuffName",
+    "DesText": "BabelDebuff_10000165_BuffDesc"
+  },
+  {
+    "Id": 11060121,
+    "GroupId": 1106012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 12
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
+    "NameText": "BabelDebuff_10000130_BuffName",
+    "DesText": "BabelDebuff_10000166_BuffDesc"
   },
   {
     "Id": 11060031,
@@ -1610,6 +1775,43 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_018.T_IconLevelBuff_018",
     "NameText": "BabelDebuff_10000135_BuffName",
     "DesText": "BabelDebuff_10000095_BuffDesc"
+  },
+  {
+    "Id": 11070111,
+    "GroupId": 1107011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
+    "NameText": "BabelDebuff_10000136_BuffName",
+    "DesText": "BabelDebuff_10000137_BuffDesc"
+  },
+  {
+    "Id": 11070121,
+    "GroupId": 1107012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 12
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_039.T_IconLevelBuff_039",
+    "NameText": "BabelDebuff_10000137_BuffName",
+    "DesText": "BabelDebuff_10000152_BuffDesc"
+  },
+  {
+    "Id": 11070131,
+    "GroupId": 1107013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 22
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyhealingtag_UI.T_Iconpropertyhealingtag_UI",
+    "NameText": "BabelDebuff_10000138_BuffName",
+    "DesText": "BabelDebuff_10000153_BuffDesc"
   },
   {
     "Id": 11070011,
@@ -1740,6 +1942,17 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenprotect_UI.T_Iconpropertygreenprotect_UI",
     "NameText": "BabelDebuff_10000148_BuffName",
     "DesText": "BabelDebuff_10000104_BuffDesc"
+  },
+  {
+    "Id": 11080131,
+    "GroupId": 1108013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
+    "NameText": "BabelDebuff_10000149_BuffName",
+    "DesText": "BabelDebuff_10000136_BuffDesc"
   },
   {
     "Id": 11080011,
@@ -1896,6 +2109,19 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconElementRound/T_IconElementZero1_UI.T_IconElementZero1_UI",
     "NameText": "BabelDebuff_10000161_BuffName",
     "DesText": "BabelDebuff_10000116_BuffDesc"
+  },
+  {
+    "Id": 11080141,
+    "GroupId": 1108014,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1108": 22
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconYangyang/T_IconYangyangM1.T_IconYangyangM1",
+    "NameText": "BabelDebuff_10000186_BuffName",
+    "DesText": "BabelDebuff_10000167_BuffDesc"
   },
   {
     "Id": 11000012,
@@ -2065,6 +2291,227 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_YangyangM4_UI.T_IconDevice_YangyangM4_UI",
     "NameText": "BabelDebuff_10000173_BuffName",
     "DesText": "BabelDebuff_10000131_BuffDesc"
+  },
+  {
+    "Id": 11000082,
+    "GroupId": 1100008,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 12
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
+    "NameText": "BabelDebuff_10000179_BuffName",
+    "DesText": "BabelDebuff_10000155_BuffDesc"
+  },
+  {
+    "Id": 11000092,
+    "GroupId": 1100009,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 12
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
+    "NameText": "BabelDebuff_10000180_BuffName",
+    "DesText": "BabelDebuff_10000157_BuffDesc"
+  },
+  {
+    "Id": 11000102,
+    "GroupId": 1100010,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1108": 12
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
+    "NameText": "BabelDebuff_10000181_BuffName",
+    "DesText": "BabelDebuff_10000159_BuffDesc"
+  },
+  {
+    "Id": 11000111,
+    "GroupId": 1100011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 34
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000183_BuffName",
+    "DesText": "BabelDebuff_10000160_BuffDesc"
+  },
+  {
+    "Id": 11000112,
+    "GroupId": 1100011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 34
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000184_BuffName",
+    "DesText": "BabelDebuff_10000161_BuffDesc"
+  },
+  {
+    "Id": 11000113,
+    "GroupId": 1100011,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1105": 34
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000185_BuffName",
+    "DesText": "BabelDebuff_10000162_BuffDesc"
+  },
+  {
+    "Id": 11000121,
+    "GroupId": 1100012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 34
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000183_BuffName",
+    "DesText": "BabelDebuff_10000160_BuffDesc"
+  },
+  {
+    "Id": 11000122,
+    "GroupId": 1100012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 34
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000184_BuffName",
+    "DesText": "BabelDebuff_10000161_BuffDesc"
+  },
+  {
+    "Id": 11000123,
+    "GroupId": 1100012,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1106": 34
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000185_BuffName",
+    "DesText": "BabelDebuff_10000162_BuffDesc"
+  },
+  {
+    "Id": 11000131,
+    "GroupId": 1100013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 34
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000183_BuffName",
+    "DesText": "BabelDebuff_10000160_BuffDesc"
+  },
+  {
+    "Id": 11000132,
+    "GroupId": 1100013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 34
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000184_BuffName",
+    "DesText": "BabelDebuff_10000161_BuffDesc"
+  },
+  {
+    "Id": 11000133,
+    "GroupId": 1100013,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1107": 34
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000185_BuffName",
+    "DesText": "BabelDebuff_10000162_BuffDesc"
+  },
+  {
+    "Id": 11000141,
+    "GroupId": 1100014,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1108": 34
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000183_BuffName",
+    "DesText": "BabelDebuff_10000160_BuffDesc"
+  },
+  {
+    "Id": 11000142,
+    "GroupId": 1100014,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1108": 34
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000184_BuffName",
+    "DesText": "BabelDebuff_10000161_BuffDesc"
+  },
+  {
+    "Id": 11000143,
+    "GroupId": 1100014,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1108": 34
+    },
+    "Star": 3,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000185_BuffName",
+    "DesText": "BabelDebuff_10000162_BuffDesc"
+  },
+  {
+    "Id": 11000151,
+    "GroupId": 1100015,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1111": 0
+    },
+    "Star": 1,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
+    "NameText": "BabelDebuff_10000051_BuffName",
+    "DesText": "BabelDebuff_10000051_BuffDesc"
+  },
+  {
+    "Id": 11000152,
+    "GroupId": 1100015,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {
+      "1111": 0
+    },
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyattacktag_UI.T_Iconpropertyattacktag_UI",
+    "NameText": "BabelDebuff_10000052_BuffName",
+    "DesText": "BabelDebuff_10000052_BuffDesc"
   },
   {
     "Id": 11090021,
@@ -2243,6 +2690,17 @@
     "DesText": "BabelDebuff_10000085_BuffDesc"
   },
   {
+    "Id": 11140031,
+    "GroupId": 1114003,
+    "DifficultPreLevel": [],
+    "DifficultPreLevelStar": {},
+    "Star": 2,
+    "Line": 1,
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "NameText": "BabelDebuff_10000123_BuffName",
+    "DesText": "BabelDebuff_10000147_BuffDesc"
+  },
+  {
     "Id": 11140041,
     "GroupId": 1114004,
     "DifficultPreLevel": [],
@@ -2318,463 +2776,5 @@
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
     "NameText": "BabelDebuff_10000177_BuffName",
     "DesText": "BabelDebuff_10000129_BuffDesc"
-  },
-  {
-    "Id": 11050071,
-    "GroupId": 1105007,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
-    "NameText": "BabelDebuff_10000110_BuffName",
-    "DesText": "BabelDebuff_10000139_BuffDesc"
-  },
-  {
-    "Id": 11060081,
-    "GroupId": 1106008,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
-    "NameText": "BabelDebuff_10000124_BuffName",
-    "DesText": "BabelDebuff_10000138_BuffDesc"
-  },
-  {
-    "Id": 11070111,
-    "GroupId": 1107011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
-    "NameText": "BabelDebuff_10000136_BuffName",
-    "DesText": "BabelDebuff_10000137_BuffDesc"
-  },
-  {
-    "Id": 11080131,
-    "GroupId": 1108013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_002.T_IconLevelBuff_002",
-    "NameText": "BabelDebuff_10000149_BuffName",
-    "DesText": "BabelDebuff_10000136_BuffDesc"
-  },
-  {
-    "Id": 11050081,
-    "GroupId": 1105008,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 12
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_032.T_IconLevelBuff_032",
-    "NameText": "BabelDebuff_10000112_BuffName",
-    "DesText": "BabelDebuff_10000141_BuffDesc"
-  },
-  {
-    "Id": 11050091,
-    "GroupId": 1105009,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1114": 0
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconJiyan/T_IconJiyanD2.T_IconJiyanD2",
-    "NameText": "BabelDebuff_10000113_BuffName",
-    "DesText": "BabelDebuff_10000142_BuffDesc"
-  },
-  {
-    "Id": 11050101,
-    "GroupId": 1105010,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1114": 0
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_033.T_IconLevelBuff_033",
-    "NameText": "BabelDebuff_10000114_BuffName",
-    "DesText": "BabelDebuff_10000143_BuffDesc"
-  },
-  {
-    "Id": 11050111,
-    "GroupId": 1105011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 22
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_034.T_IconLevelBuff_034",
-    "NameText": "BabelDebuff_10000116_BuffName",
-    "DesText": "BabelDebuff_10000144_BuffDesc"
-  },
-  {
-    "Id": 11050121,
-    "GroupId": 1105012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 12
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_035.T_IconLevelBuff_035",
-    "NameText": "BabelDebuff_10000117_BuffName",
-    "DesText": "BabelDebuff_10000145_BuffDesc"
-  },
-  {
-    "Id": 11050131,
-    "GroupId": 1105013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 12
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_036.T_IconLevelBuff_036",
-    "NameText": "BabelDebuff_10000118_BuffName",
-    "DesText": "BabelDebuff_10000146_BuffDesc"
-  },
-  {
-    "Id": 11050141,
-    "GroupId": 1105014,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1114": 0
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_037.T_IconLevelBuff_037",
-    "NameText": "BabelDebuff_10000123_BuffName",
-    "DesText": "BabelDebuff_10000147_BuffDesc"
-  },
-  {
-    "Id": 11070121,
-    "GroupId": 1107012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 12
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_039.T_IconLevelBuff_039",
-    "NameText": "BabelDebuff_10000137_BuffName",
-    "DesText": "BabelDebuff_10000152_BuffDesc"
-  },
-  {
-    "Id": 11070131,
-    "GroupId": 1107013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 22
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyhealingtag_UI.T_Iconpropertyhealingtag_UI",
-    "NameText": "BabelDebuff_10000138_BuffName",
-    "DesText": "BabelDebuff_10000153_BuffDesc"
-  },
-  {
-    "Id": 11000082,
-    "GroupId": 1100008,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 12
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
-    "NameText": "BabelDebuff_10000179_BuffName",
-    "DesText": "BabelDebuff_10000155_BuffDesc"
-  },
-  {
-    "Id": 11000092,
-    "GroupId": 1100009,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 12
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
-    "NameText": "BabelDebuff_10000180_BuffName",
-    "DesText": "BabelDebuff_10000157_BuffDesc"
-  },
-  {
-    "Id": 11000102,
-    "GroupId": 1100010,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1108": 12
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_005.T_IconLevelBuff_005",
-    "NameText": "BabelDebuff_10000181_BuffName",
-    "DesText": "BabelDebuff_10000159_BuffDesc"
-  },
-  {
-    "Id": 11140031,
-    "GroupId": 1114003,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000123_BuffName",
-    "DesText": "BabelDebuff_10000147_BuffDesc"
-  },
-  {
-    "Id": 11000111,
-    "GroupId": 1100011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 34
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000183_BuffName",
-    "DesText": "BabelDebuff_10000160_BuffDesc"
-  },
-  {
-    "Id": 11000112,
-    "GroupId": 1100011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 34
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000184_BuffName",
-    "DesText": "BabelDebuff_10000161_BuffDesc"
-  },
-  {
-    "Id": 11000113,
-    "GroupId": 1100011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1105": 34
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000185_BuffName",
-    "DesText": "BabelDebuff_10000162_BuffDesc"
-  },
-  {
-    "Id": 11000121,
-    "GroupId": 1100012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 34
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000183_BuffName",
-    "DesText": "BabelDebuff_10000160_BuffDesc"
-  },
-  {
-    "Id": 11000122,
-    "GroupId": 1100012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 34
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000184_BuffName",
-    "DesText": "BabelDebuff_10000161_BuffDesc"
-  },
-  {
-    "Id": 11000123,
-    "GroupId": 1100012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 34
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000185_BuffName",
-    "DesText": "BabelDebuff_10000162_BuffDesc"
-  },
-  {
-    "Id": 11000131,
-    "GroupId": 1100013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 34
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000183_BuffName",
-    "DesText": "BabelDebuff_10000160_BuffDesc"
-  },
-  {
-    "Id": 11000132,
-    "GroupId": 1100013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 34
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000184_BuffName",
-    "DesText": "BabelDebuff_10000161_BuffDesc"
-  },
-  {
-    "Id": 11000133,
-    "GroupId": 1100013,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1107": 34
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000185_BuffName",
-    "DesText": "BabelDebuff_10000162_BuffDesc"
-  },
-  {
-    "Id": 11000141,
-    "GroupId": 1100014,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1108": 34
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000183_BuffName",
-    "DesText": "BabelDebuff_10000160_BuffDesc"
-  },
-  {
-    "Id": 11000142,
-    "GroupId": 1100014,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1108": 34
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000184_BuffName",
-    "DesText": "BabelDebuff_10000161_BuffDesc"
-  },
-  {
-    "Id": 11000143,
-    "GroupId": 1100014,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1108": 34
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
-    "NameText": "BabelDebuff_10000185_BuffName",
-    "DesText": "BabelDebuff_10000162_BuffDesc"
-  },
-  {
-    "Id": 11060091,
-    "GroupId": 1106009,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 12
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_038.T_IconLevelBuff_038",
-    "NameText": "BabelDebuff_10000126_BuffName",
-    "DesText": "BabelDebuff_10000163_BuffDesc"
-  },
-  {
-    "Id": 11060101,
-    "GroupId": 1106010,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 22
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconRogueEntry/T_RogueEntry_5.T_RogueEntry_5",
-    "NameText": "BabelDebuff_10000128_BuffName",
-    "DesText": "BabelDebuff_10000164_BuffDesc"
-  },
-  {
-    "Id": 11060111,
-    "GroupId": 1106011,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 22
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconJianxin/T_IconJianxinM3.T_IconJianxinM3",
-    "NameText": "BabelDebuff_10000129_BuffName",
-    "DesText": "BabelDebuff_10000165_BuffDesc"
-  },
-  {
-    "Id": 11060121,
-    "GroupId": 1106012,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1106": 12
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreenbruise_UI.T_Iconpropertygreenbruise_UI",
-    "NameText": "BabelDebuff_10000130_BuffName",
-    "DesText": "BabelDebuff_10000166_BuffDesc"
-  },
-  {
-    "Id": 11080141,
-    "GroupId": 1108014,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1108": 22
-    },
-    "Star": 3,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/SkillIcon/SkillIconYangyang/T_IconYangyangM1.T_IconYangyangM1",
-    "NameText": "BabelDebuff_10000186_BuffName",
-    "DesText": "BabelDebuff_10000167_BuffDesc"
-  },
-  {
-    "Id": 11000151,
-    "GroupId": 1100015,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1111": 0
-    },
-    "Star": 1,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
-    "NameText": "BabelDebuff_10000051_BuffName",
-    "DesText": "BabelDebuff_10000051_BuffDesc"
-  },
-  {
-    "Id": 11000152,
-    "GroupId": 1100015,
-    "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1111": 0
-    },
-    "Star": 2,
-    "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyattacktag_UI.T_Iconpropertyattacktag_UI",
-    "NameText": "BabelDebuff_10000052_BuffName",
-    "DesText": "BabelDebuff_10000052_BuffDesc"
   }
 ]

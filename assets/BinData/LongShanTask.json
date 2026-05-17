@@ -24,6 +24,30 @@
     "JumpId": 810002
   },
   {
+    "TaskId": 104,
+    "StageId": 1,
+    "TaskName": "LongShanTask_206_TaskName",
+    "SortId": 103,
+    "TaskReward": {
+      "3": 30,
+      "43010003": 3,
+      "43020002": 6
+    },
+    "JumpId": 810018
+  },
+  {
+    "TaskId": 105,
+    "StageId": 1,
+    "TaskName": "LongShanTask_105_TaskName",
+    "SortId": 104,
+    "TaskReward": {
+      "2": 10000,
+      "3": 30,
+      "43020003": 3
+    },
+    "JumpId": 810004
+  },
+  {
     "TaskId": 201,
     "StageId": 2,
     "TaskName": "LongShanTask_201_TaskName",
@@ -58,6 +82,18 @@
       "43020003": 3
     },
     "JumpId": 810007
+  },
+  {
+    "TaskId": 205,
+    "StageId": 2,
+    "TaskName": "LongShanTask_104_TaskName",
+    "SortId": 204,
+    "TaskReward": {
+      "2": 10000,
+      "3": 30,
+      "36000003": 3
+    },
+    "JumpId": 810003
   },
   {
     "TaskId": 301,
@@ -96,6 +132,18 @@
     "JumpId": 810011
   },
   {
+    "TaskId": 305,
+    "StageId": 3,
+    "TaskName": "LongShanTask_305_TaskName",
+    "SortId": 304,
+    "TaskReward": {
+      "2": 10000,
+      "36000002": 2,
+      "43010003": 2
+    },
+    "JumpId": 810012
+  },
+  {
     "TaskId": 401,
     "StageId": 4,
     "TaskName": "LongShanTask_401_TaskName",
@@ -120,66 +168,6 @@
     "JumpId": 810008
   },
   {
-    "TaskId": 405,
-    "StageId": 4,
-    "TaskName": "LongShanTask_405_TaskName",
-    "SortId": 404,
-    "TaskReward": {
-      "2": 10000,
-      "36000003": 2,
-      "43020002": 2
-    },
-    "JumpId": 810017
-  },
-  {
-    "TaskId": 104,
-    "StageId": 1,
-    "TaskName": "LongShanTask_206_TaskName",
-    "SortId": 103,
-    "TaskReward": {
-      "3": 30,
-      "43010003": 3,
-      "43020002": 6
-    },
-    "JumpId": 810018
-  },
-  {
-    "TaskId": 305,
-    "StageId": 3,
-    "TaskName": "LongShanTask_305_TaskName",
-    "SortId": 304,
-    "TaskReward": {
-      "2": 10000,
-      "36000002": 2,
-      "43010003": 2
-    },
-    "JumpId": 810012
-  },
-  {
-    "TaskId": 105,
-    "StageId": 1,
-    "TaskName": "LongShanTask_105_TaskName",
-    "SortId": 104,
-    "TaskReward": {
-      "2": 10000,
-      "3": 30,
-      "43020003": 3
-    },
-    "JumpId": 810004
-  },
-  {
-    "TaskId": 205,
-    "StageId": 2,
-    "TaskName": "LongShanTask_104_TaskName",
-    "SortId": 204,
-    "TaskReward": {
-      "2": 10000,
-      "3": 30,
-      "36000003": 3
-    },
-    "JumpId": 810003
-  },
-  {
     "TaskId": 404,
     "StageId": 4,
     "TaskName": "LongShanTask_404_TaskName",
@@ -190,6 +178,18 @@
       "43020004": 2
     },
     "JumpId": 810016
+  },
+  {
+    "TaskId": 405,
+    "StageId": 4,
+    "TaskName": "LongShanTask_405_TaskName",
+    "SortId": 404,
+    "TaskReward": {
+      "2": 10000,
+      "36000003": 2,
+      "43020002": 2
+    },
+    "JumpId": 810017
   },
   {
     "TaskId": 501,
@@ -1296,6 +1296,29 @@
     "JumpId": 859331
   },
   {
+    "TaskId": 3303,
+    "StageId": 33,
+    "TaskName": "QIQiuTask_3303_TaskName",
+    "SortId": 3303,
+    "TaskReward": {
+      "3": 20,
+      "55": 5,
+      "43020012": 10
+    },
+    "JumpId": 859332
+  },
+  {
+    "TaskId": 3304,
+    "StageId": 33,
+    "TaskName": "QIQiuTask_3304_TaskName",
+    "SortId": 3304,
+    "TaskReward": {
+      "2": 50000,
+      "55": 5
+    },
+    "JumpId": 859333
+  },
+  {
     "TaskId": 3401,
     "StageId": 34,
     "TaskName": "QIQiuTask_3401_TaskName",
@@ -1318,6 +1341,29 @@
       "41100052": 20
     },
     "JumpId": 859335
+  },
+  {
+    "TaskId": 3403,
+    "StageId": 34,
+    "TaskName": "QIQiuTask_3403_TaskName",
+    "SortId": 3403,
+    "TaskReward": {
+      "3": 20,
+      "55": 5,
+      "43020012": 10
+    },
+    "JumpId": 859336
+  },
+  {
+    "TaskId": 3404,
+    "StageId": 34,
+    "TaskName": "QIQiuTask_3404_TaskName",
+    "SortId": 3404,
+    "TaskReward": {
+      "2": 50000,
+      "55": 5
+    },
+    "JumpId": 859337
   },
   {
     "TaskId": 3501,
@@ -1344,6 +1390,29 @@
     "JumpId": 859339
   },
   {
+    "TaskId": 3503,
+    "StageId": 35,
+    "TaskName": "QIQiuTask_3503_TaskName",
+    "SortId": 3503,
+    "TaskReward": {
+      "3": 20,
+      "55": 10,
+      "43020042": 10
+    },
+    "JumpId": 859340
+  },
+  {
+    "TaskId": 3504,
+    "StageId": 35,
+    "TaskName": "QIQiuTask_3504_TaskName",
+    "SortId": 3504,
+    "TaskReward": {
+      "2": 50000,
+      "55": 5
+    },
+    "JumpId": 225000
+  },
+  {
     "TaskId": 3601,
     "StageId": 36,
     "TaskName": "QIQiuTask_3601_TaskName",
@@ -1368,30 +1437,6 @@
     "JumpId": 859343
   },
   {
-    "TaskId": 3403,
-    "StageId": 34,
-    "TaskName": "QIQiuTask_3403_TaskName",
-    "SortId": 3403,
-    "TaskReward": {
-      "3": 20,
-      "55": 5,
-      "43020012": 10
-    },
-    "JumpId": 859336
-  },
-  {
-    "TaskId": 3503,
-    "StageId": 35,
-    "TaskName": "QIQiuTask_3503_TaskName",
-    "SortId": 3503,
-    "TaskReward": {
-      "3": 20,
-      "55": 10,
-      "43020042": 10
-    },
-    "JumpId": 859340
-  },
-  {
     "TaskId": 3603,
     "StageId": 36,
     "TaskName": "QIQiuTask_3603_TaskName",
@@ -1402,51 +1447,6 @@
       "43020042": 10
     },
     "JumpId": 859344
-  },
-  {
-    "TaskId": 3303,
-    "StageId": 33,
-    "TaskName": "QIQiuTask_3303_TaskName",
-    "SortId": 3303,
-    "TaskReward": {
-      "3": 20,
-      "55": 5,
-      "43020012": 10
-    },
-    "JumpId": 859332
-  },
-  {
-    "TaskId": 3304,
-    "StageId": 33,
-    "TaskName": "QIQiuTask_3304_TaskName",
-    "SortId": 3304,
-    "TaskReward": {
-      "2": 50000,
-      "55": 5
-    },
-    "JumpId": 859333
-  },
-  {
-    "TaskId": 3404,
-    "StageId": 34,
-    "TaskName": "QIQiuTask_3404_TaskName",
-    "SortId": 3404,
-    "TaskReward": {
-      "2": 50000,
-      "55": 5
-    },
-    "JumpId": 859337
-  },
-  {
-    "TaskId": 3504,
-    "StageId": 35,
-    "TaskName": "QIQiuTask_3504_TaskName",
-    "SortId": 3504,
-    "TaskReward": {
-      "2": 50000,
-      "55": 5
-    },
-    "JumpId": 225000
   },
   {
     "TaskId": 3604,
@@ -3437,18 +3437,6 @@
     "JumpId": 914015
   },
   {
-    "TaskId": 8601,
-    "StageId": 86,
-    "TaskName": "DisiGaodiTask_8603_TaskName",
-    "SortId": 8601,
-    "TaskReward": {
-      "3": 20,
-      "76": 10,
-      "43021032": 10
-    },
-    "JumpId": 914019
-  },
-  {
     "TaskId": 8602,
     "StageId": 86,
     "TaskName": "DisiGaodiTask_8601_TaskName",
@@ -3461,17 +3449,6 @@
     "JumpId": 914017
   },
   {
-    "TaskId": 8603,
-    "StageId": 86,
-    "TaskName": "DisiGaodiTask_8604_TaskName",
-    "SortId": 8603,
-    "TaskReward": {
-      "2": 50000,
-      "76": 5
-    },
-    "JumpId": 914020
-  },
-  {
     "TaskId": 8604,
     "StageId": 86,
     "TaskName": "DisiGaodiTask_8602_TaskName",
@@ -3482,6 +3459,29 @@
       "41100072": 20
     },
     "JumpId": 914018
+  },
+  {
+    "TaskId": 8601,
+    "StageId": 86,
+    "TaskName": "DisiGaodiTask_8603_TaskName",
+    "SortId": 8601,
+    "TaskReward": {
+      "3": 20,
+      "76": 10,
+      "43021032": 10
+    },
+    "JumpId": 914019
+  },
+  {
+    "TaskId": 8603,
+    "StageId": 86,
+    "TaskName": "DisiGaodiTask_8604_TaskName",
+    "SortId": 8603,
+    "TaskReward": {
+      "2": 50000,
+      "76": 5
+    },
+    "JumpId": 914020
   },
   {
     "TaskId": 33001,
@@ -3752,5 +3752,305 @@
       "3": 150
     },
     "JumpId": 850613
+  },
+  {
+    "TaskId": 34001,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34001_TaskName",
+    "SortId": 34001,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34002,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34002_TaskName",
+    "SortId": 34002,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34003,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34003_TaskName",
+    "SortId": 34003,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34004,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34004_TaskName",
+    "SortId": 34004,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34005,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34005_TaskName",
+    "SortId": 34005,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34006,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34006_TaskName",
+    "SortId": 34006,
+    "TaskReward": {
+      "3": 150
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34007,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34007_TaskName",
+    "SortId": 34007,
+    "TaskReward": {
+      "3": 125
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34008,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34008_TaskName",
+    "SortId": 34008,
+    "TaskReward": {
+      "3": 125
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34009,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34009_TaskName",
+    "SortId": 34009,
+    "TaskReward": {
+      "3": 125
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34010,
+    "StageId": 91,
+    "TaskName": "LongShanTask_34010_TaskName",
+    "SortId": 34010,
+    "TaskReward": {
+      "3": 125
+    },
+    "JumpId": 811031
+  },
+  {
+    "TaskId": 34011,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34011_TaskName",
+    "SortId": 34011,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34012,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34012_TaskName",
+    "SortId": 34012,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34013,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34013_TaskName",
+    "SortId": 34013,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34014,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34014_TaskName",
+    "SortId": 34014,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34015,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34015_TaskName",
+    "SortId": 34015,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34016,
+    "StageId": 92,
+    "TaskName": "LongShanTask_34016_TaskName",
+    "SortId": 34016,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 850035
+  },
+  {
+    "TaskId": 34017,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34017_TaskName",
+    "SortId": 34017,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34018,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34018_TaskName",
+    "SortId": 34018,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34019,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34019_TaskName",
+    "SortId": 34019,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34020,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34020_TaskName",
+    "SortId": 34020,
+    "TaskReward": {
+      "3": 200
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34021,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34021_TaskName",
+    "SortId": 34021,
+    "TaskReward": {
+      "3": 200
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34022,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34022_TaskName",
+    "SortId": 34022,
+    "TaskReward": {
+      "3": 200
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34023,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34023_TaskName",
+    "SortId": 34023,
+    "TaskReward": {
+      "3": 200
+    },
+    "JumpId": 850617
+  },
+  {
+    "TaskId": 34024,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34024_TaskName",
+    "SortId": 34024,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 850065
+  },
+  {
+    "TaskId": 34025,
+    "StageId": 93,
+    "TaskName": "LongShanTask_34025_TaskName",
+    "SortId": 34025,
+    "TaskReward": {
+      "3": 75
+    },
+    "JumpId": 850065
+  },
+  {
+    "TaskId": 34026,
+    "StageId": 94,
+    "TaskName": "LongShanTask_34026_TaskName",
+    "SortId": 34026,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 850606
+  },
+  {
+    "TaskId": 34027,
+    "StageId": 94,
+    "TaskName": "LongShanTask_34027_TaskName",
+    "SortId": 34027,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 850606
+  },
+  {
+    "TaskId": 34028,
+    "StageId": 94,
+    "TaskName": "LongShanTask_34028_TaskName",
+    "SortId": 34028,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850065
+  },
+  {
+    "TaskId": 34029,
+    "StageId": 94,
+    "TaskName": "LongShanTask_34029_TaskName",
+    "SortId": 34029,
+    "TaskReward": {
+      "3": 50
+    },
+    "JumpId": 850065
+  },
+  {
+    "TaskId": 34030,
+    "StageId": 94,
+    "TaskName": "LongShanTask_34030_TaskName",
+    "SortId": 34030,
+    "TaskReward": {
+      "3": 100
+    },
+    "JumpId": 919100
   }
 ]

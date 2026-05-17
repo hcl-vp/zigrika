@@ -138,6 +138,34 @@
     "StarRewardDesc": ""
   },
   {
+    "Id": 11,
+    "ActivityId": 102300020,
+    "InstanceID": 8519,
+    "UnlockDay": 0,
+    "UnlockInst": 0,
+    "UnlockScore": 1000,
+    "RewardScore": 1000,
+    "MaxScore": 3000,
+    "HarvestBuff": 30,
+    "Reward": 5100201,
+    "Difficulty": 4,
+    "DifficultyName": "Difficulty",
+    "MonsterRatio": "MonsterRatio",
+    "TimePointName": "Time1",
+    "ScorePointName": "score",
+    "TimeScoreValidName": "timeValid",
+    "MaxTimeScore": 1000,
+    "StarRewardList": [
+      {
+        "Item1": 2000,
+        "Item2": 5100210
+      }
+    ],
+    "Accumulate": true,
+    "Desc": "rainharves_levelreward107",
+    "StarRewardDesc": "rainharves_Starreward"
+  },
+  {
     "Id": 7,
     "ActivityId": 102300020,
     "InstanceID": 8520,
@@ -295,34 +323,6 @@
     ],
     "Accumulate": true,
     "Desc": "rainharves_levelreward121",
-    "StarRewardDesc": "rainharves_Starreward"
-  },
-  {
-    "Id": 11,
-    "ActivityId": 102300020,
-    "InstanceID": 8519,
-    "UnlockDay": 0,
-    "UnlockInst": 0,
-    "UnlockScore": 1000,
-    "RewardScore": 1000,
-    "MaxScore": 3000,
-    "HarvestBuff": 30,
-    "Reward": 5100201,
-    "Difficulty": 4,
-    "DifficultyName": "Difficulty",
-    "MonsterRatio": "MonsterRatio",
-    "TimePointName": "Time1",
-    "ScorePointName": "score",
-    "TimeScoreValidName": "timeValid",
-    "MaxTimeScore": 1000,
-    "StarRewardList": [
-      {
-        "Item1": 2000,
-        "Item2": 5100210
-      }
-    ],
-    "Accumulate": true,
-    "Desc": "rainharves_levelreward107",
     "StarRewardDesc": "rainharves_Starreward"
   }
 ]

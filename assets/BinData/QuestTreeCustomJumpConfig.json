@@ -150,13 +150,5 @@
     "JumpType": "OpenBoard",
     "ParamsId": 8630008,
     "CustomTextKey": "QuestTree_CustomCondition_340101_1"
-  },
-  {
-    "Id": 850019,
-    "QuestId": 121850001,
-    "PreConditionType": "PreChildQuest",
-    "JumpType": "OpenBoard",
-    "ParamsId": 916003,
-    "CustomTextKey": "QuestTree_CustomCondition_340501_1"
   }
 ]

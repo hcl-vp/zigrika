@@ -404,6 +404,7 @@
     "ActionType": 9,
     "SkillId": 0,
     "SkillIdTagMap": {
+      "126092927": 280001110,
       "603927209": 500101,
       "-851544994": 230002
     },
@@ -465,6 +466,7 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
+      "133305204": 280001198,
       "247622984": 291003,
       "693080645": 291001,
       "1815558707": 1003,

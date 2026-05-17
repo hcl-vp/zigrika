@@ -112,6 +112,28 @@
     "IsDifficult": false
   },
   {
+    "Id": 6,
+    "InstanceId": 8180,
+    "ActivityId": 101900001,
+    "GroupId": 999,
+    "Difficulty": 0,
+    "SortId": 0,
+    "OptionalBuff": [
+      11,
+      12,
+      19,
+      13
+    ],
+    "OpenDay": 0,
+    "Condition": 0,
+    "RewardId": 5060401,
+    "RewardScore": 2000,
+    "LevelRewardDesc": "",
+    "BaseEntityId": 0,
+    "UnlockScoreLimit": 30000,
+    "IsDifficult": false
+  },
+  {
     "Id": 7,
     "InstanceId": 8181,
     "ActivityId": 101900001,
@@ -128,28 +150,6 @@
     "OpenDay": 1,
     "Condition": 0,
     "RewardId": 5060402,
-    "RewardScore": 2000,
-    "LevelRewardDesc": "",
-    "BaseEntityId": 0,
-    "UnlockScoreLimit": 30000,
-    "IsDifficult": false
-  },
-  {
-    "Id": 6,
-    "InstanceId": 8180,
-    "ActivityId": 101900001,
-    "GroupId": 999,
-    "Difficulty": 0,
-    "SortId": 0,
-    "OptionalBuff": [
-      11,
-      12,
-      19,
-      13
-    ],
-    "OpenDay": 0,
-    "Condition": 0,
-    "RewardId": 5060401,
     "RewardScore": 2000,
     "LevelRewardDesc": "",
     "BaseEntityId": 0,

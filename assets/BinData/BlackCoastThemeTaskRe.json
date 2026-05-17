@@ -24,6 +24,14 @@
     "JumpId": 811012
   },
   {
+    "TaskId": 104,
+    "StageId": 1,
+    "TaskName": "BlackCoastTheme_104_TaskName",
+    "SortId": 40,
+    "DropId": 5060304,
+    "JumpId": 811003
+  },
+  {
     "TaskId": 201,
     "StageId": 2,
     "TaskName": "BlackCoastTheme_201_TaskName",
@@ -46,14 +54,6 @@
     "SortId": 30,
     "DropId": 5060307,
     "JumpId": 811006
-  },
-  {
-    "TaskId": 104,
-    "StageId": 1,
-    "TaskName": "BlackCoastTheme_104_TaskName",
-    "SortId": 40,
-    "DropId": 5060304,
-    "JumpId": 811003
   },
   {
     "TaskId": 204,

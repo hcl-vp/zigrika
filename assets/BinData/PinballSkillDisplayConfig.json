@@ -14,7 +14,7 @@
     "Desc": "Pinball_Character_skill_0102_desc",
     "ValueList": [
       "3",
-      "10%",
+      "8%",
       "10%",
       "3",
       "15"
@@ -58,7 +58,7 @@
     "Desc": "Pinball_Character_skill_0302_desc",
     "ValueList": [
       "0.5",
-      "180%",
+      "145%",
       "2.5"
     ],
     "IsCaptainSkill": false
@@ -121,7 +121,7 @@
     "ValueList": [
       "2",
       "0.5",
-      "32%",
+      "35%",
       "12"
     ],
     "IsCaptainSkill": false
@@ -154,7 +154,7 @@
     "Name": "Pinball_Character_skill_0103_name",
     "Desc": "Pinball_Character_skill_0103_desc",
     "ValueList": [
-      "75%"
+      "50%"
     ],
     "IsCaptainSkill": false
   },
@@ -173,7 +173,7 @@
     "Name": "Pinball_Character_skill_0303_name",
     "Desc": "Pinball_Character_skill_0303_desc",
     "ValueList": [
-      "40%"
+      "12%"
     ],
     "IsCaptainSkill": false
   },
@@ -275,7 +275,7 @@
       "4",
       "4",
       "30%",
-      "3%",
+      "2%",
       "12"
     ],
     "IsCaptainSkill": false
@@ -285,7 +285,7 @@
     "Name": "Pinball_Character_skill_0903_name",
     "Desc": "Pinball_Character_skill_0903_desc",
     "ValueList": [
-      "10%"
+      "4%"
     ],
     "IsCaptainSkill": false
   },
@@ -374,7 +374,7 @@
     "Desc": "Pinball_Character_skill_1202_desc",
     "ValueList": [
       "0.5",
-      "250%",
+      "300%",
       "1",
       "4"
     ],
@@ -397,7 +397,7 @@
     "ValueList": [
       "10",
       "50%",
-      "30%"
+      "50%"
     ],
     "IsCaptainSkill": true
   },
@@ -407,7 +407,7 @@
     "Desc": "Pinball_Character_skill_1302_desc",
     "ValueList": [
       "600%",
-      "15%",
+      "25%",
       "10"
     ],
     "IsCaptainSkill": false
@@ -535,7 +535,7 @@
     "Name": "Pinball_Character_skill_1702_name",
     "Desc": "Pinball_Character_skill_1702_desc",
     "ValueList": [
-      "1000%",
+      "1200%",
       "1"
     ],
     "IsCaptainSkill": false
@@ -563,7 +563,7 @@
     "Name": "Pinball_Character_skill_1802_name",
     "Desc": "Pinball_Character_skill_1802_desc",
     "ValueList": [
-      "125%",
+      "160%",
       "135",
       "30%",
       "20"
@@ -604,7 +604,7 @@
     "Desc": "Pinball_Character_skill_1903_desc",
     "ValueList": [
       "40%",
-      "100%",
+      "150%",
       "2%"
     ],
     "IsCaptainSkill": false

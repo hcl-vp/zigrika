@@ -1004,5 +1004,209 @@
     "Param5": {},
     "Param6": {},
     "Param7": {}
+  },
+  {
+    "Id": 75,
+    "Param1": {
+      "AddLv": "Int"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 76,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 77,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 78,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 79,
+    "Param1": {
+      "Race": "Int"
+    },
+    "Param2": {
+      "ReduceMixNum": "Int"
+    },
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 80,
+    "Param1": {
+      "Rate": "Int"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 81,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 82,
+    "Param1": {
+      "CurTagToTargetTag": "String"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 83,
+    "Param1": {
+      "Race": "Int"
+    },
+    "Param2": {
+      "Mapping": "String"
+    },
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 84,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 85,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 86,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 87,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 88,
+    "Param1": {
+      "Animal": "Int"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 89,
+    "Param1": {
+      "Animal": "Int"
+    },
+    "Param2": {
+      "BuffId": "Int"
+    },
+    "Param3": {
+      "Publish": "Int"
+    },
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 90,
+    "Param1": {
+      "M": "Int"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 91,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 92,
+    "Param1": {},
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
   }
 ]

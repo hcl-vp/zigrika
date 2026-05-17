@@ -7285,8 +7285,7 @@
     "BuffId": 106291200100,
     "BuffIds": [
       1508095100,
-      1508095101,
-      1508095104
+      1508095101
     ],
     "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150801_BuffDesc_33",
@@ -7365,8 +7364,7 @@
     "BuffId": 106291200500,
     "BuffIds": [
       1508095500,
-      1508095501,
-      1508095502
+      1508095501
     ],
     "AffixTypeList": [],
     "AffixDesc": "RogueBuffPool_150805_BuffDesc_33",
@@ -7705,10 +7703,10 @@
       "1",
       "1",
       "1",
-      "1400%",
+      "2100%",
       "1",
       "1",
-      "1400%",
+      "2100%",
       "2"
     ],
     "AffixDescSimple": "RogueBuffPool_121001_BuffDesc_0",
@@ -7726,8 +7724,8 @@
     "AffixDesc": "RogueBuffPool_121002_BuffDesc",
     "AffixDescParam": [
       "3",
-      "10%",
-      "10%",
+      "20%",
+      "20%",
       "4"
     ],
     "AffixDescSimple": "RogueBuffPool_121002_BuffDesc_0",

@@ -1,11 +1,11 @@
 [
   {
-    "Id": 2,
-    "SoundAreaInfoConfigId": 1125
-  },
-  {
     "Id": 1,
     "SoundAreaInfoConfigId": 1124
+  },
+  {
+    "Id": 2,
+    "SoundAreaInfoConfigId": 1125
   },
   {
     "Id": 3,

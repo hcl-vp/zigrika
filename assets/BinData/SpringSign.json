@@ -1,5 +1,10 @@
 [
   {
+    "Id": 1,
+    "ActivityId": 103100001,
+    "ResourceTypeId": 1
+  },
+  {
     "Id": 2,
     "ActivityId": 103100001,
     "ResourceTypeId": 2
@@ -28,10 +33,5 @@
     "Id": 7,
     "ActivityId": 103100001,
     "ResourceTypeId": 7
-  },
-  {
-    "Id": 1,
-    "ActivityId": 103100001,
-    "ResourceTypeId": 1
   }
 ]

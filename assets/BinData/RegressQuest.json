@@ -11,6 +11,17 @@
     "Version": 0
   },
   {
+    "Id": 2,
+    "TaskType": 0,
+    "TargetName": "Recall_task_new_02",
+    "TaskSubType": 2,
+    "AccessPathId": 850014,
+    "TargetReward": 4402,
+    "ProgressType": 2,
+    "Grade": 1,
+    "Version": 0
+  },
+  {
     "Id": 3,
     "TaskType": 1,
     "TargetName": "Recall_task_new_03",
@@ -39,6 +50,17 @@
     "TaskSubType": 1,
     "AccessPathId": 850014,
     "TargetReward": 4401,
+    "ProgressType": 2,
+    "Grade": 2,
+    "Version": 0
+  },
+  {
+    "Id": 7,
+    "TaskType": 0,
+    "TargetName": "Recall_task_new_06",
+    "TaskSubType": 2,
+    "AccessPathId": 850014,
+    "TargetReward": 4402,
     "ProgressType": 2,
     "Grade": 2,
     "Version": 0
@@ -110,39 +132,6 @@
     "Version": 0
   },
   {
-    "Id": 31,
-    "TaskType": 2,
-    "TargetName": "LongShanTask_902_TaskName",
-    "TaskSubType": 0,
-    "AccessPathId": 850014,
-    "TargetReward": 4420,
-    "ProgressType": 2,
-    "Grade": 2,
-    "Version": 0
-  },
-  {
-    "Id": 2,
-    "TaskType": 0,
-    "TargetName": "Recall_task_new_02",
-    "TaskSubType": 2,
-    "AccessPathId": 850014,
-    "TargetReward": 4402,
-    "ProgressType": 2,
-    "Grade": 1,
-    "Version": 0
-  },
-  {
-    "Id": 7,
-    "TaskType": 0,
-    "TargetName": "Recall_task_new_06",
-    "TaskSubType": 2,
-    "AccessPathId": 850014,
-    "TargetReward": 4402,
-    "ProgressType": 2,
-    "Grade": 2,
-    "Version": 0
-  },
-  {
     "Id": 15,
     "TaskType": 2,
     "TargetName": "LongShanTask_1003_TaskName",
@@ -206,6 +195,17 @@
     "TargetReward": 4429,
     "ProgressType": 2,
     "Grade": 1,
+    "Version": 0
+  },
+  {
+    "Id": 31,
+    "TaskType": 2,
+    "TargetName": "LongShanTask_902_TaskName",
+    "TaskSubType": 0,
+    "AccessPathId": 850014,
+    "TargetReward": 4420,
+    "ProgressType": 2,
+    "Grade": 2,
     "Version": 0
   },
   {
