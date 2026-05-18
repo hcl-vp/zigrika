@@ -34525,3 +34525,37 @@ pub const JoinSceneNotify = struct {
     pub const MaxEntityId_field_number: u32 = 15;
     pub const TransitionOption_field_number: u32 = 7;
 };
+pub const WeeklyFrameworkInfoRequest = struct {
+    pub const msg_id: u16 = 25913;
+};
+pub const WeeklyFrameworkInfoResponse = struct {
+    pub const msg_id: u16 = 25809;
+    pub const ErrorCode_field_number: u32 = 4;
+    pub const FrameworkInfo_field_number: u32 = 8;
+};
+pub const WeeklyFrameworkInfoUpdateNotify = struct {
+    pub const msg_id: u16 = 20903;
+    pub const FrameworkInfo_field_number: u32 = 9;
+};
+pub const WeeklyFrameworkInfo = struct {
+    pub const ConfigId_field_number: u32 = 1;
+    pub const BeginTime_field_number: u32 = 3;
+    pub const EndTime_field_number: u32 = 4;
+    pub const ScoreTasks_field_number: u32 = 5;
+    pub const WeeklyPlayDatas_field_number: u32 = 6;
+    pub const WorldLevel_field_number: u32 = 7;
+};
+pub const WeeklyPlayData = struct {
+    qWp: ?union(enum) {
+    } = null,
+    pub const RogueWeeklyPlayData_field_number: u32 = 10000;
+    pub const FloroFarmPlayData_field_number: u32 = 10001;
+    pub const id_field_number: u32 = 1;
+    pub const type_field_number: u32 = 2;
+};
+pub const RogueWeeklyPlayData = struct {
+    pub const HasRecord_field_number: u32 = 1;
+};
+pub const FloroFarmPlayData = struct {
+    pub const HasRecord_field_number: u32 = 1;
+};

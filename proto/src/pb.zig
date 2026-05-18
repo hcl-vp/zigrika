@@ -50082,3 +50082,41 @@ pub const JoinSceneNotify = struct {
     MaxEntityId: i64 = 0,
     TransitionOption: ?TransitionOptionPb = null,
 };
+pub const WeeklyFrameworkInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const WeeklyFrameworkInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: i32 = 0,
+    FrameworkInfo: ?WeeklyFrameworkInfo = null,
+};
+pub const WeeklyFrameworkInfoUpdateNotify = struct {
+    pub const default: @This() = .{};
+    FrameworkInfo: ?WeeklyFrameworkInfo = null,
+};
+pub const WeeklyFrameworkInfo = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    ScoreTasks: std.ArrayList(i32) = .empty,
+    WeeklyPlayDatas: std.ArrayList(WeeklyPlayData) = .empty,
+    WorldLevel: i32 = 0,
+};
+pub const WeeklyPlayData = struct {
+    pub const default: @This() = .{};
+    qWp: ?union(enum) {
+        RogueWeeklyPlayData: ?RogueWeeklyPlayData,
+        FloroFarmPlayData: ?FloroFarmPlayData,
+    } = null,
+    id: i32 = 0,
+    type: i32 = 0,
+};
+pub const RogueWeeklyPlayData = struct {
+    pub const default: @This() = .{};
+    HasRecord: bool = false,
+};
+pub const FloroFarmPlayData = struct {
+    pub const default: @This() = .{};
+    HasRecord: bool = false,
+};
