@@ -50120,3 +50120,13 @@ pub const FloroFarmPlayData = struct {
     pub const default: @This() = .{};
     HasRecord: bool = false,
 };
+pub const ClientPullResourcePackageRequest = struct {
+    pub const default: @This() = .{};
+    Holder: bool = false,
+};
+pub const ClientPullResourcePackageResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+    FinishMp4QuestIds: std.ArrayList(i32) = .empty,
+    NeedConfirmQuestIds: std.ArrayList(i32) = .empty,
+};

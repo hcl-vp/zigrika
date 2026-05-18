@@ -34559,3 +34559,13 @@ pub const RogueWeeklyPlayData = struct {
 pub const FloroFarmPlayData = struct {
     pub const HasRecord_field_number: u32 = 1;
 };
+pub const ClientPullResourcePackageRequest = struct {
+    pub const msg_id: u16 = 29519;
+    pub const Holder_field_number: u32 = 15;
+};
+pub const ClientPullResourcePackageResponse = struct {
+    pub const msg_id: u16 = 16883;
+    pub const ErrorId_field_number: u32 = 15;
+    pub const FinishMp4QuestIds_field_number: u32 = 1;
+    pub const NeedConfirmQuestIds_field_number: u32 = 3;
+};
