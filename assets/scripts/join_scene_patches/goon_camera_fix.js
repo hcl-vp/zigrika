@@ -1411,11 +1411,72 @@ setTimeout(() => {
                   "光圈选项未打开，尝试设置光圈失败",
                 ));
           break;
-        case 0:
+        case 0: {
           var r = ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
-          1 === e ? i.SetEntityEnable(r, !0) : i.SetEntityEnable(r, !1);
+
+          if (e === 1) {
+            i.SetEntityEnable(r, true);
+          } else {
+            i.SetEntityEnable(r, false);
+          }
+
           break;
-        case 6:
+        }
+        case 2: {
+          var a =
+            ModelManager_1.ModelManager.SceneTeamModel?.GetCurrentEntity?.Id;
+          if (!a) {
+            return;
+          }
+          r = EntitySystem_1.EntitySystem.Get(a);
+          if (!r?.Valid) {
+            return;
+          }
+          if (this.GetRoleMainAnimInstanceType() !== 0) {
+            return;
+          }
+          r.GetComponent(190).MainAnimInstance.设置头部转向状态(1);
+          break;
+        }
+
+        case 6: {
+          a =
+            ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
+          if (!a) {
+            return;
+          }
+
+          if (e === 1) {
+            r = i.GetPhotographOption(7);
+            a.SetCameraArmRoll(r);
+          } else {
+            a.SetCameraArmRoll(0);
+          }
+
+          break;
+        }
+        case 7: {
+          r =
+            ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
+          if (!r) {
+            return;
+          }
+
+          if (i.GetPhotographOption(6) === 1) {
+            r.SetCameraArmRoll(e < 0 ? e + 360 : e);
+          } else if (!o) {
+            if (Log_1.Log.CheckError()) {
+              Log_1.Log.Error(
+                "Photo",
+                71,
+                "倾斜角选项未打开，尝试设置倾斜角失败",
+              );
+            }
+          }
+
+          break;
+        }
+        case 8:
           const view = UiManager_1.UiManager.GetViewByName(
             "FightPhotographView",
           );
@@ -1436,7 +1497,7 @@ setTimeout(() => {
             }
           }
           break;
-        case 7:
+        case 10:
           const list_of_actors =
             ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity.GetComponent(
               23,
@@ -1449,21 +1510,21 @@ setTimeout(() => {
             actor?.SetActorHiddenInGame(e == false || e === 0);
           }
           break;
-        case 8:
+        case 11:
           TimeOfDayController_1.TimeOfDayController.AdjustTime(
             e,
             Protocol_1.Aki.Protocol.C4s.Proto_PlayerOperate,
           );
           break;
-        case 9:
-          this.SetPhotographOption(10, 0);
+        case 12:
+          this.SetPhotographOption(12, 0);
           break;
-        case 10:
+        case 13:
           dilate_time(e);
           break;
-        case 11:
-        case 12:
-        case 13: {
+        case 14:
+        case 15:
+        case 16: {
           const structure =
             ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
           const cam = structure?.$Uo;
@@ -1471,18 +1532,7 @@ setTimeout(() => {
           if (t === 11) cam.CameraLeftAndRightSpeed = e;
           else if (t === 12) cam.CameraUpAndDownSpeed = e;
           else cam.CameraForwardAndBackwardSpeed = e;
-          break;
         }
-        case 2:
-          var a =
-            ModelManager_1.ModelManager.SceneTeamModel?.GetCurrentEntity?.Id;
-          if (!a) break;
-          r = EntitySystem_1.EntitySystem.Get(a);
-          if (!r?.Valid) break;
-          if (0 !== this.GetRoleMainAnimInstanceType()) break;
-          var anim = r.GetComponent(184)?.MainAnimInstance;
-          if (!anim) break;
-          anim.设置头部转向状态(1);
       }
     };
 

@@ -78,6 +78,7 @@ setTimeout(() => {
     );
   };
 
+  const MAX_ID = 9; // update this when kuro terrorizes
   const OPTIONS = ["PhotoSetup_2_Options_0", "PhotoSetup_2_Options_1"];
   const VALUE_RANGE = [0, 100, 50];
 
@@ -94,8 +95,8 @@ setTimeout(() => {
       b.addFloat32(VALUE_RANGE[i]);
     const vr_vec = b.endVector();
     b.startObject(10);
-    b.addFieldInt32(0, 7, 0);
-    b.addFieldInt32(1, 6, 0);
+    b.addFieldInt32(0, MAX_ID + 1, 0);
+    b.addFieldInt32(1, MAX_ID, 0);
     b.addFieldOffset(2, name_off, 0);
     b.addFieldInt32(3, 0, 0);
     b.addFieldOffset(4, options_vec, 0);
@@ -108,8 +109,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const TOD_VALUE_TYPE = 8;
-  const TOD_ID = 9;
+  const TOD_VALUE_TYPE = MAX_ID + 1;
+  const TOD_ID = MAX_ID + 2;
   const TOD_MIN = 0;
   const TOD_MAX = 86400;
 
@@ -156,8 +157,8 @@ setTimeout(() => {
       b.addFloat32(VALUE_RANGE[i]);
     const vr_vec = b.endVector();
     b.startObject(10);
-    b.addFieldInt32(0, 8, 0);
-    b.addFieldInt32(1, 7, 0);
+    b.addFieldInt32(0, MAX_ID + 3, 0);
+    b.addFieldInt32(1, MAX_ID + 2, 0);
     b.addFieldOffset(2, name_off, 0);
     b.addFieldInt32(3, 0, 0);
     b.addFieldOffset(4, options_vec, 0);
@@ -170,8 +171,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const FREEZE_VALUE_TYPE = 9;
-  const FREEZE_ID = 15;
+  const FREEZE_VALUE_TYPE = MAX_ID + 3;
+  const FREEZE_ID = MAX_ID + 4;
 
   const build_freeze_toggle_entry = () => {
     const b = new Builder(512);
@@ -224,8 +225,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const TD_VALUE_TYPE = 10;
-  const TD_ID = 11;
+  const TD_VALUE_TYPE = MAX_ID + 4;
+  const TD_ID = MAX_ID + 5;
   const TD_MIN = 0;
   const TD_MAX = 2;
 
@@ -259,8 +260,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const HS_VALUE_TYPE = 11;
-  const HS_ID = 12;
+  const HS_VALUE_TYPE = MAX_ID + 5;
+  const HS_ID = MAX_ID + 6;
   const SPEED_MIN = 0.1;
   const SPEED_MAX = 10;
 
@@ -294,8 +295,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const VS_VALUE_TYPE = 12;
-  const VS_ID = 13;
+  const VS_VALUE_TYPE = MAX_ID + 6;
+  const VS_ID = MAX_ID + 7;
 
   const build_vs_entry = () => {
     const b = new Builder(256);
@@ -327,8 +328,8 @@ setTimeout(() => {
     return b.asUint8Array();
   };
 
-  const LS_VALUE_TYPE = 13;
-  const LS_ID = 14;
+  const LS_VALUE_TYPE = MAX_ID + 7;
+  const LS_ID = MAX_ID + 8;
 
   const build_ls_entry = () => {
     const b = new Builder(256);
