@@ -2992,7 +2992,7 @@
     "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
     "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
     "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
-    "ElementId": 5,
+    "ElementId": 4,
     "ShowBuffIds": [
       42
     ],
@@ -3235,7 +3235,7 @@
     "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
     "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
     "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
-    "ElementId": 5,
+    "ElementId": 4,
     "ShowBuffIds": [
       42,
       44
@@ -3539,7 +3539,7 @@
     "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
     "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
     "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
-    "ElementId": 5,
+    "ElementId": 4,
     "ShowBuffIds": [
       42,
       44,
@@ -3846,7 +3846,7 @@
     "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
     "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
     "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
-    "ElementId": 5,
+    "ElementId": 4,
     "ShowBuffIds": [
       42,
       44,

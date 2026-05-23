@@ -10687,11 +10687,11 @@
       },
       {
         "ArrayString": [
-          "15%",
-          "18.7%",
-          "22.5%",
-          "26.2%",
-          "30%"
+          "20%",
+          "25%",
+          "30%",
+          "35%",
+          "40%"
         ]
       },
       {
@@ -10714,20 +10714,20 @@
       },
       {
         "ArrayString": [
-          "25",
-          "31.2",
-          "37.5",
-          "43.7",
-          "50"
+          "30%",
+          "37.5%",
+          "45%",
+          "52.5%",
+          "60%"
         ]
       },
       {
         "ArrayString": [
           "10",
-          "10",
-          "10",
-          "10",
-          "10"
+          "12.5",
+          "15",
+          "17.5",
+          "20"
         ]
       },
       {
@@ -10743,10 +10743,10 @@
     "TypeDescription": "WeaponConf_21030056_TypeDescription",
     "AttributesDescription": "WeaponConf_21030056_AttributesDescription",
     "BgDescription": "WeaponConf_21030056_BgDescription",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21030046_UI.T_IconWeapon21030046_UI",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21030046_UI.T_IconWeapon160_21030046_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_21030046_UI.T_IconWeapon80_21030046_UI",
-    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21030046_UI.T_IconWeapon732_21030046_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21030056_UI.T_IconWeapon21030056_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21030056_UI.T_IconWeapon160_21030056_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_21030056_UI.T_IconWeapon80_21030056_UI",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21030056_UI.T_IconWeapon732_21030056_UI",
     "Mesh": "/Game/Aki/Scene/Assets/Common/Interaction/Mesh/SM_Pro_Roc_04ES.SM_Pro_Roc_04ES",
     "MaxCapcity": 999999999,
     "ItemAccess": [],
@@ -10866,10 +10866,10 @@
     "TypeDescription": "WeaponConf_21030066_TypeDescription",
     "AttributesDescription": "WeaponConf_21030066_AttributesDescription",
     "BgDescription": "WeaponConf_21030066_BgDescription",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon_21030045_UI.T_IconWeapon_21030066_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21030066_UI.T_IconWeapon21030066_UI",
     "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21030066_UI.T_IconWeapon160_21030066_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_21030066_UI.T_IconWeapon80_21030066_UI",
-    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21030045_UI.T_IconWeapon732_21030045_UI",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21030066_UI.T_IconWeapon732_21030066_UI",
     "Mesh": "/Game/Aki/Scene/Assets/Common/Interaction/Mesh/SM_Pro_Roc_04ES.SM_Pro_Roc_04ES",
     "MaxCapcity": 999999999,
     "ItemAccess": [],
@@ -10968,10 +10968,10 @@
     "TypeDescription": "WeaponConf_21050086_TypeDescription",
     "AttributesDescription": "WeaponConf_21050086_AttributesDescription",
     "BgDescription": "WeaponConf_21050086_BgDescription",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21050076_UI.T_IconWeapon21050076_UI",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21050076_UI.T_IconWeapon160_21050076_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_21050076_UI.T_IconWeapon80_21050076_UI",
-    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21050076_UI.T_IconWeapon732_21050076_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon21050086_UI.T_IconWeapon21050086_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21050086_UI.T_IconWeapon160_21050086_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_21050086_UI.T_IconWeapon80_21050086_UI",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_21050086_UI.T_IconWeapon732_21050086_UI",
     "Mesh": "/Game/Aki/Scene/Assets/Common/Interaction/Mesh/SM_Pro_Roc_04ES.SM_Pro_Roc_04ES",
     "MaxCapcity": 999999999,
     "ItemAccess": [],

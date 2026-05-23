@@ -550,7 +550,8 @@
     ],
     "EnableTags": [],
     "DisableTags": [
-      248120534
+      248120534,
+      -1809415382
     ],
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
@@ -585,7 +586,8 @@
     ],
     "EnableTags": [],
     "DisableTags": [
-      248120534
+      248120534,
+      -1809415382
     ],
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
@@ -1697,7 +1699,8 @@
     ],
     "EnableTags": [],
     "DisableTags": [
-      248120534
+      248120534,
+      -1809415382
     ],
     "DisableSkillIdTags": {},
     "IsCdVisible": true,
@@ -1732,7 +1735,8 @@
     ],
     "EnableTags": [],
     "DisableTags": [
-      248120534
+      248120534,
+      -1809415382
     ],
     "DisableSkillIdTags": {},
     "IsCdVisible": true,

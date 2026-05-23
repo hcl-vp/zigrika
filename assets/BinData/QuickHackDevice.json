@@ -24,7 +24,7 @@
     "RamResourceParam": 24,
     "TimeScaleMode": 1,
     "TimeScaleDuration": 15000,
-    "TimeDilation": 1,
+    "TimeDilation": 0,
     "FirstPersonCamera": false,
     "DurationLimit": 10000,
     "UiType": 1,
@@ -102,7 +102,7 @@
     "RefreshSkillListByTarget": true,
     "TargetSelectType": 0,
     "TargetSelectMaxDistance": 15000,
-    "TargetScreenRadius": 300,
+    "TargetScreenRadius": 350,
     "OnScreenTargetGameplayCueIds": [
       640034011
     ],
@@ -131,7 +131,7 @@
     "RefreshSkillListByTarget": true,
     "TargetSelectType": 2,
     "TargetSelectMaxDistance": 15000,
-    "TargetScreenRadius": 500,
+    "TargetScreenRadius": 600,
     "OnScreenTargetGameplayCueIds": [],
     "TargetGameplayCueIds": [
       1511102000
@@ -204,7 +204,7 @@
     "RamResourceParam": 32,
     "TimeScaleMode": 1,
     "TimeScaleDuration": 15000,
-    "TimeDilation": 1,
+    "TimeDilation": 0,
     "FirstPersonCamera": false,
     "DurationLimit": 10000,
     "UiType": 1,

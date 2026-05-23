@@ -525,7 +525,7 @@
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_LuXi.NS_Fx_LGUI_Fight_E_LuXi",
     "ElementId": 0,
     "Color": "",
-    "Scale": 1.4500000476837158
+    "Scale": 1.350000023841858
   },
   {
     "Id": 1510001,
@@ -597,15 +597,15 @@
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_LuXi_02.NS_Fx_LGUI_Fight_E_LuXi_02",
     "ElementId": 0,
     "Color": "",
-    "Scale": 1.4500000476837158
+    "Scale": 1.350000023841858
   },
   {
     "Id": 1511306,
     "Name": "露西强化重击3可用提示",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_LuXi.NS_Fx_LGUI_Fight_E_LuXi",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_LuXi_02.NS_Fx_LGUI_Fight_E_LuXi_02",
     "ElementId": 0,
     "Color": "",
-    "Scale": 1
+    "Scale": 1.350000023841858
   },
   {
     "Id": 10090001,
@@ -629,7 +629,7 @@
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_R_LuXi.NS_Fx_LGUI_Fight_R_LuXi",
     "ElementId": 0,
     "Color": "",
-    "Scale": 1.4500000476837158
+    "Scale": 1.350000023841858
   },
   {
     "Id": 9000004,
@@ -722,9 +722,49 @@
   {
     "Id": 1511316,
     "Name": "露西烧血版-强化重击3可用提示",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_General.NS_Fx_LGUI_Fight_E_General",
     "ElementId": 0,
     "Color": "#B62D34",
+    "Scale": 1
+  },
+  {
+    "Id": 1308012,
+    "Name": "丽贝卡强化重击高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_General.NS_Fx_LGUI_Fight_E_General",
+    "ElementId": 3,
+    "Color": "",
+    "Scale": 1
+  },
+  {
+    "Id": 1308401,
+    "Name": "丽贝卡闪避高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
+    "ElementId": 3,
+    "Color": "",
+    "Scale": 1
+  },
+  {
+    "Id": 1308021,
+    "Name": "丽贝卡E技能高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
+    "ElementId": 3,
+    "Color": "",
+    "Scale": 1
+  },
+  {
+    "Id": 1308301,
+    "Name": "丽贝卡大招高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_R",
+    "ElementId": 3,
+    "Color": "",
+    "Scale": 1
+  },
+  {
+    "Id": 1308001,
+    "Name": "丽贝卡点按攻击高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
+    "ElementId": 3,
+    "Color": "",
     "Scale": 1
   }
 ]

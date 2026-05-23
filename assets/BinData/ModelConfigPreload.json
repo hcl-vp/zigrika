@@ -78274,7 +78274,11 @@
       "/Game/Aki/Character/Role/FemaleXL/Luosela/R2T1LuoselaMd10011/ABP_R2T1LuoselaMd10011_PC.ABP_R2T1LuoselaMd10011_PC_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_Start.DA_Fx_Weapon_Start",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Fencing.DA_Fx_Group_Weapon_Fencing",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_End.DA_Fx_Group_Weapon_End",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Start.DA_Fx_Group_Weapon_Start",
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_End.DA_Fx_Weapon_End",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Diss.DA_Fx_Group_Weapon_Diss",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_R1A_Trail01.DA_Fx_Group_R1A_Trail01",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
@@ -79724,6 +79728,7 @@
       "/Game/Aki/Character/Role/FemaleMS/Rebecca/R2T1RebeccaMd10011/ABP_R2T1RebeccaMd10011_PC.ABP_R2T1RebeccaMd10011_PC_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_R1s_Dandai_01.DA_Fx_Group_R1s_Dandai_01",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Tread.DA_Fx_Group_Tread",
       "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_FightHook_Wind_01.NS_Fx_LGUI_FightHook_Wind_01",
@@ -80350,7 +80355,11 @@
       "/Game/Aki/Character/Role/FemaleXL/Luosela/R2T1LuoselaMd10011/ABP_Luosela.ABP_Luosela_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_Start.DA_Fx_Weapon_Start",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Fencing.DA_Fx_Group_Weapon_Fencing",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_End.DA_Fx_Group_Weapon_End",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Start.DA_Fx_Group_Weapon_Start",
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_End.DA_Fx_Weapon_End",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Diss.DA_Fx_Group_Weapon_Diss",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_R1A_Trail01.DA_Fx_Group_R1A_Trail01",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
@@ -80838,7 +80847,11 @@
       "/Game/Aki/Character/Role/FemaleXL/Luosela/R2T1LuoselaMd10011/ABP_R2T1LuoselaMd10011_PC.ABP_R2T1LuoselaMd10011_PC_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_Start.DA_Fx_Weapon_Start",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Fencing.DA_Fx_Group_Weapon_Fencing",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_End.DA_Fx_Group_Weapon_End",
+      "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Start.DA_Fx_Group_Weapon_Start",
+      "/Game/Aki/Effect/DataAsset/Niagara/R2T1LuoselaMd10011/DA_Fx_Weapon_End.DA_Fx_Weapon_End",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_Weapon_Diss.DA_Fx_Group_Weapon_Diss",
       "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_R1A_Trail01.DA_Fx_Group_R1A_Trail01",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
@@ -81465,6 +81478,7 @@
       "/Game/Aki/Character/Weapon/Prop/Role/Libeika/ERebeccaFortMd10011/ABP_ERebeccaFortMd10011.ABP_ERebeccaFortMd10011_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_R1s_Dandai_01.DA_Fx_Group_R1s_Dandai_01",
       "/Game/Aki/Character/Monster/Summon/R2T1RebeccaMd10011_Jiqiangta/Data/DT_SkillInfo.DT_SkillInfo",
       "/Game/Aki/Character/Monster/Summon/R2T1RebeccaMd10011_Jiqiangta/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
       "/Game/Aki/Character/Monster/Summon/R2T1RebeccaMd10011_Jiqiangta/Data/DT_HitEffect.DT_HitEffect",
@@ -81678,6 +81692,7 @@
       "/Game/Aki/Character/Role/FemaleMS/Rebecca/R2T1RebeccaMd10011/ABP_R2T1RebeccaMd10011_PC.ABP_R2T1RebeccaMd10011_PC_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_R1s_Dandai_01.DA_Fx_Group_R1s_Dandai_01",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Tread.DA_Fx_Group_Tread",
       "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_FightHook_Wind_01.NS_Fx_LGUI_FightHook_Wind_01",

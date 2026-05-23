@@ -1278,8 +1278,8 @@
     "HideInPureMode": false
   },
   {
-    "ViewName": "BattleQuickHackViewv",
-    "Area": "QuickHack",
+    "ViewName": "QuickHackCameraControlView",
+    "Area": "QuickHackCameraControl",
     "Priority": 0,
     "OnlyShowInMain": true,
     "RootItemIndex": 2,
@@ -1287,8 +1287,8 @@
     "HideInPureMode": false
   },
   {
-    "ViewName": "QuickHackCameraControlView",
-    "Area": "QuickHackCameraControl",
+    "ViewName": "BattleQuickHackView",
+    "Area": "QuickHack",
     "Priority": 0,
     "OnlyShowInMain": true,
     "RootItemIndex": 2,

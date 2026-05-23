@@ -838,5 +838,11 @@
     "Name": "",
     "Desc": "TowerChallengeBuff_92008182_Desc",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI"
+  },
+  {
+    "Id": 92007150,
+    "Name": "",
+    "Desc": "TowerChallengeBuff_92007150_Desc",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI"
   }
 ]

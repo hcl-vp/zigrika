@@ -6848,10 +6848,9 @@
       "10001109": 1
     },
     "AttributesDescriptionParams": [
-      "120%",
-      "30",
       "80%",
-      "14"
+      "40%",
+      "30"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LuoselaM2_UI.T_IconDevice_LuoselaM2_UI"
   },
@@ -6961,7 +6960,8 @@
       1511910001,
       1511910002,
       1511910003,
-      1511910004
+      1511910004,
+      1511910005
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -6995,8 +6995,8 @@
       "32",
       "1",
       "300",
-      "100",
-      "200"
+      "240",
+      "350"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LucyM1_UI.T_IconDevice_LucyM1_UI"
   },
@@ -7011,7 +7011,6 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1511900003,
-      1511930001,
       1511930004
     ],
     "AddProp": [],
@@ -7019,9 +7018,8 @@
       "10001511": 1
     },
     "AttributesDescriptionParams": [
-      "60",
-      "20",
       "50",
+      "100",
       "65",
       "65"
     ],
@@ -7062,7 +7060,8 @@
     "BuffIds": [
       1511900005,
       1511950001,
-      1511950003
+      1511950003,
+      1511950004
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7074,7 +7073,7 @@
       "1",
       "180",
       "150",
-      "8"
+      "10"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LucyM5_UI.T_IconDevice_LucyM5_UI"
   },
@@ -7089,8 +7088,7 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1511900006,
-      1511960002,
-      1511960003
+      1511960002
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7241,7 +7239,7 @@
       "10001308": 1
     },
     "AttributesDescriptionParams": [
-      "50%",
+      "40%",
       "900%",
       "20",
       "4",

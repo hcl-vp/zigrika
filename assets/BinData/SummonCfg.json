@@ -9172,7 +9172,8 @@
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
     "BornBuffId": [
-      1308304001
+      1308304001,
+      2002204615
     ],
     "ShareDamage": false,
     "InitVisiable": false,

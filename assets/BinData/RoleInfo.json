@@ -10613,7 +10613,11 @@
     "IsAim": true,
     "RoleGuide": 0,
     "RedDotDisableRule": 0,
-    "SkinDamage": [],
+    "SkinDamage": [
+      "/Game/Aki/Character/DA/DA_Luosela_BattleTex_Revert.DA_Luosela_BattleTex_Revert",
+      "/Game/Aki/Character/DA/DA_Luosela_BattleTex.DA_Luosela_BattleTex",
+      "/Game/Aki/Character/DA/DA_Luosela_BattleTex.DA_Luosela_BattleTex"
+    ],
     "HideHuLu": true,
     "EnableOperateSelfBgm": false,
     "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Anke/Portraits_Anke.Portraits_Anke-data",
@@ -11051,9 +11055,9 @@
     "RoleGuide": 0,
     "RedDotDisableRule": 0,
     "SkinDamage": [
-      "/Game/Aki/Character/DA/DA_Linnaea_BattleTex_Revert.DA_Linnaea_BattleTex_Revert",
+      "/Game/Aki/Character/DA/DA_Lucy_BattleTex_Revert.DA_Lucy_BattleTex_Revert",
       "/Game/Aki/Character/DA/DA_Lucy_BattleTex.DA_Lucy_BattleTex",
-      "/Game/Aki/Character/DA/DA_Lucy_BattleTex_Revert.DA_Lucy_BattleTex_Revert"
+      "/Game/Aki/Character/DA/DA_Lucy_BattleTex.DA_Lucy_BattleTex"
     ],
     "HideHuLu": true,
     "EnableOperateSelfBgm": false,

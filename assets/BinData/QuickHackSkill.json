@@ -126,10 +126,8 @@
     "UsageCount": 1,
     "Duration": 0,
     "ExtraEffectList": [],
-    "ExtraConditionType": "CheckAnyMonsterTypeMatch",
-    "ExtraConditionParams": [
-      "0"
-    ]
+    "ExtraConditionType": "",
+    "ExtraConditionParams": []
   },
   {
     "Id": 8,
@@ -252,7 +250,9 @@
     "TargetType": 0,
     "RamCost": 3,
     "SelfBuffIds": [],
-    "TargetBuffIds": [],
+    "TargetBuffIds": [
+      640034022
+    ],
     "UsageCount": -1,
     "Duration": 0,
     "ExtraEffectList": [],
@@ -268,7 +268,9 @@
     "TargetType": 0,
     "RamCost": 4,
     "SelfBuffIds": [],
-    "TargetBuffIds": [],
+    "TargetBuffIds": [
+      1511500102
+    ],
     "UsageCount": -1,
     "Duration": 0,
     "ExtraEffectList": [],
@@ -284,7 +286,10 @@
     "TargetType": 0,
     "RamCost": 4,
     "SelfBuffIds": [],
-    "TargetBuffIds": [],
+    "TargetBuffIds": [
+      1511500103,
+      1511500113
+    ],
     "UsageCount": -1,
     "Duration": 0,
     "ExtraEffectList": [],
@@ -300,7 +305,9 @@
     "TargetType": 0,
     "RamCost": 4,
     "SelfBuffIds": [],
-    "TargetBuffIds": [],
+    "TargetBuffIds": [
+      640034036
+    ],
     "UsageCount": -1,
     "Duration": 0,
     "ExtraEffectList": [],

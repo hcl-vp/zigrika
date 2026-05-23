@@ -17608,13 +17608,14 @@
     "SkillDetailNum": [
       "30%",
       "15%",
+      "3",
       "120",
       "120",
       "120",
       "120",
       "50",
       "120",
-      "5",
+      "7.5",
       "40",
       "120",
       "12",
@@ -17625,13 +17626,14 @@
     "MultiSkillDetailNum": [
       "30%",
       "15%",
+      "3",
       "120",
       "120",
       "120",
       "120",
       "50",
       "120",
-      "5",
+      "7.5",
       "40",
       "120",
       "12",
@@ -17689,21 +17691,23 @@
       "14",
       "1",
       "0.5%",
-      "70",
+      "35%",
       "250%",
-      "4"
+      "4",
+      "0.2"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004809_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1004809_MultiSkillDescribe",
     "MultiSkillDetailNum": [
       "14",
       "15%",
       "14",
       "1",
       "0.5%",
-      "70",
+      "35%",
       "250%",
-      "4"
+      "4",
+      "0.2"
     ],
     "SkillShowTagType": 0
   },
@@ -17773,6 +17777,7 @@
       151101202,
       151101203,
       151101204,
+      151101205,
       151101301,
       151101302,
       151101303,
@@ -17804,8 +17809,6 @@
       151102412,
       151102421,
       151102422,
-      151102431,
-      151102432,
       151102441,
       151102442,
       151105101,
@@ -17838,11 +17841,12 @@
       "1",
       "3",
       "2",
-      "3",
+      "4",
+      "2",
       "4",
       "2",
       "2",
-      "100",
+      "240",
       "2",
       "2",
       "3"
@@ -17896,7 +17900,9 @@
       151103302,
       151103303,
       151103401,
-      151103501
+      151103501,
+      151103502,
+      151103601
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLucy/SP_SkillIconLucyB1.SP_SkillIconLucyB1",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinB1_UI.T_IconYinlinB1_UI",
@@ -17906,8 +17912,8 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "2",
-      "2",
       "70",
+      "10",
       "2",
       "2",
       "100",
@@ -17946,7 +17952,8 @@
       151102001,
       151102002,
       151102003,
-      151102004
+      151102004,
+      151102005
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLucy/SP_SkillIconLucyC1.SP_SkillIconLucyC1",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinA1_UI.T_IconYinlinA1_UI",
@@ -17968,6 +17975,7 @@
       "5",
       "6",
       "5",
+      "30",
       "5",
       "30",
       "6"
@@ -18017,6 +18025,7 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "8",
+      "1",
       "1",
       "1"
     ],
@@ -18094,7 +18103,12 @@
     "SkillDescribe": "Skill_1004906_SkillDescribe",
     "SkillResume": "Skill_1004906_SkillResume",
     "SkillTagList": [],
-    "SkillDetailNum": [],
+    "SkillDetailNum": [
+      "30",
+      "4",
+      "2",
+      "2"
+    ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1004906_SkillDescribe",
     "MultiSkillDetailNum": [],
@@ -18113,7 +18127,8 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [
-      151107101
+      151107101,
+      151107102
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconLucy/SP_SkillIconLucyY.SP_SkillIconLucyY",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinD1_UI.T_IconYinlinD1_UI",
@@ -18124,12 +18139,13 @@
     "SkillDetailNum": [
       "100",
       "1",
-      "40",
+      "65",
       "8",
       "100",
-      "100",
+      "240",
       "20",
       "1",
+      "8",
       "0.5"
     ],
     "SkillResumeNum": [
@@ -18139,7 +18155,7 @@
     "MultiSkillDetailNum": [
       "100",
       "1",
-      "30",
+      "65",
       "8",
       "100",
       "100",
@@ -18194,8 +18210,8 @@
     "SkillResume": "Skill_1004909_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
+      "25",
       "20",
-      "30",
       "3",
       "30",
       "1",
@@ -18206,8 +18222,8 @@
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1004909_SkillDescribe",
     "MultiSkillDetailNum": [
+      "25",
       "20",
-      "30",
       "3",
       "30",
       "1",

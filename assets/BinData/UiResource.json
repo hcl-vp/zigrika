@@ -7267,14 +7267,14 @@
     "Id": "UiItem_CrossHair",
     "Path": "/Game/Aki/UI/UIResources/UiFight/Prefabs/UiItem_CrossHair.UiItem_CrossHair",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "UiView_SlowMotionProgress",
     "Path": "/Game/Aki/UI/UIResources/UiFight/Prefabs/UiView_SlowMotionProgress.UiView_SlowMotionProgress",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
@@ -9662,7 +9662,7 @@
     "PcPath": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/PC/ActivityBabelTower/PC_UiView_BabelTeam1.PC_UiView_BabelTeam1",
     "ResourceType": "Activity",
     "ActivityType": [
-      "TowerDefenceActivity"
+      "BabelTower"
     ]
   },
   {
@@ -12690,49 +12690,49 @@
     "Id": "T_ComScoreA",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreA.T_ComScoreA",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreB",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreB.T_ComScoreB",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreC",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreC.T_ComScoreC",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreD",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreD.T_ComScoreD",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreS",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreS.T_ComScoreS",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreSS",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreSS.T_ComScoreSS",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_ComScoreSSS",
     "Path": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreSSS.T_ComScoreSSS",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
@@ -12928,43 +12928,51 @@
     "Id": "T_Text5nan_DummyJa",
     "Path": "/Game/Aki/UI/UIResources/UiCG/Image/CGTextJa/T_Text5nan.T_Text5nan",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_Text5nv_DummyJa",
     "Path": "/Game/Aki/UI/UIResources/UiCG/Image/CGTextJa/T_Text5nv.T_Text5nv",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
     "Id": "T_LockBgNor",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Image/ColorfulPainting/T_LockBgNor.T_LockBgNor",
     "PcPath": "",
-    "ResourceType": "Discard",
-    "ActivityType": []
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "LifePointChallenge"
+    ]
   },
   {
     "Id": "T_UnLockBgNor",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Image/ColorfulPainting/T_UnLockBgNor.T_UnLockBgNor",
     "PcPath": "",
-    "ResourceType": "Discard",
-    "ActivityType": []
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "LifePointChallenge"
+    ]
   },
   {
     "Id": "T_LockBgHover",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Image/ColorfulPainting/T_LockBgHover.T_LockBgHover",
     "PcPath": "",
-    "ResourceType": "Discard",
-    "ActivityType": []
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "LifePointChallenge"
+    ]
   },
   {
     "Id": "T_UnLockBgHover",
     "Path": "/Game/Aki/UI/UIResources/UiActivity/Image/ColorfulPainting/T_UnLockBgHover.T_UnLockBgHover",
     "PcPath": "",
-    "ResourceType": "Discard",
-    "ActivityType": []
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "LifePointChallenge"
+    ]
   },
   {
     "Id": "T_ColorBoardLock",
@@ -29839,7 +29847,7 @@
     "Id": "T_BulingBuffBlueB",
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/Buling/T_BulingBuffBlueB.T_BulingBuffBlueB",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
@@ -29860,7 +29868,7 @@
     "Id": "T_BulingBuffOrangeB",
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/Buling/T_BulingBuffOrangeB.T_BulingBuffOrangeB",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
@@ -40883,7 +40891,7 @@
     "Id": "T_ShopTabMoto",
     "Path": "/Game/Aki/UI/UIResources/UiShop/Image/ShopTab/T_ShopTabMoto.T_ShopTabMoto",
     "PcPath": "",
-    "ResourceType": "Discard",
+    "ResourceType": "Common",
     "ActivityType": []
   },
   {
@@ -41243,7 +41251,7 @@
   {
     "Id": "UiView_LuoselaProjectionMain",
     "Path": "/Game/Aki/UI/UIResources/UiLevel/Prefabs/LuoselaProjection/UiView_LuoselaProjectionMain.UiView_LuoselaProjectionMain",
-    "PcPath": "",
+    "PcPath": "/Game/Aki/UI/UIResources/UiLevel/Prefabs/PC/LuoselaProjection/PC_UiView_LuoselaProjectionMain.PC_UiView_LuoselaProjectionMain",
     "ResourceType": "Common",
     "ActivityType": []
   },
@@ -41763,7 +41771,7 @@
   {
     "Id": "UiItem_ExchangeTipsInfo",
     "Path": "/Game/Aki/UI/UIResources/Common/Prefabs/UiItem_ExchangeTipsInfo.UiItem_ExchangeTipsInfo",
-    "PcPath": "",
+    "PcPath": "/Game/Aki/UI/UIResources/Common/Prefabs/PC/PC_UiItem_ExchangeTipsInfo.PC_UiItem_ExchangeTipsInfo",
     "ResourceType": "Common",
     "ActivityType": []
   },
@@ -42955,7 +42963,7 @@
   {
     "Id": "UiView_CheckInteraction_Prefab",
     "Path": "/Game/Aki/UI/UIResources/UiFight/Prefabs/PlotQTE/UiView_CheckInteraction.UiView_CheckInteraction",
-    "PcPath": "",
+    "PcPath": "/Game/Aki/UI/UIResources/UiFight/Prefabs/PC/PlotQTE/PC_UiView_CheckInteraction.PC_UiView_CheckInteraction",
     "ResourceType": "Common",
     "ActivityType": []
   },
@@ -43017,8 +43025,8 @@
   },
   {
     "Id": "UiView_LevelSequenceMain",
-    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity34/LevelSequence/UiView_LevelSequenceMain.UiView_LevelSequenceMain",
-    "PcPath": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/PC/Activity34/LevelSequence/PC_UiView_LevelSequenceMain.PC_UiView_LevelSequenceMain",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity34/LevelSequence/PnlLevelSeqBtnLayout.PnlLevelSeqBtnLayout",
+    "PcPath": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/PC/Activity34/LevelSequence/PC_PnlLevelSeqBtnLayout.PC_PnlLevelSeqBtnLayout",
     "ResourceType": "Common",
     "ActivityType": []
   },

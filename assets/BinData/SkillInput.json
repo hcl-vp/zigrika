@@ -2997,28 +2997,102 @@
     "Id": 130805,
     "InputArray": [],
     "SkillArray": [],
-    "ImageArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika3.T_RoleSkillTreeLibeika3",
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika1.T_RoleSkillTreeLibeika1"
+    ],
     "Description": "RoleSkillInput_1308_DescList_1"
   },
   {
     "Id": 130806,
     "InputArray": [],
     "SkillArray": [],
-    "ImageArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika4.T_RoleSkillTreeLibeika4",
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika2.T_RoleSkillTreeLibeika2"
+    ],
     "Description": "RoleSkillInput_1308_DescList_2"
   },
   {
     "Id": 130807,
     "InputArray": [],
     "SkillArray": [],
-    "ImageArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika5.T_RoleSkillTreeLibeika5",
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika6.T_RoleSkillTreeLibeika6"
+    ],
     "Description": "RoleSkillInput_1308_DescList_3"
   },
   {
     "Id": 130808,
     "InputArray": [],
     "SkillArray": [],
-    "ImageArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika7.T_RoleSkillTreeLibeika7",
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLibeika8.T_RoleSkillTreeLibeika8"
+    ],
     "Description": "RoleSkillInput_1308_DescList_4"
+  },
+  {
+    "Id": 151101,
+    "InputArray": [
+      "技能1"
+    ],
+    "SkillArray": [
+      1004902
+    ],
+    "ImageArray": [],
+    "Description": "SkillInput_1511_DescList_1"
+  },
+  {
+    "Id": 151102,
+    "InputArray": [
+      "技能1"
+    ],
+    "SkillArray": [
+      1004902
+    ],
+    "ImageArray": [],
+    "Description": "SkillInput_1511_DescList_2"
+  },
+  {
+    "Id": 151103,
+    "InputArray": [
+      "攻击",
+      "攻击"
+    ],
+    "SkillArray": [
+      1004901,
+      1004901
+    ],
+    "ImageArray": [],
+    "Description": "SkillInput_1511_DescList_3"
+  },
+  {
+    "Id": 151104,
+    "InputArray": [],
+    "SkillArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLuXi.T_RoleSkillTreeLuXi"
+    ],
+    "Description": "RoleSkillInput_1511_DescList_1"
+  },
+  {
+    "Id": 151105,
+    "InputArray": [],
+    "SkillArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLuXi1.T_RoleSkillTreeLuXi1"
+    ],
+    "Description": "RoleSkillInput_1511_DescList_2"
+  },
+  {
+    "Id": 151106,
+    "InputArray": [],
+    "SkillArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeLuXi2.T_RoleSkillTreeLuXi2"
+    ],
+    "Description": "RoleSkillInput_1511_DescList_3"
   }
 ]
