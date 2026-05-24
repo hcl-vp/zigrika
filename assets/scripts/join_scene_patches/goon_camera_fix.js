@@ -94,6 +94,18 @@ setTimeout(() => {
   } = require("Game/Module/Photograph/View/PhotographSetupView.js");
   const TimeUtil_1 = require("Game/Common/TimeUtil.js");
   const TimerSystem_1 = require("Core/Timer/TimerSystem.js");
+  const LocalStorageDefine_1 = require("Game/Common/LocalStorageDefine.js");
+  const LocalStorage_1 = require("Game/Common/LocalStorage.js");
+  const MAX_ID = 9;
+  const {
+    PhotographValueSetup,
+  } = require("Game/Module/Photograph/View/PhotographValueSetup.js");
+  const {
+    PhotographValueWithoutTitleSetup,
+  } = require("Game/Module/Photograph/View/PhotographValueWithoutTitleSetup.js");
+  const {
+    PhotographOptionSetup,
+  } = require("Game/Module/Photograph/View/PhotographOptionSetup.js");
 
   const plot_view_manager = PlotController_1.PlotController.PlotViewManager;
 
@@ -190,6 +202,149 @@ setTimeout(() => {
         FragmentMemory: undefined,
         RoleSkinData: undefined,
       });
+    }
+  };
+
+  PhotoSaveView.prototype.vNn = function () {};
+
+  PhotoSaveView.prototype.gKi = function () {
+    if (this.x4_) {
+      const i = UE.WidgetLayoutLibrary.GetViewportSize(
+        GlobalData_1.GlobalData.World,
+      );
+      return [0, 0, i.X, i.Y];
+    }
+    var e = this.GetItem(this.WWi ? 11 : 23);
+    var t = this.GetItem(this.WWi ? 12 : 24);
+    var e = e.GetPositionInViewPort(true);
+    var t = t.GetPositionInViewPort(true);
+    const i = UE.WidgetLayoutLibrary.GetViewportSize(
+      GlobalData_1.GlobalData.World,
+    );
+    return [
+      e.X < 0 ? 0 : e.X,
+      e.Y < 0 ? 0 : e.Y,
+      (t.X < i.X ? t : i).X,
+      (t.Y < i.Y ? t : i).Y,
+    ];
+  };
+
+  PhotoSaveView.prototype.D4_ = function (e) {
+    const t = this.GetItem(14);
+
+    t.SetUIActive(true);
+    this.GetItem(15).SetUIActive(false);
+    const i = this.GetItem(13);
+
+    const h = UE.WidgetLayoutLibrary.GetViewportSize(
+      GlobalData_1.GlobalData.World,
+    );
+
+    const r = UE.WidgetLayoutLibrary.GetViewportScale(
+      GlobalData_1.GlobalData.World,
+    );
+
+    if (e) {
+      i.SetWidth(h.X / r);
+      i.SetHeight(h.Y / r);
+      this.U4_ = t.K2_GetComponentScale();
+      t.SetUIItemScale(new UE.Vector(1, 1, 1));
+      const offset = t.RelativeLocation;
+      offset.Y = offset.Y - 10;
+      t.SetUIRelativeLocation(offset);
+
+      EventSystem_1.EventSystem.Emit(
+        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
+        false,
+      );
+    } else {
+      i.SetWidth(h.X / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
+      i.SetHeight(h.Y / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
+      t.SetUIItemScale(this.U4_);
+      t.SetUIRelativeLocation(new UE.Vector(0, 0, 0));
+
+      EventSystem_1.EventSystem.Emit(
+        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
+        true,
+      );
+    }
+  };
+
+  PhotoSaveView.prototype.zWi = function (e, t, i, h) {
+    var r = this.EJl();
+    let o = this.gKi();
+    this.KWi = this.fKi(r);
+    var r = UE.BlueprintPathsLibrary.ProjectUserDir();
+    var r = r + this.KWi;
+
+    var r = ScreenShotManager_1.ScreenShotManager.PrepareTakeScreenshot(
+      r,
+      o[0],
+      o[1],
+      o[2],
+      o[3],
+      e,
+    );
+
+    if (r) {
+      r.OnTakeScreenshotCapturedDelegate.Add(t);
+      i && r.OnIOSPhotoLibraryAuthorizationCompletedDelegate.Add(i);
+      h && r.OnTakeScreenshotCompressedDelegate.Add(h);
+
+      Log_1.Log.CheckInfo() &&
+        Log_1.Log.Info("Photo", 58, "开始截图", ["isSaveFile", e]);
+
+      r.TakeScreenshot();
+    }
+  };
+
+  FightPhotoSaveView.prototype.gKi = function () {
+    const i = UE.WidgetLayoutLibrary.GetViewportSize(
+      GlobalData_1.GlobalData.World,
+    );
+    return [0, 0, i.X, i.Y];
+  };
+
+  FightPhotoSaveView.prototype.D4_ = function (e) {
+    const t = this.GetItem(3);
+
+    const i = UE.WidgetLayoutLibrary.GetViewportSize(
+      GlobalData_1.GlobalData.World,
+    );
+
+    const r = UE.WidgetLayoutLibrary.GetViewportScale(
+      GlobalData_1.GlobalData.World,
+    );
+
+    if (e) {
+      ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption(
+        MAX_ID + 4,
+        0,
+      );
+      t.SetWidth(i.X / r);
+      t.SetHeight(i.Y / r);
+      this.U4_ = t.K2_GetComponentScale();
+      t.SetUIItemScale(new UE.Vector(1, 1, 1));
+      const offset = t.RelativeLocation;
+      offset.Y = offset.Y - 48;
+      t.SetUIRelativeLocation(offset);
+      this.dzd(true);
+
+      EventSystem_1.EventSystem.Emit(
+        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
+        false,
+      );
+    } else {
+      t.SetWidth(i.X / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
+      t.SetHeight(i.Y / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
+      t.SetUIItemScale(this.U4_);
+      t.SetUIRelativeLocation(new UE.Vector(0, 0, 0));
+      this.dzd(false);
+
+      EventSystem_1.EventSystem.Emit(
+        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
+        true,
+      );
     }
   };
 
@@ -336,6 +491,7 @@ setTimeout(() => {
 
   const PAUSE_DILATION_THRESHOLD = 0.01;
   const dilate_time = (dilation) => {
+    if (!Number.isFinite(dilation)) return;
     const should_pause = dilation < PAUSE_DILATION_THRESHOLD && dilation !== 1;
     set_game_paused(should_pause);
 
@@ -369,29 +525,17 @@ setTimeout(() => {
       this.GetScrollViewWithScrollbar(2),
       this.Bqe,
     );
-
     this.o8a = new GenericLayout_1.GenericLayout(
       this.GetVerticalLayout(0),
       this.n8a,
     );
-
-    await this.yEd.RefreshByDataAsync(
-      ConfigManager_1.ConfigManager.PhotographConfig.GetAllFightPhotoOptionConfig(),
-    );
-
+    await this.yEd.RefreshByDataAsync([]);
     this.yEd.SelectGridProxy(0);
     this.RefreshCondition();
     this.GetItem(4)?.SetUIActive(false);
     this.GetSprite(7).SetUIActive(false);
-    this.GetSprite(8).SetUIActive(true);
+    this.GetSprite(8).SetUIActive(false);
 
-    this.yEd.BindScrollValueChange((e) => {
-      if (e) {
-        this.GetSprite(7).SetUIActive(e.Y > 0);
-        this.GetSprite(8).SetUIActive(e.Y < 1);
-      }
-    });
-    1;
     detach_plot_camera();
   };
 
@@ -461,6 +605,9 @@ setTimeout(() => {
     this.NDc();
   };
 
+  let last_recorded_style =
+    ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(MAX_ID + 8);
+
   UiCameraPhotographerStructure.prototype.OnSpawnStructureActor = function () {
     photo_mode_active = true;
     var t = new UE.TransformDouble(
@@ -483,15 +630,14 @@ setTimeout(() => {
     //     UiManager_1.UiManager.CloseView("FilterSettingView");
     // };
     photographer.ReceiveDestroyed = function () {
-      this.Character = undefined;
-      this.IsLoadingConfigCompleted = false;
-
-      if (this.CameraNpcSphereTrace) {
-        this.CameraNpcSphereTrace.Dispose();
-        this.CameraNpcSphereTrace = undefined;
-      }
+      ((this.Character = void 0),
+        (this.IsLoadingConfigCompleted = !1),
+        this.CameraNpcSphereTrace &&
+          (this.CameraNpcSphereTrace.Dispose(),
+          (this.CameraNpcSphereTrace = void 0)));
     };
     photographer.Initialize = function () {
+      // UiManager_1.UiManager.OpenViewAsync("FilterSettingView");
       this.RelativeVectorCache = new UE.Vector();
       this.DefaultRotation = new UE.Rotator(0, 0, 0);
       this.InitialCapsuleRoll =
@@ -508,17 +654,12 @@ setTimeout(() => {
         CommonParamById_1.configCommonParamById.GetIntConfig(
           "CameraSourceMinPitch",
         );
-
-      this.MaxFov = PhotographDefine_1.MAX_FOV;
-      this.MinFov = PhotographDefine_1.MIN_FOV;
+      this.MaxFov = 300;
+      this.MinFov = 0;
       this.CameraUpAndDownSpeed = 1;
       this.CameraLeftAndRightSpeed = 1;
       this.CameraForwardAndBackwardSpeed = 1;
-
-      this.CameraForwardAndBackSpeed =
-        CommonParamById_1.configCommonParamById.GetIntConfig(
-          "CameraForwardAndBackSpeed",
-        ) ?? 1;
+      this.CameraForwardAndBackSpeed = 1;
 
       this.CameraInitializeFov = -1;
       const s =
@@ -527,49 +668,6 @@ setTimeout(() => {
       this.CameraUpAndDownMaxDistance = 100000000;
       this.CameraLeftAndRightMaxDistance = 100000000;
       this.CameraForwardAndBackMaxDistance = 100000000;
-
-      if (s) {
-        this.MinFov =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMinFov",
-          );
-
-        this.MaxFov =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraMaxFov",
-          );
-
-        this.CameraUpAndDownSpeed =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraUpAndDownSpeed",
-          );
-
-        this.CameraLeftAndRightSpeed =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "FightCameraLeftAndRightSpeed",
-          );
-      } else {
-        this.MinFov =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "CameraMinFov",
-          ) ?? PhotographDefine_1.MAX_FOV;
-
-        this.MaxFov =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "CameraMaxFov",
-          ) ?? PhotographDefine_1.MIN_FOV;
-
-        this.CameraUpAndDownSpeed =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "CameraUpAndDownSpeed",
-          ) ?? 1;
-
-        this.CameraLeftAndRightSpeed =
-          CommonParamById_1.configCommonParamById.GetIntConfig(
-            "CameraLeftAndRightSpeed",
-          ) ?? 1;
-      }
-
       this.CurCameraUpAndDownDistance = 0;
       this.CurCameraLeftAndRightDistance = 0;
       this.CurCameraForwardAndBackDistance = 0;
@@ -589,33 +687,29 @@ setTimeout(() => {
       this.DitheredNpcDistanceMap = new Map();
       this.InitCameraNpcSphereTrace();
       this.IsLoadingConfigCompleted = false;
-      const t = Info_1.Info.IsMobilePlatform()
-        ? MOBILE_CONFIG_PATH
-        : CONFIG_PATH;
-
+      var t = Info_1.Info.IsMobilePlatform() ? MOBILE_CONFIG_PATH : CONFIG_PATH;
       ResourceSystem_1.ResourceSystem.LoadAsync(
         t,
         UE.BP_PhotographCameraConfig_C,
         (t) => {
-          var t_基础 = t_基础.基础;
-
-          this.StartHidePitch = s ? t_基础.Get(15) : t_基础.Get(10);
-          var i = s ? t_基础.Get(2) : t_基础.Get(8);
-
-          var h = s ? t_基础.Get(3) : t_基础.Get(9);
-
-          this.StartHideDistance = Math.max(i, h) + HIDE_DISTANCE_OFFSET;
-          this.CompleteHideDistance = Math.min(i, h) + HIDE_DISTANCE_OFFSET;
-          var i = t_基础.Get(5);
-
-          var h = t_基础.Get(6);
+          var t = t.基础,
+            i =
+              ((this.StartHidePitch = s ? t.Get(15) : t.Get(10)),
+              s ? t.Get(2) : t.Get(8)),
+            h = s ? t.Get(3) : t.Get(9),
+            i =
+              ((this.StartHideDistance = Math.max(i, h) + HIDE_DISTANCE_OFFSET),
+              (this.CompleteHideDistance =
+                Math.min(i, h) + HIDE_DISTANCE_OFFSET),
+              t.Get(5)),
+            h = t.Get(6);
           this.NpcStartHideDistance = Math.max(i, h) + HIDE_DISTANCE_OFFSET;
           this.NpcCompleteHideDistance = Math.min(i, h) + HIDE_DISTANCE_OFFSET;
-          this.NpcStartDitherValue = t_基础.Get(7);
-          this.CompleteHidePitch = s ? t_基础.Get(1) : t_基础.Get(11);
-          this.StartHideSizeInFrame = t_基础.Get(13);
-          this.CompleteHideSizeInFrame = t_基础.Get(14);
-          this.StartDitherValue = s ? t_基础.Get(4) : t_基础.Get(12);
+          this.NpcStartDitherValue = t.Get(7);
+          this.CompleteHidePitch = s ? t.Get(1) : t.Get(11);
+          this.StartHideSizeInFrame = t.Get(13);
+          this.CompleteHideSizeInFrame = t.Get(14);
+          this.StartDitherValue = s ? t.Get(4) : t.Get(12);
           this.IsLoadingConfigCompleted = true;
         },
         100,
@@ -624,8 +718,6 @@ setTimeout(() => {
       this.CameraArm.bDoCollisionTest = false;
       this.CameraArm.bEnableCameraLag = false;
       this.CameraArm.bEnableCameraRotationLag = false;
-
-      this.RefreshDitherEffect();
     };
 
     photographer.MoveUp = function (t) {
@@ -770,37 +862,98 @@ setTimeout(() => {
       move_down_held = state === 0;
     };
 
+    last_recorded_style =
+      ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(
+        MAX_ID + 8,
+      );
     photographer.RefreshCameraArm = function () {
       if (move_up_held) CustomMoveUp(null, 1);
       if (move_down_held) CustomMoveUp(null, -1);
       if (this.PitchInput === 0 && this.YawInput === 0) return;
 
-      this.TmpRotator.DeepCopy(this.CapsuleCollision.K2_GetComponentRotation());
-      this.TmpRotator.Quaternion(this.TmpQuat);
+      const movement_style =
+        ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(
+          MAX_ID + 8,
+        );
 
-      if (Math.abs(this.PitchInput) > MathUtils_1.MathUtils.SmallNumber) {
-        this.TmpRotator2.Set(this.PitchInput, 0, 0);
-        this.TmpRotator2.Quaternion(this.TmpQuat2);
-        this.TmpQuat.Multiply(this.TmpQuat2, this.TmpQuat3);
-        this.TmpQuat.DeepCopy(this.TmpQuat3);
+      if (movement_style === 5) {
+        this.TmpRotator.DeepCopy(
+          this.CapsuleCollision.K2_GetComponentRotation(),
+        );
+        this.TmpRotator.Quaternion(this.TmpQuat);
+
+        if (Math.abs(this.PitchInput) > MathUtils_1.MathUtils.SmallNumber) {
+          this.TmpRotator2.Set(this.PitchInput, 0, 0);
+          this.TmpRotator2.Quaternion(this.TmpQuat2);
+          this.TmpQuat.Multiply(this.TmpQuat2, this.TmpQuat3);
+          this.TmpQuat.DeepCopy(this.TmpQuat3);
+        }
+        if (Math.abs(this.YawInput) > MathUtils_1.MathUtils.SmallNumber) {
+          this.TmpRotator2.Set(0, this.YawInput, 0);
+          this.TmpRotator2.Quaternion(this.TmpQuat2);
+          this.TmpQuat.Multiply(this.TmpQuat2, this.TmpQuat3);
+          this.TmpQuat.DeepCopy(this.TmpQuat3);
+        }
+
+        this.TmpQuat.Rotator(this.TmpRotator);
+        this.CapsuleCollision.K2_SetRelativeRotation(
+          this.TmpRotator.ToUeRotator(),
+          false,
+          void 0,
+          false,
+        );
+
+        this.PitchInput = 0;
+        this.YawInput = 0;
+      } else {
+        let t;
+        if (this.PitchInput !== 0 || this.YawInput !== 0) {
+          this.TmpRotator.DeepCopy(
+            this.CapsuleCollision.K2_GetComponentRotation(),
+          );
+
+          this.TmpRotator.Quaternion(this.TmpQuat);
+
+          t = GravityUtils_1.GravityUtils.GetGravityUpForActor(
+            Global_1.Global.BaseCharacter?.CharacterActorComponent,
+          );
+
+          Quat_1.Quat.ConstructorByAxisAngle(
+            t,
+            this.YawInput * MathUtils_1.MathUtils.DegToRad,
+            this.TmpQuat2,
+          );
+
+          this.TmpQuat2.Multiply(this.TmpQuat, this.TmpQuat3);
+          this.TmpQuat.DeepCopy(this.TmpQuat3);
+          t = this.GetArmPitch();
+
+          t =
+            MathUtils_1.MathUtils.Clamp(
+              this.PitchInput + t,
+              this.SourceMinPitch,
+              this.SourceMaxPitch,
+            ) - t;
+
+          Math.abs(t) > MathUtils_1.MathUtils.SmallNumber &&
+            (this.TmpRotator2.Set(t, 0, 0),
+            this.TmpRotator2.Quaternion(this.TmpQuat2),
+            this.TmpQuat.Multiply(this.TmpQuat2, this.TmpQuat3),
+            this.TmpQuat.DeepCopy(this.TmpQuat3));
+
+          this.TmpQuat.Rotator(this.TmpRotator);
+
+          this.CapsuleCollision.K2_SetRelativeRotation(
+            this.TmpRotator.ToUeRotator(),
+            false,
+            undefined,
+            false,
+          );
+
+          this.PitchInput = 0;
+          this.YawInput = 0;
+        }
       }
-      if (Math.abs(this.YawInput) > MathUtils_1.MathUtils.SmallNumber) {
-        this.TmpRotator2.Set(0, this.YawInput, 0);
-        this.TmpRotator2.Quaternion(this.TmpQuat2);
-        this.TmpQuat.Multiply(this.TmpQuat2, this.TmpQuat3);
-        this.TmpQuat.DeepCopy(this.TmpQuat3);
-      }
-
-      this.TmpQuat.Rotator(this.TmpRotator);
-      this.CapsuleCollision.K2_SetRelativeRotation(
-        this.TmpRotator.ToUeRotator(),
-        false,
-        void 0,
-        false,
-      );
-
-      this.PitchInput = 0;
-      this.YawInput = 0;
     };
 
     FightPhotographView.prototype.ZQi = function () {
@@ -1098,6 +1251,10 @@ setTimeout(() => {
   //       InputDistributeDefine_1.inputDistributeTagDefine.UiInputRootTag,
   //     );
   //   };
+  InputDistributeController_1.InputDistributeController.RefreshInputTag =
+    function () {
+      ModelManager_1.ModelManager.InputDistributeModel.RefreshInputDistributeTag();
+    };
 
   ControllerHolder_1.ControllerHolder.PhotographController.$ha = function (t) {
     return !0;
@@ -1217,74 +1374,67 @@ setTimeout(() => {
   };
 
   FightPhotographView.prototype.OnBeforeStartAsync = async function () {
-    var t = [];
-
-    this.IQi = new PhotographEntityPanel_1.PhotographEntityPanel();
-    t.push(this.IQi.CreateByActorAsync(this.GetItem(15).GetOwner()));
-
-    t.push(PhotographController_1.PhotographController.ChangeNpcFace());
-    await Promise.all(t);
-    this.zQi();
-    this.IQi.SetActive(false);
-
-    this.yQi =
-      CommonParamById_1.configCommonParamById.GetIntConfig(
-        "ControlCameraRate",
-      ) / CommonDefine_1.PERCENTAGE_FACTOR;
-
-    UiLayer_1.UiLayer.SetLayerActive(UiLayerType_1.ELayerType.HUD, false);
-    this.xQe();
-
-    var e =
-      CommonParamById_1.configCommonParamById.GetStringConfig(
-        "PhotographDAPath",
-      );
-
-    if (e?.length !== 0) {
-      ResourceSystem_1.ResourceSystem.LoadAsync(
+    var t = [],
+      e =
+        ((this.IQi = new PhotographEntityPanel_1.PhotographEntityPanel()),
+        t.push(this.IQi.CreateByActorAsync(this.GetItem(15).GetOwner())),
+        // this.GetButton(14).RootUIComp.SetUIActive(false),
+        ((this.SEd = new FightPhotoOptionPanel_1.FightPhotoOptionPanel()),
+        // (e = this.GetItem(16)),
+        t.push(
+          this.SEd.CreateThenShowByResourceIdAsync("UiItem_BattlePhoto", e),
+        )),
+        await Promise.all(t),
+        this.zQi(),
+        this.IQi.SetActive(false),
+        (this.yQi =
+          CommonParamById_1.configCommonParamById.GetIntConfig(
+            "ControlCameraRate",
+          ) / CommonDefine_1.PERCENTAGE_FACTOR),
+        UiLayer_1.UiLayer.SetLayerActive(UiLayerType_1.ELayerType.HUD, false),
+        this.xQe(),
+        CommonParamById_1.configCommonParamById.GetStringConfig(
+          "PhotographDAPath",
+        )),
+      t =
+        (0 !== e?.length &&
+          ResourceSystem_1.ResourceSystem.LoadAsync(
+            e,
+            UE.KuroSequenceConsoleCommandDataAsset,
+            (t) => {
+              UE.KuroSequencePerformanceManager.OpenKuroPerformanceModeInPhotographModel(
+                t,
+              );
+            },
+            100,
+            this.MemoryTag,
+          ),
+        GlobalData_1.GlobalData.World),
+      e = CommonParamById_1.configCommonParamById.GetStringConfig(
+        "PhotographPPVLevelPath",
+      ),
+      o = (0, puerts_1.$ref)(false);
+    if (
+      ((this.$2_ = UE.LevelStreamingDynamic.LoadLevelInstance(
+        t,
         e,
-        UE.KuroSequenceConsoleCommandDataAsset,
-        (t) => {
-          UE.KuroSequencePerformanceManager.OpenKuroPerformanceModeInPhotographModel(
-            t,
-          );
-        },
-        100,
-        this.MemoryTag,
-      );
-    }
-
-    var t = GlobalData_1.GlobalData.World;
-
-    var e = CommonParamById_1.configCommonParamById.GetStringConfig(
-      "PhotographPPVLevelPath",
-    );
-
-    const o = $ref(false);
-
-    this.$2_ = UE.LevelStreamingDynamic.LoadLevelInstance(
-      t,
-      e,
-      Vector_1.Vector.ZeroVector,
-      Rotator_1.Rotator.ZeroRotator,
-      o,
-    );
-
-    if ($unref(o)) {
+        Vector_1.Vector.ZeroVector,
+        Rotator_1.Rotator.ZeroRotator,
+        o,
+      )),
+      (0, puerts_1.$unref)(o))
+    ) {
       const i = new CustomPromise_1.CustomPromise();
-
       this.$2_.OnLevelShown.Add(() => {
         ModelManager_1.ModelManager.PhotographModel.InitFilterPostProcessVolume();
         PhotographController_1.PhotographController.InitPostProcessVolBlendWeight();
-        i.SetResult(undefined);
+        i.SetResult(void 0);
       });
-
       await i.Promise;
     }
     this.SEd.GetItem(4).GetParentAsUIItem().SetUIActive(false);
   };
 
-  const MAX_ID = 9;
   ControllerHolder_1.ControllerHolder.PhotographController.U5_ = function () {
     ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption(
       MAX_ID,
@@ -1296,31 +1446,24 @@ setTimeout(() => {
     );
 
     ModelManager_1.ModelManager.PhotographModel.IsOpenPhotograph = false;
-    let t = ModelManager_1.ModelManager.PhotographModel;
-    this.ResetPhotoMontage();
+    const t = ModelManager_1.ModelManager.PhotographModel;
+    PhotographController.ResetPhotoMontage();
     t.DestroyUiCamera();
     t.ResetEntityEnable();
     t.ClearPhotographOption();
-    this.m$e();
-    this.DWi().SetIsDitherEffectEnable(true);
-    t = Global_1.Global.BaseCharacter;
-
-    if (
-      t !== undefined &&
-      !SeamlessTravelController_1.SeamlessTravelController.WasRoleEntityInSeamlessTraveling(
-        t.CharacterActorComponent?.Entity,
-      )
-    ) {
-      t?.SetDitherEffect(0, 1);
+    PhotographController.m$e();
+    PhotographController.DWi().SetIsDitherEffectEnable(true);
+    const char = Global_1.Global.BaseCharacter;
+    if (char !== undefined) {
+      char?.SetDitherEffect(0, 1);
     }
-
-    this.SetNpcFocusPhotograph(false);
-    this.IsLastChecked = false;
-    this.NzC = false;
-    this.SetIsLineTraceBlock(false);
-    this.PhotoTargets = undefined;
-    this.TogetherCameraFov = undefined;
-    this.v_m = undefined;
+    PhotographController.SetNpcFocusPhotograph(false);
+    PhotographController.IsLastChecked = false;
+    PhotographController.b$C = false;
+    PhotographController.SetIsLineTraceBlock(false);
+    PhotographController.PhotoTargets = undefined;
+    PhotographController.TogetherCameraFov = undefined;
+    PhotographController.v_m = undefined;
   };
 
   ControllerHolder_1.ControllerHolder.PhotographController.SetSingleFilterStrength =
@@ -1332,21 +1475,181 @@ setTimeout(() => {
 
   ControllerHolder_1.ControllerHolder.PhotographController.InitializeDefaultPhotographOption =
     function () {
-      for (const o of ConfigManager_1.ConfigManager.PhotographConfig.GetAllPhotoSetupConfig()) {
-        if (o.ValueType === 8) continue;
+      var t =
+        ConfigManager_1.ConfigManager.PhotographConfig.GetAllPhotoSetupConfig();
+
+      const e =
+        LocalStorage_1.LocalStorage.GetGlobal(
+          LocalStorageDefine_1.ELocalStorageGlobalKey.PhotographSetupOption,
+        ) ?? new Map();
+
+      for (const i of t) {
+        if (i.ValueType == MAX_ID + 2) {
+          continue;
+        }
         let t = -1;
-        var e = o.Type;
-        (0 === e
-          ? (t = o.DefaultOptionIndex)
-          : 1 === e && (t = o.ValueRange[2]),
-          this.SetPhotographOption(o.ValueType, t, !0));
+        const i_Type = i.Type;
+
+        if (i.IsLocalStorage && e.has(i.ValueType)) {
+          t = e.get(i.ValueType);
+        } else if (i_Type === 0) {
+          t = i.DefaultOptionIndex;
+        } else if (i_Type === 1 || i_Type === 3) {
+          t = i.ValueRange[2];
+        } else if (i_Type === 2) {
+          t = i.DefaultDropDownIndex;
+        }
+
+        this.SetPhotographOption(i.ValueType, t, true);
       }
-      2 === this.CameraCaptureType && this.SetNpcFocusPhotograph(!0);
+
+      if (this.CameraCaptureType === 2) {
+        this.SetNpcFocusPhotograph(true);
+      }
       this.SetPhotographOption(
-        MAX_ID + 1,
+        MAX_ID + 2,
         ModelManager_1.ModelManager.TimeOfDayModel?.GameTime?.Second,
       );
     };
+
+  function saveToLocalStorage(valueType, value) {
+    const map =
+      LocalStorage_1.LocalStorage.GetGlobal(
+        LocalStorageDefine_1.ELocalStorageGlobalKey.PhotographSetupOption,
+      ) ?? new Map();
+    map.set(valueType, value);
+    LocalStorage_1.LocalStorage.SetGlobal(
+      LocalStorageDefine_1.ELocalStorageGlobalKey.PhotographSetupOption,
+      map,
+    );
+  }
+
+  const _original_ValueSetup_OnStart = PhotographValueSetup.prototype.OnStart;
+  PhotographValueSetup.prototype.OnStart = function () {
+    _original_ValueSetup_OnStart.call(this);
+    this.pQi = (e, t = 0) => {
+      let r;
+      if (this.SetupConfig.IsReverseSet) {
+        r = this.SetupConfig.ValueRange;
+        r = MathUtils_1.MathUtils.RangeClamp(e, r[0], r[1], r[1], r[0]);
+        PhotographController_1.PhotographController.SetPhotographOption(
+          this.SetupConfig.ValueType,
+          r,
+        );
+      } else {
+        r = e;
+        PhotographController_1.PhotographController.SetPhotographOption(
+          this.SetupConfig.ValueType,
+          e,
+        );
+      }
+      if (this.SetupConfig.IsLocalStorage) {
+        saveToLocalStorage(this.SetupValueType, r);
+      }
+    };
+    this.GetSlider(1).OnValueChangeCb.Unbind();
+    this.GetSlider(1).OnValueChangeCb.Bind(this.pQi);
+  };
+
+  const _original_ValueWithoutTitle_OnStart =
+    PhotographValueWithoutTitleSetup.prototype.OnStart;
+  PhotographValueWithoutTitleSetup.prototype.OnStart = function () {
+    _original_ValueWithoutTitle_OnStart.call(this);
+    this.pQi = (e, t = 0) => {
+      let r;
+      if (this.SetupConfig.IsReverseSet) {
+        r = this.SetupConfig.ValueRange;
+        r = MathUtils_1.MathUtils.RangeClamp(e, r[0], r[1], r[1], r[0]);
+        PhotographController_1.PhotographController.SetPhotographOption(
+          this.SetupConfig.ValueType,
+          r,
+        );
+        this.GetText(2).SetText(
+          MathUtils_1.MathUtils.GetFloatPointFloorString(r, 1),
+        );
+      } else {
+        r = e;
+        PhotographController_1.PhotographController.SetPhotographOption(
+          this.SetupConfig.ValueType,
+          e,
+        );
+        this.GetText(2).SetText(
+          MathUtils_1.MathUtils.GetFloatPointFloorString(e, 1),
+        );
+      }
+      if (this.SetupConfig.IsLocalStorage) {
+        saveToLocalStorage(this.SetupValueType, r);
+      }
+    };
+    this.GetSlider(0).OnValueChangeCb.Unbind();
+    this.GetSlider(0).OnValueChangeCb.Bind(this.pQi);
+  };
+
+  const _original_OptionSetup_OnStart = PhotographOptionSetup.prototype.OnStart;
+  PhotographOptionSetup.prototype.OnStart = function () {
+    _original_OptionSetup_OnStart.call(this);
+    this.UFe = () => {
+      this.EUt(!this.PKi);
+      this.wKi(this.PKi);
+      this.BKi();
+      if (this.SetupConfig.IsLocalStorage) {
+        saveToLocalStorage(this.SetupValueType, this.AKi);
+      }
+      if (this.xKi) {
+        this.xKi(this.AKi);
+      }
+      this.MarkPhotoSetupRedDotAsRead(() => {
+        this.GetItem(2)?.SetUIActive(false);
+      });
+    };
+    this.GetButton(1).OnClickCallBack.Unbind();
+    this.GetButton(1).OnClickCallBack.Bind(this.UFe);
+  };
+
+  PhotographSetupView.prototype.oQi = async function () {
+    const t =
+      ConfigManager_1.ConfigManager.PhotographConfig.GetAllPhotoSetupConfig();
+
+    const i = this.GetItem(5);
+    const e = this.GetItem(6);
+    const s = this.GetItem(13);
+    const h = this.GetItem(14);
+
+    i.SetUIActive(true);
+    e.SetUIActive(true);
+    s.SetUIActive(true);
+    h.SetUIActive(true);
+    const o = [];
+
+    const sorted = [...t].sort((a, b) => {
+      const a_id = typeof a.id === "function" ? a.id() : a.Id;
+      const b_id = typeof b.id === "function" ? b.id() : b.Id;
+      return a_id - b_id;
+    });
+
+    for (const r of sorted) {
+      if (r.ValueType !== 2 || this.Tfm === 0) {
+        o.push(this.gQi(r.ValueType, r.Type));
+      }
+    }
+    await Promise.all(o);
+    i.SetUIActive(false);
+    e.SetUIActive(false);
+    s.SetUIActive(false);
+    h.SetUIActive(false);
+  };
+
+  function original_cam_roll(t) {
+    this.TmpRotator.DeepCopy(this.CapsuleCollision.K2_GetComponentRotation());
+    this.TmpRotator.Roll = this.InitialCapsuleRoll + t;
+
+    this.CapsuleCollision.K2_SetRelativeRotation(
+      this.TmpRotator.ToUeRotator(),
+      true,
+      undefined,
+      false,
+    );
+  }
 
   ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption =
     function (t, e, o = !1) {
@@ -1449,7 +1752,7 @@ setTimeout(() => {
 
           break;
         }
-        case 8:
+        case MAX_ID:
           const view = UiManager_1.UiManager.GetViewByName(
             "FightPhotographView",
           );
@@ -1470,7 +1773,7 @@ setTimeout(() => {
             }
           }
           break;
-        case 10:
+        case MAX_ID + 1:
           const list_of_actors =
             ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity.GetComponent(
               23,
@@ -1483,31 +1786,57 @@ setTimeout(() => {
             actor?.SetActorHiddenInGame(e == false || e === 0);
           }
           break;
-        case 11:
+        case MAX_ID + 2:
           TimeOfDayController_1.TimeOfDayController.AdjustTime(
             e,
             Protocol_1.Aki.Protocol.C4s.Proto_PlayerOperate,
           );
           break;
-        case 12:
-          this.SetPhotographOption(12, 0);
+        case MAX_ID + 3:
+          this.SetPhotographOption(MAX_ID + 4, 0);
           break;
-        case 13:
+        case MAX_ID + 4:
           dilate_time(e);
           break;
-        case 14:
-        case 15:
-        case 16: {
+        case MAX_ID + 5:
+        case MAX_ID + 6:
+        case MAX_ID + 7: {
           const structure =
             ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
           const cam = structure?.$Uo;
           if (!cam) break;
-          if (t === 11) cam.CameraLeftAndRightSpeed = e;
-          else if (t === 12) cam.CameraUpAndDownSpeed = e;
+          if (t === 14) cam.CameraLeftAndRightSpeed = e;
+          else if (t === 15) cam.CameraUpAndDownSpeed = e;
           else cam.CameraForwardAndBackwardSpeed = e;
         }
       }
     };
+
+  ModelManager_1.ModelManager.PhotographModel.SetPhotographOption = function (
+    t,
+    e,
+  ) {
+    this.kWi.set(t, e);
+    const movement_style =
+      ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(
+        MAX_ID + 8,
+      );
+    if (last_recorded_style !== movement_style) {
+      const structure =
+        ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
+      const cam = structure?.$Uo;
+      if (!cam) return;
+      if (movement_style === 5) {
+        cam.SetCameraArmRoll = function (t) {};
+      } else {
+        cam.SetCameraArmRoll = original_cam_roll;
+        cam.SetCameraArmRoll(
+          ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(7),
+        );
+      }
+      last_recorded_style = movement_style;
+    }
+  };
 
   const original_set_local_text_new = LguiUtil_1.LguiUtil.SetLocalTextNew.bind(
     LguiUtil_1.LguiUtil,
@@ -1537,6 +1866,7 @@ setTimeout(() => {
   //   function () {};
 
   PhotographView_1.PhotographView.prototype.OnBeforeShow = function () {
+    ControllerHolder_1.ControllerHolder.QtaController.StopCurrentQta();
     let t;
     let e;
     let o;
@@ -1584,6 +1914,7 @@ setTimeout(() => {
   };
 
   FightPhotographView.prototype.OnBeforeShow = function () {
+    ControllerHolder_1.ControllerHolder.QtaController.StopCurrentQta();
     let t;
     let e;
     let o;
@@ -1643,7 +1974,7 @@ setTimeout(() => {
       this.GetItem(19),
     );
 
-    this.iWC();
+    this.gJC();
 
     if (
       !PhotographController_1.PhotographController.CheckIfInFightPhotographCamera()

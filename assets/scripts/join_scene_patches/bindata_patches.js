@@ -18,14 +18,11 @@ setTimeout(() => {
     configPhotoSetupByValueType,
   } = require("../Core/Define/ConfigQuery/PhotoSetupByValueType.js");
   const { ConfigManager } = require("../Game/Manager/ConfigManager.js");
-  const { ConfigCommon } = require("../Core/Config/ConfigCommon");
-  const {
-    PhotographController,
-  } = require("../Game/Module/Photograph/PhotographController.js");
 
   const PATCHED_IDS = new Set([2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  const patched_cache = new Map();
 
-  const build_patched_entry = (original) => {
+  const build_patched_filter_entry = (original) => {
     const b = new Builder(256);
     const name_off = b.createString(original.name());
     const unit_off = b.createString(original.unit());
@@ -42,387 +39,390 @@ setTimeout(() => {
     b.addFieldInt32(9, 1, 0);
     const root = b.endObject();
     b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const patched_cache = new Map();
-
-  const get_or_build_patch = (original) => {
-    const id = original.id();
-    if (patched_cache.has(id)) return patched_cache.get(id);
-    const buf = build_patched_entry(original);
-    const entry = FilterSeniorSetting.getRootAsFilterSeniorSetting(
-      new ByteBuffer(buf),
+    return FilterSeniorSetting.getRootAsFilterSeniorSetting(
+      new ByteBuffer(b.asUint8Array()),
     );
-    patched_cache.set(id, entry);
-    return entry;
   };
 
-  const filter_original_get_config =
-    configFilterSeniorSettingById.GetConfig.bind(configFilterSeniorSettingById);
-  configFilterSeniorSettingById.GetConfig = (id, ...args) => {
-    const result = filter_original_get_config(id, ...args);
-    if (!result || !PATCHED_IDS.has(id)) return result;
-    return get_or_build_patch(result);
+  const get_or_build_filter_patch = (original) => {
+    const id = original.id();
+    if (!patched_cache.has(id))
+      patched_cache.set(id, build_patched_filter_entry(original));
+    return patched_cache.get(id);
   };
 
-  const filter_original_get_config_list =
+  configFilterSeniorSettingById.GetConfig = (
+    (orig) =>
+    (id, ...args) => {
+      const result = orig(id, ...args);
+      if (!result || !PATCHED_IDS.has(id)) return result;
+      return get_or_build_filter_patch(result);
+    }
+  )(
+    configFilterSeniorSettingById.GetConfig.bind(configFilterSeniorSettingById),
+  );
+
+  configFilterSeniorSettingAll.GetConfigList = (
+    (orig) =>
+    (...args) => {
+      const list = orig(...args);
+      return list?.map((e) =>
+        PATCHED_IDS.has(e.id()) ? get_or_build_filter_patch(e) : e,
+      );
+    }
+  )(
     configFilterSeniorSettingAll.GetConfigList.bind(
       configFilterSeniorSettingAll,
-    );
-  configFilterSeniorSettingAll.GetConfigList = (...args) => {
-    const list = filter_original_get_config_list(...args);
-    if (!list) return list;
-    return list.map((entry) =>
-      PATCHED_IDS.has(entry.id()) ? get_or_build_patch(entry) : entry,
-    );
-  };
+    ),
+  );
 
-  const MAX_ID = 9; // update this when kuro terrorizes
-  const OPTIONS = ["PhotoSetup_2_Options_0", "PhotoSetup_2_Options_1"];
-  const VALUE_RANGE = [0, 100, 50];
+  const MAX_ID = 9;
 
-  const build_custom_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("PrefabTextItem_685566124_Text");
-    const option_offs = OPTIONS.map((o) => b.createString(o));
-    b.startVector(4, option_offs.length, 4);
-    for (let i = option_offs.length - 1; i >= 0; i--)
-      b.addOffset(option_offs[i]);
-    const options_vec = b.endVector();
-    b.startVector(4, VALUE_RANGE.length, 4);
-    for (let i = VALUE_RANGE.length - 1; i >= 0; i--)
-      b.addFloat32(VALUE_RANGE[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, MAX_ID + 1, 0);
-    b.addFieldInt32(1, MAX_ID, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 0, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
+  const make_photo_setup = (buf) =>
+    PhotoSetup.getRootAsPhotoSetup(new ByteBuffer(buf));
 
-  const TOD_VALUE_TYPE = MAX_ID + 1;
-  const TOD_ID = MAX_ID + 2;
-  const TOD_MIN = 0;
-  const TOD_MAX = 86400;
-
-  const build_tod_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("CUSTOM_Time of Day");
-    const opt_offs = [
-      b.createString("TimeOfDay_Options_0"),
-      b.createString("TimeOfDay_Options_1"),
-    ];
-    b.startVector(4, opt_offs.length, 4);
-    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
-    const options_vec = b.endVector();
-    const value_range = [TOD_MIN, TOD_MAX, 0];
-    b.startVector(4, value_range.length, 4);
-    for (let i = value_range.length - 1; i >= 0; i--)
-      b.addFloat32(value_range[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, TOD_ID, 0);
-    b.addFieldInt32(1, TOD_VALUE_TYPE, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 1, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const build_effects_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("PrefabTextItem_4019340794_Text");
-    const option_offs = OPTIONS.map((o) => b.createString(o));
-    b.startVector(4, option_offs.length, 4);
-    for (let i = option_offs.length - 1; i >= 0; i--)
-      b.addOffset(option_offs[i]);
-    const options_vec = b.endVector();
-    b.startVector(4, VALUE_RANGE.length, 4);
-    for (let i = VALUE_RANGE.length - 1; i >= 0; i--)
-      b.addFloat32(VALUE_RANGE[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, MAX_ID + 3, 0);
-    b.addFieldInt32(1, MAX_ID + 2, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 0, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 1, 0);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const FREEZE_VALUE_TYPE = MAX_ID + 3;
-  const FREEZE_ID = MAX_ID + 4;
-
-  const build_freeze_toggle_entry = () => {
+  const build_entry = ({
+    id,
+    value_type,
+    name,
+    type = 0,
+    options = [],
+    default_option_index = 0,
+    default_dropdown_index = 0,
+    sub_value_types = null,
+    value_range = null,
+    is_reverse_set = false,
+    change_value = 0.1,
+    is_show_red_dot = false,
+    is_local_storage = false,
+  }) => {
     const b = new Builder(512);
+    const name_off = b.createString(name);
+    const opt_offs = options.map((o) => b.createString(o));
 
-    const name_off = b.createString("CUSTOM_Freeze Time");
-    const opt_off_0 = b.createString("FreezeTime_Options_0");
-    const opt_off_1 = b.createString("FreezeTime_Options_1");
+    let suboptions_vec = null;
+    if (sub_value_types !== null) {
+      const entries =
+        sub_value_types instanceof Map
+          ? [...sub_value_types.entries()]
+          : Object.entries(sub_value_types).map(([k, v]) => [Number(k), v]);
 
-    b.startVector(4, 1, 4);
-    b.addInt32(TD_VALUE_TYPE);
-    const int_array_vec = b.endVector();
+      const dic_entry_offs = entries.map(([key, arr]) => {
+        const values = Array.isArray(arr) ? arr : [arr];
 
-    b.startObject(1);
-    b.addFieldOffset(0, int_array_vec, 0);
-    const int_array_off = b.endObject();
+        b.startVector(4, values.length, 4);
+        for (let i = values.length - 1; i >= 0; i--) b.addInt32(values[i]);
+        const int_array_vec = b.endVector();
 
-    b.startObject(2);
-    b.addFieldInt32(0, 1, 0);
-    b.addFieldOffset(1, int_array_off, 0);
-    const dic_entry_off = b.endObject();
+        b.startObject(1);
+        b.addFieldOffset(0, int_array_vec, 0);
+        const int_array_off = b.endObject();
 
-    b.startVector(4, 1, 4);
-    b.addOffset(dic_entry_off);
-    const suboptions_vec = b.endVector();
+        b.startObject(2);
+        b.addFieldInt32(0, key, 0);
+        b.addFieldOffset(1, int_array_off, 0);
+        return b.endObject();
+      });
 
-    b.startVector(4, 2, 4);
-    b.addOffset(opt_off_1);
-    b.addOffset(opt_off_0);
-    const options_vec = b.endVector();
+      b.startVector(4, dic_entry_offs.length, 4);
+      for (let i = dic_entry_offs.length - 1; i >= 0; i--)
+        b.addOffset(dic_entry_offs[i]);
+      suboptions_vec = b.endVector();
+    }
 
-    b.startVector(4, 3, 4);
-    b.addFloat32(1);
-    b.addFloat32(1);
-    b.addFloat32(0);
-    const vr_vec = b.endVector();
+    let vr_vec = null;
+    if (value_range !== null) {
+      b.startVector(4, value_range.length, 4);
+      for (let i = value_range.length - 1; i >= 0; i--)
+        b.addFloat32(value_range[i]);
+      vr_vec = b.endVector();
+    }
 
-    b.startObject(10);
-    b.addFieldInt32(0, FREEZE_ID, 0);
-    b.addFieldInt32(1, FREEZE_VALUE_TYPE, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 0, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(6, suboptions_vec, 0);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const TD_VALUE_TYPE = MAX_ID + 4;
-  const TD_ID = MAX_ID + 5;
-  const TD_MIN = 0;
-  const TD_MAX = 2;
-
-  const build_time_dilation_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("CUSTOM_Time Dilation");
-    const opt_offs = [
-      b.createString("TimeDilation_Options_0"),
-      b.createString("TimeDilation_Options_1"),
-    ];
     b.startVector(4, opt_offs.length, 4);
     for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
     const options_vec = b.endVector();
-    const value_range = [TD_MIN, TD_MAX, 0];
-    b.startVector(4, value_range.length, 4);
-    for (let i = value_range.length - 1; i >= 0; i--)
-      b.addFloat32(value_range[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, TD_ID, 0);
-    b.addFieldInt32(1, TD_VALUE_TYPE, 0);
+
+    b.startObject(13);
+    b.addFieldInt32(0, id, 0);
+    b.addFieldInt32(1, value_type, 0);
     b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 1, 0);
+    b.addFieldInt32(3, type, 0);
     b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.01, 0.1);
+    b.addFieldInt32(5, default_option_index, 1);
+    b.addFieldInt32(6, default_dropdown_index, 0);
+    if (suboptions_vec !== null) b.addFieldOffset(7, suboptions_vec, 0);
+    if (vr_vec !== null) b.addFieldOffset(8, vr_vec, 0);
+    b.addFieldInt8(9, is_reverse_set ? 1 : 0, 0);
+    b.addFieldFloat32(10, change_value, 0.1);
+    b.addFieldInt8(11, is_show_red_dot ? 1 : 0, 0);
+    b.addFieldInt8(12, is_local_storage ? 1 : 0, 0);
     const root = b.endObject();
     b.finish(root);
-    return b.asUint8Array();
+    return make_photo_setup(b.asUint8Array());
   };
 
-  const HS_VALUE_TYPE = MAX_ID + 5;
-  const HS_ID = MAX_ID + 6;
+  const TOGGLE_OPTIONS = ["PhotoSetup_2_Options_0", "PhotoSetup_2_Options_1"];
   const SPEED_MIN = 0.1;
   const SPEED_MAX = 10;
-
-  const build_hs_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("CUSTOM_Horizontal Speed");
-    const opt_offs = [
-      b.createString("HorizontalSpeed_Options_0"),
-      b.createString("HorizontalSpeed_Options_1"),
-    ];
-    b.startVector(4, opt_offs.length, 4);
-    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
-    const options_vec = b.endVector();
-    const value_range = [SPEED_MIN, SPEED_MAX, 1];
-    b.startVector(4, value_range.length, 4);
-    for (let i = value_range.length - 1; i >= 0; i--)
-      b.addFloat32(value_range[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, HS_ID, 0);
-    b.addFieldInt32(1, HS_VALUE_TYPE, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 1, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const VS_VALUE_TYPE = MAX_ID + 6;
-  const VS_ID = MAX_ID + 7;
-
-  const build_vs_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("CUSTOM_Vertical Speed");
-    const opt_offs = [
-      b.createString("VerticalSpeed_Options_0"),
-      b.createString("VerticalSpeed_Options_1"),
-    ];
-    b.startVector(4, opt_offs.length, 4);
-    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
-    const options_vec = b.endVector();
-    const value_range = [SPEED_MIN, SPEED_MAX, 1];
-    b.startVector(4, value_range.length, 4);
-    for (let i = value_range.length - 1; i >= 0; i--)
-      b.addFloat32(value_range[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, VS_ID, 0);
-    b.addFieldInt32(1, VS_VALUE_TYPE, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 1, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const LS_VALUE_TYPE = MAX_ID + 7;
-  const LS_ID = MAX_ID + 8;
-
-  const build_ls_entry = () => {
-    const b = new Builder(256);
-    const name_off = b.createString("CUSTOM_Longitudinal Speed");
-    const opt_offs = [
-      b.createString("LongitudinalSpeed_Options_0"),
-      b.createString("LongitudinalSpeed_Options_1"),
-    ];
-    b.startVector(4, opt_offs.length, 4);
-    for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
-    const options_vec = b.endVector();
-    const value_range = [SPEED_MIN, SPEED_MAX, 1];
-    b.startVector(4, value_range.length, 4);
-    for (let i = value_range.length - 1; i >= 0; i--)
-      b.addFloat32(value_range[i]);
-    const vr_vec = b.endVector();
-    b.startObject(10);
-    b.addFieldInt32(0, LS_ID, 0);
-    b.addFieldInt32(1, LS_VALUE_TYPE, 0);
-    b.addFieldOffset(2, name_off, 0);
-    b.addFieldInt32(3, 1, 0);
-    b.addFieldOffset(4, options_vec, 0);
-    b.addFieldInt32(5, 0, 1);
-    b.addFieldOffset(7, vr_vec, 0);
-    b.addFieldInt8(8, 0, 0);
-    b.addFieldFloat32(9, 0.1, 0.1);
-    const root = b.endObject();
-    b.finish(root);
-    return b.asUint8Array();
-  };
-
-  const custom_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_custom_entry()),
-  );
-  const tod_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_tod_entry()),
-  );
-  const effects_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_effects_entry()),
-  );
-  const freeze_toggle_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_freeze_toggle_entry()),
-  );
-  const time_dilation_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_time_dilation_entry()),
-  );
-  const horizontal_speed_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_hs_entry()),
-  );
-  const vertical_speed_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_vs_entry()),
-  );
-  const longitudinal_speed_entry = PhotoSetup.getRootAsPhotoSetup(
-    new ByteBuffer(build_ls_entry()),
-  );
+  const TD_VALUE_TYPE = MAX_ID + 4;
+  const TD_ID = MAX_ID + 5;
 
   const extra_entries = [
-    custom_entry,
-    effects_entry,
-    tod_entry,
-    freeze_toggle_entry,
-    time_dilation_entry,
-    horizontal_speed_entry,
-    vertical_speed_entry,
-    longitudinal_speed_entry,
+    build_entry({
+      id: MAX_ID + 1,
+      value_type: MAX_ID,
+      name: "PrefabTextItem_685566124_Text",
+      type: 0,
+      options: TOGGLE_OPTIONS,
+      default_option_index: 0,
+      change_value: 0.1,
+    }),
+    build_entry({
+      id: MAX_ID + 2,
+      value_type: MAX_ID + 1,
+      name: "PrefabTextItem_4019340794_Text",
+      type: 0,
+      options: TOGGLE_OPTIONS,
+      default_option_index: 1,
+      change_value: 0.1,
+    }),
+    build_entry({
+      id: MAX_ID + 3,
+      value_type: MAX_ID + 2,
+      name: "CUSTOM_Time of Day",
+      type: 1,
+      value_range: [0, 86400, 0],
+      change_value: 1,
+    }),
+    build_entry({
+      id: MAX_ID + 4,
+      value_type: MAX_ID + 3,
+      name: "CUSTOM_Freeze Time",
+      type: 0,
+      options: ["FreezeTime_Options_0", "FreezeTime_Options_1"],
+      sub_value_types: { 1: [TD_VALUE_TYPE] },
+      value_range: [1, 1, 0],
+      change_value: 1,
+    }),
+    build_entry({
+      id: TD_ID,
+      value_type: TD_VALUE_TYPE,
+      name: "CUSTOM_Time Dilation",
+      type: 1,
+      value_range: [0, 2, 0],
+      change_value: 0.01,
+    }),
+    build_entry({
+      id: MAX_ID + 6,
+      value_type: MAX_ID + 5,
+      name: "CUSTOM_Horizontal Speed",
+      type: 1,
+      value_range: [SPEED_MIN, SPEED_MAX, 1],
+      change_value: 0.1,
+      is_local_storage: true,
+    }),
+    build_entry({
+      id: MAX_ID + 7,
+      value_type: MAX_ID + 6,
+      name: "CUSTOM_Vertical Speed",
+      type: 1,
+      value_range: [SPEED_MIN, SPEED_MAX, 1],
+      change_value: 0.1,
+      is_local_storage: true,
+    }),
+    build_entry({
+      id: MAX_ID + 8,
+      value_type: MAX_ID + 7,
+      name: "CUSTOM_Longitudinal Speed",
+      type: 1,
+      value_range: [SPEED_MIN, SPEED_MAX, 1],
+      change_value: 0.1,
+      is_local_storage: true,
+    }),
+    build_entry({
+      id: MAX_ID + 9,
+      value_type: MAX_ID + 8,
+      name: "CUSTOM_Movement Style",
+      type: 2,
+      value_range: [0, 50],
+      change_value: 1,
+      is_local_storage: true,
+      default_dropdown_index: 4,
+    }),
+    build_entry({
+      id: 8,
+      value_type: 7,
+      name: "PhotoSetup_8_Name",
+      type: 3,
+      value_range: [-180, 180, 0],
+      change_value: 1,
+    }),
+    build_entry({
+      id: 4,
+      value_type: 3,
+      name: "PhotoSetup_4_Name",
+      type: 0,
+      options: ["PhotoSetup_4_Options_0", "PhotoSetup_4_Options_1"],
+      default_option_index: 0,
+      sub_value_types: { 0: [4, 5] },
+      change_value: 0.1,
+      is_local_storage: true,
+    }),
+    build_entry({
+      id: 5,
+      value_type: 4,
+      name: "PhotoSetup_5_Name",
+      type: 1,
+      value_range: [0, 500, 400],
+      change_value: 5,
+      is_local_storage: true,
+    }),
+    build_entry({
+      id: 6,
+      value_type: 5,
+      name: "PhotoSetup_6_Name",
+      type: 1,
+      value_range: [0.1, 5, 0.1],
+      is_reverse_set: true,
+      change_value: 0.1,
+      is_local_storage: true,
+    }),
   ];
 
-  const photo_original_get_config = configPhotoSetupByValueType.GetConfig.bind(
-    configPhotoSetupByValueType,
-  );
-  configPhotoSetupByValueType.GetConfig = (value_type, ...args) => {
-    const result = photo_original_get_config(value_type, ...args);
-    if (result !== undefined) return result;
-    return extra_entries.find((e) => e.ValueType === value_type);
-  };
+  const get_vt = (e) =>
+    typeof e.valueType === "function" ? e.valueType() : e.ValueType;
 
-  const photo_original_get_config_list =
-    configPhotoSetupAll.GetConfigList.bind(configPhotoSetupAll);
-  configPhotoSetupAll.GetConfigList = (...args) => {
-    const list = photo_original_get_config_list(...args);
-    if (!list) return list;
-    const to_add = extra_entries.filter(
-      (e) => !list.some((x) => x.ValueType === e.ValueType),
-    );
-    return to_add.length ? [...list, ...to_add] : list;
-  };
+  configPhotoSetupByValueType.GetConfig = (
+    (orig) =>
+    (value_type, ...args) => {
+      const result = orig(value_type, ...args);
+      if (result !== undefined) return result;
+      return extra_entries.find((e) => get_vt(e) === value_type);
+    }
+  )(configPhotoSetupByValueType.GetConfig.bind(configPhotoSetupByValueType));
+
+  configPhotoSetupAll.GetConfigList = (
+    (orig) =>
+    (...args) => {
+      const list = orig(...args);
+      if (!list) return list;
+      const override_vts = new Set(extra_entries.map(get_vt));
+      return [
+        ...list.filter((x) => !override_vts.has(get_vt(x))),
+        ...extra_entries,
+      ];
+    }
+  )(configPhotoSetupAll.GetConfigList.bind(configPhotoSetupAll));
 
   const photograph_config = ConfigManager?.PhotographConfig;
-  const original_get_setup =
-    photograph_config.GetPhotoSetupConfig.bind(photograph_config);
-  photograph_config.GetPhotoSetupConfig = (value_type, ...args) => {
-    const result = original_get_setup(value_type, ...args);
-    if (result !== undefined) return result;
-    return extra_entries.find((e) => e.ValueType === value_type);
+
+  photograph_config.GetPhotoSetupConfig = (
+    (orig) =>
+    (value_type, ...args) => {
+      const override = extra_entries.find((e) => get_vt(e) === value_type);
+      if (override !== undefined) return override;
+      return orig(value_type, ...args);
+    }
+  )(photograph_config.GetPhotoSetupConfig.bind(photograph_config));
+
+  photograph_config.GetAllPhotoSetupConfig = (
+    (orig) =>
+    (...args) => {
+      const list = orig(...args);
+      if (!list) return list;
+      const override_vts = new Set(extra_entries.map(get_vt));
+      return [
+        ...list.filter((x) => !override_vts.has(get_vt(x))),
+        ...extra_entries,
+      ];
+    }
+  )(photograph_config.GetAllPhotoSetupConfig.bind(photograph_config));
+
+  const { PhotoDropDown } = require("../Core/Define/Config/PhotoDropDown");
+
+  const build_dropdown_entry = ({ id, setup_type, text_id, params = [] }) => {
+    const b = new Builder(256);
+    const text_off = b.createString(text_id);
+    const param_offs = params.map((p) => b.createString(p));
+
+    b.startVector(4, param_offs.length, 4);
+    for (let i = param_offs.length - 1; i >= 0; i--) b.addOffset(param_offs[i]);
+    const params_vec = b.endVector();
+
+    b.startObject(3);
+    b.addFieldInt32(0, id, 0);
+    b.addFieldInt32(1, setup_type, 0);
+    b.addFieldOffset(2, text_off, 0);
+    b.addFieldOffset(3, params_vec, 0);
+    const root = b.endObject();
+    b.finish(root);
+    return PhotoDropDown.getRootAsPhotoDropDown(
+      new ByteBuffer(b.asUint8Array()),
+    );
+  };
+
+  const MAX_ID_DROPDOWN = 3;
+  const MOVEMENT_STYLE_OPTIONS = [
+    build_dropdown_entry({
+      id: 4,
+      setup_type: MAX_ID + 8,
+      text_id: "CUSTOM_Kuro Style",
+      params: ["4"],
+    }),
+    build_dropdown_entry({
+      id: 5,
+      setup_type: MAX_ID + 8,
+      text_id: "CUSTOM_Rabby Style",
+      params: ["5"],
+    }),
+  ];
+
+  const DROPDOWN_OVERRIDES = new Map([[MAX_ID + 8, MOVEMENT_STYLE_OPTIONS]]);
+
+  photograph_config.GetPhotoDropDownDataList = (
+    (orig) =>
+    (value_type, ...args) => {
+      if (DROPDOWN_OVERRIDES.has(value_type))
+        return DROPDOWN_OVERRIDES.get(value_type);
+      return orig(value_type, ...args);
+    }
+  )(photograph_config.GetPhotoDropDownDataList.bind(photograph_config));
+
+  const {
+    PhotographDropDownSetup,
+  } = require("Game/Module/Photograph/View/PhotographDropDownSetup.js");
+  const { ModelManager } = require("Game/Manager/ModelManager.js");
+
+  PhotographDropDownSetup.prototype._bi = (function (orig) {
+    return function () {
+      const e = ConfigManager?.PhotographConfig?.GetPhotoDropDownDataList(
+        this.SetupValueType,
+      );
+      if (!e || e.length === 0) return orig.apply(this, arguments);
+      const t = ModelManager?.PhotographModel?.GetPhotographOption(
+        this.SetupValueType,
+      );
+      const idx = e.findIndex((x) => x.Id === t);
+      this.hbi.InitScroll(e, this.g8e, idx < 0 ? 0 : idx);
+    };
+  })(PhotographDropDownSetup.prototype._bi);
+
+  const orig_ELt_descriptor = Object.getOwnPropertyDescriptor(
+    PhotographDropDownSetup.prototype,
+    "ELt",
+  );
+  const orig_OnBeforeStartAsync =
+    PhotographDropDownSetup.prototype.OnBeforeStartAsync;
+  PhotographDropDownSetup.prototype.OnBeforeStartAsync = async function () {
+    await orig_OnBeforeStartAsync.call(this);
+    const orig_ELt = this.ELt;
+    this.ELt = (e, t) => {
+      orig_ELt(e, t);
+      ModelManager?.PhotographModel?.SetPhotographOption(
+        this.SetupValueType,
+        t.Id,
+      );
+    };
+    this.hbi.SetOnSelectCall(this.ELt);
   };
 }, 0);
