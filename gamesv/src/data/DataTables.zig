@@ -17,6 +17,9 @@ pub const SummonCfg = @import("tables/SummonCfg.zig");
 pub const ModelConfigPreload = @import("tables/ModelConfigPreload.zig");
 pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
+pub const FlySkinConfig = @import("tables/FlySkinConfig.zig");
+pub const WeaponSkin = @import("tables/WeaponSkin.zig");
+pub const Ornament = @import("tables/Ornament.zig");
 pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
 pub const WeaponConf = @import("tables/WeaponConf.zig");
@@ -48,6 +51,9 @@ summon_cfg: Table(SummonCfg, "Id"),
 model_config_preload: Table(ModelConfigPreload, "Id"),
 blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
+fly_skin_config: Table(FlySkinConfig, "Id"),
+weapon_skin: Table(WeaponSkin, "Id"),
+ornament: Table(Ornament, "Id"),
 template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
 weapon_conf: Table(WeaponConf, "ItemId"),

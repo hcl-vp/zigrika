@@ -10,6 +10,7 @@ const Allocator = std.mem.Allocator;
 const pb = @import("proto").pb;
 const incr = @import("../../fs/incr.zig");
 const BuffAdditionEntry = @import("../../logic/events.zig").BuffAdditionEntry;
+const CosmeticsHelper = @import("../helpers/cosmetics.zig");
 
 const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
 
@@ -109,6 +110,29 @@ pub fn createRoleEntity(
     var role_autobuffs = try assets.tables.getRoleAutoBuffs(role, weapon, alloc.gpa);
     defer role_autobuffs.deinit(alloc.gpa);
 
+    var ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(
+        assets,
+        role_info.getOrnament(role_info.role_skin_id),
+        alloc.gpa,
+    );
+    defer ornament_buffs.deinit(alloc.gpa);
+    for (ornament_buffs.items) |entry| {
+        try role_autobuffs.append(alloc.gpa, entry);
+    }
+
+    const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIds(
+        assets,
+        role_info.getOrnament(role_info.role_skin_id),
+        alloc.gpa,
+    );
+
+    const ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(
+        assets,
+        role_info.*,
+        role_info.role_skin_id,
+        alloc.gpa,
+    );
+
     const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
     const is_cur_role = formation.cur_role == role;
 
@@ -186,6 +210,9 @@ pub fn createRoleEntity(
         },
         Entity.WeaponSkinComponent{
             .skin_id = role_info.weapon_skin_id,
+        },
+        Entity.OrnamentComponent{
+            .ornament_ids = ornament_ids,
         },
         Entity.CalabashSkinComponent{
             .skin_id = role_info.calabash_skin_id,
@@ -321,6 +348,8 @@ pub fn createRoleEntity(
     const slice = scene.entities.slice();
 
     slice.items(.buffs)[entity.index].?.fight_buff_infos = fight_buff_infos_filtered;
+    slice.items(.buffs)[entity.index].?.born_buff_ids = ornament_born_buff_ids;
+    slice.items(.buffs)[entity.index].?.born_message_id = entity.net_id;
     slice.items(.passive_ga_skill)[entity.index].?.skill_component_pb = try passive_skills.toOwnedSlice(alloc.gpa);
     slice.items(.concomitant)[entity.index].?.custom_entity_ids = blk: {
         var ids = try std.ArrayListUnmanaged(i64).initCapacity(alloc.gpa, concomitants.items.len);

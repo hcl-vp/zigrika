@@ -12,6 +12,7 @@ id: PlayerID,
 basic: @import("PlayerBasicComponent.zig"),
 role: @import("PlayerRoleComponent.zig"),
 weapon: @import("PlayerWeaponComponent.zig"),
+cosmetic: @import("PlayerCosmeticComponent.zig"),
 scene: @import("PlayerSceneComponent.zig"),
 
 pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i32) !PlayerComponentStorage {
@@ -21,6 +22,7 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
         .basic = try .init(gpa, fs, player_id),
         .role = try .init(gpa, fs, assets, player_id),
         .weapon = try .init(gpa, fs, assets, player_id),
+        .cosmetic = try .init(gpa, fs, player_id),
         .scene = try .init(gpa, fs, player_id),
     };
 }
@@ -29,6 +31,7 @@ pub fn deinit(pcs: *PlayerComponentStorage, gpa: Allocator) void {
     pcs.basic.deinit(gpa);
     pcs.role.deinit(gpa);
     pcs.weapon.deinit(gpa);
+    pcs.cosmetic.deinit(gpa);
     pcs.scene.deinit(gpa);
 }
 

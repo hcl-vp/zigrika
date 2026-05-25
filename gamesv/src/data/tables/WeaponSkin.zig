@@ -1,0 +1,5 @@
+Id: i32,
+IsShow: bool,
+WeaponSkinType: i32,
+HideInSkinView: bool,
+ItemAccess: []const i32,

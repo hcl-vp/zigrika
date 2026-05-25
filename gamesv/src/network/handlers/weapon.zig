@@ -11,6 +11,20 @@ const FightBuffComponent = @import("../../logic/component/entity/FightBuffCompon
 const EventQueue = @import("../../logic/EventQueue.zig");
 const Events = @import("../../logic/events.zig");
 
+fn appendEquipTakeOnData(
+    list: *std.ArrayList(pb.RoleLoadEquipData),
+    arena: std.mem.Allocator,
+    role_id: i32,
+    equip_inc_id: i32,
+    pos: pb.EquipPos,
+) !void {
+    try list.append(arena, .{
+        .RoleId = role_id,
+        .Pos = pos,
+        .EquipIncId = equip_inc_id,
+    });
+}
+
 pub fn onWeaponItemRequest(
     txn: *Transaction(pb.WeaponItemRequest),
     alloc: mem.Alloc,
@@ -63,7 +77,7 @@ pub fn onEquipTakeOnRequest(
         old_weapon.role_id = old_role_id;
         old_role.weapon = current_role.weapon;
 
-        try send_data.append(alloc.arena, .{ .EquipIncId = current_role.weapon, .RoleId = old_role_id });
+        try appendEquipTakeOnData(&send_data, alloc.arena, old_role_id, current_role.weapon, .Weapon);
         var iterator = query.iterator;
         while (iterator.next()) |item| {
             const entity, const equip, const config, const buffs: *FightBuffComponent = item;
@@ -103,13 +117,13 @@ pub fn onEquipTakeOnRequest(
     } else {
         old_weapon.role_id = null;
         try events.enqueue(.weapon_info_modified, .{ .incr_id = current_role.weapon });
-        try send_data.append(alloc.arena, .{ .EquipIncId = current_role.weapon });
+        try appendEquipTakeOnData(&send_data, alloc.arena, 0, current_role.weapon, .Weapon);
     }
 
     weapon.role_id = data.RoleId;
     current_role.weapon = data.EquipIncId;
 
-    try send_data.append(alloc.arena, .{ .EquipIncId = data.EquipIncId, .RoleId = data.RoleId });
+    try appendEquipTakeOnData(&send_data, alloc.arena, data.RoleId, data.EquipIncId, .Weapon);
     var iterator = query.iterator;
     while (iterator.next()) |item| {
         const entity, const equip, const config, const buffs = item;
@@ -147,5 +161,5 @@ pub fn onEquipTakeOnRequest(
     try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
     try events.enqueue(.weapon_info_modified, .{ .incr_id = data.EquipIncId });
     try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data }, alloc.arena);
-    txn.respond(.{ .DataList = send_data });
+    txn.respond(.{ .ErrorCode = .Success, .DataList = send_data });
 }

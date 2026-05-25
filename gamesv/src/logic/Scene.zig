@@ -51,6 +51,7 @@ pub const Entity = struct {
     pub const VisionSkillComponent = @import("component/entity/VisionSkillComponent.zig");
     pub const BaseSkinComponent = @import("component/entity/BaseSkinComponent.zig");
     pub const WeaponSkinComponent = @import("component/entity/WeaponSkinComponent.zig");
+    pub const OrnamentComponent = @import("component/entity/OrnamentComponent.zig");
     pub const CalabashSkinComponent = @import("component/entity/CalabashSkinComponent.zig");
 
     index: usize,

@@ -19,7 +19,7 @@ pub fn main(minimal: std.process.Init.Minimal) !u8 {
     defer threaded.deinit();
     const io = threaded.io();
 
-    var stdin_buffer: [1024]u8 = undefined;
+    var stdin_buffer: [1048576]u8 = undefined; // 1 mb buffer size thanks errorcode
     var stdin_reader = Io.File.stdin().reader(io, stdin_buffer[0..]);
     const reader = &stdin_reader.interface;
 
@@ -126,11 +126,12 @@ fn enumeration(tokens: *TokenStream, w: *Io.Writer, indentation: *usize) !bool {
                 const variant_number = tokens.expect(.number) orelse return false;
                 if (!descriptors_only) {
                     try indent(w, indentation.*);
-                    if (std.mem.startsWith(u8, variant_name, enum_name)) { // strip prefixes
-                        try w.print("{s} = {},\n", .{ variant_name[enum_name.len + 1 ..], variant_number });
-                    } else {
-                        try w.print("{s} = {},\n", .{ variant_name, variant_number });
+                    var stripped = variant_name;
+                    while (std.mem.startsWith(u8, stripped, enum_name)) {
+                        const rest = stripped[enum_name.len..];
+                        if (rest.len > 1 and rest[0] == '_') stripped = rest[1..] else break;
                     }
+                    try w.print("{s} = {},\n", .{ stripped, variant_number });
                 }
             },
             .punct => |punct| {

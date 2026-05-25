@@ -33,6 +33,7 @@ vision_skills: ?@import("VisionSkillComponent.zig") = null,
 base_skin: ?BaseSkinComponent = null,
 calabash_skin: ?@import("CalabashSkinComponent.zig") = null,
 weapon_skin: ?@import("WeaponSkinComponent.zig") = null,
+ornament: ?@import("OrnamentComponent.zig") = null,
 
 pub fn fieldIndexForType(comptime Component: type) usize {
     return comptime fieldByType(Component).@"1";
@@ -301,6 +302,12 @@ pub fn entityToProto(
     if (storage.weapon_skin) |comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .WeaponSkinComponentPb = try comp.toProto() },
+        });
+    }
+
+    if (storage.ornament) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .OrnamentComponentPb = try comp.toProto() },
         });
     }
 

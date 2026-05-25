@@ -1,3 +1,5 @@
 Id: i32,
 RoleId: i32,
+SuitWeaponSkinId: i32,
+ItemAccess: []const i32,
 UiScenePerformanceABP: []const u8,

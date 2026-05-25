@@ -29,6 +29,7 @@ role_skin_id: i32 = 0,
 paragliding_skin_id: i32 = 0,
 soar_skin_id: i32 = 0,
 weapon_skin_id: i32 = 0,
+ornaments: []OrnamentEquip = &.{},
 calabash_skin_id: i32 = 0, // we are keeping it in roleinfo just incase kuro decides to do more than just rover!
 enable_self_bgm: bool = false,
 
@@ -43,6 +44,37 @@ pub const SkillNode = struct {
     active: bool,
     skill_id: i32,
 };
+
+pub const OrnamentEquip = struct {
+    role_skin_id: i32,
+    ornament_id: i32,
+};
+
+pub fn getOrnament(info: RoleInfo, role_skin_id: i32) i32 {
+    for (info.ornaments) |entry| {
+        if (entry.role_skin_id == role_skin_id) return entry.ornament_id;
+    }
+    return 0;
+}
+
+pub fn setOrnament(info: *RoleInfo, gpa: Allocator, role_skin_id: i32, ornament_id: i32) !void {
+    for (info.ornaments) |*entry| {
+        if (entry.role_skin_id == role_skin_id) {
+            entry.ornament_id = ornament_id;
+            return;
+        }
+    }
+
+    const new_ornaments = try gpa.alloc(OrnamentEquip, info.ornaments.len + 1);
+    @memcpy(new_ornaments[0..info.ornaments.len], info.ornaments);
+    new_ornaments[info.ornaments.len] = .{
+        .role_skin_id = role_skin_id,
+        .ornament_id = ornament_id,
+    };
+
+    if (info.ornaments.len != 0) gpa.free(info.ornaments);
+    info.ornaments = new_ornaments;
+}
 
 pub fn toProto(info: RoleInfo, arena: Allocator, id: i32) !pb.RoleInfo {
     var proto: pb.RoleInfo = .{

@@ -5,6 +5,85 @@ const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Connection = @import("../../network/Connection.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerCosmeticComponent = @import("../component/player/PlayerCosmeticComponent.zig");
+const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
+const CosmeticsHelper = @import("../helpers/cosmetics.zig");
+
+fn buildEmptyStorageRecord(
+    red_dot_type: pb.EClientStorageSystemIdType,
+    arena: std.mem.Allocator,
+) !pb.ClientStorageInfo {
+    var seen: pb.ClientStorageSetData = .default;
+    try seen.Data.ensureTotalCapacity(arena, 0);
+
+    return .{
+        .SystemId = @intFromEnum(red_dot_type),
+        .Data = .{ .SetData = seen },
+    };
+}
+
+fn buildIntStorageRecord(
+    red_dot_type: pb.EClientStorageSystemIdType,
+    values: []const i32,
+    arena: std.mem.Allocator,
+) !pb.ClientStorageInfo {
+    var seen: pb.ClientStorageSetData = .default;
+    try seen.Data.ensureTotalCapacity(arena, values.len);
+    for (values) |value| seen.Data.appendAssumeCapacity(@intCast(value));
+
+    return .{
+        .SystemId = @intFromEnum(red_dot_type),
+        .Data = .{ .SetData = seen },
+    };
+}
+
+fn appendFlyEquipRole(
+    list: *std.ArrayList(pb.FlySkinEquipData),
+    skin_id: i32,
+    role_id: i32,
+    arena: std.mem.Allocator,
+) !void {
+    if (skin_id == 0) return;
+
+    for (list.items) |*item| {
+        if (item.SkinId == skin_id) {
+            try item.RoleIds.append(arena, role_id);
+            return;
+        }
+    }
+
+    var role_ids: std.ArrayList(i32) = .empty;
+    try role_ids.append(arena, role_id);
+    try list.append(arena, .{
+        .SkinId = skin_id,
+        .RoleIds = role_ids,
+    });
+}
+
+fn buildFlyEquipData(
+    role_comp: *PlayerRoleComponent,
+    cosmetic_info: CosmeticInfo,
+    arena: std.mem.Allocator,
+) !std.ArrayList(pb.FlySkinEquipData) {
+    var list: std.ArrayList(pb.FlySkinEquipData) = .empty;
+
+    for (cosmetic_info.fly_skins) |skin_id| {
+        if (skin_id == 0) continue;
+        try list.append(arena, .{
+            .SkinId = skin_id,
+            .RoleIds = .empty,
+        });
+    }
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |kv| {
+        const role_id = kv.key_ptr.*;
+        try appendFlyEquipRole(&list, kv.value_ptr.soar_skin_id, role_id, arena);
+        try appendFlyEquipRole(&list, kv.value_ptr.paragliding_skin_id, role_id, arena);
+    }
+
+    return list;
+}
 
 pub fn ensureRoleAttributes(
     _: EventQueue.Dequeue(.enter_game),
@@ -31,7 +110,53 @@ pub fn pushData(
     conn: *Connection,
     alloc: mem.Alloc,
     role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
+    try conn.push(pb.NormalItemUpdateNotify{
+        .NormalItemList = try cosmetic_comp.info.normalItemList(alloc.arena),
+        .NoTips = true,
+    }, alloc.arena);
+
+    try conn.push(pb.UnlockSkinDataNotify{
+        .PhantomSkinList = try CosmeticInfo.intList(cosmetic_comp.info.phantom_skins, alloc.arena),
+        .IsLogin = true,
+    }, alloc.arena);
+
+    try conn.push(pb.gOd{
+        .bBs = try CosmeticInfo.intList(cosmetic_comp.info.role_skins, alloc.arena),
+    }, alloc.arena);
+
+    try conn.push(pb.qC_{
+        .bBs = try CosmeticInfo.intList(cosmetic_comp.info.weapon_skins, alloc.arena),
+        .wVn = true,
+    }, alloc.arena);
+
+    try conn.push(pb.FlyEquipAddNotify{
+        .UnlockFlySkinIds = try CosmeticInfo.intList(cosmetic_comp.info.fly_skins, alloc.arena),
+    }, alloc.arena);
+
+    try conn.push(pb.RoleFlyEquipNotify{
+        .FlySkinEquipData = try buildFlyEquipData(role_comp, cosmetic_comp.info, alloc.arena),
+    }, alloc.arena);
+
+    try conn.push(pb.OrnamentInfoNotify{
+        .OrnamentInfo = .{
+            .UnlockOrnamentIds = try CosmeticInfo.intList(cosmetic_comp.info.ornaments, alloc.arena),
+            .OrnamentDressInfos = try CosmeticsHelper.buildOrnamentEquipMap(role_comp, alloc.arena),
+            .RedPointOrnamentIds = try CosmeticInfo.intList(cosmetic_comp.info.viewed_ornaments, alloc.arena),
+        },
+    }, alloc.arena);
+
+    var storage_info_notify: pb.StorageInfoNotify = .default;
+    try storage_info_notify.Infos.ensureTotalCapacity(alloc.arena, 6);
+    storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.RoleSkinRedDot, alloc.arena));
+    storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.FlySkinRedDot, alloc.arena));
+    storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.WeaponSkinRedDot, alloc.arena));
+    storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.CalabashSkinRedDot, alloc.arena));
+    storage_info_notify.Infos.appendAssumeCapacity(try buildIntStorageRecord(.Ornament, cosmetic_comp.info.viewed_ornaments, alloc.arena));
+    storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.GetOrnament, alloc.arena));
+    try conn.push(storage_info_notify, alloc.arena);
+
     var notify: pb.PbGetRoleListNotify = .default;
 
     try notify.RoleList.ensureTotalCapacity(alloc.arena, role_comp.role_map.count());

@@ -1,9 +1,16 @@
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
 const dispatch = @import("combat.zig");
+const Assets = @import("../../data/Assets.zig");
 const Scene = @import("../../logic/Scene.zig");
 const FileSystem = @import("common").FileSystem;
 const Transaction = @import("../handlers.zig").Transaction;
+const CosmeticsHelper = @import("../../logic/helpers/cosmetics.zig");
+const EventQueue = @import("../../logic/EventQueue.zig");
+const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
+const PlayerCosmeticComponent = @import("../../logic/component/player/PlayerCosmeticComponent.zig");
+const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
+const std = @import("std");
 
 pub fn SwitchRoleRequest(
     txn: *dispatch.CombatRequestTxn(.SwitchRoleRequest),
@@ -27,4 +34,501 @@ pub fn SwitchRoleRequest(
 
     try scene.save(fs, alloc.gpa);
     txn.respond(.{ .ErrorCode = .Success, .RoleId = request.RoleId });
+}
+
+fn buildFlyEquipData(role_comp: *PlayerRoleComponent, arena: std.mem.Allocator, skin_id: i32) !std.ArrayList(pb.EquipFlySkinData) {
+    var list: std.ArrayList(pb.EquipFlySkinData) = .empty;
+    try list.ensureTotalCapacity(arena, role_comp.role_map.count());
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |kv| {
+        list.appendAssumeCapacity(.{ .RoleId = kv.key_ptr.*, .SkinId = skin_id });
+    }
+    return list;
+}
+
+fn findRoleSkin(assets: *const Assets, role_id: i32, skin_id: i32) ?Assets.DataTables.RoleSkin {
+    const skin = assets.tables.role_skin.getDataById(skin_id) orelse return null;
+    if (skin.RoleId != role_id) return null;
+    return skin;
+}
+
+fn isOwnedRoleSkin(cosmetic_info: CosmeticInfo, skin_id: i32) bool {
+    return CosmeticInfo.has(cosmetic_info.role_skins, skin_id);
+}
+
+fn isOwnedFlySkin(cosmetic_info: CosmeticInfo, skin_id: i32) bool {
+    return CosmeticInfo.has(cosmetic_info.fly_skins, skin_id);
+}
+
+fn isOwnedWeaponSkin(cosmetic_info: CosmeticInfo, skin_id: i32) bool {
+    return CosmeticInfo.has(cosmetic_info.weapon_skins, skin_id);
+}
+
+fn isOwnedOrnament(cosmetic_info: CosmeticInfo, ornament_id: i32) bool {
+    return CosmeticInfo.has(cosmetic_info.ornaments, ornament_id);
+}
+
+fn roleDefaultSkin(assets: *const Assets, role_id: i32) ?i32 {
+    const role_info = assets.tables.role_info.getDataById(role_id) orelse return null;
+    return role_info.SkinId;
+}
+
+fn roleIdForSkin(assets: *const Assets, role_skin_id: i32) ?i32 {
+    if (assets.tables.role_skin.getDataById(role_skin_id)) |skin| return skin.RoleId;
+
+    for (assets.tables.role_info.items) |role| {
+        if (role.SkinId == role_skin_id) return role.Id;
+    }
+    return null;
+}
+
+fn findFlySkin(assets: *const Assets, skin_id: i32) ?Assets.DataTables.FlySkinConfig {
+    return assets.tables.fly_skin_config.getDataById(skin_id);
+}
+
+fn setFlySkin(role: anytype, skin: Assets.DataTables.FlySkinConfig) void {
+    if (skin.SkinType == 0) {
+        role.soar_skin_id = skin.Id;
+    } else {
+        role.paragliding_skin_id = skin.Id;
+    }
+}
+
+fn pushEntityFlySkinChange(
+    txn: anytype,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_id: i32,
+    skin: Assets.DataTables.FlySkinConfig,
+) !void {
+    const scene = &(maybe_scene.* orelse return);
+    const slice = scene.entities.slice();
+
+    for (slice.items(.config), 0..) |config, i| {
+        if (config.config_id != role_id) continue;
+
+        if (slice.items(.base_skin)[i]) |*base_skin| {
+            if (skin.SkinType == 0) {
+                base_skin.soar_skin_id = skin.Id;
+            } else {
+                base_skin.paragliding_skin_id = skin.Id;
+            }
+        } else {
+            slice.items(.base_skin)[i] = if (skin.SkinType == 0)
+                .{ .soar_skin_id = skin.Id }
+            else
+                .{ .paragliding_skin_id = skin.Id };
+        }
+
+        const entity: Scene.Entity = .{
+            .index = i,
+            .net_id = slice.items(.entity_id)[i].net_id,
+        };
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.BaseSkinComponent});
+
+        var fly_skin_config_data: std.ArrayList(pb.FlySkinConfigData) = .empty;
+        try fly_skin_config_data.append(alloc.arena, .{
+            .SkinId = skin.Id,
+            .FlySkinId = skin.SkinType,
+        });
+
+        var fly_skin_data: std.ArrayList(pb.EntityFlySkinChangeData) = .empty;
+        try fly_skin_data.append(alloc.arena, .{
+            .EntityId = entity.net_id,
+            .FlySkinConfigData = fly_skin_config_data,
+        });
+
+        try txn.conn.push(pb.SoarWingOrParaglidingSkinChangeNotify{
+            .FlySkinData = fly_skin_data,
+        }, alloc.arena);
+        return;
+    }
+}
+
+fn pushEntityWeaponSkinChange(
+    txn: anytype,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_id: i32,
+    skin_id: i32,
+) !void {
+    const scene = &(maybe_scene.* orelse return);
+    const slice = scene.entities.slice();
+
+    for (slice.items(.config), 0..) |config, i| {
+        if (config.config_id != role_id) continue;
+
+        if (slice.items(.weapon_skin)[i]) |*weapon_skin| {
+            weapon_skin.skin_id = skin_id;
+        } else {
+            slice.items(.weapon_skin)[i] = .{ .skin_id = skin_id };
+        }
+
+        const entity: Scene.Entity = .{
+            .index = i,
+            .net_id = slice.items(.entity_id)[i].net_id,
+        };
+
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.WeaponSkinComponent});
+        try txn.conn.push(pb.EntityEquipSkinChangeNotify{
+            .EntityId = entity.net_id,
+            .WeaponSkinComponentPb = .{ .WeaponSkinId = skin_id },
+        }, alloc.arena);
+
+        const storage = scene.entities.get(i);
+        var entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
+        try entity_add_notify.EntityPbs.append(alloc.arena, try storage.entityToProto(entity.net_id, alloc));
+        try txn.conn.push(entity_add_notify, alloc.arena);
+        return;
+    }
+}
+
+fn pushWeaponSkinEquipTakeOnNotify(txn: anytype, alloc: mem.Alloc, role_id: i32, skin_id: i32) !void {
+    var data_list: std.ArrayList(pb.RoleLoadEquipData) = .empty;
+    try data_list.append(alloc.arena, .{
+        .RoleId = role_id,
+        .Pos = .WeaponSkin,
+        .EquipIncId = skin_id,
+    });
+
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list }, alloc.arena);
+}
+
+fn buildSingleWeaponSkinEquipList(alloc: mem.Alloc, role_id: i32, skin_id: i32) !std.ArrayList(pb.LoadEquipData) {
+    var list: std.ArrayList(pb.LoadEquipData) = .empty;
+    try list.append(alloc.arena, .{ .RoleId = role_id, .SkinId = skin_id });
+    return list;
+}
+
+fn refreshRoleOrnamentEntity(
+    txn: anytype,
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_id: i32,
+    role: anytype,
+    stale_ornament_id: i32,
+) !void {
+    _ = events;
+    const scene = &(maybe_scene.* orelse return);
+    const slice = scene.entities.slice();
+
+    for (slice.items(.config), 0..) |config, i| {
+        if (config.config_id != role_id) continue;
+
+        const ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(assets, role.*, role.role_skin_id, alloc.gpa);
+        if (slice.items(.ornament)[i]) |*ornament| {
+            if (ornament.ornament_ids.len != 0) alloc.gpa.free(ornament.ornament_ids);
+            ornament.ornament_ids = ornament_ids;
+        } else {
+            slice.items(.ornament)[i] = .{ .ornament_ids = ornament_ids };
+        }
+        const ornament_comp: Scene.Entity.OrnamentComponent = slice.items(.ornament)[i].?;
+
+        const ornament_id = role.getOrnament(role.role_skin_id);
+        const stale_ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(assets, stale_ornament_id, alloc.arena);
+        const ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(assets, ornament_id, alloc.arena);
+        const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIds(assets, ornament_id, alloc.gpa);
+        const entity: Scene.Entity = .{
+            .index = i,
+            .net_id = slice.items(.entity_id)[i].net_id,
+        };
+        const combat_common: pb.CombatCommon = .{ .EntityId = entity.net_id };
+        var combat_notify: pb.CombatReceivePackNotify = .{};
+
+        if (slice.items(.buffs)[i]) |*buffs| {
+            for (stale_ornament_buffs.items) |entry| {
+                if (buffs.getByBuffId(entry.id)) |buff| {
+                    const handle_id = buff.HandleId;
+                    buffs.removeByHandleId(alloc.gpa, handle_id);
+                    try combat_notify.Data.append(alloc.arena, .{ .Message = .{
+                        .CombatNotifyData = .{
+                            .CombatCommon = combat_common,
+                            .Message = .{
+                                .RemoveGameplayEffectNotify = .{
+                                    .EntityId = entity.net_id,
+                                    .Handle = handle_id,
+                                },
+                            },
+                        },
+                    } });
+                }
+            }
+            for (ornament_buffs.items) |entry| {
+                scene.*.instance.buff_handle += 1;
+                buffs.fight_buff_infos = try alloc.gpa.realloc(buffs.fight_buff_infos, buffs.fight_buff_infos.len + 1);
+                buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1] = .{
+                    .HandleId = scene.instance.buff_handle,
+                    .BuffId = entry.id,
+                    .StackCount = entry.stack_count,
+                    .InstigatorId = entity.net_id,
+                    .EntityId = entity.net_id,
+                    .IsActive = entry.is_active,
+                };
+                try combat_notify.Data.append(alloc.arena, .{ .Message = .{
+                    .CombatNotifyData = .{
+                        .CombatCommon = combat_common,
+                        .Message = .{
+                            .ApplyGameplayEffectNotify = .{
+                                .Handle = scene.instance.buff_handle,
+                                .Id = entry.id,
+                                .EntityId = entity.net_id,
+                                .InstigatorId = entity.net_id,
+                                .IsActive = entry.is_active,
+                                .StackCount = entry.stack_count,
+                            },
+                        },
+                    },
+                } });
+            }
+            if (buffs.born_buff_ids.len != 0) alloc.gpa.free(buffs.born_buff_ids);
+            buffs.born_buff_ids = ornament_born_buff_ids;
+            buffs.born_message_id = if (ornament_born_buff_ids.len == 0) 0 else slice.items(.entity_id)[i].net_id;
+        }
+
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{ Scene.Entity.OrnamentComponent, Scene.Entity.FightBuffComponent });
+
+        var entity_ornament_ids: std.ArrayList(i32) = .empty;
+        try entity_ornament_ids.ensureTotalCapacity(alloc.arena, ornament_ids.len);
+        for (ornament_ids) |id| entity_ornament_ids.appendAssumeCapacity(id);
+        try txn.conn.push(pb.EntityDressOrnamentChangeNotify{
+            .EntityId = entity.net_id,
+            .OrnamentComponentPb = try ornament_comp.toProto(),
+        }, alloc.arena);
+
+        if (combat_notify.Data.items.len != 0) try txn.conn.push(combat_notify, alloc.arena);
+        return;
+    }
+}
+
+fn pushOrnamentEquipMap(txn: anytype, alloc: mem.Alloc, role_comp: *PlayerRoleComponent) !void {
+    try txn.conn.push(pb.OrnamentDressInfoUpdateNotify{
+        .OrnamentDressInfos = try CosmeticsHelper.buildOrnamentEquipMap(role_comp, alloc.arena),
+    }, alloc.arena);
+}
+
+pub fn onUnlockRoleSkinListRequest(
+    txn: *Transaction(pb.UnlockRoleSkinListRequest),
+    alloc: mem.Alloc,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    txn.respond(.{ .RoleSkinList = try CosmeticInfo.intList(cosmetic_comp.info.role_skins, alloc.arena) });
+}
+
+pub fn onNormalItemRequest(
+    txn: *Transaction(pb.NormalItemRequest),
+    alloc: mem.Alloc,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    txn.respond(.{ .NormalItemList = try cosmetic_comp.info.normalItemList(alloc.arena) });
+}
+
+pub fn onWeaponSkinRequest(
+    txn: *Transaction(pb.WeaponSkinRequest),
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    role_comp: *PlayerRoleComponent,
+    _: *PlayerCosmeticComponent,
+) !void {
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .EquipList = try CosmeticsHelper.buildWeaponSkinCurrentEquipList(assets, role_comp, alloc.arena),
+    });
+}
+
+pub fn onEquipWeaponSkinRequest(
+    txn: *Transaction(pb.EquipWeaponSkinRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    const data = txn.message.Data orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    const role = role_comp.role_map.getPtr(data.RoleId) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    if (!isOwnedWeaponSkin(cosmetic_comp.info, data.SkinId) or !CosmeticsHelper.isWeaponSkinCompatible(assets, data.RoleId, data.SkinId)) {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    }
+
+    role.weapon_skin_id = data.SkinId;
+    try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
+    try pushEntityWeaponSkinChange(txn, alloc, fs, maybe_scene, data.RoleId, data.SkinId);
+    try pushWeaponSkinEquipTakeOnNotify(txn, alloc, data.RoleId, data.SkinId);
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .DataList = try buildSingleWeaponSkinEquipList(alloc, data.RoleId, data.SkinId),
+    });
+}
+
+pub fn onFlySkinWearRequest(
+    txn: *Transaction(pb.FlySkinWearRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    const request = txn.message;
+    if (!isOwnedFlySkin(cosmetic_comp.info, request.SkinId)) {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    }
+    const skin = findFlySkin(assets, request.SkinId) orelse {
+        txn.respond(.{ .ErrorCode = .FlySkinItemNoConfig });
+        return;
+    };
+
+    const role = role_comp.role_map.getPtr(request.RoleId) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    setFlySkin(role, skin);
+    try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
+    try pushEntityFlySkinChange(txn, alloc, fs, maybe_scene, request.RoleId, skin);
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onFlySkinWearAllRoleRequest(
+    txn: *Transaction(pb.FlySkinWearAllRoleRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    const request = txn.message;
+    if (!isOwnedFlySkin(cosmetic_comp.info, request.SkinId)) {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    }
+    const skin = findFlySkin(assets, request.SkinId) orelse {
+        txn.respond(.{ .ErrorCode = .FlySkinItemNoConfig });
+        return;
+    };
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |kv| {
+        setFlySkin(kv.value_ptr, skin);
+        try events.enqueue(.role_info_modified, .{ .role_id = kv.key_ptr.* });
+        try pushEntityFlySkinChange(txn, alloc, fs, maybe_scene, kv.key_ptr.*, skin);
+    }
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .FlySkinData = try buildFlyEquipData(role_comp, alloc.arena, request.SkinId),
+    });
+}
+
+pub fn onSendEquipSkinRequest(txn: *Transaction(pb.SendEquipSkinRequest)) !void {
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onRoleSkinChangeRequest(
+    txn: *Transaction(pb.RoleSkinChangeRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    const request = txn.message;
+    const role = role_comp.role_map.getPtr(request.RoleId) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    const skin_id = if (request.SkinId == 0)
+        roleDefaultSkin(assets, request.RoleId) orelse {
+            txn.respond(.{ .ErrorCode = .ErrRoleSkinConfig });
+            return;
+        }
+    else blk: {
+        if (!isOwnedRoleSkin(cosmetic_comp.info, request.SkinId)) {
+            txn.respond(.{ .ErrorCode = .ErrRoleSkinNotMatch });
+            return;
+        }
+        const skin = findRoleSkin(assets, request.RoleId, request.SkinId) orelse {
+            txn.respond(.{ .ErrorCode = .ErrRoleSkinNotMatch });
+            return;
+        };
+        break :blk skin.Id;
+    };
+
+    const skin = findRoleSkin(assets, request.RoleId, skin_id);
+    const stale_ornament_id = role.getOrnament(role.role_skin_id);
+    role.role_skin_id = skin_id;
+    if (request.IsWearWeaponSkin) {
+        if (skin) |role_skin| {
+            if (isOwnedWeaponSkin(cosmetic_comp.info, role_skin.SuitWeaponSkinId) and CosmeticsHelper.isWeaponSkinCompatible(assets, request.RoleId, role_skin.SuitWeaponSkinId)) {
+                role.weapon_skin_id = role_skin.SuitWeaponSkinId;
+                try pushEntityWeaponSkinChange(txn, alloc, fs, maybe_scene, request.RoleId, role.weapon_skin_id);
+                try pushWeaponSkinEquipTakeOnNotify(txn, alloc, request.RoleId, role.weapon_skin_id);
+            }
+        }
+    }
+
+    try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, maybe_scene, request.RoleId, role, stale_ornament_id);
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onChangeOrnamentRequest(
+    txn: *Transaction(pb.ChangeOrnamentRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    fs: *FileSystem,
+    maybe_scene: *?Scene,
+    role_comp: *PlayerRoleComponent,
+    cosmetic_comp: *PlayerCosmeticComponent,
+) !void {
+    const role_skin_id = txn.message.RoleSkinId;
+    const ornament_id = if (txn.message.IsDress) txn.message.OrnamentId else 0;
+    const role_id = roleIdForSkin(assets, role_skin_id) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    if (ornament_id != 0 and (!isOwnedOrnament(cosmetic_comp.info, ornament_id) or CosmeticsHelper.ornamentForRoleSkin(assets, role_skin_id, ornament_id) == null)) {
+        txn.respond(.{ .ErrorCode = .ErrOrnamentConfig });
+        return;
+    }
+
+    const role = role_comp.role_map.getPtr(role_id) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    const stale_ornament_id = role.getOrnament(role_skin_id);
+    try role.setOrnament(alloc.gpa, role_skin_id, ornament_id);
+    try events.enqueue(.role_info_modified, .{ .role_id = role_id });
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, maybe_scene, role_id, role, stale_ornament_id);
+
+    txn.respond(.{ .ErrorCode = .Success });
+    try pushOrnamentEquipMap(txn, alloc, role_comp);
 }
