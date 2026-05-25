@@ -39,6 +39,10 @@ pub const RogueResCharacterBuff = @import("tables/RogueResCharacterBuff.zig");
 pub const HonamiStoryEffect = @import("tables/HonamiStoryEffect.zig");
 pub const ComboTeaching = @import("tables/ComboTeaching.zig");
 pub const EntitySkillPreload = @import("tables/EntitySkillPreload.zig");
+pub const FavorWord = @import("tables/FavorWord.zig");
+pub const FavorStory = @import("tables/FavorStory.zig");
+pub const FavorGoods = @import("tables/FavorGoods.zig");
+pub const Motion = @import("tables/Motion.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -73,6 +77,10 @@ rogue_res_buff: Table(RogueResCharacterBuff, "Id"),
 honami_story_effect: Table(HonamiStoryEffect, "Id"),
 combo_teaching: Table(ComboTeaching, "Id"),
 entity_skill_preload: Table(EntitySkillPreload, "Id"),
+favor_word: Table(FavorWord, "Id"),
+favor_story: Table(FavorStory, "Id"),
+favor_goods: Table(FavorGoods, "Id"),
+motion: Table(Motion, "Id"),
 
 fn loadTableItems(
     comptime T: type,
@@ -217,6 +225,7 @@ pub fn getRoleAutoBuffs(
     weapon: WeaponItem,
     gpa: Allocator,
 ) !std.ArrayListUnmanaged(BuffAdditionEntry) {
+    const role_info = tables.role_info.getDataById(role_id) orelse return error.RoleNotFound;
     const reson_conf = tables.getWeaponReson((tables.weapon_conf.getDataById(weapon.id) orelse unreachable).ResonId, weapon.reson_level) orelse unreachable;
     const additional_buffs = [_]i64{
         3003, // Remove wall run prohibition
@@ -323,6 +332,10 @@ pub fn getRoleAutoBuffs(
     for (reson_conf.Effect) |id| {
         try results.append(gpa, .{ .id = id, .is_active = true });
     }
+
+    try results.append(gpa, .{ .id = 1101007999 + role_info.ElementId, .is_active = true });
+    try results.append(gpa, .{ .id = 1001001015 + (role_info.ElementId * 2), .is_active = true });
+    try results.append(gpa, .{ .id = 3080 + role_info.ElementId, .is_active = true });
 
     var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
     defer illegal_ids.deinit(gpa);

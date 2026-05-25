@@ -106,6 +106,7 @@ setTimeout(() => {
   const {
     PhotographOptionSetup,
   } = require("Game/Module/Photograph/View/PhotographOptionSetup.js");
+  const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
 
   const plot_view_manager = PlotController_1.PlotController.PlotViewManager;
 
@@ -384,7 +385,6 @@ setTimeout(() => {
     return true;
   };
 
-  const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
   ConfigManager_1.ConfigManager.InstanceDungeonConfig.CheckViewShield =
     function () {
       return false;
@@ -1793,7 +1793,11 @@ setTimeout(() => {
           );
           break;
         case MAX_ID + 3:
-          this.SetPhotographOption(MAX_ID + 4, 0);
+          if (e == true || e === 1) {
+            dilate_time(0);
+          } else {
+            dilate_time(i.GetPhotographOption(MAX_ID + 4));
+          }
           break;
         case MAX_ID + 4:
           dilate_time(e);

@@ -109,6 +109,7 @@ pub fn pushData(
     _: EventQueue.Dequeue(.push_data),
     conn: *Connection,
     alloc: mem.Alloc,
+    assets: *const Assets,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
@@ -158,4 +159,94 @@ pub fn pushData(
     }
 
     try conn.push(notify, alloc.arena);
+    try pushFavorList(conn, alloc, assets, role_comp);
+    try pushMotionList(conn, alloc, assets, role_comp);
+}
+
+fn pushFavorList(
+    conn: *Connection,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    var favor_list: std.ArrayList(pb.RoleFavor) = .empty;
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |role_entry| {
+        const role_id = role_entry.key_ptr.*;
+
+        var role_favor: pb.RoleFavor = .{
+            .RoleId = role_id,
+            .Level = 5,
+            .Exp = 0,
+        };
+
+        for (assets.tables.favor_word.items) |word| {
+            if (word.RoleId == role_id) {
+                try role_favor.WordIds.append(alloc.arena, .{
+                    .Id = word.Id,
+                    .Status = .ItemUnLocked,
+                });
+            }
+        }
+
+        for (assets.tables.favor_story.items) |story| {
+            if (story.RoleId == role_id) {
+                try role_favor.StoryIds.append(alloc.arena, .{
+                    .Id = story.Id,
+                    .Status = .ItemUnLocked,
+                });
+            }
+        }
+
+        for (assets.tables.favor_goods.items) |goods| {
+            if (goods.RoleId == role_id) {
+                try role_favor.GoodsIds.append(alloc.arena, .{
+                    .Id = goods.Id,
+                    .Status = .ItemUnLocked,
+                });
+            }
+        }
+
+        try favor_list.append(alloc.arena, role_favor);
+    }
+
+    try conn.push(pb.RoleFavorListNotify{
+        .FavorList = favor_list,
+    }, alloc.arena);
+}
+
+fn pushMotionList(
+    conn: *Connection,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    var motion_list: std.ArrayList(pb.RoleMotion) = .empty;
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |role_entry| {
+        const role_id = role_entry.key_ptr.*;
+
+        var role_motion: pb.RoleMotion = .{
+            .RoleId = role_id,
+        };
+
+        for (assets.tables.motion.items) |motion| {
+            if (motion.RoleId == role_id) {
+                try role_motion.MotionIds.append(alloc.arena, .{
+                    .Id = motion.Id,
+                    .Status = .ItemUnLocked,
+                });
+            }
+        }
+
+        if (role_motion.MotionIds.items.len > 0) {
+            try motion_list.append(alloc.arena, role_motion);
+        }
+    }
+
+    try conn.push(pb.RoleMotionListNotify{
+        .MotionList = motion_list,
+    }, alloc.arena);
 }
