@@ -9,7 +9,9 @@ const CosmeticsHelper = @import("../../logic/helpers/cosmetics.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerCosmeticComponent = @import("../../logic/component/player/PlayerCosmeticComponent.zig");
+const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
+const RoleHelper = @import("../../logic/helpers/role.zig");
 const std = @import("std");
 
 pub fn SwitchRoleRequest(
@@ -99,11 +101,10 @@ fn pushEntityFlySkinChange(
     txn: anytype,
     alloc: mem.Alloc,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_id: i32,
     skin: Assets.DataTables.FlySkinConfig,
 ) !void {
-    const scene = &(maybe_scene.* orelse return);
     const slice = scene.entities.slice();
 
     for (slice.items(.config), 0..) |config, i| {
@@ -151,11 +152,10 @@ fn pushEntityWeaponSkinChange(
     txn: anytype,
     alloc: mem.Alloc,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_id: i32,
     skin_id: i32,
 ) !void {
-    const scene = &(maybe_scene.* orelse return);
     const slice = scene.entities.slice();
 
     for (slice.items(.config), 0..) |config, i| {
@@ -209,13 +209,12 @@ fn refreshRoleOrnamentEntity(
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_id: i32,
     role: anytype,
     stale_ornament_id: i32,
 ) !void {
     _ = events;
-    const scene = &(maybe_scene.* orelse return);
     const slice = scene.entities.slice();
 
     for (slice.items(.config), 0..) |config, i| {
@@ -347,7 +346,7 @@ pub fn onEquipWeaponSkinRequest(
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
@@ -368,7 +367,7 @@ pub fn onEquipWeaponSkinRequest(
 
     role.weapon_skin_id = data.SkinId;
     try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
-    try pushEntityWeaponSkinChange(txn, alloc, fs, maybe_scene, data.RoleId, data.SkinId);
+    try pushEntityWeaponSkinChange(txn, alloc, fs, scene, data.RoleId, data.SkinId);
     try pushWeaponSkinEquipTakeOnNotify(txn, alloc, data.RoleId, data.SkinId);
 
     txn.respond(.{
@@ -383,7 +382,7 @@ pub fn onFlySkinWearRequest(
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
@@ -404,7 +403,7 @@ pub fn onFlySkinWearRequest(
 
     setFlySkin(role, skin);
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
-    try pushEntityFlySkinChange(txn, alloc, fs, maybe_scene, request.RoleId, skin);
+    try pushEntityFlySkinChange(txn, alloc, fs, scene, request.RoleId, skin);
     txn.respond(.{ .ErrorCode = .Success });
 }
 
@@ -414,7 +413,7 @@ pub fn onFlySkinWearAllRoleRequest(
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
@@ -432,7 +431,7 @@ pub fn onFlySkinWearAllRoleRequest(
     while (iterator.next()) |kv| {
         setFlySkin(kv.value_ptr, skin);
         try events.enqueue(.role_info_modified, .{ .role_id = kv.key_ptr.* });
-        try pushEntityFlySkinChange(txn, alloc, fs, maybe_scene, kv.key_ptr.*, skin);
+        try pushEntityFlySkinChange(txn, alloc, fs, scene, kv.key_ptr.*, skin);
     }
 
     txn.respond(.{
@@ -448,12 +447,13 @@ pub fn onSendEquipSkinRequest(txn: *Transaction(pb.SendEquipSkinRequest)) !void 
 pub fn onRoleSkinChangeRequest(
     txn: *Transaction(pb.RoleSkinChangeRequest),
     events: *EventQueue,
+    scene: *Scene,
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
+    weapon_comp: *PlayerWeaponComponent,
 ) !void {
     const request = txn.message;
     const role = role_comp.role_map.getPtr(request.RoleId) orelse {
@@ -485,14 +485,24 @@ pub fn onRoleSkinChangeRequest(
         if (skin) |role_skin| {
             if (isOwnedWeaponSkin(cosmetic_comp.info, role_skin.SuitWeaponSkinId) and CosmeticsHelper.isWeaponSkinCompatible(assets, request.RoleId, role_skin.SuitWeaponSkinId)) {
                 role.weapon_skin_id = role_skin.SuitWeaponSkinId;
-                try pushEntityWeaponSkinChange(txn, alloc, fs, maybe_scene, request.RoleId, role.weapon_skin_id);
+                try pushEntityWeaponSkinChange(txn, alloc, fs, scene, request.RoleId, role.weapon_skin_id);
                 try pushWeaponSkinEquipTakeOnNotify(txn, alloc, request.RoleId, role.weapon_skin_id);
             }
         }
     }
+    try RoleHelper.resetRoles(
+        scene,
+        fs,
+        assets,
+        role_comp,
+        weapon_comp,
+        txn.conn,
+        alloc,
+        &.{request.RoleId},
+    );
 
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, maybe_scene, request.RoleId, role, stale_ornament_id);
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_id);
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -503,7 +513,7 @@ pub fn onChangeOrnamentRequest(
     alloc: mem.Alloc,
     assets: *const Assets,
     fs: *FileSystem,
-    maybe_scene: *?Scene,
+    scene: *Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
@@ -527,7 +537,7 @@ pub fn onChangeOrnamentRequest(
     const stale_ornament_id = role.getOrnament(role_skin_id);
     try role.setOrnament(alloc.gpa, role_skin_id, ornament_id);
     try events.enqueue(.role_info_modified, .{ .role_id = role_id });
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, maybe_scene, role_id, role, stale_ornament_id);
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_id);
 
     txn.respond(.{ .ErrorCode = .Success });
     try pushOrnamentEquipMap(txn, alloc, role_comp);

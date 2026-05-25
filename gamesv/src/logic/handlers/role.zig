@@ -122,15 +122,6 @@ pub fn pushData(
         .IsLogin = true,
     }, alloc.arena);
 
-    try conn.push(pb.gOd{
-        .bBs = try CosmeticInfo.intList(cosmetic_comp.info.role_skins, alloc.arena),
-    }, alloc.arena);
-
-    try conn.push(pb.qC_{
-        .bBs = try CosmeticInfo.intList(cosmetic_comp.info.weapon_skins, alloc.arena),
-        .wVn = true,
-    }, alloc.arena);
-
     try conn.push(pb.FlyEquipAddNotify{
         .UnlockFlySkinIds = try CosmeticInfo.intList(cosmetic_comp.info.fly_skins, alloc.arena),
     }, alloc.arena);

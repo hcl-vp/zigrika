@@ -902,7 +902,8 @@ pub const GWc = struct {
 };
 pub const imd = struct {
     pub const msg_id: u16 = 17287;
-    OIg: ?union(enum) {} = null,
+    OIg: ?union(enum) {
+    } = null,
     pub const K7n_field_number: u32 = 14;
 };
 pub const rmd = struct {
@@ -1479,7 +1480,8 @@ pub const jDOLLARc = struct {
     pub const s5n_field_number: u32 = 1;
 };
 pub const iw_ = struct {
-    kFs: ?union(enum) {} = null,
+    kFs: ?union(enum) {
+    } = null,
     pub const dS__field_number: u32 = 3;
     pub const mS__field_number: u32 = 4;
     pub const fS__field_number: u32 = 5;
@@ -1589,7 +1591,8 @@ pub const Asg = struct {
     pub const Cvs_field_number: u32 = 10;
 };
 pub const IOs = struct {
-    LOs: ?union(enum) {} = null,
+    LOs: ?union(enum) {
+    } = null,
     pub const vvs_field_number: u32 = 2;
     pub const pvs_field_number: u32 = 3;
     pub const Mvs_field_number: u32 = 4;
@@ -1869,7 +1872,8 @@ pub const sw_ = struct {
     pub const AS__field_number: u32 = 2;
 };
 pub const Lm1 = struct {
-    Am1: ?union(enum) {} = null,
+    Am1: ?union(enum) {
+    } = null,
     pub const Q3s_field_number: u32 = 2;
     pub const eps_field_number: u32 = 1;
 };
@@ -1931,7 +1935,8 @@ pub const vCs = struct {
     pub const FI__field_number: u32 = 6;
 };
 pub const t4s = struct {
-    p4s: ?union(enum) {} = null,
+    p4s: ?union(enum) {
+    } = null,
     pub const qDOLLAR__field_number: u32 = 2;
     pub const E5n_field_number: u32 = 3;
     pub const RDOLLARs_field_number: u32 = 4;
@@ -1947,7 +1952,8 @@ pub const XNc = struct {
     pub const DOLLARNc_field_number: u32 = 2;
 };
 pub const GDOLLAR_ = struct {
-    YNc: ?union(enum) {} = null,
+    YNc: ?union(enum) {
+    } = null,
     pub const KNc_field_number: u32 = 5;
     pub const y5n_field_number: u32 = 1;
     pub const ODOLLAR__field_number: u32 = 2;
@@ -1960,9 +1966,12 @@ pub const M4s = struct {
     pub const S5n_field_number: u32 = 3;
 };
 pub const wDOLLARs = struct {
-    na1: ?union(enum) {} = null,
-    E0u: ?union(enum) {} = null,
-    I0u: ?union(enum) {} = null,
+    na1: ?union(enum) {
+    } = null,
+    E0u: ?union(enum) {
+    } = null,
+    I0u: ?union(enum) {
+    } = null,
     pub const oa1_field_number: u32 = 8;
     pub const v0u_field_number: u32 = 10;
     pub const y0u_field_number: u32 = 11;
@@ -2019,7 +2028,8 @@ pub const MIl = struct {
     pub const A5n_field_number: u32 = 2;
 };
 pub const Yw_ = struct {
-    zw: ?union(enum) {} = null,
+    zw: ?union(enum) {
+    } = null,
     pub const Cpl_field_number: u32 = 1;
     pub const MIl_field_number: u32 = 2;
 };
@@ -2062,11 +2072,16 @@ pub const qGf = struct {
     pub const Q4n_field_number: u32 = 3;
 };
 pub const Lxd = struct {
-    Kxd: ?union(enum) {} = null,
-    Xxd: ?union(enum) {} = null,
-    Yxd: ?union(enum) {} = null,
-    zxd: ?union(enum) {} = null,
-    UWf: ?union(enum) {} = null,
+    Kxd: ?union(enum) {
+    } = null,
+    Xxd: ?union(enum) {
+    } = null,
+    Yxd: ?union(enum) {
+    } = null,
+    zxd: ?union(enum) {
+    } = null,
+    UWf: ?union(enum) {
+    } = null,
     pub const Axd_field_number: u32 = 2;
     pub const Dxd_field_number: u32 = 3;
     pub const Zps_field_number: u32 = 4;
@@ -2075,14 +2090,16 @@ pub const Lxd = struct {
     pub const Pxd_field_number: u32 = 1;
 };
 pub const Qum = struct {
-    Yum: ?union(enum) {} = null,
+    Yum: ?union(enum) {
+    } = null,
     pub const Kum_field_number: u32 = 1;
 };
 pub const Kum = struct {
     pub const Xum_field_number: u32 = 1;
 };
 pub const Pxd = struct {
-    Jxd: ?union(enum) {} = null,
+    Jxd: ?union(enum) {
+    } = null,
     pub const xxd_field_number: u32 = 1;
     pub const Bxd_field_number: u32 = 2;
 };
@@ -2093,37 +2110,48 @@ pub const Bxd = struct {
     pub const Oxd_field_number: u32 = 1;
 };
 pub const Uxd = struct {
-    Zxd: ?union(enum) {} = null,
-    eBd: ?union(enum) {} = null,
+    Zxd: ?union(enum) {
+    } = null,
+    eBd: ?union(enum) {
+    } = null,
     pub const qxd_field_number: u32 = 1;
     pub const Gxd_field_number: u32 = 2;
 };
 pub const qxd = struct {
-    tBd: ?union(enum) {} = null,
-    iBd: ?union(enum) {} = null,
-    rBd: ?union(enum) {} = null,
+    tBd: ?union(enum) {
+    } = null,
+    iBd: ?union(enum) {
+    } = null,
+    rBd: ?union(enum) {
+    } = null,
     pub const Fxd_field_number: u32 = 1;
     pub const Nxd_field_number: u32 = 2;
     pub const Vxd_field_number: u32 = 3;
 };
 pub const Axd = struct {
-    oBd: ?union(enum) {} = null,
+    oBd: ?union(enum) {
+    } = null,
     pub const jxd_field_number: u32 = 1;
 };
 pub const jxd = struct {
-    nBd: ?union(enum) {} = null,
-    sBd: ?union(enum) {} = null,
+    nBd: ?union(enum) {
+    } = null,
+    sBd: ?union(enum) {
+    } = null,
     pub const DOLLARxd_field_number: u32 = 2;
     pub const Wxd_field_number: u32 = 3;
     pub const Hxd_field_number: u32 = 1;
 };
 pub const Dxd = struct {
-    aBd: ?union(enum) {} = null,
+    aBd: ?union(enum) {
+    } = null,
     pub const Qxd_field_number: u32 = 1;
 };
 pub const Qxd = struct {
-    nBd: ?union(enum) {} = null,
-    sBd: ?union(enum) {} = null,
+    nBd: ?union(enum) {
+    } = null,
+    sBd: ?union(enum) {
+    } = null,
     pub const DOLLARxd_field_number: u32 = 2;
     pub const Wxd_field_number: u32 = 3;
     pub const Hxd_field_number: u32 = 1;
@@ -2195,7 +2223,8 @@ pub const Vps = struct {
     pub const Rps_field_number: u32 = 1;
 };
 pub const oMs = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const nvs_field_number: u32 = 3;
     pub const h5n_field_number: u32 = 1;
     pub const Y4n_field_number: u32 = 2;
@@ -2241,7 +2270,8 @@ pub const Xfm = struct {
     pub const kBm_field_number: u32 = 2;
 };
 pub const fks = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Gps_field_number: u32 = 10;
     pub const Ops_field_number: u32 = 11;
     pub const kps_field_number: u32 = 12;
@@ -2877,7 +2907,8 @@ pub const XS_ = struct {
     pub const HM__field_number: u32 = 1;
 };
 pub const TN_ = struct {
-    GN: ?union(enum) {} = null,
+    GN: ?union(enum) {
+    } = null,
     pub const LN__field_number: u32 = 3;
     pub const bN__field_number: u32 = 1;
     pub const SMs_field_number: u32 = 2;
@@ -3000,7 +3031,8 @@ pub const VN_ = struct {
     pub const h5n_field_number: u32 = 2;
 };
 pub const jN_ = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const DN__field_number: u32 = 4;
     pub const BN__field_number: u32 = 5;
     pub const c5n_field_number: u32 = 1;
@@ -3059,7 +3091,8 @@ pub const Btc = struct {
 };
 pub const ktc = struct {
     pub const msg_id: u16 = 23467;
-    GN: ?union(enum) {} = null,
+    GN: ?union(enum) {
+    } = null,
     pub const LN__field_number: u32 = 3;
     pub const Q4n_field_number: u32 = 10;
 };
@@ -3115,7 +3148,8 @@ pub const Lhc = struct {
 };
 pub const xhc = struct {
     pub const msg_id: u16 = 24556;
-    NNc: ?union(enum) {} = null,
+    NNc: ?union(enum) {
+    } = null,
     pub const ONc_field_number: u32 = 4;
 };
 pub const ONc = struct {
@@ -4533,7 +4567,8 @@ pub const Rw_ = struct {
 };
 pub const xp_ = struct {
     pub const msg_id: u16 = 15045;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const TDOLLARs_field_number: u32 = 9;
     pub const SE__field_number: u32 = 6;
     pub const ME__field_number: u32 = 2;
@@ -4904,7 +4939,8 @@ pub const gqC = struct {
     pub const PUp_field_number: u32 = 4;
 };
 pub const eZ_ = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const TJ__field_number: u32 = 2;
     pub const bJ__field_number: u32 = 3;
     pub const LJ__field_number: u32 = 4;
@@ -5020,7 +5056,8 @@ pub const gI1 = struct {
     pub const Kz__field_number: u32 = 1;
 };
 pub const Ea1 = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const ua1_field_number: u32 = 3;
     pub const da1_field_number: u32 = 4;
     pub const ma1_field_number: u32 = 5;
@@ -5096,7 +5133,8 @@ pub const nfc = struct {
 };
 pub const sfc = struct {
     pub const msg_id: u16 = 15176;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const TDOLLARs_field_number: u32 = 13;
     pub const hfc_field_number: u32 = 5;
 };
@@ -5481,7 +5519,8 @@ pub const Hiu = struct {
 };
 pub const hru = struct {
     pub const msg_id: u16 = 17779;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const gEu_field_number: u32 = 1;
     pub const CEu_field_number: u32 = 2;
     pub const pEu_field_number: u32 = 6;
@@ -5614,7 +5653,8 @@ pub const xNp = struct {
     pub const m5n_field_number: u32 = 2;
 };
 pub const QSu = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const PSu_field_number: u32 = 3;
     pub const xSu_field_number: u32 = 4;
     pub const LSu_field_number: u32 = 5;
@@ -5694,7 +5734,8 @@ pub const DNp = struct {
     pub const zru_field_number: u32 = 3;
 };
 pub const Rlu = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const dlu_field_number: u32 = 2;
     pub const mlu_field_number: u32 = 3;
     pub const flu_field_number: u32 = 4;
@@ -5831,7 +5872,8 @@ pub const eru = struct {
 };
 pub const tru = struct {
     pub const msg_id: u16 = 27623;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Sdu_field_number: u32 = 4;
     pub const Mdu_field_number: u32 = 11;
     pub const Edu_field_number: u32 = 8;
@@ -6020,28 +6062,34 @@ pub const tAu = struct {
 };
 pub const xNu = struct {
     pub const msg_id: u16 = 26387;
-    RKu: ?union(enum) {} = null,
+    RKu: ?union(enum) {
+    } = null,
     pub const EKu_field_number: u32 = 1;
     pub const MKu_field_number: u32 = 11;
     pub const IKu_field_number: u32 = 9;
 };
 pub const rJu = struct {
     pub const msg_id: u16 = 25112;
-    aJu: ?union(enum) {} = null,
+    aJu: ?union(enum) {
+    } = null,
     pub const _Zc_field_number: u32 = 8;
     pub const oJu_field_number: u32 = 12;
     pub const nJu_field_number: u32 = 6;
     pub const sJu_field_number: u32 = 3;
 };
-pub const uZc = struct {};
-pub const hJu = struct {};
+pub const uZc = struct {
+};
+pub const hJu = struct {
+};
 pub const _Ju = struct {
     pub const gjc_field_number: u32 = 1;
     pub const CWc_field_number: u32 = 2;
 };
 pub const lJu = struct {
-    RKu: ?union(enum) {} = null,
-    Bzc: ?union(enum) {} = null,
+    RKu: ?union(enum) {
+    } = null,
+    Bzc: ?union(enum) {
+    } = null,
     pub const EKu_field_number: u32 = 2;
     pub const A8s_field_number: u32 = 6;
     pub const MKu_field_number: u32 = 1;
@@ -6096,14 +6144,16 @@ pub const k7u = struct {
     pub const B7u_field_number: u32 = 4;
 };
 pub const bHc = struct {
-    RHc: ?union(enum) {} = null,
+    RHc: ?union(enum) {
+    } = null,
     pub const uHc_field_number: u32 = 2;
     pub const cHc_field_number: u32 = 3;
     pub const q6n_field_number: u32 = 1;
 };
 pub const e9u = struct {
     pub const msg_id: u16 = 21979;
-    Asm: ?union(enum) {} = null,
+    Asm: ?union(enum) {
+    } = null,
     pub const Psm_field_number: u32 = 4;
     pub const i9u_field_number: u32 = 9;
     pub const DEs_field_number: u32 = 14;
@@ -6335,7 +6385,8 @@ pub const kzc = struct {
     pub const Szc_field_number: u32 = 4;
 };
 pub const Ozc = struct {
-    qzc: ?union(enum) {} = null,
+    qzc: ?union(enum) {
+    } = null,
     pub const Izc_field_number: u32 = 3;
     pub const Tzc_field_number: u32 = 4;
     pub const Mzc_field_number: u32 = 1;
@@ -6359,7 +6410,8 @@ pub const gzc = struct {
 };
 pub const Czc = struct {
     pub const msg_id: u16 = 25363;
-    Nzc: ?union(enum) {} = null,
+    Nzc: ?union(enum) {
+    } = null,
     pub const Pzc_field_number: u32 = 4;
     pub const bzc_field_number: u32 = 2;
     pub const PJc_field_number: u32 = 1;
@@ -6507,7 +6559,8 @@ pub const HLd = struct {
     pub const IE__field_number: u32 = 5;
 };
 pub const VTd = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const DTd_field_number: u32 = 1;
     pub const xTd_field_number: u32 = 2;
     pub const UTd_field_number: u32 = 3;
@@ -6532,7 +6585,8 @@ pub const xTd = struct {
     pub const vDd_field_number: u32 = 5;
     pub const NTd_field_number: u32 = 6;
 };
-pub const UTd = struct {};
+pub const UTd = struct {
+};
 pub const BTd = struct {
     pub const Q6n_field_number: u32 = 1;
 };
@@ -6560,7 +6614,8 @@ pub const ibd = struct {
     pub const VTd_field_number: u32 = 8;
 };
 pub const rbd = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const jTd_field_number: u32 = 1;
     pub const HTd_field_number: u32 = 2;
     pub const DOLLARTd_field_number: u32 = 3;
@@ -6672,18 +6727,22 @@ pub const aDd = struct {
 };
 pub const ATd = struct {
     pub const msg_id: u16 = 17462;
-    aJu: ?union(enum) {} = null,
+    aJu: ?union(enum) {
+    } = null,
     pub const xAd_field_number: u32 = 14;
     pub const _wd_field_number: u32 = 11;
     pub const UAd_field_number: u32 = 10;
     pub const sJu_field_number: u32 = 15;
 };
-pub const kAd = struct {};
+pub const kAd = struct {
+};
 pub const mwd = struct {
     pub const uwd_field_number: u32 = 1;
 };
-pub const BAd = struct {};
-pub const obd = struct {};
+pub const BAd = struct {
+};
+pub const obd = struct {
+};
 pub const sbd = struct {
     pub const msg_id: u16 = 26888;
     pub const Cjc_field_number: u32 = 8;
@@ -6694,7 +6753,8 @@ pub const abd = struct {
 };
 pub const AAd = struct {
     pub const msg_id: u16 = 21153;
-    aJu: ?union(enum) {} = null,
+    aJu: ?union(enum) {
+    } = null,
     pub const xAd_field_number: u32 = 15;
     pub const _wd_field_number: u32 = 3;
     pub const UAd_field_number: u32 = 13;
@@ -6705,7 +6765,8 @@ pub const DAd = struct {
     pub const G9n_field_number: u32 = 15;
 };
 pub const hbd = struct {
-    Jkd: ?union(enum) {} = null,
+    Jkd: ?union(enum) {
+    } = null,
     pub const Kkd_field_number: u32 = 4;
     pub const gG__field_number: u32 = 1;
     pub const pDs_field_number: u32 = 2;
@@ -6723,7 +6784,8 @@ pub const _bd = struct {
 };
 pub const Mbd = struct {
     pub const msg_id: u16 = 17805;
-    wDd: ?union(enum) {} = null,
+    wDd: ?union(enum) {
+    } = null,
     pub const KTd_field_number: u32 = 11;
     pub const G9n_field_number: u32 = 10;
 };
@@ -6792,7 +6854,8 @@ pub const QBd = struct {
 };
 pub const KBd = struct {
     pub const msg_id: u16 = 28945;
-    tkd: ?union(enum) {} = null,
+    tkd: ?union(enum) {
+    } = null,
     pub const ekd_field_number: u32 = 1;
 };
 pub const ekd = struct {
@@ -6835,14 +6898,16 @@ pub const jOd = struct {
     pub const IE__field_number: u32 = 5;
 };
 pub const xDOLLARd = struct {
-    ZDOLLARd: ?union(enum) {} = null,
+    ZDOLLARd: ?union(enum) {
+    } = null,
     pub const DDOLLARd_field_number: u32 = 4;
     pub const UDOLLARd_field_number: u32 = 5;
     pub const b9n_field_number: u32 = 1;
     pub const ADOLLARd_field_number: u32 = 2;
     pub const Vws_field_number: u32 = 3;
 };
-pub const DDOLLARd = struct {};
+pub const DDOLLARd = struct {
+};
 pub const UDOLLARd = struct {
     pub const kmd_field_number: u32 = 1;
     pub const Omd_field_number: u32 = 2;
@@ -7221,7 +7286,8 @@ pub const yEm = struct {
 };
 pub const SEm = struct {
     pub const msg_id: u16 = 28865;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const wEm_field_number: u32 = 11;
     pub const YvC_field_number: u32 = 9;
     pub const zvC_field_number: u32 = 13;
@@ -7269,13 +7335,15 @@ pub const BLm = struct {
     pub const vlu_field_number: u32 = 9;
 };
 pub const cC1 = struct {
-    FC1: ?union(enum) {} = null,
+    FC1: ?union(enum) {
+    } = null,
     pub const Og1_field_number: u32 = 2;
     pub const qg1_field_number: u32 = 3;
     pub const Gg1_field_number: u32 = 4;
     pub const kg1_field_number: u32 = 1;
 };
-pub const Og1 = struct {};
+pub const Og1 = struct {
+};
 pub const qg1 = struct {
     pub const Fg1_field_number: u32 = 1;
     pub const Ng1_field_number: u32 = 2;
@@ -7334,7 +7402,8 @@ pub const Nf1 = struct {
     pub const tC1_field_number: u32 = 9;
 };
 pub const lC1 = struct {
-    NC1: ?union(enum) {} = null,
+    NC1: ?union(enum) {
+    } = null,
     pub const iC1_field_number: u32 = 1;
     pub const JM1_field_number: u32 = 2;
     pub const tD1_field_number: u32 = 3;
@@ -7425,7 +7494,8 @@ pub const IG1 = struct {
     pub const jg1_field_number: u32 = 2;
 };
 pub const mE1 = struct {
-    fE1: ?union(enum) {} = null,
+    fE1: ?union(enum) {
+    } = null,
     pub const vC1_field_number: u32 = 1;
     pub const yC1_field_number: u32 = 2;
     pub const eE1_field_number: u32 = 3;
@@ -8056,7 +8126,8 @@ pub const Bjm = struct {
 };
 pub const yjm = struct {
     pub const msg_id: u16 = 15845;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const TDOLLARs_field_number: u32 = 6;
     pub const SE__field_number: u32 = 13;
     pub const ME__field_number: u32 = 14;
@@ -8450,7 +8521,8 @@ pub const xnC = struct {
 };
 pub const BnC = struct {
     pub const msg_id: u16 = 26146;
-    fmC: ?union(enum) {} = null,
+    fmC: ?union(enum) {
+    } = null,
     pub const cmC_field_number: u32 = 12;
     pub const Q4n_field_number: u32 = 14;
 };
@@ -8594,7 +8666,8 @@ pub const GnC = struct {
 };
 pub const FnC = struct {
     pub const msg_id: u16 = 28175;
-    znC: ?union(enum) {} = null,
+    znC: ?union(enum) {
+    } = null,
     pub const QnC_field_number: u32 = 12;
     pub const Q4n_field_number: u32 = 5;
 };
@@ -8612,7 +8685,8 @@ pub const esC = struct {
     pub const DOLLARAs_field_number: u32 = 3;
     pub const JnC_field_number: u32 = 4;
 };
-pub const exs = struct {};
+pub const exs = struct {
+};
 pub const Utp = struct {
     pub const msg_id: u16 = 20698;
 };
@@ -8744,7 +8818,8 @@ pub const ffg = struct {
 };
 pub const dfg = struct {
     pub const msg_id: u16 = 23202;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Mfg_field_number: u32 = 15;
     pub const vlu_field_number: u32 = 8;
     pub const bBg_field_number: u32 = 1;
@@ -9121,9 +9196,12 @@ pub const klC = struct {
     pub const qlC_field_number: u32 = 1;
 };
 pub const FlC = struct {
-    PpC: ?union(enum) {} = null,
-    NlC: ?union(enum) {} = null,
-    VlC: ?union(enum) {} = null,
+    PpC: ?union(enum) {
+    } = null,
+    NlC: ?union(enum) {
+    } = null,
+    VlC: ?union(enum) {
+    } = null,
     pub const wpC_field_number: u32 = 2;
     pub const Y4n_field_number: u32 = 3;
     pub const yzs_field_number: u32 = 4;
@@ -9156,7 +9234,8 @@ pub const pPC = struct {
     pub const KvC_field_number: u32 = 2;
 };
 pub const vPC = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const ZFC_field_number: u32 = 2;
     pub const eNC_field_number: u32 = 3;
     pub const cPC_field_number: u32 = 4;
@@ -9245,7 +9324,8 @@ pub const iPC = struct {
 };
 pub const rPC = struct {
     pub const msg_id: u16 = 19600;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Dwu_field_number: u32 = 6;
     pub const oNC_field_number: u32 = 8;
     pub const nNC_field_number: u32 = 15;
@@ -9313,7 +9393,8 @@ pub const Pqp = struct {
 };
 pub const wAC = struct {
     pub const msg_id: u16 = 18093;
-    KAC: ?union(enum) {} = null,
+    KAC: ?union(enum) {
+    } = null,
     pub const UAC_field_number: u32 = 1;
     pub const xAC_field_number: u32 = 12;
     pub const DAC_field_number: u32 = 3;
@@ -9537,8 +9618,10 @@ pub const LIp = struct {
     pub const bIp_field_number: u32 = 1;
 };
 pub const wIp = struct {
-    NlC: ?union(enum) {} = null,
-    VlC: ?union(enum) {} = null,
+    NlC: ?union(enum) {
+    } = null,
+    VlC: ?union(enum) {
+    } = null,
     pub const Y4n_field_number: u32 = 2;
     pub const yzs_field_number: u32 = 3;
     pub const s5n_field_number: u32 = 1;
@@ -9581,7 +9664,8 @@ pub const Cqp = struct {
 };
 pub const pqp = struct {
     pub const msg_id: u16 = 22951;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Mfg_field_number: u32 = 15;
     pub const vlu_field_number: u32 = 13;
 };
@@ -9680,7 +9764,8 @@ pub const Aep = struct {
 };
 pub const VYg = struct {
     pub const msg_id: u16 = 21675;
-    aJu: ?union(enum) {} = null,
+    aJu: ?union(enum) {
+    } = null,
     pub const _wd_field_number: u32 = 6;
     pub const fJg_field_number: u32 = 7;
     pub const gJg_field_number: u32 = 1;
@@ -9701,8 +9786,10 @@ pub const oJg = struct {
 pub const qJg = struct {
     pub const SJg_field_number: u32 = 1;
 };
-pub const OJg = struct {};
-pub const FJg = struct {};
+pub const OJg = struct {
+};
+pub const FJg = struct {
+};
 pub const HJg = struct {
     pub const MJg_field_number: u32 = 1;
     pub const fm1_field_number: u32 = 2;
@@ -9721,7 +9808,8 @@ pub const DOLLARJg = struct {
     pub const fm1_field_number: u32 = 2;
 };
 pub const WJg = struct {
-    KJg: ?union(enum) {} = null,
+    KJg: ?union(enum) {
+    } = null,
     pub const E5s_field_number: u32 = 5;
     pub const wJg_field_number: u32 = 6;
     pub const IJg_field_number: u32 = 1;
@@ -9735,7 +9823,8 @@ pub const QJg = struct {
 pub const XJg = struct {
     pub const zys_field_number: u32 = 1;
 };
-pub const kJg = struct {};
+pub const kJg = struct {
+};
 pub const HYg = struct {
     pub const msg_id: u16 = 16697;
     pub const L8n_field_number: u32 = 6;
@@ -9881,8 +9970,10 @@ pub const bSp = struct {
     pub const xSp_field_number: u32 = 7;
 };
 pub const VSp = struct {
-    jSp: ?union(enum) {} = null,
-    DOLLARSp: ?union(enum) {} = null,
+    jSp: ?union(enum) {
+    } = null,
+    DOLLARSp: ?union(enum) {
+    } = null,
     pub const BSp_field_number: u32 = 5;
     pub const kSp_field_number: u32 = 8;
     pub const gG__field_number: u32 = 1;
@@ -9896,7 +9987,8 @@ pub const WSp = struct {
     pub const OSp_field_number: u32 = 3;
 };
 pub const HSp = struct {
-    DOLLARSp: ?union(enum) {} = null,
+    DOLLARSp: ?union(enum) {
+    } = null,
     pub const kSp_field_number: u32 = 4;
     pub const Q6n_field_number: u32 = 1;
     pub const K6n_field_number: u32 = 2;
@@ -10017,7 +10109,8 @@ pub const P6p = struct {
 };
 pub const c4p = struct {
     pub const msg_id: u16 = 15373;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const aGs_field_number: u32 = 9;
     pub const EDOLLARs_field_number: u32 = 12;
 };
@@ -10443,7 +10536,8 @@ pub const cNs = struct {
     pub const gKn_field_number: u32 = 1;
 };
 pub const oNs = struct {
-    e5n: ?union(enum) {} = null,
+    e5n: ?union(enum) {
+    } = null,
     pub const V8n_field_number: u32 = 3;
     pub const CKn_field_number: u32 = 4;
     pub const fKn_field_number: u32 = 5;
@@ -10579,8 +10673,10 @@ pub const gNs = struct {
 };
 pub const nYn = struct {
     pub const msg_id: u16 = 28888;
-    fNs: ?union(enum) {} = null,
-    vNs: ?union(enum) {} = null,
+    fNs: ?union(enum) {
+    } = null,
+    vNs: ?union(enum) {
+    } = null,
     pub const IHn_field_number: u32 = 10;
     pub const LHn_field_number: u32 = 3;
     pub const MHn_field_number: u32 = 2;
@@ -10833,7 +10929,8 @@ pub const Ijg = struct {
     pub const Q4n_field_number: u32 = 10;
 };
 pub const kjg = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const bjg_field_number: u32 = 3;
     pub const Ljg_field_number: u32 = 4;
     pub const wjg_field_number: u32 = 5;
@@ -10901,7 +10998,8 @@ pub const ZIC = struct {
     pub const msg_id: u16 = 17327;
 };
 pub const ENs = struct {
-    e5n: ?union(enum) {} = null,
+    e5n: ?union(enum) {
+    } = null,
     pub const jSs_field_number: u32 = 3;
     pub const j8n_field_number: u32 = 4;
     pub const Z4n_field_number: u32 = 1;
@@ -11103,7 +11201,8 @@ pub const JYn = struct {
     pub const Q4n_field_number: u32 = 3;
 };
 pub const qNs = struct {
-    GNs: ?union(enum) {} = null,
+    GNs: ?union(enum) {
+    } = null,
     pub const nEs_field_number: u32 = 2;
     pub const H6n_field_number: u32 = 1;
 };
@@ -11131,7 +11230,8 @@ pub const ZYn = struct {
     pub const dEs_field_number: u32 = 11;
 };
 pub const VNs = struct {
-    nvs: ?union(enum) {} = null,
+    nvs: ?union(enum) {
+    } = null,
     pub const mEs_field_number: u32 = 1;
     pub const CEs_field_number: u32 = 2;
     pub const gEs_field_number: u32 = 3;
@@ -11164,7 +11264,8 @@ pub const YNs = struct {
     pub const L8n_field_number: u32 = 1;
     pub const m9n_field_number: u32 = 2;
 };
-pub const zNs = struct {};
+pub const zNs = struct {
+};
 pub const ZNs = struct {
     pub const LEs_field_number: u32 = 1;
     pub const A5n_field_number: u32 = 2;
@@ -11453,7 +11554,8 @@ pub const Dw_ = struct {
     pub const KE__field_number: u32 = 1;
 };
 pub const Bw_ = struct {
-    K4s: ?union(enum) {} = null,
+    K4s: ?union(enum) {
+    } = null,
     pub const XE__field_number: u32 = 3;
     pub const h5n_field_number: u32 = 1;
     pub const yIs_field_number: u32 = 2;
@@ -11494,8 +11596,10 @@ pub const Py_ = struct {
     pub const hK__field_number: u32 = 8;
 };
 pub const kw_ = struct {
-    qw: ?union(enum) {} = null,
-    Ow: ?union(enum) {} = null,
+    qw: ?union(enum) {
+    } = null,
+    Ow: ?union(enum) {
+    } = null,
     pub const TVn_field_number: u32 = 3;
     pub const CIl_field_number: u32 = 4;
     pub const F4n_field_number: u32 = 1;
@@ -11546,7 +11650,8 @@ pub const lMg = struct {
 };
 pub const cUp = struct {
     pub const msg_id: u16 = 24039;
-    fUp: ?union(enum) {} = null,
+    fUp: ?union(enum) {
+    } = null,
     pub const mUp_field_number: u32 = 12;
 };
 pub const dUp = struct {
@@ -11574,7 +11679,8 @@ pub const _3s = struct {
     pub const Z1p_field_number: u32 = 14;
 };
 pub const c3s = struct {
-    d3s: ?union(enum) {} = null,
+    d3s: ?union(enum) {
+    } = null,
     pub const nys_field_number: u32 = 20;
     pub const s5n_field_number: u32 = 1;
     pub const v9n_field_number: u32 = 2;
@@ -11604,7 +11710,8 @@ pub const c3s = struct {
     pub const eVg_field_number: u32 = 28;
 };
 pub const m3s = struct {
-    C3s: ?union(enum) {} = null,
+    C3s: ?union(enum) {
+    } = null,
     pub const sys_field_number: u32 = 1;
     pub const ays_field_number: u32 = 2;
     pub const hys_field_number: u32 = 3;
@@ -11956,7 +12063,8 @@ pub const K3s = struct {
     pub const H8n_field_number: u32 = 3;
 };
 pub const ONs = struct {
-    e5n: ?union(enum) {} = null,
+    e5n: ?union(enum) {
+    } = null,
     pub const rTs_field_number: u32 = 2;
     pub const oTs_field_number: u32 = 3;
     pub const nTs_field_number: u32 = 4;
@@ -11978,7 +12086,8 @@ pub const J3s = struct {
     pub const H8n_field_number: u32 = 1;
 };
 pub const z3s = struct {
-    Z3s: ?union(enum) {} = null,
+    Z3s: ?union(enum) {
+    } = null,
     pub const _Ts_field_number: u32 = 2;
     pub const uTs_field_number: u32 = 3;
     pub const cTs_field_number: u32 = 4;
@@ -12294,7 +12403,8 @@ pub const oDC = struct {
 };
 pub const a4n = struct {
     pub const msg_id: u16 = 17438;
-    j6n: ?union(enum) {} = null,
+    j6n: ?union(enum) {
+    } = null,
     pub const TVn_field_number: u32 = 1;
     pub const CIl_field_number: u32 = 12;
     pub const F4n_field_number: u32 = 13;
@@ -12302,7 +12412,8 @@ pub const a4n = struct {
 };
 pub const Ae_ = struct {
     pub const msg_id: u16 = 26826;
-    j6n: ?union(enum) {} = null,
+    j6n: ?union(enum) {
+    } = null,
     pub const TVn_field_number: u32 = 12;
     pub const CIl_field_number: u32 = 10;
     pub const F4n_field_number: u32 = 15;
@@ -12314,7 +12425,8 @@ pub const jes = struct {
 };
 pub const ZFn = struct {
     pub const msg_id: u16 = 20995;
-    j6n: ?union(enum) {} = null,
+    j6n: ?union(enum) {
+    } = null,
     pub const TVn_field_number: u32 = 12;
     pub const CIl_field_number: u32 = 1;
     pub const F4n_field_number: u32 = 10;
@@ -12440,7 +12552,8 @@ pub const sFs = struct {
 };
 pub const fgs = struct {
     pub const msg_id: u16 = 28932;
-    j6n: ?union(enum) {} = null,
+    j6n: ?union(enum) {
+    } = null,
     pub const h6n_field_number: u32 = 3;
     pub const _6n_field_number: u32 = 4;
     pub const F4n_field_number: u32 = 14;
@@ -12454,7 +12567,8 @@ pub const vgs = struct {
 };
 pub const pgs = struct {
     pub const msg_id: u16 = 23397;
-    j6n: ?union(enum) {} = null,
+    j6n: ?union(enum) {
+    } = null,
     pub const h6n_field_number: u32 = 7;
     pub const _6n_field_number: u32 = 11;
     pub const F4n_field_number: u32 = 5;
@@ -12535,7 +12649,8 @@ pub const sI_ = struct {
 };
 pub const GC_ = struct {
     pub const msg_id: u16 = 22092;
-    tQ: ?union(enum) {} = null,
+    tQ: ?union(enum) {
+    } = null,
     pub const bI__field_number: u32 = 5;
     pub const F4n_field_number: u32 = 9;
     pub const ORs_field_number: u32 = 4;
@@ -12558,7 +12673,8 @@ pub const XIg = struct {
 };
 pub const Uzf = struct {
     pub const msg_id: u16 = 23707;
-    tQ: ?union(enum) {} = null,
+    tQ: ?union(enum) {
+    } = null,
     pub const bI__field_number: u32 = 3;
     pub const F4n_field_number: u32 = 9;
     pub const TI__field_number: u32 = 14;
@@ -12680,7 +12796,8 @@ pub const cI_ = struct {
     pub const tVn_field_number: u32 = 2;
 };
 pub const Hw_ = struct {
-    OUs: ?union(enum) {} = null,
+    OUs: ?union(enum) {
+    } = null,
     pub const RI__field_number: u32 = 1;
 };
 pub const RI_ = struct {
@@ -12786,17 +12903,23 @@ pub const kjd = struct {
     pub const LAc_field_number: u32 = 2;
 };
 pub const pAc = struct {
-    wAc: ?union(enum) {} = null,
+    wAc: ?union(enum) {
+    } = null,
     pub const yAc_field_number: u32 = 11;
     pub const dTs_field_number: u32 = 1;
     pub const vAc_field_number: u32 = 2;
 };
 pub const vAc = struct {
-    xAc: ?union(enum) {} = null,
-    DAc: ?union(enum) {} = null,
-    UAc: ?union(enum) {} = null,
-    BAc: ?union(enum) {} = null,
-    kAc: ?union(enum) {} = null,
+    xAc: ?union(enum) {
+    } = null,
+    DAc: ?union(enum) {
+    } = null,
+    UAc: ?union(enum) {
+    } = null,
+    BAc: ?union(enum) {
+    } = null,
+    kAc: ?union(enum) {
+    } = null,
     pub const SAc_field_number: u32 = 1;
     pub const MAc_field_number: u32 = 2;
     pub const EAc_field_number: u32 = 3;
@@ -12805,7 +12928,8 @@ pub const vAc = struct {
 };
 pub const fAc = struct {
     pub const msg_id: u16 = 20124;
-    wAc: ?union(enum) {} = null,
+    wAc: ?union(enum) {
+    } = null,
     pub const yAc_field_number: u32 = 5;
     pub const F4n_field_number: u32 = 6;
     pub const dTs_field_number: u32 = 1;
@@ -12824,7 +12948,8 @@ pub const CAc = struct {
 };
 pub const uAc = struct {
     pub const msg_id: u16 = 27600;
-    OAc: ?union(enum) {} = null,
+    OAc: ?union(enum) {
+    } = null,
     pub const vAc_field_number: u32 = 9;
     pub const F4n_field_number: u32 = 15;
     pub const dTs_field_number: u32 = 8;
@@ -12836,8 +12961,10 @@ pub const dAc = struct {
     pub const Q4n_field_number: u32 = 14;
 };
 pub const PAc = struct {
-    W2d: ?union(enum) {} = null,
-    lXu: ?union(enum) {} = null,
+    W2d: ?union(enum) {
+    } = null,
+    lXu: ?union(enum) {
+    } = null,
     pub const RAc_field_number: u32 = 1;
     pub const hXu_field_number: u32 = 3;
     pub const AAc_field_number: u32 = 2;
@@ -12856,8 +12983,10 @@ pub const RS1 = struct {
     pub const ES1_field_number: u32 = 1;
 };
 pub const bS1 = struct {
-    LS1: ?union(enum) {} = null,
-    wS1: ?union(enum) {} = null,
+    LS1: ?union(enum) {
+    } = null,
+    wS1: ?union(enum) {
+    } = null,
     pub const ES1_field_number: u32 = 2;
     pub const IS1_field_number: u32 = 3;
     pub const w5n_field_number: u32 = 1;
@@ -12870,15 +12999,18 @@ pub const qfu = struct {
     pub const Gfu_field_number: u32 = 1;
 };
 pub const jfu = struct {
-    Hfu: ?union(enum) {} = null,
+    Hfu: ?union(enum) {
+    } = null,
     pub const Nfu_field_number: u32 = 4;
     pub const bPu_field_number: u32 = 1;
     pub const iPs_field_number: u32 = 2;
     pub const rPs_field_number: u32 = 3;
 };
 pub const sEu = struct {
-    mFu: ?union(enum) {} = null,
-    Pmu: ?union(enum) {} = null,
+    mFu: ?union(enum) {
+    } = null,
+    Pmu: ?union(enum) {
+    } = null,
     pub const eKn_field_number: u32 = 3;
     pub const jBd_field_number: u32 = 7;
     pub const aEu_field_number: u32 = 1;
@@ -12895,7 +13027,8 @@ pub const uUu = struct {
     pub const B5n_field_number: u32 = 5;
 };
 pub const WVu = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const QVu_field_number: u32 = 1;
     pub const KVu_field_number: u32 = 2;
     pub const SKu_field_number: u32 = 3;
@@ -12970,7 +13103,8 @@ pub const xXc = struct {
     pub const Cvs_field_number: u32 = 3;
 };
 pub const hwd = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const dwd_field_number: u32 = 2;
     pub const WPd_field_number: u32 = 3;
     pub const QPd_field_number: u32 = 4;
@@ -12986,16 +13120,23 @@ pub const hwd = struct {
 pub const dwd = struct {
     pub const lwd_field_number: u32 = 1;
 };
-pub const WPd = struct {};
-pub const QPd = struct {};
-pub const zkd = struct {};
-pub const ncC = struct {};
+pub const WPd = struct {
+};
+pub const QPd = struct {
+};
+pub const zkd = struct {
+};
+pub const ncC = struct {
+};
 pub const ocC = struct {
     pub const w5n_field_number: u32 = 1;
 };
-pub const icC = struct {};
-pub const rcC = struct {};
-pub const HvC = struct {};
+pub const icC = struct {
+};
+pub const rcC = struct {
+};
+pub const HvC = struct {
+};
 pub const uUd = struct {
     pub const cUd_field_number: u32 = 1;
 };
@@ -13020,7 +13161,8 @@ pub const utm = struct {
     pub const rPs_field_number: u32 = 2;
 };
 pub const kSm = struct {
-    h5n: ?union(enum) {} = null,
+    h5n: ?union(enum) {
+    } = null,
     pub const NIm_field_number: u32 = 10;
     pub const VIm_field_number: u32 = 11;
     pub const itm_field_number: u32 = 1;
@@ -13036,14 +13178,16 @@ pub const kSm = struct {
 pub const HIm = struct {
     pub const htm_field_number: u32 = 1;
 };
-pub const DOLLARIm = struct {};
+pub const DOLLARIm = struct {
+};
 pub const qSm = struct {
     pub const GSm_field_number: u32 = 1;
     pub const h5n_field_number: u32 = 2;
     pub const gff_field_number: u32 = 3;
 };
 pub const OSm = struct {
-    h5n: ?union(enum) {} = null,
+    h5n: ?union(enum) {
+    } = null,
     pub const DPm_field_number: u32 = 3;
     pub const rYf_field_number: u32 = 4;
     pub const GSm_field_number: u32 = 1;
@@ -13109,7 +13253,8 @@ pub const _qm = struct {
     pub const cPm_field_number: u32 = 4;
 };
 pub const DOLLARwm = struct {
-    kof: ?union(enum) {} = null,
+    kof: ?union(enum) {
+    } = null,
     pub const lqm_field_number: u32 = 5;
     pub const fom_field_number: u32 = 1;
     pub const gom_field_number: u32 = 2;
@@ -13175,7 +13320,8 @@ pub const PIC = struct {
     pub const msg_id: u16 = 21652;
     pub const Q4n_field_number: u32 = 10;
 };
-pub const HAC = struct {};
+pub const HAC = struct {
+};
 pub const Qsp = struct {
     pub const msg_id: u16 = 19322;
     pub const F4n_field_number: u32 = 15;
@@ -13247,7 +13393,8 @@ pub const RFn = struct {
 };
 pub const R3n = struct {
     pub const msg_id: u16 = 20663;
-    cFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 12;
     pub const uVn_field_number: u32 = 5;
     pub const s5n_field_number: u32 = 15;
@@ -13260,7 +13407,8 @@ pub const R3n = struct {
 };
 pub const ie_ = struct {
     pub const msg_id: u16 = 29439;
-    cFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 3;
     pub const uVn_field_number: u32 = 10;
     pub const s5n_field_number: u32 = 5;
@@ -13279,8 +13427,10 @@ pub const lzn = struct {
 };
 pub const yFn = struct {
     pub const msg_id: u16 = 24635;
-    cFs: ?union(enum) {} = null,
-    gFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 1;
     pub const QEs_field_number: u32 = 6;
     pub const uVn_field_number: u32 = 3;
@@ -13319,7 +13469,8 @@ pub const IFn = struct {
 };
 pub const Q3n = struct {
     pub const msg_id: u16 = 26161;
-    cFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 15;
     pub const s5n_field_number: u32 = 6;
     pub const F6n_field_number: u32 = 12;
@@ -13347,7 +13498,8 @@ pub const czn = struct {
 };
 pub const HFn = struct {
     pub const msg_id: u16 = 27710;
-    cFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 1;
     pub const s5n_field_number: u32 = 12;
     pub const F6n_field_number: u32 = 2;
@@ -13364,7 +13516,8 @@ pub const jFn = struct {
 };
 pub const d3n = struct {
     pub const msg_id: u16 = 28475;
-    cFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 8;
     pub const s5n_field_number: u32 = 13;
     pub const F6n_field_number: u32 = 9;
@@ -13443,8 +13596,10 @@ pub const qTs = struct {
     pub const bTs_field_number: u32 = 1;
 };
 pub const u3s = struct {
-    dFs: ?union(enum) {} = null,
-    mFs: ?union(enum) {} = null,
+    dFs: ?union(enum) {
+    } = null,
+    mFs: ?union(enum) {
+    } = null,
     pub const BTs_field_number: u32 = 1;
     pub const qTs_field_number: u32 = 6;
 };
@@ -13481,8 +13636,10 @@ pub const fzn = struct {
 };
 pub const i3n = struct {
     pub const msg_id: u16 = 19769;
-    cFs: ?union(enum) {} = null,
-    gFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 5;
     pub const QEs_field_number: u32 = 15;
     pub const cVn_field_number: u32 = 2;
@@ -13511,8 +13668,10 @@ pub const Ezn = struct {
 };
 pub const W7l = struct {
     pub const msg_id: u16 = 24052;
-    cFs: ?union(enum) {} = null,
-    gFs: ?union(enum) {} = null,
+    cFs: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
     pub const n5n_field_number: u32 = 5;
     pub const QEs_field_number: u32 = 7;
     pub const cVn_field_number: u32 = 13;
@@ -13729,7 +13888,8 @@ pub const zJn = struct {
 };
 pub const ZJn = struct {
     pub const msg_id: u16 = 15835;
-    DFs: ?union(enum) {} = null,
+    DFs: ?union(enum) {
+    } = null,
     pub const sKn_field_number: u32 = 13;
     pub const G5n_field_number: u32 = 7;
     pub const O5n_field_number: u32 = 9;
@@ -13762,7 +13922,8 @@ pub const ozn = struct {
 };
 pub const nzn = struct {
     pub const msg_id: u16 = 24234;
-    DFs: ?union(enum) {} = null,
+    DFs: ?union(enum) {
+    } = null,
     pub const sKn_field_number: u32 = 4;
     pub const G5n_field_number: u32 = 15;
     pub const O5n_field_number: u32 = 11;
@@ -13774,7 +13935,8 @@ pub const szn = struct {
 };
 pub const azn = struct {
     pub const msg_id: u16 = 29714;
-    DFs: ?union(enum) {} = null,
+    DFs: ?union(enum) {
+    } = null,
     pub const sKn_field_number: u32 = 4;
     pub const G5n_field_number: u32 = 11;
     pub const O5n_field_number: u32 = 13;
@@ -13860,7 +14022,8 @@ pub const ap_ = struct {
     pub const GI__field_number: u32 = 3;
 };
 pub const Fw_ = struct {
-    e5n: ?union(enum) {} = null,
+    e5n: ?union(enum) {
+    } = null,
     pub const V8n_field_number: u32 = 3;
     pub const CKn_field_number: u32 = 4;
     pub const fKn_field_number: u32 = 5;
@@ -13995,7 +14158,8 @@ pub const BSm = struct {
     pub const Y4n_field_number: u32 = 4;
 };
 pub const jSm = struct {
-    Y4n: ?union(enum) {} = null,
+    Y4n: ?union(enum) {
+    } = null,
     pub const FSm_field_number: u32 = 1;
     pub const NSm_field_number: u32 = 2;
 };
@@ -14007,7 +14171,8 @@ pub const DOLLARSm = struct {
     pub const g8n_field_number: u32 = 7;
 };
 pub const WSm = struct {
-    h5n: ?union(enum) {} = null,
+    h5n: ?union(enum) {
+    } = null,
     pub const XDs_field_number: u32 = 1;
     pub const jIm_field_number: u32 = 2;
 };
@@ -14041,7 +14206,8 @@ pub const fff = struct {
     pub const VSm_field_number: u32 = 14;
 };
 pub const WIm = struct {
-    BWn: ?union(enum) {} = null,
+    BWn: ?union(enum) {
+    } = null,
     pub const XDs_field_number: u32 = 1;
 };
 pub const ytm = struct {
@@ -14576,7 +14742,8 @@ pub const Vca = struct {
 };
 pub const CombatMessage = struct {
     pub const OFs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const G4n_field_number: u32 = 4;
         pub const O4n_field_number: u32 = 5;
         pub const N4n_field_number: u32 = 6;
@@ -14647,7 +14814,8 @@ pub const CombatMessage = struct {
         pub const K8n_field_number: u32 = 1;
     };
     pub const KLs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const MFn_field_number: u32 = 2;
         pub const SFn_field_number: u32 = 3;
         pub const EFn_field_number: u32 = 4;
@@ -14722,9 +14890,11 @@ pub const CombatMessage = struct {
         pub const oMl_field_number: u32 = 100;
         pub const K8n_field_number: u32 = 1;
     };
-    pub const oMl = struct {};
+    pub const oMl = struct {
+    };
     pub const NFs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const DOLLARLs_field_number: u32 = 1;
         pub const HLs_field_number: u32 = 2;
         pub const hVn_field_number: u32 = 3;
@@ -14732,7 +14902,8 @@ pub const CombatMessage = struct {
         pub const WLs_field_number: u32 = 5;
     };
     pub const FFs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const D3n_field_number: u32 = 3;
         pub const A3n_field_number: u32 = 4;
         pub const U3n_field_number: u32 = 5;
@@ -14803,7 +14974,8 @@ pub const CombatMessage = struct {
         pub const W8n_field_number: u32 = 2;
     };
     pub const QLs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const sis_field_number: u32 = 3;
         pub const ais_field_number: u32 = 4;
         pub const lis_field_number: u32 = 5;
@@ -14873,14 +15045,17 @@ pub const CombatMessage = struct {
         pub const K8n_field_number: u32 = 1;
         pub const W8n_field_number: u32 = 2;
     };
-    pub const zI_ = struct {};
+    pub const zI_ = struct {
+    };
     pub const VFs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const Q8n_field_number: u32 = 2;
         pub const x5n_field_number: u32 = 3;
     };
     pub const DOLLARFs = struct {
-        kFs: ?union(enum) {} = null,
+        kFs: ?union(enum) {
+        } = null,
         pub const KLs_field_number: u32 = 2;
         pub const QLs_field_number: u32 = 3;
     };
@@ -14895,8 +15070,10 @@ pub const CombatMessage = struct {
     pub const hZn = struct {
         pub const R5n_field_number: u32 = 13;
     };
-    pub const w4n = struct {};
-    pub const lZn = struct {};
+    pub const w4n = struct {
+    };
+    pub const lZn = struct {
+    };
     pub const Vfs = struct {
         pub const s5n_field_number: u32 = 6;
     };
@@ -15971,7 +16148,8 @@ pub const D4n = struct {
 };
 pub const Ne_ = struct {
     pub const msg_id: u16 = 16972;
-    odu: ?union(enum) {} = null,
+    odu: ?union(enum) {
+    } = null,
     pub const rdu_field_number: u32 = 4;
 };
 pub const Kds = struct {
@@ -16526,7 +16704,8 @@ pub const y4s = struct {
 };
 pub const D3n = struct {
     pub const msg_id: u16 = 27955;
-    R4s: ?union(enum) {} = null,
+    R4s: ?union(enum) {
+    } = null,
     pub const Sjn_field_number: u32 = 2;
     pub const K8n_field_number: u32 = 11;
     pub const uVn_field_number: u32 = 7;
@@ -16545,7 +16724,8 @@ pub const D3n = struct {
 };
 pub const ee_ = struct {
     pub const msg_id: u16 = 17591;
-    R4s: ?union(enum) {} = null,
+    R4s: ?union(enum) {
+    } = null,
     pub const Sjn_field_number: u32 = 7;
     pub const K8n_field_number: u32 = 3;
     pub const uVn_field_number: u32 = 15;
@@ -16568,8 +16748,10 @@ pub const sis = struct {
 };
 pub const MFn = struct {
     pub const msg_id: u16 = 20269;
-    R4s: ?union(enum) {} = null,
-    D4s: ?union(enum) {} = null,
+    R4s: ?union(enum) {
+    } = null,
+    D4s: ?union(enum) {
+    } = null,
     pub const Sjn_field_number: u32 = 98;
     pub const rAs_field_number: u32 = 53;
     pub const K8n_field_number: u32 = 130;
@@ -16631,10 +16813,14 @@ pub const FFn = struct {
     pub const Ajn_field_number: u32 = 12;
 };
 pub const Njn = struct {
-    A4s: ?union(enum) {} = null,
-    P4s: ?union(enum) {} = null,
-    U4s: ?union(enum) {} = null,
-    vtc: ?union(enum) {} = null,
+    A4s: ?union(enum) {
+    } = null,
+    P4s: ?union(enum) {
+    } = null,
+    U4s: ?union(enum) {
+    } = null,
+    vtc: ?union(enum) {
+    } = null,
     pub const Vjn_field_number: u32 = 1;
     pub const Mjn_field_number: u32 = 2;
     pub const r5n_field_number: u32 = 4;
@@ -17356,8 +17542,10 @@ pub const Debug = struct {
     pub const FZn = struct {
         pub const GKn_field_number: u32 = 13;
     };
-    pub const VZn = struct {};
-    pub const Lfs = struct {};
+    pub const VZn = struct {
+    };
+    pub const Lfs = struct {
+    };
     pub const Jf_ = struct {
         pub const HTa_field_number: u32 = 1;
     };
@@ -17475,7 +17663,8 @@ pub const M6s = struct {
 };
 pub const qis = struct {
     pub const msg_id: u16 = 16892;
-    JVu: ?union(enum) {} = null,
+    JVu: ?union(enum) {
+    } = null,
     pub const wn1_field_number: u32 = 8;
     pub const Q6n_field_number: u32 = 1;
     pub const DOLLARHn_field_number: u32 = 11;
@@ -17488,7 +17677,8 @@ pub const Gis = struct {
 };
 pub const Ois = struct {
     pub const msg_id: u16 = 15237;
-    JVu: ?union(enum) {} = null,
+    JVu: ?union(enum) {
+    } = null,
     pub const wn1_field_number: u32 = 14;
     pub const W5n_field_number: u32 = 13;
     pub const mUs_field_number: u32 = 11;
@@ -17570,8 +17760,10 @@ pub const Lrs = struct {
     pub const Q4n_field_number: u32 = 14;
 };
 pub const H4s = struct {
-    DOLLARua: ?union(enum) {} = null,
-    Hua: ?union(enum) {} = null,
+    DOLLARua: ?union(enum) {
+    } = null,
+    Hua: ?union(enum) {
+    } = null,
     pub const Nua_field_number: u32 = 3;
     pub const Fua_field_number: u32 = 4;
     pub const Q6n_field_number: u32 = 1;
@@ -17589,7 +17781,8 @@ pub const j4s = struct {
     pub const aPs_field_number: u32 = 1;
 };
 pub const W4s = struct {
-    K4s: ?union(enum) {} = null,
+    K4s: ?union(enum) {
+    } = null,
     pub const N7n_field_number: u32 = 2;
     pub const hPs_field_number: u32 = 1;
 };
@@ -17768,7 +17961,8 @@ pub const QU1 = struct {
 };
 pub const KU1 = struct {
     pub const msg_id: u16 = 24776;
-    zU1: ?union(enum) {} = null,
+    zU1: ?union(enum) {
+    } = null,
     pub const XU1_field_number: u32 = 2;
 };
 pub const w7f = struct {
@@ -17860,13 +18054,15 @@ pub const QZn = struct {
     pub const Pmu_field_number: u32 = 15;
 };
 pub const qmu = struct {
-    p4s: ?union(enum) {} = null,
+    p4s: ?union(enum) {
+    } = null,
     pub const xmu_field_number: u32 = 2;
     pub const Umu_field_number: u32 = 3;
     pub const Krd_field_number: u32 = 4;
     pub const h5n_field_number: u32 = 1;
 };
-pub const Fmu = struct {};
+pub const Fmu = struct {
+};
 pub const Nmu = struct {
     pub const Dmu_field_number: u32 = 1;
     pub const Bmu_field_number: u32 = 2;
@@ -19198,7 +19394,8 @@ pub const e9n = struct {
     pub const n9n_field_number: u32 = 2;
 };
 pub const b6s = struct {
-    B6s: ?union(enum) {} = null,
+    B6s: ?union(enum) {
+    } = null,
     pub const l9n_field_number: u32 = 3;
     pub const e9n_field_number: u32 = 1;
     pub const a9n_field_number: u32 = 2;
@@ -19403,7 +19600,8 @@ pub const Zrg = struct {
     pub const J7n_field_number: u32 = 3;
 };
 pub const xvf = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const yvf_field_number: u32 = 4;
     pub const Svf_field_number: u32 = 5;
     pub const Mvf_field_number: u32 = 6;
@@ -19508,7 +19706,8 @@ pub const vos = struct {
     pub const P8n_field_number: u32 = 11;
 };
 pub const F6s = struct {
-    V6s: ?union(enum) {} = null,
+    V6s: ?union(enum) {
+    } = null,
     pub const hws_field_number: u32 = 5;
     pub const s5n_field_number: u32 = 1;
     pub const aws_field_number: u32 = 2;
@@ -19969,7 +20168,8 @@ pub const wqp = struct {
     pub const Lqp_field_number: u32 = 1;
 };
 pub const DOLLARah = struct {
-    LR: ?union(enum) {} = null,
+    LR: ?union(enum) {
+    } = null,
     pub const jah_field_number: u32 = 1;
     pub const Hah_field_number: u32 = 2;
     pub const Vah_field_number: u32 = 3;
@@ -20132,7 +20332,8 @@ pub const Kpg = struct {
     pub const Q4n_field_number: u32 = 15;
 };
 pub const Xpg = struct {
-    LR: ?union(enum) {} = null,
+    LR: ?union(enum) {
+    } = null,
     pub const Ypg_field_number: u32 = 1;
 };
 pub const Ypg = struct {
@@ -20168,7 +20369,8 @@ pub const Cwu = struct {
     pub const pWc_field_number: u32 = 3;
 };
 pub const RWc = struct {
-    XEs: ?union(enum) {} = null,
+    XEs: ?union(enum) {
+    } = null,
     pub const vWc_field_number: u32 = 3;
     pub const yWc_field_number: u32 = 4;
     pub const SWc_field_number: u32 = 5;
@@ -20197,23 +20399,31 @@ pub const LWc = struct {
     pub const TWc_field_number: u32 = 1;
     pub const DOLLARod_field_number: u32 = 2;
 };
-pub const AWc = struct {};
-pub const PWc = struct {};
+pub const AWc = struct {
+};
+pub const PWc = struct {
+};
 pub const DWc = struct {
-    xWc: ?union(enum) {} = null,
+    xWc: ?union(enum) {
+    } = null,
     pub const IWc_field_number: u32 = 1;
 };
-pub const lfd = struct {};
+pub const lfd = struct {
+};
 pub const e2d = struct {
     pub const F4n_field_number: u32 = 1;
 };
-pub const t2d = struct {};
-pub const XNd = struct {};
+pub const t2d = struct {
+};
+pub const XNd = struct {
+};
 pub const uJg = struct {
     pub const F4n_field_number: u32 = 1;
 };
-pub const cJg = struct {};
-pub const dJg = struct {};
+pub const cJg = struct {
+};
+pub const dJg = struct {
+};
 pub const pwu = struct {
     pub const msg_id: u16 = 17052;
     pub const Q4n_field_number: u32 = 13;
@@ -20287,7 +20497,8 @@ pub const rEu = struct {
     pub const lEu_field_number: u32 = 3;
 };
 pub const cEu = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const _Eu_field_number: u32 = 2;
     pub const uEu_field_number: u32 = 3;
     pub const jfu_field_number: u32 = 1;
@@ -20295,7 +20506,8 @@ pub const cEu = struct {
 pub const _Eu = struct {
     pub const s5n_field_number: u32 = 1;
 };
-pub const uEu = struct {};
+pub const uEu = struct {
+};
 pub const jns = struct {
     pub const msg_id: u16 = 21496;
     pub const s5n_field_number: u32 = 2;
@@ -20616,7 +20828,8 @@ pub const Igu = struct {
 };
 pub const fss = struct {
     pub const msg_id: u16 = 103;
-    p5s: ?union(enum) {} = null,
+    p5s: ?union(enum) {
+    } = null,
     pub const e7n_field_number: u32 = 9;
     pub const s5n_field_number: u32 = 1;
     pub const X9n_field_number: u32 = 2;
@@ -20691,7 +20904,8 @@ pub const yss = struct {
 };
 pub const Iss = struct {
     pub const msg_id: u16 = 110;
-    M5s: ?union(enum) {} = null,
+    M5s: ?union(enum) {
+    } = null,
     pub const DOLLARxs_field_number: u32 = 3;
     pub const Cvs_field_number: u32 = 1;
     pub const Vxs_field_number: u32 = 2;
@@ -20909,10 +21123,12 @@ pub const Kf_ = struct {
 pub const N7n = struct {
     pub const R7n_field_number: u32 = 1;
 };
-pub const w5s = struct {};
+pub const w5s = struct {
+};
 pub const Jss = struct {
     pub const msg_id: u16 = 17561;
-    C6n: ?union(enum) {} = null,
+    C6n: ?union(enum) {
+    } = null,
     pub const N7n_field_number: u32 = 8;
     pub const G7n_field_number: u32 = 3;
     pub const x7n_field_number: u32 = 13;
@@ -21094,7 +21310,8 @@ pub const Das = struct {
     pub const x9n_field_number: u32 = 13;
 };
 pub const O5s = struct {
-    TPc: ?union(enum) {} = null,
+    TPc: ?union(enum) {
+    } = null,
     pub const vPc_field_number: u32 = 6;
     pub const Q6n_field_number: u32 = 1;
     pub const Ebs_field_number: u32 = 2;
@@ -21145,7 +21362,8 @@ pub const bas = struct {
 };
 pub const Bas = struct {
     pub const msg_id: u16 = 22806;
-    TPc: ?union(enum) {} = null,
+    TPc: ?union(enum) {
+    } = null,
     pub const vPc_field_number: u32 = 8;
     pub const Q6n_field_number: u32 = 15;
     pub const ajC_field_number: u32 = 9;
@@ -21274,7 +21492,8 @@ pub const lhs = struct {
     pub const w9n_field_number: u32 = 3;
 };
 pub const bPc = struct {
-    LPc: ?union(enum) {} = null,
+    LPc: ?union(enum) {
+    } = null,
     pub const SPc_field_number: u32 = 1;
 };
 pub const wPc = struct {
@@ -21284,7 +21503,8 @@ pub const _qc = struct {
     pub const hqc_field_number: u32 = 1;
 };
 pub const lqc = struct {
-    LPc: ?union(enum) {} = null,
+    LPc: ?union(enum) {
+    } = null,
     pub const SPc_field_number: u32 = 1;
 };
 pub const _hs = struct {
@@ -22963,7 +23183,8 @@ pub const X1s = struct {
     pub const S2s_field_number: u32 = 7;
 };
 pub const P2d = struct {
-    kFs: ?union(enum) {} = null,
+    kFs: ?union(enum) {
+    } = null,
     pub const iTd_field_number: u32 = 1;
 };
 pub const Y1s = struct {
@@ -23186,7 +23407,8 @@ pub const Qr1 = struct {
 };
 pub const GBc = struct {
     pub const msg_id: u16 = 17594;
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const hx1_field_number: u32 = 14;
     pub const HB1_field_number: u32 = 4;
     pub const okc_field_number: u32 = 15;
@@ -23240,7 +23462,8 @@ pub const TEc = struct {
 };
 pub const PEc = struct {
     pub const msg_id: u16 = 22972;
-    tT1: ?union(enum) {} = null,
+    tT1: ?union(enum) {
+    } = null,
     pub const ZEc_field_number: u32 = 5;
     pub const Q4n_field_number: u32 = 2;
 };
@@ -23277,7 +23500,8 @@ pub const OBc = struct {
     pub const sps_field_number: u32 = 4;
 };
 pub const kEc = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const DEc_field_number: u32 = 1;
     pub const qEc_field_number: u32 = 2;
     pub const GEc_field_number: u32 = 3;
@@ -23299,7 +23523,8 @@ pub const vIc = struct {
     pub const jEc_field_number: u32 = 1;
 };
 pub const qEc = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const Rl1_field_number: u32 = 4;
     pub const Ll1_field_number: u32 = 5;
     pub const wl1_field_number: u32 = 6;
@@ -23313,7 +23538,8 @@ pub const Jr1 = struct {
     pub const zI1_field_number: u32 = 4;
     pub const Vqs_field_number: u32 = 5;
 };
-pub const Ll1 = struct {};
+pub const Ll1 = struct {
+};
 pub const wl1 = struct {
     pub const Zr1_field_number: u32 = 1;
     pub const kqs_field_number: u32 = 2;
@@ -23323,11 +23549,13 @@ pub const wl1 = struct {
     pub const ro1_field_number: u32 = 6;
 };
 pub const GEc = struct {
-    Eo1: ?union(enum) {} = null,
+    Eo1: ?union(enum) {
+    } = null,
     pub const QEc_field_number: u32 = 1;
 };
 pub const FEc = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const XEc_field_number: u32 = 1;
     pub const YEc_field_number: u32 = 2;
     pub const JEc_field_number: u32 = 4;
@@ -23344,7 +23572,8 @@ pub const XEc = struct {
     pub const Xxu_field_number: u32 = 5;
 };
 pub const YEc = struct {
-    gm1: ?union(enum) {} = null,
+    gm1: ?union(enum) {
+    } = null,
     pub const lm1_field_number: u32 = 1;
     pub const _m1_field_number: u32 = 2;
 };
@@ -23395,7 +23624,8 @@ pub const Gl1 = struct {
     pub const Whc_field_number: u32 = 4;
 };
 pub const Yr1 = struct {
-    Rtd: ?union(enum) {} = null,
+    Rtd: ?union(enum) {
+    } = null,
     pub const btd_field_number: u32 = 6;
     pub const ho1_field_number: u32 = 1;
     pub const Vy__field_number: u32 = 3;
@@ -23403,7 +23633,8 @@ pub const Yr1 = struct {
     pub const rZu_field_number: u32 = 5;
 };
 pub const LE1 = struct {
-    Eo1: ?union(enum) {} = null,
+    Eo1: ?union(enum) {
+    } = null,
     pub const QEc_field_number: u32 = 1;
     pub const Al1_field_number: u32 = 2;
     pub const On1_field_number: u32 = 3;
@@ -23425,7 +23656,8 @@ pub const Zxu = struct {
     pub const SIc_field_number: u32 = 2;
 };
 pub const SIc = struct {
-    eT1: ?union(enum) {} = null,
+    eT1: ?union(enum) {
+    } = null,
     pub const ZI1_field_number: u32 = 13;
     pub const v9n_field_number: u32 = 1;
     pub const sIc_field_number: u32 = 2;
@@ -23444,7 +23676,8 @@ pub const SIc = struct {
     pub const oZu_field_number: u32 = 16;
 };
 pub const MIc = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const lIc_field_number: u32 = 1;
     pub const _Ic_field_number: u32 = 2;
     pub const cIc_field_number: u32 = 3;
@@ -23515,7 +23748,8 @@ pub const kl1 = struct {
     pub const Jxu_field_number: u32 = 5;
 };
 pub const a5c = struct {
-    eT1: ?union(enum) {} = null,
+    eT1: ?union(enum) {
+    } = null,
     pub const ZI1_field_number: u32 = 3;
     pub const v9n_field_number: u32 = 1;
     pub const go1_field_number: u32 = 2;
@@ -23561,7 +23795,8 @@ pub const G2s = struct {
     pub const B2s_field_number: u32 = 2;
 };
 pub const Lqs = struct {
-    l8s: ?union(enum) {} = null,
+    l8s: ?union(enum) {
+    } = null,
     pub const G2s_field_number: u32 = 6;
     pub const h5n_field_number: u32 = 1;
     pub const c5n_field_number: u32 = 2;
@@ -23585,7 +23820,8 @@ pub const n_s = struct {
 };
 pub const s_s = struct {
     pub const msg_id: u16 = 19603;
-    u8s: ?union(enum) {} = null,
+    u8s: ?union(enum) {
+    } = null,
     pub const j2s_field_number: u32 = 6;
     pub const H2s_field_number: u32 = 8;
     pub const W2s_field_number: u32 = 14;
@@ -23653,7 +23889,8 @@ pub const Yna = struct {
     pub const Kna_field_number: u32 = 2;
 };
 pub const Qna = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const m_s_field_number: u32 = 1;
     pub const Pns_field_number: u32 = 2;
 };
@@ -23721,7 +23958,8 @@ pub const M_s = struct {
     pub const Q4n_field_number: u32 = 13;
 };
 pub const dqs = struct {
-    u8s: ?union(enum) {} = null,
+    u8s: ?union(enum) {
+    } = null,
     pub const j2s_field_number: u32 = 10;
     pub const Yxs_field_number: u32 = 1;
     pub const aqs_field_number: u32 = 2;
@@ -24637,7 +24875,8 @@ pub const aCs = struct {
 };
 pub const hCs = struct {
     pub const msg_id: u16 = 29395;
-    B8s: ?union(enum) {} = null,
+    B8s: ?union(enum) {
+    } = null,
     pub const aGs_field_number: u32 = 6;
 };
 pub const lCs = struct {
@@ -24751,7 +24990,8 @@ pub const _Vu = struct {
 };
 pub const uVu = struct {
     pub const msg_id: u16 = 15515;
-    wra: ?union(enum) {} = null,
+    wra: ?union(enum) {
+    } = null,
     pub const x5n_field_number: u32 = 13;
     pub const cVu_field_number: u32 = 1;
     pub const Zbs_field_number: u32 = 4;
@@ -24906,7 +25146,8 @@ pub const JCs = struct {
 };
 pub const zCs = struct {
     pub const msg_id: u16 = 25183;
-    DOLLAR8s: ?union(enum) {} = null,
+    DOLLAR8s: ?union(enum) {
+    } = null,
     pub const UGs_field_number: u32 = 4;
     pub const wGs_field_number: u32 = 6;
 };
@@ -25031,7 +25272,8 @@ pub const VGs = struct {
     pub const FGs_field_number: u32 = 3;
 };
 pub const rOs = struct {
-    R5n: ?union(enum) {} = null,
+    R5n: ?union(enum) {
+    } = null,
     pub const VGs_field_number: u32 = 1;
     pub const DOLLARGs_field_number: u32 = 2;
     pub const HGs_field_number: u32 = 3;
@@ -25348,7 +25590,8 @@ pub const Igp = struct {
     pub const B7__field_number: u32 = 7;
 };
 pub const kWp = struct {
-    qWp: ?union(enum) {} = null,
+    qWp: ?union(enum) {
+    } = null,
     pub const DWp_field_number: u32 = 10000;
     pub const xWp_field_number: u32 = 10001;
     pub const s5n_field_number: u32 = 1;
@@ -25514,7 +25757,8 @@ pub const rgs = struct {
 };
 pub const ogs = struct {
     pub const msg_id: u16 = 20946;
-    hz: ?union(enum) {} = null,
+    hz: ?union(enum) {
+    } = null,
     pub const x9n_field_number: u32 = 5;
     pub const W5n_field_number: u32 = 1;
 };
@@ -25639,7 +25883,8 @@ pub const OnlineMotorLevelInfo = struct {
     pub const Ranking_field_number: u32 = 2;
     pub const TimeCost_field_number: u32 = 3;
 };
-pub const PinballKSCRolePbData = struct {};
+pub const PinballKSCRolePbData = struct {
+};
 pub const PinballChapterData = struct {
     pub const ChapterId_field_number: u32 = 1;
     pub const UnLockTime_field_number: u32 = 2;
@@ -25650,7 +25895,8 @@ pub const DailyLevel = struct {
 };
 pub const RoleDevelopConfigRequest = struct {
     pub const msg_id: u16 = 17287;
-    aVersion: ?union(enum) {} = null,
+    aVersion: ?union(enum) {
+    } = null,
     pub const Version_field_number: u32 = 14;
 };
 pub const GachaUsePoolRequest = struct {
@@ -25782,8 +26028,10 @@ pub const ClientStorageLongData = struct {
 };
 pub const BuffStackCountNotify = struct {
     pub const msg_id: u16 = 19769;
-    Time: ?union(enum) {} = null,
-    gFs: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 5;
     pub const LeftDuration_field_number: u32 = 15;
     pub const HandleId_field_number: u32 = 2;
@@ -25920,8 +26168,10 @@ pub const SysBuffInformation = struct {
     pub const IsIterable_field_number: u32 = 9;
 };
 pub const FadeBackgroundFadeInEffectBlackPb = struct {
-    FadeIn: ?union(enum) {} = null,
-    FadeOut: ?union(enum) {} = null,
+    FadeIn: ?union(enum) {
+    } = null,
+    FadeOut: ?union(enum) {
+    } = null,
     pub const FadeInTime_field_number: u32 = 2;
     pub const FadeOutTime_field_number: u32 = 3;
     pub const FadeColor_field_number: u32 = 1;
@@ -26126,11 +26376,16 @@ pub const BattleStateChangePush = struct {
     pub const InBattle_field_number: u32 = 14;
 };
 pub const MoveSplineConfig = struct {
-    StartPoint: ?union(enum) {} = null,
-    EndPoint: ?union(enum) {} = null,
-    LookDir: ?union(enum) {} = null,
-    Cycle: ?union(enum) {} = null,
-    Circle: ?union(enum) {} = null,
+    StartPoint: ?union(enum) {
+    } = null,
+    EndPoint: ?union(enum) {
+    } = null,
+    LookDir: ?union(enum) {
+    } = null,
+    Cycle: ?union(enum) {
+    } = null,
+    Circle: ?union(enum) {
+    } = null,
     pub const StartPointIndex_field_number: u32 = 1;
     pub const EndPointIndex_field_number: u32 = 2;
     pub const IsLookDir_field_number: u32 = 3;
@@ -26428,7 +26683,8 @@ pub const AwardGroupData = struct {
 };
 pub const OrderApplyBuffNotify = struct {
     pub const msg_id: u16 = 27710;
-    Time: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 1;
     pub const Id_field_number: u32 = 12;
     pub const Level_field_number: u32 = 2;
@@ -26706,8 +26962,10 @@ pub const AchievementProgress = struct {
     pub const TotalProgress_field_number: u32 = 2;
 };
 pub const GolemCrackLevelInfo = struct {
-    NlC: ?union(enum) {} = null,
-    VlC: ?union(enum) {} = null,
+    NlC: ?union(enum) {
+    } = null,
+    VlC: ?union(enum) {
+    } = null,
     pub const state_field_number: u32 = 2;
     pub const UnlockTime_field_number: u32 = 3;
     pub const id_field_number: u32 = 1;
@@ -26790,7 +27048,8 @@ pub const TimelineTrackControlDataPb = struct {
 pub const GivebackInfoRequest = struct {
     pub const msg_id: u16 = 18676;
 };
-pub const SurvivorsPlayerCharacterPbData = struct {};
+pub const SurvivorsPlayerCharacterPbData = struct {
+};
 pub const MapTraceRequest = struct {
     pub const msg_id: u16 = 16148;
     pub const MarkId_field_number: u32 = 6;
@@ -26874,7 +27133,8 @@ pub const MonsterBoomRequest = struct {
     pub const msg_id: u16 = 21752;
     pub const Delay_field_number: u32 = 9;
 };
-pub const KurotatoCharacterEntityPbData = struct {};
+pub const KurotatoCharacterEntityPbData = struct {
+};
 pub const VisionTriggerNotify = struct {
     pub const msg_id: u16 = 17713;
     pub const VisionId_field_number: u32 = 2;
@@ -26970,7 +27230,8 @@ pub const ExchangeRewardResponse = struct {
 };
 pub const ApplyGameplayEffectRequest = struct {
     pub const msg_id: u16 = 20663;
-    Time: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 12;
     pub const Handle_field_number: u32 = 5;
     pub const Id_field_number: u32 = 15;
@@ -27047,7 +27308,8 @@ pub const ApplyVisionGroupRequest = struct {
     pub const Index_field_number: u32 = 15;
     pub const RoleId_field_number: u32 = 11;
 };
-pub const SurvivorsWeaponPbData = struct {};
+pub const SurvivorsWeaponPbData = struct {
+};
 pub const RoleTagChangePush = struct {
     pub const msg_id: u16 = 17516;
     pub const TagId_field_number: u32 = 3;
@@ -27534,7 +27796,8 @@ pub const FsmMontageDurationNotify = struct {
 pub const WeaponSkinRequest = struct {
     pub const msg_id: u16 = 28027;
 };
-pub const HonamiStoryNormalItemInfo = struct {};
+pub const HonamiStoryNormalItemInfo = struct {
+};
 pub const LiftComponentPb = struct {
     pub const Location_field_number: u32 = 1;
 };
@@ -27653,8 +27916,10 @@ pub const GlobalFixCtxPb = struct {
     pub const FixId_field_number: u32 = 1;
 };
 pub const FadeBackgroundFadeOutEffectBlackPb = struct {
-    FadeIn: ?union(enum) {} = null,
-    FadeOut: ?union(enum) {} = null,
+    FadeIn: ?union(enum) {
+    } = null,
+    FadeOut: ?union(enum) {
+    } = null,
     pub const FadeInTime_field_number: u32 = 2;
     pub const FadeOutTime_field_number: u32 = 3;
     pub const FadeColor_field_number: u32 = 1;
@@ -27838,7 +28103,8 @@ pub const OrderRemoveBuffNotify = struct {
 pub const LongArrayBlackboard = struct {
     pub const Values_field_number: u32 = 1;
 };
-pub const RbVisionBlockPbType = struct {};
+pub const RbVisionBlockPbType = struct {
+};
 pub const RoleBrief = struct {
     pub const RoleId_field_number: u32 = 1;
     pub const Level_field_number: u32 = 2;
@@ -28026,9 +28292,12 @@ pub const RoleActivateSkillRequest = struct {
     pub const SkillNodeId_field_number: u32 = 12;
 };
 pub const ICustomScreenTextSettingPb = struct {
-    ShowTextInfo: ?union(enum) {} = null,
-    TextContent: ?union(enum) {} = null,
-    EdTextContent: ?union(enum) {} = null,
+    ShowTextInfo: ?union(enum) {
+    } = null,
+    TextContent: ?union(enum) {
+    } = null,
+    EdTextContent: ?union(enum) {
+    } = null,
     pub const IsShowTextInfo_field_number: u32 = 1;
     pub const TidTextContent_field_number: u32 = 2;
     pub const EdTidTextContent_field_number: u32 = 3;
@@ -28069,7 +28338,8 @@ pub const KillProgress = struct {
     pub const CurrNum_field_number: u32 = 3;
     pub const TotalNum_field_number: u32 = 4;
 };
-pub const KurotatoMonsterEntityPbData = struct {};
+pub const KurotatoMonsterEntityPbData = struct {
+};
 pub const StorageInfoRequest = struct {
     pub const msg_id: u16 = 17029;
 };
@@ -28117,10 +28387,14 @@ pub const SkillNodeInfo = struct {
     pub const StartTimeSeconds_field_number: u32 = 7;
 };
 pub const DamageContext = struct {
-    Source: ?union(enum) {} = null,
-    Bullet: ?union(enum) {} = null,
-    Skill: ?union(enum) {} = null,
-    SkillMessage: ?union(enum) {} = null,
+    Source: ?union(enum) {
+    } = null,
+    Bullet: ?union(enum) {
+    } = null,
+    Skill: ?union(enum) {
+    } = null,
+    SkillMessage: ?union(enum) {
+    } = null,
     pub const SourceType_field_number: u32 = 1;
     pub const BulletId_field_number: u32 = 2;
     pub const SkillId_field_number: u32 = 4;
@@ -28366,7 +28640,8 @@ pub const RewardItemInfo = struct {
 };
 pub const ApplyGameplayEffectPush = struct {
     pub const msg_id: u16 = 29439;
-    Time: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 3;
     pub const Handle_field_number: u32 = 10;
     pub const Id_field_number: u32 = 5;
@@ -28406,7 +28681,8 @@ pub const TowerDefenceInstanceInfo = struct {
 };
 pub const ApplyBuffS2cRequestNotify = struct {
     pub const msg_id: u16 = 28475;
-    Time: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 8;
     pub const Id_field_number: u32 = 13;
     pub const Level_field_number: u32 = 9;
@@ -28433,8 +28709,10 @@ pub const MailBind = struct {
 };
 pub const BuffDurationNotify = struct {
     pub const msg_id: u16 = 24052;
-    Time: ?union(enum) {} = null,
-    gFs: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
+    gFs: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 5;
     pub const LeftDuration_field_number: u32 = 7;
     pub const HandleId_field_number: u32 = 13;
@@ -28460,7 +28738,8 @@ pub const AbyssDangoRoleData = struct {
     pub const Level_field_number: u32 = 2;
     pub const EquipItems_field_number: u32 = 3;
 };
-pub const SurvivorsGoldenCoinPbData = struct {};
+pub const SurvivorsGoldenCoinPbData = struct {
+};
 pub const RoleDevPropsProjectConfig = struct {
     pub const Id_field_number: u32 = 1;
     pub const ElementId_field_number: u32 = 2;
@@ -28483,12 +28762,14 @@ pub const MaterialInfo = struct {
     pub const AssetName_field_number: u32 = 2;
     pub const IsGroup_field_number: u32 = 3;
 };
-pub const CombatDataMaxResponse = struct {};
+pub const CombatDataMaxResponse = struct {
+};
 pub const RoleVisionMainPhantomRequest = struct {
     pub const msg_id: u16 = 29139;
     pub const RoleId_field_number: u32 = 1;
 };
-pub const KurotatoStructureEntityPbData = struct {};
+pub const KurotatoStructureEntityPbData = struct {
+};
 pub const PhantomArenaMasterInfo = struct {
     pub const MasterLevel_field_number: u32 = 1;
     pub const MasterExp_field_number: u32 = 2;
@@ -28631,7 +28912,8 @@ pub const WeaponItem = struct {
 pub const KurotatoWeaponEntityPbData = struct {
     pub const IncId_field_number: u32 = 1;
 };
-pub const KurotatoDropEntityPbData = struct {};
+pub const KurotatoDropEntityPbData = struct {
+};
 pub const AdventureDetectionConfig = struct {
     pub const Id_field_number: u32 = 1;
     pub const EffectBeginTime_field_number: u32 = 2;
@@ -28790,8 +29072,10 @@ pub const RhythmRedDotPb = struct {
 };
 pub const ApplyGameplayEffectNotify = struct {
     pub const msg_id: u16 = 24635;
-    CRoundAction: ?union(enum) {} = null,
-    Time: ?union(enum) {} = null,
+    CRoundAction: ?union(enum) {
+    } = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 1;
     pub const LeftDuration_field_number: u32 = 6;
     pub const Handle_field_number: u32 = 3;
@@ -28927,7 +29211,8 @@ pub const RbBreakableObstaclePbType = struct {
     pub const LinkPoints_field_number: u32 = 1;
 };
 pub const KurotatoRoleInfo = struct {
-    DOLLARSp: ?union(enum) {} = null,
+    DOLLARSp: ?union(enum) {
+    } = null,
     pub const InstData_field_number: u32 = 4;
     pub const roleId_field_number: u32 = 1;
     pub const IsUnlock_field_number: u32 = 2;
@@ -28949,8 +29234,10 @@ pub const RolePhantomPropInfo = struct {
     pub const AddProp_field_number: u32 = 3;
 };
 pub const FightBuffEffectContext = struct {
-    dRoundAction: ?union(enum) {} = null,
-    Effect: ?union(enum) {} = null,
+    dRoundAction: ?union(enum) {
+    } = null,
+    Effect: ?union(enum) {
+    } = null,
     pub const LeftCooldown_field_number: u32 = 1;
     pub const AttributeEventEffectData_field_number: u32 = 6;
 };
@@ -28985,8 +29272,10 @@ pub const ConditionItem = struct {
     pub const ItemFinishMap_field_number: u32 = 1;
 };
 pub const SimpleCombatComponentPb = struct {
-    SplineConfig: ?union(enum) {} = null,
-    SplineMove: ?union(enum) {} = null,
+    SplineConfig: ?union(enum) {
+    } = null,
+    SplineMove: ?union(enum) {
+    } = null,
     pub const SplineConfigId_field_number: u32 = 3;
     pub const SplineMoveType_field_number: u32 = 7;
     pub const SubTypeId_field_number: u32 = 1;
@@ -29022,7 +29311,8 @@ pub const DrownResponse = struct {
 };
 pub const OrderApplyBuffRequest = struct {
     pub const msg_id: u16 = 26161;
-    Time: ?union(enum) {} = null,
+    Time: ?union(enum) {
+    } = null,
     pub const Duration_field_number: u32 = 15;
     pub const Id_field_number: u32 = 6;
     pub const Level_field_number: u32 = 12;
@@ -29083,12 +29373,14 @@ pub const AnimationStateChangedRequest = struct {
     pub const ModelId_field_number: u32 = 14;
 };
 pub const ControlParam = struct {
-    Param: ?union(enum) {} = null,
+    Param: ?union(enum) {
+    } = null,
     pub const TemporaryTeleportParam_field_number: u32 = 2;
     pub const ControlType_field_number: u32 = 1;
 };
 pub const TransitionWithSpecialCustomLoadingPb = struct {
-    LoadingType: ?union(enum) {} = null,
+    LoadingType: ?union(enum) {
+    } = null,
     pub const HonamiStoryCustomLoadingPb_field_number: u32 = 1;
 };
 pub const ClientCurrentRoleReportResponse = struct {
@@ -29101,7 +29393,8 @@ pub const CrystalMonsterInfoPb = struct {
     pub const SlotInfoList_field_number: u32 = 1;
 };
 pub const IllustratedEntry = struct {
-    SubType: ?union(enum) {} = null,
+    SubType: ?union(enum) {
+    } = null,
     pub const PhotographSubType_field_number: u32 = 5;
     pub const Id_field_number: u32 = 1;
     pub const CreateTime_field_number: u32 = 2;
@@ -29292,8 +29585,10 @@ pub const FavorItem = struct {
     pub const Status_field_number: u32 = 2;
 };
 pub const CharacterLookAtInfo = struct {
-    TargetId: ?union(enum) {} = null,
-    TargetPossition: ?union(enum) {} = null,
+    TargetId: ?union(enum) {
+    } = null,
+    TargetPossition: ?union(enum) {
+    } = null,
     pub const TargetEntityId_field_number: u32 = 3;
     pub const TargetPos_field_number: u32 = 4;
     pub const EntityId_field_number: u32 = 1;
@@ -29354,7 +29649,8 @@ pub const AchievementEntry = struct {
     pub const Progress_field_number: u32 = 4;
 };
 pub const RoadNetworkComponentPb = struct {
-    MoveData: ?union(enum) {} = null,
+    MoveData: ?union(enum) {
+    } = null,
     pub const NavMoveData_field_number: u32 = 5;
     pub const DestRoadId_field_number: u32 = 1;
     pub const DestIndex_field_number: u32 = 2;
@@ -29554,7 +29850,8 @@ pub const RoleSkinChangeResponse = struct {
     pub const ErrorCode_field_number: u32 = 1;
 };
 pub const FadeBackgroundFadeOutEffectPb = struct {
-    FadeOutEffectPb: ?union(enum) {} = null,
+    FadeOutEffectPb: ?union(enum) {
+    } = null,
     pub const FadeBackgroundFadeOutEffectBlackPb_field_number: u32 = 1;
 };
 pub const LogicStateInitResponse = struct {
@@ -29586,7 +29883,8 @@ pub const ActivityLineCrossData = struct {
     pub const Challenges_field_number: u32 = 1;
 };
 pub const PhantomCollectReward = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const Progress_field_number: u32 = 3;
     pub const Type_field_number: u32 = 1;
     pub const State_field_number: u32 = 2;
@@ -29706,9 +30004,12 @@ pub const EntityPatrolStopResponse = struct {
     pub const ErrorCode_field_number: u32 = 2;
 };
 pub const TetrisLevelInfo = struct {
-    vdC: ?union(enum) {} = null,
-    ehC: ?union(enum) {} = null,
-    thC: ?union(enum) {} = null,
+    vdC: ?union(enum) {
+    } = null,
+    ehC: ?union(enum) {
+    } = null,
+    thC: ?union(enum) {
+    } = null,
     pub const DifficultyIdx_field_number: u32 = 2;
     pub const State_field_number: u32 = 3;
     pub const UnlockTime_field_number: u32 = 4;
@@ -29729,8 +30030,10 @@ pub const SetFocusModeDeterConditionResponse = struct {
     pub const ErrorCode_field_number: u32 = 2;
 };
 pub const ICustomShowUiPb = struct {
-    CustomScreenTextSettingPb: ?union(enum) {} = null,
-    HideCircle: ?union(enum) {} = null,
+    CustomScreenTextSettingPb: ?union(enum) {
+    } = null,
+    HideCircle: ?union(enum) {
+    } = null,
     pub const ICustomScreenTextSettingPb_field_number: u32 = 1;
     pub const IsHideCircle_field_number: u32 = 2;
 };
@@ -30054,7 +30357,8 @@ pub const RolePassiveSkillInfo = struct {
     pub const PassiveSkillInfoList_field_number: u32 = 2;
 };
 pub const GridPlacementPbInfo = struct {
-    GridPb: ?union(enum) {} = null,
+    GridPb: ?union(enum) {
+    } = null,
     pub const Direction_field_number: u32 = 4;
     pub const ActorGuide_field_number: u32 = 1;
     pub const X_field_number: u32 = 2;
@@ -30209,7 +30513,8 @@ pub const RemoveGameplayEffectResponse = struct {
     pub const Handle_field_number: u32 = 2;
 };
 pub const ExtraDeadInfo = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const BtBloodBathedModeInfo_field_number: u32 = 1;
 };
 pub const PartUpdateRequest = struct {
@@ -30227,7 +30532,8 @@ pub const CaughtRequest = struct {
     pub const Info_field_number: u32 = 13;
 };
 pub const FadeBackgroundFadeInEffectPb = struct {
-    FadeInEffectPb: ?union(enum) {} = null,
+    FadeInEffectPb: ?union(enum) {
+    } = null,
     pub const FadeBackgroundFadeInEffectBlackPb_field_number: u32 = 1;
 };
 pub const CalabashSkinTakeOnResponse = struct {
@@ -30270,7 +30576,8 @@ pub const ItemLockResponse = struct {
     pub const ErrorCode_field_number: u32 = 5;
 };
 pub const GachaResult = struct {
-    Bottom: ?union(enum) {} = null,
+    Bottom: ?union(enum) {
+    } = null,
     pub const BottomExtraReward_field_number: u32 = 3;
     pub const GachaReward_field_number: u32 = 1;
     pub const ExtraRewards_field_number: u32 = 2;
@@ -30401,7 +30708,8 @@ pub const MowTowerLevelsInfo = struct {
     pub const SecondRoleSelection_field_number: u32 = 8;
 };
 pub const SurvivorsLevelData = struct {
-    ModeInfo: ?union(enum) {} = null,
+    ModeInfo: ?union(enum) {
+    } = null,
     pub const EndlessInfo_field_number: u32 = 4;
     pub const LevelId_field_number: u32 = 1;
     pub const OpenTime_field_number: u32 = 2;
@@ -30553,7 +30861,8 @@ pub const InfrFirePb = struct {
 };
 pub const DrownEndTeleportPush = struct {
     pub const msg_id: u16 = 16972;
-    ycu: ?union(enum) {} = null,
+    ycu: ?union(enum) {
+    } = null,
     pub const TeleportPos_field_number: u32 = 4;
 };
 pub const RoleSkillNodeNotify = struct {
@@ -30837,7 +31146,8 @@ pub const PbBattlePassRecurringReward = struct {
     pub const Count_field_number: u32 = 3;
 };
 pub const PatrolInfoPb = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const SmartObjectComponent_field_number: u32 = 1;
 };
 pub const AnimalDropResponse = struct {
@@ -30913,7 +31223,8 @@ pub const MaterialRequest = struct {
     pub const CombatCommon_field_number: u32 = 15;
 };
 pub const HonamiStoryItemInfo = struct {
-    ItemInfo: ?union(enum) {} = null,
+    ItemInfo: ?union(enum) {
+    } = null,
     pub const HonamiStoryNormalItemInfo_field_number: u32 = 4;
     pub const EquipItemInfo_field_number: u32 = 5;
     pub const IncrId_field_number: u32 = 1;
@@ -31152,8 +31463,10 @@ pub const CircumFluenceTaskData = struct {
     pub const NextRefreshTime_field_number: u32 = 7;
 };
 pub const SceneItemSplineRuntimeData = struct {
-    Distance: ?union(enum) {} = null,
-    Rot: ?union(enum) {} = null,
+    Distance: ?union(enum) {
+    } = null,
+    Rot: ?union(enum) {
+    } = null,
     pub const DistanceAlongPath_field_number: u32 = 1;
     pub const CurRot_field_number: u32 = 3;
     pub const CurPos_field_number: u32 = 2;
@@ -31224,8 +31537,10 @@ pub const ChangeStateConfirmResponse = struct {
     pub const Error_field_number: u32 = 12;
 };
 pub const KurotatoLevelInfo = struct {
-    jSp: ?union(enum) {} = null,
-    DOLLARSp: ?union(enum) {} = null,
+    jSp: ?union(enum) {
+    } = null,
+    DOLLARSp: ?union(enum) {
+    } = null,
     pub const EndlessLevelInfo_field_number: u32 = 5;
     pub const InstData_field_number: u32 = 8;
     pub const LevelId_field_number: u32 = 1;
@@ -31319,7 +31634,8 @@ pub const PlayPointStateAsyncResponse = struct {
     pub const LevelPlayStateDict_field_number: u32 = 11;
 };
 pub const TemplateSpawnerActionCtxPb = struct {
-    Type: ?union(enum) {} = null,
+    Type: ?union(enum) {
+    } = null,
     pub const DestroyType_field_number: u32 = 2;
     pub const EntityCtx_field_number: u32 = 1;
 };
@@ -31469,7 +31785,8 @@ pub const GatherActivityInfo = struct {
     pub const GatherTaskDoneInfo_field_number: u32 = 1;
 };
 pub const WeeklyPlayData = struct {
-    qWp: ?union(enum) {} = null,
+    qWp: ?union(enum) {
+    } = null,
     pub const RogueWeeklyPlayData_field_number: u32 = 10000;
     pub const FloroFarmPlayData_field_number: u32 = 10001;
     pub const id_field_number: u32 = 1;
@@ -31481,7 +31798,8 @@ pub const SoarWingOrParaglidingSkinChangeNotify = struct {
 };
 pub const EntityStaticHookMovePush = struct {
     pub const msg_id: u16 = 26826;
-    Target: ?union(enum) {} = null,
+    Target: ?union(enum) {
+    } = null,
     pub const TargetEntityId_field_number: u32 = 12;
     pub const TargetPos_field_number: u32 = 10;
     pub const EntityId_field_number: u32 = 15;
@@ -31521,7 +31839,8 @@ pub const ActivityLongShanMain = struct {
     pub const ScoreRewardedId_field_number: u32 = 2;
 };
 pub const ICustomScreenTypeBasePb = struct {
-    ScreenPb: ?union(enum) {} = null,
+    ScreenPb: ?union(enum) {
+    } = null,
     pub const ICustomScreenSpinePb_field_number: u32 = 1;
     pub const ICustomScreenBackgroundImagePb_field_number: u32 = 2;
 };
@@ -31557,7 +31876,8 @@ pub const SecGetReportData2FlowResponse = struct {
 };
 pub const EntityStaticHookMoveRequest = struct {
     pub const msg_id: u16 = 17438;
-    Target: ?union(enum) {} = null,
+    Target: ?union(enum) {
+    } = null,
     pub const TargetEntityId_field_number: u32 = 1;
     pub const TargetPos_field_number: u32 = 12;
     pub const EntityId_field_number: u32 = 13;
@@ -31570,8 +31890,10 @@ pub const ActivityTurnTableData = struct {
     pub const TurntableTasks_field_number: u32 = 4;
 };
 pub const SpawnerEntityInfo = struct {
-    Group: ?union(enum) {} = null,
-    SpawnerSubType: ?union(enum) {} = null,
+    Group: ?union(enum) {
+    } = null,
+    SpawnerSubType: ?union(enum) {
+    } = null,
     pub const GroupTypes_field_number: u32 = 2;
     pub const MatrixInfo_field_number: u32 = 3;
     pub const IncId_field_number: u32 = 1;
@@ -31587,7 +31909,8 @@ pub const StuckCheckCtxPb = struct {
 };
 pub const EntityStaticHookMoveNotify = struct {
     pub const msg_id: u16 = 20995;
-    Target: ?union(enum) {} = null,
+    Target: ?union(enum) {
+    } = null,
     pub const TargetEntityId_field_number: u32 = 12;
     pub const TargetPos_field_number: u32 = 1;
     pub const EntityId_field_number: u32 = 10;
@@ -31681,7 +32004,8 @@ pub const SkinRewardActivityData = struct {
     pub const RewardInfos_field_number: u32 = 1;
 };
 pub const PlayerAttr = struct {
-    Value: ?union(enum) {} = null,
+    Value: ?union(enum) {
+    } = null,
     pub const Int32Value_field_number: u32 = 3;
     pub const StringValue_field_number: u32 = 4;
     pub const Key_field_number: u32 = 1;
@@ -31785,9 +32109,12 @@ pub const RiskHarvestActivityData = struct {
     pub const RewardedBuffTypeIds_field_number: u32 = 5;
 };
 pub const TransitionInSeamlessPb = struct {
-    WeatherDaPath: ?union(enum) {} = null,
-    EffectDaPath: ?union(enum) {} = null,
-    Config: ?union(enum) {} = null,
+    WeatherDaPath: ?union(enum) {
+    } = null,
+    EffectDaPath: ?union(enum) {
+    } = null,
+    Config: ?union(enum) {
+    } = null,
     pub const TransitionWeatherDaPath_field_number: u32 = 8;
     pub const SceneEffectDaPath_field_number: u32 = 10;
     pub const SeamlessTeleportFinishConfig_field_number: u32 = 11;
@@ -31854,7 +32181,8 @@ pub const WeeklyFrameworkInfo = struct {
     pub const WorldLevel_field_number: u32 = 7;
 };
 pub const ActivityWeeklyRogueData = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const RogueWeeklyLastInfo_field_number: u32 = 3;
     pub const CycleId_field_number: u32 = 1;
     pub const Score_field_number: u32 = 2;
@@ -31944,7 +32272,8 @@ pub const RhythmTaskPb = struct {
 };
 pub const PermanentRogueData = struct {
     pub const msg_id: u16 = 24556;
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const RogueResTaskThemeData_field_number: u32 = 4;
 };
 pub const ActivityRogueData = struct {
@@ -31964,7 +32293,8 @@ pub const BtnStateResponse = struct {
     pub const Result_field_number: u32 = 4;
 };
 pub const TransitionMp4Pb = struct {
-    ScreenColor: ?union(enum) {} = null,
+    ScreenColor: ?union(enum) {
+    } = null,
     pub const AfterTeleportScreenColor_field_number: u32 = 5;
     pub const ResourePath_field_number: u32 = 1;
     pub const ReplayWhenReLogin_field_number: u32 = 2;
@@ -32175,7 +32505,8 @@ pub const EntityAccessRangeResponse = struct {
     pub const Info_field_number: u32 = 6;
 };
 pub const RbBlockMovementPbAction = struct {
-    Type: ?union(enum) {} = null,
+    Type: ?union(enum) {
+    } = null,
     pub const Roll_field_number: u32 = 1;
     pub const Jump_field_number: u32 = 2;
 };
@@ -32374,7 +32705,8 @@ pub const RacingBetsGroupMatchInfo = struct {
     pub const Dangos_field_number: u32 = 5;
 };
 pub const VarDefinePb = struct {
-    Value: ?union(enum) {} = null,
+    Value: ?union(enum) {
+    } = null,
     pub const Boolean_field_number: u32 = 2;
     pub const Int_field_number: u32 = 3;
     pub const String_field_number: u32 = 4;
@@ -32396,7 +32728,8 @@ pub const CabinInfo = struct {
 };
 pub const CreateBulletResponsePush = struct {
     pub const msg_id: u16 = 17591;
-    ParentHandle: ?union(enum) {} = null,
+    ParentHandle: ?union(enum) {
+    } = null,
     pub const BulletHandle_field_number: u32 = 7;
     pub const CombatCommon_field_number: u32 = 3;
     pub const Handle_field_number: u32 = 15;
@@ -32431,7 +32764,8 @@ pub const PayShopInfo = struct {
     pub const PayShopTabTogContent_field_number: u32 = 10;
 };
 pub const PinballLevelData = struct {
-    data: ?union(enum) {} = null,
+    data: ?union(enum) {
+    } = null,
     pub const NormalLevel_field_number: u32 = 2;
     pub const CowLevel_field_number: u32 = 3;
     pub const TowerLevel_field_number: u32 = 4;
@@ -32463,8 +32797,10 @@ pub const TowerInfo = struct {
 };
 pub const CreateBulletNotify = struct {
     pub const msg_id: u16 = 20269;
-    ParentHandle: ?union(enum) {} = null,
-    LocationId: ?union(enum) {} = null,
+    ParentHandle: ?union(enum) {
+    } = null,
+    LocationId: ?union(enum) {
+    } = null,
     pub const BulletHandle_field_number: u32 = 98;
     pub const LocationEntityId_field_number: u32 = 53;
     pub const CombatCommon_field_number: u32 = 130;
@@ -32486,7 +32822,8 @@ pub const CreateBulletNotify = struct {
 };
 pub const SwitchRoleRequest = struct {
     pub const msg_id: u16 = 16892;
-    transform: ?union(enum) {} = null,
+    transform: ?union(enum) {
+    } = null,
     pub const Transform_field_number: u32 = 8;
     pub const RoleId_field_number: u32 = 1;
     pub const SwitchType_field_number: u32 = 11;
@@ -32519,7 +32856,8 @@ pub const RoleCoopActivityData = struct {
     pub const PreCompleteIds_field_number: u32 = 5;
 };
 pub const RbItemComponentPb = struct {
-    Type: ?union(enum) {} = null,
+    Type: ?union(enum) {
+    } = null,
     pub const BreakableObstacleType_field_number: u32 = 3;
     pub const RbLaserEmitterType_field_number: u32 = 4;
     pub const GamePlayIncId_field_number: u32 = 1;
@@ -32607,7 +32945,8 @@ pub const RbBlockMovingPbState = struct {
     pub const Action_field_number: u32 = 1;
 };
 pub const EntityMoveSplineComponentPb = struct {
-    RuntimeData: ?union(enum) {} = null,
+    RuntimeData: ?union(enum) {
+    } = null,
     pub const SceneItemSplineRuntimeData_field_number: u32 = 11;
     pub const SplineEntityId_field_number: u32 = 1;
     pub const MoveSplineConfig_field_number: u32 = 2;
@@ -32637,7 +32976,8 @@ pub const UseSkillInformation = struct {
 };
 pub const CreateBulletRequest = struct {
     pub const msg_id: u16 = 27955;
-    ParentHandle: ?union(enum) {} = null,
+    ParentHandle: ?union(enum) {
+    } = null,
     pub const BulletHandle_field_number: u32 = 2;
     pub const CombatCommon_field_number: u32 = 11;
     pub const Handle_field_number: u32 = 7;
@@ -32696,7 +33036,8 @@ pub const BabelTowerActivity = struct {
 };
 pub const TowerSeasonUpdateResponse = struct {
     pub const msg_id: u16 = 25183;
-    Towers: ?union(enum) {} = null,
+    Towers: ?union(enum) {
+    } = null,
     pub const TowerInfo_field_number: u32 = 4;
     pub const MaxUnlockDifficulty_field_number: u32 = 6;
 };
@@ -32734,7 +33075,8 @@ pub const HonamiStoryBackpack = struct {
     pub const Items_field_number: u32 = 4;
 };
 pub const TrapDefenseComponentPb = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const BuildingPbData_field_number: u32 = 1;
     pub const AuxiliaryPbData_field_number: u32 = 2;
     pub const MonsterPbData_field_number: u32 = 3;
@@ -32996,7 +33338,8 @@ pub const EndSkillResponse = struct {
     pub const ErrorCode_field_number: u32 = 14;
 };
 pub const SceneItemBlackboardParam = struct {
-    Value: ?union(enum) {} = null,
+    Value: ?union(enum) {
+    } = null,
     pub const IntValue_field_number: u32 = 3;
     pub const IntValues_field_number: u32 = 4;
     pub const LongValue_field_number: u32 = 5;
@@ -33058,7 +33401,8 @@ pub const DeviceInputSetting = struct {
     pub const InputCombinationAxis_field_number: u32 = 10;
 };
 pub const RbBlockPbState = struct {
-    State: ?union(enum) {} = null,
+    State: ?union(enum) {
+    } = null,
     pub const MovingState_field_number: u32 = 1;
     pub const IdleState_field_number: u32 = 2;
 };
@@ -33111,7 +33455,8 @@ pub const EndSkillRequest = struct {
 };
 pub const LoginRequest = struct {
     pub const msg_id: u16 = 103;
-    DevLoginCheck: ?union(enum) {} = null,
+    DevLoginCheck: ?union(enum) {
+    } = null,
     pub const DevLoginCheckData_field_number: u32 = 9;
     pub const Id_field_number: u32 = 1;
     pub const Account_field_number: u32 = 2;
@@ -33185,7 +33530,8 @@ pub const InputSettingResponse = struct {
     pub const InputSettingData_field_number: u32 = 6;
 };
 pub const ClientStorageInfo = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const MapMapData_field_number: u32 = 3;
     pub const MapListData_field_number: u32 = 4;
     pub const MapData_field_number: u32 = 5;
@@ -33214,11 +33560,16 @@ pub const ActivityBetHorsesData = struct {
     pub const CloseSettleMenuLegMatchList_field_number: u32 = 7;
 };
 pub const TransitionWithSpineLoadingPb = struct {
-    BackgroundFadeInEffectPb: ?union(enum) {} = null,
-    BackgroundFadeOutEffectPb: ?union(enum) {} = null,
-    Time: ?union(enum) {} = null,
-    CustomShowUiPb: ?union(enum) {} = null,
-    AkEvent: ?union(enum) {} = null,
+    BackgroundFadeInEffectPb: ?union(enum) {
+    } = null,
+    BackgroundFadeOutEffectPb: ?union(enum) {
+    } = null,
+    Time: ?union(enum) {
+    } = null,
+    CustomShowUiPb: ?union(enum) {
+    } = null,
+    AkEvent: ?union(enum) {
+    } = null,
     pub const FadeBackgroundFadeInEffectPb_field_number: u32 = 2;
     pub const FadeBackgroundFadeOutEffectPb_field_number: u32 = 3;
     pub const KeepTime_field_number: u32 = 4;
@@ -33231,7 +33582,8 @@ pub const InputSettingUpdateRequest = struct {
     pub const InputSettingData_field_number: u32 = 7;
 };
 pub const BlackboardParam = struct {
-    Value: ?union(enum) {} = null,
+    Value: ?union(enum) {
+    } = null,
     pub const IntValue_field_number: u32 = 3;
     pub const IntValues_field_number: u32 = 4;
     pub const LongValue_field_number: u32 = 5;
@@ -33265,7 +33617,8 @@ pub const StorageInfoUpdateNotify = struct {
     pub const Removes_field_number: u32 = 9;
 };
 pub const ActivityComponentPb = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const SurvivorsMonsterPbData_field_number: u32 = 2;
     pub const SurvivorsWeaponPbData_field_number: u32 = 3;
     pub const SurvivorsPlayerCharacterPbData_field_number: u32 = 4;
@@ -33304,7 +33657,8 @@ pub const StorageInfoUpdateRequest = struct {
     pub const Infos_field_number: u32 = 4;
 };
 pub const ChildQuestNodeProgress = struct {
-    Progress: ?union(enum) {} = null,
+    Progress: ?union(enum) {
+    } = null,
     pub const Kill_field_number: u32 = 1;
     pub const GetItem_field_number: u32 = 2;
     pub const MonsterCreator_field_number: u32 = 3;
@@ -33348,7 +33702,8 @@ pub const PhantomArenaActivityData = struct {
     pub const TimeLimitShopEndTime_field_number: u32 = 10;
 };
 pub const RbBlockComponentPb = struct {
-    Type: ?union(enum) {} = null,
+    Type: ?union(enum) {
+    } = null,
     pub const DefaultBlockType_field_number: u32 = 10;
     pub const VisionBlockType_field_number: u32 = 11;
     pub const CenterPosition_field_number: u32 = 1;
@@ -33385,7 +33740,8 @@ pub const AiInformation = struct {
     pub const AiBlackboardCd_field_number: u32 = 3;
 };
 pub const NodeInfo = struct {
-    ExtraInfo: ?union(enum) {} = null,
+    ExtraInfo: ?union(enum) {
+    } = null,
     pub const ChildQuestNodeInfo_field_number: u32 = 2;
     pub const Status_field_number: u32 = 1;
 };
@@ -33460,7 +33816,8 @@ pub const TreeInfo = struct {
     pub const SuspendNodeId_field_number: u32 = 13;
 };
 pub const TransitionOptionPb = struct {
-    Option: ?union(enum) {} = null,
+    Option: ?union(enum) {
+    } = null,
     pub const TransitionMp4_field_number: u32 = 2;
     pub const TransitionFlow_field_number: u32 = 3;
     pub const TransitionInSeamless_field_number: u32 = 4;
@@ -33482,7 +33839,8 @@ pub const LeaveSceneNotify = struct {
     pub const TransitionOption_field_number: u32 = 3;
 };
 pub const GameCtxPb = struct {
-    CtxInfo: ?union(enum) {} = null,
+    CtxInfo: ?union(enum) {
+    } = null,
     pub const BehaviorTree_field_number: u32 = 2;
     pub const Entity_field_number: u32 = 3;
     pub const NormalInteract_field_number: u32 = 4;
@@ -33596,7 +33954,8 @@ pub const FlowStartNotify = struct {
     pub const PlotCoordinates_field_number: u32 = 5;
 };
 pub const CombatResponseData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const CreateBulletResponse_field_number: u32 = 3;
     pub const DestroyBulletResponse_field_number: u32 = 4;
     pub const DamageExecuteResponse_field_number: u32 = 5;
@@ -33667,7 +34026,8 @@ pub const CombatResponseData = struct {
     pub const RequestId_field_number: u32 = 2;
 };
 pub const CombatPushData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const ApplyBuffS2cResponsePush_field_number: u32 = 4;
     pub const RemoveBuffS2cResponsePush_field_number: u32 = 5;
     pub const RemoveBuffByIdS2cResponsePush_field_number: u32 = 6;
@@ -33749,7 +34109,8 @@ pub const TeleportNotify = struct {
     pub const DisableAutoFade_field_number: u32 = 6;
 };
 pub const CombatRequestData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const CreateBulletRequest_field_number: u32 = 3;
     pub const DestroyBulletRequest_field_number: u32 = 4;
     pub const DamageExecuteRequest_field_number: u32 = 5;
@@ -33820,7 +34181,8 @@ pub const CombatRequestData = struct {
     pub const RequestId_field_number: u32 = 2;
 };
 pub const CombatNotifyData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const CreateBulletNotify_field_number: u32 = 2;
     pub const DestroyBulletNotify_field_number: u32 = 3;
     pub const DamageExecuteNotify_field_number: u32 = 4;
@@ -33896,7 +34258,8 @@ pub const CombatNotifyData = struct {
     pub const CombatCommon_field_number: u32 = 1;
 };
 pub const CombatSendData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const Push_field_number: u32 = 2;
     pub const Request_field_number: u32 = 3;
 };
@@ -33906,7 +34269,8 @@ pub const CombatSendPackRequest = struct {
     pub const HostPlayerId_field_number: u32 = 3;
 };
 pub const CombatReceiveData = struct {
-    Message: ?union(enum) {} = null,
+    Message: ?union(enum) {
+    } = null,
     pub const CombatNotifyData_field_number: u32 = 2;
     pub const CombatResponseData_field_number: u32 = 3;
 };
@@ -33920,7 +34284,8 @@ pub const CombatSendPackResponse = struct {
     pub const ReceivePackNotify_field_number: u32 = 6;
 };
 pub const EntityComponentPb = struct {
-    ComponentPb: ?union(enum) {} = null,
+    ComponentPb: ?union(enum) {
+    } = null,
     pub const AttributeComponent_field_number: u32 = 1;
     pub const TagComponent_field_number: u32 = 2;
     pub const TriggerComponent_field_number: u32 = 3;
@@ -34021,7 +34386,8 @@ pub const EntityActiveResponse = struct {
     pub const AiControlPlayerId_field_number: u32 = 13;
 };
 pub const EntityPb = struct {
-    d3s: ?union(enum) {} = null,
+    d3s: ?union(enum) {
+    } = null,
     pub const Camp_field_number: u32 = 20;
     pub const Id_field_number: u32 = 1;
     pub const ConfigId_field_number: u32 = 2;
@@ -34120,7 +34486,8 @@ pub const SceneInformation = struct {
     pub const EnableRoads_field_number: u32 = 28;
 };
 pub const ActivityData = struct {
-    Data: ?union(enum) {} = null,
+    Data: ?union(enum) {
+    } = null,
     pub const ParkourActivity_field_number: u32 = 10;
     pub const SignActivity_field_number: u32 = 11;
     pub const NewBieCourseActivity_field_number: u32 = 12;
@@ -34232,7 +34599,8 @@ pub const ActivityData = struct {
 };
 pub const DirectTrainGetPlayerIdResponse = struct {
     pub const msg_id: u16 = 18903;
-    MU1: ?union(enum) {} = null,
+    MU1: ?union(enum) {
+    } = null,
     pub const Activities_field_number: u32 = 8;
 };
 pub const ActivityResponse = struct {
