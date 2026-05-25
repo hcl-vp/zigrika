@@ -22,7 +22,7 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
         .basic = try .init(gpa, fs, player_id),
         .role = try .init(gpa, fs, assets, player_id),
         .weapon = try .init(gpa, fs, assets, player_id),
-        .cosmetic = try .init(gpa, fs, player_id),
+        .cosmetic = try .init(gpa, fs, assets, player_id),
         .scene = try .init(gpa, fs, player_id),
     };
 }
