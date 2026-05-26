@@ -654,7 +654,7 @@ setTimeout(() => {
         CommonParamById_1.configCommonParamById.GetIntConfig(
           "CameraSourceMinPitch",
         );
-      this.MaxFov = 300;
+      this.MaxFov = 180;
       this.MinFov = 0;
       this.CameraUpAndDownSpeed = 1;
       this.CameraLeftAndRightSpeed = 1;
@@ -963,6 +963,8 @@ setTimeout(() => {
         PhotographController.CheckIfInNormalCamera() ||
         PhotographController.CheckIfInFightPhotographCamera()
       ) {
+        this.kQd = 180;
+        this.BQd = 0;
         fov_slider.SetMinValue(this.BQd, false, false);
         fov_slider.SetMaxValue(this.kQd, false, false);
         this.SetCameraFov(photographer.GetFov(), true);
@@ -981,9 +983,9 @@ setTimeout(() => {
           this.SetCameraFov();
         }
       } else {
-        const max_fov = parseInt(PhotographController.MaxFov.Value);
-        const min_fov = parseInt(PhotographController.MinFov.Value);
-        const default_fov = (max_fov - min_fov) / 2 + min_fov;
+        const max_fov = parseInt(180);
+        const min_fov = parseInt(0);
+        const default_fov = 60;
 
         fov_slider.SetMinValue(min_fov, false, false);
         fov_slider.SetMaxValue(max_fov, false, false);

@@ -407,8 +407,27 @@ pub fn onFlySkinWearAllRoleRequest(
     });
 }
 
-pub fn onSendEquipSkinRequest(txn: *Transaction(pb.SendEquipSkinRequest)) !void {
-    txn.respond(.{ .ErrorCode = .Success });
+pub fn onSendEquipSkinRequest(
+    txn: *Transaction(pb.SendEquipSkinRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    scene: *Scene,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    const request = txn.message;
+    const role = role_comp.role_map.getPtr(request.RoleId) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    role.weapon_skin_id = 0;
+    try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
+    try pushEntityWeaponSkinChange(txn, alloc, fs, scene, request.RoleId, 0);
+    try txn.conn.push(pb.WeaponSkinDeleteNotify{
+        .RoleId = request.RoleId,
+        .SkinId = 0,
+    }, alloc.arena);
 }
 
 pub fn onRoleSkinChangeRequest(

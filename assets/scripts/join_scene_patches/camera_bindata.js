@@ -274,7 +274,7 @@ setTimeout(() => {
       value_type: 4,
       name: "PhotoSetup_5_Name",
       type: 1,
-      value_range: [0, 500, 400],
+      value_range: [0, 1000, 400],
       change_value: 5,
       is_local_storage: true,
     }),
