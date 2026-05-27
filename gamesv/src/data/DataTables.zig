@@ -43,6 +43,8 @@ pub const FavorWord = @import("tables/FavorWord.zig");
 pub const FavorStory = @import("tables/FavorStory.zig");
 pub const FavorGoods = @import("tables/FavorGoods.zig");
 pub const Motion = @import("tables/Motion.zig");
+pub const CharacterInitInfo = @import("tables/CharacterInitInfo.zig");
+pub const SkillBranchBuff = @import("tables/SkillBranchBuff.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -81,6 +83,8 @@ favor_word: Table(FavorWord, "Id"),
 favor_story: Table(FavorStory, "Id"),
 favor_goods: Table(FavorGoods, "Id"),
 motion: Table(Motion, "Id"),
+char_init_info: Table(CharacterInitInfo, "RoleId"),
+skill_branch_buff: Table(SkillBranchBuff, "BranchId"),
 
 fn loadTableItems(
     comptime T: type,
@@ -258,67 +262,94 @@ pub fn getRoleAutoBuffs(
         "9296f07f", // amy roguelike
     };
 
+    const maybe_init_info = tables.char_init_info.getDataById(role_id);
     var results: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
     errdefer results.deinit(gpa);
 
-    for (tables.buff.items) |*buff| {
-        var id_buf: [20]u8 = undefined;
-        var role_buf: [20]u8 = undefined;
-        const id_str = std.fmt.bufPrint(&id_buf, "{d}", .{buff.Id}) catch continue;
-        const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
+    var do_autobuff = true;
 
-        // autobuff
-        if (!std.mem.startsWith(u8, id_str, role_str)) continue;
-        if (id_str.len <= 4) continue;
-        if (buff.DurationPolicy != .Infinite) continue;
-        if (buff.ApplicationSourceTagRequirements.len != 0) continue;
-        if (buff.ApplicationTagRequirements.len != 0) continue;
-        if (buff.PrematureExpirationEffects.len != 0) continue;
+    if (maybe_init_info) |init_info| {
+        if (init_info.FightBuffs.len > 0) {
+            do_autobuff = false;
 
-        // roguelike buff removal
-        const suffix = id_str[4..];
-        const blacklisted_combo = blk: {
-            for (blacklisted_buff_id_combos) |combo| {
-                if (std.mem.startsWith(u8, suffix, combo)) break :blk true;
+            for (init_info.FightBuffs) |buff_id| {
+                const buff = tables.buff.getDataById(buff_id) orelse continue;
+                const is_active =
+                    buff.ModifierMagnitude.len == 0 and
+                    buff.BuffAction.len == 0 and
+                    buff.OngoingTagRequirements.len == 0 and
+                    buff.OngoingTagIgnores.len == 0 and
+                    buff.RemovalTagRequirements.len == 0 and
+                    buff.RemovalTagIgnores.len == 0 and
+                    buff.ApplicationSourceTagIgnores.len == 0 and
+                    buff.ApplicationTagIgnores.len == 0 and
+                    buff.ExtraEffectRequirements.len == 0;
+
+                try results.append(gpa, .{ .id = buff_id, .is_active = is_active });
             }
-            break :blk false;
-        };
-        if (blacklisted_combo) continue;
-
-        const blacklisted_tag = tag_cond: {
-            for (buff.GrantedTags) |tag| {
-                for (blacklisted_tag_components) |component| {
-                    if (std.mem.find(u8, tag, component) != null) break :tag_cond true;
-                }
-            }
-            break :tag_cond false;
-        };
-        if (blacklisted_tag) continue;
-
-        if (buff.ExtraEffectID == 5) {
-            const valid = buff.ExtraEffectParameters.len > 1 and calc_policy_cond: {
-                const param = buff.ExtraEffectParameters[1];
-                const hash_pos = std.mem.indexOfScalar(u8, param, '#') orelse param.len;
-                const ref_id = std.fmt.parseInt(i64, param[0..hash_pos], 10) catch break :calc_policy_cond true;
-                const ref_buff = tables.buff.getDataById(@intCast(ref_id)) orelse break :calc_policy_cond true;
-                break :calc_policy_cond ref_buff.CalculationPolicy.len > 0 and ref_buff.CalculationPolicy[0] != 0;
-            };
-            if (!valid) continue;
         }
+    }
 
-        // is_buff_active check from wicked
-        const is_active =
-            buff.ModifierMagnitude.len == 0 and
-            buff.BuffAction.len == 0 and
-            buff.OngoingTagRequirements.len == 0 and
-            buff.OngoingTagIgnores.len == 0 and
-            buff.RemovalTagRequirements.len == 0 and
-            buff.RemovalTagIgnores.len == 0 and
-            buff.ApplicationSourceTagIgnores.len == 0 and
-            buff.ApplicationTagIgnores.len == 0 and
-            buff.ExtraEffectRequirements.len == 0;
+    if (do_autobuff) {
+        for (tables.buff.items) |*buff| {
+            var id_buf: [20]u8 = undefined;
+            var role_buf: [20]u8 = undefined;
+            const id_str = std.fmt.bufPrint(&id_buf, "{d}", .{buff.Id}) catch continue;
+            const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
 
-        try results.append(gpa, .{ .id = buff.Id, .is_active = is_active });
+            // autobuff
+            if (!std.mem.startsWith(u8, id_str, role_str)) continue;
+            if (id_str.len <= 4) continue;
+            if (buff.DurationPolicy != .Infinite) continue;
+            if (buff.ApplicationSourceTagRequirements.len != 0) continue;
+            if (buff.ApplicationTagRequirements.len != 0) continue;
+            if (buff.PrematureExpirationEffects.len != 0) continue;
+
+            // roguelike buff removal
+            const suffix = id_str[4..];
+            const blacklisted_combo = blk: {
+                for (blacklisted_buff_id_combos) |combo| {
+                    if (std.mem.startsWith(u8, suffix, combo)) break :blk true;
+                }
+                break :blk false;
+            };
+            if (blacklisted_combo) continue;
+
+            const blacklisted_tag = tag_cond: {
+                for (buff.GrantedTags) |tag| {
+                    for (blacklisted_tag_components) |component| {
+                        if (std.mem.find(u8, tag, component) != null) break :tag_cond true;
+                    }
+                }
+                break :tag_cond false;
+            };
+            if (blacklisted_tag) continue;
+
+            if (buff.ExtraEffectID == 5) {
+                const valid = buff.ExtraEffectParameters.len > 1 and calc_policy_cond: {
+                    const param = buff.ExtraEffectParameters[1];
+                    const hash_pos = std.mem.indexOfScalar(u8, param, '#') orelse param.len;
+                    const ref_id = std.fmt.parseInt(i64, param[0..hash_pos], 10) catch break :calc_policy_cond true;
+                    const ref_buff = tables.buff.getDataById(@intCast(ref_id)) orelse break :calc_policy_cond true;
+                    break :calc_policy_cond ref_buff.CalculationPolicy.len > 0 and ref_buff.CalculationPolicy[0] != 0;
+                };
+                if (!valid) continue;
+            }
+
+            // is_buff_active check from wicked
+            const is_active =
+                buff.ModifierMagnitude.len == 0 and
+                buff.BuffAction.len == 0 and
+                buff.OngoingTagRequirements.len == 0 and
+                buff.OngoingTagIgnores.len == 0 and
+                buff.RemovalTagRequirements.len == 0 and
+                buff.RemovalTagIgnores.len == 0 and
+                buff.ApplicationSourceTagIgnores.len == 0 and
+                buff.ApplicationTagIgnores.len == 0 and
+                buff.ExtraEffectRequirements.len == 0;
+
+            try results.append(gpa, .{ .id = buff.Id, .is_active = is_active });
+        }
     }
 
     for (additional_buffs) |id| {
@@ -337,73 +368,75 @@ pub fn getRoleAutoBuffs(
     try results.append(gpa, .{ .id = 1001001015 + (role_info.ElementId * 2), .is_active = true });
     try results.append(gpa, .{ .id = 3080 + role_info.ElementId, .is_active = true });
 
-    var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
-    defer illegal_ids.deinit(gpa);
+    if (do_autobuff) {
+        var illegal_ids: std.AutoHashMapUnmanaged(i64, void) = .empty;
+        defer illegal_ids.deinit(gpa);
 
-    // resonant chain buff removal
-    for (tables.resonant_chain.items) |chain| {
-        if (chain.GroupId != role_id) continue;
-        for (chain.BuffIds) |buff_id| {
-            try illegal_ids.put(gpa, buff_id, {});
-        }
-    }
-
-    // further rogue buff removal
-    for (tables.rogue_res_buff.items) |rogue_char_buffs| {
-        var buff_id_buf: [20]u8 = undefined;
-        var role_buf: [20]u8 = undefined;
-        const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
-        const buff_id_str = std.fmt.bufPrint(&buff_id_buf, "{d}", .{rogue_char_buffs.BuffId}) catch continue;
-        if (std.mem.startsWith(u8, buff_id_str, role_str)) {
-            try illegal_ids.put(gpa, rogue_char_buffs.BuffId, {});
-        }
-        for (rogue_char_buffs.BuffIds) |buff_id| {
-            var bid_buf: [20]u8 = undefined;
-            const bid_str = std.fmt.bufPrint(&bid_buf, "{d}", .{buff_id}) catch continue;
-            if (std.mem.startsWith(u8, bid_str, role_str)) {
+        // resonant chain buff removal
+        for (tables.resonant_chain.items) |chain| {
+            if (chain.GroupId != role_id) continue;
+            for (chain.BuffIds) |buff_id| {
                 try illegal_ids.put(gpa, buff_id, {});
             }
         }
-    }
 
-    // honami
-    for (tables.honami_story_effect.items) |honami| {
-        for (honami.Param) |param| {
-            if (param.len < 7) continue;
-            const id = std.fmt.parseInt(i64, param, 10) catch continue;
-            try illegal_ids.put(gpa, id, {});
+        // further rogue buff removal
+        for (tables.rogue_res_buff.items) |rogue_char_buffs| {
+            var buff_id_buf: [20]u8 = undefined;
+            var role_buf: [20]u8 = undefined;
+            const role_str = std.fmt.bufPrint(&role_buf, "{d}", .{role_id}) catch continue;
+            const buff_id_str = std.fmt.bufPrint(&buff_id_buf, "{d}", .{rogue_char_buffs.BuffId}) catch continue;
+            if (std.mem.startsWith(u8, buff_id_str, role_str)) {
+                try illegal_ids.put(gpa, rogue_char_buffs.BuffId, {});
+            }
+            for (rogue_char_buffs.BuffIds) |buff_id| {
+                var bid_buf: [20]u8 = undefined;
+                const bid_str = std.fmt.bufPrint(&bid_buf, "{d}", .{buff_id}) catch continue;
+                if (std.mem.startsWith(u8, bid_str, role_str)) {
+                    try illegal_ids.put(gpa, buff_id, {});
+                }
+            }
         }
-    }
 
-    // combo teaching buff removal
-    for (tables.combo_teaching.items) |combo| {
-        for (combo.AddBuffID) |buff_id| {
-            try illegal_ids.put(gpa, buff_id, {});
+        // honami
+        for (tables.honami_story_effect.items) |honami| {
+            for (honami.Param) |param| {
+                if (param.len < 7) continue;
+                const id = std.fmt.parseInt(i64, param, 10) catch continue;
+                try illegal_ids.put(gpa, id, {});
+            }
         }
-    }
 
-    // le denia (handle ee id 6 (attribute event))
-    for (results.items) |entry| {
-        const buff = tables.buff.getDataById(@intCast(entry.id)) orelse continue;
-        if (buff.ExtraEffectID != 6) continue;
-        const result_param = if (buff.ExtraEffectParameters.len > 3)
-            buff.ExtraEffectParameters[3]
-        else
-            continue;
-        var it = std.mem.splitScalar(u8, result_param, '#');
-        while (it.next()) |id_str| {
-            const id = std.fmt.parseInt(i64, id_str, 10) catch continue;
-            try illegal_ids.put(gpa, id, {});
+        // combo teaching buff removal
+        for (tables.combo_teaching.items) |combo| {
+            for (combo.AddBuffID) |buff_id| {
+                try illegal_ids.put(gpa, buff_id, {});
+            }
         }
-    }
 
-    if (illegal_ids.count() > 0) {
-        var i: usize = 0;
-        while (i < results.items.len) {
-            if (illegal_ids.contains(results.items[i].id)) {
-                _ = results.swapRemove(i);
-            } else {
-                i += 1;
+        // le denia (handle ee id 6 (attribute event))
+        for (results.items) |entry| {
+            const buff = tables.buff.getDataById(@intCast(entry.id)) orelse continue;
+            if (buff.ExtraEffectID != 6) continue;
+            const result_param = if (buff.ExtraEffectParameters.len > 3)
+                buff.ExtraEffectParameters[3]
+            else
+                continue;
+            var it = std.mem.splitScalar(u8, result_param, '#');
+            while (it.next()) |id_str| {
+                const id = std.fmt.parseInt(i64, id_str, 10) catch continue;
+                try illegal_ids.put(gpa, id, {});
+            }
+        }
+
+        if (illegal_ids.count() > 0) {
+            var i: usize = 0;
+            while (i < results.items.len) {
+                if (illegal_ids.contains(results.items[i].id)) {
+                    _ = results.swapRemove(i);
+                } else {
+                    i += 1;
+                }
             }
         }
     }
