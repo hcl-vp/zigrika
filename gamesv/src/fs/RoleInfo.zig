@@ -185,8 +185,33 @@ pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.array_hash_m
         };
 
         try role.resetProperties(gpa, assets, info.Id);
+        try role.addDefaultSkills(gpa, assets, info.Id);
         try map.put(gpa, info.Id, role);
     }
+}
+
+pub fn addDefaultSkills(info: *RoleInfo, gpa: Allocator, assets: *const Assets, id: i32) !void {
+    var nodes: std.ArrayList(SkillNode) = .empty;
+    errdefer nodes.deinit(gpa);
+
+    var skills: std.ArrayList(struct { i32, i32 }) = .empty;
+    errdefer skills.deinit(gpa);
+
+    for (assets.tables.skill_tree.items) |node| {
+        if (node.NodeGroup != id) continue;
+        const active = node.Condition.len == 0 and node.UnLockCondition == 0;
+        try nodes.append(gpa, .{
+            .node_id = node.Id,
+            .active = active,
+            .skill_id = node.SkillId,
+        });
+        if (active and node.SkillId != 0) {
+            try skills.append(gpa, .{ node.SkillId, 1 });
+        }
+    }
+
+    info.skill_node_state = try nodes.toOwnedSlice(gpa);
+    info.skills = try skills.toOwnedSlice(gpa);
 }
 
 pub fn deinit(info: RoleInfo, gpa: Allocator) void {

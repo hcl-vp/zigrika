@@ -6,6 +6,7 @@ const EventQueue = @import("../EventQueue.zig");
 const Connection = @import("../../network/Connection.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerCosmeticComponent = @import("../component/player/PlayerCosmeticComponent.zig");
+const PlayerInventoryComponent = @import("../component/player/PlayerInventoryComponent.zig");
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const CosmeticsHelper = @import("../helpers/cosmetics.zig");
 
@@ -112,9 +113,10 @@ pub fn pushData(
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
+    inventory_comp: *PlayerInventoryComponent,
 ) !void {
     try conn.push(pb.NormalItemUpdateNotify{
-        .NormalItemList = try cosmetic_comp.info.normalItemList(alloc.arena),
+        .NormalItemList = try inventory_comp.info.normalItemList(alloc.arena),
         .NoTips = true,
     }, alloc.arena);
 

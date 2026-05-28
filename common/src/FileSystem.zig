@@ -179,6 +179,26 @@ pub fn writeFile(fs: *FileSystem, path: []const u8, content: []const u8) !void {
     try makeDirAndWriteFile(fs.io, fs.root_dir, path, content);
 }
 
+pub fn deleteFile(fs: *FileSystem, path: []const u8) !void {
+    try fs.map_lock.lock(fs.io);
+    defer fs.map_lock.unlock(fs.io);
+
+    if (fs.map.getPtr(path)) |cached| {
+        try cached.file_lock.lock(fs.io);
+        defer cached.file_lock.unlock(fs.io);
+
+        if (cached.content) |content| {
+            fs.gpa.free(content);
+            cached.content = null;
+        }
+    }
+
+    fs.root_dir.deleteFile(fs.io, path) catch |err| switch (err) {
+        error.FileNotFound => {},
+        else => return err,
+    };
+}
+
 pub const Changes = struct {
     files: []const File,
     arena: ArenaAllocator,

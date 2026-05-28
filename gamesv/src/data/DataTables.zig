@@ -24,6 +24,9 @@ pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
 pub const WeaponConf = @import("tables/WeaponConf.zig");
 pub const WeaponReson = @import("tables/WeaponReson.zig");
+pub const WeaponExpItem = @import("tables/WeaponExpItem.zig");
+pub const WeaponLevel = @import("tables/WeaponLevel.zig");
+pub const WeaponBreach = @import("tables/WeaponBreach.zig");
 pub const LevelEntityConfig = @import("tables/LevelEntityConfig.zig");
 pub const Damage = @import("tables/Damage.zig");
 pub const Area = @import("tables/Area.zig");
@@ -34,6 +37,8 @@ pub const MapFog = @import("tables/MapFog.zig");
 pub const MultiMap = @import("tables/MultiMap.zig");
 pub const MapBlockInfo = @import("tables/MapBlockInfo.zig");
 pub const Flow = @import("tables/Flow.zig");
+pub const Skill = @import("tables/Skill.zig");
+pub const SkillTree = @import("tables/SkillTree.zig");
 pub const ResonantChain = @import("tables/ResonantChain.zig");
 pub const RogueResCharacterBuff = @import("tables/RogueResCharacterBuff.zig");
 pub const HonamiStoryEffect = @import("tables/HonamiStoryEffect.zig");
@@ -64,6 +69,9 @@ template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
 weapon_conf: Table(WeaponConf, "ItemId"),
 weapon_reson: Table(WeaponReson, "Id"),
+weapon_exp_item: Table(WeaponExpItem, "Id"),
+weapon_level: Table(WeaponLevel, "Id"),
+weapon_breach: Table(WeaponBreach, "Id"),
 level_entity_config: Table(LevelEntityConfig, "EntityId"),
 damage: Table(Damage, "Id"),
 area: Table(Area, "AreaId"),
@@ -74,6 +82,8 @@ map_fog: Table(MapFog, "Fog"),
 multi_map: Table(MultiMap, "Id"),
 map_block_info: Table(MapBlockInfo, "BlockId"),
 flow: Table(Flow, "Id"),
+skill: Table(Skill, "Id"),
+skill_tree: Table(SkillTree, "Id"),
 resonant_chain: Table(ResonantChain, "Id"),
 rogue_res_buff: Table(RogueResCharacterBuff, "Id"),
 honami_story_effect: Table(HonamiStoryEffect, "Id"),

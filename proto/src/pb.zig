@@ -34742,145 +34742,244 @@ pub const dgs = struct {
     fOs: i32 = 0,
     vOs: ?Zks = null,
 };
-pub const FlySkinConfigData = struct {
+pub const LevelPlayList = struct {
     pub const default: @This() = .{};
-    SkinId: i32 = 0,
-    FlySkinId: i32 = 0,
+    Index: i32 = 0,
+    LevelPlayId: i32 = 0,
+    State: i32 = 0,
+    IsUnlock: bool = false,
+    UnlockTime: i64 = 0,
+    PlayTime: i32 = 0,
 };
-pub const SunSpiritTakeUpPb = struct {
+pub const SummonInfo = struct {
     pub const default: @This() = .{};
-    TrapEntityConfigId: i32 = 0,
+    SummonCfgId: i32 = 0,
+    SummonerId: i64 = 0,
+    SummonSkillId: i32 = 0,
+};
+pub const PlayerSceneComponentPb = struct {
+    pub const default: @This() = .{};
+    EntityIds: std.ArrayList(i64) = .empty,
+};
+pub const CrystalMonsterSlotInfo = struct {
+    pub const default: @This() = .{};
+    EntityIds: std.ArrayList(i32) = .empty,
+    MonsterType: i32 = 0,
+};
+pub const AdventureDetectionConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    EffectBeginTime: i64 = 0,
+    EffectEndTime: i64 = 0,
+};
+pub const PhantomArenaCardReward = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+    NeedCount: i32 = 0,
+    IsTaken: bool = false,
+};
+pub const PartInformation = struct {
+    pub const default: @This() = .{};
+    PartIndex: i32 = 0,
+    LifeValue: f32 = 0,
+    LifeMax: f32 = 0,
+    Activated: bool = false,
+    PartTag: i32 = 0,
+};
+pub const RemoveBuffS2cRequestNotify = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    StackCount: i32 = 0,
+    Reason: i32 = 0,
+};
+pub const RoleVisionRecommendAttrRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const PhantomCollectProgress = struct {
+    pub const default: @This() = .{};
+    Phantoms: std.ArrayList(i32) = .empty,
+};
+pub const SecGetReportData2FlowRequest = struct {
+    pub const default: @This() = .{};
+    ReportData: []const u8 = "",
+};
+pub const BoardGridDynamicConfig = struct {
+    pub const default: @This() = .{};
+    RowIndex: i32 = 0,
+    ColumnIndex: i32 = 0,
+    Flags: i64 = 0,
+};
+pub const DFsmBlackBoard = struct {
+    pub const default: @This() = .{};
+    Key: i32 = 0,
+    Value: i32 = 0,
+};
+pub const SendEquipSkinRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const EntityInteractRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    OptionIndex: i32 = 0,
+    VisionEntityId: i64 = 0,
+};
+pub const WuWuTaskPack = struct {
+    pub const default: @This() = .{};
+    WuWuPackageId: i32 = 0,
+    UnLockTime: i64 = 0,
+    HadReward: bool = false,
+};
+pub const BuffEffectPush = struct {
+    pub const default: @This() = .{};
+    HandleId: i32 = 0,
     Index: i32 = 0,
 };
-pub const EntityOnLandedResponse = struct {
-    pub const default: @This() = .{};
+pub const DestroyType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NotDelay = 0,
+    Delay = 1,
 };
-pub const BatchBulletCastComponentPb = struct {
+pub const ApplyGameplayEffectPush = struct {
     pub const default: @This() = .{};
-    ConstateId: i64 = 0,
-};
-pub const TrapDefenseMonsterPbData = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-};
-pub const CumulativeShopSubTaskData = struct {
-    pub const default: @This() = .{};
-    CanGetReward: i32 = 0,
-    ProgressCount: i32 = 0,
-    TotalProgressCount: i32 = 0,
-};
-pub const MotorTaskRewardPb = struct {
-    pub const default: @This() = .{};
-    Rewarded: i32 = 0,
-    WaitReward: i32 = 0,
-    MaxReward: i32 = 0,
-};
-pub const MapUnlockFieldInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const MonsterBoomPush = struct {
-    pub const default: @This() = .{};
-    Delay: i32 = 0,
-};
-pub const AdvertisingPageData = struct {
-    pub const default: @This() = .{};
-    Show: bool = false,
-    PointTime: i64 = 0,
-};
-pub const HeartbeatRequest = struct {
-    pub const default: @This() = .{};
-    AntiData: []const u8 = "",
-};
-pub const TransferCtxPb = struct {
-    pub const default: @This() = .{};
-    TeleportId: i32 = 0,
-};
-pub const ActorVisibleRequest = struct {
-    pub const default: @This() = .{};
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    Handle: i32 = 0,
     Id: i64 = 0,
-    IsActorVisible: bool = false,
+    Level: i32 = 0,
+    InstigatorId: i64 = 0,
+    ApplyType: i32 = 0,
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    IsActive: bool = false,
+    Reason: []const u8 = "",
+    ConfBuffId: i64 = 0,
+};
+pub const RefreshBuffDurationPush = struct {
+    pub const default: @This() = .{};
+    BuffIds: std.ArrayList(i64) = .empty,
+};
+pub const ItemDeprecateRequest = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    IncrId: i32 = 0,
+};
+pub const SilenceNpcNotify = struct {
+    pub const default: @This() = .{};
+    vTs: std.ArrayList(MapEntry(i32, bool)) = .empty,
+};
+pub const MoveSplineConfig = struct {
+    pub const default: @This() = .{};
+    StartPoint: ?union(enum) {
+        StartPointIndex: i32,
+    } = null,
+    EndPoint: ?union(enum) {
+        EndPointIndex: i32,
+    } = null,
+    LookDir: ?union(enum) {
+        IsLookDir: bool,
+    } = null,
+    Cycle: ?union(enum) {
+        CycleCount: i32,
+    } = null,
+    Circle: ?union(enum) {
+        IsCircle: bool,
+    } = null,
+};
+pub const SummonEntityNotify = struct {
+    pub const default: @This() = .{};
+    SummonerId: i64 = 0,
+    SummonIds: std.ArrayList(i64) = .empty,
+};
+pub const ArrayIntDouble = struct {
+    pub const default: @This() = .{};
+    Key: i32 = 0,
+    Value: f64 = 0,
+};
+pub const JigsawBaseComponentPb = struct {
+    pub const default: @This() = .{};
+    MoveCount: i32 = 0,
+    EntityId: i32 = 0,
+    Winner: i32 = 0,
+};
+pub const SmartObjectComponent = struct {
+    pub const default: @This() = .{};
+    LastPassIndex: i32 = 0,
+};
+pub const MapUnlockFieldNotify = struct {
+    pub const default: @This() = .{};
+    FieldId: i32 = 0,
+};
+pub const EntityStateProgress = struct {
+    pub const default: @This() = .{};
+    EntityId: std.ArrayList(i32) = .empty,
+};
+pub const QuickHackRamVerifyPush = struct {
+    pub const default: @This() = .{};
+    DeviceId: i32 = 0,
+    QuickHackSkillIdList: std.ArrayList(i32) = .empty,
+    OpenQuickHackPreMessageId: i64 = 0,
 };
 pub const MingSuGenInfo = struct {
     pub const default: @This() = .{};
     CreatureGenId: i64 = 0,
 };
-pub const MonthCardDailyRewardNotify = struct {
+pub const DetectionUnlock = struct {
     pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-    Days: i32 = 0,
+    MonsterDetectionIds: std.ArrayList(i32) = .empty,
+    DungeonDetectionIds: std.ArrayList(i32) = .empty,
+    SilentAreaDetectionIds: std.ArrayList(i32) = .empty,
 };
-pub const HackTargetComponentPb = struct {
+pub const MoraleAreaData = struct {
     pub const default: @This() = .{};
-    HackTargetEntityId: i64 = 0,
+    AreaDataId: i32 = 0,
+    ExploreBoxReceivedCount: i32 = 0,
 };
-pub const RoleSkillBranchModifyRequest = struct {
+pub const SceneTraceResponse = struct {
+    pub const default: @This() = .{};
+};
+pub const PhantomAutoPutRequest = struct {
     pub const default: @This() = .{};
     RoleId: i32 = 0,
-    SkillBranch: i32 = 0,
+    PhantomItemIncrId: std.ArrayList(i32) = .empty,
 };
-pub const OnlineMotorLevelInfo = struct {
+pub const MotorFightTalentPb = struct {
     pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    Ranking: i32 = 0,
-    TimeCost: i32 = 0,
+    Id: i32 = 0,
+    Unlock: bool = false,
+    InUse: bool = false,
 };
-pub const ChatContentType = enum(i32) {
+pub const CombatCommon = struct {
+    pub const default: @This() = .{};
+    PreMessageId: i64 = 0,
+    MessageId: i64 = 0,
+    Originator: i64 = 0,
+    TimeStamp: f32 = 0,
+    EntityId: i64 = 0,
+    IsServerRequest: bool = false,
+};
+pub const MotorDiyInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const BossRushBuffSelectionStatus = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Text = 0,
-    Emoji = 1,
+    BuffEmpty = 0,
+    BuffSelected = 1,
+    BuffLocked = 2,
+    BuffInactive = 3,
 };
-pub const PinballKSCRolePbData = struct {
-    pub const default: @This() = .{};
+pub const BlockState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    BStateAll = 0,
+    BStateSimple = 1,
+    BStateComplete = 2,
 };
-pub const PinballChapterData = struct {
+pub const RemoveCombineRelationNotify = struct {
     pub const default: @This() = .{};
-    ChapterId: i32 = 0,
-    UnLockTime: i64 = 0,
-};
-pub const DailyLevel = struct {
-    pub const default: @This() = .{};
-    RandomLevelId: i32 = 0,
-    reward: bool = false,
-};
-pub const RoleDevelopConfigRequest = struct {
-    pub const default: @This() = .{};
-    aVersion: ?union(enum) {
-        Version: []const u8,
-    } = null,
-};
-pub const GachaUsePoolRequest = struct {
-    pub const default: @This() = .{};
-    GachaId: i32 = 0,
-    PoolId: i32 = 0,
-};
-pub const PhantomBattleGuideActivity = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-    DropId: i32 = 0,
-    RewardTotalNum: i32 = 0,
-    SendReward: bool = false,
-    RecordActId: i32 = 0,
-};
-pub const PayShopInfoRequest = struct {
-    pub const default: @This() = .{};
-    Version: []const u8 = "",
-};
-pub const ToughCalcExtraRatioChangePush = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    Duration: i32 = 0,
-};
-pub const ClientStorageSetData = struct {
-    pub const default: @This() = .{};
-    Data: std.ArrayList(i32) = .empty,
-};
-pub const RoleSaveInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    WeaponIncId: i32 = 0,
-    PhantomIncId: std.ArrayList(i32) = .empty,
-    SkillBranchId: i32 = 0,
+    CombineEntity: i64 = 0,
+    TargetEntity: i64 = 0,
 };
 pub const BabelTowerData = struct {
     pub const default: @This() = .{};
@@ -34896,54 +34995,88 @@ pub const BabelTowerData = struct {
     MaxPassBuffSelection: std.ArrayList(i32) = .empty,
     MaxPassStar: i32 = 0,
 };
-pub const CaughtInfo = struct {
-    pub const default: @This() = .{};
-    Attacker: i64 = 0,
-    CaughtInfoId: i64 = 0,
-    IsEnd: bool = false,
-    FightState: i32 = 0,
+pub const EDamageImmune = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Default = 0,
+    Invincible = 1,
+    BuffEffectElement = 2,
+    BulletCurNoCtrl = 3,
+    VehiclePassenger = 4,
+    FishBoat = 5,
 };
-pub const EntityFollowTrackRequest = struct {
+pub const AbyssPluginItemInfo = struct {
     pub const default: @This() = .{};
-    EntityId: i64 = 0,
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+    IncrId: i32 = 0,
+    FuncValue: i32 = 0,
 };
-pub const LoadEquipData = struct {
+pub const CreateInstanceDungeonNotify = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkinId: i32 = 0,
-};
-pub const BuffEffectPush = struct {
-    pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    Index: i32 = 0,
-};
-pub const RoleGiftActivityData = struct {
-    pub const default: @This() = .{};
-    RewardHadGet: bool = false,
-};
-pub const LevelPlayVarAsyncRequest = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
     LevelPlayId: i32 = 0,
 };
-pub const SummonInfo = struct {
+pub const KurotatoDropEntityPbData = struct {
     pub const default: @This() = .{};
-    SummonCfgId: i32 = 0,
-    SummonerId: i64 = 0,
-    SummonSkillId: i32 = 0,
 };
-pub const MonsterAiComponentPb = struct {
+pub const SlashAndTowerInfoRequest = struct {
     pub const default: @This() = .{};
-    WeaponId: i32 = 0,
-    HatredGroupId: i64 = 0,
-    AiTeamInitId: i32 = 0,
-    CombatMessageId: i64 = 0,
-    BasicPerceptionIds: std.ArrayList(i32) = .empty,
-    HatredId: i64 = 0,
 };
-pub const PushContextIdNotify = struct {
+pub const SpringSkipEntry = struct {
     pub const default: @This() = .{};
-    Id: i64 = 0,
+    Id: i32 = 0,
+    UnLock: bool = false,
+    Finish: bool = false,
+};
+pub const RbGridDirection = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    RbForward = 0,
+    RbBackward = 1,
+    RbRight = 2,
+    RbLeft = 3,
+};
+pub const WeaponItem = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    IncrId: i32 = 0,
+    FuncValue: i32 = 0,
+    WeaponLevel: i32 = 0,
+    WeaponExp: i32 = 0,
+    WeaponBreach: i32 = 0,
+    WeaponResonLevel: i32 = 0,
+    RoleId: i32 = 0,
+};
+pub const StringArrayBlackboard = struct {
+    pub const default: @This() = .{};
+    Values: std.ArrayList([]const u8) = .empty,
+};
+pub const UseSkillFailRequest = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+};
+pub const RoleTagChangePush = struct {
+    pub const default: @This() = .{};
+    TagId: i32 = 0,
+    TagCount: i32 = 0,
+};
+pub const ClientCurrentRoleReportPush = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    CurrentRoleId: i32 = 0,
+    CurrentEntityId: i64 = 0,
+};
+pub const AceBlackProductAccountInfo = struct {
+    pub const default: @This() = .{};
+    TdmDeviceId: []const u8 = "",
+    IsRoot: bool = false,
+    IsSimulator: bool = false,
+};
+pub const LobbyListRequest = struct {
+    pub const default: @This() = .{};
+    IsFriend: bool = false,
+};
+pub const ControlTemporaryTeleportParam = struct {
+    pub const default: @This() = .{};
+    TemporaryTeleportIds: std.ArrayList(i64) = .empty,
 };
 pub const OnlineMotorTask = struct {
     pub const default: @This() = .{};
@@ -34954,148 +35087,32 @@ pub const OnlineMotorTask = struct {
     SpeedLap: i32 = 0,
     FirstRunner: i32 = 0,
 };
-pub const MotorDaCtxComponentPb = struct {
+pub const BattlePassRequest = struct {
     pub const default: @This() = .{};
-    MotorDaCtxId: i64 = 0,
 };
-pub const InstEnterInfoPb = struct {
+pub const GuideInfoRequest = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    ChallengedTimes: i32 = 0,
 };
-pub const BuffEffectExecutePush = struct {
+pub const WeatherControlInfoWithoutCheckAsyncRequest = struct {
     pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    Index: i32 = 0,
 };
-pub const ChangeStateConfirmNotify = struct {
+pub const LiftComponentPb = struct {
     pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
+    Location: i32 = 0,
 };
-pub const PreheatSignNodeInfo = struct {
+pub const MonsterInfoPreview = struct {
     pub const default: @This() = .{};
-    PreheatNodeId: i32 = 0,
-    UnlockTime: i64 = 0,
-    Rewarded: bool = false,
+    WaveConfigId: i32 = 0,
+    HpPpb: i32 = 0,
+    Damage: i64 = 0,
+    Round: i32 = 0,
+    IsDead: bool = false,
 };
-pub const LevelData = struct {
+pub const RoleInstanceList = struct {
     pub const default: @This() = .{};
-    LevelId: i32 = 0,
     InstId: i32 = 0,
-    Roles: std.ArrayList(i32) = .empty,
-    GroupId: i32 = 0,
-    IsUnlocked: bool = false,
-};
-pub const ClientStorageLongData = struct {
-    pub const default: @This() = .{};
-    Data: i64 = 0,
-};
-pub const BuffStackCountNotify = struct {
-    pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
-    } = null,
-    gFs: ?union(enum) {
-        LeftDuration: f32,
-    } = null,
-    HandleId: i32 = 0,
-    NewStackCount: i32 = 0,
-    InstigatorId: i64 = 0,
-    NotRefreshDuration: bool = false,
-    NotRefreshPeriod: bool = false,
-};
-pub const AnimalDestroyRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-};
-pub const ControlTemporaryTeleportParam = struct {
-    pub const default: @This() = .{};
-    TemporaryTeleportIds: std.ArrayList(i64) = .empty,
-};
-pub const MonsterWeaponComponentPb = struct {
-    pub const default: @This() = .{};
-    WeaponId: i32 = 0,
-};
-pub const ChangeVisionGroupNameRequest = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-    Name: []const u8 = "",
-};
-pub const MapUnlockDataNotify = struct {
-    pub const default: @This() = .{};
-    UnlockMultiMapIds: std.ArrayList(i32) = .empty,
-    UnlockMapBlockIds: std.ArrayList(i32) = .empty,
-};
-pub const WeaponItemRemoveNotify = struct {
-    pub const default: @This() = .{};
-    WeaponItemIncrIdList: std.ArrayList(i32) = .empty,
-};
-pub const CounterAttackInfo = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    FightState: i32 = 0,
-    TriggerCounterType: i32 = 0,
-    CounterAnIndex: i32 = 0,
-};
-pub const OrderRemoveBuffRequest = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    StackCount: i32 = 0,
-    Reason: []const u8 = "",
-};
-pub const ClientStorageStringData = struct {
-    pub const default: @This() = .{};
-    Data: []const u8 = "",
-};
-pub const DrownEndTeleportRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const VisionTriggerPush = struct {
-    pub const default: @This() = .{};
-    VisionId: i32 = 0,
-};
-pub const ConditionTaskStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Undone = 0,
-    TaskFinish = 1,
-    Received = 2,
-};
-pub const DodgeInfoPush = struct {
-    pub const default: @This() = .{};
-    BulletOwnerId: i64 = 0,
-    BulletId: i64 = 0,
-};
-pub const SceneTimeInfo = struct {
-    pub const default: @This() = .{};
-    Hour: i32 = 0,
-    Minute: i32 = 0,
-    OwnerTimeClockTimeSpan: i64 = 0,
-};
-pub const KeepMovementState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    KeepMovementStateInvalid = 0,
-    Kite = 1,
-    Soar = 2,
-};
-pub const DrownPush = struct {
-    pub const default: @This() = .{};
-};
-pub const TimeCheckRequest = struct {
-    pub const default: @This() = .{};
-    ClientTime: i64 = 0,
-    TimeDilation: f32 = 0,
-    FlowTimeDilation: f32 = 0,
-};
-pub const FightRoleInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    EntityId: i64 = 0,
-    OnStageWithoutControl: bool = false,
-};
-pub const FanComponentPb = struct {
-    pub const default: @This() = .{};
-    NumOfTurns: i32 = 0,
+    IsUnlock: bool = false,
+    CanUnlock: bool = false,
 };
 pub const DamageCalculationDetails = struct {
     pub const default: @This() = .{};
@@ -35118,37 +35135,1170 @@ pub const DamageCalculationDetails = struct {
     WeakDamageBonusRate: f32 = 0,
     ExceptedDamageValue: f32 = 0,
 };
-pub const FlagStrongholdInfo = struct {
+pub const OneExploreItem = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    IsPass: bool = false,
+    ExploreProgressId: i32 = 0,
+    ExplorePercent: i32 = 0,
+    CurCount: i32 = 0,
+    TotalCount: i32 = 0,
+    IsLocked: bool = false,
 };
-pub const VisionSkillInformation = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-    Level: i32 = 0,
-    Quality: i32 = 0,
-    VisionEntityId: i64 = 0,
-    Index: i32 = 0,
-};
-pub const RhythmTaskTypePb = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Resident = 0,
-    Limit = 1,
-};
-pub const PinballWeapon = struct {
+pub const TrapDefenseSpecialCellPbData = struct {
     pub const default: @This() = .{};
     ConfigId: i32 = 0,
-    IncrId: i32 = 0,
-    FuncValue: i32 = 0,
-    roleId: i32 = 0,
-    SubEntryId: i32 = 0,
 };
-pub const DangoActorData = struct {
+pub const DailyLevel = struct {
+    pub const default: @This() = .{};
+    RandomLevelId: i32 = 0,
+    reward: bool = false,
+};
+pub const ActivityInviteNewbie = struct {
+    pub const default: @This() = .{};
+    InviteCode: []const u8 = "",
+    Score: i32 = 0,
+    RedDot: bool = false,
+};
+pub const BattlePassType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Free = 0,
+    Pay = 1,
+};
+pub const FormationRoleInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    MaxHp: i32 = 0,
+    CurHp: i32 = 0,
+    Level: i32 = 0,
+    RoleSkinId: i32 = 0,
+    SkillBranchId: i32 = 0,
+};
+pub const PbOverRoleRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const RoleDevPropsProjectConfig = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    Record: i32 = 0,
+    ElementId: i32 = 0,
+    RoleName: []const u8 = "",
+    RoleExperience: i32 = 0,
+    RoleGoalLevel: i32 = 0,
+    WeaponGoalLevel: i32 = 0,
+    WeaponExperience: i32 = 0,
+    RoleItemGroup: std.ArrayList(i32) = .empty,
+    WeaponBreachItemGroup: std.ArrayList(i32) = .empty,
+    WeaponType: i32 = 0,
+    SkillItemGroup: std.ArrayList(i32) = .empty,
+    PrefectSkillLevel: std.ArrayList(i32) = .empty,
+    RoleHeadIcon: []const u8 = "",
+    RoleHeadIconSmall: []const u8 = "",
+    FormationRoleCard: []const u8 = "",
+};
+pub const InteractProgress = struct {
+    pub const default: @This() = .{};
+    NpcId: std.ArrayList(i32) = .empty,
+};
+pub const GameplayCuePush = struct {
+    pub const default: @This() = .{};
+    GameplayCueId: i64 = 0,
+};
+pub const RecommendFetterGroupInfo = struct {
+    pub const default: @This() = .{};
+    RecommendFetterGroupId: i32 = 0,
+    CountNeed: i32 = 0,
+};
+pub const HonamiStoryItemCollectionConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Status: i32 = 0,
+};
+pub const MapTraceRequest = struct {
+    pub const default: @This() = .{};
+    MarkId: i32 = 0,
+};
+pub const FlySkinWearRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkinId: i32 = 0,
+};
+pub const EnterAreaRequest = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    LeaveId: i32 = 0,
+};
+pub const EnergySyncRequest = struct {
+    pub const default: @This() = .{};
+    EnergyTypes: std.ArrayList(i32) = .empty,
+};
+pub const DangoMonopolyBoardData = struct {
+    pub const default: @This() = .{};
+    PropertyIds: std.ArrayList(i32) = .empty,
+    RecordDiceRollTimes: i32 = 0,
+    RecordTriggerMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const WebSignResponse = struct {
+    pub const default: @This() = .{};
+    NoticeSign: []const u8 = "",
+};
+pub const LordGymInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const GachaInfoRequest = struct {
+    pub const default: @This() = .{};
+    Language: i32 = 0,
+};
+pub const GetRewardTreasureBoxRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const HonamiStoryEquipItemInfo = struct {
+    pub const default: @This() = .{};
+    MainPropLibraryId: i32 = 0,
+    OriBuffTempId: std.ArrayList(i32) = .empty,
+    ChildBuffTempId: std.ArrayList(i32) = .empty,
+};
+pub const GachaPoolInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    Title: []const u8 = "",
+    Description: []const u8 = "",
+    UiType: i32 = 0,
+    ThemeColor: []const u8 = "",
+    ShowIdList: std.ArrayList(i32) = .empty,
+    UpList: std.ArrayList(i32) = .empty,
+    PreviewIdList: std.ArrayList(i32) = .empty,
+    ComplianceDetail: []const u8 = "",
+};
+pub const MotorDaCtxComponentPb = struct {
+    pub const default: @This() = .{};
+    MotorDaCtxId: i64 = 0,
+};
+pub const ServerPlayStationPlayOnlyStateResponse = struct {
+    pub const default: @This() = .{};
+    CrossPlayEnabled: bool = false,
+};
+pub const ActivityCorniceMeetingLevelEntryData = struct {
+    pub const default: @This() = .{};
+    MaxScore: i32 = 0,
+    RemainTime: i32 = 0,
+    UnlockTime: i64 = 0,
+    RewardedMap: std.ArrayList(i32) = .empty,
+};
+pub const WeaponSkinRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const TeleportUpdateNotify = struct {
+    pub const default: @This() = .{};
+    Ids: std.ArrayList(i32) = .empty,
+};
+pub const ActivateBuffRequest = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    On: bool = false,
+};
+pub const TransferContextId = struct {
+    pub const default: @This() = .{};
+    BulletContextId: i64 = 0,
+};
+pub const AccessPathTimeServerConfigRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RoguelikeCurrencyNotify = struct {
+    pub const default: @This() = .{};
+    V2s: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const HostTeleportUnlockNotify = struct {
+    pub const default: @This() = .{};
+    HostPlayerId: i32 = 0,
+    HostTeleportId: i32 = 0,
+};
+pub const MoraleFlag = struct {
+    pub const default: @This() = .{};
+    FlagId: i32 = 0,
+    BoxReceivedCount: i32 = 0,
+    BoxTotalCount: i32 = 0,
+};
+pub const TimeCheckNotify = struct {
+    pub const default: @This() = .{};
+    ClientTime: i64 = 0,
+    ServerTime: i64 = 0,
+    ServerCombatTime: i64 = 0,
+    ServerStopTime: i64 = 0,
+    ServerFlowTimestamp: i64 = 0,
+};
+pub const EquipBuffItem = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    Equiped: bool = false,
+};
+pub const SystemMarkHideInfoPb = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    MapId: i32 = 0,
+    HideInfo: []const u8 = "",
+};
+pub const PayShopItemType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Normal = 0,
+    Direct = 1,
+};
+pub const AdviceRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const KurotatoCharacterEntityPbData = struct {
+    pub const default: @This() = .{};
+};
+pub const OrderRemoveBuffRequest = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    StackCount: i32 = 0,
+    Reason: []const u8 = "",
+};
+pub const FriendAllRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FsmStateBehaviorType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Enter = 0,
+    Exit = 1,
+    BindStart = 2,
+    BindEnd = 3,
+    Task = 4,
+};
+pub const AnimationGameplayTagPush = struct {
+    pub const default: @This() = .{};
+    AddTagIds: i32 = 0,
+    RemoveTagIds: bool = false,
+};
+pub const ScratchCardRewardData = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const PrivateChatOperateType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    CloseChat = 0,
+    OpenChat = 1,
+    ReadMsg = 2,
+};
+pub const InitHonamiActivityRequest = struct {
+    pub const default: @This() = .{};
+    ActivityId: i32 = 0,
+};
+pub const FloroRanchSubDungeonHistoryData = struct {
+    pub const default: @This() = .{};
+    DataId: i32 = 0,
+    MaxDays: i32 = 0,
+    MaxCoins: i32 = 0,
+};
+pub const OrnamentComponentPb = struct {
+    pub const default: @This() = .{};
+    OrnamentIds: std.ArrayList(i32) = .empty,
+};
+pub const UpdatePlayStationBlockAccountResponse = struct {
+    pub const default: @This() = .{};
+};
+pub const InterruptSkillInfo = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    SkillId: i32 = 0,
+    BulletId: i64 = 0,
+};
+pub const TaskData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Status: i32 = 0,
+    Progress: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const ClientStorageListData = struct {
+    pub const default: @This() = .{};
+    Data: std.ArrayList(i32) = .empty,
+};
+pub const FunPlayChallengeRewardStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    FunPlayCanNoReward = 0,
+    FunPlayCanReward = 1,
+    FunPlayRewarded = 2,
+};
+pub const RoleSaveInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    WeaponIncId: i32 = 0,
+    PhantomIncId: std.ArrayList(i32) = .empty,
+    SkillBranchId: i32 = 0,
+};
+pub const ApplyGEType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Common = 0,
+    UseExtraTime = 1,
+};
+pub const ENewLinkStage = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NewLinkStageNone = 0,
+    NewLinkStageLock = 1,
+    Accumulate = 2,
+    Ready = 3,
+    Burst = 4,
+};
+pub const BuffStackCountRequest = struct {
+    pub const default: @This() = .{};
+    HandleId: i32 = 0,
+    NewStackCount: i32 = 0,
+    IsPrematureRemoval: bool = false,
+    InstigatorId: i64 = 0,
+};
+pub const MailLevel = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    None = 0,
+    General = 1,
+    Important = 2,
+};
+pub const SimpleTrackReportAsyncRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RangeType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    RangeEnter = 0,
+    RangeLeave = 1,
+    RangeInit = 2,
+    RangeInitOut = 3,
+};
+pub const KurotatoMonsterEntityPbData = struct {
+    pub const default: @This() = .{};
+};
+pub const BattleStateChangeNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    InBattle: bool = false,
+};
+pub const TeleportTransferRequest = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+};
+pub const ActiveBuffPush = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    On: bool = false,
+};
+pub const HarvestPointReward = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    State: i32 = 0,
+};
+pub const ChatContentType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Text = 0,
+    Emoji = 1,
+};
+pub const ANStartPush = struct {
+    pub const default: @This() = .{};
+    SkillId: i64 = 0,
+    MontageIndex: i32 = 0,
+    AnIndex: i32 = 0,
+};
+pub const WeaponBreachRequest = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+};
+pub const EBulletCreateSource = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NormalSource = 0,
+    ReboundSource = 1,
+};
+pub const EquipComponentPb = struct {
+    pub const default: @This() = .{};
+    WeaponId: i32 = 0,
+    WeaponBreachLevel: i32 = 0,
+};
+pub const PhantomPutOnRequest = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+    RoleId: i32 = 0,
+    Pos: i32 = 0,
+};
+pub const DevLoginCheckData = struct {
+    pub const default: @This() = .{};
+    ProtoVersion: i32 = 0,
+    ProtoMD5: []const u8 = "",
+    ConfigVersion: i32 = 0,
+    ConfigMD5: []const u8 = "",
+    BranchName: []const u8 = "",
+    ProtoSeedMD5: []const u8 = "",
+};
+pub const ToughCalcExtraRatioChangePush = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    Duration: i32 = 0,
+};
+pub const PartUpdateInfo = struct {
+    pub const default: @This() = .{};
+    PartIndex: i32 = 0,
+    Activated: bool = false,
+    Reset: bool = false,
+};
+pub const ConcomitantsComponentPb = struct {
+    pub const default: @This() = .{};
+    VisionEntityId: std.ArrayList(i64) = .empty,
+    CustomEntityIds: std.ArrayList(i64) = .empty,
+    PhantomRoleId: i64 = 0,
+    BossRushId: i64 = 0,
+};
+pub const SunSpiritTakeUpPb = struct {
+    pub const default: @This() = .{};
+    TrapEntityConfigId: i32 = 0,
+    Index: i32 = 0,
+};
+pub const StateComponentPb = struct {
+    pub const default: @This() = .{};
+    ConstateId: i64 = 0,
+};
+pub const ShopTab = struct {
+    pub const default: @This() = .{};
+    ShopId: i32 = 0,
+    TabId: i32 = 0,
+    Sort: i32 = 0,
+    name: []const u8 = "",
+    Logic: i32 = 0,
+    Enable: bool = false,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    TabSelectSpritePath: []const u8 = "",
+    TabContentPath: []const u8 = "",
+    Money: std.ArrayList(i32) = .empty,
+};
+pub const CiacconaGalRewardData = struct {
+    pub const default: @This() = .{};
+    RewardDataId: i32 = 0,
+    CanReceive: bool = false,
+    IsRewarded: bool = false,
+};
+pub const PassiveSkillAddRequest = struct {
+    pub const default: @This() = .{};
+    PassiveSkillId: i64 = 0,
+    TargetEntityId: i64 = 0,
+};
+pub const PreheatSignNodeInfo = struct {
+    pub const default: @This() = .{};
+    PreheatNodeId: i32 = 0,
+    UnlockTime: i64 = 0,
+    Rewarded: bool = false,
+};
+pub const ApplyVisionGroupRequest = struct {
+    pub const default: @This() = .{};
+    Index: i32 = 0,
+    RoleId: i32 = 0,
+};
+pub const SelectDetectionTarget = struct {
+    pub const default: @This() = .{};
+    DetectionId: i32 = 0,
+    Type: i32 = 0,
+    Id: i32 = 0,
+    IsTrace: i32 = 0,
+};
+pub const FlowActionCtxPb = struct {
+    pub const default: @This() = .{};
+    FlowListName: []const u8 = "",
+    FlowId: i32 = 0,
+    StateId: i32 = 0,
+    ActionId: i32 = 0,
+};
+pub const HoldHandComponentPb = struct {
+    pub const default: @This() = .{};
+    TargetEntityId: i64 = 0,
+    HandType: i32 = 0,
+    IsFollow: bool = false,
+};
+pub const NearbyTrackingComponentPb = struct {
+    pub const default: @This() = .{};
+    IsEnable: bool = false,
+};
+pub const TrapDefenseBuildingData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Level: i32 = 0,
+    Branch: i32 = 0,
+    MaxLevel: i32 = 0,
+    CellPrice: i32 = 0,
+    OriginalConstructPrice: i32 = 0,
+    DiscountConstructPrice: i32 = 0,
+    DeconstructReturn: i32 = 0,
+};
+pub const RoleGiftActivityData = struct {
+    pub const default: @This() = .{};
+    RewardHadGet: bool = false,
+};
+pub const TutorialInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    CreateTime: u32 = 0,
+    GetAward: bool = false,
+};
+pub const CiacconaGalInspirationData = struct {
+    pub const default: @This() = .{};
+    InspirationCount: i32 = 0,
+    RefreshTime: i64 = 0,
+};
+pub const BabelDebuff = struct {
+    pub const default: @This() = .{};
+    BuffId: i32 = 0,
+    Unlocked: bool = false,
+};
+pub const ItemExchangeInfo = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    TodayTimes: i32 = 0,
+    TotalTimes: i32 = 0,
+    DailyLimit: i32 = 0,
+    TotalLimit: i32 = 0,
+};
+pub const EAttributeType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    None = 0,
+    Lv = 1,
+    LifeMax = 2,
+    Life = 3,
+    Sheild = 4,
+    SheildDamageChange = 5,
+    SheildDamageReduce = 6,
+    Atk = 7,
+    Crit = 8,
+    CritDamage = 9,
+    Def = 10,
+    EnergyEfficiency = 11,
+    CdReduse = 12,
+    ElementEfficiency = 13,
+    DamageChangeNormalSkill = 14,
+    DamageChange = 15,
+    DamageReduce = 16,
+    DamageChangeAuto = 17,
+    DamageChangeCast = 18,
+    DamageChangeUltra = 19,
+    DamageChangeQte = 20,
+    DamageChangePhys = 21,
+    DamageChangeElement1 = 22,
+    DamageChangeElement2 = 23,
+    DamageChangeElement3 = 24,
+    DamageChangeElement4 = 25,
+    DamageChangeElement5 = 26,
+    DamageChangeElement6 = 27,
+    DamageResistancePhys = 28,
+    DamageResistanceElement1 = 29,
+    DamageResistanceElement2 = 30,
+    DamageResistanceElement3 = 31,
+    DamageResistanceElement4 = 32,
+    DamageResistanceElement5 = 33,
+    DamageResistanceElement6 = 34,
+    HealChange = 35,
+    HealedChange = 36,
+    DamageReducePhys = 37,
+    DamageReduceElement1 = 38,
+    DamageReduceElement2 = 39,
+    DamageReduceElement3 = 40,
+    DamageReduceElement4 = 41,
+    DamageReduceElement5 = 42,
+    DamageReduceElement6 = 43,
+    SpecialEnergy5Max = 44,
+    SpecialEnergy5 = 45,
+    ReactionChange3 = 46,
+    ReactionChange4 = 47,
+    ReactionChange5 = 48,
+    ReactionChange6 = 49,
+    ReactionChange7 = 50,
+    ReactionChange8 = 51,
+    ReactionChange9 = 52,
+    ReactionChange10 = 53,
+    ReactionChange11 = 54,
+    ReactionChange12 = 55,
+    ReactionChange13 = 56,
+    ReactionChange14 = 57,
+    ReactionChange15 = 58,
+    EnergyMax = 59,
+    Energy = 60,
+    SpecialEnergy1Max = 61,
+    SpecialEnergy1 = 62,
+    SpecialEnergy2Max = 63,
+    SpecialEnergy2 = 64,
+    SpecialEnergy3Max = 65,
+    SpecialEnergy3 = 66,
+    SpecialEnergy4Max = 67,
+    SpecialEnergy4 = 68,
+    StrengthMax = 69,
+    Strength = 70,
+    StrengthRecover = 71,
+    StrengthPunishTime = 72,
+    StrengthRun = 73,
+    StrengthSwim = 74,
+    StrengthFastSwim = 75,
+    ElementEnergyMax = 76,
+    ElementEnergy = 77,
+    HardnessMax = 78,
+    Hardness = 79,
+    HardnessRecover = 80,
+    HardnessPunishTime = 81,
+    HardnessChange = 82,
+    HardnessReduce = 83,
+    ToughMax = 84,
+    Tough = 85,
+    ToughRecover = 86,
+    ToughChange = 87,
+    ToughReduce = 88,
+    ElementPower1 = 89,
+    ElementPower2 = 90,
+    ElementPower3 = 91,
+    ElementPower4 = 92,
+    ElementPower5 = 93,
+    ElementPower6 = 94,
+    SpecialDamageChange = 95,
+    StrengthFastClimbCost = 96,
+    ElementPropertyType = 97,
+    WeakTime = 98,
+    IgnoreDefRate = 99,
+    IgnoreDamageResistancePhys = 100,
+    IgnoreDamageResistanceElement1 = 101,
+    IgnoreDamageResistanceElement2 = 102,
+    IgnoreDamageResistanceElement3 = 103,
+    IgnoreDamageResistanceElement4 = 104,
+    IgnoreDamageResistanceElement5 = 105,
+    IgnoreDamageResistanceElement6 = 106,
+    SkillToughRatio = 107,
+    StrengthClimbJump = 108,
+    StrengthGliding = 109,
+    Mass = 110,
+    BrakingFrictionFactor = 111,
+    GravityScale = 112,
+    SpeedRatio = 113,
+    DamageChangePhantom = 114,
+    AutoAttackSpeed = 115,
+    CastAttackSpeed = 116,
+    StatusBuildUp1Max = 117,
+    StatusBuildUp1 = 118,
+    StatusBuildUp2Max = 119,
+    StatusBuildUp2 = 120,
+    StatusBuildUp3Max = 121,
+    StatusBuildUp3 = 122,
+    StatusBuildUp4Max = 123,
+    StatusBuildUp4 = 124,
+    StatusBuildUp5Max = 125,
+    StatusBuildUp5 = 126,
+    RageMax = 127,
+    Rage = 128,
+    RageRecover = 129,
+    RagePunishTime = 130,
+    RageChange = 131,
+    RageReduce = 132,
+    ToughRecoverDelayTime = 133,
+    Jump = 134,
+    ParalysisTimeMax = 135,
+    ParalysisTime = 136,
+    ParalysisTimeRecover = 137,
+    WeaknessBuildUp = 138,
+    WeaknessBuildUpMax = 139,
+    WeaknessTotalBonus = 140,
+    BreakWeaknessRatio = 141,
+    WeaknessMastery = 142,
+    MAX = 143,
+};
+pub const FlowOptionInfo = struct {
+    pub const default: @This() = .{};
+    TalkId: i32 = 0,
+    OptionIndex: i32 = 0,
+};
+pub const PlayerHeadDataResponse = struct {
+    pub const default: @This() = .{};
+    PlayerHeadDataIds: std.ArrayList(i32) = .empty,
+};
+pub const PbAdviceContentType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Sentence = 0,
+    Conjunction = 1,
+    Expression = 2,
+    Motion = 3,
+};
+pub const InfrInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const LoadingConfigRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const LivenessTakeRequest = struct {
+    pub const default: @This() = .{};
+    Ids: std.ArrayList(i32) = .empty,
+};
+pub const FlySkinWearAllRoleRequest = struct {
+    pub const default: @This() = .{};
+    SkinId: i32 = 0,
+};
+pub const SwitchRoleType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    SignleWorld = 0,
+    MultiWorld = 1,
+    FbInstance = 2,
+};
+pub const ItemFinishList = struct {
+    pub const default: @This() = .{};
+    ConditionIdList: std.ArrayList(i32) = .empty,
+};
+pub const HonamiStoryPosInfo = struct {
+    pub const default: @This() = .{};
+    IsCross: bool = false,
+    Posotion: i32 = 0,
+};
+pub const RbVisionBlockPbType = struct {
+    pub const default: @This() = .{};
+};
+pub const NormalItem = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Count: i32 = 0,
+    ExpireTime: i64 = 0,
+};
+pub const BossRushRewardClaimStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Incomplete = 0,
+    Claimable = 1,
+    Claimed = 2,
+};
+pub const Mp4BackgroundColor = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Mp4BackgroundColorBlack = 0,
+    Mp4BackgroundColorWhite = 1,
+};
+pub const DangoMonopolyTaskState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NotCompleted = 0,
+    Completed = 1,
+    HasGet = 2,
+};
+pub const TimerInfoPb = struct {
+    pub const default: @This() = .{};
+    TimerType: []const u8 = "",
+    NodeId: i32 = 0,
+    EndTime: i64 = 0,
+    PauseTime: i64 = 0,
+};
+pub const OrnamentDressInfo = struct {
+    pub const default: @This() = .{};
+    RoleSkinId: i32 = 0,
+    DressOrnamentIds: std.ArrayList(i32) = .empty,
+};
+pub const GachaRequest = struct {
+    pub const default: @This() = .{};
+    GachaId: i32 = 0,
+    GachaTimes: i32 = 0,
+};
+pub const RoguelikeTokenList = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    IsReceive: bool = false,
+};
+pub const GuideTriggerRequest = struct {
+    pub const default: @This() = .{};
+    GroupId: i32 = 0,
+};
+pub const ActorVisiblePush = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    IsActorVisible: bool = false,
+};
+pub const CumulativeShopTaskData = struct {
+    pub const default: @This() = .{};
+    Current: i32 = 0,
+    TargetProgress: i32 = 0,
+};
+pub const PbMailAttachment = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Count: i32 = 0,
+};
+pub const TeleportDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const GuessJokerLevelInfo = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    LevelPass: bool = false,
+    UnLock: bool = false,
+    RewardGet: bool = false,
+    PlayerWin: bool = false,
+};
+pub const InfrStatusPb = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    InfrStatusLock = 0,
+    InfrStatusProgress = 1,
+    InfrStatusComplete = 2,
+};
+pub const PutVisionGroupToTopRequest = struct {
+    pub const default: @This() = .{};
+    Index: i32 = 0,
+};
+pub const InfrV2OneTree = struct {
+    pub const default: @This() = .{};
+    TreeId: i32 = 0,
+    status: i32 = 0,
+    CompleteTime: i64 = 0,
+    TotalGiftCount: i64 = 0,
+    LastGiftTime: i64 = 0,
+};
+pub const GameplayTagData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    TagCount: i32 = 0,
+};
+pub const FishingItemRotate = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    No = 0,
+    DirectionDown = 1,
+    DirectionLeft = 2,
+    DirectionUp = 3,
+};
+pub const GachaUsePoolRequest = struct {
+    pub const default: @This() = .{};
+    GachaId: i32 = 0,
+    PoolId: i32 = 0,
+};
+pub const WeatherControlInfoWithoutCheckAsyncResponse = struct {
+    pub const default: @This() = .{};
+    UnlockedWeatherSwitchConfigIdList: std.ArrayList(i32) = .empty,
+};
+pub const EntityRewardItemPb = struct {
+    pub const default: @This() = .{};
+    HasCount: i32 = 0,
+    NextResetTime: i64 = 0,
+};
+pub const PhantomIdentifyRequest = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const ApplyBuffS2cRequestNotify = struct {
+    pub const default: @This() = .{};
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    Id: i64 = 0,
+    Level: i32 = 0,
+    InstigatorId: i64 = 0,
+    ApplyType: i32 = 0,
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    IsIterable: bool = false,
+    Reason: i32 = 0,
+};
+pub const OrderRemoveBuffByTagsNotify = struct {
+    pub const default: @This() = .{};
+    TagIds: std.ArrayList(i32) = .empty,
+};
+pub const BuffStackCountNotify = struct {
+    pub const default: @This() = .{};
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    gFs: ?union(enum) {
+        LeftDuration: f32,
+    } = null,
+    HandleId: i32 = 0,
+    NewStackCount: i32 = 0,
+    InstigatorId: i64 = 0,
+    NotRefreshDuration: bool = false,
+    NotRefreshPeriod: bool = false,
+};
+pub const GuideInfoResponse = struct {
+    pub const default: @This() = .{};
+    GuideGroupFinishList: std.ArrayList(i32) = .empty,
+};
+pub const SettingInputType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Normal = 0,
+    Motorcycle = 1,
+};
+pub const RemoveGameplayEffectRequest = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    EntityId: i64 = 0,
+    IsPrematureRemoval: bool = false,
+};
+pub const QuestDestroyActionCtxPb = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const DarkCoastDeliveryRequest = struct {
+    pub const default: @This() = .{};
+    DragonPoolId: i32 = 0,
+};
+pub const MaterialInfo = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    AssetName: []const u8 = "",
+    IsGroup: bool = false,
+};
+pub const AdvertisingPageInfo = struct {
+    pub const default: @This() = .{};
+    ActivityId: i32 = 0,
+    UnlockIndex: i32 = 0,
+    RewardedIndex: i32 = 0,
+};
+pub const TrapDefenseAuxiliaryData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Level: i32 = 0,
+    Branch: i32 = 0,
+    MaxLevel: i32 = 0,
+};
+pub const MotorFightLevelPb = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    OpenTime: i64 = 0,
+    Cleared: bool = false,
+    BestScore: i32 = 0,
+    LastRoleId: i32 = 0,
+};
+pub const BeControlledComponentPb = struct {
+    pub const default: @This() = .{};
+    PlayerEntityId: i64 = 0,
+    RelationId: i32 = 0,
+    IsShow: bool = false,
+    MatchIndex: i32 = 0,
+    ConstateId: i64 = 0,
+};
+pub const TowerRolePb = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    LeaveSkillId: i32 = 0,
+    SkillBranchId: i32 = 0,
+};
+pub const RoleBrief = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Level: i32 = 0,
+};
+pub const ExploreSkillRoulette = struct {
+    pub const default: @This() = .{};
+    SkillIds: std.ArrayList(i32) = .empty,
+    ExtraItemId: i32 = 0,
+    ExploreSkill: i32 = 0,
+};
+pub const SceneBlockSplitPlayerNeedBlockPush = struct {
+    pub const default: @This() = .{};
+    PlayerNeedBlockId: std.ArrayList(i32) = .empty,
+};
+pub const BuffItem = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    CdTime: i64 = 0,
+};
+pub const InfluenceInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RogueBossInstData = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    IsUnlock: bool = false,
+    CanUnlock: bool = false,
+    UnlockTime: i64 = 0,
+};
+pub const PrivateChatDataResponse = struct {
+    pub const default: @This() = .{};
+    LoadSucc: bool = false,
+};
+pub const PhantomSkinUnlockNotify = struct {
+    pub const default: @This() = .{};
+    PhantomSkinList: std.ArrayList(i32) = .empty,
+};
+pub const CardShowEntry = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+    IsRead: bool = false,
+};
+pub const LineCrossChallengeData = struct {
+    pub const default: @This() = .{};
+    ChallengeId: i32 = 0,
+    CanGetReward: bool = false,
+    OpenTime: i64 = 0,
+    RewardDataId: i32 = 0,
+    EntityConfigId: i32 = 0,
+    IsPreChallengeState: bool = false,
+};
+pub const WeaponConsumeItem = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+    Count: i32 = 0,
+    ItemId: i32 = 0,
+};
+pub const GameplayCueRequest = struct {
+    pub const default: @This() = .{};
+    GameplayCueId: i64 = 0,
+};
+pub const FavorQuestStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Locked = 0,
+    CanAccept = 1,
+    Accepted = 2,
+    Completed = 3,
+};
+pub const PhantomArenaChallengeInfo = struct {
+    pub const default: @This() = .{};
+    ChallengeInfoId: i32 = 0,
+    IsUnlock: bool = false,
+    CanReChallenge: bool = false,
+    LastCardRoleId: i32 = 0,
+    LastCardGroupIndex: i32 = 0,
+    FinishConditions: std.ArrayList(i32) = .empty,
+    IsUncover: bool = false,
+    IsShow: bool = false,
+};
+pub const UnlockSkinDataNotify = struct {
+    pub const default: @This() = .{};
+    PhantomSkinList: std.ArrayList(i32) = .empty,
+    IsLogin: bool = false,
+};
+pub const ItemExchangeInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const Rotator = struct {
+    pub const default: @This() = .{};
+    Pitch: f32 = 0,
+    Yaw: f32 = 0,
+    Roll: f32 = 0,
+};
+pub const DirectionType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    GravityUp = 0,
+    GravityDown = 1,
+    GravityLeft = 2,
+    GravityRight = 3,
+};
+pub const ClientDataComponentPb = struct {
+    pub const default: @This() = .{};
+    IsStaticInit: bool = false,
+    OwnerId: i64 = 0,
+    GroupId: i32 = 0,
+};
+pub const ForgeInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const BuffDurationNotify = struct {
+    pub const default: @This() = .{};
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    gFs: ?union(enum) {
+        LeftDuration: f32,
+    } = null,
+    HandleId: i32 = 0,
+};
+pub const TimePointRewardData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    RewardTime: i64 = 0,
+    Rewarded: bool = false,
+    CanGetReward: bool = false,
+};
+pub const AchievementInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RacingBetsLegMatchData = struct {
+    pub const default: @This() = .{};
+    LegMatchesId: i32 = 0,
+    DangoId: i32 = 0,
+    BettingGearId: i32 = 0,
+    BettingGearCash: i32 = 0,
     Odds: i32 = 0,
+    OddsVersion: []const u8 = "",
+    LeaveCancelNum: i32 = 0,
+    OddsReward: i32 = 0,
+};
+pub const PinballRoleData = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    RoleLevel: i32 = 0,
+};
+pub const GaSwitchCommonEnemyProCampRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const SceneItemEventListenerComponentPb = struct {
+    pub const default: @This() = .{};
+    ConstateId: i64 = 0,
+};
+pub const RogueSeasonReward = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    IsReceive: bool = false,
+};
+pub const BeamReceiveActionType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    BeginAction = 0,
+    CompleteAction = 1,
+    StopAction = 2,
+};
+pub const QuestState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    InActive = 0,
+    Available = 1,
+    InProgress = 2,
+    Finish = 3,
+    Delete = 4,
+};
+pub const PayInfoRequest = struct {
+    pub const default: @This() = .{};
+    Version: []const u8 = "",
+};
+pub const TowerDefenceInstanceInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Score: i32 = 0,
+    Rewarded: bool = false,
+    IsPassed: bool = false,
+    UnlockTime: i64 = 0,
+    MaxScore: i32 = 0,
+    PassTime: i32 = 0,
+};
+pub const MotorTaskProcessPb = struct {
+    pub const default: @This() = .{};
+    Current: i32 = 0,
+    Target: i32 = 0,
+};
+pub const CalabashCfg = struct {
+    pub const default: @This() = .{};
+    LevelUpExp: i32 = 0,
+    LevelUpCondition: i32 = 0,
+    CatchGain: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const Int2Long = struct {
+    pub const default: @This() = .{};
+    First: i32 = 0,
+    Second: i64 = 0,
+};
+pub const PassiveSkillRemoveNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    SkillIdList: std.ArrayList(i64) = .empty,
+};
+pub const TriggerExitSkillRequest = struct {
+    pub const default: @This() = .{};
+    EnterEntityId: i64 = 0,
+    LeaveEntityId: i64 = 0,
+};
+pub const ValidTimeItem = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Count: i32 = 0,
+    IncrId: i32 = 0,
+    ExpireTime: i64 = 0,
+};
+pub const PinballGroupFormation = struct {
+    pub const default: @This() = .{};
+    LevelGroup: i32 = 0,
+    RoleIds: std.ArrayList(i32) = .empty,
+};
+pub const ICustomScreenBackgroundImagePb = struct {
+    pub const default: @This() = .{};
+    BgPath: []const u8 = "",
+};
+pub const InterruptSkillInDelayPush = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
 };
 pub const SysBuffInformation = struct {
     pub const default: @This() = .{};
@@ -35162,85 +36312,444 @@ pub const SysBuffInformation = struct {
     ApplyType: i32 = 0,
     IsIterable: bool = false,
 };
-pub const FadeBackgroundFadeInEffectBlackPb = struct {
+pub const ChangeStateConfirmNotify = struct {
     pub const default: @This() = .{};
-    FadeIn: ?union(enum) {
-        FadeInTime: f32,
-    } = null,
-    FadeOut: ?union(enum) {
-        FadeOutTime: f32,
-    } = null,
-    FadeColor: i32 = 0,
+    FsmId: i32 = 0,
+    State: i32 = 0,
 };
-pub const EnterViewDirectionRequest = struct {
+pub const KurotatoStructureEntityPbData = struct {
     pub const default: @This() = .{};
 };
-pub const OrderRemoveBuffByTagsNotify = struct {
+pub const PassiveSkillAddPush = struct {
     pub const default: @This() = .{};
-    TagIds: std.ArrayList(i32) = .empty,
+    PassiveSkillId: i64 = 0,
+    TargetEntityId: i64 = 0,
 };
-pub const BuffProducerComponentPb = struct {
+pub const FsmConditionPassPush = struct {
     pub const default: @This() = .{};
-    ConstateId: i64 = 0,
+    FsmId: i32 = 0,
+    FromState: i32 = 0,
+    ToState: i32 = 0,
+    ConditionIndex: i32 = 0,
+    Value: bool = false,
 };
-pub const LevelPlayDestroyActionCtxPb = struct {
+pub const AwardGroupData = struct {
     pub const default: @This() = .{};
-    LevelPlayId: i32 = 0,
+    GroupId: i32 = 0,
+    GroupRank: i32 = 0,
+    CurrentAmount: i32 = 0,
+    AllAmount: i32 = 0,
+    RewardItems: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const HonamiStoryEnhanceLevelComponentPb = struct {
+pub const CombatMaxCaseMessageRequest = struct {
     pub const default: @This() = .{};
-    Level: i32 = 0,
 };
-pub const BookItemState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BookItemLock = 0,
-    BookItemUnlock = 1,
-    BookItemRewarded = 2,
+pub const IntArrayBlackboard = struct {
+    pub const default: @This() = .{};
+    Values: std.ArrayList(i32) = .empty,
 };
-pub const OrnamentDressInfo = struct {
+pub const EntityRemoveInfo = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    Type: i32 = 0,
+};
+pub const EntityOnLandedRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const UnlockDetectionLabelInfo = struct {
+    pub const default: @This() = .{};
+    UnlockedGuideIds: std.ArrayList(i32) = .empty,
+    UnlockedDetectionTextIds: std.ArrayList(i32) = .empty,
+};
+pub const ExchangeRewardResponse = struct {
+    pub const default: @This() = .{};
+    ExchangeShareData: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    ExchangeRewardData: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const ClientStorageStringData = struct {
+    pub const default: @This() = .{};
+    Data: []const u8 = "",
+};
+pub const DrownNotify = struct {
+    pub const default: @This() = .{};
+};
+pub const FollowEntityComponentPb = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const CharacterDetachRequest = struct {
+    pub const default: @This() = .{};
+    EntityA: i64 = 0,
+    EntityB: i64 = 0,
+};
+pub const SpecialGachaPair = struct {
+    pub const default: @This() = .{};
+    TypeId: i32 = 0,
+    GachaId: i32 = 0,
+};
+pub const PhantomBattleGuideActivity = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+    DropId: i32 = 0,
+    RewardTotalNum: i32 = 0,
+    SendReward: bool = false,
+    RecordActId: i32 = 0,
+};
+pub const RewardItemInfo = struct {
+    pub const default: @This() = .{};
+    ShowPlanId: i32 = 0,
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+    IncrId: i32 = 0,
+};
+pub const UpdateVoxelEnvRequest = struct {
+    pub const default: @This() = .{};
+    ServerCaveMode: i32 = 0,
+};
+pub const FlySkinConfigData = struct {
+    pub const default: @This() = .{};
+    SkinId: i32 = 0,
+    FlySkinId: i32 = 0,
+};
+pub const CounterAttackInfo = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    FightState: i32 = 0,
+    TriggerCounterType: i32 = 0,
+    CounterAnIndex: i32 = 0,
+};
+pub const FsmConditionPassRequest = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    FromState: i32 = 0,
+    ToState: i32 = 0,
+    ConditionIndex: i32 = 0,
+    Value: bool = false,
+};
+pub const RTimeStopRequest = struct {
+    pub const default: @This() = .{};
+    IsStopCharacter: bool = false,
+    Duration: i32 = 0,
+};
+pub const PublicResourceVersionInfo = struct {
+    pub const default: @This() = .{};
+    PublicJsonVersion: i32 = 0,
+    PublicMiscVersion: i32 = 0,
+    PublicUniverseEditorVersion: i32 = 0,
+};
+pub const DangoActorData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Record: i32 = 0,
+    Odds: i32 = 0,
+};
+pub const AfterJoinSceneNotify = struct {
+    pub const default: @This() = .{};
+};
+pub const ChangeOrnamentRequest = struct {
     pub const default: @This() = .{};
     RoleSkinId: i32 = 0,
-    DressOrnamentIds: std.ArrayList(i32) = .empty,
+    OrnamentId: i32 = 0,
+    IsDress: bool = false,
 };
-pub const ScratchTicketConditionData = struct {
+pub const MonsterAiComponentPb = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    Progress: i32 = 0,
-    FinishedAchievementNum: i32 = 0,
+    WeaponId: i32 = 0,
+    HatredGroupId: i64 = 0,
+    AiTeamInitId: i32 = 0,
+    CombatMessageId: i64 = 0,
+    BasicPerceptionIds: std.ArrayList(i32) = .empty,
+    HatredId: i64 = 0,
 };
-pub const FragmentMemoryData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Flag: i32 = 0,
-    FinishTime: i64 = 0,
-};
-pub const RoleVisionRecommendAttrRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-};
-pub const BulletPatternNotify = struct {
-    pub const default: @This() = .{};
-    BulletPatternHandleId: i64 = 0,
-    BulletPatternId: i32 = 0,
-};
-pub const MapTraceInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const PayUpdateType = enum(i32) {
+pub const ConditionTaskState = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    None = 0,
-    Daily = 1,
-    Weekly = 2,
-    Monthly = 3,
-    Forever = 4,
+    ConditionTaskRunning = 0,
+    ConditionTaskFinish = 1,
+    ConditionTaskTaken = 2,
 };
-pub const QuestActiveActionCtxPb = struct {
+pub const PlayEnterOrExitPollutionRangeType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    EnterAction = 0,
+    ExitAction = 1,
+};
+pub const CombatDataMaxNotify = struct {
+    pub const default: @This() = .{};
+};
+pub const TransitionWithCharacterDisplayPb = struct {
+    pub const default: @This() = .{};
+    StyllId: i32 = 0,
+};
+pub const CaughtInfo = struct {
+    pub const default: @This() = .{};
+    Attacker: i64 = 0,
+    CaughtInfoId: i64 = 0,
+    IsEnd: bool = false,
+    FightState: i32 = 0,
+};
+pub const SkillNodeInfo = struct {
+    pub const default: @This() = .{};
+    SubProtocol: i32 = 0,
+    MontageIndex: i32 = 0,
+    SpeedRatio: f32 = 0,
+    SkillSingleId: i32 = 0,
+    SkillIndex: i32 = 0,
+    StartSection: []const u8 = "",
+    StartTimeSeconds: f32 = 0,
+};
+pub const InterruptSkillInDelayRequest = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+};
+pub const PrivateChatDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PinballKSCRolePbData = struct {
+    pub const default: @This() = .{};
+};
+pub const PhantomPolishRequest = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    PhantomMainPropItemId: i32 = 0,
+};
+pub const PhantomArenaBadge = struct {
+    pub const default: @This() = .{};
+    BadgeId: i32 = 0,
+    IsUnlock: bool = false,
+};
+pub const SceneItemBBKey = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ManipulatableState = 0,
+};
+pub const TimeStopPush = struct {
+    pub const default: @This() = .{};
+    TimeDilation: f32 = 0,
+};
+pub const TriggerExitSkillPush = struct {
+    pub const default: @This() = .{};
+    EnterEntityId: i64 = 0,
+    LeaveEntityId: i64 = 0,
+};
+pub const TsAnimNotifyStateAbsoluteTimeStopRequest = struct {
+    pub const default: @This() = .{};
+    Flag: bool = false,
+    Duration: i32 = 0,
+};
+pub const BuffEffectRequest = struct {
+    pub const default: @This() = .{};
+    HandleId: i32 = 0,
+    Index: i32 = 0,
+};
+pub const DailyQuestTerminateActionCtxPb = struct {
     pub const default: @This() = .{};
     QuestId: i32 = 0,
 };
-pub const JSPatchNotify = struct {
+pub const AbyssDangoRoleData = struct {
     pub const default: @This() = .{};
-    Content: []const u8 = "",
+    Id: i32 = 0,
+    Level: i32 = 0,
+    EquipItems: std.ArrayList(i32) = .empty,
+};
+pub const CombinationKey = struct {
+    pub const default: @This() = .{};
+    KeyNameList: std.ArrayList([]const u8) = .empty,
+};
+pub const MonsterBoomRequest = struct {
+    pub const default: @This() = .{};
+    Delay: i32 = 0,
+};
+pub const LeaveInstEscActionCtxPb = struct {
+    pub const default: @This() = .{};
+    InstanceId: i32 = 0,
+};
+pub const ResonantChainUnlockRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const ClientPullResourcePackageRequest = struct {
+    pub const default: @This() = .{};
+    Holder: bool = false,
+};
+pub const AudioState = struct {
+    pub const default: @This() = .{};
+    TreeOwnerId: i32 = 0,
+    TreeIncId: i64 = 0,
+    GroupType: []const u8 = "",
+    State: []const u8 = "",
+};
+pub const ChangeStateRequest = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    FromState: i32 = 0,
+    ToState: i32 = 0,
+};
+pub const PhantomBattleCardSkillUnlockInfo = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+    Unlock: bool = false,
+    TargetNum: i32 = 0,
+    CurNum: i32 = 0,
+};
+pub const KillProgress = struct {
+    pub const default: @This() = .{};
+    MonId: std.ArrayList(i32) = .empty,
+    PrefabNum: i32 = 0,
+    CurrNum: i32 = 0,
+    TotalNum: i32 = 0,
+};
+pub const MotorDiyEquippedPb = struct {
+    pub const default: @This() = .{};
+    SkinEquipped: i32 = 0,
+    StickerEquipped: std.ArrayList(i32) = .empty,
+    DecorationsEquipped: std.ArrayList(i32) = .empty,
+    FrameEquipped: i32 = 0,
+};
+pub const GetDetectionLabelInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const AchievementProgress = struct {
+    pub const default: @This() = .{};
+    CurProgress: i32 = 0,
+    TotalProgress: i32 = 0,
+};
+pub const MotionType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Spurt = 0,
+    Pullback = 1,
+    BeLand = 2,
+    MotionJump = 3,
+    AirSprint = 4,
+    BackFlip = 5,
+    StepAcross = 6,
+    ClimbTop = 7,
+    LimitDodge = 8,
+    CounterAttack = 9,
+};
+pub const PhantomArenaBadgeReward = struct {
+    pub const default: @This() = .{};
+    BadgeRewardId: i32 = 0,
+    NeedCount: i32 = 0,
+    IsTaken: bool = false,
+};
+pub const TransformBuffStackNotify = struct {
+    pub const default: @This() = .{};
+    BuffHandle: i64 = 0,
+    BuffId: i64 = 0,
+    BuffStackModifier: i32 = 0,
+};
+pub const NetStatusType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Wifi = 0,
+    Stream = 1,
+    Wired = 2,
+    Other = 3,
+};
+pub const ShieldInfoPb = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    ConfigId: i32 = 0,
+    ShieldValue: i32 = 0,
+    Priority: i32 = 0,
+    BuffHandle: i32 = 0,
+    IsValid: bool = false,
+};
+pub const ExploreProgressRequest = struct {
+    pub const default: @This() = .{};
+    AreaIds: std.ArrayList(i32) = .empty,
+};
+pub const NpcPb = struct {
+    pub const default: @This() = .{};
+    SplineEntityId: i32 = 0,
+    SpawnEntityId: i32 = 0,
+};
+pub const AdventreTaskState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    UnFinish = 0,
+    Finish = 1,
+    Received = 2,
+};
+pub const FavorItemStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ItemLocked = 0,
+    ItemCanUnLock = 1,
+    ItemUnLocked = 2,
+};
+pub const SetFocusModeDeterConditionRequest = struct {
+    pub const default: @This() = .{};
+    DisableId: bool = false,
+};
+pub const H5ViewActivityData = struct {
+    pub const default: @This() = .{};
+    RedDot: bool = false,
+};
+pub const EntityState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Default = 0,
+    Sleep = 1,
+    Born = 2,
+    Other = 3,
+};
+pub const ShopRecommend = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    RecommendType: i32 = 0,
+    RecommendId: i32 = 0,
+    TabName: []const u8 = "",
+    PrefabPath: []const u8 = "",
+    Sort: i32 = 0,
+    Show: bool = false,
+    TabImage: []const u8 = "",
+};
+pub const CompleteInstProgress = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const DoubleDropFrom = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    UnDefineDouble = 0,
+    DoubleActivity = 1,
+    FromRegress = 2,
+};
+pub const CalabashSkinComponentPb = struct {
+    pub const default: @This() = .{};
+    CalabashSkinId: i32 = 0,
+};
+pub const RoleSkinTrialContentData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    ChallengeState: i32 = 0,
+};
+pub const ExhibitionComponentPb = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+};
+pub const VisionEquipGroupInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const SurvivorsWeaponPbData = struct {
+    pub const default: @This() = .{};
+};
+pub const FsmPlayMontagePush = struct {
+    pub const default: @This() = .{};
+    MontageName: []const u8 = "",
+    MontagePathHash: i32 = 0,
+    SpeedRatio: f32 = 0,
+    StartSection: []const u8 = "",
+    StartTimeSeconds: f32 = 0,
+};
+pub const EntityConfigType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    OldEntity = 0,
+    Level = 1,
+    Global = 2,
+    Character = 3,
+    Template = 4,
+    Prefab = 5,
+};
+pub const PlacementItemPb = struct {
+    pub const default: @This() = .{};
+    LocatedBoardEntityConfigId: i32 = 0,
 };
 pub const LinkageCheckInActivityData = struct {
     pub const default: @This() = .{};
@@ -35248,50 +36757,32 @@ pub const LinkageCheckInActivityData = struct {
     NormalReward: std.ArrayList(i32) = .empty,
     KeepReward: std.ArrayList(i32) = .empty,
 };
-pub const PhantomArenaCardInfo = struct {
+pub const RTimeStopInstPush = struct {
     pub const default: @This() = .{};
-    CardId: i32 = 0,
-    IsUnlock: bool = false,
-    IsCardOutlookUnlock: bool = false,
+    Flag: bool = false,
+    Duration: i32 = 0,
 };
-pub const RogueSeasonReward = struct {
+pub const ICustomScreenSpinePb = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    IsReceive: bool = false,
+    SpineId: i32 = 0,
 };
-pub const ResonantChainUnlockRequest = struct {
+pub const PayShopInfoRequest = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
+    Version: []const u8 = "",
 };
-pub const AddVisionEquipGroupRequest = struct {
+pub const TransferCtxPb = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Name: []const u8 = "",
+    TeleportId: i32 = 0,
 };
-pub const MapCancelTraceRequest = struct {
-    pub const default: @This() = .{};
-    MarkId: i32 = 0,
-};
-pub const ExploreToolAllNotify = struct {
-    pub const default: @This() = .{};
-    SkillList: std.ArrayList(i32) = .empty,
-    ExploreSkill: i32 = 0,
-    NewUnlock: std.ArrayList(i32) = .empty,
-};
-pub const MoonSignInConfigData = struct {
-    pub const default: @This() = .{};
-    MoonId: i32 = 0,
-    MoonLabelTopId: i32 = 0,
-    MoonLabelBottomId: i32 = 0,
-};
-pub const WeaponSkinComponentPb = struct {
-    pub const default: @This() = .{};
-    WeaponSkinId: i32 = 0,
-};
-pub const BattleStateChangeNotify = struct {
+pub const AnimalDropRequest = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
-    InBattle: bool = false,
+};
+pub const PhantomConsumeItem = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+    Count: i32 = 0,
+    ItemId: i32 = 0,
 };
 pub const RhythmShipRank = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -35302,585 +36793,250 @@ pub const RhythmShipRank = enum(i32) {
     A = 4,
     B = 5,
 };
-pub const OrderRemoveBuffByTagsRequest = struct {
+pub const DFsm = struct {
     pub const default: @This() = .{};
-    TagIds: std.ArrayList(i32) = .empty,
+    FsmId: i32 = 0,
+    CurrentState: i32 = 0,
+    Flag: i32 = 0,
+    StateElapseTime: i32 = 0,
 };
-pub const UnlockRoleSkinListResponse = struct {
+pub const LevelPlayOpenActionCtxPb = struct {
     pub const default: @This() = .{};
-    RoleSkinList: std.ArrayList(i32) = .empty,
+    LevelPlayId: i32 = 0,
 };
-pub const PartUpdateInfo = struct {
+pub const TalentInfoData = struct {
     pub const default: @This() = .{};
-    PartIndex: i32 = 0,
-    Activated: bool = false,
-    Reset: bool = false,
-};
-pub const JigsawBaseComponentPb = struct {
-    pub const default: @This() = .{};
-    MoveCount: i32 = 0,
-    EntityId: i32 = 0,
-    Winner: i32 = 0,
-};
-pub const TowerRolePb = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    LeaveSkillId: i32 = 0,
-    SkillBranchId: i32 = 0,
-};
-pub const CombatDataMaxNotify = struct {
-    pub const default: @This() = .{};
-};
-pub const RemoveGameplayEffectPush = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    EntityId: i64 = 0,
-    IsPrematureRemoval: bool = false,
-    Reason: []const u8 = "",
-};
-pub const TempFishPointInfo = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    CurCount: i32 = 0,
-    MaxCount: i32 = 0,
-    ConfigId: i32 = 0,
-    GamePlayId: i32 = 0,
-};
-pub const CrystalMonsterSlotInfo = struct {
-    pub const default: @This() = .{};
-    EntityIds: std.ArrayList(i32) = .empty,
-    MonsterType: i32 = 0,
-};
-pub const FishingEntrustStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Created = 0,
-    Acceptable = 1,
-    Accepted = 2,
+    TalentId: i32 = 0,
+    State: i32 = 0,
 };
 pub const HeartbeatResponse = struct {
     pub const default: @This() = .{};
 };
-pub const PlacementItemPb = struct {
+pub const FightFormation = struct {
     pub const default: @This() = .{};
-    LocatedBoardEntityConfigId: i32 = 0,
+    FormationId: i32 = 0,
+    CurRole: i32 = 0,
+    RoleIds: std.ArrayList(i32) = .empty,
+    IsCurrent: bool = false,
 };
-pub const TeleportReason = enum(i32) {
+pub const PlayerTitleLimitInfo = struct {
+    pub const default: @This() = .{};
+    PlayerTitleId: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const ArraySkillNode = struct {
+    pub const default: @This() = .{};
+    SkillNodeId: i32 = 0,
+    IsActive: bool = false,
+    SkillId: i32 = 0,
+};
+pub const CoopRoleInfo = struct {
+    pub const default: @This() = .{};
+    CoopRoleId: i32 = 0,
+    RoleLevel: i32 = 0,
+    RewardLevel: i32 = 0,
+    FinishTime: i64 = 0,
+};
+pub const RemoveBuffByIdS2cRequestNotify = struct {
+    pub const default: @This() = .{};
+    BuffId: i64 = 0,
+    StackCount: i32 = 0,
+    Reason: i32 = 0,
+};
+pub const RemoveGameplayEffectNotify = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    EntityId: i64 = 0,
+};
+pub const ActivityType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Transfer = 0,
-    ApiTeleport = 1,
-    BtRollbackFailed = 2,
-    ParkourTrans = 3,
-    Gm = 4,
-    Rouge = 5,
-    Fall = 6,
-    Action = 7,
-    UnOpenedAreaPullback = 8,
-    TemporaryTransfer = 9,
-    FlowAction = 10,
-    Drown = 11,
-    FlowStart = 12,
-    CorniceTrans = 13,
-    TeleportVehicle = 14,
-    GetOff = 15,
-    LeaveGravityRegion = 16,
-    TeleportToBoat = 17,
-    GravityFlip = 18,
-    RogueRes = 19,
-    AbyssTeleport = 20,
-    GmForce = 21,
-    CharacterMoveToPoint = 22,
-    InstEntity = 23,
-    InstRequestTeleportResetPoint = 24,
+    Parkour = 0,
+    GatherActivity = 1,
+    Sign = 2,
+    TowerGuide = 3,
+    NewBieCourse = 4,
+    WorldNewJourney = 5,
+    RougeActivity = 6,
+    DoubleInstanceRewardActivity = 7,
+    RoleTrialActivity = 8,
+    Harvest = 9,
+    NewRoleGuideActivity = 10,
+    PhantomCollect = 11,
+    DailyAdventureActivity = 12,
+    LongShanMainActivity = 13,
+    BossRushActivity = 14,
+    TurnTableActivity = 15,
+    PhotoMemoryActivity = 16,
+    TrackMoonActivity = 17,
+    CircumFluence = 18,
+    TowerDefenceActivity = 19,
+    TimePointRewardActivity = 20,
+    TowerGuideNew = 21,
+    TrackMoonPhase = 22,
+    RiskHarvest = 23,
+    CorniceMeeting = 24,
+    BlackCoastTheme = 25,
+    RogueWhiteCat = 26,
+    ScratchCard = 27,
+    PreheatSign = 28,
+    MowTower = 29,
+    ThroughTrain = 30,
+    SprintSign = 31,
+    MapTravelActivity = 32,
+    FarmGold = 33,
+    NewLordGym = 34,
+    RoleSkinTrialActivity = 35,
+    RogueWeekly = 36,
+    FishingActivity = 37,
+    TeamParkOurActivity = 38,
+    SlashAndTowerLevelPlay = 39,
+    BabelTower = 40,
+    Avignon = 41,
+    BetHorses = 42,
+    Explore = 43,
+    Abyss = 44,
+    RogueRes = 45,
+    H5CircumFluence = 46,
+    DangoMonopoly = 47,
+    CiacconaActivity = 48,
+    ActivityLinkage = 49,
+    RegressActivity = 50,
+    ConsumptiveActivity = 51,
+    PhantomBattle = 52,
+    NewbieCarnival = 53,
+    MoraleActivity = 54,
+    FloroRanchActivity = 55,
+    LifePointChallenge = 56,
+    TrapDefense = 57,
+    JinzhouFlyActivity = 58,
+    FunPlay = 59,
+    MoonPhase = 60,
+    LineCross = 61,
+    HonamiStory = 62,
+    Survivors = 63,
+    PhotoFight = 64,
+    WuWuKuji = 65,
+    FirstPersonParkour = 66,
+    PreHeatTaskActivity = 67,
+    InfrTheme = 68,
+    AdvanceNoticeActivity = 69,
+    PhantomBattleRecord = 70,
+    CoopActivity = 71,
+    PhantomBattleRecordGuide = 72,
+    ArtemisActivity = 73,
+    MotorcycleIpLink = 74,
+    SkinRewardActivity = 75,
+    RoadBookActivity = 76,
+    NewTowerClimbing = 77,
+    MotorFight = 78,
+    Encircle = 79,
+    NewPlayerSupportActivity = 80,
+    SpringFestivalActivity = 81,
+    MotorParkourActivity = 82,
+    TotalTopUp = 83,
+    H5View = 84,
+    MotorDevelop = 85,
+    FlagChallenge = 86,
+    Rhythm = 87,
+    FeiXue = 89,
+    DropCatchActivity = 90,
+    TetrisActivity = 91,
+    InfrThemeV2 = 92,
+    Kurotato = 93,
+    PinballActivity = 94,
+    WuWuWeekSign = 96,
+    AnniversaryTheme = 97,
+    BossPiling = 98,
+    GolemCrackActivity = 99,
+    EdgeRunnerActivity = 100,
+    MotorDecalActivity = 101,
+    MotorParkour = 102,
+    LinkageCheckIn = 103,
+    RoleGiftActivity = 104,
+    PureUIActivity = 200,
 };
-pub const TotalTopUpRewardInfo = struct {
+pub const EntityPatrolStopRequest = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    Score: i32 = 0,
-    RewardContent: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    EntityId: i64 = 0,
+};
+pub const FishingDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const HonamiStoryScoreRewardInfo = struct {
+    pub const default: @This() = .{};
+    ScoreRewardId: i32 = 0,
     Status: i32 = 0,
 };
-pub const NormalItemRequest = struct {
+pub const NewBieCourseActivity = struct {
     pub const default: @This() = .{};
+    HadTakeReward: std.ArrayList(i32) = .empty,
 };
-pub const DailyAdventureTaskState = enum(i32) {
+pub const GmLevelActionCtxPb = struct {
+    pub const default: @This() = .{};
+    JsonStr: []const u8 = "",
+};
+pub const SceneMode = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    DailyAdventureTaskRunning = 0,
-    DailyAdventureTaskFinish = 1,
-    DailyAdventureTaskTaken = 2,
+    Single = 0,
+    Multi = 1,
 };
-pub const PartInformation = struct {
-    pub const default: @This() = .{};
-    PartIndex: i32 = 0,
-    LifeValue: f32 = 0,
-    LifeMax: f32 = 0,
-    Activated: bool = false,
-    PartTag: i32 = 0,
+pub const IllustratedType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Monster = 0,
+    VocalCorpse = 1,
+    ViewPoint = 2,
+    Weapon = 3,
+    Animal = 4,
+    Item = 5,
+    Chip = 6,
+    Photograph = 7,
+    Noun = 8,
 };
-pub const NewTrialRoleInfo = struct {
+pub const RTimeStopInstRequest = struct {
     pub const default: @This() = .{};
-    TrialRoleId: i32 = 0,
-    WorldLv: i32 = 0,
+    Flag: bool = false,
+    Duration: i32 = 0,
 };
-pub const GetRewardTreasureBoxRequest = struct {
+pub const ClientDeviceLevel = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Low = 0,
+    Medium = 1,
+    High = 2,
+};
+pub const ApplyGameplayEffectNotify = struct {
     pub const default: @This() = .{};
+    CRoundAction: ?union(enum) {
+        Duration: f32,
+    } = null,
+    Time: ?union(enum) {
+        LeftDuration: f32,
+    } = null,
+    Handle: i32 = 0,
+    Id: i64 = 0,
+    Level: i32 = 0,
     EntityId: i64 = 0,
+    InstigatorId: i64 = 0,
+    ApplyType: i32 = 0,
+    IsActive: bool = false,
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    ConfBuffId: i64 = 0,
 };
-pub const TowerRequest = struct {
+pub const ChangeVisionGroupNameRequest = struct {
     pub const default: @This() = .{};
-};
-pub const TetrisState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    TetrisLocked = 0,
-    TetrisUnlocked = 1,
-    TetrisFinished = 2,
-};
-pub const EquipBuffItem = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Equiped: bool = false,
-};
-pub const ExecuteQteRequest = struct {
-    pub const default: @This() = .{};
-    DownEntityId: i64 = 0,
-    UpEntityId: i64 = 0,
-    FnvHash: i32 = 0,
-};
-pub const TransitionType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Empty = 0,
-    PlayEffect = 1,
-    PlayMp4 = 2,
-    CenterText = 3,
-    FadeInScreen = 4,
-    Seamless = 5,
-    WithCharacterDisplay = 6,
-    WithCustomLoading = 7,
-    WithSpine = 8,
-    WithSpecialCustomLoading = 9,
-};
-pub const BattleFormation = struct {
-    pub const default: @This() = .{};
-    SelectRoles: std.ArrayList(i32) = .empty,
-    BuffSelect: i32 = 0,
-    SkillBranchIds: std.ArrayList(i32) = .empty,
-};
-pub const PrivateChatDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const EntityCtxPb = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    IncId: i64 = 0,
-};
-pub const BattleStateChangePush = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    InBattle: bool = false,
-};
-pub const MoveSplineConfig = struct {
-    pub const default: @This() = .{};
-    StartPoint: ?union(enum) {
-        StartPointIndex: i32,
-    } = null,
-    EndPoint: ?union(enum) {
-        EndPointIndex: i32,
-    } = null,
-    LookDir: ?union(enum) {
-        IsLookDir: bool,
-    } = null,
-    Cycle: ?union(enum) {
-        CycleCount: i32,
-    } = null,
-    Circle: ?union(enum) {
-        IsCircle: bool,
-    } = null,
-};
-pub const HonamiStoryEquipItemInfo = struct {
-    pub const default: @This() = .{};
-    MainPropLibraryId: i32 = 0,
-    OriBuffTempId: std.ArrayList(i32) = .empty,
-    ChildBuffTempId: std.ArrayList(i32) = .empty,
-};
-pub const TeleportUpdateNotify = struct {
-    pub const default: @This() = .{};
-    Ids: std.ArrayList(i32) = .empty,
-};
-pub const BuffItem = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    CdTime: i64 = 0,
+    Index: i32 = 0,
+    Name: []const u8 = "",
 };
 pub const ItemEntry = struct {
     pub const default: @This() = .{};
     ItemId: i32 = 0,
     ItemCount: i32 = 0,
 };
-pub const CalabashSkinTakeOnRequest = struct {
-    pub const default: @This() = .{};
-    SkinId: i32 = 0,
-};
-pub const PlayEnterOrExitPollutionRangeType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    EnterAction = 0,
-    ExitAction = 1,
-};
-pub const SkinRewardActivityRewardState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    InitState = 0,
-    TaskComplete = 1,
-    TaskRewarded = 2,
-};
-pub const NPCPerformGroupComponentPb = struct {
-    pub const default: @This() = .{};
-    Type: []const u8 = "",
-    State: []const u8 = "",
-};
-pub const AdventureManualDataRequest = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-};
-pub const GrapplingHookPointComponentPb = struct {
-    pub const default: @This() = .{};
-    HookLockPointDisabled: bool = false,
-};
-pub const FavorItemStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    ItemLocked = 0,
-    ItemCanUnLock = 1,
-    ItemUnLocked = 2,
-};
-pub const LoadingConfigRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ChangeOrnamentRequest = struct {
-    pub const default: @This() = .{};
-    RoleSkinId: i32 = 0,
-    OrnamentId: i32 = 0,
-    IsDress: bool = false,
-};
-pub const RoleGoDownPush = struct {
-    pub const default: @This() = .{};
-};
-pub const SendEquipSkinRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-};
-pub const ActorVisiblePush = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsActorVisible: bool = false,
-};
-pub const ItemDeprecateRequest = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    IncrId: i32 = 0,
-};
-pub const RoleShowEntry = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Level: i32 = 0,
-};
-pub const MontagePlayNotify = struct {
-    pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    MontageIndex: i32 = 0,
-};
-pub const InfrNotice = struct {
-    pub const default: @This() = .{};
-    RoadId: i32 = 0,
-    PasserId: i32 = 0,
-    GiftCount: i32 = 0,
-    CreateTime: i64 = 0,
-};
-pub const ActivityLinkageRewardData = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const TowerSeasonUpdateRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const OnlineMotorLevelUnLockTime = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    UnLockTime: i64 = 0,
-};
-pub const RoadBookMotorcycleInfo = struct {
-    pub const default: @This() = .{};
-    MotorcyclePlayId: i32 = 0,
-    HistorySoarScore: i32 = 0,
-    ReceiveIds: std.ArrayList(i32) = .empty,
-};
-pub const RemoveCombineRelationNotify = struct {
-    pub const default: @This() = .{};
-    CombineEntity: i64 = 0,
-    TargetEntity: i64 = 0,
-};
-pub const QuickHackOpenPush = struct {
-    pub const default: @This() = .{};
-    DeviceId: i32 = 0,
-    OwnerEntityId: i64 = 0,
-};
-pub const QuestDestroyActionCtxPb = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-};
-pub const LivingStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Alive = 0,
-    Dead = 1,
-    Init = 2,
-};
-pub const DestroyType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NotDelay = 0,
-    Delay = 1,
-};
-pub const PlayerBasicInfoGetRequest = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-};
-pub const LanguageSettingUpdateRequest = struct {
-    pub const default: @This() = .{};
-    Language: i32 = 0,
-};
-pub const PayInfoRequest = struct {
-    pub const default: @This() = .{};
-    Version: []const u8 = "",
-};
-pub const DFsmBlackboardCustom = struct {
-    pub const default: @This() = .{};
-    Key: []const u8 = "",
-    Value: i32 = 0,
-};
-pub const EquipFlySkinData = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkinId: i32 = 0,
-};
-pub const EntityInteractRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    OptionIndex: i32 = 0,
-    VisionEntityId: i64 = 0,
-};
-pub const GroupTypesWrapper = struct {
-    pub const default: @This() = .{};
-    GroupTypes: std.ArrayList(i32) = .empty,
-};
-pub const ActorVisibleNotify = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsActorVisible: bool = false,
-};
-pub const FlowerPollutionComponentPb = struct {
-    pub const default: @This() = .{};
-    UnPollutionSpline: std.ArrayList(i32) = .empty,
-};
-pub const MoonChasingTargetGetCountNotify = struct {
-    pub const default: @This() = .{};
-    TargetGetCount: i32 = 0,
-};
-pub const CalabashSkinComponentPb = struct {
-    pub const default: @This() = .{};
-    CalabashSkinId: i32 = 0,
-};
-pub const RoguelikeTokenList = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    IsReceive: bool = false,
-};
-pub const PhantomArenaCardReward = struct {
-    pub const default: @This() = .{};
-    CardId: i32 = 0,
-    NeedCount: i32 = 0,
-    IsTaken: bool = false,
-};
-pub const Int2Bool = struct {
-    pub const default: @This() = .{};
-    First: i32 = 0,
-    Second: bool = false,
-};
-pub const ExitViewDirectionRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const FishingDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const PlayPointStateAsyncRequest = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    ArenaId: i32 = 0,
-};
-pub const FsmConditionPassRequest = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    FromState: i32 = 0,
-    ToState: i32 = 0,
-    ConditionIndex: i32 = 0,
-    Value: bool = false,
-};
-pub const PhantomPolishRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    PhantomMainPropItemId: i32 = 0,
-};
-pub const TransformBuffStackNotify = struct {
-    pub const default: @This() = .{};
-    BuffHandle: i64 = 0,
-    BuffId: i64 = 0,
-    BuffStackModifier: i32 = 0,
-};
-pub const EntityActiveRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-};
-pub const PhantomPropInfo = struct {
-    pub const default: @This() = .{};
-    PhantomPropId: i32 = 0,
-    Value: i32 = 0,
-};
-pub const MotorTaskTypePb = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Unknown = 0,
-    Single = 1,
-    Limited = 2,
-    Cycle = 3,
-};
-pub const NearbyTrackingComponentPb = struct {
-    pub const default: @This() = .{};
-    IsEnable: bool = false,
-};
-pub const WebSignRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ActivitySoarData = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-};
-pub const PlayerAttrType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Int32 = 0,
-    String = 1,
-};
-pub const PutVisionGroupToTopRequest = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-};
-pub const CreateInstanceDungeonNotify = struct {
-    pub const default: @This() = .{};
-    LevelPlayId: i32 = 0,
-};
-pub const InfluenceInfo = struct {
-    pub const default: @This() = .{};
-    InfluenceId: i32 = 0,
-    RewardIndex: i32 = 0,
-    Relation: i32 = 0,
-};
-pub const BattlePassRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const PassiveSkillAddPush = struct {
-    pub const default: @This() = .{};
-    PassiveSkillId: i64 = 0,
-    TargetEntityId: i64 = 0,
-};
-pub const ChangeStateNotify = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    FromState: i32 = 0,
-    ToState: i32 = 0,
-};
-pub const PlayerSceneComponentPb = struct {
-    pub const default: @This() = .{};
-    EntityIds: std.ArrayList(i64) = .empty,
-};
-pub const PbAdviceContentType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Sentence = 0,
-    Conjunction = 1,
-    Expression = 2,
-    Motion = 3,
-};
-pub const PrivateTag = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    Tags: std.ArrayList([]const u8) = .empty,
-};
-pub const ForgeInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ShortMessageInfo = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    LastConfigId: i32 = 0,
-    IsRead: bool = false,
-    IsReceived: bool = false,
-    Options: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    UnlockTime: i64 = 0,
-    IsFinish: bool = false,
-};
-pub const QuestState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    InActive = 0,
-    Available = 1,
-    InProgress = 2,
-    Finish = 3,
-    Delete = 4,
-};
-pub const SmartObjectComponent = struct {
-    pub const default: @This() = .{};
-    LastPassIndex: i32 = 0,
-};
 pub const CharacterBattleStateInfo = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
     InBattle: bool = false,
-};
-pub const PhotographSubType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    None = 0,
-    PhotographSub = 7,
-    Role = 8,
-    Quest = 9,
-};
-pub const FollowerType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    EPlayerFollowerDefault = 0,
-    EPlayerFollowerExploreSkill = 1,
-    EPlayerFollowerAuxiliary = 2,
-    EPlayerFollowerSpecialItem = 3,
-    EPlayerFollowerMotor = 4,
-    EPlayerFollowerMax = 5,
-};
-pub const FollowShooterComponentPb = struct {
-    pub const default: @This() = .{};
-    PlayerEntityId: i64 = 0,
-    SummonConfigId: i32 = 0,
-};
-pub const MoraleAreaData = struct {
-    pub const default: @This() = .{};
-    AreaDataId: i32 = 0,
-    ExploreBoxReceivedCount: i32 = 0,
-};
-pub const EntityRewardItemPb = struct {
-    pub const default: @This() = .{};
-    HasCount: i32 = 0,
-    NextResetTime: i64 = 0,
-};
-pub const AiHateEntity = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    HatredValue: i32 = 0,
-};
-pub const HonamiStoryCustomLoadingPb = struct {
-    pub const default: @This() = .{};
-    LoadingId: i32 = 0,
-};
-pub const UnlockDetectionLabelInfo = struct {
-    pub const default: @This() = .{};
-    UnlockedGuideIds: std.ArrayList(i32) = .empty,
-    UnlockedDetectionTextIds: std.ArrayList(i32) = .empty,
 };
 pub const GameCtxType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -35990,51 +37146,1069 @@ pub const GameCtxType = enum(i32) {
     EntityQuickHackSkill = 103,
     EdDebugEnterAction = 3401,
 };
-pub const AwardGroupData = struct {
+pub const DrownEndTeleportRequest = struct {
     pub const default: @This() = .{};
-    GroupId: i32 = 0,
-    GroupRank: i32 = 0,
-    CurrentAmount: i32 = 0,
-    AllAmount: i32 = 0,
-    RewardItems: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const OrderApplyBuffNotify = struct {
+pub const EntityTimelineEventType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    LeftIn = 0,
+    LeftOut = 1,
+    RightIn = 2,
+    RightOut = 3,
+};
+pub const PlayerHeadDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const QuestReviewDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const MapMarkShowInfo = struct {
+    pub const default: @This() = .{};
+    MarkId: i32 = 0,
+    ShowFlag: u32 = 0,
+};
+pub const NpcDriveVehicleComponentPb = struct {
+    pub const default: @This() = .{};
+    VehicleCreatureId: i64 = 0,
+    Seat: i32 = 0,
+};
+pub const AdvertisingPageData = struct {
+    pub const default: @This() = .{};
+    Show: bool = false,
+    PointTime: i64 = 0,
+};
+pub const RoleConfigInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillBranch: i32 = 0,
+};
+pub const PatrolComponentPb = struct {
+    pub const default: @This() = .{};
+    Dir: bool = false,
+};
+pub const AttributeEventEffectData = struct {
+    pub const default: @This() = .{};
+    TriggeredActiveHandles: std.ArrayList(i32) = .empty,
+};
+pub const BuffConsumerComponentPb = struct {
+    pub const default: @This() = .{};
+    ConstateId: i64 = 0,
+};
+pub const ActivitySoarData = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const FsmPlayMontageRequest = struct {
+    pub const default: @This() = .{};
+    MontageName: []const u8 = "",
+    MontagePathHash: i32 = 0,
+    SpeedRatio: f32 = 0,
+    StartSection: []const u8 = "",
+    StartTimeSeconds: f32 = 0,
+};
+pub const PassiveSkillRemoveRequest = struct {
+    pub const default: @This() = .{};
+    PassiveSkillId: i64 = 0,
+    TargetEntityId: i64 = 0,
+};
+pub const GivebackInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const Vector = struct {
+    pub const default: @This() = .{};
+    X: f32 = 0,
+    Y: f32 = 0,
+    Z: f32 = 0,
+};
+pub const MoonSignInConfigData = struct {
+    pub const default: @This() = .{};
+    MoonId: i32 = 0,
+    MoonLabelTopId: i32 = 0,
+    MoonLabelBottomId: i32 = 0,
+};
+pub const DailyAdventureTaskState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    DailyAdventureTaskRunning = 0,
+    DailyAdventureTaskFinish = 1,
+    DailyAdventureTaskTaken = 2,
+};
+pub const LevelPlayCtxPb = struct {
+    pub const default: @This() = .{};
+    LevelPlayId: i32 = 0,
+};
+pub const ParkourActivityChallenge = struct {
+    pub const default: @This() = .{};
+    ChallengeId: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const OrderRemoveBuffNotify = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    StackCount: i32 = 0,
+};
+pub const FormationAttr = struct {
+    pub const default: @This() = .{};
+    AttrId: i32 = 0,
+    Ratio: i32 = 0,
+    BaseMaxValue: i32 = 0,
+    MaxValue: i32 = 0,
+    CurrentValue: i32 = 0,
+};
+pub const BoneVisibleData = struct {
+    pub const default: @This() = .{};
+    BoneName: []const u8 = "",
+    HideBone: bool = false,
+};
+pub const NormalLevel = struct {
+    pub const default: @This() = .{};
+    StarByte: i32 = 0,
+};
+pub const AnimalDestroyRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const Function = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Flag: i32 = 0,
+};
+pub const BookItemState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    BookItemLock = 0,
+    BookItemUnlock = 1,
+    BookItemRewarded = 2,
+};
+pub const EShieldUpdateType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    EShieldUpdateTypeAdd = 0,
+    EShieldUpdateTypeDel = 1,
+    EShieldUpdateTypeModify = 2,
+};
+pub const CommonTagData = struct {
+    pub const default: @This() = .{};
+    TagId: i32 = 0,
+    RemoveTagIds: bool = false,
+};
+pub const ConsumptiveTaskType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Unknown = 0,
+    Single = 1,
+    Cycle = 2,
+};
+pub const OccupationPbInfo = struct {
+    pub const default: @This() = .{};
+    ResourceName: []const u8 = "",
+    NodeId: i32 = 0,
+    IncId: i64 = 0,
+};
+pub const MowTowerRewardStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    CanNoReward = 0,
+    CanReward = 1,
+    Rewarded = 2,
+};
+pub const EquipPos = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Weapon = 0,
+    WeaponSkin = 1,
+    End = 2,
+};
+pub const FsmMontageDurationNotify = struct {
+    pub const default: @This() = .{};
+    MontageHashCode: i32 = 0,
+    DurationTime: i32 = 0,
+};
+pub const SimpleCombatSplineMovePbType = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+};
+pub const ActorVisibleRequest = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    IsActorVisible: bool = false,
+};
+pub const ExitViewDirectionRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const DropComponentPb = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    ShowPlanId: i32 = 0,
+    ItemCount: i32 = 0,
+    EntityConfigId: i32 = 0,
+};
+pub const ConditionTaskStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Undone = 0,
+    TaskFinish = 1,
+    Received = 2,
+};
+pub const TutorialUnlockRequest = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+};
+pub const PbBattlePassReward = struct {
+    pub const default: @This() = .{};
+    Level: i32 = 0,
+    ItemId: i32 = 0,
+    Type: i32 = 0,
+};
+pub const BattleStateChangeRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    InBattle: bool = false,
+};
+pub const InitRangeRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    EntitiesToRequest: std.ArrayList(i64) = .empty,
+    IsPlayerInRange: bool = false,
+};
+pub const AbyssChallengeData = struct {
+    pub const default: @This() = .{};
+    ChallengeId: i32 = 0,
+    CanUnlock: bool = false,
+    CanChallenge: bool = false,
+    UnlockTime: i64 = 0,
+    ConditionFinishState: bool = false,
+    MaxProgress: i32 = 0,
+    MinPassTime: i32 = 0,
+    IsPassed: bool = false,
+};
+pub const TeleportFinishRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const MapTraceInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const GetFormationDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const HeartbeatRequest = struct {
+    pub const default: @This() = .{};
+    AntiData: []const u8 = "",
+};
+pub const AdventureManualDataRequest = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+};
+pub const InputSettingRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const GetItemCount = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const WeaponSkinComponentPb = struct {
+    pub const default: @This() = .{};
+    WeaponSkinId: i32 = 0,
+};
+pub const RTimeStopPush = struct {
+    pub const default: @This() = .{};
+    Flag: bool = false,
+    IsStopCharacter: bool = false,
+    Duration: i32 = 0,
+};
+pub const FarmGoldLevelPlayInfo = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    StartTime: i32 = 0,
+    Challenges: bool = false,
+    Points: i32 = 0,
+    LevelRewardGet: bool = false,
+    Difficulty: i32 = 0,
+};
+pub const ActiveBulletHandle = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    HandleId: i32 = 0,
+};
+pub const RoleVisionMainPhantomRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const TutorialInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PbUpLevelSkillRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillId: i32 = 0,
+};
+pub const EntityFollowTrackRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const HonamiStoryNormalItemInfo = struct {
+    pub const default: @This() = .{};
+};
+pub const ANStartNotify = struct {
+    pub const default: @This() = .{};
+    SkillId: i64 = 0,
+    MontageIndex: i32 = 0,
+    AnIndex: i32 = 0,
+};
+pub const FlyEquipAddNotify = struct {
+    pub const default: @This() = .{};
+    UnlockFlySkinIds: std.ArrayList(i32) = .empty,
+};
+pub const SceneDateUpdateReason = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    TimeFlowAuto = 0,
+    LevelPlayAuto = 1,
+    PlayerOperate = 2,
+};
+pub const FurnitureComponentPb = struct {
+    pub const default: @This() = .{};
+    SlotId: i32 = 0,
+    FurnitureId: i32 = 0,
+};
+pub const EntityLoadCompleteNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    EntityIds: std.ArrayList(i64) = .empty,
+    EntityIdsUnload: std.ArrayList(i64) = .empty,
+};
+pub const ExchangeRewardRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const DropVisionItemResult = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    Drop: bool = false,
+};
+pub const PhotoMemoryRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FlowerPollutionComponentPb = struct {
+    pub const default: @This() = .{};
+    UnPollutionSpline: std.ArrayList(i32) = .empty,
+};
+pub const EntityTimeDilationPush = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    TimeDilation: f32 = 0,
+};
+pub const LongShanMainTaskData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Current: i32 = 0,
+    Target: i32 = 0,
+    IsFinished: bool = false,
+    IsTaken: bool = false,
+    Unlock: bool = false,
+    FinishConditions: std.ArrayList(i32) = .empty,
+    ConditionId: i32 = 0,
+    ConditionGroupId: i32 = 0,
+    UnlockConditionFinish: bool = false,
+};
+pub const ButtonType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Home = 0,
+};
+pub const DoubleInstActivityReward = struct {
+    pub const default: @This() = .{};
+    GetDoubleInstRwdCount: i32 = 0,
+};
+pub const HonamiStoryCustomLoadingPb = struct {
+    pub const default: @This() = .{};
+    LoadingId: i32 = 0,
+};
+pub const PassiveSkillRemovePush = struct {
+    pub const default: @This() = .{};
+    PassiveSkillId: i64 = 0,
+    TargetEntityId: i64 = 0,
+};
+pub const DamageContext = struct {
+    pub const default: @This() = .{};
+    Source: ?union(enum) {
+        SourceType: i32,
+    } = null,
+    Bullet: ?union(enum) {
+        BulletId: i64,
+    } = null,
+    Skill: ?union(enum) {
+        SkillId: i64,
+    } = null,
+    SkillMessage: ?union(enum) {
+        SkillMessageId: i64,
+    } = null,
+    BulletTags: std.ArrayList(i32) = .empty,
+};
+pub const TransitionFlowPb = struct {
+    pub const default: @This() = .{};
+    FlowListName: []const u8 = "",
+    FlowId: i32 = 0,
+    StateId: i32 = 0,
+};
+pub const ScratchTicketConditionData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Progress: i32 = 0,
+    FinishedAchievementNum: i32 = 0,
+};
+pub const RoleOperateSelfBgmRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    IsOpen: bool = false,
+};
+pub const ClientStorageIntData = struct {
+    pub const default: @This() = .{};
+    Data: i32 = 0,
+};
+pub const GridPbDirection = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    GridForward = 0,
+    GridBackward = 1,
+    GridLeft = 2,
+    GridRight = 3,
+};
+pub const ListenInformation = struct {
+    pub const default: @This() = .{};
+    Id: std.ArrayList(i32) = .empty,
+    Range: f32 = 0,
+};
+pub const AfterTeleportScreenColor = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    AfterTeleportScreenColorBlack = 0,
+    AfterTeleportScreenColorWhite = 1,
+};
+pub const FragileChangeRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    Flag: bool = false,
+};
+pub const BulletPatternPush = struct {
+    pub const default: @This() = .{};
+    BulletPatternHandleId: i64 = 0,
+    BulletPatternId: i32 = 0,
+};
+pub const PhantomItemRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const AiHateEntity = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    HatredValue: i32 = 0,
+};
+pub const DirectTrainGetPlayerIdRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FishingIllustratedRewardInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    CurrentProgress: i32 = 0,
+    TargetProgress: i32 = 0,
+    HasPassed: bool = false,
+    IsTaken: bool = false,
+};
+pub const RoleShowEntry = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Level: i32 = 0,
+};
+pub const ExploreToolAllNotify = struct {
+    pub const default: @This() = .{};
+    SkillList: std.ArrayList(i32) = .empty,
+    ExploreSkill: i32 = 0,
+    NewUnlock: std.ArrayList(i32) = .empty,
+};
+pub const TowerRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const WeaponItemRemoveNotify = struct {
+    pub const default: @This() = .{};
+    WeaponItemIncrIdList: std.ArrayList(i32) = .empty,
+};
+pub const LevelData = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    InstId: i32 = 0,
+    Roles: std.ArrayList(i32) = .empty,
+    GroupId: i32 = 0,
+    IsUnlocked: bool = false,
+};
+pub const ApplyGameplayEffectRequest = struct {
     pub const default: @This() = .{};
     Time: ?union(enum) {
         Duration: f32,
     } = null,
+    Handle: i32 = 0,
     Id: i64 = 0,
     Level: i32 = 0,
     InstigatorId: i64 = 0,
     ApplyType: i32 = 0,
     ServerId: i32 = 0,
     StackCount: i32 = 0,
-    IsIterable: bool = false,
+    IsActive: bool = false,
 };
-pub const ValidTimeItem = struct {
+pub const BulletComponentPb = struct {
+    pub const default: @This() = .{};
+    ConstateId: i64 = 0,
+};
+pub const FlagChallengeLevelInfo = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    Count: i32 = 0,
-    IncrId: i32 = 0,
-    ExpireTime: i64 = 0,
+    UnlockTime: i64 = 0,
+    State: i32 = 0,
 };
-pub const AnimalDropRequest = struct {
+pub const AddVisionEquipGroupRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Name: []const u8 = "",
+};
+pub const QuestFinishActionCtxPb = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const FishingTechInfo = struct {
+    pub const default: @This() = .{};
+    NodeId: i32 = 0,
+    Level: i32 = 0,
+    CanUnlock: bool = false,
+};
+pub const CumulativeShopSubTaskData = struct {
+    pub const default: @This() = .{};
+    CanGetReward: i32 = 0,
+    ProgressCount: i32 = 0,
+    TotalProgressCount: i32 = 0,
+};
+pub const ModifyEntityCampNotify = struct {
+    pub const default: @This() = .{};
+    TargetEntityId: i64 = 0,
+    Camp: i32 = 0,
+};
+pub const ActivityRoleGiveData = struct {
+    pub const default: @This() = .{};
+    IsGetReward: bool = false,
+};
+pub const InstEnterInfoPb = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    ChallengedTimes: i32 = 0,
+};
+pub const InfrTaskStatusPb = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    InfrTaskRunning = 0,
+    InfrTaskFinish = 1,
+    InfrTaskTaken = 2,
+};
+pub const DrownPush = struct {
+    pub const default: @This() = .{};
+};
+pub const AnimationGameplayTagRequest = struct {
+    pub const default: @This() = .{};
+    AddTagIds: i32 = 0,
+    RemoveTagIds: bool = false,
+};
+pub const SolarSpeedContext = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    Score: i32 = 0,
+    Ranking: i32 = 0,
+    StartTime: i32 = 0,
+    LapRecord: i32 = 0,
+};
+pub const TotalTopUpRewardInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Score: i32 = 0,
+    RewardContent: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    Status: i32 = 0,
+};
+pub const PhantomPropInfo = struct {
+    pub const default: @This() = .{};
+    PhantomPropId: i32 = 0,
+    Value: i32 = 0,
+};
+pub const FloorParams = struct {
+    pub const default: @This() = .{};
+    FloorMeshPath: []const u8 = "",
+    FloorMaterialPath: []const u8 = "",
+    PosX: f32 = 0,
+    PosY: f32 = 0,
+    FloorAppearTime: f32 = 0,
+    FloorDisappearTime: f32 = 0,
+};
+pub const IntVector2D = struct {
+    pub const default: @This() = .{};
+    X: i32 = 0,
+    Y: i32 = 0,
+};
+pub const LanguageSettingUpdateRequest = struct {
+    pub const default: @This() = .{};
+    Language: i32 = 0,
+};
+pub const OneForgeConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const ActivityTaskState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ActivityTaskRunning = 0,
+    ActivityTaskFinish = 1,
+    ActivityTaskTaken = 2,
+};
+pub const RhythmTaskTypePb = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Resident = 0,
+    Limit = 1,
+};
+pub const RhythmRedDotPb = struct {
+    pub const default: @This() = .{};
+    ReadPlanet: std.ArrayList(i32) = .empty,
+    ReadSubLevel: std.ArrayList(i32) = .empty,
+    ReadRole: std.ArrayList(i32) = .empty,
+};
+pub const ActivityRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RbGridPosition = struct {
+    pub const default: @This() = .{};
+    X: i32 = 0,
+    Y: i32 = 0,
+};
+pub const FightRoleInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    EntityId: i64 = 0,
+    OnStageWithoutControl: bool = false,
+};
+pub const LevelPlayInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    IsFirst: bool = false,
+    State: i32 = 0,
+    UpdateTime: i64 = 0,
+    GetRewardCount: i32 = 0,
+};
+pub const HonamiStoryAreaConfig = struct {
+    pub const default: @This() = .{};
+    AreaId: i32 = 0,
+    Status: i32 = 0,
+    SecreteStatus: i32 = 0,
+};
+pub const TrapDefenseGoldenCoinPbData = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+};
+pub const RemoveGameplayEffectPush = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    EntityId: i64 = 0,
+    IsPrematureRemoval: bool = false,
+    Reason: []const u8 = "",
+};
+pub const RoleSkillBranchModifyRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillBranch: i32 = 0,
+};
+pub const AdventureManualRequest = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+};
+pub const AdviceSettingNotify = struct {
+    pub const default: @This() = .{};
+    IsShow: bool = false,
+};
+pub const MotorDiyOnwedPb = struct {
+    pub const default: @This() = .{};
+    SkinOwned: std.ArrayList(i32) = .empty,
+    StickerOnwed: std.ArrayList(i32) = .empty,
+    DecorationsOwned: std.ArrayList(i32) = .empty,
+    FrameOwned: std.ArrayList(i32) = .empty,
+};
+pub const EquipFlySkinData = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkinId: i32 = 0,
+};
+pub const RoleSkinChangeRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkinId: i32 = 0,
+    IsWearWeaponSkin: bool = false,
+};
+pub const EnterViewDirectionPush = struct {
+    pub const default: @This() = .{};
+};
+pub const MotorTaskRewardPb = struct {
+    pub const default: @This() = .{};
+    Rewarded: i32 = 0,
+    WaitReward: i32 = 0,
+    MaxReward: i32 = 0,
+};
+pub const RacingBetsOrganInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Point: i32 = 0,
+};
+pub const EntityActiveRequest = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
 };
-pub const LevelPlayStateMsg = struct {
+pub const KurotatoEndlessLevelInfo = struct {
     pub const default: @This() = .{};
-    LevelPlayEntityId: i32 = 0,
-    ExploratoryType: i32 = 0,
-    StateType: i32 = 0,
-    CompleteNumber: i32 = 0,
-    IsHide: bool = false,
-    HideGroupInfo: []const u8 = "",
-    IsUnlocked: bool = false,
-    LevelPlayMarkUnlock: bool = false,
+    FinishWave: i32 = 0,
+    TotalKillCount: i32 = 0,
+    PassRoleIds: std.ArrayList(i32) = .empty,
 };
-pub const MotorInfoRequest = struct {
+pub const RoleRecordComponentPb = struct {
     pub const default: @This() = .{};
+    IsAutoRole: bool = false,
+    ConstateId: i64 = 0,
+};
+pub const HackingComponentPb = struct {
+    pub const default: @This() = .{};
+    EntityIds: std.ArrayList(i64) = .empty,
+};
+pub const EEntityType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Player = 0,
+    Npc = 1,
+    Monster = 2,
+    SceneItem = 5,
+    Custom = 6,
+    Vision = 7,
+    Animal = 8,
+    ClientOnly = 9,
+    Vehicle = 10,
+    PlayerEntity = 11,
+    SceneEntity = 12,
+};
+pub const EntityOnLandedResponse = struct {
+    pub const default: @This() = .{};
+};
+pub const MonsterBoomPush = struct {
+    pub const default: @This() = .{};
+    Delay: i32 = 0,
+};
+pub const DFsmBlackboardCustom = struct {
+    pub const default: @This() = .{};
+    Key: []const u8 = "",
+    Value: i32 = 0,
+};
+pub const GrapplingHookPointComponentPb = struct {
+    pub const default: @This() = .{};
+    HookLockPointDisabled: bool = false,
+};
+pub const SkillComponentPb = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+    ConstateId: i64 = 0,
+};
+pub const SurvivorsMonsterPbData = struct {
+    pub const default: @This() = .{};
+    SpawnPointEntityId: i32 = 0,
+};
+pub const TowerInfoData = struct {
+    pub const default: @This() = .{};
+    DangerLevel: i32 = 0,
+    MaxFloor: i32 = 0,
+};
+pub const BtType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    BtTypeInvalid = 0,
+    BtTypeQuest = 1,
+    BtTypeLevelPlay = 2,
+    BtTypeInst = 3,
+    BtTypeInstDecision = 4,
+};
+pub const StaticHookMoveType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Hook = 0,
+    Pull = 1,
+};
+pub const OnlineMotorLevelUnLockTime = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    UnLockTime: i64 = 0,
+};
+pub const AttributesIdsComponentPb = struct {
+    pub const default: @This() = .{};
+    PbSceneItemAttributeIds: std.ArrayList(i32) = .empty,
+};
+pub const RoleVisionRecommendDataRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const BuffEffectCd = struct {
+    pub const default: @This() = .{};
+    BuffId: i64 = 0,
+    ListCdRemaining: std.ArrayList(i32) = .empty,
+};
+pub const FollowerType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    EPlayerFollowerDefault = 0,
+    EPlayerFollowerExploreSkill = 1,
+    EPlayerFollowerAuxiliary = 2,
+    EPlayerFollowerSpecialItem = 3,
+    EPlayerFollowerMotor = 4,
+    EPlayerFollowerMax = 5,
+};
+pub const PlayerBasicInfoGetRequest = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+};
+pub const SceneTraceRequest = struct {
+    pub const default: @This() = .{};
+    SceneTraceId: i64 = 0,
+};
+pub const RoleTrialTask = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    ChallengeState: i32 = 0,
+    BeginOpenTime: i64 = 0,
+    EndOpenTime: i64 = 0,
+};
+pub const BulletPatternNotify = struct {
+    pub const default: @This() = .{};
+    BulletPatternHandleId: i64 = 0,
+    BulletPatternId: i32 = 0,
+};
+pub const TrapDefenseAuxiliaryPbData = struct {
+    pub const default: @This() = .{};
+    ConfigId: std.ArrayList(i32) = .empty,
+};
+pub const NewLinkBurstPush = struct {
+    pub const default: @This() = .{};
+};
+pub const NodeStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NotActive = 0,
+    BeforeActivate = 1,
+    Activate = 2,
+    Completing = 3,
+    CompletedSuccess = 4,
+    CompletedFailed = 5,
+    Suspend = 6,
+    Destroy = 7,
+};
+pub const GachaReward = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    ItemCount: i32 = 0,
+};
+pub const ActorVisibleNotify = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    IsActorVisible: bool = false,
+};
+pub const RoleElementChangeRequest = struct {
+    pub const default: @This() = .{};
+    ElementType: i32 = 0,
+};
+pub const UpdatePlayStationBlockAccountRequest = struct {
+    pub const default: @This() = .{};
+    BlockedIds: std.ArrayList([]const u8) = .empty,
+};
+pub const PlayerBattleStateChangeNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    InBattle: bool = false,
+};
+pub const ResonInfo = struct {
+    pub const default: @This() = .{};
+    ResonId: i32 = 0,
+    IsOpen: bool = false,
+    Increase: i32 = 0,
+};
+pub const UseItemProgress = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const SceneAreaState = struct {
+    pub const default: @This() = .{};
+    AreaId: i32 = 0,
+    State: bool = false,
+};
+pub const MotorCreateRequest = struct {
+    pub const default: @This() = .{};
+    IsCreate: bool = false,
+};
+pub const ToughCalcExtraRatioChangeRequest = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    Duration: i32 = 0,
+};
+pub const MapUnlockDataNotify = struct {
+    pub const default: @This() = .{};
+    UnlockMultiMapIds: std.ArrayList(i32) = .empty,
+    UnlockMapBlockIds: std.ArrayList(i32) = .empty,
+};
+pub const TemplateSpawnerType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    TemplateDefault = 0,
+    TemplateMatrix = 1,
+};
+pub const MainPhantomRecommendInfo = struct {
+    pub const default: @This() = .{};
+    Usage: i32 = 0,
+    MonsterId: i32 = 0,
+    FetterGroupId: i32 = 0,
+};
+pub const PlayerAttrKey = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Level = 0,
+    Exp = 1,
+    Coin = 2,
+    RareCoin = 3,
+    HeadPhoto = 4,
+    HeadFrame = 5,
+    AreaId = 6,
+    Name = 7,
+    Sign = 8,
+    Sex = 9,
+    OriginWorldLevel = 10,
+    CurWorldLevel = 11,
+    WorldLevelTimeStamp = 12,
+    CashCoin = 13,
+    WorldPermission = 14,
+    PlayerTitle = 15,
+};
+pub const PayItemInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    PayId: i32 = 0,
+    ItemId: i32 = 0,
+    ItemCount: i32 = 0,
+    BonusItemCount: i32 = 0,
+    SpecialBonusItemCount: i32 = 0,
+    CanSpecialBonus: bool = false,
+    StageImage: []const u8 = "",
+    ProductId: []const u8 = "",
+    Amount: []const u8 = "",
+    ComplianceDetail: []const u8 = "",
+    Quality: i32 = 0,
+};
+pub const ICustomScreenTextSettingPb = struct {
+    pub const default: @This() = .{};
+    ShowTextInfo: ?union(enum) {
+        IsShowTextInfo: bool,
+    } = null,
+    TextContent: ?union(enum) {
+        TidTextContent: []const u8,
+    } = null,
+    EdTextContent: ?union(enum) {
+        EdTidTextContent: []const u8,
+    } = null,
+};
+pub const MapCancelTraceRequest = struct {
+    pub const default: @This() = .{};
+    MarkId: i32 = 0,
+};
+pub const LivenessTask = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Current: i32 = 0,
+    Target: i32 = 0,
+    IsFinished: bool = false,
+    IsTaken: bool = false,
+    ConditionFinishState: bool = false,
+};
+pub const PlayerTitleDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const LevelPlayDestroyActionCtxPb = struct {
+    pub const default: @This() = .{};
+    LevelPlayId: i32 = 0,
+};
+pub const ShortMessageInfo = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    LastConfigId: i32 = 0,
+    IsRead: bool = false,
+    IsReceived: bool = false,
+    Options: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    UnlockTime: i64 = 0,
+    IsFinish: bool = false,
+};
+pub const ANStartRequest = struct {
+    pub const default: @This() = .{};
+    SkillId: i64 = 0,
+    MontageIndex: i32 = 0,
+    AnIndex: i32 = 0,
+};
+pub const BattleFormation = struct {
+    pub const default: @This() = .{};
+    SelectRoles: std.ArrayList(i32) = .empty,
+    BuffSelect: i32 = 0,
+    SkillBranchIds: std.ArrayList(i32) = .empty,
+};
+pub const AnimationGameplayTagNotify = struct {
+    pub const default: @This() = .{};
+    AddTagIds: i32 = 0,
+    RemoveTagIds: bool = false,
+};
+pub const SceneMonsterCreatedMonsterInfo = struct {
+    pub const default: @This() = .{};
+    PrefabId: i32 = 0,
+    MapId: i32 = 0,
+    BaseLife: i64 = 0,
+    State: i32 = 0,
+};
+pub const OneFishingIllustratedData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    MaxSize: i32 = 0,
+    MinSize: i32 = 0,
+};
+pub const AchievementGroupEntry = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    FinishTime: u32 = 0,
+    IsReceive: bool = false,
+};
+pub const LogicStateComponentPb = struct {
+    pub const default: @This() = .{};
+    PositionState: i32 = 0,
+    MoveState: i32 = 0,
+    DirectionState: i32 = 0,
+    PositionSubState: i32 = 0,
+};
+pub const FishingEntrustStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Created = 0,
+    Acceptable = 1,
+    Accepted = 2,
+};
+pub const DetectionTarget = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Type: i32 = 0,
+    UnlockState: bool = false,
+    RefresherTime: i64 = 0,
+    DetectionId: i32 = 0,
+    IsTrace: i32 = 0,
+};
+pub const NPCPerformGroupComponentPb = struct {
+    pub const default: @This() = .{};
+    Type: []const u8 = "",
+    State: []const u8 = "",
+};
+pub const KurotatoInstInfo = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    CurWave: i32 = 0,
+};
+pub const DeleteVisionEquipGroupRequest = struct {
+    pub const default: @This() = .{};
+    Index: i32 = 0,
+};
+pub const QuestAcceptActionCtxPb = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const RoleTagChangeRequest = struct {
+    pub const default: @This() = .{};
+    TagId: i32 = 0,
+    TagCount: i32 = 0,
 };
 pub const ErrorCode = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -40832,273 +43006,284 @@ pub const ErrorCode = enum(i32) {
     ErrFlowerPollutionNotConfig = 3400004,
     ErrorFlowerPollutionState = 3400005,
 };
-pub const H5ViewActivityData = struct {
-    pub const default: @This() = .{};
-    RedDot: bool = false,
+pub const PlayerAttrType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Int32 = 0,
+    String = 1,
 };
-pub const TrapDefenseSpecialCellPbData = struct {
+pub const TransitionWithCustomLoadingPb = struct {
     pub const default: @This() = .{};
     ConfigId: i32 = 0,
 };
-pub const SeamlessTeleportFinishConfigPb = struct {
+pub const DropCatchLevelInfo = struct {
     pub const default: @This() = .{};
-    IsnotStopScreenEffect: bool = false,
-    EffectExtraState: i32 = 0,
+    DropCatchId: i32 = 0,
+    RewardStates: std.ArrayList(i32) = .empty,
+    UnlockTime: i64 = 0,
+    Score: i32 = 0,
 };
-pub const RoleTrialTask = struct {
+pub const BattleStateChangePush = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    ChallengeState: i32 = 0,
-    BeginOpenTime: i64 = 0,
-    EndOpenTime: i64 = 0,
-};
-pub const ItemFinishList = struct {
-    pub const default: @This() = .{};
-    ConditionIdList: std.ArrayList(i32) = .empty,
-};
-pub const ButtonType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Home = 0,
-};
-pub const BoneVisibleData = struct {
-    pub const default: @This() = .{};
-    BoneName: []const u8 = "",
-    HideBone: bool = false,
-};
-pub const RemoveGameplayEffectRequest = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
     EntityId: i64 = 0,
-    IsPrematureRemoval: bool = false,
+    InBattle: bool = false,
 };
-pub const HonamiStoryItemCollectionConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Status: i32 = 0,
-};
-pub const EAttributeType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    None = 0,
-    Lv = 1,
-    LifeMax = 2,
-    Life = 3,
-    Sheild = 4,
-    SheildDamageChange = 5,
-    SheildDamageReduce = 6,
-    Atk = 7,
-    Crit = 8,
-    CritDamage = 9,
-    Def = 10,
-    EnergyEfficiency = 11,
-    CdReduse = 12,
-    ElementEfficiency = 13,
-    DamageChangeNormalSkill = 14,
-    DamageChange = 15,
-    DamageReduce = 16,
-    DamageChangeAuto = 17,
-    DamageChangeCast = 18,
-    DamageChangeUltra = 19,
-    DamageChangeQte = 20,
-    DamageChangePhys = 21,
-    DamageChangeElement1 = 22,
-    DamageChangeElement2 = 23,
-    DamageChangeElement3 = 24,
-    DamageChangeElement4 = 25,
-    DamageChangeElement5 = 26,
-    DamageChangeElement6 = 27,
-    DamageResistancePhys = 28,
-    DamageResistanceElement1 = 29,
-    DamageResistanceElement2 = 30,
-    DamageResistanceElement3 = 31,
-    DamageResistanceElement4 = 32,
-    DamageResistanceElement5 = 33,
-    DamageResistanceElement6 = 34,
-    HealChange = 35,
-    HealedChange = 36,
-    DamageReducePhys = 37,
-    DamageReduceElement1 = 38,
-    DamageReduceElement2 = 39,
-    DamageReduceElement3 = 40,
-    DamageReduceElement4 = 41,
-    DamageReduceElement5 = 42,
-    DamageReduceElement6 = 43,
-    SpecialEnergy5Max = 44,
-    SpecialEnergy5 = 45,
-    ReactionChange3 = 46,
-    ReactionChange4 = 47,
-    ReactionChange5 = 48,
-    ReactionChange6 = 49,
-    ReactionChange7 = 50,
-    ReactionChange8 = 51,
-    ReactionChange9 = 52,
-    ReactionChange10 = 53,
-    ReactionChange11 = 54,
-    ReactionChange12 = 55,
-    ReactionChange13 = 56,
-    ReactionChange14 = 57,
-    ReactionChange15 = 58,
-    EnergyMax = 59,
-    Energy = 60,
-    SpecialEnergy1Max = 61,
-    SpecialEnergy1 = 62,
-    SpecialEnergy2Max = 63,
-    SpecialEnergy2 = 64,
-    SpecialEnergy3Max = 65,
-    SpecialEnergy3 = 66,
-    SpecialEnergy4Max = 67,
-    SpecialEnergy4 = 68,
-    StrengthMax = 69,
-    Strength = 70,
-    StrengthRecover = 71,
-    StrengthPunishTime = 72,
-    StrengthRun = 73,
-    StrengthSwim = 74,
-    StrengthFastSwim = 75,
-    ElementEnergyMax = 76,
-    ElementEnergy = 77,
-    HardnessMax = 78,
-    Hardness = 79,
-    HardnessRecover = 80,
-    HardnessPunishTime = 81,
-    HardnessChange = 82,
-    HardnessReduce = 83,
-    ToughMax = 84,
-    Tough = 85,
-    ToughRecover = 86,
-    ToughChange = 87,
-    ToughReduce = 88,
-    ElementPower1 = 89,
-    ElementPower2 = 90,
-    ElementPower3 = 91,
-    ElementPower4 = 92,
-    ElementPower5 = 93,
-    ElementPower6 = 94,
-    SpecialDamageChange = 95,
-    StrengthFastClimbCost = 96,
-    ElementPropertyType = 97,
-    WeakTime = 98,
-    IgnoreDefRate = 99,
-    IgnoreDamageResistancePhys = 100,
-    IgnoreDamageResistanceElement1 = 101,
-    IgnoreDamageResistanceElement2 = 102,
-    IgnoreDamageResistanceElement3 = 103,
-    IgnoreDamageResistanceElement4 = 104,
-    IgnoreDamageResistanceElement5 = 105,
-    IgnoreDamageResistanceElement6 = 106,
-    SkillToughRatio = 107,
-    StrengthClimbJump = 108,
-    StrengthGliding = 109,
-    Mass = 110,
-    BrakingFrictionFactor = 111,
-    GravityScale = 112,
-    SpeedRatio = 113,
-    DamageChangePhantom = 114,
-    AutoAttackSpeed = 115,
-    CastAttackSpeed = 116,
-    StatusBuildUp1Max = 117,
-    StatusBuildUp1 = 118,
-    StatusBuildUp2Max = 119,
-    StatusBuildUp2 = 120,
-    StatusBuildUp3Max = 121,
-    StatusBuildUp3 = 122,
-    StatusBuildUp4Max = 123,
-    StatusBuildUp4 = 124,
-    StatusBuildUp5Max = 125,
-    StatusBuildUp5 = 126,
-    RageMax = 127,
-    Rage = 128,
-    RageRecover = 129,
-    RagePunishTime = 130,
-    RageChange = 131,
-    RageReduce = 132,
-    ToughRecoverDelayTime = 133,
-    Jump = 134,
-    ParalysisTimeMax = 135,
-    ParalysisTime = 136,
-    ParalysisTimeRecover = 137,
-    WeaknessBuildUp = 138,
-    WeaknessBuildUpMax = 139,
-    WeaknessTotalBonus = 140,
-    BreakWeaknessRatio = 141,
-    WeaknessMastery = 142,
-    MAX = 143,
-};
-pub const EntityTimelineEventType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    LeftIn = 0,
-    LeftOut = 1,
-    RightIn = 2,
-    RightOut = 3,
-};
-pub const RogueWeeklyPlayData = struct {
-    pub const default: @This() = .{};
-    HasRecord: bool = false,
-};
-pub const PlayerAttrKey = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Level = 0,
-    Exp = 1,
-    Coin = 2,
-    RareCoin = 3,
-    HeadPhoto = 4,
-    HeadFrame = 5,
-    AreaId = 6,
-    Name = 7,
-    Sign = 8,
-    Sex = 9,
-    OriginWorldLevel = 10,
-    CurWorldLevel = 11,
-    WorldLevelTimeStamp = 12,
-    CashCoin = 13,
-    WorldPermission = 14,
-    PlayerTitle = 15,
-};
-pub const PushDataCompleteNotify = struct {
-    pub const default: @This() = .{};
-};
-pub const LordGymInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ParkourActivityChallenge = struct {
+pub const TrapDefenseLevelData = struct {
     pub const default: @This() = .{};
     ChallengeId: i32 = 0,
+    CanUnlock: bool = false,
+    TargetProgress: std.ArrayList(i32) = .empty,
+    IsPassed: bool = false,
+    CanGetReward: bool = false,
+    UnlockTime: i64 = 0,
+    IsLeaved: bool = false,
+    MaxFinishWaveTimes: i32 = 0,
+};
+pub const LevelPlayRewardActionCtxPb = struct {
+    pub const default: @This() = .{};
+    LevelPlayId: i32 = 0,
+};
+pub const MotorInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RogueWeeklyLastInfo = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    CurLayer: i32 = 0,
+    MaxLayer: i32 = 0,
+    WorldLevel: i32 = 0,
+};
+pub const InfrV2FirePb = struct {
+    pub const default: @This() = .{};
+    FireExp: i64 = 0,
+    FireLevel: i32 = 0,
+    FireLevelReachTime: i64 = 0,
+    FireStatus: i32 = 0,
+};
+pub const ExecuteQteRequest = struct {
+    pub const default: @This() = .{};
+    DownEntityId: i64 = 0,
+    UpEntityId: i64 = 0,
+    FnvHash: i32 = 0,
+};
+pub const PlayerRebackSceneNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+};
+pub const UseSkillFailPush = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+};
+pub const EEndSkillReason = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Default = 0,
+    BeginOtherSkill = 1,
+    BeHit = 2,
+    BeCounter = 3,
+};
+pub const ChangeStateConfirmPush = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    State: i32 = 0,
+};
+pub const NewTrialRoleInfo = struct {
+    pub const default: @This() = .{};
+    TrialRoleId: i32 = 0,
+    WorldLv: i32 = 0,
+};
+pub const InfluenceInfo = struct {
+    pub const default: @This() = .{};
+    InfluenceId: i32 = 0,
+    RewardIndex: i32 = 0,
+    Relation: i32 = 0,
+};
+pub const DodgeInfoPush = struct {
+    pub const default: @This() = .{};
+    BulletOwnerId: i64 = 0,
+    BulletId: i64 = 0,
+};
+pub const StateTagComponentPb = struct {
+    pub const default: @This() = .{};
+    StateTagId: i32 = 0,
+};
+pub const MontagePlayPush = struct {
+    pub const default: @This() = .{};
+    Name: []const u8 = "",
+    Path: i32 = 0,
+    SpeedRatio: f32 = 0,
+    StartSection: []const u8 = "",
+    StartTimeSeconds: f32 = 0,
+};
+pub const GachaConsume = struct {
+    pub const default: @This() = .{};
+    Times: i32 = 0,
+    Consume: i32 = 0,
+};
+pub const ArrayIntInt = struct {
+    pub const default: @This() = .{};
+    Key: i32 = 0,
+    Value: i32 = 0,
+};
+pub const TempFishPointInfo = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    CurCount: i32 = 0,
+    MaxCount: i32 = 0,
+    ConfigId: i32 = 0,
+    GamePlayId: i32 = 0,
+};
+pub const FloroRanchCommonData = struct {
+    pub const default: @This() = .{};
+    DataId: i32 = 0,
+    ConditionId: i32 = 0,
+    IsLocked: bool = false,
+};
+pub const UnlockRoleSkinListRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FollowShooterComponentPb = struct {
+    pub const default: @This() = .{};
+    PlayerEntityId: i64 = 0,
+    SummonConfigId: i32 = 0,
+};
+pub const SurvivorsLevelInfo = struct {
+    pub const default: @This() = .{};
+    IsUnlocked: bool = false,
+    ConditionGroupId: i32 = 0,
+    WaveId: i32 = 0,
+    KillMonsterCount: i32 = 0,
+    IsFinished: bool = false,
+};
+pub const SignActivity = struct {
+    pub const default: @This() = .{};
+    SignStateList: std.ArrayList(i32) = .empty,
+};
+pub const TetrisState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    TetrisLocked = 0,
+    TetrisUnlocked = 1,
+    TetrisFinished = 2,
+};
+pub const DragonPoolInfo = struct {
+    pub const default: @This() = .{};
+    DragonPoolId: i32 = 0,
+    ActiveStatus: i32 = 0,
+    Level: i32 = 0,
+    InjectedCoreItemCount: i32 = 0,
+};
+pub const BuffEffectExecutePush = struct {
+    pub const default: @This() = .{};
+    HandleId: i32 = 0,
+    Index: i32 = 0,
+};
+pub const TowerLevel = struct {
+    pub const default: @This() = .{};
+    StarByte: i32 = 0,
+    CostTime: i32 = 0,
+};
+pub const VehicleSource = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    VehicleSourceNone = 0,
+    VehicleSourceFishingShip = 1,
+    VehicleSourceGongduolaSummon = 2,
+};
+pub const TsAnimNotifyStateAbsoluteTimeStopPush = struct {
+    pub const default: @This() = .{};
+    Flag: bool = false,
+    Duration: i32 = 0,
+};
+pub const CiacconaGalEndingData = struct {
+    pub const default: @This() = .{};
+    SubEndingDataId: i32 = 0,
+    IsRewarded: bool = false,
+};
+pub const AccessPathTimeServerConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
     BeginTime: i64 = 0,
     EndTime: i64 = 0,
 };
-pub const ANStartNotify = struct {
+pub const EnergyInfo = struct {
     pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    MontageIndex: i32 = 0,
-    AnIndex: i32 = 0,
+    EnergyCount: i32 = 0,
+    LastRenewEnergyTime: i32 = 0,
+    EnergyType: i32 = 0,
 };
-pub const ActivityRoleGiveData = struct {
+pub const CiacconaGalSubEndingData = struct {
     pub const default: @This() = .{};
-    IsGetReward: bool = false,
+    SubEndingDataId: i32 = 0,
+    IsFinished: bool = false,
+    IsRewarded: bool = false,
 };
-pub const FishingIllustratedRewardInfo = struct {
+pub const ExitViewDirectionPush = struct {
+    pub const default: @This() = .{};
+};
+pub const TutorialReceiveRequest = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    CurrentProgress: i32 = 0,
-    TargetProgress: i32 = 0,
-    HasPassed: bool = false,
-    IsTaken: bool = false,
 };
-pub const FlySkinWearRequest = struct {
+pub const PassiveSkillInfo = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkinId: i32 = 0,
+    SkillId: i64 = 0,
+    SkillCdEndTime: i64 = 0,
 };
-pub const CardShowEntry = struct {
+pub const PinballWeapon = struct {
     pub const default: @This() = .{};
-    CardId: i32 = 0,
-    IsRead: bool = false,
+    ConfigId: i32 = 0,
+    IncrId: i32 = 0,
+    FuncValue: i32 = 0,
+    roleId: i32 = 0,
+    SubEntryId: i32 = 0,
 };
-pub const MotorCreateRequest = struct {
-    pub const default: @This() = .{};
-    IsCreate: bool = false,
+pub const SkinRewardActivityRewardState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    InitState = 0,
+    TaskComplete = 1,
+    TaskRewarded = 2,
 };
-pub const MonthCardRequest = struct {
+pub const SceneLoadingFinishRequest = struct {
     pub const default: @This() = .{};
+    SceneId: []const u8 = "",
+};
+pub const RefreshVisionEquipGroupData = struct {
+    pub const default: @This() = .{};
+    IncId: std.ArrayList(i32) = .empty,
+    Name: []const u8 = "",
+};
+pub const LivingStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Alive = 0,
+    Dead = 1,
+    Init = 2,
+};
+pub const MonsterWeaponComponentPb = struct {
+    pub const default: @This() = .{};
+    WeaponId: i32 = 0,
+};
+pub const GetMusicInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FloroRanchSubDungeonData = struct {
+    pub const default: @This() = .{};
+    DataId: i32 = 0,
+    ConditionId: i32 = 0,
+    IsLocked: bool = false,
+    IsFinished: bool = false,
+};
+pub const VisionTriggerNotify = struct {
+    pub const default: @This() = .{};
+    VisionId: i32 = 0,
+};
+pub const BossPilingLevelInfo = struct {
+    pub const default: @This() = .{};
+    id: i32 = 0,
+    UnlockTime: i64 = 0,
+    BossHpNum: i32 = 0,
+    SelectRoleIds: std.ArrayList(i32) = .empty,
+    SkillBranchId: std.ArrayList(i32) = .empty,
+};
+pub const FloroFarmPlayData = struct {
+    pub const default: @This() = .{};
+    HasRecord: bool = false,
 };
 pub const EClientStorageSystemIdType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -41149,1230 +43334,9 @@ pub const EClientStorageSystemIdType = enum(i32) {
     PhoneMsgChatShowRedDot = 46,
     GolemCrack = 47,
 };
-pub const PhantomArenaBadgeReward = struct {
+pub const ClientStorageMapData = struct {
     pub const default: @This() = .{};
-    BadgeRewardId: i32 = 0,
-    NeedCount: i32 = 0,
-    IsTaken: bool = false,
-};
-pub const PlayerTitleLimitInfo = struct {
-    pub const default: @This() = .{};
-    PlayerTitleId: i32 = 0,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const GachaRequest = struct {
-    pub const default: @This() = .{};
-    GachaId: i32 = 0,
-    GachaTimes: i32 = 0,
-};
-pub const RoleChangeUnlockNotify = struct {
-    pub const default: @This() = .{};
-    UnlockRoleIds: std.ArrayList(i32) = .empty,
-    NextAllowChangeTime: i64 = 0,
-};
-pub const GameplayTagData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    TagCount: i32 = 0,
-};
-pub const ArrayIntInt = struct {
-    pub const default: @This() = .{};
-    Key: i32 = 0,
-    Value: i32 = 0,
-};
-pub const LobbyListRequest = struct {
-    pub const default: @This() = .{};
-    IsFriend: bool = false,
-};
-pub const PassiveSkillRemoveRequest = struct {
-    pub const default: @This() = .{};
-    PassiveSkillId: i64 = 0,
-    TargetEntityId: i64 = 0,
-};
-pub const ActivityInviteNewbie = struct {
-    pub const default: @This() = .{};
-    InviteCode: []const u8 = "",
-    Score: i32 = 0,
-    RedDot: bool = false,
-};
-pub const RacingBetsLegMatchData = struct {
-    pub const default: @This() = .{};
-    LegMatchesId: i32 = 0,
-    DangoId: i32 = 0,
-    BettingGearId: i32 = 0,
-    BettingGearCash: i32 = 0,
-    Odds: i32 = 0,
-    OddsVersion: []const u8 = "",
-    LeaveCancelNum: i32 = 0,
-    OddsReward: i32 = 0,
-};
-pub const AdventreTaskState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    UnFinish = 0,
-    Finish = 1,
-    Received = 2,
-};
-pub const CiacconaGalSubEndingData = struct {
-    pub const default: @This() = .{};
-    SubEndingDataId: i32 = 0,
-    IsFinished: bool = false,
-    IsRewarded: bool = false,
-};
-pub const TowerInfoData = struct {
-    pub const default: @This() = .{};
-    DangerLevel: i32 = 0,
-    MaxFloor: i32 = 0,
-};
-pub const FightFormation = struct {
-    pub const default: @This() = .{};
-    FormationId: i32 = 0,
-    CurRole: i32 = 0,
-    RoleIds: std.ArrayList(i32) = .empty,
-    IsCurrent: bool = false,
-};
-pub const SceneTraceRequest = struct {
-    pub const default: @This() = .{};
-    SceneTraceId: i64 = 0,
-};
-pub const RoleSkinTrialContentData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    ChallengeState: i32 = 0,
-};
-pub const ExchangeRewardRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const UpdateAchievementInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ConcomitantsComponentPb = struct {
-    pub const default: @This() = .{};
-    VisionEntityId: std.ArrayList(i64) = .empty,
-    CustomEntityIds: std.ArrayList(i64) = .empty,
-    PhantomRoleId: i64 = 0,
-    BossRushId: i64 = 0,
-};
-pub const TutorialInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const SoarLevelPlayInfo = struct {
-    pub const default: @This() = .{};
-    SoarLevelPlatId: i32 = 0,
-    HistorySoarScore: i32 = 0,
-    ReceiveIds: std.ArrayList(i32) = .empty,
-};
-pub const FriendAllRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const WuWuTaskPack = struct {
-    pub const default: @This() = .{};
-    WuWuPackageId: i32 = 0,
-    UnLockTime: i64 = 0,
-    HadReward: bool = false,
-};
-pub const LevelPlayInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    IsFirst: bool = false,
-    State: i32 = 0,
-    UpdateTime: i64 = 0,
-    GetRewardCount: i32 = 0,
-};
-pub const EntityLoadCompleteNotify = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    EntityIds: std.ArrayList(i64) = .empty,
-    EntityIdsUnload: std.ArrayList(i64) = .empty,
-};
-pub const VersionInfoPush = struct {
-    pub const default: @This() = .{};
-    AppVersion: []const u8 = "",
-    LauncherVersion: []const u8 = "",
-    ResourceVersion: []const u8 = "",
-};
-pub const CiacconaGalEndingData = struct {
-    pub const default: @This() = .{};
-    SubEndingDataId: i32 = 0,
-    IsRewarded: bool = false,
-};
-pub const RoguelikeCurrencyNotify = struct {
-    pub const default: @This() = .{};
-    V2s: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const ShopRecommend = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    RecommendType: i32 = 0,
-    RecommendId: i32 = 0,
-    TabName: []const u8 = "",
-    PrefabPath: []const u8 = "",
-    Sort: i32 = 0,
-    Show: bool = false,
-    TabImage: []const u8 = "",
-};
-pub const RoleShowListUpdateRequest = struct {
-    pub const default: @This() = .{};
-    RoleList: std.ArrayList(i32) = .empty,
-};
-pub const InfluenceInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const StateComponentPb = struct {
-    pub const default: @This() = .{};
-    ConstateId: i64 = 0,
-};
-pub const AchievementInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const FsmPlayMontageRequest = struct {
-    pub const default: @This() = .{};
-    MontageName: []const u8 = "",
-    MontagePathHash: i32 = 0,
-    SpeedRatio: f32 = 0,
-    StartSection: []const u8 = "",
-    StartTimeSeconds: f32 = 0,
-};
-pub const AchievementProgress = struct {
-    pub const default: @This() = .{};
-    CurProgress: i32 = 0,
-    TotalProgress: i32 = 0,
-};
-pub const GolemCrackLevelInfo = struct {
-    pub const default: @This() = .{};
-    NlC: ?union(enum) {
-        state: i32,
-    } = null,
-    VlC: ?union(enum) {
-        UnlockTime: i64,
-    } = null,
-    id: i32 = 0,
-};
-pub const ActivityType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Parkour = 0,
-    GatherActivity = 1,
-    Sign = 2,
-    TowerGuide = 3,
-    NewBieCourse = 4,
-    WorldNewJourney = 5,
-    RougeActivity = 6,
-    DoubleInstanceRewardActivity = 7,
-    RoleTrialActivity = 8,
-    Harvest = 9,
-    NewRoleGuideActivity = 10,
-    PhantomCollect = 11,
-    DailyAdventureActivity = 12,
-    LongShanMainActivity = 13,
-    BossRushActivity = 14,
-    TurnTableActivity = 15,
-    PhotoMemoryActivity = 16,
-    TrackMoonActivity = 17,
-    CircumFluence = 18,
-    TowerDefenceActivity = 19,
-    TimePointRewardActivity = 20,
-    TowerGuideNew = 21,
-    TrackMoonPhase = 22,
-    RiskHarvest = 23,
-    CorniceMeeting = 24,
-    BlackCoastTheme = 25,
-    RogueWhiteCat = 26,
-    ScratchCard = 27,
-    PreheatSign = 28,
-    MowTower = 29,
-    ThroughTrain = 30,
-    SprintSign = 31,
-    MapTravelActivity = 32,
-    FarmGold = 33,
-    NewLordGym = 34,
-    RoleSkinTrialActivity = 35,
-    RogueWeekly = 36,
-    FishingActivity = 37,
-    TeamParkOurActivity = 38,
-    SlashAndTowerLevelPlay = 39,
-    BabelTower = 40,
-    Avignon = 41,
-    BetHorses = 42,
-    Explore = 43,
-    Abyss = 44,
-    RogueRes = 45,
-    H5CircumFluence = 46,
-    DangoMonopoly = 47,
-    CiacconaActivity = 48,
-    ActivityLinkage = 49,
-    RegressActivity = 50,
-    ConsumptiveActivity = 51,
-    PhantomBattle = 52,
-    NewbieCarnival = 53,
-    MoraleActivity = 54,
-    FloroRanchActivity = 55,
-    LifePointChallenge = 56,
-    TrapDefense = 57,
-    JinzhouFlyActivity = 58,
-    FunPlay = 59,
-    MoonPhase = 60,
-    LineCross = 61,
-    HonamiStory = 62,
-    Survivors = 63,
-    PhotoFight = 64,
-    WuWuKuji = 65,
-    FirstPersonParkour = 66,
-    PreHeatTaskActivity = 67,
-    InfrTheme = 68,
-    AdvanceNoticeActivity = 69,
-    PhantomBattleRecord = 70,
-    CoopActivity = 71,
-    PhantomBattleRecordGuide = 72,
-    ArtemisActivity = 73,
-    MotorcycleIpLink = 74,
-    SkinRewardActivity = 75,
-    RoadBookActivity = 76,
-    NewTowerClimbing = 77,
-    MotorFight = 78,
-    Encircle = 79,
-    NewPlayerSupportActivity = 80,
-    SpringFestivalActivity = 81,
-    MotorParkourActivity = 82,
-    TotalTopUp = 83,
-    H5View = 84,
-    MotorDevelop = 85,
-    FlagChallenge = 86,
-    Rhythm = 87,
-    FeiXue = 89,
-    DropCatchActivity = 90,
-    TetrisActivity = 91,
-    InfrThemeV2 = 92,
-    Kurotato = 93,
-    PinballActivity = 94,
-    WuWuWeekSign = 96,
-    AnniversaryTheme = 97,
-    BossPiling = 98,
-    GolemCrackActivity = 99,
-    EdgeRunnerActivity = 100,
-    MotorDecalActivity = 101,
-    MotorParkour = 102,
-    LinkageCheckIn = 103,
-    RoleGiftActivity = 104,
-    PureUIActivity = 200,
-};
-pub const LifePointChallengeData = struct {
-    pub const default: @This() = .{};
-    ChallengeId: i32 = 0,
-    CanGetReward: bool = false,
-    OpenTime: i64 = 0,
-    RewardId: i32 = 0,
-    EntityConfigId: i32 = 0,
-    IsPreChallengeState: bool = false,
-};
-pub const GaSwitchCommonEnemyProCampRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const OrnamentComponentPb = struct {
-    pub const default: @This() = .{};
-    OrnamentIds: std.ArrayList(i32) = .empty,
-};
-pub const BuffStackCountPush = struct {
-    pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    NewStackCount: i32 = 0,
-    IsPrematureRemoval: bool = false,
-    InstigatorId: i64 = 0,
-    NotRefreshDuration: bool = false,
-    NotRefreshPeriod: bool = false,
-    Duration: f32 = 0,
-    Reason: []const u8 = "",
-};
-pub const MotionType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Spurt = 0,
-    Pullback = 1,
-    BeLand = 2,
-    MotionJump = 3,
-    AirSprint = 4,
-    BackFlip = 5,
-    StepAcross = 6,
-    ClimbTop = 7,
-    LimitDodge = 8,
-    CounterAttack = 9,
-};
-pub const TriggerComponentPb = struct {
-    pub const default: @This() = .{};
-    TriggerCount: i32 = 0,
-    ExitTriggerCount: i32 = 0,
-    ConstateId: i64 = 0,
-};
-pub const DrinkMixRole = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    FirstPass: bool = false,
-    MaxLike: bool = false,
-    RewardGet: bool = false,
-};
-pub const FloorParams = struct {
-    pub const default: @This() = .{};
-    FloorMeshPath: []const u8 = "",
-    FloorMaterialPath: []const u8 = "",
-    PosX: f32 = 0,
-    PosY: f32 = 0,
-    FloorAppearTime: f32 = 0,
-    FloorDisappearTime: f32 = 0,
-};
-pub const TransitionWithCustomLoadingPb = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-};
-pub const ServerPlayStationPlayOnlyStateRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ActivateBuffRequest = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    On: bool = false,
-};
-pub const ClientStorageIntData = struct {
-    pub const default: @This() = .{};
-    Data: i32 = 0,
-};
-pub const InfrInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const DetectionTarget = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Type: i32 = 0,
-    UnlockState: bool = false,
-    RefresherTime: i64 = 0,
-    DetectionId: i32 = 0,
-    IsTrace: i32 = 0,
-};
-pub const QuestAcceptActionCtxPb = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-};
-pub const TimelineTrackControlDataPb = struct {
-    pub const default: @This() = .{};
-    ControlPoint: i32 = 0,
-};
-pub const GivebackInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const SurvivorsPlayerCharacterPbData = struct {
-    pub const default: @This() = .{};
-};
-pub const MapTraceRequest = struct {
-    pub const default: @This() = .{};
-    MarkId: i32 = 0,
-};
-pub const MotorDiyOnwedPb = struct {
-    pub const default: @This() = .{};
-    SkinOwned: std.ArrayList(i32) = .empty,
-    StickerOnwed: std.ArrayList(i32) = .empty,
-    DecorationsOwned: std.ArrayList(i32) = .empty,
-    FrameOwned: std.ArrayList(i32) = .empty,
-};
-pub const TrapDefenseAuxiliaryData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Level: i32 = 0,
-    Branch: i32 = 0,
-    MaxLevel: i32 = 0,
-};
-pub const OneForgeConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const SceneAreaState = struct {
-    pub const default: @This() = .{};
-    AreaId: i32 = 0,
-    State: bool = false,
-};
-pub const OneExploreItem = struct {
-    pub const default: @This() = .{};
-    ExploreProgressId: i32 = 0,
-    ExplorePercent: i32 = 0,
-    CurCount: i32 = 0,
-    TotalCount: i32 = 0,
-    IsLocked: bool = false,
-};
-pub const MobileButtonSetting = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Size: f32 = 0,
-    Transparency: f32 = 0,
-    ScreenX: f32 = 0,
-    ScreenY: f32 = 0,
-    ButtonLevel: i32 = 0,
-    PanelLevel: i32 = 0,
-};
-pub const FloroRanchSubDungeonHistoryData = struct {
-    pub const default: @This() = .{};
-    DataId: i32 = 0,
-    MaxDays: i32 = 0,
-    MaxCoins: i32 = 0,
-};
-pub const UnlockRoleSkinListNofity = struct {
-    pub const default: @This() = .{};
-    RoleSkinList: std.ArrayList(i32) = .empty,
-};
-pub const FlyEquipAddNotify = struct {
-    pub const default: @This() = .{};
-    UnlockFlySkinIds: std.ArrayList(i32) = .empty,
-};
-pub const ActiveBulletHandle = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    HandleId: i32 = 0,
-};
-pub const PreOpenDetections = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    PreOpenId: i32 = 0,
-    PreOpenBeginTime: i64 = 0,
-    PreOpenEndTIme: i64 = 0,
-};
-pub const HoldHandComponentPb = struct {
-    pub const default: @This() = .{};
-    TargetEntityId: i64 = 0,
-    HandType: i32 = 0,
-    IsFollow: bool = false,
-};
-pub const RoleFavorListRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const AnimalPerformComponentPb = struct {
-    pub const default: @This() = .{};
-    AnimalInitialPartIds: std.ArrayList(i32) = .empty,
-};
-pub const RbGridPosition = struct {
-    pub const default: @This() = .{};
-    X: i32 = 0,
-    Y: i32 = 0,
-};
-pub const MonsterBoomRequest = struct {
-    pub const default: @This() = .{};
-    Delay: i32 = 0,
-};
-pub const KurotatoCharacterEntityPbData = struct {
-    pub const default: @This() = .{};
-};
-pub const VisionTriggerNotify = struct {
-    pub const default: @This() = .{};
-    VisionId: i32 = 0,
-};
-pub const SimpleTrackReportAsyncRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const EntityOnLandedRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-};
-pub const StateTagComponentPb = struct {
-    pub const default: @This() = .{};
-    StateTagId: i32 = 0,
-};
-pub const ExecuteQteNotify = struct {
-    pub const default: @This() = .{};
-    DownEntityId: i64 = 0,
-    UpEntityId: i64 = 0,
-    FnvHash: i32 = 0,
-};
-pub const ModifyEntityCampNotify = struct {
-    pub const default: @This() = .{};
-    TargetEntityId: i64 = 0,
-    Camp: i32 = 0,
-};
-pub const ActivityOpenType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    TimeLimited = 0,
-    Permanent = 1,
-    LimitToPermanent = 2,
-};
-pub const DeleteVisionEquipGroupRequest = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-};
-pub const MarkPointState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    MarkNormal = 0,
-    MarkDisable = 1,
-    MarkComplete = 2,
-};
-pub const KurotatoInstInfo = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    CurWave: i32 = 0,
-};
-pub const SceneBlockSplitPlayerNeedBlockPush = struct {
-    pub const default: @This() = .{};
-    PlayerNeedBlockId: std.ArrayList(i32) = .empty,
-};
-pub const SceneFishPointData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    EntityConfigId: i32 = 0,
-    CurCount: i32 = 0,
-    MaxCount: i32 = 0,
-    LastUpdateTime: i64 = 0,
-    NextUpdateTime: i64 = 0,
-    RefreshTime: i32 = 0,
-    GamePlayId: i32 = 0,
-    Interacted: bool = false,
-};
-pub const PbOverRoleRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-};
-pub const TeleportFinishRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RbGridDirection = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    RbForward = 0,
-    RbBackward = 1,
-    RbRight = 2,
-    RbLeft = 3,
-};
-pub const WebSignResponse = struct {
-    pub const default: @This() = .{};
-    NoticeSign: []const u8 = "",
-};
-pub const DirectTrainGetPlayerIdRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const TrapDefenseGoldenCoinPbData = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-};
-pub const FurnitureDiySlotInfo = struct {
-    pub const default: @This() = .{};
-    SlotEntityCfgId: i32 = 0,
-    RootFurnitureId: i32 = 0,
-    SubFurnitureIds: std.ArrayList(i32) = .empty,
-};
-pub const RTimeStopInstPush = struct {
-    pub const default: @This() = .{};
-    Flag: bool = false,
-    Duration: i32 = 0,
-};
-pub const BeControlledComponentPb = struct {
-    pub const default: @This() = .{};
-    PlayerEntityId: i64 = 0,
-    RelationId: i32 = 0,
-    IsShow: bool = false,
-    MatchIndex: i32 = 0,
-    ConstateId: i64 = 0,
-};
-pub const DailyQuestTerminateActionCtxPb = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-};
-pub const ItemExchangeInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const MotorParkourRewardState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    MotorParkourRewardLocked = 0,
-    MotorParkourRewardAvailable = 1,
-    MotorParkourRewardRewarded = 2,
-};
-pub const ExchangeRewardResponse = struct {
-    pub const default: @This() = .{};
-    ExchangeShareData: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    ExchangeRewardData: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const ApplyGameplayEffectRequest = struct {
-    pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
-    } = null,
-    Handle: i32 = 0,
-    Id: i64 = 0,
-    Level: i32 = 0,
-    InstigatorId: i64 = 0,
-    ApplyType: i32 = 0,
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    IsActive: bool = false,
-};
-pub const EntityConfigType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    OldEntity = 0,
-    Level = 1,
-    Global = 2,
-    Character = 3,
-    Template = 4,
-    Prefab = 5,
-};
-pub const BtBloodBathedModeInfo = struct {
-    pub const default: @This() = .{};
-    BtType: i32 = 0,
-    BtObjId: i32 = 0,
-    BtObjSetting: i32 = 0,
-};
-pub const RecommendFetterGroupInfo = struct {
-    pub const default: @This() = .{};
-    RecommendFetterGroupId: i32 = 0,
-    CountNeed: i32 = 0,
-};
-pub const FlagChallengeLevelInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    UnlockTime: i64 = 0,
-    State: i32 = 0,
-};
-pub const RecoverPropFromServer = struct {
-    pub const default: @This() = .{};
-    AttrId: i32 = 0,
-    Ratio: i32 = 0,
-    MaxValue: i32 = 0,
-    ValueIncrement: i32 = 0,
-};
-pub const FishingItemRotate = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    No = 0,
-    DirectionDown = 1,
-    DirectionLeft = 2,
-    DirectionUp = 3,
-};
-pub const BattleStateChangeRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    InBattle: bool = false,
-};
-pub const PhantomArenaBadge = struct {
-    pub const default: @This() = .{};
-    BadgeId: i32 = 0,
-    IsUnlock: bool = false,
-};
-pub const PhantomBattleCardSkillUnlockInfo = struct {
-    pub const default: @This() = .{};
-    CardId: i32 = 0,
-    Unlock: bool = false,
-    TargetNum: i32 = 0,
-    CurNum: i32 = 0,
-};
-pub const DirectionType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    GravityUp = 0,
-    GravityDown = 1,
-    GravityLeft = 2,
-    GravityRight = 3,
-};
-pub const RemoveBuffByServerIdS2cRequestNotify = struct {
-    pub const default: @This() = .{};
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    Reason: i32 = 0,
-};
-pub const EntityTimeDilationPush = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    TimeDilation: f32 = 0,
-};
-pub const GameplayCueNotify = struct {
-    pub const default: @This() = .{};
-    GameplayCueId: i64 = 0,
-};
-pub const LivenessTakeRequest = struct {
-    pub const default: @This() = .{};
-    Ids: std.ArrayList(i32) = .empty,
-};
-pub const BuffStackCountRequest = struct {
-    pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    NewStackCount: i32 = 0,
-    IsPrematureRemoval: bool = false,
-    InstigatorId: i64 = 0,
-};
-pub const ApplyVisionGroupRequest = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-    RoleId: i32 = 0,
-};
-pub const SurvivorsWeaponPbData = struct {
-    pub const default: @This() = .{};
-};
-pub const RoleTagChangePush = struct {
-    pub const default: @This() = .{};
-    TagId: i32 = 0,
-    TagCount: i32 = 0,
-};
-pub const EntityRemoveInfo = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Type: i32 = 0,
-};
-pub const FlagChallengeRoleLevelInfo = struct {
-    pub const default: @This() = .{};
-    PerLevel: i32 = 0,
-    PerExp: i32 = 0,
-};
-pub const ConsumptiveTaskType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Unknown = 0,
-    Single = 1,
-    Cycle = 2,
-};
-pub const SceneMonsterCreatedMonsterInfo = struct {
-    pub const default: @This() = .{};
-    PrefabId: i32 = 0,
-    MapId: i32 = 0,
-    BaseLife: i64 = 0,
-    State: i32 = 0,
-};
-pub const LevelPlayOpenActionCtxPb = struct {
-    pub const default: @This() = .{};
-    LevelPlayId: i32 = 0,
-};
-pub const SubActivityBeginTime = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    BeginTime: i64 = 0,
-};
-pub const KurotatoEndlessLevelInfo = struct {
-    pub const default: @This() = .{};
-    FinishWave: i32 = 0,
-    TotalKillCount: i32 = 0,
-    PassRoleIds: std.ArrayList(i32) = .empty,
-};
-pub const FeiXuePreheatInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    State: i32 = 0,
-    QuestUnlockTime: i64 = 0,
-};
-pub const AnimationGameplayTagPush = struct {
-    pub const default: @This() = .{};
-    AddTagIds: i32 = 0,
-    RemoveTagIds: bool = false,
-};
-pub const GmLevelActionCtxPb = struct {
-    pub const default: @This() = .{};
-    JsonStr: []const u8 = "",
-};
-pub const PhantomPutOnRequest = struct {
-    pub const default: @This() = .{};
-    IncId: i32 = 0,
-    RoleId: i32 = 0,
-    Pos: i32 = 0,
-};
-pub const InterruptSkillInfo = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    SkillId: i32 = 0,
-    BulletId: i64 = 0,
-};
-pub const SettingInputType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Normal = 0,
-    Motorcycle = 1,
-};
-pub const DoubleInstActivityReward = struct {
-    pub const default: @This() = .{};
-    GetDoubleInstRwdCount: i32 = 0,
-};
-pub const CoopRoleInfo = struct {
-    pub const default: @This() = .{};
-    CoopRoleId: i32 = 0,
-    RoleLevel: i32 = 0,
-    RewardLevel: i32 = 0,
-    FinishTime: i64 = 0,
-};
-pub const TrapDefenseLevelData = struct {
-    pub const default: @This() = .{};
-    ChallengeId: i32 = 0,
-    CanUnlock: bool = false,
-    TargetProgress: std.ArrayList(i32) = .empty,
-    IsPassed: bool = false,
-    CanGetReward: bool = false,
-    UnlockTime: i64 = 0,
-    IsLeaved: bool = false,
-    MaxFinishWaveTimes: i32 = 0,
-};
-pub const AccessPathTimeServerConfigRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const LongShanMainTaskData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Current: i32 = 0,
-    Target: i32 = 0,
-    IsFinished: bool = false,
-    IsTaken: bool = false,
-    Unlock: bool = false,
-    FinishConditions: std.ArrayList(i32) = .empty,
-    ConditionId: i32 = 0,
-    ConditionGroupId: i32 = 0,
-    UnlockConditionFinish: bool = false,
-};
-pub const QuestReviewDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const AchievementGroupEntry = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    FinishTime: u32 = 0,
-    IsReceive: bool = false,
-};
-pub const MontagePlayPush = struct {
-    pub const default: @This() = .{};
-    Name: []const u8 = "",
-    Path: i32 = 0,
-    SpeedRatio: f32 = 0,
-    StartSection: []const u8 = "",
-    StartTimeSeconds: f32 = 0,
-};
-pub const Rotator = struct {
-    pub const default: @This() = .{};
-    Pitch: f32 = 0,
-    Yaw: f32 = 0,
-    Roll: f32 = 0,
-};
-pub const VisionExploreSkillNotify = struct {
-    pub const default: @This() = .{};
-    ExploreSkill: i32 = 0,
-};
-pub const ConditionTaskState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    ConditionTaskRunning = 0,
-    ConditionTaskFinish = 1,
-    ConditionTaskTaken = 2,
-};
-pub const RogueBossInstData = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    IsUnlock: bool = false,
-    CanUnlock: bool = false,
-    UnlockTime: i64 = 0,
-};
-pub const PlayerHeadDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RefreshBuffDurationPush = struct {
-    pub const default: @This() = .{};
-    BuffIds: std.ArrayList(i64) = .empty,
-};
-pub const AdvertisingPageInfo = struct {
-    pub const default: @This() = .{};
-    ActivityId: i32 = 0,
-    UnlockIndex: i32 = 0,
-    RewardedIndex: i32 = 0,
-};
-pub const FlowActionCtxPb = struct {
-    pub const default: @This() = .{};
-    FlowListName: []const u8 = "",
-    FlowId: i32 = 0,
-    StateId: i32 = 0,
-    ActionId: i32 = 0,
-};
-pub const EntityPositionRequest = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    DungeonInstanceId: i32 = 0,
-};
-pub const PhantomAutoPutRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    PhantomItemIncrId: std.ArrayList(i32) = .empty,
-};
-pub const ActivateBuffNotify = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    On: bool = false,
-};
-pub const PhantomIdentifyRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const ChangeStateRequest = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    FromState: i32 = 0,
-    ToState: i32 = 0,
-};
-pub const FurnitureComponentPb = struct {
-    pub const default: @This() = .{};
-    SlotId: i32 = 0,
-    FurnitureId: i32 = 0,
-};
-pub const HackingComponentPb = struct {
-    pub const default: @This() = .{};
-    EntityIds: std.ArrayList(i64) = .empty,
-};
-pub const EdgeRunnerLordGymPassRecord = struct {
-    pub const default: @This() = .{};
-    LoadGymId: i32 = 0,
-    PassTime: i32 = 0,
-};
-pub const ShopTab = struct {
-    pub const default: @This() = .{};
-    ShopId: i32 = 0,
-    TabId: i32 = 0,
-    Sort: i32 = 0,
-    name: []const u8 = "",
-    Logic: i32 = 0,
-    Enable: bool = false,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-    TabSelectSpritePath: []const u8 = "",
-    TabContentPath: []const u8 = "",
-    Money: std.ArrayList(i32) = .empty,
-};
-pub const PrivateChatHistoryRequest = struct {
-    pub const default: @This() = .{};
-    TargetUid: i32 = 0,
-    StartIndex: i32 = 0,
-};
-pub const RogueWeeklyLastInfo = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    CurLayer: i32 = 0,
-    MaxLayer: i32 = 0,
-    WorldLevel: i32 = 0,
-};
-pub const CombinationKey = struct {
-    pub const default: @This() = .{};
-    KeyNameList: std.ArrayList([]const u8) = .empty,
-};
-pub const PhantomConsumeItem = struct {
-    pub const default: @This() = .{};
-    IncId: i32 = 0,
-    Count: i32 = 0,
-    ItemId: i32 = 0,
-};
-pub const AfterJoinSceneNotify = struct {
-    pub const default: @This() = .{};
-};
-pub const BulletComponentPb = struct {
-    pub const default: @This() = .{};
-    ConstateId: i64 = 0,
-};
-pub const SolarSpeedContext = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    Score: i32 = 0,
-    Ranking: i32 = 0,
-    StartTime: i32 = 0,
-    LapRecord: i32 = 0,
-};
-pub const SilenceNpcNotify = struct {
-    pub const default: @This() = .{};
-    vTs: std.ArrayList(MapEntry(i32, bool)) = .empty,
-};
-pub const AttributeEventEffectData = struct {
-    pub const default: @This() = .{};
-    TriggeredActiveHandles: std.ArrayList(i32) = .empty,
-};
-pub const InputSettingRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const FsmConditionPassPush = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    FromState: i32 = 0,
-    ToState: i32 = 0,
-    ConditionIndex: i32 = 0,
-    Value: bool = false,
-};
-pub const HookInteractActionType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Hooked = 0,
-    ExitMidway = 1,
-    ExitEndpoint = 2,
-};
-pub const InterruptSkillInDelayRequest = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-};
-pub const RbDefaultBlockPbType = struct {
-    pub const default: @This() = .{};
-    IsMainControl: bool = false,
-};
-pub const ESummonType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    ESummonTypeDefault = 0,
-    ESummonTypeConcomitantVision = 1,
-    ESummonTypeConcomitantCustom = 2,
-    ESummonTypeConcomitantPhantomRole = 3,
-    ESummonTypeConcomitantWeakVision = 4,
-    ESummonTypeConcomitantMotorcycle = 5,
-};
-pub const PlayerTitleDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const AdventureItemData = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    ItemNum: i32 = 0,
-};
-pub const StringArrayBlackboard = struct {
-    pub const default: @This() = .{};
-    Values: std.ArrayList([]const u8) = .empty,
-};
-pub const BoardGridPositionInfo = struct {
-    pub const default: @This() = .{};
-    Row: i32 = 0,
-    Column: i32 = 0,
-    RotAngle: i32 = 0,
-};
-pub const GatherActivityTaskState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    GatherLock = 0,
-    GatherRunning = 1,
-    GatherInComplete = 2,
-    GatherDone = 3,
-    GatherTakeReward = 4,
-};
-pub const BuffEffectRequest = struct {
-    pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    Index: i32 = 0,
-};
-pub const FavorQuestStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Locked = 0,
-    CanAccept = 1,
-    Accepted = 2,
-    Completed = 3,
-};
-pub const StaticHookMoveType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Hook = 0,
-    Pull = 1,
-};
-pub const HostTeleportUnlockNotify = struct {
-    pub const default: @This() = .{};
-    HostPlayerId: i32 = 0,
-    HostTeleportId: i32 = 0,
-};
-pub const PayItemInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    PayId: i32 = 0,
-    ItemId: i32 = 0,
-    ItemCount: i32 = 0,
-    BonusItemCount: i32 = 0,
-    SpecialBonusItemCount: i32 = 0,
-    CanSpecialBonus: bool = false,
-    StageImage: []const u8 = "",
-    ProductId: []const u8 = "",
-    Amount: []const u8 = "",
-    ComplianceDetail: []const u8 = "",
-    Quality: i32 = 0,
-};
-pub const EnterAreaRequest = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    LeaveId: i32 = 0,
-};
-pub const FragileChangeRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Flag: bool = false,
-};
-pub const DevLoginCheckData = struct {
-    pub const default: @This() = .{};
-    ProtoVersion: i32 = 0,
-    ProtoMD5: []const u8 = "",
-    ConfigVersion: i32 = 0,
-    ConfigMD5: []const u8 = "",
-    BranchName: []const u8 = "",
-    ProtoSeedMD5: []const u8 = "",
-};
-pub const RTimeStopPush = struct {
-    pub const default: @This() = .{};
-    Flag: bool = false,
-    IsStopCharacter: bool = false,
-    Duration: i32 = 0,
-};
-pub const InfrV2InfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RouletteType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Explore = 0,
-    Function = 1,
-    TrapDefense = 2,
-    Motorcycle = 3,
-};
-pub const StarRewardState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    RiskHarvestCanNoReward = 0,
-    RiskHarvestCanReward = 1,
-    RiskHarvestRewarded = 2,
-};
-pub const RoleTagChangeRequest = struct {
-    pub const default: @This() = .{};
-    TagId: i32 = 0,
-    TagCount: i32 = 0,
-};
-pub const InitRangeRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    EntitiesToRequest: std.ArrayList(i64) = .empty,
-    IsPlayerInRange: bool = false,
-};
-pub const ActiveBuffPush = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    On: bool = false,
-};
-pub const ValidTimeItemRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RangeComponentPb = struct {
-    pub const default: @This() = .{};
-    InRangePlayers: std.ArrayList(i32) = .empty,
-    InRangeEntities: std.ArrayList(i64) = .empty,
-};
-pub const RacingBetsOrganInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Point: i32 = 0,
-};
-pub const ClientCurrentRoleReportPush = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    CurrentRoleId: i32 = 0,
-    CurrentEntityId: i64 = 0,
-};
-pub const ClientStorageBoolData = struct {
-    pub const default: @This() = .{};
-    Data: bool = false,
-};
-pub const RolePhantomEquipInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    PhantomItemIncrId: std.ArrayList(i32) = .empty,
-};
-pub const ChangeStateConfirmRequest = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-};
-pub const SwitchRoleType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    SignleWorld = 0,
-    MultiWorld = 1,
-    FbInstance = 2,
-};
-pub const GuideInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const GetItemCount = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const GetFormationDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const BehaviorTreeDeleteNotify = struct {
-    pub const default: @This() = .{};
-    TreeIncIds: std.ArrayList(i64) = .empty,
+    Data: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
 pub const PhantomArenaRoleInfo = struct {
     pub const default: @This() = .{};
@@ -42380,320 +43344,46 @@ pub const PhantomArenaRoleInfo = struct {
     IsUnlock: bool = false,
     IsTaken: bool = false,
 };
-pub const IntVector2D = struct {
+pub const WeaponSkinDeleteNotify = struct {
     pub const default: @This() = .{};
-    X: i32 = 0,
-    Y: i32 = 0,
+    RoleId: i32 = 0,
+    SkinId: i32 = 0,
 };
-pub const ItemExchangeInfo = struct {
+pub const ExecuteQtePush = struct {
     pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    TodayTimes: i32 = 0,
-    TotalTimes: i32 = 0,
-    DailyLimit: i32 = 0,
-    TotalLimit: i32 = 0,
+    DownEntityId: i64 = 0,
+    UpEntityId: i64 = 0,
+    FnvHash: i32 = 0,
 };
-pub const RemoveBuffByIdS2cRequestNotify = struct {
+pub const SoarLevelPlayInfo = struct {
     pub const default: @This() = .{};
-    BuffId: i64 = 0,
-    StackCount: i32 = 0,
-    Reason: i32 = 0,
+    SoarLevelPlatId: i32 = 0,
+    HistorySoarScore: i32 = 0,
+    ReceiveIds: std.ArrayList(i32) = .empty,
 };
-pub const HonamiStoryRoleSlot = struct {
+pub const HonamiStoryMascotConfig = struct {
     pub const default: @This() = .{};
-    SlotId: i32 = 0,
-    IsUnlocked: bool = false,
+    MascotId: i32 = 0,
+    State: i32 = 0,
 };
-pub const PassiveSkillAddRequest = struct {
-    pub const default: @This() = .{};
-    PassiveSkillId: i64 = 0,
-    TargetEntityId: i64 = 0,
-};
-pub const AceBlackProductAccountInfo = struct {
-    pub const default: @This() = .{};
-    TdmDeviceId: []const u8 = "",
-    IsRoot: bool = false,
-    IsSimulator: bool = false,
-};
-pub const BuffConsumerComponentPb = struct {
+pub const BuffProducerComponentPb = struct {
     pub const default: @This() = .{};
     ConstateId: i64 = 0,
 };
-pub const TransitionWithCharacterDisplayPb = struct {
+pub const TimeCheckRequest = struct {
     pub const default: @This() = .{};
-    StyllId: i32 = 0,
+    ClientTime: i64 = 0,
+    TimeDilation: f32 = 0,
+    FlowTimeDilation: f32 = 0,
 };
-pub const SceneTraceResponse = struct {
-    pub const default: @This() = .{};
-};
-pub const DropCatchLevelInfo = struct {
-    pub const default: @This() = .{};
-    DropCatchId: i32 = 0,
-    RewardStates: std.ArrayList(i32) = .empty,
-    UnlockTime: i64 = 0,
-    Score: i32 = 0,
-};
-pub const CowLevel = struct {
-    pub const default: @This() = .{};
-    LevelScore: i32 = 0,
-};
-pub const EDamageImmune = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Default = 0,
-    Invincible = 1,
-    BuffEffectElement = 2,
-    BulletCurNoCtrl = 3,
-    VehiclePassenger = 4,
-    FishBoat = 5,
-};
-pub const LevelPlayCtxPb = struct {
-    pub const default: @This() = .{};
-    LevelPlayId: i32 = 0,
-};
-pub const RacingBetsTimeTuple = struct {
-    pub const default: @This() = .{};
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const ChildQuestNodeStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NotActive = 0,
-    Enter = 1,
-    EnterAction = 2,
-    Progress = 3,
-    Finished = 4,
-    FinishAction = 5,
-    Fail = 6,
-};
-pub const OccupationPbInfo = struct {
-    pub const default: @This() = .{};
-    ResourceName: []const u8 = "",
-    NodeId: i32 = 0,
-    IncId: i64 = 0,
-};
-pub const NormalLevel = struct {
-    pub const default: @This() = .{};
-    StarByte: i32 = 0,
-};
-pub const GachaConsume = struct {
-    pub const default: @This() = .{};
-    Times: i32 = 0,
-    Consume: i32 = 0,
-};
-pub const CalabashDevelopConditionState = struct {
-    pub const default: @This() = .{};
-    ConditionId: i32 = 0,
-    Rewarded: bool = false,
-};
-pub const ItemPkgOpenNotify = struct {
-    pub const default: @This() = .{};
-    OpenPkg: std.ArrayList(i32) = .empty,
-};
-pub const RoleConfigInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkillBranch: i32 = 0,
-};
-pub const TaskData = struct {
+pub const HarvestLevelReward = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    Status: i32 = 0,
-    Progress: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const CombatCommon = struct {
-    pub const default: @This() = .{};
-    PreMessageId: i64 = 0,
-    MessageId: i64 = 0,
-    Originator: i64 = 0,
-    TimeStamp: f32 = 0,
-    EntityId: i64 = 0,
-    IsServerRequest: bool = false,
-};
-pub const SecGetReportData2FlowRequest = struct {
-    pub const default: @This() = .{};
-    ReportData: []const u8 = "",
-};
-pub const FloatArrayBlackboard = struct {
-    pub const default: @This() = .{};
-    Values: std.ArrayList(f32) = .empty,
-};
-pub const QuestFinishActionCtxPb = struct {
-    pub const default: @This() = .{};
-    QuestId: i32 = 0,
-};
-pub const FsmMontageDurationNotify = struct {
-    pub const default: @This() = .{};
-    MontageHashCode: i32 = 0,
-    DurationTime: i32 = 0,
-};
-pub const DangoMonopolyTaskState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NotCompleted = 0,
-    Completed = 1,
-    HasGet = 2,
-};
-pub const WeaponSkinRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const HonamiStoryNormalItemInfo = struct {
-    pub const default: @This() = .{};
-};
-pub const LiftComponentPb = struct {
-    pub const default: @This() = .{};
-    Location: i32 = 0,
-};
-pub const InfrV2OneTree = struct {
-    pub const default: @This() = .{};
-    TreeId: i32 = 0,
-    status: i32 = 0,
-    CompleteTime: i64 = 0,
-    TotalGiftCount: i64 = 0,
-    LastGiftTime: i64 = 0,
-};
-pub const CombatMaxCaseMessageRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RefreshVisionEquipGroupData = struct {
-    pub const default: @This() = .{};
-    IncId: std.ArrayList(i32) = .empty,
-    Name: []const u8 = "",
-};
-pub const TutorialInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    CreateTime: u32 = 0,
-    GetAward: bool = false,
-};
-pub const MapUnlockFieldNotify = struct {
-    pub const default: @This() = .{};
-    FieldId: i32 = 0,
-};
-pub const VehiclePlayerData = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Seat: i32 = 0,
-};
-pub const EnergyInfo = struct {
-    pub const default: @This() = .{};
-    EnergyCount: i32 = 0,
-    LastRenewEnergyTime: i32 = 0,
-    EnergyType: i32 = 0,
-};
-pub const ClientCurrentRoleReportRequest = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    CurrentRoleId: i32 = 0,
-    CurrentEntityId: i64 = 0,
-};
-pub const VisionEquipGroupInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const CharacterDetachRequest = struct {
-    pub const default: @This() = .{};
-    EntityA: i64 = 0,
-    EntityB: i64 = 0,
-};
-pub const LivenessTask = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Current: i32 = 0,
-    Target: i32 = 0,
-    IsFinished: bool = false,
-    IsTaken: bool = false,
-    ConditionFinishState: bool = false,
-};
-pub const ClientPullResourcePackageRequest = struct {
-    pub const default: @This() = .{};
-    Holder: bool = false,
-};
-pub const ClientDeviceLevel = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Low = 0,
-    Medium = 1,
-    High = 2,
-};
-pub const CiacconaGalChoiceData = struct {
-    pub const default: @This() = .{};
-    ChoiceDataId: i32 = 0,
-    SecondState: bool = false,
-    FirstState: bool = false,
-};
-pub const TimerInfoPb = struct {
-    pub const default: @This() = .{};
-    TimerType: []const u8 = "",
-    NodeId: i32 = 0,
-    EndTime: i64 = 0,
-    PauseTime: i64 = 0,
-};
-pub const ExitViewDirectionPush = struct {
-    pub const default: @This() = .{};
-};
-pub const MailLevel = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    None = 0,
-    General = 1,
-    Important = 2,
-};
-pub const EnergySyncRequest = struct {
-    pub const default: @This() = .{};
-    EnergyTypes: std.ArrayList(i32) = .empty,
-};
-pub const ExploreSkillRoulette = struct {
-    pub const default: @This() = .{};
-    SkillIds: std.ArrayList(i32) = .empty,
-    ExtraItemId: i32 = 0,
-    ExploreSkill: i32 = 0,
-};
-pub const BattleModule = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Damage = 0,
-    GameplayEffect = 1,
-    Log = 2,
-};
-pub const FloroRanchCommonData = struct {
-    pub const default: @This() = .{};
-    DataId: i32 = 0,
-    ConditionId: i32 = 0,
-    IsLocked: bool = false,
-};
-pub const FunPlayChallengeRewardStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    FunPlayCanNoReward = 0,
-    FunPlayCanReward = 1,
-    FunPlayRewarded = 2,
-};
-pub const TalentInfoData = struct {
-    pub const default: @This() = .{};
-    TalentId: i32 = 0,
+    StartTime: i32 = 0,
+    IsOpen: bool = false,
+    Points: i32 = 0,
+    Diff: i32 = 0,
     State: i32 = 0,
-};
-pub const TriggerExitSkillPush = struct {
-    pub const default: @This() = .{};
-    EnterEntityId: i64 = 0,
-    LeaveEntityId: i64 = 0,
-};
-pub const SimpleCombatSplineMovePbType = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-};
-pub const AbyssPluginItemInfo = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-    IncrId: i32 = 0,
-    FuncValue: i32 = 0,
-};
-pub const HarvestPointReward = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    State: i32 = 0,
-};
-pub const WeatherControlInfoWithoutCheckAsyncRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const GlobalFixCtxPb = struct {
-    pub const default: @This() = .{};
-    FixId: i32 = 0,
 };
 pub const FadeBackgroundFadeOutEffectBlackPb = struct {
     pub const default: @This() = .{};
@@ -42705,863 +43395,27 @@ pub const FadeBackgroundFadeOutEffectBlackPb = struct {
     } = null,
     FadeColor: i32 = 0,
 };
-pub const DFsm = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    CurrentState: i32 = 0,
-    Flag: i32 = 0,
-    StateElapseTime: i32 = 0,
-};
-pub const TutorialReceiveRequest = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-};
-pub const ToughCalcExtraRatioChangeRequest = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    Duration: i32 = 0,
-};
-pub const EntityStateReadyNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    TagId: i32 = 0,
-    Ready: bool = false,
-};
-pub const SceneDateUpdateReason = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    TimeFlowAuto = 0,
-    LevelPlayAuto = 1,
-    PlayerOperate = 2,
-};
-pub const BossRushRewardClaimStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Incomplete = 0,
-    Claimable = 1,
-    Claimed = 2,
-};
-pub const FsmStateBehaviorType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Enter = 0,
-    Exit = 1,
-    BindStart = 2,
-    BindEnd = 3,
-    Task = 4,
-};
-pub const BossPilingLevelInfo = struct {
-    pub const default: @This() = .{};
-    id: i32 = 0,
-    UnlockTime: i64 = 0,
-    BossHpNum: i32 = 0,
-    SelectRoleIds: std.ArrayList(i32) = .empty,
-    SkillBranchId: std.ArrayList(i32) = .empty,
-};
-pub const MapMarkShowInfo = struct {
-    pub const default: @This() = .{};
-    MarkId: i32 = 0,
-    ShowFlag: u32 = 0,
-};
-pub const ANStartPush = struct {
-    pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    MontageIndex: i32 = 0,
-    AnIndex: i32 = 0,
-};
-pub const TeleportDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const AnimStateChangeInfo = struct {
-    pub const default: @This() = .{};
-    AnimationStates: std.ArrayList(i32) = .empty,
-    SpecialAnimationStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const EntityPatrolStopRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-};
-pub const DrownNotify = struct {
-    pub const default: @This() = .{};
-};
-pub const AdviceSetRequest = struct {
-    pub const default: @This() = .{};
-    IsShow: bool = false,
-};
-pub const DragonPoolInfo = struct {
-    pub const default: @This() = .{};
-    DragonPoolId: i32 = 0,
-    ActiveStatus: i32 = 0,
-    Level: i32 = 0,
-    InjectedCoreItemCount: i32 = 0,
-};
-pub const GuideTriggerRequest = struct {
-    pub const default: @This() = .{};
-    GroupId: i32 = 0,
-};
-pub const ApplyGEType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Common = 0,
-    UseExtraTime = 1,
-};
-pub const MoonChasingTrackMoonHandbookRewardNotify = struct {
-    pub const default: @This() = .{};
-    Ids: std.ArrayList(i32) = .empty,
-};
-pub const AfterTeleportScreenColor = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    AfterTeleportScreenColorBlack = 0,
-    AfterTeleportScreenColorWhite = 1,
-};
-pub const GuideFinishRequest = struct {
-    pub const default: @This() = .{};
-    GroupId: i32 = 0,
-};
-pub const SystemMarkHideInfoPb = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    MapId: i32 = 0,
-    HideInfo: []const u8 = "",
-};
-pub const DarkCoastDeliveryRequest = struct {
-    pub const default: @This() = .{};
-    DragonPoolId: i32 = 0,
-};
-pub const InteractProgress = struct {
-    pub const default: @This() = .{};
-    NpcId: std.ArrayList(i32) = .empty,
-};
-pub const HonamiStoryScoreRewardInfo = struct {
-    pub const default: @This() = .{};
-    ScoreRewardId: i32 = 0,
-    Status: i32 = 0,
-};
-pub const ItemLockRequest = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    IncrId: i32 = 0,
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopRequest = struct {
-    pub const default: @This() = .{};
-    Flag: bool = false,
-    Duration: i32 = 0,
-};
-pub const PullingFoundationComponentPb = struct {
-    pub const default: @This() = .{};
-    RelationId: i32 = 0,
-    MatchIndex: i32 = 0,
-};
-pub const ChangeStateConfirmPush = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-};
-pub const EShieldUpdateType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    EShieldUpdateTypeAdd = 0,
-    EShieldUpdateTypeDel = 1,
-    EShieldUpdateTypeModify = 2,
-};
-pub const InterruptSkillInDelayPush = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-};
-pub const MotorDiyInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ListenInformation = struct {
-    pub const default: @This() = .{};
-    Id: std.ArrayList(i32) = .empty,
-    Range: f32 = 0,
-};
-pub const InfrTaskStatusPb = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    InfrTaskRunning = 0,
-    InfrTaskFinish = 1,
-    InfrTaskTaken = 2,
-};
-pub const WeaponItemRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const LoadingConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const TransitionFlowPb = struct {
-    pub const default: @This() = .{};
-    FlowListName: []const u8 = "",
-    FlowId: i32 = 0,
-    StateId: i32 = 0,
-};
-pub const FishCup = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    SilverCup = 0,
-    NormalCup = 1,
-    GoldCup = 2,
-};
-pub const DropComponentPb = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    ShowPlanId: i32 = 0,
-    ItemCount: i32 = 0,
-    EntityConfigId: i32 = 0,
-};
-pub const CalabashSkinDataRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const BabelDebuff = struct {
+pub const BabelBuff = struct {
     pub const default: @This() = .{};
     BuffId: i32 = 0,
     Unlocked: bool = false,
 };
-pub const AdventureManualRequest = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-};
-pub const ANStartRequest = struct {
-    pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    MontageIndex: i32 = 0,
-    AnIndex: i32 = 0,
-};
-pub const PlayerHeadDataResponse = struct {
-    pub const default: @This() = .{};
-    PlayerHeadDataIds: std.ArrayList(i32) = .empty,
-};
-pub const SummonEntityNotify = struct {
-    pub const default: @This() = .{};
-    SummonerId: i64 = 0,
-    SummonIds: std.ArrayList(i64) = .empty,
-};
-pub const RoleInstanceList = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    IsUnlock: bool = false,
-    CanUnlock: bool = false,
-};
-pub const OrderRemoveBuffNotify = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    StackCount: i32 = 0,
-};
-pub const LongArrayBlackboard = struct {
-    pub const default: @This() = .{};
-    Values: std.ArrayList(i64) = .empty,
-};
-pub const RbVisionBlockPbType = struct {
-    pub const default: @This() = .{};
-};
-pub const RoleBrief = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Level: i32 = 0,
-};
-pub const PassiveSkillRemoveNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    SkillIdList: std.ArrayList(i64) = .empty,
-};
-pub const SummonsComponentPb = struct {
-    pub const default: @This() = .{};
-    Version: i32 = 0,
-};
-pub const UpdatePlayStationBlockAccountResponse = struct {
-    pub const default: @This() = .{};
-};
-pub const ShieldInfoPb = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    ConfigId: i32 = 0,
-    ShieldValue: i32 = 0,
-    Priority: i32 = 0,
-    BuffHandle: i32 = 0,
-    IsValid: bool = false,
-};
-pub const LivenessRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const PhotoMemoryRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const MotorFightTalentPb = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Unlock: bool = false,
-    InUse: bool = false,
-};
-pub const ClientStorageMapData = struct {
-    pub const default: @This() = .{};
-    Data: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const FlowStartTeleportCtxPb = struct {
-    pub const default: @This() = .{};
-    FlowListName: []const u8 = "",
-    FlowId: i32 = 0,
-    StateId: i32 = 0,
-};
-pub const EnterViewDirectionPush = struct {
-    pub const default: @This() = .{};
-};
-pub const HonamiStoryPosInfo = struct {
-    pub const default: @This() = .{};
-    IsCross: bool = false,
-    Posotion: i32 = 0,
-};
-pub const CiacconaGalRewardData = struct {
-    pub const default: @This() = .{};
-    RewardDataId: i32 = 0,
-    CanReceive: bool = false,
-    IsRewarded: bool = false,
-};
-pub const BuffEffectCd = struct {
-    pub const default: @This() = .{};
-    BuffId: i64 = 0,
-    ListCdRemaining: std.ArrayList(i32) = .empty,
-};
-pub const MowTowerRewardStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    CanNoReward = 0,
-    CanReward = 1,
-    Rewarded = 2,
-};
-pub const RoleSkinChangeRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkinId: i32 = 0,
-    IsWearWeaponSkin: bool = false,
-};
-pub const FormationRoleInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    MaxHp: i32 = 0,
-    CurHp: i32 = 0,
-    Level: i32 = 0,
-    RoleSkinId: i32 = 0,
-    SkillBranchId: i32 = 0,
-};
-pub const TimeCheckNotify = struct {
-    pub const default: @This() = .{};
-    ClientTime: i64 = 0,
-    ServerTime: i64 = 0,
-    ServerCombatTime: i64 = 0,
-    ServerStopTime: i64 = 0,
-    ServerFlowTimestamp: i64 = 0,
-};
-pub const MailBindInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const SelectDetectionTarget = struct {
-    pub const default: @This() = .{};
-    DetectionId: i32 = 0,
-    Type: i32 = 0,
-    Id: i32 = 0,
-    IsTrace: i32 = 0,
-};
-pub const FlySkinWearAllRoleRequest = struct {
-    pub const default: @This() = .{};
-    SkinId: i32 = 0,
-};
-pub const TrapDefenseBuildingPbData = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    battleLevel: i32 = 0,
-    ConstructCost: i32 = 0,
-    DeconstructReturn: i32 = 0,
-};
-pub const PassiveSkillRemovePush = struct {
-    pub const default: @This() = .{};
-    PassiveSkillId: i64 = 0,
-    TargetEntityId: i64 = 0,
-};
-pub const PrivateChatOperateType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    CloseChat = 0,
-    OpenChat = 1,
-    ReadMsg = 2,
-};
-pub const MonsterInfoPreview = struct {
-    pub const default: @This() = .{};
-    WaveConfigId: i32 = 0,
-    HpPpb: i32 = 0,
-    Damage: i64 = 0,
-    Round: i32 = 0,
-    IsDead: bool = false,
-};
-pub const ExecuteQtePush = struct {
-    pub const default: @This() = .{};
-    DownEntityId: i64 = 0,
-    UpEntityId: i64 = 0,
-    FnvHash: i32 = 0,
-};
-pub const PhantomArenaChallengeInfo = struct {
-    pub const default: @This() = .{};
-    ChallengeInfoId: i32 = 0,
-    IsUnlock: bool = false,
-    CanReChallenge: bool = false,
-    LastCardRoleId: i32 = 0,
-    LastCardGroupIndex: i32 = 0,
-    FinishConditions: std.ArrayList(i32) = .empty,
-    IsUncover: bool = false,
-    IsShow: bool = false,
-};
-pub const AbyssChallengeData = struct {
-    pub const default: @This() = .{};
-    ChallengeId: i32 = 0,
-    CanUnlock: bool = false,
-    CanChallenge: bool = false,
-    UnlockTime: i64 = 0,
-    ConditionFinishState: bool = false,
-    MaxProgress: i32 = 0,
-    MinPassTime: i32 = 0,
-    IsPassed: bool = false,
-};
-pub const GuessJokerLevelInfo = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    LevelPass: bool = false,
-    UnLock: bool = false,
-    RewardGet: bool = false,
-    PlayerWin: bool = false,
-};
-pub const OneForgeInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    LastRoleId: i32 = 0,
-    LimitTotalCount: i32 = 0,
-    LimitForgeCount: i32 = 0,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const PhantomCollectProgress = struct {
-    pub const default: @This() = .{};
-    Phantoms: std.ArrayList(i32) = .empty,
-};
-pub const RemoveGameplayEffectNotify = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    EntityId: i64 = 0,
-};
-pub const UseSkillFailRequest = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-};
-pub const GachaPoolInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-    Title: []const u8 = "",
-    Description: []const u8 = "",
-    UiType: i32 = 0,
-    ThemeColor: []const u8 = "",
-    ShowIdList: std.ArrayList(i32) = .empty,
-    UpList: std.ArrayList(i32) = .empty,
-    PreviewIdList: std.ArrayList(i32) = .empty,
-    ComplianceDetail: []const u8 = "",
-};
-pub const DoubleDropFrom = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    UnDefineDouble = 0,
-    DoubleActivity = 1,
-    FromRegress = 2,
-};
-pub const PhantomSkinUnlockNotify = struct {
-    pub const default: @This() = .{};
-    PhantomSkinList: std.ArrayList(i32) = .empty,
-};
-pub const RoleActivateSkillRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkillNodeId: i32 = 0,
-};
-pub const ICustomScreenTextSettingPb = struct {
-    pub const default: @This() = .{};
-    ShowTextInfo: ?union(enum) {
-        IsShowTextInfo: bool,
-    } = null,
-    TextContent: ?union(enum) {
-        TidTextContent: []const u8,
-    } = null,
-    EdTextContent: ?union(enum) {
-        EdTidTextContent: []const u8,
-    } = null,
-};
-pub const InfrV2FirePb = struct {
-    pub const default: @This() = .{};
-    FireExp: i64 = 0,
-    FireLevel: i32 = 0,
-    FireLevelReachTime: i64 = 0,
-    FireStatus: i32 = 0,
-};
-pub const LeaveInstEscActionCtxPb = struct {
-    pub const default: @This() = .{};
-    InstanceId: i32 = 0,
-};
-pub const CalabashCfg = struct {
-    pub const default: @This() = .{};
-    LevelUpExp: i32 = 0,
-    LevelUpCondition: i32 = 0,
-    CatchGain: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const LevelPlayList = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-    LevelPlayId: i32 = 0,
-    State: i32 = 0,
-    IsUnlock: bool = false,
-    UnlockTime: i64 = 0,
-    PlayTime: i32 = 0,
-};
-pub const PrivateChatDataResponse = struct {
-    pub const default: @This() = .{};
-    LoadSucc: bool = false,
-};
-pub const MotorTaskProcessPb = struct {
-    pub const default: @This() = .{};
-    Current: i32 = 0,
-    Target: i32 = 0,
-};
-pub const KillProgress = struct {
-    pub const default: @This() = .{};
-    MonId: std.ArrayList(i32) = .empty,
-    PrefabNum: i32 = 0,
-    CurrNum: i32 = 0,
-    TotalNum: i32 = 0,
-};
-pub const KurotatoMonsterEntityPbData = struct {
-    pub const default: @This() = .{};
-};
-pub const StorageInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const DropVisionItemResult = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    Drop: bool = false,
-};
-pub const WeaponBreachRequest = struct {
-    pub const default: @This() = .{};
-    IncId: i32 = 0,
-};
-pub const GachaInfoRequest = struct {
-    pub const default: @This() = .{};
-    Language: i32 = 0,
-};
-pub const Int2Long = struct {
-    pub const default: @This() = .{};
-    First: i32 = 0,
-    Second: i64 = 0,
-};
-pub const VehicleSource = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    VehicleSourceNone = 0,
-    VehicleSourceFishingShip = 1,
-    VehicleSourceGongduolaSummon = 2,
-};
-pub const ScratchCardRewardData = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const PinballRoleData = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    RoleLevel: i32 = 0,
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopPush = struct {
-    pub const default: @This() = .{};
-    Flag: bool = false,
-    Duration: i32 = 0,
-};
-pub const HonamiStoryAreaConfig = struct {
-    pub const default: @This() = .{};
-    AreaId: i32 = 0,
-    Status: i32 = 0,
-    SecreteStatus: i32 = 0,
-};
-pub const SkillNodeInfo = struct {
-    pub const default: @This() = .{};
-    SubProtocol: i32 = 0,
-    MontageIndex: i32 = 0,
-    SpeedRatio: f32 = 0,
-    SkillSingleId: i32 = 0,
-    SkillIndex: i32 = 0,
-    StartSection: []const u8 = "",
-    StartTimeSeconds: f32 = 0,
-};
-pub const DamageContext = struct {
-    pub const default: @This() = .{};
-    Source: ?union(enum) {
-        SourceType: i32,
-    } = null,
-    Bullet: ?union(enum) {
-        BulletId: i64,
-    } = null,
-    Skill: ?union(enum) {
-        SkillId: i64,
-    } = null,
-    SkillMessage: ?union(enum) {
-        SkillMessageId: i64,
-    } = null,
-    BulletTags: std.ArrayList(i32) = .empty,
-};
-pub const CumulativeShopTaskData = struct {
-    pub const default: @This() = .{};
-    Current: i32 = 0,
-    TargetProgress: i32 = 0,
-};
-pub const FloroFarmPlayData = struct {
-    pub const default: @This() = .{};
-    HasRecord: bool = false,
-};
-pub const MotorFightLevelPb = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    OpenTime: i64 = 0,
-    Cleared: bool = false,
-    BestScore: i32 = 0,
-    LastRoleId: i32 = 0,
-};
-pub const SetFocusModeDeterConditionRequest = struct {
-    pub const default: @This() = .{};
-    DisableId: bool = false,
-};
-pub const ICustomScreenSpinePb = struct {
-    pub const default: @This() = .{};
-    SpineId: i32 = 0,
-};
-pub const ProtoKeyRequest = struct {
-    pub const default: @This() = .{};
-    IsLogin: bool = false,
-    TraceId: []const u8 = "",
-};
-pub const ClientStorageListData = struct {
-    pub const default: @This() = .{};
-    Data: std.ArrayList(i32) = .empty,
-};
-pub const NpcDriveVehicleComponentPb = struct {
-    pub const default: @This() = .{};
-    VehicleCreatureId: i64 = 0,
-    Seat: i32 = 0,
-};
-pub const ENewLinkStage = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NewLinkStageNone = 0,
-    NewLinkStageLock = 1,
-    Accumulate = 2,
-    Ready = 3,
-    Burst = 4,
-};
-pub const IntArrayBlackboard = struct {
-    pub const default: @This() = .{};
-    Values: std.ArrayList(i32) = .empty,
-};
-pub const ActivityCorniceMeetingLevelEntryData = struct {
-    pub const default: @This() = .{};
-    MaxScore: i32 = 0,
-    RemainTime: i32 = 0,
-    UnlockTime: i64 = 0,
-    RewardedMap: std.ArrayList(i32) = .empty,
-};
-pub const RangeType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    RangeEnter = 0,
-    RangeLeave = 1,
-    RangeInit = 2,
-    RangeInitOut = 3,
-};
-pub const MainPhantomRecommendInfo = struct {
-    pub const default: @This() = .{};
-    Usage: i32 = 0,
-    MonsterId: i32 = 0,
-    FetterGroupId: i32 = 0,
-};
-pub const RemoveBuffS2cRequestNotify = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    StackCount: i32 = 0,
-    Reason: i32 = 0,
-};
-pub const FishingTechInfo = struct {
-    pub const default: @This() = .{};
-    NodeId: i32 = 0,
-    Level: i32 = 0,
-    CanUnlock: bool = false,
-};
-pub const NpcPb = struct {
-    pub const default: @This() = .{};
-    SplineEntityId: i32 = 0,
-    SpawnEntityId: i32 = 0,
-};
-pub const GuideInfoResponse = struct {
-    pub const default: @This() = .{};
-    GuideGroupFinishList: std.ArrayList(i32) = .empty,
-};
 pub const DrownRequest = struct {
     pub const default: @This() = .{};
 };
-pub const PhantomItemRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const EntityStateProgress = struct {
-    pub const default: @This() = .{};
-    EntityId: std.ArrayList(i32) = .empty,
-};
-pub const DetectionUnlock = struct {
-    pub const default: @This() = .{};
-    MonsterDetectionIds: std.ArrayList(i32) = .empty,
-    DungeonDetectionIds: std.ArrayList(i32) = .empty,
-    SilentAreaDetectionIds: std.ArrayList(i32) = .empty,
-};
-pub const UpdateVoxelEnvRequest = struct {
-    pub const default: @This() = .{};
-    ServerCaveMode: i32 = 0,
-};
-pub const AttributesIdsComponentPb = struct {
-    pub const default: @This() = .{};
-    PbSceneItemAttributeIds: std.ArrayList(i32) = .empty,
-};
-pub const Vector = struct {
-    pub const default: @This() = .{};
-    X: f32 = 0,
-    Y: f32 = 0,
-    Z: f32 = 0,
-};
-pub const FormationAttr = struct {
-    pub const default: @This() = .{};
-    AttrId: i32 = 0,
-    Ratio: i32 = 0,
-    BaseMaxValue: i32 = 0,
-    MaxValue: i32 = 0,
-    CurrentValue: i32 = 0,
-};
-pub const PatrolComponentPb = struct {
-    pub const default: @This() = .{};
-    Dir: bool = false,
-};
-pub const SceneMode = enum(i32) {
+pub const InputSettingDevice = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Single = 0,
-    Multi = 1,
+    Mouse = 0,
+    Handle = 1,
 };
-pub const Mp4BackgroundColor = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Mp4BackgroundColorBlack = 0,
-    Mp4BackgroundColorWhite = 1,
-};
-pub const ICustomScreenBackgroundImagePb = struct {
+pub const RoleGoDownPush = struct {
     pub const default: @This() = .{};
-    BgPath: []const u8 = "",
 };
-pub const BoardGridDynamicConfig = struct {
-    pub const default: @This() = .{};
-    RowIndex: i32 = 0,
-    ColumnIndex: i32 = 0,
-    Flags: i64 = 0,
-};
-pub const FarmGoldLevelPlayInfo = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    StartTime: i32 = 0,
-    Challenges: bool = false,
-    Points: i32 = 0,
-    LevelRewardGet: bool = false,
-    Difficulty: i32 = 0,
-};
-pub const TutorialUnlockRequest = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-};
-pub const GameplayCueRequest = struct {
-    pub const default: @This() = .{};
-    GameplayCueId: i64 = 0,
-};
-pub const SceneItemEventListenerComponentPb = struct {
-    pub const default: @This() = .{};
-    ConstateId: i64 = 0,
-};
-pub const ExhibitionComponentPb = struct {
+pub const MonthCardDailyRewardNotify = struct {
     pub const default: @This() = .{};
     ItemId: i32 = 0,
-};
-pub const FlowOptionInfo = struct {
-    pub const default: @This() = .{};
-    TalkId: i32 = 0,
-    OptionIndex: i32 = 0,
-};
-pub const RoleOperateSelfBgmRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    IsOpen: bool = false,
-};
-pub const BossRushBuffSelectionStatus = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BuffEmpty = 0,
-    BuffSelected = 1,
-    BuffLocked = 2,
-    BuffInactive = 3,
-};
-pub const LineCrossChallengeData = struct {
-    pub const default: @This() = .{};
-    ChallengeId: i32 = 0,
-    CanGetReward: bool = false,
-    OpenTime: i64 = 0,
-    RewardDataId: i32 = 0,
-    EntityConfigId: i32 = 0,
-    IsPreChallengeState: bool = false,
-};
-pub const TransferContextId = struct {
-    pub const default: @This() = .{};
-    BulletContextId: i64 = 0,
-};
-pub const CommonTagData = struct {
-    pub const default: @This() = .{};
-    TagId: i32 = 0,
-    RemoveTagIds: bool = false,
-};
-pub const TimePointRewardData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    RewardTime: i64 = 0,
-    Rewarded: bool = false,
-    CanGetReward: bool = false,
-};
-pub const EquipComponentPb = struct {
-    pub const default: @This() = .{};
-    WeaponId: i32 = 0,
-    WeaponBreachLevel: i32 = 0,
-};
-pub const EntityState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Default = 0,
-    Sleep = 1,
-    Born = 2,
-    Other = 3,
-};
-pub const GetMusicInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const WeaponSkinDeleteNotify = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkinId: i32 = 0,
-};
-pub const InfrStatusPb = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    InfrStatusLock = 0,
-    InfrStatusProgress = 1,
-    InfrStatusComplete = 2,
-};
-pub const LevelPlayRewardActionCtxPb = struct {
-    pub const default: @This() = .{};
-    LevelPlayId: i32 = 0,
-};
-pub const AdviceRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const RoleVisionRecommendDataRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
+    Count: i32 = 0,
+    Days: i32 = 0,
 };
 pub const RoadNavMoveData = struct {
     pub const default: @This() = .{};
@@ -43570,57 +43424,107 @@ pub const RoadNavMoveData = struct {
     GenRoadId: i32 = 0,
     GenRoadIndex: i32 = 0,
 };
-pub const InputSettingDevice = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Mouse = 0,
-    Handle = 1,
+pub const VisionExploreSkillNotify = struct {
+    pub const default: @This() = .{};
+    ExploreSkill: i32 = 0,
 };
-pub const FollowEntityComponentPb = struct {
+pub const CombatDataMaxResponse = struct {
+    pub const default: @This() = .{};
+};
+pub const PlayPointStateAsyncRequest = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    ArenaId: i32 = 0,
+};
+pub const StarRewardState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    RiskHarvestCanNoReward = 0,
+    RiskHarvestCanReward = 1,
+    RiskHarvestRewarded = 2,
+};
+pub const RemoveBuffByServerIdS2cRequestNotify = struct {
+    pub const default: @This() = .{};
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    Reason: i32 = 0,
+};
+pub const ItemPkgOpenNotify = struct {
+    pub const default: @This() = .{};
+    OpenPkg: std.ArrayList(i32) = .empty,
+};
+pub const ChangeStateConfirmRequest = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    State: i32 = 0,
+};
+pub const BatchBulletCastComponentPb = struct {
+    pub const default: @This() = .{};
+    ConstateId: i64 = 0,
+};
+pub const MoonChasingTargetGetCountNotify = struct {
+    pub const default: @This() = .{};
+    TargetGetCount: i32 = 0,
+};
+pub const WeeklyFrameworkInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PushDataCompleteNotify = struct {
+    pub const default: @This() = .{};
+};
+pub const RangeComponentPb = struct {
+    pub const default: @This() = .{};
+    InRangePlayers: std.ArrayList(i32) = .empty,
+    InRangeEntities: std.ArrayList(i64) = .empty,
+};
+pub const TrapDefenseMonsterPbData = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+};
+pub const DrinkMixRole = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    FirstPass: bool = false,
+    MaxLike: bool = false,
+    RewardGet: bool = false,
+};
+pub const VehiclePlayerData = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
+    Seat: i32 = 0,
 };
-pub const NewLinkBurstPush = struct {
+pub const RoleShowListUpdateRequest = struct {
     pub const default: @This() = .{};
+    RoleList: std.ArrayList(i32) = .empty,
 };
-pub const DangoMonopolyBoardData = struct {
+pub const FeiXuePreheatInfo = struct {
     pub const default: @This() = .{};
-    PropertyIds: std.ArrayList(i32) = .empty,
-    RecordDiceRollTimes: i32 = 0,
-    RecordTriggerMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    Id: i32 = 0,
+    State: i32 = 0,
+    QuestUnlockTime: i64 = 0,
 };
-pub const ResonInfo = struct {
+pub const PhantomItemRemoveNotify = struct {
     pub const default: @This() = .{};
-    ResonId: i32 = 0,
-    IsOpen: bool = false,
-    Increase: i32 = 0,
+    PhantomItemIncrIdList: std.ArrayList(i32) = .empty,
 };
-pub const GetDetectionLabelInfoRequest = struct {
+pub const FlagStrongholdInfo = struct {
     pub const default: @This() = .{};
+    Id: i32 = 0,
+    IsPass: bool = false,
 };
-pub const SceneLoadingFinishRequest = struct {
+pub const HackTargetComponentPb = struct {
     pub const default: @This() = .{};
-    SceneId: []const u8 = "",
+    HackTargetEntityId: i64 = 0,
 };
-pub const AudioState = struct {
+pub const LoadingConfig = struct {
     pub const default: @This() = .{};
-    TreeOwnerId: i32 = 0,
-    TreeIncId: i64 = 0,
-    GroupType: []const u8 = "",
-    State: []const u8 = "",
+    Id: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
 };
-pub const UnlockSkinDataNotify = struct {
+pub const PrivateTag = struct {
     pub const default: @This() = .{};
-    PhantomSkinList: std.ArrayList(i32) = .empty,
-    IsLogin: bool = false,
-};
-pub const TrapDefenseAuxiliaryPbData = struct {
-    pub const default: @This() = .{};
-    ConfigId: std.ArrayList(i32) = .empty,
-};
-pub const DamageSourceType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    FromBullet = 0,
-    FromEffect = 1,
+    PlayerId: i32 = 0,
+    Tags: std.ArrayList([]const u8) = .empty,
 };
 pub const BlackboardParamType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -43641,174 +43545,190 @@ pub const BlackboardParamType = enum(i32) {
     Entity = 14,
     EntityArray = 15,
 };
-pub const ArrayIntDouble = struct {
+pub const JSPatchNotify = struct {
     pub const default: @This() = .{};
-    Key: i32 = 0,
-    Value: f64 = 0,
+    Content: []const u8 = "",
 };
-pub const RewardItemInfo = struct {
+pub const FadeBackgroundFadeInEffectBlackPb = struct {
     pub const default: @This() = .{};
-    ShowPlanId: i32 = 0,
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-    IncrId: i32 = 0,
-};
-pub const ApplyGameplayEffectPush = struct {
-    pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
+    FadeIn: ?union(enum) {
+        FadeInTime: f32,
     } = null,
-    Handle: i32 = 0,
-    Id: i64 = 0,
-    Level: i32 = 0,
-    InstigatorId: i64 = 0,
-    ApplyType: i32 = 0,
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    IsActive: bool = false,
-    Reason: []const u8 = "",
-    ConfBuffId: i64 = 0,
+    FadeOut: ?union(enum) {
+        FadeOutTime: f32,
+    } = null,
+    FadeColor: i32 = 0,
 };
-pub const NormalItem = struct {
+pub const FlowStartTeleportCtxPb = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    Count: i32 = 0,
-    ExpireTime: i64 = 0,
+    FlowListName: []const u8 = "",
+    FlowId: i32 = 0,
+    StateId: i32 = 0,
 };
-pub const BlockState = enum(i32) {
+pub const LordGymEntranceInfo = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    EffectBeginTime: i64 = 0,
+    EffectEndTime: i64 = 0,
+};
+pub const CalabashSkinTakeOnRequest = struct {
+    pub const default: @This() = .{};
+    SkinId: i32 = 0,
+};
+pub const TransitionType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BStateAll = 0,
-    BStateSimple = 1,
-    BStateComplete = 2,
+    Empty = 0,
+    PlayEffect = 1,
+    PlayMp4 = 2,
+    CenterText = 3,
+    FadeInScreen = 4,
+    Seamless = 5,
+    WithCharacterDisplay = 6,
+    WithCustomLoading = 7,
+    WithSpine = 8,
+    WithSpecialCustomLoading = 9,
 };
-pub const AbyssRewardInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    CanGetReward: bool = false,
-    CurrentProgress: i32 = 0,
-    TargetProgress: i32 = 0,
-    CanUnlock: bool = false,
-};
-pub const TowerLevel = struct {
-    pub const default: @This() = .{};
-    StarByte: i32 = 0,
-    CostTime: i32 = 0,
-};
-pub const TowerDefenceInstanceInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Score: i32 = 0,
-    Rewarded: bool = false,
-    IsPassed: bool = false,
-    UnlockTime: i64 = 0,
-    MaxScore: i32 = 0,
-    PassTime: i32 = 0,
-};
-pub const ApplyBuffS2cRequestNotify = struct {
-    pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
-    } = null,
-    Id: i64 = 0,
-    Level: i32 = 0,
-    InstigatorId: i64 = 0,
-    ApplyType: i32 = 0,
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    IsIterable: bool = false,
-    Reason: i32 = 0,
-};
-pub const PayShopItemType = enum(i32) {
+pub const ESummonType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Normal = 0,
-    Direct = 1,
+    ESummonTypeDefault = 0,
+    ESummonTypeConcomitantVision = 1,
+    ESummonTypeConcomitantCustom = 2,
+    ESummonTypeConcomitantPhantomRole = 3,
+    ESummonTypeConcomitantWeakVision = 4,
+    ESummonTypeConcomitantMotorcycle = 5,
 };
-pub const ArraySkillNode = struct {
-    pub const default: @This() = .{};
-    SkillNodeId: i32 = 0,
-    IsActive: bool = false,
-    SkillId: i32 = 0,
-};
-pub const TimeStopPush = struct {
-    pub const default: @This() = .{};
-    TimeDilation: f32 = 0,
-};
-pub const MailBind = struct {
-    pub const default: @This() = .{};
-    IsBind: bool = false,
-    IsReward: bool = false,
-    CloseTime: i64 = 0,
-};
-pub const BuffDurationNotify = struct {
-    pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
-    } = null,
-    gFs: ?union(enum) {
-        LeftDuration: f32,
-    } = null,
-    HandleId: i32 = 0,
-};
-pub const MotorDiyEquippedPb = struct {
-    pub const default: @This() = .{};
-    SkinEquipped: i32 = 0,
-    StickerEquipped: std.ArrayList(i32) = .empty,
-    DecorationsEquipped: std.ArrayList(i32) = .empty,
-    FrameEquipped: i32 = 0,
-};
-pub const RoleElementChangeRequest = struct {
-    pub const default: @This() = .{};
-    ElementType: i32 = 0,
-};
-pub const FloroRanchSubDungeonData = struct {
-    pub const default: @This() = .{};
-    DataId: i32 = 0,
-    ConditionId: i32 = 0,
-    IsLocked: bool = false,
-    IsFinished: bool = false,
-};
-pub const AbyssDangoRoleData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Level: i32 = 0,
-    EquipItems: std.ArrayList(i32) = .empty,
+pub const TeleportReason = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Transfer = 0,
+    ApiTeleport = 1,
+    BtRollbackFailed = 2,
+    ParkourTrans = 3,
+    Gm = 4,
+    Rouge = 5,
+    Fall = 6,
+    Action = 7,
+    UnOpenedAreaPullback = 8,
+    TemporaryTransfer = 9,
+    FlowAction = 10,
+    Drown = 11,
+    FlowStart = 12,
+    CorniceTrans = 13,
+    TeleportVehicle = 14,
+    GetOff = 15,
+    LeaveGravityRegion = 16,
+    TeleportToBoat = 17,
+    GravityFlip = 18,
+    RogueRes = 19,
+    AbyssTeleport = 20,
+    GmForce = 21,
+    CharacterMoveToPoint = 22,
+    InstEntity = 23,
+    InstRequestTeleportResetPoint = 24,
 };
 pub const SurvivorsGoldenCoinPbData = struct {
     pub const default: @This() = .{};
 };
-pub const RoleDevPropsProjectConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    ElementId: i32 = 0,
-    RoleName: []const u8 = "",
-    RoleExperience: i32 = 0,
-    RoleGoalLevel: i32 = 0,
-    WeaponGoalLevel: i32 = 0,
-    WeaponExperience: i32 = 0,
-    RoleItemGroup: std.ArrayList(i32) = .empty,
-    WeaponBreachItemGroup: std.ArrayList(i32) = .empty,
-    WeaponType: i32 = 0,
-    SkillItemGroup: std.ArrayList(i32) = .empty,
-    PrefectSkillLevel: std.ArrayList(i32) = .empty,
-    RoleHeadIcon: []const u8 = "",
-    RoleHeadIconSmall: []const u8 = "",
-    FormationRoleCard: []const u8 = "",
-};
-pub const MaterialInfo = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    AssetName: []const u8 = "",
-    IsGroup: bool = false,
-};
-pub const CombatDataMaxResponse = struct {
+pub const ServerPlayStationPlayOnlyStateRequest = struct {
     pub const default: @This() = .{};
 };
-pub const RoleVisionMainPhantomRequest = struct {
+pub const TriggerComponentPb = struct {
+    pub const default: @This() = .{};
+    TriggerCount: i32 = 0,
+    ExitTriggerCount: i32 = 0,
+    ConstateId: i64 = 0,
+};
+pub const ClientCurrentRoleReportRequest = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    CurrentRoleId: i32 = 0,
+    CurrentEntityId: i64 = 0,
+};
+pub const VersionInfoPush = struct {
+    pub const default: @This() = .{};
+    AppVersion: []const u8 = "",
+    LauncherVersion: []const u8 = "",
+    ResourceVersion: []const u8 = "",
+};
+pub const RogueWeeklyPlayData = struct {
+    pub const default: @This() = .{};
+    HasRecord: bool = false,
+};
+pub const VisionTriggerPush = struct {
+    pub const default: @This() = .{};
+    VisionId: i32 = 0,
+};
+pub const RoleFavorListRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const SignState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Lock = 0,
+    Unlock = 1,
+    IsReceive = 2,
+};
+pub const FlySkinEquipData = struct {
+    pub const default: @This() = .{};
+    SkinId: i32 = 0,
+    RoleIds: std.ArrayList(i32) = .empty,
+};
+pub const WeaponItemRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const LongArrayBlackboard = struct {
+    pub const default: @This() = .{};
+    Values: std.ArrayList(i64) = .empty,
+};
+pub const LifePointChallengeData = struct {
+    pub const default: @This() = .{};
+    ChallengeId: i32 = 0,
+    CanGetReward: bool = false,
+    OpenTime: i64 = 0,
+    RewardId: i32 = 0,
+    EntityConfigId: i32 = 0,
+    IsPreChallengeState: bool = false,
+};
+pub const StorageInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const MoonChasingTrackMoonHandbookRewardNotify = struct {
+    pub const default: @This() = .{};
+    Ids: std.ArrayList(i32) = .empty,
+};
+pub const RecoverPropFromServer = struct {
+    pub const default: @This() = .{};
+    AttrId: i32 = 0,
+    Ratio: i32 = 0,
+    MaxValue: i32 = 0,
+    ValueIncrement: i32 = 0,
+};
+pub const ValidTimeItemRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const MotorTaskTypePb = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Unknown = 0,
+    Single = 1,
+    Limited = 2,
+    Cycle = 3,
+};
+pub const RoleSkillQuickLevelUpRequest = struct {
     pub const default: @This() = .{};
     RoleId: i32 = 0,
+    SkillId: i32 = 0,
+    TargetLevel: i32 = 0,
 };
-pub const KurotatoStructureEntityPbData = struct {
+pub const PreOpenDetections = struct {
     pub const default: @This() = .{};
+    Id: i32 = 0,
+    PreOpenId: i32 = 0,
+    PreOpenBeginTime: i64 = 0,
+    PreOpenEndTIme: i64 = 0,
+};
+pub const CiacconaGalChoiceData = struct {
+    pub const default: @This() = .{};
+    ChoiceDataId: i32 = 0,
+    SecondState: bool = false,
+    FirstState: bool = false,
 };
 pub const PhantomArenaMasterInfo = struct {
     pub const default: @This() = .{};
@@ -43819,28 +43739,64 @@ pub const PhantomArenaMasterInfo = struct {
     LastUsedDeckServerId: i32 = 0,
     LastUsedCardRoleId: i32 = 0,
 };
-pub const PinballGroupFormation = struct {
+pub const FlagChallengeRoleLevelInfo = struct {
     pub const default: @This() = .{};
-    LevelGroup: i32 = 0,
-    RoleIds: std.ArrayList(i32) = .empty,
+    PerLevel: i32 = 0,
+    PerExp: i32 = 0,
 };
-pub const SurvivorsLevelInfo = struct {
-    pub const default: @This() = .{};
-    IsUnlocked: bool = false,
-    ConditionGroupId: i32 = 0,
-    WaveId: i32 = 0,
-    KillMonsterCount: i32 = 0,
-    IsFinished: bool = false,
-};
-pub const EBulletCreateSource = enum(i32) {
+pub const KeepMovementState = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NormalSource = 0,
-    ReboundSource = 1,
+    KeepMovementStateInvalid = 0,
+    Kite = 1,
+    Soar = 2,
 };
-pub const Function = struct {
+pub const SummonsComponentPb = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    Flag: i32 = 0,
+    Version: i32 = 0,
+};
+pub const HookInteractActionType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Hooked = 0,
+    ExitMidway = 1,
+    ExitEndpoint = 2,
+};
+pub const BoardGridPositionInfo = struct {
+    pub const default: @This() = .{};
+    Row: i32 = 0,
+    Column: i32 = 0,
+    RotAngle: i32 = 0,
+};
+pub const GuideFinishRequest = struct {
+    pub const default: @This() = .{};
+    GroupId: i32 = 0,
+};
+pub const Int2Bool = struct {
+    pub const default: @This() = .{};
+    First: i32 = 0,
+    Second: bool = false,
+};
+pub const InfrNotice = struct {
+    pub const default: @This() = .{};
+    RoadId: i32 = 0,
+    PasserId: i32 = 0,
+    GiftCount: i32 = 0,
+    CreateTime: i64 = 0,
+};
+pub const RolePhantomEquipInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    PhantomItemIncrId: std.ArrayList(i32) = .empty,
+};
+pub const SeamlessTeleportFinishConfigPb = struct {
+    pub const default: @This() = .{};
+    IsnotStopScreenEffect: bool = false,
+    EffectExtraState: i32 = 0,
+};
+pub const SceneTimeInfo = struct {
+    pub const default: @This() = .{};
+    Hour: i32 = 0,
+    Minute: i32 = 0,
+    OwnerTimeClockTimeSpan: i64 = 0,
 };
 pub const EncircleChallengePb = struct {
     pub const default: @This() = .{};
@@ -43849,21 +43805,146 @@ pub const EncircleChallengePb = struct {
     Pass: bool = false,
     MinStep: i32 = 0,
 };
-pub const OneFishingIllustratedData = struct {
+pub const SceneFishPointData = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    MaxSize: i32 = 0,
-    MinSize: i32 = 0,
+    EntityConfigId: i32 = 0,
+    CurCount: i32 = 0,
+    MaxCount: i32 = 0,
+    LastUpdateTime: i64 = 0,
+    NextUpdateTime: i64 = 0,
+    RefreshTime: i32 = 0,
+    GamePlayId: i32 = 0,
+    Interacted: bool = false,
 };
-pub const PublicResourceVersionInfo = struct {
+pub const EntityStateReadyNotify = struct {
     pub const default: @This() = .{};
-    PublicJsonVersion: i32 = 0,
-    PublicMiscVersion: i32 = 0,
-    PublicUniverseEditorVersion: i32 = 0,
+    EntityId: i64 = 0,
+    TagId: i32 = 0,
+    Ready: bool = false,
 };
-pub const GameplayCuePush = struct {
+pub const AllMsgRequest = struct {
     pub const default: @This() = .{};
-    GameplayCueId: i64 = 0,
+};
+pub const MontagePlayNotify = struct {
+    pub const default: @This() = .{};
+    SkillId: i64 = 0,
+    MontageIndex: i32 = 0,
+};
+pub const LoadEquipData = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkinId: i32 = 0,
+};
+pub const TimelineTrackControlDataPb = struct {
+    pub const default: @This() = .{};
+    ControlPoint: i32 = 0,
+};
+pub const LevelPlayStateMsg = struct {
+    pub const default: @This() = .{};
+    LevelPlayEntityId: i32 = 0,
+    ExploratoryType: i32 = 0,
+    StateType: i32 = 0,
+    CompleteNumber: i32 = 0,
+    IsHide: bool = false,
+    HideGroupInfo: []const u8 = "",
+    IsUnlocked: bool = false,
+    LevelPlayMarkUnlock: bool = false,
+};
+pub const PhotographSubType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    None = 0,
+    PhotographSub = 7,
+    Role = 8,
+    Quest = 9,
+};
+pub const RouletteType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Explore = 0,
+    Function = 1,
+    TrapDefense = 2,
+    Motorcycle = 3,
+};
+pub const RacingBetsTimeTuple = struct {
+    pub const default: @This() = .{};
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const BtBloodBathedModeInfo = struct {
+    pub const default: @This() = .{};
+    BtType: i32 = 0,
+    BtObjId: i32 = 0,
+    BtObjSetting: i32 = 0,
+};
+pub const PullingFoundationComponentPb = struct {
+    pub const default: @This() = .{};
+    RelationId: i32 = 0,
+    MatchIndex: i32 = 0,
+};
+pub const MonsterCaptureComponentPb = struct {
+    pub const default: @This() = .{};
+    TemplateId: i32 = 0,
+    EntityId: i32 = 0,
+    MonsterId: i32 = 0,
+};
+pub const MonthCardRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const FloatArrayBlackboard = struct {
+    pub const default: @This() = .{};
+    Values: std.ArrayList(f32) = .empty,
+};
+pub const RoleActivateSkillRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillNodeId: i32 = 0,
+};
+pub const FragmentMemoryData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Flag: i32 = 0,
+    FinishTime: i64 = 0,
+};
+pub const MobileButtonSetting = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Size: f32 = 0,
+    Transparency: f32 = 0,
+    ScreenX: f32 = 0,
+    ScreenY: f32 = 0,
+    ButtonLevel: i32 = 0,
+    PanelLevel: i32 = 0,
+};
+pub const CalabashDevelopConditionState = struct {
+    pub const default: @This() = .{};
+    ConditionId: i32 = 0,
+    Rewarded: bool = false,
+};
+pub const PayUpdateType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    None = 0,
+    Daily = 1,
+    Weekly = 2,
+    Monthly = 3,
+    Forever = 4,
+};
+pub const GatherActivityTaskState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    GatherLock = 0,
+    GatherRunning = 1,
+    GatherInComplete = 2,
+    GatherDone = 3,
+    GatherTakeReward = 4,
+};
+pub const AnimalPerformComponentPb = struct {
+    pub const default: @This() = .{};
+    AnimalInitialPartIds: std.ArrayList(i32) = .empty,
+};
+pub const PayShopPrice = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Count: i32 = 0,
+    PromotionCount: i32 = 0,
 };
 pub const SlientFirstAwardState = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -43872,301 +43953,149 @@ pub const SlientFirstAwardState = enum(i32) {
     IsFinish = 2,
     IsReceive = 3,
 };
-pub const ExploreProgressRequest = struct {
-    pub const default: @This() = .{};
-    AreaIds: std.ArrayList(i32) = .empty,
-};
-pub const SimpleTrackReportMsg = struct {
+pub const LevelPlayVarAsyncRequest = struct {
     pub const default: @This() = .{};
     InstId: i32 = 0,
     LevelPlayId: i32 = 0,
-    GainTreasureCount: i32 = 0,
 };
-pub const TemplateSpawnerType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    TemplateDefault = 0,
-    TemplateMatrix = 1,
-};
-pub const RTimeStopRequest = struct {
+pub const HonamiStoryRoleSlot = struct {
     pub const default: @This() = .{};
-    IsStopCharacter: bool = false,
-    Duration: i32 = 0,
+    SlotId: i32 = 0,
+    IsUnlocked: bool = false,
 };
-pub const TeleportTransferRequest = struct {
+pub const UnlockRoleSkinListNofity = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
+    RoleSkinList: std.ArrayList(i32) = .empty,
 };
-pub const AdviceSettingNotify = struct {
+pub const ActivityLinkageRewardData = struct {
     pub const default: @This() = .{};
-    IsShow: bool = false,
-};
-pub const PayShopPrice = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
+    ItemId: i32 = 0,
     Count: i32 = 0,
-    PromotionCount: i32 = 0,
 };
-pub const HarvestLevelReward = struct {
+pub const WebSignRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const AbyssRewardInfo = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    StartTime: i32 = 0,
-    IsOpen: bool = false,
-    Points: i32 = 0,
-    Diff: i32 = 0,
-    State: i32 = 0,
+    CanGetReward: bool = false,
+    CurrentProgress: i32 = 0,
+    TargetProgress: i32 = 0,
+    CanUnlock: bool = false,
 };
-pub const IllustratedType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Monster = 0,
-    VocalCorpse = 1,
-    ViewPoint = 2,
-    Weapon = 3,
-    Animal = 4,
-    Item = 5,
-    Chip = 6,
-    Photograph = 7,
-    Noun = 8,
-};
-pub const SpecialGachaPair = struct {
+pub const GroupTypesWrapper = struct {
     pub const default: @This() = .{};
-    TypeId: i32 = 0,
-    GachaId: i32 = 0,
+    GroupTypes: std.ArrayList(i32) = .empty,
 };
-pub const MonsterCaptureComponentPb = struct {
+pub const AdventureItemData = struct {
     pub const default: @This() = .{};
-    TemplateId: i32 = 0,
-    EntityId: i32 = 0,
-    MonsterId: i32 = 0,
+    ItemId: i32 = 0,
+    ItemNum: i32 = 0,
 };
-pub const JumpTaskCondInfo = struct {
-    pub const default: @This() = .{};
-    JumpId: i32 = 0,
-    ConditionGroupIds: std.ArrayList(i32) = .empty,
-};
-pub const SpringSkipEntry = struct {
+pub const SubActivityBeginTime = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    UnLock: bool = false,
-    Finish: bool = false,
+    BeginTime: i64 = 0,
 };
-pub const PlayerRebackSceneNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-};
-pub const BtType = enum(i32) {
+pub const MotorParkourRewardState = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BtTypeInvalid = 0,
-    BtTypeQuest = 1,
-    BtTypeLevelPlay = 2,
-    BtTypeInst = 3,
-    BtTypeInstDecision = 4,
+    MotorParkourRewardLocked = 0,
+    MotorParkourRewardAvailable = 1,
+    MotorParkourRewardRewarded = 2,
 };
-pub const PbBattlePassReward = struct {
+pub const UnlockRoleSkinListResponse = struct {
     pub const default: @This() = .{};
+    RoleSkinList: std.ArrayList(i32) = .empty,
+};
+pub const VisionSkillInformation = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
     Level: i32 = 0,
-    ItemId: i32 = 0,
-    Type: i32 = 0,
+    Quality: i32 = 0,
+    VisionEntityId: i64 = 0,
+    Index: i32 = 0,
 };
-pub const UseItemProgress = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const BabelBuff = struct {
-    pub const default: @This() = .{};
-    BuffId: i32 = 0,
-    Unlocked: bool = false,
-};
-pub const SignState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Lock = 0,
-    Unlock = 1,
-    IsReceive = 2,
-};
-pub const RTimeStopInstRequest = struct {
-    pub const default: @This() = .{};
-    Flag: bool = false,
-    Duration: i32 = 0,
-};
-pub const LogicStateComponentPb = struct {
-    pub const default: @This() = .{};
-    PositionState: i32 = 0,
-    MoveState: i32 = 0,
-    DirectionState: i32 = 0,
-    PositionSubState: i32 = 0,
-};
-pub const TriggerExitSkillRequest = struct {
-    pub const default: @This() = .{};
-    EnterEntityId: i64 = 0,
-    LeaveEntityId: i64 = 0,
-};
-pub const WeaponItem = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    IncrId: i32 = 0,
-    FuncValue: i32 = 0,
-    WeaponLevel: i32 = 0,
-    WeaponExp: i32 = 0,
-    WeaponBreach: i32 = 0,
-    WeaponResonLevel: i32 = 0,
-    RoleId: i32 = 0,
-};
-pub const KurotatoWeaponEntityPbData = struct {
-    pub const default: @This() = .{};
-    IncId: i32 = 0,
-};
-pub const SceneItemBBKey = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    ManipulatableState = 0,
-};
-pub const BeamReceiveActionType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    BeginAction = 0,
-    CompleteAction = 1,
-    StopAction = 2,
-};
-pub const KurotatoDropEntityPbData = struct {
-    pub const default: @This() = .{};
-};
-pub const AdventureDetectionConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    EffectBeginTime: i64 = 0,
-    EffectEndTime: i64 = 0,
-};
-pub const EEntityType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Player = 0,
-    Npc = 1,
-    Monster = 2,
-    SceneItem = 5,
-    Custom = 6,
-    Vision = 7,
-    Animal = 8,
-    ClientOnly = 9,
-    Vehicle = 10,
-    PlayerEntity = 11,
-    SceneEntity = 12,
-};
-pub const PlayerBattleStateChangeNotify = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    InBattle: bool = false,
-};
-pub const UpdatePlayStationBlockAccountRequest = struct {
-    pub const default: @This() = .{};
-    BlockedIds: std.ArrayList([]const u8) = .empty,
-};
-pub const LordGymEntranceInfo = struct {
+pub const EntityCtxPb = struct {
     pub const default: @This() = .{};
     ConfigId: i32 = 0,
-    EffectBeginTime: i64 = 0,
-    EffectEndTime: i64 = 0,
+    IncId: i64 = 0,
+};
+pub const GolemCrackLevelInfo = struct {
+    pub const default: @This() = .{};
+    NlC: ?union(enum) {
+        state: i32,
+    } = null,
+    VlC: ?union(enum) {
+        UnlockTime: i64,
+    } = null,
+    id: i32 = 0,
+};
+pub const MailBindInfoRequest = struct {
+    pub const default: @This() = .{};
 };
 pub const MatrixInfo = struct {
     pub const default: @This() = .{};
     X: i32 = 0,
     Y: i32 = 0,
 };
-pub const InitHonamiActivityRequest = struct {
+pub const ActivateBuffNotify = struct {
     pub const default: @This() = .{};
-    ActivityId: i32 = 0,
+    Handle: i32 = 0,
+    On: bool = false,
 };
-pub const FsmPlayMontagePush = struct {
+pub const RoadBookMotorcycleInfo = struct {
     pub const default: @This() = .{};
-    MontageName: []const u8 = "",
-    MontagePathHash: i32 = 0,
-    SpeedRatio: f32 = 0,
-    StartSection: []const u8 = "",
-    StartTimeSeconds: f32 = 0,
+    MotorcyclePlayId: i32 = 0,
+    HistorySoarScore: i32 = 0,
+    ReceiveIds: std.ArrayList(i32) = .empty,
 };
-pub const AccessPathTimeServerConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const PbMailAttachment = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Count: i32 = 0,
-};
-pub const QuickHackRamVerifyPush = struct {
-    pub const default: @This() = .{};
-    DeviceId: i32 = 0,
-    QuickHackSkillIdList: std.ArrayList(i32) = .empty,
-    OpenQuickHackPreMessageId: i64 = 0,
-};
-pub const ServerPlayStationPlayOnlyStateResponse = struct {
-    pub const default: @This() = .{};
-    CrossPlayEnabled: bool = false,
-};
-pub const SlashAndTowerInfoRequest = struct {
+pub const UpdateAchievementInfoRequest = struct {
     pub const default: @This() = .{};
 };
-pub const PassiveSkillInfo = struct {
+pub const PrivateChatHistoryRequest = struct {
     pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    SkillCdEndTime: i64 = 0,
+    TargetUid: i32 = 0,
+    StartIndex: i32 = 0,
 };
-pub const HonamiStoryMascotConfig = struct {
+pub const ChangeStateNotify = struct {
     pub const default: @This() = .{};
-    MascotId: i32 = 0,
-    State: i32 = 0,
+    FsmId: i32 = 0,
+    FromState: i32 = 0,
+    ToState: i32 = 0,
 };
-pub const PbUpLevelSkillRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkillId: i32 = 0,
-};
-pub const GridPbDirection = enum(i32) {
+pub const FishCup = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    GridForward = 0,
-    GridBackward = 1,
-    GridLeft = 2,
-    GridRight = 3,
+    SilverCup = 0,
+    NormalCup = 1,
+    GoldCup = 2,
 };
-pub const MoraleFlag = struct {
+pub const EdgeRunnerLordGymPassRecord = struct {
     pub const default: @This() = .{};
-    FlagId: i32 = 0,
-    BoxReceivedCount: i32 = 0,
-    BoxTotalCount: i32 = 0,
+    LoadGymId: i32 = 0,
+    PassTime: i32 = 0,
 };
-pub const SkillComponentPb = struct {
+pub const ExecuteQteNotify = struct {
     pub const default: @This() = .{};
-    SkillId: i32 = 0,
-    ConstateId: i64 = 0,
+    DownEntityId: i64 = 0,
+    UpEntityId: i64 = 0,
+    FnvHash: i32 = 0,
 };
-pub const WeaponConsumeItem = struct {
+pub const MapUnlockFieldInfoRequest = struct {
     pub const default: @This() = .{};
-    IncId: i32 = 0,
-    Count: i32 = 0,
-    ItemId: i32 = 0,
 };
-pub const RoleBreakThroughViewRequest = struct {
+pub const EnterViewDirectionRequest = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
 };
-pub const DFsmBlackBoard = struct {
+pub const BuffStackCountPush = struct {
     pub const default: @This() = .{};
-    Key: i32 = 0,
-    Value: i32 = 0,
-};
-pub const RoleRecordComponentPb = struct {
-    pub const default: @This() = .{};
-    IsAutoRole: bool = false,
-    ConstateId: i64 = 0,
-};
-pub const ActivityTaskState = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    ActivityTaskRunning = 0,
-    ActivityTaskFinish = 1,
-    ActivityTaskTaken = 2,
-};
-pub const AnimationGameplayTagNotify = struct {
-    pub const default: @This() = .{};
-    AddTagIds: i32 = 0,
-    RemoveTagIds: bool = false,
+    HandleId: i32 = 0,
+    NewStackCount: i32 = 0,
+    IsPrematureRemoval: bool = false,
+    InstigatorId: i64 = 0,
+    NotRefreshDuration: bool = false,
+    NotRefreshPeriod: bool = false,
+    Duration: f32 = 0,
+    Reason: []const u8 = "",
 };
 pub const VisionAttrRecommendInfo = struct {
     pub const default: @This() = .{};
@@ -44182,247 +44111,586 @@ pub const MotorTechPb = struct {
     Current: i32 = 0,
     Target: i32 = 0,
 };
-pub const NodeStatus = enum(i32) {
+pub const CalabashSkinDataRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RoleChangeUnlockNotify = struct {
+    pub const default: @This() = .{};
+    UnlockRoleIds: std.ArrayList(i32) = .empty,
+    NextAllowChangeTime: i64 = 0,
+};
+pub const FanComponentPb = struct {
+    pub const default: @This() = .{};
+    NumOfTurns: i32 = 0,
+};
+pub const FurnitureDiySlotInfo = struct {
+    pub const default: @This() = .{};
+    SlotEntityCfgId: i32 = 0,
+    RootFurnitureId: i32 = 0,
+    SubFurnitureIds: std.ArrayList(i32) = .empty,
+};
+pub const GlobalFixCtxPb = struct {
+    pub const default: @This() = .{};
+    FixId: i32 = 0,
+};
+pub const RoleBreakThroughViewRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+};
+pub const BattleModule = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    NotActive = 0,
-    BeforeActivate = 1,
-    Activate = 2,
-    Completing = 3,
-    CompletedSuccess = 4,
-    CompletedFailed = 5,
-    Suspend = 6,
-    Destroy = 7,
+    Damage = 0,
+    GameplayEffect = 1,
+    Log = 2,
 };
-pub const ClientDataComponentPb = struct {
+pub const OnlineMotorLevelInfo = struct {
     pub const default: @This() = .{};
-    IsStaticInit: bool = false,
-    OwnerId: i64 = 0,
-    GroupId: i32 = 0,
+    LevelId: i32 = 0,
+    Ranking: i32 = 0,
+    TimeCost: i32 = 0,
 };
-pub const UseSkillFailPush = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-};
-pub const WeeklyFrameworkInfoRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const FlySkinEquipData = struct {
-    pub const default: @This() = .{};
-    SkinId: i32 = 0,
-    RoleIds: std.ArrayList(i32) = .empty,
-};
-pub const CompleteInstProgress = struct {
+pub const SimpleTrackReportMsg = struct {
     pub const default: @This() = .{};
     InstId: i32 = 0,
-    Count: i32 = 0,
+    LevelPlayId: i32 = 0,
+    GainTreasureCount: i32 = 0,
 };
-pub const CiacconaGalInspirationData = struct {
-    pub const default: @This() = .{};
-    InspirationCount: i32 = 0,
-    RefreshTime: i64 = 0,
-};
-pub const BattlePassType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Free = 0,
-    Pay = 1,
-};
-pub const SurvivorsMonsterPbData = struct {
-    pub const default: @This() = .{};
-    SpawnPointEntityId: i32 = 0,
-};
-pub const BulletPatternPush = struct {
-    pub const default: @This() = .{};
-    BulletPatternHandleId: i64 = 0,
-    BulletPatternId: i32 = 0,
-};
-pub const NetStatusType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Wifi = 0,
-    Stream = 1,
-    Wired = 2,
-    Other = 3,
-};
-pub const NewBieCourseActivity = struct {
-    pub const default: @This() = .{};
-    HadTakeReward: std.ArrayList(i32) = .empty,
-};
-pub const SignActivity = struct {
-    pub const default: @This() = .{};
-    SignStateList: std.ArrayList(i32) = .empty,
-};
-pub const RhythmRedDotPb = struct {
-    pub const default: @This() = .{};
-    ReadPlanet: std.ArrayList(i32) = .empty,
-    ReadSubLevel: std.ArrayList(i32) = .empty,
-    ReadRole: std.ArrayList(i32) = .empty,
-};
-pub const EEndSkillReason = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Default = 0,
-    BeginOtherSkill = 1,
-    BeHit = 2,
-    BeCounter = 3,
-};
-pub const ApplyGameplayEffectNotify = struct {
-    pub const default: @This() = .{};
-    CRoundAction: ?union(enum) {
-        Duration: f32,
-    } = null,
-    Time: ?union(enum) {
-        LeftDuration: f32,
-    } = null,
-    Handle: i32 = 0,
-    Id: i64 = 0,
-    Level: i32 = 0,
-    EntityId: i64 = 0,
-    InstigatorId: i64 = 0,
-    ApplyType: i32 = 0,
-    IsActive: bool = false,
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    ConfBuffId: i64 = 0,
-};
-pub const TrapDefenseBuildingData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Level: i32 = 0,
-    Branch: i32 = 0,
-    MaxLevel: i32 = 0,
-    CellPrice: i32 = 0,
-    OriginalConstructPrice: i32 = 0,
-    DiscountConstructPrice: i32 = 0,
-    DeconstructReturn: i32 = 0,
-};
-pub const UnlockRoleSkinListRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const WeatherControlInfoWithoutCheckAsyncResponse = struct {
-    pub const default: @This() = .{};
-    UnlockedWeatherSwitchConfigIdList: std.ArrayList(i32) = .empty,
-};
-pub const AllMsgRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const ActivityRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const AnimationGameplayTagRequest = struct {
-    pub const default: @This() = .{};
-    AddTagIds: i32 = 0,
-    RemoveTagIds: bool = false,
-};
-pub const GachaReward = struct {
+pub const ItemLockRequest = struct {
     pub const default: @This() = .{};
     ItemId: i32 = 0,
-    ItemCount: i32 = 0,
+    IncrId: i32 = 0,
 };
-pub const EquipPos = enum(i32) {
+pub const QuestActiveActionCtxPb = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const TrapDefenseBuildingPbData = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    battleLevel: i32 = 0,
+    ConstructCost: i32 = 0,
+    DeconstructReturn: i32 = 0,
+};
+pub const RbDefaultBlockPbType = struct {
+    pub const default: @This() = .{};
+    IsMainControl: bool = false,
+};
+pub const DamageSourceType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Weapon = 0,
-    WeaponSkin = 1,
-    End = 2,
+    FromBullet = 0,
+    FromEffect = 1,
 };
-pub const PhantomItemRemoveNotify = struct {
+pub const ProtoKeyRequest = struct {
     pub const default: @This() = .{};
-    PhantomItemIncrIdList: std.ArrayList(i32) = .empty,
+    IsLogin: bool = false,
+    TraceId: []const u8 = "",
 };
-pub const LoadingConfigResponse = struct {
+pub const ClientStorageLongData = struct {
     pub const default: @This() = .{};
-    LoadingConfig: std.ArrayList(LoadingConfig) = .empty,
+    Data: i64 = 0,
 };
-pub const EnergyUpdateNotify = struct {
+pub const EntityPositionRequest = struct {
     pub const default: @This() = .{};
-    UpdateInfo: std.ArrayList(EnergyInfo) = .empty,
+    ConfigId: i32 = 0,
+    DungeonInstanceId: i32 = 0,
 };
-pub const FsmCustomBlackboardDatas = struct {
+pub const GameplayCueNotify = struct {
     pub const default: @This() = .{};
-    BlackboardIntValues: std.ArrayList(DFsmBlackboardCustom) = .empty,
+    GameplayCueId: i64 = 0,
+};
+pub const PhantomArenaCardInfo = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+    IsUnlock: bool = false,
+    IsCardOutlookUnlock: bool = false,
+};
+pub const HonamiStoryEnhanceLevelComponentPb = struct {
+    pub const default: @This() = .{};
+    Level: i32 = 0,
+};
+pub const PinballChapterData = struct {
+    pub const default: @This() = .{};
+    ChapterId: i32 = 0,
+    UnLockTime: i64 = 0,
+};
+pub const ClientStorageBoolData = struct {
+    pub const default: @This() = .{};
+    Data: bool = false,
+};
+pub const SurvivorsPlayerCharacterPbData = struct {
+    pub const default: @This() = .{};
+};
+pub const OneForgeInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    LastRoleId: i32 = 0,
+    LimitTotalCount: i32 = 0,
+    LimitForgeCount: i32 = 0,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const LivenessRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const RoleDevelopConfigRequest = struct {
+    pub const default: @This() = .{};
+    aVersion: ?union(enum) {
+        Version: []const u8,
+    } = null,
+};
+pub const PushContextIdNotify = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+};
+pub const QuickHackOpenPush = struct {
+    pub const default: @This() = .{};
+    DeviceId: i32 = 0,
+    OwnerEntityId: i64 = 0,
+};
+pub const InfrV2InfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const ChildQuestNodeStatus = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    NotActive = 0,
+    Enter = 1,
+    EnterAction = 2,
+    Progress = 3,
+    Finished = 4,
+    FinishAction = 5,
+    Fail = 6,
+};
+pub const TowerSeasonUpdateRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const AdviceSetRequest = struct {
+    pub const default: @This() = .{};
+    IsShow: bool = false,
+};
+pub const NormalItemRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const AnimStateChangeInfo = struct {
+    pub const default: @This() = .{};
+    AnimationStates: std.ArrayList(i32) = .empty,
+    SpecialAnimationStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const KurotatoWeaponEntityPbData = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+};
+pub const OrderRemoveBuffByTagsRequest = struct {
+    pub const default: @This() = .{};
+    TagIds: std.ArrayList(i32) = .empty,
+};
+pub const MarkPointState = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    MarkNormal = 0,
+    MarkDisable = 1,
+    MarkComplete = 2,
+};
+pub const ActivityOpenType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    TimeLimited = 0,
+    Permanent = 1,
+    LimitToPermanent = 2,
+};
+pub const ClientStorageSetData = struct {
+    pub const default: @This() = .{};
+    Data: std.ArrayList(i32) = .empty,
+};
+pub const CowLevel = struct {
+    pub const default: @This() = .{};
+    LevelScore: i32 = 0,
+};
+pub const OrderApplyBuffNotify = struct {
+    pub const default: @This() = .{};
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    Id: i64 = 0,
+    Level: i32 = 0,
+    InstigatorId: i64 = 0,
+    ApplyType: i32 = 0,
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    IsIterable: bool = false,
+};
+pub const BehaviorTreeDeleteNotify = struct {
+    pub const default: @This() = .{};
+    TreeIncIds: std.ArrayList(i64) = .empty,
+};
+pub const JumpTaskCondInfo = struct {
+    pub const default: @This() = .{};
+    JumpId: i32 = 0,
+    ConditionGroupIds: std.ArrayList(i32) = .empty,
+};
+pub const MailBind = struct {
+    pub const default: @This() = .{};
+    IsBind: bool = false,
+    IsReward: bool = false,
+    CloseTime: i64 = 0,
+};
+pub const TriggerExitSkillResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ExitViewDirectionResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityAfterConditionActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    PreCondtionListeningIndex: i32 = 0,
+    AfterCondtionListeningIndex: i32 = 0,
+};
+pub const FsmStateBehaviorResponse = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    State: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const JigsawFoundationMatchedActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    MatchedIndex: i32 = 0,
+};
+pub const EntityRemoveNotify = struct {
+    pub const default: @This() = .{};
+    RemoveInfos: std.ArrayList(EntityRemoveInfo) = .empty,
+    IsRemove: bool = false,
+};
+pub const ShieldUpdateInfo = struct {
+    pub const default: @This() = .{};
+    Handle: i32 = 0,
+    ConfigId: i32 = 0,
+    ShieldValue: i32 = 0,
+    UpdateType: ?EShieldUpdateType = null,
+};
+pub const WeaponItemResponse = struct {
+    pub const default: @This() = .{};
+    WeaponItemList: std.ArrayList(WeaponItem) = .empty,
+};
+pub const RacingBetsSeasonData = struct {
+    pub const default: @This() = .{};
+    CurCash: i32 = 0,
+    TotalCash: i32 = 0,
+    RacingBetsLegMatchData: std.ArrayList(RacingBetsLegMatchData) = .empty,
+    HitNum: i32 = 0,
+};
+pub const TotalTopUpActivityInfo = struct {
+    pub const default: @This() = .{};
+    Score: i32 = 0,
+    TotalTopUpRewardInfos: std.ArrayList(TotalTopUpRewardInfo) = .empty,
+};
+pub const PassiveSkillRemoveResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SwitchBattleModeNotify = struct {
+    pub const default: @This() = .{};
+    ServerControllerModules: std.ArrayList(BattleModule) = .empty,
+    ClientControllerModules: std.ArrayList(BattleModule) = .empty,
+};
+pub const StorageInfoUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ActivityTimePointRewarData = struct {
+    pub const default: @This() = .{};
+    Rewards: std.ArrayList(TimePointRewardData) = .empty,
+};
+pub const CalabashSkinDataResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EquipedSkinId: i32 = 0,
+    SkinIdList: std.ArrayList(i32) = .empty,
+};
+pub const CharacterAttachResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const TagComponentPb = struct {
+    pub const default: @This() = .{};
+    GameplayTags: std.ArrayList(GameplayTagData) = .empty,
+    EntityCommonTags: std.ArrayList(i32) = .empty,
+    InitGameplayTag: bool = false,
+};
+pub const MarkPointInfo = struct {
+    pub const default: @This() = .{};
+    PosX: f32 = 0,
+    PosY: f32 = 0,
+    PosZ: f32 = 0,
+    ConfigId: i32 = 0,
+    MarkId: i32 = 0,
+    IsTrace: i32 = 0,
+    MarkType: i32 = 0,
+    MapId: i32 = 0,
+    IsServerDisable: bool = false,
+    MarkPointState: ?MarkPointState = null,
+};
+pub const AdventureRewardData = struct {
+    pub const default: @This() = .{};
+    DropId: i32 = 0,
+    Items: std.ArrayList(AdventureItemData) = .empty,
+};
+pub const RoleConfigInfoUpdateNotify = struct {
+    pub const default: @This() = .{};
+    RoleConfigs: std.ArrayList(RoleConfigInfo) = .empty,
+};
+pub const RhythmSubLevelPb = struct {
+    pub const default: @This() = .{};
+    SubLevelId: i32 = 0,
+    Cleared: bool = false,
+    BestScore: i32 = 0,
+    BestAccuracy: i32 = 0,
+    BestRank: ?RhythmShipRank = null,
+};
+pub const BuffEffectResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
 };
 pub const VisionFetterRecommendInfo = struct {
     pub const default: @This() = .{};
     Usage: i32 = 0,
     RecommendFetterGroupInfos: std.ArrayList(RecommendFetterGroupInfo) = .empty,
 };
-pub const ParkourActivity = struct {
-    pub const default: @This() = .{};
-    Challenges: std.ArrayList(ParkourActivityChallenge) = .empty,
-};
-pub const EntityInteractResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Interacting: bool = false,
-};
-pub const EntityFlySkinChangeData = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    FlySkinConfigData: std.ArrayList(FlySkinConfigData) = .empty,
-};
-pub const SunSpiritPb = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    EntityConfigId: i32 = 0,
-    TakeUpData: ?SunSpiritTakeUpPb = null,
-};
-pub const GravityFlipComponent = struct {
-    pub const default: @This() = .{};
-    Direction: ?DirectionType = null,
-};
-pub const BehaviorTreeCtxPb = struct {
-    pub const default: @This() = .{};
-    IncId: i64 = 0,
-    BtType: ?BtType = null,
-    BtId: i32 = 0,
-    NodeId: i32 = 0,
-};
-pub const EntityConditionListeningActionCtxPb = struct {
+pub const EntityGroupActionCtxPb = struct {
     pub const default: @This() = .{};
     EntityCtx: ?EntityCtxPb = null,
-    EntityConditionListeningIndex: i32 = 0,
+    TriggerIndex: i32 = 0,
+    IsMatch: bool = false,
 };
-pub const GachaUsePoolResponse = struct {
+pub const OrderApplyBuffResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const EntityAccessRangeRequest = struct {
+pub const GetDetectionLabelInfoResponse = struct {
     pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    EntitiesToCheck: std.ArrayList(i64) = .empty,
-    RangeType: ?RangeType = null,
+    UnlockLabelInfo: ?UnlockDetectionLabelInfo = null,
+};
+pub const MonsterDrownRequest = struct {
+    pub const default: @This() = .{};
+    Pos: ?Vector = null,
+};
+pub const InfrFirePb = struct {
+    pub const default: @This() = .{};
+    FireExp: i64 = 0,
+    FireLevel: i32 = 0,
+    FireLevelReachTime: i64 = 0,
+    FireStatus: ?InfrStatusPb = null,
 };
 pub const SwitchLogicStateResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const BoneVisibleChangeRequest = struct {
+pub const MaterialResponse = struct {
     pub const default: @This() = .{};
-    BoneVisibleData: ?BoneVisibleData = null,
+    ErrorCode: ?ErrorCode = null,
 };
-pub const FavorQuest = struct {
+pub const LevelPlayInfoNotify = struct {
     pub const default: @This() = .{};
-    Chapter: i32 = 0,
-    Status: ?FavorQuestStatus = null,
+    LevelPlayInfo: std.ArrayList(LevelPlayInfo) = .empty,
 };
-pub const RenjuCompleteActionCtxPb = struct {
+pub const ControlParam = struct {
     pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    Controller: i32 = 0,
+    Param: ?union(enum) {
+        TemporaryTeleportParam: ?ControlTemporaryTeleportParam,
+    } = null,
+    ControlType: i32 = 0,
 };
-pub const GetItemProgress = struct {
+pub const TowerFloorPb = struct {
     pub const default: @This() = .{};
-    Info: std.ArrayList(GetItemCount) = .empty,
+    TowerConfigId: i32 = 0,
+    Star: i32 = 0,
+    Formation: std.ArrayList(TowerRolePb) = .empty,
+    StarIndex: std.ArrayList(i32) = .empty,
+    IsQuickPass: bool = false,
 };
-pub const IllustratedInfoRequest = struct {
+pub const EntityPatrolStopResponse = struct {
     pub const default: @This() = .{};
-    TypeList: std.ArrayList(IllustratedType) = .empty,
+    ErrorCode: ?ErrorCode = null,
 };
-pub const MotorSliderCtxPb = struct {
+pub const EnterViewDirectionResponse = struct {
     pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    IsEnter: bool = false,
+    ErrorCode: ?ErrorCode = null,
 };
-pub const RbBreakableObstaclePbType = struct {
+pub const MowTowerLevelsInfo = struct {
     pub const default: @This() = .{};
-    LinkPoints: std.ArrayList(Vector) = .empty,
+    BabelTowerLevelId: i32 = 0,
+    UnlockTime: i64 = 0,
+    IsUnlock: bool = false,
+    FirstScore: i32 = 0,
+    SecondScore: i32 = 0,
+    LevelRewardStatus: std.ArrayList(MapEntry(i32, MowTowerRewardStatus)) = .empty,
+    HardLevelBuffs: std.ArrayList(i32) = .empty,
+    FirstRoleSelection: std.ArrayList(i32) = .empty,
+    SecondRoleSelection: std.ArrayList(i32) = .empty,
+};
+pub const AdviceSetResponse = struct {
+    pub const default: @This() = .{};
+    IsShow: bool = false,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PbUpLevelRoleRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    ItemList: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const CharacterBattleStateChangeNotify = struct {
+    pub const default: @This() = .{};
+    CharacterBattleStateInfo: std.ArrayList(CharacterBattleStateInfo) = .empty,
+};
+pub const SwitchLogicStateNotify = struct {
+    pub const default: @This() = .{};
+    States: ?LogicStateComponentPb = null,
+};
+pub const UpdateFormationRequest = struct {
+    pub const default: @This() = .{};
+    Formations: std.ArrayList(FightFormation) = .empty,
+};
+pub const ChatContentProto = struct {
+    pub const default: @This() = .{};
+    SenderUid: i32 = 0,
+    ChatContentType: ?ChatContentType = null,
+    Content: []const u8 = "",
+    OfflineMsg: bool = false,
+    UtcTime: i64 = 0,
+    MsgId: []const u8 = "",
+    PsAccountId: []const u8 = "",
+    XboxAccountId: []const u8 = "",
+};
+pub const PassiveSkillAddResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const TutorialInfoResponse = struct {
+    pub const default: @This() = .{};
+    UnlockList: std.ArrayList(TutorialInfo) = .empty,
+};
+pub const CaughtRequest = struct {
+    pub const default: @This() = .{};
+    Info: ?CaughtInfo = null,
+};
+pub const GetMusicInfoResponse = struct {
+    pub const default: @This() = .{};
+    MusicIds: std.ArrayList(i32) = .empty,
+    CurMusicId: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+    FavoriteMusicList: std.ArrayList(i32) = .empty,
+};
+pub const PbBattlePassRecurringReward = struct {
+    pub const default: @This() = .{};
+    Type: ?BattlePassType = null,
+    ItemId: i32 = 0,
+    Count: i32 = 0,
+};
+pub const SimpleCombatComponentPb = struct {
+    pub const default: @This() = .{};
+    SplineConfig: ?union(enum) {
+        SplineConfigId: i32,
+    } = null,
+    SplineMove: ?union(enum) {
+        SplineMoveType: ?SimpleCombatSplineMovePbType,
+    } = null,
+    SubTypeId: i32 = 0,
+    BuffLayers: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    SimpleCombatEntityAttributePbInfo: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    LockedAttributeMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const IllustratedEntry = struct {
+    pub const default: @This() = .{};
+    SubType: ?union(enum) {
+        PhotographSubType: ?PhotographSubType,
+    } = null,
+    Id: i32 = 0,
+    CreateTime: u32 = 0,
+    Num: i32 = 0,
+    IsRead: bool = false,
+};
+pub const PinballRoles = struct {
+    pub const default: @This() = .{};
+    Roles: std.ArrayList(PinballRoleData) = .empty,
+};
+pub const CalabashSkinTakeOnResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SkinId: i32 = 0,
+};
+pub const CounterAttackPush = struct {
+    pub const default: @This() = .{};
+    CounterAttackInfo: ?CounterAttackInfo = null,
+};
+pub const PrivateChatOperateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PhantomCollectReward = struct {
+    pub const default: @This() = .{};
+    Data: ?union(enum) {
+        Progress: ?PhantomCollectProgress,
+    } = null,
+    Type: i32 = 0,
+    State: i32 = 0,
+};
+pub const RbLaserEmitterPbType = struct {
+    pub const default: @This() = .{};
+    LaserPoints: std.ArrayList(Vector) = .empty,
+};
+pub const TeleportDataResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Ids: std.ArrayList(i32) = .empty,
+};
+pub const ItemDict = struct {
+    pub const default: @This() = .{};
+    Items: std.ArrayList(ItemEntry) = .empty,
+};
+pub const GameplayAttributeData = struct {
+    pub const default: @This() = .{};
+    CurrentValue: i32 = 0,
+    ValueIncrement: i32 = 0,
+    AttributeType: ?EAttributeType = null,
+};
+pub const AiInformationResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AnimationStateChangedResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const FightFormationNotifyInfo = struct {
+    pub const default: @This() = .{};
+    FormationId: i32 = 0,
+    CurRole: i32 = 0,
+    RoleInfos: std.ArrayList(FormationRoleInfo) = .empty,
+    IsCurrent: bool = false,
+};
+pub const SendEquipSkinResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PatrolInfoPb = struct {
+    pub const default: @This() = .{};
+    Data: ?union(enum) {
+        SmartObjectComponent: ?SmartObjectComponent,
+    } = null,
+};
+pub const LongShanMainData = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Tasks: std.ArrayList(LongShanMainTaskData) = .empty,
+    CanUnlock: bool = false,
+    BeginOpenTime: i64 = 0,
+    EndOpenTime: i64 = 0,
+};
+pub const VisionSkillComponentPb = struct {
+    pub const default: @This() = .{};
+    VisionSkillInfos: std.ArrayList(VisionSkillInformation) = .empty,
+    PhantomSkillInfo: ?VisionSkillInformation = null,
 };
 pub const KurotatoRoleInfo = struct {
     pub const default: @This() = .{};
@@ -44433,41 +44701,70 @@ pub const KurotatoRoleInfo = struct {
     IsUnlock: bool = false,
     MaxFinishWave: i32 = 0,
 };
-pub const ActivityTimePointRewarData = struct {
+pub const FavorItem = struct {
     pub const default: @This() = .{};
-    Rewards: std.ArrayList(TimePointRewardData) = .empty,
+    Id: i32 = 0,
+    Status: ?FavorItemStatus = null,
 };
-pub const RewardItemInfoList = struct {
+pub const FlowEndResponse = struct {
     pub const default: @This() = .{};
-    ItemList: std.ArrayList(RewardItemInfo) = .empty,
+    ErrorCode: ?ErrorCode = null,
 };
-pub const FuncOpenNotify = struct {
+pub const SlashLevelPlayInfo = struct {
     pub const default: @This() = .{};
-    Func: std.ArrayList(Function) = .empty,
+    Id: i32 = 0,
+    IsLocked: bool = false,
+    FirstScore: i32 = 0,
+    SecondScore: i32 = 0,
+    FirstBattle: ?BattleFormation = null,
+    SecondBattle: ?BattleFormation = null,
+    IsPassed: bool = false,
+    IsEasyPass: bool = false,
 };
-pub const RolePhantomPropInfo = struct {
+pub const EntityConditionListeningActionCtxPb = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
-    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+    EntityCtx: ?EntityCtxPb = null,
+    EntityConditionListeningIndex: i32 = 0,
 };
-pub const FightBuffEffectContext = struct {
+pub const CaughtPush = struct {
     pub const default: @This() = .{};
-    dRoundAction: ?union(enum) {
-        LeftCooldown: f32,
-    } = null,
-    Effect: ?union(enum) {
-        AttributeEventEffectData: ?AttributeEventEffectData,
-    } = null,
+    Info: ?CaughtInfo = null,
 };
-pub const AnimalDieRequest = struct {
+pub const FeiXuePreheatActivityInfo = struct {
     pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Pos: ?Vector = null,
+    FeiXuePreheatInfos: std.ArrayList(FeiXuePreheatInfo) = .empty,
 };
-pub const TutorialInfoResponse = struct {
+pub const BeamCastHitPlayerActionCtxPb = struct {
     pub const default: @This() = .{};
-    UnlockList: std.ArrayList(TutorialInfo) = .empty,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const GolemCrackActivityInfo = struct {
+    pub const default: @This() = .{};
+    GolemCrackLevelInfos: std.ArrayList(GolemCrackLevelInfo) = .empty,
+};
+pub const SettingNotify = struct {
+    pub const default: @This() = .{};
+    MobileButtonSettings: std.ArrayList(MobileButtonSetting) = .empty,
+};
+pub const RoleConfigInfoNotify = struct {
+    pub const default: @This() = .{};
+    RoleConfigs: std.ArrayList(RoleConfigInfo) = .empty,
+};
+pub const ItemDeprecateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ApplyGameplayEffectResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const RTimeStopResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const LifePointDrawActivityData = struct {
+    pub const default: @This() = .{};
+    LifePointChallengeData: std.ArrayList(LifePointChallengeData) = .empty,
 };
 pub const DamageExecuteNotify = struct {
     pub const default: @This() = .{};
@@ -44487,63 +44784,141 @@ pub const DamageExecuteNotify = struct {
     ChangeWeakness: i32 = 0,
     Bop: i64 = 0,
 };
-pub const ConditionItem = struct {
+pub const BroadcastAddBuffFailedNotify = struct {
     pub const default: @This() = .{};
-    ItemFinishMap: std.ArrayList(MapEntry(i32, ItemFinishList)) = .empty,
+    BuffId: i64 = 0,
+    StackCount: i32 = 0,
+    InstigatorId: i64 = 0,
+    TransferContextId: ?TransferContextId = null,
 };
-pub const SimpleCombatComponentPb = struct {
-    pub const default: @This() = .{};
-    SplineConfig: ?union(enum) {
-        SplineConfigId: i32,
-    } = null,
-    SplineMove: ?union(enum) {
-        SplineMoveType: ?SimpleCombatSplineMovePbType,
-    } = null,
-    SubTypeId: i32 = 0,
-    BuffLayers: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    SimpleCombatEntityAttributePbInfo: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    LockedAttributeMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const TeleportFinishResponse = struct {
+pub const TutorialReceiveResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const RemoveBuffS2cResponsePush = struct {
+pub const OrnamentInfo = struct {
+    pub const default: @This() = .{};
+    UnlockOrnamentIds: std.ArrayList(i32) = .empty,
+    OrnamentDressInfos: std.ArrayList(OrnamentDressInfo) = .empty,
+    RedPointOrnamentIds: std.ArrayList(i32) = .empty,
+};
+pub const RoleOperateSelfBgmResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+    IsOpen: bool = false,
 };
-pub const SwitchLogicStateNotify = struct {
-    pub const default: @This() = .{};
-    States: ?LogicStateComponentPb = null,
-};
-pub const MapCancelTraceResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    MarkId: i32 = 0,
-};
-pub const PartUpdateNotify = struct {
+pub const VisionSkillChangeNotify = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
-    PartInfos: std.ArrayList(PartInformation) = .empty,
+    VisionSkillInfos: std.ArrayList(VisionSkillInformation) = .empty,
+    PhantomSkillInfo: ?VisionSkillInformation = null,
 };
-pub const DrownResponse = struct {
+pub const HardLevelBuffs = struct {
+    pub const default: @This() = .{};
+    BuffId: i32 = 0,
+    Slot: i32 = 0,
+    State: ?BossRushBuffSelectionStatus = null,
+};
+pub const RoleShowListUpdateResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const OrderApplyBuffRequest = struct {
+pub const PartUpdateRequest = struct {
     pub const default: @This() = .{};
-    Time: ?union(enum) {
-        Duration: f32,
-    } = null,
+    EntityId: i64 = 0,
+    PartUpdateInfos: std.ArrayList(PartUpdateInfo) = .empty,
+};
+pub const GameplayCueResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const LoginResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ReconnectToken: []const u8 = "",
+    Timestamp: i64 = 0,
+    Platform: []const u8 = "",
+    ClientWaitingMode: i32 = 0,
+    ClientWaitingTime: i32 = 0,
+    ClientAutoInInterval: i32 = 0,
+    ClientDisplayTime: i32 = 0,
+};
+pub const ValidTimeItemResponse = struct {
+    pub const default: @This() = .{};
+    ItemList: std.ArrayList(ValidTimeItem) = .empty,
+};
+pub const BattleStateChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const InstDataNotify = struct {
+    pub const default: @This() = .{};
+    EnterInfos: std.ArrayList(InstEnterInfoPb) = .empty,
+};
+pub const EntityIsVisiblePush = struct {
+    pub const default: @This() = .{};
     Id: i64 = 0,
-    Level: i32 = 0,
-    InstigatorId: i64 = 0,
-    ApplyType: i32 = 0,
-    ServerId: i32 = 0,
-    StackCount: i32 = 0,
-    IsIterable: bool = false,
-    TransferContextId: ?TransferContextId = null,
-    Reason: []const u8 = "",
+    IsVisible: bool = false,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const HitEndResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SwitchRoleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+};
+pub const AnimalDestroyResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EncircleActivityPb = struct {
+    pub const default: @This() = .{};
+    Challenges: std.ArrayList(EncircleChallengePb) = .empty,
+};
+pub const RoleDevPropsConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    ProspectBeginTime: i64 = 0,
+    ProspectEndTime: i64 = 0,
+    TypeId: i32 = 0,
+    GachaId: i32 = 0,
+    SpecialGachaPair: std.ArrayList(SpecialGachaPair) = .empty,
+    SortId: i32 = 0,
+};
+pub const EntityDestructibleCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const SwitchCharacterStateNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    OldState: i32 = 0,
+    NewState: i32 = 0,
+};
+pub const PassiveSkillItemPb = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    SkillId: i64 = 0,
+};
+pub const AiBlackboardCdResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const MapUnlockFieldInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    FieldId: std.ArrayList(i32) = .empty,
+};
+pub const RenjuCompleteActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    Controller: i32 = 0,
 };
 pub const JigsawFoundationMatchedConditionActionCtxPb = struct {
     pub const default: @This() = .{};
@@ -44551,42 +44926,42 @@ pub const JigsawFoundationMatchedConditionActionCtxPb = struct {
     MatchedIndex: i32 = 0,
     ConditionIndex: i32 = 0,
 };
-pub const PbRolePropsNotify = struct {
+pub const VectorArrayBlackboard = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
-    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+    Values: std.ArrayList(Vector) = .empty,
 };
-pub const InputAction = struct {
+pub const SunSpiritPb = struct {
     pub const default: @This() = .{};
-    ActionName: []const u8 = "",
-    KeyNameList: std.ArrayList([]const u8) = .empty,
-    Version: i32 = 0,
-    InputType: ?SettingInputType = null,
+    InstId: i32 = 0,
+    EntityConfigId: i32 = 0,
+    TakeUpData: ?SunSpiritTakeUpPb = null,
 };
-pub const MotorIsEnablePush = struct {
+pub const SwitchLogicStateRequest = struct {
     pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsEnable: bool = false,
-    CombatCommon: ?CombatCommon = null,
+    States: ?LogicStateComponentPb = null,
+    ClientEntityId: i64 = 0,
 };
-pub const UpdateNodeStatusNotify = struct {
+pub const RbBlockIdlePbState = struct {
     pub const default: @This() = .{};
-    TreeOwnerId: i32 = 0,
-    TreeIncId: i64 = 0,
-    NodeId: i32 = 0,
-    Status: ?NodeStatus = null,
+    Position: ?Vector = null,
+    Rotation: ?Vector = null,
 };
-pub const NormalInteractCtxPb = struct {
+pub const RiskHarvestStarRewardInfo = struct {
     pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    OptionIndex: i32 = 0,
+    TargetScore: i32 = 0,
+    State: ?StarRewardState = null,
 };
-pub const TutorialReceiveResponse = struct {
+pub const ActivityLineCrossData = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
-    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    Challenges: std.ArrayList(LineCrossChallengeData) = .empty,
+};
+pub const MotorFightTalentTreePb = struct {
+    pub const default: @This() = .{};
+    Talent: std.ArrayList(MotorFightTalentPb) = .empty,
+};
+pub const AccessPathTimeServerConfigResponse = struct {
+    pub const default: @This() = .{};
+    AccessPathTimeServerConfig: std.ArrayList(AccessPathTimeServerConfig) = .empty,
 };
 pub const AnimationStateChangedRequest = struct {
     pub const default: @This() = .{};
@@ -44596,233 +44971,99 @@ pub const AnimationStateChangedRequest = struct {
     SpecialStates: std.ArrayList(i32) = .empty,
     ModelId: i32 = 0,
 };
-pub const ControlParam = struct {
+pub const FormationAttrRequest = struct {
     pub const default: @This() = .{};
-    Param: ?union(enum) {
-        TemporaryTeleportParam: ?ControlTemporaryTeleportParam,
-    } = null,
-    ControlType: i32 = 0,
+    Duration: i64 = 0,
+    FormationAttrs: std.ArrayList(FormationAttr) = .empty,
 };
-pub const TransitionWithSpecialCustomLoadingPb = struct {
+pub const RbBreakableObstaclePbType = struct {
     pub const default: @This() = .{};
-    LoadingType: ?union(enum) {
-        HonamiStoryCustomLoadingPb: ?HonamiStoryCustomLoadingPb,
-    } = null,
+    LinkPoints: std.ArrayList(Vector) = .empty,
 };
-pub const ClientCurrentRoleReportResponse = struct {
+pub const ActivityFunPlayChallengeData = struct {
     pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    CurrentEntityId: i64 = 0,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const CrystalMonsterInfoPb = struct {
-    pub const default: @This() = .{};
-    SlotInfoList: std.ArrayList(CrystalMonsterSlotInfo) = .empty,
-};
-pub const IllustratedEntry = struct {
-    pub const default: @This() = .{};
-    SubType: ?union(enum) {
-        PhotographSubType: ?PhotographSubType,
-    } = null,
-    Id: i32 = 0,
-    CreateTime: u32 = 0,
-    Num: i32 = 0,
-    IsRead: bool = false,
-};
-pub const ActivityCorniceMeetingData = struct {
-    pub const default: @This() = .{};
+    ChallengeId: i32 = 0,
     UnlockTime: i64 = 0,
-    LevelEntryData: std.ArrayList(MapEntry(i32, ActivityCorniceMeetingLevelEntryData)) = .empty,
+    RewardStatus: ?FunPlayChallengeRewardStatus = null,
+    FunPlaySharpComment: std.ArrayList(i32) = .empty,
+    FinishTime: i64 = 0,
 };
-pub const MapTraceResponse = struct {
+pub const RbFloorComponentPb = struct {
+    pub const default: @This() = .{};
+    GamePlayIncId: i32 = 0,
+    Type: i32 = 0,
+    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
+};
+pub const ItemLockResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    MarkId: i32 = 0,
 };
-pub const OrnamentInfo = struct {
+pub const SceneLoadingFinishResponse = struct {
     pub const default: @This() = .{};
-    UnlockOrnamentIds: std.ArrayList(i32) = .empty,
-    OrnamentDressInfos: std.ArrayList(OrnamentDressInfo) = .empty,
-    RedPointOrnamentIds: std.ArrayList(i32) = .empty,
+    ErrorCode: ?ErrorCode = null,
 };
-pub const SceneItemStateChangeConditionAction = struct {
+pub const AnimalDieRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    Pos: ?Vector = null,
+};
+pub const OrderRemoveBuffResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AllLimitTimeReward = struct {
+    pub const default: @This() = .{};
+    SignState: ?SignState = null,
+    CurProgress: i32 = 0,
+    Target: i32 = 0,
+    ConfigId: i32 = 0,
+};
+pub const LevelGroupData = struct {
+    pub const default: @This() = .{};
+    GroupId: i32 = 0,
+    OpenTime: i64 = 0,
+    levels: std.ArrayList(LevelData) = .empty,
+};
+pub const StateChangeActionCtxPb = struct {
     pub const default: @This() = .{};
     EntityCtx: ?EntityCtxPb = null,
     StateIndex: i32 = 0,
-    ConditionIndex: i32 = 0,
 };
-pub const FsmBlackboardNotify = struct {
+pub const EntityIsVisibleNotify = struct {
     pub const default: @This() = .{};
-    FsmBlackBoards: std.ArrayList(DFsmBlackBoard) = .empty,
+    Id: i64 = 0,
+    IsVisible: bool = false,
+    CombatCommon: ?CombatCommon = null,
 };
-pub const PrivateChatResponse = struct {
+pub const GetItemProgress = struct {
     pub const default: @This() = .{};
-    TargetUid: i32 = 0,
-    ErrorCode: ?ErrorCode = null,
-    MsgId: []const u8 = "",
-    FilterMsg: []const u8 = "",
-    BanEndTime: i64 = 0,
+    Info: std.ArrayList(GetItemCount) = .empty,
 };
-pub const CreateBulletResponse = struct {
+pub const DErrorResult = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+};
+pub const SceneItemLifeCycleComponentDestroyCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
 };
 pub const LivenessTakeResponse = struct {
     pub const default: @This() = .{};
     Ids: std.ArrayList(i32) = .empty,
     ErrorCode: ?ErrorCode = null,
 };
-pub const AccessPathTimeServerConfigResponse = struct {
-    pub const default: @This() = .{};
-    AccessPathTimeServerConfig: std.ArrayList(AccessPathTimeServerConfig) = .empty,
-};
-pub const BeamCastHitPlayerActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const PlayerMotionResponse = struct {
-    pub const default: @This() = .{};
-    ErrorId: ?ErrorCode = null,
-};
-pub const EnterGameRequest = struct {
-    pub const default: @This() = .{};
-    SingleInstanceId: i32 = 0,
-    MultiInstanceId: i32 = 0,
-    Mode: i32 = 0,
-    Pos: ?Vector = null,
-};
-pub const SummonerComponentPb = struct {
-    pub const default: @This() = .{};
-    SummonerId: i64 = 0,
-    SummonCfgId: i32 = 0,
-    SummonSkillId: i32 = 0,
-    PlayerId: i32 = 0,
-    Type: ?ESummonType = null,
-};
-pub const AiInformationNotify = struct {
-    pub const default: @This() = .{};
-    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
-};
-pub const VisionExploreSkillSetResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    SkillId: i32 = 0,
-};
-pub const BossRushScoreRewardData = struct {
-    pub const default: @This() = .{};
-    RewardDataId: i32 = 0,
-    State: ?BossRushRewardClaimStatus = null,
-};
-pub const TeleportTransferResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    MapId: i32 = 0,
-    PosX: f32 = 0,
-    PosY: f32 = 0,
-    PosZ: f32 = 0,
-    Pitch: f32 = 0,
-    Yaw: f32 = 0,
-    Roll: f32 = 0,
-};
-pub const DrownEndTeleportResponse = struct {
+pub const BuffStackCountResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const NormalItemUpdateNotify = struct {
+pub const InfrOneRoad = struct {
     pub const default: @This() = .{};
-    NormalItemList: std.ArrayList(NormalItem) = .empty,
-    NoTips: bool = false,
-};
-pub const CounterAttackPush = struct {
-    pub const default: @This() = .{};
-    CounterAttackInfo: ?CounterAttackInfo = null,
-};
-pub const PrivateChatOperateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RoleOperateSelfBgmResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-    IsOpen: bool = false,
-};
-pub const CharacterAttachResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EntityCommonTagNotify = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    Tags: std.ArrayList(CommonTagData) = .empty,
-};
-pub const PrivateChatRequest = struct {
-    pub const default: @This() = .{};
-    TargetUid: i32 = 0,
-    ChatContentType: ?ChatContentType = null,
-    Content: []const u8 = "",
-};
-pub const InstDataNotify = struct {
-    pub const default: @This() = .{};
-    EnterInfos: std.ArrayList(InstEnterInfoPb) = .empty,
-};
-pub const CaughtResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RecoverPropChangedNotify = struct {
-    pub const default: @This() = .{};
-    Attributes: std.ArrayList(RecoverPropFromServer) = .empty,
-    Duration: i64 = 0,
-};
-pub const VisionSkillChangeNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    VisionSkillInfos: std.ArrayList(VisionSkillInformation) = .empty,
-    PhantomSkillInfo: ?VisionSkillInformation = null,
-};
-pub const AdventureRewardData = struct {
-    pub const default: @This() = .{};
-    DropId: i32 = 0,
-    Items: std.ArrayList(AdventureItemData) = .empty,
-};
-pub const EntityCalabashSkinChangeNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    CalabashSkinCoponent: ?CalabashSkinComponentPb = null,
-};
-pub const DynamicEntityRewardCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const TimelineTrackComponentPb = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-    ControlDatas: std.ArrayList(TimelineTrackControlDataPb) = .empty,
-};
-pub const ExploreSkillRouletteUpdateNotify = struct {
-    pub const default: @This() = .{};
-    RouletteInfo: std.ArrayList(ExploreSkillRoulette) = .empty,
-};
-pub const FragmentMemoryItem = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Data: std.ArrayList(FragmentMemoryData) = .empty,
-    IsUnlock: bool = false,
-};
-pub const PhantomArenaDeckInfo = struct {
-    pub const default: @This() = .{};
-    Name: []const u8 = "",
-    BattleCardIds: std.ArrayList(i32) = .empty,
-    CanUse: bool = false,
-    LastUseChallengeId: std.ArrayList(i32) = .empty,
-    Index: i32 = 0,
-    SkillUnlockInfos: std.ArrayList(PhantomBattleCardSkillUnlockInfo) = .empty,
-};
-pub const FavorItem = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Status: ?FavorItemStatus = null,
+    RoadId: i32 = 0,
+    status: ?InfrStatusPb = null,
+    CompleteTime: i64 = 0,
+    TotalGiftCount: i64 = 0,
+    LastGiftTime: i64 = 0,
 };
 pub const CharacterLookAtInfo = struct {
     pub const default: @This() = .{};
@@ -44835,7 +45076,341 @@ pub const CharacterLookAtInfo = struct {
     EntityId: i32 = 0,
     TargetType: i32 = 0,
 };
-pub const GivebackInfoResponse = struct {
+pub const PhantomLevelUpRequest = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+    ConsumeList: std.ArrayList(PhantomConsumeItem) = .empty,
+    SlotCount: i32 = 0,
+};
+pub const ResonantChainUnlockResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+    ResonantChainGroupIndex: i32 = 0,
+};
+pub const SkinRewardActivityRewardInfo = struct {
+    pub const default: @This() = .{};
+    ConfigId: i32 = 0,
+    State: ?SkinRewardActivityRewardState = null,
+};
+pub const WeaponBreachResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    IncId: i32 = 0,
+    WeaponBreach: i32 = 0,
+};
+pub const TrampleDeActiveCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const FlySkinWearResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const FragileChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityDressOrnamentChangeNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    OrnamentComponentPb: ?OrnamentComponentPb = null,
+};
+pub const ThemeCelebration = struct {
+    pub const default: @This() = .{};
+    PersonalRewardIds: std.ArrayList(i32) = .empty,
+    WorldRewardIds: std.ArrayList(i32) = .empty,
+    SubActivityTimes: std.ArrayList(SubActivityBeginTime) = .empty,
+};
+pub const SwitchLogicStatePush = struct {
+    pub const default: @This() = .{};
+    States: ?LogicStateComponentPb = null,
+    ClientEntityId: i64 = 0,
+};
+pub const PreheatSignActivityData = struct {
+    pub const default: @This() = .{};
+    PreheatSignNodeInfos: std.ArrayList(PreheatSignNodeInfo) = .empty,
+};
+pub const UpdateChildQuestNodeStatusNotify = struct {
+    pub const default: @This() = .{};
+    TreeOwnerId: i32 = 0,
+    TreeIncId: i64 = 0,
+    NodeId: i32 = 0,
+    Status: ?ChildQuestNodeStatus = null,
+};
+pub const BehaviorTreeCtxPb = struct {
+    pub const default: @This() = .{};
+    IncId: i64 = 0,
+    BtType: ?BtType = null,
+    BtId: i32 = 0,
+    NodeId: i32 = 0,
+};
+pub const EntityEquipSkinChangeNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    WeaponSkinComponentPb: ?WeaponSkinComponentPb = null,
+};
+pub const RoleLoadEquipData = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Pos: ?EquipPos = null,
+    EquipIncId: i32 = 0,
+};
+pub const FightBuffEffectContext = struct {
+    pub const default: @This() = .{};
+    dRoundAction: ?union(enum) {
+        LeftCooldown: f32,
+    } = null,
+    Effect: ?union(enum) {
+        AttributeEventEffectData: ?AttributeEventEffectData,
+    } = null,
+};
+pub const RandomInteractCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    OptionIndex: i32 = 0,
+};
+pub const EntityStaticHookMoveResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const CalabashDevelopInfo = struct {
+    pub const default: @This() = .{};
+    MonsterId: i32 = 0,
+    UnlockConditions: std.ArrayList(CalabashDevelopConditionState) = .empty,
+};
+pub const PrivateChatOperateRequest = struct {
+    pub const default: @This() = .{};
+    OperateType: ?PrivateChatOperateType = null,
+    TargetPlayerId: i32 = 0,
+};
+pub const ItemExchangeInfoResponse = struct {
+    pub const default: @This() = .{};
+    ItemExchangeInfos: std.ArrayList(ItemExchangeInfo) = .empty,
+};
+pub const BoneVisibleChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ModifyBulletParamsResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityAccessRangeRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    EntitiesToCheck: std.ArrayList(i64) = .empty,
+    RangeType: ?RangeType = null,
+};
+pub const FarmGoldData = struct {
+    pub const default: @This() = .{};
+    PointRewardGet: std.ArrayList(i32) = .empty,
+    LevelPlayTasks: std.ArrayList(FarmGoldLevelPlayInfo) = .empty,
+};
+pub const EntityGroupFailureCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const ActivityMoonSignInData = struct {
+    pub const default: @This() = .{};
+    MoonPhaseSelectList: std.ArrayList(MoonSignInConfigData) = .empty,
+    IsGrandReward: bool = false,
+    CurrentMoonId: i32 = 0,
+};
+pub const RogueWeeklyAward = struct {
+    pub const default: @This() = .{};
+    SignState: ?SignState = null,
+    CurProgress: i32 = 0,
+    MaxProgress: i32 = 0,
+    ConfigId: i32 = 0,
+};
+pub const InfrV2TreePb = struct {
+    pub const default: @This() = .{};
+    Trees: std.ArrayList(InfrV2OneTree) = .empty,
+    ManualTraceTree: i32 = 0,
+};
+pub const NormalItemAddNotify = struct {
+    pub const default: @This() = .{};
+    NormalItemList: std.ArrayList(NormalItem) = .empty,
+    NoTips: bool = false,
+    Reason: i32 = 0,
+};
+pub const FadeBackgroundFadeOutEffectPb = struct {
+    pub const default: @This() = .{};
+    FadeOutEffectPb: ?union(enum) {
+        FadeBackgroundFadeOutEffectBlackPb: ?FadeBackgroundFadeOutEffectBlackPb,
+    } = null,
+};
+pub const AreaInfo = struct {
+    pub const default: @This() = .{};
+    AreaId: i32 = 0,
+    Atmosphere: i32 = 0,
+    FurnitureDiySlotInfos: std.ArrayList(FurnitureDiySlotInfo) = .empty,
+};
+pub const ActorVisibleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const FsmCustomBlackboardDatas = struct {
+    pub const default: @This() = .{};
+    BlackboardIntValues: std.ArrayList(DFsmBlackboardCustom) = .empty,
+};
+pub const AnimationStateInitNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    States: std.ArrayList(i32) = .empty,
+    TimeStamp: f32 = 0,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const AnimationStateInitRequest = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    States: std.ArrayList(i32) = .empty,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const CaughtResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const MonsterDrownResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityMapMarkInfoPb = struct {
+    pub const default: @This() = .{};
+    InstId: i32 = 0,
+    TemplateId: i32 = 0,
+    Pos: ?Vector = null,
+};
+pub const QuestReviewDataResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const RolePassiveSkillInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    PassiveSkillInfoList: std.ArrayList(PassiveSkillInfo) = .empty,
+};
+pub const AiHateNotify = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+};
+pub const EnterGameRequest = struct {
+    pub const default: @This() = .{};
+    SingleInstanceId: i32 = 0,
+    MultiInstanceId: i32 = 0,
+    Mode: i32 = 0,
+    Pos: ?Vector = null,
+};
+pub const FormationAttrNotify = struct {
+    pub const default: @This() = .{};
+    Duration: i64 = 0,
+    FormationAttrs: std.ArrayList(FormationAttr) = .empty,
+};
+pub const ActivityCorniceMeetingData = struct {
+    pub const default: @This() = .{};
+    UnlockTime: i64 = 0,
+    LevelEntryData: std.ArrayList(MapEntry(i32, ActivityCorniceMeetingLevelEntryData)) = .empty,
+};
+pub const WeaponResonUpRequest = struct {
+    pub const default: @This() = .{};
+    IncId: i32 = 0,
+    ConsumeList: std.ArrayList(i32) = .empty,
+    ConsumeItemList: std.ArrayList(WeaponConsumeItem) = .empty,
+};
+pub const LogicStateInitResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const RoleSkinChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const DrownEndTeleportPush = struct {
+    pub const default: @This() = .{};
+    ycu: ?union(enum) {
+        TeleportPos: ?Vector,
+    } = null,
+};
+pub const TeleportFinishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PbRolePropsNotify = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
+    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const AiBlackboardsResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const MapTraceResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    MarkId: i32 = 0,
+};
+pub const AttrData = struct {
+    pub const default: @This() = .{};
+    AttributeType: ?EAttributeType = null,
+    CurrentValue: i32 = 0,
+    ValueIncrement: i32 = 0,
+};
+pub const VisionExploreSkillSetResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SkillId: i32 = 0,
+};
+pub const CrystalMonsterInfoPb = struct {
+    pub const default: @This() = .{};
+    SlotInfoList: std.ArrayList(CrystalMonsterSlotInfo) = .empty,
+};
+pub const RbJumpMovement = struct {
+    pub const default: @This() = .{};
+    Direction: ?RbGridDirection = null,
+};
+pub const HitEndRequest = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    TargetId: i64 = 0,
+};
+pub const ActivateBuffResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const NormalItemResponse = struct {
+    pub const default: @This() = .{};
+    NormalItemList: std.ArrayList(NormalItem) = .empty,
+};
+pub const EntityIsVisibleRequest = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    IsVisible: bool = false,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const ButtonEnableResult = struct {
+    pub const default: @This() = .{};
+    Type: ?ButtonType = null,
+    Enabled: bool = false,
+};
+pub const AttributeChangedResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityFollowTrackResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const RoleTrialInfoActivity = struct {
+    pub const default: @This() = .{};
+    RoleTrialTask: std.ArrayList(RoleTrialTask) = .empty,
+};
+pub const TsAnimNotifyStateAbsoluteTimeStopResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
@@ -44845,193 +45420,6 @@ pub const OccupiedBoardGridInfo = struct {
     OccupyingEntityConfigId: i32 = 0,
     EntityConfigType: i32 = 0,
 };
-pub const GetDetectionLabelInfoResponse = struct {
-    pub const default: @This() = .{};
-    UnlockLabelInfo: ?UnlockDetectionLabelInfo = null,
-};
-pub const EntityEquipSkinChangeNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    WeaponSkinComponentPb: ?WeaponSkinComponentPb = null,
-};
-pub const SceneLoadingFinishResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const BoneVisibleChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const TrampleActivateCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const LongShanMainData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Tasks: std.ArrayList(LongShanMainTaskData) = .empty,
-    CanUnlock: bool = false,
-    BeginOpenTime: i64 = 0,
-    EndOpenTime: i64 = 0,
-};
-pub const BattleStateChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AnimationStateChangedPush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    States: std.ArrayList(i32) = .empty,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const AchievementEntry = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    FinishTime: u32 = 0,
-    IsReceive: bool = false,
-    Progress: ?AchievementProgress = null,
-};
-pub const RoadNetworkComponentPb = struct {
-    pub const default: @This() = .{};
-    MoveData: ?union(enum) {
-        NavMoveData: ?RoadNavMoveData,
-    } = null,
-    DestRoadId: i32 = 0,
-    DestIndex: i32 = 0,
-    GenRoadId: i32 = 0,
-    GenRoadIndex: i32 = 0,
-};
-pub const HonamiStoryRoleData = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    RoleSlots: std.ArrayList(HonamiStoryRoleSlot) = .empty,
-    DressWeapon: i32 = 0,
-};
-pub const FlowOptionInfoList = struct {
-    pub const default: @This() = .{};
-    OptionIndexList: std.ArrayList(FlowOptionInfo) = .empty,
-};
-pub const EncircleActivityPb = struct {
-    pub const default: @This() = .{};
-    Challenges: std.ArrayList(EncircleChallengePb) = .empty,
-};
-pub const BroadcastAddBuffFailedNotify = struct {
-    pub const default: @This() = .{};
-    BuffId: i64 = 0,
-    StackCount: i32 = 0,
-    InstigatorId: i64 = 0,
-    TransferContextId: ?TransferContextId = null,
-};
-pub const EntityIsVisibleRequest = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsVisible: bool = false,
-    CombatCommon: ?CombatCommon = null,
-};
-pub const OrderApplyBuffResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ClientStorageMapListData = struct {
-    pub const default: @This() = .{};
-    Data: std.ArrayList(MapEntry(i32, ClientStorageListData)) = .empty,
-};
-pub const VisionExploreSkillSetRequest = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-    IsAutoChange: bool = false,
-    RouletteType: ?RouletteType = null,
-};
-pub const ExploreSkillActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const TowerFloorPb = struct {
-    pub const default: @This() = .{};
-    TowerConfigId: i32 = 0,
-    Star: i32 = 0,
-    Formation: std.ArrayList(TowerRolePb) = .empty,
-    StarIndex: std.ArrayList(i32) = .empty,
-    IsQuickPass: bool = false,
-};
-pub const PartUpdatePush = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    PartUpdateInfos: std.ArrayList(PartUpdateInfo) = .empty,
-};
-pub const SlashLevelPlayInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    IsLocked: bool = false,
-    FirstScore: i32 = 0,
-    SecondScore: i32 = 0,
-    FirstBattle: ?BattleFormation = null,
-    SecondBattle: ?BattleFormation = null,
-    IsPassed: bool = false,
-    IsEasyPass: bool = false,
-};
-pub const ShieldUpdateInfo = struct {
-    pub const default: @This() = .{};
-    Handle: i32 = 0,
-    ConfigId: i32 = 0,
-    ShieldValue: i32 = 0,
-    UpdateType: ?EShieldUpdateType = null,
-};
-pub const EntityAfterConditionActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    PreCondtionListeningIndex: i32 = 0,
-    AfterCondtionListeningIndex: i32 = 0,
-};
-pub const PhantomLevelUpRequest = struct {
-    pub const default: @This() = .{};
-    IncId: i32 = 0,
-    ConsumeList: std.ArrayList(PhantomConsumeItem) = .empty,
-    SlotCount: i32 = 0,
-};
-pub const ClientPullResourcePackageResponse = struct {
-    pub const default: @This() = .{};
-    ErrorId: ?ErrorCode = null,
-    FinishMp4QuestIds: std.ArrayList(i32) = .empty,
-    NeedConfirmQuestIds: std.ArrayList(i32) = .empty,
-};
-pub const UpdateFormationRequest = struct {
-    pub const default: @This() = .{};
-    Formations: std.ArrayList(FightFormation) = .empty,
-};
-pub const GetMusicInfoResponse = struct {
-    pub const default: @This() = .{};
-    MusicIds: std.ArrayList(i32) = .empty,
-    CurMusicId: i32 = 0,
-    ErrorCode: ?ErrorCode = null,
-    FavoriteMusicList: std.ArrayList(i32) = .empty,
-};
-pub const RoleTagChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const VehiclePb = struct {
-    pub const default: @This() = .{};
-    Source: ?VehicleSource = null,
-};
-pub const ExploreSkillCustomCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const VisionSkillComponentPb = struct {
-    pub const default: @This() = .{};
-    VisionSkillInfos: std.ArrayList(VisionSkillInformation) = .empty,
-    PhantomSkillInfo: ?VisionSkillInformation = null,
-};
-pub const ConditionTask = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Current: i32 = 0,
-    Target: i32 = 0,
-    Status: ?ConditionTaskState = null,
-};
 pub const SwitchCharacterStateRequest = struct {
     pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
@@ -45039,321 +45427,30 @@ pub const SwitchCharacterStateRequest = struct {
     OldState: i32 = 0,
     NewState: i32 = 0,
 };
-pub const TrampleDeActiveCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const StorageInfoUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const CaughtPush = struct {
-    pub const default: @This() = .{};
-    Info: ?CaughtInfo = null,
-};
-pub const JigsawFoundationMatchedActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    MatchedIndex: i32 = 0,
-};
-pub const CaughtNotify = struct {
-    pub const default: @This() = .{};
-    Info: ?CaughtInfo = null,
-};
-pub const AnimalDestroyResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const TowerDefenseActivityInfo = struct {
-    pub const default: @This() = .{};
-    InstanceInfos: std.ArrayList(TowerDefenceInstanceInfo) = .empty,
-    RewardedScoreIds: std.ArrayList(i32) = .empty,
-    TotalScore: i32 = 0,
-    ShowName: bool = false,
-};
-pub const ModifyBulletParamsResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const TimeCheckResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ClientTime: i64 = 0,
-    ServerTime: i64 = 0,
-    ServerCombatTime: i64 = 0,
-    ServerStopTime: i64 = 0,
-    ServerFlowTimestamp: i64 = 0,
-};
-pub const SkinRewardActivityRewardInfo = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    State: ?SkinRewardActivityRewardState = null,
-};
-pub const OrnamentDressInfoUpdateNotify = struct {
-    pub const default: @This() = .{};
-    OrnamentDressInfos: std.ArrayList(OrnamentDressInfo) = .empty,
-};
-pub const EntityRemoveNotify = struct {
-    pub const default: @This() = .{};
-    RemoveInfos: std.ArrayList(EntityRemoveInfo) = .empty,
-    IsRemove: bool = false,
-};
-pub const PinballRoles = struct {
-    pub const default: @This() = .{};
-    Roles: std.ArrayList(PinballRoleData) = .empty,
-};
-pub const ActivityTask = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Current: i32 = 0,
-    Target: i32 = 0,
-    Status: ?ActivityTaskState = null,
-    PreItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const RoleSkinChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const FadeBackgroundFadeOutEffectPb = struct {
-    pub const default: @This() = .{};
-    FadeOutEffectPb: ?union(enum) {
-        FadeBackgroundFadeOutEffectBlackPb: ?FadeBackgroundFadeOutEffectBlackPb,
-    } = null,
-};
-pub const LogicStateInitResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const MonsterCreatorProgressSlot = struct {
-    pub const default: @This() = .{};
-    WaveId: i32 = 0,
-    KillMonIds: std.ArrayList(i32) = .empty,
-    CurrentWaveEndTime: i32 = 0,
-    SpawnStepType: i32 = 0,
-    CreatorEntityConfigId: i32 = 0,
-    MonsterInfo: std.ArrayList(SceneMonsterCreatedMonsterInfo) = .empty,
-};
-pub const CostVisionAttrRecommendInfo = struct {
-    pub const default: @This() = .{};
-    Cost: i32 = 0,
-    GetMainAttrRecommendInfo: std.ArrayList(VisionAttrRecommendInfo) = .empty,
-    GetSubAttrRecommendInfo: std.ArrayList(VisionAttrRecommendInfo) = .empty,
-};
-pub const WeaponLevelUpResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    IncId: i32 = 0,
-    WeaponLevel: i32 = 0,
-    WeaponExp: i32 = 0,
-    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const ActivityLineCrossData = struct {
-    pub const default: @This() = .{};
-    Challenges: std.ArrayList(LineCrossChallengeData) = .empty,
-};
-pub const PhantomCollectReward = struct {
-    pub const default: @This() = .{};
-    Data: ?union(enum) {
-        Progress: ?PhantomCollectProgress,
-    } = null,
-    Type: i32 = 0,
-    State: i32 = 0,
-};
-pub const InfrV2TreePb = struct {
-    pub const default: @This() = .{};
-    Trees: std.ArrayList(InfrV2OneTree) = .empty,
-    ManualTraceTree: i32 = 0,
-};
-pub const BtnStateRequest = struct {
-    pub const default: @This() = .{};
-    Type: ?ButtonType = null,
-    Types: std.ArrayList(ButtonType) = .empty,
-};
-pub const EntityQuickHackSkillCtxPb = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-    EntityState: i32 = 0,
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const GaSwitchCommonEnemyProCampResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const InputSettingUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PassiveSkillItemPb = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    SkillId: i64 = 0,
-};
-pub const AnimationStateComponentPb = struct {
-    pub const default: @This() = .{};
-    AnimationStates: std.ArrayList(i32) = .empty,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    BoneVisibleDatas: std.ArrayList(BoneVisibleData) = .empty,
-    AnimationTags: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const EntityIsVisibleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RogueWeeklyAward = struct {
-    pub const default: @This() = .{};
-    SignState: ?SignState = null,
-    CurProgress: i32 = 0,
-    MaxProgress: i32 = 0,
-    ConfigId: i32 = 0,
-};
-pub const SwitchCharacterStateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PrivateChatOperateRequest = struct {
-    pub const default: @This() = .{};
-    OperateType: ?PrivateChatOperateType = null,
-    TargetPlayerId: i32 = 0,
-};
-pub const BoneVisibleChangeNotify = struct {
+pub const BoneVisibleChangeRequest = struct {
     pub const default: @This() = .{};
     BoneVisibleData: ?BoneVisibleData = null,
 };
-pub const AiBlackboardsResponse = struct {
+pub const SummonerComponentPb = struct {
+    pub const default: @This() = .{};
+    SummonerId: i64 = 0,
+    SummonCfgId: i32 = 0,
+    SummonSkillId: i32 = 0,
+    PlayerId: i32 = 0,
+    Type: ?ESummonType = null,
+};
+pub const DrownEndTeleportResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const RoleSkillBranchModifyResponse = struct {
+pub const MotorCreateResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const EntityIsVisiblePush = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsVisible: bool = false,
-    CombatCommon: ?CombatCommon = null,
-};
-pub const EntityDestructibleCtxPb = struct {
+pub const EntityLeaveTriggerCtxPb = struct {
     pub const default: @This() = .{};
     EntityCtx: ?EntityCtxPb = null,
-};
-pub const UpdateSceneDateRequest = struct {
-    pub const default: @This() = .{};
-    AddDays: u32 = 0,
-    Hour: i32 = 0,
-    Minute: i32 = 0,
-    Reason: ?SceneDateUpdateReason = null,
-};
-pub const RbJumpMovement = struct {
-    pub const default: @This() = .{};
-    Direction: ?RbGridDirection = null,
-};
-pub const GatherTaskDoneInfo = struct {
-    pub const default: @This() = .{};
-    TaskId: i32 = 0,
-    State: ?GatherActivityTaskState = null,
-};
-pub const AnimalDieResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const FsmStateBehaviorRequest = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-    Index: i32 = 0,
-    Type: ?FsmStateBehaviorType = null,
-};
-pub const TsAnimNotifyStateAbsoluteTimeStopResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AnimationGameplayTagResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const Mp4BackgroundColorPb = struct {
-    pub const default: @This() = .{};
-    FadeIn: ?Mp4BackgroundColor = null,
-    FadeOut: ?Mp4BackgroundColor = null,
-};
-pub const EntityPatrolStopResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const TetrisLevelInfo = struct {
-    pub const default: @This() = .{};
-    vdC: ?union(enum) {
-        DifficultyIdx: i32,
-    } = null,
-    ehC: ?union(enum) {
-        State: ?TetrisState,
-    } = null,
-    thC: ?union(enum) {
-        UnlockTime: i64,
-    } = null,
-    Id: i32 = 0,
-    Results: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const PassiveSkillRemoveResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const LevelGroupData = struct {
-    pub const default: @This() = .{};
-    GroupId: i32 = 0,
-    OpenTime: i64 = 0,
-    levels: std.ArrayList(LevelData) = .empty,
-};
-pub const SetFocusModeDeterConditionResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ICustomShowUiPb = struct {
-    pub const default: @This() = .{};
-    CustomScreenTextSettingPb: ?union(enum) {
-        ICustomScreenTextSettingPb: ?ICustomScreenTextSettingPb,
-    } = null,
-    HideCircle: ?union(enum) {
-        IsHideCircle: bool,
-    } = null,
-};
-pub const RoleTrialInfoActivity = struct {
-    pub const default: @This() = .{};
-    RoleTrialTask: std.ArrayList(RoleTrialTask) = .empty,
-};
-pub const GameplayCueResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const FightFormationNotifyInfo = struct {
-    pub const default: @This() = .{};
-    FormationId: i32 = 0,
-    CurRole: i32 = 0,
-    RoleInfos: std.ArrayList(FormationRoleInfo) = .empty,
-    IsCurrent: bool = false,
-};
-pub const SwitchCharacterStateNotify = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    OldState: i32 = 0,
-    NewState: i32 = 0,
-};
-pub const JigsawFoundationUnMatchedActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    MatchedIndex: i32 = 0,
-};
-pub const MapTraceInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    MarkIdList: std.ArrayList(i32) = .empty,
-};
-pub const ActivityMapExploreData = struct {
-    pub const default: @This() = .{};
-    ActivityTasks: std.ArrayList(MapEntry(i32, ActivityTaskState)) = .empty,
+    TriggerEntityIncId: i64 = 0,
 };
 pub const PlayerDetails = struct {
     pub const default: @This() = .{};
@@ -45391,736 +45488,77 @@ pub const PlayerDetails = struct {
     MatchXboxUser: bool = false,
     XboxSocialState: i32 = 0,
 };
-pub const VectorArrayBlackboard = struct {
+pub const AnimStateChangeInfoList = struct {
     pub const default: @This() = .{};
-    Values: std.ArrayList(Vector) = .empty,
+    EntityId: i64 = 0,
+    AnimStateChangeInfo: std.ArrayList(AnimStateChangeInfo) = .empty,
 };
-pub const MotorTechOneTreePb = struct {
+pub const FsmStateBehaviorRequest = struct {
     pub const default: @This() = .{};
-    TreeId: i32 = 0,
-    Tech: std.ArrayList(MotorTechPb) = .empty,
+    FsmId: i32 = 0,
+    State: i32 = 0,
+    Index: i32 = 0,
+    Type: ?FsmStateBehaviorType = null,
 };
-pub const ActivityFunPlayChallengeData = struct {
-    pub const default: @This() = .{};
-    ChallengeId: i32 = 0,
-    UnlockTime: i64 = 0,
-    RewardStatus: ?FunPlayChallengeRewardStatus = null,
-    FunPlaySharpComment: std.ArrayList(i32) = .empty,
-    FinishTime: i64 = 0,
-};
-pub const RoleLevelUpViewRequest = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    MaxItemId: i32 = 0,
-    ItemList: std.ArrayList(ArrayIntInt) = .empty,
-};
-pub const AreaInfo = struct {
-    pub const default: @This() = .{};
-    AreaId: i32 = 0,
-    Atmosphere: i32 = 0,
-    FurnitureDiySlotInfos: std.ArrayList(FurnitureDiySlotInfo) = .empty,
-};
-pub const ResonantChainUnlockResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-    ResonantChainGroupIndex: i32 = 0,
-};
-pub const ActivityLinkageTabData = struct {
-    pub const default: @This() = .{};
-    TabDataId: i32 = 0,
-    EndTime: i64 = 0,
-    RewardData: std.ArrayList(ActivityLinkageRewardData) = .empty,
-    IsReceive: bool = false,
-    StartTime: i64 = 0,
-};
-pub const AdviceSetResponse = struct {
-    pub const default: @This() = .{};
-    IsShow: bool = false,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RoleDevPropsConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    ProspectBeginTime: i64 = 0,
-    ProspectEndTime: i64 = 0,
-    TypeId: i32 = 0,
-    GachaId: i32 = 0,
-    SpecialGachaPair: std.ArrayList(SpecialGachaPair) = .empty,
-    SortId: i32 = 0,
-};
-pub const EquipWeaponSkinRequest = struct {
-    pub const default: @This() = .{};
-    Data: ?LoadEquipData = null,
-};
-pub const LevelPlayInfoNotify = struct {
-    pub const default: @This() = .{};
-    LevelPlayInfo: std.ArrayList(LevelPlayInfo) = .empty,
-};
-pub const AiHateResponse = struct {
+pub const RemoveBuffS2cResponsePush = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const RhythmSubLevelPb = struct {
+pub const PlayerMotionRequest = struct {
     pub const default: @This() = .{};
-    SubLevelId: i32 = 0,
-    Cleared: bool = false,
-    BestScore: i32 = 0,
-    BestAccuracy: i32 = 0,
-    BestRank: ?RhythmShipRank = null,
-};
-pub const WeaponItemAddNotify = struct {
-    pub const default: @This() = .{};
-    WeaponItemList: std.ArrayList(WeaponItem) = .empty,
-    AddFromRole: bool = false,
-    Reason: i32 = 0,
-};
-pub const AiHateNotify = struct {
-    pub const default: @This() = .{};
-    HateList: std.ArrayList(AiHateEntity) = .empty,
-};
-pub const ToughCalcExtraRatioChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const HitEndRequest = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    TargetId: i64 = 0,
-};
-pub const AnimationStateChangedResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RbFloorComponentPb = struct {
-    pub const default: @This() = .{};
-    GamePlayIncId: i32 = 0,
-    Type: i32 = 0,
-    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
-};
-pub const MailBindInfoResponse = struct {
-    pub const default: @This() = .{};
-    MailBind: ?MailBind = null,
-};
-pub const FsmPlayMontageResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const SwitchRoleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-};
-pub const GetRewardTreasureBoxResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PbAdviceContent = struct {
-    pub const default: @This() = .{};
-    Type: ?PbAdviceContentType = null,
-    Id: i32 = 0,
-    Word: i32 = 0,
-};
-pub const GameplayAttributeData = struct {
-    pub const default: @This() = .{};
-    CurrentValue: i32 = 0,
-    ValueIncrement: i32 = 0,
-    AttributeType: ?EAttributeType = null,
-};
-pub const PreheatSignActivityData = struct {
-    pub const default: @This() = .{};
-    PreheatSignNodeInfos: std.ArrayList(PreheatSignNodeInfo) = .empty,
-};
-pub const RoleConfigInfoUpdateNotify = struct {
-    pub const default: @This() = .{};
-    RoleConfigs: std.ArrayList(RoleConfigInfo) = .empty,
-};
-pub const FeiXuePreheatActivityInfo = struct {
-    pub const default: @This() = .{};
-    FeiXuePreheatInfos: std.ArrayList(FeiXuePreheatInfo) = .empty,
-};
-pub const ItemDeprecateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const SummonResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const MonsterDrownPush = struct {
-    pub const default: @This() = .{};
-    Pos: ?Vector = null,
-};
-pub const AnimationStateInitResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const SceneItemLifeCycleComponentDestroyCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const AttrData = struct {
-    pub const default: @This() = .{};
-    AttributeType: ?EAttributeType = null,
-    CurrentValue: i32 = 0,
-    ValueIncrement: i32 = 0,
-};
-pub const ButtonEnableResult = struct {
-    pub const default: @This() = .{};
-    Type: ?ButtonType = null,
-    Enabled: bool = false,
-};
-pub const PinballWeapons = struct {
-    pub const default: @This() = .{};
-    PinballWeaponList: std.ArrayList(PinballWeapon) = .empty,
-};
-pub const PartComponentPb = struct {
-    pub const default: @This() = .{};
-    PartLifeInfos: std.ArrayList(PartInformation) = .empty,
-};
-pub const AllLimitTimeReward = struct {
-    pub const default: @This() = .{};
-    SignState: ?SignState = null,
-    CurProgress: i32 = 0,
-    Target: i32 = 0,
-    ConfigId: i32 = 0,
-};
-pub const RoleConfigInfoNotify = struct {
-    pub const default: @This() = .{};
-    RoleConfigs: std.ArrayList(RoleConfigInfo) = .empty,
-};
-pub const EnterViewDirectionResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PbMoveToPointConfig = struct {
-    pub const default: @This() = .{};
-    TargetPos: ?Vector = null,
-    MoveType: i32 = 0,
-    IsExact: bool = false,
-};
-pub const DestroyBulletResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EntityTriggerCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    TriggerEntityIncId: i64 = 0,
-};
-pub const RoleLoadEquipData = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Pos: ?EquipPos = null,
-    EquipIncId: i32 = 0,
-};
-pub const TagComponentPb = struct {
-    pub const default: @This() = .{};
-    GameplayTags: std.ArrayList(GameplayTagData) = .empty,
-    EntityCommonTags: std.ArrayList(i32) = .empty,
-    InitGameplayTag: bool = false,
-};
-pub const WeaponResonUpResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    IncId: i32 = 0,
-    ResonLevel: i32 = 0,
-};
-pub const ScratchTicketRoundData = struct {
-    pub const default: @This() = .{};
-    RoundId: i32 = 0,
-    UnlockTime: i64 = 0,
-    AreaStageRewardDataList: std.ArrayList(MapEntry(i32, ScratchCardRewardData)) = .empty,
-    LeftRewardItem: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const RbRollMovement = struct {
-    pub const default: @This() = .{};
-    Direction: ?RbGridDirection = null,
-};
-pub const EntityStaticHookMoveResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ActorVisibleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ActivityMoonSignInData = struct {
-    pub const default: @This() = .{};
-    MoonPhaseSelectList: std.ArrayList(MoonSignInConfigData) = .empty,
-    IsGrandReward: bool = false,
-    CurrentMoonId: i32 = 0,
-};
-pub const RoleElementChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
+    Motion: ?MotionType = null,
 };
 pub const InterruptSkillInDelayResponse = struct {
     pub const default: @This() = .{};
     SkillId: i32 = 0,
     ErrorCode: ?ErrorCode = null,
 };
-pub const AiHateRequest = struct {
-    pub const default: @This() = .{};
-    HateList: std.ArrayList(AiHateEntity) = .empty,
-};
-pub const RolePassiveSkillInfo = struct {
+pub const RoleSkillNodeNotify = struct {
     pub const default: @This() = .{};
     RoleId: i32 = 0,
-    PassiveSkillInfoList: std.ArrayList(PassiveSkillInfo) = .empty,
+    SkillNodeState: std.ArrayList(ArraySkillNode) = .empty,
 };
-pub const GridPlacementPbInfo = struct {
-    pub const default: @This() = .{};
-    GridPb: ?union(enum) {
-        Direction: ?GridPbDirection,
-    } = null,
-    ActorGuide: []const u8 = "",
-    X: i32 = 0,
-    Y: i32 = 0,
-};
-pub const DangoMonopolyConfig = struct {
-    pub const default: @This() = .{};
-    TaskId: i32 = 0,
-    ActivityTaskState: ?DangoMonopolyTaskState = null,
-    Progress: i32 = 0,
-    TargetProgress: i32 = 0,
-};
-pub const StateChangeActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    StateIndex: i32 = 0,
-};
-pub const HardLevelBuffs = struct {
-    pub const default: @This() = .{};
-    BuffId: i32 = 0,
-    Slot: i32 = 0,
-    State: ?BossRushBuffSelectionStatus = null,
-};
-pub const GolemCrackActivityInfo = struct {
-    pub const default: @This() = .{};
-    GolemCrackLevelInfos: std.ArrayList(GolemCrackLevelInfo) = .empty,
-};
-pub const SwitchBattleModeNotify = struct {
-    pub const default: @This() = .{};
-    ServerControllerModules: std.ArrayList(BattleModule) = .empty,
-    ClientControllerModules: std.ArrayList(BattleModule) = .empty,
-};
-pub const AnimationStateInitPush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    States: std.ArrayList(i32) = .empty,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const FormationAttrResponse = struct {
+pub const RemoveBuffByIdS2cResponsePush = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const FormationAttrRequest = struct {
+pub const FavorQuest = struct {
     pub const default: @This() = .{};
-    Duration: i64 = 0,
-    FormationAttrs: std.ArrayList(FormationAttr) = .empty,
+    Chapter: i32 = 0,
+    Status: ?FavorQuestStatus = null,
 };
-pub const RacingBetsSeasonData = struct {
+pub const WeaponLevelUpRequest = struct {
     pub const default: @This() = .{};
-    CurCash: i32 = 0,
-    TotalCash: i32 = 0,
-    RacingBetsLegMatchData: std.ArrayList(RacingBetsLegMatchData) = .empty,
-    HitNum: i32 = 0,
+    IncId: i32 = 0,
+    ConsumeList: std.ArrayList(WeaponConsumeItem) = .empty,
 };
-pub const UpdateChildQuestNodeStatusNotify = struct {
+pub const RotatorArrayBlackboard = struct {
     pub const default: @This() = .{};
-    TreeOwnerId: i32 = 0,
-    TreeIncId: i64 = 0,
-    NodeId: i32 = 0,
-    Status: ?ChildQuestNodeStatus = null,
+    Values: std.ArrayList(Rotator) = .empty,
 };
-pub const LanguageSettingUpdateResponse = struct {
+pub const ConditionItem = struct {
+    pub const default: @This() = .{};
+    ItemFinishMap: std.ArrayList(MapEntry(i32, ItemFinishList)) = .empty,
+};
+pub const ConditionTask = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Current: i32 = 0,
+    Target: i32 = 0,
+    Status: ?ConditionTaskState = null,
+};
+pub const MapCancelTraceResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-};
-pub const DeathStatusInfo = struct {
-    pub const default: @This() = .{};
-    GroupType: i32 = 0,
-    LivingStatus: ?LivingStatus = null,
-};
-pub const LivenessInfo = struct {
-    pub const default: @This() = .{};
-    LivenessCount: i32 = 0,
-    RewardedLiveness: std.ArrayList(i32) = .empty,
-    Tasks: std.ArrayList(LivenessTask) = .empty,
-    DayEnd: i64 = 0,
-    AreaId: i32 = 0,
-};
-pub const ShieldComponentPb = struct {
-    pub const default: @This() = .{};
-    ShieldInfoPbList: std.ArrayList(ShieldInfoPb) = .empty,
-    ShieldValueTotal: i32 = 0,
-};
-pub const BuffStackCountResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const NormalItemAddNotify = struct {
-    pub const default: @This() = .{};
-    NormalItemList: std.ArrayList(NormalItem) = .empty,
-    NoTips: bool = false,
-    Reason: i32 = 0,
-};
-pub const RbLaserEmitterPbType = struct {
-    pub const default: @This() = .{};
-    LaserPoints: std.ArrayList(Vector) = .empty,
-};
-pub const AnimationStateChangedNotify = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    States: std.ArrayList(i32) = .empty,
-    TimeStamp: f32 = 0,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const DropCatchActivityInfo = struct {
-    pub const default: @This() = .{};
-    DropCatchLevelInfos: std.ArrayList(DropCatchLevelInfo) = .empty,
+    MarkId: i32 = 0,
 };
 pub const OrderRemoveBuffByTagsResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const WeaponBreachResponse = struct {
+pub const EnergyUpdateNotify = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    IncId: i32 = 0,
-    WeaponBreach: i32 = 0,
-};
-pub const MaterialResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const MapUnlockFieldInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    FieldId: std.ArrayList(i32) = .empty,
-};
-pub const SwitchCharacterStatePush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    OldState: i32 = 0,
-    NewState: i32 = 0,
-};
-pub const MarkPointInfo = struct {
-    pub const default: @This() = .{};
-    PosX: f32 = 0,
-    PosY: f32 = 0,
-    PosZ: f32 = 0,
-    ConfigId: i32 = 0,
-    MarkId: i32 = 0,
-    IsTrace: i32 = 0,
-    MarkType: i32 = 0,
-    MapId: i32 = 0,
-    IsServerDisable: bool = false,
-    MarkPointState: ?MarkPointState = null,
-};
-pub const RoleShowListUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const BookItemInfo = struct {
-    pub const default: @This() = .{};
-    BookItemId: i32 = 0,
-    BookItemState: ?BookItemState = null,
-};
-pub const RemoveGameplayEffectResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Handle: i32 = 0,
-};
-pub const ExtraDeadInfo = struct {
-    pub const default: @This() = .{};
-    Message: ?union(enum) {
-        BtBloodBathedModeInfo: ?BtBloodBathedModeInfo,
-    } = null,
-};
-pub const PartUpdateRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    PartUpdateInfos: std.ArrayList(PartUpdateInfo) = .empty,
-};
-pub const InfrTaskPb = struct {
-    pub const default: @This() = .{};
-    TaskId: i32 = 0,
-    Target: i32 = 0,
-    status: ?InfrTaskStatusPb = null,
-};
-pub const CaughtRequest = struct {
-    pub const default: @This() = .{};
-    Info: ?CaughtInfo = null,
-};
-pub const FadeBackgroundFadeInEffectPb = struct {
-    pub const default: @This() = .{};
-    FadeInEffectPb: ?union(enum) {
-        FadeBackgroundFadeInEffectBlackPb: ?FadeBackgroundFadeInEffectBlackPb,
-    } = null,
-};
-pub const CalabashSkinTakeOnResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    SkinId: i32 = 0,
-};
-pub const MotorOutlookPresetPlanPb = struct {
-    pub const default: @This() = .{};
-    Preset: ?MotorDiyEquippedPb = null,
-    Mame: []const u8 = "",
-    Id: i32 = 0,
-};
-pub const RacingBetsRewardData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Status: ?ConditionTaskStatus = null,
-    Progress: i32 = 0,
-    TargetProgress: i32 = 0,
-    ConditionFinishState: bool = false,
-};
-pub const MonsterDrownResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const NewLinkStateNotify = struct {
-    pub const default: @This() = .{};
-    LinkConfigId: i32 = 0,
-    Current: ?ENewLinkStage = null,
-    PlayerId: i32 = 0,
-};
-pub const PartUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AttributeChangedResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ItemLockResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const GachaResult = struct {
-    pub const default: @This() = .{};
-    Bottom: ?union(enum) {
-        BottomExtraReward: ?GachaReward,
-    } = null,
-    GachaReward: ?GachaReward = null,
-    ExtraRewards: std.ArrayList(GachaReward) = .empty,
-    TransformRewards: std.ArrayList(GachaReward) = .empty,
-};
-pub const ChangeOrnamentResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EntityMapMarkInfoPb = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    TemplateId: i32 = 0,
-    Pos: ?Vector = null,
-};
-pub const EntityDressOrnamentChangeNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    OrnamentComponentPb: ?OrnamentComponentPb = null,
-};
-pub const SceneItemLifeCycleComponentCreateCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const RiskHarvestStarRewardInfo = struct {
-    pub const default: @This() = .{};
-    TargetScore: i32 = 0,
-    State: ?StarRewardState = null,
-};
-pub const ExecuteQteResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const FollowerList = struct {
-    pub const default: @This() = .{};
-    Type: ?FollowerType = null,
-    EntityId: i64 = 0,
-};
-pub const TeleportDataResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Ids: std.ArrayList(i32) = .empty,
-};
-pub const LoginResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ReconnectToken: []const u8 = "",
-    Timestamp: i64 = 0,
-    Platform: []const u8 = "",
-    ClientWaitingMode: i32 = 0,
-    ClientWaitingTime: i32 = 0,
-    ClientAutoInInterval: i32 = 0,
-    ClientDisplayTime: i32 = 0,
-};
-pub const CalabashSkinDataResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EquipedSkinId: i32 = 0,
-    SkinIdList: std.ArrayList(i32) = .empty,
-};
-pub const PbUpLevelRoleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-    Exp: i32 = 0,
-    Level: i32 = 0,
-    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const MonthCardResponse = struct {
-    pub const default: @This() = .{};
-    Days: i32 = 0,
-    IsDailyGot: bool = false,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ItemDict = struct {
-    pub const default: @This() = .{};
-    Items: std.ArrayList(ItemEntry) = .empty,
-};
-pub const MonsterBoomResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ActivateBuffResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const NormalItemResponse = struct {
-    pub const default: @This() = .{};
-    NormalItemList: std.ArrayList(NormalItem) = .empty,
-};
-pub const ChatContentProto = struct {
-    pub const default: @This() = .{};
-    SenderUid: i32 = 0,
-    ChatContentType: ?ChatContentType = null,
-    Content: []const u8 = "",
-    OfflineMsg: bool = false,
-    UtcTime: i64 = 0,
-    MsgId: []const u8 = "",
-    PsAccountId: []const u8 = "",
-    XboxAccountId: []const u8 = "",
-};
-pub const EnterAreaResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Id: i32 = 0,
-};
-pub const ValidTimeItemResponse = struct {
-    pub const default: @This() = .{};
-    ItemList: std.ArrayList(ValidTimeItem) = .empty,
-};
-pub const HitEndResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EntityIsVisibleNotify = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    IsVisible: bool = false,
-    CombatCommon: ?CombatCommon = null,
-};
-pub const AiBlackboardCdResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const MowTowerLevelsInfo = struct {
-    pub const default: @This() = .{};
-    BabelTowerLevelId: i32 = 0,
-    UnlockTime: i64 = 0,
-    IsUnlock: bool = false,
-    FirstScore: i32 = 0,
-    SecondScore: i32 = 0,
-    LevelRewardStatus: std.ArrayList(MapEntry(i32, MowTowerRewardStatus)) = .empty,
-    HardLevelBuffs: std.ArrayList(i32) = .empty,
-    FirstRoleSelection: std.ArrayList(i32) = .empty,
-    SecondRoleSelection: std.ArrayList(i32) = .empty,
-};
-pub const SurvivorsLevelData = struct {
-    pub const default: @This() = .{};
-    ModeInfo: ?union(enum) {
-        EndlessInfo: ?SurvivorsLevelInfo,
-    } = null,
-    LevelId: i32 = 0,
-    OpenTime: i64 = 0,
-    NormalInfo: ?SurvivorsLevelInfo = null,
-};
-pub const OrderRemoveBuffResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AnimationStateInitRequest = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    States: std.ArrayList(i32) = .empty,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const QuestReviewDataResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AnimStateChangeInfoList = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    AnimStateChangeInfo: std.ArrayList(AnimStateChangeInfo) = .empty,
-};
-pub const InputAxis = struct {
-    pub const default: @This() = .{};
-    AxisName: []const u8 = "",
-    KeyScaleMap: std.ArrayList(MapEntry([]const u8, i32)) = .empty,
-    Version: i32 = 0,
-    InputType: ?SettingInputType = null,
-};
-pub const GuideTriggerResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
-};
-pub const EntityGroupFailureCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const MotorFightTalentTreePb = struct {
-    pub const default: @This() = .{};
-    Talent: std.ArrayList(MotorFightTalentPb) = .empty,
-};
-pub const HitEndPush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    TargetId: i64 = 0,
-};
-pub const RoleFlyEquipNotify = struct {
-    pub const default: @This() = .{};
-    FlySkinEquipData: std.ArrayList(FlySkinEquipData) = .empty,
-};
-pub const BoneVisibleChangePush = struct {
-    pub const default: @This() = .{};
-    BoneVisibleData: ?BoneVisibleData = null,
-};
-pub const ClientTriggerActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    IsEnter: bool = false,
-};
-pub const LifePointDrawActivityData = struct {
-    pub const default: @This() = .{};
-    LifePointChallengeData: std.ArrayList(LifePointChallengeData) = .empty,
-};
-pub const BuffEffectResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
+    UpdateInfo: std.ArrayList(EnergyInfo) = .empty,
 };
 pub const DamageExecuteRequest = struct {
     pub const default: @This() = .{};
@@ -46138,15 +45576,48 @@ pub const DamageExecuteRequest = struct {
     RandomSeed: i32 = 0,
     IsBreakWeakness: bool = false,
 };
-pub const DErrorResult = struct {
+pub const CreateBulletResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
 };
-pub const FormationAttrNotify = struct {
+pub const EntityEquipChangeNotify = struct {
     pub const default: @This() = .{};
-    Duration: i64 = 0,
-    FormationAttrs: std.ArrayList(FormationAttr) = .empty,
+    EntityId: i64 = 0,
+    EquipComponent: ?EquipComponentPb = null,
+};
+pub const MonsterDrownPush = struct {
+    pub const default: @This() = .{};
+    Pos: ?Vector = null,
+};
+pub const SceneItemLifeCycleComponentCreateCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const PartUpdatePush = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    PartUpdateInfos: std.ArrayList(PartUpdateInfo) = .empty,
+};
+pub const InfrTaskPb = struct {
+    pub const default: @This() = .{};
+    TaskId: i32 = 0,
+    Target: i32 = 0,
+    status: ?InfrTaskStatusPb = null,
+};
+pub const ClientTriggerActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    IsEnter: bool = false,
+};
+pub const RoleTagChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const HonamiStoryRoleData = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    RoleSlots: std.ArrayList(HonamiStoryRoleSlot) = .empty,
+    DressWeapon: i32 = 0,
 };
 pub const PayGiftInfo = struct {
     pub const default: @This() = .{};
@@ -46181,219 +45652,47 @@ pub const PayGiftInfo = struct {
     ComplianceDetail: []const u8 = "",
     Quality: i32 = 0,
 };
-pub const FragileChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PlayerMotionRequest = struct {
-    pub const default: @This() = .{};
-    Motion: ?MotionType = null,
-};
-pub const EntityEquipChangeNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    EquipComponent: ?EquipComponentPb = null,
-};
-pub const RoleSkinTrialActivity = struct {
-    pub const default: @This() = .{};
-    RoleSkinTrialContentData: std.ArrayList(RoleSkinTrialContentData) = .empty,
-};
-pub const TotalTopUpActivityInfo = struct {
-    pub const default: @This() = .{};
-    Score: i32 = 0,
-    TotalTopUpRewardInfos: std.ArrayList(TotalTopUpRewardInfo) = .empty,
-};
-pub const InfrFirePb = struct {
-    pub const default: @This() = .{};
-    FireExp: i64 = 0,
-    FireLevel: i32 = 0,
-    FireLevelReachTime: i64 = 0,
-    FireStatus: ?InfrStatusPb = null,
-};
-pub const DrownEndTeleportPush = struct {
-    pub const default: @This() = .{};
-    ycu: ?union(enum) {
-        TeleportPos: ?Vector,
-    } = null,
-};
-pub const RoleSkillNodeNotify = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkillNodeState: std.ArrayList(ArraySkillNode) = .empty,
-};
-pub const ClientStorageMapMapData = struct {
-    pub const default: @This() = .{};
-    Data: std.ArrayList(MapEntry(i32, ClientStorageMapData)) = .empty,
-};
-pub const MonsterDrownRequest = struct {
-    pub const default: @This() = .{};
-    Pos: ?Vector = null,
-};
-pub const PlayerAccessEffectAreaRequest = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    RangeType: ?RangeType = null,
-};
-pub const ItemExchangeInfoResponse = struct {
-    pub const default: @This() = .{};
-    ItemExchangeInfos: std.ArrayList(ItemExchangeInfo) = .empty,
-};
-pub const FightPhotoLevelDataUpdateNotify = struct {
-    pub const default: @This() = .{};
-    levels: std.ArrayList(LevelData) = .empty,
-};
-pub const DrinkMixData = struct {
-    pub const default: @This() = .{};
-    RoleLevelInfo: std.ArrayList(DrinkMixRole) = .empty,
-};
-pub const PbOverRoleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-    Breakthrough: i32 = 0,
-};
-pub const SysBuffComponentPb = struct {
-    pub const default: @This() = .{};
-    SysBuffInfos: std.ArrayList(SysBuffInformation) = .empty,
-};
-pub const RemoveBuffByIdS2cResponsePush = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const PbRoleSkillLevelNotify = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    SkillInfo: ?ArrayIntInt = null,
-};
-pub const EntityFollowTrackResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const FsmStateBehaviorResponse = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EnterGameResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ClientWaitingMode: i32 = 0,
-    ClientWaitingTime: i32 = 0,
-    ClientAutoInInterval: i32 = 0,
-};
-pub const UpdateSceneDateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    CurrDate: u32 = 0,
-};
-pub const InfluenceInfoResponse = struct {
-    pub const default: @This() = .{};
-    InfluenceInfos: std.ArrayList(InfluenceInfo) = .empty,
-};
-pub const AreaExploreInfo = struct {
-    pub const default: @This() = .{};
-    AreaId: i32 = 0,
-    ExploreProgress: std.ArrayList(OneExploreItem) = .empty,
-    ExplorePercent: i32 = 0,
-};
-pub const ThemeCelebration = struct {
-    pub const default: @This() = .{};
-    PersonalRewardIds: std.ArrayList(i32) = .empty,
-    WorldRewardIds: std.ArrayList(i32) = .empty,
-    SubActivityTimes: std.ArrayList(SubActivityBeginTime) = .empty,
-};
-pub const FarmGoldData = struct {
-    pub const default: @This() = .{};
-    PointRewardGet: std.ArrayList(i32) = .empty,
-    LevelPlayTasks: std.ArrayList(FarmGoldLevelPlayInfo) = .empty,
-};
-pub const MotorCreateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EntityGroupActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    TriggerIndex: i32 = 0,
-    IsMatch: bool = false,
-};
-pub const AiHatePush = struct {
-    pub const default: @This() = .{};
-    HateList: std.ArrayList(AiHateEntity) = .empty,
-};
-pub const ApplyGameplayEffectResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const UpdateVoxelEnvResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ServerCaveMode: i32 = 0,
-};
-pub const SkillResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ApplyBuffS2cResponsePush = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Handle: i32 = 0,
-    IsActive: bool = false,
-};
-pub const CalabashDevelopInfo = struct {
-    pub const default: @This() = .{};
-    MonsterId: i32 = 0,
-    UnlockConditions: std.ArrayList(CalabashDevelopConditionState) = .empty,
-};
-pub const AnimationStateInitNotify = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Id: i64 = 0,
-    States: std.ArrayList(i32) = .empty,
-    TimeStamp: f32 = 0,
-    SpecialStates: std.ArrayList(i32) = .empty,
-    ModelId: i32 = 0,
-};
-pub const SwitchLogicStateRequest = struct {
-    pub const default: @This() = .{};
-    States: ?LogicStateComponentPb = null,
-    ClientEntityId: i64 = 0,
-};
-pub const FlowEndResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RbBlockIdlePbState = struct {
-    pub const default: @This() = .{};
-    Position: ?Vector = null,
-    Rotation: ?Vector = null,
-};
-pub const TargetGearHitPartCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    HitPartIndex: i32 = 0,
-};
-pub const DailyAdventureActivityTask = struct {
+pub const QuestionaireRewardState = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    Current: i32 = 0,
-    Target: i32 = 0,
-    Status: ?DailyAdventureTaskState = null,
+    Status: ?ActivityTaskState = null,
 };
-pub const CharacterBattleStateChangeNotify = struct {
+pub const PinballWeapons = struct {
     pub const default: @This() = .{};
-    CharacterBattleStateInfo: std.ArrayList(CharacterBattleStateInfo) = .empty,
+    PinballWeaponList: std.ArrayList(PinballWeapon) = .empty,
 };
-pub const EntityLeaveTriggerCtxPb = struct {
+pub const ActivityLinkageTabData = struct {
     pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    TriggerEntityIncId: i64 = 0,
+    TabDataId: i32 = 0,
+    EndTime: i64 = 0,
+    RewardData: std.ArrayList(ActivityLinkageRewardData) = .empty,
+    IsReceive: bool = false,
+    StartTime: i64 = 0,
 };
-pub const RandomInteractCtxPb = struct {
+pub const ProtoKeyResponse = struct {
     pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    OptionIndex: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+    Type: i32 = 0,
+    Key: []const u8 = "",
+};
+pub const ExecuteQteResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SwitchCharacterStateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const EntityFlySkinChangeData = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    FlySkinConfigData: std.ArrayList(FlySkinConfigData) = .empty,
+};
+pub const WeaponResonUpResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    IncId: i32 = 0,
+    ResonLevel: i32 = 0,
 };
 pub const PhantomItem = struct {
     pub const default: @This() = .{};
@@ -46409,25 +45708,197 @@ pub const PhantomItem = struct {
     UnAckSubProp: std.ArrayList(PhantomPropInfo) = .empty,
     LockPropIndex: std.ArrayList(i32) = .empty,
 };
-pub const ProtoKeyResponse = struct {
+pub const RolePhantomPropInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
+    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const MonsterCreatorProgressSlot = struct {
+    pub const default: @This() = .{};
+    WaveId: i32 = 0,
+    KillMonIds: std.ArrayList(i32) = .empty,
+    CurrentWaveEndTime: i32 = 0,
+    SpawnStepType: i32 = 0,
+    CreatorEntityConfigId: i32 = 0,
+    MonsterInfo: std.ArrayList(SceneMonsterCreatedMonsterInfo) = .empty,
+};
+pub const EntityQuickHackSkillCtxPb = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+    EntityState: i32 = 0,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const SummonResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    Type: i32 = 0,
-    Key: []const u8 = "",
 };
-pub const TriggerExitSkillResponse = struct {
+pub const DeathStatusInfo = struct {
+    pub const default: @This() = .{};
+    GroupType: i32 = 0,
+    LivingStatus: ?LivingStatus = null,
+};
+pub const MapTraceInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    MarkIdList: std.ArrayList(i32) = .empty,
+};
+pub const AnimationGameplayTagResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const RotatorArrayBlackboard = struct {
+pub const WeaponLevelUpResponse = struct {
     pub const default: @This() = .{};
-    Values: std.ArrayList(Rotator) = .empty,
-};
-pub const WeaponResonUpRequest = struct {
-    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
     IncId: i32 = 0,
-    ConsumeList: std.ArrayList(i32) = .empty,
-    ConsumeItemList: std.ArrayList(WeaponConsumeItem) = .empty,
+    WeaponLevel: i32 = 0,
+    WeaponExp: i32 = 0,
+    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const RoleSkinTrialActivity = struct {
+    pub const default: @This() = .{};
+    RoleSkinTrialContentData: std.ArrayList(RoleSkinTrialContentData) = .empty,
+};
+pub const ToughCalcExtraRatioChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const TowerDefenseActivityInfo = struct {
+    pub const default: @This() = .{};
+    InstanceInfos: std.ArrayList(TowerDefenceInstanceInfo) = .empty,
+    RewardedScoreIds: std.ArrayList(i32) = .empty,
+    TotalScore: i32 = 0,
+    ShowName: bool = false,
+};
+pub const GaSwitchCommonEnemyProCampResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const TeleportTransferResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    MapId: i32 = 0,
+    PosX: f32 = 0,
+    PosY: f32 = 0,
+    PosZ: f32 = 0,
+    Pitch: f32 = 0,
+    Yaw: f32 = 0,
+    Roll: f32 = 0,
+};
+pub const AnimationStateInitPush = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    States: std.ArrayList(i32) = .empty,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const BoneVisibleChangeNotify = struct {
+    pub const default: @This() = .{};
+    BoneVisibleData: ?BoneVisibleData = null,
+};
+pub const FragmentMemoryItem = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Data: std.ArrayList(FragmentMemoryData) = .empty,
+    IsUnlock: bool = false,
+};
+pub const RewardItemInfoList = struct {
+    pub const default: @This() = .{};
+    ItemList: std.ArrayList(RewardItemInfo) = .empty,
+};
+pub const GachaUsePoolResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PbOverRoleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+    Breakthrough: i32 = 0,
+};
+pub const DropCatchActivityInfo = struct {
+    pub const default: @This() = .{};
+    DropCatchLevelInfos: std.ArrayList(DropCatchLevelInfo) = .empty,
+};
+pub const PbAdviceContent = struct {
+    pub const default: @This() = .{};
+    Type: ?PbAdviceContentType = null,
+    Id: i32 = 0,
+    Word: i32 = 0,
+};
+pub const PhantomArenaDeckInfo = struct {
+    pub const default: @This() = .{};
+    Name: []const u8 = "",
+    BattleCardIds: std.ArrayList(i32) = .empty,
+    CanUse: bool = false,
+    LastUseChallengeId: std.ArrayList(i32) = .empty,
+    Index: i32 = 0,
+    SkillUnlockInfos: std.ArrayList(PhantomBattleCardSkillUnlockInfo) = .empty,
+};
+pub const PartUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ScratchTicketRoundData = struct {
+    pub const default: @This() = .{};
+    RoundId: i32 = 0,
+    UnlockTime: i64 = 0,
+    AreaStageRewardDataList: std.ArrayList(MapEntry(i32, ScratchCardRewardData)) = .empty,
+    LeftRewardItem: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const BtnStateRequest = struct {
+    pub const default: @This() = .{};
+    Type: ?ButtonType = null,
+    Types: std.ArrayList(ButtonType) = .empty,
+};
+pub const AnimalDieResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const FsmPlayMontageResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const InfluenceInfoResponse = struct {
+    pub const default: @This() = .{};
+    InfluenceInfos: std.ArrayList(InfluenceInfo) = .empty,
+};
+pub const TimelineTrackComponentPb = struct {
+    pub const default: @This() = .{};
+    Index: i32 = 0,
+    ControlDatas: std.ArrayList(TimelineTrackControlDataPb) = .empty,
+};
+pub const MotorIsEnablePush = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    IsEnable: bool = false,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const EntityIsVisibleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SceneItemStateChangeConditionAction = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    StateIndex: i32 = 0,
+    ConditionIndex: i32 = 0,
+};
+pub const GuideFinishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+};
+pub const Mp4BackgroundColorPb = struct {
+    pub const default: @This() = .{};
+    FadeIn: ?Mp4BackgroundColor = null,
+    FadeOut: ?Mp4BackgroundColor = null,
+};
+pub const NormalInteractCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    OptionIndex: i32 = 0,
 };
 pub const LordGymPassRecord = struct {
     pub const default: @This() = .{};
@@ -46435,115 +45906,234 @@ pub const LordGymPassRecord = struct {
     PassTime: i32 = 0,
     RoleIds: std.ArrayList(RoleBrief) = .empty,
 };
-pub const AiInformationResponse = struct {
+pub const GachaResult = struct {
+    pub const default: @This() = .{};
+    Bottom: ?union(enum) {
+        BottomExtraReward: ?GachaReward,
+    } = null,
+    GachaReward: ?GachaReward = null,
+    ExtraRewards: std.ArrayList(GachaReward) = .empty,
+    TransformRewards: std.ArrayList(GachaReward) = .empty,
+};
+pub const FlowOptionInfoList = struct {
+    pub const default: @This() = .{};
+    OptionIndexList: std.ArrayList(FlowOptionInfo) = .empty,
+};
+pub const TransitionWithSpecialCustomLoadingPb = struct {
+    pub const default: @This() = .{};
+    LoadingType: ?union(enum) {
+        HonamiStoryCustomLoadingPb: ?HonamiStoryCustomLoadingPb,
+    } = null,
+};
+pub const NormalItemUpdateNotify = struct {
+    pub const default: @This() = .{};
+    NormalItemList: std.ArrayList(NormalItem) = .empty,
+    NoTips: bool = false,
+};
+pub const FsmBlackboardNotify = struct {
+    pub const default: @This() = .{};
+    FsmBlackBoards: std.ArrayList(DFsmBlackBoard) = .empty,
+};
+pub const ChangeOrnamentResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const GuideFinishResponse = struct {
+pub const PbUpLevelRoleResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
+    RoleId: i32 = 0,
+    Exp: i32 = 0,
+    Level: i32 = 0,
+    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const SendEquipSkinResponse = struct {
+pub const GetRewardTreasureBoxResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const ExitViewDirectionResponse = struct {
+pub const WeaponItemAddNotify = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
+    WeaponItemList: std.ArrayList(WeaponItem) = .empty,
+    AddFromRole: bool = false,
+    Reason: i32 = 0,
 };
 pub const RoleFlyEquipChangeNotify = struct {
     pub const default: @This() = .{};
     FlySkinData: std.ArrayList(EquipFlySkinData) = .empty,
 };
-pub const SwitchLogicStatePush = struct {
+pub const DestroyBulletResponse = struct {
     pub const default: @This() = .{};
-    States: ?LogicStateComponentPb = null,
-    ClientEntityId: i64 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const MotorSliderCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    IsEnter: bool = false,
+};
+pub const EnterGameResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ClientWaitingMode: i32 = 0,
+    ClientWaitingTime: i32 = 0,
+    ClientAutoInInterval: i32 = 0,
+};
+pub const MotorOutlookPresetPlanPb = struct {
+    pub const default: @This() = .{};
+    Preset: ?MotorDiyEquippedPb = null,
+    Mame: []const u8 = "",
+    Id: i32 = 0,
+};
+pub const RemoveGameplayEffectResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Handle: i32 = 0,
+};
+pub const EnterAreaResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Id: i32 = 0,
+};
+pub const FuncOpenNotify = struct {
+    pub const default: @This() = .{};
+    Func: std.ArrayList(Function) = .empty,
+};
+pub const SetFocusModeDeterConditionResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const NewLinkStateNotify = struct {
+    pub const default: @This() = .{};
+    LinkConfigId: i32 = 0,
+    Current: ?ENewLinkStage = null,
+    PlayerId: i32 = 0,
 };
 pub const CharacterDetachResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const SettingNotify = struct {
+pub const RacingBetsRewardData = struct {
     pub const default: @This() = .{};
-    MobileButtonSettings: std.ArrayList(MobileButtonSetting) = .empty,
+    Id: i32 = 0,
+    Status: ?ConditionTaskStatus = null,
+    Progress: i32 = 0,
+    TargetProgress: i32 = 0,
+    ConditionFinishState: bool = false,
 };
-pub const PbUpLevelRoleRequest = struct {
+pub const ExploreSkillCustomCtxPb = struct {
     pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    ItemList: std.ArrayList(ArrayIntInt) = .empty,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const SysBuffComponentPb = struct {
+    pub const default: @This() = .{};
+    SysBuffInfos: std.ArrayList(SysBuffInformation) = .empty,
+};
+pub const VehiclePb = struct {
+    pub const default: @This() = .{};
+    Source: ?VehicleSource = null,
+};
+pub const ClientCurrentRoleReportResponse = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    CurrentEntityId: i64 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AchievementEntry = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    FinishTime: u32 = 0,
+    IsReceive: bool = false,
+    Progress: ?AchievementProgress = null,
+};
+pub const ShieldComponentPb = struct {
+    pub const default: @This() = .{};
+    ShieldInfoPbList: std.ArrayList(ShieldInfoPb) = .empty,
+    ShieldValueTotal: i32 = 0,
+};
+pub const RoadNetworkComponentPb = struct {
+    pub const default: @This() = .{};
+    MoveData: ?union(enum) {
+        NavMoveData: ?RoadNavMoveData,
+    } = null,
+    DestRoadId: i32 = 0,
+    DestIndex: i32 = 0,
+    GenRoadId: i32 = 0,
+    GenRoadIndex: i32 = 0,
 };
 pub const RTimeStopInstResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const WeaponItemResponse = struct {
+pub const FightPhotoLevelDataUpdateNotify = struct {
     pub const default: @This() = .{};
-    WeaponItemList: std.ArrayList(WeaponItem) = .empty,
+    levels: std.ArrayList(LevelData) = .empty,
 };
-pub const WeaponLevelUpRequest = struct {
+pub const ClientStorageMapListData = struct {
     pub const default: @This() = .{};
-    IncId: i32 = 0,
-    ConsumeList: std.ArrayList(WeaponConsumeItem) = .empty,
+    Data: std.ArrayList(MapEntry(i32, ClientStorageListData)) = .empty,
 };
-pub const FlySkinWearResponse = struct {
+pub const VisionExploreSkillSetRequest = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+    IsAutoChange: bool = false,
+    RouletteType: ?RouletteType = null,
+};
+pub const ExtraDeadInfo = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        BtBloodBathedModeInfo: ?BtBloodBathedModeInfo,
+    } = null,
+};
+pub const SwitchCharacterStatePush = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    OldState: i32 = 0,
+    NewState: i32 = 0,
+};
+pub const RoleFlyEquipNotify = struct {
+    pub const default: @This() = .{};
+    FlySkinEquipData: std.ArrayList(FlySkinEquipData) = .empty,
+};
+pub const DynamicEntityRewardCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const RoleElementChangeResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const InfrOneRoad = struct {
+pub const FadeBackgroundFadeInEffectPb = struct {
     pub const default: @This() = .{};
-    RoadId: i32 = 0,
-    status: ?InfrStatusPb = null,
-    CompleteTime: i64 = 0,
-    TotalGiftCount: i64 = 0,
-    LastGiftTime: i64 = 0,
+    FadeInEffectPb: ?union(enum) {
+        FadeBackgroundFadeInEffectBlackPb: ?FadeBackgroundFadeInEffectBlackPb,
+    } = null,
 };
-pub const PassiveSkillAddResponse = struct {
+pub const TetrisLevelInfo = struct {
+    pub const default: @This() = .{};
+    vdC: ?union(enum) {
+        DifficultyIdx: i32,
+    } = null,
+    ehC: ?union(enum) {
+        State: ?TetrisState,
+    } = null,
+    thC: ?union(enum) {
+        UnlockTime: i64,
+    } = null,
+    Id: i32 = 0,
+    Results: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const MonsterBoomResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+};
+pub const AiHatePush = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
 };
 pub const AdventreTask = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
     State: ?AdventreTaskState = null,
     AdventreProgress: i32 = 0,
-};
-pub const PbBattlePassRecurringReward = struct {
-    pub const default: @This() = .{};
-    Type: ?BattlePassType = null,
-    ItemId: i32 = 0,
-    Count: i32 = 0,
-};
-pub const PatrolInfoPb = struct {
-    pub const default: @This() = .{};
-    Data: ?union(enum) {
-        SmartObjectComponent: ?SmartObjectComponent,
-    } = null,
-};
-pub const AnimalDropResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const QuestionaireRewardState = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Status: ?ActivityTaskState = null,
-};
-pub const MotorParkourLevelInfo = struct {
-    pub const default: @This() = .{};
-    MotorParkourId: i32 = 0,
-    RewardStates: std.ArrayList(MotorParkourRewardState) = .empty,
-    UnlockTime: i64 = 0,
-    BestPassTime: i32 = 0,
-};
-pub const RTimeStopResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-pub const ExploreSkillPullGiantCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
 };
 pub const ActivityPrizeDrawingData = struct {
     pub const default: @This() = .{};
@@ -46556,34 +46146,452 @@ pub const ActivityPrizeDrawingData = struct {
     QuestTotalCount: i32 = 0,
     QuestId: i32 = 0,
 };
-pub const PbUpLevelSkillResponse = struct {
+pub const PlayerMotionResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+};
+pub const LoadingConfigResponse = struct {
+    pub const default: @This() = .{};
+    LoadingConfig: std.ArrayList(LoadingConfig) = .empty,
+};
+pub const PartUpdateNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    PartInfos: std.ArrayList(PartInformation) = .empty,
+};
+pub const AnimationStateInitResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+};
+pub const AiInformationNotify = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
+};
+pub const ExploreSkillActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const LanguageSettingUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const OrnamentDressInfoUpdateNotify = struct {
+    pub const default: @This() = .{};
+    OrnamentDressInfos: std.ArrayList(OrnamentDressInfo) = .empty,
+};
+pub const HitEndPush = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    TargetId: i64 = 0,
+};
+pub const IllustratedInfoRequest = struct {
+    pub const default: @This() = .{};
+    TypeList: std.ArrayList(IllustratedType) = .empty,
+};
+pub const GivebackInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const UpdateNodeStatusNotify = struct {
+    pub const default: @This() = .{};
+    TreeOwnerId: i32 = 0,
+    TreeIncId: i64 = 0,
+    NodeId: i32 = 0,
+    Status: ?NodeStatus = null,
+};
+pub const EntityTriggerCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    TriggerEntityIncId: i64 = 0,
+};
+pub const TrampleActivateCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const GuideTriggerResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+};
+pub const JigsawFoundationUnMatchedActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    MatchedIndex: i32 = 0,
+};
+pub const AnimationStateChangedNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    States: std.ArrayList(i32) = .empty,
+    TimeStamp: f32 = 0,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const SurvivorsLevelData = struct {
+    pub const default: @This() = .{};
+    ModeInfo: ?union(enum) {
+        EndlessInfo: ?SurvivorsLevelInfo,
+    } = null,
+    LevelId: i32 = 0,
+    OpenTime: i64 = 0,
+    NormalInfo: ?SurvivorsLevelInfo = null,
+};
+pub const UpdateVoxelEnvResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ServerCaveMode: i32 = 0,
+};
+pub const EntityCommonTagNotify = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    Tags: std.ArrayList(CommonTagData) = .empty,
+};
+pub const ExploreSkillRouletteUpdateNotify = struct {
+    pub const default: @This() = .{};
+    RouletteInfo: std.ArrayList(ExploreSkillRoulette) = .empty,
+};
+pub const UpdateSceneDateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    CurrDate: u32 = 0,
+};
+pub const ActivityMapExploreData = struct {
+    pub const default: @This() = .{};
+    ActivityTasks: std.ArrayList(MapEntry(i32, ActivityTaskState)) = .empty,
+};
+pub const ApplyBuffS2cResponsePush = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Handle: i32 = 0,
+    IsActive: bool = false,
+};
+pub const PrivateChatRequest = struct {
+    pub const default: @This() = .{};
+    TargetUid: i32 = 0,
+    ChatContentType: ?ChatContentType = null,
+    Content: []const u8 = "",
+};
+pub const ActivityTask = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Current: i32 = 0,
+    Target: i32 = 0,
+    Status: ?ActivityTaskState = null,
+    PreItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const FollowerList = struct {
+    pub const default: @This() = .{};
+    Type: ?FollowerType = null,
+    EntityId: i64 = 0,
+};
+pub const MonthCardResponse = struct {
+    pub const default: @This() = .{};
+    Days: i32 = 0,
+    IsDailyGot: bool = false,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const LivenessInfo = struct {
+    pub const default: @This() = .{};
+    LivenessCount: i32 = 0,
+    RewardedLiveness: std.ArrayList(i32) = .empty,
+    Tasks: std.ArrayList(LivenessTask) = .empty,
+    DayEnd: i64 = 0,
+    AreaId: i32 = 0,
+};
+pub const PartComponentPb = struct {
+    pub const default: @This() = .{};
+    PartLifeInfos: std.ArrayList(PartInformation) = .empty,
+};
+pub const CaughtNotify = struct {
+    pub const default: @This() = .{};
+    Info: ?CaughtInfo = null,
+};
+pub const MotorParkourLevelInfo = struct {
+    pub const default: @This() = .{};
+    MotorParkourId: i32 = 0,
+    RewardStates: std.ArrayList(MotorParkourRewardState) = .empty,
+    UnlockTime: i64 = 0,
+    BestPassTime: i32 = 0,
+};
+pub const BossRushScoreRewardData = struct {
+    pub const default: @This() = .{};
+    RewardDataId: i32 = 0,
+    State: ?BossRushRewardClaimStatus = null,
+};
+pub const RecoverPropChangedNotify = struct {
+    pub const default: @This() = .{};
+    Attributes: std.ArrayList(RecoverPropFromServer) = .empty,
+    Duration: i64 = 0,
+};
+pub const TimeCheckResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ClientTime: i64 = 0,
+    ServerTime: i64 = 0,
+    ServerCombatTime: i64 = 0,
+    ServerStopTime: i64 = 0,
+    ServerFlowTimestamp: i64 = 0,
+};
+pub const ICustomShowUiPb = struct {
+    pub const default: @This() = .{};
+    CustomScreenTextSettingPb: ?union(enum) {
+        ICustomScreenTextSettingPb: ?ICustomScreenTextSettingPb,
+    } = null,
+    HideCircle: ?union(enum) {
+        IsHideCircle: bool,
+    } = null,
+};
+pub const DrinkMixData = struct {
+    pub const default: @This() = .{};
+    RoleLevelInfo: std.ArrayList(DrinkMixRole) = .empty,
+};
+pub const ExploreSkillPullGiantCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const ClientStorageMapMapData = struct {
+    pub const default: @This() = .{};
+    Data: std.ArrayList(MapEntry(i32, ClientStorageMapData)) = .empty,
+};
+pub const ParkourActivity = struct {
+    pub const default: @This() = .{};
+    Challenges: std.ArrayList(ParkourActivityChallenge) = .empty,
+};
+pub const AiHateRequest = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+};
+pub const AnimalDropResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AreaExploreInfo = struct {
+    pub const default: @This() = .{};
+    AreaId: i32 = 0,
+    ExploreProgress: std.ArrayList(OneExploreItem) = .empty,
+    ExplorePercent: i32 = 0,
+};
+pub const FormationAttrResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SkillResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AiHateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AnimationStateChangedPush = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Id: i64 = 0,
+    States: std.ArrayList(i32) = .empty,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const PlayerAccessEffectAreaRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    RangeType: ?RangeType = null,
+};
+pub const PrivateChatResponse = struct {
+    pub const default: @This() = .{};
+    TargetUid: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+    MsgId: []const u8 = "",
+    FilterMsg: []const u8 = "",
+    BanEndTime: i64 = 0,
+};
+pub const UpdateSceneDateRequest = struct {
+    pub const default: @This() = .{};
+    AddDays: u32 = 0,
+    Hour: i32 = 0,
+    Minute: i32 = 0,
+    Reason: ?SceneDateUpdateReason = null,
+};
+pub const ClientPullResourcePackageResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+    FinishMp4QuestIds: std.ArrayList(i32) = .empty,
+    NeedConfirmQuestIds: std.ArrayList(i32) = .empty,
+};
+pub const CostVisionAttrRecommendInfo = struct {
+    pub const default: @This() = .{};
+    Cost: i32 = 0,
+    GetMainAttrRecommendInfo: std.ArrayList(VisionAttrRecommendInfo) = .empty,
+    GetSubAttrRecommendInfo: std.ArrayList(VisionAttrRecommendInfo) = .empty,
+};
+pub const BoneVisibleChangePush = struct {
+    pub const default: @This() = .{};
+    BoneVisibleData: ?BoneVisibleData = null,
+};
+pub const PbRoleSkillLevelNotify = struct {
+    pub const default: @This() = .{};
     RoleId: i32 = 0,
     SkillInfo: ?ArrayIntInt = null,
 };
-pub const SpringSignData = struct {
+pub const RbRollMovement = struct {
     pub const default: @This() = .{};
-    SpringSignActivityTasks: std.ArrayList(ActivityTask) = .empty,
-    CanInvite: bool = false,
-    DrawRoles: std.ArrayList(i32) = .empty,
-    SkinReward: bool = false,
+    Direction: ?RbGridDirection = null,
 };
-pub const RhythmShipLevelPb = struct {
+pub const OrderApplyBuffRequest = struct {
     pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    RhythmSubLevelPb: std.ArrayList(RhythmSubLevelPb) = .empty,
+    Time: ?union(enum) {
+        Duration: f32,
+    } = null,
+    Id: i64 = 0,
+    Level: i32 = 0,
+    InstigatorId: i64 = 0,
+    ApplyType: i32 = 0,
+    ServerId: i32 = 0,
+    StackCount: i32 = 0,
+    IsIterable: bool = false,
+    TransferContextId: ?TransferContextId = null,
+    Reason: []const u8 = "",
 };
-pub const LogicStateInitRequest = struct {
+pub const MailBindInfoResponse = struct {
     pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
+    MailBind: ?MailBind = null,
+};
+pub const BookItemInfo = struct {
+    pub const default: @This() = .{};
+    BookItemId: i32 = 0,
+    BookItemState: ?BookItemState = null,
+};
+pub const EntityInteractResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Interacting: bool = false,
+};
+pub const EquipWeaponSkinRequest = struct {
+    pub const default: @This() = .{};
+    Data: ?LoadEquipData = null,
+};
+pub const InputSettingUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const DailyAdventureActivityTask = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Current: i32 = 0,
+    Target: i32 = 0,
+    Status: ?DailyAdventureTaskState = null,
+};
+pub const MotorTechOneTreePb = struct {
+    pub const default: @This() = .{};
+    TreeId: i32 = 0,
+    Tech: std.ArrayList(MotorTechPb) = .empty,
+};
+pub const RoleLevelUpViewRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    MaxItemId: i32 = 0,
+    ItemList: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const DangoMonopolyConfig = struct {
+    pub const default: @This() = .{};
+    TaskId: i32 = 0,
+    ActivityTaskState: ?DangoMonopolyTaskState = null,
+    Progress: i32 = 0,
+    TargetProgress: i32 = 0,
+};
+pub const InputAxis = struct {
+    pub const default: @This() = .{};
+    AxisName: []const u8 = "",
+    KeyScaleMap: std.ArrayList(MapEntry([]const u8, i32)) = .empty,
+    Version: i32 = 0,
+    InputType: ?SettingInputType = null,
+};
+pub const DrownResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PbMoveToPointConfig = struct {
+    pub const default: @This() = .{};
+    TargetPos: ?Vector = null,
+    MoveType: i32 = 0,
+    IsExact: bool = false,
+};
+pub const GatherTaskDoneInfo = struct {
+    pub const default: @This() = .{};
+    TaskId: i32 = 0,
+    State: ?GatherActivityTaskState = null,
+};
+pub const GravityFlipComponent = struct {
+    pub const default: @This() = .{};
+    Direction: ?DirectionType = null,
+};
+pub const GridPlacementPbInfo = struct {
+    pub const default: @This() = .{};
+    GridPb: ?union(enum) {
+        Direction: ?GridPbDirection,
+    } = null,
+    ActorGuide: []const u8 = "",
+    X: i32 = 0,
+    Y: i32 = 0,
+};
+pub const EntityCalabashSkinChangeNotify = struct {
+    pub const default: @This() = .{};
     EntityId: i64 = 0,
-    InitData: ?LogicStateComponentPb = null,
-    ClientEntityId: i64 = 0,
+    CalabashSkinCoponent: ?CalabashSkinComponentPb = null,
 };
-pub const FsmCustomBlackboardNotify = struct {
+pub const InputAction = struct {
     pub const default: @This() = .{};
-    FsmCustomBlackboardDatas: ?FsmCustomBlackboardDatas = null,
+    ActionName: []const u8 = "",
+    KeyNameList: std.ArrayList([]const u8) = .empty,
+    Version: i32 = 0,
+    InputType: ?SettingInputType = null,
+};
+pub const AnimationStateComponentPb = struct {
+    pub const default: @This() = .{};
+    AnimationStates: std.ArrayList(i32) = .empty,
+    SpecialStates: std.ArrayList(i32) = .empty,
+    BoneVisibleDatas: std.ArrayList(BoneVisibleData) = .empty,
+    AnimationTags: std.ArrayList(i32) = .empty,
+    ModelId: i32 = 0,
+};
+pub const RoleSkillBranchModifyResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const TargetGearHitPartCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    HitPartIndex: i32 = 0,
+};
+pub const TemplateSpawnerActionCtxPb = struct {
+    pub const default: @This() = .{};
+    Type: ?union(enum) {
+        DestroyType: ?DestroyType,
+    } = null,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const ChangeVisionGroupNameResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
+};
+pub const HandInItemChildQuestNodeCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const DynAttachComponentPb = struct {
+    pub const default: @This() = .{};
+    PbDynAttachEntityConfigId: i32 = 0,
+    PbDynAttachEntityActorKey: []const u8 = "",
+    Pos: ?Vector = null,
+    Rot: ?Rotator = null,
+    PbDynAttachRefActorKey: []const u8 = "",
+};
+pub const TestDamageRecordEntity = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    ConfigId: i32 = 0,
+    BuffIds: std.ArrayList(i64) = .empty,
+    Attr: std.ArrayList(GameplayAttributeData) = .empty,
 };
 pub const DamageRecordEntity = struct {
     pub const default: @This() = .{};
@@ -46592,24 +46600,286 @@ pub const DamageRecordEntity = struct {
     Attr: std.ArrayList(GameplayAttributeData) = .empty,
     AttrSnapshot: std.ArrayList(GameplayAttributeData) = .empty,
 };
-pub const SunSpiritGearComponentPb = struct {
+pub const EntityAccessInfo = struct {
     pub const default: @This() = .{};
-    TakeUpInfo: std.ArrayList(SunSpiritPb) = .empty,
+    EntityId: i64 = 0,
+    RangeType: ?RangeType = null,
+    AcessRangeResults: std.ArrayList(MapEntry(i32, ErrorCode)) = .empty,
+};
+pub const PartComponentInitNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    PartComponent: ?PartComponentPb = null,
+};
+pub const PayInfoResponse = struct {
+    pub const default: @This() = .{};
+    Infos: std.ArrayList(PayItemInfo) = .empty,
+    Version: []const u8 = "",
+    ErrorCode: ?ErrorCode = null,
+};
+pub const UseSkillFailResponse = struct {
+    pub const default: @This() = .{};
+    SkillId: i32 = 0,
+    Error: ?DErrorResult = null,
+};
+pub const WeeklyPlayData = struct {
+    pub const default: @This() = .{};
+    qWp: ?union(enum) {
+        RogueWeeklyPlayData: ?RogueWeeklyPlayData,
+        FloroFarmPlayData: ?FloroFarmPlayData,
+    } = null,
+    id: i32 = 0,
+    type: i32 = 0,
+};
+pub const ActivityFishingData = struct {
+    pub const default: @This() = .{};
+    ActivityTaskData: std.ArrayList(ActivityTask) = .empty,
+    MilestoneReward: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    LimitTimeReward: i64 = 0,
+    LimitTimeEnd: i64 = 0,
+    MilestoneRewardItemAccumulate: i32 = 0,
+};
+pub const DestroyBulletResponsePush = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Handle: ?ActiveBulletHandle = null,
+};
+pub const RoleVisionMainPhantomResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RecommendInfo: std.ArrayList(MainPhantomRecommendInfo) = .empty,
+};
+pub const ApplyVisionGroupResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
+};
+pub const PbUpLevelSkillResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+    SkillInfo: ?ArrayIntInt = null,
+};
+pub const PrivateChatHistoryContentProto = struct {
+    pub const default: @This() = .{};
+    TargetUid: i32 = 0,
+    Chats: std.ArrayList(ChatContentProto) = .empty,
+    HistoryIsEnd: bool = false,
+    TotalNums: i32 = 0,
+};
+pub const PlayPointStateAsyncResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    LevelPlayStateDict: std.ArrayList(MapEntry(i32, LevelPlayStateMsg)) = .empty,
+};
+pub const AliveStatusNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    Info: std.ArrayList(DeathStatusInfo) = .empty,
+};
+pub const PlayerAttr = struct {
+    pub const default: @This() = .{};
+    Value: ?union(enum) {
+        Int32Value: i32,
+        StringValue: []const u8,
+    } = null,
+    Key: ?PlayerAttrKey = null,
+    ValueType: ?PlayerAttrType = null,
+};
+pub const ChangeStateConfirmResponse = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    State: i32 = 0,
+    Error: ?DErrorResult = null,
+};
+pub const MotorParkourActivityInfo = struct {
+    pub const default: @This() = .{};
+    MotorParkourLevelInfos: std.ArrayList(MotorParkourLevelInfo) = .empty,
+};
+pub const EnergySyncResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SyncInfo: std.ArrayList(EnergyInfo) = .empty,
+};
+pub const EntityStaticHookMoveRequest = struct {
+    pub const default: @This() = .{};
+    Target: ?union(enum) {
+        TargetEntityId: i64,
+        TargetPos: ?Vector,
+    } = null,
+    EntityId: i64 = 0,
+    HookMoveType: ?StaticHookMoveType = null,
+};
+pub const MonsterGachaDataPb = struct {
+    pub const default: @This() = .{};
+    MonsterCrystalInfoList: std.ArrayList(CrystalMonsterInfoPb) = .empty,
+};
+pub const DailyAdventureActivityData = struct {
+    pub const default: @This() = .{};
+    DailyAdventureActivityTasks: std.ArrayList(DailyAdventureActivityTask) = .empty,
+    PtRewardTaken: std.ArrayList(i32) = .empty,
+};
+pub const AttributeChangedNotify = struct {
+    pub const default: @This() = .{};
+    Attributes: std.ArrayList(GameplayAttributeData) = .empty,
+};
+pub const CombinationAction = struct {
+    pub const default: @This() = .{};
+    ActionName: []const u8 = "",
+    CombinationKeyList: std.ArrayList(CombinationKey) = .empty,
+    Version: i32 = 0,
+    InputType: ?SettingInputType = null,
+};
+pub const LogicStateInitNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    EntityId: i64 = 0,
+    InitData: ?LogicStateComponentPb = null,
+};
+pub const CircumFluenceTaskData = struct {
+    pub const default: @This() = .{};
+    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
+    ClaimedReward: std.ArrayList(ActivityTask) = .empty,
+    TaskScoreRewardId: std.ArrayList(i32) = .empty,
+    NowOpen: bool = false,
+    EndTime: i64 = 0,
+    NextRefreshTime: i64 = 0,
+};
+pub const ICustomScreenTypeBasePb = struct {
+    pub const default: @This() = .{};
+    ScreenPb: ?union(enum) {
+        ICustomScreenSpinePb: ?ICustomScreenSpinePb,
+        ICustomScreenBackgroundImagePb: ?ICustomScreenBackgroundImagePb,
+    } = null,
+};
+pub const FsmCustomBlackboardNotify = struct {
+    pub const default: @This() = .{};
+    FsmCustomBlackboardDatas: ?FsmCustomBlackboardDatas = null,
+};
+pub const FailedNodeActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
 };
 pub const MaterialRequest = struct {
     pub const default: @This() = .{};
     MaterialInfo: ?MaterialInfo = null,
     CombatCommon: ?CombatCommon = null,
 };
-pub const HonamiStoryItemInfo = struct {
+pub const RiskHarvestInstInfo = struct {
     pub const default: @This() = .{};
-    ItemInfo: ?union(enum) {
-        HonamiStoryNormalItemInfo: ?HonamiStoryNormalItemInfo,
-        EquipItemInfo: ?HonamiStoryEquipItemInfo,
+    Id: i32 = 0,
+    UnlockTime: i64 = 0,
+    IsUnlock: bool = false,
+    Score: i32 = 0,
+    Rewarded: bool = false,
+    IsFinished: bool = false,
+    StarRewardInfos: std.ArrayList(RiskHarvestStarRewardInfo) = .empty,
+};
+pub const MoveToPointComponentPb = struct {
+    pub const default: @This() = .{};
+    PbMoveToPointConfig: ?PbMoveToPointConfig = null,
+};
+pub const LivenessResponse = struct {
+    pub const default: @This() = .{};
+    LivenessInfo: ?LivenessInfo = null,
+};
+pub const PhotoMemoryResponse = struct {
+    pub const default: @This() = .{};
+    Item: std.ArrayList(FragmentMemoryItem) = .empty,
+};
+pub const EntityStaticHookMoveNotify = struct {
+    pub const default: @This() = .{};
+    Target: ?union(enum) {
+        TargetEntityId: i64,
+        TargetPos: ?Vector,
     } = null,
-    IncrId: i32 = 0,
-    ItemId: i32 = 0,
-    FuncValue: i32 = 0,
+    EntityId: i64 = 0,
+    HookMoveType: ?StaticHookMoveType = null,
+};
+pub const MotorCycleIpActivityData = struct {
+    pub const default: @This() = .{};
+    TaskDataList: std.ArrayList(ConditionTask) = .empty,
+};
+pub const PbAdvice = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    AreaId: i32 = 0,
+    Contents: std.ArrayList(PbAdviceContent) = .empty,
+    UpVote: i32 = 0,
+};
+pub const SkinRewardActivityData = struct {
+    pub const default: @This() = .{};
+    RewardInfos: std.ArrayList(SkinRewardActivityRewardInfo) = .empty,
+};
+pub const AiBlackboardCdPush = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const CoopTaskCompleteInfo = struct {
+    pub const default: @This() = .{};
+    CoopTaskId: i32 = 0,
+    Task: ?ConditionTask = null,
+    UnLockTime: i64 = 0,
+    LevelPlay1Done: bool = false,
+    LevelPlay2Done: bool = false,
+};
+pub const SimpleTrackReportAsyncResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SimpleTrackReportMsgs: std.ArrayList(SimpleTrackReportMsg) = .empty,
+};
+pub const FishingIllustratedInfo = struct {
+    pub const default: @This() = .{};
+    IllustratedList: std.ArrayList(OneFishingIllustratedData) = .empty,
+    RewardedId: std.ArrayList(FishingIllustratedRewardInfo) = .empty,
+    UnlockDetections: std.ArrayList(i32) = .empty,
+};
+pub const DamageExecuteResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    AttackerEntityId: i64 = 0,
+    TargetEntityId: i64 = 0,
+    Damage: i32 = 0,
+    PartIndex: i32 = 0,
+    IsCrit: bool = false,
+    KilledTarget: bool = false,
+    ShieldCoverDamage: i32 = 0,
+    ImmuneType: ?EDamageImmune = null,
+    ElementType: i32 = 0,
+    ChangeLife: i32 = 0,
+    ChangeWeakness: i32 = 0,
+};
+pub const FollowerComponentPb = struct {
+    pub const default: @This() = .{};
+    FollowerList: std.ArrayList(FollowerList) = .empty,
+};
+pub const HarvestActivity = struct {
+    pub const default: @This() = .{};
+    HarvestPointRewards: std.ArrayList(HarvestPointReward) = .empty,
+    HarvestLevelRewards: std.ArrayList(HarvestLevelReward) = .empty,
+};
+pub const BeamReceiveAction = struct {
+    pub const default: @This() = .{};
+    ReceiveType: ?BeamReceiveActionType = null,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const UpdateFormationResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Formation: ?FightFormation = null,
+};
+pub const MowTowerActivityData = struct {
+    pub const default: @This() = .{};
+    MowTowerLevelsInfo: std.ArrayList(MowTowerLevelsInfo) = .empty,
+};
+pub const ControlInfoNotify = struct {
+    pub const default: @This() = .{};
+    ForbidList: std.ArrayList(ControlParam) = .empty,
+};
+pub const SuccessNodeActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
 };
 pub const MovementInformation = struct {
     pub const default: @This() = .{};
@@ -46626,52 +46896,140 @@ pub const MovementInformation = struct {
     IsJump: bool = false,
     HorizontalJumpSpeed: f32 = 0,
 };
-pub const DoInteractChildQuestNodeCtxPb = struct {
+pub const EntityLivingStatusNotify = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    LivingStatus: ?LivingStatus = null,
+    DropVisionItem: std.ArrayList(DropVisionItemResult) = .empty,
+};
+pub const ChildQuestNodeEnterActionCtxPb = struct {
     pub const default: @This() = .{};
     BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
 };
-pub const AttributeChangedNotify = struct {
+pub const CharacterAttachInfo = struct {
     pub const default: @This() = .{};
-    Attributes: std.ArrayList(GameplayAttributeData) = .empty,
+    EntityId: i64 = 0,
+    Pos: ?Vector = null,
+    Rot: ?Rotator = null,
+    PartIndex: i32 = 0,
 };
-pub const AiBlackboardCdPush = struct {
+pub const SunSpiritGearComponentPb = struct {
     pub const default: @This() = .{};
-    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
-    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+    TakeUpInfo: std.ArrayList(SunSpiritPb) = .empty,
 };
-pub const MaterialPush = struct {
+pub const AddVisionEquipGroupResponse = struct {
     pub const default: @This() = .{};
-    MaterialInfo: ?MaterialInfo = null,
+    ErrorCode: ?ErrorCode = null,
+    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
+};
+pub const WeaponSkinResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EquipList: std.ArrayList(LoadEquipData) = .empty,
+};
+pub const PlayEnterOrExitPollutionRangeCtxPb = struct {
+    pub const default: @This() = .{};
+    RangeType: ?PlayEnterOrExitPollutionRangeType = null,
+    EntityCtx: ?EntityCtxPb = null,
+};
+pub const PayGiftShopInfo = struct {
+    pub const default: @This() = .{};
+    Gifts: std.ArrayList(PayGiftInfo) = .empty,
+    Version: []const u8 = "",
+};
+pub const CompositionConditionEnterActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+    ConditionIndex: i32 = 0,
+};
+pub const PackAnimChangedNotify = struct {
+    pub const default: @This() = .{};
+    EntityAnimState: std.ArrayList(AnimStateChangeInfoList) = .empty,
+};
+pub const ModifyBulletParams = struct {
+    pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
+    Handle: ?ActiveBulletHandle = null,
+    TargetId: i64 = 0,
 };
-pub const TetrisActivityInfo = struct {
+pub const MotorDevelopActivityData = struct {
     pub const default: @This() = .{};
-    TetrisLevelInfos: std.ArrayList(TetrisLevelInfo) = .empty,
+    Task: std.ArrayList(ConditionTask) = .empty,
+};
+pub const TutorialUnlockResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+    UnLockInfo: ?TutorialInfo = null,
 };
 pub const OrnamentInfoNotify = struct {
     pub const default: @This() = .{};
     OrnamentInfo: ?OrnamentInfo = null,
 };
-pub const MotorParkourActivityInfo = struct {
+pub const LogicStateInitPush = struct {
     pub const default: @This() = .{};
-    MotorParkourLevelInfos: std.ArrayList(MotorParkourLevelInfo) = .empty,
-};
-pub const EntityAccessInfo = struct {
-    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
     EntityId: i64 = 0,
-    RangeType: ?RangeType = null,
-    AcessRangeResults: std.ArrayList(MapEntry(i32, ErrorCode)) = .empty,
+    InitData: ?LogicStateComponentPb = null,
+    ClientEntityId: i64 = 0,
 };
-pub const EntitySimplyMoveInfo = struct {
+pub const SceneFishPointInfo = struct {
     pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Location: ?Vector = null,
-    Rotation: ?Rotator = null,
+    FishPoints: std.ArrayList(SceneFishPointData) = .empty,
+    TempFishPoints: std.ArrayList(TempFishPointInfo) = .empty,
 };
-pub const AliveStatusNotify = struct {
+pub const HonamiStoryItemInfo = struct {
+    pub const default: @This() = .{};
+    ItemInfo: ?union(enum) {
+        HonamiStoryNormalItemInfo: ?HonamiStoryNormalItemInfo,
+        EquipItemInfo: ?HonamiStoryEquipItemInfo,
+    } = null,
+    IncrId: i32 = 0,
+    ItemId: i32 = 0,
+    FuncValue: i32 = 0,
+};
+pub const PlayerFightFormations = struct {
     pub const default: @This() = .{};
     PlayerId: i32 = 0,
-    Info: std.ArrayList(DeathStatusInfo) = .empty,
+    Formations: std.ArrayList(FightFormationNotifyInfo) = .empty,
+};
+pub const ExploreProgressResponse = struct {
+    pub const default: @This() = .{};
+    AreaProgress: std.ArrayList(AreaExploreInfo) = .empty,
+};
+pub const RoguelikeSeason = struct {
+    pub const default: @This() = .{};
+    SeasonId: i32 = 0,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
+    RoguelikeTokenList: std.ArrayList(RoguelikeTokenList) = .empty,
+    SeasonRewardList: std.ArrayList(RogueSeasonReward) = .empty,
+    TokenItemCount: i32 = 0,
+    BlackFlowerUseCount: i32 = 0,
+    BlackFlowerMaxCount: i32 = 0,
+};
+pub const FightRoleInfos = struct {
+    pub const default: @This() = .{};
+    GroupType: i32 = 0,
+    FightRoleInfos: std.ArrayList(FightRoleInfo) = .empty,
+    CurRole: i32 = 0,
+    LivingStatus: ?LivingStatus = null,
+    IsFixedLocation: bool = false,
+};
+pub const BuffItemNotify = struct {
+    pub const default: @This() = .{};
+    ItemBuffList: std.ArrayList(BuffItem) = .empty,
+    EquipItemList: std.ArrayList(EquipBuffItem) = .empty,
+};
+pub const SceneItemSplineRuntimeData = struct {
+    pub const default: @This() = .{};
+    Distance: ?union(enum) {
+        DistanceAlongPath: f32,
+    } = null,
+    Rot: ?union(enum) {
+        CurRot: ?Rotator,
+    } = null,
+    CurPos: ?Vector = null,
 };
 pub const DragonPoolDropItems = struct {
     pub const default: @This() = .{};
@@ -46679,39 +47037,496 @@ pub const DragonPoolDropItems = struct {
     DropIds: std.ArrayList(i32) = .empty,
     DropItems: std.ArrayList(ItemDict) = .empty,
 };
-pub const OneBrochureInfo = struct {
+pub const PutVisionGroupToTopResponse = struct {
     pub const default: @This() = .{};
-    BrochureId: i32 = 0,
-    BookItemInfos: std.ArrayList(BookItemInfo) = .empty,
+    ErrorCode: ?ErrorCode = null,
+    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
+};
+pub const AttributeComponentPb = struct {
+    pub const default: @This() = .{};
+    HardnessModeId: i32 = 0,
+    RageModeId: i32 = 0,
+    AttrData: std.ArrayList(AttrData) = .empty,
+};
+pub const MaterialPush = struct {
+    pub const default: @This() = .{};
+    MaterialInfo: ?MaterialInfo = null,
+    CombatCommon: ?CombatCommon = null,
 };
 pub const PrivateMessageNotify = struct {
     pub const default: @This() = .{};
     ChatContent: ?ChatContentProto = null,
 };
+pub const EquipTakeOnNotify = struct {
+    pub const default: @This() = .{};
+    DataList: std.ArrayList(RoleLoadEquipData) = .empty,
+};
+pub const BlackCoastThemeStageInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Tasks: std.ArrayList(ActivityTask) = .empty,
+};
+pub const KurotatoLevelInfo = struct {
+    pub const default: @This() = .{};
+    jSp: ?union(enum) {
+        EndlessLevelInfo: ?KurotatoEndlessLevelInfo,
+    } = null,
+    DOLLARSp: ?union(enum) {
+        InstData: ?KurotatoInstInfo,
+    } = null,
+    LevelId: i32 = 0,
+    IsUnlock: bool = false,
+    UnlockTime: i64 = 0,
+    IsFinished: bool = false,
+};
+pub const TrapDefenseRewardData = struct {
+    pub const default: @This() = .{};
+    ActivityServerRewardItemData: ?ConditionTask = null,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
+};
+pub const GatherActivityInfo = struct {
+    pub const default: @This() = .{};
+    GatherTaskDoneInfo: std.ArrayList(GatherTaskDoneInfo) = .empty,
+};
+pub const SpringSignData = struct {
+    pub const default: @This() = .{};
+    SpringSignActivityTasks: std.ArrayList(ActivityTask) = .empty,
+    CanInvite: bool = false,
+    DrawRoles: std.ArrayList(i32) = .empty,
+    SkinReward: bool = false,
+};
+pub const AiBlackboardCdNotify = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdDel: std.ArrayList(i32) = .empty,
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const TowerAreaPb = struct {
+    pub const default: @This() = .{};
+    AreaNum: i32 = 0,
+    TowerFloors: std.ArrayList(TowerFloorPb) = .empty,
+};
+pub const HookLockPointActionCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    InteractionType: ?HookInteractActionType = null,
+};
+pub const RolePhantomPropUpdateNotify = struct {
+    pub const default: @This() = .{};
+    PropInfo: std.ArrayList(RolePhantomPropInfo) = .empty,
+};
+pub const InfrLibraryPb = struct {
+    pub const default: @This() = .{};
+    ArchiveTasks: std.ArrayList(InfrTaskPb) = .empty,
+    PhoneTasks: std.ArrayList(InfrTaskPb) = .empty,
+    UnreadArchives: std.ArrayList(i32) = .empty,
+};
+pub const ChangeStateResponse = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    Error: ?DErrorResult = null,
+    CurrentState: i32 = 0,
+};
+pub const EntityPositionResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Pos: ?Vector = null,
+};
+pub const PlayerDeadNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    DelaySeconds: i32 = 0,
+    IsAutoRevive: bool = false,
+    ReviveId: i32 = 0,
+    IsLogin: bool = false,
+    IsShowRevive: bool = false,
+    ExtraDeadInfos: std.ArrayList(ExtraDeadInfo) = .empty,
+};
+pub const PatrolInfoComponentPb = struct {
+    pub const default: @This() = .{};
+    SceneAiEnabled: bool = false,
+    PatrolInfo: ?PatrolInfoPb = null,
+};
+pub const ActionGroupNodeActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const ShieldUpdateNotify = struct {
+    pub const default: @This() = .{};
+    Shields: std.ArrayList(ShieldUpdateInfo) = .empty,
+};
+pub const ConditionInfo = struct {
+    pub const default: @This() = .{};
+    FinishConditionMap: std.ArrayList(MapEntry(i32, ConditionItem)) = .empty,
+};
+pub const SecGetReportData2FlowResponse = struct {
+    pub const default: @This() = .{};
+    Error: ?DErrorResult = null,
+};
+pub const RogueResTaskThemeData = struct {
+    pub const default: @This() = .{};
+    RogueSignReward: std.ArrayList(ActivityTask) = .empty,
+    RogueResThemeId: i32 = 0,
+    EndTime: i64 = 0,
+};
+pub const PermanentSeasonData = struct {
+    pub const default: @This() = .{};
+    PermanentSeasonDataId: i32 = 0,
+    SkillDict: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    RogueResEndId: std.ArrayList(i32) = .empty,
+    RogueResEndAward: std.ArrayList(ActivityTask) = .empty,
+    TrialRoleIds: std.ArrayList(i32) = .empty,
+    RoleIds: std.ArrayList(i32) = .empty,
+    EndTime: i64 = 0,
+    ShopItemCount: i32 = 0,
+};
+pub const PhantomItemAddNotify = struct {
+    pub const default: @This() = .{};
+    PhantomItemList: std.ArrayList(PhantomItem) = .empty,
+    Reason: i32 = 0,
+};
+pub const EquipTakeOnRequest = struct {
+    pub const default: @This() = .{};
+    Data: ?RoleLoadEquipData = null,
+};
+pub const ActivityLongShanMain = struct {
+    pub const default: @This() = .{};
+    StageData: std.ArrayList(LongShanMainData) = .empty,
+    ScoreRewardedId: std.ArrayList(i32) = .empty,
+};
+pub const GachaInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    TodayTimes: i32 = 0,
+    TotalTimes: i32 = 0,
+    ItemId: i32 = 0,
+    GachaConsumes: std.ArrayList(GachaConsume) = .empty,
+    UsePoolId: i32 = 0,
+    Pools: std.ArrayList(GachaPoolInfo) = .empty,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    DailyLimitTimes: i32 = 0,
+    TotalLimitTimes: i32 = 0,
+    ResourcesId: []const u8 = "",
+};
+pub const SoarWingOrParaglidingSkinChangeNotify = struct {
+    pub const default: @This() = .{};
+    FlySkinData: std.ArrayList(EntityFlySkinChangeData) = .empty,
+};
+pub const PhantomAutoPutResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
+};
+pub const FlySkinWearAllRoleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    FlySkinData: std.ArrayList(EquipFlySkinData) = .empty,
+};
+pub const DestroyBulletRequest = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Handle: ?ActiveBulletHandle = null,
+};
+pub const LogicStateInitRequest = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    EntityId: i64 = 0,
+    InitData: ?LogicStateComponentPb = null,
+    ClientEntityId: i64 = 0,
+};
+pub const ANStartResponse = struct {
+    pub const default: @This() = .{};
+    SkillId: i64 = 0,
+    MontageIndex: i32 = 0,
+    AnIndex: i32 = 0,
+    Error: ?DErrorResult = null,
+};
+pub const PassiveSkillAddNotify = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    PassiveSkillItemPbList: std.ArrayList(PassiveSkillItemPb) = .empty,
+};
+pub const DoInteractChildQuestNodeCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const RoleActivateSkillResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleId: i32 = 0,
+    SkillInfo: ?ArrayIntInt = null,
+};
+pub const ActivityTurnTableData = struct {
+    pub const default: @This() = .{};
+    IsAllFinish: bool = false,
+    GroupId: i32 = 0,
+    Rewards: std.ArrayList(i32) = .empty,
+    TurntableTasks: std.ArrayList(ActivityTask) = .empty,
+};
 pub const PlayFlowChildQuestNodeCtxPb = struct {
     pub const default: @This() = .{};
     BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
 };
-pub const CoopTaskCompleteInfo = struct {
+pub const CombinationAxis = struct {
     pub const default: @This() = .{};
-    CoopTaskId: i32 = 0,
-    Task: ?ConditionTask = null,
-    UnLockTime: i64 = 0,
-    LevelPlay1Done: bool = false,
-    LevelPlay2Done: bool = false,
+    AxisName: []const u8 = "",
+    CombinationKeyList: std.ArrayList(CombinationKey) = .empty,
+    Version: i32 = 0,
+    InputType: ?SettingInputType = null,
 };
-pub const FollowerComponentPb = struct {
+pub const PhantomCollectActivity = struct {
     pub const default: @This() = .{};
-    FollowerList: std.ArrayList(FollowerList) = .empty,
+    PhantomCollectRewards: std.ArrayList(PhantomCollectReward) = .empty,
 };
-pub const PlayEnterOrExitPollutionRangeCtxPb = struct {
+pub const RoleMotion = struct {
     pub const default: @This() = .{};
-    RangeType: ?PlayEnterOrExitPollutionRangeType = null,
-    EntityCtx: ?EntityCtxPb = null,
+    RoleId: i32 = 0,
+    MotionIds: std.ArrayList(FavorItem) = .empty,
 };
-pub const ChildQuestNodeEnterActionCtxPb = struct {
+pub const ActivityFunPlayData = struct {
+    pub const default: @This() = .{};
+    ActivityFunPlayChallengeData: std.ArrayList(ActivityFunPlayChallengeData) = .empty,
+};
+pub const AllMsgResponse = struct {
+    pub const default: @This() = .{};
+    ShortMessageInfos: std.ArrayList(ShortMessageInfo) = .empty,
+    BubbleIds: std.ArrayList(i32) = .empty,
+    BubbleId: i32 = 0,
+    ChatBgIds: std.ArrayList(i32) = .empty,
+    ChatBgId: i32 = 0,
+    ErrCode: ?ErrorCode = null,
+};
+pub const FriendInfo = struct {
+    pub const default: @This() = .{};
+    Info: ?PlayerDetails = null,
+    Remark: []const u8 = "",
+};
+pub const PassiveSkillNotify = struct {
+    pub const default: @This() = .{};
+    RolePassiveSkillInfoList: std.ArrayList(RolePassiveSkillInfo) = .empty,
+};
+pub const GetFormationDataResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Formations: std.ArrayList(FightFormation) = .empty,
+};
+pub const PassiveSkillComponentPb = struct {
+    pub const default: @This() = .{};
+    PassiveSkillItemPbList: std.ArrayList(PassiveSkillItemPb) = .empty,
+};
+pub const EntitySimplyMoveInfo = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    Location: ?Vector = null,
+    Rotation: ?Rotator = null,
+};
+pub const ActivityTaskData = struct {
+    pub const default: @This() = .{};
+    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
+};
+pub const StuckCheckCtxPb = struct {
     pub const default: @This() = .{};
     BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+    Index: i32 = 0,
+};
+pub const MotorDecalActivityData = struct {
+    pub const default: @This() = .{};
+    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
+};
+pub const MonsterCreatorProgress = struct {
+    pub const default: @This() = .{};
+    Slots: std.ArrayList(MonsterCreatorProgressSlot) = .empty,
+    TotalNum: i32 = 0,
+};
+pub const SummonRequestInfo = struct {
+    pub const default: @This() = .{};
+    SummonEntityId: i64 = 0,
+    SkillId: i32 = 0,
+    SummonConfigId: i32 = 0,
+    Pos: ?Vector = null,
+    Rot: ?Rotator = null,
+    IsVisible: bool = false,
+};
+pub const RelativeMoveReplaySample = struct {
+    pub const default: @This() = .{};
+    BaseMovementEntityId: i64 = 0,
+    RelativeLocation: ?Vector = null,
+    RelativeRotation: ?Rotator = null,
+};
+pub const TeamChallengeInfo = struct {
+    pub const default: @This() = .{};
+    RoleSaveInfos: std.ArrayList(RoleSaveInfo) = .empty,
+    BuffIds: std.ArrayList(i32) = .empty,
+    LastMonsterInfoPreview: ?MonsterInfoPreview = null,
+    TeamScore: i32 = 0,
+};
+pub const VisionEquipGroupInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
+};
+pub const FriendApply = struct {
+    pub const default: @This() = .{};
+    Info: ?PlayerDetails = null,
+    CreatedTime: i64 = 0,
+};
+pub const CalabashMsg = struct {
+    pub const default: @This() = .{};
+    Level: i32 = 0,
+    Exp: i32 = 0,
+    UnlockedLevels: std.ArrayList(i32) = .empty,
+    UnlockedDevelopRewards: std.ArrayList(CalabashDevelopInfo) = .empty,
+    IdentifyGuaranteeCount: i32 = 0,
+    LowCostGuaranteeCount: i32 = 0,
+};
+pub const Transform = struct {
+    pub const default: @This() = .{};
+    Pos: ?Vector = null,
+    Rot: ?Rotator = null,
+};
+pub const AdventureManualData = struct {
+    pub const default: @This() = .{};
+    AdventreTask: std.ArrayList(AdventreTask) = .empty,
+    NowChapter: i32 = 0,
+    ReceivedChapter: i32 = 0,
+    UnlockChapters: std.ArrayList(i32) = .empty,
+    RewardChapters: std.ArrayList(i32) = .empty,
+};
+pub const ActivityMoraleData = struct {
+    pub const default: @This() = .{};
+    AreaData: std.ArrayList(MoraleAreaData) = .empty,
+    MoraleProgressReward: std.ArrayList(i32) = .empty,
+    MoraleFlags: std.ArrayList(MoraleFlag) = .empty,
+};
+pub const OneBrochureInfo = struct {
+    pub const default: @This() = .{};
+    BrochureId: i32 = 0,
+    BookItemInfos: std.ArrayList(BookItemInfo) = .empty,
+};
+pub const RollBlockGamePlayActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+    ParamType: i32 = 0,
+};
+pub const FlowEndRequest = struct {
+    pub const default: @This() = .{};
+    FlowIncId: i64 = 0,
+    IsSkip: bool = false,
+    OptionInfos: std.ArrayList(MapEntry(i32, FlowOptionInfoList)) = .empty,
+};
+pub const GridObjectComponentPb = struct {
+    pub const default: @This() = .{};
+    InitGridPlacementPbInfo: ?GridPlacementPbInfo = null,
+};
+pub const ExploreSkillRouletteSetRequest = struct {
+    pub const default: @This() = .{};
+    SkillRoulette: ?ExploreSkillRoulette = null,
+    RouletteType: ?RouletteType = null,
+    SkillRoulettes: std.ArrayList(ExploreSkillRoulette) = .empty,
+};
+pub const RhythmShipLevelPb = struct {
+    pub const default: @This() = .{};
+    LevelId: i32 = 0,
+    RhythmSubLevelPb: std.ArrayList(RhythmSubLevelPb) = .empty,
+};
+pub const AiBlackboardCdRequest = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const SpawnerEntityInfo = struct {
+    pub const default: @This() = .{};
+    Group: ?union(enum) {
+        GroupTypes: ?GroupTypesWrapper,
+    } = null,
+    SpawnerSubType: ?union(enum) {
+        MatrixInfo: ?MatrixInfo,
+    } = null,
+    IncId: i64 = 0,
+};
+pub const EntityStaticHookMovePush = struct {
+    pub const default: @This() = .{};
+    Target: ?union(enum) {
+        TargetEntityId: i64,
+        TargetPos: ?Vector,
+    } = null,
+    EntityId: i64 = 0,
+    HookMoveType: ?StaticHookMoveType = null,
+};
+pub const EdDebugEnterActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const DestroyBulletNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    Handle: ?ActiveBulletHandle = null,
+    IsCreateSubBullet: bool = false,
+};
+pub const AttributeChangedRequest = struct {
+    pub const default: @This() = .{};
+    Id: i64 = 0,
+    Attributes: std.ArrayList(GameplayAttributeData) = .empty,
+};
+pub const CompositionEnterActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const TetrisActivityInfo = struct {
+    pub const default: @This() = .{};
+    TetrisLevelInfos: std.ArrayList(TetrisLevelInfo) = .empty,
+};
+pub const PhantomPutOnResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
+};
+pub const MotorOutlookPlayerPresetPb = struct {
+    pub const default: @This() = .{};
+    Plan: std.ArrayList(MotorOutlookPresetPlanPb) = .empty,
+};
+pub const ChildQuestNodeFinishActionCtxPb = struct {
+    pub const default: @This() = .{};
+    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
+};
+pub const CiacconaGalChapterData = struct {
+    pub const default: @This() = .{};
+    ChapterDataId: i32 = 0,
+    CanUnlock: bool = false,
+    CiacconaGalSubEndingData: std.ArrayList(CiacconaGalSubEndingData) = .empty,
+    CiacconaGalChoiceData: std.ArrayList(CiacconaGalChoiceData) = .empty,
+};
+pub const PlayerTitleData = struct {
+    pub const default: @This() = .{};
+    PlayerTitleId: i32 = 0,
+    IsUnlock: bool = false,
+    UnlockTime: i64 = 0,
+    StarLevel: i32 = 0,
+    ActivityServerRewardItemData: ?ConditionTask = null,
+};
+pub const EquipWeaponSkinResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    DataList: std.ArrayList(LoadEquipData) = .empty,
+};
+pub const EntityTimelineTrackCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    GroupIndex: i32 = 0,
+    ControlPoint: i32 = 0,
+    EventType: ?EntityTimelineEventType = null,
+};
+pub const FsmConditionPassResponse = struct {
+    pub const default: @This() = .{};
+    FsmId: i32 = 0,
+    Error: ?DErrorResult = null,
+};
+pub const ActivityLinkageData = struct {
+    pub const default: @This() = .{};
+    ActivityId: i32 = 0,
+    Data: std.ArrayList(ActivityLinkageTabData) = .empty,
 };
 pub const PbMailInfo = struct {
     pub const default: @This() = .{};
@@ -46729,57 +47544,15 @@ pub const PbMailInfo = struct {
     ConfigId: i32 = 0,
     ExpiryTime: i64 = 0,
 };
-pub const EnergySyncResponse = struct {
+pub const MaterialNotify = struct {
+    pub const default: @This() = .{};
+    MaterialInfo: ?MaterialInfo = null,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const DeleteVisionEquipGroupResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    SyncInfo: std.ArrayList(EnergyInfo) = .empty,
-};
-pub const MoveToPointComponentPb = struct {
-    pub const default: @This() = .{};
-    PbMoveToPointConfig: ?PbMoveToPointConfig = null,
-};
-pub const Transform = struct {
-    pub const default: @This() = .{};
-    Pos: ?Vector = null,
-    Rot: ?Rotator = null,
-};
-pub const CombinationAxis = struct {
-    pub const default: @This() = .{};
-    AxisName: []const u8 = "",
-    CombinationKeyList: std.ArrayList(CombinationKey) = .empty,
-    Version: i32 = 0,
-    InputType: ?SettingInputType = null,
-};
-pub const EntityLivingStatusNotify = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    LivingStatus: ?LivingStatus = null,
-    DropVisionItem: std.ArrayList(DropVisionItemResult) = .empty,
-};
-pub const PlayerFightFormations = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    Formations: std.ArrayList(FightFormationNotifyInfo) = .empty,
-};
-pub const ApplyVisionGroupResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
-};
-pub const PrivateChatHistoryContentProto = struct {
-    pub const default: @This() = .{};
-    TargetUid: i32 = 0,
-    Chats: std.ArrayList(ChatContentProto) = .empty,
-    HistoryIsEnd: bool = false,
-    TotalNums: i32 = 0,
-};
-pub const FightRoleInfos = struct {
-    pub const default: @This() = .{};
-    GroupType: i32 = 0,
-    FightRoleInfos: std.ArrayList(FightRoleInfo) = .empty,
-    CurRole: i32 = 0,
-    LivingStatus: ?LivingStatus = null,
-    IsFixedLocation: bool = false,
+    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
 };
 pub const ClientBasicInfo = struct {
     pub const default: @This() = .{};
@@ -46804,784 +47577,69 @@ pub const ClientBasicInfo = struct {
     ClientVersion: []const u8 = "",
     OSVersion: []const u8 = "",
 };
-pub const MaterialNotify = struct {
+pub const ActivityAvignon = struct {
     pub const default: @This() = .{};
-    MaterialInfo: ?MaterialInfo = null,
-    CombatCommon: ?CombatCommon = null,
+    RewardData: ?ActivityTaskData = null,
+    StageId: std.ArrayList(i32) = .empty,
 };
-pub const GridObjectComponentPb = struct {
+pub const ActivityBlackCoastData = struct {
     pub const default: @This() = .{};
-    InitGridPlacementPbInfo: ?GridPlacementPbInfo = null,
+    StageData: std.ArrayList(BlackCoastThemeStageInfo) = .empty,
+    RewardIds: std.ArrayList(i32) = .empty,
 };
-pub const RoguelikeSeason = struct {
-    pub const default: @This() = .{};
-    SeasonId: i32 = 0,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-    RoguelikeTokenList: std.ArrayList(RoguelikeTokenList) = .empty,
-    SeasonRewardList: std.ArrayList(RogueSeasonReward) = .empty,
-    TokenItemCount: i32 = 0,
-    BlackFlowerUseCount: i32 = 0,
-    BlackFlowerMaxCount: i32 = 0,
-};
-pub const PlayerTitleData = struct {
-    pub const default: @This() = .{};
-    PlayerTitleId: i32 = 0,
-    IsUnlock: bool = false,
-    UnlockTime: i64 = 0,
-    StarLevel: i32 = 0,
-    ActivityServerRewardItemData: ?ConditionTask = null,
-};
-pub const MotorDecalActivityData = struct {
-    pub const default: @This() = .{};
-    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
-};
-pub const AddVisionEquipGroupResponse = struct {
+pub const ExploreSkillRouletteSetResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
-};
-pub const WeaponSkinResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EquipList: std.ArrayList(LoadEquipData) = .empty,
-};
-pub const ConditionInfo = struct {
-    pub const default: @This() = .{};
-    FinishConditionMap: std.ArrayList(MapEntry(i32, ConditionItem)) = .empty,
-};
-pub const RogueResTaskThemeData = struct {
-    pub const default: @This() = .{};
-    RogueSignReward: std.ArrayList(ActivityTask) = .empty,
-    RogueResThemeId: i32 = 0,
-    EndTime: i64 = 0,
-};
-pub const EntityPositionResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Pos: ?Vector = null,
-};
-pub const CircumFluenceTaskData = struct {
-    pub const default: @This() = .{};
-    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
-    ClaimedReward: std.ArrayList(ActivityTask) = .empty,
-    TaskScoreRewardId: std.ArrayList(i32) = .empty,
-    NowOpen: bool = false,
-    EndTime: i64 = 0,
-    NextRefreshTime: i64 = 0,
-};
-pub const SceneItemSplineRuntimeData = struct {
-    pub const default: @This() = .{};
-    Distance: ?union(enum) {
-        DistanceAlongPath: f32,
-    } = null,
-    Rot: ?union(enum) {
-        CurRot: ?Rotator,
-    } = null,
-    CurPos: ?Vector = null,
-};
-pub const PermanentSeasonData = struct {
-    pub const default: @This() = .{};
-    PermanentSeasonDataId: i32 = 0,
-    SkillDict: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    RogueResEndId: std.ArrayList(i32) = .empty,
-    RogueResEndAward: std.ArrayList(ActivityTask) = .empty,
-    TrialRoleIds: std.ArrayList(i32) = .empty,
-    RoleIds: std.ArrayList(i32) = .empty,
-    EndTime: i64 = 0,
-    ShopItemCount: i32 = 0,
-};
-pub const PhantomCollectActivity = struct {
-    pub const default: @This() = .{};
-    PhantomCollectRewards: std.ArrayList(PhantomCollectReward) = .empty,
-};
-pub const FsmConditionPassResponse = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    Error: ?DErrorResult = null,
-};
-pub const ActivityFishingData = struct {
-    pub const default: @This() = .{};
-    ActivityTaskData: std.ArrayList(ActivityTask) = .empty,
-    MilestoneReward: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    LimitTimeReward: i64 = 0,
-    LimitTimeEnd: i64 = 0,
-    MilestoneRewardItemAccumulate: i32 = 0,
-};
-pub const LogicStateInitPush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    EntityId: i64 = 0,
-    InitData: ?LogicStateComponentPb = null,
-    ClientEntityId: i64 = 0,
-};
-pub const ExploreSkillRouletteSetRequest = struct {
-    pub const default: @This() = .{};
     SkillRoulette: ?ExploreSkillRoulette = null,
     RouletteType: ?RouletteType = null,
     SkillRoulettes: std.ArrayList(ExploreSkillRoulette) = .empty,
 };
-pub const DamageExecuteResponse = struct {
+pub const AddCombineEntitiesRelationNotify = struct {
+    pub const default: @This() = .{};
+    CharacterAttachInfo: ?CharacterAttachInfo = null,
+    TargetEntity: i64 = 0,
+};
+pub const ModifyBulletParamsRequest = struct {
+    pub const default: @This() = .{};
+    ModifyBulletParams: ?ModifyBulletParams = null,
+};
+pub const PrivateChatHistoryNotify = struct {
+    pub const default: @This() = .{};
+    AllChats: std.ArrayList(PrivateChatHistoryContentProto) = .empty,
+};
+pub const PlayerBasicInfoGetResponse = struct {
+    pub const default: @This() = .{};
+    Info: ?PlayerDetails = null,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PhantomLevelUpResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    AttackerEntityId: i64 = 0,
-    TargetEntityId: i64 = 0,
-    Damage: i32 = 0,
-    PartIndex: i32 = 0,
-    IsCrit: bool = false,
-    KilledTarget: bool = false,
-    ShieldCoverDamage: i32 = 0,
-    ImmuneType: ?EDamageImmune = null,
-    ElementType: i32 = 0,
-    ChangeLife: i32 = 0,
-    ChangeWeakness: i32 = 0,
+    UpdateInfo: ?PhantomItem = null,
+    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const CiacconaGalChapterData = struct {
+pub const NewTowerClimbingLevelRecord = struct {
     pub const default: @This() = .{};
-    ChapterDataId: i32 = 0,
-    CanUnlock: bool = false,
-    CiacconaGalSubEndingData: std.ArrayList(CiacconaGalSubEndingData) = .empty,
-    CiacconaGalChoiceData: std.ArrayList(CiacconaGalChoiceData) = .empty,
-};
-pub const ChangeStateConfirmResponse = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-    Error: ?DErrorResult = null,
-};
-pub const KurotatoLevelInfo = struct {
-    pub const default: @This() = .{};
-    jSp: ?union(enum) {
-        EndlessLevelInfo: ?KurotatoEndlessLevelInfo,
-    } = null,
-    DOLLARSp: ?union(enum) {
-        InstData: ?KurotatoInstInfo,
-    } = null,
     LevelId: i32 = 0,
-    IsUnlock: bool = false,
-    UnlockTime: i64 = 0,
-    IsFinished: bool = false,
-};
-pub const BlackCoastThemeStageInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Tasks: std.ArrayList(ActivityTask) = .empty,
-};
-pub const CombinationAction = struct {
-    pub const default: @This() = .{};
-    ActionName: []const u8 = "",
-    CombinationKeyList: std.ArrayList(CombinationKey) = .empty,
-    Version: i32 = 0,
-    InputType: ?SettingInputType = null,
-};
-pub const SummonRequestInfo = struct {
-    pub const default: @This() = .{};
-    SummonEntityId: i64 = 0,
-    SkillId: i32 = 0,
-    SummonConfigId: i32 = 0,
-    Pos: ?Vector = null,
-    Rot: ?Rotator = null,
-    IsVisible: bool = false,
-};
-pub const PhantomItemAddNotify = struct {
-    pub const default: @This() = .{};
-    PhantomItemList: std.ArrayList(PhantomItem) = .empty,
-    Reason: i32 = 0,
-};
-pub const PartComponentInitNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    PartComponent: ?PartComponentPb = null,
-};
-pub const PlayerDeadNotify = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    DelaySeconds: i32 = 0,
-    IsAutoRevive: bool = false,
-    ReviveId: i32 = 0,
-    IsLogin: bool = false,
-    IsShowRevive: bool = false,
-    ExtraDeadInfos: std.ArrayList(ExtraDeadInfo) = .empty,
-};
-pub const PayGiftShopInfo = struct {
-    pub const default: @This() = .{};
-    Gifts: std.ArrayList(PayGiftInfo) = .empty,
-    Version: []const u8 = "",
-};
-pub const GetFormationDataResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Formations: std.ArrayList(FightFormation) = .empty,
-};
-pub const AdventureManualData = struct {
-    pub const default: @This() = .{};
-    AdventreTask: std.ArrayList(AdventreTask) = .empty,
-    NowChapter: i32 = 0,
-    ReceivedChapter: i32 = 0,
-    UnlockChapters: std.ArrayList(i32) = .empty,
-    RewardChapters: std.ArrayList(i32) = .empty,
-};
-pub const ShieldUpdateNotify = struct {
-    pub const default: @This() = .{};
-    Shields: std.ArrayList(ShieldUpdateInfo) = .empty,
-};
-pub const PutVisionGroupToTopResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
-};
-pub const CompositionEnterActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const ActivityTaskData = struct {
-    pub const default: @This() = .{};
-    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
-};
-pub const TestDamageRecordEntity = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    ConfigId: i32 = 0,
-    BuffIds: std.ArrayList(i64) = .empty,
-    Attr: std.ArrayList(GameplayAttributeData) = .empty,
-};
-pub const ModifyBulletParams = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Handle: ?ActiveBulletHandle = null,
-    TargetId: i64 = 0,
-};
-pub const PlayPointStateAsyncResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    LevelPlayStateDict: std.ArrayList(MapEntry(i32, LevelPlayStateMsg)) = .empty,
-};
-pub const TemplateSpawnerActionCtxPb = struct {
-    pub const default: @This() = .{};
-    Type: ?union(enum) {
-        DestroyType: ?DestroyType,
-    } = null,
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const GachaInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    TodayTimes: i32 = 0,
-    TotalTimes: i32 = 0,
-    ItemId: i32 = 0,
-    GachaConsumes: std.ArrayList(GachaConsume) = .empty,
-    UsePoolId: i32 = 0,
-    Pools: std.ArrayList(GachaPoolInfo) = .empty,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-    DailyLimitTimes: i32 = 0,
-    TotalLimitTimes: i32 = 0,
-    ResourcesId: []const u8 = "",
-};
-pub const DestroyBulletNotify = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Handle: ?ActiveBulletHandle = null,
-    IsCreateSubBullet: bool = false,
-};
-pub const UseSkillFailResponse = struct {
-    pub const default: @This() = .{};
-    SkillId: i32 = 0,
-    Error: ?DErrorResult = null,
-};
-pub const PackAnimChangedNotify = struct {
-    pub const default: @This() = .{};
-    EntityAnimState: std.ArrayList(AnimStateChangeInfoList) = .empty,
-};
-pub const MotorCycleIpActivityData = struct {
-    pub const default: @This() = .{};
-    TaskDataList: std.ArrayList(ConditionTask) = .empty,
-};
-pub const VisionEquipGroupInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
-};
-pub const SimpleTrackReportAsyncResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    SimpleTrackReportMsgs: std.ArrayList(SimpleTrackReportMsg) = .empty,
-};
-pub const PhotoMemoryResponse = struct {
-    pub const default: @This() = .{};
-    Item: std.ArrayList(FragmentMemoryItem) = .empty,
-};
-pub const MonsterGachaDataPb = struct {
-    pub const default: @This() = .{};
-    MonsterCrystalInfoList: std.ArrayList(CrystalMonsterInfoPb) = .empty,
-};
-pub const AllMsgResponse = struct {
-    pub const default: @This() = .{};
-    ShortMessageInfos: std.ArrayList(ShortMessageInfo) = .empty,
-    BubbleIds: std.ArrayList(i32) = .empty,
-    BubbleId: i32 = 0,
-    ChatBgIds: std.ArrayList(i32) = .empty,
-    ChatBgId: i32 = 0,
-    ErrCode: ?ErrorCode = null,
-};
-pub const ANStartResponse = struct {
-    pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    MontageIndex: i32 = 0,
-    AnIndex: i32 = 0,
-    Error: ?DErrorResult = null,
-};
-pub const InfrLibraryPb = struct {
-    pub const default: @This() = .{};
-    ArchiveTasks: std.ArrayList(InfrTaskPb) = .empty,
-    PhoneTasks: std.ArrayList(InfrTaskPb) = .empty,
-    UnreadArchives: std.ArrayList(i32) = .empty,
-};
-pub const RoleMotion = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    MotionIds: std.ArrayList(FavorItem) = .empty,
-};
-pub const EntityTimelineTrackCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    GroupIndex: i32 = 0,
-    ControlPoint: i32 = 0,
-    EventType: ?EntityTimelineEventType = null,
-};
-pub const BeamReceiveAction = struct {
-    pub const default: @This() = .{};
-    ReceiveType: ?BeamReceiveActionType = null,
-    EntityCtx: ?EntityCtxPb = null,
-};
-pub const DailyAdventureActivityData = struct {
-    pub const default: @This() = .{};
-    DailyAdventureActivityTasks: std.ArrayList(DailyAdventureActivityTask) = .empty,
-    PtRewardTaken: std.ArrayList(i32) = .empty,
-};
-pub const PbAdvice = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    AreaId: i32 = 0,
-    Contents: std.ArrayList(PbAdviceContent) = .empty,
-    UpVote: i32 = 0,
-};
-pub const FlowEndRequest = struct {
-    pub const default: @This() = .{};
-    FlowIncId: i64 = 0,
-    IsSkip: bool = false,
-    OptionInfos: std.ArrayList(MapEntry(i32, FlowOptionInfoList)) = .empty,
-};
-pub const DeleteVisionEquipGroupResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
-};
-pub const EquipTakeOnRequest = struct {
-    pub const default: @This() = .{};
-    Data: ?RoleLoadEquipData = null,
-};
-pub const RolePhantomPropUpdateNotify = struct {
-    pub const default: @This() = .{};
-    PropInfo: std.ArrayList(RolePhantomPropInfo) = .empty,
-};
-pub const RollBlockGamePlayActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-    ParamType: i32 = 0,
-};
-pub const HarvestActivity = struct {
-    pub const default: @This() = .{};
-    HarvestPointRewards: std.ArrayList(HarvestPointReward) = .empty,
-    HarvestLevelRewards: std.ArrayList(HarvestLevelReward) = .empty,
-};
-pub const CalabashMsg = struct {
-    pub const default: @This() = .{};
-    Level: i32 = 0,
-    Exp: i32 = 0,
-    UnlockedLevels: std.ArrayList(i32) = .empty,
-    UnlockedDevelopRewards: std.ArrayList(CalabashDevelopInfo) = .empty,
-    IdentifyGuaranteeCount: i32 = 0,
-    LowCostGuaranteeCount: i32 = 0,
-};
-pub const DestroyBulletRequest = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Handle: ?ActiveBulletHandle = null,
-};
-pub const FailedNodeActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const RelativeMoveReplaySample = struct {
-    pub const default: @This() = .{};
-    BaseMovementEntityId: i64 = 0,
-    RelativeLocation: ?Vector = null,
-    RelativeRotation: ?Rotator = null,
-};
-pub const GatherActivityInfo = struct {
-    pub const default: @This() = .{};
-    GatherTaskDoneInfo: std.ArrayList(GatherTaskDoneInfo) = .empty,
-};
-pub const WeeklyPlayData = struct {
-    pub const default: @This() = .{};
-    qWp: ?union(enum) {
-        RogueWeeklyPlayData: ?RogueWeeklyPlayData,
-        FloroFarmPlayData: ?FloroFarmPlayData,
-    } = null,
-    id: i32 = 0,
-    type: i32 = 0,
-};
-pub const SoarWingOrParaglidingSkinChangeNotify = struct {
-    pub const default: @This() = .{};
-    FlySkinData: std.ArrayList(EntityFlySkinChangeData) = .empty,
-};
-pub const EntityStaticHookMovePush = struct {
-    pub const default: @This() = .{};
-    Target: ?union(enum) {
-        TargetEntityId: i64,
-        TargetPos: ?Vector,
-    } = null,
-    EntityId: i64 = 0,
-    HookMoveType: ?StaticHookMoveType = null,
-};
-pub const CharacterAttachInfo = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Pos: ?Vector = null,
-    Rot: ?Rotator = null,
-    PartIndex: i32 = 0,
-};
-pub const AiBlackboardCdNotify = struct {
-    pub const default: @This() = .{};
-    AiBlackboardCdDel: std.ArrayList(i32) = .empty,
-    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
-    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
-};
-pub const ActivityLinkageData = struct {
-    pub const default: @This() = .{};
-    ActivityId: i32 = 0,
-    Data: std.ArrayList(ActivityLinkageTabData) = .empty,
-};
-pub const TeamChallengeInfo = struct {
-    pub const default: @This() = .{};
-    RoleSaveInfos: std.ArrayList(RoleSaveInfo) = .empty,
-    BuffIds: std.ArrayList(i32) = .empty,
-    LastMonsterInfoPreview: ?MonsterInfoPreview = null,
-    TeamScore: i32 = 0,
-};
-pub const ActivityFunPlayData = struct {
-    pub const default: @This() = .{};
-    ActivityFunPlayChallengeData: std.ArrayList(ActivityFunPlayChallengeData) = .empty,
-};
-pub const LivenessResponse = struct {
-    pub const default: @This() = .{};
-    LivenessInfo: ?LivenessInfo = null,
-};
-pub const ActivityLongShanMain = struct {
-    pub const default: @This() = .{};
-    StageData: std.ArrayList(LongShanMainData) = .empty,
-    ScoreRewardedId: std.ArrayList(i32) = .empty,
-};
-pub const ICustomScreenTypeBasePb = struct {
-    pub const default: @This() = .{};
-    ScreenPb: ?union(enum) {
-        ICustomScreenSpinePb: ?ICustomScreenSpinePb,
-        ICustomScreenBackgroundImagePb: ?ICustomScreenBackgroundImagePb,
-    } = null,
-};
-pub const AiBlackboardCdRequest = struct {
-    pub const default: @This() = .{};
-    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
-    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
-};
-pub const FishingIllustratedInfo = struct {
-    pub const default: @This() = .{};
-    IllustratedList: std.ArrayList(OneFishingIllustratedData) = .empty,
-    RewardedId: std.ArrayList(FishingIllustratedRewardInfo) = .empty,
-    UnlockDetections: std.ArrayList(i32) = .empty,
-};
-pub const FriendInfo = struct {
-    pub const default: @This() = .{};
-    Info: ?PlayerDetails = null,
-    Remark: []const u8 = "",
-};
-pub const ChangeStateResponse = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    Error: ?DErrorResult = null,
-    CurrentState: i32 = 0,
-};
-pub const MotorDevelopActivityData = struct {
-    pub const default: @This() = .{};
-    Task: std.ArrayList(ConditionTask) = .empty,
-};
-pub const ActionGroupNodeActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const SecGetReportData2FlowResponse = struct {
-    pub const default: @This() = .{};
-    Error: ?DErrorResult = null,
-};
-pub const EntityStaticHookMoveRequest = struct {
-    pub const default: @This() = .{};
-    Target: ?union(enum) {
-        TargetEntityId: i64,
-        TargetPos: ?Vector,
-    } = null,
-    EntityId: i64 = 0,
-    HookMoveType: ?StaticHookMoveType = null,
-};
-pub const ActivityTurnTableData = struct {
-    pub const default: @This() = .{};
-    IsAllFinish: bool = false,
-    GroupId: i32 = 0,
-    Rewards: std.ArrayList(i32) = .empty,
-    TurntableTasks: std.ArrayList(ActivityTask) = .empty,
-};
-pub const SpawnerEntityInfo = struct {
-    pub const default: @This() = .{};
-    Group: ?union(enum) {
-        GroupTypes: ?GroupTypesWrapper,
-    } = null,
-    SpawnerSubType: ?union(enum) {
-        MatrixInfo: ?MatrixInfo,
-    } = null,
-    IncId: i64 = 0,
-};
-pub const EquipWeaponSkinResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    DataList: std.ArrayList(LoadEquipData) = .empty,
-};
-pub const StuckCheckCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-    Index: i32 = 0,
-};
-pub const EntityStaticHookMoveNotify = struct {
-    pub const default: @This() = .{};
-    Target: ?union(enum) {
-        TargetEntityId: i64,
-        TargetPos: ?Vector,
-    } = null,
-    EntityId: i64 = 0,
-    HookMoveType: ?StaticHookMoveType = null,
-};
-pub const TowerAreaPb = struct {
-    pub const default: @This() = .{};
-    AreaNum: i32 = 0,
-    TowerFloors: std.ArrayList(TowerFloorPb) = .empty,
-};
-pub const RiskHarvestInstInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    UnlockTime: i64 = 0,
-    IsUnlock: bool = false,
+    WaveConfigIds: std.ArrayList(i32) = .empty,
+    NextMonsterInfoPreview: ?MonsterInfoPreview = null,
+    TeamChallengeInfos: std.ArrayList(TeamChallengeInfo) = .empty,
     Score: i32 = 0,
-    Rewarded: bool = false,
-    IsFinished: bool = false,
-    StarRewardInfos: std.ArrayList(RiskHarvestStarRewardInfo) = .empty,
+    IsUnlock: bool = false,
+    RoleEnergyDict: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    HistoryScore: i32 = 0,
 };
-pub const MonsterCreatorProgress = struct {
+pub const SummonRequest = struct {
     pub const default: @This() = .{};
-    Slots: std.ArrayList(MonsterCreatorProgressSlot) = .empty,
-    TotalNum: i32 = 0,
+    SummonerEntityId: i64 = 0,
+    SummonInfo: ?SummonRequestInfo = null,
 };
-pub const MowTowerActivityData = struct {
-    pub const default: @This() = .{};
-    MowTowerLevelsInfo: std.ArrayList(MowTowerLevelsInfo) = .empty,
-};
-pub const AttributeComponentPb = struct {
-    pub const default: @This() = .{};
-    HardnessModeId: i32 = 0,
-    RageModeId: i32 = 0,
-    AttrData: std.ArrayList(AttrData) = .empty,
-};
-pub const TrapDefenseRewardData = struct {
-    pub const default: @This() = .{};
-    ActivityServerRewardItemData: ?ConditionTask = null,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-};
-pub const FriendApply = struct {
-    pub const default: @This() = .{};
-    Info: ?PlayerDetails = null,
-    CreatedTime: i64 = 0,
-};
-pub const PhantomAutoPutResponse = struct {
+pub const InitRangeResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
-};
-pub const PatrolInfoComponentPb = struct {
-    pub const default: @This() = .{};
-    SceneAiEnabled: bool = false,
-    PatrolInfo: ?PatrolInfoPb = null,
-};
-pub const ExploreProgressResponse = struct {
-    pub const default: @This() = .{};
-    AreaProgress: std.ArrayList(AreaExploreInfo) = .empty,
-};
-pub const BuffItemNotify = struct {
-    pub const default: @This() = .{};
-    ItemBuffList: std.ArrayList(BuffItem) = .empty,
-    EquipItemList: std.ArrayList(EquipBuffItem) = .empty,
-};
-pub const DynAttachComponentPb = struct {
-    pub const default: @This() = .{};
-    PbDynAttachEntityConfigId: i32 = 0,
-    PbDynAttachEntityActorKey: []const u8 = "",
-    Pos: ?Vector = null,
-    Rot: ?Rotator = null,
-    PbDynAttachRefActorKey: []const u8 = "",
-};
-pub const EdDebugEnterActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const RoleActivateSkillResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleId: i32 = 0,
-    SkillInfo: ?ArrayIntInt = null,
-};
-pub const PhantomPutOnResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
-};
-pub const HookLockPointActionCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    InteractionType: ?HookInteractActionType = null,
-};
-pub const EquipTakeOnNotify = struct {
-    pub const default: @This() = .{};
-    DataList: std.ArrayList(RoleLoadEquipData) = .empty,
-};
-pub const SuccessNodeActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const SkinRewardActivityData = struct {
-    pub const default: @This() = .{};
-    RewardInfos: std.ArrayList(SkinRewardActivityRewardInfo) = .empty,
-};
-pub const PlayerAttr = struct {
-    pub const default: @This() = .{};
-    Value: ?union(enum) {
-        Int32Value: i32,
-        StringValue: []const u8,
-    } = null,
-    Key: ?PlayerAttrKey = null,
-    ValueType: ?PlayerAttrType = null,
-};
-pub const ControlInfoNotify = struct {
-    pub const default: @This() = .{};
-    ForbidList: std.ArrayList(ControlParam) = .empty,
-};
-pub const ChangeVisionGroupNameResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionEquipList: std.ArrayList(RefreshVisionEquipGroupData) = .empty,
-};
-pub const CompositionConditionEnterActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-    ConditionIndex: i32 = 0,
-};
-pub const LogicStateInitNotify = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
     EntityId: i64 = 0,
-    InitData: ?LogicStateComponentPb = null,
-};
-pub const TutorialUnlockResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
-    UnLockInfo: ?TutorialInfo = null,
-};
-pub const ChildQuestNodeFinishActionCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const PassiveSkillNotify = struct {
-    pub const default: @This() = .{};
-    RolePassiveSkillInfoList: std.ArrayList(RolePassiveSkillInfo) = .empty,
-};
-pub const ActivityMoraleData = struct {
-    pub const default: @This() = .{};
-    AreaData: std.ArrayList(MoraleAreaData) = .empty,
-    MoraleProgressReward: std.ArrayList(i32) = .empty,
-    MoraleFlags: std.ArrayList(MoraleFlag) = .empty,
-};
-pub const PassiveSkillAddNotify = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    PassiveSkillItemPbList: std.ArrayList(PassiveSkillItemPb) = .empty,
-};
-pub const MotorOutlookPlayerPresetPb = struct {
-    pub const default: @This() = .{};
-    Plan: std.ArrayList(MotorOutlookPresetPlanPb) = .empty,
-};
-pub const UpdateFormationResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Formation: ?FightFormation = null,
-};
-pub const DestroyBulletResponsePush = struct {
-    pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    Handle: ?ActiveBulletHandle = null,
-};
-pub const PassiveSkillComponentPb = struct {
-    pub const default: @This() = .{};
-    PassiveSkillItemPbList: std.ArrayList(PassiveSkillItemPb) = .empty,
-};
-pub const AttributeChangedRequest = struct {
-    pub const default: @This() = .{};
-    Id: i64 = 0,
-    Attributes: std.ArrayList(GameplayAttributeData) = .empty,
-};
-pub const PayInfoResponse = struct {
-    pub const default: @This() = .{};
-    Infos: std.ArrayList(PayItemInfo) = .empty,
-    Version: []const u8 = "",
-    ErrorCode: ?ErrorCode = null,
-};
-pub const RoleVisionMainPhantomResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RecommendInfo: std.ArrayList(MainPhantomRecommendInfo) = .empty,
-};
-pub const HandInItemChildQuestNodeCtxPb = struct {
-    pub const default: @This() = .{};
-    BehaviorTreeCtx: ?BehaviorTreeCtxPb = null,
-};
-pub const SceneFishPointInfo = struct {
-    pub const default: @This() = .{};
-    FishPoints: std.ArrayList(SceneFishPointData) = .empty,
-    TempFishPoints: std.ArrayList(TempFishPointInfo) = .empty,
-};
-pub const FlySkinWearAllRoleResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    FlySkinData: std.ArrayList(EquipFlySkinData) = .empty,
-};
-pub const MailInfosNotify = struct {
-    pub const default: @This() = .{};
-    MailInfos: std.ArrayList(PbMailInfo) = .empty,
-};
-pub const RiskHarvestActivityData = struct {
-    pub const default: @This() = .{};
-    InstInfos: std.ArrayList(RiskHarvestInstInfo) = .empty,
-    RewardedScores: std.ArrayList(i32) = .empty,
-    RewardedBuffGroups: std.ArrayList(i32) = .empty,
-    UnlockBuffGroups: std.ArrayList(i32) = .empty,
-    RewardedBuffTypeIds: std.ArrayList(i32) = .empty,
+    Info: std.ArrayList(EntityAccessInfo) = .empty,
+    PlayerAccessRangeResult: ?EntityAccessInfo = null,
 };
 pub const TransitionInSeamlessPb = struct {
     pub const default: @This() = .{};
@@ -47603,11 +47661,309 @@ pub const TransitionInSeamlessPb = struct {
     IsTeleportInPlace: bool = false,
     KeepStates: std.ArrayList(KeepMovementState) = .empty,
 };
-pub const AdviceComponentPb = struct {
+pub const TransitionMp4Pb = struct {
     pub const default: @This() = .{};
-    Advice: ?PbAdvice = null,
+    ScreenColor: ?union(enum) {
+        AfterTeleportScreenColor: ?AfterTeleportScreenColor,
+    } = null,
+    ResourePath: []const u8 = "",
+    ReplayWhenReLogin: bool = false,
+    IsFadeInScreenAfterTeleport: bool = false,
+    Mp4BackgroundColor: ?Mp4BackgroundColorPb = null,
+};
+pub const RoleVisionRecommendAttrResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    VisionAttrRecommendInfos: std.ArrayList(CostVisionAttrRecommendInfo) = .empty,
+};
+pub const PhantomIdentifyResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    UpdateInfo: ?PhantomItem = null,
+};
+pub const MapTravelActivityData = struct {
+    pub const default: @This() = .{};
+    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
+    MonsterGain: std.ArrayList(i32) = .empty,
+    GetFullReward: bool = false,
+    MapTravelLevel: i32 = 0,
+    UnlockAreas: std.ArrayList(i32) = .empty,
+    SoarLevels: std.ArrayList(SoarLevelPlayInfo) = .empty,
+};
+pub const RbBlockMovementPbAction = struct {
+    pub const default: @This() = .{};
+    Type: ?union(enum) {
+        Roll: ?RbRollMovement,
+        Jump: ?RbJumpMovement,
+    } = null,
+};
+pub const RoleBreakThroughViewResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    LevelLimit: i32 = 0,
+    UnLockSkillId: i32 = 0,
+    CostList: std.ArrayList(ArrayIntInt) = .empty,
+    RewardList: std.ArrayList(ArrayIntInt) = .empty,
+    FinalProp: std.ArrayList(ArrayIntDouble) = .empty,
+    IsConditionFinish: bool = false,
+};
+pub const RoleInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Name: []const u8 = "",
+    Level: i32 = 0,
+    Exp: i32 = 0,
+    Breakthrough: i32 = 0,
+    Skills: std.ArrayList(ArrayIntInt) = .empty,
+    Phantom: std.ArrayList(ArrayIntInt) = .empty,
+    Star: i32 = 0,
+    Favor: i32 = 0,
+    Reson: std.ArrayList(ResonInfo) = .empty,
+    CurModel: i32 = 0,
+    Models: std.ArrayList(i32) = .empty,
+    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
+    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+    CreateTime: u32 = 0,
+    SkillNodeState: std.ArrayList(ArraySkillNode) = .empty,
+    ResonantChainGroupIndex: i32 = 0,
+    SkinId: i32 = 0,
+    EnableSelfBgm: bool = false,
+};
+pub const ActivityWeeklyRogueData = struct {
+    pub const default: @This() = .{};
+    Data: ?union(enum) {
+        RogueWeeklyLastInfo: ?RogueWeeklyLastInfo,
+    } = null,
+    CycleId: i32 = 0,
+    Score: i32 = 0,
+    RogueWeeklyAward: std.ArrayList(RogueWeeklyAward) = .empty,
+    MaxScore: i32 = 0,
+    CurWorldLevel: i32 = 0,
+    UseFreeCount: i32 = 0,
+    MaxFreeCount: i32 = 0,
+};
+pub const InfrThemeActivityPb = struct {
+    pub const default: @This() = .{};
+    ActivityTaskData: ?ActivityTaskData = null,
+};
+pub const HonamiStoryDropItemComponentPb = struct {
+    pub const default: @This() = .{};
+    Item: ?HonamiStoryItemInfo = null,
+};
+pub const RiskHarvestActivityData = struct {
+    pub const default: @This() = .{};
+    InstInfos: std.ArrayList(RiskHarvestInstInfo) = .empty,
+    RewardedScores: std.ArrayList(i32) = .empty,
+    RewardedBuffGroups: std.ArrayList(i32) = .empty,
+    UnlockBuffGroups: std.ArrayList(i32) = .empty,
+    RewardedBuffTypeIds: std.ArrayList(i32) = .empty,
+};
+pub const FishingItemInfo = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    IncrId: i32 = 0,
+    Rotate: ?FishingItemRotate = null,
+    Pos: ?IntVector2D = null,
+    Size: i32 = 0,
+    Cup: ?FishCup = null,
+    Quality: i32 = 0,
+    Price: i32 = 0,
+};
+pub const PhantomPolishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    UpdateInfo: ?PhantomItem = null,
+};
+pub const SlashAndTowerInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SlashLevelPlayInfo: std.ArrayList(SlashLevelPlayInfo) = .empty,
+    RewardsReceived: std.ArrayList(i32) = .empty,
+    CurSeasonEndTime: i64 = 0,
+    UpdateSeason: bool = false,
+    CurIsHaveRecord: bool = false,
+    BuffCache: std.ArrayList(i32) = .empty,
+};
+pub const PbBattlePass = struct {
+    pub const default: @This() = .{};
+    InTimeRange: bool = false,
+    Id: i32 = 0,
+    Level: i32 = 0,
+    Exp: i32 = 0,
+    WeeklyTotalExp: i32 = 0,
+    PayStatus: i32 = 0,
+    TakenRewards: std.ArrayList(PbBattlePassReward) = .empty,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    RecurringRewards: std.ArrayList(PbBattlePassRecurringReward) = .empty,
+    HadEnter: bool = false,
+};
+pub const EntitySimplyMoveInfoPackagePush = struct {
+    pub const default: @This() = .{};
+    MoveInfos: std.ArrayList(EntitySimplyMoveInfo) = .empty,
+    SceneOwnerId: i32 = 0,
+};
+pub const TestDamageRecordNotify = struct {
+    pub const default: @This() = .{};
+    TimestampMs: i64 = 0,
+    Entities: std.ArrayList(TestDamageRecordEntity) = .empty,
+};
+pub const EntityAccessRangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    EntityId: i64 = 0,
+    Info: std.ArrayList(EntityAccessInfo) = .empty,
+};
+pub const TowerDifficultyPb = struct {
+    pub const default: @This() = .{};
+    Difficulty: i32 = 0,
+    RewardIndex: std.ArrayList(i32) = .empty,
+    TowerAreas: std.ArrayList(TowerAreaPb) = .empty,
+    MaxStar: i32 = 0,
+};
+pub const ModifyBulletParamsPush = struct {
+    pub const default: @This() = .{};
+    ModifyBulletParams: ?ModifyBulletParams = null,
+};
+pub const PermanentRogueData = struct {
+    pub const default: @This() = .{};
+    Data: ?union(enum) {
+        RogueResTaskThemeData: ?RogueResTaskThemeData,
+    } = null,
+};
+pub const RoleLevelUpViewResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Level: i32 = 0,
+    LevelExpInfo: std.ArrayList(ArrayIntInt) = .empty,
+    Exp: i32 = 0,
+    AddExp: i32 = 0,
+    FinalProp: std.ArrayList(ArrayIntDouble) = .empty,
+    CostList: std.ArrayList(ArrayIntInt) = .empty,
+    OverflowList: std.ArrayList(ArrayIntInt) = .empty,
+    ItemList: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const IllustratedClass = struct {
+    pub const default: @This() = .{};
+    Type: ?IllustratedType = null,
+    IllustratedEntryList: std.ArrayList(IllustratedEntry) = .empty,
+};
+pub const CharacterAttachRequest = struct {
+    pub const default: @This() = .{};
+    CharacterAttachInfo: ?CharacterAttachInfo = null,
+    TargetEntity: i64 = 0,
+};
+pub const AchievementGroupInfo = struct {
+    pub const default: @This() = .{};
+    AchievementGroupEntry: ?AchievementGroupEntry = null,
+    AchievementEntryList: std.ArrayList(AchievementEntry) = .empty,
+};
+pub const MailInfosNotify = struct {
+    pub const default: @This() = .{};
+    MailInfos: std.ArrayList(PbMailInfo) = .empty,
+};
+pub const CumulativeShopTaskConfig = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Type: ?ConsumptiveTaskType = null,
+    CumulativeShopTaskData: ?CumulativeShopTaskData = null,
+    CumulativeShopSubTaskData: ?CumulativeShopSubTaskData = null,
+};
+pub const RacingBetsLegMatch = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    DangoActorData: std.ArrayList(DangoActorData) = .empty,
+    MatchStartEndTime: ?RacingBetsTimeTuple = null,
+    GearStartEndTime: ?RacingBetsTimeTuple = null,
+    BetDangoRank: std.ArrayList(i32) = .empty,
+    OddsRateRefreshTime: i64 = 0,
+    OddsVersion: []const u8 = "",
+    MasterLevel: ?RacingBetsTimeTuple = null,
+    OrganInfo: std.ArrayList(RacingBetsOrganInfo) = .empty,
+};
+pub const MotorSummonAndRidePush = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    VehicleIncId: i64 = 0,
+    Transform: ?Transform = null,
+};
+pub const CharacterAttachComponentPb = struct {
+    pub const default: @This() = .{};
+    PbCombinePartInfoList: std.ArrayList(CharacterAttachInfo) = .empty,
+    PbCombineTargetServerId: i64 = 0,
+};
+pub const GroupFormation = struct {
+    pub const default: @This() = .{};
     PlayerId: i32 = 0,
-    PlayerName: []const u8 = "",
+    FightRoleInfos: std.ArrayList(FightRoleInfos) = .empty,
+    CurrentGroupType: i32 = 0,
+};
+pub const RoadBookActivityInfo = struct {
+    pub const default: @This() = .{};
+    ActivityTasks: std.ArrayList(ConditionTask) = .empty,
+    MonsterGain: std.ArrayList(i32) = .empty,
+    GetFullReward: bool = false,
+    RoadBookLevel: i32 = 0,
+    UnLockAreas: std.ArrayList(i32) = .empty,
+    SoarLevels: std.ArrayList(RoadBookMotorcycleInfo) = .empty,
+};
+pub const ActivityDangoMonopolyData = struct {
+    pub const default: @This() = .{};
+    CurrentBoardId: i32 = 0,
+    CurrentGridId: i32 = 0,
+    RewardGridId: i32 = 0,
+    BoardRewards: std.ArrayList(i32) = .empty,
+    DangoTaskConfig: std.ArrayList(DangoMonopolyConfig) = .empty,
+    TaskEndTimeMap: std.ArrayList(MapEntry(i32, i64)) = .empty,
+    UnlockTime: i64 = 0,
+    BoardMap: std.ArrayList(MapEntry(i32, DangoMonopolyBoardData)) = .empty,
+};
+pub const BossPilingActivityInfo = struct {
+    pub const default: @This() = .{};
+    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
+    BossPilingLevelInfos: std.ArrayList(BossPilingLevelInfo) = .empty,
+};
+pub const MotorSummonAndRideNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    EntityId: i64 = 0,
+    VehicleIncId: i64 = 0,
+    Transform: ?Transform = null,
+};
+pub const LobbyListResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ItemList: std.ArrayList(PlayerDetails) = .empty,
+};
+pub const ForgeInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ForgeInfoList: std.ArrayList(OneForgeInfo) = .empty,
+    ForgeConfigs: std.ArrayList(OneForgeConfig) = .empty,
+    LimitRefreshTime: i64 = 0,
+};
+pub const PlayerAttrNotify = struct {
+    pub const default: @This() = .{};
+    Attributes: std.ArrayList(PlayerAttr) = .empty,
+};
+pub const BoardPb = struct {
+    pub const default: @This() = .{};
+    OccupiedGridList: std.ArrayList(OccupiedBoardGridInfo) = .empty,
+    DynamicGridConfigs: std.ArrayList(BoardGridDynamicConfig) = .empty,
+    CanMove: bool = false,
+};
+pub const EdgeRunnerActivityInfo = struct {
+    pub const default: @This() = .{};
+    EdgeRunnerFunctionIds: std.ArrayList(i32) = .empty,
+    RewardScoreId: i32 = 0,
+    EdgeRunnerLordGymPassRecords: std.ArrayList(EdgeRunnerLordGymPassRecord) = .empty,
+    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
+    PreUnlockIds: std.ArrayList(i32) = .empty,
+};
+pub const RhythmTaskPb = struct {
+    pub const default: @This() = .{};
+    TaskType: ?RhythmTaskTypePb = null,
+    Task: std.ArrayList(ConditionTask) = .empty,
 };
 pub const PayShopItem = struct {
     pub const default: @This() = .{};
@@ -47650,123 +48006,6 @@ pub const PayShopItem = struct {
     IsShowHaveNum: bool = false,
     IsBuyMaxButton: bool = false,
 };
-pub const WeeklyFrameworkInfo = struct {
-    pub const default: @This() = .{};
-    ConfigId: i32 = 0,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-    ScoreTasks: std.ArrayList(i32) = .empty,
-    WeeklyPlayDatas: std.ArrayList(WeeklyPlayData) = .empty,
-    WorldLevel: i32 = 0,
-};
-pub const ActivityWeeklyRogueData = struct {
-    pub const default: @This() = .{};
-    Data: ?union(enum) {
-        RogueWeeklyLastInfo: ?RogueWeeklyLastInfo,
-    } = null,
-    CycleId: i32 = 0,
-    Score: i32 = 0,
-    RogueWeeklyAward: std.ArrayList(RogueWeeklyAward) = .empty,
-    MaxScore: i32 = 0,
-    CurWorldLevel: i32 = 0,
-    UseFreeCount: i32 = 0,
-    MaxFreeCount: i32 = 0,
-};
-pub const PrivateChatHistoryNotify = struct {
-    pub const default: @This() = .{};
-    AllChats: std.ArrayList(PrivateChatHistoryContentProto) = .empty,
-};
-pub const MotorTaskPb = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Type: ?MotorTaskTypePb = null,
-    Process: ?MotorTaskProcessPb = null,
-    Reward: ?MotorTaskRewardPb = null,
-    EndTime: i64 = 0,
-    StartTime: i64 = 0,
-};
-pub const MotorSummonAndRideNotify = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    EntityId: i64 = 0,
-    VehicleIncId: i64 = 0,
-    Transform: ?Transform = null,
-};
-pub const PhantomPolishResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    UpdateInfo: ?PhantomItem = null,
-};
-pub const EquipTakeOnResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    DataList: std.ArrayList(RoleLoadEquipData) = .empty,
-};
-pub const FightBuffInformation = struct {
-    pub const default: @This() = .{};
-    HandleId: i32 = 0,
-    BuffId: i64 = 0,
-    Level: i32 = 0,
-    StackCount: i32 = 0,
-    InstigatorId: i64 = 0,
-    EntityId: i64 = 0,
-    ApplyType: ?ApplyGEType = null,
-    Duration: f32 = 0,
-    LeftDuration: f32 = 0,
-    Context: std.ArrayList(FightBuffEffectContext) = .empty,
-    IsActive: bool = false,
-    ServerId: i32 = 0,
-    MessageId: i64 = 0,
-    ConfBuffId: i64 = 0,
-};
-pub const ModifyBulletParamsPush = struct {
-    pub const default: @This() = .{};
-    ModifyBulletParams: ?ModifyBulletParams = null,
-};
-pub const ModifyBulletParamsRequest = struct {
-    pub const default: @This() = .{};
-    ModifyBulletParams: ?ModifyBulletParams = null,
-};
-pub const BossPilingActivityInfo = struct {
-    pub const default: @This() = .{};
-    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
-    BossPilingLevelInfos: std.ArrayList(BossPilingLevelInfo) = .empty,
-};
-pub const GroupFormation = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    FightRoleInfos: std.ArrayList(FightRoleInfos) = .empty,
-    CurrentGroupType: i32 = 0,
-};
-pub const RoleVisionRecommendAttrResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionAttrRecommendInfos: std.ArrayList(CostVisionAttrRecommendInfo) = .empty,
-};
-pub const ExploreSkillRouletteSetResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    SkillRoulette: ?ExploreSkillRoulette = null,
-    RouletteType: ?RouletteType = null,
-    SkillRoulettes: std.ArrayList(ExploreSkillRoulette) = .empty,
-};
-pub const RhythmTaskPb = struct {
-    pub const default: @This() = .{};
-    TaskType: ?RhythmTaskTypePb = null,
-    Task: std.ArrayList(ConditionTask) = .empty,
-};
-pub const PermanentRogueData = struct {
-    pub const default: @This() = .{};
-    Data: ?union(enum) {
-        RogueResTaskThemeData: ?RogueResTaskThemeData,
-    } = null,
-};
-pub const ActivityRogueData = struct {
-    pub const default: @This() = .{};
-    BeginOpenTime: i64 = 0,
-    EndOpenTime: i64 = 0,
-    RoguelikeSeason: ?RoguelikeSeason = null,
-};
 pub const UpdateFormationNotify = struct {
     pub const default: @This() = .{};
     PlayersFormations: std.ArrayList(PlayerFightFormations) = .empty,
@@ -47778,24 +48017,23 @@ pub const BtnStateResponse = struct {
     Enabled: bool = false,
     Result: std.ArrayList(ButtonEnableResult) = .empty,
 };
-pub const TransitionMp4Pb = struct {
+pub const WeeklyFrameworkInfo = struct {
     pub const default: @This() = .{};
-    ScreenColor: ?union(enum) {
-        AfterTeleportScreenColor: ?AfterTeleportScreenColor,
-    } = null,
-    ResourePath: []const u8 = "",
-    ReplayWhenReLogin: bool = false,
-    IsFadeInScreenAfterTeleport: bool = false,
-    Mp4BackgroundColor: ?Mp4BackgroundColorPb = null,
+    ConfigId: i32 = 0,
+    BeginTime: i64 = 0,
+    EndTime: i64 = 0,
+    ScoreTasks: std.ArrayList(i32) = .empty,
+    WeeklyPlayDatas: std.ArrayList(WeeklyPlayData) = .empty,
+    WorldLevel: i32 = 0,
 };
-pub const InfrThemeActivityPb = struct {
+pub const MotorTaskPb = struct {
     pub const default: @This() = .{};
-    ActivityTaskData: ?ActivityTaskData = null,
-};
-pub const WuWuWeekActivity = struct {
-    pub const default: @This() = .{};
-    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
-    TaskPack: std.ArrayList(WuWuTaskPack) = .empty,
+    Id: i32 = 0,
+    Type: ?MotorTaskTypePb = null,
+    Process: ?MotorTaskProcessPb = null,
+    Reward: ?MotorTaskRewardPb = null,
+    EndTime: i64 = 0,
+    StartTime: i64 = 0,
 };
 pub const LordGymInfoResponse = struct {
     pub const default: @This() = .{};
@@ -47810,210 +48048,24 @@ pub const FightPhotoActivityData = struct {
     LevelGroups: std.ArrayList(LevelGroupData) = .empty,
     Tasks: std.ArrayList(TaskData) = .empty,
 };
-pub const ActivityAvignon = struct {
+pub const RhythmShipPlanetPb = struct {
     pub const default: @This() = .{};
-    RewardData: ?ActivityTaskData = null,
-    StageId: std.ArrayList(i32) = .empty,
+    PlanetId: i32 = 0,
+    OpenTime: i64 = 0,
+    RhythmShipLevelPb: std.ArrayList(RhythmShipLevelPb) = .empty,
 };
-pub const PlayerAccessEffectAreaResponse = struct {
+pub const OnlineMotorActivityData = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EntityId: i64 = 0,
-    Info: ?EntityAccessInfo = null,
+    OnlineMotorLevelInfos: std.ArrayList(OnlineMotorLevelInfo) = .empty,
+    LevelTasks: std.ArrayList(OnlineMotorTask) = .empty,
+    GlobalTasks: std.ArrayList(OnlineMotorTask) = .empty,
+    UnLocks: std.ArrayList(OnlineMotorLevelUnLockTime) = .empty,
 };
-pub const RoleDevelopConfigs = struct {
+pub const ActivityRogueData = struct {
     pub const default: @This() = .{};
-    DevPropsList: std.ArrayList(RoleDevPropsConfig) = .empty,
-    DevTargetRole: i32 = 0,
-    DevPropsProjectList: std.ArrayList(RoleDevPropsProjectConfig) = .empty,
-    Version: []const u8 = "",
-};
-pub const EdgeRunnerActivityInfo = struct {
-    pub const default: @This() = .{};
-    EdgeRunnerFunctionIds: std.ArrayList(i32) = .empty,
-    RewardScoreId: i32 = 0,
-    EdgeRunnerLordGymPassRecords: std.ArrayList(EdgeRunnerLordGymPassRecord) = .empty,
-    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
-    PreUnlockIds: std.ArrayList(i32) = .empty,
-};
-pub const CumulativeShopTaskConfig = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Type: ?ConsumptiveTaskType = null,
-    CumulativeShopTaskData: ?CumulativeShopTaskData = null,
-    CumulativeShopSubTaskData: ?CumulativeShopSubTaskData = null,
-};
-pub const SummonRequest = struct {
-    pub const default: @This() = .{};
-    SummonerEntityId: i64 = 0,
-    SummonInfo: ?SummonRequestInfo = null,
-};
-pub const TowerDifficultyPb = struct {
-    pub const default: @This() = .{};
-    Difficulty: i32 = 0,
-    RewardIndex: std.ArrayList(i32) = .empty,
-    TowerAreas: std.ArrayList(TowerAreaPb) = .empty,
-    MaxStar: i32 = 0,
-};
-pub const LevelInfo = struct {
-    pub const default: @This() = .{};
-    InstId: i32 = 0,
-    StartTime: i32 = 0,
-    IsOpen: bool = false,
-    Score: i32 = 0,
-    RoleInfo: std.ArrayList(i32) = .empty,
-    BuffInfo: std.ArrayList(HardLevelBuffs) = .empty,
-    LevelRewardClaimStatus: ?BossRushRewardClaimStatus = null,
-    SelectScoreBuffs: std.ArrayList(i32) = .empty,
-    LevelScoreRewardStatus: std.ArrayList(BossRushRewardClaimStatus) = .empty,
-};
-pub const AchievementGroupInfo = struct {
-    pub const default: @This() = .{};
-    AchievementGroupEntry: ?AchievementGroupEntry = null,
-    AchievementEntryList: std.ArrayList(AchievementEntry) = .empty,
-};
-pub const RoleBreakThroughViewResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    LevelLimit: i32 = 0,
-    UnLockSkillId: i32 = 0,
-    CostList: std.ArrayList(ArrayIntInt) = .empty,
-    RewardList: std.ArrayList(ArrayIntInt) = .empty,
-    FinalProp: std.ArrayList(ArrayIntDouble) = .empty,
-    IsConditionFinish: bool = false,
-};
-pub const RoleVisionRecommendDataResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    VisionFetterRecommendInfo: std.ArrayList(VisionFetterRecommendInfo) = .empty,
-};
-pub const InitRangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EntityId: i64 = 0,
-    Info: std.ArrayList(EntityAccessInfo) = .empty,
-    PlayerAccessRangeResult: ?EntityAccessInfo = null,
-};
-pub const PhantomLevelUpResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    UpdateInfo: ?PhantomItem = null,
-    ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const RoleLevelUpViewResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Level: i32 = 0,
-    LevelExpInfo: std.ArrayList(ArrayIntInt) = .empty,
-    Exp: i32 = 0,
-    AddExp: i32 = 0,
-    FinalProp: std.ArrayList(ArrayIntDouble) = .empty,
-    CostList: std.ArrayList(ArrayIntInt) = .empty,
-    OverflowList: std.ArrayList(ArrayIntInt) = .empty,
-    ItemList: std.ArrayList(ArrayIntInt) = .empty,
-};
-pub const ActivityDangoMonopolyData = struct {
-    pub const default: @This() = .{};
-    CurrentBoardId: i32 = 0,
-    CurrentGridId: i32 = 0,
-    RewardGridId: i32 = 0,
-    BoardRewards: std.ArrayList(i32) = .empty,
-    DangoTaskConfig: std.ArrayList(DangoMonopolyConfig) = .empty,
-    TaskEndTimeMap: std.ArrayList(MapEntry(i32, i64)) = .empty,
-    UnlockTime: i64 = 0,
-    BoardMap: std.ArrayList(MapEntry(i32, DangoMonopolyBoardData)) = .empty,
-};
-pub const FishingItemInfo = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    IncrId: i32 = 0,
-    Rotate: ?FishingItemRotate = null,
-    Pos: ?IntVector2D = null,
-    Size: i32 = 0,
-    Cup: ?FishCup = null,
-    Quality: i32 = 0,
-    Price: i32 = 0,
-};
-pub const NewTowerClimbingLevelRecord = struct {
-    pub const default: @This() = .{};
-    LevelId: i32 = 0,
-    WaveConfigIds: std.ArrayList(i32) = .empty,
-    NextMonsterInfoPreview: ?MonsterInfoPreview = null,
-    TeamChallengeInfos: std.ArrayList(TeamChallengeInfo) = .empty,
-    Score: i32 = 0,
-    IsUnlock: bool = false,
-    RoleEnergyDict: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    HistoryScore: i32 = 0,
-};
-pub const PlayerAttrNotify = struct {
-    pub const default: @This() = .{};
-    Attributes: std.ArrayList(PlayerAttr) = .empty,
-};
-pub const InfrRoadPb = struct {
-    pub const default: @This() = .{};
-    Roads: std.ArrayList(InfrOneRoad) = .empty,
-    Notices: std.ArrayList(InfrNotice) = .empty,
-    ManualTraceRoad: i32 = 0,
-    RecommendRoad: i32 = 0,
-};
-pub const CharacterAttachComponentPb = struct {
-    pub const default: @This() = .{};
-    PbCombinePartInfoList: std.ArrayList(CharacterAttachInfo) = .empty,
-    PbCombineTargetServerId: i64 = 0,
-};
-pub const RoadBookActivityInfo = struct {
-    pub const default: @This() = .{};
-    ActivityTasks: std.ArrayList(ConditionTask) = .empty,
-    MonsterGain: std.ArrayList(i32) = .empty,
-    GetFullReward: bool = false,
-    RoadBookLevel: i32 = 0,
-    UnLockAreas: std.ArrayList(i32) = .empty,
-    SoarLevels: std.ArrayList(RoadBookMotorcycleInfo) = .empty,
-};
-pub const PbBattlePass = struct {
-    pub const default: @This() = .{};
-    InTimeRange: bool = false,
-    Id: i32 = 0,
-    Level: i32 = 0,
-    Exp: i32 = 0,
-    WeeklyTotalExp: i32 = 0,
-    PayStatus: i32 = 0,
-    TakenRewards: std.ArrayList(PbBattlePassReward) = .empty,
-    BeginTime: i64 = 0,
-    EndTime: i64 = 0,
-    RecurringRewards: std.ArrayList(PbBattlePassRecurringReward) = .empty,
-    HadEnter: bool = false,
-};
-pub const TestDamageRecordNotify = struct {
-    pub const default: @This() = .{};
-    TimestampMs: i64 = 0,
-    Entities: std.ArrayList(TestDamageRecordEntity) = .empty,
-};
-pub const LobbyListResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ItemList: std.ArrayList(PlayerDetails) = .empty,
-};
-pub const ItemRewardNotify = struct {
-    pub const default: @This() = .{};
-    DropId: i32 = 0,
-    Reason: i32 = 0,
-    Magnification: i32 = 0,
-    DropFrom: ?DoubleDropFrom = null,
-    RewardItems: std.ArrayList(MapEntry(i32, RewardItemInfoList)) = .empty,
-};
-pub const EntityAccessRangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    EntityId: i64 = 0,
-    Info: std.ArrayList(EntityAccessInfo) = .empty,
-};
-pub const RbBlockMovementPbAction = struct {
-    pub const default: @This() = .{};
-    Type: ?union(enum) {
-        Roll: ?RbRollMovement,
-        Jump: ?RbJumpMovement,
-    } = null,
+    BeginOpenTime: i64 = 0,
+    EndOpenTime: i64 = 0,
+    RoguelikeSeason: ?RoguelikeSeason = null,
 };
 pub const HitInformation = struct {
     pub const default: @This() = .{};
@@ -48039,190 +48091,106 @@ pub const HitInformation = struct {
     Source: ?EBulletCreateSource = null,
     PhantomSkillIdentify: i32 = 0,
 };
-pub const MotorSummonAndRidePush = struct {
+pub const ItemRewardNotify = struct {
     pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    VehicleIncId: i64 = 0,
-    Transform: ?Transform = null,
+    DropId: i32 = 0,
+    Reason: i32 = 0,
+    Magnification: i32 = 0,
+    DropFrom: ?DoubleDropFrom = null,
+    RewardItems: std.ArrayList(MapEntry(i32, RewardItemInfoList)) = .empty,
 };
-pub const ActivityScratchTicketData = struct {
+pub const InfrRoadPb = struct {
     pub const default: @This() = .{};
-    RoundData: std.ArrayList(ScratchTicketRoundData) = .empty,
-    ConditionData: std.ArrayList(ScratchTicketConditionData) = .empty,
-};
-pub const PlayerBasicInfoGetResponse = struct {
-    pub const default: @This() = .{};
-    Info: ?PlayerDetails = null,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const AddCombineEntitiesRelationNotify = struct {
-    pub const default: @This() = .{};
-    CharacterAttachInfo: ?CharacterAttachInfo = null,
-    TargetEntity: i64 = 0,
-};
-pub const ModifyBulletParamsNotify = struct {
-    pub const default: @This() = .{};
-    ModifyBulletParams: ?ModifyBulletParams = null,
-};
-pub const EntitySimplyMoveInfoPackagePush = struct {
-    pub const default: @This() = .{};
-    MoveInfos: std.ArrayList(EntitySimplyMoveInfo) = .empty,
-    SceneOwnerId: i32 = 0,
-};
-pub const ActivityBlackCoastData = struct {
-    pub const default: @This() = .{};
-    StageData: std.ArrayList(BlackCoastThemeStageInfo) = .empty,
-    RewardIds: std.ArrayList(i32) = .empty,
-};
-pub const CharacterAttachRequest = struct {
-    pub const default: @This() = .{};
-    CharacterAttachInfo: ?CharacterAttachInfo = null,
-    TargetEntity: i64 = 0,
-};
-pub const BoardPb = struct {
-    pub const default: @This() = .{};
-    OccupiedGridList: std.ArrayList(OccupiedBoardGridInfo) = .empty,
-    DynamicGridConfigs: std.ArrayList(BoardGridDynamicConfig) = .empty,
-    CanMove: bool = false,
-};
-pub const ForgeInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    ForgeInfoList: std.ArrayList(OneForgeInfo) = .empty,
-    ForgeConfigs: std.ArrayList(OneForgeConfig) = .empty,
-    LimitRefreshTime: i64 = 0,
-};
-pub const PhantomIdentifyResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    UpdateInfo: ?PhantomItem = null,
-};
-pub const GachaResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    GachaResults: std.ArrayList(GachaResult) = .empty,
-};
-pub const HonamiStoryDropItemComponentPb = struct {
-    pub const default: @This() = .{};
-    Item: ?HonamiStoryItemInfo = null,
-};
-pub const RhythmShipPlanetPb = struct {
-    pub const default: @This() = .{};
-    PlanetId: i32 = 0,
-    OpenTime: i64 = 0,
-    RhythmShipLevelPb: std.ArrayList(RhythmShipLevelPb) = .empty,
-};
-pub const RoleInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Name: []const u8 = "",
-    Level: i32 = 0,
-    Exp: i32 = 0,
-    Breakthrough: i32 = 0,
-    Skills: std.ArrayList(ArrayIntInt) = .empty,
-    Phantom: std.ArrayList(ArrayIntInt) = .empty,
-    Star: i32 = 0,
-    Favor: i32 = 0,
-    Reson: std.ArrayList(ResonInfo) = .empty,
-    CurModel: i32 = 0,
-    Models: std.ArrayList(i32) = .empty,
-    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
-    AddProp: std.ArrayList(ArrayIntInt) = .empty,
-    CreateTime: u32 = 0,
-    SkillNodeState: std.ArrayList(ArraySkillNode) = .empty,
-    ResonantChainGroupIndex: i32 = 0,
-    SkinId: i32 = 0,
-    EnableSelfBgm: bool = false,
-};
-pub const IllustratedClass = struct {
-    pub const default: @This() = .{};
-    Type: ?IllustratedType = null,
-    IllustratedEntryList: std.ArrayList(IllustratedEntry) = .empty,
-};
-pub const RacingBetsLegMatch = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    DangoActorData: std.ArrayList(DangoActorData) = .empty,
-    MatchStartEndTime: ?RacingBetsTimeTuple = null,
-    GearStartEndTime: ?RacingBetsTimeTuple = null,
-    BetDangoRank: std.ArrayList(i32) = .empty,
-    OddsRateRefreshTime: i64 = 0,
-    OddsVersion: []const u8 = "",
-    MasterLevel: ?RacingBetsTimeTuple = null,
-    OrganInfo: std.ArrayList(RacingBetsOrganInfo) = .empty,
+    Roads: std.ArrayList(InfrOneRoad) = .empty,
+    Notices: std.ArrayList(InfrNotice) = .empty,
+    ManualTraceRoad: i32 = 0,
+    RecommendRoad: i32 = 0,
 };
 pub const AdventureUpdateNotify = struct {
     pub const default: @This() = .{};
     AdventureManualData: std.ArrayList(AdventureManualData) = .empty,
 };
-pub const MapTravelActivityData = struct {
+pub const AdviceComponentPb = struct {
     pub const default: @This() = .{};
-    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
-    MonsterGain: std.ArrayList(i32) = .empty,
-    GetFullReward: bool = false,
-    MapTravelLevel: i32 = 0,
-    UnlockAreas: std.ArrayList(i32) = .empty,
-    SoarLevels: std.ArrayList(SoarLevelPlayInfo) = .empty,
+    Advice: ?PbAdvice = null,
+    PlayerId: i32 = 0,
+    PlayerName: []const u8 = "",
 };
-pub const SlashAndTowerInfoResponse = struct {
+pub const WuWuWeekActivity = struct {
+    pub const default: @This() = .{};
+    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
+    TaskPack: std.ArrayList(WuWuTaskPack) = .empty,
+};
+pub const PlayerAccessEffectAreaResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    SlashLevelPlayInfo: std.ArrayList(SlashLevelPlayInfo) = .empty,
-    RewardsReceived: std.ArrayList(i32) = .empty,
-    CurSeasonEndTime: i64 = 0,
-    UpdateSeason: bool = false,
-    CurIsHaveRecord: bool = false,
-    BuffCache: std.ArrayList(i32) = .empty,
+    EntityId: i64 = 0,
+    Info: ?EntityAccessInfo = null,
 };
-pub const OnlineMotorActivityData = struct {
+pub const RoleDevelopConfigs = struct {
     pub const default: @This() = .{};
-    OnlineMotorLevelInfos: std.ArrayList(OnlineMotorLevelInfo) = .empty,
-    LevelTasks: std.ArrayList(OnlineMotorTask) = .empty,
-    GlobalTasks: std.ArrayList(OnlineMotorTask) = .empty,
-    UnLocks: std.ArrayList(OnlineMotorLevelUnLockTime) = .empty,
+    DevPropsList: std.ArrayList(RoleDevPropsConfig) = .empty,
+    DevTargetRole: i32 = 0,
+    DevPropsProjectList: std.ArrayList(RoleDevPropsProjectConfig) = .empty,
+    Version: []const u8 = "",
+};
+pub const ModifyBulletParamsNotify = struct {
+    pub const default: @This() = .{};
+    ModifyBulletParams: ?ModifyBulletParams = null,
 };
 pub const UpdateAchievementInfoResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     AchievementEntryList: std.ArrayList(AchievementEntry) = .empty,
 };
-pub const MotorTaskTreePb = struct {
+pub const FightBuffInformation = struct {
     pub const default: @This() = .{};
-    TreeId: i32 = 0,
-    Tasks: std.ArrayList(MotorTaskPb) = .empty,
-    TpRewarded: i32 = 0,
+    HandleId: i32 = 0,
+    BuffId: i64 = 0,
+    Level: i32 = 0,
+    StackCount: i32 = 0,
+    InstigatorId: i64 = 0,
+    EntityId: i64 = 0,
+    ApplyType: ?ApplyGEType = null,
+    Duration: f32 = 0,
+    LeftDuration: f32 = 0,
+    Context: std.ArrayList(FightBuffEffectContext) = .empty,
+    IsActive: bool = false,
+    ServerId: i32 = 0,
+    MessageId: i64 = 0,
+    ConfBuffId: i64 = 0,
 };
-pub const MotorDiyPb = struct {
+pub const LevelInfo = struct {
     pub const default: @This() = .{};
-    MotorDiyOnwer: ?MotorDiyOnwedPb = null,
-    MotorDiyEquipped: ?MotorDiyEquippedPb = null,
-    MotorOutlookPreset: ?MotorOutlookPlayerPresetPb = null,
+    InstId: i32 = 0,
+    StartTime: i32 = 0,
+    IsOpen: bool = false,
+    Score: i32 = 0,
+    RoleInfo: std.ArrayList(i32) = .empty,
+    BuffInfo: std.ArrayList(HardLevelBuffs) = .empty,
+    LevelRewardClaimStatus: ?BossRushRewardClaimStatus = null,
+    SelectScoreBuffs: std.ArrayList(i32) = .empty,
+    LevelScoreRewardStatus: std.ArrayList(BossRushRewardClaimStatus) = .empty,
 };
-pub const TemplateEntitySpawnerComponentPb = struct {
+pub const RoleVisionRecommendDataResponse = struct {
     pub const default: @This() = .{};
-    SpawnerType: ?TemplateSpawnerType = null,
-    CreateEntityInfos: std.ArrayList(SpawnerEntityInfo) = .empty,
-};
-pub const AdviceResponse = struct {
-    pub const default: @This() = .{};
-    Advices: std.ArrayList(PbAdvice) = .empty,
-    UpVoteIds: std.ArrayList(i64) = .empty,
     ErrorCode: ?ErrorCode = null,
+    VisionFetterRecommendInfo: std.ArrayList(VisionFetterRecommendInfo) = .empty,
 };
-pub const GachaInfoResponse = struct {
+pub const EquipTakeOnResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
-    GachaInfos: std.ArrayList(GachaInfo) = .empty,
-    DailyTotalLeftTimes: i32 = 0,
-    RecordId: []const u8 = "",
+    DataList: std.ArrayList(RoleLoadEquipData) = .empty,
 };
-pub const RacingBetsGroupMatchInfo = struct {
+pub const GachaResponse = struct {
     pub const default: @This() = .{};
-    MatchId: i32 = 0,
-    GroupMatchTime: ?RacingBetsTimeTuple = null,
-    LegMatch: std.ArrayList(RacingBetsLegMatch) = .empty,
-    PromoteDangoList: std.ArrayList(i32) = .empty,
-    Dangos: std.ArrayList(i32) = .empty,
+    ErrorCode: ?ErrorCode = null,
+    GachaResults: std.ArrayList(GachaResult) = .empty,
+};
+pub const ActivityScratchTicketData = struct {
+    pub const default: @This() = .{};
+    RoundData: std.ArrayList(ScratchTicketRoundData) = .empty,
+    ConditionData: std.ArrayList(ScratchTicketConditionData) = .empty,
 };
 pub const VarDefinePb = struct {
     pub const default: @This() = .{};
@@ -48239,78 +48207,49 @@ pub const VarDefinePb = struct {
     } = null,
     VarType: i32 = 0,
 };
-pub const CabinInfo = struct {
+pub const DangoAbyssActivityData = struct {
     pub const default: @This() = .{};
-    FishingItem: std.ArrayList(FishingItemInfo) = .empty,
-    CabinShape: i32 = 0,
-    QuickSellShape: i32 = 0,
-    NetCabinItems: std.ArrayList(FishingItemInfo) = .empty,
-    TempCabinItems: std.ArrayList(FishingItemInfo) = .empty,
-    QuickSellRatio: i32 = 0,
+    RoleList: std.ArrayList(AbyssDangoRoleData) = .empty,
+    AbyssPluginItemInfo: std.ArrayList(AbyssPluginItemInfo) = .empty,
+    AbyssRewardInfo: std.ArrayList(AbyssRewardInfo) = .empty,
+    UnlockChallengeIdList: std.ArrayList(i32) = .empty,
+    LikeCount: i32 = 0,
+    AbyssChallengeData: std.ArrayList(AbyssChallengeData) = .empty,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
 };
-pub const CreateBulletResponsePush = struct {
-    pub const default: @This() = .{};
-    ParentHandle: ?union(enum) {
-        BulletHandle: ?ActiveBulletHandle,
-    } = null,
-    CombatCommon: ?CombatCommon = null,
-    Handle: ?ActiveBulletHandle = null,
-    OwnerEntityId: i64 = 0,
-    BulletId: i64 = 0,
-    SkillId: i64 = 0,
-    Location: ?Vector = null,
-    Rotation: ?Rotator = null,
-    TargetId: i64 = 0,
-    SpawnEntityId: i64 = 0,
-    SpawnVelocityEntityId: i64 = 0,
-    IsLocal: bool = false,
-    DtType: i32 = 0,
-    RandomPosOffset: ?Vector = null,
-    RandomInitSpeedOffset: ?Vector = null,
-};
-pub const CumulativeShopData = struct {
-    pub const default: @This() = .{};
-    ActivityId: i32 = 0,
-    TaskData: std.ArrayList(CumulativeShopTaskConfig) = .empty,
-    TotalScore: i32 = 0,
-};
-pub const PayShopInfo = struct {
+pub const SceneFishCageData = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
-    Items: std.ArrayList(PayShopItem) = .empty,
-    UpdateTime: i64 = 0,
+    EntityConfigId: i32 = 0,
+    MaxCount: i32 = 0,
+    Items: std.ArrayList(FishingItemInfo) = .empty,
     LastUpdateTime: i64 = 0,
-    ShopTabViewType: i32 = 0,
-    DynamicTabId: i32 = 0,
-    Sort: i32 = 0,
-    Money: std.ArrayList(i32) = .empty,
-    SortRule: i32 = 0,
-    PayShopTabTogContent: []const u8 = "",
+    NextUpdateTime: i64 = 0,
+    RefreshTime: i32 = 0,
 };
-pub const PinballLevelData = struct {
+pub const RogueResTaskData = struct {
     pub const default: @This() = .{};
-    data: ?union(enum) {
-        NormalLevel: ?NormalLevel,
-        CowLevel: ?CowLevel,
-        TowerLevel: ?TowerLevel,
-        DailyLevel: ?DailyLevel,
-    } = null,
-    ConfigId: i32 = 0,
+    PermanentRogueData: ?PermanentRogueData = null,
+    RogueResCollectionState: std.ArrayList(MapEntry(i32, i32)) = .empty,
 };
-pub const AdventureManualDataResponse = struct {
+pub const RoleChangeNotify = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    AdventureManualData: ?AdventureManualData = null,
+    SourceRoleId: i32 = 0,
+    RoleInfo: ?RoleInfo = null,
 };
-pub const HandInInfo = struct {
+pub const RoleCoopActivityData = struct {
     pub const default: @This() = .{};
-    Id: i32 = 0,
-    FishingItem: std.ArrayList(FishingItemInfo) = .empty,
+    CoopRoleInfos: std.ArrayList(CoopRoleInfo) = .empty,
+    RewardGetList: std.ArrayList(i32) = .empty,
+    CoopTaskCompleteInfos: std.ArrayList(CoopTaskCompleteInfo) = .empty,
+    PreCompleteIds: std.ArrayList(i32) = .empty,
 };
-pub const PrivateChatHistoryResponse = struct {
+pub const MotorTaskTreePb = struct {
     pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Data: ?PrivateChatHistoryContentProto = null,
+    TreeId: i32 = 0,
+    Tasks: std.ArrayList(MotorTaskPb) = .empty,
+    TpRewarded: i32 = 0,
 };
 pub const TowerInfo = struct {
     pub const default: @This() = .{};
@@ -48321,6 +48260,21 @@ pub const TowerInfo = struct {
     EndTime: i64 = 0,
     MaxUnlockDifficulty: i32 = 0,
     QuickPassId: i32 = 0,
+};
+pub const RoleFavor = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    Level: i32 = 0,
+    Exp: i32 = 0,
+    WordIds: std.ArrayList(FavorItem) = .empty,
+    StoryIds: std.ArrayList(FavorItem) = .empty,
+    GoodsIds: std.ArrayList(FavorItem) = .empty,
+    FavorQuest: ?FavorQuest = null,
+};
+pub const CalabashMsgNotify = struct {
+    pub const default: @This() = .{};
+    CalabashMsg: ?CalabashMsg = null,
+    CalabashCfg: ?CalabashCfg = null,
 };
 pub const CreateBulletNotify = struct {
     pub const default: @This() = .{};
@@ -48356,109 +48310,6 @@ pub const SwitchRoleRequest = struct {
     SwitchType: ?SwitchRoleType = null,
     OnStageWithoutControl: bool = false,
 };
-pub const BeginnerCarnivalData = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    ActivityTaskData: ?ActivityTaskData = null,
-    JumpTaskIds: std.ArrayList(i32) = .empty,
-    JumpTaskCondInfos: std.ArrayList(JumpTaskCondInfo) = .empty,
-};
-pub const RoleChangeNotify = struct {
-    pub const default: @This() = .{};
-    SourceRoleId: i32 = 0,
-    RoleInfo: ?RoleInfo = null,
-};
-pub const HonamiStoryBackpackEntry = struct {
-    pub const default: @This() = .{};
-    Item: ?HonamiStoryItemInfo = null,
-    State: ?HonamiStoryPosInfo = null,
-};
-pub const CalabashMsgNotify = struct {
-    pub const default: @This() = .{};
-    CalabashMsg: ?CalabashMsg = null,
-    CalabashCfg: ?CalabashCfg = null,
-};
-pub const RoleCoopActivityData = struct {
-    pub const default: @This() = .{};
-    CoopRoleInfos: std.ArrayList(CoopRoleInfo) = .empty,
-    RewardGetList: std.ArrayList(i32) = .empty,
-    CoopTaskCompleteInfos: std.ArrayList(CoopTaskCompleteInfo) = .empty,
-    PreCompleteIds: std.ArrayList(i32) = .empty,
-};
-pub const RbItemComponentPb = struct {
-    pub const default: @This() = .{};
-    Type: ?union(enum) {
-        BreakableObstacleType: ?RbBreakableObstaclePbType,
-        RbLaserEmitterType: ?RbLaserEmitterPbType,
-    } = null,
-    GamePlayIncId: i32 = 0,
-    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
-};
-pub const UpdateGroupFormationNotify = struct {
-    pub const default: @This() = .{};
-    GroupFormation: std.ArrayList(GroupFormation) = .empty,
-};
-pub const EntityFsmComponentPb = struct {
-    pub const default: @This() = .{};
-    Fsms: std.ArrayList(DFsm) = .empty,
-    HashCode: i32 = 0,
-    CommonHashCode: i32 = 0,
-    BlackBoard: std.ArrayList(DFsmBlackBoard) = .empty,
-    FsmCustomBlackboardDatas: ?FsmCustomBlackboardDatas = null,
-};
-pub const AchievementInfoResponse = struct {
-    pub const default: @This() = .{};
-    AchievementGroupInfoList: std.ArrayList(AchievementGroupInfo) = .empty,
-    AchievementFinishedStar: i32 = 0,
-    FinishedAchievementNum: i32 = 0,
-};
-pub const DarkCoastDeliveryResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    DragonPoolDropItems: ?DragonPoolDropItems = null,
-    DefeatedGuard: std.ArrayList(i32) = .empty,
-    ReceivedGuardReward: std.ArrayList(i32) = .empty,
-    LevelGain: i32 = 0,
-};
-pub const SceneFishCageData = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    EntityConfigId: i32 = 0,
-    MaxCount: i32 = 0,
-    Items: std.ArrayList(FishingItemInfo) = .empty,
-    LastUpdateTime: i64 = 0,
-    NextUpdateTime: i64 = 0,
-    RefreshTime: i32 = 0,
-};
-pub const RoleFavor = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    Level: i32 = 0,
-    Exp: i32 = 0,
-    WordIds: std.ArrayList(FavorItem) = .empty,
-    StoryIds: std.ArrayList(FavorItem) = .empty,
-    GoodsIds: std.ArrayList(FavorItem) = .empty,
-    FavorQuest: ?FavorQuest = null,
-};
-pub const PbGetRoleListNotify = struct {
-    pub const default: @This() = .{};
-    RoleList: std.ArrayList(RoleInfo) = .empty,
-};
-pub const SolarisSpeedActivity = struct {
-    pub const default: @This() = .{};
-    SolarSpeedContext: std.ArrayList(SolarSpeedContext) = .empty,
-    ActivityTaskDatas: ?ActivityTaskData = null,
-};
-pub const RogueResTaskData = struct {
-    pub const default: @This() = .{};
-    PermanentRogueData: ?PermanentRogueData = null,
-    RogueResCollectionState: std.ArrayList(MapEntry(i32, i32)) = .empty,
-};
-pub const WeeklyFrameworkInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    FrameworkInfo: ?WeeklyFrameworkInfo = null,
-};
 pub const MoveReplaySample = struct {
     pub const default: @This() = .{};
     LinearVelocity: ?Vector = null,
@@ -48478,29 +48329,6 @@ pub const MoveReplaySample = struct {
     SkillId: i64 = 0,
     ElapsedLogicTickTime: i32 = 0,
 };
-pub const RbBlockMovingPbState = struct {
-    pub const default: @This() = .{};
-    Action: ?RbBlockMovementPbAction = null,
-};
-pub const EntityMoveSplineComponentPb = struct {
-    pub const default: @This() = .{};
-    RuntimeData: ?union(enum) {
-        SceneItemSplineRuntimeData: ?SceneItemSplineRuntimeData,
-    } = null,
-    SplineEntityId: i32 = 0,
-    MoveSplineConfig: ?MoveSplineConfig = null,
-};
-pub const DangoAbyssActivityData = struct {
-    pub const default: @This() = .{};
-    RoleList: std.ArrayList(AbyssDangoRoleData) = .empty,
-    AbyssPluginItemInfo: std.ArrayList(AbyssPluginItemInfo) = .empty,
-    AbyssRewardInfo: std.ArrayList(AbyssRewardInfo) = .empty,
-    UnlockChallengeIdList: std.ArrayList(i32) = .empty,
-    LikeCount: i32 = 0,
-    AbyssChallengeData: std.ArrayList(AbyssChallengeData) = .empty,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-};
 pub const UseSkillInformation = struct {
     pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
@@ -48514,6 +48342,184 @@ pub const UseSkillInformation = struct {
     Duration: i32 = 0,
     SkillInterruptLevel: i32 = 0,
     FightState: i32 = 0,
+};
+pub const CabinInfo = struct {
+    pub const default: @This() = .{};
+    FishingItem: std.ArrayList(FishingItemInfo) = .empty,
+    CabinShape: i32 = 0,
+    QuickSellShape: i32 = 0,
+    NetCabinItems: std.ArrayList(FishingItemInfo) = .empty,
+    TempCabinItems: std.ArrayList(FishingItemInfo) = .empty,
+    QuickSellRatio: i32 = 0,
+};
+pub const TemplateEntitySpawnerComponentPb = struct {
+    pub const default: @This() = .{};
+    SpawnerType: ?TemplateSpawnerType = null,
+    CreateEntityInfos: std.ArrayList(SpawnerEntityInfo) = .empty,
+};
+pub const DarkCoastDeliveryResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    DragonPoolDropItems: ?DragonPoolDropItems = null,
+    DefeatedGuard: std.ArrayList(i32) = .empty,
+    ReceivedGuardReward: std.ArrayList(i32) = .empty,
+    LevelGain: i32 = 0,
+};
+pub const CumulativeShopData = struct {
+    pub const default: @This() = .{};
+    ActivityId: i32 = 0,
+    TaskData: std.ArrayList(CumulativeShopTaskConfig) = .empty,
+    TotalScore: i32 = 0,
+};
+pub const UpdateGroupFormationNotify = struct {
+    pub const default: @This() = .{};
+    GroupFormation: std.ArrayList(GroupFormation) = .empty,
+};
+pub const AchievementInfoResponse = struct {
+    pub const default: @This() = .{};
+    AchievementGroupInfoList: std.ArrayList(AchievementGroupInfo) = .empty,
+    AchievementFinishedStar: i32 = 0,
+    FinishedAchievementNum: i32 = 0,
+};
+pub const EntityMoveSplineComponentPb = struct {
+    pub const default: @This() = .{};
+    RuntimeData: ?union(enum) {
+        SceneItemSplineRuntimeData: ?SceneItemSplineRuntimeData,
+    } = null,
+    SplineEntityId: i32 = 0,
+    MoveSplineConfig: ?MoveSplineConfig = null,
+};
+pub const GachaInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    GachaInfos: std.ArrayList(GachaInfo) = .empty,
+    DailyTotalLeftTimes: i32 = 0,
+    RecordId: []const u8 = "",
+};
+pub const PbGetRoleListNotify = struct {
+    pub const default: @This() = .{};
+    RoleList: std.ArrayList(RoleInfo) = .empty,
+};
+pub const PrivateChatHistoryResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Data: ?PrivateChatHistoryContentProto = null,
+};
+pub const WeeklyFrameworkInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: i32 = 0,
+    FrameworkInfo: ?WeeklyFrameworkInfo = null,
+};
+pub const PayShopInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Items: std.ArrayList(PayShopItem) = .empty,
+    UpdateTime: i64 = 0,
+    LastUpdateTime: i64 = 0,
+    ShopTabViewType: i32 = 0,
+    DynamicTabId: i32 = 0,
+    Sort: i32 = 0,
+    Money: std.ArrayList(i32) = .empty,
+    SortRule: i32 = 0,
+    PayShopTabTogContent: []const u8 = "",
+};
+pub const RbItemComponentPb = struct {
+    pub const default: @This() = .{};
+    Type: ?union(enum) {
+        BreakableObstacleType: ?RbBreakableObstaclePbType,
+        RbLaserEmitterType: ?RbLaserEmitterPbType,
+    } = null,
+    GamePlayIncId: i32 = 0,
+    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
+};
+pub const PinballLevelData = struct {
+    pub const default: @This() = .{};
+    data: ?union(enum) {
+        NormalLevel: ?NormalLevel,
+        CowLevel: ?CowLevel,
+        TowerLevel: ?TowerLevel,
+        DailyLevel: ?DailyLevel,
+    } = null,
+    ConfigId: i32 = 0,
+};
+pub const SolarisSpeedActivity = struct {
+    pub const default: @This() = .{};
+    SolarSpeedContext: std.ArrayList(SolarSpeedContext) = .empty,
+    ActivityTaskDatas: ?ActivityTaskData = null,
+};
+pub const HonamiStoryBackpackEntry = struct {
+    pub const default: @This() = .{};
+    Item: ?HonamiStoryItemInfo = null,
+    State: ?HonamiStoryPosInfo = null,
+};
+pub const RbBlockMovingPbState = struct {
+    pub const default: @This() = .{};
+    Action: ?RbBlockMovementPbAction = null,
+};
+pub const MotorDiyPb = struct {
+    pub const default: @This() = .{};
+    MotorDiyOnwer: ?MotorDiyOnwedPb = null,
+    MotorDiyEquipped: ?MotorDiyEquippedPb = null,
+    MotorOutlookPreset: ?MotorOutlookPlayerPresetPb = null,
+};
+pub const AdviceResponse = struct {
+    pub const default: @This() = .{};
+    Advices: std.ArrayList(PbAdvice) = .empty,
+    UpVoteIds: std.ArrayList(i64) = .empty,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const HandInInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    FishingItem: std.ArrayList(FishingItemInfo) = .empty,
+};
+pub const BeginnerCarnivalData = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    ActivityTaskData: ?ActivityTaskData = null,
+    JumpTaskIds: std.ArrayList(i32) = .empty,
+    JumpTaskCondInfos: std.ArrayList(JumpTaskCondInfo) = .empty,
+};
+pub const RacingBetsGroupMatchInfo = struct {
+    pub const default: @This() = .{};
+    MatchId: i32 = 0,
+    GroupMatchTime: ?RacingBetsTimeTuple = null,
+    LegMatch: std.ArrayList(RacingBetsLegMatch) = .empty,
+    PromoteDangoList: std.ArrayList(i32) = .empty,
+    Dangos: std.ArrayList(i32) = .empty,
+};
+pub const EntityFsmComponentPb = struct {
+    pub const default: @This() = .{};
+    Fsms: std.ArrayList(DFsm) = .empty,
+    HashCode: i32 = 0,
+    CommonHashCode: i32 = 0,
+    BlackBoard: std.ArrayList(DFsmBlackBoard) = .empty,
+    FsmCustomBlackboardDatas: ?FsmCustomBlackboardDatas = null,
+};
+pub const CreateBulletResponsePush = struct {
+    pub const default: @This() = .{};
+    ParentHandle: ?union(enum) {
+        BulletHandle: ?ActiveBulletHandle,
+    } = null,
+    CombatCommon: ?CombatCommon = null,
+    Handle: ?ActiveBulletHandle = null,
+    OwnerEntityId: i64 = 0,
+    BulletId: i64 = 0,
+    SkillId: i64 = 0,
+    Location: ?Vector = null,
+    Rotation: ?Rotator = null,
+    TargetId: i64 = 0,
+    SpawnEntityId: i64 = 0,
+    SpawnVelocityEntityId: i64 = 0,
+    IsLocal: bool = false,
+    DtType: i32 = 0,
+    RandomPosOffset: ?Vector = null,
+    RandomInitSpeedOffset: ?Vector = null,
+};
+pub const AdventureManualDataResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    AdventureManualData: ?AdventureManualData = null,
 };
 pub const CreateBulletRequest = struct {
     pub const default: @This() = .{};
@@ -48535,6 +48541,13 @@ pub const CreateBulletRequest = struct {
     RandomPosOffset: ?Vector = null,
     RandomInitSpeedOffset: ?Vector = null,
 };
+pub const UseSkillRequest = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    UseSkillInfo: ?UseSkillInformation = null,
+    SkillSingleId: i32 = 0,
+    BattleFlags: std.ArrayList(i32) = .empty,
+};
 pub const FishingShipInfo = struct {
     pub const default: @This() = .{};
     SkinId: i32 = 0,
@@ -48546,79 +48559,26 @@ pub const FishingShipInfo = struct {
     PortId: i32 = 0,
     LastPortId: i32 = 0,
 };
-pub const HitRequest = struct {
+pub const FlagChallengeActivityInfo = struct {
     pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    HitInfo: ?HitInformation = null,
-    SkillMessageId: i64 = 0,
+    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
+    FlagChallengeLevelInfos: std.ArrayList(FlagChallengeLevelInfo) = .empty,
+    FlagStrongholdInfos: std.ArrayList(FlagStrongholdInfo) = .empty,
+    FlagChallengeRoleLevelInfo: ?FlagChallengeRoleLevelInfo = null,
+    UnlockTeleporterId: std.ArrayList(i32) = .empty,
 };
-pub const CharacterSkillComponentPb = struct {
+pub const FsmResetNotify = struct {
     pub const default: @This() = .{};
-    UseSkillInfo: ?UseSkillInformation = null,
-    MontageIndex: i32 = 0,
-    MontagePlayTime: i32 = 0,
-    Section: []const u8 = "",
-    SpeedRatio: f32 = 0,
-    MessageId: i64 = 0,
-    MontageContext: i64 = 0,
+    EntityFsmComponentPb: ?EntityFsmComponentPb = null,
 };
-pub const UseSkillRequest = struct {
+pub const PhantomItemResponse = struct {
     pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    UseSkillInfo: ?UseSkillInformation = null,
-    SkillSingleId: i32 = 0,
-    BattleFlags: std.ArrayList(i32) = .empty,
-};
-pub const BabelTowerActivity = struct {
-    pub const default: @This() = .{};
-    BabelTowerDataList: std.ArrayList(BabelTowerData) = .empty,
-    BabelDebuffUnlocks: std.ArrayList(BabelDebuff) = .empty,
-    BabelBuffUnlocks: std.ArrayList(BabelBuff) = .empty,
-    NormalQuest: std.ArrayList(ActivityTask) = .empty,
-    DailyQuest: std.ArrayList(ActivityTask) = .empty,
-    CurrentItemCount: i32 = 0,
-};
-pub const TowerSeasonUpdateResponse = struct {
-    pub const default: @This() = .{};
-    Towers: ?union(enum) {
-        TowerInfo: ?TowerInfo,
-    } = null,
-    MaxUnlockDifficulty: i32 = 0,
-};
-pub const FriendAllResponse = struct {
-    pub const default: @This() = .{};
-    FriendInfoList: std.ArrayList(FriendInfo) = .empty,
-    FriendApplyList: std.ArrayList(FriendApply) = .empty,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const BattlePassResponse = struct {
-    pub const default: @This() = .{};
-    BattlePass: ?PbBattlePass = null,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const TowerResponse = struct {
-    pub const default: @This() = .{};
-    TowerInfo: ?TowerInfo = null,
-};
-pub const PlayerTitleDataResponse = struct {
-    pub const default: @This() = .{};
-    PlayerTitleData: std.ArrayList(PlayerTitleData) = .empty,
-    ErrorCode: ?ErrorCode = null,
-    PlayerTitleLimitInfos: std.ArrayList(PlayerTitleLimitInfo) = .empty,
-};
-pub const FightBuffComponentPb = struct {
-    pub const default: @This() = .{};
-    FightBuffInfos: std.ArrayList(FightBuffInformation) = .empty,
-    ListBuffEffectCd: std.ArrayList(BuffEffectCd) = .empty,
-    ClientBornBuffIds: std.ArrayList(i64) = .empty,
-    ClientBornMessageId: i64 = 0,
-};
-pub const HonamiStoryBackpack = struct {
-    pub const default: @This() = .{};
-    BackpackId: i32 = 0,
-    Width: i32 = 0,
-    Capacity: i32 = 0,
-    Items: std.ArrayList(HonamiStoryBackpackEntry) = .empty,
+    PhantomItemList: std.ArrayList(PhantomItem) = .empty,
+    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
+    PropInfo: std.ArrayList(RolePhantomPropInfo) = .empty,
+    MaxCost: i32 = 0,
+    PhantomSkinList: std.ArrayList(i32) = .empty,
+    DirectRefineWeekTimes: i32 = 0,
 };
 pub const TrapDefenseComponentPb = struct {
     pub const default: @This() = .{};
@@ -48630,6 +48590,13 @@ pub const TrapDefenseComponentPb = struct {
         SpecialCellPbdata: ?TrapDefenseSpecialCellPbData,
     } = null,
 };
+pub const MovingEntityData = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    Originator: i64 = 0,
+    MoveInfos: std.ArrayList(MoveReplaySample) = .empty,
+    ForcePush: bool = false,
+};
 pub const InfrV2Pb = struct {
     pub const default: @This() = .{};
     FireInfo: ?InfrV2FirePb = null,
@@ -48638,55 +48605,96 @@ pub const InfrV2Pb = struct {
     ConditionTasks: std.ArrayList(ConditionTask) = .empty,
     TreeFinishCond: std.ArrayList(i32) = .empty,
 };
-pub const UseSkillNotify = struct {
+pub const SurvivorsActivityData = struct {
+    pub const default: @This() = .{};
+    NormalTaskData: ?ActivityTaskData = null,
+    ScoreTaskDatas: std.ArrayList(i32) = .empty,
+    UnlockedWeapons: std.ArrayList(i32) = .empty,
+    UnlockedRoles: std.ArrayList(i32) = .empty,
+    UnlockedItems: std.ArrayList(i32) = .empty,
+    TalentTreeNodes: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    SurvivorsChallengeInfos: std.ArrayList(SurvivorsLevelData) = .empty,
+};
+pub const RoleDevelopConfigResponse = struct {
+    pub const default: @This() = .{};
+    Configs: ?RoleDevelopConfigs = null,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PlayerTitleDataResponse = struct {
+    pub const default: @This() = .{};
+    PlayerTitleData: std.ArrayList(PlayerTitleData) = .empty,
+    ErrorCode: ?ErrorCode = null,
+    PlayerTitleLimitInfos: std.ArrayList(PlayerTitleLimitInfo) = .empty,
+};
+pub const PlayerVarNotify = struct {
+    pub const default: @This() = .{};
+    VarInfos: std.ArrayList(MapEntry([]const u8, VarDefinePb)) = .empty,
+};
+pub const HitRequest = struct {
     pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
-    UseSkillInfo: ?UseSkillInformation = null,
-    SkillSingleId: i32 = 0,
+    HitInfo: ?HitInformation = null,
+    SkillMessageId: i64 = 0,
 };
 pub const EntityVarComponentPb = struct {
     pub const default: @This() = .{};
     Vars: std.ArrayList(MapEntry([]const u8, VarDefinePb)) = .empty,
 };
-pub const MotorFightActivityPb = struct {
+pub const CharacterSkillComponentPb = struct {
     pub const default: @This() = .{};
-    MotorFightLevelPb: std.ArrayList(MotorFightLevelPb) = .empty,
-    Task: std.ArrayList(ConditionTask) = .empty,
-    TalentTree: ?MotorFightTalentTreePb = null,
-    UnlockedItem: std.ArrayList(i32) = .empty,
-    UnlockedRole: std.ArrayList(i32) = .empty,
+    UseSkillInfo: ?UseSkillInformation = null,
+    MontageIndex: i32 = 0,
+    MontagePlayTime: i32 = 0,
+    Section: []const u8 = "",
+    SpeedRatio: f32 = 0,
+    MessageId: i64 = 0,
+    MontageContext: i64 = 0,
 };
-pub const FsmResetNotify = struct {
+pub const FriendAllResponse = struct {
     pub const default: @This() = .{};
-    EntityFsmComponentPb: ?EntityFsmComponentPb = null,
-};
-pub const MovingEntityData = struct {
-    pub const default: @This() = .{};
-    EntityId: i64 = 0,
-    Originator: i64 = 0,
-    MoveInfos: std.ArrayList(MoveReplaySample) = .empty,
-    ForcePush: bool = false,
-};
-pub const IllustratedInfoResponse = struct {
-    pub const default: @This() = .{};
+    FriendInfoList: std.ArrayList(FriendInfo) = .empty,
+    FriendApplyList: std.ArrayList(FriendApply) = .empty,
     ErrorCode: ?ErrorCode = null,
-    ErrorParams: std.ArrayList([]const u8) = .empty,
-    IllustratedClassList: std.ArrayList(IllustratedClass) = .empty,
 };
-pub const DamageRecordNotify = struct {
+pub const DreamLinkActivityData = struct {
     pub const default: @This() = .{};
-    TimestampMs: i64 = 0,
-    DamageConfId: i64 = 0,
-    DamageValue: i32 = 0,
-    SkillId: i64 = 0,
-    SkillLevel: i32 = 0,
-    BulletId: i64 = 0,
-    DamageSourceType: ?DamageSourceType = null,
-    IsCritical: bool = false,
-    Attacker: ?DamageRecordEntity = null,
-    Victim: ?DamageRecordEntity = null,
-    DamageCalculationDetails: ?DamageCalculationDetails = null,
-    IsWeakness: bool = false,
+    MaxEnergy: i32 = 0,
+    SignStateList: std.ArrayList(i32) = .empty,
+    RoleInstanceList: std.ArrayList(RoleInstanceList) = .empty,
+    LevelPlayList: std.ArrayList(LevelPlayList) = .empty,
+    BossRewardIds: std.ArrayList(i32) = .empty,
+    AllLimitTimeReward: std.ArrayList(AllLimitTimeReward) = .empty,
+    ScoreMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+    LimitTimeReward: i64 = 0,
+    LimitTimeEnd: i64 = 0,
+    RogueBossInstData: std.ArrayList(RogueBossInstData) = .empty,
+    PlayTime: i32 = 0,
+    UnlockButtons: std.ArrayList(i32) = .empty,
+};
+pub const HonamiStoryBackpack = struct {
+    pub const default: @This() = .{};
+    BackpackId: i32 = 0,
+    Width: i32 = 0,
+    Capacity: i32 = 0,
+    Items: std.ArrayList(HonamiStoryBackpackEntry) = .empty,
+};
+pub const TowerResponse = struct {
+    pub const default: @This() = .{};
+    TowerInfo: ?TowerInfo = null,
+};
+pub const BabelTowerActivity = struct {
+    pub const default: @This() = .{};
+    BabelTowerDataList: std.ArrayList(BabelTowerData) = .empty,
+    BabelDebuffUnlocks: std.ArrayList(BabelDebuff) = .empty,
+    BabelBuffUnlocks: std.ArrayList(BabelBuff) = .empty,
+    NormalQuest: std.ArrayList(ActivityTask) = .empty,
+    DailyQuest: std.ArrayList(ActivityTask) = .empty,
+    CurrentItemCount: i32 = 0,
+};
+pub const BattlePassResponse = struct {
+    pub const default: @This() = .{};
+    BattlePass: ?PbBattlePass = null,
+    ErrorCode: ?ErrorCode = null,
 };
 pub const FloroRangeData = struct {
     pub const default: @This() = .{};
@@ -48705,48 +48713,39 @@ pub const FloroRangeData = struct {
     FloroRangeEndTime: i64 = 0,
     InsUnLockCondition: std.ArrayList(FloroRanchCommonData) = .empty,
 };
-pub const DreamLinkActivityData = struct {
+pub const TowerSeasonUpdateResponse = struct {
     pub const default: @This() = .{};
-    MaxEnergy: i32 = 0,
-    SignStateList: std.ArrayList(i32) = .empty,
-    RoleInstanceList: std.ArrayList(RoleInstanceList) = .empty,
-    LevelPlayList: std.ArrayList(LevelPlayList) = .empty,
-    BossRewardIds: std.ArrayList(i32) = .empty,
-    AllLimitTimeReward: std.ArrayList(AllLimitTimeReward) = .empty,
-    ScoreMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    LimitTimeReward: i64 = 0,
-    LimitTimeEnd: i64 = 0,
-    RogueBossInstData: std.ArrayList(RogueBossInstData) = .empty,
-    PlayTime: i32 = 0,
-    UnlockButtons: std.ArrayList(i32) = .empty,
+    Towers: ?union(enum) {
+        TowerInfo: ?TowerInfo,
+    } = null,
+    MaxUnlockDifficulty: i32 = 0,
 };
-pub const HitNotify = struct {
+pub const DamageRecordNotify = struct {
     pub const default: @This() = .{};
-    CombatCommon: ?CombatCommon = null,
-    HitInfo: ?HitInformation = null,
+    TimestampMs: i64 = 0,
+    DamageConfId: i64 = 0,
+    DamageValue: i32 = 0,
+    SkillId: i64 = 0,
+    SkillLevel: i32 = 0,
+    BulletId: i64 = 0,
+    DamageSourceType: ?DamageSourceType = null,
+    IsCritical: bool = false,
+    Attacker: ?DamageRecordEntity = null,
+    Victim: ?DamageRecordEntity = null,
+    DamageCalculationDetails: ?DamageCalculationDetails = null,
+    IsWeakness: bool = false,
 };
-pub const FlagChallengeActivityInfo = struct {
+pub const RoleSkillQuickLevelUpResponse = struct {
     pub const default: @This() = .{};
-    ConditionTasks: std.ArrayList(ConditionTask) = .empty,
-    FlagChallengeLevelInfos: std.ArrayList(FlagChallengeLevelInfo) = .empty,
-    FlagStrongholdInfos: std.ArrayList(FlagStrongholdInfo) = .empty,
-    FlagChallengeRoleLevelInfo: ?FlagChallengeRoleLevelInfo = null,
-    UnlockTeleporterId: std.ArrayList(i32) = .empty,
-};
-pub const SurvivorsActivityData = struct {
-    pub const default: @This() = .{};
-    NormalTaskData: ?ActivityTaskData = null,
-    ScoreTaskDatas: std.ArrayList(i32) = .empty,
-    UnlockedWeapons: std.ArrayList(i32) = .empty,
-    UnlockedRoles: std.ArrayList(i32) = .empty,
-    UnlockedItems: std.ArrayList(i32) = .empty,
-    TalentTreeNodes: std.ArrayList(MapEntry(i32, i32)) = .empty,
-    SurvivorsChallengeInfos: std.ArrayList(SurvivorsLevelData) = .empty,
-};
-pub const RoleDevelopConfigResponse = struct {
-    pub const default: @This() = .{};
-    Configs: ?RoleDevelopConfigs = null,
     ErrorCode: ?ErrorCode = null,
+    RoleInfo: ?RoleInfo = null,
+};
+pub const FightBuffComponentPb = struct {
+    pub const default: @This() = .{};
+    FightBuffInfos: std.ArrayList(FightBuffInformation) = .empty,
+    ListBuffEffectCd: std.ArrayList(BuffEffectCd) = .empty,
+    ClientBornBuffIds: std.ArrayList(i64) = .empty,
+    ClientBornMessageId: i64 = 0,
 };
 pub const HitResponse = struct {
     pub const default: @This() = .{};
@@ -48759,22 +48758,79 @@ pub const EndSkillNotify = struct {
     UseSkillInfo: ?UseSkillInformation = null,
     SkillSingleId: i32 = 0,
 };
+pub const MotorFightActivityPb = struct {
+    pub const default: @This() = .{};
+    MotorFightLevelPb: std.ArrayList(MotorFightLevelPb) = .empty,
+    Task: std.ArrayList(ConditionTask) = .empty,
+    TalentTree: ?MotorFightTalentTreePb = null,
+    UnlockedItem: std.ArrayList(i32) = .empty,
+    UnlockedRole: std.ArrayList(i32) = .empty,
+};
+pub const UseSkillNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    UseSkillInfo: ?UseSkillInformation = null,
+    SkillSingleId: i32 = 0,
+};
+pub const IllustratedInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ErrorParams: std.ArrayList([]const u8) = .empty,
+    IllustratedClassList: std.ArrayList(IllustratedClass) = .empty,
+};
+pub const HitNotify = struct {
+    pub const default: @This() = .{};
+    CombatCommon: ?CombatCommon = null,
+    HitInfo: ?HitInformation = null,
+};
 pub const SceneFishCageInfo = struct {
     pub const default: @This() = .{};
     Cages: std.ArrayList(SceneFishCageData) = .empty,
 };
-pub const PhantomItemResponse = struct {
+pub const MotorDiyInfoResponse = struct {
     pub const default: @This() = .{};
-    PhantomItemList: std.ArrayList(PhantomItem) = .empty,
-    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
-    PropInfo: std.ArrayList(RolePhantomPropInfo) = .empty,
-    MaxCost: i32 = 0,
-    PhantomSkinList: std.ArrayList(i32) = .empty,
-    DirectRefineWeekTimes: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+    MotorDiy: ?MotorDiyPb = null,
 };
-pub const PlayerVarNotify = struct {
+pub const UseSkillResponse = struct {
     pub const default: @This() = .{};
-    VarInfos: std.ArrayList(MapEntry([]const u8, VarDefinePb)) = .empty,
+    UseSkillInfo: ?UseSkillInformation = null,
+    SkillSingleId: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ActivityPermanentRogueData = struct {
+    pub const default: @This() = .{};
+    PermanentSeasonData: std.ArrayList(PermanentSeasonData) = .empty,
+    RogueResTaskData: ?RogueResTaskData = null,
+};
+pub const NewTowerClimbingActivityData = struct {
+    pub const default: @This() = .{};
+    CycleId: i32 = 0,
+    Records: std.ArrayList(NewTowerClimbingLevelRecord) = .empty,
+    ScoreTasks: std.ArrayList(i32) = .empty,
+    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
+    CycleBeginTime: i64 = 0,
+    CycleCloseTime: i64 = 0,
+    SeasonId: i32 = 0,
+    SeasonBeginTime: i64 = 0,
+    SeasonCloseTime: i64 = 0,
+    SeasonTasks: std.ArrayList(ActivityTask) = .empty,
+};
+pub const SceneItemBlackboardParam = struct {
+    pub const default: @This() = .{};
+    Value: ?union(enum) {
+        IntValue: i32,
+        IntValues: ?IntArrayBlackboard,
+        LongValue: i64,
+        LongValues: ?LongArrayBlackboard,
+        BooleanValue: bool,
+        StringValue: []const u8,
+        FloatValue: f32,
+        FloatValues: ?FloatArrayBlackboard,
+        VectorValue: ?Vector,
+        RotatorValue: ?Rotator,
+    } = null,
+    Key: ?SceneItemBBKey = null,
 };
 pub const ActivityCiacconaGalData = struct {
     pub const default: @This() = .{};
@@ -48786,6 +48842,75 @@ pub const ActivityCiacconaGalData = struct {
     State3Unlock: bool = false,
     RewardStartTime: i64 = 0,
     RewardEndTime: i64 = 0,
+};
+pub const RoleFavorListResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    FavorList: std.ArrayList(RoleFavor) = .empty,
+};
+pub const MovePackagePush = struct {
+    pub const default: @This() = .{};
+    MovingEntities: std.ArrayList(MovingEntityData) = .empty,
+    SceneOwnerId: i32 = 0,
+};
+pub const EndSkillResponse = struct {
+    pub const default: @This() = .{};
+    UseSkillInfo: ?UseSkillInformation = null,
+    SkillSingleId: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SkillRequest = struct {
+    pub const default: @This() = .{};
+    UseSkillInfo: ?UseSkillInformation = null,
+    SkillNodeInfos: ?SkillNodeInfo = null,
+};
+pub const KurotatoActivityData = struct {
+    pub const default: @This() = .{};
+    KurotatoLevelInfos: std.ArrayList(KurotatoLevelInfo) = .empty,
+    KurotatoRoleInfos: std.ArrayList(KurotatoRoleInfo) = .empty,
+    UnlockWeapons: std.ArrayList(i32) = .empty,
+    UnlockItems: std.ArrayList(i32) = .empty,
+    ScoreTasks: std.ArrayList(i32) = .empty,
+    ResTasks: std.ArrayList(ConditionTask) = .empty,
+    LimitTasks: std.ArrayList(ConditionTask) = .empty,
+};
+pub const FloroRanchActivityData = struct {
+    pub const default: @This() = .{};
+    FloroRangeData: ?FloroRangeData = null,
+    UnFinishedSubIns: i32 = 0,
+    SavedStage: i32 = 0,
+    CurWeeklyInsId: i32 = 0,
+};
+pub const RoleMotionListNotify = struct {
+    pub const default: @This() = .{};
+    MotionList: std.ArrayList(RoleMotion) = .empty,
+    RoleConditionInfoMap: std.ArrayList(MapEntry(i32, ConditionInfo)) = .empty,
+};
+pub const LevelPlayVarAsyncResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Vars: std.ArrayList(MapEntry([]const u8, VarDefinePb)) = .empty,
+};
+pub const ActivityTrapDefenseData = struct {
+    pub const default: @This() = .{};
+    TrapDefenseTalentNodeIds: std.ArrayList(i32) = .empty,
+    SpecialReward: std.ArrayList(TrapDefenseRewardData) = .empty,
+    Rewards: std.ArrayList(TrapDefenseRewardData) = .empty,
+    Auxiliaries: std.ArrayList(TrapDefenseAuxiliaryData) = .empty,
+    Buildings: std.ArrayList(TrapDefenseBuildingData) = .empty,
+    Challenges: std.ArrayList(TrapDefenseLevelData) = .empty,
+    StartTime: i64 = 0,
+    EndTime: i64 = 0,
+    TrapDefenseBdDataIdUnlocks: std.ArrayList(i32) = .empty,
+    TrapDefenseTalentTreeMaxPoints: i32 = 0,
+    TrapDefenseTalentTreePoints: i32 = 0,
+    TrapDefenseRemainPoints: i32 = 0,
+    TrapDefenseTotalPoints: i32 = 0,
+    TrapDefenseBdBuffIdUnlocks: std.ArrayList(i32) = .empty,
+};
+pub const MovePackageNotify = struct {
+    pub const default: @This() = .{};
+    MovingEntities: std.ArrayList(MovingEntityData) = .empty,
 };
 pub const ScenePlayerInformation = struct {
     pub const default: @This() = .{};
@@ -48816,126 +48941,12 @@ pub const MapMarkInfoNotify = struct {
     SystemMarkHideInfo: std.ArrayList(SystemMarkHideInfoPb) = .empty,
     CompleteMarkIds: std.ArrayList(i32) = .empty,
 };
-pub const ActivityTrapDefenseData = struct {
-    pub const default: @This() = .{};
-    TrapDefenseTalentNodeIds: std.ArrayList(i32) = .empty,
-    SpecialReward: std.ArrayList(TrapDefenseRewardData) = .empty,
-    Rewards: std.ArrayList(TrapDefenseRewardData) = .empty,
-    Auxiliaries: std.ArrayList(TrapDefenseAuxiliaryData) = .empty,
-    Buildings: std.ArrayList(TrapDefenseBuildingData) = .empty,
-    Challenges: std.ArrayList(TrapDefenseLevelData) = .empty,
-    StartTime: i64 = 0,
-    EndTime: i64 = 0,
-    TrapDefenseBdDataIdUnlocks: std.ArrayList(i32) = .empty,
-    TrapDefenseTalentTreeMaxPoints: i32 = 0,
-    TrapDefenseTalentTreePoints: i32 = 0,
-    TrapDefenseRemainPoints: i32 = 0,
-    TrapDefenseTotalPoints: i32 = 0,
-    TrapDefenseBdBuffIdUnlocks: std.ArrayList(i32) = .empty,
-};
-pub const NewTowerClimbingActivityData = struct {
-    pub const default: @This() = .{};
-    CycleId: i32 = 0,
-    Records: std.ArrayList(NewTowerClimbingLevelRecord) = .empty,
-    ScoreTasks: std.ArrayList(i32) = .empty,
-    ActivityTasks: std.ArrayList(ActivityTask) = .empty,
-    CycleBeginTime: i64 = 0,
-    CycleCloseTime: i64 = 0,
-    SeasonId: i32 = 0,
-    SeasonBeginTime: i64 = 0,
-    SeasonCloseTime: i64 = 0,
-    SeasonTasks: std.ArrayList(ActivityTask) = .empty,
-};
-pub const FloroRanchActivityData = struct {
-    pub const default: @This() = .{};
-    FloroRangeData: ?FloroRangeData = null,
-    UnFinishedSubIns: i32 = 0,
-    SavedStage: i32 = 0,
-    CurWeeklyInsId: i32 = 0,
-};
-pub const RoleMotionListNotify = struct {
-    pub const default: @This() = .{};
-    MotionList: std.ArrayList(RoleMotion) = .empty,
-    RoleConditionInfoMap: std.ArrayList(MapEntry(i32, ConditionInfo)) = .empty,
-};
-pub const LevelPlayVarAsyncResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Vars: std.ArrayList(MapEntry([]const u8, VarDefinePb)) = .empty,
-};
-pub const MovePackageNotify = struct {
-    pub const default: @This() = .{};
-    MovingEntities: std.ArrayList(MovingEntityData) = .empty,
-};
-pub const RoleFavorListResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    FavorList: std.ArrayList(RoleFavor) = .empty,
-};
-pub const SkillRequest = struct {
-    pub const default: @This() = .{};
-    UseSkillInfo: ?UseSkillInformation = null,
-    SkillNodeInfos: ?SkillNodeInfo = null,
-};
-pub const KurotatoActivityData = struct {
-    pub const default: @This() = .{};
-    KurotatoLevelInfos: std.ArrayList(KurotatoLevelInfo) = .empty,
-    KurotatoRoleInfos: std.ArrayList(KurotatoRoleInfo) = .empty,
-    UnlockWeapons: std.ArrayList(i32) = .empty,
-    UnlockItems: std.ArrayList(i32) = .empty,
-    ScoreTasks: std.ArrayList(i32) = .empty,
-    ResTasks: std.ArrayList(ConditionTask) = .empty,
-    LimitTasks: std.ArrayList(ConditionTask) = .empty,
-};
-pub const UseSkillResponse = struct {
-    pub const default: @This() = .{};
-    UseSkillInfo: ?UseSkillInformation = null,
-    SkillSingleId: i32 = 0,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const EndSkillResponse = struct {
-    pub const default: @This() = .{};
-    UseSkillInfo: ?UseSkillInformation = null,
-    SkillSingleId: i32 = 0,
-    ErrorCode: ?ErrorCode = null,
-};
-pub const SceneItemBlackboardParam = struct {
-    pub const default: @This() = .{};
-    Value: ?union(enum) {
-        IntValue: i32,
-        IntValues: ?IntArrayBlackboard,
-        LongValue: i64,
-        LongValues: ?LongArrayBlackboard,
-        BooleanValue: bool,
-        StringValue: []const u8,
-        FloatValue: f32,
-        FloatValues: ?FloatArrayBlackboard,
-        VectorValue: ?Vector,
-        RotatorValue: ?Rotator,
-    } = null,
-    Key: ?SceneItemBBKey = null,
-};
 pub const SkillNotify = struct {
     pub const default: @This() = .{};
     UseSkillInfo: ?UseSkillInformation = null,
     SkillNodeInfos: ?SkillNodeInfo = null,
 };
-pub const ActivityPermanentRogueData = struct {
-    pub const default: @This() = .{};
-    PermanentSeasonData: std.ArrayList(PermanentSeasonData) = .empty,
-    RogueResTaskData: ?RogueResTaskData = null,
-};
-pub const MovePackagePush = struct {
-    pub const default: @This() = .{};
-    MovingEntities: std.ArrayList(MovingEntityData) = .empty,
-    SceneOwnerId: i32 = 0,
-};
-pub const MotorDiyInfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    MotorDiy: ?MotorDiyPb = null,
-};
-pub const EndSkillPush = struct {
+pub const EndSkillRequest = struct {
     pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
     UseSkillInfo: ?UseSkillInformation = null,
@@ -48947,56 +48958,6 @@ pub const SceneItemComponentPb = struct {
     pub const default: @This() = .{};
     PosSender: i32 = 0,
     BlackBoards: std.ArrayList(SceneItemBlackboardParam) = .empty,
-};
-pub const PassiveGaSkillComponentPb = struct {
-    pub const default: @This() = .{};
-    SkillInfoList: std.ArrayList(CharacterSkillComponentPb) = .empty,
-    SkillComponentPb: std.ArrayList(SkillComponentPb) = .empty,
-};
-pub const InfrV2InfoResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    InfrInfo: ?InfrV2Pb = null,
-};
-pub const DeviceInputSetting = struct {
-    pub const default: @This() = .{};
-    Device: ?InputSettingDevice = null,
-    DeviceSubType: []const u8 = "",
-    InputAction: std.ArrayList(InputAction) = .empty,
-    InputAxis: std.ArrayList(InputAxis) = .empty,
-    InputCombinationAction: std.ArrayList(CombinationAction) = .empty,
-    InputCombinationAxis: std.ArrayList(CombinationAxis) = .empty,
-};
-pub const RbBlockPbState = struct {
-    pub const default: @This() = .{};
-    State: ?union(enum) {
-        MovingState: ?RbBlockMovingPbState,
-        IdleState: ?RbBlockIdlePbState,
-    } = null,
-};
-pub const NewPlayerSupportActivityData = struct {
-    pub const default: @This() = .{};
-    TrialRoleInfoList: std.ArrayList(NewTrialRoleInfo) = .empty,
-    TaskDataList: std.ArrayList(ConditionTask) = .empty,
-    CurUseTrialRoleId: i32 = 0,
-    CurUseRoleInfo: ?RoleInfo = null,
-    NewPlayerPoolFinalGachaRoleId: i32 = 0,
-};
-pub const BasicInfoNotify = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Attributes: std.ArrayList(PlayerAttr) = .empty,
-    MingSuGenInfos: std.ArrayList(MingSuGenInfo) = .empty,
-    DragonPoolInfos: std.ArrayList(DragonPoolInfo) = .empty,
-    RoleShowList: std.ArrayList(RoleShowEntry) = .empty,
-    CurCardId: i32 = 0,
-    Birthday: i32 = 0,
-    CardUnlockList: std.ArrayList(CardShowEntry) = .empty,
-    RandomSeed: i32 = 0,
-    DisplayBirthDay: bool = false,
-    LastModifyNameTime: i64 = 0,
-    ModifyNameTime: []const u8 = "",
-    BusinessCompliance: bool = false,
 };
 pub const MotorPb = struct {
     pub const default: @This() = .{};
@@ -49016,7 +48977,24 @@ pub const BossRushActivityData = struct {
     UnlockedBuffIndices: std.ArrayList(i32) = .empty,
     TaskProgressReward: std.ArrayList(ActivityTask) = .empty,
 };
-pub const EndSkillRequest = struct {
+pub const NewPlayerSupportActivityData = struct {
+    pub const default: @This() = .{};
+    TrialRoleInfoList: std.ArrayList(NewTrialRoleInfo) = .empty,
+    TaskDataList: std.ArrayList(ConditionTask) = .empty,
+    CurUseTrialRoleId: i32 = 0,
+    CurUseRoleInfo: ?RoleInfo = null,
+    NewPlayerPoolFinalGachaRoleId: i32 = 0,
+};
+pub const DeviceInputSetting = struct {
+    pub const default: @This() = .{};
+    Device: ?InputSettingDevice = null,
+    DeviceSubType: []const u8 = "",
+    InputAction: std.ArrayList(InputAction) = .empty,
+    InputAxis: std.ArrayList(InputAxis) = .empty,
+    InputCombinationAction: std.ArrayList(CombinationAction) = .empty,
+    InputCombinationAxis: std.ArrayList(CombinationAxis) = .empty,
+};
+pub const EndSkillPush = struct {
     pub const default: @This() = .{};
     CombatCommon: ?CombatCommon = null,
     UseSkillInfo: ?UseSkillInformation = null,
@@ -49057,6 +49035,39 @@ pub const LoginRequest = struct {
     XboxAccountId: []const u8 = "",
     XboxSocialState: i32 = 0,
 };
+pub const PassiveGaSkillComponentPb = struct {
+    pub const default: @This() = .{};
+    SkillInfoList: std.ArrayList(CharacterSkillComponentPb) = .empty,
+    SkillComponentPb: std.ArrayList(SkillComponentPb) = .empty,
+};
+pub const InfrV2InfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    InfrInfo: ?InfrV2Pb = null,
+};
+pub const BasicInfoNotify = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Attributes: std.ArrayList(PlayerAttr) = .empty,
+    MingSuGenInfos: std.ArrayList(MingSuGenInfo) = .empty,
+    DragonPoolInfos: std.ArrayList(DragonPoolInfo) = .empty,
+    RoleShowList: std.ArrayList(RoleShowEntry) = .empty,
+    CurCardId: i32 = 0,
+    Birthday: i32 = 0,
+    CardUnlockList: std.ArrayList(CardShowEntry) = .empty,
+    RandomSeed: i32 = 0,
+    DisplayBirthDay: bool = false,
+    LastModifyNameTime: i64 = 0,
+    ModifyNameTime: []const u8 = "",
+    BusinessCompliance: bool = false,
+};
+pub const RbBlockPbState = struct {
+    pub const default: @This() = .{};
+    State: ?union(enum) {
+        MovingState: ?RbBlockMovingPbState,
+        IdleState: ?RbBlockIdlePbState,
+    } = null,
+};
 pub const ActivityRegressData = struct {
     pub const default: @This() = .{};
     TaskProgressReward: std.ArrayList(ActivityTask) = .empty,
@@ -49084,14 +49095,14 @@ pub const InfrPb = struct {
     RoadInfo: ?InfrRoadPb = null,
     LibraryInfo: ?InfrLibraryPb = null,
 };
-pub const InputSettingData = struct {
-    pub const default: @This() = .{};
-    InputSettings: std.ArrayList(DeviceInputSetting) = .empty,
-};
 pub const RoleFavorListNotify = struct {
     pub const default: @This() = .{};
     FavorList: std.ArrayList(RoleFavor) = .empty,
     RoleConditionInfoMap: std.ArrayList(MapEntry(i32, ConditionInfo)) = .empty,
+};
+pub const InputSettingData = struct {
+    pub const default: @This() = .{};
+    InputSettings: std.ArrayList(DeviceInputSetting) = .empty,
 };
 pub const HonamiStoryPlayerBagInfo = struct {
     pub const default: @This() = .{};
@@ -49099,62 +49110,6 @@ pub const HonamiStoryPlayerBagInfo = struct {
     EquipRack: ?HonamiStoryBackpack = null,
     RoleEquipList: std.ArrayList(HonamiStoryRoleData) = .empty,
     UnlockedWeaponIds: std.ArrayList(i32) = .empty,
-};
-pub const InputSettingResponse = struct {
-    pub const default: @This() = .{};
-    InputSettingData: ?InputSettingData = null,
-};
-pub const ClientStorageInfo = struct {
-    pub const default: @This() = .{};
-    Data: ?union(enum) {
-        MapMapData: ?ClientStorageMapMapData,
-        MapListData: ?ClientStorageMapListData,
-        MapData: ?ClientStorageMapData,
-        ListData: ?ClientStorageListData,
-        SetData: ?ClientStorageSetData,
-        BoolData: ?ClientStorageBoolData,
-        IntData: ?ClientStorageIntData,
-        LongData: ?ClientStorageLongData,
-        StringData: ?ClientStorageStringData,
-    } = null,
-    SystemId: i32 = 0,
-};
-pub const RhythmActivityPb = struct {
-    pub const default: @This() = .{};
-    RhythmShipPlanetPb: std.ArrayList(RhythmShipPlanetPb) = .empty,
-    RhythmRoleId: i32 = 0,
-    RhythmTask: std.ArrayList(RhythmTaskPb) = .empty,
-    UnlockedRole: std.ArrayList(i32) = .empty,
-    RedDot: ?RhythmRedDotPb = null,
-};
-pub const ActivityBetHorsesData = struct {
-    pub const default: @This() = .{};
-    ActivityId: i32 = 0,
-    StartAndEndTime: ?RacingBetsTimeTuple = null,
-    MatchInfo: std.ArrayList(RacingBetsGroupMatchInfo) = .empty,
-    RacingBetsSeasonData: ?RacingBetsSeasonData = null,
-    BetsRewardData: std.ArrayList(RacingBetsRewardData) = .empty,
-    LegMatchTimeList: std.ArrayList(i64) = .empty,
-    CloseSettleMenuLegMatchList: std.ArrayList(i32) = .empty,
-};
-pub const TransitionWithSpineLoadingPb = struct {
-    pub const default: @This() = .{};
-    BackgroundFadeInEffectPb: ?union(enum) {
-        FadeBackgroundFadeInEffectPb: ?FadeBackgroundFadeInEffectPb,
-    } = null,
-    BackgroundFadeOutEffectPb: ?union(enum) {
-        FadeBackgroundFadeOutEffectPb: ?FadeBackgroundFadeOutEffectPb,
-    } = null,
-    Time: ?union(enum) {
-        KeepTime: f32,
-    } = null,
-    CustomShowUiPb: ?union(enum) {
-        ICustomShowUiPb: ?ICustomShowUiPb,
-    } = null,
-    AkEvent: ?union(enum) {
-        StartAkEvent: []const u8,
-    } = null,
-    ICustomScreenTypeBasePb: ?ICustomScreenTypeBasePb = null,
 };
 pub const InputSettingUpdateRequest = struct {
     pub const default: @This() = .{};
@@ -49180,15 +49135,96 @@ pub const BlackboardParam = struct {
     Key: []const u8 = "",
     Type: ?BlackboardParamType = null,
 };
+pub const ClientStorageInfo = struct {
+    pub const default: @This() = .{};
+    Data: ?union(enum) {
+        MapMapData: ?ClientStorageMapMapData,
+        MapListData: ?ClientStorageMapListData,
+        MapData: ?ClientStorageMapData,
+        ListData: ?ClientStorageListData,
+        SetData: ?ClientStorageSetData,
+        BoolData: ?ClientStorageBoolData,
+        IntData: ?ClientStorageIntData,
+        LongData: ?ClientStorageLongData,
+        StringData: ?ClientStorageStringData,
+    } = null,
+    SystemId: i32 = 0,
+};
+pub const InputSettingResponse = struct {
+    pub const default: @This() = .{};
+    InputSettingData: ?InputSettingData = null,
+};
+pub const TransitionWithSpineLoadingPb = struct {
+    pub const default: @This() = .{};
+    BackgroundFadeInEffectPb: ?union(enum) {
+        FadeBackgroundFadeInEffectPb: ?FadeBackgroundFadeInEffectPb,
+    } = null,
+    BackgroundFadeOutEffectPb: ?union(enum) {
+        FadeBackgroundFadeOutEffectPb: ?FadeBackgroundFadeOutEffectPb,
+    } = null,
+    Time: ?union(enum) {
+        KeepTime: f32,
+    } = null,
+    CustomShowUiPb: ?union(enum) {
+        ICustomShowUiPb: ?ICustomShowUiPb,
+    } = null,
+    AkEvent: ?union(enum) {
+        StartAkEvent: []const u8,
+    } = null,
+    ICustomScreenTypeBasePb: ?ICustomScreenTypeBasePb = null,
+};
 pub const MotorInfoResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     Motor: ?MotorPb = null,
 };
+pub const ActivityBetHorsesData = struct {
+    pub const default: @This() = .{};
+    ActivityId: i32 = 0,
+    StartAndEndTime: ?RacingBetsTimeTuple = null,
+    MatchInfo: std.ArrayList(RacingBetsGroupMatchInfo) = .empty,
+    RacingBetsSeasonData: ?RacingBetsSeasonData = null,
+    BetsRewardData: std.ArrayList(RacingBetsRewardData) = .empty,
+    LegMatchTimeList: std.ArrayList(i64) = .empty,
+    CloseSettleMenuLegMatchList: std.ArrayList(i32) = .empty,
+};
+pub const RhythmActivityPb = struct {
+    pub const default: @This() = .{};
+    RhythmShipPlanetPb: std.ArrayList(RhythmShipPlanetPb) = .empty,
+    RhythmRoleId: i32 = 0,
+    RhythmTask: std.ArrayList(RhythmTaskPb) = .empty,
+    UnlockedRole: std.ArrayList(i32) = .empty,
+    RedDot: ?RhythmRedDotPb = null,
+};
+pub const PayShopInfoResponse = struct {
+    pub const default: @This() = .{};
+    Infos: std.ArrayList(PayShopInfo) = .empty,
+    Version: []const u8 = "",
+    ErrorCode: ?ErrorCode = null,
+    PayGiftShopInfo: ?PayGiftShopInfo = null,
+    PayShopTabData: std.ArrayList(ShopTab) = .empty,
+    PayShopRecommendData: std.ArrayList(ShopRecommend) = .empty,
+};
+pub const BlackboardParamComponentPb = struct {
+    pub const default: @This() = .{};
+    BlackboardParams: std.ArrayList(BlackboardParam) = .empty,
+};
+pub const StorageInfoResponse = struct {
+    pub const default: @This() = .{};
+    Infos: std.ArrayList(ClientStorageInfo) = .empty,
+};
+pub const StorageInfoUpdateRequest = struct {
+    pub const default: @This() = .{};
+    Infos: std.ArrayList(ClientStorageInfo) = .empty,
+};
 pub const InfrInfoResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     InfrInfo: ?InfrPb = null,
+};
+pub const StorageInfoNotify = struct {
+    pub const default: @This() = .{};
+    Infos: std.ArrayList(ClientStorageInfo) = .empty,
 };
 pub const StorageInfoUpdateNotify = struct {
     pub const default: @This() = .{};
@@ -49212,30 +49248,9 @@ pub const ActivityComponentPb = struct {
     } = null,
     ConfigId: i32 = 0,
 };
-pub const StorageInfoResponse = struct {
-    pub const default: @This() = .{};
-    Infos: std.ArrayList(ClientStorageInfo) = .empty,
-};
-pub const StorageInfoNotify = struct {
-    pub const default: @This() = .{};
-    Infos: std.ArrayList(ClientStorageInfo) = .empty,
-};
 pub const AiBlackboardsRequest = struct {
     pub const default: @This() = .{};
     AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
-};
-pub const PayShopInfoResponse = struct {
-    pub const default: @This() = .{};
-    Infos: std.ArrayList(PayShopInfo) = .empty,
-    Version: []const u8 = "",
-    ErrorCode: ?ErrorCode = null,
-    PayGiftShopInfo: ?PayGiftShopInfo = null,
-    PayShopTabData: std.ArrayList(ShopTab) = .empty,
-    PayShopRecommendData: std.ArrayList(ShopRecommend) = .empty,
-};
-pub const StorageInfoUpdateRequest = struct {
-    pub const default: @This() = .{};
-    Infos: std.ArrayList(ClientStorageInfo) = .empty,
 };
 pub const ChildQuestNodeProgress = struct {
     pub const default: @This() = .{};
@@ -49250,13 +49265,25 @@ pub const ChildQuestNodeProgress = struct {
         EntityStateList: ?EntityStateProgress,
     } = null,
 };
-pub const BlackboardParamComponentPb = struct {
-    pub const default: @This() = .{};
-    BlackboardParams: std.ArrayList(BlackboardParam) = .empty,
-};
 pub const AiBlackboardsPush = struct {
     pub const default: @This() = .{};
     AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
+};
+pub const RbBlockComponentPb = struct {
+    pub const default: @This() = .{};
+    Type: ?union(enum) {
+        DefaultBlockType: ?RbDefaultBlockPbType,
+        VisionBlockType: ?RbVisionBlockPbType,
+    } = null,
+    CenterPosition: ?Vector = null,
+    SizeX: i32 = 0,
+    SizeY: i32 = 0,
+    SizeZ: i32 = 0,
+    Forward: ?Vector = null,
+    Right: ?Vector = null,
+    State: ?RbBlockPbState = null,
+    GamePlayIncId: i32 = 0,
+    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
 };
 pub const SpringFestivalActivityInfo = struct {
     pub const default: @This() = .{};
@@ -49286,26 +49313,16 @@ pub const PhantomArenaActivityData = struct {
     DeckInfo: std.ArrayList(PhantomArenaDeckInfo) = .empty,
     TimeLimitShopEndTime: i64 = 0,
 };
-pub const RbBlockComponentPb = struct {
-    pub const default: @This() = .{};
-    Type: ?union(enum) {
-        DefaultBlockType: ?RbDefaultBlockPbType,
-        VisionBlockType: ?RbVisionBlockPbType,
-    } = null,
-    CenterPosition: ?Vector = null,
-    SizeX: i32 = 0,
-    SizeY: i32 = 0,
-    SizeZ: i32 = 0,
-    Forward: ?Vector = null,
-    Right: ?Vector = null,
-    State: ?RbBlockPbState = null,
-    GamePlayIncId: i32 = 0,
-    OccupiedCellPositions: std.ArrayList(RbGridPosition) = .empty,
-};
 pub const ChildQuestNodeInfo = struct {
     pub const default: @This() = .{};
     Status: ?ChildQuestNodeStatus = null,
     Progress: ?ChildQuestNodeProgress = null,
+};
+pub const AiInformation = struct {
+    pub const default: @This() = .{};
+    AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
 };
 pub const AdventureManualResponse = struct {
     pub const default: @This() = .{};
@@ -49321,22 +49338,12 @@ pub const AdventureManualResponse = struct {
     PreOpeDungeonDetections: std.ArrayList(PreOpenDetections) = .empty,
     PreOpenSilenceAreaDetections: std.ArrayList(PreOpenDetections) = .empty,
 };
-pub const AiInformation = struct {
-    pub const default: @This() = .{};
-    AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
-    HateList: std.ArrayList(AiHateEntity) = .empty,
-    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
-};
 pub const NodeInfo = struct {
     pub const default: @This() = .{};
     ExtraInfo: ?union(enum) {
         ChildQuestNodeInfo: ?ChildQuestNodeInfo,
     } = null,
     Status: i32 = 0,
-};
-pub const AiInformationPush = struct {
-    pub const default: @This() = .{};
-    AiInfo: ?AiInformation = null,
 };
 pub const AiInformationRequest = struct {
     pub const default: @This() = .{};
@@ -49350,6 +49357,10 @@ pub const PinballActivityData = struct {
     Roles: ?PinballRoles = null,
     ConditionTasks: std.ArrayList(ConditionTask) = .empty,
     GroupFormations: std.ArrayList(PinballGroupFormation) = .empty,
+};
+pub const AiInformationPush = struct {
+    pub const default: @This() = .{};
+    AiInfo: ?AiInformation = null,
 };
 pub const HonamiStoryActivityData = struct {
     pub const default: @This() = .{};
@@ -49432,6 +49443,34 @@ pub const LeaveSceneNotify = struct {
     SceneId: []const u8 = "",
     TransitionOption: ?TransitionOptionPb = null,
 };
+pub const LevelEventNotify = struct {
+    pub const default: @This() = .{};
+    PlayerId: i32 = 0,
+    IncId: i32 = 0,
+    GameCtx: ?GameCtxPb = null,
+    TotalCount: i32 = 0,
+    StartIndex: i32 = 0,
+    EndIndex: i32 = 0,
+    NeedFinishReq: bool = false,
+};
+pub const DynamicInteractCtxPb = struct {
+    pub const default: @This() = .{};
+    EntityCtx: ?EntityCtxPb = null,
+    OptionGuid: []const u8 = "",
+    finalOptionCtx: ?GameCtxPb = null,
+};
+pub const BubbleInfo = struct {
+    pub const default: @This() = .{};
+    ActionGuid: []const u8 = "",
+    GameCtx: ?GameCtxPb = null,
+};
+pub const DynamicInteractInfo = struct {
+    pub const default: @This() = .{};
+    OptionGuid: []const u8 = "",
+    GameCtx: ?GameCtxPb = null,
+    Text: []const u8 = "",
+    DelayRemove: bool = false,
+};
 pub const GameCtxPb = struct {
     pub const default: @This() = .{};
     CtxInfo: ?union(enum) {
@@ -49502,44 +49541,6 @@ pub const GameCtxPb = struct {
     } = null,
     CtxType: ?GameCtxType = null,
 };
-pub const LevelEventNotify = struct {
-    pub const default: @This() = .{};
-    PlayerId: i32 = 0,
-    IncId: i32 = 0,
-    GameCtx: ?GameCtxPb = null,
-    TotalCount: i32 = 0,
-    StartIndex: i32 = 0,
-    EndIndex: i32 = 0,
-    NeedFinishReq: bool = false,
-};
-pub const BubbleInfo = struct {
-    pub const default: @This() = .{};
-    ActionGuid: []const u8 = "",
-    GameCtx: ?GameCtxPb = null,
-};
-pub const DynamicInteractCtxPb = struct {
-    pub const default: @This() = .{};
-    EntityCtx: ?EntityCtxPb = null,
-    OptionGuid: []const u8 = "",
-    finalOptionCtx: ?GameCtxPb = null,
-};
-pub const DynamicInteractInfo = struct {
-    pub const default: @This() = .{};
-    OptionGuid: []const u8 = "",
-    GameCtx: ?GameCtxPb = null,
-    Text: []const u8 = "",
-    DelayRemove: bool = false,
-};
-pub const BubbleComponentPb = struct {
-    pub const default: @This() = .{};
-    BubbleInfos: std.ArrayList(BubbleInfo) = .empty,
-};
-pub const InteractComponentPb = struct {
-    pub const default: @This() = .{};
-    DynamicInteractInfos: std.ArrayList(DynamicInteractInfo) = .empty,
-    RandomInteractIndex: std.ArrayList(i32) = .empty,
-    Interacting: bool = false,
-};
 pub const FlowStartNotify = struct {
     pub const default: @This() = .{};
     FlowIncId: i64 = 0,
@@ -49552,6 +49553,16 @@ pub const FlowStartNotify = struct {
     IsSkip: bool = false,
     HasPlotPos: bool = false,
     PlotCoordinates: ?Vector = null,
+};
+pub const BubbleComponentPb = struct {
+    pub const default: @This() = .{};
+    BubbleInfos: std.ArrayList(BubbleInfo) = .empty,
+};
+pub const InteractComponentPb = struct {
+    pub const default: @This() = .{};
+    DynamicInteractInfos: std.ArrayList(DynamicInteractInfo) = .empty,
+    RandomInteractIndex: std.ArrayList(i32) = .empty,
+    Interacting: bool = false,
 };
 pub const CombatResponseData = struct {
     pub const default: @This() = .{};

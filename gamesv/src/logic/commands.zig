@@ -13,6 +13,7 @@ pub const namespaces: []const type = &.{
     @import("commands/map.zig"),
     @import("commands/flow.zig"),
     @import("commands/js_patches.zig"),
+    @import("commands/progression.zig"),
 };
 
 fn parseArg(comptime T: type, s: []const u8) !T {

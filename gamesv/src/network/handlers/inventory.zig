@@ -1,12 +1,12 @@
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
 const Transaction = @import("../handlers.zig").Transaction;
-const PlayerCosmeticComponent = @import("../../logic/component/player/PlayerCosmeticComponent.zig");
+const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInventoryComponent.zig");
 
 pub fn onNormalItemRequest(
     txn: *Transaction(pb.NormalItemRequest),
     alloc: mem.Alloc,
-    cosmetic_comp: *PlayerCosmeticComponent,
+    inventory_comp: *PlayerInventoryComponent,
 ) !void {
-    txn.respond(.{ .NormalItemList = try cosmetic_comp.info.normalItemList(alloc.arena) });
+    txn.respond(.{ .NormalItemList = try inventory_comp.info.normalItemList(alloc.arena) });
 }

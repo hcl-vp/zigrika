@@ -107,9 +107,22 @@ pub fn createRoleEntity(
     const role_info = role_comp.role_map.getPtr(role).?;
 
     const weapon = weapon_comp.weapon_map.get(role_info.weapon) orelse unreachable;
-    var role_autobuffs = try assets.tables.getRoleAutoBuffs(role, weapon, alloc.gpa);
-    defer role_autobuffs.deinit(alloc.gpa);
+    var role_base_buffs = try assets.tables.getRoleAutoBuffs(role, weapon, alloc.gpa);
+    defer role_base_buffs.deinit(alloc.gpa);
 
+    // resonant chain buffs
+    for (assets.tables.resonant_chain.items) |chain| {
+        if (chain.GroupId != role) continue;
+        if (chain.GroupIndex > role_info.resonant_chain_group_index) continue;
+        for (chain.BuffIds) |buff_id| {
+            try role_base_buffs.append(alloc.gpa, .{
+                .id = buff_id,
+                .is_active = true,
+            });
+        }
+    }
+
+    // ornaments!!!!
     var ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(
         assets,
         role_info.getOrnament(role_info.role_skin_id),
@@ -117,7 +130,7 @@ pub fn createRoleEntity(
     );
     defer ornament_buffs.deinit(alloc.gpa);
     for (ornament_buffs.items) |entry| {
-        try role_autobuffs.append(alloc.gpa, entry);
+        try role_base_buffs.append(alloc.gpa, entry);
     }
 
     const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIds(
@@ -296,7 +309,7 @@ pub fn createRoleEntity(
         }
     }
 
-    const fight_buff_infos = try scene.buildFightBuffInfos(role_autobuffs, entity.net_id, alloc.gpa);
+    const fight_buff_infos = try scene.buildFightBuffInfos(role_base_buffs, entity.net_id, alloc.gpa);
 
     std.mem.sort(pb.FightBuffInformation, fight_buff_infos, {}, struct {
         fn lessThan(_: void, a: pb.FightBuffInformation, b: pb.FightBuffInformation) bool {

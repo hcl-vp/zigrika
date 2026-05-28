@@ -1,2 +1,5 @@
 ItemId: i32,
 ResonId: i32,
+ResonLevelLimit: i32,
+LevelId: i32,
+BreachId: i32,
