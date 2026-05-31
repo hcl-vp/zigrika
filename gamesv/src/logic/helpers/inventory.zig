@@ -4,21 +4,30 @@ const InventoryInfo = @import("../../fs/InventoryInfo.zig");
 
 pub fn addDefaultProgressionItems(info: *InventoryInfo, gpa: std.mem.Allocator, assets: *const Assets) !void {
     for (assets.tables.skill_tree.items) |entry| {
-        var iterator = entry.Consume.map.iterator();
-        while (iterator.next()) |consume| {
-            try ensureNormalItem(info, gpa, consume.key_ptr.*, 9999);
-        }
+        try ensureConsumeItems(info, gpa, entry.Consume);
     }
 
     for (assets.tables.weapon_exp_item.items) |entry| {
-        try ensureNormalItem(info, gpa, entry.Id, 9999);
+        try ensureNormalItem(info, gpa, entry.Id, 777);
     }
 
     for (assets.tables.weapon_breach.items) |entry| {
-        var iterator = entry.Consume.map.iterator();
-        while (iterator.next()) |consume| {
-            try ensureNormalItem(info, gpa, consume.key_ptr.*, 9999);
-        }
+        try ensureConsumeItems(info, gpa, entry.Consume);
+    }
+
+    for (assets.tables.role_breach.items) |entry| {
+        try ensureConsumeItems(info, gpa, entry.BreachConsume);
+    }
+
+    for (assets.tables.skill_level.items) |entry| {
+        try ensureConsumeItems(info, gpa, entry.Consume);
+    }
+}
+
+fn ensureConsumeItems(info: *InventoryInfo, gpa: std.mem.Allocator, consume_map: anytype) !void {
+    var iterator = consume_map.map.iterator();
+    while (iterator.next()) |consume| {
+        try ensureNormalItem(info, gpa, consume.key_ptr.*, 777);
     }
 }
 

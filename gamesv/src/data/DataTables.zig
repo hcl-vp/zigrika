@@ -27,6 +27,8 @@ pub const WeaponReson = @import("tables/WeaponReson.zig");
 pub const WeaponExpItem = @import("tables/WeaponExpItem.zig");
 pub const WeaponLevel = @import("tables/WeaponLevel.zig");
 pub const WeaponBreach = @import("tables/WeaponBreach.zig");
+pub const RoleBreach = @import("tables/RoleBreach.zig");
+pub const SkillLevel = @import("tables/SkillLevel.zig");
 pub const LevelEntityConfig = @import("tables/LevelEntityConfig.zig");
 pub const Damage = @import("tables/Damage.zig");
 pub const Area = @import("tables/Area.zig");
@@ -72,6 +74,8 @@ weapon_reson: Table(WeaponReson, "Id"),
 weapon_exp_item: Table(WeaponExpItem, "Id"),
 weapon_level: Table(WeaponLevel, "Id"),
 weapon_breach: Table(WeaponBreach, "Id"),
+role_breach: Table(RoleBreach, "Id"),
+skill_level: Table(SkillLevel, "Id"),
 level_entity_config: Table(LevelEntityConfig, "EntityId"),
 damage: Table(Damage, "Id"),
 area: Table(Area, "AreaId"),
