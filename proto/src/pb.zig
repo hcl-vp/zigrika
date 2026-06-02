@@ -17331,20 +17331,12 @@ pub const hYn = struct {
     ela: []const u8 = "",
     DOLLARzd: bool = false,
 };
-pub const lYn = struct {
-    pub const default: @This() = .{};
-    H8n: []const u8 = "",
-};
 pub const _Yn = struct {
     pub const default: @This() = .{};
     H8n: []const u8 = "",
     Q4n: i32 = 0,
     Zha: i64 = 0,
     ela: []const u8 = "",
-};
-pub const uYn = struct {
-    pub const default: @This() = .{};
-    zVn: []const u8 = "",
 };
 pub const cYn = struct {
     pub const default: @This() = .{};
@@ -29036,19 +29028,19 @@ pub const Mss = struct {
     Q9n: i32 = 0,
     Oxs: i32 = 0,
 };
-pub const Sss = struct {
+pub const ReconnectRequest = struct {
     pub const default: @This() = .{};
-    W5n: i32 = 0,
-    pHn: i32 = 0,
-    p7n: []const u8 = "",
-    vHn: []const u8 = "",
+    PlayerId: i32 = 0,
+    LastSvrSeqNo: i32 = 0,
+    ReconnectToken: []const u8 = "",
+    ReconnectTraceId: []const u8 = "",
 };
-pub const Ess = struct {
+pub const ReconnectResponse = struct {
     pub const default: @This() = .{};
-    Q4n: i32 = 0,
-    Nxs: i32 = 0,
-    Rws: i64 = 0,
-    Fxs: bool = false,
+    ErrorCode: ?ErrorCode = null,
+    LastRecvSeqNo: i32 = 0,
+    Timestamp: i64 = 0,
+    IsPermittedSilentLogin: bool = false,
 };
 pub const yss = struct {
     pub const default: @This() = .{};
@@ -31174,10 +31166,6 @@ pub const KoC = struct {
     tnc: i32 = 0,
     cps: i64 = 0,
     dps: i64 = 0,
-};
-pub const Zoc = struct {
-    pub const default: @This() = .{};
-    tnc: i32 = 0,
 };
 pub const enc = struct {
     pub const default: @This() = .{};
@@ -36110,6 +36098,74 @@ pub const CardShowEntry = struct {
     pub const default: @This() = .{};
     CardId: i32 = 0,
     IsRead: bool = false,
+};
+pub const ChangeCardRequest = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+};
+pub const ChangeCardResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ReadCardRequest = struct {
+    pub const default: @This() = .{};
+    CardId: i32 = 0,
+};
+pub const ReadCardResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ChangePlayerTitleRequest = struct {
+    pub const default: @This() = .{};
+    PlayerTitleId: i32 = 0,
+};
+pub const ChangePlayerTitleResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const DressedPlayerTitleNotify = struct {
+    pub const default: @This() = .{};
+    PlayerTitleId: i32 = 0,
+    StarLevel: i32 = 0,
+};
+pub const ModifyNameRequest = struct {
+    pub const default: @This() = .{};
+    Name: []const u8 = "",
+};
+pub const ModifyNameResponse = struct {
+    pub const default: @This() = .{};
+    Name: []const u8 = "",
+    ErrorCode: ?ErrorCode = null,
+    LastModifyNameTime: i64 = 0,
+    ModifyNameTime: []const u8 = "",
+};
+pub const ModifyNameNotify = struct {
+    pub const default: @This() = .{};
+    Name: []const u8 = "",
+    LastModifyNameTime: i64 = 0,
+};
+pub const ChangeHeadPhotoRequest = struct {
+    pub const default: @This() = .{};
+    HeadPhotoId: i32 = 0,
+};
+pub const ChangeHeadPhotoResponse = struct {
+    pub const default: @This() = .{};
+    HeadPhotoId: i32 = 0,
+    ErrorCode: ?ErrorCode = null,
+};
+pub const ModifySignatureRequest = struct {
+    pub const default: @This() = .{};
+    Signature: []const u8 = "",
+};
+pub const ModifySignatureResponse = struct {
+    pub const default: @This() = .{};
+    Signature: []const u8 = "",
+    ErrorCode: ?ErrorCode = null,
+};
+pub const BirthdayInfoNotify = struct {
+    pub const default: @This() = .{};
+    IsSet: bool = false,
+    ReceivedRewardYear: i32 = 0,
 };
 pub const LineCrossChallengeData = struct {
     pub const default: @This() = .{};

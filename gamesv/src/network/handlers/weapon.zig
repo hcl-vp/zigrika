@@ -11,8 +11,6 @@ const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInv
 const FightBuffComponent = @import("../../logic/component/entity/FightBuffComponent.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const Events = @import("../../logic/events.zig");
-const InventoryInfo = @import("../../fs/InventoryInfo.zig");
-const comp_util = @import("../../logic/component/comp_util.zig");
 
 fn appendEquipTakeOnData(
     list: *std.ArrayList(pb.RoleLoadEquipData),
@@ -61,39 +59,6 @@ fn weaponLevelLimit(assets: *const Assets, breach_id: i32, breach: i32) i32 {
 fn weaponExpItemValue(assets: *const Assets, item_id: i32) i32 {
     const item = assets.tables.weapon_exp_item.getDataById(item_id) orelse return 0;
     return item.BasicExp;
-}
-
-fn saveInventoryInfo(
-    alloc: mem.Alloc,
-    fs: *FileSystem,
-    inventory_comp: *PlayerInventoryComponent,
-) !void {
-    const path = try std.fmt.allocPrint(alloc.arena, "player/{}/{s}", .{ inventory_comp.player_id, InventoryInfo.data_path });
-    try comp_util.saveStruct(fs, inventory_comp.info, path, alloc.arena);
-}
-
-fn consumeWeaponBreachItems(
-    info: *InventoryInfo,
-    alloc: mem.Alloc,
-    breach: anytype,
-) !?std.ArrayList(pb.NormalItem) {
-    var iterator = breach.Consume.map.iterator();
-    while (iterator.next()) |entry| {
-        if (info.normalItemCount(entry.key_ptr.*) < entry.value_ptr.*) return null;
-    }
-
-    var updated_items: std.ArrayList(pb.NormalItem) = .empty;
-    iterator = breach.Consume.map.iterator();
-    while (iterator.next()) |entry| {
-        _ = try InventoryInfo.consumeNormalItem(info, alloc.gpa, entry.key_ptr.*, entry.value_ptr.*);
-        try updated_items.append(alloc.arena, .{
-            .Id = entry.key_ptr.*,
-            .Count = info.normalItemCount(entry.key_ptr.*),
-            .ExpireTime = 0,
-        });
-    }
-
-    return updated_items;
 }
 
 pub fn onWeaponLevelUpRequest(
@@ -169,45 +134,20 @@ pub fn onWeaponBreachRequest(
     txn: *Transaction(pb.WeaponBreachRequest),
     events: *EventQueue,
     alloc: mem.Alloc,
-    fs: *FileSystem,
     query: Scene.Query(&.{
         Scene.Entity,
         *Scene.Entity.ConfigComponent,
         *Scene.Entity.EquipComponent,
     }),
-    assets: *const Assets,
     weapon_comp: *PlayerWeaponComponent,
-    inventory_comp: *PlayerInventoryComponent,
 ) !void {
     const request = txn.message;
     const weapon = weapon_comp.weapon_map.getPtr(request.IncId) orelse {
         txn.respond(.{ .ErrorCode = .ErrWeaponConsumeItemNotFound });
         return;
     };
-    const config = assets.tables.weapon_conf.getDataById(weapon.id) orelse {
-        txn.respond(.{ .ErrorCode = .ErrWeaponResonConfigNotFound });
-        return;
-    };
-
-    const breach = for (assets.tables.weapon_breach.items) |entry| {
-        if (entry.BreachId == config.BreachId and entry.Level == weapon.breach) break entry;
-    } else {
-        txn.respond(.{ .ErrorCode = .ErrWeaponLevelLimit, .IncId = request.IncId, .WeaponBreach = weapon.breach });
-        return;
-    };
-
-    const updated_items = try consumeWeaponBreachItems(&inventory_comp.info, alloc, breach) orelse {
-        txn.respond(.{ .ErrorCode = .ErrWeaponConsumeItemNotFound, .IncId = request.IncId, .WeaponBreach = weapon.breach });
-        return;
-    };
-
     weapon.breach += 1;
     try events.enqueue(.weapon_info_modified, .{ .incr_id = request.IncId });
-    try saveInventoryInfo(alloc, fs, inventory_comp);
-    try txn.conn.push(pb.NormalItemUpdateNotify{
-        .NormalItemList = updated_items,
-        .NoTips = true,
-    }, alloc.arena);
 
     var it = query.iterator;
     while (it.next()) |item| {

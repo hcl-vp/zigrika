@@ -52,6 +52,12 @@ attributes: struct {
         return list;
     }
 },
+role_show_list: []i32 = &.{},
+cur_card_id: i32 = 0,
+cur_player_title_id: i32 = 0,
+last_modify_name_time: i64 = 0,
+birthday: i32 = 20260407,
+display_birthday: bool = true,
 
 pub fn deinit(info: BasicInfo, gpa: Allocator) void {
     std.zon.parse.free(gpa, info);

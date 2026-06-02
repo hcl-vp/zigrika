@@ -7,7 +7,7 @@ const comp_util = @import("../../logic/component/comp_util.zig");
 const GuideInfo = @import("../../fs/GuideInfo.zig");
 const PlayerGuideComponent = @import("../../logic/component/player/PlayerGuideComponent.zig");
 
-const finished_by_default = [_]i32{10116};
+const finished_by_default = [_]i32{ 10116, 10193 };
 
 pub fn onGuideInfoRequest(
     txn: *Transaction(pb.GuideInfoRequest),

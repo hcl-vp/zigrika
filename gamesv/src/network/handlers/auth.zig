@@ -137,6 +137,38 @@ pub fn handleLoginRequest(ac: AuthContext(pb.LoginRequest), arena: Allocator, fs
     }, arena);
 }
 
+pub fn handleReconnectRequest(ac: AuthContext(pb.ReconnectRequest), arena: Allocator, fs: *FileSystem) !void {
+    const log = std.log.scoped(.reconnect);
+    log.debug("request: {}", .{ac.request});
+
+    if (ac.request.PlayerId <= 0) {
+        try ac.respond(pb.ReconnectResponse{
+            .ErrorCode = .ErrReconnectGWGetGatePlayerFailed,
+            .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
+            .IsPermittedSilentLogin = true,
+        }, arena);
+        return;
+    }
+
+    const basic_info_path = try std.fmt.allocPrint(arena, "player/{}/basic_info", .{ac.request.PlayerId});
+    if (try fs.readFile(arena, basic_info_path) == null) {
+        try ac.respond(pb.ReconnectResponse{
+            .ErrorCode = .ErrReconnectGWGetGatePlayerFailed,
+            .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
+            .IsPermittedSilentLogin = true,
+        }, arena);
+        return;
+    }
+
+    ac.player_id.* = ac.request.PlayerId;
+    ac.enter.* = true;
+    try ac.respond(pb.ReconnectResponse{
+        .ErrorCode = .Success,
+        .LastRecvSeqNo = ac.request.LastSvrSeqNo,
+        .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
+    }, arena);
+}
+
 pub fn handleEnterGameRequest(ac: AuthContext(pb.EnterGameRequest), arena: Allocator, fs: *FileSystem) !void {
     const log = std.log.scoped(.enter_game);
     log.debug("request: {}", .{ac.request});

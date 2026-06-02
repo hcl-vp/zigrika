@@ -10713,20 +10713,12 @@ pub const hYn = struct {
     pub const ela_field_number: u32 = 1;
     pub const DOLLARzd_field_number: u32 = 4;
 };
-pub const lYn = struct {
-    pub const msg_id: u16 = 21061;
-    pub const H8n_field_number: u32 = 13;
-};
 pub const _Yn = struct {
     pub const msg_id: u16 = 27595;
     pub const H8n_field_number: u32 = 10;
     pub const Q4n_field_number: u32 = 3;
     pub const Zha_field_number: u32 = 9;
     pub const ela_field_number: u32 = 4;
-};
-pub const uYn = struct {
-    pub const msg_id: u16 = 23755;
-    pub const zVn_field_number: u32 = 13;
 };
 pub const cYn = struct {
     pub const msg_id: u16 = 18983;
@@ -10827,6 +10819,58 @@ pub const AYn = struct {
 pub const PYn = struct {
     pub const msg_id: u16 = 25756;
     pub const Q4n_field_number: u32 = 13;
+};
+pub const ChangePlayerTitleRequest = struct {
+    pub const msg_id: u16 = 21252;
+    pub const PlayerTitleId_field_number: u32 = 12;
+};
+pub const ChangePlayerTitleResponse = struct {
+    pub const msg_id: u16 = 23975;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const DressedPlayerTitleNotify = struct {
+    pub const msg_id: u16 = 16595;
+    pub const PlayerTitleId_field_number: u32 = 5;
+    pub const StarLevel_field_number: u32 = 13;
+};
+pub const ModifyNameRequest = struct {
+    pub const msg_id: u16 = 21061;
+    pub const Name_field_number: u32 = 13;
+};
+pub const ModifyNameResponse = struct {
+    pub const msg_id: u16 = 27595;
+    pub const Name_field_number: u32 = 10;
+    pub const ErrorCode_field_number: u32 = 3;
+    pub const LastModifyNameTime_field_number: u32 = 9;
+    pub const ModifyNameTime_field_number: u32 = 4;
+};
+pub const ModifyNameNotify = struct {
+    pub const msg_id: u16 = 28030;
+    pub const Name_field_number: u32 = 14;
+    pub const LastModifyNameTime_field_number: u32 = 4;
+};
+pub const ChangeHeadPhotoRequest = struct {
+    pub const msg_id: u16 = 20320;
+    pub const HeadPhotoId_field_number: u32 = 6;
+};
+pub const ChangeHeadPhotoResponse = struct {
+    pub const msg_id: u16 = 22357;
+    pub const HeadPhotoId_field_number: u32 = 1;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const ModifySignatureRequest = struct {
+    pub const msg_id: u16 = 23755;
+    pub const Signature_field_number: u32 = 13;
+};
+pub const ModifySignatureResponse = struct {
+    pub const msg_id: u16 = 18983;
+    pub const Signature_field_number: u32 = 4;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const BirthdayInfoNotify = struct {
+    pub const msg_id: u16 = 29264;
+    pub const IsSet_field_number: u32 = 15;
+    pub const ReceivedRewardYear_field_number: u32 = 13;
 };
 pub const UYn = struct {
     pub const msg_id: u16 = 24619;
@@ -20884,19 +20928,19 @@ pub const Mss = struct {
     pub const Q9n_field_number: u32 = 3;
     pub const Oxs_field_number: u32 = 4;
 };
-pub const Sss = struct {
+pub const ReconnectRequest = struct {
     pub const msg_id: u16 = 107;
-    pub const W5n_field_number: u32 = 1;
-    pub const pHn_field_number: u32 = 2;
-    pub const p7n_field_number: u32 = 3;
-    pub const vHn_field_number: u32 = 4;
+    pub const PlayerId_field_number: u32 = 1;
+    pub const LastSvrSeqNo_field_number: u32 = 2;
+    pub const ReconnectToken_field_number: u32 = 3;
+    pub const ReconnectTraceId_field_number: u32 = 4;
 };
-pub const Ess = struct {
+pub const ReconnectResponse = struct {
     pub const msg_id: u16 = 108;
-    pub const Q4n_field_number: u32 = 1;
-    pub const Nxs_field_number: u32 = 2;
-    pub const Rws_field_number: u32 = 3;
-    pub const Fxs_field_number: u32 = 4;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const LastRecvSeqNo_field_number: u32 = 2;
+    pub const Timestamp_field_number: u32 = 3;
+    pub const IsPermittedSilentLogin_field_number: u32 = 4;
 };
 pub const yss = struct {
     pub const msg_id: u16 = 109;
@@ -22701,10 +22745,6 @@ pub const KoC = struct {
     pub const tnc_field_number: u32 = 1;
     pub const cps_field_number: u32 = 2;
     pub const dps_field_number: u32 = 3;
-};
-pub const Zoc = struct {
-    pub const msg_id: u16 = 21252;
-    pub const tnc_field_number: u32 = 12;
 };
 pub const enc = struct {
     pub const msg_id: u16 = 23975;
@@ -26777,6 +26817,22 @@ pub const PhantomSkinUnlockNotify = struct {
 pub const CardShowEntry = struct {
     pub const CardId_field_number: u32 = 1;
     pub const IsRead_field_number: u32 = 2;
+};
+pub const ChangeCardRequest = struct {
+    pub const msg_id: u16 = 25938;
+    pub const CardId_field_number: u32 = 15;
+};
+pub const ChangeCardResponse = struct {
+    pub const msg_id: u16 = 23260;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const ReadCardRequest = struct {
+    pub const msg_id: u16 = 19369;
+    pub const CardId_field_number: u32 = 5;
+};
+pub const ReadCardResponse = struct {
+    pub const msg_id: u16 = 25756;
+    pub const ErrorCode_field_number: u32 = 13;
 };
 pub const LineCrossChallengeData = struct {
     pub const ChallengeId_field_number: u32 = 1;

@@ -52,6 +52,9 @@ pub const FavorGoods = @import("tables/FavorGoods.zig");
 pub const Motion = @import("tables/Motion.zig");
 pub const CharacterInitInfo = @import("tables/CharacterInitInfo.zig");
 pub const SkillBranchBuff = @import("tables/SkillBranchBuff.zig");
+pub const BackgroundCard = @import("tables/BackgroundCard.zig");
+pub const PlayerHeadRe = @import("tables/PlayerHeadRe.zig");
+pub const PlayerTitle = @import("tables/PlayerTitle.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -99,6 +102,9 @@ favor_goods: Table(FavorGoods, "Id"),
 motion: Table(Motion, "Id"),
 char_init_info: Table(CharacterInitInfo, "RoleId"),
 skill_branch_buff: Table(SkillBranchBuff, "BranchId"),
+background_card: Table(BackgroundCard, "Id"),
+player_head_re: Table(PlayerHeadRe, "Id"),
+player_title: Table(PlayerTitle, "Id"),
 
 fn loadTableItems(
     comptime T: type,

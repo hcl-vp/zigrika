@@ -13,6 +13,7 @@ const log = std.log.scoped(.net_handler);
 
 const net_namespaces: []const type = &.{
     @import("handlers/player.zig"),
+    @import("handlers/profile.zig"),
     @import("handlers/scene.zig"),
     @import("handlers/formation.zig"),
     @import("handlers/weapon.zig"),
