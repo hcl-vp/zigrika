@@ -2,24 +2,8 @@
   "default": {
     "CdnUrl": [
       {
-        "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
-        "weight": "396"
-      },
-      {
-        "url": "https://cdn-qcloud-hw-mc.aki-game.net/prod/client/",
-        "weight": "150"
-      },
-      {
-        "url": "https://cdn-akamai-hw-mc.aki-game.net/prod/client/",
-        "weight": "3768"
-      },
-      {
-        "url": "https://cdn-huoshan-hw-mc.aki-game.net/prod/client/",
+        "url": "http://127.0.0.1:5500/",
         "weight": "0"
-      },
-      {
-        "url": "https://cdn-aliyun-hw-mc.aki-game.net/prod/client/",
-        "weight": "396"
       }
     ],
     "SecondaryUrl": [],
@@ -62,7 +46,7 @@
     "LoginServers": [
       {
         "id": "76402e5b20be2c39f095a152090afddc",
-        "ip": "http://127.0.0.1:5500",
+        "ip": "http://127.0.0.1:10001",
         "name": "Zigrika"
       }
     ],
