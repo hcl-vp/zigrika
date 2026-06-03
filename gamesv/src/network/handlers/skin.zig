@@ -153,10 +153,6 @@ fn pushEntityWeaponSkinChange(
             .WeaponSkinComponentPb = .{ .WeaponSkinId = skin_id },
         }, alloc.arena);
 
-        const storage = scene.entities.get(i);
-        var entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
-        try entity_add_notify.EntityPbs.append(alloc.arena, try storage.entityToProto(entity.net_id, alloc));
-        try txn.conn.push(entity_add_notify, alloc.arena);
         return;
     }
 }
@@ -428,6 +424,7 @@ pub fn onSendEquipSkinRequest(
         .RoleId = request.RoleId,
         .SkinId = 0,
     }, alloc.arena);
+    txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn onRoleSkinChangeRequest(
