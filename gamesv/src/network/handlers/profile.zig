@@ -95,9 +95,9 @@ pub fn onChangePlayerTitleRequest(
     if (txn.message.PlayerTitleId == 0 or assets.tables.player_title.getDataById(txn.message.PlayerTitleId) != null) {
         basic_comp.info.cur_player_title_id = txn.message.PlayerTitleId;
         try saveBasicInfo(fs, alloc.arena, basic_comp);
-        try txn.conn.push(pb.DressedPlayerTitleNotify{
+        try txn.conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = txn.message.PlayerTitleId,
-            .StarLevel = if (txn.message.PlayerTitleId == 0) 0 else 1,
+            .PlayerTitleExtraParam = if (txn.message.PlayerTitleId == 0) 0 else 1,
         }, alloc.arena);
     }
 
@@ -119,7 +119,7 @@ pub fn onModifyNameRequest(
     basic_comp.info.last_modify_name_time = last_modify_name_time;
     try saveBasicInfo(fs, alloc.arena, basic_comp);
 
-    try txn.conn.push(pb.ModifyNameNotify{
+    try txn.conn.push(pb.PlayerNameUpdateNotify{
         .Name = basic_comp.info.attributes.name,
         .LastModifyNameTime = last_modify_name_time,
     }, alloc.arena);

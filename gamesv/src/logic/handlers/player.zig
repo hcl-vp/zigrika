@@ -30,11 +30,10 @@ pub fn pushData(
     notify.ModifyNameTime = "";
 
     try conn.push(notify, alloc.arena);
-    try conn.push(pb.BirthdayInfoNotify{ .IsSet = true }, alloc.arena);
     if (basic_comp.info.cur_player_title_id > 0) {
-        try conn.push(pb.DressedPlayerTitleNotify{
+        try conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = basic_comp.info.cur_player_title_id,
-            .StarLevel = 1,
+            .PlayerTitleExtraParam = 1,
         }, alloc.arena);
     }
 }

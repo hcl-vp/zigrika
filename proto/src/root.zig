@@ -27,7 +27,7 @@ const WireType = enum(u32) {
     }
 };
 
-pub fn encodeMessage(w: *Io.Writer, message: anytype, comptime desc_namespace: type) !void {
+pub fn encodeMessage(w: *Io.Writer, message: anytype, comptime desc_namespace: type) anyerror!void {
     const Message = @TypeOf(message);
     const message_name = @typeName(Message)[3..];
     const message_desc = blk: {
@@ -87,12 +87,14 @@ fn shouldEncodeField(value: anytype) bool {
     }
 }
 
-fn encodeField(w: *Io.Writer, value: anytype, comptime number: u32, comptime desc_namespace: type) !void {
+fn encodeField(w: *Io.Writer, value: anytype, comptime number: u32, comptime desc_namespace: type) anyerror!void {
     const Value = @TypeOf(value);
     if (Repeated(Value)) |_| {
         for (value.items) |item| try encodeField(w, item, number, desc_namespace);
     } else if (Optional(Value)) |_| {
         if (value) |item| try encodeField(w, item, number, desc_namespace);
+    } else if (comptime @typeInfo(Value) == .pointer and Value != []const u8) {
+        try encodeField(w, value.*, number, desc_namespace);
     } else {
         try writeVarInt(w, comptime wireTag(number, .of(Value)));
         if (Value == []const u8) try writeBytes(w, value) else switch (@typeInfo(Value)) {
