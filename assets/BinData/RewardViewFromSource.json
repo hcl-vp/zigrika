@@ -1090,5 +1090,11 @@
     "RewardSourceId": 53901,
     "RewardViewId": 1009,
     "RewardNotifyNotTrick": false
+  },
+  {
+    "Id": 188,
+    "RewardSourceId": 14001,
+    "RewardViewId": 1009,
+    "RewardNotifyNotTrick": false
   }
 ]

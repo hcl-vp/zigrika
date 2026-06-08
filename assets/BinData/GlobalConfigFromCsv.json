@@ -978,5 +978,47 @@
     "Desc": "二转三自动完成延时",
     "Type": "Float",
     "Value": "1.5"
+  },
+  {
+    "Id": 700016,
+    "Name": "Plot.EntitySequenceScreenEffectPath",
+    "Desc": "实机演出跳过屏幕特效",
+    "Type": "String",
+    "Value": "/Game/Aki/Effect/DataAsset/ScreenDA/SD_Scene/3_4/DA_Fx_3_4_Screen_KuaiJing.DA_Fx_3_4_Screen_KuaiJing"
+  },
+  {
+    "Id": 700017,
+    "Name": "SceneFocus.Test",
+    "Desc": "场景检视测试用例",
+    "Type": "Int",
+    "Value": "0"
+  },
+  {
+    "Id": 700018,
+    "Name": "Plot.AutoSelectOptionCharPerSec",
+    "Desc": "自动选项停留时间(字/秒)",
+    "Type": "Int",
+    "Value": "3"
+  },
+  {
+    "Id": 700019,
+    "Name": "Plot.EntitySequenceSkipAudio",
+    "Desc": "实机演出跳过音效",
+    "Type": "String",
+    "Value": "play_ui_mainline_kuaijing"
+  },
+  {
+    "Id": 700020,
+    "Name": "Plot.EntitySequenceSkipRate",
+    "Desc": "实机演出跳过加速倍速",
+    "Type": "Int",
+    "Value": "30"
+  },
+  {
+    "Id": 700021,
+    "Name": "Plot.EntitySequencePostEffectPath",
+    "Desc": "实机演出跳过后处理特效",
+    "Type": "String",
+    "Value": "/Game/Aki/Effect/DataAsset/PostProcess/Scene/3_4/LiBeiKaHuiYi/DA_FX_Post_KuaiJing.DA_FX_Post_KuaiJing"
   }
 ]

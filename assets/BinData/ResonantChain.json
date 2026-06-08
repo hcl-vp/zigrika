@@ -6940,9 +6940,10 @@
     "AttributesDescriptionParams": [
       "1",
       "3",
-      "30%",
+      "200%",
       "100%",
-      "150"
+      "150",
+      "600%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LuoselaM6_UI.T_IconDevice_LuoselaM6_UI"
   },
@@ -6970,8 +6971,7 @@
     "AttributesDescriptionParams": [
       "20",
       "14",
-      "6",
-      "10"
+      "6"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LucyM3_UI.T_IconDevice_LucyM3_UI"
   },
@@ -6994,9 +6994,9 @@
     "AttributesDescriptionParams": [
       "32",
       "1",
-      "300",
-      "240",
-      "350"
+      "450",
+      "270",
+      "560"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LucyM1_UI.T_IconDevice_LucyM1_UI"
   },
@@ -7088,14 +7088,15 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1511900006,
-      1511960002
+      1511960002,
+      1511960003
     ],
     "AddProp": [],
     "ActivateConsume": {
       "10001511": 1
     },
     "AttributesDescriptionParams": [
-      "60",
+      "40",
       "60",
       "1.5"
     ],
@@ -7171,6 +7172,7 @@
     },
     "AttributesDescriptionParams": [
       "60%",
+      "30%",
       "120"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_LibeikaM3_UI.T_IconDevice_LibeikaM3_UI"
@@ -7232,7 +7234,10 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1308910006,
-      1308906001
+      1308906001,
+      1308403004,
+      1308403005,
+      1308906003
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7242,6 +7247,9 @@
       "40%",
       "900%",
       "20",
+      "2077",
+      "5",
+      "10",
       "4",
       "120",
       "4"

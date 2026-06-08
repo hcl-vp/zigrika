@@ -6212,5 +6212,62 @@
       1814060005
     ],
     "ChooseRole": false
+  },
+  {
+    "Id": 1055,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      100658
+    ],
+    "AutoRole": [
+      100658
+    ],
+    "ChooseRole": false
+  },
+  {
+    "Id": 1056,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      100659
+    ],
+    "AutoRole": [
+      100659
+    ],
+    "ChooseRole": false
+  },
+  {
+    "Id": 1057,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      100657
+    ],
+    "AutoRole": [
+      100657
+    ],
+    "ChooseRole": false
   }
 ]

@@ -81,12 +81,12 @@
     ],
     "RecommendQuestLabel": "Farm_RecommendQuestTip",
     "Spine": [
-      "/Game/Aki/UI/UIResources/Common/Spine/RogueNuzhu/Avatar_HeroineR/Avatar_HeroineR.Avatar_HeroineR-atlas",
-      "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroR/Avatar_HeroR.Avatar_HeroR-atlas"
+      "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity34/WeeklyPastureGuide/WeeklyPastureGuide_Female/WeeklyPastureGuide_Female.WeeklyPastureGuide_Female-atlas",
+      "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity34/WeeklyPastureGuide/WeeklyPastureGuide_Male/WeeklyPastureGuide_Male.WeeklyPastureGuide_Male-atlas"
     ],
     "SpineSkeletonData": [
-      "/Game/Aki/UI/UIResources/Common/Spine/RogueNuzhu/Avatar_HeroineR/Avatar_HeroineR.Avatar_HeroineR-data",
-      "/Game/Aki/UI/UIResources/Common/Spine/RogueNanzhu/Avatar_HeroR/Avatar_HeroR.Avatar_HeroR-data"
+      "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity34/WeeklyPastureGuide/WeeklyPastureGuide_Female/WeeklyPastureGuide_Female.WeeklyPastureGuide_Female-data",
+      "/Game/Aki/UI/UIResources/UiActivity/Spine/Activity34/WeeklyPastureGuide/WeeklyPastureGuide_Male/WeeklyPastureGuide_Male.WeeklyPastureGuide_Male-data"
     ]
   }
 ]

@@ -1055,7 +1055,9 @@
     "Param2": {
       "ReduceMixNum": "Int"
     },
-    "Param3": {},
+    "Param3": {
+      "AnimalId": "String"
+    },
     "Param4": {},
     "Param5": {},
     "Param6": {},
@@ -1066,8 +1068,12 @@
     "Param1": {
       "Rate": "Int"
     },
-    "Param2": {},
-    "Param3": {},
+    "Param2": {
+      "C": "Int"
+    },
+    "Param3": {
+      "R": "Int"
+    },
     "Param4": {},
     "Param5": {},
     "Param6": {},
@@ -1203,6 +1209,32 @@
     "Id": 92,
     "Param1": {},
     "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 93,
+    "Param1": {
+      "X": "Int"
+    },
+    "Param2": {},
+    "Param3": {},
+    "Param4": {},
+    "Param5": {},
+    "Param6": {},
+    "Param7": {}
+  },
+  {
+    "Id": 94,
+    "Param1": {
+      "C": "Int"
+    },
+    "Param2": {
+      "R": "Int"
+    },
     "Param3": {},
     "Param4": {},
     "Param5": {},

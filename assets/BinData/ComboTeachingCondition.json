@@ -21365,7 +21365,7 @@
     "CompleteDelay": 0,
     "CompleteParam": [
       1109203,
-      2
+      1
     ],
     "FailedCondition": [
       0
@@ -21479,22 +21479,6 @@
     "FailedParam": [
       "1109103"
     ],
-    "RemoveBuff": [],
-    "RemoveBullet": [],
-    "SummonPos": 0,
-    "SummonRemoveBuff": [],
-    "SummonAddBuff": []
-  },
-  {
-    "Id": 11090112,
-    "CompleteCondition": 6,
-    "CompleteDelay": 0,
-    "CompleteParam": [
-      0
-    ],
-    "FailedCondition": [],
-    "FailDelay": 0,
-    "FailedParam": [],
     "RemoveBuff": [],
     "RemoveBullet": [],
     "SummonPos": 0,
@@ -21630,7 +21614,8 @@
     "CompleteDelay": 0,
     "CompleteParam": "[角色.7d47aa54.93bb8469.317b3006]",
     "FailedCondition": [
-      0
+      0,
+      1
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -21916,7 +21901,8 @@
       0.25
     ],
     "FailedCondition": [
-      0
+      0,
+      1
     ],
     "FailDelay": 0,
     "FailedParam": [
@@ -22039,11 +22025,11 @@
       0.3
     ],
     "FailedCondition": [
-      0
+      5
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1308111"
+      "角色.3130d70d.84f17612.26532052"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -22118,11 +22104,11 @@
       0.3
     ],
     "FailedCondition": [
-      0
+      5
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1308112"
+      "角色.3130d70d.84f17612.26532052"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -22350,6 +22336,22 @@
     "FailedParam": [
       "1308301"
     ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11090112,
+    "CompleteCondition": 6,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      0
+    ],
+    "FailedCondition": [],
+    "FailDelay": 0,
+    "FailedParam": [],
     "RemoveBuff": [],
     "RemoveBullet": [],
     "SummonPos": 0,

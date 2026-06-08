@@ -21086,8 +21086,8 @@
   {
     "Id": 70179001,
     "DistanceRange": {
-      "Min": 300,
-      "Max": 1500
+      "Min": 500,
+      "Max": 1000
     },
     "AngleRange": {
       "Min": -90,
@@ -21108,7 +21108,7 @@
     "Id": 70179002,
     "DistanceRange": {
       "Min": 0,
-      "Max": 300
+      "Max": 150
     },
     "AngleRange": {
       "Min": -120,

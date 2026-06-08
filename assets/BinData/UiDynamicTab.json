@@ -1560,32 +1560,6 @@
     "LightSequence": ""
   },
   {
-    "Id": 223,
-    "ParentViewName": "KurotatoHandBookView",
-    "ChildViewName": "KurotatoHandBookWeaponTabView",
-    "TabName": "PhantomArenaCollectBadgeTabView_Name",
-    "TabIndex": 1,
-    "FunctionId": 0,
-    "UiCameraSettingsName": "",
-    "UiCameraBlendName": "",
-    "BackViewBlendName": "",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconBVB1.SP_IconBVB1",
-    "LightSequence": ""
-  },
-  {
-    "Id": 224,
-    "ParentViewName": "KurotatoHandBookView",
-    "ChildViewName": "KurotatoHandBookRoleTabView",
-    "TabName": "PhantomArenaCollectCardTabView_Name",
-    "TabIndex": 2,
-    "FunctionId": 0,
-    "UiCameraSettingsName": "",
-    "UiCameraBlendName": "",
-    "BackViewBlendName": "",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconBVB2.SP_IconBVB2",
-    "LightSequence": ""
-  },
-  {
     "Id": 225,
     "ParentViewName": "MotorcycleDiyEditRootView",
     "ChildViewName": "MotorcycleDiyEditStickerTabView",

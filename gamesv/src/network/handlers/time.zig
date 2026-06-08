@@ -9,7 +9,7 @@ pub fn RTimeStopPush(
     push: pb.RTimeStopPush,
     scene: *Scene,
 ) !void {
-    scene.scene_time.dilation = if (push.Flag == true) 0.0 else 1.0;
+    scene.scene_time.dilation = push.Dilation;
 }
 
 pub fn onTimeStopPush(

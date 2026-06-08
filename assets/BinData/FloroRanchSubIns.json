@@ -895,13 +895,14 @@
     "Id": 20,
     "ActivityId": 105500002,
     "Difficulty": 3,
-    "Tag": 16,
+    "Tag": 17,
     "Race": [
       1,
-      2
+      4
     ],
-    "Stage": 6,
+    "Stage": 7,
     "StageDays": [
+      5,
       5,
       5,
       5,
@@ -911,15 +912,17 @@
     ],
     "Goal": [
       80,
-      200,
-      500,
-      1000,
+      300,
+      800,
       1500,
-      3000,
+      2400,
       5000,
       8000,
-      13000,
-      20000
+      15000,
+      24000,
+      50000,
+      150000,
+      240000
     ],
     "FirstTechReward": 0,
     "TechReward": [
@@ -931,36 +934,49 @@
     "FirstWinReward": {},
     "Terrain": {},
     "CardBase": [
-      8,
-      10,
+      7,
       9,
-      9
+      10,
+      35,
+      36,
+      40
     ],
     "Card": {},
     "StartToy": [
-      27
+      41
     ],
     "EventGroup": 1,
     "EndlessMode": true,
     "EnvironmentText": [
-      "Farm_Effect12"
+      "Farm_Environment1"
     ],
-    "RecommendCards": [],
+    "RecommendCards": [
+      57,
+      37,
+      58,
+      38,
+      49,
+      59,
+      40,
+      50
+    ],
     "RecommendToys": [
-      27
+      41,
+      40
     ]
   },
   {
     "Id": 21,
     "ActivityId": 105500002,
     "Difficulty": 3,
-    "Tag": 16,
+    "Tag": 18,
     "Race": [
       1,
-      3
+      2
     ],
-    "Stage": 6,
+    "Stage": 7,
     "StageDays": [
+      5,
       5,
       5,
       5,
@@ -970,15 +986,17 @@
     ],
     "Goal": [
       80,
-      200,
-      500,
-      1000,
+      300,
+      800,
       1500,
-      3000,
+      2400,
       5000,
       8000,
-      13000,
-      20000
+      15000,
+      24000,
+      50000,
+      150000,
+      240000
     ],
     "FirstTechReward": 0,
     "TechReward": [
@@ -990,36 +1008,46 @@
     "FirstWinReward": {},
     "Terrain": {},
     "CardBase": [
-      29,
-      29,
-      30,
-      26
+      7,
+      9,
+      10,
+      14,
+      18,
+      20
     ],
     "Card": {},
     "StartToy": [
-      36
+      42
     ],
     "EventGroup": 1,
     "EndlessMode": true,
     "EnvironmentText": [
-      "Farm_Effect12"
+      "Farm_Environment2"
     ],
-    "RecommendCards": [],
+    "RecommendCards": [
+      48,
+      1,
+      51,
+      12
+    ],
     "RecommendToys": [
-      36
+      42,
+      30,
+      27
     ]
   },
   {
     "Id": 22,
     "ActivityId": 105500002,
     "Difficulty": 3,
-    "Tag": 16,
+    "Tag": 19,
     "Race": [
       1,
-      4
+      3
     ],
-    "Stage": 6,
+    "Stage": 7,
     "StageDays": [
+      5,
       5,
       5,
       5,
@@ -1029,15 +1057,17 @@
     ],
     "Goal": [
       80,
-      200,
-      500,
-      1000,
+      300,
+      800,
       1500,
-      3000,
+      2400,
       5000,
       8000,
-      13000,
-      20000
+      15000,
+      24000,
+      50000,
+      150000,
+      240000
     ],
     "FirstTechReward": 0,
     "TechReward": [
@@ -1049,38 +1079,46 @@
     "FirstWinReward": {},
     "Terrain": {},
     "CardBase": [
-      58,
-      50,
-      36,
-      36
+      7,
+      9,
+      10,
+      27,
+      29,
+      30
     ],
     "Card": {},
     "StartToy": [
-      12,
-      14
+      43
     ],
     "EventGroup": 1,
     "EndlessMode": true,
     "EnvironmentText": [
-      "Farm_Effect12"
+      "Farm_Environment3"
     ],
-    "RecommendCards": [],
+    "RecommendCards": [
+      56,
+      26,
+      27,
+      10
+    ],
     "RecommendToys": [
-      12,
-      14
+      43,
+      35,
+      36
     ]
   },
   {
     "Id": 23,
     "ActivityId": 105500002,
     "Difficulty": 3,
-    "Tag": 16,
+    "Tag": 20,
     "Race": [
       2,
       3
     ],
-    "Stage": 6,
+    "Stage": 7,
     "StageDays": [
+      5,
       5,
       5,
       5,
@@ -1090,15 +1128,17 @@
     ],
     "Goal": [
       80,
-      200,
-      500,
-      1000,
+      300,
+      800,
       1500,
-      3000,
+      2400,
       5000,
       8000,
-      13000,
-      20000
+      15000,
+      24000,
+      50000,
+      150000,
+      240000
     ],
     "FirstTechReward": 0,
     "TechReward": [
@@ -1110,95 +1150,49 @@
     "FirstWinReward": {},
     "Terrain": {},
     "CardBase": [
-      55,
+      14,
+      18,
       20,
+      27,
       29,
-      53
+      30
     ],
     "Card": {},
     "StartToy": [
-      29,
-      33
+      44
     ],
     "EventGroup": 1,
     "EndlessMode": true,
     "EnvironmentText": [
-      "Farm_Effect12"
-    ],
-    "RecommendCards": [],
-    "RecommendToys": [
-      29,
-      33
-    ]
-  },
-  {
-    "Id": 24,
-    "ActivityId": 105500002,
-    "Difficulty": 3,
-    "Tag": 16,
-    "Race": [
-      2,
-      4
-    ],
-    "Stage": 6,
-    "StageDays": [
-      5,
-      5,
-      5,
-      5,
-      5,
-      5
-    ],
-    "Goal": [
-      80,
-      200,
-      500,
-      1000,
-      1500,
-      3000,
-      5000,
-      8000,
-      13000,
-      20000
-    ],
-    "FirstTechReward": 0,
-    "TechReward": [
-      0
-    ],
-    "ToyReward": [
-      5
-    ],
-    "FirstWinReward": {},
-    "Terrain": {},
-    "CardBase": [
-      41,
-      41,
-      41,
-      41
-    ],
-    "Card": {},
-    "StartToy": [],
-    "EventGroup": 1,
-    "EndlessMode": true,
-    "EnvironmentText": [
-      "Farm_Effect12"
+      "Farm_Environment4"
     ],
     "RecommendCards": [
-      41
+      11,
+      12,
+      56,
+      23,
+      14,
+      26,
+      27
     ],
-    "RecommendToys": []
+    "RecommendToys": [
+      44,
+      30,
+      12
+    ]
   },
   {
     "Id": 25,
     "ActivityId": 105500002,
     "Difficulty": 3,
-    "Tag": 16,
+    "Tag": 22,
     "Race": [
       3,
       4
     ],
-    "Stage": 6,
+    "Stage": 7,
     "StageDays": [
+      5,
       5,
       5,
       5,
@@ -1208,15 +1202,17 @@
     ],
     "Goal": [
       80,
-      200,
-      500,
-      1000,
+      300,
+      800,
       1500,
-      3000,
+      2400,
       5000,
       8000,
-      13000,
-      20000
+      15000,
+      24000,
+      50000,
+      150000,
+      240000
     ],
     "FirstTechReward": 0,
     "TechReward": [
@@ -1228,23 +1224,34 @@
     "FirstWinReward": {},
     "Terrain": {},
     "CardBase": [
-      36,
-      36,
+      27,
+      29,
+      30,
+      35,
       36,
       40
     ],
     "Card": {},
     "StartToy": [
-      39
+      46
     ],
     "EventGroup": 1,
     "EndlessMode": true,
     "EnvironmentText": [
-      "Farm_Effect12"
+      "Farm_Environment6"
     ],
-    "RecommendCards": [],
+    "RecommendCards": [
+      37,
+      38,
+      40,
+      33
+    ],
     "RecommendToys": [
-      39
+      46,
+      39,
+      38,
+      37,
+      12
     ]
   }
 ]

@@ -19863,7 +19863,7 @@
     "Id": 2700131,
     "DebugText": "局内玩法不存在",
     "Text": "ErrorCode_FloroRanchGamePlayNotExist_Text",
-    "IsTip": false
+    "IsTip": true
   },
   {
     "Id": 2700132,
@@ -21501,7 +21501,7 @@
     "Id": 2700177,
     "DebugText": "联机模式不允许开始玩法",
     "Text": "",
-    "IsTip": false
+    "IsTip": true
   },
   {
     "Id": 3000000,
@@ -28194,6 +28194,42 @@
     "IsTip": false
   },
   {
+    "Id": 2500358,
+    "DebugText": "配置不存在",
+    "Text": "GachaAccumulateNoConfig",
+    "IsTip": true
+  },
+  {
+    "Id": 2500359,
+    "DebugText": "不在开启时间",
+    "Text": "GachaAccumulateNoInTime",
+    "IsTip": true
+  },
+  {
+    "Id": 2500360,
+    "DebugText": "已领取奖励",
+    "Text": "GachaAccumulateRewarded",
+    "IsTip": true
+  },
+  {
+    "Id": 2500361,
+    "DebugText": "未完成该奖励任务",
+    "Text": "GachaAccumulateNoFinish",
+    "IsTip": true
+  },
+  {
+    "Id": 2500362,
+    "DebugText": "奖励选择参数错误",
+    "Text": "GachaAccumulateErrSelectParam",
+    "IsTip": true
+  },
+  {
+    "Id": 2500363,
+    "DebugText": "请求参数重复",
+    "Text": "RequestParamRepeat",
+    "IsTip": true
+  },
+  {
     "Id": 900083,
     "DebugText": "当前已经处于快速破解状态中",
     "Text": "EntityPackIdErr_Content",
@@ -28304,133 +28340,133 @@
   {
     "Id": 3000163,
     "DebugText": "非亚当重锤副本",
-    "Text": "",
+    "Text": "ErrorCode_ErrInstNotEdgeRunnerLordGym",
     "IsTip": false
   },
   {
     "Id": 3000164,
     "DebugText": "亚当重锤配置不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerLordGymConfigNotExist",
     "IsTip": false
   },
   {
     "Id": 3000165,
     "DebugText": "边缘行者数据不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerDbDataNotExist",
     "IsTip": false
   },
   {
     "Id": 3000166,
     "DebugText": "亚当重锤上一关未完成",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerPreLordGymNotPassed",
     "IsTip": false
   },
   {
     "Id": 3000167,
     "DebugText": "参数数量错误",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerParamCountErr",
     "IsTip": false
   },
   {
     "Id": 3000168,
     "DebugText": "掉落配置未找到",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerDropNoFind",
     "IsTip": false
   },
   {
     "Id": 3000169,
     "DebugText": "不存在领奖条目",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerNoReward",
     "IsTip": false
   },
   {
     "Id": 3000170,
     "DebugText": "任务配置不存在",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerTaskFindErr",
     "IsTip": false
   },
   {
     "Id": 3000171,
     "DebugText": "活动ID不匹配",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerActivityIdErr",
     "IsTip": false
   },
   {
     "Id": 3000172,
     "DebugText": "任务已领奖",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerHadReward",
     "IsTip": false
   },
   {
     "Id": 3000173,
     "DebugText": "任务未完成",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerTaskRunning",
     "IsTip": false
   },
   {
     "Id": 3000174,
     "DebugText": "任务重复",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerParamAgainErr",
     "IsTip": false
   },
   {
     "Id": 3000175,
     "DebugText": "活动配置不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerActivityConfigNotFound",
     "IsTip": false
   },
   {
     "Id": 3000176,
     "DebugText": "功能配置不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerActivityFuncUnlockConfigNotFound",
     "IsTip": false
   },
   {
     "Id": 3000177,
     "DebugText": "功能已解锁",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerActivityFuncAlreadyUnlock",
     "IsTip": false
   },
   {
     "Id": 3000178,
     "DebugText": "提前结果条件未达成",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerActivityFuncUnlockConditionNotReached",
     "IsTip": false
   },
   {
     "Id": 3000179,
     "DebugText": "功能解锁失败",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerActivityFuncUnlockFailed",
     "IsTip": false
   },
   {
     "Id": 3000180,
     "DebugText": "配置不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrGolemCrackLevelConfigNotExist",
     "IsTip": false
   },
   {
     "Id": 3000181,
     "DebugText": "活动ID不匹配",
-    "Text": "",
+    "Text": "ErrorCode_ErrActivityNotMatchGolemCrackLevel",
     "IsTip": false
   },
   {
     "Id": 3000182,
     "DebugText": "活动数据不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrGolemCrackActivityDataNotFound",
     "IsTip": false
   },
   {
     "Id": 3000183,
     "DebugText": "关卡未完成",
-    "Text": "",
+    "Text": "ErrorCode_ErrGolemCrackPreLevelNotFinished",
     "IsTip": false
   },
   {
     "Id": 3000184,
     "DebugText": "重复领奖",
-    "Text": "",
+    "Text": "ErrorCode_ErrGolemCrackLevelRewardDuplicate",
     "IsTip": false
   },
   {
@@ -28496,7 +28532,7 @@
   {
     "Id": 3000186,
     "DebugText": "节点未解锁",
-    "Text": "",
+    "Text": "ErrorCode_ErrGolemCrackPreLevelLocked",
     "IsTip": false
   },
   {
@@ -28598,25 +28634,25 @@
   {
     "Id": 3000187,
     "DebugText": "亚当重锤难度变量不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerLordGymLevelVarNotExist",
     "IsTip": false
   },
   {
     "Id": 3000188,
     "DebugText": "亚当重锤重复挑战",
-    "Text": "",
+    "Text": "ErrorCode_EdgeRunnerLordGymRepeatChallenge",
     "IsTip": false
   },
   {
     "Id": 3000189,
     "DebugText": "亚当重锤行为树不存在",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerLordGymBtTreeNotFound",
     "IsTip": false
   },
   {
     "Id": 3000190,
     "DebugText": "不在亚当重锤玩法中",
-    "Text": "",
+    "Text": "ErrorCode_ErrEdgeRunnerLordGymNotInPlay",
     "IsTip": false
   },
   {
@@ -28718,20 +28754,20 @@
   {
     "Id": 1900376,
     "DebugText": "关卡未解锁",
-    "Text": "",
-    "IsTip": false
+    "Text": "ErrorCode_1900372_Text",
+    "IsTip": true
   },
   {
     "Id": 1900377,
     "DebugText": "队伍人数不是3个",
-    "Text": "",
-    "IsTip": false
+    "Text": "ErrorCode_1900373_Text",
+    "IsTip": true
   },
   {
     "Id": 1900378,
     "DebugText": "队员活动未开启",
-    "Text": "",
-    "IsTip": false
+    "Text": "ErrorCode_1900374_Text",
+    "IsTip": true
   },
   {
     "Id": 3300018,
@@ -28755,6 +28791,138 @@
     "Id": 3300021,
     "DebugText": "可破坏物已经是被破坏了",
     "Text": "ErrorCode_3300022_Text",
+    "IsTip": false
+  },
+  {
+    "Id": 3300022,
+    "DebugText": "请求数量超过最大",
+    "Text": "ErrorCode_3300023_Text",
+    "IsTip": false
+  },
+  {
+    "Id": 3300023,
+    "DebugText": "请求选项超过边界",
+    "Text": "ErrorCode_3300024_Text",
+    "IsTip": false
+  },
+  {
+    "Id": 2700281,
+    "DebugText": "关卡活动id不等于请求活动id",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2700282,
+    "DebugText": "获取当前开放周常关卡id错误",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2700283,
+    "DebugText": "当前周常关卡未开放",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100614,
+    "DebugText": "临时存档未处理",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100615,
+    "DebugText": "没有临时存档",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100616,
+    "DebugText": "存档孔位错误",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100617,
+    "DebugText": "不是肉鸽爬塔试炼副本",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100618,
+    "DebugText": "肉鸽爬塔试炼副本配置找不到",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100619,
+    "DebugText": "肉鸽爬塔试炼配置找不到",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100620,
+    "DebugText": "肉鸽爬塔试炼副本数据找不到",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100621,
+    "DebugText": "肉鸽爬塔试炼副本正在挑战",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100622,
+    "DebugText": "肉鸽爬塔试炼Boss不可选择",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100623,
+    "DebugText": "没有存档",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 900085,
+    "DebugText": "处于声骸编队无法上车",
+    "Text": "",
+    "IsTip": true
+  },
+  {
+    "Id": 2500371,
+    "DebugText": "共鸣链兑换已达上限",
+    "Text": "ErrGiftResonantChainOptionalLimit",
+    "IsTip": true
+  },
+  {
+    "Id": 1100624,
+    "DebugText": "存档包含无效的角色",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1900383,
+    "DebugText": "玩法中无法解散联机世界",
+    "Text": "MultRacing_Team_hint1",
+    "IsTip": true
+  },
+  {
+    "Id": 2700284,
+    "DebugText": "玩具槽位不足",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2700285,
+    "DebugText": "可用玩具不足",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2700308,
+    "DebugText": "周常活动不能领取里程碑奖励",
+    "Text": "",
     "IsTip": false
   }
 ]

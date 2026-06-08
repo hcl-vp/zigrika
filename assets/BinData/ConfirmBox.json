@@ -7704,7 +7704,7 @@
     "DelayTime": 0,
     "DelayButtonIndex": 0,
     "NeedMaskClose": false,
-    "UiShowType": 0,
+    "UiShowType": 5,
     "NeedClose": true,
     "TimeDilation": 1
   },
@@ -7720,7 +7720,7 @@
     "DelayTime": 0,
     "DelayButtonIndex": 0,
     "NeedMaskClose": false,
-    "UiShowType": 0,
+    "UiShowType": 5,
     "NeedClose": true,
     "TimeDilation": 1
   },
@@ -7746,8 +7746,8 @@
     "Content": "ConfirmBox_501_Content",
     "SecondaryContent": "",
     "ButtonText": [
-      "ConfirmBox_501_ButtonText_0",
-      "ConfirmBox_501_ButtonText_1"
+      "ConfirmBox_501_ButtonText_1",
+      "ConfirmBox_501_ButtonText_0"
     ],
     "DelayTime": 0,
     "DelayButtonIndex": 0,
@@ -7832,6 +7832,228 @@
     "DelayTime": 0,
     "DelayButtonIndex": 0,
     "NeedMaskClose": true,
+    "UiShowType": 4,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 511,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "DIYProjectCreateTips",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "DIYProjectCreatebutton02",
+      "DIYProjectCreatebutton01"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 512,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_352_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_352_ButtonText_0",
+      "ConfirmBox_352_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 5,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 514,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_514_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_514_ButtonText_0",
+      "ConfirmBox_514_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 515,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_515_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_515_ButtonText_0",
+      "ConfirmBox_515_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 516,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_516_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_516_ButtonText_0",
+      "ConfirmBox_516_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 517,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_517_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_517_ButtonText_0",
+      "ConfirmBox_517_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 518,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_518_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_518_ButtonText_0",
+      "ConfirmBox_518_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 519,
+    "Title": "ConfirmBox_519_Title",
+    "Content": "ConfirmBox_519_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_519_ButtonText_0",
+      "ConfirmBox_519_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": false,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 520,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_520_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 4,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 522,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_522_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": false,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 530,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_530_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_530_ButtonText_0",
+      "ConfirmBox_530_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 523,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_523_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 524,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_524_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 537,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_537_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
     "UiShowType": 4,
     "NeedClose": true,
     "TimeDilation": 1

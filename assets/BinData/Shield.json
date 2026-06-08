@@ -3965,10 +3965,16 @@
     "FormationPropValueType": 0,
     "RefrenceTarget": 0,
     "AttributeRate": [
-      1
+      1.5
     ],
     "Value": [
-      500
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ]
   }
 ]

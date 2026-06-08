@@ -274,7 +274,7 @@
     "InitialLevel": 0,
     "BattlePassRewardId": 13,
     "LevelLimit": 70,
-    "LevelUpExp": 1000,
+    "LevelUpExp": 800,
     "ConsumeId": 3,
     "ConsumeCount": 100,
     "IsRecurringLevel": false,

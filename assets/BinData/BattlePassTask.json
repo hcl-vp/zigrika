@@ -568,12 +568,12 @@
   },
   {
     "TaskId": 211,
-    "TaskName": "BattlePassTask_211_TaskName",
+    "TaskName": "BattlePassTask_211_TaskName_new",
     "UpdateType": 2,
     "TaskReward": {
       "8": 600
     },
-    "JumpId": 850027
+    "JumpId": 919102
   },
   {
     "TaskId": 350,

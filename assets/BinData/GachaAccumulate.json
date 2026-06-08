@@ -1,0 +1,7 @@
+[
+  {
+    "Id": 101,
+    "TipsPrefabPath": "UiItem_LuckdrawCyberpunkTips",
+    "GachaAccumulatePrefabPath": "UiItem_CyberpunkLuckdraw"
+  }
+]

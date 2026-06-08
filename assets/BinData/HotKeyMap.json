@@ -9893,19 +9893,6 @@
     "IsOccupancyFightInput": false
   },
   {
-    "Id": 1028,
-    "ActionName": "UI键盘ESC",
-    "AxisName": "",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "CloseButton",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tag1",
-    "ApplicableType": 5,
-    "IsOccupancyFightInput": true
-  },
-  {
     "Id": 1238,
     "ActionName": "UI键盘F手柄A",
     "AxisName": "",
@@ -9916,6 +9903,19 @@
     "ReleaseFailureTime": 0,
     "BindButtonTag": "tag2",
     "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 1028,
+    "ActionName": "UI键盘ESC",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "CloseButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tag1",
+    "ApplicableType": 5,
     "IsOccupancyFightInput": true
   },
   {
@@ -9932,6 +9932,32 @@
     "IsOccupancyFightInput": true
   },
   {
+    "Id": 2522,
+    "ActionName": "",
+    "AxisName": "UiMoveForward",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "SliderIncrease",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagSlider4",
+    "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 2523,
+    "ActionName": "",
+    "AxisName": "UiMoveForward",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "SliderReduce",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagSlider4",
+    "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
     "Id": 1240,
     "ActionName": "UI键盘F手柄A",
     "AxisName": "",
@@ -9942,6 +9968,58 @@
     "ReleaseFailureTime": 0,
     "BindButtonTag": "tag2",
     "ApplicableType": 2,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8041,
+    "ActionName": "技能1",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagE",
+    "ApplicableType": 1,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8042,
+    "ActionName": "瞄准",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagG",
+    "ApplicableType": 1,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8043,
+    "ActionName": "通用交互",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagF",
+    "ApplicableType": 1,
+    "IsOccupancyFightInput": true
+  },
+  {
+    "Id": 8044,
+    "ActionName": "大招",
+    "AxisName": "",
+    "AxisDirection": 0,
+    "TextId": "",
+    "Type": "ClickButton",
+    "LongPressTime": 0,
+    "ReleaseFailureTime": 0,
+    "BindButtonTag": "tagR",
+    "ApplicableType": 1,
     "IsOccupancyFightInput": true
   },
   {
@@ -9994,32 +10072,6 @@
     "ReleaseFailureTime": 0,
     "BindButtonTag": "",
     "ApplicableType": 1,
-    "IsOccupancyFightInput": true
-  },
-  {
-    "Id": 2522,
-    "ActionName": "",
-    "AxisName": "UiMoveForward",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "SliderIncrease",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagSlider4",
-    "ApplicableType": 2,
-    "IsOccupancyFightInput": true
-  },
-  {
-    "Id": 2523,
-    "ActionName": "",
-    "AxisName": "UiMoveForward",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "SliderReduce",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagSlider4",
-    "ApplicableType": 2,
     "IsOccupancyFightInput": true
   },
   {
@@ -10127,55 +10179,16 @@
     "IsOccupancyFightInput": true
   },
   {
-    "Id": 8041,
-    "ActionName": "技能1",
+    "Id": 8075,
+    "ActionName": "UI返回",
     "AxisName": "",
     "AxisDirection": 0,
-    "TextId": "",
-    "Type": "ClickButton",
+    "TextId": "ReplaceTips",
+    "Type": "ProjectionPhotoItemDragCancel",
     "LongPressTime": 0,
     "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagE",
-    "ApplicableType": 1,
-    "IsOccupancyFightInput": true
-  },
-  {
-    "Id": 8042,
-    "ActionName": "瞄准",
-    "AxisName": "",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "ClickButton",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagG",
-    "ApplicableType": 1,
-    "IsOccupancyFightInput": true
-  },
-  {
-    "Id": 8043,
-    "ActionName": "通用交互",
-    "AxisName": "",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "ClickButton",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagF",
-    "ApplicableType": 1,
-    "IsOccupancyFightInput": true
-  },
-  {
-    "Id": 8044,
-    "ActionName": "大招",
-    "AxisName": "",
-    "AxisDirection": 0,
-    "TextId": "",
-    "Type": "ClickButton",
-    "LongPressTime": 0,
-    "ReleaseFailureTime": 0,
-    "BindButtonTag": "tagR",
-    "ApplicableType": 1,
+    "BindButtonTag": "",
+    "ApplicableType": 2,
     "IsOccupancyFightInput": true
   }
 ]

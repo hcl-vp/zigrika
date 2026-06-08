@@ -321,12 +321,12 @@
   },
   {
     "Id": 36,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2053_UI.T_IconRoleHeadCircle256_2053_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2053_UI.T_IconRoleHead175_2053_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2053_UI.T_IconRoleHead80_2053_UI",
     "Name": "SMC_Name_33",
     "IsGroupChat": false,
-    "Desc": "",
+    "Desc": "SMC_Sign_36",
     "PeopleNum": 0
   },
   {
@@ -511,9 +511,9 @@
   },
   {
     "Id": 55,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2005_UI.T_IconRoleHeadCircle256_2005_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2005_UI.T_IconRoleHead175_2005_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2005_UI.T_IconRoleHead80_2005_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_12_UI.T_IconRoleHead175_12_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_12_UI.T_IconRoleHead80_12_UI",
     "Name": "SMC_Name_55",
     "IsGroupChat": false,
     "Desc": "SMC_Sign_55",
@@ -725,7 +725,7 @@
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
     "Name": "SMC_Name_80",
-    "IsGroupChat": false,
+    "IsGroupChat": true,
     "Desc": "",
     "PeopleNum": 3
   },

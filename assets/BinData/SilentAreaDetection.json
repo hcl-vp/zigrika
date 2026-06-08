@@ -3930,14 +3930,14 @@
     "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34026_UI.T_IconMonsterHead_34026_UI",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
-    "ShowReward": 49918,
+    "ShowReward": 49925,
     "ShowRewardMap": {
-      "1": 49913,
-      "2": 49914,
-      "3": 49915,
-      "4": 49916,
-      "5": 49917,
-      "6": 49918
+      "1": 49925,
+      "2": 49926,
+      "3": 49927,
+      "4": 49928,
+      "5": 49929,
+      "6": 49930
     },
     "ShowRewardMapCalabash": {
       "1": 14008
@@ -3950,7 +3950,7 @@
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 30010,
-    "SortId": 24,
+    "SortId": 25,
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
@@ -4010,5 +4010,57 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodQD02.SP_DevelopmentPeriodQD02",
     "LeftBgTexture": "T_DevelopmentPeriod_QianDao01",
     "DungeonId": 0
+  },
+  {
+    "Id": 30000021,
+    "Name": "MonsterInfo_340000290_Name",
+    "GuideId": 3,
+    "LevelPlayList": [
+      316700030
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_empty",
+    "DangerType": 3,
+    "Secondary": 21,
+    "TypeDescription2": 21,
+    "MatType": 0,
+    "AttributesDescriptionLock": "MonsterInfo_340000290_UndiscoveredDes",
+    "AttributesDescriptionUnlock": "MonsterInfo_340000290_DiscoveredDes",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34029_UI.T_IconMonsterHead_34029_UI",
+    "Icon": "",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34029_UI.T_IconMonsterHead_34029_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "TemporaryIconlock": "",
+    "ShowReward": 10608,
+    "ShowRewardMap": {
+      "1": 10601,
+      "2": 10602,
+      "3": 10603,
+      "4": 10604,
+      "5": 10605,
+      "6": 10606,
+      "7": 10607,
+      "8": 10608
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 5043,
+    "LockCon": 12005136,
+    "MapId": 906,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 0,
+    "SortId": 21,
+    "NewContent": "New_corner",
+    "DetectionTabType": 0,
+    "PhantomFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 2100
   }
 ]

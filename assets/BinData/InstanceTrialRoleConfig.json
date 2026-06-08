@@ -3838,5 +3838,19 @@
     "OnlyTrial": true,
     "AutoChange": true,
     "ShowInEntrance": true
+  },
+  {
+    "Id": 1563,
+    "MaleFormation": [
+      221501105
+    ],
+    "FemaleFormation": [
+      221501105
+    ],
+    "MaleDelayFormation": [],
+    "FemaleDelayFormation": [],
+    "OnlyTrial": true,
+    "AutoChange": true,
+    "ShowInEntrance": false
   }
 ]

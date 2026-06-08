@@ -1294,5 +1294,14 @@
     "RootItemIndex": 2,
     "IsWaitNormal": true,
     "HideInPureMode": false
+  },
+  {
+    "ViewName": "MultiMotorMainView",
+    "Area": "MultiMotor",
+    "Priority": 0,
+    "OnlyShowInMain": true,
+    "RootItemIndex": 0,
+    "IsWaitNormal": true,
+    "HideInPureMode": false
   }
 ]

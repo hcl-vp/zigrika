@@ -998,5 +998,15 @@
       10007
     ],
     "DiscardGroup": []
+  },
+  {
+    "Id": 40032,
+    "FetterId": 32,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9
+    ],
+    "DiscardGroup": []
   }
 ]

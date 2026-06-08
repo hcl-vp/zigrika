@@ -99,7 +99,7 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
                 continue;
             };
 
-            if (message.data.len == 2 and message.data[0] == krkcp_syn) {
+            if (message.data.len == 35 and message.data[0] == krkcp_syn) {
                 log.debug("handshake received from {f}", .{message.from});
 
                 const conv_id = if (getFreeIndex(*ConnectionHandle, connections.items)) |i| i + 1 else no_free_index: {

@@ -3111,12 +3111,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3155,12 +3155,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3199,12 +3199,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3243,12 +3243,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          42
+          42,
+          44
         ]
       },
       "2": {
         "ArrayInt": [
-          44,
           46
         ]
       }
@@ -3413,12 +3413,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3458,12 +3458,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3503,12 +3503,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3548,12 +3548,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          42
+          42,
+          44
         ]
       },
       "2": {
         "ArrayInt": [
-          44,
           46
         ]
       }
@@ -3720,12 +3720,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3765,12 +3765,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3810,12 +3810,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          41
+          41,
+          43
         ]
       },
       "2": {
         "ArrayInt": [
-          43,
           45
         ]
       }
@@ -3855,12 +3855,12 @@
     "HandBookBuff": {
       "1": {
         "ArrayInt": [
-          42
+          42,
+          44
         ]
       },
       "2": {
         "ArrayInt": [
-          44,
           46
         ]
       }

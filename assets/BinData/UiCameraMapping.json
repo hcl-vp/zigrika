@@ -749,7 +749,9 @@
     "BodyTargetType": 0,
     "BodyCameraSettingsNameMap": {},
     "DefaultCameraBlendName": "",
-    "UiCameraBlendNameMap": {},
+    "UiCameraBlendNameMap": {
+      "VisionEquipmentView": "1001"
+    },
     "UiCameraDelayTime": 0
   },
   {
@@ -2580,8 +2582,10 @@
     "bPlayLoadingCameraAnimation": true,
     "BodyTargetType": 0,
     "BodyCameraSettingsNameMap": {},
-    "DefaultCameraBlendName": "1001",
-    "UiCameraBlendNameMap": {},
+    "DefaultCameraBlendName": "",
+    "UiCameraBlendNameMap": {
+      "VisionEquipmentView": "10012"
+    },
     "UiCameraDelayTime": 0
   }
 ]

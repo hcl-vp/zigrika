@@ -704,19 +704,19 @@
     "Scale": 1
   },
   {
-    "Id": 1511315,
-    "Name": "露西烧血版-强化重击可用提示",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_General.NS_Fx_LGUI_Fight_E_General",
-    "ElementId": 0,
-    "Color": "#B62D34",
-    "Scale": 1
-  },
-  {
     "Id": 280001198,
     "Name": "肉鸽鳞人变身Q提示",
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
     "ElementId": 3,
     "Color": "",
+    "Scale": 1
+  },
+  {
+    "Id": 1511315,
+    "Name": "露西烧血版-强化重击可用提示",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E_General.NS_Fx_LGUI_Fight_E_General",
+    "ElementId": 0,
+    "Color": "#B62D34",
     "Scale": 1
   },
   {
@@ -736,14 +736,6 @@
     "Scale": 1
   },
   {
-    "Id": 1308401,
-    "Name": "丽贝卡闪避高亮",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
-    "ElementId": 3,
-    "Color": "",
-    "Scale": 1
-  },
-  {
     "Id": 1308021,
     "Name": "丽贝卡E技能高亮",
     "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
@@ -754,10 +746,10 @@
   {
     "Id": 1308301,
     "Name": "丽贝卡大招高亮",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_R",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_R.NS_Fx_LGUI_Fight_R",
     "ElementId": 3,
     "Color": "",
-    "Scale": 1
+    "Scale": 1.350000023841858
   },
   {
     "Id": 1308001,
@@ -766,5 +758,13 @@
     "ElementId": 3,
     "Color": "",
     "Scale": 1
+  },
+  {
+    "Id": 1109004,
+    "Name": "洛瑟菈大招解禁",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_R.NS_Fx_LGUI_Fight_R",
+    "ElementId": 1,
+    "Color": "",
+    "Scale": 1.350000023841858
   }
 ]

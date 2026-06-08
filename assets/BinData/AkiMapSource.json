@@ -36,7 +36,7 @@
   },
   {
     "MapId": 8,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/AkiWorld_WP",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1499,7 +1499,7 @@
   },
   {
     "MapId": 8640,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Huodong/2_7_RushRogue/InstanceTree_RushRogue",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1604,7 +1604,7 @@
   },
   {
     "MapId": 1015,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_Lucy",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1758,7 +1758,7 @@
   },
   {
     "MapId": 1562,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_luosela/InstanceTree_Luosela_Dixiayanjiusuo",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1835,7 +1835,7 @@
   },
   {
     "MapId": 1563,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_luosela/InstanceTree_LuoSeLa_BaoGaoTing",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1870,7 +1870,7 @@
   },
   {
     "MapId": 1564,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_luosela/InstanceTree_LuoSeLa_XueShengJiDi",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1954,21 +1954,21 @@
   },
   {
     "MapId": 2522,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/WorldInstance/3_2_Lizhishe/InstanceTree_3_2_Lizhishe",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   },
   {
     "MapId": 8003,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/System/Rogue/InstanceTree_Rogue_3_3_Main",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   },
   {
     "MapId": 1561,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_xinzhijiyu",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1989,7 +1989,7 @@
   },
   {
     "MapId": 1604,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_GeCao",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2038,7 +2038,7 @@
   },
   {
     "MapId": 1611,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_YueQiu",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2171,7 +2171,7 @@
   },
   {
     "MapId": 1614,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_yanjiuyuan",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2199,7 +2199,7 @@
   },
   {
     "MapId": 6090,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Huodong/3_4_YaDang/InstanceTree_YaDang_01",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2234,7 +2234,7 @@
   },
   {
     "MapId": 8004,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/System/Rogue/InstanceTree_Rogue_3_4_Tower",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2243,6 +2243,20 @@
     "MapId": 829,
     "PakRule": 1,
     "MapPath": "/Game/Aki/Map/UISceneLevel/UI_Scene/UL_UIMap_Lucy_BossUI",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 2101,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/Main/3_4_Lucy/InstanceTree_AdamSmasher_FuShua",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 2102,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/3_4_AdOpen/InstanceTree_3_4_AdOpen",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   }

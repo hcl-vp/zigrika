@@ -23,6 +23,10 @@
     "WeaponQualityThreshold": 4,
     "PhantomNumThreshold": 0,
     "PhantomQualityThreshold": 5,
-    "PhantomLevelThreshold": 25
+    "PhantomLevelThreshold": 25,
+    "PhantomSpecialGroupList": [
+      32
+    ],
+    "PopTipsTime": 3000
   }
 ]

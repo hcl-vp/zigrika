@@ -784,35 +784,35 @@
   {
     "Id": 100100021,
     "Type": 2,
-    "PrefabResource": "ActivitySignIn_3_3",
+    "PrefabResource": "ActivitySignIn_3_4",
     "SignRewards": [
       {
-        "ItemId": 50001,
-        "Count": 1
+        "ItemId": 3,
+        "Count": 100
       },
       {
-        "ItemId": 50001,
-        "Count": 1
+        "ItemId": 36000004,
+        "Count": 10
       },
       {
-        "ItemId": 50002,
-        "Count": 2
-      },
-      {
-        "ItemId": 50001,
-        "Count": 1
-      },
-      {
-        "ItemId": 50001,
+        "ItemId": 89103028,
         "Count": 1
       },
       {
         "ItemId": 2,
-        "Count": 10000
+        "Count": 200000
       },
       {
-        "ItemId": 2,
-        "Count": 10000
+        "ItemId": 3,
+        "Count": 200
+      },
+      {
+        "ItemId": 36000014,
+        "Count": 100
+      },
+      {
+        "ItemId": 89300003,
+        "Count": 1
       }
     ],
     "ImportantRewardIndex": -1,

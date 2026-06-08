@@ -296,6 +296,22 @@
     "Enable": true
   },
   {
+    "ShopId": 4,
+    "TabId": 4,
+    "Sort": 5,
+    "Name": "PayShopTab_4_4_Name",
+    "Logic": 2,
+    "Enable": true
+  },
+  {
+    "ShopId": 6,
+    "TabId": 4,
+    "Sort": 2,
+    "Name": "PayShopTab_6_4_Name",
+    "Logic": 1,
+    "Enable": true
+  },
+  {
     "ShopId": 224,
     "TabId": 1,
     "Sort": 1,

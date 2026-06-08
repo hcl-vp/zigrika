@@ -68392,6 +68392,7 @@
       "/Game/Aki/Character/ControlMonster/Floater/Floater_SDTideng/ABP_Floater_SDTideng.ABP_Floater_SDTideng_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/NPC_NM013/DA_Fx_Group_NPC_NM013_Zhuangshi.DA_Fx_Group_NPC_NM013_Zhuangshi",
       "/Game/Aki/Character/ControlMonster/Floater/Floater_SDTideng/Data/DT_SkillInfo.DT_SkillInfo",
       "/Game/Aki/Character/ControlMonster/Floater/Floater_SDTideng/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
       "/Game/Aki/Character/ControlMonster/Floater/Floater_SDTideng/Data/DT_HitEffect.DT_HitEffect",
@@ -79807,6 +79808,7 @@
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Push_Fall.DA_Fx_Group_Push_Fall",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Move.DA_Fx_Group_Move",
       "/Game/Aki/Character/Role/FemaleM/Lucy/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Role/FemaleM/Lucy/Data/DT_SkillInfo_Performance.DT_SkillInfo_Performance",
       "/Game/Aki/Character/Role/FemaleM/Lucy/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
       "/Game/Aki/Character/Role/FemaleM/Lucy/Data/DT_HitEffect.DT_HitEffect",
       "/Game/Aki/Character/Role/FemaleM/Lucy/Data/DA_PartHitEffect.DA_PartHitEffect"
@@ -79866,6 +79868,8 @@
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Push_Fall.DA_Fx_Group_Push_Fall",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Move.DA_Fx_Group_Move",
       "/Game/Aki/Effect/EffectGroup/R2T1TaidaonvMd10011/DA_Fx_Group_Taidaonv_R1a03_Hedao.DA_Fx_Group_Taidaonv_R1a03_Hedao",
+      "/Game/Aki/Effect/EffectGroup/R2T1TaidaonvMd10011/DA_Fx_Group_Taidaonv_AttackBurst06_Disappear.DA_Fx_Group_Taidaonv_AttackBurst06_Disappear",
+      "/Game/Aki/Effect/EffectGroup/R2T1TaidaonvMd10011/DA_Fx_Group_Taidaonv_AttackBurst06_appear.DA_Fx_Group_Taidaonv_AttackBurst06_appear",
       "/Game/Aki/Character/Role/FemaleXL/TaiDaoNv/Data/DT_SkillInfo.DT_SkillInfo",
       "/Game/Aki/Character/Role/FemaleXL/TaiDaoNv/Data/Rouge/DT_SkillInfo_Rouge.DT_SkillInfo_Rouge",
       "/Game/Aki/Character/Role/FemaleXL/TaiDaoNv/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
@@ -80568,8 +80572,7 @@
     "Effects": [],
     "Audios": [],
     "Meshes": [
-      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/Model/ML1AdamSmasherMd00001.ML1AdamSmasherMd00001",
-      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/Model/Weapon/ML1AdamSmasherMd00001_Weapon.ML1AdamSmasherMd00001_Weapon"
+      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/Model/ML1AdamSmasherMd00001.ML1AdamSmasherMd00001"
     ],
     "Materials": [],
     "AnimationBlueprints": [
@@ -81643,7 +81646,7 @@
       "/Game/Aki/Character/Weapon/Prop/Vehicle/MotorProp/EMotorcycleTrailMd10012/Model/Feixue/MI_EMotorcycleTrailMd10012_Effect01.MI_EMotorcycleTrailMd10012_Effect01",
       "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/FeiXue/DA_Fx_Group_Motuo_LuodiDeng_L.DA_Fx_Group_Motuo_LuodiDeng_L",
       "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/FeiXue/DA_Fx_Group_Motuo_LuodiDeng_R.DA_Fx_Group_Motuo_LuodiDeng_R",
-      "/Game/Aki/Effect/DataAsset/Light/Common/Moto/Feixue_Moto/DA_Fx_Light_moto_FX.DA_Fx_Light_moto_FX",
+      "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/DA_Fx_Group_Motuo_Light_FX.DA_Fx_Group_Motuo_Light_FX",
       "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/FeiXue/DA_Fx_Group_Motuo_Baozha.DA_Fx_Group_Motuo_Baozha",
       "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/FeiXue/DA_Fx_Group_Motuo_Baozha01.DA_Fx_Group_Motuo_Baozha01",
       "/Game/Aki/Effect/EffectGroup/NI_SC1MotorMd00001/FeiXue/DA_Fx_Group_Motuo_Xishou.DA_Fx_Group_Motuo_Xishou",
@@ -81774,10 +81777,12 @@
     "Effects": [],
     "Audios": [],
     "Meshes": [
-      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/Model/ML1AdamSmasherMd00001.ML1AdamSmasherMd00001"
+      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/Model/Weapon/ML1AdamSmasherMd00001_Weapon.ML1AdamSmasherMd00001_Weapon"
     ],
     "Materials": [],
-    "AnimationBlueprints": [],
+    "AnimationBlueprints": [
+      "/Game/Aki/Character/Monster/Lord/ML1AdamSmasherMd00001/ABP_ML1AdamSmasherMd00001_Vision.ABP_ML1AdamSmasherMd00001_Vision_C"
+    ],
     "Others": [
       "/Game/Aki/Character/Vision/VM_Lord/VM_ML1AdamSmasher/Md00001/Data/DT_SkillInfo.DT_SkillInfo",
       "/Game/Aki/Character/Vision/VM_Lord/VM_ML1AdamSmasher/Md00001/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
@@ -81881,6 +81886,42 @@
       "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WeiZuoShenWang/Md00601/Data/DA_PartHitEffect.DA_PartHitEffect",
       "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WeiZuoShenWang/Md00601/Data/DT_ReplaceEffect.DT_ReplaceEffect",
       "/Game/Aki/Effect/EffectGroup/ML1WeiZuoShenWangMd00601/Vision/DA_Fx_Group_Vision_Kpose01_she_sp1.DA_Fx_Group_Vision_Kpose01_she_sp1"
+    ]
+  },
+  {
+    "Id": 312281001,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Lord/VM_ML1Linren/Md00311/BP_Vision_ML1Linren_Mod2.BP_Vision_ML1Linren_Mod2_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1Linren/Md00311/BP_Vision_ML1Linren_Mod2.BP_Vision_ML1Linren_Mod2_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Lord/ML1LinrenMd00311/Model/SP1/ML1LinrenMd10311.ML1LinrenMd10311"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1Linren/Md00311/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1Linren/Md00311/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1Linren/Md00311/Data/DT_HitEffect.DT_HitEffect"
+    ]
+  },
+  {
+    "Id": 20700006,
+    "ActorClassPath": "",
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Weapon/Prop/Hulu/R1Hulu007Md10011/Model/R1Hulu007Md10011.R1Hulu007Md10011"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Effect/EffectGroup/Common/Fight/DA_Fx_Group_Shoufu_Trail02.DA_Fx_Group_Shoufu_Trail02"
     ]
   }
 ]

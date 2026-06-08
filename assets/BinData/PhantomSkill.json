@@ -13269,7 +13269,86 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34029_1_UI.T_MstSkil_34029_1_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34029_1_UI.T_MstSkil_34029_1_UI"
+  },
+  {
+    "Id": 312281001,
+    "PhantomSkillId": 281016,
+    "BuffIds": [],
+    "SettleIds": [],
+    "BuffEffects": [],
+    "ChargeEfficiency": 0,
+    "SkillGroupId": 200001,
+    "SkillCD": 20,
+    "DescriptionEx": "PhantomSkill_280001_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_280001_SimplyDescription",
+    "IfCounterSkill": false,
+    "CurLevelDescriptionEx": [
+      "46",
+      "365",
+      "91",
+      "15",
+      "20"
+    ],
+    "LevelDescStrArray": [
+      {
+        "ArrayString": [
+          "82.88%",
+          "118.40%",
+          "19.73%",
+          "12.00%",
+          "12.00%",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "ArrayString": [
+          "95.31%",
+          "136.16%",
+          "22.69%",
+          "12.00%",
+          "12.00%",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "ArrayString": [
+          "107.74%",
+          "153.92%",
+          "25.65%",
+          "12.00%",
+          "12.00%",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "ArrayString": [
+          "120.18%",
+          "171.68%",
+          "28.61%",
+          "12.00%",
+          "12.00%",
+          "15",
+          "20"
+        ]
+      },
+      {
+        "ArrayString": [
+          "132.61%",
+          "189.44%",
+          "31.57%",
+          "12.00%",
+          "12.00%",
+          "15",
+          "20"
+        ]
+      }
+    ],
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_Z_B3_1_UI.T_MstSkil_Z_B3_1_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_Z_B3_1_UI.T_MstSkil_Z_B3_1_UI"
   }
 ]

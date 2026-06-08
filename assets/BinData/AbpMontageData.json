@@ -31441,7 +31441,7 @@
   },
   {
     "Id": 701230,
-    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00311_NPC/CommonAnim/Montage/stand2_Montage.stand2_Montage",
+    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00311_NPC/CommonAnim/Montage/Patrol_Action01_Montage.Patrol_Action01_Montage",
     "MaleVariant": "",
     "InitState": "",
     "EndState": "",
@@ -31449,7 +31449,7 @@
   },
   {
     "Id": 701231,
-    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00311_NPC/CommonAnim/Montage/stand2_Montage.stand2_Montage",
+    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00311_NPC/CommonAnim/Montage/Patrol_Action02_Montage.Patrol_Action02_Montage",
     "MaleVariant": "",
     "InitState": "",
     "EndState": "",
@@ -37832,6 +37832,14 @@
     "DisableBlinkCurve": true
   },
   {
+    "Id": 701342,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/Npc/MaleM/NH_MaleM_140/Montage/Invite01.Invite01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
     "Id": 850646,
     "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleMS/Daniya/CommonAnim/Montage/Akimbo.Akimbo",
     "MaleVariant": "",
@@ -37842,6 +37850,14 @@
   {
     "Id": 850647,
     "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleMS/Daniya/CommonAnim/Montage/Sit_Book.Sit_Book",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701343,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/Npc/MaleM/NH_MaleM_140/Montage/David_die.David_die",
     "MaleVariant": "",
     "InitState": "",
     "EndState": "",
@@ -37938,6 +37954,14 @@
   {
     "Id": 701352,
     "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleM/Lucy/Montage/Lucy_Calm02.Lucy_Calm02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701353,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/Npc/MaleM/NH_MaleM_140/Montage/David_Sit01.David_Sit01",
     "MaleVariant": "",
     "InitState": "",
     "EndState": "",
@@ -38402,6 +38426,222 @@
   {
     "Id": 701414,
     "Montage": "/Game/Aki/Character/NPC/FemaleS/Montage/Girl/LyingDie_girl.LyingDie_girl",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701415,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Rebecca/Body/Dongbu/Rebecca_Gun03.Rebecca_Gun03",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701416,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Helping_01.Helping_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701417,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Mone/Body/Montage/Touch02_Montage.Touch02_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701418,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Montage_Common_ShuaiDao03_Loop_FemaleM.Montage_Common_ShuaiDao03_Loop_FemaleM",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701419,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleM/Lucy/Montage/Lucy_Takeout01.Lucy_Takeout01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701420,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleM/Lucy/Montage/Lucy_Touch01.Lucy_Touch01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701421,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Stand_Giving_Can.Stand_Giving_Can",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701422,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleM/Lucy/Montage/Lucy_Walk.Lucy_Walk",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701423,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/MaleXL/Qiushui/CommonAnim/RaiseUp_OK.RaiseUp_OK",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701424,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/NH_FemaleM_188/CommonAnim/Dusting.Dusting",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701425,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Prone_Sleep.Prone_Sleep",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701426,
+    "Montage": "/Game/Aki/Character/NPC/MaleM/Montage/Prone_Sleep.Prone_Sleep",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701427,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleMS/Mone/Montage/Sit_Read_Montage.Sit_Read_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701428,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Rebecca/Body/Montage/Tsundere02_Loop_Montage.Tsundere02_Loop_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701429,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Rebecca/Body/Montage/Zhouji01_Montage.Zhouji01_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701430,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Rebecca/Body/Montage/Tsundere03_Loop_Montage.Tsundere03_Loop_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701431,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Rebecca/Body/Montage/Squat_MoTou01_Loop_Montage.Squat_MoTou01_Loop_Montage",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701432,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/ShengtaiAnim/3_4/Lucy/CommonAnim/Lucy_OverLook_Loop_Montage1.Lucy_OverLook_Loop_Montage1",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701433,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Luosela/Body/Montage/DaDianHua01.DaDianHua01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701434,
+    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00301_NPC/CommonAnim/AM_Attack03.AM_Attack03",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701435,
+    "Montage": "/Game/Aki/Character/NPC/Monster/ME1TanSuiZhongJiMd00301_NPC/CommonAnim/AM_Behit_Block.AM_Behit_Block",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701436,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/MaleXL/Luhesi/Body/Montage/Pad02.Pad02",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701437,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Helping_01.Helping_01",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701438,
+    "Montage": "/Game/Aki/Character/NPC/FemaleM/Montage/Montage_Common_ShuaiDao03_Loop_FemaleM.Montage_Common_ShuaiDao03_Loop_FemaleM",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701439,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/ShengtaiAnim/3_4/Lucy/CommonAnim/Lucy_OverLook_Loop_Montage2.Lucy_OverLook_Loop_Montage2",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701440,
+    "Montage": "/Game/Aki/Character/NPC/RoleNPC/FemaleM/Lucy/Montage/Lucy_Calm03_CloseEye.Lucy_Calm03_CloseEye",
+    "MaleVariant": "",
+    "InitState": "",
+    "EndState": "",
+    "DisableBlinkCurve": true
+  },
+  {
+    "Id": 701441,
+    "Montage": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleMS/Xigelika/Body/Dongbu/Sitdownhead_Montage.Sitdownhead_Montage",
     "MaleVariant": "",
     "InitState": "",
     "EndState": "",

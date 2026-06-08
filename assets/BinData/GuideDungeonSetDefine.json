@@ -29,7 +29,12 @@
       2517,
       2520,
       2518,
-      2519
+      2519,
+      1615,
+      1616,
+      1607,
+      1600,
+      1605
     ],
     "DungeonTypeSetList": [
       1,
@@ -67,7 +72,10 @@
       2517,
       2520,
       2518,
-      2519
+      2519,
+      1615,
+      1616,
+      1607
     ],
     "DungeonTypeSetList": [
       1,
@@ -464,6 +472,33 @@
       9853
     ],
     "DungeonTypeSetList": [],
+    "ExcludeIdList": []
+  },
+  {
+    "StrId": "2077",
+    "DungeonIdList": [],
+    "DungeonTypeSetList": [
+      1,
+      2
+    ],
+    "ExcludeIdList": [
+      1599,
+      1600,
+      1604,
+      1605,
+      1608,
+      1606
+    ]
+  },
+  {
+    "StrId": "YuHangYuan",
+    "DungeonIdList": [
+      3924
+    ],
+    "DungeonTypeSetList": [
+      1,
+      2
+    ],
     "ExcludeIdList": []
   }
 ]

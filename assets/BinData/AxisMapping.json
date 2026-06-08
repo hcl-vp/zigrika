@@ -925,5 +925,21 @@
     "DisplayName": "",
     "KeyboardVersionMap": {},
     "GamepadVersionMap": {}
+  },
+  {
+    "Id": 54,
+    "AxisName": "UiScroll2Slow",
+    "AxisType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": {},
+    "FrancePcKeys": {},
+    "ThaiPcKeys": {},
+    "GamepadKeys": {
+      "Gamepad_RightX": 0.20000000298023224
+    },
+    "DisplayName": "",
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
   }
 ]

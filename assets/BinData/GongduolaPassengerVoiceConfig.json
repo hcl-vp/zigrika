@@ -2783,7 +2783,7 @@
       1
     ],
     "TriggerTimePeriod": [
-      "Night"
+      "DayTime"
     ],
     "ConditionParam": [
       15
@@ -2827,7 +2827,7 @@
       30003
     ],
     "TriggerTimePeriod": [
-      "Night"
+      "DayTime"
     ],
     "ConditionParam": [
       15

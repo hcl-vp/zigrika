@@ -1523,12 +1523,12 @@
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_02.DA_Fx_Group_Adam_ML_MengyanBuff_02",
+      "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_04.DA_Fx_AdamSmasher_Buff_04",
       "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff.DA_Fx_Group_Adam_ML_MengyanBuff",
       "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_02.DA_Fx_AdamSmasher_Buff_02",
       "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_01.DA_Fx_Group_Adam_ML_MengyanBuff_01",
-      "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_03.DA_Fx_AdamSmasher_Buff_03",
-      "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_02.DA_Fx_Group_Adam_ML_MengyanBuff_02",
-      "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_04.DA_Fx_AdamSmasher_Buff_04"
+      "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_03.DA_Fx_AdamSmasher_Buff_03"
     ]
   },
   {

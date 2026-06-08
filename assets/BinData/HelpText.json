@@ -6058,5 +6058,125 @@
     "Type": 0,
     "Style": 1,
     "TimeDilation": 1
+  },
+  {
+    "Id": 625,
+    "GroupId": 625,
+    "Title": "HelpText_625_Title",
+    "Picture": "",
+    "Content": "HelpText_625_Content",
+    "Type": 0,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 626,
+    "GroupId": 626,
+    "Title": "HelpText_626_Title",
+    "Picture": "",
+    "Content": "HelpText_626_Content",
+    "Type": 0,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 627,
+    "GroupId": 627,
+    "Title": "HelpText_627_Title",
+    "Picture": "",
+    "Content": "HelpText_627_Content",
+    "Type": 0,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 629,
+    "GroupId": 629,
+    "Title": "HelpText_629_Title",
+    "Picture": "",
+    "Content": "HelpText_629_Content",
+    "Type": 0,
+    "Style": 1,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 635,
+    "GroupId": 635,
+    "Title": "HelpText_635_Title",
+    "Picture": "",
+    "Content": "HelpText_635_Content",
+    "Type": 0,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 644,
+    "GroupId": 644,
+    "Title": "Tutorial_36107_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36107_UI.T_ImgHelp_Tuwenyindao_36107_UI",
+    "Content": "GuideTutorialPage_36107_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 645,
+    "GroupId": 644,
+    "Title": "Tutorial_3610702_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36107_02_UI.T_ImgHelp_Tuwenyindao_36107_02_UI",
+    "Content": "GuideTutorialPage_3610702_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 646,
+    "GroupId": 644,
+    "Title": "Tutorial_3610703_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36107_03_UI.T_ImgHelp_Tuwenyindao_36107_03_UI",
+    "Content": "GuideTutorialPage_3610703_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 647,
+    "GroupId": 645,
+    "Title": "Tutorial_36108_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36108_UI.T_ImgHelp_Tuwenyindao_36108_UI",
+    "Content": "GuideTutorialPage_36108_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 648,
+    "GroupId": 645,
+    "Title": "Tutorial_3610802_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36108_02_UI.T_ImgHelp_Tuwenyindao_36108_02_UI",
+    "Content": "GuideTutorialPage_3610802_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 649,
+    "GroupId": 646,
+    "Title": "Tutorial_36110_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36110_UI.T_ImgHelp_Tuwenyindao_36110_UI",
+    "Content": "GuideTutorialPage_36110_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 650,
+    "GroupId": 646,
+    "Title": "Tutorial_3611002_Title",
+    "Picture": "/Game/Aki/UI/UIResources/Common/Image/ImgHelp/T_ImgHelp_Tuwenyindao_36110_02_UI.T_ImgHelp_Tuwenyindao_36110_02_UI",
+    "Content": "GuideTutorialPage_3611002_Content",
+    "Type": 1,
+    "Style": 0,
+    "TimeDilation": 1
   }
 ]

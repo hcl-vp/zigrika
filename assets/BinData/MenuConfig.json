@@ -45,7 +45,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 1,
@@ -93,7 +94,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 2,
@@ -141,7 +143,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 3,
@@ -189,7 +192,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 4,
@@ -244,7 +248,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 41,
@@ -299,7 +304,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 56,
@@ -352,7 +358,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 42,
@@ -403,7 +410,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 6,
@@ -458,7 +466,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 44,
@@ -511,7 +520,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 45,
@@ -566,7 +576,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 46,
@@ -619,7 +630,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 47,
@@ -670,7 +682,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 52,
@@ -725,7 +738,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 53,
@@ -776,7 +790,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 7,
@@ -821,7 +836,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 8,
@@ -866,7 +882,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 9,
@@ -911,7 +928,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 10,
@@ -956,7 +974,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 11,
@@ -1001,7 +1020,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 12,
@@ -1046,7 +1066,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 13,
@@ -1091,7 +1112,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 14,
@@ -1136,7 +1158,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 15,
@@ -1181,7 +1204,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 16,
@@ -1226,7 +1250,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 17,
@@ -1271,7 +1296,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 18,
@@ -1316,7 +1342,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 19,
@@ -1361,7 +1388,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20,
@@ -1406,7 +1434,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 21,
@@ -1451,7 +1480,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 22,
@@ -1496,7 +1526,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 23,
@@ -1541,7 +1572,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 24,
@@ -1586,7 +1618,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 25,
@@ -1631,7 +1664,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 26,
@@ -1676,7 +1710,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 27,
@@ -1721,7 +1756,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 28,
@@ -1766,7 +1802,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 29,
@@ -1811,7 +1848,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 30,
@@ -1856,7 +1894,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 31,
@@ -1901,7 +1940,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 32,
@@ -1946,7 +1986,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 33,
@@ -1991,7 +2032,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 34,
@@ -2036,7 +2078,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 35,
@@ -2081,7 +2124,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 36,
@@ -2126,7 +2170,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 37,
@@ -2171,7 +2216,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 38,
@@ -2230,7 +2276,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 39,
@@ -2280,7 +2327,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 40,
@@ -2330,7 +2378,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 50,
@@ -2375,7 +2424,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 51,
@@ -2420,7 +2470,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 58,
@@ -2468,7 +2519,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 59,
@@ -2516,7 +2568,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 68,
@@ -2567,7 +2620,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 70,
@@ -2631,7 +2685,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 71,
@@ -2690,7 +2745,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 72,
@@ -2751,7 +2807,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 73,
@@ -2801,7 +2858,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 74,
@@ -2856,7 +2914,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 75,
@@ -2901,7 +2960,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 12990008,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 76,
@@ -2957,7 +3017,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 89,
@@ -3005,7 +3066,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 90,
@@ -3053,7 +3115,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 91,
@@ -3101,7 +3164,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 92,
@@ -3149,7 +3213,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 93,
@@ -3202,7 +3267,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 94,
@@ -3250,7 +3316,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 95,
@@ -3298,7 +3365,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 96,
@@ -3346,7 +3414,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 97,
@@ -3394,7 +3463,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 99,
@@ -3442,7 +3512,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 100,
@@ -3490,7 +3561,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 101,
@@ -3541,7 +3613,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 102,
@@ -3592,7 +3665,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 10301,
@@ -3643,7 +3717,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 103,
@@ -3694,7 +3769,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 107,
@@ -3739,7 +3815,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 108,
@@ -3790,7 +3867,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 110,
@@ -3847,7 +3925,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 111,
@@ -3898,7 +3977,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 112,
@@ -3946,7 +4026,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 12005119,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 113,
@@ -3991,7 +4072,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 114,
@@ -4036,7 +4118,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 901,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 115,
@@ -4081,7 +4164,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 902,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 116,
@@ -4126,7 +4210,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 903,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 117,
@@ -4171,7 +4256,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 904,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 118,
@@ -4216,7 +4302,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 905,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 119,
@@ -4261,7 +4348,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 906,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 120,
@@ -4306,7 +4394,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 907,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 123,
@@ -4351,7 +4440,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 908,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 121,
@@ -4402,7 +4492,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 122,
@@ -4453,7 +4544,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 124,
@@ -4506,7 +4598,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 125,
@@ -4566,7 +4659,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 126,
@@ -4623,7 +4717,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 127,
@@ -4674,7 +4769,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 128,
@@ -4731,7 +4827,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 130,
@@ -4782,7 +4879,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 131,
@@ -4833,7 +4931,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 132,
@@ -4884,7 +4983,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 133,
@@ -4933,7 +5033,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 135,
@@ -4984,7 +5085,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 137,
@@ -5032,7 +5134,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 138,
@@ -5085,7 +5188,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 139,
@@ -5133,7 +5237,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 140,
@@ -5186,7 +5291,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 141,
@@ -5241,7 +5347,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 142,
@@ -5289,7 +5396,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 144,
@@ -5344,7 +5452,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 146,
@@ -5389,7 +5498,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 907,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 5,
@@ -5444,7 +5554,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20023,
@@ -5495,7 +5606,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 65,
@@ -5546,7 +5658,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20025,
@@ -5597,7 +5710,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 145,
@@ -5648,7 +5762,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 77,
@@ -5702,7 +5817,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 136,
@@ -5753,7 +5869,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 51101,
@@ -5804,7 +5921,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 13000020,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 200241,
@@ -5855,7 +5973,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 200242,
@@ -5906,7 +6025,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 200245,
@@ -5957,7 +6077,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 60207,
@@ -6008,7 +6129,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 1352,
@@ -6059,7 +6181,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 1355,
@@ -6110,7 +6233,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20026,
@@ -6171,7 +6295,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20027,
@@ -6222,7 +6347,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20028,
@@ -6273,7 +6399,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20029,
@@ -6324,7 +6451,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20030,
@@ -6375,7 +6503,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20204,
@@ -6426,7 +6555,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20205,
@@ -6477,7 +6607,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20031,
@@ -6528,7 +6659,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20032,
@@ -6579,7 +6711,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 202052,
@@ -6636,7 +6769,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 202562,
@@ -6691,7 +6825,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 200062,
@@ -6748,7 +6883,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 200682,
@@ -6801,7 +6937,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 2001112,
@@ -6854,7 +6991,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 129,
@@ -6902,7 +7040,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 134,
@@ -6950,7 +7089,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20203,
@@ -7001,7 +7141,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 1271,
@@ -7052,7 +7193,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 60208,
@@ -7103,7 +7245,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20360,
@@ -7156,7 +7299,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 60209,
@@ -7207,7 +7351,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 55113,
@@ -7255,7 +7400,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20033,
@@ -7306,7 +7452,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 51102,
@@ -7357,7 +7504,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20206,
@@ -7402,7 +7550,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 2001102,
@@ -7459,7 +7608,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20310,
@@ -7517,7 +7667,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20340,
@@ -7580,7 +7731,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20350,
@@ -7638,7 +7790,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20351,
@@ -7697,7 +7850,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 20341,
@@ -7756,7 +7910,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20352,
@@ -7815,7 +7970,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20034,
@@ -7866,7 +8022,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20610,
@@ -7917,7 +8074,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20210,
@@ -7962,7 +8120,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20211,
@@ -8015,7 +8174,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20212,
@@ -8066,7 +8226,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20213,
@@ -8117,7 +8278,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20214,
@@ -8168,7 +8330,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20215,
@@ -8219,7 +8382,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 900100,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 200271,
@@ -8282,7 +8446,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 20216,
@@ -8335,7 +8500,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 60210,
@@ -8386,7 +8552,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 51506,
@@ -8431,7 +8598,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 10107,
@@ -8482,7 +8650,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 202053,
@@ -8539,7 +8708,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 55114,
@@ -8587,7 +8757,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20035,
@@ -8642,7 +8813,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 2001103,
@@ -8699,7 +8871,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 60301,
@@ -8750,7 +8923,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 60302,
@@ -8801,7 +8975,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 30201,
@@ -8846,7 +9021,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 12990008,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 30202,
@@ -8897,7 +9073,8 @@
     "CanDisableDetailShow": true,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 60303,
@@ -8948,7 +9125,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 603031,
@@ -8999,7 +9177,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 51103,
@@ -9050,7 +9229,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 201006,
@@ -9095,7 +9275,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 0
   },
   {
     "Id": 4701,
@@ -9150,7 +9331,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 30200,
@@ -9205,7 +9387,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20611,
@@ -9258,7 +9441,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 60304,
@@ -9309,7 +9493,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   },
   {
     "Id": 20004,
@@ -9366,7 +9551,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 200321,
@@ -9423,7 +9609,8 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 1,
-    "CanShowInLogin": true
+    "CanShowInLogin": true,
+    "XboxHide": 1
   },
   {
     "Id": 51104,
@@ -9474,6 +9661,7 @@
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
     "Ps5Hide": 0,
-    "CanShowInLogin": false
+    "CanShowInLogin": false,
+    "XboxHide": 0
   }
 ]

@@ -427,5 +427,82 @@
     "TagIcon": "",
     "ShowReward": 5211213,
     "JumpParam": 108400002
+  },
+  {
+    "Id": 3401,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 60,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220801,
+    "JumpParam": 100100021
+  },
+  {
+    "Id": 3402,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 15,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220802,
+    "JumpParam": 110300001
+  },
+  {
+    "Id": 3403,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 10,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220803,
+    "JumpParam": 110400001
+  },
+  {
+    "Id": 3404,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 50,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220804,
+    "JumpParam": 109900001
+  },
+  {
+    "Id": 3405,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 40,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220805,
+    "JumpParam": 108200002
+  },
+  {
+    "Id": 3406,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 30,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220806,
+    "JumpParam": 110000001
+  },
+  {
+    "Id": 3407,
+    "Type": 2,
+    "ActivityGroup": 5,
+    "Sort": 20,
+    "Icon": "",
+    "Title": "",
+    "TagIcon": "",
+    "ShowReward": 5220807,
+    "JumpParam": 100600006
   }
 ]

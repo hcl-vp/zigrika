@@ -2265,7 +2265,7 @@
     "ExecutionId": [],
     "ExecutionRadius": 3,
     "ForceLockOnCoefficient": 0,
-    "MonsterSizeId": 1,
+    "MonsterSizeId": 3,
     "MonsterPerformanceId": 0,
     "FixedLocation": false,
     "WeaknessExploitWeapon": 0

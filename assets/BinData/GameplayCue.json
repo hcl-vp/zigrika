@@ -124221,7 +124221,9 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "FallbackForwardOffset=450"
+    ],
     "Group": 0,
     "Priority": 0
   },
@@ -135319,7 +135321,9 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "FallbackForwardOffset=450"
+    ],
     "Group": 0,
     "Priority": 0
   },
@@ -143274,230 +143278,6 @@
   },
   {
     "Id": 80036031,
-    "Path": "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff.DA_Fx_Group_Adam_ML_MengyanBuff",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 80036032,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_02.DA_Fx_AdamSmasher_Buff_02",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 80036041,
-    "Path": "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_01.DA_Fx_Group_Adam_ML_MengyanBuff_01",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 80036042,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_03.DA_Fx_AdamSmasher_Buff_03",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 80036051,
     "Path": "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_02.DA_Fx_Group_Adam_ML_MengyanBuff_02",
     "CueType": 0,
     "Comp": 1,
@@ -143553,8 +143333,232 @@
     "Priority": 0
   },
   {
-    "Id": 80036052,
+    "Id": 80036032,
     "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_04.DA_Fx_AdamSmasher_Buff_04",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 80036041,
+    "Path": "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff.DA_Fx_Group_Adam_ML_MengyanBuff",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 80036042,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_02.DA_Fx_AdamSmasher_Buff_02",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 80036051,
+    "Path": "/Game/Aki/Effect/EffectGroup/ML1AdamSmasherMd00001/DA_Fx_Group_Adam_ML_MengyanBuff_01.DA_Fx_Group_Adam_ML_MengyanBuff_01",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 80036052,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_AdamSmasher_Buff_03.DA_Fx_AdamSmasher_Buff_03",
     "CueType": 1,
     "Comp": 1,
     "CompName": "Mesh",
@@ -146602,9 +146606,7 @@
     "Resources": [],
     "Parameters": [
       "1",
-      "F8E56C7F",
-      "",
-      "2"
+      "F8E56C7F"
     ],
     "Group": 0,
     "Priority": 100
@@ -153295,7 +153297,7 @@
     "CueType": 34,
     "Comp": 1,
     "CompName": "Mesh",
-    "Socket": "WeaponProp06#HitCase",
+    "Socket": "Bone_Prop001_R#HitCase",
     "Location": {
       "X": 0,
       "Y": 0,
@@ -153974,12 +153976,12 @@
     "Priority": 0
   },
   {
-    "Id": 1100033002,
-    "Path": "/Game/Aki/Effect/EffectGroup/Weapon/Device/R5Device508/DA_Fx_Group_R5Device508_touying02.DA_Fx_Group_R5Device508_touying02",
+    "Id": 1109100022,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_R1b_Change.DA_Fx_Group_R1b_Change",
     "CueType": 0,
-    "Comp": 2,
-    "CompName": "WeaponCase0",
-    "Socket": "Bone_T4_All",
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
     "Location": {
       "X": 0,
       "Y": 0,
@@ -153995,65 +153997,9 @@
       "Y": 1,
       "Z": 1
     },
-    "LocRule": 2,
-    "RotaRule": 2,
-    "SclRule": 2,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1100033003,
-    "Path": "/Game/Aki/Effect/EffectGroup/Weapon/Device/R5Device508/DA_Fx_Group_R5Device508_touying03.DA_Fx_Group_R5Device508_touying03",
-    "CueType": 0,
-    "Comp": 2,
-    "CompName": "WeaponCase0",
-    "Socket": "Bone_T4_All",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 2,
-    "RotaRule": 2,
-    "SclRule": 2,
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
     "EndRule": 0,
     "Magni": 0,
     "AttrId": 0,
@@ -154263,10 +154209,66 @@
     "Priority": 100
   },
   {
-    "Id": 1109100022,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LuoselaMd10011/DA_Fx_Group_R1b_Change.DA_Fx_Group_R1b_Change",
-    "CueType": 0,
+    "Id": 640034011,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Hairu_Lucy_Basic1.DA_Fx_Hairu_Lucy_Basic1",
+    "CueType": 1,
     "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511902002,
+    "Path": "/Game/Aki/Effect/DataAsset/FilterDA/DA_PostProcess_Filter_Green.DA_PostProcess_Filter_Green",
+    "CueType": 0,
+    "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
     "Location": {
@@ -154317,240 +154319,6 @@
     "Parameters": [],
     "Group": 0,
     "Priority": 0
-  },
-  {
-    "Id": 80036381,
-    "Path": "",
-    "CueType": 21,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "play_vo_mon_adamsmasher_story01"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 80036391,
-    "Path": "",
-    "CueType": 21,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "play_vo_mon_adamsmasher_story02"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 2809000113,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconComBuff06.T_IconComBuff06",
-    "CueType": 2,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "2",
-      "342c27"
-    ],
-    "Group": 0,
-    "Priority": 100
-  },
-  {
-    "Id": 2809000114,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconComBuff07.T_IconComBuff07",
-    "CueType": 2,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "2",
-      "342c27"
-    ],
-    "Group": 0,
-    "Priority": 100
   },
   {
     "Id": 1308504001,
@@ -154690,6 +154458,1254 @@
     "RotaRule": 0,
     "SclRule": 0,
     "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1100033002,
+    "Path": "/Game/Aki/Effect/EffectGroup/Weapon/Device/R5Device508/DA_Fx_Group_R5Device508_touying02.DA_Fx_Group_R5Device508_touying02",
+    "CueType": 0,
+    "Comp": 2,
+    "CompName": "WeaponCase0",
+    "Socket": "Bone_T4_All",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 2,
+    "RotaRule": 2,
+    "SclRule": 2,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1100033003,
+    "Path": "/Game/Aki/Effect/EffectGroup/Weapon/Device/R5Device508/DA_Fx_Group_R5Device508_touying03.DA_Fx_Group_R5Device508_touying03",
+    "CueType": 0,
+    "Comp": 2,
+    "CompName": "WeaponCase0",
+    "Socket": "Bone_T4_All",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 2,
+    "RotaRule": 2,
+    "SclRule": 2,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034012,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon09.T_CyberSynergyIcon09",
+    "CueType": 37,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034013,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon04.T_CyberSynergyIcon04",
+    "CueType": 37,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034014,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon03.T_CyberSynergyIcon03",
+    "CueType": 37,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511902001,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_Adam_MLs_A13_Mat_All_02.DA_Fx_Adam_MLs_A13_Mat_All_02",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511902005,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Lucy_Eye_HairuColor.DA_Fx_Lucy_Eye_HairuColor",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500101,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon01.T_CyberSynergyIcon01",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500102,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon09.T_CyberSynergyIcon09",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500103,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon04.T_CyberSynergyIcon04",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500105,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon06.T_CyberSynergyIcon06",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500107,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon02.T_CyberSynergyIcon02",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034015,
+    "Path": "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_4/3_4SaiBoBengKe/DA_Fx_SC1_3_4FireSpark_01.DA_Fx_SC1_3_4FireSpark_01",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001Head",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": -90,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034016,
+    "Path": "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_4/3_4SaiBoBengKe/DA_Fx_SC1_3_4FireSpark_01.DA_Fx_SC1_3_4FireSpark_01",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001Head",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": -90,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034017,
+    "Path": "/Game/Aki/Effect/EffectGroup/Scenes/3_4/Postprocess/DA_Fx_Group_Post_LuoSeLa_Screen_01.DA_Fx_Group_Post_LuoSeLa_Screen_01",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511301001,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Hairu_Lucy_Basic1.DA_Fx_Hairu_Lucy_Basic1",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511315300,
+    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H01.NS_Fx_Lucy_R1a_Link_Attack_Sp_H01",
+    "CueType": 34,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001LHand#HitCase",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511315301,
+    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H01_Right.NS_Fx_Lucy_R1a_Link_Attack_Sp_H01_Right",
+    "CueType": 34,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001RHand#HitCase",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511305300,
+    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Left.NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Left",
+    "CueType": 34,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001LHand#HitCase",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511305301,
+    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Right.NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Right",
+    "CueType": 34,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001RHand#HitCase",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500012,
+    "Path": "/Game/Aki/Effect/DataAsset/FilterDA/DA_PostProcess_Filter_Blue.DA_PostProcess_Filter_Blue",
+    "CueType": 0,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 8087000801,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Mone/DA_Fx_Mone_AlphaDissolve.DA_Fx_Mone_AlphaDissolve",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
     "Magni": 0,
     "AttrId": 0,
     "Tag": "",
@@ -155013,6 +156029,118 @@
     "Priority": 0
   },
   {
+    "Id": 1511306000,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_R1a_Buff.DA_Fx_Group_R1a_Buff",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Root",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511306001,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Lucy_Jacket.DA_Fx_Lucy_Jacket",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
     "Id": 1308888001,
     "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Rebecca/DA_Fx_Rebecca_HairEffect.DA_Fx_Rebecca_HairEffect",
     "CueType": 1,
@@ -155069,65 +156197,9 @@
     "Priority": 0
   },
   {
-    "Id": 1308888007,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_Outskill2.DA_Fx_Group_Outskill2",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Root",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
     "Id": 1308888002,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_HairEffect.DA_Fx_Group_HairEffect",
-    "CueType": 21,
+    "Path": "",
+    "CueType": 25,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -155177,6 +156249,13 @@
     ],
     "Resources": [],
     "Parameters": [
+      "1",
+      "play_role_rebecc_bat_hair_effect_loop",
+      "",
+      "stop_role_rebecc_bat_hair_effect_loop",
+      "",
+      "play_role_rebecc_bat_hair_effect_loop",
+      "stop_role_rebecc_bat_hair_effect_loop",
       "play_role_rebecc_bat_hair_effect_loop"
     ],
     "Group": 0,
@@ -155407,968 +156486,6 @@
     "Priority": 0
   },
   {
-    "Id": 1511315300,
-    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H01.NS_Fx_Lucy_R1a_Link_Attack_Sp_H01",
-    "CueType": 34,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Bip001LHand#HitCase",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511315301,
-    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H01_Right.NS_Fx_Lucy_R1a_Link_Attack_Sp_H01_Right",
-    "CueType": 34,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Bip001RHand#HitCase",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511305300,
-    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Left.NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Left",
-    "CueType": 34,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Bip001LHand#HitCase",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511305301,
-    "Path": "/Game/Aki/Effect/Niagara/NI_R2T1LucyMd10011/NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Right.NS_Fx_Lucy_R1a_Link_Attack_Sp_H02_Right",
-    "CueType": 34,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Bip001RHand#HitCase",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511220002,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_Sp_Skill_aim1.DA_Fx_Group_Sp_Skill_aim1",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "HitCase",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 1,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511902001,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Lord/ML1AdamSmasherMd00001/DA_Fx_Adam_MLs_A13_Mat_All_02.DA_Fx_Adam_MLs_A13_Mat_All_02",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511902002,
-    "Path": "/Game/Aki/Effect/DataAsset/FilterDA/DA_PostProcess_Filter_Green.DA_PostProcess_Filter_Green",
-    "CueType": 0,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500012,
-    "Path": "/Game/Aki/Effect/DataAsset/FilterDA/DA_PostProcess_Filter_Blue.DA_PostProcess_Filter_Blue",
-    "CueType": 0,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511902005,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Lucy_Eye_HairuColor.DA_Fx_Lucy_Eye_HairuColor",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500101,
-    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon01.T_CyberSynergyIcon01",
-    "CueType": 37,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "0"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500102,
-    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon07.T_CyberSynergyIcon07",
-    "CueType": 37,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "0"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500103,
-    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon04.T_CyberSynergyIcon04",
-    "CueType": 37,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "0"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500105,
-    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon05.T_CyberSynergyIcon05",
-    "CueType": 37,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "0"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511500107,
-    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon02.T_CyberSynergyIcon02",
-    "CueType": 37,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "0"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511301001,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Hairu_Lucy_Basic1.DA_Fx_Hairu_Lucy_Basic1",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511306000,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_R1a_Buff.DA_Fx_Group_R1a_Buff",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Root",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511306001,
-    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Lucy_Jacket.DA_Fx_Lucy_Jacket",
-    "CueType": 1,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
     "Id": 1511306003,
     "Path": "",
     "CueType": 21,
@@ -156485,9 +156602,9 @@
     "Priority": 0
   },
   {
-    "Id": 1308888010,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff01.T_IconLibeikaBuff01",
-    "CueType": 2,
+    "Id": 80036381,
+    "Path": "",
+    "CueType": 21,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -156537,74 +156654,15 @@
     ],
     "Resources": [],
     "Parameters": [
-      "1",
-      "8B5CF6CC"
-    ],
-    "Group": 0,
-    "Priority": 100
-  },
-  {
-    "Id": 1308888011,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff02.T_IconLibeikaBuff02",
-    "CueType": 24,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "1"
+      "play_vo_mon_adamsmasher_story01"
     ],
     "Group": 0,
     "Priority": 0
   },
   {
-    "Id": 1308888012,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff03.T_IconLibeikaBuff03",
-    "CueType": 2,
+    "Id": 80036391,
+    "Path": "",
+    "CueType": 21,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -156654,136 +156712,22 @@
     ],
     "Resources": [],
     "Parameters": [
-      "1"
+      "play_vo_mon_adamsmasher_story02"
     ],
     "Group": 0,
     "Priority": 0
   },
   {
-    "Id": 1308888013,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff04.T_IconLibeikaBuff04",
-    "CueType": 24,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [
-      "1"
-    ],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511777000,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_R1s01_Pingmu.DA_Fx_Group_R1s01_Pingmu",
+    "Id": 1511220002,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_Sp_Skill_aim1.DA_Fx_Group_Sp_Skill_aim1",
     "CueType": 0,
     "Comp": 1,
     "CompName": "Mesh",
-    "Socket": "None",
+    "Socket": "HitCase",
     "Location": {
       "X": 0,
       "Y": 0,
       "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
-    "bListenAttr": false,
-    "bSoftFollow": false,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": false,
-    "InterpSpeed": 5,
-    "FarthestDistance": 100,
-    "FaultTolerance": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511777001,
-    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_S1a01_Pingmu08.DA_Fx_Group_S1a01_Pingmu08",
-    "CueType": 0,
-    "Comp": 1,
-    "CompName": "Mesh",
-    "Socket": "Root",
-    "Location": {
-      "X": 0,
-      "Y": -65,
-      "Z": 110
     },
     "Rotation": {
       "X": 0,
@@ -156804,62 +156748,6 @@
     "Tag": "",
     "Max": 10000,
     "Min": 0,
-    "bListenAttr": true,
-    "bSoftFollow": true,
-    "bLockRevolution": false,
-    "LockRotation": {
-      "X": 1,
-      "Y": 0,
-      "Z": 0
-    },
-    "LockCamera": true,
-    "InterpSpeed": 10,
-    "FarthestDistance": 5,
-    "FaultTolerance": {
-      "X": 10,
-      "Y": 10,
-      "Z": 20
-    },
-    "TargetScaleUp": [
-      1,
-      1
-    ],
-    "Resources": [],
-    "Parameters": [],
-    "Group": 0,
-    "Priority": 0
-  },
-  {
-    "Id": 1511777002,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLucyBuff06.T_IconLucyBuff06",
-    "CueType": 2,
-    "Comp": 0,
-    "CompName": "Mesh",
-    "Socket": "None",
-    "Location": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Rotation": {
-      "X": 0,
-      "Y": 0,
-      "Z": 0
-    },
-    "Scale": {
-      "X": 1,
-      "Y": 1,
-      "Z": 1
-    },
-    "LocRule": 0,
-    "RotaRule": 0,
-    "SclRule": 0,
-    "EndRule": 0,
-    "Magni": 0,
-    "AttrId": 0,
-    "Tag": "",
-    "Max": 10000,
-    "Min": 0,
     "bListenAttr": false,
     "bSoftFollow": false,
     "bLockRevolution": false,
@@ -156881,18 +156769,13 @@
       1
     ],
     "Resources": [],
-    "Parameters": [
-      "1",
-      "F8E56C7F",
-      "",
-      "2"
-    ],
+    "Parameters": [],
     "Group": 0,
-    "Priority": 100
+    "Priority": 0
   },
   {
-    "Id": 1511777003,
-    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLucyBuff06.T_IconLucyBuff06",
+    "Id": 2809000113,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconComBuff06.T_IconComBuff06",
     "CueType": 2,
     "Comp": 0,
     "CompName": "Mesh",
@@ -156944,12 +156827,239 @@
     "Resources": [],
     "Parameters": [
       "2",
-      "F8E56C7F",
-      "",
-      "2"
+      "342c27"
     ],
     "Group": 0,
     "Priority": 100
+  },
+  {
+    "Id": 2809000114,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconComBuff07.T_IconComBuff07",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "2",
+      "342c27"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1308888007,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1RebeccaMd10011/DA_Fx_Group_HairEffect.DA_Fx_Group_HairEffect",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Root",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 640034018,
+    "Path": "",
+    "CueType": 21,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "play_sfx_gp_carchase_light_spark"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 8087000802,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Mone/DA_Fx_Mone_Burst_Up_Linght_01.DA_Fx_Mone_Burst_Up_Linght_01",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
   },
   {
     "Id": 1109100023,
@@ -157232,6 +157342,473 @@
     "Priority": 0
   },
   {
+    "Id": 1511777000,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_R1s01_Pingmu.DA_Fx_Group_R1s01_Pingmu",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511777001,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_S1a01_Pingmu08.DA_Fx_Group_S1a01_Pingmu08",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Root",
+    "Location": {
+      "X": 0,
+      "Y": -65,
+      "Z": 110
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": true,
+    "bSoftFollow": true,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 1,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": true,
+    "InterpSpeed": 10,
+    "FarthestDistance": 5,
+    "FaultTolerance": {
+      "X": 10,
+      "Y": 10,
+      "Z": 20
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1308888010,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff01.T_IconLibeikaBuff01",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "8B5CF6CC"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1308888011,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff02.T_IconLibeikaBuff02",
+    "CueType": 24,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1308888012,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff03.T_IconLibeikaBuff03",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1308888013,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLibeikaBuff04.T_IconLibeikaBuff04",
+    "CueType": 24,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511777002,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLucyBuff06.T_IconLucyBuff06",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "F8E56C7F",
+      "",
+      "2"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1511777003,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLucyBuff06.T_IconLucyBuff06",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "2",
+      "F8E56C7F",
+      "",
+      "2"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
     "Id": 1511777004,
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconLucyBuff07.T_IconLucyBuff07",
     "CueType": 2,
@@ -157286,5 +157863,521 @@
     "Parameters": [],
     "Group": 0,
     "Priority": 0
+  },
+  {
+    "Id": 640034019,
+    "Path": "/Game/Aki/Effect/DataAsset/Niagara/Scene/3_4/3_4SaiBoBengKe/DA_Fx_Scene_CyberpunkTtansitions_01.DA_Fx_Scene_CyberpunkTtansitions_01",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Root",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 1,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500106,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon05.T_CyberSynergyIcon05",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511500104,
+    "Path": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon03.T_CyberSynergyIcon03",
+    "CueType": 37,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511003011,
+    "Path": "/Game/Aki/Effect/MaterialController/DA_Character/Lucy/DA_Fx_Lucy_Diss.DA_Fx_Lucy_Diss",
+    "CueType": 1,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1211999401,
+    "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconDaniyaBuff03.T_IconDaniyaBuff03",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "0"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 1511888000,
+    "Path": "/Game/Aki/Effect/DataAsset/PostProcess/R2T1LucyMd10011/DA_Fx_Post_Lucy_R1b_screen.DA_Fx_Post_Lucy_R1b_screen",
+    "CueType": 0,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511888001,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1LucyMd10011/DA_Fx_Group_R1b_ErrorEnd.DA_Fx_Group_R1b_ErrorEnd",
+    "CueType": 0,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0
+  },
+  {
+    "Id": 1511910101,
+    "Path": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredattack_UI.T_Iconpropertyredattack_UI",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "F8E56C7F"
+    ],
+    "Group": 0,
+    "Priority": 100
+  },
+  {
+    "Id": 2002204502,
+    "Path": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredphysics_UI.T_Iconpropertyredphysics_UI",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "F8E56C7F"
+    ],
+    "Group": 0,
+    "Priority": 100
   }
 ]

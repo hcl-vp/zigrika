@@ -4236,5 +4236,87 @@
     "IsIdleAction": false,
     "KeyboardVersionMap": {},
     "GamepadVersionMap": {}
+  },
+  {
+    "Id": 207,
+    "ActionName": "UI键盘ESC",
+    "ActionType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": [
+      "Escape"
+    ],
+    "FrancePcKeys": [
+      "Escape"
+    ],
+    "ThaiPcKeys": [
+      "Escape"
+    ],
+    "GamepadKeys": [],
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "IsIdleAction": false,
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 209,
+    "ActionName": "UI右摇杆左",
+    "ActionType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": [],
+    "FrancePcKeys": [],
+    "ThaiPcKeys": [],
+    "GamepadKeys": [
+      "Gamepad_RightStick_Left"
+    ],
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "IsIdleAction": false,
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 210,
+    "ActionName": "UI右摇杆右",
+    "ActionType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": [],
+    "FrancePcKeys": [],
+    "ThaiPcKeys": [],
+    "GamepadKeys": [
+      "Gamepad_RightStick_Right"
+    ],
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "IsIdleAction": false,
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 159,
+    "ActionName": "载具发射仅QTE用",
+    "ActionType": 1,
+    "InputTag": "FightInputRoot.FightInput.ActionInput",
+    "ExclusiveType": 1,
+    "PcKeys": [
+      "LeftMouseButton"
+    ],
+    "FrancePcKeys": [
+      "LeftMouseButton"
+    ],
+    "ThaiPcKeys": [
+      "LeftMouseButton"
+    ],
+    "GamepadKeys": [
+      "Gamepad_FaceButton_Left"
+    ],
+    "MobileIconPath": "",
+    "DisplayName": "",
+    "IsIdleAction": false,
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
   }
 ]

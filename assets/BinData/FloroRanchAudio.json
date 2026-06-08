@@ -80,154 +80,154 @@
     "Id": 12,
     "CharacterType": 1,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat1",
     "AudioEvent": ""
   },
   {
     "Id": 13,
     "CharacterType": 1,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat2",
     "AudioEvent": ""
   },
   {
     "Id": 14,
     "CharacterType": 1,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat3",
     "AudioEvent": ""
   },
   {
     "Id": 15,
     "CharacterType": 1,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat4",
     "AudioEvent": ""
   },
   {
     "Id": 16,
     "CharacterType": 1,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat5",
     "AudioEvent": ""
   },
   {
     "Id": 17,
     "CharacterType": 1,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat6",
     "AudioEvent": ""
   },
   {
     "Id": 18,
     "CharacterType": 1,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat7",
     "AudioEvent": ""
   },
   {
     "Id": 19,
     "CharacterType": 1,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat8",
     "AudioEvent": ""
   },
   {
     "Id": 20,
     "CharacterType": 1,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat9",
     "AudioEvent": ""
   },
   {
     "Id": 21,
     "CharacterType": 1,
     "Type": 3,
-    "Text": "",
+    "Text": "Farm_Chat10",
     "AudioEvent": ""
   },
   {
     "Id": 22,
     "CharacterType": 1,
     "Type": 4,
-    "Text": "",
+    "Text": "Farm_Chat11",
     "AudioEvent": ""
   },
   {
     "Id": 23,
     "CharacterType": 2,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat1",
     "AudioEvent": ""
   },
   {
     "Id": 24,
     "CharacterType": 2,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat2",
     "AudioEvent": ""
   },
   {
     "Id": 25,
     "CharacterType": 2,
     "Type": 0,
-    "Text": "",
+    "Text": "Farm_Chat3",
     "AudioEvent": ""
   },
   {
     "Id": 26,
     "CharacterType": 2,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat4",
     "AudioEvent": ""
   },
   {
     "Id": 27,
     "CharacterType": 2,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat5",
     "AudioEvent": ""
   },
   {
     "Id": 28,
     "CharacterType": 2,
     "Type": 1,
-    "Text": "",
+    "Text": "Farm_Chat6",
     "AudioEvent": ""
   },
   {
     "Id": 29,
     "CharacterType": 2,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat7",
     "AudioEvent": ""
   },
   {
     "Id": 30,
     "CharacterType": 2,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat8",
     "AudioEvent": ""
   },
   {
     "Id": 31,
     "CharacterType": 2,
     "Type": 2,
-    "Text": "",
+    "Text": "Farm_Chat9",
     "AudioEvent": ""
   },
   {
     "Id": 32,
     "CharacterType": 2,
     "Type": 3,
-    "Text": "",
+    "Text": "Farm_Chat10",
     "AudioEvent": ""
   },
   {
     "Id": 33,
     "CharacterType": 2,
     "Type": 4,
-    "Text": "",
+    "Text": "Farm_Chat11",
     "AudioEvent": ""
   }
 ]

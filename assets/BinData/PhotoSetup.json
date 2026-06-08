@@ -19,7 +19,10 @@
     "IsReverseSet": false,
     "ChangeValue": 0.1,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 3,
@@ -41,7 +44,10 @@
     "IsReverseSet": false,
     "ChangeValue": 0.1,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 4,
@@ -70,7 +76,10 @@
     "IsReverseSet": false,
     "ChangeValue": 0.1,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 5,
@@ -92,7 +101,10 @@
     "IsReverseSet": false,
     "ChangeValue": 5,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 6,
@@ -114,7 +126,10 @@
     "IsReverseSet": true,
     "ChangeValue": 0.1,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 7,
@@ -142,7 +157,10 @@
     "IsReverseSet": false,
     "ChangeValue": 0.1,
     "IsShowRedDot": true,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 8,
@@ -150,8 +168,8 @@
     "Name": "PhotoSetup_8_Name",
     "Type": 3,
     "Options": [
-      "PhotoSetup_7_Options_0",
-      "PhotoSetup_7_Options_1"
+      "关闭",
+      "开启"
     ],
     "DefaultOptionIndex": 1,
     "DefaultDropDownIndex": 0,
@@ -164,7 +182,10 @@
     "IsReverseSet": false,
     "ChangeValue": 1,
     "IsShowRedDot": false,
-    "IsLocalStorage": false
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "°",
+    "IsShowInPS5": true
   },
   {
     "Id": 9,
@@ -186,6 +207,9 @@
     "IsReverseSet": false,
     "ChangeValue": 0.1,
     "IsShowRedDot": true,
-    "IsLocalStorage": true
+    "IsLocalStorage": true,
+    "Digits": 0,
+    "Unit": "",
+    "IsShowInPS5": false
   }
 ]
