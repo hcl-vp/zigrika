@@ -35,9 +35,6 @@ setTimeout(() => {
   const {
     PhotoSaveView,
   } = require("../Game/Module/Photograph/View/PhotoSaveView.js");
-  const {
-    FightPhotoSaveView,
-  } = require("../Game/Module/Photograph/View/FightPhotoSaveView.js");
   const PhotographDefine_1 = require("../Game/Module/Photograph/PhotographDefine.js");
   const ScreenShotManager_1 = require("../Game/Module/ScreenShot/ScreenShotManager.js");
   const BattleUiControl_1 = require("../Game/Module/BattleUi/BattleUiControl.js");
@@ -107,6 +104,11 @@ setTimeout(() => {
     PhotographOptionSetup,
   } = require("Game/Module/Photograph/View/PhotographOptionSetup.js");
   const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
+  const LogReportDefine_1 = require("Game/Module/LogReport/LogReportDefine.js");
+  const LogReportController_1 = require("Game/Module/LogReport/LogReportController.js");
+  const {
+    LevelSequencePlayer,
+  } = require("../Game/Module/Common/LevelSequencePlayer.js");
 
   const plot_view_manager = PlotController_1.PlotController.PlotViewManager;
 
@@ -272,6 +274,16 @@ setTimeout(() => {
   };
 
   PhotoSaveView.prototype.zWi = function (e, t, i, h) {
+    this.Hide();
+    UE.LGUIBPLibrary.ResetGlobalBlurUIItem(
+      GlobalData_1.GlobalData.GameInstance.GetWorld(),
+    );
+    if (UiManager_1.UiManager.IsViewOpen("FightPhotographView")) {
+      UiManager_1.UiManager.GetViewByName("FightPhotographView").dSl(false);
+    }
+    if (UiManager_1.UiManager.IsViewOpen("PhotographView")) {
+      UiManager_1.UiManager.GetViewByName("PhotographView").dSl(false);
+    }
     var r = this.EJl();
     let o = this.gKi();
     this.KWi = this.fKi(r);
@@ -295,57 +307,27 @@ setTimeout(() => {
       Log_1.Log.CheckInfo() &&
         Log_1.Log.Info("Photo", 58, "开始截图", ["isSaveFile", e]);
 
-      r.TakeScreenshot();
-    }
-  };
+      setTimeout(() => {
+        o =
+          (
+            LocalStorage_1.LocalStorage.GetGlobal(
+              LocalStorageDefine_1.ELocalStorageGlobalKey.PhotographSetupOption,
+            ) ?? new Map()
+          ).get(8) ?? 1;
+        r.TakeScreenshotHighRes(o);
 
-  FightPhotoSaveView.prototype.gKi = function () {
-    const i = UE.WidgetLayoutLibrary.GetViewportSize(
-      GlobalData_1.GlobalData.World,
-    );
-    return [0, 0, i.X, i.Y];
-  };
-
-  FightPhotoSaveView.prototype.D4_ = function (e) {
-    const t = this.GetItem(3);
-
-    const i = UE.WidgetLayoutLibrary.GetViewportSize(
-      GlobalData_1.GlobalData.World,
-    );
-
-    const r = UE.WidgetLayoutLibrary.GetViewportScale(
-      GlobalData_1.GlobalData.World,
-    );
-
-    if (e) {
-      ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption(
-        MAX_ID + 4,
-        0,
-      );
-      t.SetWidth(i.X / r);
-      t.SetHeight(i.Y / r);
-      this.U4_ = t.K2_GetComponentScale();
-      t.SetUIItemScale(new UE.Vector(1, 1, 1));
-      const offset = t.RelativeLocation;
-      offset.Y = offset.Y - 48;
-      t.SetUIRelativeLocation(offset);
-      this.dzd(true);
-
-      EventSystem_1.EventSystem.Emit(
-        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
-        false,
-      );
-    } else {
-      t.SetWidth(i.X / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
-      t.SetHeight(i.Y / (r * PhotographDefine_1.SCREEN_SHOT_TEXTURE_SCALE));
-      t.SetUIItemScale(this.U4_);
-      t.SetUIRelativeLocation(new UE.Vector(0, 0, 0));
-      this.dzd(false);
-
-      EventSystem_1.EventSystem.Emit(
-        EventDefine_1.EEventName.OnPreparePhotoScreenShot,
-        true,
-      );
+        setTimeout(() => {
+          if (UiManager_1.UiManager.IsViewOpen("FightPhotographView")) {
+            UiManager_1.UiManager.GetViewByName("FightPhotographView").dSl(
+              true,
+            );
+          }
+          if (UiManager_1.UiManager.IsViewOpen("PhotographView")) {
+            UiManager_1.UiManager.GetViewByName("PhotographView").dSl(true);
+          }
+          this.Show();
+        }, 500);
+      }, 500);
     }
   };
 
@@ -489,7 +471,10 @@ setTimeout(() => {
     }
   };
 
+  const orig_play_sequence_purely =
+    LevelSequencePlayer.prototype.PlaySequencePurely;
   const PAUSE_DILATION_THRESHOLD = 0.01;
+  var last_dilated_time = 1;
   const dilate_time = (dilation) => {
     if (!Number.isFinite(dilation)) return;
     const should_pause = dilation < PAUSE_DILATION_THRESHOLD && dilation !== 1;
@@ -501,6 +486,25 @@ setTimeout(() => {
         4,
       );
     }
+    if (dilation < 1) {
+      LevelSequencePlayer.prototype.PlaySequencePurely = function (
+        e,
+        t = false,
+        i = false,
+        s = undefined,
+        h = undefined,
+        r = false,
+      ) {
+        s?.SetResult(true);
+      };
+    } else {
+      LevelSequencePlayer.prototype.PlaySequencePurely =
+        orig_play_sequence_purely;
+    }
+    UE.GameplayStatics.SetGlobalTimeDilation(
+      GlobalData_1.GlobalData.World,
+      dilation,
+    );
 
     const actors = puerts.$ref(UE.NewArray(UE.Actor));
     UE.GameplayStatics.GetAllActorsOfClass(
@@ -518,6 +522,87 @@ setTimeout(() => {
         niagara.SetTickTimeDilation(should_pause ? 0 : dilation);
       }
     }
+  };
+
+  const jump_to_end = (player, key) => {
+    if (!player) return;
+    const ctx = player.GetSequencePlayContext(key);
+    if (!ctx) return;
+    ctx.ExecutePlay();
+    const seq = player.Zxt(key);
+    if (seq?.IsValid()) {
+      player.Qxt.SequenceJumpToSecondByKey(
+        key,
+        seq.SequencePlayer.GetDuration().Time,
+      );
+    }
+  };
+
+  PhotographOptionSetup.prototype.EUt = function (t, e = true) {
+    t = (this.PKi = t) ? "ClickL" : "ClickR";
+    jump_to_end(this.SPe, t);
+  };
+
+  PhotographOptionSetup.prototype.OnBeforeShow = function () {
+    jump_to_end(this.MU_, "Start02");
+  };
+
+  PhotographController.ScreenShot = function (t) {
+    UiManager_1.UiManager.CloseView("GenericPromptView");
+    const original_dilated_time =
+      ModelManager_1.ModelManager.GameModeModel.GetCacheTimeDilationValue();
+    dilate_time(0);
+    const e =
+      Global_1.Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy;
+
+    const o = ModelManager_1.ModelManager.PhotographModel;
+    var i = ModelManager_1.ModelManager.SceneTeamModel;
+    const r = ModelManager_1.ModelManager.AreaModel;
+    var i = i.GetCurrentEntity.Entity.GetComponent(0).GetRoleId();
+    const a = o.GetPhotographOption(0);
+
+    const n = LocalStorage_1.LocalStorage.GetGlobal(
+      LocalStorageDefine_1.ELocalStorageGlobalKey.PhotoAndShareShowPlayerName,
+      true,
+    );
+
+    const s = o.GetPhotographOption(3);
+    const h = o.GetPhotographFilter();
+    const _ = new LogReportDefine_1.PhotographerLogData();
+    _.event_id = "1009";
+    _.i_area_id = r.AreaInfo.AreaId;
+    _.i_father_area_id = r.AreaInfo.Father;
+    _.f_pos_x = e.X;
+    _.f_pos_y = e.Y;
+    _.f_pos_z = e.Z;
+    _.i_motion = o.MontageId;
+    _.i_expression = 0;
+    _.i_role_id = i;
+    _.i_shot_option = o.GetPhotographOption(2);
+    _.i_self_option = a ? 0 : 1;
+    _.i_info_option = n ? 0 : 1;
+    _.i_dof_option = s ? 1 : 0;
+    _.i_filter_id = h;
+    LogReportController_1.LogReportController.LogReport(_);
+
+    UiManager_1.UiManager.OpenView("PhotoSaveView", t, () => {
+      dilate_time(original_dilated_time);
+      EventSystem_1.EventSystem.Emit(EventDefine_1.EEventName.OnScreenShotDone);
+
+      if (this.CameraCaptureType === 1) {
+        if (this.IsLastChecked) {
+          EventSystem_1.EventSystem.Emit(
+            EventDefine_1.EEventName.OnEntityCameraFinished,
+            true,
+          );
+        } else {
+          EventSystem_1.EventSystem.Emit(
+            EventDefine_1.EEventName.OnEntityCameraFinished,
+            false,
+          );
+        }
+      }
+    });
   };
 
   FightPhotoOptionPanel.prototype.OnBeforeStartAsync = async function () {
@@ -585,16 +670,59 @@ setTimeout(() => {
   //   _super_on_after_hide.call(this);
   // };
 
-  const _super_on_after_destroy = FightPhotographView.prototype.OnAfterDestroy;
-  FightPhotographView.prototype.OnAfterDestroy = function () {
-    dilate_time(1);
-    _super_on_after_destroy.call(this);
+  const orig_close_fight_photograph_mode =
+    ControllerHolder_1.ControllerHolder.PhotographController
+      .CloseFightPhotographMode;
+  ControllerHolder_1.ControllerHolder.PhotographController.CloseFightPhotographMode =
+    function (...args) {
+      dilate_time(last_dilated_time);
+      UE.GameplayStatics.SetGlobalTimeDilation(
+        GlobalData_1.GlobalData.World,
+        1,
+      );
+      LevelSequencePlayer.prototype.PlaySequencePurely =
+        orig_play_sequence_purely;
+      dilate_time(last_dilated_time);
+      last_dilated_time = 1;
+      orig_close_fight_photograph_mode.apply(this, args);
+    };
+
+  const orig_close_photograph =
+    ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph;
+  ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph =
+    function (...args) {
+      dilate_time(last_dilated_time);
+      UE.GameplayStatics.SetGlobalTimeDilation(
+        GlobalData_1.GlobalData.World,
+        1,
+      );
+      LevelSequencePlayer.prototype.PlaySequencePurely =
+        orig_play_sequence_purely;
+      dilate_time(last_dilated_time);
+      last_dilated_time = 1;
+      orig_close_photograph.apply(this, args);
+    };
+
+  ControllerHolder_1.ControllerHolder.PhotographController.OMa = function () {};
+
+  const original_uicam_get = UiCameraManager_1.UiCameraManager.Get;
+  UiCameraManager_1.UiCameraManager.Get = function () {
+    const cam = original_uicam_get.call(this);
+    cam.Enter = function (e = 0, t = 0, r = 0, o) {
+      if (this.JRo) return;
+      CameraController_1.CameraController.EnterCameraMode(2, 0, t, r, o);
+      for (const i of this.$Ro.values()) i.Activate();
+      this.JRo = true;
+    };
+    return cam;
   };
 
   const _superOnAfterShow =
     PhotographView_1.PhotographView.prototype.OnAfterShow;
 
   FightPhotographView.prototype.OnAfterShow = function () {
+    last_dilated_time =
+      ModelManager_1.ModelManager.GameModeModel.GetCacheTimeDilationValue();
     _superOnAfterShow.call(this);
     // ModelManager_1.ModelManager.RenderModuleModel?.EnableForceTickCharRenderShell(
     //   "FightPhotographView OnAfterShow",

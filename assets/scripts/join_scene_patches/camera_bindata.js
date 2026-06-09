@@ -378,7 +378,31 @@ setTimeout(() => {
     }),
   ];
 
-  const DROPDOWN_OVERRIDES = new Map([[MAX_ID + 8, MOVEMENT_STYLE_OPTIONS]]);
+  const RESOLUTION_OPTIONS = [
+    build_dropdown_entry({
+      id: 1,
+      setup_type: MAX_ID - 1,
+      text_id: "Default_Graphics_Quality_1",
+      params: ["1"],
+    }),
+    build_dropdown_entry({
+      id: 2,
+      setup_type: MAX_ID - 1,
+      text_id: "High_Definition_Quality_2",
+      params: ["2"],
+    }),
+    build_dropdown_entry({
+      id: 3,
+      setup_type: MAX_ID - 1,
+      text_id: "CUSTOM_Very High (3x)",
+      params: ["3"],
+    }),
+  ];
+
+  const DROPDOWN_OVERRIDES = new Map([
+    [MAX_ID - 1, RESOLUTION_OPTIONS],
+    [MAX_ID + 8, MOVEMENT_STYLE_OPTIONS],
+  ]);
 
   photograph_config.GetPhotoDropDownDataList = (
     (orig) =>
@@ -404,7 +428,8 @@ setTimeout(() => {
         this.SetupValueType,
       );
       const idx = e.findIndex((x) => x.Id === t);
-      this.hbi.InitScroll(e, this.g8e, idx < 0 ? 0 : idx);
+      const safeIdx = idx < 0 ? 0 : Math.min(idx, e.length - 1);
+      this.hbi.InitScroll(e, this.g8e, safeIdx);
     };
   })(PhotographDropDownSetup.prototype._bi);
 
