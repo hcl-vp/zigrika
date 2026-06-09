@@ -109,6 +109,12 @@ setTimeout(() => {
   const {
     LevelSequencePlayer,
   } = require("../Game/Module/Common/LevelSequencePlayer.js");
+  const {
+    MovieModeController,
+  } = require("../Game/Module/MovieMode/MovieModeController.js");
+  const {
+    MovieModeAspectView,
+  } = require("../Game/Module/MovieMode/MovieModeAspectView.js");
 
   const plot_view_manager = PlotController_1.PlotController.PlotViewManager;
 
@@ -1681,38 +1687,51 @@ setTimeout(() => {
     this.GetSlider(1).OnValueChangeCb.Bind(this.pQi);
   };
 
-  const _original_ValueWithoutTitle_OnStart =
-    PhotographValueWithoutTitleSetup.prototype.OnStart;
+  PhotographValueWithoutTitleSetup.DeferredUpdateTypes = new Set([MAX_ID + 10]);
+
   PhotographValueWithoutTitleSetup.prototype.OnStart = function () {
-    _original_ValueWithoutTitle_OnStart.call(this);
+    this.SPe = new LevelSequencePlayer(this.RootItem);
+    this._pendingDeferredValue = undefined;
     this.pQi = (e, t = 0) => {
       let r;
       if (this.SetupConfig.IsReverseSet) {
         r = this.SetupConfig.ValueRange;
         r = MathUtils_1.MathUtils.RangeClamp(e, r[0], r[1], r[1], r[0]);
-        PhotographController_1.PhotographController.SetPhotographOption(
-          this.SetupConfig.ValueType,
-          r,
-        );
-        this.GetText(2).SetText(
-          MathUtils_1.MathUtils.GetFloatPointFloorString(r, 1),
-        );
       } else {
         r = e;
-        PhotographController_1.PhotographController.SetPhotographOption(
-          this.SetupConfig.ValueType,
-          e,
-        );
-        this.GetText(2).SetText(
-          MathUtils_1.MathUtils.GetFloatPointFloorString(e, 1),
-        );
       }
+      this.GetText(2).SetText(
+        MathUtils_1.MathUtils.GetFloatPointFloorString(r, 2),
+      );
+      if (
+        PhotographValueWithoutTitleSetup.DeferredUpdateTypes.has(
+          this.SetupConfig.ValueType,
+        )
+      ) {
+        this._pendingDeferredValue = r;
+        return;
+      }
+      PhotographController_1.PhotographController.SetPhotographOption(
+        this.SetupConfig.ValueType,
+        r,
+      );
       if (this.SetupConfig.IsLocalStorage) {
         saveToLocalStorage(this.SetupValueType, r);
       }
     };
-    this.GetSlider(0).OnValueChangeCb.Unbind();
     this.GetSlider(0).OnValueChangeCb.Bind(this.pQi);
+    this.GetSlider(0).OnEndDragCb.Bind(() => {
+      if (this._pendingDeferredValue !== undefined) {
+        PhotographController_1.PhotographController.SetPhotographOption(
+          this.SetupConfig.ValueType,
+          this._pendingDeferredValue,
+        );
+        if (this.SetupConfig.IsLocalStorage) {
+          saveToLocalStorage(this.SetupValueType, this._pendingDeferredValue);
+        }
+        this._pendingDeferredValue = undefined;
+      }
+    });
   };
 
   const _original_OptionSetup_OnStart = PhotographOptionSetup.prototype.OnStart;
@@ -1780,6 +1799,26 @@ setTimeout(() => {
       false,
     );
   }
+
+  const orig_CreateAspectView = MovieModeController.CreateAspectView;
+
+  MovieModeController.CreateAspectView = async function (e) {
+    this._pendingAspectRatio = e.AspectRatio ?? null;
+    await orig_CreateAspectView.call(this, e);
+  };
+
+  const orig_AspectView_OnStart = MovieModeAspectView.prototype.OnStart;
+  MovieModeAspectView.prototype.OnStart = function () {
+    orig_AspectView_OnStart.call(this);
+    const override =
+      ControllerHolder_1.ControllerHolder.MovieModeController
+        ._pendingAspectRatio;
+    if (override !== null && override !== undefined) {
+      this.Lld = override;
+      ControllerHolder_1.ControllerHolder.MovieModeController._pendingAspectRatio =
+        null;
+    }
+  };
 
   ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption =
     function (t, e, o = !1) {
@@ -1942,6 +1981,76 @@ setTimeout(() => {
           if (t === 14) cam.CameraLeftAndRightSpeed = e;
           else if (t === 15) cam.CameraUpAndDownSpeed = e;
           else cam.CameraForwardAndBackwardSpeed = e;
+          break;
+        }
+        case MAX_ID + 9:
+          {
+            if (e == false || e === 0) {
+              ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+                {
+                  BlendTime: 0,
+                },
+              );
+            } else {
+              let e = i.GetPhotographOption(MAX_ID + 10) ?? 1.777;
+              if (e === 0.0 || e < 0.1) {
+                ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+                  {
+                    BlendTime: 0,
+                  },
+                );
+                return;
+              }
+              if (e === 1.8 || (e > 1.79 && e < 1.81)) {
+                ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+                  {
+                    BlendTime: 0,
+                  },
+                );
+              } else {
+                ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+                  {
+                    BlendTime: 0,
+                  },
+                  (success) => {
+                    MovieModeController.EnterMovieMode({
+                      BlendTime: 0,
+                      AspectRatio: e,
+                    });
+                  },
+                );
+              }
+            }
+          }
+          break;
+        case MAX_ID + 10: {
+          if (e === 0.0 || e < 0.1) {
+            ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+              {
+                BlendTime: 0,
+              },
+            );
+            return;
+          }
+          if (e === 1.8 || (e > 1.79 && e < 1.81)) {
+            ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+              {
+                BlendTime: 0,
+              },
+            );
+          } else {
+            ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+              {
+                BlendTime: 0,
+              },
+              (success) => {
+                MovieModeController.EnterMovieMode({
+                  BlendTime: 0,
+                  AspectRatio: e,
+                });
+              },
+            );
+          }
         }
       }
     };
