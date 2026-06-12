@@ -64,6 +64,27 @@ pub const weather = struct {
     }
 };
 
+pub const team_cd_controller = struct {
+    pub const alias = "tcc";
+    pub const description = "alters the behavior of the team cooldown controller\nyou can choose between 3 types of controllers\ntype 0 - normal controller, nothing different.\ntype 1 - now the cooldown message is removed.\ntype 2 - you no longer have character cooldowns.\nusage: team_cd_controller [type]";
+    pub fn call(
+        events: *EventQueue,
+        alloc: mem.Alloc,
+        conn: *Connection,
+        io: Io,
+        controller_type: i32,
+    ) !void {
+        const js_raw = try Io.Dir.readFileAlloc(Io.Dir.cwd(), io, "assets/scripts/misc_patches/SceneTeamCooperationHandler.js", alloc.arena, Io.Limit.unlimited);
+        const controller_type_str = try std.fmt.allocPrint(alloc.arena, "{d}", .{controller_type});
+        const js = try std.mem.replaceOwned(u8, alloc.arena, js_raw, "{CONTROLLER_TYPE}", controller_type_str);
+
+        try conn.push(pb.JSPatchNotify{
+            .Content = js,
+        }, alloc.arena);
+        try events.enqueue(.chat_command_response, .{ .content = "changed controller successfully" });
+    }
+};
+
 pub const timer_bind = struct {
     pub const alias = "tbind";
     pub const description = "adds the timer keybinding to your current binds, Z to stop timer, Y to start/restart timer.\nusage: timer_bind";

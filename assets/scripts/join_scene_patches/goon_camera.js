@@ -438,59 +438,18 @@ setTimeout(() => {
 
   let photo_mode_active = false;
 
-  const set_game_paused = (paused) => {
-    if (paused) {
-      TickSystem_1.TickSystem.IsPaused = true;
-      EventCSharpBridge_1.EventCSharpBridge.Emit(
-        EventDefine_1.EEventName.TsSyncTickPauseState,
-        TickSystem_1.TickSystem.IsSetPaused,
-      );
-      cpp_1.FKuroGameBudgetAllocatorInterface.SetPauseFrame(
-        UE.KismetSystemLibrary.GetFrameCount(),
-      );
-      ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
-        0,
-        2,
-      );
-      Time_1.Time.LastPauseTimeFrame = Time_1.Time.Frame;
-      EventSystem_1.EventSystem.Emit(
-        EventDefine_1.EEventName.OnSetGamePaused,
-        true,
-      );
-      UE.GameplayStatics.SetGamePaused(GlobalData_1.GlobalData.World, true);
-    } else {
-      TickSystem_1.TickSystem.IsPaused = false;
-      EventCSharpBridge_1.EventCSharpBridge.Emit(
-        EventDefine_1.EEventName.TsSyncTickPauseState,
-        TickSystem_1.TickSystem.IsSetPaused,
-      );
-      ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
-        1,
-        2,
-      );
-      Time_1.Time.LastResumeTimeFrame = Time_1.Time.Frame;
-      EventSystem_1.EventSystem.Emit(
-        EventDefine_1.EEventName.OnSetGamePaused,
-        false,
-      );
-      UE.GameplayStatics.SetGamePaused(GlobalData_1.GlobalData.World, false);
-    }
-  };
-
   const orig_play_sequence_purely =
     LevelSequencePlayer.prototype.PlaySequencePurely;
   const PAUSE_DILATION_THRESHOLD = 0.01;
-  var last_dilated_time = 1;
   const dilate_time = (dilation) => {
     if (!Number.isFinite(dilation)) return;
     const should_pause = dilation < PAUSE_DILATION_THRESHOLD && dilation !== 1;
-    set_game_paused(should_pause);
-
-    if (!should_pause) {
-      ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
-        dilation,
-        4,
-      );
+    if (should_pause) {
+      TickSystem_1.TickSystem.IsPaused = true;
+      UE.GameplayStatics.SetGamePaused(GlobalData_1.GlobalData.World, true);
+    } else {
+      TickSystem_1.TickSystem.IsPaused = false;
+      UE.GameplayStatics.SetGamePaused(GlobalData_1.GlobalData.World, false);
     }
     if (dilation < 1) {
       LevelSequencePlayer.prototype.PlaySequencePurely = function (
@@ -507,27 +466,14 @@ setTimeout(() => {
       LevelSequencePlayer.prototype.PlaySequencePurely =
         orig_play_sequence_purely;
     }
+    ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
+      dilation,
+      2,
+    );
     UE.GameplayStatics.SetGlobalTimeDilation(
       GlobalData_1.GlobalData.World,
       dilation,
     );
-
-    const actors = puerts.$ref(UE.NewArray(UE.Actor));
-    UE.GameplayStatics.GetAllActorsOfClass(
-      GlobalData_1.GlobalData.World,
-      UE.Actor.StaticClass(),
-      actors,
-    );
-    const actor_array = puerts.$unref(actors);
-    const count = actor_array.Num();
-    for (let i = 0; i < count; i++) {
-      const niagara = actor_array
-        .Get(i)
-        .GetComponentByClass(UE.NiagaraComponent.StaticClass());
-      if (niagara?.IsValid()) {
-        niagara.SetTickTimeDilation(should_pause ? 0 : dilation);
-      }
-    }
   };
 
   const jump_to_end = (player, key) => {
@@ -555,8 +501,6 @@ setTimeout(() => {
 
   PhotographController.ScreenShot = function (t) {
     UiManager_1.UiManager.CloseView("GenericPromptView");
-    const original_dilated_time =
-      ModelManager_1.ModelManager.GameModeModel.GetCacheTimeDilationValue();
     dilate_time(0);
     const e =
       Global_1.Global.BaseCharacter.CharacterActorComponent.ActorLocationProxy;
@@ -592,7 +536,7 @@ setTimeout(() => {
     LogReportController_1.LogReportController.LogReport(_);
 
     UiManager_1.UiManager.OpenView("PhotoSaveView", t, () => {
-      dilate_time(original_dilated_time);
+      dilate_time(PhotographModel.GetPhotographOption(MAX_ID + 4));
       EventSystem_1.EventSystem.Emit(EventDefine_1.EEventName.OnScreenShotDone);
 
       if (this.CameraCaptureType === 1) {
@@ -653,23 +597,23 @@ setTimeout(() => {
     UiManager_1.UiManager.CloseView("PlotSubtitleView");
   };
 
-  ModelManager_1.ModelManager.PhotographModel.SetPhotographTimeDilation =
-    function (t) {
-      Log_1.Log.Info("Photograph", 57, "SetPhotographTimeDilation", [
-        "timeDilation",
-        t,
-      ]);
+  // ModelManager_1.ModelManager.PhotographModel.SetPhotographTimeDilation =
+  //   function (t) {
+  //     Log_1.Log.Info("Photograph", 57, "SetPhotographTimeDilation", [
+  //       "timeDilation",
+  //       t,
+  //     ]);
 
-      if (t !== 1) {
-        AudioSystem_1.AudioSystem.SetState("game_sys_fightphoto", "slow");
-        AudioSystem_1.AudioSystem.PostEvent("play_ui_battlephoto_timestop");
-      }
+  //     if (t !== 1) {
+  //       AudioSystem_1.AudioSystem.SetState("game_sys_fightphoto", "slow");
+  //       AudioSystem_1.AudioSystem.PostEvent("play_ui_battlephoto_timestop");
+  //     }
 
-      ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
-        t,
-        4,
-      );
-    };
+  //     ControllerHolder_1.ControllerHolder.GameModeController.SetTimeDilation(
+  //       t,
+  //       4,
+  //     );
+  //   };
 
   // const _super_on_after_hide = FightPhotographView.prototype.OnAfterHide;
   // FightPhotographView.prototype.OnAfterHide = function () {
@@ -681,15 +625,9 @@ setTimeout(() => {
       .CloseFightPhotographMode;
   ControllerHolder_1.ControllerHolder.PhotographController.CloseFightPhotographMode =
     function (...args) {
-      dilate_time(last_dilated_time);
-      UE.GameplayStatics.SetGlobalTimeDilation(
-        GlobalData_1.GlobalData.World,
-        1,
-      );
+      dilate_time(1);
       LevelSequencePlayer.prototype.PlaySequencePurely =
         orig_play_sequence_purely;
-      dilate_time(last_dilated_time);
-      last_dilated_time = 1;
       orig_close_fight_photograph_mode.apply(this, args);
     };
 
@@ -697,15 +635,9 @@ setTimeout(() => {
     ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph;
   ControllerHolder_1.ControllerHolder.PhotographController.ClosePhotograph =
     function (...args) {
-      dilate_time(last_dilated_time);
-      UE.GameplayStatics.SetGlobalTimeDilation(
-        GlobalData_1.GlobalData.World,
-        1,
-      );
+      dilate_time(1);
       LevelSequencePlayer.prototype.PlaySequencePurely =
         orig_play_sequence_purely;
-      dilate_time(last_dilated_time);
-      last_dilated_time = 1;
       orig_close_photograph.apply(this, args);
     };
 
@@ -727,8 +659,6 @@ setTimeout(() => {
     PhotographView_1.PhotographView.prototype.OnAfterShow;
 
   FightPhotographView.prototype.OnAfterShow = function () {
-    last_dilated_time =
-      ModelManager_1.ModelManager.GameModeModel.GetCacheTimeDilationValue();
     _superOnAfterShow.call(this);
     // ModelManager_1.ModelManager.RenderModuleModel?.EnableForceTickCharRenderShell(
     //   "FightPhotographView OnAfterShow",
@@ -2024,6 +1954,15 @@ setTimeout(() => {
           }
           break;
         case MAX_ID + 10: {
+          const enabled = i.GetPhotographOption(MAX_ID + 9) ?? false;
+          if (!enabled) {
+            ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
+              {
+                BlendTime: 0,
+              },
+            );
+            return;
+          }
           if (e === 0.0 || e < 0.1) {
             ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
               {
