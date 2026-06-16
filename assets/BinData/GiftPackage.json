@@ -7,7 +7,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 301,
@@ -21,7 +22,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 302,
@@ -35,7 +37,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 501,
@@ -65,7 +68,8 @@
       "390077029": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 502,
@@ -95,7 +99,8 @@
       "390077033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 503,
@@ -125,7 +130,8 @@
       "390077022": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 504,
@@ -155,7 +161,8 @@
       "390077005": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 505,
@@ -185,7 +192,8 @@
       "390077024": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 506,
@@ -215,7 +223,8 @@
       "390077033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 507,
@@ -245,7 +254,8 @@
       "390077025": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 508,
@@ -257,7 +267,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 509,
@@ -269,7 +280,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 510,
@@ -281,7 +293,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 511,
@@ -293,7 +306,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 512,
@@ -305,7 +319,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 513,
@@ -317,7 +332,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 514,
@@ -329,7 +345,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 515,
@@ -341,7 +358,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 516,
@@ -353,7 +371,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 517,
@@ -365,7 +384,8 @@
     },
     "Weight": {},
     "AvailableNum": 0,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1001,
@@ -397,7 +417,8 @@
       "390077029": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1002,
@@ -429,7 +450,8 @@
       "390077033": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1003,
@@ -461,7 +483,8 @@
       "390077022": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1004,
@@ -493,7 +516,8 @@
       "390077005": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1005,
@@ -527,7 +551,8 @@
       "390077024": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1006,
@@ -557,7 +582,8 @@
       "390077033": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1007,
@@ -589,7 +615,8 @@
       "390077025": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1008,
@@ -621,7 +648,8 @@
       "390077038": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1009,
@@ -653,7 +681,8 @@
       "390077038": 3
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1010,
@@ -708,6 +737,19 @@
       "6000178": 1,
       "6000196": 1,
       "6000197": 1,
+      "6000202": 1,
+      "6000203": 1,
+      "6000204": 1,
+      "6000205": 1,
+      "6000206": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1,
+      "6000210": 1,
+      "6000211": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1,
       "390070051": 1,
       "390070052": 1,
       "390070053": 1,
@@ -782,6 +824,19 @@
       "6000178": 1,
       "6000196": 1,
       "6000197": 1,
+      "6000202": 1,
+      "6000203": 1,
+      "6000204": 1,
+      "6000205": 1,
+      "6000206": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1,
+      "6000210": 1,
+      "6000211": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1,
       "390070051": 1,
       "390070052": 1,
       "390070053": 1,
@@ -807,7 +862,8 @@
       "390077017": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1011,
@@ -853,6 +909,8 @@
       "6000194": 1,
       "6000195": 1,
       "6000198": 1,
+      "6000215": 1,
+      "6000216": 1,
       "390077004": 1,
       "390077005": 1,
       "390077021": 1,
@@ -906,6 +964,8 @@
       "6000194": 1,
       "6000195": 1,
       "6000198": 1,
+      "6000215": 1,
+      "6000216": 1,
       "390077004": 1,
       "390077005": 1,
       "390077021": 1,
@@ -919,7 +979,8 @@
       "390077038": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1012,
@@ -962,6 +1023,8 @@
       "6000199": 1,
       "6000200": 1,
       "6000201": 1,
+      "6000217": 1,
+      "6000218": 1,
       "390080003": 1,
       "390080005": 1,
       "390080007": 1
@@ -1003,12 +1066,16 @@
       "6000192": 1,
       "6000199": 1,
       "6000200": 1,
+      "6000201": 1,
+      "6000217": 1,
+      "6000218": 1,
       "390080003": 1,
       "390080005": 1,
       "390080007": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 421,
@@ -1022,7 +1089,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 422,
@@ -1036,7 +1104,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 423,
@@ -1050,7 +1119,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 424,
@@ -1064,7 +1134,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 425,
@@ -1078,7 +1149,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 2001,
@@ -1092,7 +1164,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 426,
@@ -1106,7 +1179,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1013,
@@ -1238,6 +1312,23 @@
       "6000199": 1,
       "6000200": 1,
       "6000201": 1,
+      "6000202": 1,
+      "6000203": 1,
+      "6000204": 1,
+      "6000205": 1,
+      "6000206": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1,
+      "6000210": 1,
+      "6000211": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1,
+      "6000215": 1,
+      "6000216": 1,
+      "6000217": 1,
+      "6000218": 1,
       "390070051": 1,
       "390070052": 1,
       "390070053": 1,
@@ -1402,6 +1493,24 @@
       "6000198": 1,
       "6000199": 1,
       "6000200": 1,
+      "6000201": 1,
+      "6000202": 1,
+      "6000203": 1,
+      "6000204": 1,
+      "6000205": 1,
+      "6000206": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1,
+      "6000210": 1,
+      "6000211": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1,
+      "6000215": 1,
+      "6000216": 1,
+      "6000217": 1,
+      "6000218": 1,
       "390070051": 1,
       "390070052": 1,
       "390070053": 1,
@@ -1441,7 +1550,8 @@
       "390080007": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3001,
@@ -1453,7 +1563,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3002,
@@ -1465,7 +1576,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3003,
@@ -1476,7 +1588,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3004,
@@ -1487,7 +1600,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3005,
@@ -1499,7 +1613,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1014,
@@ -1519,7 +1634,8 @@
       "390077029": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1015,
@@ -1535,7 +1651,8 @@
       "390077033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1016,
@@ -1551,7 +1668,8 @@
       "390077022": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1017,
@@ -1567,7 +1685,8 @@
       "390077005": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1018,
@@ -1585,7 +1704,8 @@
       "390077024": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1019,
@@ -1601,7 +1721,8 @@
       "390077033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1020,
@@ -1619,7 +1740,8 @@
       "390077025": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1021,
@@ -1639,7 +1761,8 @@
       "390077038": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1022,
@@ -1655,7 +1778,8 @@
       "390077038": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1023,
@@ -1681,7 +1805,8 @@
       "390077013": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1024,
@@ -1709,7 +1834,8 @@
       "390077016": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1025,
@@ -1737,7 +1863,8 @@
       "390077017": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1026,
@@ -1765,7 +1892,8 @@
       "390070079": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1027,
@@ -1793,7 +1921,8 @@
       "390077017": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1028,
@@ -1817,7 +1946,8 @@
       "390077017": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1029,
@@ -1843,7 +1973,8 @@
       "390070100": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1030,
@@ -1867,7 +1998,8 @@
       "390077013": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1031,
@@ -1895,7 +2027,8 @@
       "390077012": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1041,
@@ -1910,7 +2043,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1042,
@@ -1925,7 +2059,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4001,
@@ -1941,7 +2076,8 @@
       "41100031": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4002,
@@ -1957,7 +2093,8 @@
       "41100032": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4003,
@@ -1973,7 +2110,8 @@
       "41100033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4004,
@@ -1989,7 +2127,8 @@
       "41100034": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 427,
@@ -2003,7 +2142,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1043,
@@ -2018,7 +2158,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1044,
@@ -2033,7 +2174,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3006,
@@ -2044,7 +2186,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3007,
@@ -2055,7 +2198,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 428,
@@ -2069,7 +2213,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1045,
@@ -2087,7 +2232,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1046,
@@ -2105,7 +2251,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4012,
@@ -2121,7 +2268,8 @@
       "41100032": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4013,
@@ -2137,7 +2285,8 @@
       "41100033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4014,
@@ -2153,7 +2302,8 @@
       "41100034": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4011,
@@ -2169,7 +2319,8 @@
       "41100031": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3008,
@@ -2185,7 +2336,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3009,
@@ -2200,7 +2352,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5001,
@@ -2212,7 +2365,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5002,
@@ -2223,7 +2377,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3010,
@@ -2236,7 +2391,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3011,
@@ -2249,7 +2405,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 429,
@@ -2263,7 +2420,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4021,
@@ -2277,7 +2435,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4022,
@@ -2291,7 +2450,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4023,
@@ -2305,7 +2465,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4024,
@@ -2319,7 +2480,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4005,
@@ -2333,7 +2495,8 @@
       "41100051": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4006,
@@ -2347,7 +2510,8 @@
       "41100052": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4007,
@@ -2361,7 +2525,8 @@
       "41100051": 2
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4008,
@@ -2375,7 +2540,8 @@
       "41100052": 2
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1101,
@@ -2393,7 +2559,8 @@
       "6000081": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1102,
@@ -2413,7 +2580,8 @@
       "6000104": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1103,
@@ -2431,7 +2599,8 @@
       "6000081": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1104,
@@ -2447,7 +2616,8 @@
       "6000080": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1105,
@@ -2465,7 +2635,8 @@
       "6000097": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1151,
@@ -2489,7 +2660,8 @@
       "6000093": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1152,
@@ -2513,7 +2685,8 @@
       "6000099": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1153,
@@ -2537,7 +2710,8 @@
       "6000102": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1154,
@@ -2559,7 +2733,8 @@
       "6000094": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1155,
@@ -2585,7 +2760,8 @@
       "6000101": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1047,
@@ -2599,7 +2775,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1048,
@@ -2613,7 +2790,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3012,
@@ -2624,7 +2802,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3013,
@@ -2635,7 +2814,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3014,
@@ -2646,7 +2826,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3015,
@@ -2657,7 +2838,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3016,
@@ -2668,7 +2850,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3017,
@@ -2679,7 +2862,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3018,
@@ -2691,7 +2875,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3019,
@@ -2703,7 +2888,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3020,
@@ -2715,7 +2901,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3021,
@@ -2726,7 +2913,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3022,
@@ -2737,7 +2925,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3023,
@@ -2748,7 +2937,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3024,
@@ -2759,7 +2949,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3025,
@@ -2770,7 +2961,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3026,
@@ -2781,7 +2973,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3027,
@@ -2792,7 +2985,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1049,
@@ -2810,7 +3004,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1050,
@@ -2825,7 +3020,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1051,
@@ -2840,7 +3036,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1052,
@@ -2855,7 +3052,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1053,
@@ -2870,7 +3068,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1614,
@@ -2884,7 +3083,8 @@
       "50000073": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1615,
@@ -2898,7 +3098,8 @@
       "50000074": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1616,
@@ -2912,7 +3113,8 @@
       "50000075": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1617,
@@ -2926,7 +3128,8 @@
       "50000076": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1618,
@@ -2940,7 +3143,8 @@
       "50000077": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1619,
@@ -2954,7 +3158,8 @@
       "50000078": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1620,
@@ -2968,7 +3173,8 @@
       "50000079": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1621,
@@ -2982,7 +3188,8 @@
       "50000080": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1622,
@@ -2996,7 +3203,8 @@
       "50000081": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1701,
@@ -3010,7 +3218,8 @@
       "50001097": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1702,
@@ -3024,7 +3233,8 @@
       "50001098": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1703,
@@ -3038,7 +3248,8 @@
       "50001099": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1704,
@@ -3052,7 +3263,8 @@
       "50001100": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1705,
@@ -3066,7 +3278,8 @@
       "50001101": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1054,
@@ -3086,7 +3299,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4025,
@@ -3150,7 +3364,8 @@
       "42601160": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4026,
@@ -3166,7 +3381,8 @@
       "50000105": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1801,
@@ -3180,7 +3396,8 @@
       "50001509": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1802,
@@ -3194,7 +3411,8 @@
       "50001504": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1803,
@@ -3208,7 +3426,8 @@
       "50001503": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1804,
@@ -3222,7 +3441,8 @@
       "50001507": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1805,
@@ -3236,7 +3456,8 @@
       "50001503": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1806,
@@ -3250,7 +3471,8 @@
       "50001508": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1807,
@@ -3264,7 +3486,8 @@
       "50001509": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1808,
@@ -3278,7 +3501,8 @@
       "50001513": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1809,
@@ -3292,7 +3516,8 @@
       "50001511": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1810,
@@ -3306,7 +3531,8 @@
       "50001514": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1106,
@@ -3322,7 +3548,8 @@
       "6000104": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1156,
@@ -3346,7 +3573,8 @@
       "6000110": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1706,
@@ -3360,7 +3588,8 @@
       "50020001": 2
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1811,
@@ -3374,7 +3603,8 @@
       "50031515": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1055,
@@ -3389,7 +3619,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1056,
@@ -3404,7 +3635,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 430,
@@ -3417,7 +3649,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 431,
@@ -3430,7 +3663,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 432,
@@ -3443,7 +3677,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 433,
@@ -3456,7 +3691,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 434,
@@ -3471,7 +3707,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3028,
@@ -3482,7 +3719,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3029,
@@ -3492,7 +3730,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3030,
@@ -3502,7 +3741,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3031,
@@ -3514,7 +3754,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3033,
@@ -3524,7 +3765,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3034,
@@ -3536,7 +3778,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3035,
@@ -3548,7 +3791,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3037,
@@ -3558,7 +3802,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3038,
@@ -3570,7 +3815,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3039,
@@ -3581,7 +3827,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4033,
@@ -3779,7 +4026,8 @@
       "83040077": 38
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4034,
@@ -4087,7 +4335,8 @@
       "83050072": 41
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4035,
@@ -4625,7 +4874,8 @@
       "83060192": 15
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4036,
@@ -5019,7 +5269,8 @@
       "83060192": 50
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4041,
@@ -5557,7 +5808,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4042,
@@ -6095,7 +6347,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4043,
@@ -6633,7 +6886,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4044,
@@ -7171,7 +7425,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4045,
@@ -7709,7 +7964,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4046,
@@ -8247,7 +8503,8 @@
       "83060192": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5003,
@@ -8259,7 +8516,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3040,
@@ -8272,7 +8530,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 435,
@@ -8287,7 +8546,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3036,
@@ -8299,7 +8559,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5004,
@@ -8310,7 +8571,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5005,
@@ -8321,7 +8583,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4050,
@@ -8355,7 +8618,8 @@
       "83200012": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1107,
@@ -8371,7 +8635,8 @@
       "6000112": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1108,
@@ -8387,7 +8652,8 @@
       "6000120": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1157,
@@ -8409,7 +8675,8 @@
       "6000110": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1158,
@@ -8435,7 +8702,8 @@
       "6000110": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1707,
@@ -8449,7 +8717,8 @@
       "50020002": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1708,
@@ -8463,7 +8732,8 @@
       "50020003": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1812,
@@ -8477,7 +8747,8 @@
       "50031517": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1057,
@@ -8498,7 +8769,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1911,
@@ -8510,7 +8782,8 @@
       "390077013": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1912,
@@ -8522,7 +8795,8 @@
       "6000103": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1913,
@@ -8534,7 +8808,8 @@
       "6000094": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1914,
@@ -8546,7 +8821,8 @@
       "6000063": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1931,
@@ -8558,7 +8834,8 @@
       "6000062": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1932,
@@ -8570,7 +8847,8 @@
       "6000102": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1933,
@@ -8582,7 +8860,8 @@
       "390077022": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1934,
@@ -8594,7 +8873,8 @@
       "6000080": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1961,
@@ -8606,7 +8886,8 @@
       "6000067": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1962,
@@ -8618,7 +8899,8 @@
       "6000069": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1963,
@@ -8630,7 +8912,8 @@
       "390077025": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1964,
@@ -8642,7 +8925,8 @@
       "390077033": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1921,
@@ -8654,7 +8938,8 @@
       "390070100": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1922,
@@ -8666,7 +8951,8 @@
       "6000107": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1923,
@@ -8678,7 +8964,8 @@
       "390077012": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1924,
@@ -8690,7 +8977,8 @@
       "390077028": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1941,
@@ -8702,7 +8990,8 @@
       "390070071": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1942,
@@ -8714,7 +9003,8 @@
       "390070068": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1943,
@@ -8726,7 +9016,8 @@
       "390077005": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1944,
@@ -8738,7 +9029,8 @@
       "6000097": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1951,
@@ -8750,7 +9042,8 @@
       "6000070": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1952,
@@ -8762,7 +9055,8 @@
       "390070074": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1953,
@@ -8774,7 +9068,8 @@
       "6000096": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1954,
@@ -8786,7 +9081,8 @@
       "390077024": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4101,
@@ -8799,7 +9095,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4102,
@@ -8812,7 +9109,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4103,
@@ -8825,7 +9123,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4104,
@@ -8838,7 +9137,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4105,
@@ -8851,7 +9151,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4106,
@@ -8864,7 +9165,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4107,
@@ -8877,7 +9179,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4108,
@@ -8890,7 +9193,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4109,
@@ -8903,7 +9207,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4110,
@@ -8916,7 +9221,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4111,
@@ -8929,7 +9235,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4112,
@@ -8942,7 +9249,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4113,
@@ -8955,7 +9263,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4114,
@@ -8968,7 +9277,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4115,
@@ -8981,7 +9291,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4116,
@@ -8994,7 +9305,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4117,
@@ -9007,7 +9319,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4118,
@@ -9020,7 +9333,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4119,
@@ -9033,7 +9347,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4120,
@@ -9046,7 +9361,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4121,
@@ -9059,7 +9375,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4122,
@@ -9072,7 +9389,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4123,
@@ -9085,7 +9403,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4124,
@@ -9098,7 +9417,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4131,
@@ -9116,7 +9436,8 @@
       "50030104": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4132,
@@ -9134,7 +9455,8 @@
       "50030108": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4133,
@@ -9152,7 +9474,8 @@
       "50030112": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4134,
@@ -9170,7 +9493,8 @@
       "50030116": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4135,
@@ -9188,7 +9512,8 @@
       "50030120": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4136,
@@ -9206,7 +9531,8 @@
       "50030124": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3041,
@@ -9218,7 +9544,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3042,
@@ -9230,7 +9557,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3043,
@@ -9245,7 +9573,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 436,
@@ -9265,7 +9594,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 437,
@@ -9276,7 +9606,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 438,
@@ -9292,7 +9623,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3044,
@@ -9304,7 +9636,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5006,
@@ -9315,7 +9648,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4202,
@@ -9397,7 +9731,8 @@
       "87401223": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4203,
@@ -9481,7 +9816,8 @@
       "87303410": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4204,
@@ -9537,7 +9873,8 @@
       "87303418": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4205,
@@ -9619,7 +9956,8 @@
       "87401253": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4206,
@@ -9659,7 +9997,8 @@
       "87303417": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4207,
@@ -9741,7 +10080,8 @@
       "87401224": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4208,
@@ -9823,7 +10163,8 @@
       "87401254": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4209,
@@ -9905,7 +10246,8 @@
       "87401284": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4210,
@@ -9987,7 +10329,8 @@
       "87401225": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4211,
@@ -10069,7 +10412,8 @@
       "87401255": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4212,
@@ -10151,7 +10495,8 @@
       "87401285": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4009,
@@ -10167,7 +10512,8 @@
       "41100081": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4010,
@@ -10183,7 +10529,8 @@
       "41100082": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1109,
@@ -10201,7 +10548,8 @@
       "6000188": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1110,
@@ -10219,7 +10567,8 @@
       "6000187": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1111,
@@ -10237,7 +10586,8 @@
       "6000186": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1159,
@@ -10253,7 +10603,8 @@
       "6000178": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1160,
@@ -10269,7 +10620,8 @@
       "6000177": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1161,
@@ -10285,7 +10637,8 @@
       "6000178": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 439,
@@ -10304,7 +10657,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 440,
@@ -10323,7 +10677,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 441,
@@ -10342,7 +10697,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 442,
@@ -10361,7 +10717,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4027,
@@ -10378,7 +10735,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4028,
@@ -10395,7 +10753,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4029,
@@ -10412,7 +10771,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4030,
@@ -10429,7 +10789,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 443,
@@ -10443,7 +10804,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 444,
@@ -10457,7 +10819,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 445,
@@ -10471,7 +10834,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 446,
@@ -10485,7 +10849,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4031,
@@ -10497,7 +10862,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4032,
@@ -10509,7 +10875,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4037,
@@ -10521,7 +10888,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4038,
@@ -10533,7 +10901,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5007,
@@ -10546,7 +10915,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3045,
@@ -10558,7 +10928,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3046,
@@ -10569,7 +10940,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 447,
@@ -10603,7 +10975,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 448,
@@ -10642,7 +11015,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 449,
@@ -10681,7 +11055,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3047,
@@ -10694,7 +11069,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 450,
@@ -10711,7 +11087,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1112,
@@ -10725,7 +11102,8 @@
       "6000119": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1113,
@@ -10739,7 +11117,8 @@
       "6000161": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1114,
@@ -10753,7 +11132,8 @@
       "6000162": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1115,
@@ -10769,7 +11149,8 @@
       "6000168": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1116,
@@ -10783,7 +11164,8 @@
       "6000173": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1162,
@@ -10799,7 +11181,8 @@
       "6000118": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1163,
@@ -10815,7 +11198,8 @@
       "6000164": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1164,
@@ -10831,7 +11215,8 @@
       "6000166": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1165,
@@ -10847,7 +11232,8 @@
       "6000170": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1166,
@@ -10863,7 +11249,8 @@
       "6000172": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3048,
@@ -10876,7 +11263,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3049,
@@ -10890,7 +11278,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3050,
@@ -10904,7 +11293,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1117,
@@ -10922,7 +11312,8 @@
       "6000195": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1118,
@@ -10940,7 +11331,8 @@
       "6000194": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1119,
@@ -10958,7 +11350,8 @@
       "6000186": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1167,
@@ -10974,7 +11367,8 @@
       "6000197": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1168,
@@ -10990,7 +11384,8 @@
       "6000197": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1169,
@@ -11006,7 +11401,8 @@
       "6000178": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3051,
@@ -11019,7 +11415,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3052,
@@ -11032,7 +11429,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 451,
@@ -11068,7 +11466,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6001,
@@ -11090,7 +11489,8 @@
       "80830084": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6002,
@@ -11112,7 +11512,8 @@
       "80830105": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6003,
@@ -11134,7 +11535,8 @@
       "80830106": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6004,
@@ -11156,7 +11558,8 @@
       "80830168": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6005,
@@ -11176,7 +11579,8 @@
       "80830092": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6006,
@@ -11196,7 +11600,8 @@
       "80830097": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6007,
@@ -11218,7 +11623,8 @@
       "80830101": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6008,
@@ -11238,7 +11644,8 @@
       "80830103": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4311,
@@ -11253,7 +11660,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4312,
@@ -11268,7 +11676,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4313,
@@ -11283,7 +11692,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4314,
@@ -11298,7 +11708,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4316,
@@ -11313,7 +11724,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 4317,
@@ -11328,7 +11740,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3053,
@@ -11341,7 +11754,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3054,
@@ -11354,7 +11768,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 5008,
@@ -11365,7 +11780,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 518,
@@ -11376,7 +11792,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1120,
@@ -11394,7 +11811,8 @@
       "6000195": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1121,
@@ -11412,7 +11830,8 @@
       "6000198": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1170,
@@ -11428,7 +11847,8 @@
       "6000197": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 1171,
@@ -11444,7 +11864,8 @@
       "6000196": 1
     },
     "AvailableNum": 1,
-    "ShowType": 1
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 452,
@@ -11462,7 +11883,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 453,
@@ -11501,7 +11923,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3055,
@@ -11512,7 +11935,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3056,
@@ -11523,7 +11947,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3057,
@@ -11537,7 +11962,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 519,
@@ -11549,7 +11975,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6101,
@@ -11569,7 +11996,8 @@
       "80865201": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6102,
@@ -11609,7 +12037,8 @@
       "80865303": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6103,
@@ -11649,7 +12078,8 @@
       "80865403": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 6104,
@@ -11697,7 +12127,8 @@
       "80860027": 1
     },
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3059,
@@ -11710,7 +12141,21 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3060,
+    "Type": 0,
+    "Content": {
+      "3": 100,
+      "80069019": 1,
+      "80870001": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 1
   },
   {
     "Id": 3061,
@@ -11720,7 +12165,34 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3062,
+    "Type": 0,
+    "Content": {
+      "10800": 2,
+      "50002": 1,
+      "50005": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3063,
+    "Type": 0,
+    "Content": {
+      "3": 400,
+      "10800": 5,
+      "50002": 5
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3064,
@@ -11732,7 +12204,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3065,
@@ -11742,7 +12215,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3066,
@@ -11753,7 +12227,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3067,
@@ -11764,7 +12239,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3068,
@@ -11774,7 +12250,8 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   },
   {
     "Id": 3069,
@@ -11784,6 +12261,403 @@
     },
     "Weight": {},
     "AvailableNum": 1,
-    "ShowType": 0
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 5009,
+    "Type": 0,
+    "Content": {
+      "81011508": 1,
+      "82011508": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 5010,
+    "Type": 0,
+    "Content": {
+      "81011509": 1,
+      "82011509": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1122,
+    "Type": 4,
+    "Content": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "Weight": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1123,
+    "Type": 4,
+    "Content": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "Weight": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1124,
+    "Type": 4,
+    "Content": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "Weight": {
+      "6000215": 1,
+      "6000216": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1172,
+    "Type": 4,
+    "Content": {
+      "6000202": 1,
+      "6000206": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1
+    },
+    "Weight": {
+      "6000202": 1,
+      "6000206": 1,
+      "6000212": 1,
+      "6000213": 1,
+      "6000214": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1173,
+    "Type": 4,
+    "Content": {
+      "6000204": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1
+    },
+    "Weight": {
+      "6000204": 1,
+      "6000207": 1,
+      "6000208": 1,
+      "6000209": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 1174,
+    "Type": 4,
+    "Content": {
+      "6000203": 1,
+      "6000205": 1,
+      "6000210": 1,
+      "6000211": 1
+    },
+    "Weight": {
+      "6000203": 1,
+      "6000205": 1,
+      "6000210": 1,
+      "6000211": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 1,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4053,
+    "Type": 1,
+    "Content": {
+      "41100013": 1,
+      "41100023": 1,
+      "41100033": 1,
+      "41100043": 1,
+      "41100053": 1,
+      "41100093": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3070,
+    "Type": 0,
+    "Content": {
+      "2": 30000,
+      "36000014": 10,
+      "50000087": 2
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3071,
+    "Type": 0,
+    "Content": {
+      "80065025": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3072,
+    "Type": 0,
+    "Content": {
+      "2": 30000,
+      "50001": 1,
+      "50002": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3073,
+    "Type": 0,
+    "Content": {
+      "3": 400,
+      "10800": 5,
+      "50002": 5
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 3074,
+    "Type": 0,
+    "Content": {
+      "3": 600,
+      "50000109": 30,
+      "50000118": 30,
+      "50000211": 60
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 454,
+    "Type": 1,
+    "Content": {
+      "41400094": 1,
+      "41400114": 1,
+      "41400124": 1,
+      "41400144": 1,
+      "41400194": 1,
+      "41400204": 1,
+      "41400254": 1,
+      "41400294": 1,
+      "41400304": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4015,
+    "Type": 2,
+    "Content": {
+      "41100011": 1,
+      "41100021": 1,
+      "41100031": 1,
+      "41100091": 1
+    },
+    "Weight": {
+      "41100011": 1,
+      "41100021": 1,
+      "41100031": 1,
+      "41100091": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4016,
+    "Type": 2,
+    "Content": {
+      "41100012": 1,
+      "41100022": 1,
+      "41100032": 1,
+      "41100092": 1
+    },
+    "Weight": {
+      "41100012": 1,
+      "41100022": 1,
+      "41100032": 1,
+      "41100092": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 6201,
+    "Type": 0,
+    "Content": {
+      "69004001": 1,
+      "69004002": 1,
+      "69004003": 1,
+      "69004004": 1,
+      "69004005": 1
+    },
+    "Weight": {
+      "69004001": 1,
+      "69004002": 1,
+      "69004003": 1,
+      "69004004": 1,
+      "69004005": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 6202,
+    "Type": 0,
+    "Content": {
+      "69004006": 1,
+      "69004007": 1,
+      "69004008": 1,
+      "69004009": 1,
+      "69004010": 1
+    },
+    "Weight": {
+      "69004006": 1,
+      "69004007": 1,
+      "69004008": 1,
+      "69004009": 1,
+      "69004010": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 6203,
+    "Type": 0,
+    "Content": {
+      "69004011": 1,
+      "69004012": 1,
+      "69004013": 1,
+      "69004014": 1,
+      "69004015": 1
+    },
+    "Weight": {
+      "69004011": 1,
+      "69004012": 1,
+      "69004013": 1,
+      "69004014": 1,
+      "69004015": 1
+    },
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 6204,
+    "Type": 1,
+    "Content": {
+      "21010015": 1,
+      "21010045": 1,
+      "21020015": 1,
+      "21020045": 1,
+      "21030015": 1,
+      "21030045": 1,
+      "21040015": 1,
+      "21040045": 1,
+      "21050015": 1,
+      "21050045": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4051,
+    "Type": 1,
+    "Content": {
+      "41100011": 1,
+      "41100021": 1,
+      "41100031": 1,
+      "41100041": 1,
+      "41100051": 1,
+      "41100091": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4052,
+    "Type": 1,
+    "Content": {
+      "41100012": 1,
+      "41100022": 1,
+      "41100032": 1,
+      "41100042": 1,
+      "41100052": 1,
+      "41100092": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
+  },
+  {
+    "Id": 4054,
+    "Type": 1,
+    "Content": {
+      "41100014": 1,
+      "41100024": 1,
+      "41100034": 1,
+      "41100044": 1,
+      "41100054": 1,
+      "41100094": 1
+    },
+    "Weight": {},
+    "AvailableNum": 1,
+    "ShowType": 0,
+    "CheckGoodsMethod": 0
   }
 ]

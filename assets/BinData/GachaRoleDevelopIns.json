@@ -844,5 +844,626 @@
     "Type": 2,
     "DungeonEntranceId": 0,
     "LevelPlayParam": 36
+  },
+  {
+    "Id": 1095,
+    "RoleId": 1610,
+    "AdventureGuide": 20010402,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1102081,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1096,
+    "RoleId": 1610,
+    "AdventureGuide": 30000020,
+    "DungeonDetection": 1101023,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1097,
+    "RoleId": 1610,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249030,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1098,
+    "RoleId": 1110,
+    "AdventureGuide": 20010402,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1102081,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1099,
+    "RoleId": 1110,
+    "AdventureGuide": 30000020,
+    "DungeonDetection": 1101023,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1100,
+    "RoleId": 1110,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249031,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1101,
+    "RoleId": 1607,
+    "AdventureGuide": 20010011,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002061,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1102,
+    "RoleId": 1607,
+    "AdventureGuide": 30000011,
+    "DungeonDetection": 1101003,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1103,
+    "RoleId": 1607,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249032,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1104,
+    "RoleId": 1206,
+    "AdventureGuide": 20010010,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002051,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1105,
+    "RoleId": 1206,
+    "AdventureGuide": 30000013,
+    "DungeonDetection": 1101006,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1106,
+    "RoleId": 1206,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249033,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1107,
+    "RoleId": 1606,
+    "AdventureGuide": 20010010,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002051,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1108,
+    "RoleId": 1606,
+    "AdventureGuide": 30000011,
+    "DungeonDetection": 1101003,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1109,
+    "RoleId": 1606,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249034,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1110,
+    "RoleId": 1107,
+    "AdventureGuide": 20010010,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002051,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1111,
+    "RoleId": 1107,
+    "AdventureGuide": 30000012,
+    "DungeonDetection": 1101002,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1112,
+    "RoleId": 1107,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249035,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1113,
+    "RoleId": 1301,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1114,
+    "RoleId": 1301,
+    "AdventureGuide": 30000002,
+    "DungeonDetection": 1101011,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1115,
+    "RoleId": 1301,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249036,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1116,
+    "RoleId": 1104,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1117,
+    "RoleId": 1104,
+    "AdventureGuide": 30000007,
+    "DungeonDetection": 1101005,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1118,
+    "RoleId": 1104,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249037,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1119,
+    "RoleId": 1405,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1120,
+    "RoleId": 1405,
+    "AdventureGuide": 30000004,
+    "DungeonDetection": 1101009,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1121,
+    "RoleId": 1405,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249038,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1122,
+    "RoleId": 1503,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1123,
+    "RoleId": 1503,
+    "AdventureGuide": 30000005,
+    "DungeonDetection": 1101004,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1124,
+    "RoleId": 1503,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249039,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1125,
+    "RoleId": 1203,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1126,
+    "RoleId": 1203,
+    "AdventureGuide": 30000003,
+    "DungeonDetection": 1101007,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1127,
+    "RoleId": 1203,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249040,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1128,
+    "RoleId": 1202,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1129,
+    "RoleId": 1202,
+    "AdventureGuide": 30000003,
+    "DungeonDetection": 1101007,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1130,
+    "RoleId": 1202,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249041,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1131,
+    "RoleId": 1402,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1132,
+    "RoleId": 1402,
+    "AdventureGuide": 30000004,
+    "DungeonDetection": 1101009,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1133,
+    "RoleId": 1402,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249042,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1134,
+    "RoleId": 1103,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1135,
+    "RoleId": 1103,
+    "AdventureGuide": 30000007,
+    "DungeonDetection": 1101005,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1136,
+    "RoleId": 1103,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249043,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1137,
+    "RoleId": 1403,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1138,
+    "RoleId": 1403,
+    "AdventureGuide": 30000004,
+    "DungeonDetection": 1101009,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1139,
+    "RoleId": 1403,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249044,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1140,
+    "RoleId": 1601,
+    "AdventureGuide": 20010007,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002031,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1141,
+    "RoleId": 1601,
+    "AdventureGuide": 30000006,
+    "DungeonDetection": 1101004,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1142,
+    "RoleId": 1601,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249045,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1143,
+    "RoleId": 1204,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1144,
+    "RoleId": 1204,
+    "AdventureGuide": 30000003,
+    "DungeonDetection": 1101007,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1145,
+    "RoleId": 1204,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249046,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1146,
+    "RoleId": 1102,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1147,
+    "RoleId": 1102,
+    "AdventureGuide": 30000007,
+    "DungeonDetection": 1101005,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1148,
+    "RoleId": 1102,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249047,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1149,
+    "RoleId": 1602,
+    "AdventureGuide": 20010007,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002031,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1150,
+    "RoleId": 1602,
+    "AdventureGuide": 30000000,
+    "DungeonDetection": 1101009,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1151,
+    "RoleId": 1602,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249048,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1152,
+    "RoleId": 1303,
+    "AdventureGuide": 20010006,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002021,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1153,
+    "RoleId": 1303,
+    "AdventureGuide": 30000001,
+    "DungeonDetection": 1101011,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1154,
+    "RoleId": 1303,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249049,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1155,
+    "RoleId": 1106,
+    "AdventureGuide": 30000009,
+    "DungeonDetection": 1101001,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1156,
+    "RoleId": 1106,
+    "AdventureGuide": 30000010,
+    "DungeonDetection": 1101008,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1157,
+    "RoleId": 1106,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249050,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1158,
+    "RoleId": 1504,
+    "AdventureGuide": 20010008,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002041,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1159,
+    "RoleId": 1504,
+    "AdventureGuide": 30000002,
+    "DungeonDetection": 1101011,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1160,
+    "RoleId": 1504,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249051,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1161,
+    "RoleId": 1307,
+    "AdventureGuide": 20010401,
+    "DungeonDetection": 0,
+    "Type": 1,
+    "DungeonEntranceId": 1002071,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1162,
+    "RoleId": 1307,
+    "AdventureGuide": 30000016,
+    "DungeonDetection": 1101014,
+    "Type": 1,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
+  },
+  {
+    "Id": 1163,
+    "RoleId": 1307,
+    "AdventureGuide": 30010001,
+    "DungeonDetection": 249052,
+    "Type": 2,
+    "DungeonEntranceId": 0,
+    "LevelPlayParam": 36
   }
 ]

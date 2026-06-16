@@ -802,17 +802,5 @@
     "ViewName": "DangoAbyssCommonRewardActivityView",
     "FrameLimit": false,
     "CacheWorldFrame": true
-  },
-  {
-    "Id": 134,
-    "ViewName": "MultiMotorChoseLevelView",
-    "FrameLimit": false,
-    "CacheWorldFrame": true
-  },
-  {
-    "Id": 135,
-    "ViewName": "MultiMotorRewardView",
-    "FrameLimit": false,
-    "CacheWorldFrame": true
   }
 ]

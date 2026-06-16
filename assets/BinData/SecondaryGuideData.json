@@ -99,7 +99,7 @@
     "Icon": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/SP_IconDevelopment03.SP_IconDevelopment03",
     "HelpGroupId": 0,
     "ShowDropDown": true,
-    "DropDownTypeId": 1,
+    "DropDownTypeId": 3,
     "TimeOutDay": 0,
     "Shield": false
   },
@@ -125,7 +125,7 @@
     "Icon": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/SP_IconDevelopment06.SP_IconDevelopment06",
     "HelpGroupId": 0,
     "ShowDropDown": true,
-    "DropDownTypeId": 1,
+    "DropDownTypeId": 2,
     "TimeOutDay": 0,
     "Shield": false
   },

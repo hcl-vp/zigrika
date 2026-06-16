@@ -10,9 +10,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917103"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 2,
@@ -25,9 +23,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917104"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 3,
@@ -40,9 +36,7 @@
     "SkipType": 1,
     "SkipParam": [
       "917117"
-    ],
-    "SkipCondition": 5,
-    "HintText": "Cyberpunk_QuestBlock"
+    ]
   },
   {
     "Id": 4,
@@ -55,9 +49,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917117"
-    ],
-    "SkipCondition": 5,
-    "HintText": "Cyberpunk_QuestBlock"
+    ]
   },
   {
     "Id": 5,
@@ -70,9 +62,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917117"
-    ],
-    "SkipCondition": 5,
-    "HintText": "Cyberpunk_QuestBlock"
+    ]
   },
   {
     "Id": 6,
@@ -85,9 +75,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917117"
-    ],
-    "SkipCondition": 5,
-    "HintText": "Cyberpunk_QuestBlock"
+    ]
   },
   {
     "Id": 7,
@@ -100,9 +88,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917117"
-    ],
-    "SkipCondition": 5,
-    "HintText": "Cyberpunk_QuestBlock"
+    ]
   },
   {
     "Id": 9,
@@ -115,9 +101,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 10,
@@ -130,9 +114,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 11,
@@ -145,9 +127,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 12,
@@ -160,9 +140,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 13,
@@ -175,9 +153,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 14,
@@ -190,9 +166,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917102"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 16,
@@ -205,9 +179,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917111"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 17,
@@ -220,9 +192,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917111"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 18,
@@ -235,9 +205,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917112"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 19,
@@ -250,9 +218,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917113"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 20,
@@ -265,9 +231,7 @@
     "SkipType": 3,
     "SkipParam": [
       "917114"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   },
   {
     "Id": 21,
@@ -280,8 +244,6 @@
     "SkipType": 3,
     "SkipParam": [
       "917115"
-    ],
-    "SkipCondition": 0,
-    "HintText": ""
+    ]
   }
 ]

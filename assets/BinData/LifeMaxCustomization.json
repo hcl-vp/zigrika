@@ -166,5 +166,69 @@
     "RageMaxCustom": 2100000000,
     "InitLifeCount": 0,
     "LifeCustomType": 0
+  },
+  {
+    "Id": 3011,
+    "SingleTubeLife": 56,
+    "LifeCount": 80,
+    "RageMaxCustom": 268200,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3012,
+    "SingleTubeLife": 248,
+    "LifeCount": 80,
+    "RageMaxCustom": 1186668,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3013,
+    "SingleTubeLife": 437,
+    "LifeCount": 80,
+    "RageMaxCustom": 2094012,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3014,
+    "SingleTubeLife": 1051,
+    "LifeCount": 80,
+    "RageMaxCustom": 5044692,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3015,
+    "SingleTubeLife": 2189,
+    "LifeCount": 80,
+    "RageMaxCustom": 10504524,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3016,
+    "SingleTubeLife": 4138,
+    "LifeCount": 80,
+    "RageMaxCustom": 19858068,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3017,
+    "SingleTubeLife": 9951,
+    "LifeCount": 80,
+    "RageMaxCustom": 47764644,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
+  },
+  {
+    "Id": 3018,
+    "SingleTubeLife": 11686,
+    "LifeCount": 80,
+    "RageMaxCustom": 56092632,
+    "InitLifeCount": 0,
+    "LifeCustomType": 0
   }
 ]

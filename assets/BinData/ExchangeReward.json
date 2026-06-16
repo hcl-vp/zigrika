@@ -8177,6 +8177,86 @@
     "PreviewReward": {}
   },
   {
+    "Id": 14001135,
+    "SharedId": 0,
+    "MaxCount": 1,
+    "Cost": {
+      "5": 60
+    },
+    "RewardId": {
+      "1": 118901,
+      "2": 118902,
+      "3": 118903,
+      "4": 118904,
+      "5": 118905,
+      "6": 118906,
+      "7": 118907,
+      "8": 118908
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 14001136,
+    "SharedId": 0,
+    "MaxCount": 1,
+    "Cost": {
+      "5": 60
+    },
+    "RewardId": {
+      "1": 119001,
+      "2": 119002,
+      "3": 119003,
+      "4": 119004,
+      "5": 119005,
+      "6": 119006,
+      "7": 119007,
+      "8": 119008
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 14001019,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 60
+    },
+    "RewardId": {
+      "1": 17301,
+      "2": 17302,
+      "3": 17303,
+      "4": 17304,
+      "5": 17305,
+      "6": 17306,
+      "7": 17307,
+      "8": 17308
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 14001020,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 60
+    },
+    "RewardId": {
+      "1": 17401,
+      "2": 17402,
+      "3": 17403,
+      "4": 17404,
+      "5": 17405,
+      "6": 17406,
+      "7": 17407,
+      "8": 17408
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
     "Id": 5220954,
     "SharedId": 0,
     "MaxCount": 1,
@@ -8194,6 +8274,221 @@
     "Cost": {},
     "RewardId": {
       "1": 5220955
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100301,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 10011,
+      "2": 10012,
+      "3": 10013,
+      "4": 10014,
+      "5": 10015,
+      "6": 10016,
+      "7": 10017,
+      "8": 10018
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100311,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {},
+    "RewardId": {
+      "1": 10010
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100302,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 10021,
+      "2": 10022,
+      "3": 10023,
+      "4": 10024,
+      "5": 10025,
+      "6": 10026,
+      "7": 10027,
+      "8": 10028
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100312,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {},
+    "RewardId": {
+      "1": 10010
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100303,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 10031,
+      "2": 10032,
+      "3": 10033,
+      "4": 10034,
+      "5": 10035,
+      "6": 10036,
+      "7": 10037,
+      "8": 10038
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 100313,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {},
+    "RewardId": {
+      "1": 10010
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 145000126,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 3259,
+      "2": 3259,
+      "3": 3260,
+      "4": 3261,
+      "5": 3262,
+      "6": 3263,
+      "7": 3264,
+      "8": 3265
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 145000226,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 3266,
+      "2": 3266,
+      "3": 3267,
+      "4": 3268,
+      "5": 3269,
+      "6": 3270,
+      "7": 3271,
+      "8": 3272
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 145000326,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 3273,
+      "2": 3273,
+      "3": 3274,
+      "4": 3275,
+      "5": 3276,
+      "6": 3277,
+      "7": 3278,
+      "8": 3279
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 145000426,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 3280,
+      "2": 3280,
+      "3": 3281,
+      "4": 3282,
+      "5": 3283,
+      "6": 3284,
+      "7": 3285,
+      "8": 3286
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 145000526,
+    "SharedId": 0,
+    "MaxCount": 0,
+    "Cost": {
+      "5": 40
+    },
+    "RewardId": {
+      "1": 3287,
+      "2": 3287,
+      "3": 3288,
+      "4": 3289,
+      "5": 3290,
+      "6": 3291,
+      "7": 3292,
+      "8": 3293
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 14001137,
+    "SharedId": 0,
+    "MaxCount": 1,
+    "Cost": {},
+    "RewardId": {
+      "1": 15034
+    },
+    "RewardIdCalabash": {},
+    "PreviewReward": {}
+  },
+  {
+    "Id": 14001138,
+    "SharedId": 0,
+    "MaxCount": 1,
+    "Cost": {},
+    "RewardId": {
+      "1": 15035
     },
     "RewardIdCalabash": {},
     "PreviewReward": {}

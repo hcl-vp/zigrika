@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 110800001,
+    "ContinueDays": 30,
+    "LivenessContinueDays": 30,
+    "LivenessBonusItemId": [
+      1
+    ],
+    "LivenessTimes": 2,
+    "PayGifts": [
+      104100113,
+      104100114,
+      104100115
+    ],
+    "PayGiftsContinueDays": 30,
+    "GachaIds": [
+      100028,
+      200028
+    ],
+    "GachaContinueDays": 30,
+    "WeekCardContinueDays": 30,
+    "WeekCardIds": [
+      2
+    ]
+  }
+]

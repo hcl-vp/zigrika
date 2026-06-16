@@ -940,6 +940,13 @@
     "OccupationData": ""
   },
   {
+    "Id": "suisui",
+    "OccupationType": "Npc",
+    "NameStringKey": 220,
+    "Name": 221,
+    "OccupationData": ""
+  },
+  {
     "Id": "SIGMA",
     "OccupationType": "Npc",
     "NameStringKey": -1,
@@ -1001,10 +1008,24 @@
     }
   },
   {
-    "Id": "Feixue",
+    "Id": "qiuhong",
     "OccupationType": "Npc",
-    "NameStringKey": -1,
-    "Name": 220,
+    "NameStringKey": 222,
+    "Name": 223,
+    "OccupationData": ""
+  },
+  {
+    "Id": "kuainiang",
+    "OccupationType": "Npc",
+    "NameStringKey": 224,
+    "Name": 225,
+    "OccupationData": ""
+  },
+  {
+    "Id": "weining",
+    "OccupationType": "Npc",
+    "NameStringKey": 226,
+    "Name": 227,
     "OccupationData": ""
   }
 ]

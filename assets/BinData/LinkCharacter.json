@@ -658,5 +658,49 @@
     "WeaponAnimList": [],
     "CompNameList": [],
     "RoleLinkAudio": "play_vo_rogue_link_rover_wind"
+  },
+  {
+    "Id": 100070,
+    "RoleId": 1110,
+    "NeedLoadMesh": 0,
+    "CharacterDataAsset": "/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/SplitScreenData/DA_SplitScreenCharData_Suisui.DA_SplitScreenCharData_Suisui",
+    "WeaponMeshList": [
+      "/Game/Aki/Character/Weapon/Prop/Role/SuiSuiProp/ESuisuixiaoShuishanMd10011/Model/ESuisuixiaoShuishanMd10011.ESuisuixiaoShuishanMd10011"
+    ],
+    "WeaponAnimList": [],
+    "CompNameList": [
+      "WeaponCase"
+    ],
+    "RoleLinkAudio": ""
+  },
+  {
+    "Id": 100067,
+    "RoleId": 1309,
+    "NeedLoadMesh": 0,
+    "CharacterDataAsset": "/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/SplitScreenData/DA_SplitScreenCharData_Nanzhu_Thunder.DA_SplitScreenCharData_Nanzhu_Thunder",
+    "WeaponMeshList": [],
+    "WeaponAnimList": [],
+    "CompNameList": [],
+    "RoleLinkAudio": ""
+  },
+  {
+    "Id": 1000671,
+    "RoleId": 1309,
+    "NeedLoadMesh": 0,
+    "CharacterDataAsset": "/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/SplitScreenData/DA_SplitScreenCharData_Nanzhu_ResRogue_Skin01_Thunder.DA_SplitScreenCharData_Nanzhu_ResRogue_Skin01_Thunder",
+    "WeaponMeshList": [],
+    "WeaponAnimList": [],
+    "CompNameList": [],
+    "RoleLinkAudio": ""
+  },
+  {
+    "Id": 100068,
+    "RoleId": 1310,
+    "NeedLoadMesh": 0,
+    "CharacterDataAsset": "/Game/Aki/Sequence/Common_Seq/Video/SplitScreen/SplitScreenData/DA_SplitScreenCharData_Nvzhu_ResRogue_Thunder.DA_SplitScreenCharData_Nvzhu_ResRogue_Thunder",
+    "WeaponMeshList": [],
+    "WeaponAnimList": [],
+    "CompNameList": [],
+    "RoleLinkAudio": ""
   }
 ]

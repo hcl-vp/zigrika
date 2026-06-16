@@ -1,1 +1,53 @@
-[]
+[
+  {
+    "Id": 3401,
+    "ActivityId": 109500001,
+    "ScoreItem": 77,
+    "CurrencyItemId": 80400004,
+    "UpgradeRewardCount": 4,
+    "ShopProductCount": 4,
+    "WeaponCount": 6,
+    "DamageDefenseConst": 20,
+    "HarvestingParams": [
+      20,
+      0.019999999552965164,
+      100,
+      0.019999999552965164
+    ],
+    "ConsecutiveKillMaxTimeInterval": 3,
+    "ConsecutiveKillHoldDuration": 3000,
+    "ConsecutiveKillStartShowNum": 25,
+    "ConsecutiveKillStartShowNumArray": [
+      10,
+      25,
+      100,
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800,
+      900,
+      1000,
+      1200,
+      1400,
+      1600
+    ],
+    "PersonalCardId": 80060000,
+    "BulletCountMax": {
+      "1": 20,
+      "2": 30,
+      "3": 40,
+      "1902": 15,
+      "1903": 15
+    },
+    "ShareId": 9,
+    "CameraShakeCd": 0.5,
+    "CameraShake": {
+      "1": "/Game/Aki/Data/SimpleCombat/3_4Potato/CS_Tudou_Lv3.CS_Tudou_Lv3_C",
+      "2": "/Game/Aki/Data/SimpleCombat/3_4Potato/CS_Tudou_Lv6.CS_Tudou_Lv6_C",
+      "3": "/Game/Aki/Data/SimpleCombat/3_4Potato/CS_Tudou_Lv9.CS_Tudou_Lv9_C"
+    }
+  }
+]

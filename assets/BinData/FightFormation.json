@@ -6214,6 +6214,28 @@
     "ChooseRole": false
   },
   {
+    "Id": 9610,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      1008044,
+      11077004,
+      15077104,
+      5200049,
+      100623,
+      100627
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
     "Id": 1055,
     "LimitRole": [],
     "LimitCount": [
@@ -6269,5 +6291,233 @@
       100657
     ],
     "ChooseRole": false
+  },
+  {
+    "Id": 9701,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      110899000,
+      150999000,
+      150899000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9702,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      110899000,
+      110999000,
+      150899000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9703,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      151099000,
+      121199000,
+      120999000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9704,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      121099000,
+      121199000,
+      150899000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9705,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      141299000,
+      141199000,
+      150599000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9706,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      130699000,
+      141099000,
+      150599000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9707,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      121099000,
+      150999000,
+      120999000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9708,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      160299000,
+      150999000,
+      120999000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9709,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      110899000,
+      110999000,
+      150899000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9710,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      141299000,
+      141199000,
+      150599000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9711,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      151099000,
+      121199000,
+      120999000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9712,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      121099000,
+      150999000,
+      120999000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
   }
 ]

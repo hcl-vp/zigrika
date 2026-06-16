@@ -1,0 +1,54 @@
+[
+  {
+    "Id": 1,
+    "Name": "PhotoSetup_9_Name",
+    "UiType": 1,
+    "DefaultDropDownIndex": 1,
+    "DropDownList": [
+      1,
+      2,
+      3
+    ],
+    "ValueRange": [
+      0,
+      100,
+      50
+    ],
+    "IsReverseSet": false,
+    "IsLocalStorage": true,
+    "Digits": 0,
+    "Unit": ""
+  },
+  {
+    "Id": 2,
+    "Name": "BattlePhoto_BlurIntensityText",
+    "UiType": 0,
+    "DefaultDropDownIndex": 0,
+    "DropDownList": [],
+    "ValueRange": [
+      0,
+      5,
+      0
+    ],
+    "IsReverseSet": true,
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "%"
+  },
+  {
+    "Id": 3,
+    "Name": "PhotoSetup_8_Name",
+    "UiType": 2,
+    "DefaultDropDownIndex": 0,
+    "DropDownList": [],
+    "ValueRange": [
+      -45,
+      45,
+      0
+    ],
+    "IsReverseSet": false,
+    "IsLocalStorage": false,
+    "Digits": 0,
+    "Unit": "°"
+  }
+]

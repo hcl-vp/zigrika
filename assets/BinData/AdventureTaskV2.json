@@ -1,0 +1,684 @@
+[
+  {
+    "Id": 10010001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010001",
+    "ChapterId": 1,
+    "DropId": 4601,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10010002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010002",
+    "ChapterId": 1,
+    "DropId": 4602,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10010003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010003",
+    "ChapterId": 1,
+    "DropId": 4603,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10010004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010004",
+    "ChapterId": 1,
+    "DropId": 4604,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10010005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010005",
+    "ChapterId": 1,
+    "DropId": 4605,
+    "JumpTo": {
+      "12": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10010006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10010006",
+    "ChapterId": 1,
+    "DropId": 4606,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10020001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020001",
+    "ChapterId": 2,
+    "DropId": 4607,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020002",
+    "ChapterId": 2,
+    "DropId": 4608,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020003",
+    "ChapterId": 2,
+    "DropId": 4609,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020004",
+    "ChapterId": 2,
+    "DropId": 4610,
+    "JumpTo": {
+      "5": "CalabashCollectTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020005",
+    "ChapterId": 2,
+    "DropId": 4611,
+    "JumpTo": {
+      "5": "CalabashLevelUpTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020006",
+    "ChapterId": 2,
+    "DropId": 4612,
+    "JumpTo": {
+      "9": "62"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10030001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030001",
+    "ChapterId": 3,
+    "DropId": 4613,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10030003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030003",
+    "ChapterId": 3,
+    "DropId": 4615,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10030004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030004",
+    "ChapterId": 3,
+    "DropId": 4616,
+    "JumpTo": {
+      "2": "5021"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10030005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030005",
+    "ChapterId": 3,
+    "DropId": 4617,
+    "JumpTo": {
+      "9": "6"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10030006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030006",
+    "ChapterId": 3,
+    "DropId": 4618,
+    "JumpTo": {
+      "10": "1"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10040001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040001",
+    "ChapterId": 4,
+    "DropId": 4619,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10040002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040002",
+    "ChapterId": 4,
+    "DropId": 4620,
+    "JumpTo": {
+      "4": "RoleSkillTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10040003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040003",
+    "ChapterId": 4,
+    "DropId": 4621,
+    "JumpTo": {
+      "5": "CalabashLevelUpTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10040004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040004",
+    "ChapterId": 4,
+    "DropId": 4622,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10040005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040005",
+    "ChapterId": 4,
+    "DropId": 4623,
+    "JumpTo": {
+      "2": "380003"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10040006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10040006",
+    "ChapterId": 4,
+    "DropId": 4624,
+    "JumpTo": {
+      "11": "9"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10050001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050001",
+    "ChapterId": 5,
+    "DropId": 4625,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10050002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050002",
+    "ChapterId": 5,
+    "DropId": 4626,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10050003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050003",
+    "ChapterId": 5,
+    "DropId": 4627,
+    "JumpTo": {
+      "5": "CalabashCollectTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10050004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050004",
+    "ChapterId": 5,
+    "DropId": 4628,
+    "JumpTo": {
+      "2": "5001"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10050005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050005",
+    "ChapterId": 5,
+    "DropId": 4629,
+    "JumpTo": {
+      "2": "300401"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10050006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10050006",
+    "ChapterId": 5,
+    "DropId": 4630,
+    "JumpTo": {
+      "2": "301203"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10060001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060001",
+    "ChapterId": 6,
+    "DropId": 4631,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10060002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060002",
+    "ChapterId": 6,
+    "DropId": 4632,
+    "JumpTo": {
+      "4": "RoleSkillTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10060003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060003",
+    "ChapterId": 6,
+    "DropId": 4633,
+    "JumpTo": {
+      "10": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10060004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060004",
+    "ChapterId": 6,
+    "DropId": 4634,
+    "JumpTo": {
+      "2": "380015"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10060005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060005",
+    "ChapterId": 6,
+    "DropId": 4635,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10060006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10060006",
+    "ChapterId": 6,
+    "DropId": 4636,
+    "JumpTo": {
+      "2": "4021"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10070001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070001",
+    "ChapterId": 7,
+    "DropId": 4637,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10070002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070002",
+    "ChapterId": 7,
+    "DropId": 4638,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10070003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070003",
+    "ChapterId": 7,
+    "DropId": 4639,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10070004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070004",
+    "ChapterId": 7,
+    "DropId": 4640,
+    "JumpTo": {
+      "5": "CalabashLevelUpTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10070005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070005",
+    "ChapterId": 7,
+    "DropId": 4641,
+    "JumpTo": {
+      "2": "300401"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10070006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10070006",
+    "ChapterId": 7,
+    "DropId": 4642,
+    "JumpTo": {
+      "13": "919102"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10030002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10030002",
+    "ChapterId": 3,
+    "DropId": 4614,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080001",
+    "ChapterId": 8,
+    "DropId": 4643,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080002",
+    "ChapterId": 8,
+    "DropId": 4644,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080003",
+    "ChapterId": 8,
+    "DropId": 4645,
+    "JumpTo": {
+      "5": "CalabashCollectTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080004",
+    "ChapterId": 8,
+    "DropId": 4646,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080005",
+    "ChapterId": 8,
+    "DropId": 4647,
+    "JumpTo": {
+      "10": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10080006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10080006",
+    "ChapterId": 8,
+    "DropId": 4648,
+    "JumpTo": {
+      "11": "3"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10090001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090001",
+    "ChapterId": 9,
+    "DropId": 4649,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090002",
+    "ChapterId": 9,
+    "DropId": 4650,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090003",
+    "ChapterId": 9,
+    "DropId": 4651,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090004",
+    "ChapterId": 9,
+    "DropId": 4652,
+    "JumpTo": {
+      "5": "CalabashLevelUpTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090005",
+    "ChapterId": 9,
+    "DropId": 4653,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090006",
+    "ChapterId": 9,
+    "DropId": 4654,
+    "JumpTo": {
+      "2": "300401"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10090007,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10090007",
+    "ChapterId": 9,
+    "DropId": 4655,
+    "JumpTo": {
+      "9": "28"
+    },
+    "TaskType": 2
+  },
+  {
+    "Id": 10100001,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100001",
+    "ChapterId": 10,
+    "DropId": 4656,
+    "JumpTo": {
+      "3": "RoleRootView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100002,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100002",
+    "ChapterId": 10,
+    "DropId": 4657,
+    "JumpTo": {
+      "4": "RoleWeaponTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100003,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100003",
+    "ChapterId": 10,
+    "DropId": 4658,
+    "JumpTo": {
+      "4": "RoleSkillTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100004,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100004",
+    "ChapterId": 10,
+    "DropId": 4659,
+    "JumpTo": {
+      "4": "RolePhantomTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100005",
+    "ChapterId": 10,
+    "DropId": 4660,
+    "JumpTo": {
+      "11": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100006,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100006",
+    "ChapterId": 10,
+    "DropId": 4661,
+    "JumpTo": {
+      "10": "1"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10100007,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10100007",
+    "ChapterId": 10,
+    "DropId": 4662,
+    "JumpTo": {
+      "9": "5"
+    },
+    "TaskType": 2
+  }
+]

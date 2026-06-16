@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 110800001,
+    "TrialRoleGroupId": 8600036,
+    "ConditionGroup": 1000023,
+    "RolePathMale": "T_PrivilegeRoleYinlin",
+    "RoleBgPathMale": "T_PrivilegeRoleBgYinlin"
+  },
+  {
+    "Id": 2,
+    "ActivityId": 110800001,
+    "TrialRoleGroupId": 8600043,
+    "ConditionGroup": 1000024,
+    "RolePathMale": "T_PrivilegeRoleChangli",
+    "RoleBgPathMale": "T_PrivilegeRoleBgChangli"
+  },
+  {
+    "Id": 3,
+    "ActivityId": 110800001,
+    "TrialRoleGroupId": 8600050,
+    "ConditionGroup": 1000025,
+    "RolePathMale": "T_PrivilegeRoleJinxi",
+    "RoleBgPathMale": "T_PrivilegeRoleBgJinxi"
+  },
+  {
+    "Id": 4,
+    "ActivityId": 110800001,
+    "TrialRoleGroupId": 8600057,
+    "ConditionGroup": 1000026,
+    "RolePathMale": "T_PrivilegeRoleChun",
+    "RoleBgPathMale": "T_PrivilegeRoleBgChun"
+  },
+  {
+    "Id": 5,
+    "ActivityId": 110800001,
+    "TrialRoleGroupId": 8600064,
+    "ConditionGroup": 1000027,
+    "RolePathMale": "T_PrivilegeRoleShouanren",
+    "RoleBgPathMale": "T_PrivilegeRoleBgShouanren"
+  }
+]

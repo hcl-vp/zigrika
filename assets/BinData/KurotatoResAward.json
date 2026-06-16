@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "Id": 7,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907326_HintText"
+  },
+  {
+    "Id": 8,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907327_HintText"
+  },
+  {
+    "Id": 9,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907328_HintText"
+  },
+  {
+    "Id": 10,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907329_HintText"
+  },
+  {
+    "Id": 11,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907330_HintText"
+  },
+  {
+    "Id": 12,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907331_HintText"
+  },
+  {
+    "Id": 13,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907332_HintText"
+  },
+  {
+    "Id": 14,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907333_HintText"
+  },
+  {
+    "Id": 15,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907334_HintText"
+  },
+  {
+    "Id": 16,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907335_HintText"
+  },
+  {
+    "Id": 17,
+    "ActivityId": 3401,
+    "AwardType": 1,
+    "DropId": 42222,
+    "TabId": 1,
+    "Desc": "ConditionGroup_12907336_HintText"
+  }
+]

@@ -4,5 +4,11 @@
     "PayGiftId": 47,
     "HelpGroupId": 492,
     "Days": 15
+  },
+  {
+    "Id": 2,
+    "PayGiftId": 48,
+    "HelpGroupId": 640,
+    "Days": 15
   }
 ]

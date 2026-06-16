@@ -264,5 +264,20 @@
     "ConditionId": 0,
     "QuestIdList": [],
     "Disable": false
+  },
+  {
+    "Id": 20,
+    "Type": 0,
+    "MapId": 0,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconActInfrastructure_01.SP_IconActInfrastructure_01",
+    "Desc": "Sheriff_CommonMap_Tip",
+    "Style": 0,
+    "Priority": 1,
+    "Rank": 9999,
+    "MarkIdMap": {},
+    "MarkId": [],
+    "ConditionId": 0,
+    "QuestIdList": [],
+    "Disable": false
   }
 ]

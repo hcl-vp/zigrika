@@ -6550,5 +6550,257 @@
     "GlobalAmount": 1,
     "ProductId": "com.kurogame.aki.giftpay37",
     "CurrencyType": "¥"
+  },
+  {
+    "Id": 855,
+    "PayId": 90,
+    "Region": "China",
+    "Amount": 6,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 856,
+    "PayId": 90,
+    "Region": "SEA",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 857,
+    "PayId": 90,
+    "Region": "America",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 858,
+    "PayId": 90,
+    "Region": "Asia",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 859,
+    "PayId": 90,
+    "Region": "Europe",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 860,
+    "PayId": 90,
+    "Region": "HMT",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 861,
+    "PayId": 90,
+    "Region": "Default",
+    "Amount": 0.9900000095367432,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay44",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 862,
+    "PayId": 91,
+    "Region": "China",
+    "Amount": 68,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 863,
+    "PayId": 91,
+    "Region": "SEA",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 864,
+    "PayId": 91,
+    "Region": "America",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 865,
+    "PayId": 91,
+    "Region": "Asia",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 866,
+    "PayId": 91,
+    "Region": "Europe",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 867,
+    "PayId": 91,
+    "Region": "HMT",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 868,
+    "PayId": 91,
+    "Region": "Default",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay45",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 869,
+    "PayId": 92,
+    "Region": "China",
+    "Amount": 68,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 870,
+    "PayId": 92,
+    "Region": "SEA",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 871,
+    "PayId": 92,
+    "Region": "America",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 872,
+    "PayId": 92,
+    "Region": "Asia",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 873,
+    "PayId": 92,
+    "Region": "Europe",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 874,
+    "PayId": 92,
+    "Region": "HMT",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 875,
+    "PayId": 92,
+    "Region": "Default",
+    "Amount": 9.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay46",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 876,
+    "PayId": 93,
+    "Region": "China",
+    "Amount": 168,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 877,
+    "PayId": 93,
+    "Region": "SEA",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 878,
+    "PayId": 93,
+    "Region": "America",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 879,
+    "PayId": 93,
+    "Region": "Asia",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 880,
+    "PayId": 93,
+    "Region": "Europe",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 881,
+    "PayId": 93,
+    "Region": "HMT",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
+  },
+  {
+    "Id": 882,
+    "PayId": 93,
+    "Region": "Default",
+    "Amount": 24.989999771118164,
+    "GlobalAmount": 1,
+    "ProductId": "com.kurogame.aki.giftpay47",
+    "CurrencyType": "¥"
   }
 ]

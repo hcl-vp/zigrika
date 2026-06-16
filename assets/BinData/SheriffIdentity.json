@@ -1,0 +1,110 @@
+[
+  {
+    "Id": 100101,
+    "CriminalId": 1001,
+    "Name": "Sheriff_Criminal_Name_1_1",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRole1.T_SkyEyeRole1",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole1.SP_SkyEyeRole1",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRole1.T_SkyEyeRole1",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole1.SP_SkyEyeRole1",
+    "Accusal": "Sheriff_Criminal_Charge_1_1",
+    "Witness": "Sheriff_Criminal_Location_1_1",
+    "IdentityState": 0
+  },
+  {
+    "Id": 100102,
+    "CriminalId": 1001,
+    "Name": "Sheriff_Criminal_Name_1_2",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_1_2",
+    "Witness": "Sheriff_Criminal_Location_1_2",
+    "IdentityState": 1
+  },
+  {
+    "Id": 100103,
+    "CriminalId": 1001,
+    "Name": "Sheriff_Criminal_Name_1_3",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_1_3",
+    "Witness": "Sheriff_Criminal_Location_1_3",
+    "IdentityState": 1
+  },
+  {
+    "Id": 100201,
+    "CriminalId": 1002,
+    "Name": "Sheriff_Criminal_Name_2",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_2",
+    "Witness": "Sheriff_Criminal_Location_2",
+    "IdentityState": 0
+  },
+  {
+    "Id": 100301,
+    "CriminalId": 1003,
+    "Name": "Sheriff_Criminal_Name_3",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_3",
+    "Witness": "Sheriff_Criminal_Location_3",
+    "IdentityState": 0
+  },
+  {
+    "Id": 100401,
+    "CriminalId": 1004,
+    "Name": "Sheriff_Criminal_Name_4",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_4",
+    "Witness": "Sheriff_Criminal_Location_4",
+    "IdentityState": 0
+  },
+  {
+    "Id": 100501,
+    "CriminalId": 1005,
+    "Name": "Sheriff_Criminal_Name_5",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_5",
+    "Witness": "Sheriff_Criminal_Location_5",
+    "IdentityState": 0
+  },
+  {
+    "Id": 109901,
+    "CriminalId": 1099,
+    "Name": "Sheriff_Criminal_Name_5",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_5",
+    "Witness": "Sheriff_Criminal_Location_5",
+    "IdentityState": 0
+  },
+  {
+    "Id": 100601,
+    "CriminalId": 1006,
+    "Name": "Sheriff_Criminal_Name_6",
+    "IconReport": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "IconListData": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "IconConfirm": "/Game/Aki/UI/UIResources/UiSkyEye/Image/Role/T_SkyEyeRoleFemale.T_SkyEyeRoleFemale",
+    "MarkIcon": "/Game/Aki/UI/UIResources/UiSkyEye/Atlas/MapRole/SP_SkyEyeRole2.SP_SkyEyeRole2",
+    "Accusal": "Sheriff_Criminal_Charge_6",
+    "Witness": "Sheriff_Criminal_Location_6",
+    "IdentityState": 0
+  }
+]

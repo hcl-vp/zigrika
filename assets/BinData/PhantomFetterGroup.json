@@ -457,5 +457,50 @@
     "FetterElementColor": "FFFFFF00",
     "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriAdam.T_IconElementAttriAdam",
     "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Adam.T_IconElementAttri128_Adam"
+  },
+  {
+    "Id": 33,
+    "FetterMap": {
+      "2": 332,
+      "5": 335
+    },
+    "FetterType": 0,
+    "FetterGroupName": "PhantomFetter_33_Name",
+    "AccessId": 202034,
+    "FetterGroupDesc": "PrefabTextItem_Empty_Text",
+    "SortId": 33,
+    "FetterElementColor": "FFFFFF00",
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriDarkAssist.T_IconElementAttriDarkAssist",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_DarkAssist.T_IconElementAttri128_DarkAssist"
+  },
+  {
+    "Id": 34,
+    "FetterMap": {
+      "2": 342,
+      "5": 345
+    },
+    "FetterType": 0,
+    "FetterGroupName": "PhantomFetter_34_Name",
+    "AccessId": 202034,
+    "FetterGroupDesc": "PrefabTextItem_Empty_Text",
+    "SortId": 34,
+    "FetterElementColor": "FFFFFF00",
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindVision.T_IconElementAttriWindVision",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_WindVision.T_IconElementAttri128_WindVision"
+  },
+  {
+    "Id": 35,
+    "FetterMap": {
+      "2": 352,
+      "5": 355
+    },
+    "FetterType": 0,
+    "FetterGroupName": "PhantomFetter_35_Name",
+    "AccessId": 202035,
+    "FetterGroupDesc": "PrefabTextItem_Empty_Text",
+    "SortId": 35,
+    "FetterElementColor": "FFFFFF00",
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.T_IconElementAttriFireUltimateSkill",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_FireUltimateSkill.T_IconElementAttri128_FireUltimateSkill"
   }
 ]

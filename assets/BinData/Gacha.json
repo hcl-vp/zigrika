@@ -723,15 +723,5 @@
     "Id": 200070,
     "RuleGroupId": 2,
     "Sort": 30
-  },
-  {
-    "Id": 100071,
-    "RuleGroupId": 1,
-    "Sort": 22
-  },
-  {
-    "Id": 200071,
-    "RuleGroupId": 2,
-    "Sort": 32
   }
 ]

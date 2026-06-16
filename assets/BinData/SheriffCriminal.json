@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1001,
+    "InitIdentityId": 100101,
+    "SheriffAnomalyId": 101,
+    "DropId": 5180602,
+    "Priority": 99
+  },
+  {
+    "Id": 1002,
+    "InitIdentityId": 100201,
+    "SheriffAnomalyId": 102,
+    "DropId": 5180602,
+    "Priority": 98
+  },
+  {
+    "Id": 1003,
+    "InitIdentityId": 100301,
+    "SheriffAnomalyId": 103,
+    "DropId": 5180602,
+    "Priority": 97
+  },
+  {
+    "Id": 1004,
+    "InitIdentityId": 100401,
+    "SheriffAnomalyId": 104,
+    "DropId": 5180602,
+    "Priority": 96
+  },
+  {
+    "Id": 1005,
+    "InitIdentityId": 100501,
+    "SheriffAnomalyId": 105,
+    "DropId": 5180602,
+    "Priority": 95
+  },
+  {
+    "Id": 1099,
+    "InitIdentityId": 109901,
+    "SheriffAnomalyId": 199,
+    "DropId": 5180602,
+    "Priority": 1
+  },
+  {
+    "Id": 1006,
+    "InitIdentityId": 100601,
+    "SheriffAnomalyId": 106,
+    "DropId": 5180602,
+    "Priority": 94
+  }
+]

@@ -1,0 +1,111 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 111000001,
+    "TargetLevel": 5,
+    "Reward": 5030006,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 2,
+    "ActivityId": 111000001,
+    "TargetLevel": 10,
+    "Reward": 5030007,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 3,
+    "ActivityId": 111000001,
+    "TargetLevel": 15,
+    "Reward": 5030008,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 4,
+    "ActivityId": 111000001,
+    "TargetLevel": 20,
+    "Reward": 5030009,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 5,
+    "ActivityId": 111000001,
+    "TargetLevel": 25,
+    "Reward": 5030010,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 6,
+    "ActivityId": 111000001,
+    "TargetLevel": 30,
+    "Reward": 5030011,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 7,
+    "ActivityId": 111000001,
+    "TargetLevel": 35,
+    "Reward": 5030012,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 8,
+    "ActivityId": 111000001,
+    "TargetLevel": 40,
+    "Reward": 5030013,
+    "WeaponPreviewList": [
+      21110501,
+      21210501,
+      21310501,
+      21410501,
+      21510501,
+      21010045,
+      21020045,
+      21030045,
+      21040045,
+      21050045
+    ]
+  },
+  {
+    "Id": 9,
+    "ActivityId": 111000001,
+    "TargetLevel": 45,
+    "Reward": 5030014,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 10,
+    "ActivityId": 111000001,
+    "TargetLevel": 50,
+    "Reward": 5030015,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 11,
+    "ActivityId": 111000001,
+    "TargetLevel": 55,
+    "Reward": 5030016,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 12,
+    "ActivityId": 111000001,
+    "TargetLevel": 60,
+    "Reward": 5030017,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 13,
+    "ActivityId": 111000001,
+    "TargetLevel": 65,
+    "Reward": 5030018,
+    "WeaponPreviewList": []
+  },
+  {
+    "Id": 14,
+    "ActivityId": 111000001,
+    "TargetLevel": 70,
+    "Reward": 5030019,
+    "WeaponPreviewList": []
+  }
+]

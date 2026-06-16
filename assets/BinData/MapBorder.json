@@ -19,7 +19,8 @@
     "ConditionId": 0,
     "PrefabPaths": [
       "/Game/Aki/UI/UIResources/UiWorldMap/Prefabs/UiItem_BasePathLine_Edgewall_2-7.UiItem_BasePathLine_Edgewall_2-7",
-      "/Game/Aki/UI/UIResources/UiWorldMap/Prefabs/UiItem_BasePathLine_Edgewall_3-1.UiItem_BasePathLine_Edgewall_3-1"
+      "/Game/Aki/UI/UIResources/UiWorldMap/Prefabs/UiItem_BasePathLine_Edgewall_3-1.UiItem_BasePathLine_Edgewall_3-1",
+      "/Game/Aki/UI/UIResources/UiWorldMap/Prefabs/UiItem_BasePathLine_Edgewall_3-5_outer.UiItem_BasePathLine_Edgewall_3-5_outer"
     ]
   },
   {

@@ -2593,5 +2593,53 @@
     "RoleName": "",
     "QuestId": 0,
     "ShowQuestList": []
+  },
+  {
+    "Id": 100045,
+    "Type": 10800,
+    "Name": "QuestHandBook_100045_Name",
+    "MaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_41.T_ArchiveView_41",
+    "FemaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_41.T_ArchiveView_41",
+    "Descrtption": "QuestHandBook_100045_Descrtption",
+    "AreaIcon": "/Game/Aki/UI/UIResources/UiArchive/Atlas/SP_ArchiveAreaMengzhou.SP_ArchiveAreaMengzhou",
+    "AreaNumber": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComRomeText_01.T_ComRomeText_01",
+    "RoleName": "",
+    "QuestId": 189000005,
+    "ShowQuestList": [
+      192000006,
+      189000005
+    ]
+  },
+  {
+    "Id": 100046,
+    "Type": 10800,
+    "Name": "QuestHandBook_100046_Name",
+    "MaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_42.T_ArchiveView_42",
+    "FemaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_42.T_ArchiveView_42",
+    "Descrtption": "QuestHandBook_100046_Descrtption",
+    "AreaIcon": "/Game/Aki/UI/UIResources/UiArchive/Atlas/SP_ArchiveAreaMengzhou.SP_ArchiveAreaMengzhou",
+    "AreaNumber": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComRomeText_02.T_ComRomeText_02",
+    "RoleName": "",
+    "QuestId": 192750000,
+    "ShowQuestList": [
+      880000045,
+      189000006,
+      192750000
+    ]
+  },
+  {
+    "Id": 100047,
+    "Type": 10800,
+    "Name": "QuestHandBook_100047_Name",
+    "MaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_43.T_ArchiveView_43",
+    "FemaleTexture": "/Game/Aki/UI/UIResources/Common/Image/ArchiveView/T_ArchiveView_43.T_ArchiveView_43",
+    "Descrtption": "QuestHandBook_100047_Descrtption",
+    "AreaIcon": "/Game/Aki/UI/UIResources/UiArchive/Atlas/SP_ArchiveAreaMengzhou.SP_ArchiveAreaMengzhou",
+    "AreaNumber": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComRomeText_00.T_ComRomeText_00",
+    "RoleName": "",
+    "QuestId": 192000007,
+    "ShowQuestList": [
+      192000007
+    ]
   }
 ]

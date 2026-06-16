@@ -69154,15 +69154,18 @@
         "e_906_168850009",
         "e_906_159700020",
         "e_2516_171700001",
-        "e_906_171700045",
         "e_906_171700024",
         "e_906_171700016",
         "e_1561_171700000",
         "e_1561_171700005",
         "e_906_171700017",
-        "e_906_171700046",
         "e_906_159700017",
         "e_906_171000005",
+        "e_906_171700002",
+        "e_906_171700001",
+        "e_906_171700000",
+        "e_906_171700011",
+        "e_906_171700010",
         "e_906_159700021",
         "e_906_171000037",
         "e_906_171000009",
@@ -69180,7 +69183,6 @@
         "e_1614_171700000",
         "e_906_171700023",
         "q_119000000",
-        "q_159000000",
         "f_159000001_1",
         "f_159000001_2"
       ],
@@ -69201,7 +69203,6 @@
         "e_906_171700024",
         "e_906_171700016",
         "e_906_171700017",
-        "e_906_171700046",
         "e_906_159700021",
         "e_906_171000009",
         "e_906_171000037",
@@ -69272,8 +69273,6 @@
         "e_906_159000048",
         "e_906_159700000",
         "e_906_159700001",
-        "e_906_152700092",
-        "e_906_162700981",
         "e_906_159700016",
         "e_906_159700028",
         "e_906_171700018",
@@ -69290,8 +69289,6 @@
         "f_159000002_1"
       ],
       "WeakReference": [
-        "e_906_152700092",
-        "e_906_162700981",
         "q_159000000"
       ],
       "Children": [
@@ -72157,10 +72154,10 @@
         "e_906_195700044",
         "e_906_195700045",
         "e_906_195700043",
+        "e_906_195000002",
+        "e_906_195000006",
         "e_906_195700096",
         "e_906_195700095",
-        "e_906_195700115",
-        "e_906_195700114",
         "e_2514_125000000",
         "e_2514_195000003",
         "e_2514_195000004",
@@ -72226,13 +72223,11 @@
         "e_906_195700044",
         "e_906_195700045",
         "e_906_195700043",
+        "e_906_195000002",
+        "e_906_195000006",
         "e_906_195700096",
         "e_906_195700095",
-        "e_906_195700115",
-        "e_906_195700114",
-        "e_906_195000006",
         "e_906_168800035",
-        "e_906_195000002",
         "e_906_195000007",
         "e_906_195700042",
         "e_2514_195700000",
@@ -72241,31 +72236,6 @@
         "e_2514_195700012",
         "e_2514_195700014",
         "e_2514_195700013",
-        "e_2514_320800488",
-        "e_2514_168800025",
-        "e_2514_320800496",
-        "e_2514_320800120",
-        "e_2514_320800017",
-        "e_2514_320800018",
-        "e_2514_320800021",
-        "e_2514_320800022",
-        "e_2514_320800023",
-        "e_2514_320800024",
-        "e_2514_320800026",
-        "e_2514_320800027",
-        "e_2514_320800028",
-        "e_2514_320800031",
-        "e_2514_320800032",
-        "e_2514_320800033",
-        "e_2514_320800102",
-        "e_2514_320800101",
-        "e_2514_320800146",
-        "e_2514_320800147",
-        "e_2514_320800148",
-        "e_2514_320800149",
-        "e_2514_320800150",
-        "e_2514_320800151",
-        "e_2514_320800482",
         "e_2514_125000000",
         "e_2514_195000003",
         "e_2514_195000004",
@@ -72340,8 +72310,6 @@
         "e_906_195700104",
         "l_906_42850006",
         "l_906_320700014",
-        "l_2514_320800000",
-        "l_2514_320800005",
         "q_119000000",
         "q_125000129",
         "f_125000011_2",
@@ -72354,31 +72322,6 @@
       "WeakReference": [
         "e_906_168800035",
         "e_2514_168800010",
-        "e_2514_320800488",
-        "e_2514_168800025",
-        "e_2514_320800496",
-        "e_2514_320800120",
-        "e_2514_320800017",
-        "e_2514_320800018",
-        "e_2514_320800021",
-        "e_2514_320800022",
-        "e_2514_320800023",
-        "e_2514_320800024",
-        "e_2514_320800026",
-        "e_2514_320800027",
-        "e_2514_320800028",
-        "e_2514_320800031",
-        "e_2514_320800032",
-        "e_2514_320800033",
-        "e_2514_320800102",
-        "e_2514_320800101",
-        "e_2514_320800146",
-        "e_2514_320800147",
-        "e_2514_320800148",
-        "e_2514_320800149",
-        "e_2514_320800150",
-        "e_2514_320800151",
-        "e_2514_320800482",
         "e_906_162700810",
         "e_906_162700811",
         "e_906_162701195",
@@ -72397,8 +72340,6 @@
         "e_906_693700060",
         "l_906_42850006",
         "l_906_320700014",
-        "l_2514_320800000",
-        "l_2514_320800005",
         "q_119000000",
         "q_125000129"
       ],
@@ -90769,6 +90710,38 @@
     }
   },
   {
+    "QuestId": 211850013,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 211850013,
+      "DungeonId": 909,
+      "Type": 11,
+      "RegionId": 26,
+      "Key": "恒黯的视线_后日谈",
+      "TidName": "Quest_211850013_QuestName_211_1",
+      "TidDesc": "Quest_211850013_QuestDesc_211_1",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": [
+          {
+            "Type": "PreQuest",
+            "PreQuest": 211850006
+          }
+        ]
+      },
+      "DistributeType": "System",
+      "ActiveActions": [],
+      "Reference": [
+        "q_211850006"
+      ],
+      "WeakReference": [
+        "q_211850006"
+      ]
+    }
+  },
+  {
     "QuestId": 162850001,
     "Data": {
       "ObjType": "Quest",
@@ -90860,38 +90833,6 @@
         "f_162850006_21",
         "f_162850006_23",
         "f_162850006_25"
-      ]
-    }
-  },
-  {
-    "QuestId": 211850013,
-    "Data": {
-      "ObjType": "Quest",
-      "Id": 211850013,
-      "DungeonId": 909,
-      "Type": 11,
-      "RegionId": 26,
-      "Key": "恒黯的视线_后日谈",
-      "TidName": "Quest_211850013_QuestName_211_1",
-      "TidDesc": "Quest_211850013_QuestDesc_211_1",
-      "OnlineType": "SingleHangUpOnline",
-      "IsAutoTrack": false,
-      "IsAutoCoverCurTrack": false,
-      "ProvideType": {
-        "Conditions": [
-          {
-            "Type": "PreQuest",
-            "PreQuest": 211850006
-          }
-        ]
-      },
-      "DistributeType": "System",
-      "ActiveActions": [],
-      "Reference": [
-        "q_211850006"
-      ],
-      "WeakReference": [
-        "q_211850006"
       ]
     }
   },
@@ -91569,6 +91510,7 @@
       "DungeonId": 906,
       "Type": 11,
       "RegionId": 26,
+      "RoleId": "anke",
       "Key": "后日谈",
       "TidName": "Quest_159700000_QuestName_159_1",
       "TidDesc": "Quest_159700000_QuestDesc_159_1",
@@ -92328,7 +92270,6 @@
       "ActiveActions": [],
       "ActivityId": 100600006,
       "Reference": [
-        "e_906_207700004",
         "f_207700000_1"
       ]
     }
@@ -92405,6 +92346,110 @@
     }
   },
   {
+    "QuestId": 32750028,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 32750028,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "要回顾的任务",
+      "TidName": "Quest_32750028_QuestName_32_1",
+      "TidDesc": "Quest_32750028_QuestDesc_32_1",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {},
+      "DistributeType": "System",
+      "Children": [
+        "e_100_32750000",
+        "e_100_32750007",
+        "e_100_32750006",
+        "e_100_32750008"
+      ],
+      "Reference": [
+        "e_100_32750000",
+        "e_100_32750007",
+        "e_100_32750006",
+        "e_100_32750008",
+        "l_100_32750000",
+        "f_32750001_1"
+      ],
+      "AcceptActions": [
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              32750000
+            ]
+          },
+          "ActionGuid": "847a8e2c8f6745f88acea93c2ea7e510",
+          "ActionId": 3000001
+        }
+      ]
+    }
+  },
+  {
+    "QuestId": 32750029,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 32750029,
+      "DungeonId": 20000100,
+      "Type": 15,
+      "RegionId": 100,
+      "Key": "回顾_要回顾的任务",
+      "TidName": "Quest_32750028_QuestName_32_1",
+      "TidDesc": "Quest_32750028_QuestDesc_32_1",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {},
+      "DistributeType": "System",
+      "Children": [
+        "e_100_32750000",
+        "e_100_32750007",
+        "e_100_32750006",
+        "e_100_32750008"
+      ],
+      "Reference": [
+        "e_100_32750000",
+        "e_100_32750007",
+        "e_100_32750006",
+        "e_100_32750008",
+        "e_100_32750011",
+        "l_100_32750000",
+        "q_32750028",
+        "f_32750001_1"
+      ],
+      "AcceptActions": [
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              32750000
+            ]
+          },
+          "ActionGuid": "6016d45daa6340af83b99ea6ef61ebcc",
+          "ActionId": 3000001
+        }
+      ],
+      "RecallConfig": {
+        "RecallId": 32750028,
+        "RecallEntityList": [
+          {
+            "LevelId": 100,
+            "EntityList": [
+              32750011
+            ]
+          }
+        ]
+      },
+      "WeakReference": [
+        "q_32750028"
+      ]
+    }
+  },
+  {
     "QuestId": 246700000,
     "Data": {
       "ObjType": "Quest",
@@ -92472,6 +92517,56 @@
     }
   },
   {
+    "QuestId": 318750001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 318750001,
+      "DungeonId": 8,
+      "Type": 10,
+      "RegionId": 11,
+      "Key": "巴别塔引导任务",
+      "TidName": "Quest_318750001_QuestName_318_1",
+      "TidDesc": "Quest_318750001_QuestDesc_318_1",
+      "RewardId": 44001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "ActivityId": 110500002,
+      "Reference": [
+        "e_8_318750002",
+        "f_318750001_1",
+        "f_318750001_2"
+      ],
+      "Children": [
+        "e_8_318750002"
+      ]
+    }
+  },
+  {
+    "QuestId": 192750002,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 192750002,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 1,
+      "Key": "任务3",
+      "TidName": "Quest_192750002_QuestName_192_1",
+      "TidDesc": "Quest_192750002_QuestDesc_192_1",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {},
+      "DistributeType": "System",
+      "ActiveActions": []
+    }
+  },
+  {
     "QuestId": 29700007,
     "Data": {
       "ObjType": "Quest",
@@ -92491,6 +92586,134 @@
       },
       "DistributeType": "Passive",
       "ActiveActions": []
+    }
+  },
+  {
+    "QuestId": 42750000,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 42750000,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "3.5任务快速返回",
+      "TidName": "Quest_42750000_QuestName_42_1",
+      "TidDesc": "Quest_42750000_QuestDesc_42_1",
+      "RewardId": 1001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Interact",
+      "IsHideAcceptMarkOnNpc": false,
+      "AddInteractOption": {
+        "EntityId": 42750088,
+        "Option": {
+          "Guid": "05ac64446f354af6bd29f615f09ffc7c",
+          "Type": {
+            "Type": "Flow",
+            "Flow": {
+              "FlowListName": "剧情_Default",
+              "FlowId": 1,
+              "StateId": 1,
+              "FlowGuid": "3a2ba759394d4dd0968cc2bc0de8776f"
+            }
+          },
+          "DoIntactType": "Direct"
+        }
+      },
+      "ActiveActions": [
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              42750088
+            ]
+          },
+          "ActionGuid": "3a5cc15aeefd4175ad14646e29d4ec80",
+          "ActionId": 3000001
+        }
+      ],
+      "Children": [
+        "e_100_42750088",
+        "l_100_42750011"
+      ],
+      "Reference": [
+        "e_100_42750088",
+        "e_100_42750090",
+        "e_100_42750092",
+        "e_100_42750089",
+        "e_100_42750091",
+        "e_100_42750093",
+        "e_100_42750094",
+        "l_100_42750011",
+        "q_42750000",
+        "f_31000156_1"
+      ],
+      "WeakReference": [
+        "q_42750000"
+      ],
+      "BindSystems": []
+    }
+  },
+  {
+    "QuestId": 42750001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 42750001,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "3.5主线KSC杀怪",
+      "TidName": "Quest_42750001_QuestName_42_1",
+      "TidDesc": "Quest_42750001_QuestDesc_42_1",
+      "RewardId": 1001,
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Interact",
+      "IsHideAcceptMarkOnNpc": false,
+      "AddInteractOption": {
+        "EntityId": 42750100,
+        "Option": {
+          "Guid": "290a410cfdbc46e3869628ca3ce01aa5",
+          "Type": {
+            "Type": "Flow",
+            "Flow": {
+              "FlowListName": "剧情_Default",
+              "FlowId": 1,
+              "StateId": 1,
+              "FlowGuid": "9c3775fb62004337a927a897b9967367"
+            }
+          },
+          "DoIntactType": "Direct"
+        }
+      },
+      "ActiveActions": [
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              42750100
+            ]
+          },
+          "ActionGuid": "8d69c53a40194e24800e76c6e603a4bf",
+          "ActionId": 3000010
+        }
+      ],
+      "BindSystems": [],
+      "Children": [
+        "e_100_42750100"
+      ],
+      "Reference": [
+        "e_100_42750100",
+        "f_31000156_1"
+      ]
     }
   },
   {
@@ -92533,6 +92756,49 @@
     }
   },
   {
+    "QuestId": 30750008,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 30750008,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "范围外追踪目标",
+      "TidName": "Quest_30750008_QuestName_30_1",
+      "TidDesc": "Quest_30750008_QuestDesc_30_1",
+      "OnlineType": "SingleHangUpOnline",
+      "ProvideType": {},
+      "DistributeType": "Passive",
+      "Reference": [
+        "e_100_30750115",
+        "e_100_30750116",
+        "e_100_30750117",
+        "e_100_30002687",
+        "f_31000156_1"
+      ]
+    }
+  },
+  {
+    "QuestId": 30750009,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 30750009,
+      "DungeonId": 100,
+      "Type": 100,
+      "RegionId": 100,
+      "Key": "3.5通缉金币结算提示",
+      "TidName": "Quest_30750009_QuestName_30_1",
+      "TidDesc": "Quest_30750009_QuestDesc_30_1",
+      "OnlineType": "SingleHangUpOnline",
+      "ProvideType": {},
+      "DistributeType": "Passive",
+      "Reference": [
+        "e_100_30750119",
+        "e_100_30750118"
+      ]
+    }
+  },
+  {
     "QuestId": 168700003,
     "Data": {
       "ObjType": "Quest",
@@ -92568,21 +92834,58 @@
     }
   },
   {
-    "QuestId": 226700004,
+    "QuestId": 200750000,
     "Data": {
       "ObjType": "Quest",
-      "Id": 226700004,
+      "Id": 200750000,
       "DungeonId": 906,
-      "Type": 11,
+      "Type": 10,
       "RegionId": 26,
-      "Key": "3_4摩托车跑酷隐藏地图标记隐藏任务",
-      "TidName": "Quest_226700004_QuestName_226_4",
-      "TidDesc": "Quest_226700004_QuestDesc_226_4",
+      "Key": "土豆幸存者引导",
+      "TidName": "Quest_200750000_QuestName_200_1",
+      "TidDesc": "Quest_200750000_QuestDesc_200_1",
       "OnlineType": "SingleHangUpOnline",
       "IsAutoTrack": false,
       "IsAutoCoverCurTrack": false,
       "ProvideType": {},
-      "DistributeType": "System"
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "Reference": [
+        "e_906_200750000",
+        "f_200750001_1"
+      ],
+      "ActivityId": 109500001,
+      "RewardId": 44001
+    }
+  },
+  {
+    "QuestId": 200750001,
+    "Data": {
+      "ObjType": "Quest",
+      "Id": 200750001,
+      "DungeonId": 906,
+      "Type": 11,
+      "RegionId": 26,
+      "Key": "土豆幸存者-唤醒NPC并卡住",
+      "TidName": "Quest_200750001_QuestName_200_4",
+      "TidDesc": "Quest_200750001_QuestDesc_200_4",
+      "OnlineType": "SingleHangUpOnline",
+      "IsAutoTrack": false,
+      "IsAutoCoverCurTrack": false,
+      "ProvideType": {
+        "Conditions": []
+      },
+      "DistributeType": "Activity",
+      "ActiveActions": [],
+      "ActivityId": 109500001,
+      "Children": [
+        "e_906_200750000",
+        "e_906_200750001"
+      ],
+      "Reference": [
+        "e_906_200750000",
+        "e_906_200750001"
+      ]
     }
   }
 ]

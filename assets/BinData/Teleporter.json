@@ -8723,12 +8723,56 @@
     "ShowWorldMap": false
   },
   {
+    "Id": 4010001,
+    "MapId": 8,
+    "ObjectId": 0,
+    "FogId": 3,
+    "Type": 1,
+    "TeleportEntityConfigId": 124001188,
+    "Plot": "",
+    "AfterNetworkAction": 0,
+    "ShowWorldMap": false
+  },
+  {
     "Id": 3410001,
     "MapId": 906,
     "ObjectId": 0,
     "FogId": 62,
     "Type": 3,
-    "TeleportEntityConfigId": 246700001,
+    "TeleportEntityConfigId": 246700000,
+    "Plot": "",
+    "AfterNetworkAction": 0,
+    "ShowWorldMap": false
+  },
+  {
+    "Id": 3580001,
+    "MapId": 8,
+    "ObjectId": 0,
+    "FogId": 0,
+    "Type": 3,
+    "TeleportEntityConfigId": 610750144,
+    "Plot": "",
+    "AfterNetworkAction": 0,
+    "ShowWorldMap": false
+  },
+  {
+    "Id": 3580002,
+    "MapId": 8,
+    "ObjectId": 0,
+    "FogId": 0,
+    "Type": 3,
+    "TeleportEntityConfigId": 610750145,
+    "Plot": "",
+    "AfterNetworkAction": 0,
+    "ShowWorldMap": false
+  },
+  {
+    "Id": 3540001,
+    "MapId": 906,
+    "ObjectId": 0,
+    "FogId": 64,
+    "Type": 3,
+    "TeleportEntityConfigId": 200750001,
     "Plot": "",
     "AfterNetworkAction": 0,
     "ShowWorldMap": false

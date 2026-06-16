@@ -1,0 +1,39 @@
+[
+  {
+    "Id": 1,
+    "CompleteCondition": 0,
+    "Icon": "",
+    "Icons": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "Name": "QuestBranch_BranchA_Name",
+    "Desc": "QuestBranch_BranchA_Desc",
+    "ShownAreaRoute": [
+      1,
+      2,
+      3
+    ],
+    "Component": [
+      10001
+    ]
+  },
+  {
+    "Id": 2,
+    "CompleteCondition": 0,
+    "Icon": "",
+    "Icons": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "Name": "QuestBranch_BranchB_Name",
+    "Desc": "QuestBranch_BranchB_Desc",
+    "ShownAreaRoute": [
+      4,
+      5,
+      6
+    ],
+    "Component": [
+      10002
+    ]
+  }
+]

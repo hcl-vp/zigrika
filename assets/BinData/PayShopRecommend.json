@@ -78,5 +78,25 @@
     "PrefabPath": "UiItem_ShopSkinMoNing",
     "Sort": 1,
     "Show": true
+  },
+  {
+    "Id": 9,
+    "RecommendType": 2,
+    "RecommendId": 106100007,
+    "RecommendTexture": "0",
+    "TabName": "PrefabTextItem_QianxiaoSkinRecommend_Text",
+    "PrefabPath": "UiItem_ShopSkinQianXiao",
+    "Sort": 1,
+    "Show": false
+  },
+  {
+    "Id": 10,
+    "RecommendType": 2,
+    "RecommendId": 106100008,
+    "RecommendTexture": "0",
+    "TabName": "PrefabTextItem_LinnaiSkinRecommend_Text",
+    "PrefabPath": "UiItem_ShopSkinLinNai",
+    "Sort": 2,
+    "Show": false
   }
 ]

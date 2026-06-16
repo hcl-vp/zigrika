@@ -24921,7 +24921,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 0,
-    "AutoOpenCondition": 131200608,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -24967,8 +24967,8 @@
       21192
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201358,
-    "AutoOpenCondition": 131200609,
+    "OpenLimitCondition": 0,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -24996,8 +24996,8 @@
       21195
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201358,
-    "AutoOpenCondition": 131200610,
+    "OpenLimitCondition": 0,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25032,7 +25032,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200614,
-    "AutoOpenCondition": 131200623,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25061,7 +25061,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200611,
-    "AutoOpenCondition": 131200623,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25093,7 +25093,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200615,
-    "AutoOpenCondition": 131200623,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25270,7 +25270,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200621,
-    "AutoOpenCondition": 131200620,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25637,8 +25637,8 @@
       21237
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201358,
-    "AutoOpenCondition": 131200626,
+    "OpenLimitCondition": 0,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -25667,7 +25667,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200627,
-    "AutoOpenCondition": 131200623,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -44444,7 +44444,7 @@
       22737
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201360,
+    "OpenLimitCondition": 131200621,
     "AutoOpenCondition": 131200620,
     "LimitRepeat": [
       -1
@@ -44502,7 +44502,7 @@
       22743
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201359,
+    "OpenLimitCondition": 0,
     "AutoOpenCondition": 131200610,
     "LimitRepeat": [
       -1
@@ -44549,7 +44549,7 @@
       22764
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201359,
+    "OpenLimitCondition": 0,
     "AutoOpenCondition": 131200609,
     "LimitRepeat": [
       -1
@@ -44584,7 +44584,7 @@
       22773
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201361,
+    "OpenLimitCondition": 131200614,
     "AutoOpenCondition": 131200623,
     "LimitRepeat": [
       -1
@@ -44674,7 +44674,7 @@
       22785
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201362,
+    "OpenLimitCondition": 131200615,
     "AutoOpenCondition": 131200623,
     "LimitRepeat": [
       -1
@@ -44703,7 +44703,7 @@
       22788
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201359,
+    "OpenLimitCondition": 0,
     "AutoOpenCondition": 131200626,
     "LimitRepeat": [
       -1
@@ -45436,8 +45436,8 @@
       1555
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 242916903,
-    "AutoOpenCondition": 242917092,
+    "OpenLimitCondition": 0,
+    "AutoOpenCondition": 0,
     "LimitRepeat": [
       -1
     ],
@@ -45516,6 +45516,41 @@
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131201324,
     "AutoOpenCondition": 131201278,
+    "LimitRepeat": [
+      -1
+    ],
+    "DungeonId": [
+      1,
+      2,
+      8
+    ],
+    "DungeonSets": [
+      "BigWorld"
+    ],
+    "DungeonTypes": [],
+    "ResetInDungeon": false,
+    "OnlineMode": 1,
+    "Priority": 0,
+    "PriorityBreakExclude": [
+      -1
+    ]
+  },
+  {
+    "Id": 20534,
+    "Step": [
+      22825,
+      22826,
+      22827,
+      22828,
+      22829,
+      22830,
+      22831,
+      22832,
+      22833
+    ],
+    "MultiPlatformStep": [],
+    "OpenLimitCondition": 0,
+    "AutoOpenCondition": 131201325,
     "LimitRepeat": [
       -1
     ],

@@ -1,0 +1,41 @@
+[
+  {
+    "Id": 750001,
+    "MonsterBp": "/Game/Aki/Character/NPC/Animal/NA059/BP_NA059.BP_NA059",
+    "MontagePath": "/Game/Aki/Character/NPC/Animal/NA059/CommonAnim/AM_Slide",
+    "EmotionName": "爱心",
+    "AttachPoint": "Head",
+    "Offset": [
+      10,
+      10,
+      15
+    ],
+    "Remark": ""
+  },
+  {
+    "Id": 750002,
+    "MonsterBp": "/Game/Aki/Character/NPC/Animal/NA059/BP_NA059.BP_NA059",
+    "MontagePath": "/Game/Aki/Character/NPC/Animal/NA059/CommonAnim/AM_Slide",
+    "EmotionName": "开心",
+    "AttachPoint": "Head",
+    "Offset": [
+      20,
+      20,
+      20
+    ],
+    "Remark": ""
+  },
+  {
+    "Id": 750003,
+    "MonsterBp": "/Game/Aki/Character/NPC/Animal/NA059/BP_NA059.BP_NA059",
+    "MontagePath": "/Game/Aki/Character/NPC/Animal/NA059/CommonAnim/AM_Alert_P2",
+    "EmotionName": "开心",
+    "AttachPoint": "Head",
+    "Offset": [
+      20,
+      20,
+      20
+    ],
+    "Remark": ""
+  }
+]

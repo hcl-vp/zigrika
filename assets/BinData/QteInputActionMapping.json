@@ -164,7 +164,11 @@
     "QteInputActionName": "载具氮气"
   },
   {
-    "QteInputActionId": 45,
-    "QteInputActionName": "载具发射仅QTE用"
+    "QteInputActionId": 42,
+    "QteInputActionName": "交互动态漫-向左拖动"
+  },
+  {
+    "QteInputActionId": 43,
+    "QteInputActionName": "交互动态漫-向右拖动"
   }
 ]

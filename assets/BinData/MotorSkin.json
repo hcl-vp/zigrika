@@ -21,5 +21,30 @@
     "Mesh": "/Game/Aki/Character/Vehicle/Motor/Model/EMotorcycleMd10011.EMotorcycleMd10011",
     "ObtainedShowDescription": "",
     "ShowInBag": false
+  },
+  {
+    "Id": 89200001,
+    "DefaultFlag": false,
+    "SortIndex": 1,
+    "Editable": false,
+    "BindSticker": [],
+    "BindFrame": 89400004,
+    "BindDecorations": [],
+    "ModelId": 900000,
+    "StandAnim": "/Game/Aki/Character/Vehicle/Motor/CommonAnim/Stand.Stand",
+    "QualityId": 5,
+    "Name": "MotorName_89200001_Name",
+    "TypeDescription": "MotorType_05",
+    "AttributesDescription": "Motor_89200001_AttributeDesc",
+    "BgDescription": "Motor_89200001_AttributeDesc",
+    "ItemAccess": [
+      8631044
+    ],
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_yk_04_UI.T_IconA_yk_04_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA160/T_IconA160_yk_04_UI.T_IconA160_yk_04_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_yk_04_UI.T_IconA80_yk_04_UI",
+    "Mesh": "/Game/Aki/Character/Vehicle/Motor/Model/EMotorcycleMd10011.EMotorcycleMd10011",
+    "ObtainedShowDescription": "",
+    "ShowInBag": true
   }
 ]

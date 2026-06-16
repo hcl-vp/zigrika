@@ -42,14 +42,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301001,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000001,
@@ -94,14 +97,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301002,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000002,
@@ -146,14 +152,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301003,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000003,
@@ -198,14 +207,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301004,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000004,
@@ -250,14 +262,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301005,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000005,
@@ -302,14 +317,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301006,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000006,
@@ -354,14 +372,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301007,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000007,
@@ -406,14 +427,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301008,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000008,
@@ -458,14 +482,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301009,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000009,
@@ -510,14 +537,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 210301020
   },
   {
     "Id": 30010001,
@@ -562,14 +592,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404001,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010009,
@@ -614,14 +647,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404002,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010010,
@@ -666,14 +702,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404003,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010011,
@@ -718,14 +757,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404004,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010012,
@@ -770,14 +812,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404005,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010013,
@@ -822,14 +867,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404006,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010016,
@@ -874,14 +922,17 @@
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 1,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404007,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020001,
@@ -926,12 +977,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020002,
@@ -976,12 +1030,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020003,
@@ -1026,12 +1083,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020004,
@@ -1076,12 +1136,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020005,
@@ -1126,12 +1189,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020006,
@@ -1176,12 +1242,15 @@
     "NewContent": "",
     "DetectionTabType": 6,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000010,
@@ -1219,21 +1288,24 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 5032,
-    "LockCon": 12005128,
+    "LockCon": 0,
     "MapId": 900,
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 0,
     "SortId": 3,
     "NewContent": "",
-    "DetectionTabType": 0,
+    "DetectionTabType": 12,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301010,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020007,
@@ -1278,12 +1350,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020008,
@@ -1328,12 +1403,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010017,
@@ -1378,14 +1456,17 @@
     "AdditionalId": 0,
     "SortId": 12,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404008,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010018,
@@ -1430,14 +1511,17 @@
     "AdditionalId": 0,
     "SortId": 11,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404009,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000011,
@@ -1482,14 +1566,17 @@
     "AdditionalId": 0,
     "SortId": 12,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301011,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000012,
@@ -1534,14 +1621,17 @@
     "AdditionalId": 0,
     "SortId": 11,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301012,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000013,
@@ -1586,14 +1676,17 @@
     "AdditionalId": 0,
     "SortId": 13,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301013,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020009,
@@ -1638,12 +1731,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010019,
@@ -1688,14 +1784,17 @@
     "AdditionalId": 0,
     "SortId": 13,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404010,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010020,
@@ -1740,14 +1839,17 @@
     "AdditionalId": 0,
     "SortId": 14,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404011,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020010,
@@ -1792,12 +1894,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020011,
@@ -1842,12 +1947,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020012,
@@ -1892,12 +2000,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000014,
@@ -1942,14 +2053,17 @@
     "AdditionalId": 0,
     "SortId": 14,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301014,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020013,
@@ -1994,12 +2108,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010021,
@@ -2044,14 +2161,17 @@
     "AdditionalId": 0,
     "SortId": 15,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404012,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015001,
@@ -2097,12 +2217,15 @@
     "PhantomFetterGroup": [
       19
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210403001,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018001,
@@ -2148,12 +2271,15 @@
     "PhantomFetterGroup": [
       4
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302001,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018002,
@@ -2199,12 +2325,15 @@
     "PhantomFetterGroup": [
       12
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302002,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018003,
@@ -2250,12 +2379,15 @@
     "PhantomFetterGroup": [
       3
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302003,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018004,
@@ -2302,12 +2434,15 @@
       3,
       13
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302004,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018005,
@@ -2353,12 +2488,15 @@
     "PhantomFetterGroup": [
       6
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302005,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018006,
@@ -2404,12 +2542,15 @@
     "PhantomFetterGroup": [
       2
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302006,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018007,
@@ -2455,12 +2596,15 @@
     "PhantomFetterGroup": [
       11
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302007,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018008,
@@ -2507,12 +2651,15 @@
       10,
       13
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302008,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018009,
@@ -2559,12 +2706,15 @@
       16,
       17
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302009,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000015,
@@ -2609,14 +2759,17 @@
     "AdditionalId": 0,
     "SortId": 15,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301015,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30018010,
@@ -2662,12 +2815,15 @@
     "PhantomFetterGroup": [
       19
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210302010,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000016,
@@ -2712,14 +2868,17 @@
     "AdditionalId": 0,
     "SortId": 16,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301016,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000017,
@@ -2757,21 +2916,24 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 5039,
-    "LockCon": 12005132,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 0,
     "SortId": 17,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 2,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 9902
+    "DungeonId": 9902,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015002,
@@ -2817,12 +2979,15 @@
     "PhantomFetterGroup": [
       20
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210403002,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015003,
@@ -2868,12 +3033,15 @@
     "PhantomFetterGroup": [
       21
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210403003,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020014,
@@ -2918,12 +3086,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020015,
@@ -2968,12 +3139,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015004,
@@ -3019,12 +3193,15 @@
     "PhantomFetterGroup": [
       22
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210403004,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015005,
@@ -3070,12 +3247,15 @@
     "PhantomFetterGroup": [
       23
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210403005,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020016,
@@ -3120,12 +3300,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 7,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010022,
@@ -3170,14 +3353,17 @@
     "AdditionalId": 0,
     "SortId": 16,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404013,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010023,
@@ -3222,14 +3408,17 @@
     "AdditionalId": 0,
     "SortId": 17,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404014,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020017,
@@ -3274,12 +3463,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015006,
@@ -3330,12 +3522,15 @@
       28,
       29
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015007,
@@ -3386,12 +3581,15 @@
       28,
       29
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000018,
@@ -3436,14 +3634,17 @@
     "AdditionalId": 0,
     "SortId": 19,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301017,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000019,
@@ -3488,14 +3689,17 @@
     "AdditionalId": 0,
     "SortId": 18,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301018,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000020,
@@ -3540,14 +3744,17 @@
     "AdditionalId": 0,
     "SortId": 20,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210301019,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020018,
@@ -3592,12 +3799,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010024,
@@ -3642,14 +3852,17 @@
     "AdditionalId": 0,
     "SortId": 18,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404015,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010025,
@@ -3694,14 +3907,17 @@
     "AdditionalId": 0,
     "SortId": 19,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404016,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30015008,
@@ -3752,12 +3968,15 @@
       28,
       29
     ],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020019,
@@ -3802,12 +4021,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020020,
@@ -3852,12 +4074,15 @@
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30010026,
@@ -3902,14 +4127,17 @@
     "AdditionalId": 0,
     "SortId": 20,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 210404017,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30020021,
@@ -3950,16 +4178,19 @@
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 30010,
-    "SortId": 25,
+    "SortId": 24,
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30030001,
@@ -4004,12 +4235,15 @@
     "NewContent": "",
     "DetectionTabType": 0,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 7,
     "DetectionTitlePanel": 5,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodQD01.SP_DevelopmentPeriodQD01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodQD02.SP_DevelopmentPeriodQD02",
     "LeftBgTexture": "T_DevelopmentPeriod_QianDao01",
-    "DungeonId": 0
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   },
   {
     "Id": 30000021,
@@ -4047,20 +4281,76 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 5043,
-    "LockCon": 12005136,
+    "LockCon": 0,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 0,
     "SortId": 21,
     "NewContent": "New_corner",
-    "DetectionTabType": 0,
+    "DetectionTabType": 5,
     "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 2100
+    "DungeonId": 2100,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0
+  },
+  {
+    "Id": 30020022,
+    "Name": "LordGymInfo_Text16",
+    "GuideId": 2,
+    "LevelPlayList": [
+      150750010
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_empty",
+    "DangerType": 3,
+    "Secondary": 61,
+    "TypeDescription2": 61,
+    "MatType": 0,
+    "AttributesDescriptionLock": "LordGymInfo_Text16",
+    "AttributesDescriptionUnlock": "LordGymInfo_Text16",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34028_UI.T_IconMonsterHead_34028_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34018_UI.T_IconMonsterHead_QX_34018_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34028_UI.T_IconMonsterHead_34028_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
+    "ShowReward": 49925,
+    "ShowRewardMap": {
+      "1": 49925,
+      "2": 49926,
+      "3": 49927,
+      "4": 49928,
+      "5": 49929,
+      "6": 49930
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 4028,
+    "LockCon": 13000231,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 31010,
+    "SortId": 25,
+    "NewContent": "New_corner",
+    "DetectionTabType": 10,
+    "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 0,
+    "JumpType": 0,
+    "InstanceDungeonEntranceId": 0
   }
 ]

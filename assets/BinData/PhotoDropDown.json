@@ -3,7 +3,6 @@
     "Id": 1,
     "SetupType": 8,
     "TextId": "Default_Graphics_Quality_1",
-    "IsShowInLowDevice": true,
     "Param": [
       "1"
     ]
@@ -12,9 +11,16 @@
     "Id": 2,
     "SetupType": 8,
     "TextId": "High_Definition_Quality_2",
-    "IsShowInLowDevice": false,
     "Param": [
       "2"
+    ]
+  },
+  {
+    "Id": 3,
+    "SetupType": 8,
+    "TextId": "Ultra_Graphics_Quality_3",
+    "Param": [
+      "3"
     ]
   }
 ]

@@ -24291,6 +24291,204 @@
     "CloseAutoBlink": true
   },
   {
+    "Id": 750386,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/Faces_Default.Faces_Default"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750387,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/Serious.Serious"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750388,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/Angry.Angry"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750389,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/Sad.Sad"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750390,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Character/NPC/FemaleM/NH_FemaleM_205/LiangyuHappy.LiangyuHappy"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750391,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Character/NPC/FemaleM/NH_FemaleM_205/LiangyuDilemma.LiangyuDilemma"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750392,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Character/NPC/FemaleM/NH_FemaleM_205/LiangyuResignation.LiangyuResignation"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750393,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Character/NPC/FemaleM/NH_FemaleM_205/LiangyuSurprised.LiangyuSurprised"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750394,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Afraid.NPC_Afraid"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750395,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Angry.NPC_Angry"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750396,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Angry1.NPC_Angry1"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750397,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Close_Eyes.NPC_Close_Eyes"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 750398,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Contempt.NPC_Contempt"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750399,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_HalfCloseEyes_Smile.NPC_HalfCloseEyes_Smile"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 750400,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Happy.NPC_Happy"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750401,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Sad.NPC_Sad"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750402,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Serious.NPC_Serious"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750403,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Smile_Close_Eyes.NPC_Smile_Close_Eyes"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 750404,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Sorry.NPC_Sorry"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750405,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_Surprise.NPC_Surprise"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750406,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_WeiXie.NPC_WeiXie"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 750407,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DefaultFace/NPCFace/NPC_WuYu.NPC_WuYu"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
     "Id": 701737,
     "FaceExpression": {
       "Type": "AnimSequence",

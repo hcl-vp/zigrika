@@ -1008,5 +1008,42 @@
       9
     ],
     "DiscardGroup": []
+  },
+  {
+    "Id": 40033,
+    "FetterId": 33,
+    "Cost": 4,
+    "LockGroup": [
+      8,
+      9,
+      35
+    ],
+    "DiscardGroup": []
+  },
+  {
+    "Id": 30033,
+    "FetterId": 33,
+    "Cost": 3,
+    "LockGroup": [
+      27,
+      11
+    ],
+    "DiscardGroup": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  {
+    "Id": 10033,
+    "FetterId": 33,
+    "Cost": 1,
+    "LockGroup": [
+      10007,
+      10002
+    ],
+    "DiscardGroup": []
   }
 ]

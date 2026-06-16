@@ -28,7 +28,7 @@
     "BgPic": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Image/T_ActiveChallengePic02.T_ActiveChallengePic02",
     "ItemColor": "#CBE37F",
     "HelpId": 598,
-    "Score": "3000–6000",
+    "Score": "3000~6000",
     "Time": "WeeklyGamePlayTime_2",
     "Sort": 20,
     "UnlockCondition": 13000241,

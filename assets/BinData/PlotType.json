@@ -298,5 +298,10 @@
     "Id": 140,
     "TypeDescription": "PlotType_140_TypeDescription",
     "Type": 7
+  },
+  {
+    "Id": 10800,
+    "TypeDescription": "PlotType_10018_TypeDescription",
+    "Type": 9
   }
 ]

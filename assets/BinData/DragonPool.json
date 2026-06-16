@@ -39,7 +39,9 @@
       4010
     ],
     "AutoTake": true,
-    "CanLevelUpTips": []
+    "CanLevelUpTips": [],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 2,
@@ -69,7 +71,9 @@
       4026
     ],
     "AutoTake": true,
-    "CanLevelUpTips": []
+    "CanLevelUpTips": [],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 3,
@@ -96,7 +100,9 @@
       5
     ],
     "AutoTake": false,
-    "CanLevelUpTips": []
+    "CanLevelUpTips": [],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 4,
@@ -133,7 +139,9 @@
       5
     ],
     "AutoTake": true,
-    "CanLevelUpTips": []
+    "CanLevelUpTips": [],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 5,
@@ -168,7 +176,9 @@
       5
     ],
     "AutoTake": true,
-    "CanLevelUpTips": []
+    "CanLevelUpTips": [],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 6,
@@ -207,7 +217,9 @@
       "剧情_3.0拉海洛_阿尔塞尼声匣集齐提示",
       "7",
       "1"
-    ]
+    ],
+    "QuestId": 0,
+    "PlotStateList": []
   },
   {
     "Id": 7,
@@ -244,6 +256,49 @@
       "剧情_3.1日灵通用集齐提示",
       "2",
       "1"
+    ],
+    "QuestId": 0,
+    "PlotStateList": []
+  },
+  {
+    "Id": 8,
+    "CoreId": 40040008,
+    "Goal": [
+      6,
+      8,
+      10,
+      12,
+      15,
+      15,
+      15,
+      22
+    ],
+    "DropIds": [
+      4070,
+      4071,
+      4072,
+      4073,
+      4074,
+      4075,
+      4076,
+      4077
+    ],
+    "DarkCoastDeliveryList": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "AutoTake": true,
+    "CanLevelUpTips": [],
+    "QuestId": 939700000,
+    "PlotStateList": [
+      1,
+      1,
+      1,
+      2,
+      2
     ]
   }
 ]

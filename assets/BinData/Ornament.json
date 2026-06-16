@@ -482,16 +482,14 @@
     "AttributesDescription": "OrnamentAttrDes_80870007",
     "BgDescription": "OrnamentBgDes_80870007",
     "ShopPreviewSubTitle": "ShopPreviewSubTitle_80870007",
-    "ItemAccess": [
-      871007
-    ],
+    "ItemAccess": [],
     "SortIndex": 1,
     "RedDotDisableRule": 1,
     "ShowInBag": true,
     "ObtainedShowDescription": "ShowDescription_80870007",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/Skin/Accessories256/T_AccessoriesSkin256_80870007.T_AccessoriesSkin256_80870007",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/Skin/Accessories160/T_AccessoriesSkin160_80870007.T_AccessoriesSkin160_80870007",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/Skin/Accessories80/T_AccessoriesSkin80_80870007.T_AccessoriesSkin80_80870007",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead256/T_IconRoleHead256_7_a_UI.T_IconRoleHead256_7_a_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_7_a_UI.T_IconRoleHead175_7_a_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_7_a_UI.T_IconRoleHead80_7_a_UI",
     "ModelId": [
       80870007
     ],
@@ -514,9 +512,9 @@
     "UiRoleState": 0,
     "IsNewTag": true,
     "ShowUseButton": true,
-    "PreviewTextureInBuyView": "/Game/Aki/UI/UIResources/Common/Image/Skin/AccessoriesItem/T_AccessoriesItemSkin_80870007.T_AccessoriesItemSkin_80870007",
-    "PreviewTextureInPayShop": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Accessories/T_ShopRoleAccessoriesSkin_Linnai.T_ShopRoleAccessoriesSkin_Linnai",
-    "PopPreviewTexture": "/Game/Aki/UI/UIResources/UiShop/Image/Skin/Accessories/T_ShopItemAccessoriesSkin_Linnai.T_ShopItemAccessoriesSkin_Linnai",
+    "PreviewTextureInBuyView": "",
+    "PreviewTextureInPayShop": "",
+    "PopPreviewTexture": "",
     "TitleName": "",
     "SubDecName": ""
   },

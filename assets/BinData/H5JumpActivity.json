@@ -10,5 +10,11 @@
     "CNRootUrl": "https://mc-act.kurogames-global.com/Anniversary-20260420-zFxFdK3v/index.html",
     "OverseaRootUrl": "https://wuwa-act.kurogames-global.com/Anniversary-20260420-zFxFdK3v/index.html",
     "BgPath": "UiItem_AnniversaryRetrospeActivityMain"
+  },
+  {
+    "Id": 108400003,
+    "CNRootUrl": "https://mc-act.kurogames-global.com/risingbird-20260703-s9fZktsm/index.html",
+    "OverseaRootUrl": "https://wuwa-act.kurogames-global.com/risingbird-20260703-s9fZktsm/index.html",
+    "BgPath": "UiItem_FlyBirdMainBg"
   }
 ]

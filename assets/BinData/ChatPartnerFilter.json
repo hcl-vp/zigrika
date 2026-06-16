@@ -1,0 +1,79 @@
+[
+  {
+    "Id": 1001,
+    "Type": 1,
+    "Name": "MessageFilterItem_1001",
+    "Icon": "",
+    "SortId": 1
+  },
+  {
+    "Id": 1002,
+    "Type": 1,
+    "Name": "MessageFilterItem_1002",
+    "Icon": "",
+    "SortId": 2
+  },
+  {
+    "Id": 1003,
+    "Type": 1,
+    "Name": "MessageFilterItem_1003",
+    "Icon": "",
+    "SortId": 3
+  },
+  {
+    "Id": 2001,
+    "Type": 2,
+    "Name": "MessageFilterItem_2001",
+    "Icon": "",
+    "SortId": 1000
+  },
+  {
+    "Id": 2002,
+    "Type": 2,
+    "Name": "MessageFilterItem_2002",
+    "Icon": "",
+    "SortId": 1
+  },
+  {
+    "Id": 2003,
+    "Type": 2,
+    "Name": "MessageFilterItem_2003",
+    "Icon": "",
+    "SortId": 2
+  },
+  {
+    "Id": 2004,
+    "Type": 2,
+    "Name": "MessageFilterItem_2004",
+    "Icon": "",
+    "SortId": 3
+  },
+  {
+    "Id": 2005,
+    "Type": 2,
+    "Name": "MessageFilterItem_2005",
+    "Icon": "",
+    "SortId": 4
+  },
+  {
+    "Id": 3001,
+    "Type": 3,
+    "Name": "MessageFilterItem_3001",
+    "Icon": "",
+    "SortId": 1
+  },
+  {
+    "Id": 3002,
+    "Type": 3,
+    "Name": "MessageFilterItem_3002",
+    "Icon": "",
+    "SortId": 2
+  },
+  {
+    "Id": 3003,
+    "Type": 3,
+    "Name": "MessageFilterItem_3003",
+    "Icon": "",
+    "SortId": 3
+  }
+]

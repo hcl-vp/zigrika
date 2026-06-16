@@ -1895,5 +1895,477 @@
     },
     "ProgressNeed": 1,
     "SaveRecord": true
+  },
+  {
+    "Id": 30301,
+    "LimitParams": {
+      "type": "null",
+      "level": "20"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30302,
+    "LimitParams": {
+      "quality": "null",
+      "level": "20"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30303,
+    "LimitParams": {
+      "quality": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30304,
+    "LimitParams": {
+      "num": "3",
+      "quality": "0",
+      "suit": "0"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30305,
+    "LimitParams": {
+      "Id": "1",
+      "Id2": ""
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30306,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30307,
+    "LimitParams": {
+      "type": "null",
+      "level": "40"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30308,
+    "LimitParams": {
+      "quality": "null",
+      "level": "40"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30309,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30310,
+    "LimitParams": {
+      "Quality": "2"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30311,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30312,
+    "LimitParams": {
+      "CustomTypes": "4"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30313,
+    "LimitParams": {
+      "type": "null",
+      "level": "40"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30314,
+    "LimitParams": {
+      "quality": "1",
+      "level": "10"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30315,
+    "LimitParams": {
+      "num": "1",
+      "quality": "1",
+      "suit": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30316,
+    "LimitParams": {
+      "LevelType": "7"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30317,
+    "LimitParams": {
+      "CustomTypes": "5"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30318,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30319,
+    "LimitParams": {
+      "type": "null",
+      "level": "50"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30320,
+    "LimitParams": {
+      "num": "1",
+      "level": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30321,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30322,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30323,
+    "LimitParams": {
+      "CustomTypes": "2"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30324,
+    "LimitParams": {
+      "Id": "9"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30325,
+    "LimitParams": {
+      "type": "null",
+      "level": "50"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30326,
+    "LimitParams": {
+      "Quality": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30327,
+    "LimitParams": {
+      "Quality": "4"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30328,
+    "LimitParams": {
+      "LevelType": "0"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30329,
+    "LimitParams": {
+      "Id": "1|2",
+      "Id2": ""
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30330,
+    "LimitParams": {
+      "Difficulty": "1",
+      "AreaNum": "1",
+      "Star": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30331,
+    "LimitParams": {
+      "quality": "null",
+      "level": "50"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30332,
+    "LimitParams": {
+      "num": "2",
+      "level": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30334,
+    "LimitParams": {
+      "CustomTypes": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30335,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30337,
+    "LimitParams": {
+      "type": "null",
+      "level": "60"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30338,
+    "LimitParams": {
+      "quality": "null",
+      "level": "60"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30339,
+    "LimitParams": {
+      "Quality": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30340,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30341,
+    "LimitParams": {
+      "Id": "1|2",
+      "Id2": ""
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30343,
+    "LimitParams": {
+      "type": "null",
+      "level": "60"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30344,
+    "LimitParams": {
+      "quality": "null",
+      "level": "60"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30345,
+    "LimitParams": {
+      "Quality": "5"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30346,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30348,
+    "LimitParams": {
+      "Id": "3"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30349,
+    "LimitParams": {
+      "type": "null",
+      "level": "70"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30350,
+    "LimitParams": {
+      "quality": "null",
+      "level": "70"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30351,
+    "LimitParams": {
+      "quality": "5",
+      "level": "25"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30352,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30353,
+    "LimitParams": {
+      "Quality": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30354,
+    "LimitParams": {
+      "Id": "1|2",
+      "Id2": ""
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30356,
+    "LimitParams": {
+      "type": "null",
+      "level": "80"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30357,
+    "LimitParams": {
+      "quality": "null",
+      "level": "80"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30358,
+    "LimitParams": {
+      "num": "3",
+      "level": "6"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30359,
+    "LimitParams": {
+      "quality": "5",
+      "level": "25"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30360,
+    "LimitParams": {
+      "Id": "1"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30362,
+    "LimitParams": {
+      "Difficulty": "2",
+      "AreaNum": "2",
+      "Star": "12"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
   }
 ]

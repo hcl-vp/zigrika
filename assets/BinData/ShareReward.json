@@ -62,5 +62,21 @@
       "3": 30
     },
     "UpdateType": 0
+  },
+  {
+    "Id": 9,
+    "ShareType": 8,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
+  },
+  {
+    "Id": 10,
+    "ShareType": 9,
+    "Reward": {
+      "3": 30
+    },
+    "UpdateType": 0
   }
 ]

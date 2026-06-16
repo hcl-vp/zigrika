@@ -8,6 +8,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000053,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -33,7 +34,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 2,
@@ -44,6 +46,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000050,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_06.T_Boss_06",
     "Name": "WheelBattle1_Boss1_Name",
@@ -69,7 +72,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 3,
@@ -80,6 +84,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 882900013,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -105,7 +110,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 4,
@@ -116,6 +122,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000052,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33004.T_Boss_33004",
     "Name": "WheelBattle1_Boss3_Name",
@@ -141,7 +148,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 5,
@@ -152,6 +160,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000053,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -177,7 +186,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 6,
@@ -188,6 +198,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000050,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_06.T_Boss_06",
     "Name": "WheelBattle1_Boss1_Name",
@@ -213,7 +224,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 7,
@@ -224,6 +236,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 882900013,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -249,7 +262,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 8,
@@ -260,6 +274,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000052,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33004.T_Boss_33004",
     "Name": "WheelBattle1_Boss3_Name",
@@ -285,7 +300,8 @@
     "RecommendTeamFeature": [
       1,
       2
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 9,
@@ -296,6 +312,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000053,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -321,7 +338,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 10,
@@ -332,6 +350,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000050,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_06.T_Boss_06",
     "Name": "WheelBattle1_Boss1_Name",
@@ -357,7 +376,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 11,
@@ -368,6 +388,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 882700017,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -393,7 +414,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 12,
@@ -404,6 +426,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000052,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33004.T_Boss_33004",
     "Name": "WheelBattle1_Boss3_Name",
@@ -429,7 +452,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 13,
@@ -440,6 +464,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000053,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -465,7 +490,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 14,
@@ -476,6 +502,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000050,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_06.T_Boss_06",
     "Name": "WheelBattle1_Boss1_Name",
@@ -501,7 +528,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 15,
@@ -512,6 +540,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 882700017,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -537,7 +566,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 16,
@@ -548,6 +578,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 650000052,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33004.T_Boss_33004",
     "Name": "WheelBattle1_Boss3_Name",
@@ -573,7 +604,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 17,
@@ -584,6 +616,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750002,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -609,7 +642,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 18,
@@ -620,6 +654,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750001,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -645,7 +680,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 19,
@@ -656,6 +692,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_04.T_Boss_04",
     "Name": "WheelBattle1_Boss6_Name",
@@ -681,7 +718,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 20,
@@ -692,6 +730,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34021.T_Boss_34021",
     "Name": "WheelBattle1_Boss5_Name",
@@ -717,7 +756,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 21,
@@ -728,6 +768,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750002,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -753,7 +794,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 22,
@@ -764,6 +806,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750001,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -789,7 +832,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 23,
@@ -800,6 +844,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_04.T_Boss_04",
     "Name": "WheelBattle1_Boss6_Name",
@@ -825,7 +870,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 24,
@@ -836,6 +882,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34021.T_Boss_34021",
     "Name": "WheelBattle1_Boss5_Name",
@@ -861,7 +908,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 25,
@@ -872,6 +920,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750002,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -897,7 +946,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 26,
@@ -908,6 +958,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750001,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -933,7 +984,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 27,
@@ -944,6 +996,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_04.T_Boss_04",
     "Name": "WheelBattle1_Boss6_Name",
@@ -969,7 +1022,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 28,
@@ -980,6 +1034,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34021.T_Boss_34021",
     "Name": "WheelBattle1_Boss5_Name",
@@ -1005,7 +1060,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 29,
@@ -1016,6 +1072,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750002,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_01.T_Boss_01",
     "Name": "WheelBattle1_Boss2_Name",
@@ -1041,7 +1098,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 30,
@@ -1052,6 +1110,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750001,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_330091.T_Boss_330091",
     "Name": "WheelBattle1_Boss4_Name",
@@ -1077,7 +1136,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 31,
@@ -1088,6 +1148,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_04.T_Boss_04",
     "Name": "WheelBattle1_Boss6_Name",
@@ -1113,7 +1174,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 32,
@@ -1124,6 +1186,7 @@
     "RecommendId": 0,
     "KillScore": 0,
     "MonsterLevel": 0,
+    "DamegaRate": 10,
     "MonsterId": 607750003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34021.T_Boss_34021",
     "Name": "WheelBattle1_Boss5_Name",
@@ -1149,7 +1212,8 @@
     "RecommendTeamFeature": [
       3,
       4
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 33,
@@ -1160,6 +1224,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -1189,7 +1254,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 34,
@@ -1200,6 +1266,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -1229,7 +1296,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 35,
@@ -1240,6 +1308,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 650000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33030.T_Boss_33030",
     "Name": "WheelBattle1_Boss8_Name",
@@ -1269,7 +1338,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 36,
@@ -1280,6 +1350,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -1309,7 +1380,8 @@
     },
     "RecommendTeamFeature": [
       6
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 37,
@@ -1320,6 +1392,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -1356,7 +1429,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 38,
@@ -1367,6 +1441,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -1403,7 +1478,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 39,
@@ -1414,6 +1490,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 650000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33030.T_Boss_33030",
     "Name": "WheelBattle1_Boss8_Name",
@@ -1450,7 +1527,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 40,
@@ -1461,6 +1539,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -1497,7 +1576,8 @@
     },
     "RecommendTeamFeature": [
       6
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 41,
@@ -1508,6 +1588,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -1537,7 +1618,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 42,
@@ -1548,6 +1630,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -1585,7 +1668,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 43,
@@ -1596,6 +1680,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -1633,7 +1718,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 44,
@@ -1644,6 +1730,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 650000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33030.T_Boss_33030",
     "Name": "WheelBattle1_Boss8_Name",
@@ -1681,7 +1768,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 45,
@@ -1692,6 +1780,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -1729,7 +1818,8 @@
     },
     "RecommendTeamFeature": [
       6
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 46,
@@ -1740,6 +1830,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -1769,7 +1860,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 47,
@@ -1780,6 +1872,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -1817,7 +1910,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 48,
@@ -1828,6 +1922,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -1865,7 +1960,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 49,
@@ -1876,6 +1972,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 650000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33030.T_Boss_33030",
     "Name": "WheelBattle1_Boss8_Name",
@@ -1913,7 +2010,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 50,
@@ -1924,6 +2022,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -1961,7 +2060,8 @@
     },
     "RecommendTeamFeature": [
       6
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 51,
@@ -1972,6 +2072,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -2001,7 +2102,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 53,
@@ -2012,6 +2114,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -2041,7 +2144,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 54,
@@ -2052,6 +2156,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -2081,7 +2186,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 55,
@@ -2092,6 +2198,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -2121,7 +2228,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 56,
@@ -2132,6 +2240,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 650000040,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34005.T_Boss_34005",
     "Name": "WheelBattle1_Boss13_Name",
@@ -2162,7 +2271,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 57,
@@ -2173,6 +2283,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -2209,7 +2320,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 58,
@@ -2220,6 +2332,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -2256,7 +2369,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 59,
@@ -2267,6 +2381,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -2303,7 +2418,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 60,
@@ -2314,6 +2430,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 650000040,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34005.T_Boss_34005",
     "Name": "WheelBattle1_Boss13_Name",
@@ -2351,7 +2468,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 61,
@@ -2362,6 +2480,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -2391,7 +2510,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 62,
@@ -2402,6 +2522,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -2439,7 +2560,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 63,
@@ -2450,6 +2572,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -2487,7 +2610,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 64,
@@ -2498,6 +2622,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -2535,7 +2660,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 65,
@@ -2546,6 +2672,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 650000040,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34005.T_Boss_34005",
     "Name": "WheelBattle1_Boss13_Name",
@@ -2584,7 +2711,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 66,
@@ -2595,6 +2723,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -2624,7 +2753,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 67,
@@ -2635,6 +2765,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 670800003,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34260.T_Boss_34260",
     "Name": "WheelBattle1_Boss11_Name",
@@ -2672,7 +2803,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 68,
@@ -2683,6 +2815,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 650000046,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34080.T_Boss_34080",
     "Name": "WheelBattle1_Boss7_Name",
@@ -2720,7 +2853,8 @@
     },
     "RecommendTeamFeature": [
       7
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 69,
@@ -2731,6 +2865,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -2768,7 +2903,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 70,
@@ -2779,6 +2915,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 650000040,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34005.T_Boss_34005",
     "Name": "WheelBattle1_Boss13_Name",
@@ -2817,7 +2954,8 @@
     },
     "RecommendTeamFeature": [
       5
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 71,
@@ -2828,6 +2966,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -2857,7 +2996,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 72,
@@ -2868,6 +3008,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 480,
     "MonsterId": 24000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -2894,7 +3035,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 73,
@@ -2905,6 +3047,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -2931,7 +3074,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 74,
@@ -2942,6 +3086,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -2968,7 +3113,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 75,
@@ -2979,6 +3125,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 665000020,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
     "Name": "WheelBattle1_Boss15_Name",
@@ -3005,7 +3152,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 76,
@@ -3016,6 +3164,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -3042,7 +3191,8 @@
     },
     "RecommendTeamFeature": [
       9
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 77,
@@ -3053,6 +3203,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 90,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -3079,7 +3230,8 @@
     },
     "RecommendTeamFeature": [
       10
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 78,
@@ -3090,6 +3242,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 480,
     "MonsterId": 24000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3123,7 +3276,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 79,
@@ -3134,6 +3288,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3167,7 +3322,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 80,
@@ -3178,6 +3334,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3211,7 +3368,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 81,
@@ -3222,6 +3380,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 665000020,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
     "Name": "WheelBattle1_Boss15_Name",
@@ -3255,7 +3414,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 82,
@@ -3266,6 +3426,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -3299,7 +3460,8 @@
     },
     "RecommendTeamFeature": [
       9
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 83,
@@ -3310,6 +3472,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -3343,7 +3506,8 @@
     },
     "RecommendTeamFeature": [
       10
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 84,
@@ -3354,6 +3518,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 100,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -3380,7 +3545,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 85,
@@ -3391,6 +3557,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 480,
     "MonsterId": 24000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3425,7 +3592,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 86,
@@ -3436,6 +3604,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3470,7 +3639,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 87,
@@ -3481,6 +3651,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3515,7 +3686,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 88,
@@ -3526,6 +3698,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 665000020,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
     "Name": "WheelBattle1_Boss15_Name",
@@ -3560,7 +3733,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 89,
@@ -3571,6 +3745,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -3605,7 +3780,8 @@
     },
     "RecommendTeamFeature": [
       9
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 90,
@@ -3616,6 +3792,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -3650,7 +3827,8 @@
     },
     "RecommendTeamFeature": [
       10
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 91,
@@ -3661,6 +3839,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 110,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -3687,7 +3866,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 92,
@@ -3698,6 +3878,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 480,
     "MonsterId": 24000049,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3732,7 +3913,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 93,
@@ -3743,6 +3925,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3777,7 +3960,8 @@
     },
     "RecommendTeamFeature": [
       11
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 94,
@@ -3788,6 +3972,7 @@
     "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 480,
     "MonsterId": 24000014,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32007.T_Boss_32007",
     "Name": "WheelBattle1_Boss14_Name",
@@ -3822,7 +4007,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 95,
@@ -3833,6 +4019,7 @@
     "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 665000020,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
     "Name": "WheelBattle1_Boss15_Name",
@@ -3867,7 +4054,8 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 96,
@@ -3878,6 +4066,7 @@
     "RecommendId": 3,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 676750008,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_340251.T_Boss_340251",
     "Name": "WheelBattle1_Boss9_Name",
@@ -3912,7 +4101,8 @@
     },
     "RecommendTeamFeature": [
       9
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 97,
@@ -3923,6 +4113,7 @@
     "RecommendId": 4,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1000,
     "MonsterId": 947700006,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
     "Name": "WheelBattle1_Boss12_Name",
@@ -3957,7 +4148,8 @@
     },
     "RecommendTeamFeature": [
       10
-    ]
+    ],
+    "DamegaRateShow": 0
   },
   {
     "Id": 98,
@@ -3968,6 +4160,7 @@
     "RecommendId": 5,
     "KillScore": 0,
     "MonsterLevel": 120,
+    "DamegaRate": 1100,
     "MonsterId": 401800000,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
     "Name": "WheelBattle1_Boss10_Name",
@@ -3994,6 +4187,1231 @@
     },
     "RecommendTeamFeature": [
       8
-    ]
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 101,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": true,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 480,
+    "MonsterId": 24000046,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 102,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 480,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 103,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 480,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 104,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 2,
+    "IsShowInView": true,
+    "RecommendId": 1,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 1000,
+    "MonsterId": 650000047,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33006.T_Boss_33006",
+    "Name": "WheelBattle1_Boss16_Name",
+    "Desc": "WheelBattle_0_Boss7_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      5
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall10.T_BossLevelItemTexSmall10",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex10.T_BossLevelItemTex10",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex10.T_BossGuideTex10",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss10.T_LevelModeBoss10",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      48
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          48
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 105,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 3,
+    "IsShowInView": true,
+    "RecommendId": 3,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 1000,
+    "MonsterId": 665000020,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
+    "Name": "WheelBattle1_Boss15_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      4
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall8.T_BossLevelItemTexSmall8",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
+    "ElementId": 4,
+    "ShowBuffIds": [
+      42
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          42
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 106,
+    "Level": 11,
+    "Round": 1,
+    "Wave": 4,
+    "IsShowInView": true,
+    "RecommendId": 4,
+    "KillScore": 0,
+    "MonsterLevel": 90,
+    "DamegaRate": 1000,
+    "MonsterId": 947700006,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
+    "Name": "WheelBattle1_Boss12_Name",
+    "Desc": "WheelBattle_0_Boss12_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      2
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall6.T_BossLevelItemTexSmall6",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex6.T_BossLevelItemTex6",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex6.T_BossGuideTex6",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss6.T_LevelModeBoss6",
+    "ElementId": 2,
+    "ShowBuffIds": [
+      23
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          23
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      10
+    ],
+    "DamegaRateShow": 0
+  },
+  {
+    "Id": 107,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": true,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 400,
+    "MonsterId": 24000046,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 108,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 400,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 109,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 1,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 400,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 110,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 2,
+    "IsShowInView": true,
+    "RecommendId": 1,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 834,
+    "MonsterId": 650000047,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33006.T_Boss_33006",
+    "Name": "WheelBattle1_Boss16_Name",
+    "Desc": "WheelBattle_0_Boss7_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      5
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall10.T_BossLevelItemTexSmall10",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex10.T_BossLevelItemTex10",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex10.T_BossGuideTex10",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss10.T_LevelModeBoss10",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      48,
+      50
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          48,
+          50
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          52
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 111,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 3,
+    "IsShowInView": true,
+    "RecommendId": 3,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 834,
+    "MonsterId": 665000020,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
+    "Name": "WheelBattle1_Boss15_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      4
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall8.T_BossLevelItemTexSmall8",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
+    "ElementId": 4,
+    "ShowBuffIds": [
+      42,
+      44
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          42,
+          44
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          46
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 112,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 4,
+    "IsShowInView": true,
+    "RecommendId": 4,
+    "KillScore": 0,
+    "MonsterLevel": 100,
+    "DamegaRate": 834,
+    "MonsterId": 947700006,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
+    "Name": "WheelBattle1_Boss12_Name",
+    "Desc": "WheelBattle_0_Boss12_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      2
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall6.T_BossLevelItemTexSmall6",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex6.T_BossLevelItemTex6",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex6.T_BossGuideTex6",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss6.T_LevelModeBoss6",
+    "ElementId": 2,
+    "ShowBuffIds": [
+      23,
+      27
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          23,
+          27
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          32
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      10
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 113,
+    "Level": 12,
+    "Round": 1,
+    "Wave": 5,
+    "IsShowInView": true,
+    "RecommendId": 5,
+    "KillScore": 1000,
+    "MonsterLevel": 100,
+    "DamegaRate": 918,
+    "MonsterId": 401800000,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
+    "Name": "WheelBattle1_Boss10_Name",
+    "Desc": "WheelBattle_1_Boss10_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_34021_1_UI.T_IconMonsterGoods160_34021_7_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_6.T_BossClipA_Nor_6",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_6.T_BossClipB_Nor_12"
+    ],
+    "TagIdList": [],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall1.T_BossLevelItemTexSmall1",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex1.T_BossLevelItemTex1",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex1.T_BossGuideTex1",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss1.T_LevelModeBoss1",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      9,
+      14
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          9,
+          14
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1
+  },
+  {
+    "Id": 114,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 6,
+    "IsShowInView": true,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 460,
+    "MonsterId": 24000046,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 115,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 6,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 460,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 116,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 6,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 460,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 117,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 7,
+    "IsShowInView": true,
+    "RecommendId": 1,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 960,
+    "MonsterId": 650000047,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33006.T_Boss_33006",
+    "Name": "WheelBattle1_Boss16_Name",
+    "Desc": "WheelBattle_0_Boss7_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      5
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall10.T_BossLevelItemTexSmall10",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex10.T_BossLevelItemTex10",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex10.T_BossGuideTex10",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss10.T_LevelModeBoss10",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      48,
+      50,
+      52
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          48,
+          50
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          52
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 118,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 8,
+    "IsShowInView": true,
+    "RecommendId": 3,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 960,
+    "MonsterId": 665000020,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
+    "Name": "WheelBattle1_Boss15_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      4
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall8.T_BossLevelItemTexSmall8",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
+    "ElementId": 4,
+    "ShowBuffIds": [
+      42,
+      44,
+      46
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          42,
+          44
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          46
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 119,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 9,
+    "IsShowInView": true,
+    "RecommendId": 4,
+    "KillScore": 0,
+    "MonsterLevel": 110,
+    "DamegaRate": 960,
+    "MonsterId": 947700006,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
+    "Name": "WheelBattle1_Boss12_Name",
+    "Desc": "WheelBattle_0_Boss12_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      2
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall6.T_BossLevelItemTexSmall6",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex6.T_BossLevelItemTex6",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex6.T_BossGuideTex6",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss6.T_LevelModeBoss6",
+    "ElementId": 2,
+    "ShowBuffIds": [
+      23,
+      27,
+      32
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          23,
+          27
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          32
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      10
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 120,
+    "Level": 12,
+    "Round": 2,
+    "Wave": 10,
+    "IsShowInView": true,
+    "RecommendId": 5,
+    "KillScore": 1000,
+    "MonsterLevel": 110,
+    "DamegaRate": 1055,
+    "MonsterId": 401800000,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
+    "Name": "WheelBattle1_Boss10_Name",
+    "Desc": "WheelBattle_1_Boss10_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_34021_1_UI.T_IconMonsterGoods160_34021_12_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_6.T_BossClipA_Nor_6",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_6.T_BossClipB_Nor_17"
+    ],
+    "TagIdList": [],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall1.T_BossLevelItemTexSmall1",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex1.T_BossLevelItemTex1",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex1.T_BossGuideTex1",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss1.T_LevelModeBoss1",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      9,
+      14
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          9,
+          14
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.149999976158142
+  },
+  {
+    "Id": 121,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 11,
+    "IsShowInView": true,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 500,
+    "MonsterId": 24000046,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 122,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 11,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 500,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 123,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 11,
+    "IsShowInView": false,
+    "RecommendId": 2,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 500,
+    "MonsterId": 882000025,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_32004.T_Boss_32004",
+    "Name": "WheelBattle1_Boss14_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      3
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall12.T_BossLevelItemTexSmall12",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex12.T_BossLevelItemTex12",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex12.T_BossGuideTex12",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss12.T_LevelModeBoss12",
+    "ElementId": 3,
+    "ShowBuffIds": [
+      47,
+      49,
+      51
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          47,
+          49
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          51
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      12
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 124,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 12,
+    "IsShowInView": true,
+    "RecommendId": 1,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 1043,
+    "MonsterId": 650000047,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_33006.T_Boss_33006",
+    "Name": "WheelBattle1_Boss16_Name",
+    "Desc": "WheelBattle_0_Boss7_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      5
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall10.T_BossLevelItemTexSmall10",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex10.T_BossLevelItemTex10",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex10.T_BossGuideTex10",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss10.T_LevelModeBoss10",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      48,
+      50,
+      52
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          48,
+          50
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          52
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 125,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 13,
+    "IsShowInView": true,
+    "RecommendId": 3,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 1043,
+    "MonsterId": 665000020,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34012_1.T_Boss_34012_1",
+    "Name": "WheelBattle1_Boss15_Name",
+    "Desc": "",
+    "SmallIcon": "",
+    "BigIcon": [],
+    "TagIdList": [
+      4
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall8.T_BossLevelItemTexSmall8",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex8.T_BossLevelItemTex8",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex8.T_BossGuideTex8",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss8.T_LevelModeBoss8",
+    "ElementId": 4,
+    "ShowBuffIds": [
+      42,
+      44,
+      46
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          42,
+          44
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          46
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 126,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 14,
+    "IsShowInView": true,
+    "RecommendId": 4,
+    "KillScore": 0,
+    "MonsterLevel": 120,
+    "DamegaRate": 1043,
+    "MonsterId": 947700006,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_34022.T_Boss_34022",
+    "Name": "WheelBattle1_Boss12_Name",
+    "Desc": "WheelBattle_0_Boss12_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_996_UI.T_IconMonsterGoods160_996_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_4.T_BossClipA_Nor_4",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_4.T_BossClipB_Nor_4"
+    ],
+    "TagIdList": [
+      2
+    ],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall6.T_BossLevelItemTexSmall6",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex6.T_BossLevelItemTex6",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex6.T_BossGuideTex6",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss6.T_LevelModeBoss6",
+    "ElementId": 2,
+    "ShowBuffIds": [
+      23,
+      27,
+      32
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          23,
+          27
+        ]
+      },
+      "2": {
+        "ArrayInt": [
+          32
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      10
+    ],
+    "DamegaRateShow": 1.25
+  },
+  {
+    "Id": 127,
+    "Level": 12,
+    "Round": 3,
+    "Wave": 15,
+    "IsShowInView": true,
+    "RecommendId": 5,
+    "KillScore": 1000,
+    "MonsterLevel": 120,
+    "DamegaRate": 1147,
+    "MonsterId": 401800000,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgBoss/T_Boss_35220.T_Boss_35220",
+    "Name": "WheelBattle1_Boss10_Name",
+    "Desc": "WheelBattle_1_Boss10_Desc",
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_34021_1_UI.T_IconMonsterGoods160_34021_17_UI",
+    "BigIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipA_Nor_6.T_BossClipA_Nor_6",
+      "/Game/Aki/UI/UIResources/Common/Image/BgCgBig/MowingTower/BossClipTexture/T_BossClipB_Nor_6.T_BossClipB_Nor_22"
+    ],
+    "TagIdList": [],
+    "SmallIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTexSmall/T_BossLevelItemTexSmall1.T_BossLevelItemTexSmall1",
+    "BigIconInModeView": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossLevelItemTex/T_BossLevelItemTex1.T_BossLevelItemTex1",
+    "SmallIconHandBook": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossGuideTex/T_BossGuideTex1.T_BossGuideTex1",
+    "MonsterPortrait": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity32/MowingTower/BossTex/T_LevelModeBoss1.T_LevelModeBoss1",
+    "ElementId": 5,
+    "ShowBuffIds": [
+      9,
+      14
+    ],
+    "HandBookBuff": {
+      "1": {
+        "ArrayInt": [
+          9,
+          14
+        ]
+      }
+    },
+    "RecommendTeamFeature": [
+      8
+    ],
+    "DamegaRateShow": 1.25
   }
 ]

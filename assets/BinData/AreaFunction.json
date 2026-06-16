@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 750001,
+    "Desc": "",
+    "Data": {
+      "Type": 0,
+      "ExitEffectHeight": -41630,
+      "EffectiveHeight": -41910,
+      "FallTeleportHeight": -45733,
+      "Motor": {
+        "WindFieldDepth": 1000,
+        "MaxAdditionalSpeed": 5000,
+        "SpeedCurve": "/Game/Aki/Data/Fight/Curves/CV_MotorSoarWindField.CV_MotorSoarWindField",
+        "SpeedTolerance": 400,
+        "Direction": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "Offset": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      "Character": {
+        "BulletId": 200100013,
+        "Range": {
+          "X": 450,
+          "Z": 2500
+        },
+        "Offset": {
+          "Z": 2500
+        }
+      }
+    }
+  }
+]

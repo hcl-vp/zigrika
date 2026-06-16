@@ -2074,5 +2074,29 @@
     "Desc": "",
     "Icon": "",
     "IconSprite": ""
+  },
+  {
+    "FunctionId": 10156,
+    "Name": "玄方录",
+    "IsOn": true,
+    "OpenConditionId": 0,
+    "ShowUIType": 0,
+    "Delay": 101,
+    "Title": "",
+    "Desc": "",
+    "Icon": "",
+    "IconSprite": ""
+  },
+  {
+    "FunctionId": 10157,
+    "Name": "玄方录支线任务收录",
+    "IsOn": true,
+    "OpenConditionId": 0,
+    "ShowUIType": 0,
+    "Delay": 101,
+    "Title": "",
+    "Desc": "",
+    "Icon": "",
+    "IconSprite": ""
   }
 ]

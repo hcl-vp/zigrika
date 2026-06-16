@@ -464,6 +464,11 @@
           8
         ]
       },
+      "-1192129107": {
+        "ArrayInt": [
+          5
+        ]
+      },
       "-1785184580": {
         "ArrayInt": [
           4,
@@ -677,6 +682,15 @@
       "-705162633": {
         "ArrayInt": [
           4,
+          8
+        ]
+      },
+      "-201929859": {
+        "ArrayInt": [
+          4,
+          7,
+          6,
+          9,
           8
         ]
       }
@@ -992,6 +1006,11 @@
           4,
           8
         ]
+      },
+      "-1192129107": {
+        "ArrayInt": [
+          5
+        ]
       }
     },
     "GamepadButtonTypeMap": {
@@ -1205,6 +1224,11 @@
           4,
           8,
           11
+        ]
+      },
+      "-1192129107": {
+        "ArrayInt": [
+          5
         ]
       }
     },
@@ -3512,6 +3536,158 @@
     "PadButtonTypeList": [
       1,
       5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5045,
+    "DesktopButtonTypeList": [
+      1,
+      5,
+      7,
+      6,
+      8
+    ],
+    "PadButtonTypeList": [
+      4,
+      6,
+      0,
+      7,
+      8,
+      5,
+      1,
+      0,
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5052,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5057,
+    "DesktopButtonTypeList": [
+      4,
+      6
+    ],
+    "PadButtonTypeList": [
+      4,
+      6
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5058,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5059,
+    "DesktopButtonTypeList": [
+      5
+    ],
+    "PadButtonTypeList": [
+      5
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5060,
+    "DesktopButtonTypeList": [
+      1
+    ],
+    "PadButtonTypeList": [
+      1
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5064,
+    "DesktopButtonTypeList": [
+      0
+    ],
+    "PadButtonTypeList": [
+      0
+    ],
+    "TagList": [],
+    "TagDesktopButtonTypeList": [],
+    "TagPadButtonTypeList": [],
+    "DesktopButtonTypeMap": {},
+    "PadButtonTypeMap": {},
+    "GamepadButtonTypeMap": {},
+    "MotorPadButtonTypeMap": {},
+    "MotorJoystickPadButtonTypeMap": {}
+  },
+  {
+    "Id": 5054,
+    "DesktopButtonTypeList": [
+      4,
+      7
+    ],
+    "PadButtonTypeList": [
+      4,
+      7
     ],
     "TagList": [],
     "TagDesktopButtonTypeList": [],

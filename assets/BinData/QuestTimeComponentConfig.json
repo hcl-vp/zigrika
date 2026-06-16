@@ -1,0 +1,1783 @@
+[
+  {
+    "Id": 10001,
+    "Location": {
+      "X": -145,
+      "Y": -333
+    },
+    "Type": 1,
+    "StatusType": 1,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "",
+    "TipsTitle": "",
+    "TipsDesc": "",
+    "TipsArea": "",
+    "TipsStatusDesc": "",
+    "AnimMovePoint": [
+      {
+        "X": -145,
+        "Y": -333
+      },
+      {
+        "X": -109,
+        "Y": -85
+      },
+      {
+        "X": -269,
+        "Y": -21
+      },
+      {
+        "X": -561,
+        "Y": 17
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 600,
+    "PathSpeed": 800,
+    "HeadLoopEffect": "800"
+  },
+  {
+    "Id": 10002,
+    "Location": {
+      "X": 191,
+      "Y": 77
+    },
+    "Type": 1,
+    "StatusType": 2,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "",
+    "TipsTitle": "",
+    "TipsDesc": "",
+    "TipsArea": "",
+    "TipsStatusDesc": "",
+    "AnimMovePoint": [
+      {
+        "X": 191,
+        "Y": 77
+      },
+      {
+        "X": 213,
+        "Y": -175
+      },
+      {
+        "X": 787,
+        "Y": -27
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 600,
+    "PathSpeed": 800,
+    "HeadLoopEffect": "800"
+  },
+  {
+    "Id": 1101,
+    "Location": {
+      "X": 159,
+      "Y": -416
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2_UI.T_IconRoleHeadCircle256_2_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Chixia",
+    "TipsDesc": "QuestBranch_TipsDesc_1101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_1101",
+    "AnimMovePoint": [
+      {
+        "X": 159,
+        "Y": -416
+      },
+      {
+        "X": 199,
+        "Y": -380
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 20,
+    "PathSpeed": 200,
+    "HeadLoopEffect": "800"
+  },
+  {
+    "Id": 2101,
+    "Location": {
+      "X": 237,
+      "Y": -172
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_2101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_2101",
+    "AnimMovePoint": [
+      {
+        "X": 205,
+        "Y": -406
+      },
+      {
+        "X": 237,
+        "Y": -172
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 3101,
+    "Location": {
+      "X": 473,
+      "Y": -334
+    },
+    "Type": 1,
+    "StatusType": 2,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_3101",
+    "TipsArea": "QuestBranch_Area_2",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_3101",
+    "AnimMovePoint": [
+      {
+        "X": 237,
+        "Y": -172
+      },
+      {
+        "X": 473,
+        "Y": -334
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 4101,
+    "Location": {
+      "X": 963,
+      "Y": -10
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_4101",
+    "TipsArea": "QuestBranch_Area_3",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_4101",
+    "AnimMovePoint": [
+      {
+        "X": 475,
+        "Y": -320
+      },
+      {
+        "X": 963,
+        "Y": -10
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 5101,
+    "Location": {
+      "X": 611,
+      "Y": 246
+    },
+    "Type": 1,
+    "StatusType": 2,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_5101",
+    "TipsArea": "QuestBranch_Area_4",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_5101",
+    "AnimMovePoint": [
+      {
+        "X": 963,
+        "Y": -38
+      },
+      {
+        "X": 611,
+        "Y": 246
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 6101,
+    "Location": {
+      "X": 611,
+      "Y": 246
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_6101",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_6101",
+    "AnimMovePoint": [
+      {
+        "X": 591,
+        "Y": 228
+      },
+      {
+        "X": 611,
+        "Y": 246
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 7101,
+    "Location": {
+      "X": 523,
+      "Y": 142
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_7101",
+    "TipsArea": "QuestBranch_Area_6",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_7101",
+    "AnimMovePoint": [
+      {
+        "X": 611,
+        "Y": 246
+      },
+      {
+        "X": 523,
+        "Y": 142
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 8101,
+    "Location": {
+      "X": 467,
+      "Y": 134
+    },
+    "Type": 1,
+    "StatusType": 2,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_8101",
+    "TipsArea": "QuestBranch_Area_7",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_8101",
+    "AnimMovePoint": [
+      {
+        "X": 523,
+        "Y": 142
+      },
+      {
+        "X": 467,
+        "Y": 134
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 8301,
+    "Location": {
+      "X": 535,
+      "Y": 130
+    },
+    "Type": 4,
+    "StatusType": 2,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityPurpleNor.SP_MapHeadQualityPurpleNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_8301",
+    "TipsArea": "QuestBranch_Area_8",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_8301",
+    "AnimMovePoint": [
+      {
+        "X": 535,
+        "Y": 130
+      },
+      {
+        "X": 535,
+        "Y": 130
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 9101,
+    "Location": {
+      "X": 179,
+      "Y": 36
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_9101",
+    "TipsArea": "QuestBranch_Area_9",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_9101",
+    "AnimMovePoint": [
+      {
+        "X": 467,
+        "Y": 134
+      },
+      {
+        "X": 179,
+        "Y": 36
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 9301,
+    "Location": {
+      "X": 277,
+      "Y": 44
+    },
+    "Type": 4,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityPurpleNor.SP_MapHeadQualityPurpleNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_9301",
+    "TipsArea": "QuestBranch_Area_6",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_9301",
+    "AnimMovePoint": [
+      {
+        "X": 535,
+        "Y": 130
+      },
+      {
+        "X": 277,
+        "Y": 44
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 10101,
+    "Location": {
+      "X": 215,
+      "Y": -458
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_10101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_10101",
+    "AnimMovePoint": [
+      {
+        "X": 215,
+        "Y": -458
+      },
+      {
+        "X": 215,
+        "Y": -458
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": "Flash_In"
+  },
+  {
+    "Id": 10301,
+    "Location": {
+      "X": 19,
+      "Y": -190
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_10301",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_10301",
+    "AnimMovePoint": [
+      {
+        "X": 277,
+        "Y": 44
+      },
+      {
+        "X": 19,
+        "Y": -190
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 10102,
+    "Location": {
+      "X": 87,
+      "Y": -200
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_10102",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_10102",
+    "AnimMovePoint": [
+      {
+        "X": 179,
+        "Y": 36
+      },
+      {
+        "X": 87,
+        "Y": -200
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 11101,
+    "Location": {
+      "X": 153,
+      "Y": -120
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_11101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_11101",
+    "AnimMovePoint": [
+      {
+        "X": 215,
+        "Y": -458
+      },
+      {
+        "X": 153,
+        "Y": -120
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      51
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 11301,
+    "Location": {
+      "X": -575,
+      "Y": -36
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_11301",
+    "TipsArea": "QuestBranch_Area_3",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_11301",
+    "AnimMovePoint": [
+      {
+        "X": 19,
+        "Y": -190
+      },
+      {
+        "X": -575,
+        "Y": -36
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 11102,
+    "Location": {
+      "X": 305,
+      "Y": -190
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_11102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_11102",
+    "AnimMovePoint": [
+      {
+        "X": 279,
+        "Y": -456
+      },
+      {
+        "X": 305,
+        "Y": -190
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      32
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 12101,
+    "Location": {
+      "X": 59,
+      "Y": -186
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_12101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_12101",
+    "AnimMovePoint": [
+      {
+        "X": 153,
+        "Y": -120
+      },
+      {
+        "X": 59,
+        "Y": -186
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      14
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 12301,
+    "Location": {
+      "X": -575,
+      "Y": -36
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_12301",
+    "TipsArea": "QuestBranch_Area_4",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_12301",
+    "AnimMovePoint": [
+      {
+        "X": -575,
+        "Y": -36
+      },
+      {
+        "X": -575,
+        "Y": -36
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 12102,
+    "Location": {
+      "X": 773,
+      "Y": 28
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_12102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_12102",
+    "AnimMovePoint": [
+      {
+        "X": 480,
+        "Y": -320
+      },
+      {
+        "X": 773,
+        "Y": 28
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      82
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 13101,
+    "Location": {
+      "X": -389,
+      "Y": -30
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_13101",
+    "TipsArea": "QuestBranch_Area_2",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_13101",
+    "AnimMovePoint": [
+      {
+        "X": 59,
+        "Y": -186
+      },
+      {
+        "X": -389,
+        "Y": -30
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      19
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 13301,
+    "Location": {
+      "X": -449,
+      "Y": -20
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_13301",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_13301",
+    "AnimMovePoint": [
+      {
+        "X": -575,
+        "Y": -36
+      },
+      {
+        "X": -449,
+        "Y": -20
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 13103,
+    "Location": {
+      "X": -657,
+      "Y": 88
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_13103",
+    "TipsArea": "QuestBranch_Area_2",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_13103",
+    "AnimMovePoint": [
+      {
+        "X": -657,
+        "Y": 88
+      },
+      {
+        "X": -657,
+        "Y": 88
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 13102,
+    "Location": {
+      "X": 777,
+      "Y": -34
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_13102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_13102",
+    "AnimMovePoint": [
+      {
+        "X": 777,
+        "Y": -34
+      },
+      {
+        "X": 777,
+        "Y": -34
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      82
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 14101,
+    "Location": {
+      "X": -733,
+      "Y": 32
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_14101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_14101",
+    "AnimMovePoint": [
+      {
+        "X": -389,
+        "Y": -30
+      },
+      {
+        "X": -733,
+        "Y": 32
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      22
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 14301,
+    "Location": {
+      "X": -525,
+      "Y": 10
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_14301",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_14301",
+    "AnimMovePoint": [
+      {
+        "X": -449,
+        "Y": -20
+      },
+      {
+        "X": -525,
+        "Y": 10
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 14103,
+    "Location": {
+      "X": -579,
+      "Y": 48
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_14103",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_14103",
+    "AnimMovePoint": [
+      {
+        "X": -657,
+        "Y": 88
+      },
+      {
+        "X": -579,
+        "Y": 48
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 14102,
+    "Location": {
+      "X": 777,
+      "Y": -34
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_14102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_14102",
+    "AnimMovePoint": [
+      {
+        "X": 777,
+        "Y": -34
+      },
+      {
+        "X": 777,
+        "Y": -34
+      }
+    ],
+    "BranchFinishQuestNode": [
+      880000045,
+      88
+    ],
+    "OnGoingDesc": "QuestBranch_Ongoing",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 15101,
+    "Location": {
+      "X": 101,
+      "Y": 286
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_15101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_15101",
+    "AnimMovePoint": [
+      {
+        "X": -621,
+        "Y": 16
+      },
+      {
+        "X": 101,
+        "Y": 286
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 15102,
+    "Location": {
+      "X": 271,
+      "Y": 372
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_15102",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_15102",
+    "AnimMovePoint": [
+      {
+        "X": 357,
+        "Y": -54
+      },
+      {
+        "X": 271,
+        "Y": 372
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 15103,
+    "Location": {
+      "X": 151,
+      "Y": 250
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_15103",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_15103",
+    "AnimMovePoint": [
+      {
+        "X": -579,
+        "Y": 48
+      },
+      {
+        "X": 151,
+        "Y": 250
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 15301,
+    "Location": {
+      "X": -700,
+      "Y": 300
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_15301",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_15301",
+    "AnimMovePoint": [
+      {
+        "X": 0,
+        "Y": 0
+      },
+      {
+        "X": -800,
+        "Y": 600
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 16101,
+    "Location": {
+      "X": 157,
+      "Y": 284
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_16101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_16101",
+    "AnimMovePoint": [
+      {
+        "X": 101,
+        "Y": 286
+      },
+      {
+        "X": 157,
+        "Y": 284
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 16102,
+    "Location": {
+      "X": 277,
+      "Y": 340
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_16102",
+    "TipsArea": "QuestBranch_Area_2",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_16102",
+    "AnimMovePoint": [
+      {
+        "X": 271,
+        "Y": 372
+      },
+      {
+        "X": 277,
+        "Y": 340
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 16301,
+    "Location": {
+      "X": 317,
+      "Y": 120
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_16301",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_16301",
+    "AnimMovePoint": [
+      {
+        "X": 317,
+        "Y": 120
+      },
+      {
+        "X": 317,
+        "Y": 120
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 17101,
+    "Location": {
+      "X": 525,
+      "Y": 246
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_17101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_17101",
+    "AnimMovePoint": [
+      {
+        "X": 157,
+        "Y": 284
+      },
+      {
+        "X": 525,
+        "Y": 246
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 17102,
+    "Location": {
+      "X": 469,
+      "Y": 248
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_17102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_17102",
+    "AnimMovePoint": [
+      {
+        "X": 225,
+        "Y": 288
+      },
+      {
+        "X": 469,
+        "Y": 248
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 17301,
+    "Location": {
+      "X": 403,
+      "Y": 226
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_17301",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_17301",
+    "AnimMovePoint": [
+      {
+        "X": 317,
+        "Y": 120
+      },
+      {
+        "X": 403,
+        "Y": 226
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 18101,
+    "Location": {
+      "X": 103,
+      "Y": 294
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_18101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_18101",
+    "AnimMovePoint": [
+      {
+        "X": 525,
+        "Y": 246
+      },
+      {
+        "X": 103,
+        "Y": 294
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 18301,
+    "Location": {
+      "X": 500,
+      "Y": -800
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_18301",
+    "TipsArea": "QuestBranch_Area_3",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_18301",
+    "AnimMovePoint": [
+      {
+        "X": 0,
+        "Y": 0
+      },
+      {
+        "X": -200,
+        "Y": -600
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 18103,
+    "Location": {
+      "X": -200,
+      "Y": -1000
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_18103",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_18103",
+    "AnimMovePoint": [
+      {
+        "X": 469,
+        "Y": 248
+      },
+      {
+        "X": 185,
+        "Y": 342
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 18102,
+    "Location": {
+      "X": -100,
+      "Y": -900
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_18102",
+    "TipsArea": "QuestBranch_Area_2",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_18102",
+    "AnimMovePoint": [
+      {
+        "X": 277,
+        "Y": 340
+      },
+      {
+        "X": 257,
+        "Y": 354
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 1102,
+    "Location": {
+      "X": 205,
+      "Y": -406
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_1102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_1102",
+    "AnimMovePoint": [
+      {
+        "X": 205,
+        "Y": -406
+      },
+      {
+        "X": 205,
+        "Y": -406
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 10103,
+    "Location": {
+      "X": 279,
+      "Y": -456
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_10103",
+    "TipsArea": "QuestBranch_Area_4",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_10103",
+    "AnimMovePoint": [
+      {
+        "X": 279,
+        "Y": -456
+      },
+      {
+        "X": 279,
+        "Y": -456
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 19101,
+    "Location": {
+      "X": -621,
+      "Y": 16
+    },
+    "Type": 1,
+    "StatusType": 3,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_5_UI.T_IconRoleHeadCircle256_5_UI",
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_4_UI.T_IconRoleHeadCircle256_4_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Rover",
+    "TipsDesc": "QuestBranch_TipsDesc_19101",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_19101",
+    "AnimMovePoint": [
+      {
+        "X": -733,
+        "Y": 32
+      },
+      {
+        "X": -621,
+        "Y": 16
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 19301,
+    "Location": {
+      "X": -525,
+      "Y": 10
+    },
+    "Type": 3,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc01.T_HeadNpc01"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedNor.SP_MapHeadQualityRedNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityRedHold.SP_MapHeadQualityRedHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Muou",
+    "TipsDesc": "QuestBranch_TipsDesc_19301",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_19301",
+    "AnimMovePoint": [
+      {
+        "X": -525,
+        "Y": 10
+      },
+      {
+        "X": -525,
+        "Y": 10
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 19103,
+    "Location": {
+      "X": -579,
+      "Y": 48
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_19103",
+    "TipsArea": "QuestBranch_Area_5",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_19103",
+    "AnimMovePoint": [
+      {
+        "X": -579,
+        "Y": 48
+      },
+      {
+        "X": -579,
+        "Y": 48
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 19102,
+    "Location": {
+      "X": 357,
+      "Y": -54
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/UiMissionMap/Image/Head/T_HeadNpc02.T_HeadNpc02"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Suisui",
+    "TipsDesc": "QuestBranch_TipsDesc_19102",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_19102",
+    "AnimMovePoint": [
+      {
+        "X": 777,
+        "Y": -34
+      },
+      {
+        "X": 357,
+        "Y": -54
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  },
+  {
+    "Id": 16103,
+    "Location": {
+      "X": 225,
+      "Y": 288
+    },
+    "Type": 1,
+    "StatusType": 4,
+    "ComponentIcon": [
+      "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI"
+    ],
+    "ComponentQualityFrame": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueNor.SP_MapHeadQualityBlueNor",
+    "ComponentQualityFrameHold": "/Game/Aki/UI/UIResources/UiMissionMap/Atlas/SP_MapHeadQualityBlueHold.SP_MapHeadQualityBlueHold",
+    "TipsQualityBg": "/Game/Aki/UI/UIResources/UiMissionMap/Image/T_InfoQualityGreen.T_InfoQualityGreen",
+    "TipsTitle": "QuestBranch_Character_Yangyang",
+    "TipsDesc": "QuestBranch_TipsDesc_16103",
+    "TipsArea": "QuestBranch_Area_1",
+    "TipsStatusDesc": "QuestBranch_StatusDesc_16103",
+    "AnimMovePoint": [
+      {
+        "X": 151,
+        "Y": 250
+      },
+      {
+        "X": 225,
+        "Y": 288
+      }
+    ],
+    "BranchFinishQuestNode": [],
+    "OnGoingDesc": "",
+    "MoveSpeed": 2000,
+    "PathSpeed": 2000,
+    "HeadLoopEffect": ""
+  }
+]

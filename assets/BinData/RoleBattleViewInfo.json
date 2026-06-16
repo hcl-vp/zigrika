@@ -468,5 +468,25 @@
     "ChatVisible": false,
     "FormationVisible": false,
     "JoystickType": 0
+  },
+  {
+    "Id": 5055,
+    "MiniMapVisible": true,
+    "TopButtonVisible": false,
+    "HomeButtonVisible": true,
+    "RoleStateVisible": true,
+    "ChatVisible": true,
+    "FormationVisible": true,
+    "JoystickType": 0
+  },
+  {
+    "Id": 5056,
+    "MiniMapVisible": true,
+    "TopButtonVisible": false,
+    "HomeButtonVisible": true,
+    "RoleStateVisible": true,
+    "ChatVisible": true,
+    "FormationVisible": true,
+    "JoystickType": 0
   }
 ]

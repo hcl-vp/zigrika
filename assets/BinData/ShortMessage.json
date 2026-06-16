@@ -2882,5 +2882,19 @@
     "FinallPopType": 0,
     "DropId": 0,
     "QuestId": 0
+  },
+  {
+    "Id": 35045,
+    "WhichChat": 85,
+    "FlowParam": [
+      "剧情_3.5土豆幸存者",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
   }
 ]

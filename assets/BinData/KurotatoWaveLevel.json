@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "Id": 1,
+    "WaveRange": [
+      0,
+      0
+    ],
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreD.T_ComScoreD"
+  },
+  {
+    "Id": 2,
+    "WaveRange": [
+      1,
+      19
+    ],
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreC.T_ComScoreC"
+  },
+  {
+    "Id": 3,
+    "WaveRange": [
+      20,
+      39
+    ],
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreB.T_ComScoreB"
+  },
+  {
+    "Id": 4,
+    "WaveRange": [
+      40,
+      59
+    ],
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ComImg/T_ComScoreA.T_ComScoreA"
+  }
+]

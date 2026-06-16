@@ -1,0 +1,128 @@
+[
+  {
+    "Id": 1,
+    "ActivityId": 110900001,
+    "Sort": 1,
+    "Name": "AdventureTaskChapterV2_Name_01",
+    "DropId": 4701,
+    "Roles": [],
+    "LevelUnlockCount": 0,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_01"
+  },
+  {
+    "Id": 2,
+    "ActivityId": 110900001,
+    "Sort": 2,
+    "Name": "AdventureTaskChapterV2_Name_02",
+    "DropId": 4702,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_02",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_02"
+  },
+  {
+    "Id": 3,
+    "ActivityId": 110900001,
+    "Sort": 3,
+    "Name": "AdventureTaskChapterV2_Name_03",
+    "DropId": 4703,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_03",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_03"
+  },
+  {
+    "Id": 4,
+    "ActivityId": 110900001,
+    "Sort": 4,
+    "Name": "AdventureTaskChapterV2_Name_04",
+    "DropId": 4704,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_04",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_04"
+  },
+  {
+    "Id": 5,
+    "ActivityId": 110900001,
+    "Sort": 5,
+    "Name": "AdventureTaskChapterV2_Name_05",
+    "DropId": 4705,
+    "Roles": [
+      1203,
+      1104,
+      1301,
+      1405,
+      1503
+    ],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_05",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_05"
+  },
+  {
+    "Id": 6,
+    "ActivityId": 110900001,
+    "Sort": 6,
+    "Name": "AdventureTaskChapterV2_Name_06",
+    "DropId": 4706,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_06",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_06"
+  },
+  {
+    "Id": 7,
+    "ActivityId": 110900001,
+    "Sort": 7,
+    "Name": "AdventureTaskChapterV2_Name_07",
+    "DropId": 4707,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_07",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_07"
+  },
+  {
+    "Id": 8,
+    "ActivityId": 110900001,
+    "Sort": 8,
+    "Name": "AdventureTaskChapterV2_Name_08",
+    "DropId": 4708,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 5,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_08",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_08"
+  },
+  {
+    "Id": 9,
+    "ActivityId": 110900001,
+    "Sort": 9,
+    "Name": "AdventureTaskChapterV2_Name_09",
+    "DropId": 4709,
+    "Roles": [],
+    "LevelUnlockCount": 5,
+    "RewardUnlockCount": 6,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_09",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_09"
+  },
+  {
+    "Id": 10,
+    "ActivityId": 110900001,
+    "Sort": 10,
+    "Name": "AdventureTaskChapterV2_Name_10",
+    "DropId": 4710,
+    "Roles": [],
+    "LevelUnlockCount": 6,
+    "RewardUnlockCount": 6,
+    "LockedDesc": "AdventureTaskChapterV2_LockedDesc_10",
+    "ChapterTitle": "AdventureTaskChapterV2_Title_10"
+  }
+]
