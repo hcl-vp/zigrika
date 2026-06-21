@@ -22,6 +22,10 @@ pub fn addDefaultProgressionItems(info: *InventoryInfo, gpa: std.mem.Allocator, 
     for (assets.tables.skill_level.items) |entry| {
         try ensureConsumeItems(info, gpa, entry.Consume);
     }
+
+    for (assets.tables.motor_tech_tree.items) |entry| {
+        try ensureNormalItem(info, gpa, entry.TpItemId, 777);
+    }
 }
 
 fn ensureConsumeItems(info: *InventoryInfo, gpa: std.mem.Allocator, consume_map: anytype) !void {

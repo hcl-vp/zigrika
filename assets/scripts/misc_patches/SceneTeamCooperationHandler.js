@@ -21,7 +21,7 @@ SceneTeamCooperationHandler.prototype.Trigger = function (e, r) {
 
       return false;
     }
-    n = e.EntityHandle.Entity.GetComponent(220);
+    n = e.EntityHandle.Entity.GetComponent(221);
     if (n.HasTag(-2044964178) && n.HasAnyTag(SceneTeamDefine_1.beHitTagList)) {
       if (Log_1.Log.CheckInfo()) {
         Log_1.Log.Info("SceneTeam", 48, "被击硬直时间无法换人", [

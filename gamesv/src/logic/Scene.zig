@@ -37,16 +37,23 @@ pub const Entity = struct {
     pub const ActorVisibleMarker = @import("component/entity/ActorVisibleMarker.zig");
     pub const DirectControlMarker = @import("component/entity/DirectControlMarker.zig");
     pub const AttributeComponent = @import("component/entity/AttributeComponent.zig");
+    pub const TagComponent = @import("component/entity/TagComponent.zig");
     pub const FightBuffComponent = @import("component/entity/FightBuffComponent.zig");
     pub const CharacterAttachComponent = @import("component/entity/CharacterAttachComponent.zig");
     pub const ConcomitantComponent = @import("component/entity/ConcomitantComponent.zig");
     pub const EquipComponent = @import("component/entity/EquipComponent.zig");
     pub const FollowerComponent = @import("component/entity/FollowerComponent.zig");
+    pub const VehicleComponent = @import("component/entity/VehicleComponent.zig");
+    pub const NpcDriveVehicleComponent = @import("component/entity/NpcDriveVehicleComponent.zig");
+    pub const MotorOutlookComponent = @import("component/entity/MotorOutlookComponent.zig");
+    pub const MotorDaCtxComponent = @import("component/entity/MotorDaCtxComponent.zig");
     pub const LogicStateComponent = @import("component/entity/LogicStateComponent.zig");
     pub const MonsterAiComponent = @import("component/entity/MonsterAiComponent.zig");
     pub const PassiveGaSkillComponent = @import("component/entity/PassiveGaSkillComponent.zig");
     pub const PlayerBattleBinder = @import("component/entity/PlayerBattleBinder.zig");
     pub const SummonerComponent = @import("component/entity/SummonerComponent.zig");
+    pub const FollowShooterComponent = @import("component/entity/FollowShooterComponent.zig");
+    pub const FollowEntityComponent = @import("component/entity/FollowEntityComponent.zig");
     pub const FsmComponent = @import("component/entity/FsmComponent.zig");
     pub const VisionSkillComponent = @import("component/entity/VisionSkillComponent.zig");
     pub const BaseSkinComponent = @import("component/entity/BaseSkinComponent.zig");
@@ -238,6 +245,9 @@ pub fn spawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype
 
     const id = try scene.nextEntityId(fs, gpa);
     storage.entity_id = .{ .net_id = id };
+    if (storage.motor_da_ctx) |*comp| {
+        if (comp.context_id == 0) comp.context_id = id;
+    }
 
     try scene.net_id_map.put(gpa, id, scene.entities.len);
     try scene.entities.append(gpa, storage);

@@ -12,6 +12,7 @@ const logic_namespaces: []const type = &.{
     @import("handlers/save.zig"),
     @import("handlers/debugger.zig"),
     @import("handlers/buff.zig"),
+    @import("handlers/tags.zig"),
     @import("handlers/chat.zig"),
     @import("handlers/time.zig"),
 };

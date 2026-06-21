@@ -27,7 +27,7 @@ pub const battle = struct {
             break :blk -1;
         };
 
-        var notify: pb.CombatReceivePackNotify = .{};
+        var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = cur_role_entity_id },

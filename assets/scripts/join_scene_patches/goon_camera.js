@@ -122,10 +122,10 @@ setTimeout(() => {
     var e,
       t = this.SpecialSkillComponent.Entity;
     ((this.Hte = t.GetComponent(3)),
-      (this.cBe = t.GetComponent(42)),
+      (this.cBe = t.GetComponent(44)),
       this.Hte?.IsRoleAndCtrlByMe &&
-        ((this.Nce = t.GetComponent(67)),
-        (e = t.GetComponent(218)),
+        ((this.Nce = t.GetComponent(69)),
+        (e = t.GetComponent(221)),
         (this.SMd = e?.ListenForTagAddOrRemove(1519720150, this.IMd)),
         EventSystem_1.EventSystem.Add(
           EventDefine_1.EEventName.OnChangeRole,
@@ -179,7 +179,7 @@ setTimeout(() => {
     const entity = teamItem.Kpo?.Entity;
     if (!entity?.Valid) continue;
 
-    const specialSkillComp = entity.GetComponent(284);
+    const specialSkillComp = entity.GetComponent(285);
     if (!specialSkillComp) continue;
 
     const specialSkill = specialSkillComp.SpecialSkill;
@@ -357,16 +357,6 @@ setTimeout(() => {
   };
   FightPhotoOptionPanel.GetGuideUiItemAndUiItemForShowEx = function (e) {
     return;
-  };
-
-  FightPhotoOptionPanel.prototype.RefreshFinishSprite = function () {
-    var e =
-      ControllerHolder_1.ControllerHolder.PhotographController.CurrentBtNode;
-    e &&
-      e.InProgress &&
-      (this.GetText(9)?.SetUIActive(!e.CheckRoleInCamera()),
-      this.GetItem(6)?.SetUIActive(e.CheckPhotographCondition()));
-    this.GetText(9).SetText("Private Server Freecam Tool");
   };
 
   RouletteModel.prototype.IsExploreRouletteOpen = function () {
@@ -555,25 +545,6 @@ setTimeout(() => {
     });
   };
 
-  FightPhotoOptionPanel.prototype.OnBeforeStartAsync = async function () {
-    this.yEd = new GenericScrollViewNew_1.GenericScrollViewNew(
-      this.GetScrollViewWithScrollbar(2),
-      this.Bqe,
-    );
-    this.o8a = new GenericLayout_1.GenericLayout(
-      this.GetVerticalLayout(0),
-      this.n8a,
-    );
-    await this.yEd.RefreshByDataAsync([]);
-    this.yEd.SelectGridProxy(0);
-    this.RefreshCondition();
-    this.GetItem(4)?.SetUIActive(false);
-    this.GetSprite(7).SetUIActive(false);
-    this.GetSprite(8).SetUIActive(false);
-
-    detach_plot_camera();
-  };
-
   // reattach
   UiCameraPhotographerStructure.prototype.OnDestroy = function () {
     this.YUo();
@@ -667,6 +638,7 @@ setTimeout(() => {
     dilate_time(0);
     // UiTimeDilation_1.UiTimeDilation.Rur(true);
     this.NDc();
+    detach_plot_camera();
   };
 
   let last_recorded_style =
@@ -1421,22 +1393,22 @@ setTimeout(() => {
 
   FightPhotographView.prototype.NDc = function () {
     // UiTimeDilation_1.UiTimeDilation.NBn();
-    var e = ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
-    e?.Valid &&
-      e.Entity?.Valid &&
-      (e = e.Entity.GetComponent(213)) &&
-      !e.HasTag(-561064175) &&
-      e.AddTag(-561064175);
+    // var e = ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
+    // e?.Valid &&
+    //   e.Entity?.Valid &&
+    //   (e = e.Entity.GetComponent(221)) &&
+    //   !e.HasTag(-561064175) &&
+    //   e.AddTag(-561064175);
   };
 
   FightPhotographView.prototype.VDc = function () {
     // UiTimeDilation_1.UiTimeDilation.kBn();
-    var e = ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
-    e?.Valid &&
-      e.Entity?.Valid &&
-      (e = e.Entity.GetComponent(213)) &&
-      e.HasTag(-561064175) &&
-      e.RemoveTag(-561064175);
+    // var e = ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
+    // e?.Valid &&
+    //   e.Entity?.Valid &&
+    //   (e = e.Entity.GetComponent(221)) &&
+    //   e.HasTag(-561064175) &&
+    //   e.RemoveTag(-561064175);
   };
 
   FightPhotographView.prototype.OnBeforeStartAsync = async function () {
@@ -1445,11 +1417,7 @@ setTimeout(() => {
         ((this.IQi = new PhotographEntityPanel_1.PhotographEntityPanel()),
         t.push(this.IQi.CreateByActorAsync(this.GetItem(15).GetOwner())),
         // this.GetButton(14).RootUIComp.SetUIActive(false),
-        ((this.SEd = new FightPhotoOptionPanel_1.FightPhotoOptionPanel()),
         // (e = this.GetItem(16)),
-        t.push(
-          this.SEd.CreateThenShowByResourceIdAsync("UiItem_BattlePhoto", e),
-        )),
         await Promise.all(t),
         this.zQi(),
         this.IQi.SetActive(false),
@@ -1498,7 +1466,6 @@ setTimeout(() => {
       });
       await i.Promise;
     }
-    this.SEd.GetItem(4).GetParentAsUIItem().SetUIActive(false);
   };
 
   ControllerHolder_1.ControllerHolder.PhotographController.U5_ = function () {
@@ -1810,7 +1777,7 @@ setTimeout(() => {
           if (this.GetRoleMainAnimInstanceType() !== 0) {
             return;
           }
-          r.GetComponent(190).MainAnimInstance.设置头部转向状态(1);
+          r.GetComponent(191).MainAnimInstance.设置头部转向状态(1);
           break;
         }
 
@@ -1864,12 +1831,12 @@ setTimeout(() => {
             view?.SEd?.Jzd(false);
           } else {
             view?.SEd?.Jzd(true);
-            const entity =
-              ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
-            if (entity?.Valid && entity.Entity?.Valid) {
-              const comp = entity.Entity.GetComponent(213);
-              comp?.HasTag(-561064175) && comp.RemoveTag(-561064175);
-            }
+            // const entity =
+            //   ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
+            // if (entity?.Valid && entity.Entity?.Valid) {
+            //   const comp = entity.Entity.GetComponent(221);
+            //   comp?.HasTag(-561064175) && comp.RemoveTag(-561064175);
+            // }
           }
           break;
         case MAX_ID + 1:
@@ -2031,6 +1998,13 @@ setTimeout(() => {
     original_set_local_text_new(e, t, ...r);
   };
 
+  PhotographSetupView.prototype.lQi = function (t) {
+    this.Ifm = t;
+    this._Qi(t === 1);
+    this.uQi(t === 0);
+    this.cQi(t === 2);
+    // this.w1_(t === 3);
+  };
   PhotographSetupView.prototype.R1_ = function () {};
   PhotographSetupView.prototype.OnBeforeDestroy = function () {
     this.sQi();

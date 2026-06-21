@@ -56,6 +56,12 @@ pub const BuffAddition = struct {
 
 pub const BuffChange = struct { entity: Entity };
 
+pub const GameplayTagChange = struct {
+    entity: Entity,
+    add_tag_ids: []i32,
+    remove_tag_ids: []i32,
+};
+
 pub const ChatCommandResponse = struct { content: []const u8 };
 
 pub const TickTime = struct {};

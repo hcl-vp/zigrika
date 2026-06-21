@@ -43,7 +43,7 @@ pub fn DamageExecuteRequest(
         query,
         alloc,
     );
-    try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+    try conn.push(pb.CombatMessage.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
 
     txn.respond(.{
         .ErrorCode = .Success,

@@ -33,6 +33,7 @@ pub const LevelEntityConfig = @import("tables/LevelEntityConfig.zig");
 pub const Damage = @import("tables/Damage.zig");
 pub const Area = @import("tables/Area.zig");
 pub const InfrV2TreeBuild = @import("tables/InfrV2TreeBuild.zig");
+pub const InfrRoadBuild = @import("tables/InfrRoadBuild.zig");
 pub const Teleporter = @import("tables/Teleporter.zig");
 pub const Activity = @import("tables/Activity.zig");
 pub const MapFog = @import("tables/MapFog.zig");
@@ -52,9 +53,25 @@ pub const FavorGoods = @import("tables/FavorGoods.zig");
 pub const Motion = @import("tables/Motion.zig");
 pub const CharacterInitInfo = @import("tables/CharacterInitInfo.zig");
 pub const SkillBranchBuff = @import("tables/SkillBranchBuff.zig");
+pub const PhonographMusic = @import("tables/PhonographMusic.zig");
 pub const BackgroundCard = @import("tables/BackgroundCard.zig");
 pub const PlayerHeadRe = @import("tables/PlayerHeadRe.zig");
 pub const PlayerTitle = @import("tables/PlayerTitle.zig");
+pub const MotorTechTree = @import("tables/MotorTechTree.zig");
+pub const MotorLvl = @import("tables/MotorLvl.zig");
+pub const MotorTech = @import("tables/MotorTech.zig");
+pub const MotorTechLv = @import("tables/MotorTechLv.zig");
+pub const MotorTask = @import("tables/MotorTask.zig");
+pub const MotorSkin = @import("tables/MotorSkin.zig");
+pub const MotorSticker = @import("tables/MotorSticker.zig");
+pub const MotorStickerPart = @import("tables/MotorStickerPart.zig");
+pub const MotorLoadProject = @import("tables/MotorLoadProject.zig");
+pub const MotorGeneralPreview = @import("tables/MotorGeneralPreview.zig");
+pub const MotorDecalIp = @import("tables/MotorDecalIp.zig");
+pub const MotorLinkageIp = @import("tables/MotorLinkageIp.zig");
+pub const MotorFrame = @import("tables/MotorFrame.zig");
+pub const MotorDecorations = @import("tables/MotorDecorations.zig");
+pub const MotorDecorationsPart = @import("tables/MotorDecorationsPart.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -83,6 +100,7 @@ level_entity_config: Table(LevelEntityConfig, "EntityId"),
 damage: Table(Damage, "Id"),
 area: Table(Area, "AreaId"),
 infr_v2_tree_build: Table(InfrV2TreeBuild, "Id"),
+infr_road_build: Table(InfrRoadBuild, "Id"),
 teleporter: Table(Teleporter, "Id"),
 activity: Table(Activity, "Id"),
 map_fog: Table(MapFog, "Fog"),
@@ -102,9 +120,25 @@ favor_goods: Table(FavorGoods, "Id"),
 motion: Table(Motion, "Id"),
 char_init_info: Table(CharacterInitInfo, "RoleId"),
 skill_branch_buff: Table(SkillBranchBuff, "BranchId"),
+phonograph_music: Table(PhonographMusic, "Id"),
 background_card: Table(BackgroundCard, "Id"),
 player_head_re: Table(PlayerHeadRe, "Id"),
 player_title: Table(PlayerTitle, "Id"),
+motor_tech_tree: Table(MotorTechTree, "Id"),
+motor_lvl: Table(MotorLvl, "Level"),
+motor_tech: Table(MotorTech, "Id"),
+motor_tech_lv: Table(MotorTechLv, "Id"),
+motor_task: Table(MotorTask, "Id"),
+motor_skin: Table(MotorSkin, "Id"),
+motor_sticker: Table(MotorSticker, "Id"),
+motor_sticker_part: Table(MotorStickerPart, "Id"),
+motor_load_project: Table(MotorLoadProject, "Id"),
+motor_general_preview: Table(MotorGeneralPreview, "Id"),
+motor_decal_ip: Table(MotorDecalIp, "Id"),
+motor_linkage_ip: Table(MotorLinkageIp, "Id"),
+motor_frame: Table(MotorFrame, "Id"),
+motor_decorations: Table(MotorDecorations, "Id"),
+motor_decorations_part: Table(MotorDecorationsPart, "Id"),
 
 fn loadTableItems(
     comptime T: type,
@@ -239,6 +273,27 @@ pub fn getProps(tables: *const DataTables, property_id: i32, gpa: Allocator) ![]
     }
 
     return props;
+}
+
+pub fn getMotorcycleConfigId(tables: *const DataTables) ?i32 {
+    for (tables.explore_tools.items) |tool| {
+        if (tool.SummonConfigId == 0) continue;
+
+        const summon = tables.summon_cfg.getDataById(tool.SummonConfigId) orelse continue;
+        const blueprint = blk: {
+            for (tables.blueprint_config.items) |entry| {
+                if (std.mem.eql(u8, entry.BlueprintType, summon.BlueprintType)) break :blk entry;
+            }
+            continue;
+        };
+        if (blueprint.EntityLogic != .Vehicle) continue;
+
+        for (tables.template_config.items) |template| {
+            if (std.mem.eql(u8, template.BlueprintType, summon.BlueprintType)) return template.Id;
+        }
+    }
+
+    return null;
 }
 
 const BuffAdditionEntry = @import("../logic/events.zig").BuffAdditionEntry;

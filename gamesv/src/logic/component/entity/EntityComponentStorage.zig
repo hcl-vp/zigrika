@@ -18,16 +18,23 @@ visible: ?@import("VisibleMarker.zig") = null,
 actor_visible: ?@import("ActorVisibleMarker.zig") = null,
 direct_control: ?@import("DirectControlMarker.zig") = null,
 attribute: ?@import("AttributeComponent.zig") = null,
+tag: ?@import("TagComponent.zig") = null,
 buffs: ?@import("FightBuffComponent.zig") = null,
 character_attach: ?@import("CharacterAttachComponent.zig") = null,
 concomitant: ?@import("ConcomitantComponent.zig") = null,
 equip: ?@import("EquipComponent.zig") = null,
 follower: ?@import("FollowerComponent.zig") = null,
+vehicle: ?@import("VehicleComponent.zig") = null,
+npc_drive_vehicle: ?@import("NpcDriveVehicleComponent.zig") = null,
+motor_outlook: ?@import("MotorOutlookComponent.zig") = null,
+motor_da_ctx: ?@import("MotorDaCtxComponent.zig") = null,
 logic_state: ?@import("LogicStateComponent.zig") = null,
 monster_ai: ?@import("MonsterAiComponent.zig") = null,
 passive_ga_skill: ?@import("PassiveGaSkillComponent.zig") = null,
 player_battle_binder: ?@import("PlayerBattleBinder.zig") = null,
 summoner: ?@import("SummonerComponent.zig") = null,
+follow_shooter: ?@import("FollowShooterComponent.zig") = null,
+follow_entity: ?@import("FollowEntityComponent.zig") = null,
 fsm: ?@import("FsmComponent.zig") = null,
 vision_skills: ?@import("VisionSkillComponent.zig") = null,
 base_skin: ?BaseSkinComponent = null,
@@ -227,6 +234,12 @@ pub fn entityToProto(
         });
     }
 
+    if (storage.tag) |tag_comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .TagComponent = tag_comp.toProto() },
+        });
+    }
+
     if (storage.buffs) |buff_comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .FightBuffComponent = buff_comp.toProto() },
@@ -257,6 +270,30 @@ pub fn entityToProto(
         });
     }
 
+    if (storage.vehicle) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .VehiclePb = comp.toProto() },
+        });
+    }
+
+    if (storage.npc_drive_vehicle) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .NpcDriveVehicleComponentPb = try comp.toProto() },
+        });
+    }
+
+    if (storage.motor_outlook) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .MotorOutlookComponentPb = comp.toProto() },
+        });
+    }
+
+    if (storage.motor_da_ctx) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .MotorDaCtxComponentPb = comp.toProto() },
+        });
+    }
+
     if (storage.logic_state) |comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .LogicStateComponentPb = try comp.toProto() },
@@ -284,6 +321,18 @@ pub fn entityToProto(
     if (storage.summoner) |comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .SummonerComponent = try comp.toProto() },
+        });
+    }
+
+    if (storage.follow_shooter) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .FollowShooterComponentPb = try comp.toProto() },
+        });
+    }
+
+    if (storage.follow_entity) |comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .FollowEntityComponentPb = try comp.toProto() },
         });
     }
 

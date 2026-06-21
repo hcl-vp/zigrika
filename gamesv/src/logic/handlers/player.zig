@@ -33,7 +33,7 @@ pub fn pushData(
     if (basic_comp.info.cur_player_title_id > 0) {
         try conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = basic_comp.info.cur_player_title_id,
-            .PlayerTitleExtraParam = 1,
+            .CurPlayerTitleId = 1, // PlayerTitleExtraParam
         }, alloc.arena);
     }
 }

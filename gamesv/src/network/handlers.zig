@@ -7,7 +7,6 @@ const EventQueue = @import("../logic/EventQueue.zig");
 const logic_handlers = @import("../logic/handlers.zig");
 
 const Io = std.Io;
-const Allocator = std.mem.Allocator;
 
 const log = std.log.scoped(.net_handler);
 
@@ -43,6 +42,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/time.zig"),
     @import("handlers/skin.zig"),
     @import("handlers/inventory.zig"),
+    @import("handlers/motor.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 

@@ -97,7 +97,7 @@ pub fn onChangePlayerTitleRequest(
         try saveBasicInfo(fs, alloc.arena, basic_comp);
         try txn.conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = txn.message.PlayerTitleId,
-            .PlayerTitleExtraParam = if (txn.message.PlayerTitleId == 0) 0 else 1,
+            .CurPlayerTitleId = if (txn.message.PlayerTitleId == 0) 0 else 1, // PlayerTitleExtraParam
         }, alloc.arena);
     }
 

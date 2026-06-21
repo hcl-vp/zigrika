@@ -15,7 +15,10 @@ weapon: @import("PlayerWeaponComponent.zig"),
 cosmetic: @import("PlayerCosmeticComponent.zig"),
 inventory: @import("PlayerInventoryComponent.zig"),
 guide: @import("PlayerGuideComponent.zig"),
+map: @import("PlayerMapComponent.zig"),
+music: @import("PlayerMusicComponent.zig"),
 scene: @import("PlayerSceneComponent.zig"),
+motor: @import("PlayerMotorComponent.zig"),
 
 pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i32) !PlayerComponentStorage {
     return .{
@@ -27,7 +30,10 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
         .cosmetic = try .init(gpa, fs, assets, player_id),
         .inventory = try .init(gpa, fs, assets, player_id),
         .guide = try .init(gpa, fs, player_id),
+        .map = try .init(gpa, fs, player_id),
+        .music = try .init(gpa, fs, player_id),
         .scene = try .init(gpa, fs, player_id),
+        .motor = try .init(gpa, fs, assets, player_id),
     };
 }
 
@@ -38,7 +44,10 @@ pub fn deinit(pcs: *PlayerComponentStorage, gpa: Allocator) void {
     pcs.cosmetic.deinit(gpa);
     pcs.inventory.deinit(gpa);
     pcs.guide.deinit(gpa);
+    pcs.map.deinit(gpa);
+    pcs.music.deinit(gpa);
     pcs.scene.deinit(gpa);
+    pcs.motor.deinit(gpa);
 }
 
 pub fn hasComponent(comptime Component: type) bool {

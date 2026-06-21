@@ -21,7 +21,7 @@ pub const max_attribute = struct {
         config_id_str: []const u8,
         attr: i32,
     ) !void {
-        var notify: pb.CombatReceivePackNotify = .{};
+        var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
         var id_buf: [3]i32 = undefined;
         const ids = resolve_config_ids(config_id_str, &scene.formation_info, &id_buf);
 
@@ -47,7 +47,7 @@ pub const empty_attribute = struct {
         config_id_str: []const u8,
         attr: i32,
     ) !void {
-        var notify: pb.CombatReceivePackNotify = .{};
+        var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
         var id_buf: [3]i32 = undefined;
         const ids = resolve_config_ids(config_id_str, &scene.formation_info, &id_buf);
 
@@ -74,7 +74,7 @@ pub const set_attribute = struct {
         attr: i32,
         value: i32,
     ) !void {
-        var notify: pb.CombatReceivePackNotify = .{};
+        var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
         var id_buf: [3]i32 = undefined;
         const ids = resolve_config_ids(config_id_str, &scene.formation_info, &id_buf);
 
@@ -116,7 +116,7 @@ fn resolve_config_ids(
 }
 
 fn apply_attr_change(
-    notify: *pb.CombatReceivePackNotify,
+    notify: *pb.CombatMessage.CombatReceivePackNotify,
     scene: *Scene,
     fs: *FileSystem,
     query: Scene.Query(&.{ Scene.Entity, *Scene.Entity.ConfigComponent, *Scene.Entity.AttributeComponent }),

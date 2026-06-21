@@ -209,7 +209,7 @@ fn refreshRoleOrnamentEntity(
             .net_id = slice.items(.entity_id)[i].net_id,
         };
         const combat_common: pb.CombatCommon = .{ .EntityId = entity.net_id };
-        var combat_notify: pb.CombatReceivePackNotify = .{};
+        var combat_notify: pb.CombatMessage.CombatReceivePackNotify = .{};
 
         if (slice.items(.buffs)[i]) |*buffs| {
             for (stale_ornament_buffs.items) |entry| {

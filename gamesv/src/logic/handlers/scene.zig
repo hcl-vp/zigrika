@@ -15,18 +15,103 @@ const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.z
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
+const PlayerMotorComponent = @import("../component/player/PlayerMotorComponent.zig");
 const file_util = @import("../../fs/file_util.zig");
 const FormationInfo = @import("../../fs/FormationInfo.zig");
 const RoleInfo = @import("../../fs/RoleInfo.zig");
+const autopilot = @import("../helpers/autopilot.zig");
 const Entity = Scene.Entity;
 const Io = std.Io;
+const lahai_roi_dungeon_id = 906;
+
+fn notifyTransportRoadways(fs: *FileSystem, alloc: mem.Alloc, scene: *Scene, conn: *Connection, assets: *const Assets) !void {
+    const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
+    const roads = try autopilot.roadIdsForMap(fs, alloc, instance_dungeon.MapConfigId);
+    if (roads.items.len == 0) return;
+
+    try conn.push(pb.SceneRoadSyncNotify{
+        .InstanceId = scene.instance_id,
+        .EnabledRoads = roads,
+    }, alloc.arena);
+}
+
+fn notifyInfrastructureRoadData(alloc: mem.Alloc, conn: *Connection, assets: *const Assets) !void {
+    var roads: std.ArrayList(pb.InfrOneRoad) = .empty;
+    for (assets.tables.infr_road_build.items) |cfg| {
+        if (cfg.DungeonId != lahai_roi_dungeon_id) continue;
+
+        try roads.append(alloc.arena, .{
+            .RoadId = cfg.Id,
+            .status = .InfrStatusComplete,
+            .CompleteTime = 0,
+            .TotalGiftCount = 0,
+            .LastGiftTime = 0,
+        });
+    }
+
+    try conn.push(pb.InfrRoadUpdateNotify{
+        .RoadInfo = .{ .Roads = roads },
+    }, alloc.arena);
+}
+
+fn containsI32(items: []const i32, value: i32) bool {
+    for (items) |item| {
+        if (item == value) return true;
+    }
+    return false;
+}
+
+fn appendUniqueI32(items: *std.ArrayList(i32), arena: std.mem.Allocator, value: i32) !void {
+    if (containsI32(items.items, value)) return;
+    try items.append(arena, value);
+}
+
+fn appendCompletedRoadDataLayers(scene_info: *pb.SceneInformation, assets: *const Assets, arena: std.mem.Allocator) !void {
+    var repaired_layers: std.ArrayList(i32) = .empty;
+    var unrepaired_layers: std.ArrayList(i32) = .empty;
+
+    for (assets.tables.infr_road_build.items) |cfg| {
+        if (cfg.DungeonId != lahai_roi_dungeon_id) continue;
+
+        for (cfg.LoadDataLayers) |layer| {
+            try appendUniqueI32(&repaired_layers, arena, layer);
+        }
+        for (cfg.UnloadDataLayers) |layer| {
+            try appendUniqueI32(&unrepaired_layers, arena, layer);
+        }
+    }
+
+    var data_layers: std.ArrayList(i32) = .empty;
+    for (scene_info.DataLayers.items) |layer| {
+        if (!containsI32(unrepaired_layers.items, layer)) {
+            try appendUniqueI32(&data_layers, arena, layer);
+        }
+    }
+    for (repaired_layers.items) |layer| {
+        try appendUniqueI32(&data_layers, arena, layer);
+    }
+
+    scene_info.DataLayers = data_layers;
+}
 
 pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !void {
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
     defer roulette_info.deinit(alloc.gpa);
     try roulette_info.append(alloc.gpa, .{
         .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.roulette),
+        .ExtraItemId = scene.explore_tools_info.explore_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_explore_skill,
+    });
+    try roulette_info.append(alloc.gpa, .{
+        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.function_roulette),
+        .ExtraItemId = scene.explore_tools_info.function_extra_item_id,
+        .ExploreSkill = scene.explore_tools_info.active_function_skill,
+    });
+    try roulette_info.append(alloc.gpa, .{});
+    try roulette_info.append(alloc.gpa, .{
+        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.motorcycle_roulette),
+        .ExtraItemId = scene.explore_tools_info.motorcycle_extra_item_id,
+        .ExploreSkill = scene.explore_tools_info.active_motorcycle_skill,
     });
 
     const vision_explore_notify: pb.VisionExploreSkillNotify = .{
@@ -140,6 +225,9 @@ pub fn onInitialSceneJoin(
             break :blk try list.toOwnedSlice(alloc.gpa);
         };
         scene.explore_tools_info.active_explore_skill = 1001;
+        scene.explore_tools_info.active_function_skill = 0;
+        scene.explore_tools_info.motorcycle_roulette = try alloc.gpa.dupe(i32, &[_]i32{ 6001, 6003, 6007, 6011, 6012, 6020, 0, 0 });
+        scene.explore_tools_info.active_motorcycle_skill = 6001;
 
         const roles = [_]i32{ 1211, 1108, 1506 };
 
@@ -178,6 +266,7 @@ pub fn notifyJoinScene(
     basic_comp: *PlayerBasicComponent, // we'll have to be able to query for component of each individual player if we're going to implement MP
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
+    motor_comp: *PlayerMotorComponent,
     scene: *Scene,
 ) !void {
     const log = std.log.scoped(.scene_join);
@@ -204,6 +293,9 @@ pub fn notifyJoinScene(
         );
         return;
     };
+    if (instance_dungeon.Id == lahai_roi_dungeon_id) {
+        try appendCompletedRoadDataLayers(&scene_info, assets, alloc.arena);
+    }
 
     for (scene.instance.players) |scene_player| {
         if (scene_player.id == player_id.id) {
@@ -216,7 +308,24 @@ pub fn notifyJoinScene(
                 .LivingStatus = .Alive, // TODO: keep track of this
             };
 
-            _ = try PlayerEntityTemplates.createPlayerSceneEntity(fs, scene, alloc, player_id.id, assets);
+            const motorcycle_entity = try PlayerEntityTemplates.createMotorcycleEntity(
+                fs,
+                scene,
+                alloc,
+                player_id.id,
+                assets,
+                motor_comp,
+            );
+            const player_scene_entity = try PlayerEntityTemplates.createPlayerSceneEntity(fs, scene, alloc, player_id.id, assets, motorcycle_entity.net_id);
+            _ = try PlayerEntityTemplates.ensureMotorcycleCompanionEntity(
+                fs,
+                scene,
+                alloc,
+                player_id.id,
+                assets,
+                motorcycle_entity,
+                player_scene_entity,
+            );
             _ = try PlayerEntityTemplates.createSceneBattleEntity(fs, scene, alloc, player_id.id, assets);
 
             for (&formation.roles) |*maybe_role| if (maybe_role.*) |*role| {
@@ -303,6 +412,7 @@ pub fn formationUpdateNotify(
         *Entity.AttributeComponent,
     }),
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
     alloc: mem.Alloc,
 ) !void {
     const log = std.log.scoped(.update_formations);
@@ -322,27 +432,41 @@ pub fn formationUpdateNotify(
                 log.warn("role {} not found in role_map, skipping", .{role.role_id});
                 continue;
             };
+            const weapon_info = weapon_comp.weapon_map.get(role_info.weapon) orelse unreachable;
+            var dress_list: std.ArrayList(i32) = .empty;
+            defer dress_list.deinit(alloc.arena);
+            for (role_info.ornaments) |ornament| {
+                try dress_list.append(alloc.arena, ornament.ornament_id);
+            }
 
             if (role.entity_id != -1) {
                 if (query.byNetId(role.entity_id)) |comps| {
                     const attribute_comp = comps[1];
                     try role_infos.append(alloc.arena, pb.FormationRoleInfo{
-                        .RoleId = role.role_id,
+                        .roleId = role.role_id,
                         .MaxHp = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.LifeMax)].current,
                         .CurHp = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.Life)].current,
                         .Level = attribute_comp.attributes[@intFromEnum(pb.EAttributeType.Lv)].current,
                         .RoleSkinId = role_info.role_skin_id,
+                        .WeaponBreachLevel = weapon_info.breach,
+                        .WeaponId = weapon_info.id,
+                        .WeaponSkinId = role_info.weapon_skin_id,
+                        .DressList = dress_list,
                     });
                     continue;
                 }
             }
 
             try role_infos.append(alloc.arena, pb.FormationRoleInfo{
-                .RoleId = role.role_id,
+                .roleId = role.role_id,
                 .MaxHp = role_info.base_prop[@intFromEnum(pb.EAttributeType.LifeMax)],
                 .CurHp = role_info.base_prop[@intFromEnum(pb.EAttributeType.Life)],
                 .Level = role_info.level,
                 .RoleSkinId = role_info.role_skin_id,
+                .WeaponBreachLevel = weapon_info.breach,
+                .WeaponId = weapon_info.id,
+                .WeaponSkinId = role_info.weapon_skin_id,
+                .DressList = dress_list,
             });
         }
 
@@ -378,12 +502,15 @@ pub fn afterSceneJoin(
     scene: *Scene,
     conn: *Connection,
     fs: *FileSystem,
+    assets: *const Assets,
     io: Io,
     player_id: PlayerID,
     alloc: mem.Alloc,
 ) !void {
     try conn.push(pb.AfterJoinSceneNotify{}, alloc.arena);
     try conn.push(pb.SwitchBattleModeNotify{}, alloc.arena);
+    try notifyTransportRoadways(fs, alloc, scene, conn, assets);
+    try notifyInfrastructureRoadData(alloc, conn, assets);
 
     const rtc: Io.Clock = .real;
     const now_ms = rtc.now(io).toMilliseconds();
@@ -405,6 +532,7 @@ pub fn afterSceneJoin(
     try formation_attrs.appendSlice(alloc.arena, &.{
         .{ .AttrId = 1, .Ratio = 2400, .BaseMaxValue = 24000, .MaxValue = 24000, .CurrentValue = 22000 },
         .{ .AttrId = 10, .Ratio = 2400, .BaseMaxValue = 7000, .MaxValue = 15000, .CurrentValue = 7000 },
+        .{ .AttrId = 14, .Ratio = 0, .BaseMaxValue = 10000, .MaxValue = 10000, .CurrentValue = 10000 },
     });
     const formation_attr_notify: pb.FormationAttrNotify = .{
         .Duration = 1534854458,
@@ -429,6 +557,7 @@ pub fn afterSceneJoin(
         "assets/scripts/join_scene_patches/debug_disable.js",
         "assets/scripts/join_scene_patches/main_watermask_disable.js",
         "assets/scripts/join_scene_patches/flight_fix.js",
+        "assets/scripts/join_scene_patches/motorcycle.js",
     };
 
     for (patch_files) |path| {

@@ -17,7 +17,7 @@ pub fn removeBuffFromEntity(
     const log = std.log.scoped(.buff_removal);
     const item = query.byEntityHandle(event.data.entity) orelse return;
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.entity.net_id };
-    var notify: pb.CombatReceivePackNotify = .{};
+    var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
 
     for (event.data.handle_ids) |handle_id| {
         item[0].removeByHandleId(alloc.gpa, handle_id);
@@ -55,32 +55,50 @@ pub fn addBuffToEntity(
     const log = std.log.scoped(.buff_addition);
     const item = query.byEntityHandle(event.data.target) orelse return;
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.target.net_id };
-    var notify: pb.CombatReceivePackNotify = .{};
+    var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
 
     for (event.data.buffs) |entry| {
         const existing = item[0].getByBuffId(entry.id);
+        const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
-            buff.StackCount = entry.stack_count;
+            buff.Level = 1;
+            buff.StackCount = stack_count;
+            buff.InstigatorId = event.data.instigator.net_id;
+            buff.EntityId = event.data.target.net_id;
+            buff.Duration = -1.0;
+            buff.LeftDuration = -1.0;
+            buff.ApplyType = .Common;
             buff.IsActive = entry.is_active;
+            buff.MessageId = -1;
         } else {
             scene.*.instance.buff_handle += 1;
             item[0].fight_buff_infos = try alloc.gpa.realloc(item[0].fight_buff_infos, item[0].fight_buff_infos.len + 1);
-            item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1] = .{
-                .HandleId = scene.instance.buff_handle,
-                .BuffId = entry.id,
-                .InstigatorId = event.data.instigator.net_id,
-                .IsActive = entry.is_active,
-            };
+            item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1] = Assets.DataTables.createBuffInformation(
+                scene.instance.buff_handle,
+                entry.id,
+                event.data.instigator.net_id,
+                event.data.target.net_id,
+                entry.is_active,
+            );
+            item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1].StackCount = stack_count;
+            const buff = item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1];
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
                     .CombatCommon = combat_common,
                     .Message = .{
                         .ApplyGameplayEffectNotify = .{
-                            .Handle = scene.instance.buff_handle,
-                            .Id = entry.id,
-                            .EntityId = event.data.target.net_id,
-                            .InstigatorId = event.data.instigator.net_id,
-                            .IsActive = entry.is_active,
+                            .Handle = buff.HandleId,
+                            .Id = buff.BuffId,
+                            .Level = buff.Level,
+                            .EntityId = buff.EntityId,
+                            .InstigatorId = buff.InstigatorId,
+                            .ApplyType = if (buff.ApplyType) |apply_type| @intFromEnum(apply_type) else 0,
+                            .IsActive = buff.IsActive,
+                            .ServerId = buff.ServerId,
+                            .StackCount = buff.StackCount,
+                            .CRoundAction = .{ .Duration = buff.Duration },
+                            .Time = .{ .LeftDuration = buff.LeftDuration },
+                            .ConfBuffId = buff.ConfBuffId,
                         },
                     },
                 },
