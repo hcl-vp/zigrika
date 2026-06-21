@@ -9,3 +9,10 @@ pub fn onQuestReviewDataRequest(txn: *Transaction(pb.QuestReviewDataRequest)) !v
 pub fn onSetFocusModeDeterConditionRequest(txn: *Transaction(pb.SetFocusModeDeterConditionRequest)) !void {
     txn.respond(.{ .ErrorCode = .Success });
 }
+
+pub fn onQuestBranchRequest(txn: *Transaction(pb.oCp)) !void {
+    txn.respond(.{
+        .Q4n = @intFromEnum(pb.ErrorCode.Success),
+        .mCp = .{},
+    });
+}

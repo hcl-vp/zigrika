@@ -51,6 +51,8 @@ pub fn Transaction(comptime T: type) type {
         pub const MessagePB = T;
 
         pub const Response = blk: {
+            if (T == proto.pb.oCp) break :blk proto.pb.nCp;
+
             const message_name = @typeName(T)[3..];
             if (!(std.mem.endsWith(u8, message_name, "Request"))) break :blk void;
             const response_name = message_name[0 .. message_name.len - 7] ++ "Response";
