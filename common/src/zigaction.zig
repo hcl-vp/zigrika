@@ -25,7 +25,7 @@ pub fn Handler(comptime sig: posix.SIG) type {
                 else => {
                     posix.sigaction(sig, &.{
                         .handler = .{ .handler = sigHandler },
-                        .mask = 0,
+                        .mask = posix.sigemptyset(),
                         .flags = 0,
                     }, null);
                 },
