@@ -35856,3 +35856,21 @@ pub const LobbyListResponse = struct {
     pub const ErrorCode_field_number: u32 = 10;
     pub const ItemList_field_number: u32 = 5;
 };
+pub const QuestBranchInfo = struct {
+    pub const QuestBranchInfos_field_number: u32 = 1;
+    pub const UnlockTimePoints_field_number: u32 = 2;
+    pub const UnlockBranchComponentsGroup_field_number: u32 = 3;
+};
+pub const OneQuestBranchPageInfo = struct {
+    pub const id_field_number: u32 = 1;
+    pub const CurBranch_field_number: u32 = 2;
+    pub const CompleteBranches_field_number: u32 = 3;
+};
+pub const QuestBranchRequest = struct {
+    pub const msg_id: u16 = 17117;
+};
+pub const QuestBranchResponse = struct {
+    pub const msg_id: u16 = 22986;
+    pub const errorCode_field_number: u32 = 14;
+    pub const QuestBranchInfo_field_number: u32 = 8;
+};

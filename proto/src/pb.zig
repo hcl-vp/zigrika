@@ -51914,3 +51914,23 @@ pub const LobbyListResponse = struct {
     ErrorCode: ?ErrorCode = null,
     ItemList: std.ArrayList(PlayerDetails) = .empty,
 };
+pub const QuestBranchInfo = struct {
+    pub const default: @This() = .{};
+    QuestBranchInfos: std.ArrayList(OneQuestBranchPageInfo) = .empty,
+    UnlockTimePoints: std.ArrayList(i32) = .empty,
+    UnlockBranchComponentsGroup: std.ArrayList(i32) = .empty,
+};
+pub const OneQuestBranchPageInfo = struct {
+    pub const default: @This() = .{};
+    id: i32 = 0,
+    CurBranch: i32 = 0,
+    CompleteBranches: std.ArrayList(i32) = .empty,
+};
+pub const QuestBranchRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const QuestBranchResponse = struct {
+    pub const default: @This() = .{};
+    errorCode: i32 = 0,
+    QuestBranchInfo: ?QuestBranchInfo = null,
+};

@@ -10,9 +10,9 @@ pub fn onSetFocusModeDeterConditionRequest(txn: *Transaction(pb.SetFocusModeDete
     txn.respond(.{ .ErrorCode = .Success });
 }
 
-pub fn onQuestBranchRequest(txn: *Transaction(pb.oCp)) !void {
+pub fn onQuestBranchRequest(txn: *Transaction(pb.QuestBranchRequest)) !void {
     txn.respond(.{
-        .Q4n = @intFromEnum(pb.ErrorCode.Success),
-        .mCp = .{},
+        .errorCode = @intFromEnum(pb.ErrorCode.Success),
+        .QuestBranchInfo = .{},
     });
 }
