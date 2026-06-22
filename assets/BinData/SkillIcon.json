@@ -406,5 +406,11 @@
     "Tag": 2133968434,
     "IconPath": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconT91.SP_IconT91",
     "Name": ""
+  },
+  {
+    "Id": 72,
+    "Tag": 1702161495,
+    "IconPath": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconT88.SP_IconT88",
+    "Name": ""
   }
 ]

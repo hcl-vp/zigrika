@@ -833,7 +833,7 @@
       830006
     ],
     "UnLockedWeapons": [
-      10103
+      10104
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35012_Name",
@@ -944,9 +944,9 @@
       840013
     ],
     "UnLockedWeapons": [
-      10146,
-      10164,
-      10123
+      10147,
+      10167,
+      10126
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35021_Name",
@@ -1139,8 +1139,8 @@
       830013
     ],
     "UnLockedWeapons": [
-      10181,
-      10191
+      10184,
+      10194
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35023_Name",
@@ -1217,16 +1217,16 @@
       13502410
     ],
     "UnlockCharacters": [
-      10008
+      10005
     ],
     "UnLockedItems": [
-      820002,
-      830019
+      830014,
+      840011,
+      840012,
+      840015
     ],
     "UnLockedWeapons": [
-      10063,
-      10211,
-      10221
+      10054
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35024_Name",
@@ -1301,16 +1301,17 @@
       13503110
     ],
     "UnlockCharacters": [
-      10005
+      10010
     ],
     "UnLockedItems": [
-      830014,
-      840011,
-      840012,
-      840015
+      830016,
+      840005,
+      840006,
+      840007,
+      840016
     ],
     "UnLockedWeapons": [
-      10053
+      10157
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35031_Name",
@@ -1382,20 +1383,19 @@
     "RecommendCharacters": [],
     "SaveWaveIds": [],
     "TargetWaveIds": [
-      13503212
+      13503210
     ],
     "UnlockCharacters": [
-      10010
+      10008
     ],
     "UnLockedItems": [
-      830016,
-      840005,
-      840006,
-      840007,
-      840016
+      820002,
+      830019
     ],
     "UnLockedWeapons": [
-      10156
+      10064,
+      10214,
+      10224
     ],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity27/Survivor/T_IconSurvivorLagunacheng.T_IconSurvivorLagunacheng",
     "Name": "KurotatoLevel_35032_Name",
@@ -1469,7 +1469,7 @@
       13504018
     ],
     "TargetWaveIds": [
-      13504050
+      13504001
     ],
     "UnlockCharacters": [],
     "UnLockedItems": [],

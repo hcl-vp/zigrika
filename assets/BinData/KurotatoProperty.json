@@ -923,5 +923,43 @@
     "ShowType": 1,
     "Precision": 0,
     "IsBlockFloat": false
+  },
+  {
+    "Id": 44,
+    "Name": "伤害加深1",
+    "KSCBasePropertyVarName": "DamageAmplify1",
+    "ShowName": "KurotatoProperty_name_44",
+    "WeaponPropertyDesc": "",
+    "WeaponPropertyDescParam": [],
+    "Priority": 1000,
+    "Desc": "KurotatoProperty_desc_44",
+    "DescParams": [],
+    "BasicValue": 0,
+    "Min": 0,
+    "Max": 1,
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/Overview/T_IconRogueSecondaryAttribute_UI.T_IconRogueSecondaryAttribute_UI",
+    "RoleType": 0,
+    "ShowType": 1,
+    "Precision": 0,
+    "IsBlockFloat": false
+  },
+  {
+    "Id": 45,
+    "Name": "伤害加深2",
+    "KSCBasePropertyVarName": "DamageAmplify2",
+    "ShowName": "KurotatoProperty_name_45",
+    "WeaponPropertyDesc": "",
+    "WeaponPropertyDescParam": [],
+    "Priority": 1000,
+    "Desc": "KurotatoProperty_desc_45",
+    "DescParams": [],
+    "BasicValue": 0,
+    "Min": 0,
+    "Max": 1,
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/Overview/T_IconRogueSecondaryAttribute_UI.T_IconRogueSecondaryAttribute_UI",
+    "RoleType": 0,
+    "ShowType": 1,
+    "Precision": 0,
+    "IsBlockFloat": false
   }
 ]

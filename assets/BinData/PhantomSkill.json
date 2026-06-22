@@ -13446,59 +13446,52 @@
     "Id": 200135,
     "PhantomSkillId": 200135,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20013501,
+      20013502
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 15,
+    "DescriptionEx": "PhantomSkill_200135_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200135_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "10.70%",
+          "32.10%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "12.84%",
+          "38.52%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "14.98%",
+          "44.94%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "17.12%",
+          "51.36%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "19.26%",
+          "57.78%",
+          "15"
         ]
       }
     ],
@@ -13509,59 +13502,52 @@
     "Id": 200136,
     "PhantomSkillId": 200136,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20013601,
+      20013602
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200136_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200136_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "10.80%",
+          "7.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "12.96%",
+          "8.64%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "15.12%",
+          "10.08%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "17.28%",
+          "11.52%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "19.44%",
+          "12.96%",
+          "8"
         ]
       }
     ],
@@ -13572,59 +13558,46 @@
     "Id": 200137,
     "PhantomSkillId": 200137,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20013701
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200137_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200137_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -13635,59 +13608,57 @@
     "Id": 200138,
     "PhantomSkillId": 200138,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20013801,
+      20013802
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230001,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200001,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200138_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200138_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "85.50%",
+          "0.31%",
+          "24",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "102.60%",
+          "0.37%",
+          "24",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "119.70%",
+          "0.43%",
+          "24",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "136.80%",
+          "0.49%",
+          "24",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "153.90%",
+          "0.55%",
+          "24",
+          "8"
         ]
       }
     ],
@@ -13698,59 +13669,46 @@
     "Id": 200139,
     "PhantomSkillId": 200139,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20013901
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200139_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200139_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -13761,59 +13719,46 @@
     "Id": 200140,
     "PhantomSkillId": 200140,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014001
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200140_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200140_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -13824,59 +13769,47 @@
     "Id": 200141,
     "PhantomSkillId": 200141,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014101,
+      20014102
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200141_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200141_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "36.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "43.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "50.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "57.60%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "64.80%",
+          "8"
         ]
       }
     ],
@@ -13887,59 +13820,46 @@
     "Id": 200142,
     "PhantomSkillId": 200142,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014201
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200142_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200142_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -13950,59 +13870,46 @@
     "Id": 200143,
     "PhantomSkillId": 200143,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014301
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200143_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200143_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -14013,59 +13920,52 @@
     "Id": 200144,
     "PhantomSkillId": 200144,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014401,
+      20014402
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200144_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200144_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "28.80%",
+          "43.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "34.56%",
+          "51.84%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "40.32%",
+          "60.48%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "46.08%",
+          "69.12%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "51.84%",
+          "77.76%",
+          "8"
         ]
       }
     ],
@@ -14076,59 +13976,46 @@
     "Id": 200145,
     "PhantomSkillId": 200145,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014502
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 15,
+    "DescriptionEx": "PhantomSkill_200145_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200145_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "107.00%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "128.40%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "149.80%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "171.20%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "192.60%",
+          "15"
         ]
       }
     ],
@@ -14139,59 +14026,46 @@
     "Id": 200146,
     "PhantomSkillId": 200146,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014601
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 8,
+    "DescriptionEx": "PhantomSkill_200146_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200146_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "72.00%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "86.40%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "100.80%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "115.20%",
+          "8"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "129.60%",
+          "8"
         ]
       }
     ],
@@ -14202,59 +14076,46 @@
     "Id": 200147,
     "PhantomSkillId": 200147,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014701
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
-    "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "SkillGroupId": 200002,
+    "SkillCD": 15,
+    "DescriptionEx": "PhantomSkill_200147_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200147_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "107.00%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "128.40%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "149.80%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "171.20%",
+          "15"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
-          "20"
+          "192.60%",
+          "15"
         ]
       }
     ],
@@ -14265,58 +14126,45 @@
     "Id": 200148,
     "PhantomSkillId": 200148,
     "BuffIds": [],
-    "SettleIds": [],
+    "SettleIds": [
+      20014801
+    ],
     "BuffEffects": [],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
+    "SkillGroupId": 200002,
     "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "DescriptionEx": "PhantomSkill_200148_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_200148_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
-          "12.00%",
-          "15",
+          "18.85%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
-          "12.00%",
-          "15",
+          "22.62%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
-          "12.00%",
-          "15",
+          "26.39%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
-          "12.00%",
-          "15",
+          "30.16%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
-          "12.00%",
-          "15",
+          "33.93%",
           "20"
         ]
       }
@@ -14385,58 +14233,58 @@
     "Id": 280042,
     "PhantomSkillId": 280042,
     "BuffIds": [],
-    "SettleIds": [],
-    "BuffEffects": [],
+    "SettleIds": [
+      28004201
+    ],
+    "BuffEffects": [
+      290001002,
+      290001012
+    ],
     "ChargeEfficiency": 0,
-    "SkillGroupId": 230008,
+    "SkillGroupId": 200002,
     "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "DescriptionEx": "PhantomSkill_280042_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_280042_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
+          "2.30%",
           "12.00%",
-          "15",
+          "12.00%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
+          "2.76%",
           "12.00%",
-          "15",
+          "12.00%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
+          "3.22%",
           "12.00%",
-          "15",
+          "12.00%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
+          "3.68%",
           "12.00%",
-          "15",
+          "12.00%",
           "20"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
+          "4.14%",
           "12.00%",
-          "15",
+          "12.00%",
           "20"
         ]
       }
@@ -14448,59 +14296,75 @@
     "Id": 280043,
     "PhantomSkillId": 280043,
     "BuffIds": [],
-    "SettleIds": [],
-    "BuffEffects": [],
+    "SettleIds": [
+      28004301,
+      28004303
+    ],
+    "BuffEffects": [
+      290001006,
+      290001012
+    ],
     "ChargeEfficiency": 0,
     "SkillGroupId": 230009,
     "SkillCD": 20,
-    "DescriptionEx": "PhantomSkill_280040_DescriptionEx",
-    "SimplyDescription": "PhantomSkill_280040_SimplyDescription",
+    "DescriptionEx": "PhantomSkill_280043_DescriptionEx",
+    "SimplyDescription": "PhantomSkill_280043_SimplyDescription",
     "IfCounterSkill": false,
     "CurLevelDescriptionEx": [],
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "152.00%",
-          "15",
+          "22.80%",
+          "60.80%",
           "12.00%",
+          "12.00%",
+          "20",
           "15",
-          "20"
+          "1"
         ]
       },
       {
         "ArrayString": [
-          "182.40%",
-          "15",
+          "27.36%",
+          "72.96%",
           "12.00%",
+          "12.00%",
+          "20",
           "15",
-          "20"
+          "1"
         ]
       },
       {
         "ArrayString": [
-          "212.80%",
-          "15",
+          "31.92%",
+          "85.12%",
           "12.00%",
+          "12.00%",
+          "20",
           "15",
-          "20"
+          "1"
         ]
       },
       {
         "ArrayString": [
-          "243.20%",
-          "15",
+          "36.48%",
+          "97.28%",
           "12.00%",
+          "12.00%",
+          "20",
           "15",
-          "20"
+          "1"
         ]
       },
       {
         "ArrayString": [
-          "273.60%",
-          "15",
+          "41.04%",
+          "109.44%",
           "12.00%",
+          "12.00%",
+          "20",
           "15",
-          "20"
+          "1"
         ]
       }
     ],

@@ -4215,5 +4215,36 @@
     "LimitInputEnums": [],
     "UseLoopAnim": true,
     "UseMask": 0
+  },
+  {
+    "GuideId": 22846,
+    "Content": "GuideTips_22846_Content",
+    "Button": [
+      "闪避"
+    ],
+    "InputEnums": [],
+    "LimitInputEnums": [],
+    "UseLoopAnim": false,
+    "UseMask": 0
+  },
+  {
+    "GuideId": 22847,
+    "Content": "GuideTips_22847_Content",
+    "Button": [
+      "闪避"
+    ],
+    "InputEnums": [],
+    "LimitInputEnums": [],
+    "UseLoopAnim": false,
+    "UseMask": 0
+  },
+  {
+    "GuideId": 22848,
+    "Content": "GuideTips_22848_Content",
+    "Button": [],
+    "InputEnums": [],
+    "LimitInputEnums": [],
+    "UseLoopAnim": false,
+    "UseMask": 0
   }
 ]

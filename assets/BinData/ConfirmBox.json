@@ -8359,5 +8359,21 @@
     "UiShowType": 4,
     "NeedClose": true,
     "TimeDilation": 1
+  },
+  {
+    "Id": 540,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_503_Content_01",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_503_ButtonText_0",
+      "ConfirmBox_503_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": false,
+    "TimeDilation": 0
   }
 ]

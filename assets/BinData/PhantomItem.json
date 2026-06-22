@@ -44774,7 +44774,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/CommonAnim/Stand01.Stand01",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31090_UI.T_IconMonsterHead_31090_UI",
@@ -44832,7 +44832,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/CommonAnim/Stand01.Stand01",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31090_UI.T_IconMonsterHead_31090_UI",
@@ -44890,7 +44890,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/CommonAnim/Stand01.Stand01",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31090_UI.T_IconMonsterHead_31090_UI",
@@ -44948,7 +44948,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/CommonAnim/Stand01.Stand01",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31090_UI.T_IconMonsterHead_31090_UI",
@@ -45006,7 +45006,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1CiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31091_UI.T_IconMonsterHead_31091_UI",
@@ -45064,7 +45064,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1CiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31091_UI.T_IconMonsterHead_31091_UI",
@@ -45122,7 +45122,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1CiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31091_UI.T_IconMonsterHead_31091_UI",
@@ -45180,7 +45180,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1CiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31091_UI.T_IconMonsterHead_31091_UI",
@@ -45238,7 +45238,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31092_UI.T_IconMonsterHead_31092_UI",
@@ -45258,7 +45258,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      34
+      35
     ],
     "PhantomType": 1
   },
@@ -45296,7 +45296,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31092_UI.T_IconMonsterHead_31092_UI",
@@ -45316,7 +45316,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      34
+      35
     ],
     "PhantomType": 1
   },
@@ -45354,7 +45354,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31092_UI.T_IconMonsterHead_31092_UI",
@@ -45374,7 +45374,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      34
+      35
     ],
     "PhantomType": 1
   },
@@ -45412,7 +45412,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31092_UI.T_IconMonsterHead_31092_UI",
@@ -45432,7 +45432,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      34
+      35
     ],
     "PhantomType": 1
   },
@@ -45470,7 +45470,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JinTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31093_UI.T_IconMonsterHead_31093_UI",
@@ -45490,7 +45490,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      35
+      34
     ],
     "PhantomType": 1
   },
@@ -45528,7 +45528,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JinTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31093_UI.T_IconMonsterHead_31093_UI",
@@ -45548,7 +45548,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      35
+      34
     ],
     "PhantomType": 1
   },
@@ -45586,7 +45586,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JinTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31093_UI.T_IconMonsterHead_31093_UI",
@@ -45606,7 +45606,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      35
+      34
     ],
     "PhantomType": 1
   },
@@ -45644,7 +45644,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JinTingHouMd00401/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31093_UI.T_IconMonsterHead_31093_UI",
@@ -45664,7 +45664,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      35
+      34
     ],
     "PhantomType": 1
   },
@@ -45702,7 +45702,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31094_UI.T_IconMonsterHead_31094_UI",
@@ -45760,7 +45760,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31094_UI.T_IconMonsterHead_31094_UI",
@@ -45818,7 +45818,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31094_UI.T_IconMonsterHead_31094_UI",
@@ -45876,7 +45876,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31094_UI.T_IconMonsterHead_31094_UI",
@@ -45934,7 +45934,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31095_UI.T_IconMonsterHead_31095_UI",
@@ -45992,7 +45992,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31095_UI.T_IconMonsterHead_31095_UI",
@@ -46050,7 +46050,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31095_UI.T_IconMonsterHead_31095_UI",
@@ -46108,7 +46108,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31095_UI.T_IconMonsterHead_31095_UI",
@@ -46166,7 +46166,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31096_UI.T_IconMonsterHead_31096_UI",
@@ -46224,7 +46224,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31096_UI.T_IconMonsterHead_31096_UI",
@@ -46282,7 +46282,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31096_UI.T_IconMonsterHead_31096_UI",
@@ -46340,7 +46340,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31096_UI.T_IconMonsterHead_31096_UI",
@@ -46398,7 +46398,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31097_UI.T_IconMonsterHead_31097_UI",
@@ -46456,7 +46456,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31097_UI.T_IconMonsterHead_31097_UI",
@@ -46514,7 +46514,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31097_UI.T_IconMonsterHead_31097_UI",
@@ -46572,7 +46572,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31097_UI.T_IconMonsterHead_31097_UI",
@@ -46630,7 +46630,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31098_UI.T_IconMonsterHead_31098_UI",
@@ -46688,7 +46688,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31098_UI.T_IconMonsterHead_31098_UI",
@@ -46746,7 +46746,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31098_UI.T_IconMonsterHead_31098_UI",
@@ -46804,7 +46804,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31098_UI.T_IconMonsterHead_31098_UI",
@@ -46862,7 +46862,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31099_UI.T_IconMonsterHead_31099_UI",
@@ -46920,7 +46920,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31099_UI.T_IconMonsterHead_31099_UI",
@@ -46978,7 +46978,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31099_UI.T_IconMonsterHead_31099_UI",
@@ -47036,7 +47036,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31099_UI.T_IconMonsterHead_31099_UI",
@@ -47080,9 +47080,9 @@
     "Rarity": 0,
     "MeshId": 200145,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47094,7 +47094,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1BanShenShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31100_UI.T_IconMonsterHead_31100_UI",
@@ -47138,9 +47138,9 @@
     "Rarity": 0,
     "MeshId": 200145,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47152,7 +47152,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1BanShenShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31100_UI.T_IconMonsterHead_31100_UI",
@@ -47196,9 +47196,9 @@
     "Rarity": 0,
     "MeshId": 200145,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47210,7 +47210,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1BanShenShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31100_UI.T_IconMonsterHead_31100_UI",
@@ -47254,9 +47254,9 @@
     "Rarity": 0,
     "MeshId": 200145,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47268,7 +47268,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1BanShenShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31100_UI.T_IconMonsterHead_31100_UI",
@@ -47326,7 +47326,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiZiTouMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31101_UI.T_IconMonsterHead_31101_UI",
@@ -47384,7 +47384,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiZiTouMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31101_UI.T_IconMonsterHead_31101_UI",
@@ -47442,7 +47442,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiZiTouMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31101_UI.T_IconMonsterHead_31101_UI",
@@ -47500,7 +47500,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1ShiZiTouMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31101_UI.T_IconMonsterHead_31101_UI",
@@ -47558,7 +47558,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YuJiaMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31102_UI.T_IconMonsterHead_31102_UI",
@@ -47616,7 +47616,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YuJiaMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31102_UI.T_IconMonsterHead_31102_UI",
@@ -47674,7 +47674,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YuJiaMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31102_UI.T_IconMonsterHead_31102_UI",
@@ -47732,7 +47732,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YuJiaMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31102_UI.T_IconMonsterHead_31102_UI",
@@ -47776,9 +47776,9 @@
     "Rarity": 1,
     "MeshId": 200148,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47790,7 +47790,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Elite/ME1WanZhengShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32067_UI.T_IconMonsterHead_32067_UI",
@@ -47836,9 +47836,9 @@
     "Rarity": 1,
     "MeshId": 200148,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47850,7 +47850,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Elite/ME1WanZhengShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32067_UI.T_IconMonsterHead_32067_UI",
@@ -47896,9 +47896,9 @@
     "Rarity": 1,
     "MeshId": 200148,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47910,7 +47910,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Elite/ME1WanZhengShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32067_UI.T_IconMonsterHead_32067_UI",
@@ -47956,9 +47956,9 @@
     "Rarity": 1,
     "MeshId": 200148,
     "Zoom": [
-      1,
-      1,
-      1
+      0.699999988079071,
+      0.699999988079071,
+      0.699999988079071
     ],
     "Location": [
       0,
@@ -47970,7 +47970,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Elite/ME1WanZhengShiZiMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32067_UI.T_IconMonsterHead_32067_UI",
@@ -48016,9 +48016,9 @@
     "Rarity": 1,
     "MeshId": 200149,
     "Zoom": [
-      1,
-      1,
-      1
+      0.4000000059604645,
+      0.4000000059604645,
+      0.4000000059604645
     ],
     "Location": [
       0,
@@ -48030,7 +48030,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32068_UI.T_IconMonsterHead_32068_UI",
@@ -48076,9 +48076,9 @@
     "Rarity": 1,
     "MeshId": 200149,
     "Zoom": [
-      1,
-      1,
-      1
+      0.4000000059604645,
+      0.4000000059604645,
+      0.4000000059604645
     ],
     "Location": [
       0,
@@ -48090,7 +48090,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32068_UI.T_IconMonsterHead_32068_UI",
@@ -48136,9 +48136,9 @@
     "Rarity": 1,
     "MeshId": 200149,
     "Zoom": [
-      1,
-      1,
-      1
+      0.4000000059604645,
+      0.4000000059604645,
+      0.4000000059604645
     ],
     "Location": [
       0,
@@ -48150,7 +48150,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32068_UI.T_IconMonsterHead_32068_UI",
@@ -48196,9 +48196,9 @@
     "Rarity": 1,
     "MeshId": 200149,
     "Zoom": [
-      1,
-      1,
-      1
+      0.4000000059604645,
+      0.4000000059604645,
+      0.4000000059604645
     ],
     "Location": [
       0,
@@ -48210,7 +48210,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32068_UI.T_IconMonsterHead_32068_UI",
@@ -48256,9 +48256,9 @@
     "Rarity": 2,
     "MeshId": 280042,
     "Zoom": [
-      1,
-      1,
-      1
+      0.3199999928474426,
+      0.3199999928474426,
+      0.3199999928474426
     ],
     "Location": [
       0,
@@ -48270,7 +48270,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
@@ -48315,9 +48315,9 @@
     "Rarity": 2,
     "MeshId": 280042,
     "Zoom": [
-      1,
-      1,
-      1
+      0.3199999928474426,
+      0.3199999928474426,
+      0.3199999928474426
     ],
     "Location": [
       0,
@@ -48329,7 +48329,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
@@ -48374,9 +48374,9 @@
     "Rarity": 2,
     "MeshId": 280042,
     "Zoom": [
-      1,
-      1,
-      1
+      0.3199999928474426,
+      0.3199999928474426,
+      0.3199999928474426
     ],
     "Location": [
       0,
@@ -48388,7 +48388,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
@@ -48433,9 +48433,9 @@
     "Rarity": 2,
     "MeshId": 280042,
     "Zoom": [
-      1,
-      1,
-      1
+      0.3199999928474426,
+      0.3199999928474426,
+      0.3199999928474426
     ],
     "Location": [
       0,
@@ -48447,7 +48447,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/Stand2.Stand2",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
@@ -48489,12 +48489,12 @@
     "CalabashBuffs": [
       70046
     ],
-    "Rarity": 2,
+    "Rarity": 3,
     "MeshId": 280043,
     "Zoom": [
-      1,
-      1,
-      1
+      0.11999999731779099,
+      0.11999999731779099,
+      0.11999999731779099
     ],
     "Location": [
       0,
@@ -48506,7 +48506,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Boss/MB1ChongLouMd00601/CommonAnim/Stand02_1.Stand02_1",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34031_UI.T_IconMonsterHead_34031_UI",
@@ -48547,12 +48547,12 @@
     "CalabashBuffs": [
       70046
     ],
-    "Rarity": 2,
+    "Rarity": 3,
     "MeshId": 280043,
     "Zoom": [
-      1,
-      1,
-      1
+      0.11999999731779099,
+      0.11999999731779099,
+      0.11999999731779099
     ],
     "Location": [
       0,
@@ -48564,7 +48564,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Boss/MB1ChongLouMd00601/CommonAnim/Stand02_1.Stand02_1",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34031_UI.T_IconMonsterHead_34031_UI",
@@ -48605,12 +48605,12 @@
     "CalabashBuffs": [
       70046
     ],
-    "Rarity": 2,
+    "Rarity": 3,
     "MeshId": 280043,
     "Zoom": [
-      1,
-      1,
-      1
+      0.11999999731779099,
+      0.11999999731779099,
+      0.11999999731779099
     ],
     "Location": [
       0,
@@ -48622,7 +48622,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Boss/MB1ChongLouMd00601/CommonAnim/Stand02_1.Stand02_1",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34031_UI.T_IconMonsterHead_34031_UI",
@@ -48663,12 +48663,12 @@
     "CalabashBuffs": [
       70046
     ],
-    "Rarity": 2,
+    "Rarity": 3,
     "MeshId": 280043,
     "Zoom": [
-      1,
-      1,
-      1
+      0.11999999731779099,
+      0.11999999731779099,
+      0.11999999731779099
     ],
     "Location": [
       0,
@@ -48680,7 +48680,7 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Vision/VM_Boss/VM_MB1Daniya/Md00201/CommonAnim/Stand2_1.Stand2_1",
+    "StandAnim": "/Game/Aki/Character/Monster/Boss/MB1ChongLouMd00601/CommonAnim/Stand02_1.Stand02_1",
     "TypeDescription": "PhantomItem_60000012_TypeDescription",
     "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34031_UI.T_IconMonsterHead_34031_UI",
@@ -48738,9 +48738,9 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1BingmengmaMd00201/CommonAnim/Stand2.Stand2",
-    "TypeDescription": "PhantomItem_60000012_TypeDescription",
-    "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
+    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/Stand2.Stand2",
+    "TypeDescription": "PhantomItem_60000020_TypeDescription",
+    "AttributesDescription": "PhantomItem_60000020_TypeDescription",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods/T_IconMonsterGoods_SG_32068_UI.T_IconMonsterGoods_SG_32068_UI",
     "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead732/T_IconMonsterHead732_SG_32068_UI.T_IconMonsterHead732_SG_32068_UI",
     "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_SG_32068_UI.T_IconMonsterGoods160_SG_32068_UI",
@@ -48750,7 +48750,7 @@
     "MaxCapcity": 999999999,
     "ItemAccess": [],
     "ObtainedShow": 1,
-    "ObtainedShowDescription": "PhantomItem_60000012_ObtainedShowDescription",
+    "ObtainedShowDescription": "PhantomItem_60000020_ObtainedShowDescription",
     "NumLimit": 0,
     "ShowInBag": true,
     "SortIndex": 0,
@@ -48765,9 +48765,9 @@
     "PhantomType": 1
   },
   {
-    "ItemId": 60102055,
-    "MonsterId": 6010205,
-    "ParentMonsterId": 6000205,
+    "ItemId": 60102025,
+    "MonsterId": 6010202,
+    "ParentMonsterId": 6000202,
     "MonsterName": "MonsterInfo_350000420_Name",
     "ElementType": [
       5
@@ -48777,12 +48777,12 @@
       "RandNum": 1
     },
     "LevelUpGroupId": 4,
-    "SkillId": 200138,
+    "SkillId": 200135,
     "CalabashBuffs": [
       70046
     ],
     "Rarity": 0,
-    "MeshId": 201138,
+    "MeshId": 201135,
     "Zoom": [
       1,
       1,
@@ -48798,19 +48798,19 @@
       0,
       0
     ],
-    "StandAnim": "/Game/Aki/Character/Monster/ElitePro/MP1BingmengmaMd00201/CommonAnim/Stand2.Stand2",
-    "TypeDescription": "PhantomItem_60000012_TypeDescription",
-    "AttributesDescription": "PhantomItem_60000012_AttributesDescription",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods/T_IconMonsterGoods_SG_31093_UI.T_IconMonsterGoods_SG_31093_UI",
-    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead732/T_IconMonsterHead732_SG_31093_UI.T_IconMonsterHead732_SG_31093_UI",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_SG_31093_UI.T_IconMonsterGoods160_SG_31093_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods80/T_IconMonsterGoods80_SG_31093_UI.T_IconMonsterGoods80_SG_31093_UI",
+    "StandAnim": "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/CommonAnim/Stand01.Stand01",
+    "TypeDescription": "PhantomItem_60000020_TypeDescription",
+    "AttributesDescription": "PhantomItem_60000020_TypeDescription",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods/T_IconMonsterGoods_SG_31090_UI.T_IconMonsterGoods_SG_31090_UI",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead732/T_IconMonsterHead732_SG_31090_UI.T_IconMonsterHead732_SG_31090_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_SG_31090_UI.T_IconMonsterGoods160_SG_31090_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods80/T_IconMonsterGoods80_SG_31090_UI.T_IconMonsterGoods80_SG_31090_UI",
     "Mesh": "/Game/Aki/Scene/Assets/Common/Interaction/Mesh/SM_Pro_Roc_04ES.SM_Pro_Roc_04ES",
     "QualityId": 5,
     "MaxCapcity": 999999999,
     "ItemAccess": [],
     "ObtainedShow": 1,
-    "ObtainedShowDescription": "PhantomItem_60000012_ObtainedShowDescription",
+    "ObtainedShowDescription": "PhantomItem_60000020_ObtainedShowDescription",
     "NumLimit": 0,
     "ShowInBag": true,
     "SortIndex": 0,
@@ -48818,7 +48818,7 @@
     "Destructible": true,
     "RedDotDisableRule": 0,
     "FetterGroup": [
-      35
+      33
     ],
     "PhantomType": 1
   }

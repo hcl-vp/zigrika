@@ -1551,6 +1551,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350310101,
       350310102,
       350310103,
@@ -1572,6 +1573,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350310201,
       350310202,
       350310203,
@@ -1593,6 +1595,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350310301,
       350310302,
       350310303,
@@ -1615,6 +1618,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310401,
       350310402,
@@ -1641,6 +1645,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310501,
       350310502,
@@ -1664,6 +1669,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310601,
       350310602,
@@ -1687,6 +1693,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310701,
       350310702,
@@ -1712,6 +1719,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310801,
       350310802,
@@ -1736,6 +1744,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350310901,
       350310902,
@@ -1763,6 +1772,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350311001,
       350311002,
@@ -1783,7 +1793,7 @@
     "WaveConditions": [
       0
     ],
-    "WaveTime": 20,
+    "WaveTime": 25,
     "ConditionSpawnIds": [],
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
@@ -1812,9 +1822,7 @@
       350110202,
       350110203,
       350110204,
-      350110205,
-      350110206,
-      350110207
+      350110205
     ]
   },
   {
@@ -1836,9 +1844,7 @@
       350110304,
       350110305,
       350110306,
-      350110307,
-      30010001,
-      30010002
+      350110307
     ]
   },
   {
@@ -1858,9 +1864,7 @@
       350120102,
       350120103,
       350120104,
-      350120105,
-      30010001,
-      30010002
+      350120105
     ]
   },
   {
@@ -1881,8 +1885,8 @@
       350120203,
       350120204,
       350120205,
-      30010001,
-      30010002
+      350120206,
+      350120207
     ]
   },
   {
@@ -1944,7 +1948,7 @@
     "WaveTime": 40,
     "ConditionSpawnIds": [],
     "HasEndlessModeSelection": false,
-    "IsPowerWave": false,
+    "IsPowerWave": true,
     "MonsterSpawnGroup": [
       350120501,
       350120502,
@@ -1971,6 +1975,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210101,
       350210102,
       350210103,
@@ -1992,6 +1997,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210201,
       350210202,
       350210203,
@@ -2013,6 +2019,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210301,
       350210302,
       350210303,
@@ -2036,6 +2043,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210401,
       350210402,
       350210403,
@@ -2062,6 +2070,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210501,
       350210502,
       350210503,
@@ -2085,6 +2094,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210601,
       350210602,
       350210603,
@@ -2108,6 +2118,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210701,
       350210702,
       350210703,
@@ -2133,6 +2144,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350210801,
       350210802,
       350210803,
@@ -2161,7 +2173,8 @@
       350220103,
       350220104,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2184,7 +2197,8 @@
       350220205,
       350220206,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2209,7 +2223,8 @@
       350220307,
       350220308,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2243,7 +2258,8 @@
       350220416,
       350220417,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2277,7 +2293,8 @@
       350220516,
       350220517,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2309,7 +2326,8 @@
       350220614,
       350220615,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2343,7 +2361,8 @@
       350220716,
       350220717,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2376,7 +2395,8 @@
       350220815,
       350220816,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2398,7 +2418,8 @@
       350230104,
       350230105,
       350230106,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2419,7 +2440,8 @@
       350230203,
       350230205,
       350230206,
-      30010001
+      30010001,
+      30010002
     ]
   },
   {
@@ -2446,6 +2468,8 @@
       350230309,
       350230310,
       350230311,
+      30010002,
+      30010001,
       30010002
     ]
   },
@@ -2472,6 +2496,7 @@
       350230410,
       350230412,
       350230414,
+      30010001,
       30010002
     ]
   },
@@ -2503,6 +2528,7 @@
       350230513,
       350230514,
       350230515,
+      30010001,
       30010002
     ]
   },
@@ -2536,6 +2562,7 @@
       350230615,
       350230616,
       350230617,
+      30010001,
       30010002
     ]
   },
@@ -2568,6 +2595,7 @@
       350230714,
       350230715,
       350230716,
+      30010001,
       30010002
     ]
   },
@@ -2601,6 +2629,7 @@
       350230815,
       350230816,
       350230817,
+      30010001,
       30010002
     ]
   },
@@ -2618,6 +2647,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240101,
       350240102,
       350240103,
@@ -2639,6 +2669,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240201,
       350240202,
       350240203,
@@ -2660,6 +2691,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240301,
       350240302,
       350240303,
@@ -2683,6 +2715,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240401,
       350240402,
       350240403,
@@ -2709,6 +2742,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240501,
       350240502,
       350240503,
@@ -2732,6 +2766,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240601,
       350240602,
       350240603,
@@ -2755,6 +2790,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240701,
       350240702,
       350240703,
@@ -2780,6 +2816,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240801,
       350240802,
       350240803,
@@ -2804,6 +2841,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350240901,
       350240902,
       350240903,
@@ -2831,6 +2869,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350241001,
       350241002,
       350241003,
@@ -2856,6 +2895,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350320101,
       350320102,
       350320103,
@@ -2877,6 +2917,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350320201,
       350320202,
       350320203,
@@ -2898,6 +2939,7 @@
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350320301,
       350320302,
       350320303,
@@ -2921,6 +2963,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350320401,
       350320402,
@@ -2947,6 +2990,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350320501,
       350320502,
@@ -2970,6 +3014,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350320601,
       350320602,
@@ -2993,6 +3038,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350320701,
       350320702,
@@ -3017,6 +3063,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350320801,
       350320802,
@@ -3039,17 +3086,19 @@
     "WaveTime": 60,
     "ConditionSpawnIds": [],
     "HasEndlessModeSelection": false,
-    "IsPowerWave": true,
+    "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
-      350320901,
-      350320902,
-      350320903,
-      350320904,
-      350320905,
-      350320906,
-      350320907,
-      350320908
+      350321001,
+      350321002,
+      350321003,
+      350321004,
+      350321005,
+      350321006,
+      350321007,
+      350321008,
+      350321009
     ]
   },
   {
@@ -3063,18 +3112,18 @@
     "WaveTime": 60,
     "ConditionSpawnIds": [],
     "HasEndlessModeSelection": false,
-    "IsPowerWave": false,
+    "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
-      350321001,
-      350321002,
-      350321003,
-      350321004,
-      350321005,
-      350321006,
-      350321007,
-      350321008,
-      350321009
+      350320901,
+      350320902,
+      350320903,
+      350320904,
+      350320905,
+      350320906,
+      350320907,
+      350320908
     ]
   },
   {
@@ -3090,6 +3139,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350321101,
       350321102,
@@ -3119,6 +3169,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350321201,
       350321202,
@@ -3143,6 +3194,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350400101,
       350400102,
       350400103,
@@ -3170,6 +3222,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350400201,
       350400202,
       350400203,
@@ -3192,6 +3245,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350400801,
       350400802,
@@ -3216,6 +3270,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350400901,
       350400902,
@@ -3240,6 +3295,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401001,
       350401002,
@@ -3266,6 +3322,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401201,
       350401202,
@@ -3289,6 +3346,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401301,
       350401302,
@@ -3313,6 +3371,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401401,
       350401402,
@@ -3338,6 +3397,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401601,
       350401602,
@@ -3361,6 +3421,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401701,
       350401702,
@@ -3385,6 +3446,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350401801,
       350401802,
@@ -3410,6 +3472,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402001,
       350402002,
@@ -3434,6 +3497,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402101,
       350402102,
@@ -3458,6 +3522,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402201,
       350402202,
@@ -3483,6 +3548,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402401,
       350402402,
@@ -3506,6 +3572,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402501,
       350402502,
@@ -3530,6 +3597,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402601,
       350402602,
@@ -3555,6 +3623,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402801,
       350402802,
@@ -3579,6 +3648,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350402901,
       350402902,
@@ -3603,6 +3673,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350403001,
       350403002,
@@ -3628,6 +3699,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350403201,
       350403202,
@@ -3652,6 +3724,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350403301,
       350403302,
@@ -3677,6 +3750,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350403401,
       350403402,
@@ -3702,6 +3776,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350403601,
       350403602,
@@ -3727,6 +3802,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350404201,
       350404202,
@@ -3752,6 +3828,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350404401,
       350404402,
@@ -3775,6 +3852,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350404601,
       350404602,
@@ -3801,6 +3879,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350404701,
       350404702,
@@ -3824,6 +3903,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350404901,
       350404902,
@@ -3854,6 +3934,7 @@
     "HasEndlessModeSelection": false,
     "IsPowerWave": true,
     "MonsterSpawnGroup": [
+      30010001,
       30010002,
       350405001,
       350405002,
@@ -4094,9 +4175,7 @@
       350110404,
       350110405,
       350110406,
-      350110407,
-      30010001,
-      30010002
+      350110407
     ]
   },
   {
@@ -4116,6 +4195,7 @@
     "IsPowerWave": false,
     "MonsterSpawnGroup": [
       30010001,
+      30010002,
       350400001,
       350400002
     ]

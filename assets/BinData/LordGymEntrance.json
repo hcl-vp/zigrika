@@ -789,7 +789,7 @@
     ],
     "EntranceTitle": "BossEn3.5_title",
     "EntranceDescription": "BossEn2.0_detail_01",
-    "MeshId": 391564,
+    "MeshId": 3915642,
     "Zoom": [
       5.400000095367432,
       5.400000095367432,
@@ -798,12 +798,12 @@
     "Location": [
       1050,
       0,
-      390
+      20
     ],
     "Rotator": [
       0,
-      0,
-      165
+      75,
+      0
     ],
     "LordChangeMaterialController": "/Game/Aki/Effect/MaterialController/Common/MonsterBuff/Daoguan3_0/DA_Fx_Group_Daoguan_Moster_Start_3_1.DA_Fx_Group_Daoguan_Moster_Start_3_1",
     "LordStartMaterialController": "/Game/Aki/Effect/MaterialController/Common/MonsterBuff/Daoguan3_0/DA_Fx_Group_Daoguan_Moster_Start.DA_Fx_Group_Daoguan_Moster_Start",

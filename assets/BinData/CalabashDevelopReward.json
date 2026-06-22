@@ -6673,33 +6673,5 @@
     "VisionCoolDown": 0,
     "InteractAreaList": [],
     "ItemAccess": 0
-  },
-  {
-    "MonsterId": 6010205,
-    "InteractAreaId": 0,
-    "DevelopCondition": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "MonsterInfoId": 350000420,
-    "AllExp": 100,
-    "SortId": 1,
-    "MonsterProbeId": 310000930,
-    "HandBookBp": "/Game/Aki/Character/Kpose/Ordinary/MO1JinTingHouMd10401.MO1JinTingHouMd10401",
-    "MonsterBodyType": 1,
-    "HandBookCamera": "800021",
-    "MonsterNumber": "T01-",
-    "InteractionRadius": 150,
-    "IsShow": false,
-    "AllowVision": true,
-    "IsWorldInteractable": false,
-    "SpecialSkillName": "",
-    "SpecialSkillDescription": "",
-    "SpecialSkillPicturePath": "",
-    "VisionCoolDown": 0,
-    "InteractAreaList": [],
-    "ItemAccess": 0
   }
 ]

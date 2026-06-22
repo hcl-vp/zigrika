@@ -59,7 +59,7 @@
     "Id": 8,
     "ActivityId": 110500002,
     "DifficultyId": 1,
-    "StarNum": 12,
+    "StarNum": 16,
     "TextBgColor": "d8762f",
     "DifficultyTextKey": "BabelDifficultyTipsNormal"
   },
@@ -67,7 +67,7 @@
     "Id": 9,
     "ActivityId": 110500002,
     "DifficultyId": 2,
-    "StarNum": 22,
+    "StarNum": 26,
     "TextBgColor": "d22448",
     "DifficultyTextKey": "BabelDifficultyTipsHard"
   }

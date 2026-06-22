@@ -470,8 +470,8 @@
     "FetterGroupDesc": "PrefabTextItem_Empty_Text",
     "SortId": 33,
     "FetterElementColor": "FFFFFF00",
-    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriDarkAssist.T_IconElementAttriDarkAssist",
-    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_DarkAssist.T_IconElementAttri128_DarkAssist"
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriYangyang.T_IconElementAttriYangyang",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Yangyang.T_IconElementAttri128_Yangyang"
   },
   {
     "Id": 34,
@@ -485,8 +485,8 @@
     "FetterGroupDesc": "PrefabTextItem_Empty_Text",
     "SortId": 34,
     "FetterElementColor": "FFFFFF00",
-    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriWindVision.T_IconElementAttriWindVision",
-    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_WindVision.T_IconElementAttri128_WindVision"
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriQingxiao.T_IconElementAttriQingxiao",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Qingxiao.T_IconElementAttri128_Qingxiao"
   },
   {
     "Id": 35,
@@ -500,7 +500,7 @@
     "FetterGroupDesc": "PrefabTextItem_Empty_Text",
     "SortId": 35,
     "FetterElementColor": "FFFFFF00",
-    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriFireUltimateSkill.T_IconElementAttriFireUltimateSkill",
-    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_FireUltimateSkill.T_IconElementAttri128_FireUltimateSkill"
+    "FetterElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri/T_IconElementAttriJingran.T_IconElementAttriJingran",
+    "AimModelElementPath": "/Game/Aki/UI/UIResources/Common/Image/IconElementAttri128/T_IconElementAttri128_Jingran.T_IconElementAttri128_Jingran"
   }
 ]

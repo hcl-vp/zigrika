@@ -12644,5 +12644,136 @@
     "DefaultUnlock": false,
     "SilentUnlock": false,
     "ShowLayer": 1
+  },
+  {
+    "Id": 36111,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36111,
+      3611102,
+      3611103,
+      3611104
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36111_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": true,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
+  },
+  {
+    "Id": 36112,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36112,
+      3611202
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36112_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": true,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
+  },
+  {
+    "Id": 36113,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36113,
+      3611302
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36113_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": true,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
+  },
+  {
+    "Id": 36114,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36114
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36114_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": false,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
+  },
+  {
+    "Id": 36115,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36115
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36115_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": false,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
+  },
+  {
+    "Id": 36116,
+    "TutorialType": 11,
+    "TutorialOrder": 0,
+    "PageId": [
+      36116
+    ],
+    "PageReplaceConditionGroupId": 0,
+    "ReplacePageId": [],
+    "GroupName": "GuideTutorial_36116_GroupName",
+    "ExclusiveType": 0,
+    "TutorialTip": false,
+    "DropId": 100001,
+    "DisableDropReward": true,
+    "RequireReadAll": false,
+    "ExcludeFromWiki": true,
+    "CopiedFrom": 0,
+    "DefaultUnlock": false,
+    "SilentUnlock": false,
+    "ShowLayer": 1
   }
 ]

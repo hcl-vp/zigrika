@@ -124620,5 +124620,292 @@
     "IsClient": true,
     "Description": "ConditionGroup_12907309_HintText",
     "AccessId": 0
+  },
+  {
+    "Id": 131201447,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201448,
+    "Type": "OnGuideTriggerEvent",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Name": "KurotatoRoleLevelUp"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201449,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoAttrSelectMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201450,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201451,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoBoxDropMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201452,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201453,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201454,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201455,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201456,
+    "Type": "CheckUIOpenDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoShopMainView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201457,
+    "Type": "CheckUIShowDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoRoleSelectView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201458,
+    "Type": "CheckUIShowDone",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoRoleSelectView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201490,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35011",
+      "Wave": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201467,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35011",
+      "Wave": "2"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201468,
+    "Type": "CheckGuideStatus",
+    "NeedNum": 1,
+    "LimitParams": {
+      "GuideGroupId": "20541",
+      "Status": "2"
+    },
+    "LimitParamsOpe": {
+      "Status": ">="
+    },
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201469,
+    "Type": "OnViewClose",
+    "NeedNum": 1,
+    "LimitParams": {
+      "UIName": "KurotatoPopupDetailView"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201470,
+    "Type": "CheckUiItemShow",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ViewName": "CommonGameMainView",
+      "MarkName": "tudou_3.5_10"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201471,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35012",
+      "Wave": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201472,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35012",
+      "Wave": "2"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201473,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35012",
+      "Wave": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201474,
+    "Type": "CheckKurotatoLevelWave",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35012",
+      "Wave": "4"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201475,
+    "Type": "CheckUiItemShow",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ViewName": "SheriffMainView",
+      "MarkName": "tianyan_3.5_01"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 131201478,
+    "Type": "CheckKurotatoLevelFinished",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelId": "35024"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
   }
 ]

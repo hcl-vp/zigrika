@@ -2078,7 +2078,7 @@
   {
     "FunctionId": 10156,
     "Name": "玄方录",
-    "IsOn": true,
+    "IsOn": false,
     "OpenConditionId": 0,
     "ShowUIType": 0,
     "Delay": 101,
@@ -2090,7 +2090,7 @@
   {
     "FunctionId": 10157,
     "Name": "玄方录支线任务收录",
-    "IsOn": true,
+    "IsOn": false,
     "OpenConditionId": 0,
     "ShowUIType": 0,
     "Delay": 101,

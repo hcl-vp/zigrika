@@ -7268,7 +7268,7 @@
     "BuffIds": [
       1610007001,
       1610007102,
-      1610007103
+      1610007109
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7291,14 +7291,15 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1610007002,
-      1610007201
+      1610007201,
+      1610007206
     ],
     "AddProp": [],
     "ActivateConsume": {
       "10001610": 1
     },
     "AttributesDescriptionParams": [
-      "50%",
+      "100%",
       "337.98%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_XuanLingM2_UI.T_IconDevice_XuanLingM2_UI"
@@ -7315,14 +7316,15 @@
     "BuffIds": [
       1610007003,
       1610007302,
-      1610007304
+      1610007304,
+      1610007305
     ],
     "AddProp": [],
     "ActivateConsume": {
       "10001610": 1
     },
     "AttributesDescriptionParams": [
-      "240%",
+      "175%",
       "3"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_XuanLingM3_UI.T_IconDevice_XuanLingM3_UI"
@@ -7416,9 +7418,7 @@
     "AttributesDescription": "ResonantChain_325_AttributesDescription",
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
-      1110100001,
-      1110100820,
-      1110100822
+      1110100001
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7447,7 +7447,7 @@
       "10001110": 1
     },
     "AttributesDescriptionParams": [
-      "40%"
+      "50%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_SuisuiM2_UI.T_IconDevice_SuisuiM2_UI"
   },

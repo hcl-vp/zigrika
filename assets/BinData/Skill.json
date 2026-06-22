@@ -19927,26 +19927,6 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [
-      161000101,
-      161000201,
-      161000202,
-      161000203,
-      161000301,
-      161000302,
-      161000401,
-      161000402,
-      161000403,
-      161003101,
-      161010101,
-      161010102,
-      161010201,
-      161010301,
-      161010302,
-      161010303,
-      161010401,
-      161010402,
-      161010403,
-      161013101,
       1610001010,
       1610002010,
       1610002020,
@@ -19960,8 +19940,6 @@
       1610101010,
       1610101020,
       1610102010,
-      1610102020,
-      1610102030,
       1610103010,
       1610103020,
       1610103030,
@@ -20174,40 +20152,10 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [
-      1610021010,
-      1610021020,
-      1610021030,
-      161005201,
-      1610121010,
-      1610121020,
-      1610132010,
-      1610132020,
-      1610133010,
-      1610134010,
-      1610134020,
-      1610134030,
-      1610135010,
-      1610135020,
-      161015201,
-      161040101,
-      1610021012,
-      1610021022,
-      1610021032,
-      1610121012,
-      1610121022,
-      1610132012,
-      1610132022,
-      1610133012,
-      1610134012,
-      1610134022,
-      1610134032,
-      1610135012,
-      1610135022,
-      161040201,
-      161040602,
       161002101,
       161002102,
       161002103,
+      161005201,
       161012101,
       161012102,
       161013201,
@@ -20218,18 +20166,7 @@
       161013403,
       161013501,
       161013502,
-      1610142010,
-      1610143010,
-      1610143020,
-      1610143030,
-      1610144010,
-      1610144020,
-      1610142012,
-      1610143012,
-      1610143022,
-      1610143032,
-      1610144012,
-      1610144022,
+      161015201,
       161014201,
       161014301,
       161014302,
@@ -20246,13 +20183,13 @@
     "SkillDetailNum": [
       "100",
       "1",
-      "100%",
+      "125%",
       "25",
       "15",
       "50",
       "100",
       "1",
-      "100%",
+      "125%",
       "25",
       "15",
       "50",
@@ -20263,20 +20200,21 @@
       "180%",
       "100",
       "1",
-      "1"
+      "1",
+      "8"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006007_SkillDescribe",
     "MultiSkillDetailNum": [
       "100",
       "1",
-      "100%",
+      "125%",
       "25",
       "15",
       "50",
       "100",
       "1",
-      "100%",
+      "125%",
       "25",
       "15",
       "50",
@@ -20287,7 +20225,8 @@
       "180%",
       "100",
       "1",
-      "1"
+      "1",
+      "8"
     ],
     "SkillShowTagType": 2
   },
@@ -20411,9 +20350,9 @@
       "2"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004001_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005501_SkillDescribe",
     "MultiSkillDetailNum": [
-      "7",
+      "4",
       "60",
       "1",
       "2"
@@ -20445,10 +20384,8 @@
     "SkillTagList": [],
     "SkillDetailNum": [],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004002_SkillDescribe",
-    "MultiSkillDetailNum": [
-      "4"
-    ],
+    "MultiSkillDescribe": "Skill_1005502_SkillDescribe",
+    "MultiSkillDetailNum": [],
     "SkillShowTagType": 1
   },
   {
@@ -20475,7 +20412,7 @@
     "SkillTagList": [],
     "SkillDetailNum": [],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004003_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005503_SkillDescribe",
     "MultiSkillDetailNum": [],
     "SkillShowTagType": 1
   },
@@ -20502,7 +20439,7 @@
       "10"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004004_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005504_SkillDescribe",
     "MultiSkillDetailNum": [
       "10"
     ],
@@ -20529,13 +20466,13 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "20%",
-      "6"
+      "20"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004005_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005505_SkillDescribe",
     "MultiSkillDetailNum": [
       "20%",
-      "6"
+      "20"
     ],
     "SkillShowTagType": 0
   },
@@ -20562,7 +20499,7 @@
     "SkillTagList": [],
     "SkillDetailNum": [],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004006_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005506_SkillDescribe",
     "MultiSkillDetailNum": [],
     "SkillShowTagType": 0
   },
@@ -20644,7 +20581,8 @@
       13091240011,
       13091240021,
       13091240031,
-      13091250011
+      13091250011,
+      1309114011
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconThunderzhu/SP_IconThunderzhuY1.SP_IconThunderzhuY1",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinD1_UI.T_IconYinlinD1_UI",
@@ -20658,7 +20596,7 @@
       "10"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004007_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005507_SkillDescribe",
     "MultiSkillDetailNum": [
       "10",
       "20",
@@ -20687,7 +20625,7 @@
     "SkillTagList": [],
     "SkillDetailNum": [],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004008_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005508_SkillDescribe",
     "MultiSkillDetailNum": [],
     "SkillShowTagType": 0
   },
@@ -20716,7 +20654,7 @@
       "14"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1004009_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005509_SkillDescribe",
     "MultiSkillDetailNum": [
       "20",
       "25",
@@ -20745,7 +20683,7 @@
     "SkillTagList": [],
     "SkillDetailNum": [],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1005310_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005510_SkillDescribe",
     "MultiSkillDetailNum": [],
     "SkillShowTagType": 0
   },
@@ -20842,12 +20780,21 @@
     "SkillResume": "Skill_1005703_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
+      "15",
+      "15",
       "6%",
-      "12%"
+      "12%",
+      "30"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005703_SkillDescribe",
-    "MultiSkillDetailNum": [],
+    "MultiSkillDetailNum": [
+      "15",
+      "15",
+      "6%",
+      "12%",
+      "30"
+    ],
     "SkillShowTagType": 1
   },
   {
@@ -20874,15 +20821,25 @@
       "10",
       "2",
       "62",
-      "0.0034%",
+      "0.34%",
       "20",
       "13",
-      "50%",
+      "80%",
       "240%"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005704_SkillDescribe",
-    "MultiSkillDetailNum": [],
+    "MultiSkillDetailNum": [
+      "10",
+      "10",
+      "2",
+      "62",
+      "0.34%",
+      "20",
+      "13",
+      "80%",
+      "240%"
+    ],
     "SkillShowTagType": 0
   },
   {
@@ -20915,7 +20872,11 @@
       "10"
     ],
     "MultiSkillDescribe": "Skill_1005705_SkillDescribe",
-    "MultiSkillDetailNum": [],
+    "MultiSkillDetailNum": [
+      "50%",
+      "1",
+      "10"
+    ],
     "SkillShowTagType": 0
   },
   {
@@ -20996,10 +20957,16 @@
     "SkillDescribe": "Skill_1005707_SkillDescribe",
     "SkillResume": "Skill_1005707_SkillResume",
     "SkillTagList": [],
-    "SkillDetailNum": [],
+    "SkillDetailNum": [
+      "120",
+      "600"
+    ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005707_SkillDescribe",
-    "MultiSkillDetailNum": [],
+    "MultiSkillDetailNum": [
+      "120",
+      "600"
+    ],
     "SkillShowTagType": 0
   },
   {

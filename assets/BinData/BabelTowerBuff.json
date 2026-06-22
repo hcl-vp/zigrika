@@ -364,9 +364,7 @@
   {
     "Id": 34,
     "Star": 1,
-    "DifficultPreLevel": [
-      1121
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_IconpropertyredAoxiangtili_UI.T_IconpropertyredAoxiangtili_UI",
@@ -376,9 +374,7 @@
   {
     "Id": 35,
     "Star": 1,
-    "DifficultPreLevel": [
-      1122
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreencure_UI.T_Iconpropertygreencure_UI",
@@ -388,9 +384,7 @@
   {
     "Id": 36,
     "Star": 1,
-    "DifficultPreLevel": [
-      1123
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertybluelight_UI.T_Iconpropertybluelight_UI",
@@ -400,9 +394,7 @@
   {
     "Id": 37,
     "Star": 1,
-    "DifficultPreLevel": [
-      1124
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreendefense_UI.T_Iconpropertygreendefense_UI",
@@ -412,9 +404,7 @@
   {
     "Id": 38,
     "Star": 1,
-    "DifficultPreLevel": [
-      1125
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
@@ -424,9 +414,7 @@
   {
     "Id": 39,
     "Star": 1,
-    "DifficultPreLevel": [
-      1126
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredfoco_UI.T_Iconpropertyredfoco_UI",
@@ -436,25 +424,21 @@
   {
     "Id": 40,
     "Star": 1,
-    "DifficultPreLevel": [
-      1127
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredphysics_UI.T_Iconpropertyredphysics_UI",
-    "NameText": "BabelTower_BuffTitle_40",
-    "DesText": "BabelTower_BuffDesc_40"
+    "NameText": "BabelTower_BuffTitle_41",
+    "DesText": "BabelTower_BuffDesc_41"
   },
   {
     "Id": 41,
     "Star": 1,
-    "DifficultPreLevel": [
-      1128
-    ],
+    "DifficultPreLevel": [],
     "DifficultPreLevelStar": {},
     "DifficultLimitTime": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyblueshield_UI.T_Iconpropertyblueshield_UI",
-    "NameText": "BabelTower_BuffTitle_41",
-    "DesText": "BabelTower_BuffDesc_41"
+    "NameText": "BabelTower_BuffTitle_40",
+    "DesText": "BabelTower_BuffDesc_40"
   }
 ]

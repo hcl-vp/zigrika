@@ -1251,8 +1251,7 @@
     "SkillTitle": "SkillTag_Trick",
     "SkillDesc": [
       130905,
-      130906,
-      130907
+      130906
     ],
     "Type": 1
   },
@@ -1261,10 +1260,10 @@
     "RoleId": 1310,
     "SkillTitle": "SkillTag_Energy",
     "SkillDesc": [
-      131001,
-      131002,
-      131003,
-      131004
+      130901,
+      130902,
+      130903,
+      130904
     ],
     "Type": 0
   },
@@ -1273,9 +1272,8 @@
     "RoleId": 1310,
     "SkillTitle": "SkillTag_Trick",
     "SkillDesc": [
-      131005,
-      131006,
-      131007
+      130905,
+      130906
     ],
     "Type": 1
   },

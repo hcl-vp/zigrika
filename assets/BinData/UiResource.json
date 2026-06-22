@@ -45224,5 +45224,23 @@
     "PcPath": "",
     "ResourceType": "Common",
     "ActivityType": []
+  },
+  {
+    "Id": "PC_DynKurotatoSkill",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity34/Survivor/Fight/PC_DynRogueSkill.PC_DynRogueSkill",
+    "PcPath": "",
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "Kurotato"
+    ]
+  },
+  {
+    "Id": "UiItem_KurotatoChestPos",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity34/Survivor/Fight/UiItem_ChestPos.UiItem_ChestPos",
+    "PcPath": "",
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "Kurotato"
+    ]
   }
 ]

@@ -4869,7 +4869,7 @@
   },
   {
     "Id": 950100011,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/Addskill/Ksc_Da_Buff_AddSkill_Shouqiang.Ksc_Da_Buff_AddSkill_ShouQiang"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/Addskill/Ksc_Da_Buff_AddSkill_Zuolun.Ksc_Da_Buff_AddSkill_Zuolun"
   },
   {
     "Id": 950100012,
@@ -5865,7 +5865,7 @@
   },
   {
     "Id": 970200130,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/ItemBuff/KSC_DA_Buff_ListenEvent_970200130.KSC_DA_Buff_ListenEvent_970200130"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/ItemBuff/KSC_DA_Buff_HurtAddGold_970200130.KSC_DA_Buff_HurtAddGold_970200130"
   },
   {
     "Id": 1170000014,
@@ -6214,5 +6214,13 @@
   {
     "Id": 950100223,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/ItemBuff/KSC_DA_Buff_ModifyAttr_950100223.KSC_DA_Buff_ModifyAttr_950100223"
+  },
+  {
+    "Id": 970200010,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_ListenEvent_PickupHeal_970200010.KSC_DA_Buff_ListenEvent_PickupHeal_970200010"
+  },
+  {
+    "Id": 970100247,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_TransferBlood.KSC_DA_Buff_TransferBlood"
   }
 ]

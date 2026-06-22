@@ -693,6 +693,16 @@
           9,
           8
         ]
+      },
+      "-661701884": {
+        "ArrayInt": [
+          4,
+          5,
+          7,
+          6,
+          9,
+          8
+        ]
       }
     },
     "PadButtonTypeMap": {
@@ -1011,6 +1021,19 @@
         "ArrayInt": [
           5
         ]
+      },
+      "-661701884": {
+        "ArrayInt": [
+          4,
+          6,
+          9,
+          7,
+          8,
+          5,
+          1,
+          10,
+          11
+        ]
       }
     },
     "GamepadButtonTypeMap": {
@@ -1229,6 +1252,18 @@
       "-1192129107": {
         "ArrayInt": [
           5
+        ]
+      },
+      "-661701884": {
+        "ArrayInt": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          104
         ]
       }
     },
@@ -3631,10 +3666,10 @@
   {
     "Id": 5059,
     "DesktopButtonTypeList": [
-      5
+      0
     ],
     "PadButtonTypeList": [
-      5
+      0
     ],
     "TagList": [],
     "TagDesktopButtonTypeList": [],
@@ -3665,10 +3700,10 @@
   {
     "Id": 5064,
     "DesktopButtonTypeList": [
-      0
+      6
     ],
     "PadButtonTypeList": [
-      0
+      6
     ],
     "TagList": [],
     "TagDesktopButtonTypeList": [],

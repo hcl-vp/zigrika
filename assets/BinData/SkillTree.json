@@ -26704,22 +26704,22 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_105_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_105_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_297_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_297_PropertyNodeDescribe",
     "PropertyNodeParam": [
-      "2.40%"
+      "1.20%"
     ],
-    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
+    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
     "Property": [
       {
-        "Id": 9,
-        "Value": 240,
+        "Id": 8,
+        "Value": 120,
         "IsRatio": false
       }
     ],
     "Consume": {
       "2": 50000,
-      "41100093": 3,
+      "41100063": 3,
       "43021013": 3
     },
     "UnLockCondition": 500006
@@ -26739,8 +26739,8 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_106_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_106_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_298_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_298_PropertyNodeDescribe",
     "PropertyNodeParam": [
       "1.80%"
     ],
@@ -26754,7 +26754,7 @@
     ],
     "Consume": {
       "2": 50000,
-      "41100093": 3,
+      "41100063": 3,
       "43021013": 3
     },
     "UnLockCondition": 500005
@@ -26774,8 +26774,8 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_107_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_107_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_299_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_299_PropertyNodeDescribe",
     "PropertyNodeParam": [
       "1.80%"
     ],
@@ -26789,7 +26789,7 @@
     ],
     "Consume": {
       "2": 50000,
-      "41100093": 3,
+      "41100063": 3,
       "43021013": 3
     },
     "UnLockCondition": 500005
@@ -26809,22 +26809,22 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_108_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_108_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_300_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_300_PropertyNodeDescribe",
     "PropertyNodeParam": [
-      "2.40%"
+      "1.20%"
     ],
-    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
+    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
     "Property": [
       {
-        "Id": 9,
-        "Value": 240,
+        "Id": 8,
+        "Value": 120,
         "IsRatio": false
       }
     ],
     "Consume": {
       "2": 50000,
-      "41100093": 3,
+      "41100063": 3,
       "43021013": 3
     },
     "UnLockCondition": 500006
@@ -26844,23 +26844,23 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_109_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_109_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_301_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_301_PropertyNodeDescribe",
     "PropertyNodeParam": [
-      "5.60%"
+      "2.80%"
     ],
-    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
+    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
     "Property": [
       {
-        "Id": 9,
-        "Value": 560,
+        "Id": 8,
+        "Value": 280,
         "IsRatio": false
       }
     ],
     "Consume": {
       "2": 100000,
-      "41100094": 3,
-      "41400324": 1,
+      "41100064": 3,
+      "41400304": 1,
       "43021014": 3
     },
     "UnLockCondition": 500008
@@ -26880,8 +26880,8 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_110_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_110_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_302_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_302_PropertyNodeDescribe",
     "PropertyNodeParam": [
       "4.20%"
     ],
@@ -26895,8 +26895,8 @@
     ],
     "Consume": {
       "2": 100000,
-      "41100094": 3,
-      "41400324": 1,
+      "41100064": 3,
+      "41400304": 1,
       "43021014": 3
     },
     "UnLockCondition": 500007
@@ -26916,8 +26916,8 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_111_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_111_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_303_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_303_PropertyNodeDescribe",
     "PropertyNodeParam": [
       "4.20%"
     ],
@@ -26931,8 +26931,8 @@
     ],
     "Consume": {
       "2": 100000,
-      "41100094": 3,
-      "41400324": 1,
+      "41100064": 3,
+      "41400304": 1,
       "43021014": 3
     },
     "UnLockCondition": 500007
@@ -26952,23 +26952,23 @@
     "SkillId": 0,
     "SkillBranchIds": [],
     "SkillBranchDescList": [],
-    "PropertyNodeTitle": "SkillTree_112_PropertyNodeTitle",
-    "PropertyNodeDescribe": "SkillTree_112_PropertyNodeDescribe",
+    "PropertyNodeTitle": "SkillTree_304_PropertyNodeTitle",
+    "PropertyNodeDescribe": "SkillTree_304_PropertyNodeDescribe",
     "PropertyNodeParam": [
-      "5.60%"
+      "2.80%"
     ],
-    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredcrit_UI.T_Iconpropertyredcrit_UI",
+    "PropertyNodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredbaoji_UI.T_Iconpropertyredbaoji_UI",
     "Property": [
       {
-        "Id": 9,
-        "Value": 560,
+        "Id": 8,
+        "Value": 280,
         "IsRatio": false
       }
     ],
     "Consume": {
       "2": 100000,
-      "41100094": 3,
-      "41400324": 1,
+      "41100064": 3,
+      "41400304": 1,
       "43021014": 3
     },
     "UnLockCondition": 500008

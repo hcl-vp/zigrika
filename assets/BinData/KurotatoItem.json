@@ -6034,7 +6034,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_810005",
     "DescParams": [
-      "20%"
+      "10%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_810005",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_limuguo_UI.T_IconC160_limuguo_UI",
@@ -6156,7 +6156,7 @@
   {
     "Id": 820002,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907308,
     "Effect": [
       972021,
       972022
@@ -6195,7 +6195,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_820003",
     "DescParams": [
-      "20%"
+      "30%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820003",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask160/T_IconTask160_Task_022_UI.T_IconTask160_Task_022_UI",
@@ -6275,14 +6275,14 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_820006",
     "DescParams": [
-      "5%",
-      "1"
+      "10%",
+      "5"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820006",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_SM_Gat_13A_UI.T_IconC160_SM_Gat_13A_UI",
     "Tag": "",
-    "Quality": 2,
-    "ShopBasicCost": 81,
+    "Quality": 3,
+    "ShopBasicCost": 108,
     "ShopSellMutiply": 0.6,
     "Tags": [
       "生存角色适配"
@@ -6343,7 +6343,7 @@
   {
     "Id": 820009,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907305,
     "Effect": [
       972091
     ],
@@ -6370,7 +6370,7 @@
   {
     "Id": 820010,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907305,
     "Effect": [
       972101
     ],
@@ -6424,7 +6424,7 @@
   {
     "Id": 820012,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "Effect": [
       972121
     ],
@@ -6450,9 +6450,10 @@
   {
     "Id": 820013,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "Effect": [
-      972131
+      972131,
+      972132
     ],
     "Name": "KurotatoItem_name_820013",
     "SortId": 261,
@@ -6476,7 +6477,7 @@
   {
     "Id": 820014,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "Effect": [
       972141
     ],
@@ -6487,7 +6488,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_820014",
     "DescParams": [
-      "5",
+      "1",
       "1%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820014",
@@ -6503,7 +6504,7 @@
   {
     "Id": 820015,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "Effect": [
       972151,
       972152,
@@ -6543,7 +6544,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830001",
     "DescParams": [
-      "20%"
+      "50%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830001",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_YJ_001_UI.T_IconCook160_YJ_001_UI",
@@ -6569,8 +6570,8 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830002",
     "DescParams": [
-      "5%",
-      "15",
+      "10%",
+      "5",
       "5"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830002",
@@ -6615,7 +6616,9 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      973041
+      973041,
+      973042,
+      973043
     ],
     "Name": "KurotatoItem_name_830004",
     "SortId": 267,
@@ -6625,7 +6628,7 @@
     "Desc": "KurotatoItem_desc_830004",
     "DescParams": [
       "5%",
-      "2",
+      "5",
       "10"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830004",
@@ -6639,7 +6642,7 @@
   {
     "Id": 830005,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907302,
     "Effect": [
       973051,
       973052
@@ -6668,10 +6671,12 @@
   {
     "Id": 830006,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907302,
     "Effect": [
       973061,
-      973062
+      973062,
+      973063,
+      973064
     ],
     "Name": "KurotatoItem_name_830006",
     "SortId": 269,
@@ -6723,7 +6728,7 @@
   {
     "Id": 830008,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907304,
     "Effect": [
       973081,
       973082
@@ -6763,8 +6768,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830009",
     "DescParams": [
-      "3%",
-      "3%"
+      "5%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830009",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_Sep_061_UI.T_IconC160_Sep_061_UI",
@@ -6805,7 +6809,9 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      973111
+      973111,
+      973112,
+      973113
     ],
     "Name": "KurotatoItem_name_830011",
     "SortId": 274,
@@ -6814,7 +6820,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830011",
     "DescParams": [
-      "25%"
+      "80%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830011",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_059_UI.T_IconC160_059_UI",
@@ -6827,7 +6833,7 @@
   {
     "Id": 830012,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907305,
     "Effect": [
       973121
     ],
@@ -6853,7 +6859,7 @@
   {
     "Id": 830013,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907305,
     "Effect": [
       973131,
       973132,
@@ -6885,7 +6891,7 @@
   {
     "Id": 830014,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907306,
     "Effect": [
       973141
     ],
@@ -6938,7 +6944,7 @@
   {
     "Id": 830016,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907307,
     "Effect": [
       973161
     ],
@@ -6977,7 +6983,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830017",
     "DescParams": [
-      "2%",
+      "3%",
       "30"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830017",
@@ -7003,9 +7009,8 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_840001",
     "DescParams": [
-      "-1%",
-      "1%",
-      "20"
+      "-1",
+      "5%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_840001",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_YJ_005_UI.T_IconCook160_YJ_005_UI",
@@ -7045,7 +7050,7 @@
   {
     "Id": 840003,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907304,
     "Effect": [
       974031
     ],
@@ -7056,10 +7061,10 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_840003",
     "DescParams": [
-      "2",
+      "1",
       "2%",
-      "15",
-      "20"
+      "60",
+      "30"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_840003",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRouge160/T_IconRouge160_023_UI.T_IconRouge160_023_UI",
@@ -7074,7 +7079,7 @@
   {
     "Id": 840004,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907304,
     "Effect": [
       974041
     ],
@@ -7103,7 +7108,7 @@
   {
     "Id": 840005,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907307,
     "Effect": [
       974051
     ],
@@ -7129,7 +7134,7 @@
   {
     "Id": 840006,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907307,
     "Effect": [
       974061
     ],
@@ -7157,7 +7162,7 @@
   {
     "Id": 840007,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907307,
     "Effect": [
       974071,
       974072
@@ -7169,7 +7174,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_840007",
     "DescParams": [
-      "5",
+      "3",
       "10%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_840007",
@@ -7187,8 +7192,7 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      974081,
-      974082
+      974081
     ],
     "Name": "KurotatoItem_name_840008",
     "SortId": 288,
@@ -7268,7 +7272,7 @@
   {
     "Id": 840011,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907306,
     "Effect": [
       974111
     ],
@@ -7294,7 +7298,7 @@
   {
     "Id": 840012,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907306,
     "Effect": [
       974121
     ],
@@ -7323,7 +7327,7 @@
   {
     "Id": 840013,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "Effect": [
       974131
     ],
@@ -7376,7 +7380,7 @@
   {
     "Id": 840015,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907306,
     "Effect": [
       974151
     ],
@@ -7403,7 +7407,7 @@
   {
     "Id": 840016,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907307,
     "Effect": [
       974161
     ],
@@ -7442,21 +7446,21 @@
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_830018",
-    "DescParams": [
-      "20%"
-    ],
+    "DescParams": [],
     "BgDesc": "KurotatoItem_Bgdesc_830018",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_SM_Gat_27A_UI.T_IconC160_SM_Gat_27A_UI",
     "Tag": "",
     "Quality": 3,
     "ShopBasicCost": 108,
     "ShopSellMutiply": 0.6,
-    "Tags": []
+    "Tags": [
+      "经济角色适配"
+    ]
   },
   {
     "Id": 830019,
     "ActivityId": 3401,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907308,
     "Effect": [
       970200570,
       970200571
@@ -7565,7 +7569,7 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      975003
+      975009
     ],
     "Name": "KurotatoItem_name_840019",
     "SortId": 299,

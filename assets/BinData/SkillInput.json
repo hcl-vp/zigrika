@@ -3126,8 +3126,12 @@
   },
   {
     "Id": 111004,
-    "InputArray": [],
-    "SkillArray": [],
+    "InputArray": [
+      "0"
+    ],
+    "SkillArray": [
+      0
+    ],
     "ImageArray": [],
     "Description": "RoleSkillInput_1110_DescList_2"
   },

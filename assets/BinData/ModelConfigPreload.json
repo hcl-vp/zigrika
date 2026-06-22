@@ -79851,6 +79851,8 @@
       "/Game/Aki/Character/Role/FemaleM/Xuanling/R2T1XuanlingMd10011/ABP_R2T1XuanlingMd10011_PC.ABP_R2T1XuanlingMd10011_PC_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/R2T1XuanLingMd10011/DA_Fx_Group_XuanLing_Weapon_End03.DA_Fx_Group_XuanLing_Weapon_End03",
+      "/Game/Aki/Effect/EffectGroup/R2T1XuanLingMd10011/DA_Fx_Group_XuanLing_Weapon_End02.DA_Fx_Group_XuanLing_Weapon_End02",
       "/Game/Aki/Effect/DataAsset/Ghost/DA_Fx_Ghost_R2T1Xuanling_Weapon_10014.DA_Fx_Ghost_R2T1Xuanling_Weapon_10014",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Tread.DA_Fx_Group_Tread",
@@ -79904,10 +79906,6 @@
       "/Game/Aki/Character/Role/FemaleM/Suisui/R2T1SuisuiMd10011/ABP_R2T1SuisuiMd10011_PC.ABP_R2T1SuisuiMd10011_PC_C"
     ],
     "Others": [
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_R1a01_heshan.DA_Fx_Group_R1a01_heshan",
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_S1a01_Trail1.DA_Fx_Group_S1a01_Trail1",
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_S1a01_Trail2.DA_Fx_Group_S1a01_Trail2",
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_S1a03_Trail.DA_Fx_Group_S1a03_Trail",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Climb_Ribbon.DA_Fx_Group_Climb_Ribbon",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Tread.DA_Fx_Group_Tread",
       "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_FightHook_Wind_01.NS_Fx_LGUI_FightHook_Wind_01",
@@ -81632,7 +81630,8 @@
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/BP_MP1FengTingXieYou00201.BP_MP1FengTingXieYou00201_C"
     ],
     "Animations": [
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Death.AM_Death"
+      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Death.AM_Death",
+      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Behit_Block.AM_Behit_Block"
     ],
     "Effects": [],
     "Audios": [],
@@ -81647,10 +81646,9 @@
       "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/3C/DA_Fx_Group_MP1FengTingXieYou_MPa_Smoke.DA_Fx_Group_MP1FengTingXieYou_MPa_Smoke",
       "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/DA_Fx_Group_MP1FengTingXieYou_MPa_Death1.DA_Fx_Group_MP1FengTingXieYou_MPa_Death1",
       "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/DA_Fx_Group_MP1FengTingXieYou_MPa_Death.DA_Fx_Group_MP1FengTingXieYou_MPa_Death",
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_SkillInfo.DT_SkillInfo",
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_HitEffect.DT_HitEffect",
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DA_PartHitEffect.DA_PartHitEffect"
+      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_R1.DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_R1",
+      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_R2.DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_R2",
+      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_L1.DA_Fx_Group_MP1FengTingXieYou_MPa_Dun_Break_Rock_L1"
     ]
   },
   {
@@ -81823,7 +81821,8 @@
       "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/BP_ML1WanELaoMd00101.BP_ML1WanELaoMd00101_C"
     ],
     "Animations": [
-      "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/AM_Death.AM_Death"
+      "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/AM_Death.AM_Death",
+      "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/CommonAnim/AM_Death_Shoufu.AM_Death_Shoufu"
     ],
     "Effects": [],
     "Audios": [],
@@ -81835,6 +81834,7 @@
       "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/ABP_ML1WanELaoMd00101_Custom.ABP_ML1WanELaoMd00101_Custom_C"
     ],
     "Others": [
+      "/Game/Aki/Effect/EffectGroup/ML1WanELaoMd00101/DA_Fx_Group_WanELao_MLs_Paralysis_S1.DA_Fx_Group_WanELao_MLs_Paralysis_S1",
       "/Game/Aki/Effect/EffectGroup/ML1WanELaoMd00101/DA_Fx_Group_WanELao_MLs_Death_Yanjiang.DA_Fx_Group_WanELao_MLs_Death_Yanjiang",
       "/Game/Aki/Effect/EffectGroup/ML1WanELaoMd00101/DA_Fx_Group_WanELao_MLs_Death_Bao.DA_Fx_Group_WanELao_MLs_Death_Bao",
       "/Game/Aki/Effect/EffectGroup/ML1WanELaoMd00101/DA_Fx_Group_WanELao_MLs_Death_Xu.DA_Fx_Group_WanELao_MLs_Death_Xu",
@@ -82259,6 +82259,7 @@
       "/Game/Aki/Character/Role/FemaleM/Qianxia/DataRouge/DT_SkillInfo_Rouge.DT_SkillInfo_Rouge",
       "/Game/Aki/Character/Role/FemaleM/Qianxia/Data/System/photos/DT_SkillInfo_Child_photos.DT_SkillInfo_Child_photos",
       "/Game/Aki/Character/Role/FemaleM/Qianxia/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Role/FemaleM/Qianxia/DataRouge/DT_ReBulletDataMain_Rouge.DT_ReBulletDataMain_Rouge",
       "/Game/Aki/Character/Role/FemaleM/Qianxia/Data/DT_HitEffect.DT_HitEffect",
       "/Game/Aki/Character/Role/FemaleM/Qianxia/Data/DA_PartHitEffect.DA_PartHitEffect",
       "/Game/Aki/Character/Role/FemaleM/Qianxia/R2T1QianXiaMd20011/DT_ReplaceEffect.DT_ReplaceEffect"
@@ -84392,7 +84393,12 @@
     "AnimationBlueprints": [
       "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/ABP_SC1HuoLuDing_ControlMonster.ABP_SC1HuoLuDing_ControlMonster_C"
     ],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
   },
   {
     "Id": 39158902,
@@ -84412,15 +84418,24 @@
   },
   {
     "Id": 200149,
-    "ActorClassPath": "",
-    "ActorClass": [],
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/BP_Vision_MP1FengTingXieYou.BP_Vision_MP1FengTingXieYou_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/BP_Vision_MP1FengTingXieYou.BP_Vision_MP1FengTingXieYou_C"
+    ],
     "Animations": [],
     "Effects": [],
     "Audios": [],
-    "Meshes": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Model/MP1FengTingXieYou00201.MP1FengTingXieYou00201"
+    ],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
   },
   {
     "Id": 200150,
@@ -84511,15 +84526,26 @@
   },
   {
     "Id": 280042,
-    "ActorClassPath": "",
-    "ActorClass": [],
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/BP_Vision_ML1WanELao.BP_Vision_ML1WanELao_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/BP_Vision_ML1WanELao.BP_Vision_ML1WanELao_C"
+    ],
     "Animations": [],
     "Effects": [],
     "Audios": [],
-    "Meshes": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/Model/ML1WanELaoMd00101.ML1WanELaoMd00101"
+    ],
     "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": []
+    "AnimationBlueprints": [
+      "/Game/Aki/Character/Monster/Lord/ML1WanELaoMd00101/ABP_ML1WanELaoMd00101.ABP_ML1WanELaoMd00101_C"
+    ],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Lord/VM_ML1WanELao/Md00201/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
   },
   {
     "Id": 280043,
@@ -84632,6 +84658,157 @@
     ],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00001/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00001/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00001/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00001/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 200140,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/BP_Vision_MO1JiBin1.BP_Vision_MO1JiBin1_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/BP_Vision_MO1JiBin1.BP_Vision_MO1JiBin1_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/Model/MO1JiBinMd00001.MO1JiBinMd00001"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00101/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 200141,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/BP_Vision_MO1JiBin2.BP_Vision_MO1JiBin2_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/BP_Vision_MO1JiBin2.BP_Vision_MO1JiBin2_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/Model/MO1JiBinMd00001.MO1JiBinMd00001"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00201/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 200142,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/BP_Vision_MO1JiBin3.BP_Vision_MO1JiBin3_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/BP_Vision_MO1JiBin3.BP_Vision_MO1JiBin3_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/Model/MO1JiBinMd00001.MO1JiBinMd00001"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00301/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 200143,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/BP_Vision_MO1JiBin5.BP_Vision_MO1JiBin5_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/BP_Vision_MO1JiBin5.BP_Vision_MO1JiBin5_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/Model/MO1JiBinMd00001.MO1JiBinMd00001"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00501/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 200144,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/BP_Vision_MO1JiBin6.BP_Vision_MO1JiBin6_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/BP_Vision_MO1JiBin6.BP_Vision_MO1JiBin6_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00001/Model/MO1JiBinMd00001.MO1JiBinMd00001"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1JiBin/Md00601/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
+  },
+  {
+    "Id": 201135,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1YaoBaiQuan/Md00501/BP_Vision_MO1YaoBaiQuan.BP_Vision_MO1YaoBaiQuan_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1YaoBaiQuan/Md00501/BP_Vision_MO1YaoBaiQuan.BP_Vision_MO1YaoBaiQuan_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/Ordinary/MO1YaoBaiQuanMd00501/Model/SP1/MO1YaoBaiQuanMd10501.MO1YaoBaiQuanMd10501"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1YaoBaiQuan/Md00501/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1YaoBaiQuan/Md00501/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_Ordinary/VM_MO1YaoBaiQuan/Md00501/Data/DT_HitEffect.DT_HitEffect"
+    ]
+  },
+  {
+    "Id": 201149,
+    "ActorClassPath": "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/BP_Vision_MP1FengTingXieYou.BP_Vision_MP1FengTingXieYou_C",
+    "ActorClass": [
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/BP_Vision_MP1FengTingXieYou.BP_Vision_MP1FengTingXieYou_C"
+    ],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [
+      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Model/SP1/MP1FengTingXieYou10201.MP1FengTingXieYou10201"
+    ],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_SkillInfo.DT_SkillInfo",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DT_HitEffect.DT_HitEffect",
+      "/Game/Aki/Character/Vision/VM_ElitePro/VM_MP1FengTingXieYou/Md00101/Data/DA_PartHitEffect.DA_PartHitEffect"
+    ]
   }
 ]

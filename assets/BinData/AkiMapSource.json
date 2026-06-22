@@ -2427,5 +2427,12 @@
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_TInyuan/InstanceTree_TinYuan_Fushua",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 832,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/UISceneLevel/UI_Scene/UL_UIMap_ChallengeUI",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
   }
 ]
