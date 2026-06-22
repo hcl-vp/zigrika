@@ -1,5 +1,5 @@
 # Zigrika
-Server Emulator for Wuthering Waves targeting 3.4 LIVE (3.4 LIVE on `lts` branch).
+Server Emulator for Wuthering Waves targeting 3.5 BETA (3.4 LIVE on `lts` branch).
 ![title](assets/img/screenshot.png)
 
 # Features
