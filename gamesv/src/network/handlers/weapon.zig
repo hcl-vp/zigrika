@@ -163,6 +163,7 @@ pub fn onWeaponBreachRequest(
         break;
     }
 
+    try events.enqueue(.update_formations, .{});
     txn.respond(.{
         .ErrorCode = .Success,
         .IncId = request.IncId,
@@ -387,6 +388,7 @@ pub fn onEquipTakeOnRequest(
 
     try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
     try events.enqueue(.weapon_info_modified, .{ .incr_id = data.EquipIncId });
+    try events.enqueue(.update_formations, .{});
     try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data }, alloc.arena);
     txn.respond(.{ .ErrorCode = .Success, .DataList = send_data });
 }

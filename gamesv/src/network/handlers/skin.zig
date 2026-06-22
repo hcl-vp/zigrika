@@ -330,6 +330,7 @@ pub fn onEquipWeaponSkinRequest(
 
     role.weapon_skin_id = data.SkinId;
     try events.enqueue(.role_info_modified, .{ .role_id = data.RoleId });
+    try events.enqueue(.update_formations, .{});
     try pushEntityWeaponSkinChange(txn, alloc, fs, scene, data.RoleId, data.SkinId);
     try pushWeaponSkinEquipTakeOnNotify(txn, alloc, data.RoleId, data.SkinId);
 
@@ -419,6 +420,7 @@ pub fn onSendEquipSkinRequest(
 
     role.weapon_skin_id = 0;
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
+    try events.enqueue(.update_formations, .{});
     try pushEntityWeaponSkinChange(txn, alloc, fs, scene, request.RoleId, 0);
     try txn.conn.push(pb.WeaponSkinDeleteNotify{
         .RoleId = request.RoleId,
@@ -485,6 +487,7 @@ pub fn onRoleSkinChangeRequest(
     );
 
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
+    try events.enqueue(.update_formations, .{});
     try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_id);
 
     txn.respond(.{ .ErrorCode = .Success });
@@ -520,6 +523,7 @@ pub fn onChangeOrnamentRequest(
     const stale_ornament_id = role.getOrnament(role_skin_id);
     try role.setOrnament(alloc.gpa, role_skin_id, ornament_id);
     try events.enqueue(.role_info_modified, .{ .role_id = role_id });
+    try events.enqueue(.update_formations, .{});
     try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_id);
 
     txn.respond(.{ .ErrorCode = .Success });
