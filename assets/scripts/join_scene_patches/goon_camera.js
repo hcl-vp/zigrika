@@ -645,7 +645,6 @@ setTimeout(() => {
 
   PhotographView_1.PhotographView.prototype.OnBeforeCreate = function () {
     PhotographController_1.PhotographController.InitPhotographRelativeContent();
-    AudioSystem_1.AudioSystem.SetState("game_sys_fightphoto", "pause");
     dilate_time(0);
     detach_plot_camera();
   };
