@@ -16,7 +16,7 @@ const combat_namespaces: []const type = &.{
 };
 
 pub fn CombatRequestTxn(comptime Tag: anytype) type {
-    const MessageUnion = @FieldType(pb.CombatMessage.CombatRequestData, "Message");
+    const MessageUnion = @FieldType(pb.CombatRequestData, "Message");
     const RequestUnion = @typeInfo(@FieldType(MessageUnion, @tagName(Tag))).optional.child;
     const req_name = @tagName(Tag);
     const resp_tag_name = req_name[0 .. req_name.len - "Request".len] ++ "Response";
@@ -28,10 +28,11 @@ pub fn CombatRequestTxn(comptime Tag: anytype) type {
         common: ?pb.CombatCommon,
         request_id: i32,
         payload: RequestPayload,
-        response: ?pb.CombatMessage.CombatResponseData = null,
+        receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+        response: ?pb.CombatResponseData = null,
 
         pub fn respond(self: *@This(), msg: anytype) void {
-            const ResponseMessageUnion = @typeInfo(@FieldType(pb.CombatMessage.CombatResponseData, "Message")).optional.child;
+            const ResponseMessageUnion = @typeInfo(@FieldType(pb.CombatResponseData, "Message")).optional.child;
             const ResponsePayload = @typeInfo(@FieldType(ResponseMessageUnion, resp_tag_name)).optional.child;
 
             var payload: ResponsePayload = std.mem.zeroes(ResponsePayload);
@@ -57,8 +58,9 @@ pub fn dispatch(
     data: DataType,
     state: *State,
     events: *EventQueue,
-) !?pb.CombatMessage.CombatReceiveData {
-    const is_request = DataType == pb.CombatMessage.CombatRequestData;
+    receive_data_pack: ?*std.ArrayList(pb.CombatReceiveData),
+) !?pb.CombatReceiveData {
+    const is_request = DataType == pb.CombatRequestData;
 
     const msg = data.Message orelse return null;
 
@@ -89,6 +91,7 @@ pub fn dispatch(
                     .common = data.CombatCommon,
                     .request_id = data.RequestId,
                     .payload = inner,
+                    .receive_data_pack = receive_data_pack.?,
                 };
                 args[0] = &txn;
 
@@ -125,22 +128,22 @@ pub fn dispatch(
 }
 
 pub fn onCombatSendPackRequest(
-    txn: *Transaction(pb.CombatMessage.CombatSendPackRequest),
+    txn: *Transaction(pb.CombatSendPackRequest),
     state: *State,
     events: *EventQueue,
 ) !void {
-    var receive_data_pack: std.ArrayList(pb.CombatMessage.CombatReceiveData) = .empty;
+    var receive_data_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
 
     for (txn.message.Data.items) |message| {
         const inner = message.Message orelse continue;
         switch (inner) {
             .Push => |maybe_push| {
                 const push = maybe_push orelse continue;
-                _ = try dispatch(pb.CombatMessage.CombatPushData, push, state, events);
+                _ = try dispatch(pb.CombatPushData, push, state, events, null);
             },
             .Request => |maybe_req| {
                 const req = maybe_req orelse continue;
-                if (try dispatch(pb.CombatMessage.CombatRequestData, req, state, events)) |response| {
+                if (try dispatch(pb.CombatRequestData, req, state, events, &receive_data_pack)) |response| {
                     try receive_data_pack.append(state.arena.allocator(), response);
                 }
             },

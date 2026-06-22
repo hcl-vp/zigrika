@@ -17641,6 +17641,116 @@ pub const KXn = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
 };
+pub const Ai = struct {
+    pub const default: @This() = .{};
+    pub const eNs = struct {
+        pub const default: @This() = .{};
+        F4n: i64 = 0,
+        Z8n: i32 = 0,
+    };
+    pub const tNs = struct {
+        pub const default: @This() = .{};
+        j4n: i32 = 0,
+        W4n: i64 = 0,
+    };
+    pub const iNs = struct {
+        pub const default: @This() = .{};
+        j4n: i32 = 0,
+        W4n: bool = false,
+    };
+    pub const rNs = struct {
+        pub const default: @This() = .{};
+        eVn: std.ArrayList(oNs) = .empty,
+        ISs: std.ArrayList(Ai.eNs) = .empty,
+        TSs: std.ArrayList(Ai.tNs) = .empty,
+    };
+    pub const nNs = struct {
+        pub const default: @This() = .{};
+        F4n: i64 = 0,
+        tVn: ?Ai.rNs = null,
+        W5n: i32 = 0,
+    };
+    pub const J3n = struct {
+        pub const default: @This() = .{};
+        tVn: ?rNs = null,
+    };
+    pub const fe_ = struct {
+        pub const default: @This() = .{};
+        tVn: ?rNs = null,
+    };
+    pub const QXn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const QFn = struct {
+        pub const default: @This() = .{};
+        TSs: std.ArrayList(tNs) = .empty,
+    };
+    pub const i4n = struct {
+        pub const default: @This() = .{};
+        eVn: std.ArrayList(oNs) = .empty,
+    };
+    pub const Ee_ = struct {
+        pub const default: @This() = .{};
+        eVn: std.ArrayList(oNs) = .empty,
+    };
+    pub const XXn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const r4n = struct {
+        pub const default: @This() = .{};
+        K4n: std.ArrayList(Ai.tNs) = .empty,
+        H4n: std.ArrayList(Ai.iNs) = .empty,
+    };
+    pub const Ie_ = struct {
+        pub const default: @This() = .{};
+        K4n: std.ArrayList(Ai.tNs) = .empty,
+        H4n: std.ArrayList(Ai.iNs) = .empty,
+    };
+    pub const YXn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const JFn = struct {
+        pub const default: @This() = .{};
+        LSs: std.ArrayList(i32) = .empty,
+        K4n: std.ArrayList(Ai.tNs) = .empty,
+        H4n: std.ArrayList(Ai.iNs) = .empty,
+    };
+    pub const o4n = struct {
+        pub const default: @This() = .{};
+        ISs: std.ArrayList(eNs) = .empty,
+    };
+    pub const Te_ = struct {
+        pub const default: @This() = .{};
+        ISs: std.ArrayList(eNs) = .empty,
+    };
+    pub const JXn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const a3n = struct {
+        pub const default: @This() = .{};
+        ISs: std.ArrayList(eNs) = .empty,
+    };
+    pub const zXn = struct {
+        pub const default: @This() = .{};
+        F4n: i64 = 0,
+    };
+    pub const ZXn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const eYn = struct {
+        pub const default: @This() = .{};
+        ASs: std.ArrayList(nNs) = .empty,
+    };
+    pub const tYn = struct {
+        pub const default: @This() = .{};
+        PSs: std.ArrayList(i64) = .empty,
+    };
+};
 pub const sNs = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
     BlackboardParamType_None = 0,
@@ -18388,6 +18498,13 @@ pub const Vf_ = struct {
     DOLLARE_: std.ArrayList(i32) = .empty,
     WE_: std.ArrayList(i32) = .empty,
     HE_: i32 = 0,
+};
+pub const BattleDefine = struct {
+    pub const default: @This() = .{};
+    pub const ZG1 = struct {
+        pub const default: @This() = .{};
+        JG1: i64 = 0,
+    };
 };
 pub const ANs = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -20258,6 +20375,13 @@ pub const _10 = struct {
     pub const default: @This() = .{};
     ox0: i64 = 0,
 };
+pub const u10L = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+    d10: i32 = 0,
+    AMs: i32 = 0,
+    c10: i32 = 0,
+};
 pub const T_0 = struct {
     pub const default: @This() = .{};
     ox0: i64 = 0,
@@ -21931,6 +22055,58 @@ pub const Ev_ = struct {
     pub const default: @This() = .{};
     G9n: i32 = 0,
 };
+pub const Summon = struct {
+    pub const default: @This() = .{};
+    pub const x3s = enum(i32) {
+        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+        ESummonTypeDefault = 0,
+        ESummonTypeConcomitantVision = 1,
+        ESummonTypeConcomitantCustom = 2,
+        ESummonTypeConcomitantPhantomRole = 3,
+        ESummonTypeConcomitantWeakVision = 4,
+        ESummonTypeConcomitantMotorcycle = 5,
+    };
+    pub const p3s = struct {
+        pub const default: @This() = .{};
+        YWn: i64 = 0,
+        dIs: i32 = 0,
+        mIs: i32 = 0,
+        W5n: i32 = 0,
+        h5n: i32 = 0,
+    };
+    pub const Pys = struct {
+        pub const default: @This() = .{};
+        K7n: i32 = 0,
+    };
+    pub const tJs = enum(i32) {
+        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+        EPlayerFollowerDefault = 0,
+        EPlayerFollowerExploreSkill = 1,
+        EPlayerFollowerAuxiliary = 2,
+        EPlayerFollowerSpecialItem = 3,
+        EPlayerFollowerMotor = 4,
+        EPlayerFollowerMax = 5,
+    };
+    pub const STs = struct {
+        pub const default: @This() = .{};
+        h5n: i32 = 0,
+        F4n: i64 = 0,
+    };
+    pub const nI_ = struct {
+        pub const default: @This() = .{};
+        OI_: std.ArrayList(STs) = .empty,
+    };
+    pub const tI_ = struct {
+        pub const default: @This() = .{};
+        xIs: i64 = 0,
+        UKn: i32 = 0,
+    };
+    pub const eJs = struct {
+        pub const default: @This() = .{};
+        W5n: i32 = 0,
+        OI_: std.ArrayList(Summon.STs) = .empty,
+    };
+};
 pub const Dql = struct {
     pub const default: @This() = .{};
     Tql: i64 = 0,
@@ -22786,6 +22962,372 @@ pub const Fca = struct {
 pub const Vca = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
+};
+pub const CombatMessage = struct {
+    pub const default: @This() = .{};
+    pub const OFs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            G4n: ?G4n,
+            O4n: ?O4n,
+            N4n: ?N4n,
+            ee_: ?ee_,
+            te_: ?te_,
+            ie_: ?ie_,
+            re_: ?re_,
+            oe_: ?oe_,
+            ne_: ?ne_,
+            se_: ?se_,
+            ae_: ?ae_,
+            he_: ?he_,
+            le_: ?le_,
+            _e_: ?_e_,
+            ce_: ?ce_,
+            ue_: ?ue_,
+            de_: ?de_,
+            me_: ?me_,
+            Ce_: ?Ce_,
+            ge_: ?ge_,
+            pe_: ?pe_,
+            fe_: ?Ai.fe_,
+            ve_: ?ve_,
+            ye_: ?ye_,
+            Se_: ?Se_,
+            Me_: ?Me_,
+            Ee_: ?Ai.Ee_,
+            Ie_: ?Ai.Ie_,
+            Te_: ?Ai.Te_,
+            be_: ?be_,
+            Le_: ?Le_,
+            Ae_: ?Ae_,
+            xe_: ?xe_,
+            Re_: ?Re_,
+            Pe_: ?Pe_,
+            we_: ?we_,
+            Ue_: ?Ue_,
+            De_: ?De_,
+            Be_: ?Be_,
+            qe_: ?qe_,
+            ke_: ?ke_,
+            Oe_: ?Oe_,
+            Ge_: ?Ge_,
+            Fe_: ?Fe_,
+            Ne_: ?Ne_,
+            Ve_: ?Ve_,
+            je_: ?je_,
+            He_: ?He_,
+            We_: ?We_,
+            Qe_: ?Qe_,
+            Ke_: ?Ke_,
+            DOLLARe_: ?DOLLARe_,
+            Xe_: ?Xe_,
+            Su_: ?Su_,
+            Opc: ?Opc,
+            kn1: ?kn1,
+            GG1: ?GG1,
+            k3u: ?k3u,
+            Rpd: ?Rpd,
+            Vzd: ?Vzd,
+            Ddm: ?Ddm,
+            Hag: ?Hag,
+            Pxg: ?Pxg,
+            kqC: ?kqC,
+            aap: ?aap,
+            Xvp: ?Xvp,
+            sr0: ?sr0,
+        } = null,
+        K8n: ?K8n = null,
+    };
+    pub const KLs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            MFn: ?MFn,
+            SFn: ?SFn,
+            EFn: ?EFn,
+            yFn: ?yFn,
+            IFn: ?IFn,
+            TFn: ?TFn,
+            LFn: ?LFn,
+            DFn: ?DFn,
+            AFn: ?AFn,
+            UFn: ?UFn,
+            RFn: ?RFn,
+            xFn: ?xFn,
+            PFn: ?PFn,
+            EJs: ?EJs,
+            BFn: ?BFn,
+            wFn: ?wFn,
+            bFn: ?bFn,
+            qFn: ?qFn,
+            GFn: ?GFn,
+            OFn: ?OFn,
+            NFn: ?NFn,
+            kFn: ?kFn,
+            FFn: ?FFn,
+            VFn: ?VFn,
+            HFn: ?HFn,
+            jFn: ?jFn,
+            WFn: ?WFn,
+            KFn: ?KFn,
+            QFn: ?Ai.QFn,
+            XFn: ?XFn,
+            DOLLARFn: ?DOLLARFn,
+            YFn: ?YFn,
+            JFn: ?Ai.JFn,
+            zFn: ?zFn,
+            ZFn: ?ZFn,
+            e3n: ?e3n,
+            t3n: ?t3n,
+            i3n: ?i3n,
+            r3n: ?r3n,
+            o3n: ?o3n,
+            n3n: ?n3n,
+            s3n: ?Debug.s3n,
+            a3n: ?Ai.a3n,
+            h3n: ?h3n,
+            l3n: ?l3n,
+            d3n: ?d3n,
+            C3n: ?C3n,
+            p3n: ?p3n,
+            v3n: ?v3n,
+            M3n: ?M3n,
+            E3n: ?E3n,
+            y3n: ?y3n,
+            I3n: ?I3n,
+            T3n: ?T3n,
+            L3n: ?L3n,
+            Xsh: ?Xsh,
+            Wul: ?Wul,
+            Jpl: ?Jpl,
+            Zpl: ?Zpl,
+            yvl: ?Debug.yvl,
+            W7l: ?W7l,
+            qus: ?qus,
+            Bn1: ?Bn1,
+            ev1: ?ev1,
+            B9d: ?B9d,
+            Adm: ?Adm,
+            rpm: ?rpm,
+            x9f: ?x9f,
+            wxg: ?wxg,
+            BqC: ?BqC,
+            YXC: ?YXC,
+            oMl: ?CombatMessage.oMl,
+        } = null,
+        K8n: ?K8n = null,
+    };
+    pub const oMl = struct {
+        pub const default: @This() = .{};
+    };
+    pub const NFs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            DOLLARLs: ?DOLLARLs,
+            HLs: ?HLs,
+            hVn: ?hVn,
+            jLs: ?jLs,
+            WLs: ?WLs,
+        } = null,
+    };
+    pub const FFs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            D3n: ?D3n,
+            A3n: ?A3n,
+            U3n: ?U3n,
+            R3n: ?R3n,
+            x3n: ?x3n,
+            P3n: ?P3n,
+            B3n: ?B3n,
+            w3n: ?w3n,
+            b3n: ?b3n,
+            q3n: ?q3n,
+            G3n: ?G3n,
+            O3n: ?O3n,
+            yJs: ?yJs,
+            N3n: ?N3n,
+            k3n: ?k3n,
+            F3n: ?F3n,
+            V3n: ?V3n,
+            H3n: ?H3n,
+            j3n: ?j3n,
+            W3n: ?W3n,
+            K3n: ?K3n,
+            Q3n: ?Q3n,
+            X3n: ?X3n,
+            DOLLAR3n: ?DOLLAR3n,
+            Y3n: ?Y3n,
+            J3n: ?Ai.J3n,
+            z3n: ?z3n,
+            Z3n: ?Z3n,
+            e4n: ?e4n,
+            t4n: ?t4n,
+            i4n: ?Ai.i4n,
+            r4n: ?Ai.r4n,
+            o4n: ?Ai.o4n,
+            n4n: ?n4n,
+            s4n: ?s4n,
+            a4n: ?a4n,
+            h4n: ?h4n,
+            l4n: ?l4n,
+            _4n: ?_4n,
+            u4n: ?u4n,
+            c4n: ?c4n,
+            m4n: ?m4n,
+            d4n: ?d4n,
+            C4n: ?C4n,
+            g4n: ?g4n,
+            f4n: ?f4n,
+            p4n: ?p4n,
+            y4n: ?y4n,
+            I4n: ?I4n,
+            T4n: ?T4n,
+            L4n: ?L4n,
+            D4n: ?D4n,
+            A4n: ?A4n,
+            U4n: ?U4n,
+            R4n: ?R4n,
+            x4n: ?x4n,
+            P4n: ?P4n,
+            B4n: ?B4n,
+            qis: ?qis,
+            G5a: ?G5a,
+            T7a: ?T7a,
+            efl: ?efl,
+            tfl: ?tfl,
+            Trs: ?Trs,
+            DOLLARwC: ?DOLLARwC,
+            w4n: ?CombatMessage.w4n,
+        } = null,
+        K8n: ?K8n = null,
+        W8n: i32 = 0,
+    };
+    pub const QLs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            sis: ?sis,
+            ais: ?ais,
+            lis: ?lis,
+            lzn: ?lzn,
+            _zn: ?_zn,
+            ris: ?ris,
+            ois: ?ois,
+            zts: ?zts,
+            Zts: ?Zts,
+            eis: ?eis,
+            DOLLARhs: ?DOLLARhs,
+            Sms: ?Sms,
+            IJs: ?IJs,
+            Tis: ?Tis,
+            Ris: ?Ris,
+            mes: ?mes,
+            Ces: ?Ces,
+            ycs: ?ycs,
+            Ecs: ?Ecs,
+            his: ?his,
+            Wds: ?Wds,
+            uzn: ?uzn,
+            czn: ?czn,
+            dzn: ?dzn,
+            mzn: ?mzn,
+            QXn: ?Ai.QXn,
+            Ais: ?Ais,
+            Dis: ?Dis,
+            ves: ?ves,
+            DOLLARes: ?DOLLARes,
+            XXn: ?Ai.XXn,
+            YXn: ?Ai.YXn,
+            JXn: ?Ai.JXn,
+            Pis: ?Pis,
+            nis: ?nis,
+            jes: ?jes,
+            zZn: ?zZn,
+            ZZn: ?ZZn,
+            ees: ?ees,
+            fzn: ?fzn,
+            Bis: ?Bis,
+            iis: ?iis,
+            cis: ?cis,
+            dis: ?dis,
+            _is: ?_is,
+            tis: ?tis,
+            mis: ?mis,
+            Lis: ?Lis,
+            Ezn: ?Ezn,
+            r1s: ?r1s,
+            OCs: ?OCs,
+            Kds: ?Kds,
+            Qds: ?Qds,
+            uis: ?uis,
+            kCs: ?kCs,
+            Xfs: ?Xfs,
+            Yfs: ?Yfs,
+            Jfs: ?Jfs,
+            Gis: ?Gis,
+            vf_: ?vf_,
+            yf_: ?yf_,
+            Tg_: ?Tg_,
+            Ag_: ?Ag_,
+            Lrs: ?Lrs,
+            WwC: ?WwC,
+            zI_: ?CombatMessage.zI_,
+        } = null,
+        K8n: ?K8n = null,
+        W8n: i32 = 0,
+    };
+    pub const zI_ = struct {
+        pub const default: @This() = .{};
+    };
+    pub const VFs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            Q8n: ?CombatMessage.OFs,
+            x5n: ?CombatMessage.FFs,
+        } = null,
+    };
+    pub const DOLLARFs = struct {
+        pub const default: @This() = .{};
+        kFs: ?union(enum) {
+            KLs: ?CombatMessage.KLs,
+            QLs: ?CombatMessage.QLs,
+        } = null,
+    };
+    pub const sZn = struct {
+        pub const default: @This() = .{};
+        R5n: std.ArrayList(CombatMessage.VFs) = .empty,
+        ORs: i32 = 0,
+    };
+    pub const aZn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+        XLs: ?CombatMessage.hZn = null,
+    };
+    pub const hZn = struct {
+        pub const default: @This() = .{};
+        R5n: std.ArrayList(DOLLARFs) = .empty,
+    };
+    pub const w4n = struct {
+        pub const default: @This() = .{};
+    };
+    pub const lZn = struct {
+        pub const default: @This() = .{};
+    };
+    pub const Vfs = struct {
+        pub const default: @This() = .{};
+        s5n: []const u8 = "",
+    };
+    pub const DOLLARfs = struct {
+        pub const default: @This() = .{};
+        YLs: []const u8 = "",
+    };
+    pub const Hfs = struct {
+        pub const default: @This() = .{};
+        Ujn: []const u8 = "",
+    };
+    pub const jfs = struct {
+        pub const default: @This() = .{};
+        JLs: []const u8 = "",
+    };
 };
 pub const fms = struct {
     pub const default: @This() = .{};
@@ -25356,6 +25898,133 @@ pub const T4n = struct {
 pub const r1s = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
+};
+pub const Debug = struct {
+    pub const default: @This() = .{};
+    pub const F4s = enum(i32) {
+        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+        ECheatInputDefault = 0,
+        ECheatInputDel = 1,
+        ECheatInputEnd = 2,
+    };
+    pub const BZn = struct {
+        pub const default: @This() = .{};
+        h5n: i32 = 0,
+        OKn: i32 = 0,
+        VAs: std.ArrayList(i64) = .empty,
+    };
+    pub const qZn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const V4s = struct {
+        pub const default: @This() = .{};
+        F4n: i64 = 0,
+        DOLLARAs: std.ArrayList(i64) = .empty,
+        HAs: std.ArrayList(DOLLARks) = .empty,
+        jAs: std.ArrayList(DOLLARks) = .empty,
+    };
+    pub const QKd = struct {
+        pub const default: @This() = .{};
+        GKd: i64 = 0,
+        NKd: f32 = 0,
+        jKd: f32 = 0,
+        HKd: f32 = 0,
+        FJm: i64 = 0,
+        aig: f32 = 0,
+        hig: f32 = 0,
+        VKd: f32 = 0,
+        DOLLARKd: f32 = 0,
+        WKd: f32 = 0,
+        lig: f32 = 0,
+        _ig: f32 = 0,
+        FKd: i64 = 0,
+        Jpg: f32 = 0,
+        ENg: i32 = 0,
+        INg: f32 = 0,
+        TNg: f32 = 0,
+        Iip: f32 = 0,
+    };
+    pub const s3n = struct {
+        pub const default: @This() = .{};
+        WAs: i64 = 0,
+        KAs: i64 = 0,
+        QAs: i32 = 0,
+        r5n: i64 = 0,
+        Wjn: i32 = 0,
+        Mjn: i64 = 0,
+        XAs: i32 = 0,
+        YAs: bool = false,
+        Zjn: ?Debug.V4s = null,
+        JAs: ?Debug.V4s = null,
+        QKd: ?Debug.QKd = null,
+        uig: bool = false,
+    };
+    pub const oR_ = struct {
+        pub const default: @This() = .{};
+        F4n: i64 = 0,
+        v9n: i32 = 0,
+        DOLLARAs: std.ArrayList(i64) = .empty,
+        HAs: std.ArrayList(DOLLARks) = .empty,
+    };
+    pub const yvl = struct {
+        pub const default: @This() = .{};
+        WAs: i64 = 0,
+        gDs: std.ArrayList(Debug.oR_) = .empty,
+    };
+    pub const GZn = struct {
+        pub const default: @This() = .{};
+        tWn: bool = false,
+        Kga: i32 = 0,
+    };
+    pub const OZn = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+    };
+    pub const kZn = struct {
+        pub const default: @This() = .{};
+        zAs: f32 = 0,
+        ZAs: std.ArrayList(Debug.DOLLAR4s) = .empty,
+    };
+    pub const NZn = struct {
+        pub const default: @This() = .{};
+        zAs: f32 = 0,
+        ePs: ?Debug.DOLLAR4s = null,
+        tPs: bool = false,
+    };
+    pub const DOLLAR4s = struct {
+        pub const default: @This() = .{};
+        iPs: f32 = 0,
+        rPs: f32 = 0,
+        oPs: f32 = 0,
+        nPs: f32 = 0,
+    };
+    pub const FZn = struct {
+        pub const default: @This() = .{};
+        GKn: []const u8 = "",
+    };
+    pub const VZn = struct {
+        pub const default: @This() = .{};
+    };
+    pub const Lfs = struct {
+        pub const default: @This() = .{};
+    };
+    pub const Jf_ = struct {
+        pub const default: @This() = .{};
+        HTa: []const u8 = "",
+    };
+    pub const Yfc = struct {
+        pub const default: @This() = .{};
+        Q4n: i32 = 0,
+        GNs: []const u8 = "",
+    };
+    pub const Vw1 = struct {
+        pub const default: @This() = .{};
+        rS_: std.ArrayList(Gks) = .empty,
+        n5n: i32 = 0,
+        jw1: i32 = 0,
+        w7n: i32 = 0,
+    };
 };
 pub const GCs = struct {
     pub const default: @This() = .{};
@@ -32575,6 +33244,7 @@ pub const kEc = struct {
         Yr1: ?Yr1,
         LE1: ?LE1,
         oR1: ?hR1,
+        i4L: ?i4L,
         r41: ?r41,
         Kxu: ?Kxu,
     } = null,
@@ -32768,6 +33438,14 @@ pub const hR1 = struct {
     pub const default: @This() = .{};
     sR1: bool = false,
     F2s: i32 = 0,
+};
+pub const i4L = struct {
+    pub const default: @This() = .{};
+    v9n: i32 = 0,
+    UEc: i32 = 0,
+    DOLLARB1: i32 = 0,
+    WB1: bool = false,
+    jEc: std.ArrayList(i32) = .empty,
 };
 pub const r41 = struct {
     pub const default: @This() = .{};
@@ -32991,6 +33669,9 @@ pub const Lqs = struct {
     pub const default: @This() = .{};
     l8s: ?union(enum) {
         G2s: ?G2s,
+    } = null,
+    DOLLAR8s: ?union(enum) {
+        O2s: bool,
     } = null,
     h5n: i32 = 0,
     c5n: i32 = 0,
@@ -44507,115 +45188,90 @@ pub const AdviceResponse = struct {
     UpVoteIds: std.ArrayList(i64) = .empty,
     ErrorCode: ?ErrorCode = null,
 };
-pub const Ai = struct {
+pub const AiHateEntity = struct {
     pub const default: @This() = .{};
-    pub const AiHateEntity = struct {
-        pub const default: @This() = .{};
-        EntityId: i64 = 0,
-        HatredValue: i32 = 0,
-    };
-    pub const Int2Long = struct {
-        pub const default: @This() = .{};
-        First: i32 = 0,
-        Second: i64 = 0,
-    };
-    pub const Int2Bool = struct {
-        pub const default: @This() = .{};
-        First: i32 = 0,
-        Second: bool = false,
-    };
-    pub const AiInformation = struct {
-        pub const default: @This() = .{};
-        AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
-        HateList: std.ArrayList(Ai.AiHateEntity) = .empty,
-        AiBlackboardCd: std.ArrayList(Ai.Int2Long) = .empty,
-    };
-    pub const AiControlSwitch = struct {
-        pub const default: @This() = .{};
-        EntityId: i64 = 0,
-        AiInfo: ?Ai.AiInformation = null,
-        PlayerId: i32 = 0,
-    };
-    pub const AiInformationRequest = struct {
-        pub const default: @This() = .{};
-        AiInfo: ?AiInformation = null,
-    };
-    pub const AiInformationPush = struct {
-        pub const default: @This() = .{};
-        AiInfo: ?AiInformation = null,
-    };
-    pub const AiInformationResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const AiInformationNotify = struct {
-        pub const default: @This() = .{};
-        AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
-    };
-    pub const AiBlackboardsRequest = struct {
-        pub const default: @This() = .{};
-        AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
-    };
-    pub const AiBlackboardsPush = struct {
-        pub const default: @This() = .{};
-        AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
-    };
-    pub const AiBlackboardsResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const AiBlackboardCdRequest = struct {
-        pub const default: @This() = .{};
-        AiBlackboardCdModify: std.ArrayList(Ai.Int2Long) = .empty,
-        AiBlackboardCdComplete: std.ArrayList(Ai.Int2Bool) = .empty,
-    };
-    pub const AiBlackboardCdPush = struct {
-        pub const default: @This() = .{};
-        AiBlackboardCdModify: std.ArrayList(Ai.Int2Long) = .empty,
-        AiBlackboardCdComplete: std.ArrayList(Ai.Int2Bool) = .empty,
-    };
-    pub const AiBlackboardCdResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const AiBlackboardCdNotify = struct {
-        pub const default: @This() = .{};
-        AiBlackboardCdDel: std.ArrayList(i32) = .empty,
-        AiBlackboardCdModify: std.ArrayList(Ai.Int2Long) = .empty,
-        AiBlackboardCdComplete: std.ArrayList(Ai.Int2Bool) = .empty,
-    };
-    pub const AiHateRequest = struct {
-        pub const default: @This() = .{};
-        HateList: std.ArrayList(AiHateEntity) = .empty,
-    };
-    pub const AiHatePush = struct {
-        pub const default: @This() = .{};
-        HateList: std.ArrayList(AiHateEntity) = .empty,
-    };
-    pub const AiHateResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const AiHateNotify = struct {
-        pub const default: @This() = .{};
-        HateList: std.ArrayList(AiHateEntity) = .empty,
-    };
-    pub const AiControlSwitchRequest = struct {
-        pub const default: @This() = .{};
-        EntityId: i64 = 0,
-    };
-    pub const AiControlSwitchResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const AiControlSwitchNotify = struct {
-        pub const default: @This() = .{};
-        AiControlSwitchInfos: std.ArrayList(AiControlSwitch) = .empty,
-    };
-    pub const PreAiControlSwitchNotify = struct {
-        pub const default: @This() = .{};
-        EntityIds: std.ArrayList(i64) = .empty,
-    };
+    EntityId: i64 = 0,
+    HatredValue: i32 = 0,
+};
+pub const Int2Long = struct {
+    pub const default: @This() = .{};
+    First: i32 = 0,
+    Second: i64 = 0,
+};
+pub const Int2Bool = struct {
+    pub const default: @This() = .{};
+    First: i32 = 0,
+    Second: bool = false,
+};
+pub const AiInformation = struct {
+    pub const default: @This() = .{};
+    AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
+};
+pub const AiInformationRequest = struct {
+    pub const default: @This() = .{};
+    AiInfo: ?AiInformation = null,
+};
+pub const AiInformationPush = struct {
+    pub const default: @This() = .{};
+    AiInfo: ?AiInformation = null,
+};
+pub const AiInformationResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AiInformationNotify = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCd: std.ArrayList(Int2Long) = .empty,
+};
+pub const AiBlackboardsRequest = struct {
+    pub const default: @This() = .{};
+    AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
+};
+pub const AiBlackboardsPush = struct {
+    pub const default: @This() = .{};
+    AiBlackboards: std.ArrayList(BlackboardParam) = .empty,
+};
+pub const AiBlackboardsResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AiBlackboardCdRequest = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const AiBlackboardCdPush = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const AiBlackboardCdResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AiBlackboardCdNotify = struct {
+    pub const default: @This() = .{};
+    AiBlackboardCdDel: std.ArrayList(i32) = .empty,
+    AiBlackboardCdModify: std.ArrayList(Int2Long) = .empty,
+    AiBlackboardCdComplete: std.ArrayList(Int2Bool) = .empty,
+};
+pub const AiHateRequest = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+};
+pub const AiHatePush = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
+};
+pub const AiHateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AiHateNotify = struct {
+    pub const default: @This() = .{};
+    HateList: std.ArrayList(AiHateEntity) = .empty,
 };
 pub const BlackboardParamType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -45060,12 +45716,9 @@ pub const DarkCoastDeliveryResponse = struct {
     ReceivedGuardReward: std.ArrayList(i32) = .empty,
     LevelGain: i32 = 0,
 };
-pub const BattleDefine = struct {
+pub const TransferContextId = struct {
     pub const default: @This() = .{};
-    pub const TransferContextId = struct {
-        pub const default: @This() = .{};
-        BulletContextId: i64 = 0,
-    };
+    BulletContextId: i64 = 0,
 };
 pub const BattlePassType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -45354,7 +46007,7 @@ pub const EntityComponentPb = struct {
         AttributeComponent: ?AttributeComponentPb,
         TagComponent: ?TagComponentPb,
         TriggerComponent: ?TriggerComponentPb,
-        SummonerComponent: ?Summon.SummonerComponentPb,
+        SummonerComponent: ?SummonerComponentPb,
         PartComponent: ?PartComponentPb,
         VisionSkillComponent: ?VisionSkillComponentPb,
         AnimationStateComponent: ?AnimationStateComponentPb,
@@ -45375,7 +46028,7 @@ pub const EntityComponentPb = struct {
         BeControlledComponentPb: ?BeControlledComponentPb,
         ConcomitantsComponentPb: ?ConcomitantsComponentPb,
         TimelineTrackComponentPb: ?TimelineTrackComponentPb,
-        SummonsComponentPb: ?Summon.SummonsComponentPb,
+        SummonsComponentPb: ?SummonsComponentPb,
         EntityFsmComponentPb: ?EntityFsmComponentPb,
         BoardPb: ?BoardPb,
         PlacementItemPb: ?PlacementItemPb,
@@ -45390,7 +46043,7 @@ pub const EntityComponentPb = struct {
         PassiveGaSkillComponentPb: ?PassiveGaSkillComponentPb,
         DynAttachComponentPb: ?DynAttachComponentPb,
         EntityVarComponentPb: ?EntityVarComponentPb,
-        FollowShooterComponentPb: ?Summon.FollowShooterComponentPb,
+        FollowShooterComponentPb: ?FollowShooterComponentPb,
         StateComponentPb: ?StateComponentPb,
         BulletComponentPb: ?BulletComponentPb,
         BuffProducerComponentPb: ?BuffProducerComponentPb,
@@ -45401,7 +46054,7 @@ pub const EntityComponentPb = struct {
         PlayerSceneComponentPb: ?PlayerSceneComponentPb,
         JigsawBaseComponentPb: ?JigsawBaseComponentPb,
         RoleRecordComponentPb: ?RoleRecordComponentPb,
-        FollowerComponentPb: ?Summon.FollowerComponentPb,
+        FollowerComponentPb: ?FollowerComponentPb,
         AttributesIdsComponentPb: ?AttributesIdsComponentPb,
         PullingFoundationComponentPb: ?PullingFoundationComponentPb,
         BatchBulletCastComponentPb: ?BatchBulletCastComponentPb,
@@ -46683,7 +47336,7 @@ pub const OrderApplyBuffRequest = struct {
     ServerId: i32 = 0,
     StackCount: i32 = 0,
     IsIterable: bool = false,
-    TransferContextId: ?BattleDefine.TransferContextId = null,
+    TransferContextId: ?TransferContextId = null,
     Reason: []const u8 = "",
 };
 pub const OrderApplyBuffResponse = struct {
@@ -46766,7 +47419,7 @@ pub const BroadcastAddBuffFailedNotify = struct {
     BuffId: i64 = 0,
     StackCount: i32 = 0,
     InstigatorId: i64 = 0,
-    TransferContextId: ?BattleDefine.TransferContextId = null,
+    TransferContextId: ?TransferContextId = null,
 };
 pub const ActivateBuffRequest = struct {
     pub const default: @This() = .{};
@@ -47070,57 +47723,49 @@ pub const JigsawBaseComponentPb = struct {
     EntityId: i32 = 0,
     Winner: i32 = 0,
 };
-pub const Summon = struct {
+pub const ESummonType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ESummonTypeDefault = 0,
+    ESummonTypeConcomitantVision = 1,
+    ESummonTypeConcomitantCustom = 2,
+    ESummonTypeConcomitantPhantomRole = 3,
+    ESummonTypeConcomitantWeakVision = 4,
+    ESummonTypeConcomitantMotorcycle = 5,
+};
+pub const SummonerComponentPb = struct {
     pub const default: @This() = .{};
-    pub const ESummonType = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        ESummonTypeDefault = 0,
-        ESummonTypeConcomitantVision = 1,
-        ESummonTypeConcomitantCustom = 2,
-        ESummonTypeConcomitantPhantomRole = 3,
-        ESummonTypeConcomitantWeakVision = 4,
-        ESummonTypeConcomitantMotorcycle = 5,
-    };
-    pub const SummonerComponentPb = struct {
-        pub const default: @This() = .{};
-        SummonerId: i64 = 0,
-        SummonCfgId: i32 = 0,
-        SummonSkillId: i32 = 0,
-        PlayerId: i32 = 0,
-        Type: ?ESummonType = null,
-    };
-    pub const SummonsComponentPb = struct {
-        pub const default: @This() = .{};
-        Version: i32 = 0,
-    };
-    pub const FollowerType = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        EPlayerFollowerDefault = 0,
-        EPlayerFollowerExploreSkill = 1,
-        EPlayerFollowerAuxiliary = 2,
-        EPlayerFollowerSpecialItem = 3,
-        EPlayerFollowerMotor = 4,
-        EPlayerFollowerMax = 5,
-    };
-    pub const FollowerList = struct {
-        pub const default: @This() = .{};
-        Type: ?FollowerType = null,
-        EntityId: i64 = 0,
-    };
-    pub const FollowerComponentPb = struct {
-        pub const default: @This() = .{};
-        FollowerList: std.ArrayList(FollowerList) = .empty,
-    };
-    pub const FollowShooterComponentPb = struct {
-        pub const default: @This() = .{};
-        PlayerEntityId: i64 = 0,
-        SummonConfigId: i32 = 0,
-    };
-    pub const FollowerUpdateNotify = struct {
-        pub const default: @This() = .{};
-        PlayerId: i32 = 0,
-        FollowerList: std.ArrayList(Summon.FollowerList) = .empty,
-    };
+    SummonerId: i64 = 0,
+    SummonCfgId: i32 = 0,
+    SummonSkillId: i32 = 0,
+    PlayerId: i32 = 0,
+    Type: ?ESummonType = null,
+};
+pub const SummonsComponentPb = struct {
+    pub const default: @This() = .{};
+    Version: i32 = 0,
+};
+pub const FollowerType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    EPlayerFollowerDefault = 0,
+    EPlayerFollowerExploreSkill = 1,
+    EPlayerFollowerAuxiliary = 2,
+    EPlayerFollowerSpecialItem = 3,
+    EPlayerFollowerMotor = 4,
+    EPlayerFollowerMax = 5,
+};
+pub const FollowerList = struct {
+    pub const default: @This() = .{};
+    Type: ?FollowerType = null,
+    EntityId: i64 = 0,
+};
+pub const FollowerComponentPb = struct {
+    pub const default: @This() = .{};
+    FollowerList: std.ArrayList(FollowerList) = .empty,
+};
+pub const FollowShooterComponentPb = struct {
+    pub const default: @This() = .{};
+    PlayerEntityId: i64 = 0,
+    SummonConfigId: i32 = 0,
 };
 pub const CharacterAttachInfo = struct {
     pub const default: @This() = .{};
@@ -47486,371 +48131,339 @@ pub const PrivateChatOperateResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const CombatMessage = struct {
+pub const CombatPushData = struct {
     pub const default: @This() = .{};
-    pub const CombatPushData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            ApplyBuffS2cResponsePush: ?ApplyBuffS2cResponsePush,
-            RemoveBuffS2cResponsePush: ?RemoveBuffS2cResponsePush,
-            RemoveBuffByIdS2cResponsePush: ?RemoveBuffByIdS2cResponsePush,
-            CreateBulletResponsePush: ?CreateBulletResponsePush,
-            DestroyBulletResponsePush: ?DestroyBulletResponsePush,
-            ApplyGameplayEffectPush: ?ApplyGameplayEffectPush,
-            RemoveGameplayEffectPush: ?RemoveGameplayEffectPush,
-            HitEndPush: ?HitEndPush,
-            EndSkillPush: ?EndSkillPush,
-            PartUpdatePush: ?PartUpdatePush,
-            MaterialPush: ?MaterialPush,
-            GameplayCuePush: ?GameplayCuePush,
-            EntityIsVisiblePush: ?EntityIsVisiblePush,
-            SwitchCharacterStatePush: ?SwitchCharacterStatePush,
-            LogicStateInitPush: ?LogicStateInitPush,
-            SwitchLogicStatePush: ?SwitchLogicStatePush,
-            AnimationStateChangedPush: ?AnimationStateChangedPush,
-            AnimationStateInitPush: ?AnimationStateInitPush,
-            ModifyBulletParamsPush: ?ModifyBulletParamsPush,
-            DrownPush: ?DrownPush,
-            ActiveBuffPush: ?ActiveBuffPush,
-            AiInformationPush: ?Ai.AiInformationPush,
-            ToughCalcExtraRatioChangePush: ?ToughCalcExtraRatioChangePush,
-            BattleStateChangePush: ?BattleStateChangePush,
-            AnimationGameplayTagPush: ?AnimationGameplayTagPush,
-            BoneVisibleChangePush: ?BoneVisibleChangePush,
-            AiBlackboardsPush: ?Ai.AiBlackboardsPush,
-            AiBlackboardCdPush: ?Ai.AiBlackboardCdPush,
-            AiHatePush: ?Ai.AiHatePush,
-            MonsterBoomPush: ?MonsterBoomPush,
-            CaughtPush: ?CaughtPush,
-            EntityStaticHookMovePush: ?EntityStaticHookMovePush,
-            ChangeStateConfirmPush: ?ChangeStateConfirmPush,
-            BuffStackCountPush: ?BuffStackCountPush,
-            ANStartPush: ?ANStartPush,
-            UseSkillFailPush: ?UseSkillFailPush,
-            EnterViewDirectionPush: ?EnterViewDirectionPush,
-            ExitViewDirectionPush: ?ExitViewDirectionPush,
-            PassiveSkillAddPush: ?PassiveSkillAddPush,
-            InterruptSkillInDelayPush: ?InterruptSkillInDelayPush,
-            TriggerExitSkillPush: ?TriggerExitSkillPush,
-            ActorVisiblePush: ?ActorVisiblePush,
-            BuffEffectPush: ?BuffEffectPush,
-            RTimeStopPush: ?RTimeStopPush,
-            DrownEndTeleportPush: ?DrownEndTeleportPush,
-            MonsterDrownPush: ?MonsterDrownPush,
-            PassiveSkillRemovePush: ?PassiveSkillRemovePush,
-            RTimeStopInstPush: ?RTimeStopInstPush,
-            FsmPlayMontagePush: ?FsmPlayMontagePush,
-            TsAnimNotifyStateAbsoluteTimeStopPush: ?TsAnimNotifyStateAbsoluteTimeStopPush,
-            RoleTagChangePush: ?RoleTagChangePush,
-            ExecuteQtePush: ?ExecuteQtePush,
-            ClientCurrentRoleReportPush: ?ClientCurrentRoleReportPush,
-            MontagePlayPush: ?MontagePlayPush,
-            CounterAttackPush: ?CounterAttackPush,
-            NewLinkBurstPush: ?NewLinkBurstPush,
-            RefreshBuffDurationPush: ?RefreshBuffDurationPush,
-            RoleGoDownPush: ?RoleGoDownPush,
-            FsmConditionPassPush: ?FsmConditionPassPush,
-            BuffEffectExecutePush: ?BuffEffectExecutePush,
-            VisionTriggerPush: ?VisionTriggerPush,
-            MotorIsEnablePush: ?MotorIsEnablePush,
-            MotorSummonAndRidePush: ?MotorSummonAndRidePush,
-            BulletPatternPush: ?BulletPatternPush,
-            QuickHackRamVerifyPush: ?QuickHackRamVerifyPush,
-            QuickHackOpenPush: ?QuickHackOpenPush,
-            DodgeInfoPush: ?DodgeInfoPush,
-        } = null,
-        CombatCommon: ?CombatCommon = null,
-    };
-    pub const CombatNotifyData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            CreateBulletNotify: ?CreateBulletNotify,
-            DestroyBulletNotify: ?DestroyBulletNotify,
-            DamageExecuteNotify: ?DamageExecuteNotify,
-            ApplyGameplayEffectNotify: ?ApplyGameplayEffectNotify,
-            RemoveGameplayEffectNotify: ?RemoveGameplayEffectNotify,
-            HitNotify: ?HitNotify,
-            SkillNotify: ?SkillNotify,
-            UseSkillNotify: ?UseSkillNotify,
-            EndSkillNotify: ?EndSkillNotify,
-            EntityLoadCompleteNotify: ?EntityLoadCompleteNotify,
-            PartUpdateNotify: ?PartUpdateNotify,
-            PartComponentInitNotify: ?PartComponentInitNotify,
-            MaterialNotify: ?MaterialNotify,
-            GameplayCueNotify: ?GameplayCueNotify,
-            EntityIsVisibleNotify: ?EntityIsVisibleNotify,
-            SwitchCharacterStateNotify: ?SwitchCharacterStateNotify,
-            PlayerRebackSceneNotify: ?PlayerRebackSceneNotify,
-            LogicStateInitNotify: ?LogicStateInitNotify,
-            SwitchLogicStateNotify: ?SwitchLogicStateNotify,
-            AttributeChangedNotify: ?AttributeChangedNotify,
-            AnimationStateChangedNotify: ?AnimationStateChangedNotify,
-            AnimationStateInitNotify: ?AnimationStateInitNotify,
-            ModifyBulletParamsNotify: ?ModifyBulletParamsNotify,
-            DrownNotify: ?DrownNotify,
-            OrderApplyBuffNotify: ?OrderApplyBuffNotify,
-            OrderRemoveBuffNotify: ?OrderRemoveBuffNotify,
-            ActivateBuffNotify: ?ActivateBuffNotify,
-            OrderRemoveBuffByTagsNotify: ?OrderRemoveBuffByTagsNotify,
-            AiInformationNotify: ?Ai.AiInformationNotify,
-            BattleStateChangeNotify: ?BattleStateChangeNotify,
-            AnimationGameplayTagNotify: ?AnimationGameplayTagNotify,
-            BoneVisibleChangeNotify: ?BoneVisibleChangeNotify,
-            AiBlackboardCdNotify: ?Ai.AiBlackboardCdNotify,
-            CaughtNotify: ?CaughtNotify,
-            EntityStaticHookMoveNotify: ?EntityStaticHookMoveNotify,
-            ChangeStateNotify: ?ChangeStateNotify,
-            ChangeStateConfirmNotify: ?ChangeStateConfirmNotify,
-            BuffStackCountNotify: ?BuffStackCountNotify,
-            MontagePlayNotify: ?MontagePlayNotify,
-            ANStartNotify: ?ANStartNotify,
-            FsmResetNotify: ?FsmResetNotify,
-            DamageRecordNotify: ?Debug.DamageRecordNotify,
-            AiHateNotify: ?Ai.AiHateNotify,
-            FsmBlackboardNotify: ?FsmBlackboardNotify,
-            CharacterBattleStateChangeNotify: ?CharacterBattleStateChangeNotify,
-            ApplyBuffS2cRequestNotify: ?ApplyBuffS2cRequestNotify,
-            RemoveBuffS2cRequestNotify: ?RemoveBuffS2cRequestNotify,
-            ActorVisibleNotify: ?ActorVisibleNotify,
-            RecoverPropChangedNotify: ?RecoverPropChangedNotify,
-            RemoveBuffByIdS2cRequestNotify: ?RemoveBuffByIdS2cRequestNotify,
-            ShieldUpdateNotify: ?ShieldUpdateNotify,
-            PlayerBattleStateChangeNotify: ?PlayerBattleStateChangeNotify,
-            FsmCustomBlackboardNotify: ?FsmCustomBlackboardNotify,
-            PassiveSkillAddNotify: ?PassiveSkillAddNotify,
-            PassiveSkillRemoveNotify: ?PassiveSkillRemoveNotify,
-            ExecuteQteNotify: ?ExecuteQteNotify,
-            ModifyEntityCampNotify: ?ModifyEntityCampNotify,
-            AddCombineEntitiesRelationNotify: ?AddCombineEntitiesRelationNotify,
-            RemoveCombineRelationNotify: ?RemoveCombineRelationNotify,
-            TestDamageRecordNotify: ?Debug.TestDamageRecordNotify,
-            BuffDurationNotify: ?BuffDurationNotify,
-            EntityLivingStatusNotify: ?EntityLivingStatusNotify,
-            NewLinkStateNotify: ?NewLinkStateNotify,
-            BroadcastAddBuffFailedNotify: ?BroadcastAddBuffFailedNotify,
-            PackAnimChangedNotify: ?PackAnimChangedNotify,
-            VisionTriggerNotify: ?VisionTriggerNotify,
-            RemoveBuffByServerIdS2cRequestNotify: ?RemoveBuffByServerIdS2cRequestNotify,
-            TransformBuffStackNotify: ?TransformBuffStackNotify,
-            MotorSummonAndRideNotify: ?MotorSummonAndRideNotify,
-            BulletPatternNotify: ?BulletPatternNotify,
-            FsmMontageDurationNotify: ?FsmMontageDurationNotify,
-            CombatDataMaxNotify: ?CombatMessage.CombatDataMaxNotify,
-        } = null,
-        CombatCommon: ?CombatCommon = null,
-    };
-    pub const CombatDataMaxNotify = struct {
-        pub const default: @This() = .{};
-    };
-    pub const CombatContext = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            FsmStateChangeContext: ?FsmStateChangeContext,
-            SkillContext: ?SkillContext,
-            MontageContext: ?MontageContext,
-            AddBuffContext: ?AddBuffContext,
-            BulletContext: ?BulletContext,
-        } = null,
-    };
-    pub const CombatRequestData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            CreateBulletRequest: ?CreateBulletRequest,
-            DestroyBulletRequest: ?DestroyBulletRequest,
-            DamageExecuteRequest: ?DamageExecuteRequest,
-            ApplyGameplayEffectRequest: ?ApplyGameplayEffectRequest,
-            RemoveGameplayEffectRequest: ?RemoveGameplayEffectRequest,
-            HitRequest: ?HitRequest,
-            HitEndRequest: ?HitEndRequest,
-            SkillRequest: ?SkillRequest,
-            UseSkillRequest: ?UseSkillRequest,
-            EndSkillRequest: ?EndSkillRequest,
-            PartUpdateRequest: ?PartUpdateRequest,
-            MaterialRequest: ?MaterialRequest,
-            GameplayCueRequest: ?GameplayCueRequest,
-            EntityIsVisibleRequest: ?EntityIsVisibleRequest,
-            SwitchCharacterStateRequest: ?SwitchCharacterStateRequest,
-            LogicStateInitRequest: ?LogicStateInitRequest,
-            SwitchLogicStateRequest: ?SwitchLogicStateRequest,
-            AnimationStateChangedRequest: ?AnimationStateChangedRequest,
-            AnimationStateInitRequest: ?AnimationStateInitRequest,
-            ModifyBulletParamsRequest: ?ModifyBulletParamsRequest,
-            DrownRequest: ?DrownRequest,
-            OrderApplyBuffRequest: ?OrderApplyBuffRequest,
-            OrderRemoveBuffRequest: ?OrderRemoveBuffRequest,
-            ActivateBuffRequest: ?ActivateBuffRequest,
-            OrderRemoveBuffByTagsRequest: ?OrderRemoveBuffByTagsRequest,
-            AiInformationRequest: ?Ai.AiInformationRequest,
-            ToughCalcExtraRatioChangeRequest: ?ToughCalcExtraRatioChangeRequest,
-            BattleStateChangeRequest: ?BattleStateChangeRequest,
-            AnimationGameplayTagRequest: ?AnimationGameplayTagRequest,
-            BoneVisibleChangeRequest: ?BoneVisibleChangeRequest,
-            AiBlackboardsRequest: ?Ai.AiBlackboardsRequest,
-            AiBlackboardCdRequest: ?Ai.AiBlackboardCdRequest,
-            AiHateRequest: ?Ai.AiHateRequest,
-            MonsterBoomRequest: ?MonsterBoomRequest,
-            CaughtRequest: ?CaughtRequest,
-            EntityStaticHookMoveRequest: ?EntityStaticHookMoveRequest,
-            ChangeStateRequest: ?ChangeStateRequest,
-            ChangeStateConfirmRequest: ?ChangeStateConfirmRequest,
-            FsmConditionPassRequest: ?FsmConditionPassRequest,
-            BuffStackCountRequest: ?BuffStackCountRequest,
-            ANStartRequest: ?ANStartRequest,
-            UseSkillFailRequest: ?UseSkillFailRequest,
-            EnterViewDirectionRequest: ?EnterViewDirectionRequest,
-            ExitViewDirectionRequest: ?ExitViewDirectionRequest,
-            PassiveSkillAddRequest: ?PassiveSkillAddRequest,
-            InterruptSkillInDelayRequest: ?InterruptSkillInDelayRequest,
-            TriggerExitSkillRequest: ?TriggerExitSkillRequest,
-            ActorVisibleRequest: ?ActorVisibleRequest,
-            BuffEffectRequest: ?BuffEffectRequest,
-            FragileChangeRequest: ?FragileChangeRequest,
-            RTimeStopRequest: ?RTimeStopRequest,
-            DrownEndTeleportRequest: ?DrownEndTeleportRequest,
-            MonsterDrownRequest: ?MonsterDrownRequest,
-            PassiveSkillRemoveRequest: ?PassiveSkillRemoveRequest,
-            RTimeStopInstRequest: ?RTimeStopInstRequest,
-            FsmStateBehaviorRequest: ?FsmStateBehaviorRequest,
-            FsmPlayMontageRequest: ?FsmPlayMontageRequest,
-            TsAnimNotifyStateAbsoluteTimeStopRequest: ?TsAnimNotifyStateAbsoluteTimeStopRequest,
-            SwitchRoleRequest: ?SwitchRoleRequest,
-            RoleTagChangeRequest: ?RoleTagChangeRequest,
-            ExecuteQteRequest: ?ExecuteQteRequest,
-            CharacterAttachRequest: ?CharacterAttachRequest,
-            CharacterDetachRequest: ?CharacterDetachRequest,
-            ClientCurrentRoleReportRequest: ?ClientCurrentRoleReportRequest,
-            GaSwitchCommonEnemyProCampRequest: ?GaSwitchCommonEnemyProCampRequest,
-            CombatMaxCaseMessageRequest: ?CombatMessage.CombatMaxCaseMessageRequest,
-        } = null,
-        CombatCommon: ?CombatCommon = null,
-        RequestId: i32 = 0,
-    };
-    pub const CombatResponseData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            CreateBulletResponse: ?CreateBulletResponse,
-            DestroyBulletResponse: ?DestroyBulletResponse,
-            DamageExecuteResponse: ?DamageExecuteResponse,
-            ApplyGameplayEffectResponse: ?ApplyGameplayEffectResponse,
-            RemoveGameplayEffectResponse: ?RemoveGameplayEffectResponse,
-            HitResponse: ?HitResponse,
-            HitEndResponse: ?HitEndResponse,
-            SkillResponse: ?SkillResponse,
-            UseSkillResponse: ?UseSkillResponse,
-            EndSkillResponse: ?EndSkillResponse,
-            PartUpdateResponse: ?PartUpdateResponse,
-            MaterialResponse: ?MaterialResponse,
-            GameplayCueResponse: ?GameplayCueResponse,
-            EntityIsVisibleResponse: ?EntityIsVisibleResponse,
-            SwitchCharacterStateResponse: ?SwitchCharacterStateResponse,
-            LogicStateInitResponse: ?LogicStateInitResponse,
-            SwitchLogicStateResponse: ?SwitchLogicStateResponse,
-            AnimationStateChangedResponse: ?AnimationStateChangedResponse,
-            AnimationStateInitResponse: ?AnimationStateInitResponse,
-            ModifyBulletParamsResponse: ?ModifyBulletParamsResponse,
-            DrownResponse: ?DrownResponse,
-            OrderApplyBuffResponse: ?OrderApplyBuffResponse,
-            OrderRemoveBuffResponse: ?OrderRemoveBuffResponse,
-            ActivateBuffResponse: ?ActivateBuffResponse,
-            OrderRemoveBuffByTagsResponse: ?OrderRemoveBuffByTagsResponse,
-            AiInformationResponse: ?Ai.AiInformationResponse,
-            ToughCalcExtraRatioChangeResponse: ?ToughCalcExtraRatioChangeResponse,
-            BattleStateChangeResponse: ?BattleStateChangeResponse,
-            AnimationGameplayTagResponse: ?AnimationGameplayTagResponse,
-            BoneVisibleChangeResponse: ?BoneVisibleChangeResponse,
-            AiBlackboardsResponse: ?Ai.AiBlackboardsResponse,
-            AiBlackboardCdResponse: ?Ai.AiBlackboardCdResponse,
-            AiHateResponse: ?Ai.AiHateResponse,
-            MonsterBoomResponse: ?MonsterBoomResponse,
-            CaughtResponse: ?CaughtResponse,
-            EntityStaticHookMoveResponse: ?EntityStaticHookMoveResponse,
-            ChangeStateResponse: ?ChangeStateResponse,
-            ChangeStateConfirmResponse: ?ChangeStateConfirmResponse,
-            FsmConditionPassResponse: ?FsmConditionPassResponse,
-            BuffStackCountResponse: ?BuffStackCountResponse,
-            ANStartResponse: ?ANStartResponse,
-            UseSkillFailResponse: ?UseSkillFailResponse,
-            EnterViewDirectionResponse: ?EnterViewDirectionResponse,
-            ExitViewDirectionResponse: ?ExitViewDirectionResponse,
-            PassiveSkillAddResponse: ?PassiveSkillAddResponse,
-            InterruptSkillInDelayResponse: ?InterruptSkillInDelayResponse,
-            TriggerExitSkillResponse: ?TriggerExitSkillResponse,
-            ActorVisibleResponse: ?ActorVisibleResponse,
-            BuffEffectResponse: ?BuffEffectResponse,
-            FragileChangeResponse: ?FragileChangeResponse,
-            RTimeStopResponse: ?RTimeStopResponse,
-            DrownEndTeleportResponse: ?DrownEndTeleportResponse,
-            MonsterDrownResponse: ?MonsterDrownResponse,
-            PassiveSkillRemoveResponse: ?PassiveSkillRemoveResponse,
-            RTimeStopInstResponse: ?RTimeStopInstResponse,
-            FsmStateBehaviorResponse: ?FsmStateBehaviorResponse,
-            FsmPlayMontageResponse: ?FsmPlayMontageResponse,
-            TsAnimNotifyStateAbsoluteTimeStopResponse: ?TsAnimNotifyStateAbsoluteTimeStopResponse,
-            SwitchRoleResponse: ?SwitchRoleResponse,
-            RoleTagChangeResponse: ?RoleTagChangeResponse,
-            ExecuteQteResponse: ?ExecuteQteResponse,
-            CharacterAttachResponse: ?CharacterAttachResponse,
-            CharacterDetachResponse: ?CharacterDetachResponse,
-            ClientCurrentRoleReportResponse: ?ClientCurrentRoleReportResponse,
-            GaSwitchCommonEnemyProCampResponse: ?GaSwitchCommonEnemyProCampResponse,
-            CombatDataMaxResponse: ?CombatMessage.CombatDataMaxResponse,
-        } = null,
-        CombatCommon: ?CombatCommon = null,
-        RequestId: i32 = 0,
-    };
-    pub const CombatDataMaxResponse = struct {
-        pub const default: @This() = .{};
-    };
-    pub const CombatSendData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            Push: ?CombatMessage.CombatPushData,
-            Request: ?CombatMessage.CombatRequestData,
-        } = null,
-    };
-    pub const CombatReceiveData = struct {
-        pub const default: @This() = .{};
-        Message: ?union(enum) {
-            CombatNotifyData: ?CombatMessage.CombatNotifyData,
-            CombatResponseData: ?CombatMessage.CombatResponseData,
-        } = null,
-    };
-    pub const CombatSendPackRequest = struct {
-        pub const default: @This() = .{};
-        Data: std.ArrayList(CombatMessage.CombatSendData) = .empty,
-        HostPlayerId: i32 = 0,
-    };
-    pub const CombatSendPackResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-        ReceivePackNotify: ?CombatMessage.CombatReceivePackNotify = null,
-    };
-    pub const CombatReceivePackNotify = struct {
-        pub const default: @This() = .{};
-        Data: std.ArrayList(CombatReceiveData) = .empty,
-    };
-    pub const CombatMaxCaseMessageRequest = struct {
-        pub const default: @This() = .{};
-    };
-    pub const CombatMaxCaseMessageResponse = struct {
-        pub const default: @This() = .{};
-    };
-    pub const CombatMessagePrefixInfoRequest = struct {
-        pub const default: @This() = .{};
-        Id: []const u8 = "",
-    };
-    pub const CombatMessagePrefixInfoResponse = struct {
-        pub const default: @This() = .{};
-        PrefixInfo: []const u8 = "",
-    };
-    pub const CombatMessagePostInfoRequest = struct {
-        pub const default: @This() = .{};
-        PostId: []const u8 = "",
-    };
-    pub const CombatMessagePostInfoResponse = struct {
-        pub const default: @This() = .{};
-        PostInfo: []const u8 = "",
-    };
+    Message: ?union(enum) {
+        ApplyBuffS2cResponsePush: ?ApplyBuffS2cResponsePush,
+        RemoveBuffS2cResponsePush: ?RemoveBuffS2cResponsePush,
+        RemoveBuffByIdS2cResponsePush: ?RemoveBuffByIdS2cResponsePush,
+        CreateBulletResponsePush: ?CreateBulletResponsePush,
+        DestroyBulletResponsePush: ?DestroyBulletResponsePush,
+        ApplyGameplayEffectPush: ?ApplyGameplayEffectPush,
+        RemoveGameplayEffectPush: ?RemoveGameplayEffectPush,
+        HitEndPush: ?HitEndPush,
+        EndSkillPush: ?EndSkillPush,
+        PartUpdatePush: ?PartUpdatePush,
+        MaterialPush: ?MaterialPush,
+        GameplayCuePush: ?GameplayCuePush,
+        EntityIsVisiblePush: ?EntityIsVisiblePush,
+        SwitchCharacterStatePush: ?SwitchCharacterStatePush,
+        LogicStateInitPush: ?LogicStateInitPush,
+        SwitchLogicStatePush: ?SwitchLogicStatePush,
+        AnimationStateChangedPush: ?AnimationStateChangedPush,
+        AnimationStateInitPush: ?AnimationStateInitPush,
+        ModifyBulletParamsPush: ?ModifyBulletParamsPush,
+        DrownPush: ?DrownPush,
+        ActiveBuffPush: ?ActiveBuffPush,
+        AiInformationPush: ?AiInformationPush,
+        ToughCalcExtraRatioChangePush: ?ToughCalcExtraRatioChangePush,
+        BattleStateChangePush: ?BattleStateChangePush,
+        AnimationGameplayTagPush: ?AnimationGameplayTagPush,
+        BoneVisibleChangePush: ?BoneVisibleChangePush,
+        AiBlackboardsPush: ?AiBlackboardsPush,
+        AiBlackboardCdPush: ?AiBlackboardCdPush,
+        AiHatePush: ?AiHatePush,
+        MonsterBoomPush: ?MonsterBoomPush,
+        CaughtPush: ?CaughtPush,
+        EntityStaticHookMovePush: ?EntityStaticHookMovePush,
+        ChangeStateConfirmPush: ?ChangeStateConfirmPush,
+        BuffStackCountPush: ?BuffStackCountPush,
+        ANStartPush: ?ANStartPush,
+        UseSkillFailPush: ?UseSkillFailPush,
+        EnterViewDirectionPush: ?EnterViewDirectionPush,
+        ExitViewDirectionPush: ?ExitViewDirectionPush,
+        PassiveSkillAddPush: ?PassiveSkillAddPush,
+        InterruptSkillInDelayPush: ?InterruptSkillInDelayPush,
+        TriggerExitSkillPush: ?TriggerExitSkillPush,
+        ActorVisiblePush: ?ActorVisiblePush,
+        BuffEffectPush: ?BuffEffectPush,
+        RTimeStopPush: ?RTimeStopPush,
+        DrownEndTeleportPush: ?DrownEndTeleportPush,
+        MonsterDrownPush: ?MonsterDrownPush,
+        PassiveSkillRemovePush: ?PassiveSkillRemovePush,
+        RTimeStopInstPush: ?RTimeStopInstPush,
+        FsmPlayMontagePush: ?FsmPlayMontagePush,
+        TsAnimNotifyStateAbsoluteTimeStopPush: ?TsAnimNotifyStateAbsoluteTimeStopPush,
+        RoleTagChangePush: ?RoleTagChangePush,
+        ExecuteQtePush: ?ExecuteQtePush,
+        ClientCurrentRoleReportPush: ?ClientCurrentRoleReportPush,
+        MontagePlayPush: ?MontagePlayPush,
+        CounterAttackPush: ?CounterAttackPush,
+        NewLinkBurstPush: ?NewLinkBurstPush,
+        RefreshBuffDurationPush: ?RefreshBuffDurationPush,
+        RoleGoDownPush: ?RoleGoDownPush,
+        FsmConditionPassPush: ?FsmConditionPassPush,
+        BuffEffectExecutePush: ?BuffEffectExecutePush,
+        VisionTriggerPush: ?VisionTriggerPush,
+        MotorIsEnablePush: ?MotorIsEnablePush,
+        MotorSummonAndRidePush: ?MotorSummonAndRidePush,
+        BulletPatternPush: ?BulletPatternPush,
+        QuickHackRamVerifyPush: ?QuickHackRamVerifyPush,
+        QuickHackOpenPush: ?QuickHackOpenPush,
+        DodgeInfoPush: ?DodgeInfoPush,
+    } = null,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const CombatNotifyData = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        CreateBulletNotify: ?CreateBulletNotify,
+        DestroyBulletNotify: ?DestroyBulletNotify,
+        DamageExecuteNotify: ?DamageExecuteNotify,
+        ApplyGameplayEffectNotify: ?ApplyGameplayEffectNotify,
+        RemoveGameplayEffectNotify: ?RemoveGameplayEffectNotify,
+        HitNotify: ?HitNotify,
+        SkillNotify: ?SkillNotify,
+        UseSkillNotify: ?UseSkillNotify,
+        EndSkillNotify: ?EndSkillNotify,
+        EntityLoadCompleteNotify: ?EntityLoadCompleteNotify,
+        PartUpdateNotify: ?PartUpdateNotify,
+        PartComponentInitNotify: ?PartComponentInitNotify,
+        MaterialNotify: ?MaterialNotify,
+        GameplayCueNotify: ?GameplayCueNotify,
+        EntityIsVisibleNotify: ?EntityIsVisibleNotify,
+        SwitchCharacterStateNotify: ?SwitchCharacterStateNotify,
+        PlayerRebackSceneNotify: ?PlayerRebackSceneNotify,
+        LogicStateInitNotify: ?LogicStateInitNotify,
+        SwitchLogicStateNotify: ?SwitchLogicStateNotify,
+        AttributeChangedNotify: ?AttributeChangedNotify,
+        AnimationStateChangedNotify: ?AnimationStateChangedNotify,
+        AnimationStateInitNotify: ?AnimationStateInitNotify,
+        ModifyBulletParamsNotify: ?ModifyBulletParamsNotify,
+        DrownNotify: ?DrownNotify,
+        OrderApplyBuffNotify: ?OrderApplyBuffNotify,
+        OrderRemoveBuffNotify: ?OrderRemoveBuffNotify,
+        ActivateBuffNotify: ?ActivateBuffNotify,
+        OrderRemoveBuffByTagsNotify: ?OrderRemoveBuffByTagsNotify,
+        AiInformationNotify: ?AiInformationNotify,
+        BattleStateChangeNotify: ?BattleStateChangeNotify,
+        AnimationGameplayTagNotify: ?AnimationGameplayTagNotify,
+        BoneVisibleChangeNotify: ?BoneVisibleChangeNotify,
+        AiBlackboardCdNotify: ?AiBlackboardCdNotify,
+        CaughtNotify: ?CaughtNotify,
+        EntityStaticHookMoveNotify: ?EntityStaticHookMoveNotify,
+        ChangeStateNotify: ?ChangeStateNotify,
+        ChangeStateConfirmNotify: ?ChangeStateConfirmNotify,
+        BuffStackCountNotify: ?BuffStackCountNotify,
+        MontagePlayNotify: ?MontagePlayNotify,
+        ANStartNotify: ?ANStartNotify,
+        FsmResetNotify: ?FsmResetNotify,
+        DamageRecordNotify: ?DamageRecordNotify,
+        AiHateNotify: ?AiHateNotify,
+        FsmBlackboardNotify: ?FsmBlackboardNotify,
+        CharacterBattleStateChangeNotify: ?CharacterBattleStateChangeNotify,
+        ApplyBuffS2cRequestNotify: ?ApplyBuffS2cRequestNotify,
+        RemoveBuffS2cRequestNotify: ?RemoveBuffS2cRequestNotify,
+        ActorVisibleNotify: ?ActorVisibleNotify,
+        RecoverPropChangedNotify: ?RecoverPropChangedNotify,
+        RemoveBuffByIdS2cRequestNotify: ?RemoveBuffByIdS2cRequestNotify,
+        ShieldUpdateNotify: ?ShieldUpdateNotify,
+        PlayerBattleStateChangeNotify: ?PlayerBattleStateChangeNotify,
+        FsmCustomBlackboardNotify: ?FsmCustomBlackboardNotify,
+        PassiveSkillAddNotify: ?PassiveSkillAddNotify,
+        PassiveSkillRemoveNotify: ?PassiveSkillRemoveNotify,
+        ExecuteQteNotify: ?ExecuteQteNotify,
+        ModifyEntityCampNotify: ?ModifyEntityCampNotify,
+        AddCombineEntitiesRelationNotify: ?AddCombineEntitiesRelationNotify,
+        RemoveCombineRelationNotify: ?RemoveCombineRelationNotify,
+        TestDamageRecordNotify: ?TestDamageRecordNotify,
+        BuffDurationNotify: ?BuffDurationNotify,
+        EntityLivingStatusNotify: ?EntityLivingStatusNotify,
+        NewLinkStateNotify: ?NewLinkStateNotify,
+        BroadcastAddBuffFailedNotify: ?BroadcastAddBuffFailedNotify,
+        PackAnimChangedNotify: ?PackAnimChangedNotify,
+        VisionTriggerNotify: ?VisionTriggerNotify,
+        RemoveBuffByServerIdS2cRequestNotify: ?RemoveBuffByServerIdS2cRequestNotify,
+        TransformBuffStackNotify: ?TransformBuffStackNotify,
+        MotorSummonAndRideNotify: ?MotorSummonAndRideNotify,
+        BulletPatternNotify: ?BulletPatternNotify,
+        FsmMontageDurationNotify: ?FsmMontageDurationNotify,
+        CombatDataMaxNotify: ?CombatDataMaxNotify,
+    } = null,
+    CombatCommon: ?CombatCommon = null,
+};
+pub const CombatDataMaxNotify = struct {
+    pub const default: @This() = .{};
+};
+pub const CombatRequestData = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        CreateBulletRequest: ?CreateBulletRequest,
+        DestroyBulletRequest: ?DestroyBulletRequest,
+        DamageExecuteRequest: ?DamageExecuteRequest,
+        ApplyGameplayEffectRequest: ?ApplyGameplayEffectRequest,
+        RemoveGameplayEffectRequest: ?RemoveGameplayEffectRequest,
+        HitRequest: ?HitRequest,
+        HitEndRequest: ?HitEndRequest,
+        SkillRequest: ?SkillRequest,
+        UseSkillRequest: ?UseSkillRequest,
+        EndSkillRequest: ?EndSkillRequest,
+        PartUpdateRequest: ?PartUpdateRequest,
+        MaterialRequest: ?MaterialRequest,
+        GameplayCueRequest: ?GameplayCueRequest,
+        EntityIsVisibleRequest: ?EntityIsVisibleRequest,
+        SwitchCharacterStateRequest: ?SwitchCharacterStateRequest,
+        LogicStateInitRequest: ?LogicStateInitRequest,
+        SwitchLogicStateRequest: ?SwitchLogicStateRequest,
+        AnimationStateChangedRequest: ?AnimationStateChangedRequest,
+        AnimationStateInitRequest: ?AnimationStateInitRequest,
+        ModifyBulletParamsRequest: ?ModifyBulletParamsRequest,
+        DrownRequest: ?DrownRequest,
+        OrderApplyBuffRequest: ?OrderApplyBuffRequest,
+        OrderRemoveBuffRequest: ?OrderRemoveBuffRequest,
+        ActivateBuffRequest: ?ActivateBuffRequest,
+        OrderRemoveBuffByTagsRequest: ?OrderRemoveBuffByTagsRequest,
+        AiInformationRequest: ?AiInformationRequest,
+        ToughCalcExtraRatioChangeRequest: ?ToughCalcExtraRatioChangeRequest,
+        BattleStateChangeRequest: ?BattleStateChangeRequest,
+        AnimationGameplayTagRequest: ?AnimationGameplayTagRequest,
+        BoneVisibleChangeRequest: ?BoneVisibleChangeRequest,
+        AiBlackboardsRequest: ?AiBlackboardsRequest,
+        AiBlackboardCdRequest: ?AiBlackboardCdRequest,
+        AiHateRequest: ?AiHateRequest,
+        MonsterBoomRequest: ?MonsterBoomRequest,
+        CaughtRequest: ?CaughtRequest,
+        EntityStaticHookMoveRequest: ?EntityStaticHookMoveRequest,
+        ChangeStateRequest: ?ChangeStateRequest,
+        ChangeStateConfirmRequest: ?ChangeStateConfirmRequest,
+        FsmConditionPassRequest: ?FsmConditionPassRequest,
+        BuffStackCountRequest: ?BuffStackCountRequest,
+        ANStartRequest: ?ANStartRequest,
+        UseSkillFailRequest: ?UseSkillFailRequest,
+        EnterViewDirectionRequest: ?EnterViewDirectionRequest,
+        ExitViewDirectionRequest: ?ExitViewDirectionRequest,
+        PassiveSkillAddRequest: ?PassiveSkillAddRequest,
+        InterruptSkillInDelayRequest: ?InterruptSkillInDelayRequest,
+        TriggerExitSkillRequest: ?TriggerExitSkillRequest,
+        ActorVisibleRequest: ?ActorVisibleRequest,
+        BuffEffectRequest: ?BuffEffectRequest,
+        FragileChangeRequest: ?FragileChangeRequest,
+        RTimeStopRequest: ?RTimeStopRequest,
+        DrownEndTeleportRequest: ?DrownEndTeleportRequest,
+        MonsterDrownRequest: ?MonsterDrownRequest,
+        PassiveSkillRemoveRequest: ?PassiveSkillRemoveRequest,
+        RTimeStopInstRequest: ?RTimeStopInstRequest,
+        FsmStateBehaviorRequest: ?FsmStateBehaviorRequest,
+        FsmPlayMontageRequest: ?FsmPlayMontageRequest,
+        TsAnimNotifyStateAbsoluteTimeStopRequest: ?TsAnimNotifyStateAbsoluteTimeStopRequest,
+        SwitchRoleRequest: ?SwitchRoleRequest,
+        RoleTagChangeRequest: ?RoleTagChangeRequest,
+        ExecuteQteRequest: ?ExecuteQteRequest,
+        CharacterAttachRequest: ?CharacterAttachRequest,
+        CharacterDetachRequest: ?CharacterDetachRequest,
+        ClientCurrentRoleReportRequest: ?ClientCurrentRoleReportRequest,
+        GaSwitchCommonEnemyProCampRequest: ?GaSwitchCommonEnemyProCampRequest,
+        CombatMaxCaseMessageRequest: ?CombatMaxCaseMessageRequest,
+    } = null,
+    CombatCommon: ?CombatCommon = null,
+    RequestId: i32 = 0,
+};
+pub const CombatResponseData = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        CreateBulletResponse: ?CreateBulletResponse,
+        DestroyBulletResponse: ?DestroyBulletResponse,
+        DamageExecuteResponse: ?DamageExecuteResponse,
+        ApplyGameplayEffectResponse: ?ApplyGameplayEffectResponse,
+        RemoveGameplayEffectResponse: ?RemoveGameplayEffectResponse,
+        HitResponse: ?HitResponse,
+        HitEndResponse: ?HitEndResponse,
+        SkillResponse: ?SkillResponse,
+        UseSkillResponse: ?UseSkillResponse,
+        EndSkillResponse: ?EndSkillResponse,
+        PartUpdateResponse: ?PartUpdateResponse,
+        MaterialResponse: ?MaterialResponse,
+        GameplayCueResponse: ?GameplayCueResponse,
+        EntityIsVisibleResponse: ?EntityIsVisibleResponse,
+        SwitchCharacterStateResponse: ?SwitchCharacterStateResponse,
+        LogicStateInitResponse: ?LogicStateInitResponse,
+        SwitchLogicStateResponse: ?SwitchLogicStateResponse,
+        AnimationStateChangedResponse: ?AnimationStateChangedResponse,
+        AnimationStateInitResponse: ?AnimationStateInitResponse,
+        ModifyBulletParamsResponse: ?ModifyBulletParamsResponse,
+        DrownResponse: ?DrownResponse,
+        OrderApplyBuffResponse: ?OrderApplyBuffResponse,
+        OrderRemoveBuffResponse: ?OrderRemoveBuffResponse,
+        ActivateBuffResponse: ?ActivateBuffResponse,
+        OrderRemoveBuffByTagsResponse: ?OrderRemoveBuffByTagsResponse,
+        AiInformationResponse: ?AiInformationResponse,
+        ToughCalcExtraRatioChangeResponse: ?ToughCalcExtraRatioChangeResponse,
+        BattleStateChangeResponse: ?BattleStateChangeResponse,
+        AnimationGameplayTagResponse: ?AnimationGameplayTagResponse,
+        BoneVisibleChangeResponse: ?BoneVisibleChangeResponse,
+        AiBlackboardsResponse: ?AiBlackboardsResponse,
+        AiBlackboardCdResponse: ?AiBlackboardCdResponse,
+        AiHateResponse: ?AiHateResponse,
+        MonsterBoomResponse: ?MonsterBoomResponse,
+        CaughtResponse: ?CaughtResponse,
+        EntityStaticHookMoveResponse: ?EntityStaticHookMoveResponse,
+        ChangeStateResponse: ?ChangeStateResponse,
+        ChangeStateConfirmResponse: ?ChangeStateConfirmResponse,
+        FsmConditionPassResponse: ?FsmConditionPassResponse,
+        BuffStackCountResponse: ?BuffStackCountResponse,
+        ANStartResponse: ?ANStartResponse,
+        UseSkillFailResponse: ?UseSkillFailResponse,
+        EnterViewDirectionResponse: ?EnterViewDirectionResponse,
+        ExitViewDirectionResponse: ?ExitViewDirectionResponse,
+        PassiveSkillAddResponse: ?PassiveSkillAddResponse,
+        InterruptSkillInDelayResponse: ?InterruptSkillInDelayResponse,
+        TriggerExitSkillResponse: ?TriggerExitSkillResponse,
+        ActorVisibleResponse: ?ActorVisibleResponse,
+        BuffEffectResponse: ?BuffEffectResponse,
+        FragileChangeResponse: ?FragileChangeResponse,
+        RTimeStopResponse: ?RTimeStopResponse,
+        DrownEndTeleportResponse: ?DrownEndTeleportResponse,
+        MonsterDrownResponse: ?MonsterDrownResponse,
+        PassiveSkillRemoveResponse: ?PassiveSkillRemoveResponse,
+        RTimeStopInstResponse: ?RTimeStopInstResponse,
+        FsmStateBehaviorResponse: ?FsmStateBehaviorResponse,
+        FsmPlayMontageResponse: ?FsmPlayMontageResponse,
+        TsAnimNotifyStateAbsoluteTimeStopResponse: ?TsAnimNotifyStateAbsoluteTimeStopResponse,
+        SwitchRoleResponse: ?SwitchRoleResponse,
+        RoleTagChangeResponse: ?RoleTagChangeResponse,
+        ExecuteQteResponse: ?ExecuteQteResponse,
+        CharacterAttachResponse: ?CharacterAttachResponse,
+        CharacterDetachResponse: ?CharacterDetachResponse,
+        ClientCurrentRoleReportResponse: ?ClientCurrentRoleReportResponse,
+        GaSwitchCommonEnemyProCampResponse: ?GaSwitchCommonEnemyProCampResponse,
+        CombatDataMaxResponse: ?CombatDataMaxResponse,
+    } = null,
+    CombatCommon: ?CombatCommon = null,
+    RequestId: i32 = 0,
+};
+pub const CombatDataMaxResponse = struct {
+    pub const default: @This() = .{};
+};
+pub const CombatSendData = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        Push: ?CombatPushData,
+        Request: ?CombatRequestData,
+    } = null,
+};
+pub const CombatReceiveData = struct {
+    pub const default: @This() = .{};
+    Message: ?union(enum) {
+        CombatNotifyData: ?CombatNotifyData,
+        CombatResponseData: ?CombatResponseData,
+    } = null,
+};
+pub const CombatSendPackRequest = struct {
+    pub const default: @This() = .{};
+    Data: std.ArrayList(CombatSendData) = .empty,
+    HostPlayerId: i32 = 0,
+};
+pub const CombatSendPackResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    ReceivePackNotify: ?CombatReceivePackNotify = null,
+};
+pub const CombatReceivePackNotify = struct {
+    pub const default: @This() = .{};
+    Data: std.ArrayList(CombatReceiveData) = .empty,
+};
+pub const CombatMaxCaseMessageRequest = struct {
+    pub const default: @This() = .{};
 };
 pub const EntityLoadCompleteNotify = struct {
     pub const default: @This() = .{};
@@ -48299,14 +48912,6 @@ pub const SceneRoadSyncNotify = struct {
     InstanceId: i32 = 0,
     EnabledRoads: std.ArrayList(i32) = .empty,
 };
-pub const EEntityFsmChangeType = enum(i32) {
-    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-    Enter = 0,
-    Exit = 1,
-    BindStart = 3,
-    BindEnd = 4,
-    Task = 5,
-};
 pub const EBulletCreateSource = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
     NormalSource = 0,
@@ -48321,33 +48926,10 @@ pub const ENewLinkStage = enum(i32) {
     Ready = 3,
     Burst = 4,
 };
-pub const FsmStateChangeContext = struct {
-    pub const default: @This() = .{};
-    FsmId: i32 = 0,
-    State: i32 = 0,
-    ChangeType: ?EEntityFsmChangeType = null,
-    Index: i32 = 0,
-    ConstateId: i64 = 0,
-};
-pub const SkillContext = struct {
-    pub const default: @This() = .{};
-    SkillId: i64 = 0,
-    ConstateId: i64 = 0,
-};
 pub const MontageContext = struct {
     pub const default: @This() = .{};
     SkillId: i64 = 0,
     MontageIndex: i32 = 0,
-    ConstateId: i64 = 0,
-};
-pub const AddBuffContext = struct {
-    pub const default: @This() = .{};
-    BuffHandle: i32 = 0,
-    ConstateId: i64 = 0,
-};
-pub const BulletContext = struct {
-    pub const default: @This() = .{};
-    Handle: ?ActiveBulletHandle = null,
     ConstateId: i64 = 0,
 };
 pub const HitInformation = struct {
@@ -49219,132 +49801,60 @@ pub const FragileChangeResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
-pub const Debug = struct {
+pub const DamageRecordEntity = struct {
     pub const default: @This() = .{};
-    pub const ECheatInput = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        ECheatInputDefault = 0,
-        ECheatInputDel = 1,
-        ECheatInputEnd = 2,
-    };
-    pub const CheatInputRequest = struct {
-        pub const default: @This() = .{};
-        Type: ?ECheatInput = null,
-        AoeDestroyEnemyRange: i32 = 0,
-        EntityList: std.ArrayList(i64) = .empty,
-    };
-    pub const CheatInputResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const DamageRecordEntity = struct {
-        pub const default: @This() = .{};
-        EntityId: i64 = 0,
-        BuffIds: std.ArrayList(i64) = .empty,
-        Attr: std.ArrayList(GameplayAttributeData) = .empty,
-        AttrSnapshot: std.ArrayList(GameplayAttributeData) = .empty,
-    };
-    pub const DamageCalculationDetails = struct {
-        pub const default: @This() = .{};
-        ABaseAttackValue: i64 = 0,
-        VEffectiveDefense: f32 = 0,
-        ADamageFactor: f32 = 0,
-        ADamageBonusRate: f32 = 0,
-        ACritChance: i64 = 0,
-        AWeaknessMasteryCoefficient: f32 = 0,
-        VMonsterTypeRate: f32 = 0,
-        ARate: f32 = 0,
-        VDefFactor: f32 = 0,
-        VResistanceFactor: f32 = 0,
-        VbDamageReduce: f32 = 0,
-        VbElementReduce: f32 = 0,
-        AEnergyChange: i64 = 0,
-        WeaknessLvValue: f32 = 0,
-        VWeaknessBuffStack: i32 = 0,
-        HitDamageBonusRate: f32 = 0,
-        WeakDamageBonusRate: f32 = 0,
-        ExceptedDamageValue: f32 = 0,
-    };
-    pub const DamageRecordNotify = struct {
-        pub const default: @This() = .{};
-        TimestampMs: i64 = 0,
-        DamageConfId: i64 = 0,
-        DamageValue: i32 = 0,
-        SkillId: i64 = 0,
-        SkillLevel: i32 = 0,
-        BulletId: i64 = 0,
-        DamageSourceType: ?DamageSourceType = null,
-        IsCritical: bool = false,
-        Attacker: ?Debug.DamageRecordEntity = null,
-        Victim: ?Debug.DamageRecordEntity = null,
-        DamageCalculationDetails: ?Debug.DamageCalculationDetails = null,
-        IsWeakness: bool = false,
-    };
-    pub const TestDamageRecordEntity = struct {
-        pub const default: @This() = .{};
-        EntityId: i64 = 0,
-        ConfigId: i32 = 0,
-        BuffIds: std.ArrayList(i64) = .empty,
-        Attr: std.ArrayList(GameplayAttributeData) = .empty,
-    };
-    pub const TestDamageRecordNotify = struct {
-        pub const default: @This() = .{};
-        TimestampMs: i64 = 0,
-        Entities: std.ArrayList(Debug.TestDamageRecordEntity) = .empty,
-    };
-    pub const SetDamageRecordRequest = struct {
-        pub const default: @This() = .{};
-        Enable: bool = false,
-        DameRandomSeed: i32 = 0,
-    };
-    pub const SetDamageRecordResponse = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-    };
-    pub const GmVoxelInfoNotify = struct {
-        pub const default: @This() = .{};
-        CellSize: f32 = 0,
-        Spans: std.ArrayList(Debug.VoxelSpan) = .empty,
-    };
-    pub const GmIsOverlapNotify = struct {
-        pub const default: @This() = .{};
-        CellSize: f32 = 0,
-        Box: ?Debug.VoxelSpan = null,
-        IsOverlap: bool = false,
-    };
-    pub const VoxelSpan = struct {
-        pub const default: @This() = .{};
-        X: f32 = 0,
-        Y: f32 = 0,
-        Smin: f32 = 0,
-        Smax: f32 = 0,
-    };
-    pub const OutputDebugInfoRequest = struct {
-        pub const default: @This() = .{};
-        ClientInfo: []const u8 = "",
-    };
-    pub const OutputDebugInfoResponse = struct {
-        pub const default: @This() = .{};
-    };
-    pub const RequestOutputDebugNotify = struct {
-        pub const default: @This() = .{};
-    };
-    pub const UploadEventNotify = struct {
-        pub const default: @This() = .{};
-        LogId: []const u8 = "",
-    };
-    pub const SkillErrorNotify = struct {
-        pub const default: @This() = .{};
-        ErrorCode: ?ErrorCode = null,
-        ExtraInfo: []const u8 = "",
-    };
-    pub const DebugMapPathNotify = struct {
-        pub const default: @This() = .{};
-        PosList: std.ArrayList(Vector) = .empty,
-        Duration: i32 = 0,
-        Radius: i32 = 0,
-        IsTrace: i32 = 0,
-    };
+    EntityId: i64 = 0,
+    BuffIds: std.ArrayList(i64) = .empty,
+    Attr: std.ArrayList(GameplayAttributeData) = .empty,
+    AttrSnapshot: std.ArrayList(GameplayAttributeData) = .empty,
+};
+pub const DamageCalculationDetails = struct {
+    pub const default: @This() = .{};
+    ABaseAttackValue: i64 = 0,
+    VEffectiveDefense: f32 = 0,
+    ADamageFactor: f32 = 0,
+    ADamageBonusRate: f32 = 0,
+    ACritChance: i64 = 0,
+    AWeaknessMasteryCoefficient: f32 = 0,
+    VMonsterTypeRate: f32 = 0,
+    ARate: f32 = 0,
+    VDefFactor: f32 = 0,
+    VResistanceFactor: f32 = 0,
+    VbDamageReduce: f32 = 0,
+    VbElementReduce: f32 = 0,
+    AEnergyChange: i64 = 0,
+    WeaknessLvValue: f32 = 0,
+    VWeaknessBuffStack: i32 = 0,
+    HitDamageBonusRate: f32 = 0,
+    WeakDamageBonusRate: f32 = 0,
+    ExceptedDamageValue: f32 = 0,
+};
+pub const DamageRecordNotify = struct {
+    pub const default: @This() = .{};
+    TimestampMs: i64 = 0,
+    DamageConfId: i64 = 0,
+    DamageValue: i32 = 0,
+    SkillId: i64 = 0,
+    SkillLevel: i32 = 0,
+    BulletId: i64 = 0,
+    DamageSourceType: ?DamageSourceType = null,
+    IsCritical: bool = false,
+    Attacker: ?DamageRecordEntity = null,
+    Victim: ?DamageRecordEntity = null,
+    DamageCalculationDetails: ?DamageCalculationDetails = null,
+    IsWeakness: bool = false,
+};
+pub const TestDamageRecordEntity = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    ConfigId: i32 = 0,
+    BuffIds: std.ArrayList(i64) = .empty,
+    Attr: std.ArrayList(GameplayAttributeData) = .empty,
+};
+pub const TestDamageRecordNotify = struct {
+    pub const default: @This() = .{};
+    TimestampMs: i64 = 0,
+    Entities: std.ArrayList(TestDamageRecordEntity) = .empty,
 };
 pub const TimeStopPush = struct {
     pub const default: @This() = .{};
@@ -51480,6 +51990,26 @@ pub const QuestReviewDataResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
+pub const QuestBranchInfo = struct {
+    pub const default: @This() = .{};
+    QuestBranchInfos: std.ArrayList(OneQuestBranchPageInfo) = .empty,
+    UnlockTimePoints: std.ArrayList(i32) = .empty,
+    UnlockBranchComponentsGroup: std.ArrayList(i32) = .empty,
+};
+pub const OneQuestBranchPageInfo = struct {
+    pub const default: @This() = .{};
+    id: i32 = 0,
+    CurBranch: i32 = 0,
+    CompleteBranches: std.ArrayList(i32) = .empty,
+};
+pub const QuestBranchRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const QuestBranchResponse = struct {
+    pub const default: @This() = .{};
+    errorCode: i32 = 0,
+    QuestBranchInfo: ?QuestBranchInfo = null,
+};
 pub const RangeType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
     RangeEnter = 0,
@@ -51913,24 +52443,4 @@ pub const LobbyListResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     ItemList: std.ArrayList(PlayerDetails) = .empty,
-};
-pub const QuestBranchInfo = struct {
-    pub const default: @This() = .{};
-    QuestBranchInfos: std.ArrayList(OneQuestBranchPageInfo) = .empty,
-    UnlockTimePoints: std.ArrayList(i32) = .empty,
-    UnlockBranchComponentsGroup: std.ArrayList(i32) = .empty,
-};
-pub const OneQuestBranchPageInfo = struct {
-    pub const default: @This() = .{};
-    id: i32 = 0,
-    CurBranch: i32 = 0,
-    CompleteBranches: std.ArrayList(i32) = .empty,
-};
-pub const QuestBranchRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const QuestBranchResponse = struct {
-    pub const default: @This() = .{};
-    errorCode: i32 = 0,
-    QuestBranchInfo: ?QuestBranchInfo = null,
 };

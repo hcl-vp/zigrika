@@ -10897,6 +10897,110 @@ pub const KXn = struct {
     pub const msg_id: u16 = 21116;
     pub const Q4n_field_number: u32 = 15;
 };
+pub const Ai = struct {
+    pub const eNs = struct {
+        pub const F4n_field_number: u32 = 1;
+        pub const Z8n_field_number: u32 = 2;
+    };
+    pub const tNs = struct {
+        pub const j4n_field_number: u32 = 1;
+        pub const W4n_field_number: u32 = 2;
+    };
+    pub const iNs = struct {
+        pub const j4n_field_number: u32 = 1;
+        pub const W4n_field_number: u32 = 2;
+    };
+    pub const rNs = struct {
+        pub const eVn_field_number: u32 = 1;
+        pub const ISs_field_number: u32 = 2;
+        pub const TSs_field_number: u32 = 3;
+    };
+    pub const nNs = struct {
+        pub const F4n_field_number: u32 = 1;
+        pub const tVn_field_number: u32 = 2;
+        pub const W5n_field_number: u32 = 3;
+    };
+    pub const J3n = struct {
+        pub const msg_id: u16 = 15593;
+        pub const tVn_field_number: u32 = 10;
+    };
+    pub const fe_ = struct {
+        pub const msg_id: u16 = 25228;
+        pub const tVn_field_number: u32 = 6;
+    };
+    pub const QXn = struct {
+        pub const msg_id: u16 = 18718;
+        pub const Q4n_field_number: u32 = 1;
+    };
+    pub const QFn = struct {
+        pub const msg_id: u16 = 21566;
+        pub const TSs_field_number: u32 = 12;
+    };
+    pub const i4n = struct {
+        pub const msg_id: u16 = 27817;
+        pub const eVn_field_number: u32 = 9;
+    };
+    pub const Ee_ = struct {
+        pub const msg_id: u16 = 20623;
+        pub const eVn_field_number: u32 = 1;
+    };
+    pub const XXn = struct {
+        pub const msg_id: u16 = 27726;
+        pub const Q4n_field_number: u32 = 4;
+    };
+    pub const r4n = struct {
+        pub const msg_id: u16 = 18036;
+        pub const K4n_field_number: u32 = 15;
+        pub const H4n_field_number: u32 = 5;
+    };
+    pub const Ie_ = struct {
+        pub const msg_id: u16 = 28235;
+        pub const K4n_field_number: u32 = 15;
+        pub const H4n_field_number: u32 = 3;
+    };
+    pub const YXn = struct {
+        pub const msg_id: u16 = 21338;
+        pub const Q4n_field_number: u32 = 7;
+    };
+    pub const JFn = struct {
+        pub const msg_id: u16 = 15417;
+        pub const LSs_field_number: u32 = 7;
+        pub const K4n_field_number: u32 = 4;
+        pub const H4n_field_number: u32 = 2;
+    };
+    pub const o4n = struct {
+        pub const msg_id: u16 = 16922;
+        pub const ISs_field_number: u32 = 11;
+    };
+    pub const Te_ = struct {
+        pub const msg_id: u16 = 21579;
+        pub const ISs_field_number: u32 = 9;
+    };
+    pub const JXn = struct {
+        pub const msg_id: u16 = 27096;
+        pub const Q4n_field_number: u32 = 14;
+    };
+    pub const a3n = struct {
+        pub const msg_id: u16 = 19276;
+        pub const ISs_field_number: u32 = 1;
+    };
+    pub const zXn = struct {
+        pub const msg_id: u16 = 17770;
+        pub const F4n_field_number: u32 = 2;
+    };
+    pub const ZXn = struct {
+        pub const msg_id: u16 = 21692;
+        pub const Q4n_field_number: u32 = 9;
+    };
+    pub const eYn = struct {
+        pub const msg_id: u16 = 15408;
+        pub const ASs_field_number: u32 = 11;
+    };
+    pub const tYn = struct {
+        pub const msg_id: u16 = 22664;
+        pub const PSs_field_number: u32 = 10;
+    };
+};
 pub const aNs = struct {
     pub const gKn_field_number: u32 = 1;
 };
@@ -11488,6 +11592,11 @@ pub const Vf_ = struct {
     pub const DOLLARE__field_number: u32 = 2;
     pub const WE__field_number: u32 = 3;
     pub const HE__field_number: u32 = 8;
+};
+pub const BattleDefine = struct {
+    pub const ZG1 = struct {
+        pub const JG1_field_number: u32 = 1;
+    };
 };
 pub const UNs = struct {
     pub const F6n_field_number: u32 = 1;
@@ -12992,6 +13101,13 @@ pub const _10 = struct {
     pub const msg_id: u16 = 24221;
     pub const ox0_field_number: u32 = 12;
 };
+pub const u10L = struct {
+    pub const msg_id: u16 = 19272;
+    pub const Q4n_field_number: u32 = 6;
+    pub const d10_field_number: u32 = 14;
+    pub const AMs_field_number: u32 = 2;
+    pub const c10_field_number: u32 = 1;
+};
 pub const T_0 = struct {
     pub const msg_id: u16 = 15135;
     pub const ox0_field_number: u32 = 4;
@@ -14486,6 +14602,34 @@ pub const Ev_ = struct {
     pub const msg_id: u16 = 26978;
     pub const G9n_field_number: u32 = 1;
 };
+pub const Summon = struct {
+    pub const p3s = struct {
+        pub const YWn_field_number: u32 = 1;
+        pub const dIs_field_number: u32 = 2;
+        pub const mIs_field_number: u32 = 3;
+        pub const W5n_field_number: u32 = 4;
+        pub const h5n_field_number: u32 = 5;
+    };
+    pub const Pys = struct {
+        pub const K7n_field_number: u32 = 1;
+    };
+    pub const STs = struct {
+        pub const h5n_field_number: u32 = 1;
+        pub const F4n_field_number: u32 = 2;
+    };
+    pub const nI_ = struct {
+        pub const OI__field_number: u32 = 1;
+    };
+    pub const tI_ = struct {
+        pub const xIs_field_number: u32 = 1;
+        pub const UKn_field_number: u32 = 2;
+    };
+    pub const eJs = struct {
+        pub const msg_id: u16 = 25249;
+        pub const W5n_field_number: u32 = 3;
+        pub const OI__field_number: u32 = 4;
+    };
+};
 pub const Dql = struct {
     pub const Tql_field_number: u32 = 1;
     pub const Iql_field_number: u32 = 2;
@@ -15229,6 +15373,363 @@ pub const Fca = struct {
 pub const Vca = struct {
     pub const msg_id: u16 = 22182;
     pub const Q4n_field_number: u32 = 9;
+};
+pub const CombatMessage = struct {
+    pub const OFs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const G4n_field_number: u32 = 4;
+        pub const O4n_field_number: u32 = 5;
+        pub const N4n_field_number: u32 = 6;
+        pub const ee__field_number: u32 = 7;
+        pub const te__field_number: u32 = 8;
+        pub const ie__field_number: u32 = 9;
+        pub const re__field_number: u32 = 10;
+        pub const oe__field_number: u32 = 11;
+        pub const ne__field_number: u32 = 12;
+        pub const se__field_number: u32 = 13;
+        pub const ae__field_number: u32 = 14;
+        pub const he__field_number: u32 = 15;
+        pub const le__field_number: u32 = 16;
+        pub const _e__field_number: u32 = 17;
+        pub const ce__field_number: u32 = 18;
+        pub const ue__field_number: u32 = 19;
+        pub const de__field_number: u32 = 20;
+        pub const me__field_number: u32 = 21;
+        pub const Ce__field_number: u32 = 22;
+        pub const ge__field_number: u32 = 23;
+        pub const pe__field_number: u32 = 24;
+        pub const fe__field_number: u32 = 25;
+        pub const ve__field_number: u32 = 26;
+        pub const ye__field_number: u32 = 27;
+        pub const Se__field_number: u32 = 28;
+        pub const Me__field_number: u32 = 29;
+        pub const Ee__field_number: u32 = 30;
+        pub const Ie__field_number: u32 = 31;
+        pub const Te__field_number: u32 = 32;
+        pub const be__field_number: u32 = 33;
+        pub const Le__field_number: u32 = 34;
+        pub const Ae__field_number: u32 = 35;
+        pub const xe__field_number: u32 = 36;
+        pub const Re__field_number: u32 = 37;
+        pub const Pe__field_number: u32 = 38;
+        pub const we__field_number: u32 = 39;
+        pub const Ue__field_number: u32 = 40;
+        pub const De__field_number: u32 = 41;
+        pub const Be__field_number: u32 = 42;
+        pub const qe__field_number: u32 = 43;
+        pub const ke__field_number: u32 = 44;
+        pub const Oe__field_number: u32 = 45;
+        pub const Ge__field_number: u32 = 46;
+        pub const Fe__field_number: u32 = 47;
+        pub const Ne__field_number: u32 = 48;
+        pub const Ve__field_number: u32 = 49;
+        pub const je__field_number: u32 = 50;
+        pub const He__field_number: u32 = 51;
+        pub const We__field_number: u32 = 52;
+        pub const Qe__field_number: u32 = 53;
+        pub const Ke__field_number: u32 = 54;
+        pub const DOLLARe__field_number: u32 = 55;
+        pub const Xe__field_number: u32 = 56;
+        pub const Su__field_number: u32 = 57;
+        pub const Opc_field_number: u32 = 58;
+        pub const kn1_field_number: u32 = 59;
+        pub const GG1_field_number: u32 = 60;
+        pub const k3u_field_number: u32 = 61;
+        pub const Rpd_field_number: u32 = 62;
+        pub const Vzd_field_number: u32 = 63;
+        pub const Ddm_field_number: u32 = 64;
+        pub const Hag_field_number: u32 = 65;
+        pub const Pxg_field_number: u32 = 66;
+        pub const kqC_field_number: u32 = 67;
+        pub const aap_field_number: u32 = 68;
+        pub const Xvp_field_number: u32 = 69;
+        pub const sr0_field_number: u32 = 70;
+        pub const K8n_field_number: u32 = 1;
+    };
+    pub const KLs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const MFn_field_number: u32 = 2;
+        pub const SFn_field_number: u32 = 3;
+        pub const EFn_field_number: u32 = 4;
+        pub const yFn_field_number: u32 = 5;
+        pub const IFn_field_number: u32 = 6;
+        pub const TFn_field_number: u32 = 7;
+        pub const LFn_field_number: u32 = 8;
+        pub const DFn_field_number: u32 = 9;
+        pub const AFn_field_number: u32 = 10;
+        pub const UFn_field_number: u32 = 11;
+        pub const RFn_field_number: u32 = 12;
+        pub const xFn_field_number: u32 = 14;
+        pub const PFn_field_number: u32 = 15;
+        pub const EJs_field_number: u32 = 16;
+        pub const BFn_field_number: u32 = 17;
+        pub const wFn_field_number: u32 = 18;
+        pub const bFn_field_number: u32 = 19;
+        pub const qFn_field_number: u32 = 20;
+        pub const GFn_field_number: u32 = 21;
+        pub const OFn_field_number: u32 = 22;
+        pub const NFn_field_number: u32 = 23;
+        pub const kFn_field_number: u32 = 24;
+        pub const FFn_field_number: u32 = 25;
+        pub const VFn_field_number: u32 = 26;
+        pub const HFn_field_number: u32 = 27;
+        pub const jFn_field_number: u32 = 28;
+        pub const WFn_field_number: u32 = 29;
+        pub const KFn_field_number: u32 = 30;
+        pub const QFn_field_number: u32 = 31;
+        pub const XFn_field_number: u32 = 32;
+        pub const DOLLARFn_field_number: u32 = 33;
+        pub const YFn_field_number: u32 = 34;
+        pub const JFn_field_number: u32 = 35;
+        pub const zFn_field_number: u32 = 36;
+        pub const ZFn_field_number: u32 = 37;
+        pub const e3n_field_number: u32 = 38;
+        pub const t3n_field_number: u32 = 40;
+        pub const i3n_field_number: u32 = 41;
+        pub const r3n_field_number: u32 = 42;
+        pub const o3n_field_number: u32 = 43;
+        pub const n3n_field_number: u32 = 44;
+        pub const s3n_field_number: u32 = 45;
+        pub const a3n_field_number: u32 = 46;
+        pub const h3n_field_number: u32 = 47;
+        pub const l3n_field_number: u32 = 48;
+        pub const d3n_field_number: u32 = 53;
+        pub const C3n_field_number: u32 = 54;
+        pub const p3n_field_number: u32 = 57;
+        pub const v3n_field_number: u32 = 58;
+        pub const M3n_field_number: u32 = 59;
+        pub const E3n_field_number: u32 = 61;
+        pub const y3n_field_number: u32 = 62;
+        pub const I3n_field_number: u32 = 63;
+        pub const T3n_field_number: u32 = 64;
+        pub const L3n_field_number: u32 = 65;
+        pub const Xsh_field_number: u32 = 66;
+        pub const Wul_field_number: u32 = 69;
+        pub const Jpl_field_number: u32 = 70;
+        pub const Zpl_field_number: u32 = 71;
+        pub const yvl_field_number: u32 = 72;
+        pub const W7l_field_number: u32 = 73;
+        pub const qus_field_number: u32 = 74;
+        pub const Bn1_field_number: u32 = 75;
+        pub const ev1_field_number: u32 = 76;
+        pub const B9d_field_number: u32 = 77;
+        pub const Adm_field_number: u32 = 78;
+        pub const rpm_field_number: u32 = 79;
+        pub const x9f_field_number: u32 = 80;
+        pub const wxg_field_number: u32 = 81;
+        pub const BqC_field_number: u32 = 82;
+        pub const YXC_field_number: u32 = 83;
+        pub const oMl_field_number: u32 = 100;
+        pub const K8n_field_number: u32 = 1;
+    };
+    pub const oMl = struct {
+        pub const msg_id: u16 = 25184;
+    };
+    pub const NFs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const DOLLARLs_field_number: u32 = 1;
+        pub const HLs_field_number: u32 = 2;
+        pub const hVn_field_number: u32 = 3;
+        pub const jLs_field_number: u32 = 4;
+        pub const WLs_field_number: u32 = 5;
+    };
+    pub const FFs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const D3n_field_number: u32 = 3;
+        pub const A3n_field_number: u32 = 4;
+        pub const U3n_field_number: u32 = 5;
+        pub const R3n_field_number: u32 = 6;
+        pub const x3n_field_number: u32 = 7;
+        pub const P3n_field_number: u32 = 8;
+        pub const B3n_field_number: u32 = 9;
+        pub const w3n_field_number: u32 = 10;
+        pub const b3n_field_number: u32 = 11;
+        pub const q3n_field_number: u32 = 12;
+        pub const G3n_field_number: u32 = 13;
+        pub const O3n_field_number: u32 = 14;
+        pub const yJs_field_number: u32 = 15;
+        pub const N3n_field_number: u32 = 16;
+        pub const k3n_field_number: u32 = 17;
+        pub const F3n_field_number: u32 = 18;
+        pub const V3n_field_number: u32 = 19;
+        pub const H3n_field_number: u32 = 20;
+        pub const j3n_field_number: u32 = 21;
+        pub const W3n_field_number: u32 = 22;
+        pub const K3n_field_number: u32 = 23;
+        pub const Q3n_field_number: u32 = 24;
+        pub const X3n_field_number: u32 = 25;
+        pub const DOLLAR3n_field_number: u32 = 26;
+        pub const Y3n_field_number: u32 = 27;
+        pub const J3n_field_number: u32 = 28;
+        pub const z3n_field_number: u32 = 29;
+        pub const Z3n_field_number: u32 = 30;
+        pub const e4n_field_number: u32 = 31;
+        pub const t4n_field_number: u32 = 32;
+        pub const i4n_field_number: u32 = 33;
+        pub const r4n_field_number: u32 = 34;
+        pub const o4n_field_number: u32 = 35;
+        pub const n4n_field_number: u32 = 36;
+        pub const s4n_field_number: u32 = 37;
+        pub const a4n_field_number: u32 = 38;
+        pub const h4n_field_number: u32 = 39;
+        pub const l4n_field_number: u32 = 40;
+        pub const _4n_field_number: u32 = 41;
+        pub const u4n_field_number: u32 = 42;
+        pub const c4n_field_number: u32 = 43;
+        pub const m4n_field_number: u32 = 44;
+        pub const d4n_field_number: u32 = 45;
+        pub const C4n_field_number: u32 = 46;
+        pub const g4n_field_number: u32 = 47;
+        pub const f4n_field_number: u32 = 49;
+        pub const p4n_field_number: u32 = 50;
+        pub const y4n_field_number: u32 = 55;
+        pub const I4n_field_number: u32 = 56;
+        pub const T4n_field_number: u32 = 57;
+        pub const L4n_field_number: u32 = 58;
+        pub const D4n_field_number: u32 = 59;
+        pub const A4n_field_number: u32 = 60;
+        pub const U4n_field_number: u32 = 61;
+        pub const R4n_field_number: u32 = 62;
+        pub const x4n_field_number: u32 = 63;
+        pub const P4n_field_number: u32 = 64;
+        pub const B4n_field_number: u32 = 65;
+        pub const qis_field_number: u32 = 66;
+        pub const G5a_field_number: u32 = 67;
+        pub const T7a_field_number: u32 = 68;
+        pub const efl_field_number: u32 = 69;
+        pub const tfl_field_number: u32 = 70;
+        pub const Trs_field_number: u32 = 71;
+        pub const DOLLARwC_field_number: u32 = 72;
+        pub const w4n_field_number: u32 = 99;
+        pub const K8n_field_number: u32 = 1;
+        pub const W8n_field_number: u32 = 2;
+    };
+    pub const QLs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const sis_field_number: u32 = 3;
+        pub const ais_field_number: u32 = 4;
+        pub const lis_field_number: u32 = 5;
+        pub const lzn_field_number: u32 = 6;
+        pub const _zn_field_number: u32 = 7;
+        pub const ris_field_number: u32 = 8;
+        pub const ois_field_number: u32 = 9;
+        pub const zts_field_number: u32 = 10;
+        pub const Zts_field_number: u32 = 11;
+        pub const eis_field_number: u32 = 12;
+        pub const DOLLARhs_field_number: u32 = 13;
+        pub const Sms_field_number: u32 = 14;
+        pub const IJs_field_number: u32 = 15;
+        pub const Tis_field_number: u32 = 16;
+        pub const Ris_field_number: u32 = 17;
+        pub const mes_field_number: u32 = 18;
+        pub const Ces_field_number: u32 = 19;
+        pub const ycs_field_number: u32 = 20;
+        pub const Ecs_field_number: u32 = 21;
+        pub const his_field_number: u32 = 22;
+        pub const Wds_field_number: u32 = 23;
+        pub const uzn_field_number: u32 = 24;
+        pub const czn_field_number: u32 = 25;
+        pub const dzn_field_number: u32 = 26;
+        pub const mzn_field_number: u32 = 27;
+        pub const QXn_field_number: u32 = 28;
+        pub const Ais_field_number: u32 = 29;
+        pub const Dis_field_number: u32 = 30;
+        pub const ves_field_number: u32 = 31;
+        pub const DOLLARes_field_number: u32 = 32;
+        pub const XXn_field_number: u32 = 33;
+        pub const YXn_field_number: u32 = 34;
+        pub const JXn_field_number: u32 = 35;
+        pub const Pis_field_number: u32 = 36;
+        pub const nis_field_number: u32 = 37;
+        pub const jes_field_number: u32 = 38;
+        pub const zZn_field_number: u32 = 39;
+        pub const ZZn_field_number: u32 = 40;
+        pub const ees_field_number: u32 = 41;
+        pub const fzn_field_number: u32 = 42;
+        pub const Bis_field_number: u32 = 43;
+        pub const iis_field_number: u32 = 44;
+        pub const cis_field_number: u32 = 45;
+        pub const dis_field_number: u32 = 46;
+        pub const _is_field_number: u32 = 47;
+        pub const tis_field_number: u32 = 49;
+        pub const mis_field_number: u32 = 50;
+        pub const Lis_field_number: u32 = 55;
+        pub const Ezn_field_number: u32 = 56;
+        pub const r1s_field_number: u32 = 57;
+        pub const OCs_field_number: u32 = 58;
+        pub const Kds_field_number: u32 = 59;
+        pub const Qds_field_number: u32 = 60;
+        pub const uis_field_number: u32 = 61;
+        pub const kCs_field_number: u32 = 62;
+        pub const Xfs_field_number: u32 = 63;
+        pub const Yfs_field_number: u32 = 64;
+        pub const Jfs_field_number: u32 = 65;
+        pub const Gis_field_number: u32 = 66;
+        pub const vf__field_number: u32 = 67;
+        pub const yf__field_number: u32 = 68;
+        pub const Tg__field_number: u32 = 69;
+        pub const Ag__field_number: u32 = 70;
+        pub const Lrs_field_number: u32 = 71;
+        pub const WwC_field_number: u32 = 72;
+        pub const zI__field_number: u32 = 100;
+        pub const K8n_field_number: u32 = 1;
+        pub const W8n_field_number: u32 = 2;
+    };
+    pub const zI_ = struct {
+    };
+    pub const VFs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const Q8n_field_number: u32 = 2;
+        pub const x5n_field_number: u32 = 3;
+    };
+    pub const DOLLARFs = struct {
+        kFs: ?union(enum) {
+        } = null,
+        pub const KLs_field_number: u32 = 2;
+        pub const QLs_field_number: u32 = 3;
+    };
+    pub const sZn = struct {
+        pub const msg_id: u16 = 28427;
+        pub const R5n_field_number: u32 = 13;
+        pub const ORs_field_number: u32 = 3;
+    };
+    pub const aZn = struct {
+        pub const msg_id: u16 = 20561;
+        pub const Q4n_field_number: u32 = 4;
+        pub const XLs_field_number: u32 = 6;
+    };
+    pub const hZn = struct {
+        pub const msg_id: u16 = 21308;
+        pub const R5n_field_number: u32 = 13;
+    };
+    pub const w4n = struct {
+        pub const msg_id: u16 = 28432;
+    };
+    pub const lZn = struct {
+        pub const msg_id: u16 = 24897;
+    };
+    pub const Vfs = struct {
+        pub const msg_id: u16 = 26459;
+        pub const s5n_field_number: u32 = 6;
+    };
+    pub const DOLLARfs = struct {
+        pub const msg_id: u16 = 20759;
+        pub const YLs_field_number: u32 = 10;
+    };
+    pub const Hfs = struct {
+        pub const msg_id: u16 = 21492;
+        pub const Ujn_field_number: u32 = 2;
+    };
+    pub const jfs = struct {
+        pub const msg_id: u16 = 29987;
+        pub const JLs_field_number: u32 = 1;
+    };
 };
 pub const fms = struct {
     pub const msg_id: u16 = 20368;
@@ -17601,6 +18102,122 @@ pub const T4n = struct {
 pub const r1s = struct {
     pub const msg_id: u16 = 27687;
     pub const Q4n_field_number: u32 = 14;
+};
+pub const Debug = struct {
+    pub const BZn = struct {
+        pub const msg_id: u16 = 18101;
+        pub const h5n_field_number: u32 = 5;
+        pub const OKn_field_number: u32 = 1;
+        pub const VAs_field_number: u32 = 6;
+    };
+    pub const qZn = struct {
+        pub const msg_id: u16 = 28306;
+        pub const Q4n_field_number: u32 = 1;
+    };
+    pub const V4s = struct {
+        pub const F4n_field_number: u32 = 1;
+        pub const DOLLARAs_field_number: u32 = 2;
+        pub const HAs_field_number: u32 = 3;
+        pub const jAs_field_number: u32 = 4;
+    };
+    pub const QKd = struct {
+        pub const GKd_field_number: u32 = 1;
+        pub const NKd_field_number: u32 = 2;
+        pub const jKd_field_number: u32 = 3;
+        pub const HKd_field_number: u32 = 4;
+        pub const FJm_field_number: u32 = 5;
+        pub const aig_field_number: u32 = 6;
+        pub const hig_field_number: u32 = 7;
+        pub const VKd_field_number: u32 = 8;
+        pub const DOLLARKd_field_number: u32 = 9;
+        pub const WKd_field_number: u32 = 10;
+        pub const lig_field_number: u32 = 11;
+        pub const _ig_field_number: u32 = 12;
+        pub const FKd_field_number: u32 = 13;
+        pub const Jpg_field_number: u32 = 14;
+        pub const ENg_field_number: u32 = 15;
+        pub const INg_field_number: u32 = 16;
+        pub const TNg_field_number: u32 = 17;
+        pub const Iip_field_number: u32 = 18;
+    };
+    pub const s3n = struct {
+        pub const msg_id: u16 = 28821;
+        pub const WAs_field_number: u32 = 7;
+        pub const KAs_field_number: u32 = 3;
+        pub const QAs_field_number: u32 = 13;
+        pub const r5n_field_number: u32 = 14;
+        pub const Wjn_field_number: u32 = 12;
+        pub const Mjn_field_number: u32 = 9;
+        pub const XAs_field_number: u32 = 11;
+        pub const YAs_field_number: u32 = 10;
+        pub const Zjn_field_number: u32 = 8;
+        pub const JAs_field_number: u32 = 2;
+        pub const QKd_field_number: u32 = 1;
+        pub const uig_field_number: u32 = 4;
+    };
+    pub const oR_ = struct {
+        pub const F4n_field_number: u32 = 1;
+        pub const v9n_field_number: u32 = 2;
+        pub const DOLLARAs_field_number: u32 = 3;
+        pub const HAs_field_number: u32 = 4;
+    };
+    pub const yvl = struct {
+        pub const msg_id: u16 = 16847;
+        pub const WAs_field_number: u32 = 13;
+        pub const gDs_field_number: u32 = 11;
+    };
+    pub const GZn = struct {
+        pub const msg_id: u16 = 20911;
+        pub const tWn_field_number: u32 = 10;
+        pub const Kga_field_number: u32 = 6;
+    };
+    pub const OZn = struct {
+        pub const msg_id: u16 = 28489;
+        pub const Q4n_field_number: u32 = 13;
+    };
+    pub const kZn = struct {
+        pub const msg_id: u16 = 16817;
+        pub const zAs_field_number: u32 = 12;
+        pub const ZAs_field_number: u32 = 10;
+    };
+    pub const NZn = struct {
+        pub const msg_id: u16 = 24033;
+        pub const zAs_field_number: u32 = 8;
+        pub const ePs_field_number: u32 = 10;
+        pub const tPs_field_number: u32 = 5;
+    };
+    pub const DOLLAR4s = struct {
+        pub const iPs_field_number: u32 = 1;
+        pub const rPs_field_number: u32 = 2;
+        pub const oPs_field_number: u32 = 3;
+        pub const nPs_field_number: u32 = 4;
+    };
+    pub const FZn = struct {
+        pub const msg_id: u16 = 20197;
+        pub const GKn_field_number: u32 = 13;
+    };
+    pub const VZn = struct {
+        pub const msg_id: u16 = 26202;
+    };
+    pub const Lfs = struct {
+        pub const msg_id: u16 = 17142;
+    };
+    pub const Jf_ = struct {
+        pub const msg_id: u16 = 15355;
+        pub const HTa_field_number: u32 = 1;
+    };
+    pub const Yfc = struct {
+        pub const msg_id: u16 = 25844;
+        pub const Q4n_field_number: u32 = 13;
+        pub const GNs_field_number: u32 = 15;
+    };
+    pub const Vw1 = struct {
+        pub const msg_id: u16 = 20699;
+        pub const rS__field_number: u32 = 9;
+        pub const n5n_field_number: u32 = 1;
+        pub const jw1_field_number: u32 = 8;
+        pub const w7n_field_number: u32 = 11;
+    };
 };
 pub const GCs = struct {
     pub const msg_id: u16 = 16566;
@@ -23826,6 +24443,7 @@ pub const kEc = struct {
     pub const Yr1_field_number: u32 = 5;
     pub const LE1_field_number: u32 = 6;
     pub const oR1_field_number: u32 = 9;
+    pub const i4L_field_number: u32 = 10;
     pub const r41_field_number: u32 = 11;
     pub const Kxu_field_number: u32 = 12;
     pub const w5n_field_number: u32 = 1000;
@@ -23958,6 +24576,13 @@ pub const LE1 = struct {
 pub const hR1 = struct {
     pub const sR1_field_number: u32 = 1;
     pub const F2s_field_number: u32 = 2;
+};
+pub const i4L = struct {
+    pub const v9n_field_number: u32 = 1;
+    pub const UEc_field_number: u32 = 2;
+    pub const DOLLARB1_field_number: u32 = 3;
+    pub const WB1_field_number: u32 = 4;
+    pub const jEc_field_number: u32 = 5;
 };
 pub const r41 = struct {
     pub const v9n_field_number: u32 = 1;
@@ -24113,7 +24738,10 @@ pub const G2s = struct {
 pub const Lqs = struct {
     l8s: ?union(enum) {
     } = null,
+    DOLLAR8s: ?union(enum) {
+    } = null,
     pub const G2s_field_number: u32 = 6;
+    pub const O2s_field_number: u32 = 7;
     pub const h5n_field_number: u32 = 1;
     pub const c5n_field_number: u32 = 2;
     pub const v9n_field_number: u32 = 3;
@@ -29405,109 +30033,86 @@ pub const AdviceResponse = struct {
     pub const UpVoteIds_field_number: u32 = 11;
     pub const ErrorCode_field_number: u32 = 9;
 };
-pub const Ai = struct {
-    pub const AiHateEntity = struct {
-        pub const EntityId_field_number: u32 = 1;
-        pub const HatredValue_field_number: u32 = 2;
-    };
-    pub const Int2Long = struct {
-        pub const First_field_number: u32 = 1;
-        pub const Second_field_number: u32 = 2;
-    };
-    pub const Int2Bool = struct {
-        pub const First_field_number: u32 = 1;
-        pub const Second_field_number: u32 = 2;
-    };
-    pub const AiInformation = struct {
-        pub const AiBlackboards_field_number: u32 = 1;
-        pub const HateList_field_number: u32 = 2;
-        pub const AiBlackboardCd_field_number: u32 = 3;
-    };
-    pub const AiControlSwitch = struct {
-        pub const EntityId_field_number: u32 = 1;
-        pub const AiInfo_field_number: u32 = 2;
-        pub const PlayerId_field_number: u32 = 3;
-    };
-    pub const AiInformationRequest = struct {
-        pub const msg_id: u16 = 15593;
-        pub const AiInfo_field_number: u32 = 10;
-    };
-    pub const AiInformationPush = struct {
-        pub const msg_id: u16 = 25228;
-        pub const AiInfo_field_number: u32 = 6;
-    };
-    pub const AiInformationResponse = struct {
-        pub const msg_id: u16 = 18718;
-        pub const ErrorCode_field_number: u32 = 1;
-    };
-    pub const AiInformationNotify = struct {
-        pub const msg_id: u16 = 21566;
-        pub const AiBlackboardCd_field_number: u32 = 12;
-    };
-    pub const AiBlackboardsRequest = struct {
-        pub const msg_id: u16 = 27817;
-        pub const AiBlackboards_field_number: u32 = 9;
-    };
-    pub const AiBlackboardsPush = struct {
-        pub const msg_id: u16 = 20623;
-        pub const AiBlackboards_field_number: u32 = 1;
-    };
-    pub const AiBlackboardsResponse = struct {
-        pub const msg_id: u16 = 27726;
-        pub const ErrorCode_field_number: u32 = 4;
-    };
-    pub const AiBlackboardCdRequest = struct {
-        pub const msg_id: u16 = 18036;
-        pub const AiBlackboardCdModify_field_number: u32 = 15;
-        pub const AiBlackboardCdComplete_field_number: u32 = 5;
-    };
-    pub const AiBlackboardCdPush = struct {
-        pub const msg_id: u16 = 28235;
-        pub const AiBlackboardCdModify_field_number: u32 = 15;
-        pub const AiBlackboardCdComplete_field_number: u32 = 3;
-    };
-    pub const AiBlackboardCdResponse = struct {
-        pub const msg_id: u16 = 21338;
-        pub const ErrorCode_field_number: u32 = 7;
-    };
-    pub const AiBlackboardCdNotify = struct {
-        pub const msg_id: u16 = 15417;
-        pub const AiBlackboardCdDel_field_number: u32 = 7;
-        pub const AiBlackboardCdModify_field_number: u32 = 4;
-        pub const AiBlackboardCdComplete_field_number: u32 = 2;
-    };
-    pub const AiHateRequest = struct {
-        pub const msg_id: u16 = 16922;
-        pub const HateList_field_number: u32 = 11;
-    };
-    pub const AiHatePush = struct {
-        pub const msg_id: u16 = 21579;
-        pub const HateList_field_number: u32 = 9;
-    };
-    pub const AiHateResponse = struct {
-        pub const msg_id: u16 = 27096;
-        pub const ErrorCode_field_number: u32 = 14;
-    };
-    pub const AiHateNotify = struct {
-        pub const msg_id: u16 = 19276;
-        pub const HateList_field_number: u32 = 1;
-    };
-    pub const AiControlSwitchRequest = struct {
-        pub const msg_id: u16 = 17770;
-        pub const EntityId_field_number: u32 = 2;
-    };
-    pub const AiControlSwitchResponse = struct {
-        pub const msg_id: u16 = 21692;
-        pub const ErrorCode_field_number: u32 = 9;
-    };
-    pub const AiControlSwitchNotify = struct {
-        pub const msg_id: u16 = 15408;
-        pub const AiControlSwitchInfos_field_number: u32 = 11;
-    };
-    pub const PreAiControlSwitchNotify = struct {
-        pub const msg_id: u16 = 22664;
-        pub const EntityIds_field_number: u32 = 10;
-    };
+pub const AiHateEntity = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const HatredValue_field_number: u32 = 2;
+};
+pub const Int2Long = struct {
+    pub const First_field_number: u32 = 1;
+    pub const Second_field_number: u32 = 2;
+};
+pub const Int2Bool = struct {
+    pub const First_field_number: u32 = 1;
+    pub const Second_field_number: u32 = 2;
+};
+pub const AiInformation = struct {
+    pub const AiBlackboards_field_number: u32 = 1;
+    pub const HateList_field_number: u32 = 2;
+    pub const AiBlackboardCd_field_number: u32 = 3;
+};
+pub const AiInformationRequest = struct {
+    pub const msg_id: u16 = 15593;
+    pub const AiInfo_field_number: u32 = 10;
+};
+pub const AiInformationPush = struct {
+    pub const msg_id: u16 = 25228;
+    pub const AiInfo_field_number: u32 = 6;
+};
+pub const AiInformationResponse = struct {
+    pub const msg_id: u16 = 18718;
+    pub const ErrorCode_field_number: u32 = 1;
+};
+pub const AiInformationNotify = struct {
+    pub const msg_id: u16 = 21566;
+    pub const AiBlackboardCd_field_number: u32 = 12;
+};
+pub const AiBlackboardsRequest = struct {
+    pub const msg_id: u16 = 27817;
+    pub const AiBlackboards_field_number: u32 = 9;
+};
+pub const AiBlackboardsPush = struct {
+    pub const msg_id: u16 = 20623;
+    pub const AiBlackboards_field_number: u32 = 1;
+};
+pub const AiBlackboardsResponse = struct {
+    pub const msg_id: u16 = 27726;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const AiBlackboardCdRequest = struct {
+    pub const msg_id: u16 = 18036;
+    pub const AiBlackboardCdModify_field_number: u32 = 15;
+    pub const AiBlackboardCdComplete_field_number: u32 = 5;
+};
+pub const AiBlackboardCdPush = struct {
+    pub const msg_id: u16 = 28235;
+    pub const AiBlackboardCdModify_field_number: u32 = 15;
+    pub const AiBlackboardCdComplete_field_number: u32 = 3;
+};
+pub const AiBlackboardCdResponse = struct {
+    pub const msg_id: u16 = 21338;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const AiBlackboardCdNotify = struct {
+    pub const msg_id: u16 = 15417;
+    pub const AiBlackboardCdDel_field_number: u32 = 7;
+    pub const AiBlackboardCdModify_field_number: u32 = 4;
+    pub const AiBlackboardCdComplete_field_number: u32 = 2;
+};
+pub const AiHateRequest = struct {
+    pub const msg_id: u16 = 16922;
+    pub const HateList_field_number: u32 = 11;
+};
+pub const AiHatePush = struct {
+    pub const msg_id: u16 = 21579;
+    pub const HateList_field_number: u32 = 9;
+};
+pub const AiHateResponse = struct {
+    pub const msg_id: u16 = 27096;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const AiHateNotify = struct {
+    pub const msg_id: u16 = 19276;
+    pub const HateList_field_number: u32 = 1;
 };
 pub const IntArrayBlackboard = struct {
     pub const Values_field_number: u32 = 1;
@@ -29811,10 +30416,8 @@ pub const DarkCoastDeliveryResponse = struct {
     pub const ReceivedGuardReward_field_number: u32 = 3;
     pub const LevelGain_field_number: u32 = 8;
 };
-pub const BattleDefine = struct {
-    pub const TransferContextId = struct {
-        pub const BulletContextId_field_number: u32 = 1;
-    };
+pub const TransferContextId = struct {
+    pub const BulletContextId_field_number: u32 = 1;
 };
 pub const PbBattlePassReward = struct {
     pub const Level_field_number: u32 = 1;
@@ -31522,33 +32125,26 @@ pub const JigsawBaseComponentPb = struct {
     pub const EntityId_field_number: u32 = 2;
     pub const Winner_field_number: u32 = 3;
 };
-pub const Summon = struct {
-    pub const SummonerComponentPb = struct {
-        pub const SummonerId_field_number: u32 = 1;
-        pub const SummonCfgId_field_number: u32 = 2;
-        pub const SummonSkillId_field_number: u32 = 3;
-        pub const PlayerId_field_number: u32 = 4;
-        pub const Type_field_number: u32 = 5;
-    };
-    pub const SummonsComponentPb = struct {
-        pub const Version_field_number: u32 = 1;
-    };
-    pub const FollowerList = struct {
-        pub const Type_field_number: u32 = 1;
-        pub const EntityId_field_number: u32 = 2;
-    };
-    pub const FollowerComponentPb = struct {
-        pub const FollowerList_field_number: u32 = 1;
-    };
-    pub const FollowShooterComponentPb = struct {
-        pub const PlayerEntityId_field_number: u32 = 1;
-        pub const SummonConfigId_field_number: u32 = 2;
-    };
-    pub const FollowerUpdateNotify = struct {
-        pub const msg_id: u16 = 25249;
-        pub const PlayerId_field_number: u32 = 3;
-        pub const FollowerList_field_number: u32 = 4;
-    };
+pub const SummonerComponentPb = struct {
+    pub const SummonerId_field_number: u32 = 1;
+    pub const SummonCfgId_field_number: u32 = 2;
+    pub const SummonSkillId_field_number: u32 = 3;
+    pub const PlayerId_field_number: u32 = 4;
+    pub const Type_field_number: u32 = 5;
+};
+pub const SummonsComponentPb = struct {
+    pub const Version_field_number: u32 = 1;
+};
+pub const FollowerList = struct {
+    pub const Type_field_number: u32 = 1;
+    pub const EntityId_field_number: u32 = 2;
+};
+pub const FollowerComponentPb = struct {
+    pub const FollowerList_field_number: u32 = 1;
+};
+pub const FollowShooterComponentPb = struct {
+    pub const PlayerEntityId_field_number: u32 = 1;
+    pub const SummonConfigId_field_number: u32 = 2;
 };
 pub const CharacterAttachInfo = struct {
     pub const EntityId_field_number: u32 = 1;
@@ -31853,362 +32449,332 @@ pub const PrivateChatOperateResponse = struct {
     pub const msg_id: u16 = 20087;
     pub const ErrorCode_field_number: u32 = 4;
 };
-pub const CombatMessage = struct {
-    pub const CombatPushData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const ApplyBuffS2cResponsePush_field_number: u32 = 4;
-        pub const RemoveBuffS2cResponsePush_field_number: u32 = 5;
-        pub const RemoveBuffByIdS2cResponsePush_field_number: u32 = 6;
-        pub const CreateBulletResponsePush_field_number: u32 = 7;
-        pub const DestroyBulletResponsePush_field_number: u32 = 8;
-        pub const ApplyGameplayEffectPush_field_number: u32 = 9;
-        pub const RemoveGameplayEffectPush_field_number: u32 = 10;
-        pub const HitEndPush_field_number: u32 = 11;
-        pub const EndSkillPush_field_number: u32 = 12;
-        pub const PartUpdatePush_field_number: u32 = 13;
-        pub const MaterialPush_field_number: u32 = 14;
-        pub const GameplayCuePush_field_number: u32 = 15;
-        pub const EntityIsVisiblePush_field_number: u32 = 16;
-        pub const SwitchCharacterStatePush_field_number: u32 = 17;
-        pub const LogicStateInitPush_field_number: u32 = 18;
-        pub const SwitchLogicStatePush_field_number: u32 = 19;
-        pub const AnimationStateChangedPush_field_number: u32 = 20;
-        pub const AnimationStateInitPush_field_number: u32 = 21;
-        pub const ModifyBulletParamsPush_field_number: u32 = 22;
-        pub const DrownPush_field_number: u32 = 23;
-        pub const ActiveBuffPush_field_number: u32 = 24;
-        pub const AiInformationPush_field_number: u32 = 25;
-        pub const ToughCalcExtraRatioChangePush_field_number: u32 = 26;
-        pub const BattleStateChangePush_field_number: u32 = 27;
-        pub const AnimationGameplayTagPush_field_number: u32 = 28;
-        pub const BoneVisibleChangePush_field_number: u32 = 29;
-        pub const AiBlackboardsPush_field_number: u32 = 30;
-        pub const AiBlackboardCdPush_field_number: u32 = 31;
-        pub const AiHatePush_field_number: u32 = 32;
-        pub const MonsterBoomPush_field_number: u32 = 33;
-        pub const CaughtPush_field_number: u32 = 34;
-        pub const EntityStaticHookMovePush_field_number: u32 = 35;
-        pub const ChangeStateConfirmPush_field_number: u32 = 36;
-        pub const BuffStackCountPush_field_number: u32 = 37;
-        pub const ANStartPush_field_number: u32 = 38;
-        pub const UseSkillFailPush_field_number: u32 = 39;
-        pub const EnterViewDirectionPush_field_number: u32 = 40;
-        pub const ExitViewDirectionPush_field_number: u32 = 41;
-        pub const PassiveSkillAddPush_field_number: u32 = 42;
-        pub const InterruptSkillInDelayPush_field_number: u32 = 43;
-        pub const TriggerExitSkillPush_field_number: u32 = 44;
-        pub const ActorVisiblePush_field_number: u32 = 45;
-        pub const BuffEffectPush_field_number: u32 = 46;
-        pub const RTimeStopPush_field_number: u32 = 47;
-        pub const DrownEndTeleportPush_field_number: u32 = 48;
-        pub const MonsterDrownPush_field_number: u32 = 49;
-        pub const PassiveSkillRemovePush_field_number: u32 = 50;
-        pub const RTimeStopInstPush_field_number: u32 = 51;
-        pub const FsmPlayMontagePush_field_number: u32 = 52;
-        pub const TsAnimNotifyStateAbsoluteTimeStopPush_field_number: u32 = 53;
-        pub const RoleTagChangePush_field_number: u32 = 54;
-        pub const ExecuteQtePush_field_number: u32 = 55;
-        pub const ClientCurrentRoleReportPush_field_number: u32 = 56;
-        pub const MontagePlayPush_field_number: u32 = 57;
-        pub const CounterAttackPush_field_number: u32 = 58;
-        pub const NewLinkBurstPush_field_number: u32 = 59;
-        pub const RefreshBuffDurationPush_field_number: u32 = 60;
-        pub const RoleGoDownPush_field_number: u32 = 61;
-        pub const FsmConditionPassPush_field_number: u32 = 62;
-        pub const BuffEffectExecutePush_field_number: u32 = 63;
-        pub const VisionTriggerPush_field_number: u32 = 64;
-        pub const MotorIsEnablePush_field_number: u32 = 65;
-        pub const MotorSummonAndRidePush_field_number: u32 = 66;
-        pub const BulletPatternPush_field_number: u32 = 67;
-        pub const QuickHackRamVerifyPush_field_number: u32 = 68;
-        pub const QuickHackOpenPush_field_number: u32 = 69;
-        pub const DodgeInfoPush_field_number: u32 = 70;
-        pub const CombatCommon_field_number: u32 = 1;
-    };
-    pub const CombatNotifyData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const CreateBulletNotify_field_number: u32 = 2;
-        pub const DestroyBulletNotify_field_number: u32 = 3;
-        pub const DamageExecuteNotify_field_number: u32 = 4;
-        pub const ApplyGameplayEffectNotify_field_number: u32 = 5;
-        pub const RemoveGameplayEffectNotify_field_number: u32 = 6;
-        pub const HitNotify_field_number: u32 = 7;
-        pub const SkillNotify_field_number: u32 = 8;
-        pub const UseSkillNotify_field_number: u32 = 9;
-        pub const EndSkillNotify_field_number: u32 = 10;
-        pub const EntityLoadCompleteNotify_field_number: u32 = 11;
-        pub const PartUpdateNotify_field_number: u32 = 12;
-        pub const PartComponentInitNotify_field_number: u32 = 14;
-        pub const MaterialNotify_field_number: u32 = 15;
-        pub const GameplayCueNotify_field_number: u32 = 16;
-        pub const EntityIsVisibleNotify_field_number: u32 = 17;
-        pub const SwitchCharacterStateNotify_field_number: u32 = 18;
-        pub const PlayerRebackSceneNotify_field_number: u32 = 19;
-        pub const LogicStateInitNotify_field_number: u32 = 20;
-        pub const SwitchLogicStateNotify_field_number: u32 = 21;
-        pub const AttributeChangedNotify_field_number: u32 = 22;
-        pub const AnimationStateChangedNotify_field_number: u32 = 23;
-        pub const AnimationStateInitNotify_field_number: u32 = 24;
-        pub const ModifyBulletParamsNotify_field_number: u32 = 25;
-        pub const DrownNotify_field_number: u32 = 26;
-        pub const OrderApplyBuffNotify_field_number: u32 = 27;
-        pub const OrderRemoveBuffNotify_field_number: u32 = 28;
-        pub const ActivateBuffNotify_field_number: u32 = 29;
-        pub const OrderRemoveBuffByTagsNotify_field_number: u32 = 30;
-        pub const AiInformationNotify_field_number: u32 = 31;
-        pub const BattleStateChangeNotify_field_number: u32 = 32;
-        pub const AnimationGameplayTagNotify_field_number: u32 = 33;
-        pub const BoneVisibleChangeNotify_field_number: u32 = 34;
-        pub const AiBlackboardCdNotify_field_number: u32 = 35;
-        pub const CaughtNotify_field_number: u32 = 36;
-        pub const EntityStaticHookMoveNotify_field_number: u32 = 37;
-        pub const ChangeStateNotify_field_number: u32 = 38;
-        pub const ChangeStateConfirmNotify_field_number: u32 = 40;
-        pub const BuffStackCountNotify_field_number: u32 = 41;
-        pub const MontagePlayNotify_field_number: u32 = 42;
-        pub const ANStartNotify_field_number: u32 = 43;
-        pub const FsmResetNotify_field_number: u32 = 44;
-        pub const DamageRecordNotify_field_number: u32 = 45;
-        pub const AiHateNotify_field_number: u32 = 46;
-        pub const FsmBlackboardNotify_field_number: u32 = 47;
-        pub const CharacterBattleStateChangeNotify_field_number: u32 = 48;
-        pub const ApplyBuffS2cRequestNotify_field_number: u32 = 53;
-        pub const RemoveBuffS2cRequestNotify_field_number: u32 = 54;
-        pub const ActorVisibleNotify_field_number: u32 = 57;
-        pub const RecoverPropChangedNotify_field_number: u32 = 58;
-        pub const RemoveBuffByIdS2cRequestNotify_field_number: u32 = 59;
-        pub const ShieldUpdateNotify_field_number: u32 = 61;
-        pub const PlayerBattleStateChangeNotify_field_number: u32 = 62;
-        pub const FsmCustomBlackboardNotify_field_number: u32 = 63;
-        pub const PassiveSkillAddNotify_field_number: u32 = 64;
-        pub const PassiveSkillRemoveNotify_field_number: u32 = 65;
-        pub const ExecuteQteNotify_field_number: u32 = 66;
-        pub const ModifyEntityCampNotify_field_number: u32 = 69;
-        pub const AddCombineEntitiesRelationNotify_field_number: u32 = 70;
-        pub const RemoveCombineRelationNotify_field_number: u32 = 71;
-        pub const TestDamageRecordNotify_field_number: u32 = 72;
-        pub const BuffDurationNotify_field_number: u32 = 73;
-        pub const EntityLivingStatusNotify_field_number: u32 = 74;
-        pub const NewLinkStateNotify_field_number: u32 = 75;
-        pub const BroadcastAddBuffFailedNotify_field_number: u32 = 76;
-        pub const PackAnimChangedNotify_field_number: u32 = 77;
-        pub const VisionTriggerNotify_field_number: u32 = 78;
-        pub const RemoveBuffByServerIdS2cRequestNotify_field_number: u32 = 79;
-        pub const TransformBuffStackNotify_field_number: u32 = 80;
-        pub const MotorSummonAndRideNotify_field_number: u32 = 81;
-        pub const BulletPatternNotify_field_number: u32 = 82;
-        pub const FsmMontageDurationNotify_field_number: u32 = 83;
-        pub const CombatDataMaxNotify_field_number: u32 = 100;
-        pub const CombatCommon_field_number: u32 = 1;
-    };
-    pub const CombatDataMaxNotify = struct {
-        pub const msg_id: u16 = 25184;
-    };
-    pub const CombatContext = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const FsmStateChangeContext_field_number: u32 = 1;
-        pub const SkillContext_field_number: u32 = 2;
-        pub const MontageContext_field_number: u32 = 3;
-        pub const AddBuffContext_field_number: u32 = 4;
-        pub const BulletContext_field_number: u32 = 5;
-    };
-    pub const CombatRequestData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const CreateBulletRequest_field_number: u32 = 3;
-        pub const DestroyBulletRequest_field_number: u32 = 4;
-        pub const DamageExecuteRequest_field_number: u32 = 5;
-        pub const ApplyGameplayEffectRequest_field_number: u32 = 6;
-        pub const RemoveGameplayEffectRequest_field_number: u32 = 7;
-        pub const HitRequest_field_number: u32 = 8;
-        pub const HitEndRequest_field_number: u32 = 9;
-        pub const SkillRequest_field_number: u32 = 10;
-        pub const UseSkillRequest_field_number: u32 = 11;
-        pub const EndSkillRequest_field_number: u32 = 12;
-        pub const PartUpdateRequest_field_number: u32 = 13;
-        pub const MaterialRequest_field_number: u32 = 14;
-        pub const GameplayCueRequest_field_number: u32 = 15;
-        pub const EntityIsVisibleRequest_field_number: u32 = 16;
-        pub const SwitchCharacterStateRequest_field_number: u32 = 17;
-        pub const LogicStateInitRequest_field_number: u32 = 18;
-        pub const SwitchLogicStateRequest_field_number: u32 = 19;
-        pub const AnimationStateChangedRequest_field_number: u32 = 20;
-        pub const AnimationStateInitRequest_field_number: u32 = 21;
-        pub const ModifyBulletParamsRequest_field_number: u32 = 22;
-        pub const DrownRequest_field_number: u32 = 23;
-        pub const OrderApplyBuffRequest_field_number: u32 = 24;
-        pub const OrderRemoveBuffRequest_field_number: u32 = 25;
-        pub const ActivateBuffRequest_field_number: u32 = 26;
-        pub const OrderRemoveBuffByTagsRequest_field_number: u32 = 27;
-        pub const AiInformationRequest_field_number: u32 = 28;
-        pub const ToughCalcExtraRatioChangeRequest_field_number: u32 = 29;
-        pub const BattleStateChangeRequest_field_number: u32 = 30;
-        pub const AnimationGameplayTagRequest_field_number: u32 = 31;
-        pub const BoneVisibleChangeRequest_field_number: u32 = 32;
-        pub const AiBlackboardsRequest_field_number: u32 = 33;
-        pub const AiBlackboardCdRequest_field_number: u32 = 34;
-        pub const AiHateRequest_field_number: u32 = 35;
-        pub const MonsterBoomRequest_field_number: u32 = 36;
-        pub const CaughtRequest_field_number: u32 = 37;
-        pub const EntityStaticHookMoveRequest_field_number: u32 = 38;
-        pub const ChangeStateRequest_field_number: u32 = 39;
-        pub const ChangeStateConfirmRequest_field_number: u32 = 40;
-        pub const FsmConditionPassRequest_field_number: u32 = 41;
-        pub const BuffStackCountRequest_field_number: u32 = 42;
-        pub const ANStartRequest_field_number: u32 = 43;
-        pub const UseSkillFailRequest_field_number: u32 = 44;
-        pub const EnterViewDirectionRequest_field_number: u32 = 45;
-        pub const ExitViewDirectionRequest_field_number: u32 = 46;
-        pub const PassiveSkillAddRequest_field_number: u32 = 47;
-        pub const InterruptSkillInDelayRequest_field_number: u32 = 49;
-        pub const TriggerExitSkillRequest_field_number: u32 = 50;
-        pub const ActorVisibleRequest_field_number: u32 = 55;
-        pub const BuffEffectRequest_field_number: u32 = 56;
-        pub const FragileChangeRequest_field_number: u32 = 57;
-        pub const RTimeStopRequest_field_number: u32 = 58;
-        pub const DrownEndTeleportRequest_field_number: u32 = 59;
-        pub const MonsterDrownRequest_field_number: u32 = 60;
-        pub const PassiveSkillRemoveRequest_field_number: u32 = 61;
-        pub const RTimeStopInstRequest_field_number: u32 = 62;
-        pub const FsmStateBehaviorRequest_field_number: u32 = 63;
-        pub const FsmPlayMontageRequest_field_number: u32 = 64;
-        pub const TsAnimNotifyStateAbsoluteTimeStopRequest_field_number: u32 = 65;
-        pub const SwitchRoleRequest_field_number: u32 = 66;
-        pub const RoleTagChangeRequest_field_number: u32 = 67;
-        pub const ExecuteQteRequest_field_number: u32 = 68;
-        pub const CharacterAttachRequest_field_number: u32 = 69;
-        pub const CharacterDetachRequest_field_number: u32 = 70;
-        pub const ClientCurrentRoleReportRequest_field_number: u32 = 71;
-        pub const GaSwitchCommonEnemyProCampRequest_field_number: u32 = 72;
-        pub const CombatMaxCaseMessageRequest_field_number: u32 = 99;
-        pub const CombatCommon_field_number: u32 = 1;
-        pub const RequestId_field_number: u32 = 2;
-    };
-    pub const CombatResponseData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const CreateBulletResponse_field_number: u32 = 3;
-        pub const DestroyBulletResponse_field_number: u32 = 4;
-        pub const DamageExecuteResponse_field_number: u32 = 5;
-        pub const ApplyGameplayEffectResponse_field_number: u32 = 6;
-        pub const RemoveGameplayEffectResponse_field_number: u32 = 7;
-        pub const HitResponse_field_number: u32 = 8;
-        pub const HitEndResponse_field_number: u32 = 9;
-        pub const SkillResponse_field_number: u32 = 10;
-        pub const UseSkillResponse_field_number: u32 = 11;
-        pub const EndSkillResponse_field_number: u32 = 12;
-        pub const PartUpdateResponse_field_number: u32 = 13;
-        pub const MaterialResponse_field_number: u32 = 14;
-        pub const GameplayCueResponse_field_number: u32 = 15;
-        pub const EntityIsVisibleResponse_field_number: u32 = 16;
-        pub const SwitchCharacterStateResponse_field_number: u32 = 17;
-        pub const LogicStateInitResponse_field_number: u32 = 18;
-        pub const SwitchLogicStateResponse_field_number: u32 = 19;
-        pub const AnimationStateChangedResponse_field_number: u32 = 20;
-        pub const AnimationStateInitResponse_field_number: u32 = 21;
-        pub const ModifyBulletParamsResponse_field_number: u32 = 22;
-        pub const DrownResponse_field_number: u32 = 23;
-        pub const OrderApplyBuffResponse_field_number: u32 = 24;
-        pub const OrderRemoveBuffResponse_field_number: u32 = 25;
-        pub const ActivateBuffResponse_field_number: u32 = 26;
-        pub const OrderRemoveBuffByTagsResponse_field_number: u32 = 27;
-        pub const AiInformationResponse_field_number: u32 = 28;
-        pub const ToughCalcExtraRatioChangeResponse_field_number: u32 = 29;
-        pub const BattleStateChangeResponse_field_number: u32 = 30;
-        pub const AnimationGameplayTagResponse_field_number: u32 = 31;
-        pub const BoneVisibleChangeResponse_field_number: u32 = 32;
-        pub const AiBlackboardsResponse_field_number: u32 = 33;
-        pub const AiBlackboardCdResponse_field_number: u32 = 34;
-        pub const AiHateResponse_field_number: u32 = 35;
-        pub const MonsterBoomResponse_field_number: u32 = 36;
-        pub const CaughtResponse_field_number: u32 = 37;
-        pub const EntityStaticHookMoveResponse_field_number: u32 = 38;
-        pub const ChangeStateResponse_field_number: u32 = 39;
-        pub const ChangeStateConfirmResponse_field_number: u32 = 40;
-        pub const FsmConditionPassResponse_field_number: u32 = 41;
-        pub const BuffStackCountResponse_field_number: u32 = 42;
-        pub const ANStartResponse_field_number: u32 = 43;
-        pub const UseSkillFailResponse_field_number: u32 = 44;
-        pub const EnterViewDirectionResponse_field_number: u32 = 45;
-        pub const ExitViewDirectionResponse_field_number: u32 = 46;
-        pub const PassiveSkillAddResponse_field_number: u32 = 47;
-        pub const InterruptSkillInDelayResponse_field_number: u32 = 49;
-        pub const TriggerExitSkillResponse_field_number: u32 = 50;
-        pub const ActorVisibleResponse_field_number: u32 = 55;
-        pub const BuffEffectResponse_field_number: u32 = 56;
-        pub const FragileChangeResponse_field_number: u32 = 57;
-        pub const RTimeStopResponse_field_number: u32 = 58;
-        pub const DrownEndTeleportResponse_field_number: u32 = 59;
-        pub const MonsterDrownResponse_field_number: u32 = 60;
-        pub const PassiveSkillRemoveResponse_field_number: u32 = 61;
-        pub const RTimeStopInstResponse_field_number: u32 = 62;
-        pub const FsmStateBehaviorResponse_field_number: u32 = 63;
-        pub const FsmPlayMontageResponse_field_number: u32 = 64;
-        pub const TsAnimNotifyStateAbsoluteTimeStopResponse_field_number: u32 = 65;
-        pub const SwitchRoleResponse_field_number: u32 = 66;
-        pub const RoleTagChangeResponse_field_number: u32 = 67;
-        pub const ExecuteQteResponse_field_number: u32 = 68;
-        pub const CharacterAttachResponse_field_number: u32 = 69;
-        pub const CharacterDetachResponse_field_number: u32 = 70;
-        pub const ClientCurrentRoleReportResponse_field_number: u32 = 71;
-        pub const GaSwitchCommonEnemyProCampResponse_field_number: u32 = 72;
-        pub const CombatDataMaxResponse_field_number: u32 = 100;
-        pub const CombatCommon_field_number: u32 = 1;
-        pub const RequestId_field_number: u32 = 2;
-    };
-    pub const CombatDataMaxResponse = struct {
-    };
-    pub const CombatSendData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const Push_field_number: u32 = 2;
-        pub const Request_field_number: u32 = 3;
-    };
-    pub const CombatReceiveData = struct {
-        Message: ?union(enum) {
-        } = null,
-        pub const CombatNotifyData_field_number: u32 = 2;
-        pub const CombatResponseData_field_number: u32 = 3;
-    };
-    pub const CombatSendPackRequest = struct {
-        pub const msg_id: u16 = 28427;
-        pub const Data_field_number: u32 = 13;
-        pub const HostPlayerId_field_number: u32 = 3;
-    };
-    pub const CombatSendPackResponse = struct {
-        pub const msg_id: u16 = 20561;
-        pub const ErrorCode_field_number: u32 = 4;
-        pub const ReceivePackNotify_field_number: u32 = 6;
-    };
-    pub const CombatReceivePackNotify = struct {
-        pub const msg_id: u16 = 21308;
-        pub const Data_field_number: u32 = 13;
-    };
-    pub const CombatMaxCaseMessageRequest = struct {
-        pub const msg_id: u16 = 28432;
-    };
-    pub const CombatMaxCaseMessageResponse = struct {
-        pub const msg_id: u16 = 24897;
-    };
-    pub const CombatMessagePrefixInfoRequest = struct {
-        pub const msg_id: u16 = 26459;
-        pub const Id_field_number: u32 = 6;
-    };
-    pub const CombatMessagePrefixInfoResponse = struct {
-        pub const msg_id: u16 = 20759;
-        pub const PrefixInfo_field_number: u32 = 10;
-    };
-    pub const CombatMessagePostInfoRequest = struct {
-        pub const msg_id: u16 = 21492;
-        pub const PostId_field_number: u32 = 2;
-    };
-    pub const CombatMessagePostInfoResponse = struct {
-        pub const msg_id: u16 = 29987;
-        pub const PostInfo_field_number: u32 = 1;
-    };
+pub const CombatPushData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const ApplyBuffS2cResponsePush_field_number: u32 = 4;
+    pub const RemoveBuffS2cResponsePush_field_number: u32 = 5;
+    pub const RemoveBuffByIdS2cResponsePush_field_number: u32 = 6;
+    pub const CreateBulletResponsePush_field_number: u32 = 7;
+    pub const DestroyBulletResponsePush_field_number: u32 = 8;
+    pub const ApplyGameplayEffectPush_field_number: u32 = 9;
+    pub const RemoveGameplayEffectPush_field_number: u32 = 10;
+    pub const HitEndPush_field_number: u32 = 11;
+    pub const EndSkillPush_field_number: u32 = 12;
+    pub const PartUpdatePush_field_number: u32 = 13;
+    pub const MaterialPush_field_number: u32 = 14;
+    pub const GameplayCuePush_field_number: u32 = 15;
+    pub const EntityIsVisiblePush_field_number: u32 = 16;
+    pub const SwitchCharacterStatePush_field_number: u32 = 17;
+    pub const LogicStateInitPush_field_number: u32 = 18;
+    pub const SwitchLogicStatePush_field_number: u32 = 19;
+    pub const AnimationStateChangedPush_field_number: u32 = 20;
+    pub const AnimationStateInitPush_field_number: u32 = 21;
+    pub const ModifyBulletParamsPush_field_number: u32 = 22;
+    pub const DrownPush_field_number: u32 = 23;
+    pub const ActiveBuffPush_field_number: u32 = 24;
+    pub const AiInformationPush_field_number: u32 = 25;
+    pub const ToughCalcExtraRatioChangePush_field_number: u32 = 26;
+    pub const BattleStateChangePush_field_number: u32 = 27;
+    pub const AnimationGameplayTagPush_field_number: u32 = 28;
+    pub const BoneVisibleChangePush_field_number: u32 = 29;
+    pub const AiBlackboardsPush_field_number: u32 = 30;
+    pub const AiBlackboardCdPush_field_number: u32 = 31;
+    pub const AiHatePush_field_number: u32 = 32;
+    pub const MonsterBoomPush_field_number: u32 = 33;
+    pub const CaughtPush_field_number: u32 = 34;
+    pub const EntityStaticHookMovePush_field_number: u32 = 35;
+    pub const ChangeStateConfirmPush_field_number: u32 = 36;
+    pub const BuffStackCountPush_field_number: u32 = 37;
+    pub const ANStartPush_field_number: u32 = 38;
+    pub const UseSkillFailPush_field_number: u32 = 39;
+    pub const EnterViewDirectionPush_field_number: u32 = 40;
+    pub const ExitViewDirectionPush_field_number: u32 = 41;
+    pub const PassiveSkillAddPush_field_number: u32 = 42;
+    pub const InterruptSkillInDelayPush_field_number: u32 = 43;
+    pub const TriggerExitSkillPush_field_number: u32 = 44;
+    pub const ActorVisiblePush_field_number: u32 = 45;
+    pub const BuffEffectPush_field_number: u32 = 46;
+    pub const RTimeStopPush_field_number: u32 = 47;
+    pub const DrownEndTeleportPush_field_number: u32 = 48;
+    pub const MonsterDrownPush_field_number: u32 = 49;
+    pub const PassiveSkillRemovePush_field_number: u32 = 50;
+    pub const RTimeStopInstPush_field_number: u32 = 51;
+    pub const FsmPlayMontagePush_field_number: u32 = 52;
+    pub const TsAnimNotifyStateAbsoluteTimeStopPush_field_number: u32 = 53;
+    pub const RoleTagChangePush_field_number: u32 = 54;
+    pub const ExecuteQtePush_field_number: u32 = 55;
+    pub const ClientCurrentRoleReportPush_field_number: u32 = 56;
+    pub const MontagePlayPush_field_number: u32 = 57;
+    pub const CounterAttackPush_field_number: u32 = 58;
+    pub const NewLinkBurstPush_field_number: u32 = 59;
+    pub const RefreshBuffDurationPush_field_number: u32 = 60;
+    pub const RoleGoDownPush_field_number: u32 = 61;
+    pub const FsmConditionPassPush_field_number: u32 = 62;
+    pub const BuffEffectExecutePush_field_number: u32 = 63;
+    pub const VisionTriggerPush_field_number: u32 = 64;
+    pub const MotorIsEnablePush_field_number: u32 = 65;
+    pub const MotorSummonAndRidePush_field_number: u32 = 66;
+    pub const BulletPatternPush_field_number: u32 = 67;
+    pub const QuickHackRamVerifyPush_field_number: u32 = 68;
+    pub const QuickHackOpenPush_field_number: u32 = 69;
+    pub const DodgeInfoPush_field_number: u32 = 70;
+    pub const CombatCommon_field_number: u32 = 1;
+};
+pub const CombatNotifyData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const CreateBulletNotify_field_number: u32 = 2;
+    pub const DestroyBulletNotify_field_number: u32 = 3;
+    pub const DamageExecuteNotify_field_number: u32 = 4;
+    pub const ApplyGameplayEffectNotify_field_number: u32 = 5;
+    pub const RemoveGameplayEffectNotify_field_number: u32 = 6;
+    pub const HitNotify_field_number: u32 = 7;
+    pub const SkillNotify_field_number: u32 = 8;
+    pub const UseSkillNotify_field_number: u32 = 9;
+    pub const EndSkillNotify_field_number: u32 = 10;
+    pub const EntityLoadCompleteNotify_field_number: u32 = 11;
+    pub const PartUpdateNotify_field_number: u32 = 12;
+    pub const PartComponentInitNotify_field_number: u32 = 14;
+    pub const MaterialNotify_field_number: u32 = 15;
+    pub const GameplayCueNotify_field_number: u32 = 16;
+    pub const EntityIsVisibleNotify_field_number: u32 = 17;
+    pub const SwitchCharacterStateNotify_field_number: u32 = 18;
+    pub const PlayerRebackSceneNotify_field_number: u32 = 19;
+    pub const LogicStateInitNotify_field_number: u32 = 20;
+    pub const SwitchLogicStateNotify_field_number: u32 = 21;
+    pub const AttributeChangedNotify_field_number: u32 = 22;
+    pub const AnimationStateChangedNotify_field_number: u32 = 23;
+    pub const AnimationStateInitNotify_field_number: u32 = 24;
+    pub const ModifyBulletParamsNotify_field_number: u32 = 25;
+    pub const DrownNotify_field_number: u32 = 26;
+    pub const OrderApplyBuffNotify_field_number: u32 = 27;
+    pub const OrderRemoveBuffNotify_field_number: u32 = 28;
+    pub const ActivateBuffNotify_field_number: u32 = 29;
+    pub const OrderRemoveBuffByTagsNotify_field_number: u32 = 30;
+    pub const AiInformationNotify_field_number: u32 = 31;
+    pub const BattleStateChangeNotify_field_number: u32 = 32;
+    pub const AnimationGameplayTagNotify_field_number: u32 = 33;
+    pub const BoneVisibleChangeNotify_field_number: u32 = 34;
+    pub const AiBlackboardCdNotify_field_number: u32 = 35;
+    pub const CaughtNotify_field_number: u32 = 36;
+    pub const EntityStaticHookMoveNotify_field_number: u32 = 37;
+    pub const ChangeStateNotify_field_number: u32 = 38;
+    pub const ChangeStateConfirmNotify_field_number: u32 = 40;
+    pub const BuffStackCountNotify_field_number: u32 = 41;
+    pub const MontagePlayNotify_field_number: u32 = 42;
+    pub const ANStartNotify_field_number: u32 = 43;
+    pub const FsmResetNotify_field_number: u32 = 44;
+    pub const DamageRecordNotify_field_number: u32 = 45;
+    pub const AiHateNotify_field_number: u32 = 46;
+    pub const FsmBlackboardNotify_field_number: u32 = 47;
+    pub const CharacterBattleStateChangeNotify_field_number: u32 = 48;
+    pub const ApplyBuffS2cRequestNotify_field_number: u32 = 53;
+    pub const RemoveBuffS2cRequestNotify_field_number: u32 = 54;
+    pub const ActorVisibleNotify_field_number: u32 = 57;
+    pub const RecoverPropChangedNotify_field_number: u32 = 58;
+    pub const RemoveBuffByIdS2cRequestNotify_field_number: u32 = 59;
+    pub const ShieldUpdateNotify_field_number: u32 = 61;
+    pub const PlayerBattleStateChangeNotify_field_number: u32 = 62;
+    pub const FsmCustomBlackboardNotify_field_number: u32 = 63;
+    pub const PassiveSkillAddNotify_field_number: u32 = 64;
+    pub const PassiveSkillRemoveNotify_field_number: u32 = 65;
+    pub const ExecuteQteNotify_field_number: u32 = 66;
+    pub const ModifyEntityCampNotify_field_number: u32 = 69;
+    pub const AddCombineEntitiesRelationNotify_field_number: u32 = 70;
+    pub const RemoveCombineRelationNotify_field_number: u32 = 71;
+    pub const TestDamageRecordNotify_field_number: u32 = 72;
+    pub const BuffDurationNotify_field_number: u32 = 73;
+    pub const EntityLivingStatusNotify_field_number: u32 = 74;
+    pub const NewLinkStateNotify_field_number: u32 = 75;
+    pub const BroadcastAddBuffFailedNotify_field_number: u32 = 76;
+    pub const PackAnimChangedNotify_field_number: u32 = 77;
+    pub const VisionTriggerNotify_field_number: u32 = 78;
+    pub const RemoveBuffByServerIdS2cRequestNotify_field_number: u32 = 79;
+    pub const TransformBuffStackNotify_field_number: u32 = 80;
+    pub const MotorSummonAndRideNotify_field_number: u32 = 81;
+    pub const BulletPatternNotify_field_number: u32 = 82;
+    pub const FsmMontageDurationNotify_field_number: u32 = 83;
+    pub const CombatDataMaxNotify_field_number: u32 = 100;
+    pub const CombatCommon_field_number: u32 = 1;
+};
+pub const CombatDataMaxNotify = struct {
+    pub const msg_id: u16 = 25184;
+};
+pub const CombatRequestData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const CreateBulletRequest_field_number: u32 = 3;
+    pub const DestroyBulletRequest_field_number: u32 = 4;
+    pub const DamageExecuteRequest_field_number: u32 = 5;
+    pub const ApplyGameplayEffectRequest_field_number: u32 = 6;
+    pub const RemoveGameplayEffectRequest_field_number: u32 = 7;
+    pub const HitRequest_field_number: u32 = 8;
+    pub const HitEndRequest_field_number: u32 = 9;
+    pub const SkillRequest_field_number: u32 = 10;
+    pub const UseSkillRequest_field_number: u32 = 11;
+    pub const EndSkillRequest_field_number: u32 = 12;
+    pub const PartUpdateRequest_field_number: u32 = 13;
+    pub const MaterialRequest_field_number: u32 = 14;
+    pub const GameplayCueRequest_field_number: u32 = 15;
+    pub const EntityIsVisibleRequest_field_number: u32 = 16;
+    pub const SwitchCharacterStateRequest_field_number: u32 = 17;
+    pub const LogicStateInitRequest_field_number: u32 = 18;
+    pub const SwitchLogicStateRequest_field_number: u32 = 19;
+    pub const AnimationStateChangedRequest_field_number: u32 = 20;
+    pub const AnimationStateInitRequest_field_number: u32 = 21;
+    pub const ModifyBulletParamsRequest_field_number: u32 = 22;
+    pub const DrownRequest_field_number: u32 = 23;
+    pub const OrderApplyBuffRequest_field_number: u32 = 24;
+    pub const OrderRemoveBuffRequest_field_number: u32 = 25;
+    pub const ActivateBuffRequest_field_number: u32 = 26;
+    pub const OrderRemoveBuffByTagsRequest_field_number: u32 = 27;
+    pub const AiInformationRequest_field_number: u32 = 28;
+    pub const ToughCalcExtraRatioChangeRequest_field_number: u32 = 29;
+    pub const BattleStateChangeRequest_field_number: u32 = 30;
+    pub const AnimationGameplayTagRequest_field_number: u32 = 31;
+    pub const BoneVisibleChangeRequest_field_number: u32 = 32;
+    pub const AiBlackboardsRequest_field_number: u32 = 33;
+    pub const AiBlackboardCdRequest_field_number: u32 = 34;
+    pub const AiHateRequest_field_number: u32 = 35;
+    pub const MonsterBoomRequest_field_number: u32 = 36;
+    pub const CaughtRequest_field_number: u32 = 37;
+    pub const EntityStaticHookMoveRequest_field_number: u32 = 38;
+    pub const ChangeStateRequest_field_number: u32 = 39;
+    pub const ChangeStateConfirmRequest_field_number: u32 = 40;
+    pub const FsmConditionPassRequest_field_number: u32 = 41;
+    pub const BuffStackCountRequest_field_number: u32 = 42;
+    pub const ANStartRequest_field_number: u32 = 43;
+    pub const UseSkillFailRequest_field_number: u32 = 44;
+    pub const EnterViewDirectionRequest_field_number: u32 = 45;
+    pub const ExitViewDirectionRequest_field_number: u32 = 46;
+    pub const PassiveSkillAddRequest_field_number: u32 = 47;
+    pub const InterruptSkillInDelayRequest_field_number: u32 = 49;
+    pub const TriggerExitSkillRequest_field_number: u32 = 50;
+    pub const ActorVisibleRequest_field_number: u32 = 55;
+    pub const BuffEffectRequest_field_number: u32 = 56;
+    pub const FragileChangeRequest_field_number: u32 = 57;
+    pub const RTimeStopRequest_field_number: u32 = 58;
+    pub const DrownEndTeleportRequest_field_number: u32 = 59;
+    pub const MonsterDrownRequest_field_number: u32 = 60;
+    pub const PassiveSkillRemoveRequest_field_number: u32 = 61;
+    pub const RTimeStopInstRequest_field_number: u32 = 62;
+    pub const FsmStateBehaviorRequest_field_number: u32 = 63;
+    pub const FsmPlayMontageRequest_field_number: u32 = 64;
+    pub const TsAnimNotifyStateAbsoluteTimeStopRequest_field_number: u32 = 65;
+    pub const SwitchRoleRequest_field_number: u32 = 66;
+    pub const RoleTagChangeRequest_field_number: u32 = 67;
+    pub const ExecuteQteRequest_field_number: u32 = 68;
+    pub const CharacterAttachRequest_field_number: u32 = 69;
+    pub const CharacterDetachRequest_field_number: u32 = 70;
+    pub const ClientCurrentRoleReportRequest_field_number: u32 = 71;
+    pub const GaSwitchCommonEnemyProCampRequest_field_number: u32 = 72;
+    pub const CombatMaxCaseMessageRequest_field_number: u32 = 99;
+    pub const CombatCommon_field_number: u32 = 1;
+    pub const RequestId_field_number: u32 = 2;
+};
+pub const CombatResponseData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const CreateBulletResponse_field_number: u32 = 3;
+    pub const DestroyBulletResponse_field_number: u32 = 4;
+    pub const DamageExecuteResponse_field_number: u32 = 5;
+    pub const ApplyGameplayEffectResponse_field_number: u32 = 6;
+    pub const RemoveGameplayEffectResponse_field_number: u32 = 7;
+    pub const HitResponse_field_number: u32 = 8;
+    pub const HitEndResponse_field_number: u32 = 9;
+    pub const SkillResponse_field_number: u32 = 10;
+    pub const UseSkillResponse_field_number: u32 = 11;
+    pub const EndSkillResponse_field_number: u32 = 12;
+    pub const PartUpdateResponse_field_number: u32 = 13;
+    pub const MaterialResponse_field_number: u32 = 14;
+    pub const GameplayCueResponse_field_number: u32 = 15;
+    pub const EntityIsVisibleResponse_field_number: u32 = 16;
+    pub const SwitchCharacterStateResponse_field_number: u32 = 17;
+    pub const LogicStateInitResponse_field_number: u32 = 18;
+    pub const SwitchLogicStateResponse_field_number: u32 = 19;
+    pub const AnimationStateChangedResponse_field_number: u32 = 20;
+    pub const AnimationStateInitResponse_field_number: u32 = 21;
+    pub const ModifyBulletParamsResponse_field_number: u32 = 22;
+    pub const DrownResponse_field_number: u32 = 23;
+    pub const OrderApplyBuffResponse_field_number: u32 = 24;
+    pub const OrderRemoveBuffResponse_field_number: u32 = 25;
+    pub const ActivateBuffResponse_field_number: u32 = 26;
+    pub const OrderRemoveBuffByTagsResponse_field_number: u32 = 27;
+    pub const AiInformationResponse_field_number: u32 = 28;
+    pub const ToughCalcExtraRatioChangeResponse_field_number: u32 = 29;
+    pub const BattleStateChangeResponse_field_number: u32 = 30;
+    pub const AnimationGameplayTagResponse_field_number: u32 = 31;
+    pub const BoneVisibleChangeResponse_field_number: u32 = 32;
+    pub const AiBlackboardsResponse_field_number: u32 = 33;
+    pub const AiBlackboardCdResponse_field_number: u32 = 34;
+    pub const AiHateResponse_field_number: u32 = 35;
+    pub const MonsterBoomResponse_field_number: u32 = 36;
+    pub const CaughtResponse_field_number: u32 = 37;
+    pub const EntityStaticHookMoveResponse_field_number: u32 = 38;
+    pub const ChangeStateResponse_field_number: u32 = 39;
+    pub const ChangeStateConfirmResponse_field_number: u32 = 40;
+    pub const FsmConditionPassResponse_field_number: u32 = 41;
+    pub const BuffStackCountResponse_field_number: u32 = 42;
+    pub const ANStartResponse_field_number: u32 = 43;
+    pub const UseSkillFailResponse_field_number: u32 = 44;
+    pub const EnterViewDirectionResponse_field_number: u32 = 45;
+    pub const ExitViewDirectionResponse_field_number: u32 = 46;
+    pub const PassiveSkillAddResponse_field_number: u32 = 47;
+    pub const InterruptSkillInDelayResponse_field_number: u32 = 49;
+    pub const TriggerExitSkillResponse_field_number: u32 = 50;
+    pub const ActorVisibleResponse_field_number: u32 = 55;
+    pub const BuffEffectResponse_field_number: u32 = 56;
+    pub const FragileChangeResponse_field_number: u32 = 57;
+    pub const RTimeStopResponse_field_number: u32 = 58;
+    pub const DrownEndTeleportResponse_field_number: u32 = 59;
+    pub const MonsterDrownResponse_field_number: u32 = 60;
+    pub const PassiveSkillRemoveResponse_field_number: u32 = 61;
+    pub const RTimeStopInstResponse_field_number: u32 = 62;
+    pub const FsmStateBehaviorResponse_field_number: u32 = 63;
+    pub const FsmPlayMontageResponse_field_number: u32 = 64;
+    pub const TsAnimNotifyStateAbsoluteTimeStopResponse_field_number: u32 = 65;
+    pub const SwitchRoleResponse_field_number: u32 = 66;
+    pub const RoleTagChangeResponse_field_number: u32 = 67;
+    pub const ExecuteQteResponse_field_number: u32 = 68;
+    pub const CharacterAttachResponse_field_number: u32 = 69;
+    pub const CharacterDetachResponse_field_number: u32 = 70;
+    pub const ClientCurrentRoleReportResponse_field_number: u32 = 71;
+    pub const GaSwitchCommonEnemyProCampResponse_field_number: u32 = 72;
+    pub const CombatDataMaxResponse_field_number: u32 = 100;
+    pub const CombatCommon_field_number: u32 = 1;
+    pub const RequestId_field_number: u32 = 2;
+};
+pub const CombatDataMaxResponse = struct {
+};
+pub const CombatSendData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const Push_field_number: u32 = 2;
+    pub const Request_field_number: u32 = 3;
+};
+pub const CombatReceiveData = struct {
+    Message: ?union(enum) {
+    } = null,
+    pub const CombatNotifyData_field_number: u32 = 2;
+    pub const CombatResponseData_field_number: u32 = 3;
+};
+pub const CombatSendPackRequest = struct {
+    pub const msg_id: u16 = 28427;
+    pub const Data_field_number: u32 = 13;
+    pub const HostPlayerId_field_number: u32 = 3;
+};
+pub const CombatSendPackResponse = struct {
+    pub const msg_id: u16 = 20561;
+    pub const ErrorCode_field_number: u32 = 4;
+    pub const ReceivePackNotify_field_number: u32 = 6;
+};
+pub const CombatReceivePackNotify = struct {
+    pub const msg_id: u16 = 21308;
+    pub const Data_field_number: u32 = 13;
+};
+pub const CombatMaxCaseMessageRequest = struct {
+    pub const msg_id: u16 = 28432;
 };
 pub const EntityLoadCompleteNotify = struct {
     pub const msg_id: u16 = 26322;
@@ -32629,29 +33195,10 @@ pub const SceneRoadSyncNotify = struct {
     pub const InstanceId_field_number: u32 = 12;
     pub const EnabledRoads_field_number: u32 = 4;
 };
-pub const FsmStateChangeContext = struct {
-    pub const FsmId_field_number: u32 = 1;
-    pub const State_field_number: u32 = 2;
-    pub const ChangeType_field_number: u32 = 3;
-    pub const Index_field_number: u32 = 4;
-    pub const ConstateId_field_number: u32 = 5;
-};
-pub const SkillContext = struct {
-    pub const SkillId_field_number: u32 = 1;
-    pub const ConstateId_field_number: u32 = 2;
-};
 pub const MontageContext = struct {
     pub const SkillId_field_number: u32 = 1;
     pub const MontageIndex_field_number: u32 = 2;
     pub const ConstateId_field_number: u32 = 3;
-};
-pub const AddBuffContext = struct {
-    pub const BuffHandle_field_number: u32 = 1;
-    pub const ConstateId_field_number: u32 = 2;
-};
-pub const BulletContext = struct {
-    pub const Handle_field_number: u32 = 1;
-    pub const ConstateId_field_number: u32 = 2;
 };
 pub const HitInformation = struct {
     pub const Originator_field_number: u32 = 1;
@@ -33476,121 +34023,57 @@ pub const FragileChangeResponse = struct {
     pub const msg_id: u16 = 27687;
     pub const ErrorCode_field_number: u32 = 14;
 };
-pub const Debug = struct {
-    pub const CheatInputRequest = struct {
-        pub const msg_id: u16 = 18101;
-        pub const Type_field_number: u32 = 5;
-        pub const AoeDestroyEnemyRange_field_number: u32 = 1;
-        pub const EntityList_field_number: u32 = 6;
-    };
-    pub const CheatInputResponse = struct {
-        pub const msg_id: u16 = 28306;
-        pub const ErrorCode_field_number: u32 = 1;
-    };
-    pub const DamageRecordEntity = struct {
-        pub const EntityId_field_number: u32 = 1;
-        pub const BuffIds_field_number: u32 = 2;
-        pub const Attr_field_number: u32 = 3;
-        pub const AttrSnapshot_field_number: u32 = 4;
-    };
-    pub const DamageCalculationDetails = struct {
-        pub const ABaseAttackValue_field_number: u32 = 1;
-        pub const VEffectiveDefense_field_number: u32 = 2;
-        pub const ADamageFactor_field_number: u32 = 3;
-        pub const ADamageBonusRate_field_number: u32 = 4;
-        pub const ACritChance_field_number: u32 = 5;
-        pub const AWeaknessMasteryCoefficient_field_number: u32 = 6;
-        pub const VMonsterTypeRate_field_number: u32 = 7;
-        pub const ARate_field_number: u32 = 8;
-        pub const VDefFactor_field_number: u32 = 9;
-        pub const VResistanceFactor_field_number: u32 = 10;
-        pub const VbDamageReduce_field_number: u32 = 11;
-        pub const VbElementReduce_field_number: u32 = 12;
-        pub const AEnergyChange_field_number: u32 = 13;
-        pub const WeaknessLvValue_field_number: u32 = 14;
-        pub const VWeaknessBuffStack_field_number: u32 = 15;
-        pub const HitDamageBonusRate_field_number: u32 = 16;
-        pub const WeakDamageBonusRate_field_number: u32 = 17;
-        pub const ExceptedDamageValue_field_number: u32 = 18;
-    };
-    pub const DamageRecordNotify = struct {
-        pub const msg_id: u16 = 28821;
-        pub const TimestampMs_field_number: u32 = 7;
-        pub const DamageConfId_field_number: u32 = 3;
-        pub const DamageValue_field_number: u32 = 13;
-        pub const SkillId_field_number: u32 = 14;
-        pub const SkillLevel_field_number: u32 = 12;
-        pub const BulletId_field_number: u32 = 9;
-        pub const DamageSourceType_field_number: u32 = 11;
-        pub const IsCritical_field_number: u32 = 10;
-        pub const Attacker_field_number: u32 = 8;
-        pub const Victim_field_number: u32 = 2;
-        pub const DamageCalculationDetails_field_number: u32 = 1;
-        pub const IsWeakness_field_number: u32 = 4;
-    };
-    pub const TestDamageRecordEntity = struct {
-        pub const EntityId_field_number: u32 = 1;
-        pub const ConfigId_field_number: u32 = 2;
-        pub const BuffIds_field_number: u32 = 3;
-        pub const Attr_field_number: u32 = 4;
-    };
-    pub const TestDamageRecordNotify = struct {
-        pub const msg_id: u16 = 16847;
-        pub const TimestampMs_field_number: u32 = 13;
-        pub const Entities_field_number: u32 = 11;
-    };
-    pub const SetDamageRecordRequest = struct {
-        pub const msg_id: u16 = 20911;
-        pub const Enable_field_number: u32 = 10;
-        pub const DameRandomSeed_field_number: u32 = 6;
-    };
-    pub const SetDamageRecordResponse = struct {
-        pub const msg_id: u16 = 28489;
-        pub const ErrorCode_field_number: u32 = 13;
-    };
-    pub const GmVoxelInfoNotify = struct {
-        pub const msg_id: u16 = 16817;
-        pub const CellSize_field_number: u32 = 12;
-        pub const Spans_field_number: u32 = 10;
-    };
-    pub const GmIsOverlapNotify = struct {
-        pub const msg_id: u16 = 24033;
-        pub const CellSize_field_number: u32 = 8;
-        pub const Box_field_number: u32 = 10;
-        pub const IsOverlap_field_number: u32 = 5;
-    };
-    pub const VoxelSpan = struct {
-        pub const X_field_number: u32 = 1;
-        pub const Y_field_number: u32 = 2;
-        pub const Smin_field_number: u32 = 3;
-        pub const Smax_field_number: u32 = 4;
-    };
-    pub const OutputDebugInfoRequest = struct {
-        pub const msg_id: u16 = 20197;
-        pub const ClientInfo_field_number: u32 = 13;
-    };
-    pub const OutputDebugInfoResponse = struct {
-        pub const msg_id: u16 = 26202;
-    };
-    pub const RequestOutputDebugNotify = struct {
-        pub const msg_id: u16 = 17142;
-    };
-    pub const UploadEventNotify = struct {
-        pub const msg_id: u16 = 15355;
-        pub const LogId_field_number: u32 = 1;
-    };
-    pub const SkillErrorNotify = struct {
-        pub const msg_id: u16 = 25844;
-        pub const ErrorCode_field_number: u32 = 13;
-        pub const ExtraInfo_field_number: u32 = 15;
-    };
-    pub const DebugMapPathNotify = struct {
-        pub const msg_id: u16 = 20699;
-        pub const PosList_field_number: u32 = 9;
-        pub const Duration_field_number: u32 = 1;
-        pub const Radius_field_number: u32 = 8;
-        pub const IsTrace_field_number: u32 = 11;
-    };
+pub const DamageRecordEntity = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const BuffIds_field_number: u32 = 2;
+    pub const Attr_field_number: u32 = 3;
+    pub const AttrSnapshot_field_number: u32 = 4;
+};
+pub const DamageCalculationDetails = struct {
+    pub const ABaseAttackValue_field_number: u32 = 1;
+    pub const VEffectiveDefense_field_number: u32 = 2;
+    pub const ADamageFactor_field_number: u32 = 3;
+    pub const ADamageBonusRate_field_number: u32 = 4;
+    pub const ACritChance_field_number: u32 = 5;
+    pub const AWeaknessMasteryCoefficient_field_number: u32 = 6;
+    pub const VMonsterTypeRate_field_number: u32 = 7;
+    pub const ARate_field_number: u32 = 8;
+    pub const VDefFactor_field_number: u32 = 9;
+    pub const VResistanceFactor_field_number: u32 = 10;
+    pub const VbDamageReduce_field_number: u32 = 11;
+    pub const VbElementReduce_field_number: u32 = 12;
+    pub const AEnergyChange_field_number: u32 = 13;
+    pub const WeaknessLvValue_field_number: u32 = 14;
+    pub const VWeaknessBuffStack_field_number: u32 = 15;
+    pub const HitDamageBonusRate_field_number: u32 = 16;
+    pub const WeakDamageBonusRate_field_number: u32 = 17;
+    pub const ExceptedDamageValue_field_number: u32 = 18;
+};
+pub const DamageRecordNotify = struct {
+    pub const msg_id: u16 = 28821;
+    pub const TimestampMs_field_number: u32 = 7;
+    pub const DamageConfId_field_number: u32 = 3;
+    pub const DamageValue_field_number: u32 = 13;
+    pub const SkillId_field_number: u32 = 14;
+    pub const SkillLevel_field_number: u32 = 12;
+    pub const BulletId_field_number: u32 = 9;
+    pub const DamageSourceType_field_number: u32 = 11;
+    pub const IsCritical_field_number: u32 = 10;
+    pub const Attacker_field_number: u32 = 8;
+    pub const Victim_field_number: u32 = 2;
+    pub const DamageCalculationDetails_field_number: u32 = 1;
+    pub const IsWeakness_field_number: u32 = 4;
+};
+pub const TestDamageRecordEntity = struct {
+    pub const EntityId_field_number: u32 = 1;
+    pub const ConfigId_field_number: u32 = 2;
+    pub const BuffIds_field_number: u32 = 3;
+    pub const Attr_field_number: u32 = 4;
+};
+pub const TestDamageRecordNotify = struct {
+    pub const msg_id: u16 = 16847;
+    pub const TimestampMs_field_number: u32 = 13;
+    pub const Entities_field_number: u32 = 11;
 };
 pub const TimeStopPush = struct {
     pub const msg_id: u16 = 16566;
@@ -35465,6 +35948,24 @@ pub const QuestReviewDataResponse = struct {
     pub const msg_id: u16 = 18799;
     pub const ErrorCode_field_number: u32 = 3;
 };
+pub const QuestBranchInfo = struct {
+    pub const QuestBranchInfos_field_number: u32 = 1;
+    pub const UnlockTimePoints_field_number: u32 = 2;
+    pub const UnlockBranchComponentsGroup_field_number: u32 = 3;
+};
+pub const OneQuestBranchPageInfo = struct {
+    pub const id_field_number: u32 = 1;
+    pub const CurBranch_field_number: u32 = 2;
+    pub const CompleteBranches_field_number: u32 = 3;
+};
+pub const QuestBranchRequest = struct {
+    pub const msg_id: u16 = 17117;
+};
+pub const QuestBranchResponse = struct {
+    pub const msg_id: u16 = 22986;
+    pub const errorCode_field_number: u32 = 14;
+    pub const QuestBranchInfo_field_number: u32 = 8;
+};
 pub const EntityAccessInfo = struct {
     pub const EntityId_field_number: u32 = 1;
     pub const RangeType_field_number: u32 = 2;
@@ -35855,22 +36356,4 @@ pub const LobbyListResponse = struct {
     pub const msg_id: u16 = 26822;
     pub const ErrorCode_field_number: u32 = 10;
     pub const ItemList_field_number: u32 = 5;
-};
-pub const QuestBranchInfo = struct {
-    pub const QuestBranchInfos_field_number: u32 = 1;
-    pub const UnlockTimePoints_field_number: u32 = 2;
-    pub const UnlockBranchComponentsGroup_field_number: u32 = 3;
-};
-pub const OneQuestBranchPageInfo = struct {
-    pub const id_field_number: u32 = 1;
-    pub const CurBranch_field_number: u32 = 2;
-    pub const CompleteBranches_field_number: u32 = 3;
-};
-pub const QuestBranchRequest = struct {
-    pub const msg_id: u16 = 17117;
-};
-pub const QuestBranchResponse = struct {
-    pub const msg_id: u16 = 22986;
-    pub const errorCode_field_number: u32 = 14;
-    pub const QuestBranchInfo_field_number: u32 = 8;
 };

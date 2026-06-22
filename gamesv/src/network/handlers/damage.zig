@@ -13,7 +13,6 @@ const damage_helper = @import("../../logic/helpers/damage.zig");
 // TODO: make energy regen be based on the damage context as current approach suffers an issue with multi-target.
 pub fn DamageExecuteRequest(
     txn: *dispatch.CombatRequestTxn(.DamageExecuteRequest),
-    conn: *Connection,
     assets: *const Assets,
     scene: *Scene,
     fs: *FileSystem,
@@ -43,7 +42,7 @@ pub fn DamageExecuteRequest(
         query,
         alloc,
     );
-    try conn.push(pb.CombatMessage.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+    try txn.receive_data_pack.appendSlice(alloc.arena, combat_receive_pack.items);
 
     txn.respond(.{
         .ErrorCode = .Success,

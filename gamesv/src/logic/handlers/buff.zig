@@ -17,7 +17,7 @@ pub fn removeBuffFromEntity(
     const log = std.log.scoped(.buff_removal);
     const item = query.byEntityHandle(event.data.entity) orelse return;
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.entity.net_id };
-    var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
+    var notify: pb.CombatReceivePackNotify = .{};
 
     for (event.data.handle_ids) |handle_id| {
         item[0].removeByHandleId(alloc.gpa, handle_id);
@@ -55,7 +55,7 @@ pub fn addBuffToEntity(
     const log = std.log.scoped(.buff_addition);
     const item = query.byEntityHandle(event.data.target) orelse return;
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.target.net_id };
-    var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
+    var notify: pb.CombatReceivePackNotify = .{};
 
     for (event.data.buffs) |entry| {
         const existing = item[0].getByBuffId(entry.id);

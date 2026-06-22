@@ -12,7 +12,6 @@ const buff_helper = @import("../../logic/helpers/buff.zig");
 
 pub fn OrderApplyBuffRequest(
     txn: *dispatch.CombatRequestTxn(.OrderApplyBuffRequest),
-    conn: *Connection,
     assets: *const Assets,
     scene: *Scene,
     fs: *FileSystem,
@@ -63,7 +62,7 @@ pub fn OrderApplyBuffRequest(
         query,
         alloc,
     );
-    try conn.push(pb.CombatMessage.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+    try txn.receive_data_pack.appendSlice(alloc.arena, combat_receive_pack.items);
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -102,5 +101,5 @@ pub fn ApplyGameplayEffectPush(
         query,
         alloc,
     );
-    try conn.push(pb.CombatMessage.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+    try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
 }

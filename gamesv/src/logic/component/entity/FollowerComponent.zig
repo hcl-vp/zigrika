@@ -11,8 +11,8 @@ pub const Entry = struct {
 
 list: []Entry = &.{},
 
-pub fn toProto(comp: Component, alloc: mem.Alloc) !pb.Summon.FollowerComponentPb {
-    var follower_list = std.ArrayList(pb.Summon.FollowerList).empty;
+pub fn toProto(comp: Component, alloc: mem.Alloc) !pb.FollowerComponentPb {
+    var follower_list = std.ArrayList(pb.FollowerList).empty;
     for (comp.list) |item| {
         try follower_list.append(alloc.arena, .{
             .Type = @enumFromInt(item.Type),

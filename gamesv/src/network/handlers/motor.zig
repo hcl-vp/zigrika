@@ -289,7 +289,7 @@ fn findMotorEntity(scene: *Scene, assets: *const Assets) ?Scene.Entity {
     for (slice.items(.follower)) |maybe_follower| {
         const follower = maybe_follower orelse continue;
         for (follower.list) |entry| {
-            if (entry.Type != @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerMotor) or entry.EntityId == 0) continue;
+            if (entry.Type != @intFromEnum(pb.FollowerType.EPlayerFollowerMotor) or entry.EntityId == 0) continue;
 
             const index = scene.net_id_map.get(entry.EntityId) orelse continue;
             const config = slice.items(.config)[index];

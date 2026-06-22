@@ -9,7 +9,7 @@ pub fn updateGameplayTags(
     alloc: mem.Alloc,
 ) !void {
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.entity.net_id };
-    var notify: pb.CombatMessage.CombatReceivePackNotify = .{};
+    var notify: pb.CombatReceivePackNotify = .{};
 
     for (event.data.add_tag_ids) |tag_id| {
         try appendTagNotify(&notify, alloc, combat_common, tag_id, true);
@@ -24,7 +24,7 @@ pub fn updateGameplayTags(
 }
 
 fn appendTagNotify(
-    notify: *pb.CombatMessage.CombatReceivePackNotify,
+    notify: *pb.CombatReceivePackNotify,
     alloc: mem.Alloc,
     combat_common: pb.CombatCommon,
     tag_id: i32,

@@ -40,12 +40,12 @@ pub fn createPlayerSceneEntity(
     motorcycle_entity_id: i64,
 ) !Entity {
     const followers = try alloc.gpa.dupe(Entity.FollowerComponent.Entry, &[_]Entity.FollowerComponent.Entry{
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerDefault) },
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerExploreSkill) },
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerAuxiliary) },
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerSpecialItem) },
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerMotor), .EntityId = motorcycle_entity_id },
-        .{ .Type = @intFromEnum(pb.Summon.FollowerType.EPlayerFollowerMax) },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerDefault) },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerExploreSkill) },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerAuxiliary) },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerSpecialItem) },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerMotor), .EntityId = motorcycle_entity_id },
+        .{ .Type = @intFromEnum(pb.FollowerType.EPlayerFollowerMax) },
     });
     const entity = try scene.spawn(alloc.gpa, fs, .{
         Entity.FollowerComponent{ .list = followers },
