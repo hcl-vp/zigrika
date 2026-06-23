@@ -1722,6 +1722,37 @@ setTimeout(() => {
     }
   };
 
+  const enemy_cache = [];
+  const disabled_map = new Map();
+
+  const toggle_enemies = (show) => {
+    if (enemy_cache.length === 0) {
+      const range = CommonParamById_1.configCommonParamById.GetIntConfig(
+        "FightPhotoHideMonsterDistance",
+      );
+      ModelManager_1.ModelManager.CreatureModel.GetEntitiesInRange(
+        range,
+        192,
+        enemy_cache,
+      );
+    }
+
+    for (const o of enemy_cache) {
+      if (!o.Valid || !o.Entity?.Valid || o.Entity.Active === show) continue;
+
+      if (show) {
+        const handle = disabled_map.get(o);
+        if (handle) {
+          o.Entity.Enable(handle, "toggle_enemies");
+          disabled_map.delete(o);
+        }
+      } else {
+        const handle = o.Entity.Disable("toggle_enemies: state=false");
+        disabled_map.set(o, handle);
+      }
+    }
+  };
+
   ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption =
     function (t, e, o = !1) {
       var i = ModelManager_1.ModelManager.PhotographModel;
@@ -1824,25 +1855,7 @@ setTimeout(() => {
           break;
         }
         case MAX_ID:
-          const view = UiManager_1.UiManager.GetViewByName(
-            "FightPhotographView",
-          );
-          if (view) {
-            view.OnBackButtonClicked = () => {
-              ControllerHolder_1.ControllerHolder.PhotographController.CloseFightPhotographMode();
-            };
-          }
-          if (e == true || e === 1) {
-            view?.SEd?.Jzd(false);
-          } else {
-            view?.SEd?.Jzd(true);
-            // const entity =
-            //   ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity;
-            // if (entity?.Valid && entity.Entity?.Valid) {
-            //   const comp = entity.Entity.GetComponent(221);
-            //   comp?.HasTag(-561064175) && comp.RemoveTag(-561064175);
-            // }
-          }
+          toggle_enemies(e == true || e === 1 ? false : true);
           break;
         case MAX_ID + 1:
           const entity =
