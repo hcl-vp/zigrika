@@ -558,6 +558,7 @@ pub fn afterSceneJoin(
         "assets/scripts/join_scene_patches/main_watermask_disable.js",
         "assets/scripts/join_scene_patches/flight_fix.js",
         "assets/scripts/join_scene_patches/motorcycle.js",
+        "assets/scripts/join_scene_patches/global_spawn.js",
     };
 
     for (patch_files) |path| {

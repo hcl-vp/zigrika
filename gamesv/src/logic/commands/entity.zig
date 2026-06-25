@@ -26,7 +26,7 @@ const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
 
 pub const spawn = struct {
     pub const alias = "s";
-    pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?]";
+    pub const description = "spawns an entity.\nusage: spawn [entity_id] [fsm?] [freeze?] [tune_break?]";
     pub fn call(
         events: *EventQueue,
         scene: *Scene,
@@ -35,6 +35,7 @@ pub const spawn = struct {
         conn: *Connection,
         alloc: mem.Alloc,
         entity_id: i64,
+        placeholder_fsm: ?bool,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
@@ -103,7 +104,6 @@ pub const spawn = struct {
         var buff_ids: std.ArrayList(i64) = .empty;
         defer buff_ids.deinit(alloc.gpa);
 
-        if (is_frozen orelse false) try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
         if (is_tune_broken orelse false) try buff_ids.appendSlice(alloc.gpa, TUNE_BROKEN_BUFFS);
         if (buff_ids.items.len > 0) {
             var born_buffs = try buffListFromIds(alloc.gpa, buff_ids.items);
@@ -117,8 +117,35 @@ pub const spawn = struct {
         var entity_pbs: std.ArrayList(pb.EntityPb) = try .initCapacity(alloc.gpa, 1);
         defer entity_pbs.deinit(alloc.gpa);
         const storage = scene.entities.get(entity.index);
-        const entity_pb = try storage.entityToProto(entity.net_id, alloc);
+        var entity_pb = try storage.entityToProto(entity.net_id, alloc);
+        if (!(is_frozen orelse false) and (placeholder_fsm orelse false)) {
+            var fsms: std.ArrayList(pb.DFsm) = .empty;
+            try fsms.appendSlice(alloc.arena, &.{
+                .{ .FsmId = 10007, .CurrentState = 10013 },
+                .{ .FsmId = 10007, .CurrentState = 10012 },
+                .{ .FsmId = 10009, .CurrentState = 10015 },
+            });
+            try entity_pb.ComponentPbs.append(alloc.arena, .{
+                .ComponentPb = .{
+                    .EntityFsmComponentPb = .{
+                        .HashCode = 439390503,
+                        .Fsms = fsms,
+                    },
+                },
+            });
+        } else if ((is_frozen orelse false)) {
+            try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
+        }
         entity_pbs.appendAssumeCapacity(entity_pb);
+
+        try conn.push(pb.JSPatchNotify{
+            .Content = try std.fmt.allocPrint(
+                alloc.arena,
+                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d});",
+                .{ entity_id, entity_config.MapId },
+            ),
+        }, alloc.arena);
+
         try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
 
         try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}", .{ entity_id, is_frozen, is_tune_broken });
