@@ -762,7 +762,7 @@
     "Desc": "KurotatoProperty_desc_10",
     "DescParams": [],
     "BasicValue": 0,
-    "Min": 0,
+    "Min": -15,
     "Max": 1,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertygreendefense_UI.T_Iconpropertygreendefense_UI",
     "RoleType": 1,

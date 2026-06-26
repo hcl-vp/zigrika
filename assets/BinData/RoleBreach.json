@@ -5692,5 +5692,14 @@
     },
     "BreachReward": 0,
     "ConditionId": 504007
+  },
+  {
+    "Id": 505801,
+    "BreachGroupId": 5058,
+    "BreachLevel": 0,
+    "MaxLevel": 90,
+    "BreachConsume": {},
+    "BreachReward": 0,
+    "ConditionId": 0
   }
 ]

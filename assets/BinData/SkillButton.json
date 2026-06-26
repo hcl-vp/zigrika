@@ -8625,9 +8625,11 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
-      "568864496": 1610003,
+      "568864496": 1610001,
       "917667812": 1002,
-      "1000317324": 1610003,
+      "1000317324": 1610001,
+      "-351874267": 1610003,
+      "-2120531870": 1610003,
       "-1949390155": 1610002
     },
     "CustomHandleId": 0,
@@ -8642,12 +8644,10 @@
     "SkillId": 1610203,
     "SkillIdTagMap": {
       "43033631": 1610001,
-      "709199798": 1610051,
+      "709199798": 1610052,
       "1230663142": 1610051,
-      "1308372461": 1610151,
+      "1308372461": 1610152,
       "1520676172": 210009,
-      "1719725610": 1610152,
-      "2146407679": 1610052,
       "-1070569477": 210009,
       "-2142004278": 1610151,
       "-1962447602": 1610101
@@ -8678,9 +8678,7 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
-      "1719725610": 1610003,
-      "1914275633": 1610001,
-      "2146407679": 1610003
+      "1914275633": 1610001
     },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
@@ -9439,7 +9437,9 @@
     "ButtonType": 4,
     "ActionType": 4,
     "SkillId": 1110001,
-    "SkillIdTagMap": {},
+    "SkillIdTagMap": {
+      "1032880671": 1110006
+    },
     "SkillIconTags": [
       -624589333,
       917667812
@@ -9463,6 +9463,7 @@
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
     "DynamicEffectTagMap": {
+      "50712192": 1110001,
       "917667812": 1002
     },
     "CustomHandleId": 0,
@@ -9735,7 +9736,9 @@
     "ButtonType": 4,
     "ActionType": 4,
     "SkillId": 5045101,
-    "SkillIdTagMap": {},
+    "SkillIdTagMap": {
+      "1491611589": 5045007
+    },
     "SkillIconTags": [],
     "EnableTags": [],
     "DisableTags": [
@@ -9818,7 +9821,9 @@
     "CdCompletedEffectId": 0,
     "IsLongPressControlCamera": true,
     "LongPressTime": 300,
-    "DynamicEffectTagMap": {},
+    "DynamicEffectTagMap": {
+      "-1475675833": 1003
+    },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
   },
@@ -10126,9 +10131,9 @@
   {
     "Id": 50540020,
     "RoleId": 5054,
-    "Name": "探索技能",
-    "ButtonType": 7,
-    "ActionType": 7,
+    "Name": "机关交互",
+    "ButtonType": 1,
+    "ActionType": 1,
     "SkillId": 5054010,
     "SkillIdTagMap": {},
     "SkillIconTags": [],
@@ -10315,7 +10320,49 @@
     "CdCompletedEffectId": 0,
     "IsLongPressControlCamera": false,
     "LongPressTime": 0,
-    "DynamicEffectTagMap": {},
+    "DynamicEffectTagMap": {
+      "-1475675833": 1003
+    },
+    "CustomHandleId": 0,
+    "ShowLongPressTags": []
+  },
+  {
+    "Id": 50450006,
+    "RoleId": 5045,
+    "Name": "探索技能",
+    "ButtonType": 7,
+    "ActionType": 7,
+    "SkillId": 5045003,
+    "SkillIdTagMap": {},
+    "SkillIconTags": [
+      1702161495,
+      -1526637662,
+      1193763416
+    ],
+    "EnableTags": [],
+    "DisableTags": [],
+    "DisableSkillIdTags": {},
+    "VisibleTags": [
+      1702161495,
+      -1526637662,
+      1193763416
+    ],
+    "HiddenTags": [],
+    "IsCdVisible": true,
+    "AttributeId": 0,
+    "MaxAttributeId": 0,
+    "AttributeIdTagMap": {},
+    "AttributeEnableTags": [],
+    "FormationAttributeIdTagMap": {},
+    "MaxAttributeBurstEffectId": 0,
+    "CdCompletedEffectId": 0,
+    "IsLongPressControlCamera": false,
+    "LongPressTime": 0,
+    "DynamicEffectTagMap": {
+      "1193763416": 1003,
+      "1702161495": 1003,
+      "-1526637662": 1002
+    },
     "CustomHandleId": 0,
     "ShowLongPressTags": []
   }

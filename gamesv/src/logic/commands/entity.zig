@@ -26,7 +26,7 @@ const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
 
 pub const spawn = struct {
     pub const alias = "s";
-    pub const description = "spawns an entity.\nusage: spawn [entity_id] [fsm?] [freeze?] [tune_break?]";
+    pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?] [fsm?]";
     pub fn call(
         events: *EventQueue,
         scene: *Scene,
@@ -35,9 +35,9 @@ pub const spawn = struct {
         conn: *Connection,
         alloc: mem.Alloc,
         entity_id: i64,
-        placeholder_fsm: ?bool,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
+        placeholder_fsm: ?bool,
     ) !void {
         var entity_config = (assets.tables.level_entity_config.getDataById(entity_id) orelse {
             try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
@@ -105,6 +105,7 @@ pub const spawn = struct {
         defer buff_ids.deinit(alloc.gpa);
 
         if (is_tune_broken orelse false) try buff_ids.appendSlice(alloc.gpa, TUNE_BROKEN_BUFFS);
+        if (is_frozen orelse false) try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
         if (buff_ids.items.len > 0) {
             var born_buffs = try buffListFromIds(alloc.gpa, buff_ids.items);
             defer born_buffs.deinit(alloc.gpa);
@@ -118,7 +119,7 @@ pub const spawn = struct {
         defer entity_pbs.deinit(alloc.gpa);
         const storage = scene.entities.get(entity.index);
         var entity_pb = try storage.entityToProto(entity.net_id, alloc);
-        if (!(is_frozen orelse false) and (placeholder_fsm orelse false)) {
+        if (placeholder_fsm orelse false) {
             var fsms: std.ArrayList(pb.DFsm) = .empty;
             try fsms.appendSlice(alloc.arena, &.{
                 .{ .FsmId = 10007, .CurrentState = 10013 },
@@ -133,8 +134,6 @@ pub const spawn = struct {
                     },
                 },
             });
-        } else if ((is_frozen orelse false)) {
-            try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
         }
         entity_pbs.appendAssumeCapacity(entity_pb);
 
@@ -148,7 +147,7 @@ pub const spawn = struct {
 
         try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
 
-        try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}", .{ entity_id, is_frozen, is_tune_broken });
+        try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, forced_fsm: {any}", .{ entity_id, is_frozen, is_tune_broken, placeholder_fsm });
     }
 };
 

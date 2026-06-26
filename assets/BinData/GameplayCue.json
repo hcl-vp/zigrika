@@ -165325,9 +165325,9 @@
     "CompName": "Mesh",
     "Socket": "Bip001RHand",
     "Location": {
-      "X": 250,
+      "X": 0,
       "Y": 0,
-      "Z": 450
+      "Z": 0
     },
     "Rotation": {
       "X": 0,
@@ -167983,9 +167983,9 @@
     "CompName": "Mesh",
     "Socket": "None",
     "Location": {
-      "X": 0,
+      "X": 250,
       "Y": 0,
-      "Z": 0
+      "Z": 450
     },
     "Rotation": {
       "X": 0,
@@ -168094,7 +168094,7 @@
   {
     "Id": 16100050001,
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconXuanLingBuff04.T_IconXuanLingBuff04",
-    "CueType": 2,
+    "CueType": 24,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -168143,7 +168143,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168151,7 +168154,7 @@
   {
     "Id": 16100050002,
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconXuanLingBuff05.T_IconXuanLingBuff05",
-    "CueType": 2,
+    "CueType": 24,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -168200,7 +168203,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168257,7 +168263,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168314,7 +168323,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168371,7 +168383,12 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F",
+      "",
+      "2"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168428,7 +168445,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168436,7 +168456,7 @@
   {
     "Id": 16100050007,
     "Path": "/Game/Aki/UI/UIResources/UiFight/Image/Buff/T_IconXuanLingBuff07.T_IconXuanLingBuff07",
-    "CueType": 2,
+    "CueType": 24,
     "Comp": 0,
     "CompName": "Mesh",
     "Socket": "None",
@@ -168485,7 +168505,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -168542,7 +168565,10 @@
       1
     ],
     "Resources": [],
-    "Parameters": [],
+    "Parameters": [
+      "1",
+      "E649A67F"
+    ],
     "Group": 0,
     "Priority": 0,
     "HideRule": 0
@@ -175534,6 +175560,299 @@
       "X": 1,
       "Y": 1,
       "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0,
+    "HideRule": 0
+  },
+  {
+    "Id": 1309700009,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1ThunderNanzhuMd10011/DA_Fx_Group_R1a_Hand.DA_Fx_Group_R1a_Hand",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "Bip001LForearm",
+    "Location": {
+      "X": 5,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0,
+    "HideRule": 0
+  },
+  {
+    "Id": 1309700010,
+    "Path": "",
+    "CueType": 11,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "OtherCase4",
+      "1"
+    ],
+    "Group": 0,
+    "Priority": 0,
+    "HideRule": 0
+  },
+  {
+    "Id": 1110001051,
+    "Path": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_SuisuiM3_UI.T_IconDevice_SuisuiM3_UI",
+    "CueType": 2,
+    "Comp": 0,
+    "CompName": "Mesh",
+    "Socket": "None",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Scale": {
+      "X": 1,
+      "Y": 1,
+      "Z": 1
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [
+      "1",
+      "41AEFB7F",
+      "",
+      "2"
+    ],
+    "Group": 0,
+    "Priority": 90,
+    "HideRule": 0
+  },
+  {
+    "Id": 1309700011,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1ThunderNanzhuMd10011/DA_Fx_Group_R1s_Skill01_loop.DA_Fx_Group_R1s_Skill01_loop",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "WeaponProp07",
+    "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 180,
+      "Z": 90
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
+    },
+    "LocRule": 0,
+    "RotaRule": 0,
+    "SclRule": 0,
+    "EndRule": 0,
+    "Magni": 0,
+    "AttrId": 0,
+    "Tag": "",
+    "Max": 10000,
+    "Min": 0,
+    "bListenAttr": false,
+    "bSoftFollow": false,
+    "bLockRevolution": false,
+    "LockRotation": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "LockCamera": false,
+    "InterpSpeed": 5,
+    "FarthestDistance": 100,
+    "FaultTolerance": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+    },
+    "TargetScaleUp": [
+      1,
+      1
+    ],
+    "Resources": [],
+    "Parameters": [],
+    "Group": 0,
+    "Priority": 0,
+    "HideRule": 0
+  },
+  {
+    "Id": 1309700012,
+    "Path": "/Game/Aki/Effect/EffectGroup/R2T1ThunderNanzhuMd10011/DA_Fx_Group_R1s_Skill01_loop.DA_Fx_Group_R1s_Skill01_loop",
+    "CueType": 0,
+    "Comp": 1,
+    "CompName": "Mesh",
+    "Socket": "WeaponProp07",
+    "Location": {
+      "X": 0,
+      "Y": -5,
+      "Z": 0
+    },
+    "Rotation": {
+      "X": 0,
+      "Y": 180,
+      "Z": 90
+    },
+    "Scale": {
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
     },
     "LocRule": 0,
     "RotaRule": 0,

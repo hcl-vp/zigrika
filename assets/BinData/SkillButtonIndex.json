@@ -3585,6 +3585,7 @@
     "Id": 5045,
     "DesktopButtonTypeList": [
       1,
+      4,
       5,
       7,
       6,
@@ -3604,9 +3605,35 @@
     "TagList": [],
     "TagDesktopButtonTypeList": [],
     "TagPadButtonTypeList": [],
-    "DesktopButtonTypeMap": {},
-    "PadButtonTypeMap": {},
-    "GamepadButtonTypeMap": {},
+    "DesktopButtonTypeMap": {
+      "1010356381": {
+        "ArrayInt": [
+          4
+        ]
+      }
+    },
+    "PadButtonTypeMap": {
+      "1010356381": {
+        "ArrayInt": [
+          4,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    },
+    "GamepadButtonTypeMap": {
+      "1010356381": {
+        "ArrayInt": [
+          4
+        ]
+      }
+    },
     "MotorPadButtonTypeMap": {},
     "MotorJoystickPadButtonTypeMap": {}
   },
@@ -3718,11 +3745,11 @@
     "Id": 5054,
     "DesktopButtonTypeList": [
       4,
-      7
+      1
     ],
     "PadButtonTypeList": [
       4,
-      7
+      1
     ],
     "TagList": [],
     "TagDesktopButtonTypeList": [],

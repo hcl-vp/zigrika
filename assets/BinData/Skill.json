@@ -20060,13 +20060,17 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "10%",
-      "12%"
+      "30%",
+      "12%",
+      "36%"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006004_SkillDescribe",
     "MultiSkillDetailNum": [
       "10%",
-      "12%"
+      "30%",
+      "12%",
+      "36%"
     ],
     "SkillShowTagType": 0
   },
@@ -20092,16 +20096,14 @@
     "SkillDetailNum": [
       "6",
       "6",
-      "6",
-      "5"
+      "6"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006005_SkillDescribe",
     "MultiSkillDetailNum": [
       "6",
       "6",
-      "6",
-      "5"
+      "6"
     ],
     "SkillShowTagType": 0
   },
@@ -20183,50 +20185,64 @@
     "SkillDetailNum": [
       "100",
       "1",
-      "125%",
-      "25",
-      "15",
+      "1",
       "50",
       "100",
       "1",
-      "125%",
-      "25",
-      "15",
+      "1",
       "50",
+      "15",
+      "160%",
+      "25",
+      "2",
+      "15",
+      "160%",
+      "25",
       "2",
       "12",
-      "2",
-      "30%",
-      "180%",
+      "4",
+      "1",
+      "6",
+      "25%",
+      "150%",
       "100",
+      "100",
+      "50",
+      "2",
       "1",
-      "1",
-      "8"
+      "1"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006007_SkillDescribe",
     "MultiSkillDetailNum": [
       "100",
       "1",
-      "125%",
-      "25",
-      "15",
+      "1",
       "50",
       "100",
       "1",
-      "125%",
-      "25",
-      "15",
+      "1",
       "50",
+      "15",
+      "160%",
+      "25",
+      "2",
+      "15",
+      "160%",
+      "25",
       "2",
       "12",
-      "2",
-      "30%",
-      "180%",
+      "4",
+      "1",
+      "6",
+      "25%",
+      "150%",
       "100",
+      "100",
+      "50",
+      "2",
       "1",
-      "1",
-      "8"
+      "1"
     ],
     "SkillShowTagType": 2
   },
@@ -20278,13 +20294,17 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "20%",
-      "20"
+      "20",
+      "20",
+      "300%"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006009_SkillDescribe",
     "MultiSkillDetailNum": [
       "20%",
-      "20"
+      "20",
+      "20",
+      "300%"
     ],
     "SkillShowTagType": 0
   },
@@ -20346,16 +20366,14 @@
     "SkillDetailNum": [
       "4",
       "60",
-      "1",
-      "2"
+      "3"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005501_SkillDescribe",
     "MultiSkillDetailNum": [
       "4",
       "60",
-      "1",
-      "2"
+      "3"
     ],
     "SkillShowTagType": 0
   },
@@ -20582,7 +20600,11 @@
       13091240021,
       13091240031,
       13091250011,
-      1309114011
+      1309114011,
+      13091260010,
+      13091260020,
+      13091260011,
+      13091260021
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconThunderzhu/SP_IconThunderzhuY1.SP_IconThunderzhuY1",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinD1_UI.T_IconYinlinD1_UI",
@@ -20593,14 +20615,32 @@
     "SkillDetailNum": [
       "10",
       "20",
-      "10"
+      "10",
+      "6",
+      "2",
+      "3",
+      "1",
+      "6",
+      "3",
+      "2",
+      "1",
+      "1"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005507_SkillDescribe",
     "MultiSkillDetailNum": [
       "10",
       "20",
-      "10"
+      "10",
+      "6",
+      "2",
+      "3",
+      "1",
+      "6",
+      "3",
+      "2",
+      "1",
+      "1"
     ],
     "SkillShowTagType": 2
   },
@@ -20822,7 +20862,7 @@
       "2",
       "62",
       "0.34%",
-      "20",
+      "18",
       "13",
       "80%",
       "240%"
@@ -20835,7 +20875,7 @@
       "2",
       "62",
       "0.34%",
-      "20",
+      "18",
       "13",
       "80%",
       "240%"
@@ -20959,13 +20999,21 @@
     "SkillTagList": [],
     "SkillDetailNum": [
       "120",
-      "600"
+      "40",
+      "35",
+      "600",
+      "100",
+      "102"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005707_SkillDescribe",
     "MultiSkillDetailNum": [
       "120",
-      "600"
+      "40",
+      "35",
+      "600",
+      "100",
+      "102"
     ],
     "SkillShowTagType": 0
   },

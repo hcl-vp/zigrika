@@ -62365,7 +62365,7 @@
   {
     "Id": 1610007606,
     "SkillDesc": "共鸣链6-检测自身附加异常",
-    "CDTime": 1,
+    "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -62833,34 +62833,6 @@
     "CDType": "Owner"
   },
   {
-    "Id": 1110101000,
-    "SkillDesc": "监听【下落攻击·强化形态】命中-3共",
-    "CDTime": 25,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "HitTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillID==1110015",
-    "SubSkillAction": [],
-    "InstigatorType": "Attacker",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "1110101001",
-      "1110101002"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
     "Id": 900200040115,
     "SkillDesc": "10层后打子弹",
     "CDTime": 0,
@@ -63261,158 +63233,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055131,
-    "SkillDesc": "触发器：监听施放变奏技能或共鸣技能-1阶",
-    "CDTime": 20,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "SkillTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "-1",
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillType==2\nOR\nSkillType==4",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055141",
-      "110055151"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055132,
-    "SkillDesc": "触发器：监听施放变奏技能或共鸣技能-2阶",
-    "CDTime": 20,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "SkillTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "-1",
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillType==2\nOR\nSkillType==4",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055142",
-      "110055152"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055133,
-    "SkillDesc": "触发器：监听施放变奏技能或共鸣技能-3阶",
-    "CDTime": 20,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "SkillTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "-1",
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillType==2\nOR\nSkillType==4",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055143",
-      "110055153"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055134,
-    "SkillDesc": "触发器：监听施放变奏技能或共鸣技能-4阶",
-    "CDTime": 20,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "SkillTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "-1",
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillType==2\nOR\nSkillType==4",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055144",
-      "110055154"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055135,
-    "SkillDesc": "触发器：监听施放变奏技能或共鸣技能-5阶",
-    "CDTime": 20,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "SkillTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "-1",
-      "0"
-    ],
-    "TriggerParams": {},
-    "TriggerFormula": "SkillType==2\nOR\nSkillType==4",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055145",
-      "110055155"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
     "Id": 110055171,
-    "SkillDesc": "触发器：监听后台时附加冰异常-1阶",
+    "SkillDesc": "触发器：监听附加冰异常-1阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63425,346 +63247,14 @@
       "0",
       "10011000"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "!MatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
       "110055191",
-      "110055211"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055172,
-    "SkillDesc": "触发器：监听后台时附加冰异常-2阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "10011000"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055192",
-      "110055212"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055173,
-    "SkillDesc": "触发器：监听后台时附加冰异常-3阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "10011000"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055193",
-      "110055213"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055174,
-    "SkillDesc": "触发器：监听后台时附加冰异常-4阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "10011000"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055194",
-      "110055214"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055175,
-    "SkillDesc": "触发器：监听后台时附加冰异常-5阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "10011000"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055195",
-      "110055215"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055181,
-    "SkillDesc": "触发器：监听后台时进行治疗-1阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "DamageTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "1"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\n!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055201",
-      "110055211"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055182,
-    "SkillDesc": "触发器：监听后台时进行治疗-2阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "DamageTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "1"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\n!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055202",
-      "110055212"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055183,
-    "SkillDesc": "触发器：监听后台时进行治疗-3阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "DamageTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "1"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\n!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055203",
-      "110055213"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055184,
-    "SkillDesc": "触发器：监听后台时进行治疗-4阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "DamageTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "1"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\n!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055204",
-      "110055214"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055185,
-    "SkillDesc": "触发器：监听后台时进行治疗-5阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "DamageTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "1"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\n!MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "110055205",
-      "110055215"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
-    "ActionExecuteFlag": 0,
-    "CDType": "Owner"
-  },
-  {
-    "Id": 110055221,
-    "SkillDesc": "触发器：监听前台时附加冰异常-1阶",
-    "CDTime": 0,
-    "CdThreshold": -1,
-    "ShareGroupId": 0,
-    "MaxCount": 1,
-    "IsShareAllCdSkill": false,
-    "IsDefaultActivated": true,
-    "TriggerType": "BuffInstigatorTrigger",
-    "ExecuteType": 0,
-    "TriggerPreset": [
-      "0",
-      "10011000"
-    ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "MatchAnyTag(Attacker, CheckAttackerTags)",
-    "SubSkillAction": [],
-    "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
+      "110055151",
       "110055241",
       "110055261"
     ],
@@ -63774,8 +63264,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055222,
-    "SkillDesc": "触发器：监听前台时附加冰异常-2阶",
+    "Id": 110055172,
+    "SkillDesc": "触发器：监听附加冰异常-2阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63788,16 +63278,14 @@
       "0",
       "10011000"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "MatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055192",
+      "110055152",
       "110055242",
       "110055262"
     ],
@@ -63807,8 +63295,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055223,
-    "SkillDesc": "触发器：监听前台时附加冰异常-3阶",
+    "Id": 110055173,
+    "SkillDesc": "触发器：监听附加冰异常-3阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63821,16 +63309,14 @@
       "0",
       "10011000"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "MatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055193",
+      "110055153",
       "110055243",
       "110055263"
     ],
@@ -63840,8 +63326,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055224,
-    "SkillDesc": "触发器：监听前台时附加冰异常-4阶",
+    "Id": 110055174,
+    "SkillDesc": "触发器：监听附加冰异常-4阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63854,16 +63340,14 @@
       "0",
       "10011000"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "MatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055194",
+      "110055154",
       "110055244",
       "110055264"
     ],
@@ -63873,8 +63357,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055225,
-    "SkillDesc": "触发器：监听前台时附加冰异常-5阶",
+    "Id": 110055175,
+    "SkillDesc": "触发器：监听附加冰异常-5阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63887,16 +63371,14 @@
       "0",
       "10011000"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "MatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055195",
+      "110055155",
       "110055245",
       "110055265"
     ],
@@ -63906,8 +63388,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055231,
-    "SkillDesc": "触发器：监听前台时进行治疗-1阶",
+    "Id": 110055181,
+    "SkillDesc": "触发器：监听进行治疗-1阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63920,16 +63402,14 @@
       "0",
       "1"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\nMatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055201",
+      "110055151",
       "110055251",
       "110055261"
     ],
@@ -63939,8 +63419,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055232,
-    "SkillDesc": "触发器：监听前台时进行治疗-2阶",
+    "Id": 110055182,
+    "SkillDesc": "触发器：监听进行治疗-2阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63953,16 +63433,14 @@
       "0",
       "1"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\nMatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055202",
+      "110055152",
       "110055252",
       "110055262"
     ],
@@ -63972,8 +63450,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055233,
-    "SkillDesc": "触发器：监听前台时进行治疗-3阶",
+    "Id": 110055183,
+    "SkillDesc": "触发器：监听进行治疗-3阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -63986,16 +63464,14 @@
       "0",
       "1"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\nMatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055203",
+      "110055153",
       "110055253",
       "110055263"
     ],
@@ -64005,8 +63481,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055234,
-    "SkillDesc": "触发器：监听前台时进行治疗-4阶",
+    "Id": 110055184,
+    "SkillDesc": "触发器：监听进行治疗-4阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -64019,16 +63495,14 @@
       "0",
       "1"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\nMatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055204",
+      "110055154",
       "110055254",
       "110055264"
     ],
@@ -64038,8 +63512,8 @@
     "CDType": "Owner"
   },
   {
-    "Id": 110055235,
-    "SkillDesc": "触发器：监听前台时进行治疗-5阶",
+    "Id": 110055185,
+    "SkillDesc": "触发器：监听进行治疗-5阶",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -64052,16 +63526,14 @@
       "0",
       "1"
     ],
-    "TriggerParams": {
-      "CheckAttackerTags": [
-        "行为状态.逻辑状态.前台"
-      ]
-    },
-    "TriggerFormula": "Attacker==Owner\nAND\nMatchAnyTag(Attacker, CheckAttackerTags)",
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "AddBuff",
     "SkillActionParams": [
+      "110055205",
+      "110055155",
       "110055255",
       "110055265"
     ],
@@ -65538,6 +65010,34 @@
     "SkillActionParams": [],
     "ActionScriptParams": {},
     "SkillActionScript": "AddBuff2(Victim,1110100641,1)\nOR\nAddBuff2(Attacker,1110100901,1)",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1110100404,
+    "SkillDesc": "监听强化子弹造成伤害，造成时加CD Buff",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "DamageTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "0",
+      "0"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "DamageID==1110022002\nOR\nDamageID==1110010002",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1110100401"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   }

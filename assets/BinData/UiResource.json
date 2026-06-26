@@ -45242,5 +45242,14 @@
     "ActivityType": [
       "Kurotato"
     ]
+  },
+  {
+    "Id": "DynKurotatoSkill",
+    "Path": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/Activity34/Survivor/Fight/DynRogueSkill.DynRogueSkill",
+    "PcPath": "",
+    "ResourceType": "Activity",
+    "ActivityType": [
+      "Kurotato"
+    ]
   }
 ]

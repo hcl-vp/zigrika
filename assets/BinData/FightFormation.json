@@ -6305,7 +6305,7 @@
     "RecommendFormation": [],
     "TrialRole": [
       110899000,
-      150999000,
+      110999000,
       150899000
     ],
     "AutoRole": [],
@@ -6313,6 +6313,44 @@
   },
   {
     "Id": 9702,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      121099000,
+      121199000,
+      150899000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9703,
+    "LimitRole": [],
+    "LimitCount": [
+      1,
+      2,
+      3
+    ],
+    "LitmitElement": [],
+    "Content": "",
+    "RecommendFormation": [],
+    "TrialRole": [
+      161099000,
+      150899000,
+      111099000
+    ],
+    "AutoRole": [],
+    "ChooseRole": true
+  },
+  {
+    "Id": 9704,
     "LimitRole": [],
     "LimitCount": [
       1,
@@ -6331,26 +6369,7 @@
     "ChooseRole": true
   },
   {
-    "Id": 9703,
-    "LimitRole": [],
-    "LimitCount": [
-      1,
-      2,
-      3
-    ],
-    "LitmitElement": [],
-    "Content": "",
-    "RecommendFormation": [],
-    "TrialRole": [
-      151099000,
-      121199000,
-      120999000
-    ],
-    "AutoRole": [],
-    "ChooseRole": true
-  },
-  {
-    "Id": 9704,
+    "Id": 9705,
     "LimitRole": [],
     "LimitCount": [
       1,
@@ -6369,25 +6388,6 @@
     "ChooseRole": true
   },
   {
-    "Id": 9705,
-    "LimitRole": [],
-    "LimitCount": [
-      1,
-      2,
-      3
-    ],
-    "LitmitElement": [],
-    "Content": "",
-    "RecommendFormation": [],
-    "TrialRole": [
-      141299000,
-      141199000,
-      150599000
-    ],
-    "AutoRole": [],
-    "ChooseRole": true
-  },
-  {
     "Id": 9706,
     "LimitRole": [],
     "LimitCount": [
@@ -6399,8 +6399,8 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      130699000,
-      141099000,
+      141299000,
+      110999000,
       150599000
     ],
     "AutoRole": [],
@@ -6418,9 +6418,9 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      121099000,
-      150999000,
-      120999000
+      161099000,
+      150899000,
+      111099000
     ],
     "AutoRole": [],
     "ChooseRole": true
@@ -6437,7 +6437,7 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      160299000,
+      121099000,
       150999000,
       120999000
     ],
@@ -6458,6 +6458,9 @@
     "TrialRole": [
       110899000,
       150999000,
+      110999000,
+      140999000,
+      140799000,
       150899000
     ],
     "AutoRole": [],
@@ -6475,9 +6478,11 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      141299000,
-      141199000,
-      150599000
+      161099000,
+      111099000,
+      110899000,
+      110999000,
+      150899000
     ],
     "AutoRole": [],
     "ChooseRole": true
@@ -6494,8 +6499,10 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      151099000,
+      121099000,
       121199000,
+      151099000,
+      150899000,
       120999000
     ],
     "AutoRole": [],
@@ -6513,9 +6520,12 @@
     "Content": "",
     "RecommendFormation": [],
     "TrialRole": [
-      121099000,
+      161099000,
+      111099000,
       150999000,
-      120999000
+      121099000,
+      120999000,
+      150899000
     ],
     "AutoRole": [],
     "ChooseRole": true
