@@ -554,6 +554,12 @@ pub const h5s = struct {
     pub const Bws_field_number: u32 = 3;
     pub const Qws_field_number: u32 = 4;
 };
+pub const RobotRoleInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const BaseProp_field_number: u32 = 2;
+    pub const AddProp_field_number: u32 = 3;
+    pub const RoleEquipmentPropData_field_number: u32 = 4;
+};
 pub const zfs = struct {
     pub const msg_id: u16 = 18066;
     pub const C5n_field_number: u32 = 12;
@@ -562,6 +568,15 @@ pub const Zfs = struct {
     pub const msg_id: u16 = 17281;
     pub const fMs_field_number: u32 = 2;
     pub const exs_field_number: u32 = 14;
+};
+pub const RobotRolePropRequest = struct {
+    pub const msg_id: u16 = 18066;
+    pub const RoleIds_field_number: u32 = 12;
+};
+pub const RobotRolePropResponse = struct {
+    pub const msg_id: u16 = 17281;
+    pub const Error_field_number: u32 = 2;
+    pub const RobotRoleInfo_field_number: u32 = 14;
 };
 pub const jm_ = struct {
     pub const msg_id: u16 = 29312;
@@ -20130,6 +20145,33 @@ pub const IR_ = struct {
     pub const F4__field_number: u32 = 10;
     pub const N4__field_number: u32 = 11;
     pub const V4__field_number: u32 = 12;
+};
+pub const GachaItem = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const IsUp_field_number: u32 = 2;
+};
+pub const GachaPoolDetail = struct {
+    pub const Text_field_number: u32 = 1;
+    pub const FiveStarRoles_field_number: u32 = 2;
+    pub const FiveStarWeapons_field_number: u32 = 3;
+    pub const FourStarRoles_field_number: u32 = 4;
+    pub const FourStarWeapons_field_number: u32 = 5;
+    pub const ThreeStarRoles_field_number: u32 = 6;
+    pub const FiveStarTitle_field_number: u32 = 7;
+    pub const FileStarDetail_field_number: u32 = 8;
+    pub const FourStarTitle_field_number: u32 = 9;
+    pub const FourStarDetail_field_number: u32 = 10;
+    pub const ThreeStarTitle_field_number: u32 = 11;
+    pub const ThreeStarDetail_field_number: u32 = 12;
+};
+pub const GachaPoolDetailRequest = struct {
+    pub const msg_id: u16 = 26354;
+    pub const PoolId_field_number: u32 = 9;
+};
+pub const GachaPoolDetailResponse = struct {
+    pub const msg_id: u16 = 16105;
+    pub const ErrorCode_field_number: u32 = 15;
+    pub const GachaPoolDetail_field_number: u32 = 13;
 };
 pub const _m_ = struct {
     pub const msg_id: u16 = 26354;

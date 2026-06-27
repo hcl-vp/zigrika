@@ -1,0 +1,8 @@
+Id: i32,
+Type: i32,
+SummaryTitle: []const u8,
+SummaryDescribe: []const u8,
+ThemeColor: []const u8,
+UpList: []const i32,
+ShowIdList: []const i32,
+PreviewIdList: []const i32,

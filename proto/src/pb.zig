@@ -631,6 +631,13 @@ pub const h5s = struct {
     Bws: std.ArrayList(e5s) = .empty,
     Qws: ?Z6s = null,
 };
+pub const RobotRoleInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
+    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+    RoleEquipmentPropData: ?RolePhantomPropInfo = null,
+};
 pub const zfs = struct {
     pub const default: @This() = .{};
     C5n: std.ArrayList(i32) = .empty,
@@ -639,6 +646,15 @@ pub const Zfs = struct {
     pub const default: @This() = .{};
     fMs: i32 = 0,
     exs: std.ArrayList(h5s) = .empty,
+};
+pub const RobotRolePropRequest = struct {
+    pub const default: @This() = .{};
+    RoleIds: std.ArrayList(i32) = .empty,
+};
+pub const RobotRolePropResponse = struct {
+    pub const default: @This() = .{};
+    Error: ?ErrorCode = null,
+    RobotRoleInfo: std.ArrayList(RobotRoleInfo) = .empty,
 };
 pub const jm_ = struct {
     pub const default: @This() = .{};
@@ -28110,6 +28126,35 @@ pub const IR_ = struct {
     F4_: []const u8 = "",
     N4_: []const u8 = "",
     V4_: []const u8 = "",
+};
+pub const GachaItem = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    IsUp: bool = false,
+};
+pub const GachaPoolDetail = struct {
+    pub const default: @This() = .{};
+    Text: []const u8 = "",
+    FiveStarRoles: std.ArrayList(GachaItem) = .empty,
+    FiveStarWeapons: std.ArrayList(GachaItem) = .empty,
+    FourStarRoles: std.ArrayList(GachaItem) = .empty,
+    FourStarWeapons: std.ArrayList(GachaItem) = .empty,
+    ThreeStarRoles: std.ArrayList(GachaItem) = .empty,
+    FiveStarTitle: []const u8 = "",
+    FileStarDetail: []const u8 = "",
+    FourStarTitle: []const u8 = "",
+    FourStarDetail: []const u8 = "",
+    ThreeStarTitle: []const u8 = "",
+    ThreeStarDetail: []const u8 = "",
+};
+pub const GachaPoolDetailRequest = struct {
+    pub const default: @This() = .{};
+    PoolId: i32 = 0,
+};
+pub const GachaPoolDetailResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    GachaPoolDetail: ?GachaPoolDetail = null,
 };
 pub const _m_ = struct {
     pub const default: @This() = .{};

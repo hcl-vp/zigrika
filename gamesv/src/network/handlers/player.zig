@@ -12,7 +12,3 @@ pub fn onAllMsgRequest(txn: *Transaction(pb.AllMsgRequest)) !void {
 pub fn onBattlePassRequest(txn: *Transaction(pb.BattlePassRequest)) !void {
     txn.respond(.{ .BattlePass = .{ .InTimeRange = false } });
 }
-
-pub fn onGachaInfoRequest(txn: *Transaction(pb.GachaInfoRequest)) !void {
-    txn.respond(.{});
-}

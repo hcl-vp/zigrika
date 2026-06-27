@@ -3,6 +3,8 @@ const Assets = @import("../../data/Assets.zig");
 const InventoryInfo = @import("../../fs/InventoryInfo.zig");
 
 pub fn addDefaultProgressionItems(info: *InventoryInfo, gpa: std.mem.Allocator, assets: *const Assets) !void {
+    try addDefaultGachaItems(info, gpa, assets);
+
     for (assets.tables.skill_tree.items) |entry| {
         try ensureConsumeItems(info, gpa, entry.Consume);
     }
@@ -26,6 +28,39 @@ pub fn addDefaultProgressionItems(info: *InventoryInfo, gpa: std.mem.Allocator, 
     for (assets.tables.motor_tech_tree.items) |entry| {
         try ensureNormalItem(info, gpa, entry.TpItemId, 777);
     }
+}
+
+fn addDefaultGachaItems(info: *InventoryInfo, gpa: std.mem.Allocator, assets: *const Assets) !void {
+    for (assets.tables.gacha.items) |gacha| {
+        const pool_id = firstGachaPoolId(assets, gacha.Id);
+        const view = assets.tables.gacha_view_info.getDataById(pool_id) orelse continue;
+        try ensureNormalItem(info, gpa, gachaCurrencyItemId(gacha.Id, view.Type), 777);
+    }
+}
+
+fn firstGachaPoolId(assets: *const Assets, gacha_id: i32) i32 {
+    var best_id: i32 = 0;
+    var best_sort: i32 = std.math.maxInt(i32);
+    for (assets.tables.gacha_pool.items) |pool| {
+        if (pool.GachaId != gacha_id) continue;
+        if (pool.Sort < best_sort or (pool.Sort == best_sort and (best_id == 0 or pool.Id < best_id))) {
+            best_id = pool.Id;
+            best_sort = pool.Sort;
+        }
+    }
+    return best_id;
+}
+
+pub fn gachaCurrencyItemId(gacha_id: i32, view_type: i32) i32 {
+    return switch (view_type) {
+        1, 4, 5 => 50001,
+        2, 7, 9 => 50002,
+        3, 8, 10 => 50005,
+        11 => 50007,
+        12 => 50008,
+        6 => if (gacha_id == 5) 50006 else 50001,
+        else => 50001,
+    };
 }
 
 fn ensureConsumeItems(info: *InventoryInfo, gpa: std.mem.Allocator, consume_map: anytype) !void {

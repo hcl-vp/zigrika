@@ -74,6 +74,10 @@ pub const MotorLinkageIp = @import("tables/MotorLinkageIp.zig");
 pub const MotorFrame = @import("tables/MotorFrame.zig");
 pub const MotorDecorations = @import("tables/MotorDecorations.zig");
 pub const MotorDecorationsPart = @import("tables/MotorDecorationsPart.zig");
+pub const Gacha = @import("tables/Gacha.zig");
+pub const GachaPool = @import("tables/GachaPool.zig");
+pub const GachaViewInfo = @import("tables/GachaViewInfo.zig");
+pub const GachaTextureInfo = @import("tables/GachaTextureInfo.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -142,6 +146,10 @@ motor_linkage_ip: Table(MotorLinkageIp, "Id"),
 motor_frame: Table(MotorFrame, "Id"),
 motor_decorations: Table(MotorDecorations, "Id"),
 motor_decorations_part: Table(MotorDecorationsPart, "Id"),
+gacha: Table(Gacha, "Id"),
+gacha_pool: Table(GachaPool, "Id"),
+gacha_view_info: Table(GachaViewInfo, "Id"),
+gacha_texture_info: Table(GachaTextureInfo, "Id"),
 
 fn loadTableItems(
     comptime T: type,

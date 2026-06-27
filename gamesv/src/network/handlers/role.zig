@@ -211,6 +211,36 @@ fn toClientRoleInfo(info: anytype, arena: std.mem.Allocator, id: i32) !pb.RoleIn
     return proto;
 }
 
+pub fn onRobotRolePropRequest(
+    txn: *Transaction(pb.RobotRolePropRequest),
+    alloc: mem.Alloc,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    var prop_list: std.ArrayList(pb.RobotRoleInfo) = .empty;
+
+    for (txn.message.RoleIds.items) |role_id| {
+        const role = role_comp.role_map.get(role_id) orelse continue;
+        var prop: pb.RobotRoleInfo = .{ .RoleId = role_id };
+
+        try prop.BaseProp.ensureTotalCapacity(alloc.arena, role.base_prop.len);
+        for (role.base_prop, 0..) |value, key| {
+            prop.BaseProp.appendAssumeCapacity(.{ .Key = @intCast(key), .Value = value });
+        }
+
+        try prop.AddProp.ensureTotalCapacity(alloc.arena, role.add_prop.len);
+        for (role.add_prop, 0..) |value, key| {
+            prop.AddProp.appendAssumeCapacity(.{ .Key = @intCast(key), .Value = value });
+        }
+
+        try prop_list.append(alloc.arena, prop);
+    }
+
+    txn.respond(.{
+        .Error = .Success,
+        .RobotRoleInfo = prop_list,
+    });
+}
+
 pub fn onPbUpLevelSkillRequest(
     txn: *Transaction(pb.PbUpLevelSkillRequest),
     events: *EventQueue,

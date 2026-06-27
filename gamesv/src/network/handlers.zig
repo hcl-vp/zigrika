@@ -43,6 +43,7 @@ const net_namespaces: []const type = &.{
     @import("handlers/skin.zig"),
     @import("handlers/inventory.zig"),
     @import("handlers/motor.zig"),
+    @import("handlers/gacha.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 

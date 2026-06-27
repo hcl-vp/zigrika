@@ -1,3 +1,29 @@
 .{
     .autocomplete_guides = false,
+
+    .gacha_rates = .{
+        .rate_denominator = 10000,
+        .five_star_base_rate = 80,
+        .four_star_base_rate = 600,
+        .featured_five_star_win_numerator = 1,
+        .featured_five_star_win_denominator = 2,
+        .featured_four_star_win_numerator = 1,
+        .featured_four_star_win_denominator = 2,
+        .normal = .{
+            .five_star_hard_pity_pull = 80,
+            .five_star_soft_pity_start_pull = 66,
+            .five_star_soft_pity_phase_one_end_pull = 70,
+            .five_star_soft_pity_phase_two_end_pull = 75,
+            .five_star_soft_pity_phase_three_end_pull = 78,
+            .five_star_soft_pity_force_pull = 79,
+            .five_star_soft_pity_phase_one_step = 400,
+            .five_star_soft_pity_phase_two_step = 800,
+            .five_star_soft_pity_phase_three_step = 1000,
+        },
+        .novice = .{
+            .five_star_hard_pity_pull = 50,
+            .five_star_soft_pity_start_pull = 41,
+            .five_star_soft_pity_step = 600,
+        },
+    },
 }

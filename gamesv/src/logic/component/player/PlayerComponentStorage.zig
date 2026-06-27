@@ -14,6 +14,7 @@ role: @import("PlayerRoleComponent.zig"),
 weapon: @import("PlayerWeaponComponent.zig"),
 cosmetic: @import("PlayerCosmeticComponent.zig"),
 inventory: @import("PlayerInventoryComponent.zig"),
+gacha: @import("PlayerGachaComponent.zig"),
 guide: @import("PlayerGuideComponent.zig"),
 map: @import("PlayerMapComponent.zig"),
 music: @import("PlayerMusicComponent.zig"),
@@ -29,6 +30,7 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
         .weapon = try .init(gpa, fs, assets, player_id),
         .cosmetic = try .init(gpa, fs, assets, player_id),
         .inventory = try .init(gpa, fs, assets, player_id),
+        .gacha = try .init(gpa, fs, player_id),
         .guide = try .init(gpa, fs, player_id),
         .map = try .init(gpa, fs, player_id),
         .music = try .init(gpa, fs, player_id),
@@ -43,6 +45,7 @@ pub fn deinit(pcs: *PlayerComponentStorage, gpa: Allocator) void {
     pcs.weapon.deinit(gpa);
     pcs.cosmetic.deinit(gpa);
     pcs.inventory.deinit(gpa);
+    pcs.gacha.deinit(gpa);
     pcs.guide.deinit(gpa);
     pcs.map.deinit(gpa);
     pcs.music.deinit(gpa);

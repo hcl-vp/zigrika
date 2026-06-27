@@ -1,4 +1,5 @@
 ItemId: i32,
+QualityId: i32,
 ResonId: i32,
 ResonLevelLimit: i32,
 LevelId: i32,
