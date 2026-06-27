@@ -41335,6 +41335,16 @@ pub const PbRoleSkillLevelNotify = struct {
     RoleId: i32 = 0,
     SkillInfo: ?ArrayIntInt = null,
 };
+pub const SkillEffect = struct {
+    pub const default: @This() = .{};
+    Level: i32 = 0,
+    EffectDescList: std.ArrayList(OneSkillEffect) = .empty,
+};
+pub const OneSkillEffect = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Desc: std.ArrayList([]const u8) = .empty,
+};
 pub const RoleLevelUpViewRequest = struct {
     pub const default: @This() = .{};
     RoleId: i32 = 0,
@@ -41365,6 +41375,29 @@ pub const RoleBreakThroughViewResponse = struct {
     CostList: std.ArrayList(ArrayIntInt) = .empty,
     RewardList: std.ArrayList(ArrayIntInt) = .empty,
     FinalProp: std.ArrayList(ArrayIntDouble) = .empty,
+    IsConditionFinish: bool = false,
+};
+pub const RoleSkillLevelUpViewRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillId: i32 = 0,
+};
+pub const RoleSkillLevelUpViewResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SkillEffectList: std.ArrayList(SkillEffect) = .empty,
+    CostList: std.ArrayList(ArrayIntInt) = .empty,
+};
+pub const RoleSkillViewRequest = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    SkillId: i32 = 0,
+};
+pub const RoleSkillViewResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SkillEffectList: std.ArrayList(SkillEffect) = .empty,
+    PreSkillEffectList: std.ArrayList(SkillEffect) = .empty,
     IsConditionFinish: bool = false,
 };
 pub const RoleActivateSkillRequest = struct {
@@ -41526,6 +41559,32 @@ pub const RoleSkillQuickLevelUpResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     RoleInfo: ?RoleInfo = null,
+};
+pub const RoleVoice = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    VoiceId: i32 = 0,
+};
+pub const PlayerVoiceLanguageRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PlayerVoiceLanguageResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleVoices: std.ArrayList(RoleVoice) = .empty,
+};
+pub const RoleVoiceSetting = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    VoiceLanguage: i32 = 0,
+};
+pub const PlayerRoleVoiceSetRequest = struct {
+    pub const default: @This() = .{};
+    RoleVoices: std.ArrayList(RoleVoiceSetting) = .empty,
+};
+pub const PlayerRoleVoiceSetResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
 };
 pub const SecGetReportData2FlowRequest = struct {
     pub const default: @This() = .{};

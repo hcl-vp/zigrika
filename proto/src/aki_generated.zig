@@ -27220,6 +27220,14 @@ pub const PbRoleSkillLevelNotify = struct {
     pub const RoleId_field_number: u32 = 13;
     pub const SkillInfo_field_number: u32 = 8;
 };
+pub const SkillEffect = struct {
+    pub const Level_field_number: u32 = 1;
+    pub const EffectDescList_field_number: u32 = 3;
+};
+pub const OneSkillEffect = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Desc_field_number: u32 = 3;
+};
 pub const RoleLevelUpViewRequest = struct {
     pub const msg_id: u16 = 26090;
     pub const RoleId_field_number: u32 = 13;
@@ -27251,6 +27259,29 @@ pub const RoleBreakThroughViewResponse = struct {
     pub const RewardList_field_number: u32 = 7;
     pub const FinalProp_field_number: u32 = 13;
     pub const IsConditionFinish_field_number: u32 = 15;
+};
+pub const RoleSkillLevelUpViewRequest = struct {
+    pub const msg_id: u16 = 25506;
+    pub const RoleId_field_number: u32 = 13;
+    pub const SkillId_field_number: u32 = 14;
+};
+pub const RoleSkillLevelUpViewResponse = struct {
+    pub const msg_id: u16 = 23911;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const SkillEffectList_field_number: u32 = 8;
+    pub const CostList_field_number: u32 = 2;
+};
+pub const RoleSkillViewRequest = struct {
+    pub const msg_id: u16 = 21325;
+    pub const RoleId_field_number: u32 = 10;
+    pub const SkillId_field_number: u32 = 15;
+};
+pub const RoleSkillViewResponse = struct {
+    pub const msg_id: u16 = 24146;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const SkillEffectList_field_number: u32 = 6;
+    pub const PreSkillEffectList_field_number: u32 = 8;
+    pub const IsConditionFinish_field_number: u32 = 13;
 };
 pub const RoleActivateSkillRequest = struct {
     pub const msg_id: u16 = 18805;
@@ -27406,6 +27437,30 @@ pub const RoleSkillQuickLevelUpResponse = struct {
     pub const msg_id: u16 = 24955;
     pub const ErrorCode_field_number: u32 = 2;
     pub const RoleInfo_field_number: u32 = 1;
+};
+pub const RoleVoice = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const VoiceId_field_number: u32 = 2;
+};
+pub const PlayerVoiceLanguageRequest = struct {
+    pub const msg_id: u16 = 20065;
+};
+pub const PlayerVoiceLanguageResponse = struct {
+    pub const msg_id: u16 = 23859;
+    pub const ErrorCode_field_number: u32 = 6;
+    pub const RoleVoices_field_number: u32 = 3;
+};
+pub const RoleVoiceSetting = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const VoiceLanguage_field_number: u32 = 2;
+};
+pub const PlayerRoleVoiceSetRequest = struct {
+    pub const msg_id: u16 = 22440;
+    pub const RoleVoices_field_number: u32 = 11;
+};
+pub const PlayerRoleVoiceSetResponse = struct {
+    pub const msg_id: u16 = 27742;
+    pub const ErrorCode_field_number: u32 = 5;
 };
 pub const SecGetReportData2FlowRequest = struct {
     pub const msg_id: u16 = 25758;

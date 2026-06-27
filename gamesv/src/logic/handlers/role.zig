@@ -180,7 +180,7 @@ fn pushFavorList(
         var role_favor: pb.RoleFavor = .{
             .RoleId = role_id,
             .Level = 5,
-            .Exp = 0,
+            .Exp = 16800,
         };
 
         for (assets.tables.favor_word.items) |word| {

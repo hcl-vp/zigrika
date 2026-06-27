@@ -3,6 +3,7 @@ const pb = @import("proto").pb;
 const Transaction = @import("../handlers.zig").Transaction;
 const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
+const Assets = @import("../../data/Assets.zig");
 const comp_util = @import("../../logic/component/comp_util.zig");
 const GuideInfo = @import("../../fs/GuideInfo.zig");
 const PlayerGuideComponent = @import("../../logic/component/player/PlayerGuideComponent.zig");
@@ -12,13 +13,20 @@ const finished_by_default = [_]i32{ 10116, 10193 };
 pub fn onGuideInfoRequest(
     txn: *Transaction(pb.GuideInfoRequest),
     guide_comp: *PlayerGuideComponent,
+    assets: *const Assets,
     alloc: mem.Alloc,
 ) !void {
     var finished: std.ArrayList(i32) = .empty;
-    for (finished_by_default) |group_id| {
-        if (!guide_comp.info.hasFinished(group_id)) try finished.append(alloc.arena, group_id);
+    if (Assets.DataTables.Config.autocomplete_guides) {
+        for (assets.tables.guide_group.items) |group| {
+            try finished.append(alloc.arena, group.Id);
+        }
+    } else {
+        for (finished_by_default) |group_id| {
+            if (!guide_comp.info.hasFinished(group_id)) try finished.append(alloc.arena, group_id);
+        }
+        try finished.appendSlice(alloc.arena, guide_comp.info.finished_groups);
     }
-    try finished.appendSlice(alloc.arena, guide_comp.info.finished_groups);
     txn.respond(.{ .GuideGroupFinishList = finished });
 }
 

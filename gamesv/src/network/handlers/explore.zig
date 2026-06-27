@@ -8,6 +8,19 @@ const EventQueue = @import("../../logic/EventQueue.zig");
 const sliceToArrayList = @import("../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Entity = Scene.Entity;
 const FileSystem = @import("common").FileSystem;
+const roulette_slot_count = 8;
+
+fn ownedRouletteSkillIds(gpa: std.mem.Allocator, ids: []const i32) ![]i32 {
+    const items = try gpa.alloc(i32, roulette_slot_count);
+    @memset(items, 0);
+    const count = @min(ids.len, roulette_slot_count);
+    @memcpy(items[0..count], ids[0..count]);
+    return items;
+}
+
+fn rouletteSkillIds(arena: std.mem.Allocator, ids: []const i32) !std.ArrayList(i32) {
+    return sliceToArrayList(i32, try ownedRouletteSkillIds(arena, ids));
+}
 
 pub fn onEnterAreaRequest(txn: *Transaction(pb.EnterAreaRequest)) !void {
     txn.respond(.{ .Id = txn.message.Id });
@@ -63,19 +76,19 @@ pub fn onExploreSkillRouletteSetRequest(
         switch (roulette_type) {
             .Explore => {
                 if (scene.explore_tools_info.roulette.len != 0) alloc.gpa.free(scene.explore_tools_info.roulette);
-                scene.explore_tools_info.roulette = try alloc.gpa.dupe(i32, roulette.SkillIds.items);
+                scene.explore_tools_info.roulette = try ownedRouletteSkillIds(alloc.gpa, roulette.SkillIds.items);
                 scene.explore_tools_info.explore_extra_item_id = roulette.ExtraItemId;
                 scene.explore_tools_info.active_explore_skill = roulette.ExploreSkill;
             },
             .Function => {
                 if (scene.explore_tools_info.function_roulette.len != 0) alloc.gpa.free(scene.explore_tools_info.function_roulette);
-                scene.explore_tools_info.function_roulette = try alloc.gpa.dupe(i32, roulette.SkillIds.items);
+                scene.explore_tools_info.function_roulette = try ownedRouletteSkillIds(alloc.gpa, roulette.SkillIds.items);
                 scene.explore_tools_info.function_extra_item_id = roulette.ExtraItemId;
                 scene.explore_tools_info.active_function_skill = roulette.ExploreSkill;
             },
             .Motorcycle => {
                 if (scene.explore_tools_info.motorcycle_roulette.len != 0) alloc.gpa.free(scene.explore_tools_info.motorcycle_roulette);
-                scene.explore_tools_info.motorcycle_roulette = try alloc.gpa.dupe(i32, roulette.SkillIds.items);
+                scene.explore_tools_info.motorcycle_roulette = try ownedRouletteSkillIds(alloc.gpa, roulette.SkillIds.items);
                 scene.explore_tools_info.motorcycle_extra_item_id = roulette.ExtraItemId;
                 scene.explore_tools_info.active_motorcycle_skill = roulette.ExploreSkill;
             },
@@ -86,18 +99,18 @@ pub fn onExploreSkillRouletteSetRequest(
 
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
     try roulette_info.append(alloc.arena, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.roulette),
         .ExtraItemId = scene.explore_tools_info.explore_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_explore_skill,
     });
     try roulette_info.append(alloc.arena, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.function_roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.function_roulette),
         .ExtraItemId = scene.explore_tools_info.function_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_function_skill,
     });
     try roulette_info.append(alloc.arena, .{});
     try roulette_info.append(alloc.arena, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.motorcycle_roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.motorcycle_roulette),
         .ExtraItemId = scene.explore_tools_info.motorcycle_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_motorcycle_skill,
     });

@@ -5,6 +5,7 @@ const Allocator = std.mem.Allocator;
 const ArenaAllocator = std.heap.ArenaAllocator;
 const pb = @import("proto").pb;
 const WeaponItem = @import("../fs/WeaponItem.zig");
+pub const Config = @import("zon/config.zon");
 const ConcertoExceptions: []const i32 = @import("zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
@@ -51,6 +52,7 @@ pub const FavorWord = @import("tables/FavorWord.zig");
 pub const FavorStory = @import("tables/FavorStory.zig");
 pub const FavorGoods = @import("tables/FavorGoods.zig");
 pub const Motion = @import("tables/Motion.zig");
+pub const GuideGroup = @import("tables/GuideGroup.zig");
 pub const CharacterInitInfo = @import("tables/CharacterInitInfo.zig");
 pub const SkillBranchBuff = @import("tables/SkillBranchBuff.zig");
 pub const PhonographMusic = @import("tables/PhonographMusic.zig");
@@ -118,6 +120,7 @@ favor_word: Table(FavorWord, "Id"),
 favor_story: Table(FavorStory, "Id"),
 favor_goods: Table(FavorGoods, "Id"),
 motion: Table(Motion, "Id"),
+guide_group: Table(GuideGroup, "Id"),
 char_init_info: Table(CharacterInitInfo, "RoleId"),
 skill_branch_buff: Table(SkillBranchBuff, "BranchId"),
 phonograph_music: Table(PhonographMusic, "Id"),

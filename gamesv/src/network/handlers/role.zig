@@ -28,7 +28,7 @@ pub fn onRoleFavorListRequest(
         var role_favor: pb.RoleFavor = .{
             .RoleId = role_id,
             .Level = 5,
-            .Exp = 0,
+            .Exp = 16800,
         };
 
         for (assets.tables.favor_word.items) |word| {
@@ -284,6 +284,33 @@ pub fn onRoleActivateSkillRequest(
     });
 }
 
+pub fn onRoleSkillLevelUpViewRequest(
+    txn: *Transaction(pb.RoleSkillLevelUpViewRequest),
+    assets: *const Assets,
+) !void {
+    if (assets.tables.skill.getDataById(txn.message.SkillId) == null) {
+        txn.respond(.{ .ErrorCode = .ErrSkillInfoParamError });
+        return;
+    }
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onRoleSkillViewRequest(
+    txn: *Transaction(pb.RoleSkillViewRequest),
+    assets: *const Assets,
+) !void {
+    if (assets.tables.skill.getDataById(txn.message.SkillId) == null) {
+        txn.respond(.{ .ErrorCode = .ErrSkillInfoParamError });
+        return;
+    }
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .IsConditionFinish = true,
+    });
+}
+
 pub fn onRoleSkillQuickLevelUpRequest(
     txn: *Transaction(pb.RoleSkillQuickLevelUpRequest),
     events: *EventQueue,
@@ -313,6 +340,57 @@ pub fn onRoleSkillQuickLevelUpRequest(
         .ErrorCode = .Success,
         .RoleInfo = try toClientRoleInfo(role.*, alloc.arena, request.RoleId),
     });
+}
+
+pub fn onPlayerVoiceLanguageRequest(
+    txn: *Transaction(pb.PlayerVoiceLanguageRequest),
+    alloc: mem.Alloc,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    var role_voices: std.ArrayList(pb.RoleVoice) = .empty;
+
+    var iterator = role_comp.role_map.iterator();
+    while (iterator.next()) |entry| {
+        if (entry.value_ptr.voice_language == 0) continue;
+
+        try role_voices.append(alloc.arena, .{
+            .RoleId = entry.key_ptr.*,
+            .VoiceId = entry.value_ptr.voice_language,
+        });
+    }
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .RoleVoices = role_voices,
+    });
+}
+
+pub fn onPlayerRoleVoiceSetRequest(
+    txn: *Transaction(pb.PlayerRoleVoiceSetRequest),
+    events: *EventQueue,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    if (txn.message.RoleVoices.items.len == 0) {
+        var iterator = role_comp.role_map.iterator();
+        while (iterator.next()) |entry| {
+            if (entry.value_ptr.voice_language == 0) continue;
+            entry.value_ptr.voice_language = 0;
+            try events.enqueue(.role_info_modified, .{ .role_id = entry.key_ptr.* });
+        }
+
+        txn.respond(.{ .ErrorCode = .Success });
+        return;
+    }
+
+    for (txn.message.RoleVoices.items) |voice| {
+        const role = role_comp.role_map.getPtr(voice.RoleId) orelse continue;
+        if (role.voice_language == voice.VoiceLanguage) continue;
+
+        role.voice_language = voice.VoiceLanguage;
+        try events.enqueue(.role_info_modified, .{ .role_id = voice.RoleId });
+    }
+
+    txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn onResonantChainUnlockRequest(

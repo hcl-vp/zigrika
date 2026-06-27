@@ -32,6 +32,7 @@ weapon_skin_id: i32 = 0,
 ornaments: []OrnamentEquip = &.{},
 calabash_skin_id: i32 = 0, // we are keeping it in roleinfo just incase kuro decides to do more than just rover!
 enable_self_bgm: bool = false,
+voice_language: i32 = 0,
 
 pub const Reson = struct {
     id: i32,

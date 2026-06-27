@@ -23,6 +23,15 @@ const autopilot = @import("../helpers/autopilot.zig");
 const Entity = Scene.Entity;
 const Io = std.Io;
 const lahai_roi_dungeon_id = 906;
+const roulette_slot_count = 8;
+
+fn rouletteSkillIds(arena: std.mem.Allocator, ids: []const i32) !std.ArrayList(i32) {
+    const items = try arena.alloc(i32, roulette_slot_count);
+    @memset(items, 0);
+    const count = @min(ids.len, roulette_slot_count);
+    @memcpy(items[0..count], ids[0..count]);
+    return sliceToArrayList(i32, items);
+}
 
 fn notifyTransportRoadways(fs: *FileSystem, alloc: mem.Alloc, scene: *Scene, conn: *Connection, assets: *const Assets) !void {
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
@@ -98,18 +107,18 @@ pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !v
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
     defer roulette_info.deinit(alloc.gpa);
     try roulette_info.append(alloc.gpa, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.roulette),
         .ExtraItemId = scene.explore_tools_info.explore_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_explore_skill,
     });
     try roulette_info.append(alloc.gpa, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.function_roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.function_roulette),
         .ExtraItemId = scene.explore_tools_info.function_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_function_skill,
     });
     try roulette_info.append(alloc.gpa, .{});
     try roulette_info.append(alloc.gpa, .{
-        .SkillIds = sliceToArrayList(i32, scene.explore_tools_info.motorcycle_roulette),
+        .SkillIds = try rouletteSkillIds(alloc.arena, scene.explore_tools_info.motorcycle_roulette),
         .ExtraItemId = scene.explore_tools_info.motorcycle_extra_item_id,
         .ExploreSkill = scene.explore_tools_info.active_motorcycle_skill,
     });
@@ -211,16 +220,20 @@ pub fn onInitialSceneJoin(
         };
 
         scene.explore_tools_info.roulette = blk: {
+            const default_roulette: []const i32 = &.{ 6002, 1001, 1007 };
             const additional_roulette: []const i32 = &.{ 1015, 1029, 1009 };
 
             var list: std.ArrayList(i32) = .empty;
-            for (assets.tables.explore_tools.items[0..3]) |tool| {
-                try list.append(alloc.gpa, tool.PhantomSkillId);
+            for (default_roulette) |skill_id| {
+                try list.append(alloc.gpa, skill_id);
             }
             for (assets.tables.explore_tools.items) |tool| {
                 if (std.mem.indexOfScalar(i32, additional_roulette, tool.PhantomSkillId) != null) {
                     try list.append(alloc.gpa, tool.PhantomSkillId);
                 }
+            }
+            while (list.items.len < roulette_slot_count) {
+                try list.append(alloc.gpa, 0);
             }
             break :blk try list.toOwnedSlice(alloc.gpa);
         };
@@ -559,6 +572,8 @@ pub fn afterSceneJoin(
         "assets/scripts/join_scene_patches/flight_fix.js",
         "assets/scripts/join_scene_patches/motorcycle.js",
         "assets/scripts/join_scene_patches/global_spawn.js",
+        "assets/scripts/join_scene_patches/red_dot_remover.js",
+        "assets/scripts/join_scene_patches/voice_language_fix.js",
     };
 
     for (patch_files) |path| {
