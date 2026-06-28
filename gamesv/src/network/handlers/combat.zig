@@ -13,6 +13,7 @@ const combat_namespaces: []const type = &.{
     @import("damage.zig"),
     @import("buff.zig"),
     @import("time.zig"),
+    @import("fsm.zig"),
 };
 
 pub fn CombatRequestTxn(comptime Tag: anytype) type {

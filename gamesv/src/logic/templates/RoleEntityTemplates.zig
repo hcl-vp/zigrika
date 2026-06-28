@@ -183,18 +183,7 @@ pub fn createRoleEntity(
         ),
         Entity.ConcomitantComponent{},
         Entity.PassiveGaSkillComponent{},
-        Entity.FsmComponent{
-            .hash_code = 340617276,
-            .common_hash_code = 2075276641,
-            .fsms = try alloc.gpa.dupe(pb.DFsm, &.{
-                .{
-                    .FsmId = 10263,
-                    .CurrentState = 10265,
-                    .Flag = 1,
-                    .StateElapseTime = 0,
-                },
-            }),
-        },
+        try Entity.FsmComponent.fromStateMachineId("SM_RoleBeHit", assets, alloc.gpa),
         Entity.VisionSkillComponent{
             .vision_skills = try alloc.gpa.dupe(
                 pb.VisionSkillInformation,

@@ -6,6 +6,7 @@ const comp_util = @import("../comp_util.zig");
 const mem = @import("../../../mem.zig");
 const pb = @import("proto").pb;
 const BaseSkinComponent = @import("BaseSkinComponent.zig");
+const Assets = @import("../../../data/Assets.zig");
 
 const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
@@ -202,6 +203,7 @@ pub fn entityToProto(
     storage: *const EntityComponentStorage,
     net_id: i64,
     alloc: mem.Alloc,
+    assets: *const Assets,
 ) !pb.EntityPb {
     const base_skin_comp = storage.base_skin orelse BaseSkinComponent{};
     var entity: pb.EntityPb = .{
@@ -338,7 +340,7 @@ pub fn entityToProto(
 
     if (storage.fsm) |comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
-            .ComponentPb = .{ .EntityFsmComponentPb = try comp.toProto() },
+            .ComponentPb = .{ .EntityFsmComponentPb = try comp.toProto(alloc.arena, assets) },
         });
     }
 

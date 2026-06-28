@@ -1,4 +1,5 @@
 BaseInfoComponent: ?@import("BaseInfo.zig") = null,
+AiComponent: ?@import("Ai.zig") = null,
 
 pub fn mergeInto(template: *const @This(), target: *@This()) void {
     if (target.BaseInfoComponent == null) {

@@ -26,7 +26,7 @@ const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
 
 pub const spawn = struct {
     pub const alias = "s";
-    pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?] [fsm?]";
+    pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?]";
     pub fn call(
         events: *EventQueue,
         scene: *Scene,
@@ -37,7 +37,6 @@ pub const spawn = struct {
         entity_id: i64,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
-        placeholder_fsm: ?bool,
     ) !void {
         var entity_config = (assets.tables.level_entity_config.getDataById(entity_id) orelse {
             try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
@@ -84,6 +83,13 @@ pub const spawn = struct {
             return;
         };
 
+        const ai_id: ?i32 = blk: {
+            const ai_comp = template_config.ComponentsData.AiComponent orelse {
+                break :blk null;
+            };
+            break :blk ai_comp.AiId;
+        };
+
         const entity = try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = base_info.Camp orelse 0,
@@ -99,6 +105,7 @@ pub const spawn = struct {
                 .rotation = scene.instance.players[0].rotation,
             },
             Entity.FightBuffComponent{},
+            try Entity.FsmComponent.fromAiBaseId(ai_id, assets, alloc.gpa),
         });
 
         var buff_ids: std.ArrayList(i64) = .empty;
@@ -118,23 +125,7 @@ pub const spawn = struct {
         var entity_pbs: std.ArrayList(pb.EntityPb) = try .initCapacity(alloc.gpa, 1);
         defer entity_pbs.deinit(alloc.gpa);
         const storage = scene.entities.get(entity.index);
-        var entity_pb = try storage.entityToProto(entity.net_id, alloc);
-        if (placeholder_fsm orelse false) {
-            var fsms: std.ArrayList(pb.DFsm) = .empty;
-            try fsms.appendSlice(alloc.arena, &.{
-                .{ .FsmId = 10007, .CurrentState = 10013 },
-                .{ .FsmId = 10007, .CurrentState = 10012 },
-                .{ .FsmId = 10009, .CurrentState = 10015 },
-            });
-            try entity_pb.ComponentPbs.append(alloc.arena, .{
-                .ComponentPb = .{
-                    .EntityFsmComponentPb = .{
-                        .HashCode = 439390503,
-                        .Fsms = fsms,
-                    },
-                },
-            });
-        }
+        const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
         entity_pbs.appendAssumeCapacity(entity_pb);
 
         try conn.push(pb.JSPatchNotify{
@@ -147,7 +138,7 @@ pub const spawn = struct {
 
         try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
 
-        try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, forced_fsm: {any}", .{ entity_id, is_frozen, is_tune_broken, placeholder_fsm });
+        try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, ai_id: {any}", .{ entity_id, is_frozen, is_tune_broken, ai_id });
     }
 };
 

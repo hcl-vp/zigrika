@@ -197,14 +197,14 @@ pub fn onUpdateFormationRequest(
                     }
                 }
                 const storage = scene.entities.get(entity.index);
-                const entity_pb = try storage.entityToProto(entity.net_id, alloc);
+                const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
                 try role_entity_pbs.append(alloc.gpa, entity_pb);
 
                 if (storage.concomitant) |concomitant| {
                     for (concomitant.custom_entity_ids) |concom_id| {
                         const concom_index = scene.net_id_map.get(concom_id) orelse continue;
                         const concom_storage = scene.entities.get(concom_index);
-                        const concom_pb = try concom_storage.entityToProto(concom_id, alloc);
+                        const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
                         try concom_entity_pbs.append(alloc.gpa, concom_pb);
                     }
                 }

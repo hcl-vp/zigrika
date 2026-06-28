@@ -78,6 +78,8 @@ pub const Gacha = @import("tables/Gacha.zig");
 pub const GachaPool = @import("tables/GachaPool.zig");
 pub const GachaViewInfo = @import("tables/GachaViewInfo.zig");
 pub const GachaTextureInfo = @import("tables/GachaTextureInfo.zig");
+pub const AiStateMachineConfig = @import("tables/AiStateMachineConfig.zig");
+pub const AiBase = @import("tables/AiBase.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
@@ -150,6 +152,8 @@ gacha: Table(Gacha, "Id"),
 gacha_pool: Table(GachaPool, "Id"),
 gacha_view_info: Table(GachaViewInfo, "Id"),
 gacha_texture_info: Table(GachaTextureInfo, "Id"),
+ai_state_machine_config: Table(AiStateMachineConfig, "Id"),
+ai_base: Table(AiBase, "Id"),
 
 fn loadTableItems(
     comptime T: type,

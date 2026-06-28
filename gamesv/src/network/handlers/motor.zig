@@ -329,6 +329,7 @@ fn pushEntityAddNotify(
     alloc: mem.Alloc,
     scene: *Scene,
     entity: Scene.Entity,
+    assets: *const Assets,
 ) !void {
     var role_entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
     defer role_entity_pbs.deinit(alloc.gpa);
@@ -336,13 +337,13 @@ fn pushEntityAddNotify(
     defer concom_entity_pbs.deinit(alloc.gpa);
 
     const storage = scene.entities.get(entity.index);
-    try role_entity_pbs.append(alloc.gpa, try storage.entityToProto(entity.net_id, alloc));
+    try role_entity_pbs.append(alloc.gpa, try storage.entityToProto(entity.net_id, alloc, assets));
 
     if (storage.concomitant) |concomitant| {
         for (concomitant.custom_entity_ids) |concom_id| {
             const concom_index = scene.net_id_map.get(concom_id) orelse continue;
             const concom_storage = scene.entities.get(concom_index);
-            const concom_pb = try concom_storage.entityToProto(concom_id, alloc);
+            const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
             try concom_entity_pbs.append(alloc.gpa, concom_pb);
         }
     }
@@ -563,7 +564,7 @@ pub fn onChangeVehicleRideSharingRequest(
         player_scene_entity,
     );
     if (companion.created) {
-        try pushEntityAddNotify(txn.conn, alloc, scene, companion.entity);
+        try pushEntityAddNotify(txn.conn, alloc, scene, companion.entity, assets);
     }
 
     if (PlayerEntityTemplates.findMotorcyclePassengerEntity(scene, assets)) |old_passenger| {
@@ -587,7 +588,7 @@ pub fn onChangeVehicleRideSharingRequest(
         },
         else => return err,
     };
-    try pushEntityAddNotify(txn.conn, alloc, scene, passenger_entity);
+    try pushEntityAddNotify(txn.conn, alloc, scene, passenger_entity, assets);
 
     try txn.conn.push(pb.UpdateVehicleRideSharingNotify{
         .PlayerId = player_id.id,

@@ -399,7 +399,7 @@ pub fn notifyJoinScene(
     const entities = scene.entities.slice();
     for (0..entities.len) |index| {
         const storage = entities.get(index);
-        const entity = try storage.entityToProto(storage.entity_id.net_id, alloc);
+        const entity = try storage.entityToProto(storage.entity_id.net_id, alloc, assets);
         try aoi.Entities.append(alloc.arena, entity);
     }
 

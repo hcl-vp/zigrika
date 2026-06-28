@@ -7,6 +7,7 @@ const mem = @import("../../mem.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const PositionComponent = @import("../../logic/component/entity/PositionComponent.zig");
 const FileSystem = @import("common").FileSystem;
+const Assets = @import("../../data/Assets.zig");
 
 pub fn onSceneTraceRequest(txn: *Transaction(pb.SceneTraceRequest)) !void {
     const log = std.log.scoped(.scene_trace);
@@ -19,14 +20,20 @@ pub fn onUpdateSceneDateRequest(txn: *Transaction(pb.UpdateSceneDateRequest)) !v
     txn.respond(.{});
 }
 
-pub fn onEntityActiveRequest(txn: *Transaction(pb.EntityActiveRequest), entities: Scene.Query(&.{Scene.Entity}), scene: *Scene, alloc: mem.Alloc) !void {
+pub fn onEntityActiveRequest(
+    txn: *Transaction(pb.EntityActiveRequest),
+    entities: Scene.Query(&.{Scene.Entity}),
+    scene: *Scene,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+) !void {
     const log = std.log.scoped(.entity_active);
     log.debug("request id: {d}", .{txn.message.EntityId});
 
     const entity = entities.byNetId(txn.message.EntityId) orelse return error.EntityNotFound;
     const scene_entity: Scene.Entity = entity[0];
 
-    const entity_pb = try scene.entities.get(scene_entity.index).entityToProto(scene_entity.net_id, alloc);
+    const entity_pb = try scene.entities.get(scene_entity.index).entityToProto(scene_entity.net_id, alloc, assets);
 
     txn.respond(.{
         .IsVisible = entity_pb.IsVisible,
