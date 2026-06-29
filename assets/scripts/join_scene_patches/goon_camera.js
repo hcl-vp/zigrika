@@ -464,6 +464,11 @@ setTimeout(() => {
         h = undefined,
         r = false,
       ) {
+        const ctx = this.GetSequencePlayContext(e);
+        if (ctx) {
+          ctx.ExecutePlay();
+          this.EndSequenceLastFrame(e);
+        }
         s?.SetResult(true);
       };
     } else {
@@ -631,11 +636,13 @@ setTimeout(() => {
   const original_uicam_get = UiCameraManager_1.UiCameraManager.Get;
   UiCameraManager_1.UiCameraManager.Get = function () {
     const cam = original_uicam_get.call(this);
+    const orig_enter = cam.Enter.bind(cam);
     cam.Enter = function (e = 0, t = 0, r = 0, o) {
-      if (this.JRo) return;
-      CameraController_1.CameraController.EnterCameraMode(2, 0, t, r, o);
-      for (const i of this.$Ro.values()) i.Activate();
-      this.JRo = true;
+      const in_photo_timestop =
+        UiManager_1.UiManager.IsViewOpen("PhotographView") &&
+        TickSystem_1.TickSystem.IsPaused;
+      if (in_photo_timestop && this.JRo) return;
+      orig_enter(e, t, r, o);
     };
     return cam;
   };
@@ -2085,6 +2092,22 @@ setTimeout(() => {
         "FunctionPhotograph",
         this.GetItem(19),
       );
+    }
+  };
+
+  PhotographSetupView.prototype.uQi = function (t) {
+    for (const i of this.qKi) {
+      i.SetActive(t);
+    }
+    this.Xva?.PlayInEditor();
+  };
+
+  PhotographSetupView.prototype.w1_ = function (t) {
+    this.E1_.SetActive(t);
+    if (t) {
+      this.Xva?.PlayInEditor();
+    } else {
+      this.b1_(false);
     }
   };
 

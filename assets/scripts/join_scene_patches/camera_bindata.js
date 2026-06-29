@@ -176,6 +176,7 @@ setTimeout(() => {
       options: TOGGLE_OPTIONS,
       default_option_index: 0,
       change_value: 0.1,
+      is_local_storage: true,
     }),
     build_entry({
       id: MAX_ID + 2,
@@ -204,6 +205,7 @@ setTimeout(() => {
       value_range: [1, 1, 0],
       default_option_index: 1,
       change_value: 1,
+      is_local_storage: false,
     }),
     build_entry({
       id: TD_ID,
@@ -212,6 +214,7 @@ setTimeout(() => {
       type: 3,
       value_range: [0, 5, 0],
       change_value: 0.1,
+      is_local_storage: false,
     }),
     build_entry({
       id: MAX_ID + 6,
@@ -220,7 +223,7 @@ setTimeout(() => {
       type: 1,
       value_range: [SPEED_MIN, SPEED_MAX, 1],
       change_value: 0.1,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
     build_entry({
       id: MAX_ID + 7,
@@ -229,7 +232,7 @@ setTimeout(() => {
       type: 1,
       value_range: [SPEED_MIN, SPEED_MAX, 1],
       change_value: 0.1,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
     build_entry({
       id: MAX_ID + 8,
@@ -238,7 +241,7 @@ setTimeout(() => {
       type: 1,
       value_range: [SPEED_MIN, SPEED_MAX, 1],
       change_value: 0.1,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
     build_entry({
       id: MAX_ID + 9,
@@ -288,7 +291,7 @@ setTimeout(() => {
       default_option_index: 0,
       sub_value_types: { 0: [4, 5] },
       change_value: 0.1,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
     build_entry({
       id: 5,
@@ -297,7 +300,7 @@ setTimeout(() => {
       type: 1,
       value_range: [0, 1000, 400],
       change_value: 5,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
     build_entry({
       id: 6,
@@ -307,7 +310,7 @@ setTimeout(() => {
       value_range: [0.1, 5, 0.1],
       is_reverse_set: true,
       change_value: 0.1,
-      is_local_storage: true,
+      is_local_storage: false,
     }),
   ];
 
