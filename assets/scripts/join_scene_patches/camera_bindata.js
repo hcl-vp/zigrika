@@ -95,41 +95,37 @@ setTimeout(() => {
     change_value = 0.1,
     is_show_red_dot = false,
     is_local_storage = false,
+    digits = 0,
+    unit = "",
   }) => {
     const b = new Builder(512);
     const name_off = b.createString(name);
+    const unit_off = b.createString(unit);
     const opt_offs = options.map((o) => b.createString(o));
-
     let suboptions_vec = null;
     if (sub_value_types !== null) {
       const entries =
         sub_value_types instanceof Map
           ? [...sub_value_types.entries()]
           : Object.entries(sub_value_types).map(([k, v]) => [Number(k), v]);
-
       const dic_entry_offs = entries.map(([key, arr]) => {
         const values = Array.isArray(arr) ? arr : [arr];
-
         b.startVector(4, values.length, 4);
         for (let i = values.length - 1; i >= 0; i--) b.addInt32(values[i]);
         const int_array_vec = b.endVector();
-
         b.startObject(1);
         b.addFieldOffset(0, int_array_vec, 0);
         const int_array_off = b.endObject();
-
         b.startObject(2);
         b.addFieldInt32(0, key, 0);
         b.addFieldOffset(1, int_array_off, 0);
         return b.endObject();
       });
-
       b.startVector(4, dic_entry_offs.length, 4);
       for (let i = dic_entry_offs.length - 1; i >= 0; i--)
         b.addOffset(dic_entry_offs[i]);
       suboptions_vec = b.endVector();
     }
-
     let vr_vec = null;
     if (value_range !== null) {
       b.startVector(4, value_range.length, 4);
@@ -137,12 +133,10 @@ setTimeout(() => {
         b.addFloat32(value_range[i]);
       vr_vec = b.endVector();
     }
-
     b.startVector(4, opt_offs.length, 4);
     for (let i = opt_offs.length - 1; i >= 0; i--) b.addOffset(opt_offs[i]);
     const options_vec = b.endVector();
-
-    b.startObject(13);
+    b.startObject(15);
     b.addFieldInt32(0, id, 0);
     b.addFieldInt32(1, value_type, 0);
     b.addFieldOffset(2, name_off, 0);
@@ -156,6 +150,8 @@ setTimeout(() => {
     b.addFieldFloat32(10, change_value, 0.1);
     b.addFieldInt8(11, is_show_red_dot ? 1 : 0, 0);
     b.addFieldInt8(12, is_local_storage ? 1 : 0, 0);
+    b.addFieldInt32(13, digits, 0);
+    b.addFieldOffset(14, unit_off, 0);
     const root = b.endObject();
     b.finish(root);
     return make_photo_setup(b.asUint8Array());
@@ -214,7 +210,7 @@ setTimeout(() => {
       type: 3,
       value_range: [0, 5, 0],
       change_value: 0.1,
-      is_local_storage: false,
+      digits: 2,
     }),
     build_entry({
       id: MAX_ID + 6,
@@ -273,6 +269,7 @@ setTimeout(() => {
       value_range: [0.2, 4, 1.8],
       change_value: 0.01,
       is_local_storage: true,
+      digits: 2,
     }),
     build_entry({
       id: 8,
@@ -281,6 +278,8 @@ setTimeout(() => {
       type: 3,
       value_range: [-180, 180, 0],
       change_value: 1,
+      digits: 2,
+      unit: "°",
     }),
     build_entry({
       id: 4,

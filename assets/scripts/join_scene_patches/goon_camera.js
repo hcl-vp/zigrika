@@ -636,13 +636,18 @@ setTimeout(() => {
   const original_uicam_get = UiCameraManager_1.UiCameraManager.Get;
   UiCameraManager_1.UiCameraManager.Get = function () {
     const cam = original_uicam_get.call(this);
-    const orig_enter = cam.Enter.bind(cam);
     cam.Enter = function (e = 0, t = 0, r = 0, o) {
-      const in_photo_timestop =
-        UiManager_1.UiManager.IsViewOpen("PhotographView") &&
-        TickSystem_1.TickSystem.IsPaused;
-      if (in_photo_timestop && this.JRo) return;
-      orig_enter(e, t, r, o);
+      if (this.JRo) return;
+      const in_photo = UiManager_1.UiManager.IsViewOpen("PhotographView");
+      CameraController_1.CameraController.EnterCameraMode(
+        2,
+        in_photo ? 0 : e,
+        t,
+        r,
+        o,
+      );
+      for (const i of this.$Ro.values()) i.Activate();
+      this.JRo = true;
     };
     return cam;
   };
@@ -1609,9 +1614,7 @@ setTimeout(() => {
       } else {
         r = e;
       }
-      this.GetText(2).SetText(
-        MathUtils_1.MathUtils.GetFloatPointFloorString(r, 2),
-      );
+      this.Jkl(r);
       if (
         PhotographValueWithoutTitleSetup.DeferredUpdateTypes.has(
           this.SetupConfig.ValueType,
