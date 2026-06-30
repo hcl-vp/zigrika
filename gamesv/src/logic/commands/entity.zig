@@ -10,6 +10,7 @@ const mem = @import("../../mem.zig");
 const ConfigComponent = @import("../../logic/component/entity/ConfigComponent.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const respond = @import("../commands.zig").respond;
@@ -152,6 +153,7 @@ pub const reset_formation = struct {
         assets: *const Assets,
         role_comp: *PlayerRoleComponent,
         weapon_comp: *PlayerWeaponComponent,
+        echo_comp: *PlayerEchoComponent,
         conn: *Connection,
         alloc: mem.Alloc,
     ) !void {
@@ -161,6 +163,7 @@ pub const reset_formation = struct {
             assets,
             role_comp,
             weapon_comp,
+            echo_comp,
             conn,
             alloc,
             null,

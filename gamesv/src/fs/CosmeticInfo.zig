@@ -76,12 +76,40 @@ pub fn addDefaults(cosmetics: *CosmeticInfo, gpa: Allocator, assets: *const Asse
         }
     }
 
+    for (assets.tables.phantom_item.items) |info| {
+        if (info.ParentMonsterId != 0) {
+            try phantom_skins.append(gpa, info.ItemId);
+        }
+    }
+
     cosmetics.role_skins = try role_skins.toOwnedSlice(gpa);
     cosmetics.phantom_skins = try phantom_skins.toOwnedSlice(gpa);
     cosmetics.fly_skins = try fly_skins.toOwnedSlice(gpa);
     cosmetics.weapon_skins = try weapon_skins.toOwnedSlice(gpa);
     cosmetics.ornaments = try ornaments.toOwnedSlice(gpa);
     cosmetics.viewed_ornaments = try viewed_ornaments.toOwnedSlice(gpa);
+}
+
+pub fn ensureDefaultPhantomSkins(info: *CosmeticInfo, gpa: Allocator, assets: *const Assets) !bool {
+    var changed = false;
+    var phantom_skins: std.ArrayListUnmanaged(i32) = .empty;
+    errdefer phantom_skins.deinit(gpa);
+
+    try phantom_skins.appendSlice(gpa, info.phantom_skins);
+    for (assets.tables.phantom_item.items) |item| {
+        if (item.ParentMonsterId == 0 or has(phantom_skins.items, item.ItemId)) continue;
+        try phantom_skins.append(gpa, item.ItemId);
+        changed = true;
+    }
+
+    if (!changed) {
+        phantom_skins.deinit(gpa);
+        return false;
+    }
+
+    if (info.phantom_skins.len != 0) gpa.free(info.phantom_skins);
+    info.phantom_skins = try phantom_skins.toOwnedSlice(gpa);
+    return true;
 }
 
 pub fn deinit(info: CosmeticInfo, gpa: Allocator) void {

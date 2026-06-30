@@ -223,6 +223,16 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
 }
 
 pub fn spawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype) !Entity {
+    return try spawnWithOptionalNetId(scene, gpa, fs, components, null);
+}
+
+pub fn spawnWithNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64, components: anytype) !Entity {
+    if (net_id <= 0) return error.InvalidEntityId;
+    if (scene.net_id_map.contains(net_id)) return error.EntityIdAlreadyExists;
+    return try spawnWithOptionalNetId(scene, gpa, fs, components, net_id);
+}
+
+fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
 
@@ -243,7 +253,9 @@ pub fn spawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype
         }
     }
 
-    const id = try scene.nextEntityId(fs, gpa);
+    const id = requested_net_id orelse try scene.nextEntityId(fs, gpa);
+    if (requested_net_id != null) try scene.ensureNextEntityIdAtLeast(fs, gpa, id + 1);
+
     storage.entity_id = .{ .net_id = id };
     if (storage.motor_da_ctx) |*comp| {
         if (comp.context_id == 0) comp.context_id = id;
@@ -365,15 +377,47 @@ pub fn saveInstance(scene: *Scene, fs: *FileSystem, gpa: Allocator) !void {
 }
 
 pub fn nextEntityId(scene: *Scene, fs: *FileSystem, gpa: Allocator) !i64 {
-    const incr_path = try std.fmt.allocPrint(
+    const incr_path = try scene.entityCounterPath(gpa);
+    defer gpa.free(incr_path);
+
+    return try incr.next(i64, fs, incr_path);
+}
+
+pub fn ensureNextEntityIdAtLeast(scene: *Scene, fs: *FileSystem, gpa: Allocator, next_id: i64) !void {
+    if (next_id <= 1) return;
+
+    const incr_path = try scene.entityCounterPath(gpa);
+    defer gpa.free(incr_path);
+
+    var buf: [32]u8 = undefined;
+    if (try fs.lockFile(incr_path)) |lock_value| {
+        var lock = lock_value;
+        var tokens = std.mem.tokenizeAny(u8, lock.content, " \r\n");
+        const current_id = std.fmt.parseInt(i64, tokens.next() orelse {
+            try lock.unlock(null);
+            return error.InvalidCounterFile;
+        }, 10) catch {
+            try lock.unlock(null);
+            return error.InvalidCounterFile;
+        };
+
+        if (current_id < next_id) {
+            try lock.unlock(try std.fmt.bufPrint(&buf, "{d}\n", .{next_id}));
+        } else {
+            try lock.unlock(null);
+        }
+        return;
+    }
+
+    try fs.writeFile(incr_path, try std.fmt.bufPrint(&buf, "{d}\n", .{next_id}));
+}
+
+fn entityCounterPath(scene: *Scene, gpa: Allocator) ![]u8 {
+    return try std.fmt.allocPrint(
         gpa,
         "player/{d}/scene/{d}/entity/next",
         .{ scene.player_id, scene.instance_id },
     );
-
-    defer gpa.free(incr_path);
-
-    return try incr.next(i64, fs, incr_path);
 }
 
 const BuffAdditionEntry = @import("../logic/events.zig").BuffAdditionEntry;

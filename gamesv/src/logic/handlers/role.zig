@@ -5,10 +5,13 @@ const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Connection = @import("../../network/Connection.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../component/player/PlayerEchoComponent.zig");
 const PlayerCosmeticComponent = @import("../component/player/PlayerCosmeticComponent.zig");
 const PlayerInventoryComponent = @import("../component/player/PlayerInventoryComponent.zig");
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const CosmeticsHelper = @import("../helpers/cosmetics.zig");
+const RoleStats = @import("../helpers/role_stats.zig");
 
 fn buildEmptyStorageRecord(
     red_dot_type: pb.EClientStorageSystemIdType,
@@ -112,6 +115,8 @@ pub fn pushData(
     alloc: mem.Alloc,
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
     inventory_comp: *PlayerInventoryComponent,
 ) !void {
@@ -157,7 +162,16 @@ pub fn pushData(
     var iterator = role_comp.role_map.iterator();
 
     while (iterator.next()) |role| {
-        notify.RoleList.appendAssumeCapacity(try role.value_ptr.toProto(alloc.arena, role.key_ptr.*));
+        notify.RoleList.appendAssumeCapacity(try RoleStats.toClientRoleInfo(
+            alloc.gpa,
+            alloc.arena,
+            assets,
+            role_comp,
+            role.key_ptr.*,
+            role.value_ptr,
+            weapon_comp,
+            echo_comp,
+        ));
     }
 
     try conn.push(notify, alloc.arena);

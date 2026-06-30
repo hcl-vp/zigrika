@@ -50,3 +50,5 @@ pub fn DamageExecuteRequest(
         .ElementType = execute_data.ElementType,
     });
 }
+
+pub fn HitEndPush(_: pb.HitEndPush) !void {}

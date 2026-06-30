@@ -1,0 +1,5 @@
+Id: i32,
+PropId: i32,
+AddType: i32,
+StandardProperty: i32,
+GrowthId: i32,

@@ -9,6 +9,7 @@ const EventQueue = @import("../../logic/EventQueue.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerCosmeticComponent = @import("../../logic/component/player/PlayerCosmeticComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const std = @import("std");
@@ -439,6 +440,7 @@ pub fn onRoleSkinChangeRequest(
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
     weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
 ) !void {
     const request = txn.message;
     const role = role_comp.role_map.getPtr(request.RoleId) orelse {
@@ -481,6 +483,7 @@ pub fn onRoleSkinChangeRequest(
         assets,
         role_comp,
         weapon_comp,
+        echo_comp,
         txn.conn,
         alloc,
         &.{request.RoleId},

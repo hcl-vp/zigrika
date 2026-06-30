@@ -44,6 +44,12 @@ const net_namespaces: []const type = &.{
     @import("handlers/inventory.zig"),
     @import("handlers/motor.zig"),
     @import("handlers/gacha.zig"),
+    @import("handlers/minimal.zig"),
+    @import("handlers/echo.zig"),
+    @import("handlers/echo/presets.zig"),
+    @import("handlers/echo/upgrade.zig"),
+    @import("handlers/echo/calabash.zig"),
+    @import("handlers/echo/projector.zig"),
     // @import("handlers/activity.zig"), VERY BUGGY, DISABLED BY DEFAULT!!!
 };
 

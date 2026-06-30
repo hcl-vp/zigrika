@@ -26,3 +26,10 @@ RedDotBase_1.RedDotData.prototype.SetUIItemActive = function () {
     item.IsValid() && item.SetUIActive(false);
   }
 };
+
+const GachaTagItem_1 = require("../Game/Module/Gacha/GachaMainView/GachaTagItem.js");
+const refreshGachaRedDot = GachaTagItem_1.GachaTagItem.prototype.RefreshRedDot;
+GachaTagItem_1.GachaTagItem.prototype.RefreshRedDot = function () {
+  refreshGachaRedDot.call(this);
+  this.GetItem(2)?.SetUIActive(false);
+};

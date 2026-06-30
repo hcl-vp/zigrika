@@ -8,7 +8,11 @@ const comp_util = @import("../../logic/component/comp_util.zig");
 const GuideInfo = @import("../../fs/GuideInfo.zig");
 const PlayerGuideComponent = @import("../../logic/component/player/PlayerGuideComponent.zig");
 
-const finished_by_default = [_]i32{ 10116, 10193 };
+const finished_by_default = [_]i32{
+    10116, 10193, 10194,
+    10120, 10175, 10270,
+    10285,
+};
 
 pub fn onGuideInfoRequest(
     txn: *Transaction(pb.GuideInfoRequest),
@@ -44,4 +48,38 @@ pub fn onGuideFinishRequest(
     const path = try std.fmt.allocPrint(alloc.arena, "player/{}/{s}", .{ guide_comp.player_id, GuideInfo.data_path });
     try comp_util.saveStruct(fs, guide_comp.info, path, alloc.arena);
     txn.respond(.{});
+}
+
+pub fn onIllustratedInfoRequest(
+    txn: *Transaction(pb.IllustratedInfoRequest),
+    alloc: mem.Alloc,
+    assets: *const Assets,
+) !void {
+    var classes: std.ArrayList(pb.IllustratedClass) = .empty;
+
+    for (txn.message.TypeList.items) |illustrated_type| {
+        var entries: std.ArrayList(pb.IllustratedEntry) = .empty;
+
+        if (illustrated_type == .VocalCorpse) {
+            for (assets.tables.calabash_develop_reward.items) |reward| {
+                if (!reward.IsShow) continue;
+                try entries.append(alloc.arena, .{
+                    .Id = reward.MonsterId,
+                    .CreateTime = 1,
+                    .Num = @intCast(reward.DevelopCondition.len),
+                    .IsRead = true,
+                });
+            }
+        }
+
+        try classes.append(alloc.arena, .{
+            .Type = illustrated_type,
+            .IllustratedEntryList = entries,
+        });
+    }
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .IllustratedClassList = classes,
+    });
 }

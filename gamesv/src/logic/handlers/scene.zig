@@ -16,6 +16,7 @@ const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.z
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 const PlayerMotorComponent = @import("../component/player/PlayerMotorComponent.zig");
+const PlayerEchoComponent = @import("../component/player/PlayerEchoComponent.zig");
 const file_util = @import("../../fs/file_util.zig");
 const FormationInfo = @import("../../fs/FormationInfo.zig");
 const RoleInfo = @import("../../fs/RoleInfo.zig");
@@ -280,6 +281,7 @@ pub fn notifyJoinScene(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     motor_comp: *PlayerMotorComponent,
+    echo_comp: *PlayerEchoComponent,
     scene: *Scene,
 ) !void {
     const log = std.log.scoped(.scene_join);
@@ -350,6 +352,7 @@ pub fn notifyJoinScene(
                     assets,
                     role_comp,
                     weapon_comp,
+                    echo_comp,
                     instance_dungeon,
                     role.role_id,
                 );

@@ -12,6 +12,7 @@ const FileSystem = @import("common").FileSystem;
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const EntityComponentStorage = @import("../../logic/component/entity/EntityComponentStorage.zig");
 
 fn build_fight_formations(
@@ -73,6 +74,7 @@ pub fn onUpdateFormationRequest(
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
 ) !void {
     const log = std.log.scoped(.formation_update);
 
@@ -157,6 +159,10 @@ pub fn onUpdateFormationRequest(
                 const entity_index = scene.net_id_map.get(entity_id) orelse continue;
                 const storage = scene.entities.get(entity_index);
                 if (storage.concomitant) |concomitant| {
+                    for (concomitant.vision_entity_id) |concom_id| {
+                        try scene.remove(alloc.gpa, fs, concom_id);
+                        try remove_infos.append(alloc.gpa, .{ .EntityId = concom_id });
+                    }
                     for (concomitant.custom_entity_ids) |concom_id| {
                         try scene.remove(alloc.gpa, fs, concom_id);
                         try remove_infos.append(alloc.gpa, .{ .EntityId = concom_id });
@@ -186,6 +192,7 @@ pub fn onUpdateFormationRequest(
                     assets,
                     role_comp,
                     weapon_comp,
+                    echo_comp,
                     instance_dungeon,
                     role_id,
                 );
@@ -201,6 +208,12 @@ pub fn onUpdateFormationRequest(
                 try role_entity_pbs.append(alloc.gpa, entity_pb);
 
                 if (storage.concomitant) |concomitant| {
+                    for (concomitant.vision_entity_id) |concom_id| {
+                        const concom_index = scene.net_id_map.get(concom_id) orelse continue;
+                        const concom_storage = scene.entities.get(concom_index);
+                        const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+                        try concom_entity_pbs.append(alloc.gpa, concom_pb);
+                    }
                     for (concomitant.custom_entity_ids) |concom_id| {
                         const concom_index = scene.net_id_map.get(concom_id) orelse continue;
                         const concom_storage = scene.entities.get(concom_index);

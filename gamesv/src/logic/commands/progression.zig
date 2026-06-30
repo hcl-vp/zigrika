@@ -6,7 +6,9 @@ const EventQueue = @import("../../logic/EventQueue.zig");
 const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInventoryComponent.zig");
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const WeaponItem = @import("../../fs/WeaponItem.zig");
+const special_item_incr = @import("../../fs/special_item_incr.zig");
 const FileSystem = @import("common").FileSystem;
 const Connection = @import("../../network/Connection.zig");
 const Scene = @import("../../logic/Scene.zig");
@@ -14,6 +16,7 @@ const comp_util = @import("../component/comp_util.zig");
 const mem = @import("../../mem.zig");
 const respond = @import("../commands.zig").respond;
 const Events = @import("../../logic/events.zig");
+const RoleStats = @import("../../logic/helpers/role_stats.zig");
 
 pub const resonance_item = struct {
     pub const alias = "waveband";
@@ -28,6 +31,8 @@ pub const resonance_item = struct {
         scene: *Scene,
         inventory_comp: *PlayerInventoryComponent,
         role_comp: *PlayerRoleComponent,
+        weapon_comp: *PlayerWeaponComponent,
+        echo_comp: *PlayerEchoComponent,
         query: Scene.Query(&.{
             Scene.Entity,
             *Scene.Entity.FightBuffComponent,
@@ -47,7 +52,7 @@ pub const resonance_item = struct {
 
         if (action) |value| {
             if (std.ascii.eqlIgnoreCase(value, "clear")) {
-                try clearWavebands(events, alloc, assets, fs, conn, scene, inventory_comp, role_comp, query, token);
+                try clearWavebands(events, alloc, assets, fs, conn, scene, inventory_comp, role_comp, weapon_comp, echo_comp, query, token);
                 return;
             }
         }
@@ -132,7 +137,7 @@ pub const weapon_item = struct {
         };
 
         var added: std.ArrayList(pb.WeaponItem) = .empty;
-        try addWeaponCopies(alloc, fs, weapon_comp, weapon_id, count, &added);
+        try addWeaponCopies(alloc, fs, assets, weapon_comp, weapon_id, count, &added);
         try pushWeaponAdds(conn, alloc, added);
         try respond(events, alloc.arena, "granted {d} copies of weapon {d}", .{ count, weapon_id });
     }
@@ -152,28 +157,6 @@ fn saveInventoryInfo(
     try comp_util.saveStruct(fs, inventory_comp.info, path, alloc.arena);
 }
 
-// this is a O(n) which could probably be removed if issue 1 is addressed
-fn nextWeaponIncrId(weapon_comp: *PlayerWeaponComponent) i32 {
-    var next_id: i32 = 1;
-    var iterator = weapon_comp.weapon_map.iterator();
-    while (iterator.next()) |entry| {
-        next_id = @max(next_id, entry.key_ptr.* + 1);
-    }
-    return next_id;
-}
-
-// TODO - Issue #1: unify all this later for when echoes are added as they all share the same IncrId
-fn saveWeaponNext(
-    alloc: mem.Alloc,
-    fs: *FileSystem,
-    weapon_comp: *PlayerWeaponComponent,
-) !void {
-    const path = try std.fmt.allocPrint(alloc.arena, "player/{}/{s}/next", .{ weapon_comp.player_id, WeaponItem.data_dir });
-    const next_id = nextWeaponIncrId(weapon_comp);
-    var buf: [32]u8 = undefined;
-    try fs.writeFile(path, try std.fmt.bufPrint(&buf, "{}", .{next_id}));
-}
-
 fn saveWeaponInfo(
     alloc: mem.Alloc,
     fs: *FileSystem,
@@ -188,20 +171,22 @@ fn saveWeaponInfo(
 fn addWeaponCopies(
     alloc: mem.Alloc,
     fs: *FileSystem,
+    assets: *const Assets,
     weapon_comp: *PlayerWeaponComponent,
     weapon_id: i32,
     count: i32,
     added: *std.ArrayList(pb.WeaponItem),
 ) !void {
-    var incr_id = nextWeaponIncrId(weapon_comp);
     for (0..@intCast(count)) |_| {
-        const weapon: WeaponItem = .{ .id = weapon_id };
+        const incr_id = try special_item_incr.next(alloc.gpa, fs, weapon_comp.player_id);
+        const weapon: WeaponItem = .{
+            .id = weapon_id,
+            .func_value = WeaponItem.defaultFuncValue(assets, weapon_id),
+        };
         try weapon_comp.weapon_map.put(alloc.gpa, incr_id, weapon);
         try saveWeaponInfo(alloc, fs, weapon_comp, incr_id, weapon);
         try added.append(alloc.arena, weapon.toProto(incr_id));
-        incr_id += 1;
     }
-    try saveWeaponNext(alloc, fs, weapon_comp);
 }
 
 fn pushWeaponAdds(
@@ -326,7 +311,6 @@ fn clearWeaponCopies(
         try fs.deleteFile(try std.fmt.allocPrint(alloc.arena, "player/{}/{s}/{}", .{ weapon_comp.player_id, WeaponItem.data_dir, incr_id }));
     }
 
-    try saveWeaponNext(alloc, fs, weapon_comp);
     if (removed_ids.items.len != 0) {
         try conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids }, alloc.arena);
     }
@@ -343,6 +327,8 @@ fn clearWavebands(
     scene: *Scene,
     inventory_comp: *PlayerInventoryComponent,
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
     query: Scene.Query(&.{
         Scene.Entity,
         *Scene.Entity.FightBuffComponent,
@@ -387,7 +373,16 @@ fn clearWavebands(
                 try events.enqueue(.role_info_modified, .{ .role_id = role_id });
             }
             var role_list: std.ArrayList(pb.RoleInfo) = .empty;
-            try role_list.append(alloc.arena, try role.toProto(alloc.arena, role_id));
+            try role_list.append(alloc.arena, try RoleStats.toClientRoleInfo(
+                alloc.gpa,
+                alloc.arena,
+                assets,
+                role_comp,
+                role_id,
+                role,
+                weapon_comp,
+                echo_comp,
+            ));
             try conn.push(pb.PbGetRoleListNotify{ .RoleList = role_list }, alloc.arena);
         }
     }

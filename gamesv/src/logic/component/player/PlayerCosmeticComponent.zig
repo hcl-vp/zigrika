@@ -27,9 +27,9 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
 
     if (info.isEmpty()) {
         try info.addDefaults(gpa, assets);
-        const path = try std.fmt.allocPrint(arena, "player/{}/{s}", .{ player_id, CosmeticInfo.data_path });
-        const serialized = try file_util.serializeZon(arena, info);
-        try fs.writeFile(path, serialized);
+        try save(gpa, fs, player_id, info);
+    } else if (try info.ensureDefaultPhantomSkins(gpa, assets)) {
+        try save(gpa, fs, player_id, info);
     }
 
     return .{
@@ -40,4 +40,14 @@ pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i
 
 pub fn deinit(comp: *PlayerCosmeticComponent, gpa: Allocator) void {
     comp.info.deinit(gpa);
+}
+
+pub fn save(gpa: Allocator, fs: *FileSystem, player_id: i32, info: CosmeticInfo) !void {
+    var arena_state = std.heap.ArenaAllocator.init(gpa);
+    defer arena_state.deinit();
+    const arena = arena_state.allocator();
+
+    const path = try std.fmt.allocPrint(arena, "player/{}/{s}", .{ player_id, CosmeticInfo.data_path });
+    const serialized = try file_util.serializeZon(arena, info);
+    try fs.writeFile(path, serialized);
 }

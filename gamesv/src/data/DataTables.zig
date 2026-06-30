@@ -9,6 +9,7 @@ pub const Config = @import("zon/config.zon");
 const ConcertoExceptions: []const i32 = @import("zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
+pub const MainRoleConfig = @import("tables/MainRoleConfig.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
 pub const FunctionCondition = @import("tables/FunctionCondition.zig");
 pub const RolePropertyGrowth = @import("tables/RolePropertyGrowth.zig");
@@ -24,6 +25,8 @@ pub const Ornament = @import("tables/Ornament.zig");
 pub const TemplateConfig = @import("tables/TemplateConfig.zig");
 pub const ExploreTools = @import("tables/ExploreTools.zig");
 pub const WeaponConf = @import("tables/WeaponConf.zig");
+pub const WeaponBaseAttributes = @import("tables/WeaponBaseAttributes.zig");
+pub const WeaponPropertyGrowth = @import("tables/WeaponPropertyGrowth.zig");
 pub const WeaponReson = @import("tables/WeaponReson.zig");
 pub const WeaponExpItem = @import("tables/WeaponExpItem.zig");
 pub const WeaponLevel = @import("tables/WeaponLevel.zig");
@@ -48,6 +51,7 @@ pub const RogueResCharacterBuff = @import("tables/RogueResCharacterBuff.zig");
 pub const HonamiStoryEffect = @import("tables/HonamiStoryEffect.zig");
 pub const ComboTeaching = @import("tables/ComboTeaching.zig");
 pub const EntitySkillPreload = @import("tables/EntitySkillPreload.zig");
+pub const CommonSkillPreload = @import("tables/CommonSkillPreload.zig");
 pub const FavorWord = @import("tables/FavorWord.zig");
 pub const FavorStory = @import("tables/FavorStory.zig");
 pub const FavorGoods = @import("tables/FavorGoods.zig");
@@ -80,9 +84,28 @@ pub const GachaViewInfo = @import("tables/GachaViewInfo.zig");
 pub const GachaTextureInfo = @import("tables/GachaTextureInfo.zig");
 pub const AiStateMachineConfig = @import("tables/AiStateMachineConfig.zig");
 pub const AiBase = @import("tables/AiBase.zig");
+pub const PhantomItem = @import("tables/PhantomItem.zig");
+pub const PhantomSkill = @import("tables/PhantomSkill.zig");
+pub const PhantomSummonGroup = @import("tables/PhantomSummonGroup.zig");
+pub const PhantomFetter = @import("tables/PhantomFetter.zig");
+pub const PhantomFetterGroup = @import("tables/PhantomFetterGroup.zig");
+pub const PhantomMainProperty = @import("tables/PhantomMainProperty.zig");
+pub const PhantomMainPropItem = @import("tables/PhantomMainPropItem.zig");
+pub const PhantomSubProperty = @import("tables/PhantomSubProperty.zig");
+pub const PhantomRarity = @import("tables/PhantomRarity.zig");
+pub const PhantomQuality = @import("tables/PhantomQuality.zig");
+pub const PhantomGrowth = @import("tables/PhantomGrowth.zig");
+pub const PhantomLevel = @import("tables/PhantomLevel.zig");
+pub const PhantomExpItem = @import("tables/PhantomExpItem.zig");
+pub const PhantomVicePolishConfig = @import("tables/PhantomVicePolishConfig.zig");
+pub const CalabashLevel = @import("tables/CalabashLevel.zig");
+pub const CalabashDevelopReward = @import("tables/CalabashDevelopReward.zig");
+pub const DropPackage = @import("tables/DropPackage.zig");
+pub const PropValue = @import("tables/PropValue.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
+main_role_config: Table(MainRoleConfig, "Id"),
 base_property: Table(BaseProperty, "Id"),
 function_condition: Table(FunctionCondition, "FunctionId"),
 role_property_growth: Table(RolePropertyGrowth, "Id"),
@@ -98,6 +121,8 @@ ornament: Table(Ornament, "Id"),
 template_config: Table(TemplateConfig, "Id"),
 explore_tools: Table(ExploreTools, "PhantomSkillId"),
 weapon_conf: Table(WeaponConf, "ItemId"),
+weapon_base_attributes: Table(WeaponBaseAttributes, "ItemId"),
+weapon_property_growth: Table(WeaponPropertyGrowth, "Id"),
 weapon_reson: Table(WeaponReson, "Id"),
 weapon_exp_item: Table(WeaponExpItem, "Id"),
 weapon_level: Table(WeaponLevel, "Id"),
@@ -122,6 +147,7 @@ rogue_res_buff: Table(RogueResCharacterBuff, "Id"),
 honami_story_effect: Table(HonamiStoryEffect, "Id"),
 combo_teaching: Table(ComboTeaching, "Id"),
 entity_skill_preload: Table(EntitySkillPreload, "Id"),
+common_skill_preload: Table(CommonSkillPreload, "Id"),
 favor_word: Table(FavorWord, "Id"),
 favor_story: Table(FavorStory, "Id"),
 favor_goods: Table(FavorGoods, "Id"),
@@ -154,6 +180,23 @@ gacha_view_info: Table(GachaViewInfo, "Id"),
 gacha_texture_info: Table(GachaTextureInfo, "Id"),
 ai_state_machine_config: Table(AiStateMachineConfig, "Id"),
 ai_base: Table(AiBase, "Id"),
+phantom_item: Table(PhantomItem, "ItemId"),
+phantom_skill: Table(PhantomSkill, "PhantomSkillId"),
+phantom_summon_group: Table(PhantomSummonGroup, "Id"),
+phantom_fetter: Table(PhantomFetter, "Id"),
+phantom_fetter_group: Table(PhantomFetterGroup, "Id"),
+phantom_main_property: Table(PhantomMainProperty, "Id"),
+phantom_main_prop_item: Table(PhantomMainPropItem, "Id"),
+phantom_sub_property: Table(PhantomSubProperty, "Id"),
+phantom_rarity: Table(PhantomRarity, "Rare"),
+phantom_quality: Table(PhantomQuality, "Quality"),
+phantom_growth: Table(PhantomGrowth, "Id"),
+phantom_level: Table(PhantomLevel, "Id"),
+phantom_exp_item: Table(PhantomExpItem, "ItemId"),
+phantom_vice_polish_config: Table(PhantomVicePolishConfig, "PropCount"),
+calabash_level: Table(CalabashLevel, "Level"),
+calabash_develop_reward: Table(CalabashDevelopReward, "MonsterId"),
+drop_package: Table(DropPackage, "Id"),
 
 fn loadTableItems(
     comptime T: type,
@@ -332,8 +375,6 @@ pub fn getRoleAutoBuffs(
         1216, // Reduce stamina while flying down in sprint
         1001000000, // Character initial buff mount
         70000077, // Role-IOU deduction control
-        291724064, // Male MC Tag
-        291724065, // Female MC Tag
     };
     const blacklisted_buff_id_combos = [_][]const u8{
         "666", "990", "777", "095", "402", "403", "302", "291", "98", "009", "020",
@@ -446,6 +487,12 @@ pub fn getRoleAutoBuffs(
         try results.append(gpa, .{ .id = id, .is_active = true });
     }
 
+    if (tables.main_role_config.getDataById(role_id)) |main_role| {
+        if (mainRoleTagBuffId(main_role.Gender)) |tag_buff_id| {
+            try results.append(gpa, .{ .id = tag_buff_id, .is_active = true });
+        }
+    }
+
     if (std.mem.findScalar(i32, ConcertoExceptions, role_id) == null) {
         try results.append(gpa, .{ .id = 1101002011, .is_active = true });
     }
@@ -532,6 +579,14 @@ pub fn getRoleAutoBuffs(
     }
 
     return results;
+}
+
+fn mainRoleTagBuffId(gender: i32) ?i64 {
+    return switch (gender) {
+        1 => 291724064,
+        0 => 291724065,
+        else => null,
+    };
 }
 
 pub fn createBuffInformation(

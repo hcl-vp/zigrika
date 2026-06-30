@@ -554,12 +554,6 @@ pub const h5s = struct {
     pub const Bws_field_number: u32 = 3;
     pub const Qws_field_number: u32 = 4;
 };
-pub const RobotRoleInfo = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const BaseProp_field_number: u32 = 2;
-    pub const AddProp_field_number: u32 = 3;
-    pub const RoleEquipmentPropData_field_number: u32 = 4;
-};
 pub const zfs = struct {
     pub const msg_id: u16 = 18066;
     pub const C5n_field_number: u32 = 12;
@@ -568,15 +562,6 @@ pub const Zfs = struct {
     pub const msg_id: u16 = 17281;
     pub const fMs_field_number: u32 = 2;
     pub const exs_field_number: u32 = 14;
-};
-pub const RobotRolePropRequest = struct {
-    pub const msg_id: u16 = 18066;
-    pub const RoleIds_field_number: u32 = 12;
-};
-pub const RobotRolePropResponse = struct {
-    pub const msg_id: u16 = 17281;
-    pub const Error_field_number: u32 = 2;
-    pub const RobotRoleInfo_field_number: u32 = 14;
 };
 pub const jm_ = struct {
     pub const msg_id: u16 = 29312;
@@ -20146,33 +20131,6 @@ pub const IR_ = struct {
     pub const N4__field_number: u32 = 11;
     pub const V4__field_number: u32 = 12;
 };
-pub const GachaItem = struct {
-    pub const ItemId_field_number: u32 = 1;
-    pub const IsUp_field_number: u32 = 2;
-};
-pub const GachaPoolDetail = struct {
-    pub const Text_field_number: u32 = 1;
-    pub const FiveStarRoles_field_number: u32 = 2;
-    pub const FiveStarWeapons_field_number: u32 = 3;
-    pub const FourStarRoles_field_number: u32 = 4;
-    pub const FourStarWeapons_field_number: u32 = 5;
-    pub const ThreeStarRoles_field_number: u32 = 6;
-    pub const FiveStarTitle_field_number: u32 = 7;
-    pub const FileStarDetail_field_number: u32 = 8;
-    pub const FourStarTitle_field_number: u32 = 9;
-    pub const FourStarDetail_field_number: u32 = 10;
-    pub const ThreeStarTitle_field_number: u32 = 11;
-    pub const ThreeStarDetail_field_number: u32 = 12;
-};
-pub const GachaPoolDetailRequest = struct {
-    pub const msg_id: u16 = 26354;
-    pub const PoolId_field_number: u32 = 9;
-};
-pub const GachaPoolDetailResponse = struct {
-    pub const msg_id: u16 = 16105;
-    pub const ErrorCode_field_number: u32 = 15;
-    pub const GachaPoolDetail_field_number: u32 = 13;
-};
 pub const _m_ = struct {
     pub const msg_id: u16 = 26354;
     pub const o9n_field_number: u32 = 9;
@@ -27009,6 +26967,11 @@ pub const AbyssRewardInfo = struct {
     pub const TargetProgress_field_number: u32 = 7;
     pub const CanUnlock_field_number: u32 = 9;
 };
+pub const AddCountItemInfo = struct {
+    pub const Id_field_number: u32 = 1;
+    pub const Count_field_number: u32 = 2;
+    pub const IncrId_field_number: u32 = 3;
+};
 pub const ItemLockRequest = struct {
     pub const msg_id: u16 = 29074;
     pub const ItemId_field_number: u32 = 8;
@@ -27100,6 +27063,11 @@ pub const PhantomItemRemoveNotify = struct {
     pub const msg_id: u16 = 25953;
     pub const PhantomItemIncrIdList_field_number: u32 = 8;
 };
+pub const ItemFuncValueUpdateNotify = struct {
+    pub const msg_id: u16 = 15945;
+    pub const IncrId_field_number: u32 = 13;
+    pub const FuncValue_field_number: u32 = 14;
+};
 pub const WeaponItem = struct {
     pub const Id_field_number: u32 = 1;
     pub const IncrId_field_number: u32 = 2;
@@ -27148,6 +27116,21 @@ pub const ValidTimeItem = struct {
 pub const ValidTimeItemResponse = struct {
     pub const msg_id: u16 = 21554;
     pub const ItemList_field_number: u32 = 4;
+};
+pub const RobotRoleInfo = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const BaseProp_field_number: u32 = 2;
+    pub const AddProp_field_number: u32 = 3;
+    pub const RoleEquipmentPropData_field_number: u32 = 4;
+};
+pub const RobotRolePropRequest = struct {
+    pub const msg_id: u16 = 18066;
+    pub const RoleIds_field_number: u32 = 12;
+};
+pub const RobotRolePropResponse = struct {
+    pub const msg_id: u16 = 17281;
+    pub const Error_field_number: u32 = 2;
+    pub const RobotRoleInfo_field_number: u32 = 14;
 };
 pub const ItemDeprecateRequest = struct {
     pub const msg_id: u16 = 29312;
@@ -27479,30 +27462,6 @@ pub const RoleSkillQuickLevelUpResponse = struct {
     pub const msg_id: u16 = 24955;
     pub const ErrorCode_field_number: u32 = 2;
     pub const RoleInfo_field_number: u32 = 1;
-};
-pub const RoleVoice = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const VoiceId_field_number: u32 = 2;
-};
-pub const PlayerVoiceLanguageRequest = struct {
-    pub const msg_id: u16 = 20065;
-};
-pub const PlayerVoiceLanguageResponse = struct {
-    pub const msg_id: u16 = 23859;
-    pub const ErrorCode_field_number: u32 = 6;
-    pub const RoleVoices_field_number: u32 = 3;
-};
-pub const RoleVoiceSetting = struct {
-    pub const RoleId_field_number: u32 = 1;
-    pub const VoiceLanguage_field_number: u32 = 2;
-};
-pub const PlayerRoleVoiceSetRequest = struct {
-    pub const msg_id: u16 = 22440;
-    pub const RoleVoices_field_number: u32 = 11;
-};
-pub const PlayerRoleVoiceSetResponse = struct {
-    pub const msg_id: u16 = 27742;
-    pub const ErrorCode_field_number: u32 = 5;
 };
 pub const SecGetReportData2FlowRequest = struct {
     pub const msg_id: u16 = 25758;
@@ -30345,6 +30304,14 @@ pub const PlayerBasicInfoGetResponse = struct {
     pub const Info_field_number: u32 = 1;
     pub const ErrorCode_field_number: u32 = 12;
 };
+pub const BirthdayInitRequest = struct {
+    pub const msg_id: u16 = 27593;
+    pub const Birthday_field_number: u32 = 9;
+};
+pub const BirthdayInitResponse = struct {
+    pub const msg_id: u16 = 21515;
+    pub const ErrorCode_field_number: u32 = 10;
+};
 pub const RoleShowListUpdateRequest = struct {
     pub const msg_id: u16 = 24461;
     pub const RoleList_field_number: u32 = 4;
@@ -30367,6 +30334,14 @@ pub const ReadCardRequest = struct {
 };
 pub const ReadCardResponse = struct {
     pub const msg_id: u16 = 25756;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const BirthdayShowSetRequest = struct {
+    pub const msg_id: u16 = 25274;
+    pub const DisPlay_field_number: u32 = 1;
+};
+pub const BirthdayShowSetResponse = struct {
+    pub const msg_id: u16 = 16202;
     pub const ErrorCode_field_number: u32 = 13;
 };
 pub const PlayerNameUpdateNotify = struct {
@@ -30467,6 +30442,30 @@ pub const PlayerXboxBlockListRequest = struct {
 };
 pub const PlayerXboxBlockListResponse = struct {
     pub const msg_id: u16 = 17327;
+};
+pub const RoleVoice = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const VoiceId_field_number: u32 = 2;
+};
+pub const PlayerVoiceLanguageRequest = struct {
+    pub const msg_id: u16 = 20065;
+};
+pub const PlayerVoiceLanguageResponse = struct {
+    pub const msg_id: u16 = 23859;
+    pub const ErrorCode_field_number: u32 = 6;
+    pub const RoleVoices_field_number: u32 = 3;
+};
+pub const RoleVoiceSetting = struct {
+    pub const RoleId_field_number: u32 = 1;
+    pub const VoiceLanguage_field_number: u32 = 2;
+};
+pub const PlayerRoleVoiceSetRequest = struct {
+    pub const msg_id: u16 = 22440;
+    pub const RoleVoices_field_number: u32 = 11;
+};
+pub const PlayerRoleVoiceSetResponse = struct {
+    pub const msg_id: u16 = 27742;
+    pub const ErrorCode_field_number: u32 = 5;
 };
 pub const PlayerAttr = struct {
     Value: ?union(enum) {
@@ -32408,6 +32407,16 @@ pub const MotorDiyPb = struct {
     pub const MotorOutlookPreset_field_number: u32 = 3;
     pub const LatestMotorSkinSuit_field_number: u32 = 4;
 };
+pub const BirthRoleSelect = struct {
+    pub const Year_field_number: u32 = 1;
+    pub const Role_field_number: u32 = 2;
+};
+pub const BirthdayInfoUpdateNotify = struct {
+    pub const msg_id: u16 = 29264;
+    pub const BirthDayReset_field_number: u32 = 15;
+    pub const RecentRewardTime_field_number: u32 = 13;
+    pub const Roles_field_number: u32 = 12;
+};
 pub const BuffItem = struct {
     pub const ItemId_field_number: u32 = 1;
     pub const CdTime_field_number: u32 = 3;
@@ -32462,6 +32471,18 @@ pub const CalabashMsgNotify = struct {
     pub const msg_id: u16 = 25240;
     pub const CalabashMsg_field_number: u32 = 4;
     pub const CalabashCfg_field_number: u32 = 3;
+};
+pub const CalabashLevelsRewardNotify = struct {
+    pub const msg_id: u16 = 24902;
+    pub const RewardedLevels_field_number: u32 = 7;
+};
+pub const CalabashLevelRewardRequest = struct {
+    pub const msg_id: u16 = 20110;
+    pub const Level_field_number: u32 = 3;
+};
+pub const CalabashLevelRewardResponse = struct {
+    pub const msg_id: u16 = 26624;
+    pub const ErrorCode_field_number: u32 = 11;
 };
 pub const CalabashSkinDataRequest = struct {
     pub const msg_id: u16 = 16689;
@@ -33072,6 +33093,17 @@ pub const EntitySimplyMoveInfoPackagePush = struct {
     pub const MoveInfos_field_number: u32 = 12;
     pub const SceneOwnerId_field_number: u32 = 9;
 };
+pub const RemoveSummonEntityRequest = struct {
+    pub const msg_id: u16 = 27142;
+    pub const SummonerId_field_number: u32 = 6;
+    pub const SkillId_field_number: u32 = 5;
+    pub const RemoveType_field_number: u32 = 11;
+    pub const RemoveENtityIds_field_number: u32 = 14;
+};
+pub const RemoveSummonEntityResponse = struct {
+    pub const msg_id: u16 = 19429;
+    pub const ErrorCode_field_number: u32 = 1;
+};
 pub const EntityOnLandedRequest = struct {
     pub const msg_id: u16 = 23489;
     pub const EntityId_field_number: u32 = 10;
@@ -33184,6 +33216,15 @@ pub const SummonRequest = struct {
 pub const SummonResponse = struct {
     pub const msg_id: u16 = 24945;
     pub const ErrorCode_field_number: u32 = 9;
+};
+pub const Summon3Request = struct {
+    pub const msg_id: u16 = 17712;
+    pub const SummonerEntityId_field_number: u32 = 6;
+    pub const SummonInfo_field_number: u32 = 15;
+};
+pub const Summon3Response = struct {
+    pub const msg_id: u16 = 21698;
+    pub const ErrorCode_field_number: u32 = 10;
 };
 pub const SummonEntityNotify = struct {
     pub const msg_id: u16 = 22110;
@@ -34435,6 +34476,41 @@ pub const ExploreSkillRouletteSetResponse = struct {
     pub const RouletteType_field_number: u32 = 3;
     pub const SkillRoulettes_field_number: u32 = 10;
 };
+pub const UnlockIllustratedPhantom = struct {
+    pub const MonsterId_field_number: u32 = 1;
+    pub const SkinIds_field_number: u32 = 2;
+    pub const EqupiedSkin_field_number: u32 = 3;
+    pub const IsSpecial_field_number: u32 = 4;
+};
+pub const PhantomInteractionUnlockNotify = struct {
+    pub const msg_id: u16 = 22103;
+    pub const UnlockIllustratedPhantoms_field_number: u32 = 11;
+    pub const EquipedMonsterIds_field_number: u32 = 6;
+};
+pub const PhantomInteractionInfoUpdateNotify = struct {
+    pub const msg_id: u16 = 20034;
+    pub const UnlockIllustratedPhantom_field_number: u32 = 8;
+};
+pub const PhantomInteractionEquipRequest = struct {
+    pub const msg_id: u16 = 16869;
+    pub const EquipedMonsterIds_field_number: u32 = 2;
+};
+pub const PhantomInteractionEquipResponse = struct {
+    pub const msg_id: u16 = 29115;
+    pub const ErrorCode_field_number: u32 = 14;
+};
+pub const SkinChangeInfo = struct {
+    pub const MonsterId_field_number: u32 = 1;
+    pub const SkinId_field_number: u32 = 2;
+};
+pub const PhantomInteractionSkinChangeRequest = struct {
+    pub const msg_id: u16 = 29162;
+    pub const SkinChangeInfos_field_number: u32 = 1;
+};
+pub const PhantomInteractionSkinChangeResponse = struct {
+    pub const msg_id: u16 = 19039;
+    pub const ErrorCode_field_number: u32 = 14;
+};
 pub const FavorQuest = struct {
     pub const Chapter_field_number: u32 = 1;
     pub const Status_field_number: u32 = 2;
@@ -34806,6 +34882,33 @@ pub const GachaUsePoolRequest = struct {
 pub const GachaUsePoolResponse = struct {
     pub const msg_id: u16 = 21596;
     pub const ErrorCode_field_number: u32 = 13;
+};
+pub const GachaItem = struct {
+    pub const ItemId_field_number: u32 = 1;
+    pub const IsUp_field_number: u32 = 2;
+};
+pub const GachaPoolDetail = struct {
+    pub const Text_field_number: u32 = 1;
+    pub const FiveStarRoles_field_number: u32 = 2;
+    pub const FiveStarWeapons_field_number: u32 = 3;
+    pub const FourStarRoles_field_number: u32 = 4;
+    pub const FourStarWeapons_field_number: u32 = 5;
+    pub const ThreeStarRoles_field_number: u32 = 6;
+    pub const FiveStarTitle_field_number: u32 = 7;
+    pub const FileStarDetail_field_number: u32 = 8;
+    pub const FourStarTitle_field_number: u32 = 9;
+    pub const FourStarDetail_field_number: u32 = 10;
+    pub const ThreeStarTitle_field_number: u32 = 11;
+    pub const ThreeStarDetail_field_number: u32 = 12;
+};
+pub const GachaPoolDetailRequest = struct {
+    pub const msg_id: u16 = 26354;
+    pub const PoolId_field_number: u32 = 9;
+};
+pub const GachaPoolDetailResponse = struct {
+    pub const msg_id: u16 = 16105;
+    pub const ErrorCode_field_number: u32 = 15;
+    pub const GachaPoolDetail_field_number: u32 = 13;
 };
 pub const GivebackInfoRequest = struct {
     pub const msg_id: u16 = 18676;
@@ -35747,6 +35850,95 @@ pub const ShopRecommend = struct {
     pub const Show_field_number: u32 = 7;
     pub const TabImage_field_number: u32 = 8;
 };
+pub const PhBaPlanAttr = struct {
+    pub const AttrId_field_number: u32 = 1;
+    pub const Deal_field_number: u32 = 2;
+};
+pub const PhBaOneCostPlan = struct {
+    pub const CostType_field_number: u32 = 1;
+    pub const AttrList_field_number: u32 = 2;
+};
+pub const PhBaOneSuitPlan = struct {
+    pub const SuitId_field_number: u32 = 1;
+    pub const OneCostList_field_number: u32 = 2;
+    pub const IsOpen_field_number: u32 = 3;
+};
+pub const PhBaOneAllSuitPlan = struct {
+    pub const SuitPlanList_field_number: u32 = 1;
+    pub const Name_field_number: u32 = 2;
+};
+pub const PhBaPlanUsePlanRequest = struct {
+    pub const msg_id: u16 = 19874;
+};
+pub const PhBaPlanUsePlanResponse = struct {
+    pub const msg_id: u16 = 23837;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const SelfPlanCode_field_number: u32 = 13;
+    pub const UsePlan_field_number: u32 = 1;
+    pub const FiveStarSwitch_field_number: u32 = 9;
+    pub const TowPlanSame_field_number: u32 = 15;
+};
+pub const PhBaPlanSaveUsePlanRequest = struct {
+    pub const msg_id: u16 = 26000;
+    pub const UsePlan_field_number: u32 = 6;
+};
+pub const PhBaPlanSaveUsePlanResponse = struct {
+    pub const msg_id: u16 = 25623;
+    pub const ErrorCode_field_number: u32 = 5;
+    pub const SelfPlanCode_field_number: u32 = 13;
+    pub const TowPlanSame_field_number: u32 = 7;
+};
+pub const PhBaPlanFindPlanRequest = struct {
+    pub const msg_id: u16 = 29918;
+    pub const TargetCode_field_number: u32 = 15;
+};
+pub const PhBaPlanFindPlanResponse = struct {
+    pub const msg_id: u16 = 25519;
+    pub const ErrorCode_field_number: u32 = 12;
+    pub const Plan_field_number: u32 = 11;
+    pub const TowPlanSame_field_number: u32 = 3;
+};
+pub const PhBaPlanSetStatusInfo = struct {
+    pub const Open_field_number: u32 = 1;
+    pub const Suit_field_number: u32 = 2;
+};
+pub const PhBaPlanSetPlanStatusRequest = struct {
+    pub const msg_id: u16 = 20243;
+    pub const SetInfo_field_number: u32 = 10;
+};
+pub const PhBaPlanSetPlanStatusResponse = struct {
+    pub const msg_id: u16 = 17430;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const TowPlanSame_field_number: u32 = 9;
+};
+pub const PhBaPlanUpdatePlanRequest = struct {
+    pub const msg_id: u16 = 29314;
+};
+pub const PhBaPlanUpdatePlanResponse = struct {
+    pub const msg_id: u16 = 23473;
+    pub const ErrorCode_field_number: u32 = 6;
+    pub const SelfPlanCode_field_number: u32 = 5;
+};
+pub const PhBaPlanSetFiveStarSwitchRequest = struct {
+    pub const msg_id: u16 = 15717;
+    pub const Open_field_number: u32 = 10;
+};
+pub const PhBaPlanSetFiveStarSwitchResponse = struct {
+    pub const msg_id: u16 = 19058;
+    pub const ErrorCode_field_number: u32 = 13;
+};
+pub const PhBaPlanBatchOper = struct {
+    pub const Oper_field_number: u32 = 1;
+    pub const IncrId_field_number: u32 = 2;
+};
+pub const PhBaPlanBatchOperRequest = struct {
+    pub const msg_id: u16 = 26401;
+    pub const BatchOper_field_number: u32 = 15;
+};
+pub const PhBaPlanBatchOperResponse = struct {
+    pub const msg_id: u16 = 18607;
+    pub const errCode_field_number: u32 = 3;
+};
 pub const PhantomConsumeItem = struct {
     pub const IncId_field_number: u32 = 1;
     pub const Count_field_number: u32 = 2;
@@ -35763,6 +35955,10 @@ pub const PhantomLevelUpResponse = struct {
     pub const ErrorCode_field_number: u32 = 12;
     pub const UpdateInfo_field_number: u32 = 11;
     pub const ItemMap_field_number: u32 = 1;
+};
+pub const PhantomPutOnNotify = struct {
+    pub const msg_id: u16 = 21259;
+    pub const EquipInfoList_field_number: u32 = 12;
 };
 pub const PhantomPutOnRequest = struct {
     pub const msg_id: u16 = 29278;
@@ -35785,6 +35981,10 @@ pub const PhantomAutoPutResponse = struct {
     pub const ErrorCode_field_number: u32 = 4;
     pub const EquipInfoList_field_number: u32 = 3;
 };
+pub const PhantomItemUpdateNotify = struct {
+    pub const msg_id: u16 = 28617;
+    pub const UpdateInfo_field_number: u32 = 11;
+};
 pub const RolePhantomPropUpdateNotify = struct {
     pub const msg_id: u16 = 17907;
     pub const PropInfo_field_number: u32 = 10;
@@ -35803,6 +36003,50 @@ pub const PhantomSkinUnlockNotify = struct {
     pub const msg_id: u16 = 21910;
     pub const PhantomSkinList_field_number: u32 = 13;
 };
+pub const PhantomSkinChangeRequest = struct {
+    pub const msg_id: u16 = 25332;
+    pub const IncrId_field_number: u32 = 8;
+    pub const SkinId_field_number: u32 = 13;
+    pub const ChangeDefault_field_number: u32 = 6;
+};
+pub const PhantomSkinChangeResponse = struct {
+    pub const msg_id: u16 = 28383;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const PhantomRefiningRequest = struct {
+    pub const msg_id: u16 = 17169;
+    pub const IncrIdList_field_number: u32 = 15;
+};
+pub const PhantomRefiningResponse = struct {
+    pub const msg_id: u16 = 20466;
+    pub const ErrorCode_field_number: u32 = 13;
+    pub const Items_field_number: u32 = 11;
+    pub const ExtraItems_field_number: u32 = 9;
+    pub const CostPhantoms_field_number: u32 = 15;
+};
+pub const CalabashBatchRefiningRequest = struct {
+    pub const msg_id: u16 = 23128;
+    pub const IncrIdList_field_number: u32 = 6;
+};
+pub const CalabashBatchRefiningResponse = struct {
+    pub const msg_id: u16 = 19858;
+    pub const ErrorCode_field_number: u32 = 7;
+    pub const Items_field_number: u32 = 4;
+    pub const ExtraItems_field_number: u32 = 1;
+    pub const CostPhantoms_field_number: u32 = 8;
+};
+pub const PhantomBatchDirectRefiningRequest = struct {
+    pub const msg_id: u16 = 23060;
+    pub const IncrIdList_field_number: u32 = 15;
+    pub const TargetFetterGroupId_field_number: u32 = 7;
+};
+pub const PhantomBatchDirectRefiningResponse = struct {
+    pub const msg_id: u16 = 23354;
+    pub const ErrorCode_field_number: u32 = 11;
+    pub const Items_field_number: u32 = 8;
+    pub const CostPhantoms_field_number: u32 = 1;
+    pub const DirectRefineWeekTimes_field_number: u32 = 12;
+};
 pub const PhantomPolishRequest = struct {
     pub const msg_id: u16 = 28904;
     pub const IncrId_field_number: u32 = 10;
@@ -35812,6 +36056,86 @@ pub const PhantomPolishResponse = struct {
     pub const msg_id: u16 = 26576;
     pub const ErrorCode_field_number: u32 = 15;
     pub const UpdateInfo_field_number: u32 = 5;
+};
+pub const PhantomManageConfigUpdateRequest = struct {
+    pub const msg_id: u16 = 28831;
+    pub const Setting_field_number: u32 = 14;
+    pub const SettingType_field_number: u32 = 7;
+};
+pub const PhantomManageConfigUpdateResponse = struct {
+    pub const msg_id: u16 = 19933;
+    pub const ErrorCode_field_number: u32 = 9;
+    pub const Setting_field_number: u32 = 5;
+};
+pub const PhantomSettingInfo = struct {
+    pub const Setting_field_number: u32 = 1;
+    pub const SettingType_field_number: u32 = 2;
+};
+pub const PhantomSettingBatchUpdateRequest = struct {
+    pub const msg_id: u16 = 21942;
+    pub const Settings_field_number: u32 = 11;
+};
+pub const PhantomSettingBatchUpdateResponse = struct {
+    pub const msg_id: u16 = 23541;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const Settings_field_number: u32 = 14;
+};
+pub const PhantomManageConfigRequest = struct {
+    pub const msg_id: u16 = 17121;
+};
+pub const PhantomManageConfigResponse = struct {
+    pub const msg_id: u16 = 24518;
+    pub const AutoLock_field_number: u32 = 4;
+    pub const AutoDisuse_field_number: u32 = 14;
+};
+pub const PhantomManageConfig = struct {
+    pub const Index_field_number: u32 = 1;
+    pub const IsOn_field_number: u32 = 2;
+    pub const Name_field_number: u32 = 3;
+    pub const PhantomRule_field_number: u32 = 4;
+};
+pub const PhantomRuleMap = struct {
+    pub const RuleId_field_number: u32 = 1;
+    pub const ValueList_field_number: u32 = 2;
+};
+pub const PhantomFuncValueBatchRequest = struct {
+    pub const msg_id: u16 = 18356;
+    pub const FuncValue_field_number: u32 = 8;
+    pub const IncrId_field_number: u32 = 7;
+};
+pub const PhantomFuncValueBatchResponse = struct {
+    pub const msg_id: u16 = 16345;
+    pub const ErrorCode_field_number: u32 = 4;
+};
+pub const PhantomBatchPolishRequest = struct {
+    pub const msg_id: u16 = 22198;
+    pub const IncrIds_field_number: u32 = 8;
+    pub const PhantomMainPropItemId_field_number: u32 = 4;
+};
+pub const PhantomBatchPolishResponse = struct {
+    pub const msg_id: u16 = 20732;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const UpdateInfos_field_number: u32 = 10;
+};
+pub const PhantomVicePolishRequest = struct {
+    pub const msg_id: u16 = 16307;
+    pub const IncrId_field_number: u32 = 5;
+    pub const LockPropIndex_field_number: u32 = 3;
+};
+pub const PhantomVicePolishResponse = struct {
+    pub const msg_id: u16 = 15910;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const PhantomSubProp_field_number: u32 = 14;
+};
+pub const PhantomVicePolishAckRequest = struct {
+    pub const msg_id: u16 = 15895;
+    pub const IncrId_field_number: u32 = 15;
+    pub const Ack_field_number: u32 = 5;
+};
+pub const PhantomVicePolishAckResponse = struct {
+    pub const msg_id: u16 = 20774;
+    pub const ErrorCode_field_number: u32 = 4;
+    pub const UpdateInfo_field_number: u32 = 10;
 };
 pub const RefreshVisionEquipGroupData = struct {
     pub const IncId_field_number: u32 = 1;

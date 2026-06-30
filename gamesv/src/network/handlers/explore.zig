@@ -5,9 +5,14 @@ const Scene = @import("../../logic/Scene.zig");
 const PlayerID = @import("../../logic/PlayerID.zig");
 const mem = @import("../../mem.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
-const sliceToArrayList = @import("../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
+const EntityComponentStorage = @import("../../logic/component/entity/EntityComponentStorage.zig");
+const sliceToArrayList = EntityComponentStorage.sliceToArrayList;
 const Entity = Scene.Entity;
 const FileSystem = @import("common").FileSystem;
+const Assets = @import("../../data/Assets.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
+const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
+const phantom_projector = @import("../../logic/helpers/phantom_projector.zig");
 const roulette_slot_count = 8;
 
 fn ownedRouletteSkillIds(gpa: std.mem.Allocator, ids: []const i32) ![]i32 {
@@ -125,4 +130,107 @@ pub fn onExploreSkillRouletteSetRequest(
         .RouletteType = roulette_type,
         .SkillRoulettes = roulette_info,
     });
+}
+
+pub fn onSummon3Request(
+    txn: *Transaction(pb.Summon3Request),
+    scene: *Scene,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    assets: *const Assets,
+    echo_comp: *PlayerEchoComponent,
+) !void {
+    const info = txn.message.SummonInfo orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+    if (info.SummonEntityId <= 0) {
+        txn.respond(.{ .ErrorCode = .ErrSummonAddEntityFail });
+        return;
+    }
+    if (scene.net_id_map.contains(info.SummonEntityId)) {
+        txn.respond(.{ .ErrorCode = .ErrSummonEntityIdAlreadyExist });
+        return;
+    }
+    if (!phantom_projector.isUnlockedMonster(assets, info.SummonConfigId)) {
+        txn.respond(.{ .ErrorCode = .ErrPhantomInteractionNotUnlock });
+        return;
+    }
+
+    const item = phantom_projector.displayedPhantomItem(assets, echo_comp.calabash_info, info.SummonConfigId) orelse {
+        txn.respond(.{ .ErrorCode = .ErrPhantomInteractionConfigNotFind });
+        return;
+    };
+    const summon_id = if (item.MeshId != 0) item.MeshId else item.SkillId;
+    if (summon_id == 0) {
+        txn.respond(.{ .ErrorCode = .ErrSummonCfgNotFound });
+        return;
+    }
+
+    const entity = RoleEntityTemplates.createProjectorVisionEntity(
+        fs,
+        scene,
+        alloc,
+        scene.player_id,
+        assets,
+        summon_id,
+        txn.message.SummonerEntityId,
+        info.SummonEntityId,
+        info.Pos orelse .{},
+        info.Rot orelse .{},
+    ) catch |err| switch (err) {
+        error.EntityIdAlreadyExists => {
+            txn.respond(.{ .ErrorCode = .ErrSummonEntityIdAlreadyExist });
+            return;
+        },
+        else => return err,
+    } orelse {
+        txn.respond(.{ .ErrorCode = .ErrSummonCfgNotFound });
+        return;
+    };
+
+    const storage = scene.entities.get(entity.index);
+    try txn.conn.push(pb.EntityAddNotify{
+        .EntityPbs = try singleEntityPb(alloc, assets, storage, entity.net_id),
+    }, alloc.arena);
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onRemoveSummonEntityRequest(
+    txn: *Transaction(pb.RemoveSummonEntityRequest),
+    scene: *Scene,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+) !void {
+    var remove_infos: std.ArrayList(pb.EntityRemoveInfo) = .empty;
+
+    for (txn.message.RemoveENtityIds.items) |entity_id| {
+        const index = scene.net_id_map.get(entity_id) orelse continue;
+        const storage = scene.entities.get(index);
+        const summoner = storage.summoner orelse continue;
+        if (summoner.summoner_id != txn.message.SummonerId) continue;
+
+        try scene.remove(alloc.gpa, fs, entity_id);
+        try remove_infos.append(alloc.arena, .{ .EntityId = entity_id });
+    }
+
+    if (remove_infos.items.len != 0) {
+        try txn.conn.push(pb.EntityRemoveNotify{
+            .IsRemove = true,
+            .RemoveInfos = remove_infos,
+        }, alloc.arena);
+    }
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+fn singleEntityPb(
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    storage: EntityComponentStorage,
+    entity_id: i64,
+) !std.ArrayList(pb.EntityPb) {
+    var entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
+    try entity_pbs.append(alloc.arena, try storage.entityToProto(entity_id, alloc, assets));
+    return entity_pbs;
 }

@@ -69,7 +69,7 @@ pub fn loadItems(
             );
         }
 
-        if (store_type == .by_incr_id) {
+        if (store_type == .by_incr_id and !@hasDecl(Item, "shared_incr_id")) {
             const counter_path = try std.fmt.allocPrint(arena, "player/{}/{s}/next", .{ player_id, Item.data_dir });
 
             var print_buf: [32]u8 = undefined;

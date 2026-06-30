@@ -1,6 +1,9 @@
 .{
+    // Marks guide popups as completed when guide data is loaded.
     .autocomplete_guides = false,
 
+    // Convene rates and pity tuning.
+    // Rates use `rate_denominator`, so 80 / 10000 is 0.8%.
     .gacha_rates = .{
         .rate_denominator = 10000,
         .five_star_base_rate = 80,

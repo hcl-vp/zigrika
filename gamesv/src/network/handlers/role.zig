@@ -7,11 +7,15 @@ const Scene = @import("../../logic/Scene.zig");
 const FileSystem = @import("common").FileSystem;
 const Transaction = @import("../handlers.zig").Transaction;
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
+const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
+const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInventoryComponent.zig");
 const InventoryInfo = @import("../../fs/InventoryInfo.zig");
 const comp_util = @import("../../logic/component/comp_util.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const Events = @import("../../logic/events.zig");
+const RoleAttributeSync = @import("../helpers/role_attribute_sync.zig");
+const RoleStats = @import("../../logic/helpers/role_stats.zig");
 
 pub fn onRoleFavorListRequest(
     txn: *Transaction(pb.RoleFavorListRequest),
@@ -275,8 +279,17 @@ pub fn onRoleActivateSkillRequest(
     txn: *Transaction(pb.RoleActivateSkillRequest),
     events: *EventQueue,
     alloc: mem.Alloc,
+    fs: *FileSystem,
+    scene: *Scene,
+    stat_query: Scene.Query(&.{
+        Scene.Entity,
+        *Scene.Entity.ConfigComponent,
+        *Scene.Entity.AttributeComponent,
+    }),
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
 ) !void {
     const request = txn.message;
     const role = role_comp.role_map.getPtr(request.RoleId) orelse {
@@ -306,6 +319,7 @@ pub fn onRoleActivateSkillRequest(
         .RoleId = request.RoleId,
         .SkillNodeState = node_states,
     }, alloc.arena);
+    try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, request.RoleId);
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -347,6 +361,8 @@ pub fn onRoleSkillQuickLevelUpRequest(
     alloc: mem.Alloc,
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
 ) !void {
     const request = txn.message;
     const role = role_comp.role_map.getPtr(request.RoleId) orelse {
@@ -368,7 +384,16 @@ pub fn onRoleSkillQuickLevelUpRequest(
 
     txn.respond(.{
         .ErrorCode = .Success,
-        .RoleInfo = try toClientRoleInfo(role.*, alloc.arena, request.RoleId),
+        .RoleInfo = try RoleStats.toClientRoleInfo(
+            alloc.gpa,
+            alloc.arena,
+            assets,
+            role_comp,
+            request.RoleId,
+            role,
+            weapon_comp,
+            echo_comp,
+        ),
     });
 }
 
@@ -428,12 +453,20 @@ pub fn onResonantChainUnlockRequest(
     events: *EventQueue,
     alloc: mem.Alloc,
     fs: *FileSystem,
+    scene: *Scene,
     query: Scene.Query(&.{
         Scene.Entity,
         *Scene.Entity.ConfigComponent,
     }),
+    stat_query: Scene.Query(&.{
+        Scene.Entity,
+        *Scene.Entity.ConfigComponent,
+        *Scene.Entity.AttributeComponent,
+    }),
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
     inventory_comp: *PlayerInventoryComponent,
 ) !void {
     const request = txn.message;
@@ -511,6 +544,7 @@ pub fn onResonantChainUnlockRequest(
         .NormalItemList = updated_items,
         .NoTips = true,
     }, alloc.arena);
+    try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, request.RoleId);
 
     txn.respond(.{
         .ErrorCode = .Success,

@@ -19,6 +19,18 @@ pub const RelatedAttrKind = enum {
     Recover,
 };
 
+pub fn gameplayAttributeData(attr_type: pb.EAttributeType, attr: AttributeComponent.Attribute) pb.GameplayAttributeData {
+    const ratio_attr = switch (attr_type) {
+        .Atk, .LifeMax, .Def => true,
+        else => false,
+    };
+    return .{
+        .AttributeType = attr_type,
+        .CurrentValue = if (ratio_attr) attr.base else attr.current,
+        .ValueIncrement = attr.current,
+    };
+}
+
 pub fn get_element_bonus(element_type: i32) pb.EAttributeType {
     return switch (element_type) {
         0 => .DamageChangePhys,
@@ -204,7 +216,7 @@ pub fn change_attr(
     if (hp_ratio_before) |ratio| {
         if (life_max_idx < attr_comp.attributes.len and life_idx < attr_comp.attributes.len) {
             const new_max = attr_comp.attributes[life_max_idx].current;
-            const new_hp: i32 = @intFromFloat(@round(@as(f32, @floatFromInt(new_max)) * ratio));
+            const new_hp: i32 = @as(i32, @round(@as(f32, @floatFromInt(new_max)) * ratio));
             const clamped = std.math.clamp(new_hp, 0, new_max);
             attr_comp.attributes[life_idx].base = clamped;
             attr_comp.attributes[life_idx].current = clamped;
@@ -305,15 +317,7 @@ pub fn generate_attr_messages(
             });
         }
 
-        const ratio_attr = switch (attr_type) {
-            .Atk, .LifeMax, .Def => true,
-            else => false,
-        };
-        try changes.append(alloc.arena, .{
-            .AttributeType = attr_type,
-            .CurrentValue = if (ratio_attr) attr.base else attr.current,
-            .ValueIncrement = attr.current,
-        });
+        try changes.append(alloc.arena, gameplayAttributeData(attr_type, attr.*));
     }
 
     const realtime_clock: std.Io.Clock = .real;

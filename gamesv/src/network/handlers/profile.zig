@@ -160,6 +160,37 @@ pub fn onModifySignatureRequest(
     });
 }
 
+pub fn onBirthdayInitRequest(
+    txn: *Transaction(pb.BirthdayInitRequest),
+    fs: *FileSystem,
+    alloc: mem.Alloc,
+    basic_comp: *PlayerBasicComponent,
+) !void {
+    if (txn.message.Birthday > 0) {
+        basic_comp.info.birthday = txn.message.Birthday;
+        basic_comp.info.display_birthday = true;
+        try saveBasicInfo(fs, alloc.arena, basic_comp);
+        try txn.conn.push(pb.BirthdayInfoUpdateNotify{
+            .BirthDayReset = true,
+            .RecentRewardTime = @divTrunc(basic_comp.info.birthday, 10000),
+        }, alloc.arena);
+    }
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn onBirthdayShowSetRequest(
+    txn: *Transaction(pb.BirthdayShowSetRequest),
+    fs: *FileSystem,
+    alloc: mem.Alloc,
+    basic_comp: *PlayerBasicComponent,
+) !void {
+    basic_comp.info.display_birthday = txn.message.DisPlay;
+    try saveBasicInfo(fs, alloc.arena, basic_comp);
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
 fn saveBasicInfo(fs: *FileSystem, arena: std.mem.Allocator, basic_comp: *const PlayerBasicComponent) !void {
     const path = try std.fmt.allocPrint(arena, "player/{}/basic_info", .{basic_comp.player_id});
     const serialized = try file_util.serializeZon(arena, basic_comp.info);

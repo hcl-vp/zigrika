@@ -28,6 +28,35 @@ pub fn addDefaultProgressionItems(info: *InventoryInfo, gpa: std.mem.Allocator, 
     for (assets.tables.motor_tech_tree.items) |entry| {
         try ensureNormalItem(info, gpa, entry.TpItemId, 777);
     }
+
+    try addDefaultEchoMaterials(info, gpa, assets);
+}
+
+fn addDefaultEchoMaterials(info: *InventoryInfo, gpa: std.mem.Allocator, assets: *const Assets) !void {
+    for (assets.tables.phantom_exp_item.items) |entry| {
+        try ensureNormalItem(info, gpa, entry.ItemId, 777);
+    }
+
+    for (assets.tables.phantom_quality.items) |entry| {
+        var iterator = entry.IdentifyCost.map.iterator();
+        while (iterator.next()) |consume| {
+            try ensureNormalItem(info, gpa, consume.key_ptr.*, 777);
+        }
+    }
+
+    for (assets.tables.phantom_rarity.items) |entry| {
+        var iterator = entry.PolishCost.map.iterator();
+        while (iterator.next()) |consume| {
+            try ensureNormalItem(info, gpa, consume.key_ptr.*, 777);
+        }
+    }
+
+    for (assets.tables.phantom_vice_polish_config.items) |entry| {
+        var iterator = entry.Cost.map.iterator();
+        while (iterator.next()) |consume| {
+            try ensureNormalItem(info, gpa, consume.key_ptr.*, 777);
+        }
+    }
 }
 
 fn addDefaultGachaItems(info: *InventoryInfo, gpa: std.mem.Allocator, assets: *const Assets) !void {
@@ -71,7 +100,7 @@ fn ensureConsumeItems(info: *InventoryInfo, gpa: std.mem.Allocator, consume_map:
 }
 
 fn ensureNormalItem(info: *InventoryInfo, gpa: std.mem.Allocator, id: i32, count: i32) !void {
-    if (id == 0 or count <= 0 or info.normalItemCount(id) >= count) return;
+    if (isPlayerCurrency(id) or count <= 0 or info.normalItemCount(id) >= count) return;
 
     for (info.normal_items) |*item| {
         if (item.id == id) {
@@ -81,4 +110,8 @@ fn ensureNormalItem(info: *InventoryInfo, gpa: std.mem.Allocator, id: i32, count
     }
 
     try InventoryInfo.addNormalItem(info, gpa, id, count);
+}
+
+fn isPlayerCurrency(id: i32) bool {
+    return id >= 1 and id <= 6;
 }
