@@ -124,7 +124,7 @@ pub fn onPhantomLevelUpRequest(
             total -= next_exp;
         }
         item.exp = if (item.level >= highest_level) 0 else total;
-        try item.rebuildMainProps(alloc.gpa, assets, item_config.MainProp.RandGroupId);
+        item.refreshMainPropValues(assets);
     }
 
     if (slot_count > 0) {

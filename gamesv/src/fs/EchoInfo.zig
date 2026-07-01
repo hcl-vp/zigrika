@@ -185,6 +185,13 @@ pub fn rebuildMainProps(item: *EchoInfo, gpa: Allocator, assets: *const Assets, 
     item.main_prop = new_props;
 }
 
+pub fn refreshMainPropValues(item: *EchoInfo, assets: *const Assets) void {
+    for (item.main_prop) |*prop| {
+        const prop_item = assets.tables.phantom_main_prop_item.getDataById(prop.id) orelse continue;
+        prop.value = mainPropValue(assets, prop_item, item.level);
+    }
+}
+
 pub fn maxUnlockedSubPropCount(assets: *const Assets, quality: i32) ?usize {
     const config = assets.tables.phantom_quality.getDataById(quality) orelse return null;
     return config.SlotUnlockLevel.len;
