@@ -609,7 +609,7 @@ fn pickReplacementSubProp(
     var available_count: usize = 0;
     for (items) |prop| {
         if (old_config) |config| {
-            if (config.PropId == prop.PropId) continue;
+            if (EchoInfo.sameSubPropType(config, prop)) continue;
         } else if (prop.Id == old_prop.id) continue;
         if (EchoInfo.containsSubPropRole(assets, current, prop)) continue;
         available_count += 1;
@@ -620,7 +620,7 @@ fn pickReplacementSubProp(
     var current_index: usize = 0;
     for (items) |prop| {
         if (old_config) |config| {
-            if (config.PropId == prop.PropId) continue;
+            if (EchoInfo.sameSubPropType(config, prop)) continue;
         } else if (prop.Id == old_prop.id) continue;
         if (EchoInfo.containsSubPropRole(assets, current, prop)) continue;
         if (current_index == chosen) {
