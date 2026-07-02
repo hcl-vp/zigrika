@@ -185,6 +185,13 @@ pub fn rebuildMainProps(item: *EchoInfo, gpa: Allocator, assets: *const Assets, 
     item.main_prop = new_props;
 }
 
+pub fn refreshMainPropValues(item: *EchoInfo, assets: *const Assets) void {
+    for (item.main_prop) |*prop| {
+        const prop_item = assets.tables.phantom_main_prop_item.getDataById(prop.id) orelse continue;
+        prop.value = mainPropValue(assets, prop_item, item.level);
+    }
+}
+
 pub fn maxUnlockedSubPropCount(assets: *const Assets, quality: i32) ?usize {
     const config = assets.tables.phantom_quality.getDataById(quality) orelse return null;
     return config.SlotUnlockLevel.len;
@@ -234,9 +241,20 @@ pub fn appendSubProps(
 pub fn containsSubPropRole(assets: *const Assets, props: []const Prop, candidate: Assets.DataTables.PhantomSubProperty) bool {
     for (props) |prop| {
         const existing = assets.tables.phantom_sub_property.getDataById(prop.id) orelse continue;
-        if (existing.PropId == candidate.PropId) return true;
+        if (sameSubPropType(existing, candidate)) return true;
     }
     return false;
+}
+
+pub fn sameSubPropType(a: Assets.DataTables.PhantomSubProperty, b: Assets.DataTables.PhantomSubProperty) bool {
+    if (isFlatPercentSubProp(a) and isFlatPercentSubProp(b)) {
+        return a.PropId == b.PropId and a.AddType == b.AddType;
+    }
+    return a.PropId == b.PropId;
+}
+
+fn isFlatPercentSubProp(prop: Assets.DataTables.PhantomSubProperty) bool {
+    return prop.PropId == 10002 or prop.PropId == 10007 or prop.PropId == 10010;
 }
 
 pub fn pickRandomSubProperty(

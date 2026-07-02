@@ -697,6 +697,7 @@ setTimeout(() => {
           new UE.LinearColor(0, 1, 0.25, 0),
         );
       }
+      owner.OtherCase12.SetHiddenInGame(false, true);
     }
     photo_mode_active = true;
     var t = new UE.TransformDouble(
