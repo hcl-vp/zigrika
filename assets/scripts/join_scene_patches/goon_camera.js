@@ -106,6 +106,8 @@ setTimeout(() => {
   const ConfigManager_1 = require("../Game/Manager/ConfigManager.js");
   const LogReportDefine_1 = require("Game/Module/LogReport/LogReportDefine.js");
   const LogReportController_1 = require("Game/Module/LogReport/LogReportController.js");
+  const GameSettingsDumpUtils_1 = require("Game/GameSettings/GameSettingsDumpUtils.js");
+  const GameSettingsUtils_1 = require("Game/GameSettings/GameSettingsUtils.js");
   const {
     LevelSequencePlayer,
   } = require("../Game/Module/Common/LevelSequencePlayer.js");
@@ -664,7 +666,38 @@ setTimeout(() => {
   let last_recorded_style =
     ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(MAX_ID + 8);
 
+  function get_owner_actor(entity) {
+    const rendering_component =
+      entity.GetComponent(3)?.Actor?.CharRenderingComponent;
+    return rendering_component?.GetCachedOwner?.();
+  }
+
   UiCameraPhotographerStructure.prototype.OnSpawnStructureActor = function () {
+    if (
+      ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.PbDataId ===
+      1110
+    ) {
+      const owner = get_owner_actor(
+        ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity,
+      );
+
+      const cases = ["OtherCase1", "OtherCase2", "OtherCase6"];
+      for (const c of cases) {
+        const mat = owner[c].GetMaterial(4);
+        mat.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
+        mat.SetVectorParameterValue(
+          new UE.FName("Second_Contorl"),
+          new UE.LinearColor(0, 1, 0.25, 0),
+        );
+
+        const mat2 = owner[c].GetMaterial(1);
+        mat2.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
+        mat2.SetVectorParameterValue(
+          new UE.FName("Second_Contorl"),
+          new UE.LinearColor(0, 1, 0.25, 0),
+        );
+      }
+    }
     photo_mode_active = true;
     var t = new UE.TransformDouble(
       new UE.Quat(0),
@@ -1534,7 +1567,7 @@ setTimeout(() => {
         ) ?? new Map();
 
       for (const i of t) {
-        if (i.ValueType == MAX_ID + 2) {
+        if (i.ValueType === MAX_ID + 2 || i.ValueType === MAX_ID + 12) {
           continue;
         }
         let t = -1;
@@ -1559,6 +1592,12 @@ setTimeout(() => {
       this.SetPhotographOption(
         MAX_ID + 2,
         ModelManager_1.ModelManager.TimeOfDayModel?.GameTime?.Second,
+      );
+      this.SetPhotographOption(
+        MAX_ID + 12,
+        UE.KismetSystemLibrary.GetConsoleVariableFloatValue(
+          "r.Kuro.KuroBloomEnable",
+        ),
       );
     };
 
@@ -1763,6 +1802,19 @@ setTimeout(() => {
     }
   };
 
+  const toggle_weapon_hidden = (hide) => {
+    const entity =
+      ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity?.Entity;
+    if (!entity?.Valid) return;
+
+    const weapon_comp = entity.GetComponent(88);
+    if (!weapon_comp) return;
+
+    for (const w of weapon_comp.QKr.CharacterWeapons) {
+      weapon_comp.bQr(w, hide, false, true, 0, "InstantHideNoEffect");
+    }
+  };
+
   ControllerHolder_1.ControllerHolder.PhotographController.SetPhotographOption =
     function (t, e, o = !1) {
       var i = ModelManager_1.ModelManager.PhotographModel;
@@ -1814,14 +1866,14 @@ setTimeout(() => {
           var a =
             ModelManager_1.ModelManager.SceneTeamModel?.GetCurrentEntity?.Id;
           if (!a) {
-            return;
+            break;
           }
           r = EntitySystem_1.EntitySystem.Get(a);
           if (!r?.Valid) {
-            return;
+            break;
           }
           if (this.GetRoleMainAnimInstanceType() !== 0) {
-            return;
+            break;
           }
           r.GetComponent(191).MainAnimInstance.设置头部转向状态(1);
           break;
@@ -1831,7 +1883,7 @@ setTimeout(() => {
           a =
             ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
           if (!a) {
-            return;
+            break;
           }
 
           if (e === 1) {
@@ -1847,7 +1899,7 @@ setTimeout(() => {
           r =
             ModelManager_1.ModelManager.PhotographModel.GetPhotographerStructure();
           if (!r) {
-            return;
+            break;
           }
 
           if (i.GetPhotographOption(6) === 1) {
@@ -1925,7 +1977,7 @@ setTimeout(() => {
                     BlendTime: 0,
                   },
                 );
-                return;
+                break;
               }
               if (e === 1.8 || (e > 1.79 && e < 1.81)) {
                 ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
@@ -1957,7 +2009,7 @@ setTimeout(() => {
                 BlendTime: 0,
               },
             );
-            return;
+            break;
           }
           if (e === 0.0 || e < 0.1) {
             ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
@@ -1965,7 +2017,7 @@ setTimeout(() => {
                 BlendTime: 0,
               },
             );
-            return;
+            break;
           }
           if (e === 1.8 || (e > 1.79 && e < 1.81)) {
             ControllerHolder_1.ControllerHolder.MovieModeController.ExitMovieMode(
@@ -1986,7 +2038,15 @@ setTimeout(() => {
               },
             );
           }
+          break;
         }
+        case MAX_ID + 11:
+          toggle_weapon_hidden(e == true || e === 1);
+          break;
+        case MAX_ID + 12:
+          GameSettingsUtils_1.GameSettingsUtils.ApplyBloomEnable(
+            e == true || e === 1 ? 1 : 0,
+          );
       }
     };
 

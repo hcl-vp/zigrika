@@ -311,6 +311,26 @@ setTimeout(() => {
       change_value: 0.1,
       is_local_storage: false,
     }),
+    build_entry({
+      id: MAX_ID + 12,
+      value_type: MAX_ID + 11,
+      name: "CUSTOM_Hide Weapon",
+      type: 0,
+      options: TOGGLE_OPTIONS,
+      default_option_index: 0,
+      change_value: 0.1,
+      is_local_storage: false,
+    }),
+    build_entry({
+      id: MAX_ID + 13,
+      value_type: MAX_ID + 12,
+      name: "CUSTOM_Bloom",
+      type: 0,
+      options: TOGGLE_OPTIONS,
+      default_option_index: 0,
+      change_value: 0.1,
+      is_local_storage: false,
+    }),
   ];
 
   const get_vt = (e) =>
