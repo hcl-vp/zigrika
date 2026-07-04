@@ -20174,7 +20174,8 @@
       161014302,
       161014303,
       161014401,
-      161014402
+      161014402,
+      161015203
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingY.SP_IconXuanLingY",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinD1_UI.T_IconYinlinD1_UI",
@@ -20293,18 +20294,16 @@
     "SkillResume": "Skill_1006009_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
-      "20%",
+      "300%",
       "20",
-      "20",
-      "300%"
+      "20%"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1006009_SkillDescribe",
     "MultiSkillDetailNum": [
-      "20%",
+      "300%",
       "20",
-      "20",
-      "300%"
+      "20%"
     ],
     "SkillShowTagType": 0
   },
@@ -20366,6 +20365,10 @@
     "SkillDetailNum": [
       "4",
       "60",
+      "100",
+      "2",
+      "3",
+      "4",
       "3"
     ],
     "SkillResumeNum": [],
@@ -20373,6 +20376,10 @@
     "MultiSkillDetailNum": [
       "4",
       "60",
+      "100",
+      "2",
+      "3",
+      "4",
       "3"
     ],
     "SkillShowTagType": 0
@@ -20615,32 +20622,36 @@
     "SkillDetailNum": [
       "10",
       "20",
+      "60",
       "10",
-      "6",
-      "2",
+      "7",
+      "3",
       "3",
       "1",
       "6",
       "3",
       "2",
       "1",
-      "1"
+      "120",
+      "100"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005507_SkillDescribe",
     "MultiSkillDetailNum": [
       "10",
       "20",
+      "60",
       "10",
-      "6",
-      "2",
+      "7",
+      "3",
       "3",
       "1",
       "6",
       "3",
       "2",
       "1",
-      "1"
+      "120",
+      "100"
     ],
     "SkillShowTagType": 2
   },
@@ -20694,7 +20705,7 @@
       "14"
     ],
     "SkillResumeNum": [],
-    "MultiSkillDescribe": "Skill_1005509_SkillDescribe",
+    "MultiSkillDescribe": "Skill_1005509_MultiSkillDescribe",
     "MultiSkillDetailNum": [
       "20",
       "25",
@@ -21071,7 +21082,8 @@
       "0.12%",
       "0.1%",
       "50%",
-      "6"
+      "6",
+      "30"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005709_MultiSkillDescribe",
@@ -21085,7 +21097,8 @@
       "0.12%",
       "0.1%",
       "50%",
-      "6"
+      "6",
+      "30"
     ],
     "SkillShowTagType": 0
   },
@@ -21095,7 +21108,7 @@
     "SkillType": 12,
     "UpgradeCondition": 0,
     "UpgradeSkillId": 0,
-    "SkillName": "Skill_1000004_SkillName",
+    "SkillName": "Skill_1000005_SkillName",
     "SkillLevelGroupId": 1005710,
     "LeftSkillEffect": 0,
     "MaxSkillLevel": 1,

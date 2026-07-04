@@ -62761,7 +62761,7 @@
     "ExecuteType": 0,
     "TriggerPreset": [
       "0",
-      "10011000#10021000#10031000#10041000#10051000#10061000"
+      "10011000#10021000#10031000#10041000#10051000#10061000#10035000"
     ],
     "TriggerParams": {},
     "TriggerFormula": "OldStack>NewStack",
@@ -64232,16 +64232,13 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "CounterType == 1",
+    "TriggerFormula": "CounterType == 1\nAND\nDamageID==1309101013",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "1309500002",
-      "1309500005"
-    ],
+    "SkillAction": "Customize",
+    "SkillActionParams": [],
     "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
+    "SkillActionScript": "AddBuff2(Victim,1309500001,1,Owner) AND AddBuff2(Owner,1309500002,1,Owner) AND AddBuff2(Owner,1309500005,1,Owner)",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   },
@@ -64925,7 +64922,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "HasInt(1002,DamageSubType)",
+    "TriggerFormula": "HasInt(1004,DamageSubType)",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "Customize",
@@ -64951,7 +64948,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "HasInt(1001,DamageSubType)",
+    "TriggerFormula": "HasInt(1003,DamageSubType)",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "Customize",
@@ -64977,7 +64974,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "HasInt(1004,DamageSubType)",
+    "TriggerFormula": "HasInt(1001,DamageSubType)",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "Customize",
@@ -65003,7 +65000,7 @@
       "0"
     ],
     "TriggerParams": {},
-    "TriggerFormula": "HasInt(1003,DamageSubType)",
+    "TriggerFormula": "HasInt(1002,DamageSubType)",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
     "SkillAction": "Customize",
@@ -65038,6 +65035,89 @@
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1610007504,
+    "SkillDesc": "共鸣链5-监听回血子弹生效",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "DamageTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "0",
+      "1"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "DamageID==161050001",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1610007503"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1610007607,
+    "SkillDesc": "共鸣链6-检测光异常附加失败",
+    "CDTime": 1,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "BuffAddFailureTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "2",
+      "10051000"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1610007603",
+      "1610007604"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1110100603,
+    "SkillDesc": "触发器：领域内角色附加光异常失败时，使敌方光异常上限+3",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "BuffAddFailureTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "1",
+      "10051000"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "Customize",
+    "SkillActionParams": [],
+    "ActionScriptParams": {},
+    "SkillActionScript": "AddBuff2(Victim,1110100601,1)\nOR\nAddBuff2(Attacker,1110100901,1)",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   }

@@ -124505,8 +124505,7 @@
     "Type": "KurotatoFinishLevel",
     "NeedNum": 1,
     "LimitParams": {
-      "Level": "35032",
-      "Type": "1"
+      "Level": "35032"
     },
     "LimitParamsOpe": {},
     "IsClient": true,

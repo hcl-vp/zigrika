@@ -7267,7 +7267,6 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1610007001,
-      1610007102,
       1610007107
     ],
     "AddProp": [],
@@ -7365,7 +7364,7 @@
     "BuffIds": [
       1610007005,
       1610007501,
-      1610007502
+      1610007504
     ],
     "AddProp": [],
     "ActivateConsume": {

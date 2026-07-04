@@ -22895,9 +22895,13 @@
     "CompleteCondition": 5,
     "CompleteDelay": 0,
     "CompleteParam": "[角色.dc4175dc.09f7d0eb.e95c93f1]",
-    "FailedCondition": [],
+    "FailedCondition": [
+      0
+    ],
     "FailDelay": 0,
-    "FailedParam": [],
+    "FailedParam": [
+      "1610203#1610101"
+    ],
     "RemoveBuff": [
       1610005002
     ],
@@ -24188,7 +24192,7 @@
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1110006#1110011#1110011#1110015"
+      "1110006#1110011#1110111#1110015"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -24303,15 +24307,18 @@
   },
   {
     "Id": 11100801,
-    "CompleteCondition": 5,
+    "CompleteCondition": 0,
     "CompleteDelay": 0,
-    "CompleteParam": "[角色.88be5576.8b478add.af2f8c6e]",
+    "CompleteParam": [
+      1110006,
+      0
+    ],
     "FailedCondition": [
-      4
+      0
     ],
     "FailDelay": 0,
     "FailedParam": [
-      "1110001019"
+      "1110006#1110007#1110008#1110009#1110105#1110014"
     ],
     "RemoveBuff": [],
     "RemoveBullet": [],
@@ -24327,6 +24334,108 @@
       1110016,
       0
     ],
+    "FailedCondition": [
+      4
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1110001019"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 13090502,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1309005,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1309005"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 13090807,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1309126,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1309126"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 13100502,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1310005,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1310005"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 13100807,
+    "CompleteCondition": 0,
+    "CompleteDelay": 0,
+    "CompleteParam": [
+      1310126,
+      0
+    ],
+    "FailedCondition": [
+      0
+    ],
+    "FailDelay": 0,
+    "FailedParam": [
+      "1310126"
+    ],
+    "RemoveBuff": [],
+    "RemoveBullet": [],
+    "SummonPos": 0,
+    "SummonRemoveBuff": [],
+    "SummonAddBuff": []
+  },
+  {
+    "Id": 11100802,
+    "CompleteCondition": 5,
+    "CompleteDelay": 0,
+    "CompleteParam": "[角色.88be5576.8b478add.af2f8c6e]",
     "FailedCondition": [
       4
     ],
