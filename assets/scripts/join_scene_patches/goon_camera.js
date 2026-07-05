@@ -666,6 +666,30 @@ setTimeout(() => {
   let last_recorded_style =
     ModelManager_1.ModelManager.PhotographModel.GetPhotographOption(MAX_ID + 8);
 
+  const externally_hidden = new Set();
+
+  const toggle_weapon_hidden = (hide) => {
+    const entity =
+      ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity?.Entity;
+    if (!entity?.Valid) return;
+
+    const weapon_comp = entity.GetComponent(88);
+    if (!weapon_comp) return;
+
+    for (const w of weapon_comp.QKr.CharacterWeapons) {
+      if (hide) {
+        weapon_comp.bQr(w, true, false, true, 0, "InstantHideNoEffect");
+        externally_hidden.add(w);
+      } else {
+        if (externally_hidden.has(w)) {
+          externally_hidden.delete(w);
+          if (!w.WeaponHidden || externally_hidden.has(w)) continue;
+          weapon_comp.bQr(w, false, false, true, 0, "InstantHideNoEffect");
+        }
+      }
+    }
+  };
+
   function get_owner_actor(entity) {
     const rendering_component =
       entity.GetComponent(3)?.Actor?.CharRenderingComponent;
@@ -673,6 +697,7 @@ setTimeout(() => {
   }
 
   UiCameraPhotographerStructure.prototype.OnSpawnStructureActor = function () {
+    externally_hidden.clear();
     if (
       ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.PbDataId ===
       1110
@@ -681,7 +706,7 @@ setTimeout(() => {
         ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity,
       );
 
-      const cases = ["OtherCase1", "OtherCase2", "OtherCase6"];
+      const cases = ["OtherCase1", "OtherCase2", "OtherCase3", "OtherCase6"];
       for (const c of cases) {
         const mat = owner[c].GetMaterial(4);
         mat.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
@@ -1800,19 +1825,6 @@ setTimeout(() => {
         const handle = o.Entity.Disable("toggle_enemies: state=false");
         disabled_map.set(o, handle);
       }
-    }
-  };
-
-  const toggle_weapon_hidden = (hide) => {
-    const entity =
-      ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity?.Entity;
-    if (!entity?.Valid) return;
-
-    const weapon_comp = entity.GetComponent(88);
-    if (!weapon_comp) return;
-
-    for (const w of weapon_comp.QKr.CharacterWeapons) {
-      weapon_comp.bQr(w, hide, false, true, 0, "InstantHideNoEffect");
     }
   };
 
