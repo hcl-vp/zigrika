@@ -1,115 +1,362 @@
 const std = @import("std");
 const pb = @import("proto").pb;
-const dispatch = @import("combat.zig");
-const Assets = @import("../../data/Assets.zig");
-const Scene = @import("../../logic/Scene.zig");
-const FsmTimerScheduler = @import("../../logic/schedulers/FsmTimerScheduler.zig");
 const mem = @import("../../mem.zig");
+const dispatch = @import("combat.zig");
+const Scene = @import("../../logic/Scene.zig");
+const Entity = Scene.Entity;
+
+const FsmQuery = Scene.Query(&.{
+    Entity,
+    *Entity.FsmComponent,
+    ?*Entity.AttributeComponent,
+    ?*Entity.LogicStateComponent,
+});
+
+const LogicStateQuery = Scene.Query(&.{
+    Entity,
+    *Entity.LogicStateComponent,
+});
+
+pub fn HitRequest(
+    txn: *dispatch.CombatRequestTxn(.HitRequest),
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+) !void {
+    const target_id = if (txn.payload.HitInfo) |hit_info| hit_info.TargetId else 0;
+    const entity_id = if (target_id != 0) target_id else commonEntityId(txn.common) orelse 0;
+
+    if (entity_id != 0) {
+        if (query.byNetId(entity_id)) |item| {
+            _, const fsm, _, _ = item;
+            try ensureRuntime(fsm, io, alloc.gpa);
+            if (txn.payload.HitInfo) |hit_info| fsm.recordHit(hit_info);
+        }
+    }
+
+    txn.respond(.{
+        .HitInfo = txn.payload.HitInfo,
+        .ErrorCode = .Success,
+    });
+}
+
+pub fn HitEndRequest(txn: *dispatch.CombatRequestTxn(.HitEndRequest)) !void {
+    txn.respond(.{ .ErrorCode = .Success });
+}
 
 pub fn ChangeStateRequest(
     txn: *dispatch.CombatRequestTxn(.ChangeStateRequest),
-    fsm_timers: *FsmTimerScheduler,
-    scene: *Scene,
-    assets: *const Assets,
-    alloc: mem.Alloc,
+    query: FsmQuery,
     io: std.Io,
-) !void {
-    const request = txn.payload;
-    const entity_id = if (txn.common) |common| common.EntityId else 0;
-    const current_state = try fsm_timers.setCurrentState(
-        alloc.gpa,
-        scene,
-        assets,
-        entity_id,
-        request.FsmId,
-        request.ToState,
-        nowMs(io),
-    );
-
-    txn.respond(.{
-        .FsmId = request.FsmId,
-        .CurrentState = current_state,
-        .Error = pb.DErrorResult{ .ErrorCode = .Success },
-    });
-}
-
-pub fn ChangeStateConfirmPush(
-    push: pb.ChangeStateConfirmPush,
-    common: ?pb.CombatCommon,
-    fsm_timers: *FsmTimerScheduler,
-    scene: *Scene,
-    assets: *const Assets,
     alloc: mem.Alloc,
-    io: std.Io,
 ) !void {
-    const entity_id = if (common) |combat_common| combat_common.EntityId else return;
-    _ = try fsm_timers.setCurrentState(
-        alloc.gpa,
-        scene,
-        assets,
-        entity_id,
-        push.FsmId,
-        push.State,
-        nowMs(io),
-    );
-}
+    const entity_id = commonEntityId(txn.common) orelse 0;
+    var current_state: i32 = txn.payload.ToState;
+    var response_error: pb.DErrorResult = successResult();
 
-pub fn FsmConditionPassPush(
-    push: pb.FsmConditionPassPush,
-    common: ?pb.CombatCommon,
-    fsm_timers: *FsmTimerScheduler,
-    scene: *Scene,
-    assets: *const Assets,
-    alloc: mem.Alloc,
-    io: std.Io,
-) !void {
-    const log = std.log.scoped(.fsm_condition);
-    const entity_id = if (common) |combat_common| combat_common.EntityId else return;
-
-    try fsm_timers.recordClientPass(
-        alloc.gpa,
-        scene,
-        assets,
-        entity_id,
-        push.FsmId,
-        push.FromState,
-        push.ToState,
-        push.ConditionIndex,
-        push.Value,
-        nowMs(io),
-    );
-
-    log.debug("FsmId: {d}, FromState: {d}, ToState: {d}, ConditionIndex: {d}, Value: {}", .{
-        push.FsmId,
-        push.FromState,
-        push.ToState,
-        push.ConditionIndex,
-        push.Value,
-    });
-}
-
-pub fn AiHatePush(push: pb.AiHatePush) !void {
-    const log = std.log.scoped(.fsm_ai_hate);
-
-    for (push.HateList.items) |ai_hate| {
-        log.debug("EntityID: {d}, HatredValue: {d}", .{ ai_hate.EntityId, ai_hate.HatredValue });
+    if (entity_id != 0) {
+        if (query.byNetId(entity_id)) |item| {
+            const entity, const fsm, const attribute, const logic_state = item;
+            const now_ms = queryNow(io);
+            try fsm.initRuntime(alloc.gpa, now_ms);
+            switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.ToState, alloc.gpa, now_ms)) {
+                .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
+                .mismatch => |pending_state| {
+                    current_state = pending_state;
+                    response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
+                        txn.payload.FsmId,
+                        txn.payload.ToState,
+                        pending_state,
+                    });
+                },
+                .no_pending => {
+                    if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
+                        .attribute = attribute,
+                        .logic_state = logic_state,
+                        .now_ms = now_ms,
+                    })) |notify| {
+                        try txn.receive_data_pack.append(alloc.arena, notify);
+                        const transition = notify.Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
+                        current_state = transition.ToState;
+                        response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotWait, &.{
+                            transition.FsmId,
+                            transition.FromState,
+                            transition.ToState,
+                        });
+                    }
+                },
+            }
+        }
     }
 
-    // TODO
+    txn.respond(.{
+        .FsmId = txn.payload.FsmId,
+        .Error = response_error,
+        .CurrentState = current_state,
+    });
+}
+
+pub fn ChangeStateConfirmRequest(
+    txn: *dispatch.CombatRequestTxn(.ChangeStateConfirmRequest),
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+) !void {
+    if (commonEntityId(txn.common)) |entity_id| {
+        if (query.byNetId(entity_id)) |item| {
+            const entity, const fsm, const attribute, const logic_state = item;
+            const now_ms = queryNow(io);
+            try fsm.initRuntime(alloc.gpa, now_ms);
+            switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
+                .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
+                .mismatch, .no_pending => {},
+            }
+        }
+    }
+
+    txn.respond(.{
+        .FsmId = txn.payload.FsmId,
+        .State = txn.payload.State,
+        .Error = successResult(),
+    });
+}
+
+pub fn FsmConditionPassRequest(
+    txn: *dispatch.CombatRequestTxn(.FsmConditionPassRequest),
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+) !void {
+    if (commonEntityId(txn.common)) |entity_id| {
+        if (query.byNetId(entity_id)) |item| {
+            const entity, const fsm, const attribute, const logic_state = item;
+            const now_ms = queryNow(io);
+            try fsm.initRuntime(alloc.gpa, now_ms);
+            try fsm.insertPass(alloc.gpa, .{
+                .fsm_id = txn.payload.FsmId,
+                .from = txn.payload.FromState,
+                .to = txn.payload.ToState,
+                .index = txn.payload.ConditionIndex,
+            }, txn.payload.Value);
+            if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
+                .attribute = attribute,
+                .logic_state = logic_state,
+                .now_ms = now_ms,
+            })) |notify| {
+                try txn.receive_data_pack.append(alloc.arena, notify);
+            }
+        }
+    }
+
+    txn.respond(.{
+        .FsmId = txn.payload.FsmId,
+        .Error = successResult(),
+    });
 }
 
 pub fn FsmStateBehaviorRequest(
     txn: *dispatch.CombatRequestTxn(.FsmStateBehaviorRequest),
 ) !void {
-    const request = txn.payload;
     txn.respond(.{
-        .FsmId = request.FsmId,
-        .State = request.State,
+        .FsmId = txn.payload.FsmId,
+        .State = txn.payload.State,
         .ErrorCode = .Success,
     });
 }
 
-fn nowMs(io: std.Io) i64 {
-    const clock: std.Io.Clock = .awake;
-    return clock.now(io).toMilliseconds();
+pub fn AiHateRequest(
+    txn: *dispatch.CombatRequestTxn(.AiHateRequest),
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+) !void {
+    if (commonEntityId(txn.common)) |entity_id| {
+        if (query.byNetId(entity_id)) |item| {
+            const entity, const fsm, const attribute, const logic_state = item;
+            const now_ms = queryNow(io);
+            try fsm.initRuntime(alloc.gpa, now_ms);
+            _ = fsm.setHateFromList(txn.payload.HateList.items);
+            if (try fsm.checkState(entity.net_id, alloc.gpa, .{
+                .attribute = attribute,
+                .logic_state = logic_state,
+                .now_ms = now_ms,
+            })) |notify| {
+                try txn.receive_data_pack.append(alloc.arena, notify);
+            }
+        }
+    }
+
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn LogicStateInitRequest(
+    txn: *dispatch.CombatRequestTxn(.LogicStateInitRequest),
+    query: LogicStateQuery,
+) !void {
+    updateLogicState(query, txn.payload.EntityId, txn.payload.CombatCommon, txn.payload.InitData);
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn SwitchLogicStateRequest(
+    txn: *dispatch.CombatRequestTxn(.SwitchLogicStateRequest),
+    query: LogicStateQuery,
+) !void {
+    updateLogicState(query, 0, txn.common, txn.payload.States);
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn FsmConditionPassPush(
+    push: pb.FsmConditionPassPush,
+    common: ?pb.CombatCommon,
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const entity_id = commonEntityId(common) orelse return;
+    if (query.byNetId(entity_id)) |item| {
+        const entity, const fsm, const attribute, const logic_state = item;
+        const now_ms = queryNow(io);
+        try fsm.initRuntime(alloc.gpa, now_ms);
+        try fsm.insertPass(alloc.gpa, .{
+            .fsm_id = push.FsmId,
+            .from = push.FromState,
+            .to = push.ToState,
+            .index = push.ConditionIndex,
+        }, push.Value);
+        if (try fsm.checkTransitions(entity.net_id, push.FsmId, alloc.gpa, .{
+            .attribute = attribute,
+            .logic_state = logic_state,
+            .now_ms = now_ms,
+        })) |notify| {
+            try receive_data_pack.append(alloc.arena, notify);
+        }
+    }
+}
+
+pub fn AiHatePush(
+    push: pb.AiHatePush,
+    common: ?pb.CombatCommon,
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const entity_id = commonEntityId(common) orelse return;
+    if (query.byNetId(entity_id)) |item| {
+        const entity, const fsm, const attribute, const logic_state = item;
+        const now_ms = queryNow(io);
+        try fsm.initRuntime(alloc.gpa, now_ms);
+        _ = fsm.setHateFromList(push.HateList.items);
+        if (try fsm.checkState(entity.net_id, alloc.gpa, .{
+            .attribute = attribute,
+            .logic_state = logic_state,
+            .now_ms = now_ms,
+        })) |notify| {
+            try receive_data_pack.append(alloc.arena, notify);
+        }
+    }
+}
+
+pub fn ChangeStateConfirmPush(
+    push: pb.ChangeStateConfirmPush,
+    common: ?pb.CombatCommon,
+    query: FsmQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const entity_id = commonEntityId(common) orelse return;
+    if (query.byNetId(entity_id)) |item| {
+        const entity, const fsm, const attribute, const logic_state = item;
+        const now_ms = queryNow(io);
+        try fsm.initRuntime(alloc.gpa, now_ms);
+        switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa, now_ms)) {
+            .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, logic_state, now_ms, alloc, receive_data_pack),
+            .mismatch, .no_pending => {},
+        }
+    }
+}
+
+pub fn LogicStateInitPush(
+    push: pb.LogicStateInitPush,
+    common: ?pb.CombatCommon,
+    query: LogicStateQuery,
+) !void {
+    updateLogicState(query, push.EntityId, push.CombatCommon orelse common, push.InitData);
+}
+
+pub fn SwitchLogicStatePush(
+    push: pb.SwitchLogicStatePush,
+    common: ?pb.CombatCommon,
+    query: LogicStateQuery,
+) !void {
+    updateLogicState(query, 0, common, push.States);
+}
+
+fn updateLogicState(
+    query: LogicStateQuery,
+    entity_id: i64,
+    common: ?pb.CombatCommon,
+    state_data: ?pb.LogicStateComponentPb,
+) void {
+    const target_id = if (entity_id != 0) entity_id else commonEntityId(common) orelse return;
+    const data = state_data orelse return;
+    if (query.byNetId(target_id)) |item| {
+        _, const logic_state = item;
+        logic_state.position_state = data.PositionState;
+        logic_state.move_state = data.MoveState;
+        logic_state.direction_state = data.DirectionState;
+        logic_state.position_sub_state = data.PositionSubState;
+    }
+}
+
+fn ensureRuntime(fsm: *Entity.FsmComponent, io: std.Io, gpa: std.mem.Allocator) !void {
+    try fsm.initRuntime(gpa, queryNow(io));
+}
+
+fn appendFollowupTransition(
+    entity: Entity,
+    fsm: *Entity.FsmComponent,
+    fsm_id: i32,
+    attribute: ?*Entity.AttributeComponent,
+    logic_state: ?*Entity.LogicStateComponent,
+    now_ms: i64,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    if (try fsm.checkTransitions(entity.net_id, fsm_id, alloc.gpa, .{
+        .attribute = attribute,
+        .logic_state = logic_state,
+        .now_ms = now_ms,
+    })) |notify| {
+        try receive_data_pack.append(alloc.arena, notify);
+    }
+}
+
+fn queryNow(io: std.Io) i64 {
+    const rtc: std.Io.Clock = .awake;
+    return rtc.now(io).toMilliseconds();
+}
+
+fn commonEntityId(common: ?pb.CombatCommon) ?i64 {
+    const value = common orelse return null;
+    if (value.EntityId == 0) return null;
+    return value.EntityId;
+}
+
+fn successResult() pb.DErrorResult {
+    return .{ .ErrorCode = .Success };
+}
+
+fn errorResult(arena: std.mem.Allocator, code: pb.ErrorCode, params: []const i32) !pb.DErrorResult {
+    var error_params: std.ArrayList([]const u8) = .empty;
+    for (params) |param| {
+        try error_params.append(arena, try std.fmt.allocPrint(arena, "{d}", .{param}));
+    }
+
+    return .{
+        .ErrorCode = code,
+        .ErrorParams = error_params,
+    };
 }

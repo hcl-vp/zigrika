@@ -13,6 +13,7 @@ pub const MainRoleConfig = @import("tables/MainRoleConfig.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
 pub const FunctionCondition = @import("tables/FunctionCondition.zig");
 pub const RolePropertyGrowth = @import("tables/RolePropertyGrowth.zig");
+pub const MonsterPropertyGrowth = @import("tables/MonsterPropertyGrowth.zig");
 pub const InstanceDungeon = @import("tables/InstanceDungeon.zig");
 pub const Buff = @import("tables/Buff.zig");
 pub const SummonCfg = @import("tables/SummonCfg.zig");
@@ -113,6 +114,7 @@ main_role_config: Table(MainRoleConfig, "Id"),
 base_property: Table(BaseProperty, "Id"),
 function_condition: Table(FunctionCondition, "FunctionId"),
 role_property_growth: Table(RolePropertyGrowth, "Id"),
+monster_property_growth: Table(MonsterPropertyGrowth, "Id"),
 instance_dungeon: Table(InstanceDungeon, "Id"),
 buff: Table(Buff, "Id"),
 summon_cfg: Table(SummonCfg, "Id"),
@@ -321,6 +323,13 @@ pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
 pub fn getRolePropertyGrowth(tables: *const DataTables, level: i32, breach: i32) ?*const RolePropertyGrowth {
     for (tables.role_property_growth.items) |*config| {
         if (config.Level == level and config.BreachLevel == breach)
+            return config;
+    } else return null;
+}
+
+pub fn getMonsterPropertyGrowth(tables: *const DataTables, level: i32, curve_id: i32) ?*const MonsterPropertyGrowth {
+    for (tables.monster_property_growth.items) |*config| {
+        if (config.Level == level and config.CurveId == curve_id)
             return config;
     } else return null;
 }

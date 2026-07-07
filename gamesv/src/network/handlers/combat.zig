@@ -114,6 +114,8 @@ pub fn dispatch(
                 inline for (comptime std.meta.fields(Args)[1..], 1..) |param, i| {
                     if (param.type == *EventQueue)
                         args[i] = events
+                    else if (param.type == *std.ArrayList(pb.CombatReceiveData))
+                        args[i] = receive_data_pack.?
                     else if (param.type == ?pb.CombatCommon)
                         args[i] = data.CombatCommon
                     else
@@ -140,7 +142,7 @@ pub fn onCombatSendPackRequest(
         switch (inner) {
             .Push => |maybe_push| {
                 const push = maybe_push orelse continue;
-                _ = try dispatch(pb.CombatPushData, push, state, events, null);
+                _ = try dispatch(pb.CombatPushData, push, state, events, &receive_data_pack);
             },
             .Request => |maybe_req| {
                 const req = maybe_req orelse continue;

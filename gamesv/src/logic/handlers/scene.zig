@@ -552,6 +552,7 @@ pub fn afterSceneJoin(
     scene.scene_time = .{
         .timestamp = now_ms,
         .last_packet_time = now_ms,
+        .last_fsm_tick_time = now_ms,
         .dilation = 1.0,
     };
     try conn.push(pb.TimeCheckNotify{

@@ -16,6 +16,7 @@ pub fn parseZon(comptime T: type, gpa: Allocator, content: [:0]const u8, path: ?
 }
 
 pub fn serializeZon(arena: Allocator, data: anytype) ![:0]u8 {
+    @setEvalBranchQuota(10000);
     var allocating = std.Io.Writer.Allocating.init(arena);
     try zon.stringify.serialize(data, .{}, &allocating.writer);
     return allocating.toOwnedSliceSentinel(0);

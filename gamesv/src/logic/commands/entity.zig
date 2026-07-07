@@ -13,6 +13,7 @@ const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeapon
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
+const entity_attributes = @import("../../logic/helpers/entity_attributes.zig");
 const respond = @import("../commands.zig").respond;
 
 const EntitySpawnBase = struct {
@@ -24,6 +25,128 @@ const EntitySpawnBase = struct {
 const FROZEN_BUFFS: *const [1]i64 = &.{10010001};
 const TUNE_BROKEN_BUFFS: *const [5]i64 = &.{ 3161, 3162, 3163, 3164, 9000000000 };
 const buffListFromIds = @import("../../data/tables/Buff.zig").buffListFromIds;
+
+const LevelEntityConfig = Assets.DataTables.LevelEntityConfig;
+const BlueprintConfig = Assets.DataTables.BlueprintConfig;
+const TemplateConfig = Assets.DataTables.TemplateConfig;
+const Components = @import("../../data/tables/entity_components/Components.zig");
+const EntityLogic = @FieldType(BlueprintConfig, "EntityLogic");
+
+const SpawnConfig = struct {
+    entity_config: LevelEntityConfig,
+    blueprint_config: BlueprintConfig,
+    template_config: TemplateConfig,
+    score: i32,
+};
+
+fn spawnBaseFromLogic(entity_logic: EntityLogic) ?EntitySpawnBase {
+    return switch (entity_logic) {
+        .Item => .{ .config_type = .level, .entity_type = .scene_item, .entity_state = .default },
+        .Animal => .{ .config_type = .level, .entity_type = .animal, .entity_state = .default },
+        .Monster => .{ .config_type = .level, .entity_type = .monster, .entity_state = .born },
+        .Vehicle => .{ .config_type = .level, .entity_type = .vehicle, .entity_state = .default },
+        .Npc => .{ .config_type = .level, .entity_type = .npc, .entity_state = .default },
+        .Vision => .{ .config_type = .level, .entity_type = .vision, .entity_state = .default },
+        .ClientOnly => .{ .config_type = .level, .entity_type = .client_only, .entity_state = .default },
+        .Custom => .{ .config_type = .level, .entity_type = .custom, .entity_state = .default },
+        .ServerOnly, .SimpleCombat => null,
+    };
+}
+
+fn useAiRuntime(entity_type: ConfigComponent.EntityType) bool {
+    return switch (entity_type) {
+        .animal, .monster, .npc, .vision => true,
+        else => false,
+    };
+}
+
+fn findBlueprintConfig(assets: *const Assets, blueprint_type: []const u8) ?BlueprintConfig {
+    for (assets.tables.blueprint_config.items) |bp_cfg| {
+        if (std.mem.eql(u8, bp_cfg.BlueprintType, blueprint_type)) return bp_cfg;
+    }
+
+    return null;
+}
+
+fn findTemplateConfig(assets: *const Assets, blueprint_type: []const u8) ?TemplateConfig {
+    for (assets.tables.template_config.items) |tp_cfg| {
+        if (std.mem.eql(u8, tp_cfg.BlueprintType, blueprint_type)) return tp_cfg;
+    }
+
+    return null;
+}
+
+fn hasAiId(components: *const Components) bool {
+    if (components.AiComponent) |ai_comp| return ai_comp.AiId != null;
+    return false;
+}
+
+fn hasCombatAttributes(components: *const Components) bool {
+    if (components.AttributeComponent) |attr_comp| return !(attr_comp.Disabled orelse false);
+    return false;
+}
+
+fn spawnCandidateScore(scene_map_id: i32, entity_config: *const LevelEntityConfig, blueprint_config: *const BlueprintConfig) i32 {
+    var score: i32 = 0;
+    const spawn_base = spawnBaseFromLogic(blueprint_config.EntityLogic);
+
+    if (entity_config.MapId == scene_map_id) score += 10000;
+
+    if (spawn_base) |base| {
+        if (useAiRuntime(base.entity_type)) score += 1000;
+        if (base.entity_type == .monster) score += 3000;
+    }
+
+    if (hasAiId(&entity_config.ComponentsData)) score += 2500;
+    if (hasCombatAttributes(&entity_config.ComponentsData)) score += 1500;
+    if (!entity_config.IsHidden) score += 100;
+    if (!entity_config.InSleep) score += 50;
+
+    return score;
+}
+
+fn selectSpawnConfig(assets: *const Assets, entity_id: i64, scene_map_id: i32) ?SpawnConfig {
+    var best: ?SpawnConfig = null;
+
+    for (assets.tables.level_entity_config.items) |cfg| {
+        if (cfg.EntityId != entity_id) continue;
+
+        const blueprint_config = findBlueprintConfig(assets, cfg.BlueprintType) orelse continue;
+        var template_config = findTemplateConfig(assets, cfg.BlueprintType) orelse continue;
+        var entity_config = cfg;
+        template_config.ComponentsData.mergeInto(&entity_config.ComponentsData);
+
+        const score = spawnCandidateScore(scene_map_id, &entity_config, &blueprint_config);
+        if (best == null or score > best.?.score) {
+            best = .{
+                .entity_config = entity_config,
+                .blueprint_config = blueprint_config,
+                .template_config = template_config,
+                .score = score,
+            };
+        }
+    }
+
+    return best;
+}
+
+fn templateCamp(template_config: *const TemplateConfig) ?i32 {
+    if (template_config.ComponentsData.BaseInfoComponent) |base_info| return base_info.Camp;
+    return null;
+}
+
+fn spawnCamp(base_info: anytype, template_config: *const TemplateConfig, spawn_base: EntitySpawnBase) i32 {
+    const base_camp = base_info.Camp;
+    const tpl_camp = templateCamp(template_config);
+
+    if (spawn_base.entity_type == .monster) {
+        if (tpl_camp) |camp| {
+            if (base_camp == null or base_camp.? == 0 or base_camp.? == 2) return camp;
+        }
+    }
+
+    return base_camp orelse tpl_camp orelse 0;
+}
 
 pub const spawn = struct {
     pub const alias = "s";
@@ -39,61 +162,48 @@ pub const spawn = struct {
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
-        var entity_config = (assets.tables.level_entity_config.getDataById(entity_id) orelse {
+        const selected = selectSpawnConfig(assets, entity_id, scene.instance_id) orelse {
             try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
             return;
-        });
-        const blueprint_config = blk: {
-            for (assets.tables.blueprint_config.items) |bp_cfg| {
-                if (std.mem.eql(u8, bp_cfg.BlueprintType, entity_config.BlueprintType)) {
-                    break :blk bp_cfg;
-                }
-            }
-            try respond(events, alloc.arena, "{d} couldn't be spawned, no blueprint config found", .{entity_id});
+        };
+        const entity_config = selected.entity_config;
+        const blueprint_config = selected.blueprint_config;
+        const template_config = selected.template_config;
+
+        const spawn_base = spawnBaseFromLogic(blueprint_config.EntityLogic) orelse {
+            try respond(events, alloc.arena, "{d} couldn't be spawned, unhandled entity logic: {s}", .{ entity_id, @tagName(blueprint_config.EntityLogic) });
             return;
         };
-        var template_config = blk: {
-            for (assets.tables.template_config.items) |tp_cfg| {
-                if (std.mem.eql(u8, tp_cfg.BlueprintType, entity_config.BlueprintType)) {
-                    break :blk tp_cfg;
-                }
-            }
-            try respond(events, alloc.arena, "{d} couldn't be spawned, no blueprint config found", .{entity_id});
-            return;
-        };
+        const components_data = entity_config.ComponentsData;
 
-        template_config.ComponentsData.mergeInto(&entity_config.ComponentsData);
-
-        const spawn_base: EntitySpawnBase = switch (blueprint_config.EntityLogic) {
-            .Item => .{ .config_type = .level, .entity_type = .scene_item, .entity_state = .default },
-            .Animal => .{ .config_type = .level, .entity_type = .animal, .entity_state = .default },
-            .Monster => .{ .config_type = .level, .entity_type = .monster, .entity_state = .born },
-            .Vehicle => .{ .config_type = .level, .entity_type = .vehicle, .entity_state = .default },
-            .Npc => .{ .config_type = .level, .entity_type = .npc, .entity_state = .default },
-            .Vision => .{ .config_type = .level, .entity_type = .vision, .entity_state = .default },
-            .ClientOnly => .{ .config_type = .level, .entity_type = .client_only, .entity_state = .default },
-            .Custom => .{ .config_type = .level, .entity_type = .custom, .entity_state = .default },
-            .ServerOnly, .SimpleCombat => {
-                try respond(events, alloc.arena, "{d} couldn't be spawned, unhandled entity logic: {s}", .{ entity_id, @tagName(blueprint_config.EntityLogic) });
-                return;
-            },
-        };
-
-        const base_info = template_config.ComponentsData.BaseInfoComponent orelse {
+        const base_info = components_data.BaseInfoComponent orelse {
             try respond(events, alloc.arena, "{d} couldn't be spawned, it had no baseinfo comp and we dont support that :)", .{entity_id});
             return;
         };
 
-        const ai_id: ?i32 = blk: {
-            const ai_comp = template_config.ComponentsData.AiComponent orelse {
-                break :blk null;
-            };
-            break :blk ai_comp.AiId;
-        };
+        const ai_comp = components_data.AiComponent;
+        const ai_id = if (ai_comp) |comp| comp.AiId else null;
+        const weapon_id = if (ai_comp) |comp| parseOptionalInt(comp.WeaponId) else 0;
+        const final_camp = spawnCamp(base_info, &template_config, spawn_base);
+        const use_ai_runtime = useAiRuntime(spawn_base.entity_type);
+        const combat_attributes: ?Entity.AttributeComponent = if (use_ai_runtime)
+            (try entity_attributes.createCombatAttributes(
+                assets,
+                &components_data,
+                blueprint_config.EntityLogic,
+                alloc,
+            ))
+        else
+            null;
+        const attribute_component: ?Entity.AttributeComponent = if (use_ai_runtime)
+            combat_attributes orelse Entity.AttributeComponent{}
+        else
+            null;
+        const combat_ready = use_ai_runtime and ai_id != null and combat_attributes != null;
 
-        const entity = try scene.spawn(alloc.gpa, fs, .{
+        const entity = if (use_ai_runtime and ai_id != null) try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
-                .camp = base_info.Camp orelse 0,
+                .camp = final_camp,
                 .config_id = @intCast(entity_id),
                 .config_type = spawn_base.config_type,
                 .entity_type = spawn_base.entity_type,
@@ -106,7 +216,53 @@ pub const spawn = struct {
                 .rotation = scene.instance.players[0].rotation,
             },
             Entity.FightBuffComponent{},
+            attribute_component.?,
+            Entity.LogicStateComponent{},
+            Entity.MonsterAiComponent{
+                .weapon_id = weapon_id,
+                .hatred_group_id = 0,
+                .ai_team_init_id = 100,
+                .combat_message_id = 0,
+            },
             try Entity.FsmComponent.fromAiBaseId(ai_id, assets, alloc.gpa),
+        }) else if (use_ai_runtime) try scene.spawn(alloc.gpa, fs, .{
+            Entity.ConfigComponent{
+                .camp = final_camp,
+                .config_id = @intCast(entity_id),
+                .config_type = spawn_base.config_type,
+                .entity_type = spawn_base.entity_type,
+                .state = spawn_base.entity_state,
+            },
+            Entity.ActorVisibleMarker{},
+            Entity.VisibleMarker{},
+            Entity.PositionComponent{
+                .location = scene.instance.players[0].location,
+                .rotation = scene.instance.players[0].rotation,
+            },
+            Entity.FightBuffComponent{},
+            attribute_component.?,
+            Entity.LogicStateComponent{},
+            Entity.MonsterAiComponent{
+                .weapon_id = weapon_id,
+                .hatred_group_id = 0,
+                .ai_team_init_id = 100,
+                .combat_message_id = 0,
+            },
+        }) else try scene.spawn(alloc.gpa, fs, .{
+            Entity.ConfigComponent{
+                .camp = final_camp,
+                .config_id = @intCast(entity_id),
+                .config_type = spawn_base.config_type,
+                .entity_type = spawn_base.entity_type,
+                .state = spawn_base.entity_state,
+            },
+            Entity.ActorVisibleMarker{},
+            Entity.VisibleMarker{},
+            Entity.PositionComponent{
+                .location = scene.instance.players[0].location,
+                .rotation = scene.instance.players[0].rotation,
+            },
+            Entity.FightBuffComponent{},
         });
 
         var buff_ids: std.ArrayList(i64) = .empty;
@@ -139,9 +295,20 @@ pub const spawn = struct {
 
         try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
 
-        try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, ai_id: {any}", .{ entity_id, is_frozen, is_tune_broken, ai_id });
+        try respond(events, alloc.arena, "spawned {d}, map: {d}, bp: {s}, camp: {d}, ai_id: {any}, combat: {s}", .{ entity_id, entity_config.MapId, entity_config.BlueprintType, final_camp, ai_id, if (combat_ready) "ready" else "incomplete" });
     }
 };
+
+fn parseOptionalInt(value: ?std.json.Value) i32 {
+    const raw = value orelse return 0;
+    return switch (raw) {
+        .integer => |v| @intCast(v),
+        .float => |v| @intFromFloat(v),
+        .number_string => |v| std.fmt.parseInt(i32, v, 10) catch 0,
+        .string => |v| std.fmt.parseInt(i32, v, 10) catch 0,
+        else => 0,
+    };
+}
 
 pub const reset_formation = struct {
     pub const alias = "rf";

@@ -9,9 +9,14 @@ pub const Attribute = struct {
     current: i32,
 };
 attributes: []Attribute = &.{},
+hardness_mode_id: i32 = 0,
+rage_mode_id: i32 = 0,
 
 pub fn toProto(comp: Component, alloc: mem.Alloc) !pb.AttributeComponentPb {
-    var comp_pb: pb.AttributeComponentPb = .{};
+    var comp_pb: pb.AttributeComponentPb = .{
+        .HardnessModeId = comp.hardness_mode_id,
+        .RageModeId = comp.rage_mode_id,
+    };
 
     inline for (comptime std.meta.fields(pb.EAttributeType), 0..) |field, i| {
         try comp_pb.AttrData.append(alloc.arena, .{
@@ -25,7 +30,13 @@ pub fn toProto(comp: Component, alloc: mem.Alloc) !pb.AttributeComponentPb {
 }
 
 pub fn create(base_prop: []i32, gpa: std.mem.Allocator) !Component {
+    return createWithModes(base_prop, 0, 0, gpa);
+}
+
+pub fn createWithModes(base_prop: []i32, hardness_mode_id: i32, rage_mode_id: i32, gpa: std.mem.Allocator) !Component {
     return Component{
+        .hardness_mode_id = hardness_mode_id,
+        .rage_mode_id = rage_mode_id,
         .attributes = blk: {
             var s = try gpa.alloc(Attribute, base_prop.len);
             for (base_prop, 0..) |prop, i| {
