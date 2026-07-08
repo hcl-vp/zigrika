@@ -7,6 +7,7 @@ const EventQueue = @import("../EventQueue.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 const Scene = @import("../Scene.zig");
+const State = @import("../../network/State.zig");
 
 pub fn onRoleInfoModified(
     event: EventQueue.Dequeue(.role_info_modified),
@@ -50,7 +51,9 @@ pub fn onBuffChange(
     alloc: mem.Alloc,
     fs: *FileSystem,
     scene: *Scene,
+    state: *State,
 ) !void {
+    state.buff_timers.markDirty();
     try scene.saveInstance(fs, alloc.gpa);
     try scene.saveComponents(
         fs,

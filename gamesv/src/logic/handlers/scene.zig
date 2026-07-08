@@ -11,6 +11,7 @@ const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
 const SceneInstance = @import("../../fs/SceneInstance.zig");
 const Connection = @import("../../network/Connection.zig");
+const State = @import("../../network/State.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
@@ -157,6 +158,7 @@ pub fn onInitialSceneJoin(
     assets: *const Assets,
     scene_comp: *PlayerSceneComponent,
     cur_scene: *?Scene,
+    state: *State,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
@@ -262,6 +264,8 @@ pub fn onInitialSceneJoin(
     }
 
     try scene.save(fs, alloc.gpa);
+    state.buff_timers.reset(alloc.gpa);
+    state.next_timed_logic_check_ms = 0;
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
     });

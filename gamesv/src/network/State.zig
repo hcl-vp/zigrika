@@ -12,6 +12,7 @@ const ArenaAllocator = std.heap.ArenaAllocator;
 const Scene = @import("../logic/Scene.zig");
 const PlayerID = @import("../logic/PlayerID.zig");
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
+const BuffTimerScheduler = @import("../logic/BuffTimerScheduler.zig");
 
 io: Io,
 gpa: Allocator,
@@ -23,6 +24,7 @@ player_id: PlayerID,
 player_components: PlayerComponentStorage,
 scene: ?Scene,
 next_timed_logic_check_ms: i64,
+buff_timers: BuffTimerScheduler,
 
 pub fn init(
     gpa: Allocator,
@@ -44,10 +46,12 @@ pub fn init(
         .player_id = .{ .id = player_id },
         .scene = null,
         .next_timed_logic_check_ms = 0,
+        .buff_timers = .{},
     };
 }
 
 pub fn deinit(s: *State, fs: *FileSystem) void {
+    s.buff_timers.deinit(s.gpa);
     s.arena.deinit();
     s.player_components.deinit(s.gpa);
     if (s.scene) |*scene| scene.deinit(s.gpa, fs);
