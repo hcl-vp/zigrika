@@ -1,64 +1,58 @@
-const std = @import("std");
-const pb = @import("proto").pb;
 const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
-const comp_util = @import("../component/comp_util.zig");
 const EventQueue = @import("../EventQueue.zig");
-const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
-const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
-const Scene = @import("../Scene.zig");
 const State = @import("../../network/State.zig");
 
 pub fn onRoleInfoModified(
     event: EventQueue.Dequeue(.role_info_modified),
-    role_comp: *const PlayerRoleComponent,
     alloc: mem.Alloc,
-    fs: *FileSystem,
+    state: *State,
 ) !void {
-    const role_info = role_comp.role_map.getPtr(event.data.role_id) orelse return;
-    const path = try std.fmt.allocPrint(alloc.arena, "player/{}/role/{}", .{ role_comp.player_id, event.data.role_id });
-    try comp_util.saveStruct(fs, role_info, path, alloc.arena);
+    try state.dirty_saves.markRole(alloc.gpa, event.data.role_id);
 }
 
 pub fn onWeaponInfoModified(
     event: EventQueue.Dequeue(.weapon_info_modified),
-    weapon_comp: *const PlayerWeaponComponent,
     alloc: mem.Alloc,
-    fs: *FileSystem,
+    state: *State,
 ) !void {
-    const weapon_info = weapon_comp.weapon_map.getPtr(event.data.incr_id) orelse return;
-    const path = try std.fmt.allocPrint(alloc.arena, "player/{}/weapon/{}", .{ weapon_comp.player_id, event.data.incr_id });
-    try comp_util.saveStruct(fs, weapon_info, path, alloc.arena);
+    try state.dirty_saves.markWeapon(alloc.gpa, event.data.incr_id);
 }
 
 pub fn onEntityMovement(
     event: EventQueue.Dequeue(.entity_movement),
     alloc: mem.Alloc,
-    fs: *FileSystem,
-    scene: *Scene,
+    state: *State,
 ) !void {
-    try scene.saveInstance(fs, alloc.gpa);
-    try scene.saveComponents(
-        fs,
-        alloc.gpa,
-        event.data.entity,
-        &.{Scene.Entity.PositionComponent},
-    );
+    try state.dirty_saves.markMovement(alloc.gpa, event.data.entity);
 }
 
 pub fn onBuffChange(
     event: EventQueue.Dequeue(.buff_change),
     alloc: mem.Alloc,
-    fs: *FileSystem,
-    scene: *Scene,
     state: *State,
 ) !void {
     state.buff_timers.markDirty();
-    try scene.saveInstance(fs, alloc.gpa);
-    try scene.saveComponents(
-        fs,
-        alloc.gpa,
-        event.data.entity,
-        &.{Scene.Entity.FightBuffComponent},
-    );
+    try state.dirty_saves.markBuffChange(alloc.gpa, event.data.entity);
 }
+
+pub fn onDirtySaveTick(
+    _: EventQueue.Dequeue(.dirty_save_tick),
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    state: *State,
+) !void {
+    try dirty_save.flush(state, alloc.gpa, fs);
+}
+
+const dirty_save = struct {
+    fn flush(state: *State, gpa: mem.Allocator, fs: *FileSystem) !void {
+        try state.dirty_saves.flush(
+            gpa,
+            fs,
+            &state.player_components.role,
+            &state.player_components.weapon,
+            if (state.scene) |*scene| scene else null,
+        );
+    }
+};

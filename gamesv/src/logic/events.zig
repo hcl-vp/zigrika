@@ -69,6 +69,10 @@ pub const LevelPlayTimerTick = struct {
     now_ms: i64,
 };
 
+pub const DirtySaveTick = struct {
+    now_ms: i64,
+};
+
 pub const GameplayTagChange = struct {
     entity: Entity,
     add_tag_ids: []i32,
