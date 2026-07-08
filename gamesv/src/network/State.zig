@@ -25,6 +25,7 @@ player_id: PlayerID,
 player_components: PlayerComponentStorage,
 scene: ?Scene,
 next_timed_logic_check_ms: i64,
+next_levelplay_timer_tick_ms: i64,
 buff_timers: BuffTimerScheduler,
 fsm_timers: FsmTimerScheduler,
 
@@ -48,6 +49,7 @@ pub fn init(
         .player_id = .{ .id = player_id },
         .scene = null,
         .next_timed_logic_check_ms = 0,
+        .next_levelplay_timer_tick_ms = 0,
         .buff_timers = .{},
         .fsm_timers = .{},
     };
