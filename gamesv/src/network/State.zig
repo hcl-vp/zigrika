@@ -22,6 +22,7 @@ arena: ArenaAllocator,
 player_id: PlayerID,
 player_components: PlayerComponentStorage,
 scene: ?Scene,
+next_timed_logic_check_ms: i64,
 
 pub fn init(
     gpa: Allocator,
@@ -42,6 +43,7 @@ pub fn init(
         .player_components = pcs,
         .player_id = .{ .id = player_id },
         .scene = null,
+        .next_timed_logic_check_ms = 0,
     };
 }
 
