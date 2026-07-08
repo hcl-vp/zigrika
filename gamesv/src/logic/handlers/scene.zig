@@ -276,6 +276,7 @@ pub fn onInitialSceneJoin(
     state.fsm_timers.reset(alloc.gpa);
     state.next_timed_logic_check_ms = 0;
     state.next_levelplay_timer_tick_ms = 0;
+    state.next_scene_cleanup_tick_ms = 0;
     state.next_dirty_save_tick_ms = 0;
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,

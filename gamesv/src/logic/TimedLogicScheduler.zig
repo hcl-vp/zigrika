@@ -5,6 +5,7 @@ const logic_handlers = @import("handlers.zig");
 
 const fast_tick_interval_ms: i64 = 100;
 const levelplay_timer_tick_interval_ms: i64 = 250;
+const cleanup_tick_interval_ms: i64 = 1_000;
 const dirty_save_tick_interval_ms: i64 = 30_000;
 
 pub fn nextWakeDelayMs(state: *State) ?i64 {
@@ -13,8 +14,11 @@ pub fn nextWakeDelayMs(state: *State) ?i64 {
     const now_ms = nowMs(state);
     return @min(
         @min(
-            bucketDelayMs(state.next_timed_logic_check_ms, now_ms),
-            bucketDelayMs(state.next_levelplay_timer_tick_ms, now_ms),
+            @min(
+                bucketDelayMs(state.next_timed_logic_check_ms, now_ms),
+                bucketDelayMs(state.next_levelplay_timer_tick_ms, now_ms),
+            ),
+            bucketDelayMs(state.next_scene_cleanup_tick_ms, now_ms),
         ),
         bucketDelayMs(state.next_dirty_save_tick_ms, now_ms),
     );
@@ -29,6 +33,9 @@ pub fn drainDue(state: *State) !bool {
     }
     if (state.next_levelplay_timer_tick_ms == 0) {
         state.next_levelplay_timer_tick_ms = now_ms;
+    }
+    if (state.next_scene_cleanup_tick_ms == 0) {
+        state.next_scene_cleanup_tick_ms = now_ms;
     }
     if (state.next_dirty_save_tick_ms == 0) {
         state.next_dirty_save_tick_ms = now_ms;
@@ -48,6 +55,12 @@ pub fn drainDue(state: *State) !bool {
     if (state.next_levelplay_timer_tick_ms <= now_ms) {
         state.next_levelplay_timer_tick_ms = now_ms + levelplay_timer_tick_interval_ms;
         try event_queue.enqueue(.level_play_timer_tick, .{ .now_ms = now_ms });
+        did_enqueue = true;
+    }
+
+    if (state.next_scene_cleanup_tick_ms <= now_ms) {
+        state.next_scene_cleanup_tick_ms = now_ms + cleanup_tick_interval_ms;
+        try event_queue.enqueue(.scene_cleanup_tick, .{ .now_ms = now_ms });
         did_enqueue = true;
     }
 
