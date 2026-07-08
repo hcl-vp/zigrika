@@ -265,6 +265,7 @@ pub fn onInitialSceneJoin(
 
     try scene.save(fs, alloc.gpa);
     state.buff_timers.reset(alloc.gpa);
+    state.fsm_timers.reset(alloc.gpa);
     state.next_timed_logic_check_ms = 0;
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,

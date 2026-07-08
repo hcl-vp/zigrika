@@ -13,6 +13,7 @@ const Scene = @import("../logic/Scene.zig");
 const PlayerID = @import("../logic/PlayerID.zig");
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
 const BuffTimerScheduler = @import("../logic/BuffTimerScheduler.zig");
+const FsmTimerScheduler = @import("../logic/FsmTimerScheduler.zig");
 
 io: Io,
 gpa: Allocator,
@@ -25,6 +26,7 @@ player_components: PlayerComponentStorage,
 scene: ?Scene,
 next_timed_logic_check_ms: i64,
 buff_timers: BuffTimerScheduler,
+fsm_timers: FsmTimerScheduler,
 
 pub fn init(
     gpa: Allocator,
@@ -47,10 +49,12 @@ pub fn init(
         .scene = null,
         .next_timed_logic_check_ms = 0,
         .buff_timers = .{},
+        .fsm_timers = .{},
     };
 }
 
 pub fn deinit(s: *State, fs: *FileSystem) void {
+    s.fsm_timers.deinit(s.gpa);
     s.buff_timers.deinit(s.gpa);
     s.arena.deinit();
     s.player_components.deinit(s.gpa);

@@ -31,6 +31,7 @@ pub fn drainDue(state: *State) !bool {
     var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
     try event_queue.enqueue(.tick_time, .{});
     try event_queue.enqueue(.buff_timer_tick, .{ .now_ms = now_ms });
+    try event_queue.enqueue(.fsm_timer_tick, .{ .now_ms = now_ms });
     try logic_handlers.drainEventQueue(&event_queue, state);
 
     return true;
