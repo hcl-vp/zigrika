@@ -3,7 +3,7 @@ const State = @import("../network/State.zig");
 const EventQueue = @import("EventQueue.zig");
 const logic_handlers = @import("handlers.zig");
 
-const fast_tick_interval_ms: i64 = 100;
+const fast_tick_interval_ms: i64 = 50;
 const levelplay_timer_tick_interval_ms: i64 = 250;
 const cleanup_tick_interval_ms: i64 = 1_000;
 const dirty_save_tick_interval_ms: i64 = 30_000;

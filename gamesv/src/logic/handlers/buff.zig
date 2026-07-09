@@ -68,6 +68,7 @@ pub fn addBuffToEntity(
         const existing = item[0].getByBuffId(entry.id);
         const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
+            state.buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
             buff.Level = 1;
             buff.StackCount = stack_count;
             buff.InstigatorId = event.data.instigator.net_id;

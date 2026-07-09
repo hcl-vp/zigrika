@@ -41,6 +41,14 @@ pub fn markDirty(scheduler: *BuffTimerScheduler) void {
     scheduler.dirty = true;
 }
 
+pub fn forgetHandle(
+    scheduler: *BuffTimerScheduler,
+    entity_id: i64,
+    handle_id: i32,
+) void {
+    scheduler.removeEntriesForHandle(entity_id, handle_id);
+}
+
 pub fn drainDue(
     scheduler: *BuffTimerScheduler,
     event: EventQueue.Dequeue(.buff_timer_tick),
@@ -65,10 +73,6 @@ pub fn drainDue(
     var i: usize = 0;
     while (i < scheduler.entries.items.len) {
         const entry = scheduler.entries.items[i];
-        if (entry.due_ms > now_ms) {
-            i += 1;
-            continue;
-        }
 
         switch (entry.kind) {
             .expiry => {
@@ -76,6 +80,12 @@ pub fn drainDue(
                     _ = scheduler.entries.swapRemove(i);
                     continue;
                 };
+                syncLeftDuration(lookup[1], entry.due_ms, now_ms);
+                if (entry.due_ms > now_ms) {
+                    i += 1;
+                    continue;
+                }
+
                 const entity = lookup[0];
                 const handle_ids = try alloc.arena.alloc(i32, 1);
                 handle_ids[0] = entry.handle_id;
@@ -87,6 +97,11 @@ pub fn drainDue(
                 i = 0;
             },
             .period => {
+                if (entry.due_ms > now_ms) {
+                    i += 1;
+                    continue;
+                }
+
                 const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
                     _ = scheduler.entries.swapRemove(i);
                     continue;
@@ -121,13 +136,26 @@ fn rebuild(
     assets: *const Assets,
     now_ms: i64,
 ) !void {
-    scheduler.entries.clearRetainingCapacity();
+    var previous_entries = scheduler.entries;
+    defer previous_entries.deinit(gpa);
+    scheduler.entries = .empty;
+    errdefer {
+        scheduler.entries.deinit(gpa);
+        scheduler.entries = .empty;
+    }
 
     const slice = scene.entities.slice();
     for (slice.items(.entity_id), slice.items(.buffs)) |entity_id, maybe_buffs| {
         const buffs = maybe_buffs orelse continue;
         for (buffs.fight_buff_infos) |buff_info| {
-            try scheduler.registerBuff(gpa, assets, buff_info, entity_id.net_id, now_ms);
+            try scheduler.registerBuff(
+                gpa,
+                assets,
+                buff_info,
+                entity_id.net_id,
+                now_ms,
+                previous_entries.items,
+            );
         }
     }
 
@@ -142,25 +170,36 @@ fn registerBuff(
     buff_info: pb.FightBuffInformation,
     entity_id: i64,
     now_ms: i64,
+    previous_entries: []const Entry,
 ) !void {
     const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse return;
 
     if (buff_data.DurationPolicy == .HasDuration and buff_info.LeftDuration > 0) {
+        const due_ms = if (findEntry(previous_entries, .expiry, entity_id, buff_info.HandleId)) |entry|
+            entry.due_ms
+        else
+            now_ms + secondsToMs(buff_info.LeftDuration);
+
         try scheduler.entries.append(gpa, .{
             .kind = .expiry,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + secondsToMs(buff_info.LeftDuration),
+            .due_ms = due_ms,
         });
     }
 
     if (buff_data.Period > 0) {
         const interval_ms = secondsToMs(buff_data.Period);
+        const due_ms = if (findEntry(previous_entries, .period, entity_id, buff_info.HandleId)) |entry|
+            entry.due_ms
+        else
+            now_ms + interval_ms;
+
         try scheduler.entries.append(gpa, .{
             .kind = .period,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + interval_ms,
+            .due_ms = due_ms,
             .interval_ms = interval_ms,
         });
     }
@@ -197,6 +236,35 @@ fn removeEntriesForHandle(
             i += 1;
         }
     }
+}
+
+fn findEntry(
+    entries: []const Entry,
+    kind: Kind,
+    entity_id: i64,
+    handle_id: i32,
+) ?Entry {
+    for (entries) |entry| {
+        if (entry.kind == kind and entry.entity_id == entity_id and entry.handle_id == handle_id) {
+            return entry;
+        }
+    }
+
+    return null;
+}
+
+fn syncLeftDuration(
+    buff_info: *pb.FightBuffInformation,
+    due_ms: i64,
+    now_ms: i64,
+) void {
+    const remaining_ms = @max(due_ms - now_ms, 0);
+    var remaining_seconds = @as(f32, @floatFromInt(remaining_ms)) / 1000.0;
+    if (buff_info.Duration > 0 and remaining_seconds > buff_info.Duration) {
+        remaining_seconds = buff_info.Duration;
+    }
+
+    buff_info.LeftDuration = remaining_seconds;
 }
 
 fn secondsToMs(seconds: f32) i64 {
