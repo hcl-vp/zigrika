@@ -355,12 +355,15 @@ pub fn createRoleEntity(
         }
     }
 
-    // ornaments!!!!
-    var ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(
+    const ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(
         assets,
-        role_info.getOrnament(role_info.role_skin_id),
+        role_info.*,
+        role_info.role_skin_id,
         alloc.gpa,
     );
+
+    // ornaments!!!!
+    var ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForIds(assets, ornament_ids, alloc.gpa);
     defer ornament_buffs.deinit(alloc.gpa);
     for (ornament_buffs.items) |entry| {
         try role_base_buffs.append(alloc.gpa, entry);
@@ -375,18 +378,7 @@ pub fn createRoleEntity(
         });
     }
 
-    const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIds(
-        assets,
-        role_info.getOrnament(role_info.role_skin_id),
-        alloc.gpa,
-    );
-
-    const ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(
-        assets,
-        role_info.*,
-        role_info.role_skin_id,
-        alloc.gpa,
-    );
+    const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIdsForIds(assets, ornament_ids, alloc.gpa);
 
     const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
     const is_cur_role = formation.cur_role == role;

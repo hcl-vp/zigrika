@@ -1,6 +1,7 @@
 Id: i32,
 RoleSkinIds: []const i32,
 DefaultOrnament: bool,
+OrGroupId: i32,
 HideInUi: bool,
 ItemAccess: []const i32,
 OrnamentBuff: []const i64,

@@ -3,7 +3,7 @@ const std = @import("std");
 const pb = @import("proto").pb;
 const Transaction = @import("../handlers.zig").Transaction;
 
-const ph_ba_success_code: i32 = @intFromEnum(pb.ErrorCode.Success);
+const ph_ba_success_code: pb.ErrorCode = .Success;
 
 pub fn onRoleVisionRecommendDataRequest(
     txn: *Transaction(pb.RoleVisionRecommendDataRequest),

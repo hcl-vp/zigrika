@@ -75,12 +75,20 @@ pub fn buildOrnamentEquipMap(
     var iterator = role_comp.role_map.iterator();
     while (iterator.next()) |kv| {
         for (kv.value_ptr.ornaments) |entry| {
-            var ids: std.ArrayList(i32) = .empty;
-            if (entry.ornament_id != 0) try ids.append(arena, entry.ornament_id);
-            try list.append(arena, .{
-                .RoleSkinId = entry.role_skin_id,
-                .DressOrnamentIds = ids,
-            });
+            if (entry.ornament_id == 0) continue;
+
+            for (list.items) |*item| {
+                if (item.RoleSkinId != entry.role_skin_id) continue;
+                try item.DressOrnamentIds.append(arena, entry.ornament_id);
+                break;
+            } else {
+                var ids: std.ArrayList(i32) = .empty;
+                try ids.append(arena, entry.ornament_id);
+                try list.append(arena, .{
+                    .RoleSkinId = entry.role_skin_id,
+                    .DressOrnamentIds = ids,
+                });
+            }
         }
     }
     return list;
@@ -96,40 +104,47 @@ pub fn buildOrnamentIdsForRoleSkin(
     var list: std.ArrayList(i32) = .empty;
     defer list.deinit(gpa);
 
-    const equipped = role.getOrnament(role_skin_id);
-    if (equipped != 0) try list.append(gpa, equipped);
+    for (role.ornaments) |entry| {
+        if (entry.role_skin_id != role_skin_id or entry.ornament_id == 0) continue;
+        try list.append(gpa, entry.ornament_id);
+    }
 
     return try list.toOwnedSlice(gpa);
 }
 
-pub fn buildOrnamentBuffsForRoleSkin(
+pub fn buildOrnamentBuffsForIds(
     assets: *const Assets,
-    ornament_id: i32,
+    ornament_ids: []const i32,
     gpa: std.mem.Allocator,
 ) !std.ArrayListUnmanaged(BuffAdditionEntry) {
     var list: std.ArrayListUnmanaged(BuffAdditionEntry) = .empty;
-    const ornament = assets.tables.ornament.getDataById(ornament_id) orelse return list;
+    for (ornament_ids) |ornament_id| {
+        const ornament = assets.tables.ornament.getDataById(ornament_id) orelse continue;
 
-    for (ornament.OrnamentBuff) |buff_id| try appendBuffEntry(&list, gpa, buff_id);
-    for (ornament.OrnamentUiBuff) |buff_id| try appendBuffEntry(&list, gpa, buff_id);
+        for (ornament.OrnamentBuff) |buff_id| try appendBuffEntry(&list, gpa, buff_id);
+        for (ornament.OrnamentUiBuff) |buff_id| try appendBuffEntry(&list, gpa, buff_id);
+    }
 
     return list;
 }
 
-pub fn buildOrnamentBornBuffIds(
+pub fn buildOrnamentBornBuffIdsForIds(
     assets: *const Assets,
-    ornament_id: i32,
+    ornament_ids: []const i32,
     gpa: std.mem.Allocator,
 ) ![]i64 {
-    const ornament = assets.tables.ornament.getDataById(ornament_id) orelse return &.{};
     var ids: std.ArrayList(i64) = .empty;
     defer ids.deinit(gpa);
 
-    for (ornament.OrnamentBuff) |buff_id| {
-        if (buff_id != 0) try ids.append(gpa, buff_id);
-    }
-    for (ornament.OrnamentUiBuff) |buff_id| {
-        if (buff_id != 0) try ids.append(gpa, buff_id);
+    for (ornament_ids) |ornament_id| {
+        const ornament = assets.tables.ornament.getDataById(ornament_id) orelse continue;
+
+        for (ornament.OrnamentBuff) |buff_id| {
+            if (buff_id != 0) try ids.append(gpa, buff_id);
+        }
+        for (ornament.OrnamentUiBuff) |buff_id| {
+            if (buff_id != 0) try ids.append(gpa, buff_id);
+        }
     }
 
     return try ids.toOwnedSlice(gpa);

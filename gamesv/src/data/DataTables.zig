@@ -43,6 +43,9 @@ pub const Activity = @import("tables/Activity.zig");
 pub const MapFog = @import("tables/MapFog.zig");
 pub const MultiMap = @import("tables/MultiMap.zig");
 pub const MapBlockInfo = @import("tables/MapBlockInfo.zig");
+pub const ExploreProgressReward = @import("tables/ExploreProgressReward.zig");
+pub const ExploreReward = @import("tables/ExploreReward.zig");
+pub const ExploreScore = @import("tables/ExploreScore.zig");
 pub const Flow = @import("tables/Flow.zig");
 pub const Skill = @import("tables/Skill.zig");
 pub const SkillTree = @import("tables/SkillTree.zig");
@@ -100,6 +103,7 @@ pub const PhantomExpItem = @import("tables/PhantomExpItem.zig");
 pub const PhantomVicePolishConfig = @import("tables/PhantomVicePolishConfig.zig");
 pub const CalabashLevel = @import("tables/CalabashLevel.zig");
 pub const CalabashDevelopReward = @import("tables/CalabashDevelopReward.zig");
+pub const CalabashSkin = @import("tables/CalabashSkin.zig");
 pub const DropPackage = @import("tables/DropPackage.zig");
 pub const PropValue = @import("tables/PropValue.zig");
 
@@ -139,6 +143,9 @@ activity: Table(Activity, "Id"),
 map_fog: Table(MapFog, "Fog"),
 multi_map: Table(MultiMap, "Id"),
 map_block_info: Table(MapBlockInfo, "BlockId"),
+explore_progress_reward: Table(ExploreProgressReward, "Id"),
+explore_reward: Table(ExploreReward, "Id"),
+explore_score: Table(ExploreScore, "Area"),
 flow: Table(Flow, "Id"),
 skill: Table(Skill, "Id"),
 skill_tree: Table(SkillTree, "Id"),
@@ -196,6 +203,7 @@ phantom_exp_item: Table(PhantomExpItem, "ItemId"),
 phantom_vice_polish_config: Table(PhantomVicePolishConfig, "PropCount"),
 calabash_level: Table(CalabashLevel, "Level"),
 calabash_develop_reward: Table(CalabashDevelopReward, "MonsterId"),
+calabash_skin: Table(CalabashSkin, "Id"),
 drop_package: Table(DropPackage, "Id"),
 
 fn loadTableItems(

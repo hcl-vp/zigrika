@@ -631,13 +631,6 @@ pub const h5s = struct {
     Bws: std.ArrayList(e5s) = .empty,
     Qws: ?Z6s = null,
 };
-pub const RobotRoleInfo = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
-    AddProp: std.ArrayList(ArrayIntInt) = .empty,
-    RoleEquipmentPropData: ?RolePhantomPropInfo = null,
-};
 pub const zfs = struct {
     pub const default: @This() = .{};
     C5n: std.ArrayList(i32) = .empty,
@@ -646,15 +639,6 @@ pub const Zfs = struct {
     pub const default: @This() = .{};
     fMs: i32 = 0,
     exs: std.ArrayList(h5s) = .empty,
-};
-pub const RobotRolePropRequest = struct {
-    pub const default: @This() = .{};
-    RoleIds: std.ArrayList(i32) = .empty,
-};
-pub const RobotRolePropResponse = struct {
-    pub const default: @This() = .{};
-    Error: ?ErrorCode = null,
-    RobotRoleInfo: std.ArrayList(RobotRoleInfo) = .empty,
 };
 pub const jm_ = struct {
     pub const default: @This() = .{};
@@ -28127,35 +28111,6 @@ pub const IR_ = struct {
     N4_: []const u8 = "",
     V4_: []const u8 = "",
 };
-pub const GachaItem = struct {
-    pub const default: @This() = .{};
-    ItemId: i32 = 0,
-    IsUp: bool = false,
-};
-pub const GachaPoolDetail = struct {
-    pub const default: @This() = .{};
-    Text: []const u8 = "",
-    FiveStarRoles: std.ArrayList(GachaItem) = .empty,
-    FiveStarWeapons: std.ArrayList(GachaItem) = .empty,
-    FourStarRoles: std.ArrayList(GachaItem) = .empty,
-    FourStarWeapons: std.ArrayList(GachaItem) = .empty,
-    ThreeStarRoles: std.ArrayList(GachaItem) = .empty,
-    FiveStarTitle: []const u8 = "",
-    FileStarDetail: []const u8 = "",
-    FourStarTitle: []const u8 = "",
-    FourStarDetail: []const u8 = "",
-    ThreeStarTitle: []const u8 = "",
-    ThreeStarDetail: []const u8 = "",
-};
-pub const GachaPoolDetailRequest = struct {
-    pub const default: @This() = .{};
-    PoolId: i32 = 0,
-};
-pub const GachaPoolDetailResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    GachaPoolDetail: ?GachaPoolDetail = null,
-};
 pub const _m_ = struct {
     pub const default: @This() = .{};
     o9n: i32 = 0,
@@ -36182,6 +36137,12 @@ pub const DoubleDropFrom = enum(i32) {
     DoubleActivity = 1,
     FromRegress = 2,
 };
+pub const AddCountItemInfo = struct {
+    pub const default: @This() = .{};
+    Id: i32 = 0,
+    Count: i32 = 0,
+    IncrId: i32 = 0,
+};
 pub const ItemLockRequest = struct {
     pub const default: @This() = .{};
     ItemId: i32 = 0,
@@ -36277,6 +36238,11 @@ pub const PhantomItemRemoveNotify = struct {
     pub const default: @This() = .{};
     PhantomItemIncrIdList: std.ArrayList(i32) = .empty,
 };
+pub const ItemFuncValueUpdateNotify = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    FuncValue: i32 = 0,
+};
 pub const WeaponItem = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
@@ -36330,6 +36296,22 @@ pub const ValidTimeItem = struct {
 pub const ValidTimeItemResponse = struct {
     pub const default: @This() = .{};
     ItemList: std.ArrayList(ValidTimeItem) = .empty,
+};
+pub const RobotRoleInfo = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    BaseProp: std.ArrayList(ArrayIntInt) = .empty,
+    AddProp: std.ArrayList(ArrayIntInt) = .empty,
+    RoleEquipmentPropData: ?RolePhantomPropInfo = null,
+};
+pub const RobotRolePropRequest = struct {
+    pub const default: @This() = .{};
+    RoleIds: std.ArrayList(i32) = .empty,
+};
+pub const RobotRolePropResponse = struct {
+    pub const default: @This() = .{};
+    Error: ?ErrorCode = null,
+    RobotRoleInfo: std.ArrayList(RobotRoleInfo) = .empty,
 };
 pub const ItemDeprecateRequest = struct {
     pub const default: @This() = .{};
@@ -41471,6 +41453,15 @@ pub const ResonantChainUnlockResponse = struct {
     RoleId: i32 = 0,
     ResonantChainGroupIndex: i32 = 0,
 };
+pub const RoleSexChangeRequest = struct {
+    pub const default: @This() = .{};
+    Sex: i32 = 0,
+};
+pub const RoleSexChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Sex: i32 = 0,
+};
 pub const RoleElementChangeRequest = struct {
     pub const default: @This() = .{};
     ElementType: i32 = 0,
@@ -41604,32 +41595,6 @@ pub const RoleSkillQuickLevelUpResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     RoleInfo: ?RoleInfo = null,
-};
-pub const RoleVoice = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    VoiceId: i32 = 0,
-};
-pub const PlayerVoiceLanguageRequest = struct {
-    pub const default: @This() = .{};
-};
-pub const PlayerVoiceLanguageResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    RoleVoices: std.ArrayList(RoleVoice) = .empty,
-};
-pub const RoleVoiceSetting = struct {
-    pub const default: @This() = .{};
-    RoleId: i32 = 0,
-    VoiceLanguage: i32 = 0,
-};
-pub const PlayerRoleVoiceSetRequest = struct {
-    pub const default: @This() = .{};
-    RoleVoices: std.ArrayList(RoleVoiceSetting) = .empty,
-};
-pub const PlayerRoleVoiceSetResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
 };
 pub const SecGetReportData2FlowRequest = struct {
     pub const default: @This() = .{};
@@ -42120,7 +42085,7 @@ pub const GameCtxPb = struct {
         BehaviorTree: ?BehaviorTreeCtxPb,
         Entity: ?EntityCtxPb,
         NormalInteract: ?NormalInteractCtxPb,
-        DynamicInteract: ?*DynamicInteractCtxPb,
+        DynamicInteract: ?DynamicInteractCtxPb,
         RandomInteract: ?RandomInteractCtxPb,
         StateChangeAction: ?StateChangeActionCtxPb,
         EntityGroupAction: ?EntityGroupActionCtxPb,
@@ -42202,7 +42167,7 @@ pub const DynamicInteractCtxPb = struct {
     pub const default: @This() = .{};
     EntityCtx: ?EntityCtxPb = null,
     OptionGuid: []const u8 = "",
-    finalOptionCtx: ?GameCtxPb = null,
+    finalOptionCtx: ?*GameCtxPb = null,
 };
 pub const MotorSliderCtxPb = struct {
     pub const default: @This() = .{};
@@ -45457,6 +45422,11 @@ pub const AudioState = struct {
     GroupType: []const u8 = "",
     State: []const u8 = "",
 };
+pub const BanLogoutInfo = struct {
+    pub const default: @This() = .{};
+    Reason: i32 = 0,
+    BanEndTime: i64 = 0,
+};
 pub const CardShowEntry = struct {
     pub const default: @This() = .{};
     CardId: i32 = 0,
@@ -45553,6 +45523,14 @@ pub const PlayerBasicInfoGetResponse = struct {
     Info: ?PlayerDetails = null,
     ErrorCode: ?ErrorCode = null,
 };
+pub const BirthdayInitRequest = struct {
+    pub const default: @This() = .{};
+    Birthday: i32 = 0,
+};
+pub const BirthdayInitResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
 pub const RoleShowListUpdateRequest = struct {
     pub const default: @This() = .{};
     RoleList: std.ArrayList(i32) = .empty,
@@ -45574,6 +45552,14 @@ pub const ReadCardRequest = struct {
     CardId: i32 = 0,
 };
 pub const ReadCardResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const BirthdayShowSetRequest = struct {
+    pub const default: @This() = .{};
+    DisPlay: bool = false,
+};
+pub const BirthdayShowSetResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
@@ -45744,6 +45730,32 @@ pub const PlayerXboxBlockListRequest = struct {
 };
 pub const PlayerXboxBlockListResponse = struct {
     pub const default: @This() = .{};
+};
+pub const RoleVoice = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    VoiceId: i32 = 0,
+};
+pub const PlayerVoiceLanguageRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PlayerVoiceLanguageResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    RoleVoices: std.ArrayList(RoleVoice) = .empty,
+};
+pub const RoleVoiceSetting = struct {
+    pub const default: @This() = .{};
+    RoleId: i32 = 0,
+    VoiceLanguage: i32 = 0,
+};
+pub const PlayerRoleVoiceSetRequest = struct {
+    pub const default: @This() = .{};
+    RoleVoices: std.ArrayList(RoleVoiceSetting) = .empty,
+};
+pub const PlayerRoleVoiceSetResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
 };
 pub const PlayerAttrType = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -45996,6 +46008,13 @@ pub const CompleteInstProgress = struct {
     pub const default: @This() = .{};
     InstId: i32 = 0,
     Count: i32 = 0,
+};
+pub const UpdateNodeProgressNotify = struct {
+    pub const default: @This() = .{};
+    TreeOwnerId: i32 = 0,
+    TreeIncId: i64 = 0,
+    NodeId: i32 = 0,
+    Progress: ?ChildQuestNodeProgress = null,
 };
 pub const UpdateChildQuestNodeStatusNotify = struct {
     pub const default: @This() = .{};
@@ -46652,6 +46671,16 @@ pub const EntityInteractRequest = struct {
     VisionEntityId: i64 = 0,
 };
 pub const EntityInteractResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Interacting: bool = false,
+};
+pub const EntityDynamicInteractRequest = struct {
+    pub const default: @This() = .{};
+    EntityId: i64 = 0,
+    OptionGuid: []const u8 = "",
+};
+pub const EntityDynamicInteractResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     Interacting: bool = false,
@@ -48073,6 +48102,17 @@ pub const MotorDiyPb = struct {
     MotorOutlookPreset: ?MotorOutlookPlayerPresetPb = null,
     LatestMotorSkinSuit: std.ArrayList(MotorDiyEquippedPb) = .empty,
 };
+pub const BirthRoleSelect = struct {
+    pub const default: @This() = .{};
+    Year: i32 = 0,
+    Role: i32 = 0,
+};
+pub const BirthdayInfoUpdateNotify = struct {
+    pub const default: @This() = .{};
+    BirthDayReset: bool = false,
+    RecentRewardTime: i32 = 0,
+    Roles: std.ArrayList(BirthRoleSelect) = .empty,
+};
 pub const BuffItem = struct {
     pub const default: @This() = .{};
     ItemId: i32 = 0,
@@ -48138,6 +48178,18 @@ pub const CalabashMsgNotify = struct {
     pub const default: @This() = .{};
     CalabashMsg: ?CalabashMsg = null,
     CalabashCfg: ?CalabashCfg = null,
+};
+pub const CalabashLevelsRewardNotify = struct {
+    pub const default: @This() = .{};
+    RewardedLevels: std.ArrayList(i32) = .empty,
+};
+pub const CalabashLevelRewardRequest = struct {
+    pub const default: @This() = .{};
+    Level: i32 = 0,
+};
+pub const CalabashLevelRewardResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
 };
 pub const CalabashSkinDataRequest = struct {
     pub const default: @This() = .{};
@@ -48785,6 +48837,17 @@ pub const EntitySimplyMoveInfoPackagePush = struct {
     MoveInfos: std.ArrayList(EntitySimplyMoveInfo) = .empty,
     SceneOwnerId: i32 = 0,
 };
+pub const RemoveSummonEntityRequest = struct {
+    pub const default: @This() = .{};
+    SummonerId: i64 = 0,
+    SkillId: i32 = 0,
+    RemoveType: i32 = 0,
+    RemoveENtityIds: std.ArrayList(i64) = .empty,
+};
+pub const RemoveSummonEntityResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
 pub const EntityOnLandedRequest = struct {
     pub const default: @This() = .{};
     EntityId: i64 = 0,
@@ -48898,6 +48961,15 @@ pub const SummonRequest = struct {
     SummonInfo: ?SummonRequestInfo = null,
 };
 pub const SummonResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const Summon3Request = struct {
+    pub const default: @This() = .{};
+    SummonerEntityId: i64 = 0,
+    SummonInfo: ?SummonRequestInfo = null,
+};
+pub const Summon3Response = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
 };
@@ -50200,6 +50272,49 @@ pub const ExploreProgressResponse = struct {
     pub const default: @This() = .{};
     AreaProgress: std.ArrayList(AreaExploreInfo) = .empty,
 };
+pub const MultiExploreScoreRewardRequest = struct {
+    pub const default: @This() = .{};
+    nBs: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const MultiExploreScoreRewardResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const CountryExploreScoreInfoRequest = struct {
+    pub const default: @This() = .{};
+    CountryId: i32 = 0,
+};
+pub const CountryExploreScoreInfoResponse = struct {
+    pub const default: @This() = .{};
+    ExploreScore: i32 = 0,
+    CountryExploreScoreReceived: std.ArrayList(CountryExploreScoreReceived) = .empty,
+};
+pub const CountryExploreScoreReceived = struct {
+    pub const default: @This() = .{};
+    AreaId: i32 = 0,
+    ExploreProgress: std.ArrayList(i32) = .empty,
+};
+pub const CountryExploreLevel = struct {
+    pub const default: @This() = .{};
+    CountryId: i32 = 0,
+    ExploreLevel: i32 = 0,
+};
+pub const ExploreLevelNotify = struct {
+    pub const default: @This() = .{};
+    CountryExploreLevel: std.ArrayList(CountryExploreLevel) = .empty,
+};
+pub const ReceiveAreaStageRewardAsyncRequest = struct {
+    pub const default: @This() = .{};
+    AreaStageRewardDataList: std.ArrayList(i32) = .empty,
+};
+pub const ReceiveAreaStageRewardAsyncResponse = struct {
+    pub const default: @This() = .{};
+    AreaStageRewardDataList: std.ArrayList(i32) = .empty,
+};
+pub const ExploreProgressRewardIdsNotify = struct {
+    pub const default: @This() = .{};
+    AreaStageRewardDataList: std.ArrayList(i32) = .empty,
+};
 pub const ExploreToolAllNotify = struct {
     pub const default: @This() = .{};
     SkillList: std.ArrayList(i32) = .empty,
@@ -50250,6 +50365,43 @@ pub const ExploreSkillRouletteSetResponse = struct {
     SkillRoulette: ?ExploreSkillRoulette = null,
     RouletteType: ?RouletteType = null,
     SkillRoulettes: std.ArrayList(ExploreSkillRoulette) = .empty,
+};
+pub const UnlockIllustratedPhantom = struct {
+    pub const default: @This() = .{};
+    MonsterId: i32 = 0,
+    SkinIds: std.ArrayList(i32) = .empty,
+    EqupiedSkin: i32 = 0,
+    IsSpecial: bool = false,
+};
+pub const PhantomInteractionUnlockNotify = struct {
+    pub const default: @This() = .{};
+    UnlockIllustratedPhantoms: std.ArrayList(UnlockIllustratedPhantom) = .empty,
+    EquipedMonsterIds: std.ArrayList(i32) = .empty,
+};
+pub const PhantomInteractionInfoUpdateNotify = struct {
+    pub const default: @This() = .{};
+    UnlockIllustratedPhantom: ?UnlockIllustratedPhantom = null,
+};
+pub const PhantomInteractionEquipRequest = struct {
+    pub const default: @This() = .{};
+    EquipedMonsterIds: std.ArrayList(i32) = .empty,
+};
+pub const PhantomInteractionEquipResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const SkinChangeInfo = struct {
+    pub const default: @This() = .{};
+    MonsterId: i32 = 0,
+    SkinId: i32 = 0,
+};
+pub const PhantomInteractionSkinChangeRequest = struct {
+    pub const default: @This() = .{};
+    SkinChangeInfos: std.ArrayList(SkinChangeInfo) = .empty,
+};
+pub const PhantomInteractionSkinChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
 };
 pub const FavorQuest = struct {
     pub const default: @This() = .{};
@@ -50693,6 +50845,35 @@ pub const GachaUsePoolRequest = struct {
 pub const GachaUsePoolResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
+};
+pub const GachaItem = struct {
+    pub const default: @This() = .{};
+    ItemId: i32 = 0,
+    IsUp: bool = false,
+};
+pub const GachaPoolDetail = struct {
+    pub const default: @This() = .{};
+    Text: []const u8 = "",
+    FiveStarRoles: std.ArrayList(GachaItem) = .empty,
+    FiveStarWeapons: std.ArrayList(GachaItem) = .empty,
+    FourStarRoles: std.ArrayList(GachaItem) = .empty,
+    FourStarWeapons: std.ArrayList(GachaItem) = .empty,
+    ThreeStarRoles: std.ArrayList(GachaItem) = .empty,
+    FiveStarTitle: []const u8 = "",
+    FileStarDetail: []const u8 = "",
+    FourStarTitle: []const u8 = "",
+    FourStarDetail: []const u8 = "",
+    ThreeStarTitle: []const u8 = "",
+    ThreeStarDetail: []const u8 = "",
+};
+pub const GachaPoolDetailRequest = struct {
+    pub const default: @This() = .{};
+    PoolId: i32 = 0,
+};
+pub const GachaPoolDetailResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    GachaPoolDetail: ?GachaPoolDetail = null,
 };
 pub const GivebackInfoRequest = struct {
     pub const default: @This() = .{};
@@ -51198,6 +51379,14 @@ pub const ReconnectResponse = struct {
     LastRecvSeqNo: i32 = 0,
     Timestamp: i64 = 0,
     IsPermittedSilentLogin: bool = false,
+};
+pub const LogoutNotify = struct {
+    pub const default: @This() = .{};
+    Ban: ?union(enum) {
+        BanInfo: ?BanLogoutInfo,
+    } = null,
+    ErrorCode: ?ErrorCode = null,
+    logoutReason: i32 = 0,
 };
 pub const ProtoKeyRequest = struct {
     pub const default: @This() = .{};
@@ -51762,6 +51951,114 @@ pub const ShopRecommend = struct {
     Show: bool = false,
     TabImage: []const u8 = "",
 };
+pub const PhBaPlanAttrDeal = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    PhBaDefault = 0,
+    PhBaLock = 1,
+    PhBaDiscard = 2,
+};
+pub const PhBaPlanAttr = struct {
+    pub const default: @This() = .{};
+    AttrId: i32 = 0,
+    Deal: ?PhBaPlanAttrDeal = null,
+};
+pub const PhBaCostType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    PhBaCostDefault = 0,
+    PhBaCost1 = 1,
+    PhBaCost3 = 3,
+    PhBaCost4 = 4,
+};
+pub const PhBaOneCostPlan = struct {
+    pub const default: @This() = .{};
+    CostType: ?PhBaCostType = null,
+    AttrList: std.ArrayList(PhBaPlanAttr) = .empty,
+};
+pub const PhBaOneSuitPlan = struct {
+    pub const default: @This() = .{};
+    SuitId: i32 = 0,
+    OneCostList: std.ArrayList(PhBaOneCostPlan) = .empty,
+    IsOpen: bool = false,
+};
+pub const PhBaOneAllSuitPlan = struct {
+    pub const default: @This() = .{};
+    SuitPlanList: std.ArrayList(PhBaOneSuitPlan) = .empty,
+    Name: []const u8 = "",
+};
+pub const PhBaPlanUsePlanRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PhBaPlanUsePlanResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SelfPlanCode: []const u8 = "",
+    UsePlan: ?PhBaOneAllSuitPlan = null,
+    FiveStarSwitch: bool = false,
+    TowPlanSame: bool = false,
+};
+pub const PhBaPlanSaveUsePlanRequest = struct {
+    pub const default: @This() = .{};
+    UsePlan: ?PhBaOneAllSuitPlan = null,
+};
+pub const PhBaPlanSaveUsePlanResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SelfPlanCode: []const u8 = "",
+    TowPlanSame: bool = false,
+};
+pub const PhBaPlanFindPlanRequest = struct {
+    pub const default: @This() = .{};
+    TargetCode: []const u8 = "",
+};
+pub const PhBaPlanFindPlanResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Plan: ?PhBaOneAllSuitPlan = null,
+    TowPlanSame: bool = false,
+};
+pub const PhBaPlanSetStatusInfo = struct {
+    pub const default: @This() = .{};
+    Open: bool = false,
+    Suit: i32 = 0,
+};
+pub const PhBaPlanSetPlanStatusRequest = struct {
+    pub const default: @This() = .{};
+    SetInfo: std.ArrayList(PhBaPlanSetStatusInfo) = .empty,
+};
+pub const PhBaPlanSetPlanStatusResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    TowPlanSame: bool = false,
+};
+pub const PhBaPlanUpdatePlanRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PhBaPlanUpdatePlanResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    SelfPlanCode: []const u8 = "",
+};
+pub const PhBaPlanSetFiveStarSwitchRequest = struct {
+    pub const default: @This() = .{};
+    Open: bool = false,
+};
+pub const PhBaPlanSetFiveStarSwitchResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PhBaPlanBatchOper = struct {
+    pub const default: @This() = .{};
+    Oper: ?PhantomFuncValue = null,
+    IncrId: std.ArrayList(i32) = .empty,
+};
+pub const PhBaPlanBatchOperRequest = struct {
+    pub const default: @This() = .{};
+    BatchOper: std.ArrayList(PhBaPlanBatchOper) = .empty,
+};
+pub const PhBaPlanBatchOperResponse = struct {
+    pub const default: @This() = .{};
+    errCode: ?ErrorCode = null,
+};
 pub const PhantomConsumeItem = struct {
     pub const default: @This() = .{};
     IncId: i32 = 0,
@@ -51779,6 +52076,10 @@ pub const PhantomLevelUpResponse = struct {
     ErrorCode: ?ErrorCode = null,
     UpdateInfo: ?PhantomItem = null,
     ItemMap: std.ArrayList(MapEntry(i32, i32)) = .empty,
+};
+pub const PhantomPutOnNotify = struct {
+    pub const default: @This() = .{};
+    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
 };
 pub const PhantomPutOnRequest = struct {
     pub const default: @This() = .{};
@@ -51801,6 +52102,10 @@ pub const PhantomAutoPutResponse = struct {
     ErrorCode: ?ErrorCode = null,
     EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
 };
+pub const PhantomItemUpdateNotify = struct {
+    pub const default: @This() = .{};
+    UpdateInfo: std.ArrayList(PhantomItem) = .empty,
+};
 pub const RolePhantomPropUpdateNotify = struct {
     pub const default: @This() = .{};
     PropInfo: std.ArrayList(RolePhantomPropInfo) = .empty,
@@ -51819,12 +52124,150 @@ pub const PhantomSkinUnlockNotify = struct {
     pub const default: @This() = .{};
     PhantomSkinList: std.ArrayList(i32) = .empty,
 };
+pub const PhantomSkinChangeRequest = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    SkinId: i32 = 0,
+    ChangeDefault: bool = false,
+};
+pub const PhantomSkinChangeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PhantomRefiningRequest = struct {
+    pub const default: @This() = .{};
+    IncrIdList: std.ArrayList(i32) = .empty,
+};
+pub const PhantomRefiningResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Items: std.ArrayList(AddCountItemInfo) = .empty,
+    ExtraItems: std.ArrayList(AddCountItemInfo) = .empty,
+    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
+};
+pub const CalabashBatchRefiningRequest = struct {
+    pub const default: @This() = .{};
+    IncrIdList: std.ArrayList(i32) = .empty,
+};
+pub const CalabashBatchRefiningResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Items: std.ArrayList(AddCountItemInfo) = .empty,
+    ExtraItems: std.ArrayList(AddCountItemInfo) = .empty,
+    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
+};
+pub const PhantomBatchDirectRefiningRequest = struct {
+    pub const default: @This() = .{};
+    IncrIdList: std.ArrayList(i32) = .empty,
+    TargetFetterGroupId: i32 = 0,
+};
+pub const PhantomBatchDirectRefiningResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Items: std.ArrayList(AddCountItemInfo) = .empty,
+    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
+    DirectRefineWeekTimes: i32 = 0,
+};
 pub const PhantomPolishRequest = struct {
     pub const default: @This() = .{};
     IncrId: i32 = 0,
     PhantomMainPropItemId: i32 = 0,
 };
 pub const PhantomPolishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    UpdateInfo: ?PhantomItem = null,
+};
+pub const PhantomSettingType = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    AutoLock = 0,
+    AutoDisuse = 1,
+};
+pub const PhantomManageConfigUpdateRequest = struct {
+    pub const default: @This() = .{};
+    Setting: ?PhantomManageConfig = null,
+    SettingType: ?PhantomSettingType = null,
+};
+pub const PhantomManageConfigUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Setting: ?PhantomManageConfig = null,
+};
+pub const PhantomSettingInfo = struct {
+    pub const default: @This() = .{};
+    Setting: ?PhantomManageConfig = null,
+    SettingType: ?PhantomSettingType = null,
+};
+pub const PhantomSettingBatchUpdateRequest = struct {
+    pub const default: @This() = .{};
+    Settings: std.ArrayList(PhantomSettingInfo) = .empty,
+};
+pub const PhantomSettingBatchUpdateResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    Settings: std.ArrayList(PhantomSettingInfo) = .empty,
+};
+pub const PhantomManageConfigRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const PhantomManageConfigResponse = struct {
+    pub const default: @This() = .{};
+    AutoLock: std.ArrayList(PhantomManageConfig) = .empty,
+    AutoDisuse: std.ArrayList(PhantomManageConfig) = .empty,
+};
+pub const PhantomManageConfig = struct {
+    pub const default: @This() = .{};
+    Index: i32 = 0,
+    IsOn: bool = false,
+    Name: []const u8 = "",
+    PhantomRule: std.ArrayList(PhantomRuleMap) = .empty,
+};
+pub const PhantomRuleMap = struct {
+    pub const default: @This() = .{};
+    RuleId: i32 = 0,
+    ValueList: std.ArrayList(i32) = .empty,
+};
+pub const PhantomFuncValue = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Locked = 0,
+    Disuse = 1,
+    Reset = 2,
+};
+pub const PhantomFuncValueBatchRequest = struct {
+    pub const default: @This() = .{};
+    FuncValue: ?PhantomFuncValue = null,
+    IncrId: std.ArrayList(i32) = .empty,
+};
+pub const PhantomFuncValueBatchResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const PhantomBatchPolishRequest = struct {
+    pub const default: @This() = .{};
+    IncrIds: std.ArrayList(i32) = .empty,
+    PhantomMainPropItemId: i32 = 0,
+};
+pub const PhantomBatchPolishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    UpdateInfos: std.ArrayList(PhantomItem) = .empty,
+};
+pub const PhantomVicePolishRequest = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    LockPropIndex: std.ArrayList(i32) = .empty,
+};
+pub const PhantomVicePolishResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+    PhantomSubProp: std.ArrayList(PhantomPropInfo) = .empty,
+};
+pub const PhantomVicePolishAckRequest = struct {
+    pub const default: @This() = .{};
+    IncrId: i32 = 0,
+    Ack: bool = false,
+};
+pub const PhantomVicePolishAckResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     UpdateInfo: ?PhantomItem = null,
@@ -52068,6 +52511,100 @@ pub const QuestState = enum(i32) {
     InProgress = 2,
     Finish = 3,
     Delete = 4,
+};
+pub const QuestInfo = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+    Status: ?QuestState = null,
+};
+pub const QuestListNotify = struct {
+    pub const default: @This() = .{};
+    Quests: std.ArrayList(QuestInfo) = .empty,
+};
+pub const TraceQuestNotify = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const TraceQuestRequest = struct {
+    pub const default: @This() = .{};
+    TraceType: i32 = 0,
+    QuestId: i32 = 0,
+    Operate: i32 = 0,
+};
+pub const TraceQuestResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+};
+pub const QuestReadyListNotify = struct {
+    pub const default: @This() = .{};
+    QuestId: std.ArrayList(i32) = .empty,
+};
+pub const QuestShowListNotify = struct {
+    pub const default: @This() = .{};
+    QuestId: std.ArrayList(i32) = .empty,
+};
+pub const QuestFinishListNotify = struct {
+    pub const default: @This() = .{};
+    QuestId: std.ArrayList(i32) = .empty,
+};
+pub const QuestRedDotRequest = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+    Operate: i32 = 0,
+};
+pub const QuestRedDotResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+};
+pub const QuestRedDotNotify = struct {
+    pub const default: @This() = .{};
+    QuestId: std.ArrayList(i32) = .empty,
+};
+pub const ConfirmQuestResourceRequest = struct {
+    pub const default: @This() = .{};
+    QuestIds: std.ArrayList(i32) = .empty,
+};
+pub const ConfirmQuestResourceResponse = struct {
+    pub const default: @This() = .{};
+    ErrorId: ?ErrorCode = null,
+};
+pub const SetQuestFocusModeRequest = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const SetQuestFocusModeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const CancelQuestFocusModeRequest = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const CancelQuestFocusModeResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const AcceptFocusWaitQuestRequest = struct {
+    pub const default: @This() = .{};
+    QuestId: i32 = 0,
+};
+pub const AcceptFocusWaitQuestResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: ?ErrorCode = null,
+};
+pub const FocusQuestSetNotify = struct {
+    pub const default: @This() = .{};
+    FocusQuestId: i32 = 0,
+    Reason: ?QuestFocusReason = null,
+};
+pub const FocusQuestChangeNotify = struct {
+    pub const default: @This() = .{};
+    FocusQuestId: i32 = 0,
+};
+pub const QuestFocusReason = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    Request = 0,
+    Inherit = 1,
 };
 pub const SetFocusModeDeterConditionRequest = struct {
     pub const default: @This() = .{};
@@ -52547,405 +53084,4 @@ pub const LobbyListResponse = struct {
     pub const default: @This() = .{};
     ErrorCode: ?ErrorCode = null,
     ItemList: std.ArrayList(PlayerDetails) = .empty,
-};
-
-pub const AddCountItemInfo = struct {
-    pub const default: @This() = .{};
-    Id: i32 = 0,
-    Count: i32 = 0,
-    IncrId: i32 = 0,
-};
-
-pub const BirthdayInfoUpdateNotify = struct {
-    pub const default: @This() = .{};
-    BirthDayReset: bool = false,
-    RecentRewardTime: i32 = 0,
-    Roles: std.ArrayList(KS1) = .empty,
-};
-
-pub const BirthdayInitRequest = struct {
-    pub const default: @This() = .{};
-    Birthday: i32 = 0,
-};
-
-pub const BirthdayInitResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ErrorCode = .Success,
-};
-
-pub const BirthdayShowSetRequest = struct {
-    pub const default: @This() = .{};
-    DisPlay: bool = false,
-};
-
-pub const BirthdayShowSetResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ErrorCode = .Success,
-};
-
-pub const CalabashLevelsRewardNotify = struct {
-    pub const default: @This() = .{};
-    RewardedLevels: std.ArrayList(i32) = .empty,
-};
-
-pub const CalabashLevelRewardRequest = struct {
-    pub const default: @This() = .{};
-    Level: i32 = 0,
-};
-
-pub const CalabashLevelRewardResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const ItemFuncValueUpdateNotify = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    FuncValue: i32 = 0,
-};
-
-pub const PhBaOneAllSuitPlan = struct {
-    pub const default: @This() = .{};
-    SuitPlanList: std.ArrayList(PhBaOneSuitPlan) = .empty,
-    Name: []const u8 = "",
-};
-
-pub const PhBaOneCostPlan = struct {
-    pub const default: @This() = .{};
-    CostType: i32 = 0,
-    AttrList: std.ArrayList(PhBaPlanAttr) = .empty,
-};
-
-pub const PhBaOneSuitPlan = struct {
-    pub const default: @This() = .{};
-    SuitId: i32 = 0,
-    OneCostList: std.ArrayList(PhBaOneCostPlan) = .empty,
-    IsOpen: bool = false,
-};
-
-pub const PhBaPlanAttr = struct {
-    pub const default: @This() = .{};
-    AttrId: i32 = 0,
-    Deal: i32 = 0,
-};
-
-pub const PhBaPlanBatchOper = struct {
-    pub const default: @This() = .{};
-    Oper: i32 = 0,
-    IncrId: std.ArrayList(i32) = .empty,
-};
-
-pub const PhBaPlanFindPlanRequest = struct {
-    pub const default: @This() = .{};
-    TargetCode: []const u8 = "",
-};
-
-pub const PhBaPlanFindPlanResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    Plan: ?PhBaOneAllSuitPlan = null,
-    TowPlanSame: bool = false,
-};
-
-pub const PhBaPlanSaveUsePlanRequest = struct {
-    pub const default: @This() = .{};
-    UsePlan: ?PhBaOneAllSuitPlan = null,
-};
-
-pub const PhBaPlanSaveUsePlanResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    SelfPlanCode: []const u8 = "",
-    TowPlanSame: bool = false,
-};
-
-pub const PhBaPlanSetFiveStarSwitchRequest = struct {
-    pub const default: @This() = .{};
-    Open: bool = false,
-};
-
-pub const PhBaPlanSetFiveStarSwitchResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-};
-
-pub const PhBaPlanSetPlanStatusRequest = struct {
-    pub const default: @This() = .{};
-    SetInfo: std.ArrayList(PhBaPlanSetStatusInfo) = .empty,
-};
-
-pub const PhBaPlanSetPlanStatusResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    TowPlanSame: bool = false,
-};
-
-pub const PhBaPlanSetStatusInfo = struct {
-    pub const default: @This() = .{};
-    Open: bool = false,
-    Suit: i32 = 0,
-};
-
-pub const PhBaPlanUpdatePlanRequest = struct {
-    pub const default: @This() = .{};
-};
-
-pub const PhBaPlanUpdatePlanResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    SelfPlanCode: []const u8 = "",
-};
-
-pub const PhBaPlanUsePlanRequest = struct {
-    pub const default: @This() = .{};
-};
-
-pub const PhBaPlanUsePlanResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: i32 = 0,
-    SelfPlanCode: []const u8 = "",
-    UsePlan: ?PhBaOneAllSuitPlan = null,
-    FiveStarSwitch: bool = false,
-    TowPlanSame: bool = false,
-};
-
-pub const PhantomBatchDirectRefiningRequest = struct {
-    pub const default: @This() = .{};
-    IncrIdList: std.ArrayList(i32) = .empty,
-    TargetFetterGroupId: i32 = 0,
-};
-
-pub const PhantomBatchDirectRefiningResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Items: std.ArrayList(AddCountItemInfo) = .empty,
-    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
-    DirectRefineWeekTimes: i32 = 0,
-};
-
-pub const PhantomBatchPolishRequest = struct {
-    pub const default: @This() = .{};
-    IncrIds: std.ArrayList(i32) = .empty,
-    PhantomMainPropItemId: i32 = 0,
-};
-
-pub const PhantomBatchPolishResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    UpdateInfos: std.ArrayList(PhantomItem) = .empty,
-};
-
-pub const CalabashBatchRefiningRequest = struct {
-    pub const default: @This() = .{};
-    IncrIdList: std.ArrayList(i32) = .empty,
-};
-
-pub const CalabashBatchRefiningResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Items: std.ArrayList(AddCountItemInfo) = .empty,
-    ExtraItems: std.ArrayList(AddCountItemInfo) = .empty,
-    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
-};
-
-pub const PhantomFuncValueBatchRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: std.ArrayList(i32) = .empty,
-    FuncValue: i32 = 0,
-};
-
-pub const PhantomFuncValueBatchResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const PhantomItemUpdateNotify = struct {
-    pub const default: @This() = .{};
-    UpdateInfo: std.ArrayList(PhantomItem) = .empty,
-};
-
-pub const PhantomManageConfig = struct {
-    pub const default: @This() = .{};
-    Index: i32 = 0,
-    IsOn: bool = false,
-    Name: []const u8 = "",
-    PhantomRule: std.ArrayList(PhantomRuleMap) = .empty,
-};
-
-pub const PhantomManageConfigRequest = struct {
-    pub const default: @This() = .{};
-};
-
-pub const PhantomManageConfigResponse = struct {
-    pub const default: @This() = .{};
-    AutoLock: std.ArrayList(PhantomManageConfig) = .empty,
-    AutoDisuse: std.ArrayList(PhantomManageConfig) = .empty,
-};
-
-pub const PhantomManageConfigUpdateRequest = struct {
-    pub const default: @This() = .{};
-    SettingType: i32 = 0,
-    Setting: ?PhantomManageConfig = null,
-};
-
-pub const PhantomManageConfigUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Setting: ?PhantomManageConfig = null,
-};
-
-pub const PhBaPlanBatchOperRequest = struct {
-    pub const default: @This() = .{};
-    BatchOper: std.ArrayList(PhBaPlanBatchOper) = .empty,
-};
-
-pub const PhBaPlanBatchOperResponse = struct {
-    pub const default: @This() = .{};
-    errCode: ?ErrorCode = null,
-};
-
-pub const PhantomPutOnNotify = struct {
-    pub const default: @This() = .{};
-    EquipInfoList: std.ArrayList(RolePhantomEquipInfo) = .empty,
-};
-
-pub const PhantomRefiningRequest = struct {
-    pub const default: @This() = .{};
-    IncrIdList: std.ArrayList(i32) = .empty,
-};
-
-pub const PhantomRefiningResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Items: std.ArrayList(AddCountItemInfo) = .empty,
-    ExtraItems: std.ArrayList(AddCountItemInfo) = .empty,
-    CostPhantoms: std.ArrayList(PhantomItem) = .empty,
-};
-
-pub const PhantomRuleMap = struct {
-    pub const default: @This() = .{};
-    RuleId: i32 = 0,
-    ValueList: std.ArrayList(i32) = .empty,
-};
-
-pub const PhantomSettingBatchUpdateRequest = struct {
-    pub const default: @This() = .{};
-    Settings: std.ArrayList(PhantomSettingInfo) = .empty,
-};
-
-pub const PhantomSettingBatchUpdateResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    Settings: std.ArrayList(PhantomSettingInfo) = .empty,
-};
-
-pub const PhantomSettingInfo = struct {
-    pub const default: @This() = .{};
-    Setting: ?PhantomManageConfig = null,
-    SettingType: i32 = 0,
-};
-
-pub const PhantomSkinChangeRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    SkinId: i32 = 0,
-    ChangeDefault: bool = false,
-};
-
-pub const PhantomSkinChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const PhantomVicePolishAckRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    Ack: bool = false,
-};
-
-pub const PhantomVicePolishAckResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    UpdateInfo: ?PhantomItem = null,
-};
-
-pub const PhantomVicePolishRequest = struct {
-    pub const default: @This() = .{};
-    IncrId: i32 = 0,
-    LockPropIndex: std.ArrayList(i32) = .empty,
-};
-
-pub const PhantomVicePolishResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-    PhantomSubProp: std.ArrayList(PhantomPropInfo) = .empty,
-};
-
-pub const PhantomInteractionEquipRequest = struct {
-    pub const default: @This() = .{};
-    EquipedMonsterIds: std.ArrayList(i32) = .empty,
-};
-
-pub const PhantomInteractionEquipResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const PhantomInteractionInfoUpdateNotify = struct {
-    pub const default: @This() = .{};
-    UnlockIllustratedPhantom: ?UnlockIllustratedPhantom = null,
-};
-
-pub const PhantomInteractionSkinChangeRequest = struct {
-    pub const default: @This() = .{};
-    SkinChangeInfos: std.ArrayList(SkinChangeInfo) = .empty,
-};
-
-pub const PhantomInteractionSkinChangeResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const PhantomInteractionUnlockNotify = struct {
-    pub const default: @This() = .{};
-    UnlockIllustratedPhantoms: std.ArrayList(UnlockIllustratedPhantom) = .empty,
-    EquipedMonsterIds: std.ArrayList(i32) = .empty,
-};
-
-pub const RemoveSummonEntityRequest = struct {
-    pub const default: @This() = .{};
-    SummonerId: i64 = 0,
-    SkillId: i32 = 0,
-    RemoveType: i32 = 0,
-    RemoveENtityIds: std.ArrayList(i64) = .empty,
-};
-
-pub const RemoveSummonEntityResponse = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const SkinChangeInfo = struct {
-    pub const default: @This() = .{};
-    MonsterId: i32 = 0,
-    SkinId: i32 = 0,
-};
-
-pub const Summon3Request = struct {
-    pub const default: @This() = .{};
-    SummonerEntityId: i64 = 0,
-    SummonInfo: ?SummonRequestInfo = null,
-};
-
-pub const Summon3Response = struct {
-    pub const default: @This() = .{};
-    ErrorCode: ?ErrorCode = null,
-};
-
-pub const UnlockIllustratedPhantom = struct {
-    pub const default: @This() = .{};
-    MonsterId: i32 = 0,
-    SkinIds: std.ArrayList(i32) = .empty,
-    EqupiedSkin: i32 = 0,
-    IsSpecial: bool = false,
 };

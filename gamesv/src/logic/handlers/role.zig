@@ -5,6 +5,7 @@ const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Connection = @import("../../network/Connection.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 const PlayerEchoComponent = @import("../component/player/PlayerEchoComponent.zig");
 const PlayerCosmeticComponent = @import("../component/player/PlayerCosmeticComponent.zig");
@@ -12,6 +13,7 @@ const PlayerInventoryComponent = @import("../component/player/PlayerInventoryCom
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const CosmeticsHelper = @import("../helpers/cosmetics.zig");
 const RoleStats = @import("../helpers/role_stats.zig");
+const RoleHelper = @import("../helpers/role.zig");
 
 fn buildEmptyStorageRecord(
     red_dot_type: pb.EClientStorageSystemIdType,
@@ -114,6 +116,7 @@ pub fn pushData(
     conn: *Connection,
     alloc: mem.Alloc,
     assets: *const Assets,
+    basic_comp: *PlayerBasicComponent,
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
@@ -156,12 +159,26 @@ pub fn pushData(
     storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.GetOrnament, alloc.arena));
     try conn.push(storage_info_notify, alloc.arena);
 
+    const selected_main_role = RoleHelper.selectedMainRoleId(
+        assets,
+        role_comp,
+        basic_comp.info.attributes.sex,
+        basic_comp.info.selected_main_role_id,
+    );
+    try conn.push(pb.RoleChangeUnlockNotify{
+        .UnlockRoleIds = try RoleHelper.mainRoleUnlockList(assets, basic_comp.info.attributes.sex, alloc.arena),
+    }, alloc.arena);
+
     var notify: pb.PbGetRoleListNotify = .default;
 
     try notify.RoleList.ensureTotalCapacity(alloc.arena, role_comp.role_map.count());
     var iterator = role_comp.role_map.iterator();
 
     while (iterator.next()) |role| {
+        if (selected_main_role) |selected| {
+            if (RoleHelper.isMainRole(assets, role.key_ptr.*) and role.key_ptr.* != selected) continue;
+        }
+
         notify.RoleList.appendAssumeCapacity(try RoleStats.toClientRoleInfo(
             alloc.gpa,
             alloc.arena,

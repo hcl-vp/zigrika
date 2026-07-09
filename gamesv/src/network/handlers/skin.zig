@@ -184,7 +184,7 @@ fn refreshRoleOrnamentEntity(
     scene: *Scene,
     role_id: i32,
     role: anytype,
-    stale_ornament_id: i32,
+    stale_ornament_ids: []const i32,
 ) !void {
     _ = events;
     const slice = scene.entities.slice();
@@ -201,10 +201,9 @@ fn refreshRoleOrnamentEntity(
         }
         const ornament_comp: Scene.Entity.OrnamentComponent = slice.items(.ornament)[i].?;
 
-        const ornament_id = role.getOrnament(role.role_skin_id);
-        const stale_ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(assets, stale_ornament_id, alloc.arena);
-        const ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForRoleSkin(assets, ornament_id, alloc.arena);
-        const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIds(assets, ornament_id, alloc.gpa);
+        const stale_ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForIds(assets, stale_ornament_ids, alloc.arena);
+        const ornament_buffs = try CosmeticsHelper.buildOrnamentBuffsForIds(assets, ornament_ids, alloc.arena);
+        const ornament_born_buff_ids = try CosmeticsHelper.buildOrnamentBornBuffIdsForIds(assets, ornament_ids, alloc.gpa);
         const entity: Scene.Entity = .{
             .index = i,
             .net_id = slice.items(.entity_id)[i].net_id,
@@ -281,6 +280,107 @@ fn pushOrnamentEquipMap(txn: anytype, alloc: mem.Alloc, role_comp: *PlayerRoleCo
     try txn.conn.push(pb.OrnamentDressInfoUpdateNotify{
         .OrnamentDressInfos = try CosmeticsHelper.buildOrnamentEquipMap(role_comp, alloc.arena),
     }, alloc.arena);
+}
+
+fn equippedCalabashSkinId(assets: *const Assets, role_comp: *PlayerRoleComponent) i32 {
+    var roles = role_comp.role_map.iterator();
+    while (roles.next()) |role| {
+        if (!RoleHelper.isMainRole(assets, role.key_ptr.*)) continue;
+        if (role.value_ptr.calabash_skin_id != 0) return role.value_ptr.calabash_skin_id;
+    }
+
+    return 0;
+}
+
+fn calabashSkinIdList(assets: *const Assets, arena: std.mem.Allocator) !std.ArrayList(i32) {
+    var list: std.ArrayList(i32) = .empty;
+    try list.ensureTotalCapacity(arena, assets.tables.calabash_skin.items.len);
+
+    for (assets.tables.calabash_skin.items) |skin| {
+        list.appendAssumeCapacity(skin.Id);
+    }
+
+    return list;
+}
+
+fn pushEntityCalabashSkinChange(
+    txn: anytype,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    assets: *const Assets,
+    scene: *Scene,
+    skin_id: i32,
+) !void {
+    const slice = scene.entities.slice();
+
+    for (slice.items(.config), 0..) |config, i| {
+        if (!RoleHelper.isMainRole(assets, config.config_id)) continue;
+
+        if (slice.items(.calabash_skin)[i]) |*calabash_skin| {
+            calabash_skin.skin_id = skin_id;
+        } else {
+            slice.items(.calabash_skin)[i] = .{ .skin_id = skin_id };
+        }
+
+        const entity: Scene.Entity = .{
+            .index = i,
+            .net_id = slice.items(.entity_id)[i].net_id,
+        };
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.CalabashSkinComponent});
+        try txn.conn.push(pb.EntityCalabashSkinChangeNotify{
+            .EntityId = entity.net_id,
+            .CalabashSkinCoponent = .{ .CalabashSkinId = skin_id },
+        }, alloc.arena);
+    }
+}
+
+pub fn onCalabashSkinDataRequest(
+    txn: *Transaction(pb.CalabashSkinDataRequest),
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .EquipedSkinId = equippedCalabashSkinId(assets, role_comp),
+        .SkinIdList = try calabashSkinIdList(assets, alloc.arena),
+    });
+}
+
+pub fn onCalabashSkinTakeOnRequest(
+    txn: *Transaction(pb.CalabashSkinTakeOnRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    assets: *const Assets,
+    scene: *Scene,
+    role_comp: *PlayerRoleComponent,
+) !void {
+    const skin_id = txn.message.SkinId;
+    if (skin_id != 0 and assets.tables.calabash_skin.getDataById(skin_id) == null) {
+        txn.respond(.{ .ErrorCode = .CalabashSkinUnLockErr });
+        return;
+    }
+
+    var changed_roles: std.ArrayList(i32) = .empty;
+    defer changed_roles.deinit(alloc.gpa);
+
+    var roles = role_comp.role_map.iterator();
+    while (roles.next()) |role| {
+        const role_id = role.key_ptr.*;
+        if (!RoleHelper.isMainRole(assets, role_id)) continue;
+        if (role.value_ptr.calabash_skin_id == skin_id) continue;
+
+        role.value_ptr.calabash_skin_id = skin_id;
+        try changed_roles.append(alloc.gpa, role_id);
+    }
+
+    for (changed_roles.items) |role_id| {
+        try events.enqueue(.role_info_modified, .{ .role_id = role_id });
+    }
+
+    try pushEntityCalabashSkinChange(txn, alloc, fs, assets, scene, skin_id);
+    txn.respond(.{ .ErrorCode = .Success, .SkinId = skin_id });
 }
 
 pub fn onUnlockRoleSkinListRequest(
@@ -466,7 +566,7 @@ pub fn onRoleSkinChangeRequest(
     };
 
     const skin = findRoleSkin(assets, request.RoleId, skin_id);
-    const stale_ornament_id = role.getOrnament(role.role_skin_id);
+    const stale_ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(assets, role.*, role.role_skin_id, alloc.arena);
     role.role_skin_id = skin_id;
     if (request.IsWearWeaponSkin) {
         if (skin) |role_skin| {
@@ -491,7 +591,7 @@ pub fn onRoleSkinChangeRequest(
 
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
     try events.enqueue(.update_formations, .{});
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_id);
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_ids);
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -507,13 +607,13 @@ pub fn onChangeOrnamentRequest(
     cosmetic_comp: *PlayerCosmeticComponent,
 ) !void {
     const role_skin_id = txn.message.RoleSkinId;
-    const ornament_id = if (txn.message.IsDress) txn.message.OrnamentId else 0;
+    const ornament_id = txn.message.OrnamentId;
     const role_id = roleIdForSkin(assets, role_skin_id) orelse {
         txn.respond(.{ .ErrorCode = .RequestParamError });
         return;
     };
 
-    if (ornament_id != 0 and (!isOwnedOrnament(cosmetic_comp.info, ornament_id) or CosmeticsHelper.ornamentForRoleSkin(assets, role_skin_id, ornament_id) == null)) {
+    if (ornament_id == 0 or !isOwnedOrnament(cosmetic_comp.info, ornament_id) or CosmeticsHelper.ornamentForRoleSkin(assets, role_skin_id, ornament_id) == null) {
         txn.respond(.{ .ErrorCode = .ErrOrnamentConfig });
         return;
     }
@@ -523,11 +623,17 @@ pub fn onChangeOrnamentRequest(
         return;
     };
 
-    const stale_ornament_id = role.getOrnament(role_skin_id);
-    try role.setOrnament(alloc.gpa, role_skin_id, ornament_id);
-    try events.enqueue(.role_info_modified, .{ .role_id = role_id });
-    try events.enqueue(.update_formations, .{});
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_id);
+    const stale_ornament_ids = try CosmeticsHelper.buildOrnamentIdsForRoleSkin(assets, role.*, role_skin_id, alloc.arena);
+    const changed = if (txn.message.IsDress)
+        try role.dressOrnament(alloc.gpa, assets, role_skin_id, ornament_id)
+    else
+        try role.undressOrnament(alloc.gpa, role_skin_id, ornament_id);
+
+    if (changed) {
+        try events.enqueue(.role_info_modified, .{ .role_id = role_id });
+        try events.enqueue(.update_formations, .{});
+        try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_ids);
+    }
 
     txn.respond(.{ .ErrorCode = .Success });
     try pushOrnamentEquipMap(txn, alloc, role_comp);

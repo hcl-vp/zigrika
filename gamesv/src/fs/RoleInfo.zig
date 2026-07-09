@@ -53,28 +53,79 @@ pub const OrnamentEquip = struct {
 
 pub fn getOrnament(info: RoleInfo, role_skin_id: i32) i32 {
     for (info.ornaments) |entry| {
-        if (entry.role_skin_id == role_skin_id) return entry.ornament_id;
+        if (entry.role_skin_id == role_skin_id and entry.ornament_id != 0) return entry.ornament_id;
     }
     return 0;
 }
 
-pub fn setOrnament(info: *RoleInfo, gpa: Allocator, role_skin_id: i32, ornament_id: i32) !void {
-    for (info.ornaments) |*entry| {
-        if (entry.role_skin_id == role_skin_id) {
-            entry.ornament_id = ornament_id;
-            return;
-        }
+pub fn hasOrnament(info: RoleInfo, role_skin_id: i32, ornament_id: i32) bool {
+    if (ornament_id == 0) return false;
+    for (info.ornaments) |entry| {
+        if (entry.role_skin_id == role_skin_id and entry.ornament_id == ornament_id) return true;
     }
+    return false;
+}
 
-    const new_ornaments = try gpa.alloc(OrnamentEquip, info.ornaments.len + 1);
-    @memcpy(new_ornaments[0..info.ornaments.len], info.ornaments);
-    new_ornaments[info.ornaments.len] = .{
-        .role_skin_id = role_skin_id,
-        .ornament_id = ornament_id,
-    };
+pub fn dressOrnament(info: *RoleInfo, gpa: Allocator, assets: *const Assets, role_skin_id: i32, ornament_id: i32) !bool {
+    if (ornament_id == 0 or info.hasOrnament(role_skin_id, ornament_id)) return false;
 
+    const ornament = assets.tables.ornament.getDataById(ornament_id) orelse return error.OrnamentNotFound;
+    var ornaments: std.ArrayListUnmanaged(OrnamentEquip) = .empty;
+    errdefer ornaments.deinit(gpa);
+
+    try ornaments.ensureTotalCapacity(gpa, info.ornaments.len + 1);
+    for (info.ornaments) |entry| {
+        if (entry.ornament_id == 0) {
+            continue;
+        }
+
+        const conflicts = if (entry.role_skin_id == role_skin_id and ornament.OrGroupId != 0)
+            if (assets.tables.ornament.getDataById(entry.ornament_id)) |equipped|
+                equipped.OrGroupId == ornament.OrGroupId
+            else
+                false
+        else
+            false;
+
+        if (conflicts) {
+            continue;
+        }
+
+        ornaments.appendAssumeCapacity(entry);
+    }
+    ornaments.appendAssumeCapacity(.{ .role_skin_id = role_skin_id, .ornament_id = ornament_id });
+
+    const new_ornaments = try ornaments.toOwnedSlice(gpa);
     if (info.ornaments.len != 0) gpa.free(info.ornaments);
     info.ornaments = new_ornaments;
+    return true;
+}
+
+pub fn undressOrnament(info: *RoleInfo, gpa: Allocator, role_skin_id: i32, ornament_id: i32) !bool {
+    if (ornament_id == 0) return false;
+
+    var ornaments: std.ArrayListUnmanaged(OrnamentEquip) = .empty;
+    errdefer ornaments.deinit(gpa);
+    var changed = false;
+
+    try ornaments.ensureTotalCapacity(gpa, info.ornaments.len);
+    for (info.ornaments) |entry| {
+        if (entry.ornament_id == 0 or (entry.role_skin_id == role_skin_id and entry.ornament_id == ornament_id)) {
+            changed = true;
+            continue;
+        }
+
+        ornaments.appendAssumeCapacity(entry);
+    }
+
+    if (!changed) {
+        ornaments.deinit(gpa);
+        return false;
+    }
+    const new_ornaments = try ornaments.toOwnedSlice(gpa);
+    if (info.ornaments.len != 0) gpa.free(info.ornaments);
+    info.ornaments = new_ornaments;
+    return true;
 }
 
 pub fn toProto(info: RoleInfo, arena: Allocator, id: i32) !pb.RoleInfo {
@@ -179,19 +230,14 @@ fn scaleProperty(value: *i32, ratio: i32) void {
 pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.array_hash_map.Auto(i32, RoleInfo)) !void {
     for (assets.tables.role_info.items) |info| {
         if (info.Id < 1000 or info.Id > 1999) continue;
-        var role: RoleInfo = .{
-            .level = info.MaxLevel,
-            .breakthrough = 6,
-            .role_skin_id = info.SkinId,
-        };
-
-        try role.resetProperties(gpa, assets, info.Id);
-        try role.addDefaultSkills(gpa, assets, info.Id);
-        try map.put(gpa, info.Id, role);
+        try map.put(gpa, info.Id, try createDefault(gpa, assets, info.Id));
     }
 }
 
 pub fn addDefaultSkills(info: *RoleInfo, gpa: Allocator, assets: *const Assets, id: i32) !void {
+    const role_config = assets.tables.role_info.getDataById(id) orelse return error.RoleNotFound;
+    const skill_tree_group_id = role_config.SkillTreeGroupId;
+
     var nodes: std.ArrayList(SkillNode) = .empty;
     errdefer nodes.deinit(gpa);
 
@@ -199,7 +245,7 @@ pub fn addDefaultSkills(info: *RoleInfo, gpa: Allocator, assets: *const Assets, 
     errdefer skills.deinit(gpa);
 
     for (assets.tables.skill_tree.items) |node| {
-        if (node.NodeGroup != id) continue;
+        if (node.NodeGroup != skill_tree_group_id) continue;
         const active = node.Condition.len == 0 and node.UnLockCondition == 0;
         try nodes.append(gpa, .{
             .node_id = node.Id,
@@ -213,6 +259,20 @@ pub fn addDefaultSkills(info: *RoleInfo, gpa: Allocator, assets: *const Assets, 
 
     info.skill_node_state = try nodes.toOwnedSlice(gpa);
     info.skills = try skills.toOwnedSlice(gpa);
+}
+
+pub fn createDefault(gpa: Allocator, assets: *const Assets, id: i32) !RoleInfo {
+    const info = assets.tables.role_info.getDataById(id) orelse return error.RoleNotFound;
+    var role: RoleInfo = .{
+        .level = info.MaxLevel,
+        .breakthrough = 6,
+        .role_skin_id = info.SkinId,
+    };
+    errdefer role.deinit(gpa);
+
+    try role.resetProperties(gpa, assets, id);
+    try role.addDefaultSkills(gpa, assets, id);
+    return role;
 }
 
 pub fn deinit(info: RoleInfo, gpa: Allocator) void {

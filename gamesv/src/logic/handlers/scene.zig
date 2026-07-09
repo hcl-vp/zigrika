@@ -448,7 +448,10 @@ pub fn formationUpdateNotify(
                 log.warn("role {} not found in role_map, skipping", .{role.role_id});
                 continue;
             };
-            const weapon_info = weapon_comp.weapon_map.get(role_info.weapon) orelse unreachable;
+            const weapon_info = weapon_comp.weapon_map.get(role_info.weapon) orelse {
+                log.warn("weapon {} not found for formation role {}, skipping", .{ role_info.weapon, role.role_id });
+                continue;
+            };
             var dress_list: std.ArrayList(i32) = .empty;
             defer dress_list.deinit(alloc.arena);
             for (role_info.ornaments) |ornament| {
@@ -577,6 +580,7 @@ pub fn afterSceneJoin(
         "assets/scripts/join_scene_patches/global_spawn.js",
         "assets/scripts/join_scene_patches/red_dot_remover.js",
         "assets/scripts/join_scene_patches/voice_language_fix.js",
+        "assets/scripts/join_scene_patches/chat_limit.js",
     };
 
     for (patch_files) |path| {

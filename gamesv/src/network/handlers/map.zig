@@ -8,6 +8,7 @@ const PlayerMapComponent = @import("../../logic/component/player/PlayerMapCompon
 
 const FileSystem = common.FileSystem;
 const lahai_roi_dungeon_id = 906;
+const full_explore_percent = 100;
 
 fn appendTrackedIds(arena: std.mem.Allocator, map_comp: *const PlayerMapComponent) !std.ArrayList(i32) {
     var ids: std.ArrayList(i32) = .empty;
@@ -21,6 +22,79 @@ fn appendCustomMarks(arena: std.mem.Allocator, map_comp: *const PlayerMapCompone
         try marks.append(arena, saved_mark.toPb());
     }
     return marks;
+}
+
+fn appendExploreProgressRewardIds(arena: std.mem.Allocator, assets: *const Assets) !std.ArrayList(i32) {
+    var reward_ids: std.ArrayList(i32) = .empty;
+    for (assets.tables.explore_progress_reward.items) |reward| {
+        try reward_ids.append(arena, reward.Id);
+    }
+    return reward_ids;
+}
+
+const CountryExploreScoreData = struct {
+    score: i32,
+    received: std.ArrayList(pb.CountryExploreScoreReceived),
+};
+
+fn appendMaxExploreLevelEntries(
+    arena: std.mem.Allocator,
+    assets: *const Assets,
+    country_filter: ?i32,
+) !std.ArrayList(pb.CountryExploreLevel) {
+    var levels: std.ArrayList(pb.CountryExploreLevel) = .empty;
+
+    for (assets.tables.explore_reward.items) |reward| {
+        if (country_filter) |country_id| {
+            if (reward.Country != country_id) continue;
+        }
+
+        for (levels.items) |*entry| {
+            if (entry.CountryId == reward.Country) {
+                entry.ExploreLevel = @max(entry.ExploreLevel, reward.ExploreLevel);
+                break;
+            }
+        } else {
+            try levels.append(arena, .{
+                .CountryId = reward.Country,
+                .ExploreLevel = reward.ExploreLevel,
+            });
+        }
+    }
+
+    return levels;
+}
+
+fn buildCountryExploreScoreData(
+    arena: std.mem.Allocator,
+    assets: *const Assets,
+    country_id: i32,
+) !CountryExploreScoreData {
+    var received: std.ArrayList(pb.CountryExploreScoreReceived) = .empty;
+    var total_score: i32 = 0;
+
+    for (assets.tables.explore_score.items) |score_cfg| {
+        const area = assets.tables.area.getDataById(score_cfg.Area) orelse continue;
+        if (area.CountryId != country_id) continue;
+
+        var thresholds: std.ArrayList(i32) = .empty;
+        var it = score_cfg.Score.map.iterator();
+        while (it.next()) |entry| {
+            try thresholds.append(arena, entry.key_ptr.*);
+            total_score += entry.value_ptr.*;
+        }
+        if (thresholds.items.len == 0) continue;
+
+        try received.append(arena, .{
+            .AreaId = score_cfg.Area,
+            .ExploreProgress = thresholds,
+        });
+    }
+
+    return .{
+        .score = total_score,
+        .received = received,
+    };
 }
 
 pub fn onMapTraceRequest(
@@ -144,8 +218,68 @@ pub fn onMapUnlockFieldInfoRequest(
     });
 }
 
-pub fn onExploreProgressRequest(txn: *Transaction(pb.ExploreProgressRequest)) !void {
-    txn.respond(.{});
+pub fn onExploreProgressRequest(
+    txn: *Transaction(pb.ExploreProgressRequest),
+    assets: *const Assets,
+    alloc: mem.Alloc,
+) !void {
+    try txn.conn.push(pb.ExploreLevelNotify{
+        .CountryExploreLevel = try appendMaxExploreLevelEntries(alloc.arena, assets, null),
+    }, alloc.arena);
+
+    try txn.conn.push(pb.ExploreProgressRewardIdsNotify{
+        .AreaStageRewardDataList = try appendExploreProgressRewardIds(alloc.arena, assets),
+    }, alloc.arena);
+
+    var area_progress: std.ArrayList(pb.AreaExploreInfo) = .empty;
+
+    for (txn.message.AreaIds.items) |area_id| {
+        try area_progress.append(alloc.arena, .{
+            .AreaId = area_id,
+            .ExplorePercent = full_explore_percent,
+        });
+    }
+
+    txn.respond(.{
+        .AreaProgress = area_progress,
+    });
+}
+
+pub fn onReceiveAreaStageRewardAsyncRequest(
+    txn: *Transaction(pb.ReceiveAreaStageRewardAsyncRequest),
+    alloc: mem.Alloc,
+) !void {
+    _ = alloc;
+    txn.respond(.{
+        .AreaStageRewardDataList = txn.message.AreaStageRewardDataList,
+    });
+}
+
+pub fn onCountryExploreScoreInfoRequest(
+    txn: *Transaction(pb.CountryExploreScoreInfoRequest),
+    assets: *const Assets,
+    alloc: mem.Alloc,
+) !void {
+    const country_id = txn.message.CountryId;
+    const score_data = try buildCountryExploreScoreData(alloc.arena, assets, country_id);
+    const levels = try appendMaxExploreLevelEntries(alloc.arena, assets, country_id);
+
+    try txn.conn.push(pb.ExploreLevelNotify{ .CountryExploreLevel = levels }, alloc.arena);
+    txn.respond(.{
+        .ExploreScore = score_data.score,
+        .CountryExploreScoreReceived = score_data.received,
+    });
+}
+
+pub fn onMultiExploreScoreRewardRequest(
+    txn: *Transaction(pb.MultiExploreScoreRewardRequest),
+    alloc: mem.Alloc,
+) !void {
+    _ = txn.message;
+    _ = alloc;
+    txn.respond(.{
+        .ErrorCode = .Success,
+    });
 }
 
 pub fn onDarkCoastDeliveryRequest(txn: *Transaction(pb.DarkCoastDeliveryRequest)) !void {

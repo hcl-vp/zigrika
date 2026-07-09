@@ -78,7 +78,7 @@ pub fn init(
 
     try special_item_incr.ensureAtLeast(gpa, fs, player_id, EchoInfo.nextAfterPresetGroups(preset_info.groups));
 
-    if (echo_map.count() == 0) {
+    if (Assets.DataTables.Config.seed_default_echoes and echo_map.count() == 0) {
         try EchoInfo.addDefaults(gpa, assets, &echo_map, try special_item_incr.current(gpa, fs, player_id));
         try saveAll(gpa, fs, player_id, echo_map);
     }

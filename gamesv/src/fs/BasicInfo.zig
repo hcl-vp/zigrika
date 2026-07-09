@@ -21,7 +21,7 @@ attributes: struct {
     };
 
     level: i32 = 80,
-    exp: i32 = 0,
+    exp: i32 = 7777777,
     coin: i32 = 777777,
     rare_coin: i32 = 777777,
     head_photo: i32 = 82001209,
@@ -53,6 +53,7 @@ attributes: struct {
     }
 },
 role_show_list: []i32 = &.{},
+selected_main_role_id: i32 = 0,
 cur_card_id: i32 = 0,
 cur_player_title_id: i32 = 0,
 last_modify_name_time: i64 = 0,

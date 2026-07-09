@@ -10,8 +10,10 @@ const SubPropRollProfile = struct {
     multipliers: []const i32,
 };
 
-const flat_sub_prop_weights = [_]i32{ 15, 15, 35, 35 };
-const normal_sub_prop_weights = [_]i32{ 5, 5, 10, 10, 15, 15, 17, 23 };
+const flat_atk_sub_prop_weights = [_]i32{ 70, 540, 390, 30 };
+const flat_def_sub_prop_weights = [_]i32{ 150, 460, 330, 90 };
+const critical_sub_prop_weights = [_]i32{ 70, 70, 70, 24, 24, 24, 9, 9 };
+const shared_sub_prop_weights = [_]i32{ 70, 80, 210, 250, 180, 150, 60, 30 };
 const flat_atk_def_multipliers = [_]i32{ 813, 1083, 1353, 1623 };
 const critical_multipliers = [_]i32{ 1263, 1383, 1503, 1623, 1743, 1863, 1983, 2103 };
 const normal_sub_prop_multipliers = [_]i32{ 853, 953, 1053, 1153, 1253, 1353, 1453, 1553 };
@@ -138,12 +140,14 @@ pub fn addDefaults(
 
     for (assets.tables.phantom_item.items) |item| {
         if (!validDefaultOwnedItem(assets, item)) continue;
-        try echo_map.put(gpa, next_incr_id, try buildDefaultEcho(gpa, assets, item));
-        next_incr_id += 1;
+        for (item.FetterGroup) |fetter_group_id| {
+            try echo_map.put(gpa, next_incr_id, try buildDefaultEcho(gpa, assets, item, fetter_group_id));
+            next_incr_id += 1;
+        }
     }
 }
 
-fn validDefaultOwnedItem(assets: *const Assets, item: Assets.DataTables.PhantomItem) bool {
+pub fn validDefaultOwnedItem(assets: *const Assets, item: Assets.DataTables.PhantomItem) bool {
     if (item.PhantomType != 1 or item.ParentMonsterId != 0) return false;
     if (!item.ShowInBag or !item.Destructible or item.FetterGroup.len == 0) return false;
     if (assets.tables.phantom_rarity.getDataById(item.Rarity) == null) return false;
@@ -155,20 +159,25 @@ fn buildDefaultEcho(
     gpa: Allocator,
     assets: *const Assets,
     item: Assets.DataTables.PhantomItem,
+    fetter_group_id: i32,
 ) !EchoInfo {
     return .{
         .id = item.ItemId,
         .main_prop = try buildMainProps(gpa, assets, item.MainProp.RandGroupId, 0),
-        .fetter_group_id = item.FetterGroup[0],
+        .fetter_group_id = fetter_group_id,
     };
 }
 
 fn buildMainProps(gpa: Allocator, assets: *const Assets, rand_group_id: i32, level: i32) ![]Prop {
     const main_property = findMainProperty(assets, rand_group_id) orelse return &.{};
+    return buildMainPropsFromGroup(gpa, assets, main_property.PropGroup, level);
+}
+
+pub fn buildMainPropsFromGroup(gpa: Allocator, assets: *const Assets, prop_group: []const i32, level: i32) ![]Prop {
     var props: std.ArrayList(Prop) = .empty;
     errdefer props.deinit(gpa);
 
-    for (main_property.PropGroup) |prop_item_id| {
+    for (prop_group) |prop_item_id| {
         const prop_item = assets.tables.phantom_main_prop_item.getDataById(prop_item_id) orelse continue;
         try props.append(gpa, .{
             .id = prop_item.Id,
@@ -263,15 +272,18 @@ pub fn pickRandomSubProperty(
     rng: std.Random,
 ) ?Assets.DataTables.PhantomSubProperty {
     var available_count: usize = 0;
-    for (assets.tables.phantom_sub_property.items) |prop| {
-        if (!containsSubPropRole(assets, props, prop)) available_count += 1;
+    for (assets.tables.phantom_sub_property.items, 0..) |prop, index| {
+        if (containsSubPropRole(assets, props, prop)) continue;
+        if (containsSubPropType(assets.tables.phantom_sub_property.items[0..index], prop)) continue;
+        available_count += 1;
     }
     if (available_count == 0) return null;
 
     const chosen = rng.uintLessThan(usize, available_count);
     var current: usize = 0;
-    for (assets.tables.phantom_sub_property.items) |prop| {
+    for (assets.tables.phantom_sub_property.items, 0..) |prop, index| {
         if (containsSubPropRole(assets, props, prop)) continue;
+        if (containsSubPropType(assets.tables.phantom_sub_property.items[0..index], prop)) continue;
         if (current == chosen) return prop;
         current += 1;
     }
@@ -285,14 +297,30 @@ pub fn randomSubPropValue(quality: i32, prop: Assets.DataTables.PhantomSubProper
     return scaledSubPropValue(prop.SubStandardProperty, multiplier);
 }
 
+pub fn maxSubPropTier(quality: i32, prop: Assets.DataTables.PhantomSubProperty) usize {
+    const profile = subPropRollProfile(prop);
+    return maxSubPropRollIndex(quality, profile.multipliers.len) + 1;
+}
+
+pub fn subPropValueForTier(quality: i32, prop: Assets.DataTables.PhantomSubProperty, tier: i32) ?i32 {
+    if (tier <= 0) return null;
+    const profile = subPropRollProfile(prop);
+    const tier_index: usize = @intCast(tier - 1);
+    if (tier_index >= maxSubPropTier(quality, prop)) return null;
+    return scaledSubPropValue(prop.SubStandardProperty, profile.multipliers[tier_index]);
+}
+
 fn subPropRollProfile(prop: Assets.DataTables.PhantomSubProperty) SubPropRollProfile {
-    if (isFlatAtkDefSubProp(prop)) {
-        return .{ .weights = flat_sub_prop_weights[0..], .multipliers = flat_atk_def_multipliers[0..] };
+    if (isFlatAtkSubProp(prop)) {
+        return .{ .weights = flat_atk_sub_prop_weights[0..], .multipliers = flat_atk_def_multipliers[0..] };
+    }
+    if (isFlatDefSubProp(prop)) {
+        return .{ .weights = flat_def_sub_prop_weights[0..], .multipliers = flat_atk_def_multipliers[0..] };
     }
     if (isCriticalSubProp(prop)) {
-        return .{ .weights = normal_sub_prop_weights[0..], .multipliers = critical_multipliers[0..] };
+        return .{ .weights = critical_sub_prop_weights[0..], .multipliers = critical_multipliers[0..] };
     }
-    return .{ .weights = normal_sub_prop_weights[0..], .multipliers = normal_sub_prop_multipliers[0..] };
+    return .{ .weights = shared_sub_prop_weights[0..], .multipliers = normal_sub_prop_multipliers[0..] };
 }
 
 fn maxSubPropRollIndex(quality: i32, multiplier_count: usize) usize {
@@ -310,12 +338,23 @@ fn maxSubPropRollIndex(quality: i32, multiplier_count: usize) usize {
     };
 }
 
-fn isFlatAtkDefSubProp(prop: Assets.DataTables.PhantomSubProperty) bool {
-    return (prop.PropId == 10007 or prop.PropId == 10010) and prop.AddType == 1;
+fn isFlatAtkSubProp(prop: Assets.DataTables.PhantomSubProperty) bool {
+    return prop.PropId == 10007 and prop.AddType == 1;
+}
+
+fn isFlatDefSubProp(prop: Assets.DataTables.PhantomSubProperty) bool {
+    return prop.PropId == 10010 and prop.AddType == 1;
 }
 
 fn isCriticalSubProp(prop: Assets.DataTables.PhantomSubProperty) bool {
     return prop.PropId == 8 or prop.PropId == 9;
+}
+
+fn containsSubPropType(props: []const Assets.DataTables.PhantomSubProperty, candidate: Assets.DataTables.PhantomSubProperty) bool {
+    for (props) |prop| {
+        if (sameSubPropType(prop, candidate)) return true;
+    }
+    return false;
 }
 
 fn randomWeightedIndex(rng: std.Random, weights: []const i32, max_index: usize) usize {

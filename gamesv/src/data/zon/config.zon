@@ -2,6 +2,9 @@
     // Marks guide popups as completed when guide data is loaded.
     .autocomplete_guides = false,
 
+    // Adds the default data-driven Echo inventory for new players.
+    .seed_default_echoes = true,
+
     // Convene rates and pity tuning.
     // Rates use `rate_denominator`, so 80 / 10000 is 0.8%.
     .gacha_rates = .{
@@ -29,4 +32,6 @@
             .five_star_soft_pity_step = 600,
         },
     },
+
+    .default_uid = 777,
 }

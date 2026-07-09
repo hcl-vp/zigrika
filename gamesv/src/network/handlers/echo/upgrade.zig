@@ -377,14 +377,14 @@ pub fn onPhantomVicePolishRequest(
         txn.respond(.{ .ErrorCode = .ErrPhantomConfigNotFound });
         return;
     };
-    if (item_config.QualityId != 5) {
-        txn.respond(.{ .ErrorCode = .ErrPhantomVicePolishItemPropLimit });
-        return;
-    }
     const max_sub_props = EchoInfo.maxUnlockedSubPropCount(assets, item_config.QualityId) orelse {
         txn.respond(.{ .ErrorCode = .ErrPhantomVicePolishItemPropLimit });
         return;
     };
+    if (max_sub_props == 0) {
+        txn.respond(.{ .ErrorCode = .ErrPhantomVicePolishItemPropLimit });
+        return;
+    }
     if (item.sub_prop.len == 0) {
         txn.respond(.{ .ErrorCode = .ErrPhantomVicePolishNoneProp });
         return;
@@ -602,33 +602,8 @@ fn pickReplacementSubProp(
     quality: i32,
     rng: std.Random,
 ) EchoInfo.Prop {
-    const items = assets.tables.phantom_sub_property.items;
-    if (items.len == 0) return old_prop;
-
-    const old_config = assets.tables.phantom_sub_property.getDataById(old_prop.id);
-    var available_count: usize = 0;
-    for (items) |prop| {
-        if (old_config) |config| {
-            if (EchoInfo.sameSubPropType(config, prop)) continue;
-        } else if (prop.Id == old_prop.id) continue;
-        if (EchoInfo.containsSubPropRole(assets, current, prop)) continue;
-        available_count += 1;
-    }
-    if (available_count == 0) return old_prop;
-
-    const chosen = rng.uintLessThan(usize, available_count);
-    var current_index: usize = 0;
-    for (items) |prop| {
-        if (old_config) |config| {
-            if (EchoInfo.sameSubPropType(config, prop)) continue;
-        } else if (prop.Id == old_prop.id) continue;
-        if (EchoInfo.containsSubPropRole(assets, current, prop)) continue;
-        if (current_index == chosen) {
-            return .{ .id = prop.Id, .value = EchoInfo.randomSubPropValue(quality, prop, rng) };
-        }
-        current_index += 1;
-    }
-    return old_prop;
+    const prop = EchoInfo.pickRandomSubProperty(assets, current, rng) orelse return old_prop;
+    return .{ .id = prop.Id, .value = EchoInfo.randomSubPropValue(quality, prop, rng) };
 }
 
 fn propList(data: []const EchoInfo.Prop, arena: std.mem.Allocator) !std.ArrayList(pb.PhantomPropInfo) {

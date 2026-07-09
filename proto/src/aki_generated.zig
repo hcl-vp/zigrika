@@ -27334,6 +27334,15 @@ pub const ResonantChainUnlockResponse = struct {
     pub const RoleId_field_number: u32 = 9;
     pub const ResonantChainGroupIndex_field_number: u32 = 8;
 };
+pub const RoleSexChangeRequest = struct {
+    pub const msg_id: u16 = 19816;
+    pub const Sex_field_number: u32 = 1;
+};
+pub const RoleSexChangeResponse = struct {
+    pub const msg_id: u16 = 26450;
+    pub const ErrorCode_field_number: u32 = 5;
+    pub const Sex_field_number: u32 = 3;
+};
 pub const RoleElementChangeRequest = struct {
     pub const msg_id: u16 = 29633;
     pub const ElementType_field_number: u32 = 11;
@@ -30223,6 +30232,10 @@ pub const AudioState = struct {
     pub const GroupType_field_number: u32 = 3;
     pub const State_field_number: u32 = 4;
 };
+pub const BanLogoutInfo = struct {
+    pub const Reason_field_number: u32 = 1;
+    pub const BanEndTime_field_number: u32 = 2;
+};
 pub const CardShowEntry = struct {
     pub const CardId_field_number: u32 = 1;
     pub const IsRead_field_number: u32 = 2;
@@ -30635,6 +30648,13 @@ pub const UseItemProgress = struct {
 pub const CompleteInstProgress = struct {
     pub const InstId_field_number: u32 = 1;
     pub const Count_field_number: u32 = 2;
+};
+pub const UpdateNodeProgressNotify = struct {
+    pub const msg_id: u16 = 18729;
+    pub const TreeOwnerId_field_number: u32 = 6;
+    pub const TreeIncId_field_number: u32 = 3;
+    pub const NodeId_field_number: u32 = 4;
+    pub const Progress_field_number: u32 = 5;
 };
 pub const UpdateChildQuestNodeStatusNotify = struct {
     pub const msg_id: u16 = 29641;
@@ -31195,6 +31215,16 @@ pub const EntityInteractResponse = struct {
     pub const msg_id: u16 = 21923;
     pub const ErrorCode_field_number: u32 = 7;
     pub const Interacting_field_number: u32 = 1;
+};
+pub const EntityDynamicInteractRequest = struct {
+    pub const msg_id: u16 = 17213;
+    pub const EntityId_field_number: u32 = 9;
+    pub const OptionGuid_field_number: u32 = 10;
+};
+pub const EntityDynamicInteractResponse = struct {
+    pub const msg_id: u16 = 29001;
+    pub const ErrorCode_field_number: u32 = 10;
+    pub const Interacting_field_number: u32 = 8;
 };
 pub const BoneVisibleChangeRequest = struct {
     pub const msg_id: u16 = 21927;
@@ -34433,6 +34463,47 @@ pub const ExploreProgressResponse = struct {
     pub const msg_id: u16 = 19851;
     pub const AreaProgress_field_number: u32 = 12;
 };
+pub const MultiExploreScoreRewardRequest = struct {
+    pub const msg_id: u16 = 15898;
+    pub const nBs_field_number: u32 = 9;
+};
+pub const MultiExploreScoreRewardResponse = struct {
+    pub const msg_id: u16 = 20373;
+    pub const ErrorCode_field_number: u32 = 8;
+};
+pub const CountryExploreScoreInfoRequest = struct {
+    pub const msg_id: u16 = 16426;
+    pub const CountryId_field_number: u32 = 2;
+};
+pub const CountryExploreScoreInfoResponse = struct {
+    pub const msg_id: u16 = 24051;
+    pub const ExploreScore_field_number: u32 = 10;
+    pub const CountryExploreScoreReceived_field_number: u32 = 12;
+};
+pub const CountryExploreScoreReceived = struct {
+    pub const AreaId_field_number: u32 = 1;
+    pub const ExploreProgress_field_number: u32 = 2;
+};
+pub const CountryExploreLevel = struct {
+    pub const CountryId_field_number: u32 = 1;
+    pub const ExploreLevel_field_number: u32 = 2;
+};
+pub const ExploreLevelNotify = struct {
+    pub const msg_id: u16 = 18679;
+    pub const CountryExploreLevel_field_number: u32 = 10;
+};
+pub const ReceiveAreaStageRewardAsyncRequest = struct {
+    pub const msg_id: u16 = 22014;
+    pub const AreaStageRewardDataList_field_number: u32 = 2;
+};
+pub const ReceiveAreaStageRewardAsyncResponse = struct {
+    pub const msg_id: u16 = 18858;
+    pub const AreaStageRewardDataList_field_number: u32 = 13;
+};
+pub const ExploreProgressRewardIdsNotify = struct {
+    pub const msg_id: u16 = 18139;
+    pub const AreaStageRewardDataList_field_number: u32 = 14;
+};
 pub const ExploreToolAllNotify = struct {
     pub const msg_id: u16 = 16541;
     pub const SkillList_field_number: u32 = 9;
@@ -35349,6 +35420,14 @@ pub const ReconnectResponse = struct {
     pub const LastRecvSeqNo_field_number: u32 = 2;
     pub const Timestamp_field_number: u32 = 3;
     pub const IsPermittedSilentLogin_field_number: u32 = 4;
+};
+pub const LogoutNotify = struct {
+    pub const msg_id: u16 = 110;
+    Ban: ?union(enum) {
+    } = null,
+    pub const BanInfo_field_number: u32 = 3;
+    pub const ErrorCode_field_number: u32 = 1;
+    pub const logoutReason_field_number: u32 = 2;
 };
 pub const ProtoKeyRequest = struct {
     pub const msg_id: u16 = 111;
@@ -36343,6 +36422,94 @@ pub const PlayerMotionResponse = struct {
 pub const JSPatchNotify = struct {
     pub const msg_id: u16 = 15973;
     pub const Content_field_number: u32 = 12;
+};
+pub const QuestInfo = struct {
+    pub const QuestId_field_number: u32 = 1;
+    pub const Status_field_number: u32 = 2;
+};
+pub const QuestListNotify = struct {
+    pub const msg_id: u16 = 28526;
+    pub const Quests_field_number: u32 = 3;
+};
+pub const TraceQuestNotify = struct {
+    pub const msg_id: u16 = 20346;
+    pub const QuestId_field_number: u32 = 9;
+};
+pub const TraceQuestRequest = struct {
+    pub const msg_id: u16 = 21924;
+    pub const TraceType_field_number: u32 = 2;
+    pub const QuestId_field_number: u32 = 14;
+    pub const Operate_field_number: u32 = 7;
+};
+pub const TraceQuestResponse = struct {
+    pub const msg_id: u16 = 25802;
+    pub const ErrorId_field_number: u32 = 12;
+};
+pub const QuestReadyListNotify = struct {
+    pub const msg_id: u16 = 15917;
+    pub const QuestId_field_number: u32 = 9;
+};
+pub const QuestShowListNotify = struct {
+    pub const msg_id: u16 = 20280;
+    pub const QuestId_field_number: u32 = 14;
+};
+pub const QuestFinishListNotify = struct {
+    pub const msg_id: u16 = 17434;
+    pub const QuestId_field_number: u32 = 5;
+};
+pub const QuestRedDotRequest = struct {
+    pub const msg_id: u16 = 26654;
+    pub const QuestId_field_number: u32 = 4;
+    pub const Operate_field_number: u32 = 6;
+};
+pub const QuestRedDotResponse = struct {
+    pub const msg_id: u16 = 15106;
+    pub const ErrorId_field_number: u32 = 2;
+};
+pub const QuestRedDotNotify = struct {
+    pub const msg_id: u16 = 27199;
+    pub const QuestId_field_number: u32 = 6;
+};
+pub const ConfirmQuestResourceRequest = struct {
+    pub const msg_id: u16 = 29568;
+    pub const QuestIds_field_number: u32 = 14;
+};
+pub const ConfirmQuestResourceResponse = struct {
+    pub const msg_id: u16 = 19878;
+    pub const ErrorId_field_number: u32 = 14;
+};
+pub const SetQuestFocusModeRequest = struct {
+    pub const msg_id: u16 = 21712;
+    pub const QuestId_field_number: u32 = 9;
+};
+pub const SetQuestFocusModeResponse = struct {
+    pub const msg_id: u16 = 25364;
+    pub const ErrorCode_field_number: u32 = 12;
+};
+pub const CancelQuestFocusModeRequest = struct {
+    pub const msg_id: u16 = 25279;
+    pub const QuestId_field_number: u32 = 5;
+};
+pub const CancelQuestFocusModeResponse = struct {
+    pub const msg_id: u16 = 29024;
+    pub const ErrorCode_field_number: u32 = 10;
+};
+pub const AcceptFocusWaitQuestRequest = struct {
+    pub const msg_id: u16 = 23447;
+    pub const QuestId_field_number: u32 = 11;
+};
+pub const AcceptFocusWaitQuestResponse = struct {
+    pub const msg_id: u16 = 26638;
+    pub const ErrorCode_field_number: u32 = 7;
+};
+pub const FocusQuestSetNotify = struct {
+    pub const msg_id: u16 = 24439;
+    pub const FocusQuestId_field_number: u32 = 11;
+    pub const Reason_field_number: u32 = 13;
+};
+pub const FocusQuestChangeNotify = struct {
+    pub const msg_id: u16 = 28837;
+    pub const FocusQuestId_field_number: u32 = 15;
 };
 pub const SetFocusModeDeterConditionRequest = struct {
     pub const msg_id: u16 = 22627;

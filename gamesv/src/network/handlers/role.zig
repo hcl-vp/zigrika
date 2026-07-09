@@ -7,15 +7,52 @@ const Scene = @import("../../logic/Scene.zig");
 const FileSystem = @import("common").FileSystem;
 const Transaction = @import("../handlers.zig").Transaction;
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
+const PlayerBasicComponent = @import("../../logic/component/player/PlayerBasicComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInventoryComponent.zig");
 const InventoryInfo = @import("../../fs/InventoryInfo.zig");
+const Account = @import("../../fs/Account.zig");
 const comp_util = @import("../../logic/component/comp_util.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const Events = @import("../../logic/events.zig");
 const RoleAttributeSync = @import("../helpers/role_attribute_sync.zig");
 const RoleStats = @import("../../logic/helpers/role_stats.zig");
+const RoleHelper = @import("../../logic/helpers/role.zig");
+const EchoShared = @import("echo/shared.zig");
+
+fn pushWeaponEquipNotify(txn: anytype, alloc: mem.Alloc, role_id: i32, weapon_id: i32) !void {
+    if (weapon_id == 0) return;
+
+    var data_list: std.ArrayList(pb.RoleLoadEquipData) = .empty;
+    defer data_list.deinit(alloc.arena);
+    try data_list.append(alloc.arena, .{
+        .RoleId = role_id,
+        .Pos = .Weapon,
+        .EquipIncId = weapon_id,
+    });
+
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list }, alloc.arena);
+}
+
+fn pushPhantomEquipNotify(
+    txn: anytype,
+    alloc: mem.Alloc,
+    assets: *const Assets,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
+    role_id: i32,
+) !void {
+    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    defer changed_roles.deinit(alloc.gpa);
+    try changed_roles.put(alloc.gpa, role_id, {});
+
+    try EchoShared.pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
+    try txn.conn.push(pb.PhantomPutOnNotify{
+        .EquipInfoList = try EchoShared.changedEquipInfoList(echo_comp, changed_roles, alloc.arena),
+    }, alloc.arena);
+}
 
 pub fn onRoleFavorListRequest(
     txn: *Transaction(pb.RoleFavorListRequest),
@@ -66,6 +103,195 @@ pub fn onRoleFavorListRequest(
     }
 
     txn.respond(.{ .FavorList = favor_list });
+}
+
+pub fn onRoleSexChangeRequest(
+    txn: *Transaction(pb.RoleSexChangeRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    assets: *const Assets,
+    scene: *Scene,
+    basic_comp: *PlayerBasicComponent,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
+) !void {
+    const target_gender = txn.message.Sex;
+    const current_gender = basic_comp.info.attributes.sex;
+
+    if (target_gender == current_gender) {
+        txn.respond(.{
+            .ErrorCode = .Success,
+            .Sex = current_gender,
+        });
+        return;
+    }
+
+    const source_role_id = RoleHelper.currentFormationMainRoleId(assets, scene, current_gender) orelse
+        RoleHelper.selectedMainRoleId(assets, role_comp, current_gender, basic_comp.info.selected_main_role_id) orelse {
+        txn.respond(.{
+            .ErrorCode = .ErrRoleSexFuncNotOpen,
+            .Sex = current_gender,
+        });
+        return;
+    };
+    const source_role_config = assets.tables.role_info.getDataById(source_role_id) orelse {
+        txn.respond(.{
+            .ErrorCode = .RequestParamError,
+            .Sex = current_gender,
+        });
+        return;
+    };
+    const target_role_id = RoleHelper.mainRoleIdForElement(assets, target_gender, source_role_config.ElementId) orelse {
+        txn.respond(.{
+            .ErrorCode = .ErrRoleSexFuncNotOpen,
+            .Sex = current_gender,
+        });
+        return;
+    };
+
+    const transfer = try RoleHelper.transferMainRoleState(
+        alloc,
+        fs,
+        assets,
+        scene,
+        basic_comp,
+        role_comp,
+        weapon_comp,
+        echo_comp,
+        source_role_id,
+        target_role_id,
+    );
+    try events.enqueue(.role_info_modified, .{ .role_id = target_role_id });
+
+    basic_comp.info.attributes.sex = target_gender;
+    try RoleHelper.saveBasicInfo(fs, alloc.arena, basic_comp);
+    try Account.syncLoginSexForPlayer(alloc.arena, fs, basic_comp.player_id, target_gender);
+
+    if (transfer.formation_changed) {
+        try RoleHelper.resetRoles(
+            scene,
+            fs,
+            assets,
+            role_comp,
+            weapon_comp,
+            echo_comp,
+            txn.conn,
+            alloc,
+            &.{target_role_id},
+        );
+        try scene.save(fs, alloc.gpa);
+        try events.enqueue(.update_formations, .{});
+    }
+
+    const target_role = role_comp.role_map.getPtr(target_role_id) orelse {
+        txn.respond(.{
+            .ErrorCode = .RequestParamError,
+            .Sex = current_gender,
+        });
+        return;
+    };
+
+    try txn.conn.push(pb.RoleChangeNotify{
+        .SourceRoleId = source_role_id,
+        .RoleInfo = try RoleStats.toClientRoleInfo(
+            alloc.gpa,
+            alloc.arena,
+            assets,
+            role_comp,
+            target_role_id,
+            target_role,
+            weapon_comp,
+            echo_comp,
+        ),
+    }, alloc.arena);
+    try txn.conn.push(pb.RoleChangeUnlockNotify{
+        .UnlockRoleIds = try RoleHelper.mainRoleUnlockList(assets, target_gender, alloc.arena),
+    }, alloc.arena);
+
+    txn.respond(.{
+        .ErrorCode = .Success,
+        .Sex = target_gender,
+    });
+    try txn.conn.push(pb.LogoutNotify{
+        .ErrorCode = .ErrSexChangeLogout,
+    }, alloc.arena);
+}
+
+pub fn onRoleElementChangeRequest(
+    txn: *Transaction(pb.RoleElementChangeRequest),
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    fs: *FileSystem,
+    assets: *const Assets,
+    scene: *Scene,
+    basic_comp: *PlayerBasicComponent,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    echo_comp: *PlayerEchoComponent,
+) !void {
+    const gender = basic_comp.info.attributes.sex;
+    const target_role_id = RoleHelper.mainRoleIdForElement(assets, gender, txn.message.ElementType) orelse {
+        txn.respond(.{ .ErrorCode = .ErrRoleChangeElementFunc });
+        return;
+    };
+    const source_role_id = RoleHelper.currentFormationMainRoleId(assets, scene, gender) orelse
+        RoleHelper.selectedMainRoleId(assets, role_comp, gender, basic_comp.info.selected_main_role_id) orelse target_role_id;
+
+    const transfer = try RoleHelper.transferMainRoleState(
+        alloc,
+        fs,
+        assets,
+        scene,
+        basic_comp,
+        role_comp,
+        weapon_comp,
+        echo_comp,
+        source_role_id,
+        target_role_id,
+    );
+    if (transfer.basic_changed) try RoleHelper.saveBasicInfo(fs, alloc.arena, basic_comp);
+    try events.enqueue(.role_info_modified, .{ .role_id = target_role_id });
+
+    if (transfer.formation_changed) {
+        try RoleHelper.resetRoles(
+            scene,
+            fs,
+            assets,
+            role_comp,
+            weapon_comp,
+            echo_comp,
+            txn.conn,
+            alloc,
+            &.{target_role_id},
+        );
+        try scene.save(fs, alloc.gpa);
+        try events.enqueue(.update_formations, .{});
+    }
+
+    const target_role = role_comp.role_map.getPtr(target_role_id) orelse {
+        txn.respond(.{ .ErrorCode = .RequestParamError });
+        return;
+    };
+
+    try pushWeaponEquipNotify(txn, alloc, target_role_id, target_role.weapon);
+    try txn.conn.push(pb.RoleChangeNotify{
+        .SourceRoleId = source_role_id,
+        .RoleInfo = try RoleStats.toClientRoleInfo(
+            alloc.gpa,
+            alloc.arena,
+            assets,
+            role_comp,
+            target_role_id,
+            target_role,
+            weapon_comp,
+            echo_comp,
+        ),
+    }, alloc.arena);
+    try pushPhantomEquipNotify(txn, alloc, assets, role_comp, weapon_comp, echo_comp, target_role_id);
+
+    txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn SwitchRoleRequest(
