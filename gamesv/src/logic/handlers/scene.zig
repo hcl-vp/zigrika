@@ -163,8 +163,17 @@ pub fn onInitialSceneJoin(
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
 
+    try state.dirty_saves.flush(
+        alloc.gpa,
+        fs,
+        &state.player_components.role,
+        &state.player_components.weapon,
+        if (cur_scene.*) |*active_scene| active_scene else null,
+    );
+
     if (cur_scene.*) |*scene| {
         scene.deinit(alloc.gpa, fs);
+        cur_scene.* = null;
     }
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
@@ -262,14 +271,6 @@ pub fn onInitialSceneJoin(
             };
         }
     }
-
-    try state.dirty_saves.flush(
-        alloc.gpa,
-        fs,
-        &state.player_components.role,
-        &state.player_components.weapon,
-        if (cur_scene.*) |*active_scene| active_scene else null,
-    );
 
     try scene.save(fs, alloc.gpa);
     state.buff_timers.reset(alloc.gpa);
