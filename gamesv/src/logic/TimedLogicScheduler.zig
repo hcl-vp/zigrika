@@ -24,6 +24,19 @@ pub fn nextWakeDelayMs(state: *State) ?i64 {
     );
 }
 
+pub fn shouldDrain(state: *State, now_ms: i64) bool {
+    if (state.scene == null) return false;
+
+    return state.next_timed_logic_check_ms == 0 or
+        state.next_timed_logic_check_ms <= now_ms or
+        state.next_levelplay_timer_tick_ms == 0 or
+        state.next_levelplay_timer_tick_ms <= now_ms or
+        state.next_scene_cleanup_tick_ms == 0 or
+        state.next_scene_cleanup_tick_ms <= now_ms or
+        state.next_dirty_save_tick_ms == 0 or
+        state.next_dirty_save_tick_ms <= now_ms;
+}
+
 pub fn drainDue(state: *State) !bool {
     if (state.scene == null) return false;
 

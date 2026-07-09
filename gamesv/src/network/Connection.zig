@@ -132,6 +132,22 @@ fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake 
     return if (wake.closed) null else wake;
 }
 
+fn drainTimedLogicForSession(state: *State, kcp: *Kcp, io: Io, init_time: i64) !bool {
+    const log = std.log.scoped(.connection);
+    const rtc: Io.Clock = .real;
+    const time = rtc.now(io);
+
+    try kcp.update(@intCast(time.toMilliseconds() - init_time));
+
+    const timed_changed = TimedLogicScheduler.drainDue(state) catch |err| failed: {
+        log.err("failed to execute timed logic tick: {t}", .{err});
+        break :failed false;
+    };
+    _ = state.arena.reset(.free_all);
+
+    return timed_changed;
+}
+
 pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, assets: *const Assets) void {
     const log = std.log.scoped(.connection);
 
@@ -262,23 +278,28 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
                     }
                 }
             } else |_| {} // EAGAIN behavior
+
+            if (state) |*s| {
+                const now_ms = rtc.now(handle.io).toMilliseconds();
+                if (TimedLogicScheduler.shouldDrain(s, now_ms)) {
+                    const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
+                        log.err("failed to update kcp state: {t}, disconnecting", .{err});
+                        return;
+                    };
+                    needs_flush = timed_changed or needs_flush;
+                }
+            }
         }
 
         if (wake.tick) {
-            const time = rtc.now(handle.io);
-            kcp.update(@intCast(time.toMilliseconds() - init_time)) catch |err| {
-                log.err("failed to update kcp state: {t}, disconnecting", .{err});
-                return;
-            };
             needs_flush = true;
 
             if (state) |*s| {
-                const timed_changed = TimedLogicScheduler.drainDue(s) catch |err| failed: {
-                    log.err("failed to execute timed logic tick: {t}", .{err});
-                    break :failed false;
+                const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
+                    log.err("failed to update kcp state: {t}, disconnecting", .{err});
+                    return;
                 };
                 needs_flush = timed_changed or needs_flush;
-                _ = s.arena.reset(.free_all);
             }
         }
 
