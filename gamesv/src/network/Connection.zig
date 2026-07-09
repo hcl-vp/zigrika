@@ -183,6 +183,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
     // TODO: timeout
     while (waitSessionWake(handle, if (state) |*s| TimedLogicScheduler.nextWakeDelayMs(s) else null)) |wake| {
         var needs_flush = false;
+        var timed_logic_checked = false;
 
         if (wake.packet) |packet| {
             const time = rtc.now(handle.io);
@@ -287,11 +288,12 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
                         return;
                     };
                     needs_flush = timed_changed or needs_flush;
+                    timed_logic_checked = true;
                 }
             }
         }
 
-        if (wake.tick) {
+        if (wake.tick and !timed_logic_checked) {
             needs_flush = true;
 
             if (state) |*s| {
