@@ -56,6 +56,7 @@ pub const Transition = struct {
 pub const ConfirmResult = union(enum) {
     no_pending,
     confirmed,
+    accepted,
     mismatch: i32,
 };
 
@@ -194,6 +195,39 @@ pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Alloca
     if (resolved.to == pending_state) {
         runtime.pending_state = null;
         try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+        return .confirmed;
+    }
+
+    return .{ .mismatch = pending_state };
+}
+
+pub fn confirmStateRequest(
+    comp: *Component,
+    fsm_id: i32,
+    from: i32,
+    to: i32,
+    gpa: mem.Allocator,
+    now_ms: i64,
+) !ConfirmResult {
+    const runtime = comp.runtimeNode(fsm_id) orelse return .no_pending;
+    const pending_state = runtime.pending_state orelse {
+        if (try comp.acceptPredictedTransition(fsm_id, from, to, gpa, now_ms)) return .accepted;
+        return .no_pending;
+    };
+
+    const current = runtime.cur_state;
+    const resolved = comp.resolveOverrideStates(current, to, true);
+    if (resolved.to == pending_state) {
+        runtime.pending_state = null;
+        try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+        return .confirmed;
+    }
+
+    if (comp.canFoldPredictedTransition(pending_state, from, to)) {
+        runtime.pending_state = null;
+        try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+        try comp.runTransitionEvents(gpa, from, to);
+        try comp.changeCurrentState(fsm_id, from, to, gpa, now_ms);
         return .confirmed;
     }
 
@@ -526,6 +560,66 @@ fn runTransitionEvents(comp: *Component, gpa: mem.Allocator, from: i32, to: i32)
         try comp.runActions(gpa, node.OnEnterActions);
         try comp.runBindStates(gpa, node.BindStates);
     }
+}
+
+fn acceptPredictedTransition(
+    comp: *Component,
+    fsm_id: i32,
+    from: i32,
+    to: i32,
+    gpa: mem.Allocator,
+    now_ms: i64,
+) !bool {
+    const runtime = comp.runtimeNode(fsm_id) orelse return false;
+    if (!comp.statesEquivalent(runtime.cur_state, from)) return false;
+    if (!comp.hasPredictedTransition(from, to)) return false;
+
+    try comp.runTransitionEvents(gpa, from, to);
+    try comp.changeCurrentState(fsm_id, from, to, gpa, now_ms);
+    return true;
+}
+
+fn canFoldPredictedTransition(comp: *const Component, pending_state: i32, from: i32, to: i32) bool {
+    const pending_node = comp.findNode(pending_state) orelse return false;
+    const entry_state = comp.getDeepestChild(pending_node);
+    if (!comp.statesEquivalent(entry_state, from)) return false;
+    if (!comp.stateContains(pending_state, to, 0)) return false;
+    return comp.hasPredictedTransition(from, to);
+}
+
+fn hasPredictedTransition(comp: *const Component, from: i32, to: i32) bool {
+    const requested = comp.resolveOverrideStates(from, to, false);
+
+    for (comp.node_list) |entry| {
+        for (entry.value.Transitions) |transition| {
+            const candidate = comp.resolveOverrideStates(transition.From, transition.To, false);
+            if (candidate.from != requested.from or candidate.to != requested.to) continue;
+            if (transition.TransitionPredictionType == 1) return true;
+        }
+    }
+
+    return false;
+}
+
+fn stateContains(comp: *const Component, ancestor: i32, target: i32, depth: usize) bool {
+    if (depth > 32) return false;
+    if (comp.statesEquivalent(ancestor, target)) return true;
+
+    const node = comp.findNode(ancestor) orelse return false;
+    const children = node.Children orelse return false;
+    for (children) |child| {
+        if (comp.statesEquivalent(child, target)) return true;
+        if (comp.stateContains(child, target, depth + 1)) return true;
+    }
+
+    return false;
+}
+
+fn statesEquivalent(comp: *const Component, a: i32, b: i32) bool {
+    if (a == b) return true;
+    const resolved_a = comp.resolvedForAlias(a) orelse a;
+    const resolved_b = comp.resolvedForAlias(b) orelse b;
+    return resolved_a == resolved_b;
 }
 
 fn runActions(

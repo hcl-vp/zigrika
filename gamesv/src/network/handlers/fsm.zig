@@ -59,8 +59,15 @@ pub fn ChangeStateRequest(
             const entity, const fsm, const attribute, const logic_state = item;
             const now_ms = queryNow(io);
             try fsm.initRuntime(alloc.gpa, now_ms);
-            switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.ToState, alloc.gpa, now_ms)) {
+            switch (try fsm.confirmStateRequest(
+                txn.payload.FsmId,
+                txn.payload.FromState,
+                txn.payload.ToState,
+                alloc.gpa,
+                now_ms,
+            )) {
                 .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
+                .accepted => {},
                 .mismatch => |pending_state| {
                     current_state = pending_state;
                     response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
@@ -109,7 +116,7 @@ pub fn ChangeStateConfirmRequest(
             try fsm.initRuntime(alloc.gpa, now_ms);
             switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
                 .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
-                .mismatch, .no_pending => {},
+                .accepted, .mismatch, .no_pending => {},
             }
         }
     }
@@ -273,7 +280,7 @@ pub fn ChangeStateConfirmPush(
         try fsm.initRuntime(alloc.gpa, now_ms);
         switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa, now_ms)) {
             .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, logic_state, now_ms, alloc, receive_data_pack),
-            .mismatch, .no_pending => {},
+            .accepted, .mismatch, .no_pending => {},
         }
     }
 }
