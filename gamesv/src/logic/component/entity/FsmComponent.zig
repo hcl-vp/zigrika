@@ -8,6 +8,7 @@ const LogicStateComponent = @import("LogicStateComponent.zig");
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 const log = std.log.scoped(.fsm_component);
+const max_state_depth = 32;
 
 const NodeEntry = struct {
     key: i32,
@@ -21,10 +22,26 @@ const OverrideEntry = struct {
 
 pub const FsmNode = struct {
     fsm_id: i32,
-    cur_node: i32,
-    cur_state: i32,
-    parent_state: i32 = 0,
-    pending_state: ?i32 = null,
+    active_path: [max_state_depth]i32 = @splat(0),
+    active_len: u8 = 0,
+    pending_path: [max_state_depth]i32 = @splat(0),
+    pending_len: u8 = 0,
+    pending_from: ?i32 = null,
+    pending_to: ?i32 = null,
+    pending_since_ms: i64 = 0,
+
+    fn active(node: *const FsmNode) []const i32 {
+        return node.active_path[0..node.active_len];
+    }
+
+    fn pending(node: *const FsmNode) []const i32 {
+        return node.pending_path[0..node.pending_len];
+    }
+
+    fn leaf(node: *const FsmNode) ?i32 {
+        const path = node.active();
+        return if (path.len == 0) null else path[path.len - 1];
+    }
 };
 
 pub const ConditionKey = struct {
@@ -136,15 +153,17 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
     var runtime_nodes: std.ArrayList(FsmNode) = .empty;
     defer runtime_nodes.deinit(gpa);
 
-    for (comp.state_list) |fsm_id| {
-        const node = comp.findNodeExact(fsm_id) orelse continue;
-        const initial = comp.getDeepestChild(node);
-        try runtime_nodes.append(gpa, .{
-            .fsm_id = fsm_id,
-            .cur_node = comp.parentNodeId(initial) orelse 0,
-            .cur_state = initial,
-            .parent_state = 0,
-        });
+    for (comp.state_list) |raw_fsm_id| {
+        const fsm_id = comp.canonicalState(raw_fsm_id);
+        const already_added = for (runtime_nodes.items) |runtime| {
+            if (runtime.fsm_id == fsm_id) break true;
+        } else false;
+        if (already_added) continue;
+
+        var runtime: FsmNode = .{ .fsm_id = fsm_id };
+        const active_len = comp.buildInitialPath(fsm_id, &runtime.active_path) orelse continue;
+        runtime.active_len = @intCast(active_len);
+        try runtime_nodes.append(gpa, runtime);
     }
 
     comp.runtime_nodes = try runtime_nodes.toOwnedSlice(gpa);
@@ -194,17 +213,13 @@ pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Alloca
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, state)) return .invalid_target;
 
-    const current = runtime.cur_state;
-    const resolved = comp.resolveOverrideStates(current, state, true);
-
-    const pending_state = runtime.pending_state orelse return .no_pending;
-    if (resolved.to == pending_state) {
-        runtime.pending_state = null;
-        try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+    const pending_state = runtime.pending_to orelse return .no_pending;
+    if (comp.statesEquivalent(state, pending_state)) {
+        try comp.commitPending(runtime, gpa, now_ms);
         return .confirmed;
     }
 
-    return .{ .mismatch = pending_state };
+    return .{ .mismatch = comp.clientState(pending_state) };
 }
 
 pub fn confirmStateRequest(
@@ -219,35 +234,34 @@ pub fn confirmStateRequest(
     if (!comp.stateBelongsToFsm(fsm_id, from)) return .invalid_source;
     if (!comp.stateBelongsToFsm(fsm_id, to)) return .invalid_target;
 
-    const pending_state = runtime.pending_state orelse {
+    const pending_state = runtime.pending_to orelse {
         if (try comp.acceptPredictedTransition(fsm_id, from, to, gpa, now_ms)) return .accepted;
         return .no_pending;
     };
 
-    const current = runtime.cur_state;
-    const resolved = comp.resolveOverrideStates(current, to, true);
-    if (resolved.to == pending_state) {
-        if (!comp.statesEquivalent(current, from)) return .{ .mismatch = pending_state };
+    if (comp.statesEquivalent(to, pending_state)) {
+        const pending_from = runtime.pending_from orelse return .{ .mismatch = comp.clientState(pending_state) };
+        if (!comp.statesEquivalent(pending_from, from)) return .{ .mismatch = comp.clientState(pending_state) };
 
-        runtime.pending_state = null;
-        try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+        try comp.commitPending(runtime, gpa, now_ms);
         return .confirmed;
     }
 
-    if (comp.canFoldPredictedTransition(pending_state, from, to)) {
-        runtime.pending_state = null;
-        try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
+    if (comp.canFoldPredictedTransition(runtime, from, to)) {
+        try comp.commitPending(runtime, gpa, now_ms);
         try comp.runTransitionEvents(gpa, from, to);
         try comp.changeCurrentState(fsm_id, from, to, gpa, now_ms);
         return .confirmed;
     }
 
-    return .{ .mismatch = pending_state };
+    return .{ .mismatch = comp.clientState(pending_state) };
 }
 
 pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
     for (comp.runtime_nodes) |runtime| {
-        if (runtime.fsm_id == fsm_id) return runtime.cur_state;
+        if (runtime.fsm_id == comp.canonicalState(fsm_id)) {
+            return if (runtime.leaf()) |leaf| comp.clientState(leaf) else null;
+        }
     }
 
     return null;
@@ -318,10 +332,11 @@ pub fn getInitialFsm(
 
     if (comp.runtime_nodes.len != 0) {
         for (comp.runtime_nodes) |runtime| {
-            const node = comp.findNodeExact(runtime.fsm_id);
+            const node = comp.findNode(runtime.fsm_id);
+            const current_state = runtime.leaf() orelse continue;
             try result.append(arena, .{
-                .FsmId = runtime.fsm_id,
-                .CurrentState = runtime.cur_state,
+                .FsmId = comp.clientState(runtime.fsm_id),
+                .CurrentState = comp.clientState(current_state),
                 .Flag = if (node) |entry| if (entry.IsAnimStateMachine orelse false) 1 else 0 else 0,
                 .StateElapseTime = 0,
             });
@@ -329,11 +344,21 @@ pub fn getInitialFsm(
         return result;
     }
 
-    for (comp.state_list) |id| {
-        const node = comp.findNodeExact(id) orelse continue;
+    var seen_roots: [max_state_depth]i32 = @splat(0);
+    var seen_len: usize = 0;
+    for (comp.state_list) |raw_id| {
+        const id = comp.canonicalState(raw_id);
+        if (std.mem.indexOfScalar(i32, seen_roots[0..seen_len], id) != null) continue;
+        if (seen_len >= seen_roots.len) return error.FsmRootLimitExceeded;
+        seen_roots[seen_len] = id;
+        seen_len += 1;
+
+        const node = comp.findNode(id) orelse continue;
+        var active_path: [max_state_depth]i32 = @splat(0);
+        const active_len = comp.buildInitialPath(id, &active_path) orelse continue;
         try result.append(arena, .{
-            .FsmId = id,
-            .CurrentState = comp.getDeepestChild(node),
+            .FsmId = comp.clientState(id),
+            .CurrentState = comp.clientState(active_path[active_len - 1]),
             .Flag = if (node.IsAnimStateMachine orelse false) 1 else 0,
             .StateElapseTime = 0,
         });
@@ -401,30 +426,14 @@ fn fromConfig(
 
 fn findReadyTransition(comp: *Component, fsm_id: i32, gpa: mem.Allocator, ctx: EvalContext) !?Transition {
     const runtime = comp.runtimeNode(fsm_id) orelse return null;
-    if (runtime.pending_state != null) return null;
+    if (runtime.pending_to != null) return null;
 
-    const cur_state = runtime.cur_state;
-    const parent_state = runtime.parent_state;
+    const active_path = runtime.active();
+    if (active_path.len < 2) return null;
 
-    if (comp.findNodeRecursive(fsm_id, cur_state)) |node| {
-        if (node.Children) |children| {
-            if (children.len != 0) {
-                const last_child = children[children.len - 1];
-                if (last_child == cur_state) {
-                    if (comp.findNodeRecursive(fsm_id, parent_state)) |parent_node| {
-                        if (try comp.checkTransitionsForState(fsm_id, parent_node, parent_state, gpa, ctx)) |transition| {
-                            return transition;
-                        }
-                    }
-                } else if (try comp.checkTransitionsForState(fsm_id, node, cur_state, gpa, ctx)) |transition| {
-                    return transition;
-                }
-            }
-        }
-    }
-
-    if (comp.findNodeRecursive(fsm_id, parent_state)) |node| {
-        if (try comp.checkTransitionsForState(fsm_id, node, parent_state, gpa, ctx)) |transition| {
+    for (active_path[1..], 1..) |active_state, index| {
+        const parent_node = comp.findNode(active_path[index - 1]) orelse continue;
+        if (try comp.checkTransitionsForState(runtime.fsm_id, parent_node, active_state, gpa, ctx)) |transition| {
             return transition;
         }
     }
@@ -441,24 +450,29 @@ fn checkTransitionsForState(
     ctx: EvalContext,
 ) !?Transition {
     const runtime = comp.runtimeNode(fsm_id) orelse return null;
-    if (runtime.pending_state != null) return null;
+    if (runtime.pending_to != null) return null;
 
     const children = node.Children orelse return null;
+    const canonical_source = comp.canonicalState(state_to_check);
 
-    for (children) |target_state| {
-        if (state_to_check == target_state) continue;
+    for (children) |raw_target_state| {
+        const target_state = comp.canonicalState(raw_target_state);
+        if (canonical_source == target_state) continue;
 
         for (node.Transitions) |transition| {
             const resolved_transition = comp.resolveOverrideStates(transition.From, transition.To, false);
-            if (resolved_transition.from != state_to_check or resolved_transition.to != target_state) continue;
+            if (resolved_transition.from != canonical_source or resolved_transition.to != target_state) continue;
 
             const top_condition = findCondition(transition.Conditions, 0) orelse continue;
             if (!comp.evalCondition(fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
 
-            const result = comp.resolveOverrideStates(state_to_check, target_state, true);
-            comp.pendingState(fsm_id, result.to);
-            try comp.runTransitionEvents(gpa, result.from, result.to);
-            return .{ .fsm_id = fsm_id, .from = result.from, .to = result.to };
+            try comp.setPendingTransition(runtime, canonical_source, target_state, ctx.now_ms);
+            try comp.runTransitionEvents(gpa, canonical_source, target_state);
+            return .{
+                .fsm_id = comp.clientState(runtime.fsm_id),
+                .from = comp.clientState(canonical_source),
+                .to = comp.clientState(target_state),
+            };
         }
     }
 
@@ -582,7 +596,7 @@ fn acceptPredictedTransition(
     now_ms: i64,
 ) !bool {
     const runtime = comp.runtimeNode(fsm_id) orelse return false;
-    if (!comp.statesEquivalent(runtime.cur_state, from)) return false;
+    if (!comp.pathContains(runtime.active(), from)) return false;
     if (!comp.hasPredictedTransition(from, to)) return false;
 
     try comp.runTransitionEvents(gpa, from, to);
@@ -590,11 +604,9 @@ fn acceptPredictedTransition(
     return true;
 }
 
-fn canFoldPredictedTransition(comp: *const Component, pending_state: i32, from: i32, to: i32) bool {
-    const pending_node = comp.findNode(pending_state) orelse return false;
-    const entry_state = comp.getDeepestChild(pending_node);
-    if (!comp.statesEquivalent(entry_state, from)) return false;
-    if (!comp.stateContains(pending_state, to, 0)) return false;
+fn canFoldPredictedTransition(comp: *const Component, runtime: *const FsmNode, from: i32, to: i32) bool {
+    if (!comp.pathContains(runtime.pending(), from)) return false;
+    if (!comp.stateBelongsToFsm(runtime.fsm_id, to)) return false;
     return comp.hasPredictedTransition(from, to);
 }
 
@@ -627,15 +639,11 @@ fn stateContains(comp: *const Component, ancestor: i32, target: i32, depth: usiz
 }
 
 fn statesEquivalent(comp: *const Component, a: i32, b: i32) bool {
-    if (a == b) return true;
-    const resolved_a = comp.resolvedForAlias(a) orelse a;
-    const resolved_b = comp.resolvedForAlias(b) orelse b;
-    return resolved_a == resolved_b;
+    return comp.canonicalState(a) == comp.canonicalState(b);
 }
 
 fn stateBelongsToFsm(comp: *const Component, fsm_id: i32, state: i32) bool {
-    const resolved = comp.resolvedForAlias(state) orelse state;
-    return comp.stateContains(fsm_id, resolved, 0);
+    return comp.stateContains(comp.canonicalState(fsm_id), comp.canonicalState(state), 0);
 }
 
 fn runActions(
@@ -687,60 +695,63 @@ fn addTag(comp: *Component, gpa: mem.Allocator, tag_id: i64) !void {
     comp.tags = tags;
 }
 
-fn pendingState(comp: *Component, fsm_id: i32, to: i32) void {
-    const runtime = comp.runtimeNode(fsm_id) orelse return;
-    var new_state = to;
+fn setPendingTransition(comp: *const Component, runtime: *FsmNode, from: i32, to: i32, now_ms: i64) !void {
+    const pending_len = comp.buildActivePath(runtime.fsm_id, to, &runtime.pending_path) orelse
+        return error.InvalidFsmTransitionTarget;
 
-    if (comp.aliasForResolved(to)) |alias| {
-        new_state = alias;
-    }
-
-    runtime.pending_state = new_state;
+    runtime.pending_len = @intCast(pending_len);
+    runtime.pending_from = comp.canonicalState(from);
+    runtime.pending_to = comp.canonicalState(to);
+    runtime.pending_since_ms = now_ms;
 }
 
-fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
-    const runtime = comp.runtimeNode(fsm_id) orelse return;
-    var new_state = to;
-    const resolved = comp.resolveOverrideStates(from, new_state, false);
+fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator, now_ms: i64) !void {
+    const from = runtime.pending_from orelse return;
+    const pending_path = runtime.pending();
+    if (pending_path.len == 0) return;
 
-    if (comp.findNodeExact(runtime.cur_node)) |root_node| {
-        if (root_node.Children) |children| {
-            if (std.mem.indexOfScalar(i32, children, resolved.to) != null) {
-                runtime.parent_state = resolved.to;
-                try comp.removePassesFrom(gpa, fsm_id, runtime.parent_state);
-            }
-        }
-    }
+    @memcpy(runtime.active_path[0..pending_path.len], pending_path);
+    runtime.active_len = runtime.pending_len;
+    runtime.pending_len = 0;
+    runtime.pending_from = null;
+    runtime.pending_to = null;
+    runtime.pending_since_ms = 0;
 
-    if (comp.aliasForResolved(to)) |alias| {
-        new_state = alias;
-    }
-
-    while (comp.findNodeExact(new_state)) |node| {
-        const children = node.Children orelse break;
-        if (children.len == 0) break;
-        new_state = children[0];
-    }
-
-    runtime.cur_state = new_state;
-    try comp.removePassesFrom(gpa, fsm_id, from);
+    try comp.removePassesFrom(gpa, runtime.fsm_id, from);
     comp.start_time_ms = now_ms;
     comp.last_state = from;
 }
 
+fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
+    const runtime = comp.runtimeNode(fsm_id) orelse return;
+    const active_len = comp.buildActivePath(runtime.fsm_id, to, &runtime.active_path) orelse return;
+
+    runtime.active_len = @intCast(active_len);
+    runtime.pending_len = 0;
+    runtime.pending_from = null;
+    runtime.pending_to = null;
+    runtime.pending_since_ms = 0;
+    try comp.removePassesFrom(gpa, runtime.fsm_id, from);
+    comp.start_time_ms = now_ms;
+    comp.last_state = comp.canonicalState(from);
+}
+
 fn currentStateMatches(comp: *const Component, state: i32) bool {
     for (comp.runtime_nodes) |runtime| {
-        if (runtime.cur_state == state) return true;
+        if (comp.pathContains(runtime.active(), state)) return true;
     }
 
     return false;
 }
 
-fn currentStateNameMatches(comp: *const Component, fsm_id: i32, name: []const u8) bool {
+fn currentStateNameMatches(comp: *const Component, _: i32, name: []const u8) bool {
     for (comp.runtime_nodes) |runtime| {
-        if (runtime.fsm_id != fsm_id) continue;
-        const node = comp.findNode(runtime.cur_state) orelse return false;
-        if (node.Name) |node_name| return std.mem.eql(u8, node_name, name);
+        for (runtime.active()) |state| {
+            const node = comp.findNode(state) orelse continue;
+            if (node.Name) |node_name| {
+                if (std.mem.eql(u8, node_name, name)) return true;
+            }
+        }
     }
 
     return false;
@@ -825,17 +836,20 @@ fn findCondition(
 }
 
 fn runtimeNode(comp: *Component, fsm_id: i32) ?*FsmNode {
+    const canonical_fsm_id = comp.canonicalState(fsm_id);
     for (comp.runtime_nodes) |*runtime| {
-        if (runtime.fsm_id == fsm_id) return runtime;
+        if (runtime.fsm_id == canonical_fsm_id) return runtime;
     }
 
     return null;
 }
 
 fn findNode(comp: *const Component, id: i32) ?AiStateMachineConfig.StateMachineNode {
-    if (comp.findNodeExact(id)) |node| return node;
-    if (comp.resolvedForAlias(id)) |mapped| return comp.findNodeExact(mapped);
-    return null;
+    const canonical_id = comp.canonicalState(id);
+    if (comp.aliasForResolved(canonical_id)) |alias| {
+        if (comp.findNodeExact(alias)) |node| return node;
+    }
+    return comp.findNodeExact(canonical_id);
 }
 
 fn findNodeExact(comp: *const Component, id: i32) ?AiStateMachineConfig.StateMachineNode {
@@ -846,49 +860,87 @@ fn findNodeExact(comp: *const Component, id: i32) ?AiStateMachineConfig.StateMac
     return null;
 }
 
-fn parentNodeId(comp: *const Component, state: i32) ?i32 {
-    for (comp.node_list) |entry| {
-        if (entry.value.Children) |children| {
-            if (std.mem.indexOfScalar(i32, children, state) != null) return entry.key;
-        }
-    }
-
-    return null;
+fn canonicalState(comp: *const Component, state: i32) i32 {
+    return comp.resolvedForAlias(state) orelse state;
 }
 
-fn findNodeRecursive(comp: *const Component, fsm_id: i32, target_state: i32) ?AiStateMachineConfig.StateMachineNode {
-    const root = comp.findNodeExact(fsm_id) orelse return null;
-    const children = root.Children orelse return null;
-
-    if (std.mem.indexOfScalar(i32, children, target_state) != null) return root;
-
-    for (comp.node_list) |entry| {
-        if (entry.value.Children) |node_children| {
-            if (std.mem.indexOfScalar(i32, node_children, target_state) != null) return entry.value;
-        }
-    }
-
-    for (children) |child| {
-        if (comp.findNodeRecursive(child, target_state)) |found| return found;
-    }
-
-    return null;
+fn clientState(comp: *const Component, state: i32) i32 {
+    const canonical_state = comp.canonicalState(state);
+    return comp.aliasForResolved(canonical_state) orelse canonical_state;
 }
 
-fn getDeepestChild(
+fn pathContains(comp: *const Component, path: []const i32, state: i32) bool {
+    const canonical_state = comp.canonicalState(state);
+    for (path) |active_state| {
+        if (active_state == canonical_state) return true;
+    }
+    return false;
+}
+
+fn buildInitialPath(comp: *const Component, fsm_id: i32, path: *[max_state_depth]i32) ?usize {
+    var len: usize = 0;
+    var current = comp.canonicalState(fsm_id);
+
+    while (true) {
+        if (len >= path.len or std.mem.indexOfScalar(i32, path[0..len], current) != null) return null;
+        path[len] = current;
+        len += 1;
+
+        const node = comp.findNode(current) orelse return null;
+        const children = node.Children orelse break;
+        if (children.len == 0) break;
+        current = comp.canonicalState(children[0]);
+    }
+
+    return len;
+}
+
+fn buildActivePath(comp: *const Component, fsm_id: i32, target_state: i32, path: *[max_state_depth]i32) ?usize {
+    var len: usize = 0;
+    if (!comp.findPathToState(comp.canonicalState(fsm_id), comp.canonicalState(target_state), path, &len, 0)) return null;
+
+    var current = path[len - 1];
+    while (true) {
+        const node = comp.findNode(current) orelse return null;
+        const children = node.Children orelse break;
+        if (children.len == 0) break;
+
+        current = comp.canonicalState(children[0]);
+        if (len >= path.len or std.mem.indexOfScalar(i32, path[0..len], current) != null) return null;
+        path[len] = current;
+        len += 1;
+    }
+
+    return len;
+}
+
+fn findPathToState(
     comp: *const Component,
-    node: AiStateMachineConfig.StateMachineNode,
-) i32 {
-    if (node.Children) |children| {
-        if (children.len > 0) {
-            const first_child_id = children[0];
-            if (comp.findNode(first_child_id)) |child| {
-                return comp.getDeepestChild(child);
+    current_state: i32,
+    target_state: i32,
+    path: *[max_state_depth]i32,
+    len: *usize,
+    depth: usize,
+) bool {
+    if (depth >= max_state_depth or len.* >= path.len) return false;
+
+    const canonical_current = comp.canonicalState(current_state);
+    if (std.mem.indexOfScalar(i32, path[0..len.*], canonical_current) != null) return false;
+    path[len.*] = canonical_current;
+    len.* += 1;
+
+    if (canonical_current == comp.canonicalState(target_state)) return true;
+
+    if (comp.findNode(canonical_current)) |node| {
+        if (node.Children) |children| {
+            for (children) |child| {
+                if (comp.findPathToState(child, target_state, path, len, depth + 1)) return true;
             }
         }
     }
 
-    return node.Uuid;
+    len.* -= 1;
+    return false;
 }
 
 const ResolvedStates = struct {
@@ -899,14 +951,14 @@ const ResolvedStates = struct {
 fn resolveOverrideStates(comp: *const Component, from: i32, to: i32, reverse: bool) ResolvedStates {
     if (reverse) {
         return .{
-            .from = comp.aliasForResolved(from) orelse from,
-            .to = comp.aliasForResolved(to) orelse to,
+            .from = comp.clientState(from),
+            .to = comp.clientState(to),
         };
     }
 
     return .{
-        .from = comp.resolvedForAlias(from) orelse from,
-        .to = comp.resolvedForAlias(to) orelse to,
+        .from = comp.canonicalState(from),
+        .to = comp.canonicalState(to),
     };
 }
 
