@@ -80,6 +80,17 @@ pub const ConfirmResult = union(enum) {
     mismatch: i32,
 };
 
+pub const ClientPassResult = enum {
+    updated,
+    machine_not_found,
+    invalid_source,
+    inactive_source,
+    invalid_target,
+    transition_not_found,
+    condition_not_found,
+    condition_not_client,
+};
+
 hash_code: i32 = 0,
 common_hash_code: i32 = 0,
 state_list: []const i32 = &.{},
@@ -192,10 +203,23 @@ pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) boo
     return old_in_hate != comp.in_hate;
 }
 
-pub fn insertPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !void {
+pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !ClientPassResult {
+    const fsm_id = comp.canonicalState(key.fsm_id);
+    const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
+    if (!comp.stateBelongsToFsm(fsm_id, key.from)) return .invalid_source;
+    if (!comp.pathContains(runtime.active(), key.from)) return .inactive_source;
+    if (!comp.stateBelongsToFsm(fsm_id, key.to)) return .invalid_target;
+
     const resolved = comp.resolveOverrideStates(key.from, key.to, false);
+    switch (comp.clientConditionLookup(fsm_id, resolved.from, resolved.to, key.index)) {
+        .valid => {},
+        .transition_not_found => return .transition_not_found,
+        .condition_not_found => return .condition_not_found,
+        .condition_not_client => return .condition_not_client,
+    }
+
     const resolved_key: ConditionKey = .{
-        .fsm_id = key.fsm_id,
+        .fsm_id = fsm_id,
         .from = resolved.from,
         .to = resolved.to,
         .index = key.index,
@@ -203,10 +227,11 @@ pub fn insertPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value
 
     if (!value) {
         try comp.removePass(gpa, resolved_key);
-        return;
+        return .updated;
     }
 
     try comp.appendPass(gpa, resolved_key);
+    return .updated;
 }
 
 pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
@@ -492,9 +517,12 @@ fn evalCondition(
     depth: usize,
 ) bool {
     if (depth > 12) return false;
+    if (condition.IsClient orelse false) {
+        return comp.clientPasses(fsm_id, transition, condition.Index);
+    }
 
     var result = comp.evalConditionRaw(fsm_id, transition, conditions, condition, ctx, depth);
-    if (condition.Reverse and !(condition.IsClient orelse false)) result = !result;
+    if (condition.Reverse) result = !result;
     return result;
 }
 
@@ -564,15 +592,10 @@ fn evalConditionRaw(
     }
 
     if (condition.CondTag) |tag| {
-        if (condition.IsClient orelse false) {
-            if (comp.clientPasses(fsm_id, transition, condition.Index)) return true;
-        }
         return if (tag.TagId) |tag_id| std.mem.indexOfScalar(i64, comp.tags, @as(i64, tag_id)) != null else false;
     }
 
-    if (condition.CondTaskFinish != null or condition.CondMontageTimeRemaining != null) {
-        return (condition.IsClient orelse false) and comp.clientPasses(fsm_id, transition, condition.Index);
-    }
+    if (condition.CondTaskFinish != null or condition.CondMontageTimeRemaining != null) return false;
 
     if (condition.CondInstStateChange) |inst| {
         return std.mem.indexOfScalar(i64, comp.tags, @as(i64, inst.TagId)) != null;
@@ -651,6 +674,71 @@ fn statesEquivalent(comp: *const Component, a: i32, b: i32) bool {
 
 fn stateBelongsToFsm(comp: *const Component, fsm_id: i32, state: i32) bool {
     return comp.stateContains(comp.canonicalState(fsm_id), comp.canonicalState(state), 0);
+}
+
+const ClientConditionLookup = enum {
+    valid,
+    transition_not_found,
+    condition_not_found,
+    condition_not_client,
+};
+
+fn clientConditionLookup(comp: *const Component, fsm_id: i32, from: i32, to: i32, index: i32) ClientConditionLookup {
+    var found_transition = false;
+    var found_condition = false;
+    if (comp.findClientConditionRecursive(
+        comp.canonicalState(fsm_id),
+        comp.canonicalState(from),
+        comp.canonicalState(to),
+        index,
+        &found_transition,
+        &found_condition,
+        0,
+    )) return .valid;
+
+    if (!found_transition) return .transition_not_found;
+    if (!found_condition) return .condition_not_found;
+    return .condition_not_client;
+}
+
+fn findClientConditionRecursive(
+    comp: *const Component,
+    node_id: i32,
+    from: i32,
+    to: i32,
+    index: i32,
+    found_transition: *bool,
+    found_condition: *bool,
+    depth: usize,
+) bool {
+    if (depth >= max_state_depth) return false;
+    const node = comp.findNode(node_id) orelse return false;
+
+    for (node.Transitions) |transition| {
+        const resolved = comp.resolveOverrideStates(transition.From, transition.To, false);
+        if (resolved.from != from or resolved.to != to) continue;
+
+        found_transition.* = true;
+        const condition = findCondition(transition.Conditions, index) orelse continue;
+        found_condition.* = true;
+        if (condition.IsClient orelse false) return true;
+    }
+
+    if (node.Children) |children| {
+        for (children) |child| {
+            if (comp.findClientConditionRecursive(
+                child,
+                from,
+                to,
+                index,
+                found_transition,
+                found_condition,
+                depth + 1,
+            )) return true;
+        }
+    }
+
+    return false;
 }
 
 fn runActions(
@@ -824,7 +912,7 @@ fn attrValue(attribute: ?*const AttributeComponent, attribute_id: i32) ?i32 {
 fn clientPasses(comp: *const Component, fsm_id: i32, transition: AiStateMachineConfig.StateMachineTransition, index: i32) bool {
     const resolved = comp.resolveOverrideStates(transition.From, transition.To, false);
     return comp.passPoolContains(.{
-        .fsm_id = fsm_id,
+        .fsm_id = comp.canonicalState(fsm_id),
         .from = resolved.from,
         .to = resolved.to,
         .index = index,

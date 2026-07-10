@@ -207,30 +207,45 @@ pub fn FsmConditionPassRequest(
     io: std.Io,
     alloc: mem.Alloc,
 ) !void {
-    if (commonEntityId(txn.common)) |entity_id| {
-        if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const logic_state = item;
-            const now_ms = queryNow(io);
-            try fsm.initRuntime(alloc.gpa, now_ms);
-            try fsm.insertPass(alloc.gpa, .{
-                .fsm_id = txn.payload.FsmId,
-                .from = txn.payload.FromState,
-                .to = txn.payload.ToState,
-                .index = txn.payload.ConditionIndex,
-            }, txn.payload.Value);
-            if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
-                .attribute = attribute,
-                .logic_state = logic_state,
-                .now_ms = now_ms,
-            })) |notify| {
-                try txn.receive_data_pack.append(alloc.arena, notify);
-            }
+    const entity_id = commonEntityId(txn.common) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+        });
+        return;
+    };
+    const item = query.byNetId(entity_id) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+        });
+        return;
+    };
+
+    const entity, const fsm, const attribute, const logic_state = item;
+    const now_ms = queryNow(io);
+    try fsm.initRuntime(alloc.gpa, now_ms);
+    const pass_result = try fsm.recordClientPass(alloc.gpa, .{
+        .fsm_id = txn.payload.FsmId,
+        .from = txn.payload.FromState,
+        .to = txn.payload.ToState,
+        .index = txn.payload.ConditionIndex,
+    }, txn.payload.Value);
+    const response_error = try clientPassError(alloc.arena, pass_result, txn.payload);
+
+    if (pass_result == .updated) {
+        if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
+            .attribute = attribute,
+            .logic_state = logic_state,
+            .now_ms = now_ms,
+        })) |notify| {
+            try txn.receive_data_pack.append(alloc.arena, notify);
         }
     }
 
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
-        .Error = successResult(),
+        .Error = response_error,
     });
 }
 
@@ -298,12 +313,13 @@ pub fn FsmConditionPassPush(
         const entity, const fsm, const attribute, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
-        try fsm.insertPass(alloc.gpa, .{
+        const pass_result = try fsm.recordClientPass(alloc.gpa, .{
             .fsm_id = push.FsmId,
             .from = push.FromState,
             .to = push.ToState,
             .index = push.ConditionIndex,
         }, push.Value);
+        if (pass_result != .updated) return;
         if (try fsm.checkTransitions(entity.net_id, push.FsmId, alloc.gpa, .{
             .attribute = attribute,
             .logic_state = logic_state,
@@ -427,6 +443,30 @@ fn commonEntityId(common: ?pb.CombatCommon) ?i64 {
 
 fn successResult() pb.DErrorResult {
     return .{ .ErrorCode = .Success };
+}
+
+fn clientPassError(
+    arena: std.mem.Allocator,
+    result: Entity.FsmComponent.ClientPassResult,
+    payload: pb.FsmConditionPassRequest,
+) !pb.DErrorResult {
+    return switch (result) {
+        .updated => successResult(),
+        .machine_not_found => try errorResult(arena, .ErrEntityFsmMachineNotExist, &.{payload.FsmId}),
+        .invalid_source => try errorResult(arena, .ErrEntityFsmStateIncorrect, &.{
+            payload.FsmId,
+            payload.FromState,
+        }),
+        .invalid_target => try errorResult(arena, .ErrIEntityFsmTransitToState, &.{
+            payload.FsmId,
+            payload.ToState,
+        }),
+        .inactive_source, .transition_not_found, .condition_not_found, .condition_not_client => try errorResult(
+            arena,
+            .ErrIEntityFsmActionNotMatchState,
+            &.{ payload.FsmId, payload.FromState, payload.ToState, payload.ConditionIndex },
+        ),
+    };
 }
 
 fn errorResult(arena: std.mem.Allocator, code: pb.ErrorCode, params: []const i32) !pb.DErrorResult {
