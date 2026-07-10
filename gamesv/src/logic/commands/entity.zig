@@ -105,18 +105,21 @@ fn spawnCandidateScore(scene_map_id: i32, entity_config: *const LevelEntityConfi
     return score;
 }
 
-fn selectSpawnConfig(assets: *const Assets, entity_id: i64, scene_map_id: i32) ?SpawnConfig {
+fn selectSpawnConfig(assets: *const Assets, entity_id: i64, scene_map_id: i32, source_map_id: ?i32) ?SpawnConfig {
     var best: ?SpawnConfig = null;
 
     for (assets.tables.level_entity_config.items) |cfg| {
         if (cfg.EntityId != entity_id) continue;
+        if (source_map_id) |map_id| {
+            if (cfg.MapId != map_id) continue;
+        }
 
         const blueprint_config = findBlueprintConfig(assets, cfg.BlueprintType) orelse continue;
         var template_config = findTemplateConfig(assets, cfg.BlueprintType) orelse continue;
         var entity_config = cfg;
         template_config.ComponentsData.mergeInto(&entity_config.ComponentsData);
 
-        const score = spawnCandidateScore(scene_map_id, &entity_config, &blueprint_config);
+        const score = spawnCandidateScore(source_map_id orelse scene_map_id, &entity_config, &blueprint_config);
         if (best == null or score > best.?.score) {
             best = .{
                 .entity_config = entity_config,
@@ -162,8 +165,27 @@ pub const spawn = struct {
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
-        const selected = selectSpawnConfig(assets, entity_id, scene.instance_id) orelse {
-            try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
+        try callWithSourceMap(events, scene, fs, assets, conn, alloc, entity_id, is_frozen, is_tune_broken, null);
+    }
+
+    fn callWithSourceMap(
+        events: *EventQueue,
+        scene: *Scene,
+        fs: *FileSystem,
+        assets: *const Assets,
+        conn: *Connection,
+        alloc: mem.Alloc,
+        entity_id: i64,
+        is_frozen: ?bool,
+        is_tune_broken: ?bool,
+        source_map_id: ?i32,
+    ) !void {
+        const selected = selectSpawnConfig(assets, entity_id, scene.instance_id, source_map_id) orelse {
+            if (source_map_id) |map_id| {
+                try respond(events, alloc.arena, "{d} couldn't be spawned, no LevelEntityConfig row for map {d}", .{ entity_id, map_id });
+            } else {
+                try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
+            }
             return;
         };
         const entity_config = selected.entity_config;
@@ -199,8 +221,6 @@ pub const spawn = struct {
             combat_attributes orelse Entity.AttributeComponent{}
         else
             null;
-        const combat_ready = use_ai_runtime and ai_id != null and combat_attributes != null;
-
         const entity = if (use_ai_runtime and ai_id != null) try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
@@ -295,7 +315,26 @@ pub const spawn = struct {
 
         try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
 
-        try respond(events, alloc.arena, "spawned {d}, map: {d}, bp: {s}, camp: {d}, ai_id: {any}, combat: {s}", .{ entity_id, entity_config.MapId, entity_config.BlueprintType, final_camp, ai_id, if (combat_ready) "ready" else "incomplete" });
+        try respond(events, alloc.arena, "spawned {d}, map: {d}, bp: {s}, camp: {d}, ai_id: {any}", .{ entity_id, entity_config.MapId, entity_config.BlueprintType, final_camp, ai_id });
+    }
+};
+
+pub const spawn_map = struct {
+    pub const alias = "sm";
+    pub const description = "spawns an entity using an exact source map row.\nusage: spawn_map [entity_id] [source_map_id] [freeze?] [tune_break?]";
+    pub fn call(
+        events: *EventQueue,
+        scene: *Scene,
+        fs: *FileSystem,
+        assets: *const Assets,
+        conn: *Connection,
+        alloc: mem.Alloc,
+        entity_id: i64,
+        source_map_id: i32,
+        is_frozen: ?bool,
+        is_tune_broken: ?bool,
+    ) !void {
+        try spawn.callWithSourceMap(events, scene, fs, assets, conn, alloc, entity_id, is_frozen, is_tune_broken, source_map_id);
     }
 };
 
