@@ -54,6 +54,9 @@ pub const Transition = struct {
 };
 
 pub const ConfirmResult = union(enum) {
+    machine_not_found,
+    invalid_source,
+    invalid_target,
     no_pending,
     confirmed,
     accepted,
@@ -187,7 +190,9 @@ pub fn insertPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value
 }
 
 pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
-    const runtime = comp.runtimeNode(fsm_id) orelse return .no_pending;
+    const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
+    if (!comp.stateBelongsToFsm(fsm_id, state)) return .invalid_target;
+
     const current = runtime.cur_state;
     const resolved = comp.resolveOverrideStates(current, state, true);
 
@@ -209,7 +214,10 @@ pub fn confirmStateRequest(
     gpa: mem.Allocator,
     now_ms: i64,
 ) !ConfirmResult {
-    const runtime = comp.runtimeNode(fsm_id) orelse return .no_pending;
+    const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
+    if (!comp.stateBelongsToFsm(fsm_id, from)) return .invalid_source;
+    if (!comp.stateBelongsToFsm(fsm_id, to)) return .invalid_target;
+
     const pending_state = runtime.pending_state orelse {
         if (try comp.acceptPredictedTransition(fsm_id, from, to, gpa, now_ms)) return .accepted;
         return .no_pending;
@@ -218,6 +226,8 @@ pub fn confirmStateRequest(
     const current = runtime.cur_state;
     const resolved = comp.resolveOverrideStates(current, to, true);
     if (resolved.to == pending_state) {
+        if (!comp.statesEquivalent(current, from)) return .{ .mismatch = pending_state };
+
         runtime.pending_state = null;
         try comp.changeCurrentState(fsm_id, current, pending_state, gpa, now_ms);
         return .confirmed;
@@ -234,12 +244,12 @@ pub fn confirmStateRequest(
     return .{ .mismatch = pending_state };
 }
 
-pub fn currentState(comp: *const Component, fsm_id: i32) i32 {
+pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
     for (comp.runtime_nodes) |runtime| {
         if (runtime.fsm_id == fsm_id) return runtime.cur_state;
     }
 
-    return 0;
+    return null;
 }
 
 pub fn checkState(
@@ -620,6 +630,11 @@ fn statesEquivalent(comp: *const Component, a: i32, b: i32) bool {
     const resolved_a = comp.resolvedForAlias(a) orelse a;
     const resolved_b = comp.resolvedForAlias(b) orelse b;
     return resolved_a == resolved_b;
+}
+
+fn stateBelongsToFsm(comp: *const Component, fsm_id: i32, state: i32) bool {
+    const resolved = comp.resolvedForAlias(state) orelse state;
+    return comp.stateContains(fsm_id, resolved, 0);
 }
 
 fn runActions(

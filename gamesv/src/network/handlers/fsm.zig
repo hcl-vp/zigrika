@@ -50,50 +50,82 @@ pub fn ChangeStateRequest(
     io: std.Io,
     alloc: mem.Alloc,
 ) !void {
-    const entity_id = commonEntityId(txn.common) orelse 0;
-    var current_state: i32 = txn.payload.ToState;
+    const entity_id = commonEntityId(txn.common) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+            .CurrentState = 0,
+        });
+        return;
+    };
+    const item = query.byNetId(entity_id) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+            .CurrentState = 0,
+        });
+        return;
+    };
+
+    const entity, const fsm, const attribute, const logic_state = item;
+    const now_ms = queryNow(io);
+    try fsm.initRuntime(alloc.gpa, now_ms);
+
+    var current_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
 
-    if (entity_id != 0) {
-        if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const logic_state = item;
-            const now_ms = queryNow(io);
-            try fsm.initRuntime(alloc.gpa, now_ms);
-            switch (try fsm.confirmStateRequest(
+    switch (try fsm.confirmStateRequest(
+        txn.payload.FsmId,
+        txn.payload.FromState,
+        txn.payload.ToState,
+        alloc.gpa,
+        now_ms,
+    )) {
+        .confirmed => {
+            current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
+            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack);
+        },
+        .accepted => current_state = fsm.currentState(txn.payload.FsmId) orelse current_state,
+        .mismatch => |pending_state| {
+            current_state = pending_state;
+            response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
                 txn.payload.FsmId,
-                txn.payload.FromState,
                 txn.payload.ToState,
-                alloc.gpa,
-                now_ms,
-            )) {
-                .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
-                .accepted => {},
-                .mismatch => |pending_state| {
-                    current_state = pending_state;
-                    response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
-                        txn.payload.FsmId,
-                        txn.payload.ToState,
-                        pending_state,
-                    });
-                },
-                .no_pending => {
-                    if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
-                        .attribute = attribute,
-                        .logic_state = logic_state,
-                        .now_ms = now_ms,
-                    })) |notify| {
-                        try txn.receive_data_pack.append(alloc.arena, notify);
-                        const transition = notify.Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
-                        current_state = transition.ToState;
-                        response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotWait, &.{
-                            transition.FsmId,
-                            transition.FromState,
-                            transition.ToState,
-                        });
-                    }
-                },
+                pending_state,
+            });
+        },
+        .machine_not_found => response_error = try errorResult(alloc.arena, .ErrEntityFsmMachineNotExist, &.{txn.payload.FsmId}),
+        .invalid_source => response_error = try errorResult(alloc.arena, .ErrEntityFsmStateIncorrect, &.{
+            txn.payload.FsmId,
+            txn.payload.FromState,
+            current_state,
+        }),
+        .invalid_target => response_error = try errorResult(alloc.arena, .ErrIEntityFsmTransitToState, &.{
+            txn.payload.FsmId,
+            txn.payload.ToState,
+        }),
+        .no_pending => {
+            if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
+                .attribute = attribute,
+                .logic_state = logic_state,
+                .now_ms = now_ms,
+            })) |notify| {
+                try txn.receive_data_pack.append(alloc.arena, notify);
+                const transition = notify.Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
+                current_state = transition.ToState;
+                response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotWait, &.{
+                    transition.FsmId,
+                    transition.FromState,
+                    transition.ToState,
+                });
+            } else {
+                current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
+                response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotExist, &.{
+                    txn.payload.FsmId,
+                    current_state,
+                });
             }
-        }
+        },
     }
 
     txn.respond(.{
@@ -109,22 +141,63 @@ pub fn ChangeStateConfirmRequest(
     io: std.Io,
     alloc: mem.Alloc,
 ) !void {
-    if (commonEntityId(txn.common)) |entity_id| {
-        if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const logic_state = item;
-            const now_ms = queryNow(io);
-            try fsm.initRuntime(alloc.gpa, now_ms);
-            switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
-                .confirmed => try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack),
-                .accepted, .mismatch, .no_pending => {},
-            }
-        }
+    const entity_id = commonEntityId(txn.common) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = 0,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+        });
+        return;
+    };
+    const item = query.byNetId(entity_id) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = 0,
+            .Error = try errorResult(alloc.arena, .ErrEntityNotFound, &.{}),
+        });
+        return;
+    };
+
+    const entity, const fsm, const attribute, const logic_state = item;
+    const now_ms = queryNow(io);
+    try fsm.initRuntime(alloc.gpa, now_ms);
+
+    var response_state = fsm.currentState(txn.payload.FsmId) orelse 0;
+    var response_error: pb.DErrorResult = successResult();
+
+    switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
+        .confirmed => {
+            response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
+            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack);
+        },
+        .mismatch => |pending_state| {
+            response_state = pending_state;
+            response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
+                txn.payload.FsmId,
+                txn.payload.State,
+                pending_state,
+            });
+        },
+        .machine_not_found => response_error = try errorResult(alloc.arena, .ErrEntityFsmMachineNotExist, &.{txn.payload.FsmId}),
+        .invalid_target => response_error = try errorResult(alloc.arena, .ErrIEntityFsmTransitToState, &.{
+            txn.payload.FsmId,
+            txn.payload.State,
+        }),
+        .no_pending => response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotExist, &.{
+            txn.payload.FsmId,
+            response_state,
+        }),
+        .accepted => response_state = fsm.currentState(txn.payload.FsmId) orelse response_state,
+        .invalid_source => response_error = try errorResult(alloc.arena, .ErrEntityFsmStateIncorrect, &.{
+            txn.payload.FsmId,
+            response_state,
+        }),
     }
 
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
-        .State = txn.payload.State,
-        .Error = successResult(),
+        .State = response_state,
+        .Error = response_error,
     });
 }
 
@@ -280,7 +353,7 @@ pub fn ChangeStateConfirmPush(
         try fsm.initRuntime(alloc.gpa, now_ms);
         switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa, now_ms)) {
             .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, logic_state, now_ms, alloc, receive_data_pack),
-            .accepted, .mismatch, .no_pending => {},
+            .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
         }
     }
 }
