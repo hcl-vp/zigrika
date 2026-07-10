@@ -174,19 +174,20 @@ pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) boo
 }
 
 pub fn insertPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !void {
-    if (!value) return;
-
-    try comp.appendPass(gpa, key);
-
     const resolved = comp.resolveOverrideStates(key.from, key.to, false);
-    if (resolved.from != key.from or resolved.to != key.to) {
-        try comp.appendPass(gpa, .{
-            .fsm_id = key.fsm_id,
-            .from = resolved.from,
-            .to = resolved.to,
-            .index = key.index,
-        });
+    const resolved_key: ConditionKey = .{
+        .fsm_id = key.fsm_id,
+        .from = resolved.from,
+        .to = resolved.to,
+        .index = key.index,
+    };
+
+    if (!value) {
+        try comp.removePass(gpa, resolved_key);
+        return;
     }
+
+    try comp.appendPass(gpa, resolved_key);
 }
 
 pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
@@ -706,7 +707,7 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
         if (root_node.Children) |children| {
             if (std.mem.indexOfScalar(i32, children, resolved.to) != null) {
                 runtime.parent_state = resolved.to;
-                try comp.removePassesFrom(gpa, runtime.parent_state);
+                try comp.removePassesFrom(gpa, fsm_id, runtime.parent_state);
             }
         }
     }
@@ -722,7 +723,7 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
     }
 
     runtime.cur_state = new_state;
-    try comp.removePassesFrom(gpa, from);
+    try comp.removePassesFrom(gpa, fsm_id, from);
     comp.start_time_ms = now_ms;
     comp.last_state = from;
 }
@@ -936,12 +937,28 @@ fn appendPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey) !void {
     comp.pass_pool = pass_pool;
 }
 
-fn removePassesFrom(comp: *Component, gpa: mem.Allocator, from: i32) !void {
+fn removePass(comp: *Component, gpa: mem.Allocator, key: ConditionKey) !void {
     var pass_pool: std.ArrayList(ConditionKey) = .empty;
     defer pass_pool.deinit(gpa);
 
     for (comp.pass_pool) |entry| {
-        if (entry.from == from) continue;
+        if (entry.fsm_id == key.fsm_id and
+            entry.index == key.index and
+            comp.statesEquivalent(entry.from, key.from) and
+            comp.statesEquivalent(entry.to, key.to)) continue;
+        try pass_pool.append(gpa, entry);
+    }
+
+    gpa.free(comp.pass_pool);
+    comp.pass_pool = try pass_pool.toOwnedSlice(gpa);
+}
+
+fn removePassesFrom(comp: *Component, gpa: mem.Allocator, fsm_id: i32, from: i32) !void {
+    var pass_pool: std.ArrayList(ConditionKey) = .empty;
+    defer pass_pool.deinit(gpa);
+
+    for (comp.pass_pool) |entry| {
+        if (entry.fsm_id == fsm_id and comp.statesEquivalent(entry.from, from)) continue;
         try pass_pool.append(gpa, entry);
     }
 

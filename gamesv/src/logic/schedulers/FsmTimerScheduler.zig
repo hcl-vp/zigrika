@@ -142,35 +142,22 @@ pub fn recordClientPass(
 ) !void {
     try scheduler.ensureLoaded(gpa, scene, assets, now_ms);
 
-    const raw_key: ConditionKey = .{
+    const states = if (findFsmComponent(scene, entity_id)) |fsm_component|
+        resolveOverride(fsm_component, from_state, to_state, false)
+    else
+        TransitionStates{ .from = from_state, .to = to_state };
+    const key: ConditionKey = .{
         .entity_id = entity_id,
         .fsm_id = fsm_id,
-        .from_state = from_state,
-        .to_state = to_state,
+        .from_state = states.from,
+        .to_state = states.to,
         .condition_index = condition_index,
     };
 
     if (value) {
-        try scheduler.addClientPass(gpa, raw_key);
+        try scheduler.addClientPass(gpa, key);
     } else {
-        scheduler.removeClientPass(raw_key);
-    }
-
-    if (findFsmComponent(scene, entity_id)) |fsm_component| {
-        const resolved = resolveOverride(fsm_component, from_state, to_state, false);
-        const resolved_key: ConditionKey = .{
-            .entity_id = entity_id,
-            .fsm_id = fsm_id,
-            .from_state = resolved.from,
-            .to_state = resolved.to,
-            .condition_index = condition_index,
-        };
-
-        if (value) {
-            try scheduler.addClientPass(gpa, resolved_key);
-        } else {
-            scheduler.removeClientPass(resolved_key);
-        }
+        scheduler.removeClientPass(key);
     }
 
     try scheduler.rescheduleAll(gpa, scene, assets, now_ms);
@@ -191,8 +178,14 @@ pub fn setCurrentState(
     const state_index = scheduler.findStateIndex(entity_id, fsm_id) orelse return current_state;
     const fsm_component = findFsmComponent(scene, entity_id) orelse return current_state;
     const new_state = resolvedDeepestChild(fsm_component, current_state);
+    const previous_state = scheduler.states.items[state_index].current_state;
+    const had_pending = scheduler.states.items[state_index].pending_state != null;
 
-    scheduler.states.items[state_index].last_state = scheduler.states.items[state_index].current_state;
+    if (had_pending or previous_state != new_state) {
+        scheduler.removeClientPassesFrom(entity_id, fsm_id, previous_state);
+    }
+
+    scheduler.states.items[state_index].last_state = previous_state;
     scheduler.states.items[state_index].current_state = new_state;
     scheduler.states.items[state_index].pending_state = null;
     scheduler.states.items[state_index].state_started_ms = now_ms;
@@ -454,6 +447,23 @@ fn removeClientPass(
     }
 }
 
+fn removeClientPassesFrom(
+    scheduler: *FsmTimerScheduler,
+    entity_id: i64,
+    fsm_id: i32,
+    from_state: i32,
+) void {
+    var i: usize = 0;
+    while (i < scheduler.client_passes.items.len) {
+        const pass = scheduler.client_passes.items[i];
+        if (pass.entity_id == entity_id and pass.fsm_id == fsm_id and pass.from_state == from_state) {
+            _ = scheduler.client_passes.swapRemove(i);
+        } else {
+            i += 1;
+        }
+    }
+}
+
 fn hasClientPass(
     scheduler: *const FsmTimerScheduler,
     fsm_component: *const FsmComponent,
@@ -463,15 +473,6 @@ fn hasClientPass(
     to_state: i32,
     condition_index: i32,
 ) bool {
-    const raw_key: ConditionKey = .{
-        .entity_id = entity_id,
-        .fsm_id = fsm_id,
-        .from_state = from_state,
-        .to_state = to_state,
-        .condition_index = condition_index,
-    };
-    if (scheduler.hasExactClientPass(raw_key)) return true;
-
     const resolved = resolveOverride(fsm_component, from_state, to_state, false);
     return scheduler.hasExactClientPass(.{
         .entity_id = entity_id,
