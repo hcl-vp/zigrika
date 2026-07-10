@@ -96,6 +96,6 @@ fn isDue(next_ms: i64, now_ms: i64) bool {
 }
 
 fn nowMs(state: *State) i64 {
-    const rtc: std.Io.Clock = .real;
-    return rtc.now(state.io).toMilliseconds();
+    const clock: std.Io.Clock = .awake;
+    return clock.now(state.io).toMilliseconds();
 }

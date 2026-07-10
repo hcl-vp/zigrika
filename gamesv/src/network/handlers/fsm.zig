@@ -110,6 +110,6 @@ pub fn FsmStateBehaviorRequest(
 }
 
 fn nowMs(io: std.Io) i64 {
-    const rtc: std.Io.Clock = .real;
-    return rtc.now(io).toMilliseconds();
+    const clock: std.Io.Clock = .awake;
+    return clock.now(io).toMilliseconds();
 }

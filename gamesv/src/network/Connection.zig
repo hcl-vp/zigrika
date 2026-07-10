@@ -76,7 +76,7 @@ fn waitForPacket(handle: *ConnectionHandle) anyerror!RawPacket {
 
 fn waitForTimedTick(io: Io, delay_ms: i64) anyerror!void {
     const sleep_ms = if (delay_ms > 0) delay_ms else 0;
-    try io.sleep(.fromMilliseconds(sleep_ms), .real);
+    try io.sleep(.fromMilliseconds(sleep_ms), .awake);
 }
 
 fn applySessionSelectResult(wake: *SessionWake, result: SessionSelectResult) void {
@@ -134,8 +134,8 @@ fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake 
 
 fn drainTimedLogicForSession(state: *State, kcp: *Kcp, io: Io, init_time: i64) !bool {
     const log = std.log.scoped(.connection);
-    const rtc: Io.Clock = .real;
-    const time = rtc.now(io);
+    const clock: Io.Clock = .awake;
+    const time = clock.now(io);
 
     try kcp.update(@intCast(time.toMilliseconds() - init_time));
 
@@ -151,8 +151,8 @@ fn drainTimedLogicForSession(state: *State, kcp: *Kcp, io: Io, init_time: i64) !
 pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, assets: *const Assets) void {
     const log = std.log.scoped(.connection);
 
-    const rtc: Io.Clock = .real;
-    const init_time = rtc.now(handle.io).toMilliseconds();
+    const clock: Io.Clock = .awake;
+    const init_time = clock.now(handle.io).toMilliseconds();
 
     var kcp = Kcp.init(gpa, handle.conv_id, @intFromPtr(handle)) catch |err| {
         log.err("failed to initialize kcp instance: {t}", .{err});
@@ -186,7 +186,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
         var timed_logic_checked = false;
 
         if (wake.packet) |packet| {
-            const time = rtc.now(handle.io);
+            const time = clock.now(handle.io);
             needs_flush = true;
 
             _ = kcp.input(packet.buf[0..packet.len]) catch |err| {
@@ -281,7 +281,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
             } else |_| {} // EAGAIN behavior
 
             if (state) |*s| {
-                const now_ms = rtc.now(handle.io).toMilliseconds();
+                const now_ms = clock.now(handle.io).toMilliseconds();
                 if (TimedLogicScheduler.shouldDrain(s, now_ms)) {
                     const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
                         log.err("failed to update kcp state: {t}, disconnecting", .{err});
