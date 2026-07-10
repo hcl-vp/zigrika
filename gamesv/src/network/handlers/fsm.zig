@@ -17,23 +17,7 @@ const LogicStateQuery = Scene.Query(&.{
     *Entity.LogicStateComponent,
 });
 
-pub fn HitRequest(
-    txn: *dispatch.CombatRequestTxn(.HitRequest),
-    query: FsmQuery,
-    io: std.Io,
-    alloc: mem.Alloc,
-) !void {
-    const target_id = if (txn.payload.HitInfo) |hit_info| hit_info.TargetId else 0;
-    const entity_id = if (target_id != 0) target_id else commonEntityId(txn.common) orelse 0;
-
-    if (entity_id != 0) {
-        if (query.byNetId(entity_id)) |item| {
-            _, const fsm, _, _ = item;
-            try ensureRuntime(fsm, io, alloc.gpa);
-            if (txn.payload.HitInfo) |hit_info| fsm.recordHit(hit_info);
-        }
-    }
-
+pub fn HitRequest(txn: *dispatch.CombatRequestTxn(.HitRequest)) !void {
     txn.respond(.{
         .HitInfo = txn.payload.HitInfo,
         .ErrorCode = .Success,

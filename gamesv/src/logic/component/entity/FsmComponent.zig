@@ -51,13 +51,6 @@ pub const ConditionKey = struct {
     index: i32,
 };
 
-pub const LastHit = struct {
-    has_be_hit_data: bool,
-    fight_state: i32,
-    is_trigger_vision_counter_attack: bool,
-    skill_id: i64,
-};
-
 pub const EvalContext = struct {
     attribute: ?*const AttributeComponent = null,
     logic_state: ?*const LogicStateComponent = null,
@@ -102,7 +95,6 @@ tags: []const i64 = &.{},
 in_hate: bool = false,
 is_paralyze: bool = false,
 last_state: i32 = 0,
-last_hit_info: ?LastHit = null,
 event: ?[]const u8 = null,
 start_time_ms: i64 = 0,
 
@@ -179,15 +171,6 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
 
     comp.runtime_nodes = try runtime_nodes.toOwnedSlice(gpa);
     comp.start_time_ms = now_ms;
-}
-
-pub fn recordHit(comp: *Component, hit_info: pb.HitInformation) void {
-    comp.last_hit_info = .{
-        .has_be_hit_data = hit_info.HasBeHitData,
-        .fight_state = hit_info.FightState,
-        .is_trigger_vision_counter_attack = hit_info.IsTriggerVisionCounterAttack,
-        .skill_id = hit_info.SkillId,
-    };
 }
 
 pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
@@ -570,9 +553,8 @@ fn evalConditionRaw(
         return comp.lastStateNameMatches(state.TargetStateName);
     }
 
-    if (condition.CondListenBeHit) |hit| {
-        return comp.listenBeHitPasses(hit);
-    }
+    // The client owns be-hit event classification and reports it through condition passes.
+    if (condition.CondListenBeHit != null) return false;
 
     if (condition.CondListenEvent) |listen| {
         return comp.listenEventPasses(listen, std.mem.eql(u8, condition.Name, "CondListenEvent"));
@@ -855,27 +837,6 @@ fn currentStateNameMatches(comp: *const Component, _: i32, name: []const u8) boo
 fn lastStateNameMatches(comp: *const Component, name: []const u8) bool {
     const node = comp.findNode(comp.last_state) orelse return false;
     if (node.Name) |node_name| return std.mem.eql(u8, node_name, name);
-    return false;
-}
-
-fn listenBeHitPasses(comp: *Component, condition: AiStateMachineConfig.ConditionListenBeHit) bool {
-    const hit = comp.last_hit_info orelse return false;
-    comp.last_hit_info = null;
-
-    if (condition.NoHitAnimation != hit.has_be_hit_data) return false;
-
-    const state = @divTrunc(hit.fight_state, 256);
-    const sub = @rem(hit.fight_state, 256);
-
-    if (state == 2 and sub == 0 and condition.SoftKnock) return true;
-    if (state == 2 and sub == 1 and condition.KnockDown) return true;
-    if (state == 2 and sub == 2 and condition.KnockUp) return true;
-    if ((state == 3 or state == 8) and condition.HeavyKnock) return true;
-    if (state == 4 and condition.Parry) {
-        if (condition.VisionCounterAttackId == 0) return true;
-        return hit.is_trigger_vision_counter_attack and hit.skill_id == condition.VisionCounterAttackId;
-    }
-
     return false;
 }
 
