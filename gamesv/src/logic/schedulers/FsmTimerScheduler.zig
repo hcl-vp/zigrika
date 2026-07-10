@@ -98,6 +98,10 @@ pub fn drainDue(
             _ = scheduler.entries.swapRemove(i);
             continue;
         };
+        const fsm_component = findFsmComponent(scene, entry.entity_id) orelse {
+            _ = scheduler.entries.swapRemove(i);
+            continue;
+        };
         const state = scheduler.states.items[state_index];
         if (state.pending_state != null or state.current_state != entry.from_state) {
             _ = scheduler.entries.swapRemove(i);
@@ -106,14 +110,15 @@ pub fn drainDue(
 
         scheduler.states.items[state_index].pending_state = entry.to_state;
         scheduler.removeEntriesForFsm(entry.entity_id, entry.fsm_id);
+        const client_states = resolveOverride(fsm_component, entry.from_state, entry.to_state, true);
         try combat_receive_pack.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entry.entity_id },
                 .Message = .{
                     .ChangeStateNotify = .{
                         .FsmId = entry.fsm_id,
-                        .FromState = entry.from_state,
-                        .ToState = entry.to_state,
+                        .FromState = client_states.from,
+                        .ToState = client_states.to,
                     },
                 },
             },
@@ -185,7 +190,7 @@ pub fn setCurrentState(
 
     const state_index = scheduler.findStateIndex(entity_id, fsm_id) orelse return current_state;
     const fsm_component = findFsmComponent(scene, entity_id) orelse return current_state;
-    const new_state = deepestChild(fsm_component, current_state);
+    const new_state = resolvedDeepestChild(fsm_component, current_state);
 
     scheduler.states.items[state_index].last_state = scheduler.states.items[state_index].current_state;
     scheduler.states.items[state_index].current_state = new_state;
@@ -194,7 +199,7 @@ pub fn setCurrentState(
     scheduler.removeEntriesForFsm(entity_id, fsm_id);
     try scheduler.scheduleForState(gpa, scene, assets, state_index, now_ms);
 
-    return new_state;
+    return resolveOverrideState(fsm_component, new_state, true);
 }
 
 fn ensureLoaded(
@@ -229,7 +234,7 @@ fn rebuild(
             try scheduler.states.append(gpa, .{
                 .entity_id = entity_id.net_id,
                 .fsm_id = fsm.FsmId,
-                .current_state = fsm.CurrentState,
+                .current_state = resolvedDeepestChild(fsm_component, fsm.CurrentState),
                 .state_started_ms = now_ms,
             });
         }
@@ -269,7 +274,8 @@ fn scheduleForState(
 
     for (fsm_component.node_list) |entry| {
         for (entry.value.Transitions) |transition| {
-            if (transition.From != state.current_state) continue;
+            const resolved = resolveOverride(fsm_component, transition.From, transition.To, false);
+            if (resolved.from != state.current_state) continue;
 
             const due_ms = scheduler.transitionDueMs(
                 fsm_component,
@@ -281,8 +287,8 @@ fn scheduleForState(
             try scheduler.entries.append(gpa, .{
                 .entity_id = state.entity_id,
                 .fsm_id = state.fsm_id,
-                .from_state = transition.From,
-                .to_state = transition.To,
+                .from_state = resolved.from,
+                .to_state = resolved.to,
                 .due_ms = @max(due_ms, now_ms),
             });
         }
@@ -533,6 +539,12 @@ fn deepestChild(fsm_component: *const FsmComponent, state: i32) i32 {
         if (children.len > 0) return deepestChild(fsm_component, children[0]);
     }
     return state;
+}
+
+fn resolvedDeepestChild(fsm_component: *const FsmComponent, state: i32) i32 {
+    const local_deepest = deepestChild(fsm_component, state);
+    const resolved = resolveOverrideState(fsm_component, local_deepest, false);
+    return resolveOverrideState(fsm_component, deepestChild(fsm_component, resolved), false);
 }
 
 fn findNode(
