@@ -455,25 +455,28 @@ fn checkTransitionsForState(
     const children = node.Children orelse return null;
     const canonical_source = comp.canonicalState(state_to_check);
 
-    for (children) |raw_target_state| {
-        const target_state = comp.canonicalState(raw_target_state);
+    for (node.Transitions) |transition| {
+        const resolved_transition = comp.resolveOverrideStates(transition.From, transition.To, false);
+        if (resolved_transition.from != canonical_source) continue;
+
+        const target_state = resolved_transition.to;
         if (canonical_source == target_state) continue;
 
-        for (node.Transitions) |transition| {
-            const resolved_transition = comp.resolveOverrideStates(transition.From, transition.To, false);
-            if (resolved_transition.from != canonical_source or resolved_transition.to != target_state) continue;
+        const target_is_child = for (children) |child| {
+            if (comp.statesEquivalent(child, target_state)) break true;
+        } else false;
+        if (!target_is_child) continue;
 
-            const top_condition = findCondition(transition.Conditions, 0) orelse continue;
-            if (!comp.evalCondition(fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
+        const top_condition = findCondition(transition.Conditions, 0) orelse continue;
+        if (!comp.evalCondition(fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
 
-            try comp.setPendingTransition(runtime, canonical_source, target_state, ctx.now_ms);
-            try comp.runTransitionEvents(gpa, canonical_source, target_state);
-            return .{
-                .fsm_id = comp.clientState(runtime.fsm_id),
-                .from = comp.clientState(canonical_source),
-                .to = comp.clientState(target_state),
-            };
-        }
+        try comp.setPendingTransition(runtime, canonical_source, target_state, ctx.now_ms);
+        try comp.runTransitionEvents(gpa, canonical_source, target_state);
+        return .{
+            .fsm_id = comp.clientState(runtime.fsm_id),
+            .from = comp.clientState(canonical_source),
+            .to = comp.clientState(target_state),
+        };
     }
 
     return null;
@@ -617,7 +620,8 @@ fn hasPredictedTransition(comp: *const Component, from: i32, to: i32) bool {
         for (entry.value.Transitions) |transition| {
             const candidate = comp.resolveOverrideStates(transition.From, transition.To, false);
             if (candidate.from != requested.from or candidate.to != requested.to) continue;
-            if (transition.TransitionPredictionType == 1) return true;
+            const prediction_type = transition.TransitionPredictionType orelse 0;
+            if (prediction_type == 1 or prediction_type == 2) return true;
         }
     }
 
