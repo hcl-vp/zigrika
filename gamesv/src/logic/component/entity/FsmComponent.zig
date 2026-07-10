@@ -600,7 +600,7 @@ fn acceptPredictedTransition(
 ) !bool {
     const runtime = comp.runtimeNode(fsm_id) orelse return false;
     if (!comp.pathContains(runtime.active(), from)) return false;
-    if (!comp.hasPredictedTransition(from, to)) return false;
+    if (!comp.hasPredictedTransition(runtime.fsm_id, from, to)) return false;
 
     try comp.runTransitionEvents(gpa, from, to);
     try comp.changeCurrentState(fsm_id, from, to, gpa, now_ms);
@@ -610,16 +610,19 @@ fn acceptPredictedTransition(
 fn canFoldPredictedTransition(comp: *const Component, runtime: *const FsmNode, from: i32, to: i32) bool {
     if (!comp.pathContains(runtime.pending(), from)) return false;
     if (!comp.stateBelongsToFsm(runtime.fsm_id, to)) return false;
-    return comp.hasPredictedTransition(from, to);
+    return comp.hasPredictedTransition(runtime.fsm_id, from, to);
 }
 
-fn hasPredictedTransition(comp: *const Component, from: i32, to: i32) bool {
+fn hasPredictedTransition(comp: *const Component, fsm_id: i32, from: i32, to: i32) bool {
     const requested = comp.resolveOverrideStates(from, to, false);
+    const root = comp.findNode(fsm_id) orelse return false;
+    const client_owns_animation = root.IsAnimStateMachine orelse false;
 
     for (comp.node_list) |entry| {
         for (entry.value.Transitions) |transition| {
             const candidate = comp.resolveOverrideStates(transition.From, transition.To, false);
             if (candidate.from != requested.from or candidate.to != requested.to) continue;
+            if (client_owns_animation) return true;
             const prediction_type = transition.TransitionPredictionType orelse 0;
             if (prediction_type == 1 or prediction_type == 2) return true;
         }
