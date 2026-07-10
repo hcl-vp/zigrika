@@ -34,7 +34,7 @@ pub fn handleFsmTick(
         if (!fsm.in_hate) continue;
 
         try fsm.initRuntime(alloc.gpa, now_ms);
-        if (try fsm.checkState(entity.net_id, alloc.gpa, .{
+        if (try fsm.checkState(entity.net_id, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,

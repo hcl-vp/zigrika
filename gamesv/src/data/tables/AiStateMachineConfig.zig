@@ -125,6 +125,7 @@ pub const StateMachineAction = struct {
     ActionCue: ?ActionCue = null,
     ActionEnterFight: ?struct {} = null,
     ActionAddTagCount: ?ActionTagCount = null,
+    ActionRemoveTagCount: ?ActionTagCount = null,
     ActionInstChangeStateTag: ?ActionInstChangeStateTag = null,
     ActionStopMontage: ?ActionStopMontage = null,
     ActionExitHit: ?struct {} = null,

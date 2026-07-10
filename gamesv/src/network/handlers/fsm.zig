@@ -218,7 +218,7 @@ pub fn FsmConditionPassRequest(
     const response_error = try clientPassError(alloc.arena, pass_result, txn.payload);
 
     if (pass_result == .updated) {
-        if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
+        if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,
@@ -255,7 +255,7 @@ pub fn AiHateRequest(
             const now_ms = queryNow(io);
             try fsm.initRuntime(alloc.gpa, now_ms);
             _ = fsm.setHateFromList(txn.payload.HateList.items);
-            if (try fsm.checkState(entity.net_id, alloc.gpa, .{
+            if (try fsm.checkState(entity.net_id, .{
                 .attribute = attribute,
                 .logic_state = logic_state,
                 .now_ms = now_ms,
@@ -304,7 +304,7 @@ pub fn FsmConditionPassPush(
             .index = push.ConditionIndex,
         }, push.Value);
         if (pass_result != .updated) return;
-        if (try fsm.checkTransitions(entity.net_id, push.FsmId, alloc.gpa, .{
+        if (try fsm.checkTransitions(entity.net_id, push.FsmId, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,
@@ -328,7 +328,7 @@ pub fn AiHatePush(
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         _ = fsm.setHateFromList(push.HateList.items);
-        if (try fsm.checkState(entity.net_id, alloc.gpa, .{
+        if (try fsm.checkState(entity.net_id, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,
@@ -405,7 +405,7 @@ fn appendFollowupTransition(
     alloc: mem.Alloc,
     receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
 ) !void {
-    if (try fsm.checkTransitions(entity.net_id, fsm_id, alloc.gpa, .{
+    if (try fsm.checkTransitions(entity.net_id, fsm_id, .{
         .attribute = attribute,
         .logic_state = logic_state,
         .now_ms = now_ms,
