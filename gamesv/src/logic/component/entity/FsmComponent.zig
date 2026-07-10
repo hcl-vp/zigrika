@@ -117,37 +117,18 @@ pub fn toProto(comp: Component, arena: mem.Allocator, assets: *const Assets) !pb
     };
 }
 
-pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets, gpa: mem.Allocator) !Component {
-    const common_fsm = getCommonFsm(assets) orelse {
-        log.warn("Common state machine missing", .{});
-        return .{};
-    };
+pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets, gpa: mem.Allocator) !?Component {
+    const configs = findAiStateMachineConfigs(ai_id, assets) orelse return null;
+    return fromConfig(configs.entity, configs.common, gpa);
+}
 
-    const ai_base = assets.tables.ai_base.getDataById(ai_id orelse return .{}) orelse {
-        log.warn("Ai base with id {?} not found", .{ai_id});
-        return .{};
-    };
-
-    const entry = assets.tables.ai_state_machine_config.getDataById(ai_base.StateMachine) orelse {
-        log.warn("Requested state machine with id {s} not found in config", .{ai_base.StateMachine});
-        return .{};
-    };
-
-    return fromConfig(entry.StateMachineJson, common_fsm.StateMachineJson, gpa);
+pub fn hasUsableAiBaseId(ai_id: ?i32, assets: *const Assets) bool {
+    return findAiStateMachineConfigs(ai_id, assets) != null;
 }
 
 pub fn fromStateMachineId(id: []const u8, assets: *const Assets, gpa: mem.Allocator) !Component {
-    const common_fsm = getCommonFsm(assets) orelse {
-        log.warn("Common state machine missing", .{});
-        return .{};
-    };
-
-    const entry = assets.tables.ai_state_machine_config.getDataById(id) orelse {
-        log.warn("Requested state machine with id {s} not found in config", .{id});
-        return .{};
-    };
-
-    return fromConfig(entry.StateMachineJson, common_fsm.StateMachineJson, gpa);
+    const configs = findStateMachineConfigs(id, assets) orelse return error.InvalidFsmConfiguration;
+    return (try fromConfig(configs.entity, configs.common, gpa)) orelse error.InvalidFsmConfiguration;
 }
 
 pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
@@ -379,11 +360,54 @@ pub fn getCommonFsm(assets: *const Assets) ?AiStateMachineConfig {
     return assets.tables.ai_state_machine_config.getDataById("SM_Common");
 }
 
+const StateMachineConfigs = struct {
+    entity: AiStateMachineConfig.StateMachineJsonData,
+    common: AiStateMachineConfig.StateMachineJsonData,
+};
+
+fn findAiStateMachineConfigs(ai_id: ?i32, assets: *const Assets) ?StateMachineConfigs {
+    const id = ai_id orelse return null;
+    if (id <= 0) return null;
+
+    const ai_base = assets.tables.ai_base.getDataById(id) orelse return null;
+    return findStateMachineConfigs(ai_base.StateMachine, assets);
+}
+
+fn findStateMachineConfigs(id: []const u8, assets: *const Assets) ?StateMachineConfigs {
+    if (id.len == 0) return null;
+    const common = getCommonFsm(assets) orelse return null;
+    const entity = assets.tables.ai_state_machine_config.getDataById(id) orelse return null;
+    if (!hasDeclaredRoot(entity.StateMachineJson, common.StateMachineJson)) return null;
+
+    return .{
+        .entity = entity.StateMachineJson,
+        .common = common.StateMachineJson,
+    };
+}
+
+fn hasDeclaredRoot(
+    entity: AiStateMachineConfig.StateMachineJsonData,
+    common: AiStateMachineConfig.StateMachineJsonData,
+) bool {
+    for (entity.StateMachines) |root_id| {
+        for (entity.Nodes) |node| {
+            if (node.Uuid != root_id) continue;
+            const effective_id = node.ReferenceUuid orelse node.Uuid;
+            const nodes = if (node.ReferenceUuid != null) common.Nodes else entity.Nodes;
+            for (nodes) |candidate| {
+                if (candidate.Uuid == effective_id) return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 fn fromConfig(
     state_machine_config: AiStateMachineConfig.StateMachineJsonData,
     common_state_machine: AiStateMachineConfig.StateMachineJsonData,
     gpa: mem.Allocator,
-) !Component {
+) !?Component {
     var state_list: std.ArrayList(i32) = try .initCapacity(gpa, 1);
     defer state_list.deinit(gpa);
     try state_list.appendSlice(gpa, state_machine_config.StateMachines);
@@ -423,13 +447,28 @@ fn fromConfig(
         }
     }
 
-    return .{
+    var component: Component = .{
         .hash_code = state_machine_config.Version,
         .common_hash_code = common_state_machine.Version,
         .state_list = try state_list.toOwnedSlice(gpa),
         .node_list = try fsm_tree.toOwnedSlice(gpa),
         .override_mapping = try override_mapping.toOwnedSlice(gpa),
     };
+    if (!component.hasValidInitialRoot()) {
+        component.deinit(gpa);
+        return null;
+    }
+
+    return component;
+}
+
+fn hasValidInitialRoot(comp: *const Component) bool {
+    for (comp.state_list) |fsm_id| {
+        var path: [max_state_depth]i32 = @splat(0);
+        if (comp.buildInitialPath(fsm_id, &path) != null) return true;
+    }
+
+    return false;
 }
 
 fn findReadyTransition(comp: *Component, fsm_id: i32, gpa: mem.Allocator, ctx: EvalContext) !?Transition {

@@ -76,8 +76,8 @@ fn findTemplateConfig(assets: *const Assets, blueprint_type: []const u8) ?Templa
     return null;
 }
 
-fn hasAiId(components: *const Components) bool {
-    if (components.AiComponent) |ai_comp| return ai_comp.AiId != null;
+fn hasUsableFsm(assets: *const Assets, components: *const Components) bool {
+    if (components.AiComponent) |ai_comp| return Entity.FsmComponent.hasUsableAiBaseId(ai_comp.AiId, assets);
     return false;
 }
 
@@ -86,7 +86,7 @@ fn hasCombatAttributes(components: *const Components) bool {
     return false;
 }
 
-fn spawnCandidateScore(scene_map_id: i32, entity_config: *const LevelEntityConfig, blueprint_config: *const BlueprintConfig) i32 {
+fn spawnCandidateScore(assets: *const Assets, scene_map_id: i32, entity_config: *const LevelEntityConfig, blueprint_config: *const BlueprintConfig) i32 {
     var score: i32 = 0;
     const spawn_base = spawnBaseFromLogic(blueprint_config.EntityLogic);
 
@@ -97,7 +97,7 @@ fn spawnCandidateScore(scene_map_id: i32, entity_config: *const LevelEntityConfi
         if (base.entity_type == .monster) score += 3000;
     }
 
-    if (hasAiId(&entity_config.ComponentsData)) score += 2500;
+    if (hasUsableFsm(assets, &entity_config.ComponentsData)) score += 2500;
     if (hasCombatAttributes(&entity_config.ComponentsData)) score += 1500;
     if (!entity_config.IsHidden) score += 100;
     if (!entity_config.InSleep) score += 50;
@@ -119,7 +119,7 @@ fn selectSpawnConfig(assets: *const Assets, entity_id: i64, scene_map_id: i32, s
         var entity_config = cfg;
         template_config.ComponentsData.mergeInto(&entity_config.ComponentsData);
 
-        const score = spawnCandidateScore(source_map_id orelse scene_map_id, &entity_config, &blueprint_config);
+        const score = spawnCandidateScore(assets, source_map_id orelse scene_map_id, &entity_config, &blueprint_config);
         if (best == null or score > best.?.score) {
             best = .{
                 .entity_config = entity_config,
@@ -208,6 +208,10 @@ pub const spawn = struct {
         const weapon_id = if (ai_comp) |comp| parseOptionalInt(comp.WeaponId) else 0;
         const final_camp = spawnCamp(base_info, &template_config, spawn_base);
         const use_ai_runtime = useAiRuntime(spawn_base.entity_type);
+        const fsm_component = if (use_ai_runtime)
+            try Entity.FsmComponent.fromAiBaseId(ai_id, assets, alloc.gpa)
+        else
+            null;
         const combat_attributes: ?Entity.AttributeComponent = if (use_ai_runtime)
             (try entity_attributes.createCombatAttributes(
                 assets,
@@ -221,7 +225,7 @@ pub const spawn = struct {
             combat_attributes orelse Entity.AttributeComponent{}
         else
             null;
-        const entity = if (use_ai_runtime and ai_id != null) try scene.spawn(alloc.gpa, fs, .{
+        const entity = if (fsm_component) |fsm| try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
                 .config_id = @intCast(entity_id),
@@ -244,7 +248,7 @@ pub const spawn = struct {
                 .ai_team_init_id = 100,
                 .combat_message_id = 0,
             },
-            try Entity.FsmComponent.fromAiBaseId(ai_id, assets, alloc.gpa),
+            fsm,
         }) else if (use_ai_runtime) try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
