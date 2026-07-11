@@ -4,6 +4,7 @@ const mem = @import("../../../mem.zig");
 const std = @import("std");
 const Assets = @import("../../../data/Assets.zig");
 const AttributeComponent = @import("AttributeComponent.zig");
+const FightBuffComponent = @import("FightBuffComponent.zig");
 const LogicStateComponent = @import("LogicStateComponent.zig");
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
@@ -65,8 +66,18 @@ const TagCount = struct {
 
 pub const EvalContext = struct {
     attribute: ?*const AttributeComponent = null,
+    buffs: ?*const FightBuffComponent = null,
     logic_state: ?*const LogicStateComponent = null,
+    parts: ?[]const PartState = null,
+    dissolve_combined: ?bool = null,
     now_ms: i64,
+};
+
+pub const PartState = struct {
+    name: []const u8,
+    life: f32,
+    max_life: f32,
+    activated: bool,
 };
 
 pub const Transition = struct {
@@ -665,6 +676,20 @@ fn evalConditionRaw(
 
     if (condition.CondInstStateChange != null) return false;
 
+    if (condition.CondBuffStack) |buff| {
+        return buffStackInRange(ctx.buffs, buff);
+    }
+
+    if (condition.CondPartLife) |part| {
+        return partLifeInRange(ctx.parts, part);
+    }
+
+    if (condition.CondCheckPartActivated) |part| {
+        return partIsActivated(ctx.parts, part.PartName);
+    }
+
+    if (condition.CondCheckDissolveCombine != null) return ctx.dissolve_combined orelse false;
+
     return false;
 }
 
@@ -1064,6 +1089,35 @@ fn listenEventPasses(comp: *Component, condition: AiStateMachineConfig.Condition
     const event = comp.event orelse return false;
     comp.event = null;
     return std.mem.eql(u8, event, condition.Event);
+}
+
+fn buffStackInRange(buffs: ?*const FightBuffComponent, condition: AiStateMachineConfig.ConditionBuffStack) bool {
+    const component = buffs orelse return condition.MinStack <= 0 and condition.MaxStack >= 0;
+    const stack = for (component.fight_buff_infos) |buff| {
+        if (buff.BuffId == condition.BuffId) break buff.StackCount;
+    } else 0;
+    return stack >= condition.MinStack and stack <= condition.MaxStack;
+}
+
+fn partLifeInRange(parts: ?[]const PartState, condition: AiStateMachineConfig.ConditionPartLife) bool {
+    const states = parts orelse return false;
+    const part = for (states) |state| {
+        if (std.mem.eql(u8, state.name, condition.PartName)) break state;
+    } else return false;
+
+    const value: f64 = if (condition.CheckRate) blk: {
+        if (part.max_life <= 0) return false;
+        break :blk @as(f64, part.life) * 10000.0 / @as(f64, part.max_life);
+    } else part.life;
+    return value >= @as(f64, @floatFromInt(condition.Min)) and value <= @as(f64, @floatFromInt(condition.Max));
+}
+
+fn partIsActivated(parts: ?[]const PartState, name: []const u8) bool {
+    const states = parts orelse return false;
+    for (states) |part| {
+        if (std.mem.eql(u8, part.name, name)) return part.activated;
+    }
+    return false;
 }
 
 fn attrInRange(attribute: ?*const AttributeComponent, attribute_id: i32, min: i32, max: i32) bool {

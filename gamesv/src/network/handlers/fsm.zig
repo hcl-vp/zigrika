@@ -9,6 +9,7 @@ const FsmQuery = Scene.Query(&.{
     Entity,
     *Entity.FsmComponent,
     ?*Entity.AttributeComponent,
+    ?*Entity.FightBuffComponent,
     ?*Entity.LogicStateComponent,
 });
 
@@ -51,7 +52,7 @@ pub fn ChangeStateRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const logic_state = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -68,7 +69,7 @@ pub fn ChangeStateRequest(
     )) {
         .confirmed => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
-            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack);
+            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, now_ms, alloc, txn.receive_data_pack);
         },
         .accepted => current_state = fsm.currentState(txn.payload.FsmId) orelse current_state,
         .mismatch => |pending_state| {
@@ -92,6 +93,7 @@ pub fn ChangeStateRequest(
         .no_pending => {
             if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
                 .attribute = attribute,
+                .buffs = buffs,
                 .logic_state = logic_state,
                 .now_ms = now_ms,
             })) |notify| {
@@ -143,7 +145,7 @@ pub fn ChangeStateConfirmRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const logic_state = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -154,7 +156,7 @@ pub fn ChangeStateConfirmRequest(
     switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa)) {
         .confirmed => {
             response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
-            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack);
+            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, now_ms, alloc, txn.receive_data_pack);
         },
         .mismatch => |pending_state| {
             response_state = pending_state;
@@ -208,7 +210,7 @@ pub fn FsmConditionPassRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const logic_state = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -223,6 +225,7 @@ pub fn FsmConditionPassRequest(
     if (pass_result == .updated) {
         if (try fsm.checkTransitions(entity.net_id, txn.payload.FsmId, .{
             .attribute = attribute,
+            .buffs = buffs,
             .logic_state = logic_state,
             .now_ms = now_ms,
         })) |notify| {
@@ -254,13 +257,14 @@ pub fn AiHateRequest(
 ) !void {
     if (commonEntityId(txn.common)) |entity_id| {
         if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const logic_state = item;
+            const entity, const fsm, const attribute, const buffs, const logic_state = item;
             const now_ms = queryNow(io);
             try fsm.initRuntime(alloc.gpa, now_ms);
             defer fsm.finishTick(now_ms);
             _ = fsm.setHateFromList(txn.payload.HateList.items);
             try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, txn.receive_data_pack, .{
                 .attribute = attribute,
+                .buffs = buffs,
                 .logic_state = logic_state,
                 .now_ms = now_ms,
             });
@@ -296,7 +300,7 @@ pub fn FsmConditionPassPush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const logic_state = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
@@ -309,6 +313,7 @@ pub fn FsmConditionPassPush(
         if (pass_result != .updated) return;
         if (try fsm.checkTransitions(entity.net_id, push.FsmId, .{
             .attribute = attribute,
+            .buffs = buffs,
             .logic_state = logic_state,
             .now_ms = now_ms,
         })) |notify| {
@@ -327,13 +332,14 @@ pub fn AiHatePush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const logic_state = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         _ = fsm.setHateFromList(push.HateList.items);
         try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
             .attribute = attribute,
+            .buffs = buffs,
             .logic_state = logic_state,
             .now_ms = now_ms,
         });
@@ -350,12 +356,12 @@ pub fn ChangeStateConfirmPush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const logic_state = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa)) {
-            .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, logic_state, now_ms, alloc, receive_data_pack),
+            .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, buffs, logic_state, now_ms, alloc, receive_data_pack),
             .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
         }
     }
@@ -399,6 +405,7 @@ fn appendFollowupTransition(
     fsm: *Entity.FsmComponent,
     fsm_id: i32,
     attribute: ?*Entity.AttributeComponent,
+    buffs: ?*Entity.FightBuffComponent,
     logic_state: ?*Entity.LogicStateComponent,
     now_ms: i64,
     alloc: mem.Alloc,
@@ -406,6 +413,7 @@ fn appendFollowupTransition(
 ) !void {
     if (try fsm.checkTransitions(entity.net_id, fsm_id, .{
         .attribute = attribute,
+        .buffs = buffs,
         .logic_state = logic_state,
         .now_ms = now_ms,
     })) |notify| {

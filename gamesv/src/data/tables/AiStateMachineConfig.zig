@@ -60,6 +60,27 @@ pub const ConditionInstStateChange = struct {
     TagId: i32 = 0,
 };
 
+pub const ConditionBuffStack = struct {
+    BuffId: i64 = 0,
+    MinStack: i32 = 0,
+    MaxStack: i32 = 0,
+};
+
+pub const ConditionPartLife = struct {
+    PartName: []const u8 = "",
+    CheckRate: bool = false,
+    Min: i32 = 0,
+    Max: i32 = 0,
+};
+
+pub const ConditionCheckPartActivated = struct {
+    PartName: []const u8 = "",
+};
+
+pub const ConditionMontageTimeElapsing = struct {
+    Time: i32 = 0,
+};
+
 pub const StateMachineCondition = struct {
     Index: i32 = 0,
     Name: []const u8 = "",
@@ -79,7 +100,13 @@ pub const StateMachineCondition = struct {
     CondListenEvent: ?ConditionListenEvent = null,
     CondCheckPositionState: ?ConditionCheckPositionState = null,
     CondInstStateChange: ?ConditionInstStateChange = null,
+    CondBuffStack: ?ConditionBuffStack = null,
+    CondPartLife: ?ConditionPartLife = null,
+    CondCheckPartActivated: ?ConditionCheckPartActivated = null,
+    CondCheckDissolveCombine: ?struct {} = null,
     CondMontageTimeRemaining: ?struct {} = null,
+    CondMontageTimeElapsing: ?ConditionMontageTimeElapsing = null,
+    CondHasMoveInput: ?struct {} = null,
     CondTaskFinish: ?struct {} = null,
 };
 

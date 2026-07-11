@@ -17,6 +17,7 @@ pub fn handleFsmTick(
         Entity,
         *Entity.FsmComponent,
         ?*Entity.AttributeComponent,
+        ?*Entity.FightBuffComponent,
         ?*Entity.LogicStateComponent,
     }),
 ) !void {
@@ -30,13 +31,14 @@ pub fn handleFsmTick(
 
     var it = query.iterator;
     while (it.next()) |item| {
-        const entity, const fsm, const attribute, const logic_state = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state = item;
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         if (!fsm.needsServerTick()) continue;
 
         try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{
             .attribute = attribute,
+            .buffs = buffs,
             .logic_state = logic_state,
             .now_ms = now_ms,
         });
