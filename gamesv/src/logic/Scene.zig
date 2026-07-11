@@ -240,6 +240,19 @@ pub fn initFsmRuntimes(scene: *Scene, gpa: Allocator, now_ms: i64) !void {
     }
 }
 
+pub fn setFsmEncounterTarget(scene: *Scene, fsm_entity_id: i64, target_entity_id: ?i64) !bool {
+    const fsm_index = scene.net_id_map.get(fsm_entity_id) orelse return error.EntityNotFound;
+    const fsm_slot = &scene.entities.items(.fsm)[fsm_index];
+    const fsm = if (fsm_slot.*) |*component| component else return error.EntityFsmNotFound;
+
+    const target = if (target_entity_id) |target_id| blk: {
+        if (!scene.net_id_map.contains(target_id)) return error.TargetEntityNotFound;
+        break :blk std.math.cast(i32, target_id) orelse return error.FsmBlackboardTargetOutOfRange;
+    } else null;
+
+    return fsm.setEncounterTarget(target);
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
@@ -313,6 +326,7 @@ pub fn delete(
 pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
+    scene.clearFsmEncounterTargetReferences(net_id);
     var storage = scene.entities.get(index);
     storage.deinit(gpa);
     scene.entities.swapRemove(index);
@@ -320,6 +334,13 @@ pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void
     if (index < scene.entities.len) {
         const swapped_id = scene.entities.items(.entity_id)[index].net_id;
         try scene.net_id_map.put(gpa, swapped_id, index);
+    }
+}
+
+fn clearFsmEncounterTargetReferences(scene: *Scene, target_entity_id: i64) void {
+    const target_id = std.math.cast(i32, target_entity_id) orelse return;
+    for (scene.entities.items(.fsm)) |*optional_fsm| {
+        if (optional_fsm.*) |*fsm| _ = fsm.clearEncounterTargetReference(target_id);
     }
 }
 

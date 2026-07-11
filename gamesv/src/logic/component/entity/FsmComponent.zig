@@ -12,6 +12,7 @@ const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 const log = std.log.scoped(.fsm_component);
 const max_state_depth = 32;
 const montage_blackboard_key = 1;
+const encounter_target_blackboard_key = 2;
 const pending_transition_timeout_ms = 3000;
 
 pub const transient = true;
@@ -222,6 +223,7 @@ pub fn finishTick(comp: *Component, now_ms: i64) void {
 }
 
 pub fn needsServerTick(comp: *const Component) bool {
+    if (comp.blackboard_dirty != 0) return true;
     if (comp.lifecycle_effects_pending) return true;
     if (comp.lifecycle_effects.items.len != 0) return true;
     if (comp.in_hate) return true;
@@ -262,6 +264,15 @@ pub fn markLifecycleEffectsEnqueued(comp: *Component, gpa: mem.Allocator) void {
 
 pub fn completeLifecycleEffects(comp: *Component) void {
     comp.lifecycle_effects_pending = false;
+}
+
+pub fn setEncounterTarget(comp: *Component, target_id: ?i32) bool {
+    return comp.setBlackboardValue(encounter_target_blackboard_key, target_id, true);
+}
+
+pub fn clearEncounterTargetReference(comp: *Component, target_id: i32) bool {
+    if (comp.blackboard[encounter_target_blackboard_key] != target_id) return false;
+    return comp.setEncounterTarget(null);
 }
 
 pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
@@ -535,6 +546,8 @@ fn blackboardToProto(comp: *const Component, arena: mem.Allocator, dirty: ?u8) !
         const bit = blackboardBit(key);
         if (dirty) |mask| {
             if (mask & bit == 0) continue;
+            try result.append(arena, .{ .Key = @intCast(key), .Value = value orelse 0 });
+            continue;
         }
         if (value) |entry| {
             try result.append(arena, .{ .Key = @intCast(key), .Value = entry });
@@ -1107,9 +1120,14 @@ fn preparePathBlackboard(comp: *Component, path: []const i32, activated_at: []co
 }
 
 fn setBlackboard(comp: *Component, key: usize, value: i32, mark_dirty: bool) void {
-    if (key >= comp.blackboard.len or comp.blackboard[key] == value) return;
+    _ = comp.setBlackboardValue(key, value, mark_dirty);
+}
+
+fn setBlackboardValue(comp: *Component, key: usize, value: ?i32, mark_dirty: bool) bool {
+    if (key >= comp.blackboard.len or comp.blackboard[key] == value) return false;
     comp.blackboard[key] = value;
     if (mark_dirty) comp.blackboard_dirty |= blackboardBit(key);
+    return true;
 }
 
 fn blackboardBit(key: usize) u8 {
