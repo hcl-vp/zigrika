@@ -3,7 +3,6 @@ const std = @import("std");
 const EventQueue = @import("../EventQueue.zig");
 const BuffTimerScheduler = @import("BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("DirtySaveQueue.zig");
-const FsmTimerScheduler = @import("FsmTimerScheduler.zig");
 const ScheduledJob = @import("ScheduledJob.zig");
 
 const Interval = ScheduledJob.Interval;
@@ -11,6 +10,10 @@ const intervals = std.enums.values(Interval);
 const scene_time_job: ScheduledJob = .{
     .interval = .ms50,
     .event_key = .tick_time,
+};
+const fsm_timer_job: ScheduledJob = .{
+    .interval = .ms50,
+    .event_key = .fsm_timer_tick,
 };
 const level_play_job: ScheduledJob = .{
     .interval = .ms250,
@@ -23,7 +26,7 @@ const scene_cleanup_job: ScheduledJob = .{
 const jobs = [_]ScheduledJob{
     scene_time_job,
     BuffTimerScheduler.job,
-    FsmTimerScheduler.job,
+    fsm_timer_job,
     level_play_job,
     scene_cleanup_job,
     DirtySaveQueue.job,
