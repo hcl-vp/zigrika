@@ -1129,8 +1129,8 @@ fn attrRateInRange(attribute: ?*const AttributeComponent, attribute_id: i32, den
     const numerator = attrValue(attribute, attribute_id) orelse return false;
     const denominator = attrValue(attribute, denominator_id) orelse return false;
     if (denominator == 0) return false;
-    const rate = @divTrunc(numerator * 10000, denominator);
-    return rate >= min and rate <= max;
+    const rate = @divTrunc(@as(i64, numerator) * 10000, @as(i64, denominator));
+    return rate >= @as(i64, min) and rate <= @as(i64, max);
 }
 
 fn attrValue(attribute: ?*const AttributeComponent, attribute_id: i32) ?i32 {
