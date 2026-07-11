@@ -1016,8 +1016,6 @@ fn updateBindStates(
         if (bind.BindBuff) |buff| {
             if (delta > 0) {
                 try comp.appendLifecycleEffect(gpa, .{ .add_buff = buff.BuffId });
-            } else if (delta < 0) {
-                try comp.appendLifecycleEffect(gpa, .{ .remove_buff = buff.BuffId });
             }
         }
 
@@ -1086,14 +1084,14 @@ fn applyPathLifecycle(comp: *Component, gpa: mem.Allocator, active_path: []const
 
 fn enterNode(comp: *Component, gpa: mem.Allocator, state: i32) !void {
     const node = comp.findNode(state) orelse return;
-    try comp.updateBindStates(gpa, node.BindStates, 1);
     try comp.runActions(gpa, node.OnEnterActions);
+    try comp.updateBindStates(gpa, node.BindStates, 1);
 }
 
 fn exitNode(comp: *Component, gpa: mem.Allocator, state: i32) !void {
     const node = comp.findNode(state) orelse return;
-    try comp.updateBindStates(gpa, node.BindStates, -1);
     try comp.runActions(gpa, node.OnExitActions);
+    try comp.updateBindStates(gpa, node.BindStates, -1);
 }
 
 fn prepareInitialBlackboard(comp: *Component, now_ms: i64) void {
