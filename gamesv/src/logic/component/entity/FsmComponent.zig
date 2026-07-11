@@ -10,6 +10,7 @@ const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 const log = std.log.scoped(.fsm_component);
 const max_state_depth = 32;
+const montage_blackboard_key = 1;
 
 const NodeEntry = struct {
     key: i32,
@@ -118,6 +119,8 @@ tags: []TagCount = &.{},
 in_hate: bool = false,
 event: ?[]const u8 = null,
 last_tick_ms: i64 = 0,
+blackboard: [3]?i32 = .{ null, null, null },
+blackboard_dirty: u8 = 0,
 
 pub fn deinit(comp: *Component, gpa: mem.Allocator) void {
     gpa.free(comp.state_list);
@@ -133,7 +136,7 @@ pub fn toProto(comp: Component, arena: mem.Allocator, assets: *const Assets) !pb
         .Fsms = try comp.getInitialFsm(arena, assets),
         .HashCode = comp.hash_code,
         .CommonHashCode = comp.common_hash_code,
-        .BlackBoard = .empty,
+        .BlackBoard = try comp.blackboardToProto(arena, null),
         .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
     };
 }
@@ -182,7 +185,12 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
     }
 
     comp.event = null;
-    for (comp.runtime_nodes) |runtime| try comp.enterPath(gpa, runtime.active());
+    comp.prepareInitialBlackboard(now_ms);
+    for (comp.runtime_nodes) |runtime| {
+        comp.preparePathBlackboard(runtime.active(), runtime.active_since_ms[0..runtime.active_len], false);
+        try comp.enterPath(gpa, runtime.active());
+    }
+    comp.blackboard_dirty = 0;
     comp.finishTick(now_ms);
 }
 
@@ -325,11 +333,37 @@ pub fn appendReadyStateTransitions(
     output: *std.ArrayList(pb.CombatReceiveData),
     ctx: EvalContext,
 ) !void {
+    try comp.appendBlackboardNotify(entity_id, allocator, output);
     for (comp.runtime_nodes) |runtime| {
         if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
+            try comp.appendBlackboardNotify(entity_id, allocator, output);
             try output.append(allocator, transitionNotify(entity_id, transition));
         }
     }
+}
+
+pub fn appendBlackboardNotify(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const dirty = comp.blackboard_dirty;
+    if (dirty == 0) return;
+
+    const values = try comp.blackboardToProto(allocator, dirty);
+    if (values.items.len == 0) {
+        comp.blackboard_dirty &= ~dirty;
+        return;
+    }
+
+    try output.append(allocator, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = entity_id },
+            .Message = .{ .FsmBlackboardNotify = .{ .FsmBlackBoards = values } },
+        },
+    } });
+    comp.blackboard_dirty &= ~dirty;
 }
 
 pub fn checkTransitions(
@@ -413,6 +447,20 @@ pub fn getInitialFsm(
         });
     }
 
+    return result;
+}
+
+fn blackboardToProto(comp: *const Component, arena: mem.Allocator, dirty: ?u8) !std.ArrayList(pb.DFsmBlackBoard) {
+    var result: std.ArrayList(pb.DFsmBlackBoard) = .empty;
+    for (comp.blackboard[1..], 1..) |value, key| {
+        const bit = blackboardBit(key);
+        if (dirty) |mask| {
+            if (mask & bit == 0) continue;
+        }
+        if (value) |entry| {
+            try result.append(arena, .{ .Key = @intCast(key), .Value = entry });
+        }
+    }
     return result;
 }
 
@@ -926,7 +974,62 @@ fn exitNode(comp: *Component, gpa: mem.Allocator, state: i32) !void {
     try comp.runActions(gpa, node.OnExitActions);
 }
 
-fn setPendingTransition(comp: *const Component, runtime: *FsmNode, from: i32, to: i32, now_ms: i64) !void {
+fn prepareInitialBlackboard(comp: *Component, now_ms: i64) void {
+    var minimum_montage_count: ?usize = null;
+    for (comp.node_list) |entry| {
+        const task = entry.value.Task orelse continue;
+        const montage = task.TaskRandomMontage orelse continue;
+        if (montage.RandomByClient or montage.MontageNames.len == 0) continue;
+        minimum_montage_count = if (minimum_montage_count) |count|
+            @min(count, montage.MontageNames.len)
+        else
+            montage.MontageNames.len;
+    }
+
+    if (minimum_montage_count) |count| {
+        comp.setBlackboard(montage_blackboard_key, comp.selectMontageIndex(0, now_ms, count), false);
+    }
+}
+
+fn preparePathBlackboard(comp: *Component, path: []const i32, activated_at: []const i64, mark_dirty: bool) void {
+    for (path, 0..) |state, index| {
+        const node = comp.findNode(state) orelse continue;
+        const task = node.Task orelse continue;
+        if (task.TaskRandomMontage) |montage| {
+            if (!montage.RandomByClient and montage.MontageNames.len != 0) {
+                comp.setBlackboard(
+                    montage_blackboard_key,
+                    comp.selectMontageIndex(state, activated_at[index], montage.MontageNames.len),
+                    mark_dirty,
+                );
+            }
+        }
+    }
+}
+
+fn setBlackboard(comp: *Component, key: usize, value: i32, mark_dirty: bool) void {
+    if (key >= comp.blackboard.len or comp.blackboard[key] == value) return;
+    comp.blackboard[key] = value;
+    if (mark_dirty) comp.blackboard_dirty |= blackboardBit(key);
+}
+
+fn blackboardBit(key: usize) u8 {
+    return @as(u8, 1) << @intCast(key);
+}
+
+fn selectMontageIndex(comp: *const Component, state: i32, activated_at: i64, count: usize) i32 {
+    var seed: u64 = @bitCast(activated_at);
+    const state_bits: u32 = @bitCast(state);
+    const hash_bits: u32 = @bitCast(comp.hash_code);
+    seed ^= @as(u64, state_bits) *% 0x9E3779B185EBCA87;
+    seed ^= @as(u64, hash_bits) *% 0xC2B2AE3D27D4EB4F;
+    seed ^= seed >> 12;
+    seed ^= seed << 25;
+    seed ^= seed >> 27;
+    return @intCast(seed % count);
+}
+
+fn setPendingTransition(comp: *Component, runtime: *FsmNode, from: i32, to: i32, now_ms: i64) !void {
     const pending_len = comp.buildActivePath(runtime.fsm_id, to, &runtime.pending_path) orelse
         return error.InvalidFsmTransitionTarget;
 
@@ -940,6 +1043,7 @@ fn setPendingTransition(comp: *const Component, runtime: *FsmNode, from: i32, to
     runtime.pending_len = @intCast(pending_len);
     runtime.pending_from = comp.canonicalState(from);
     runtime.pending_to = comp.canonicalState(to);
+    comp.preparePathBlackboard(runtime.pending(), runtime.pending_since_ms[0..runtime.pending_len], true);
 }
 
 fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator) !void {
@@ -970,6 +1074,7 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
             now_ms;
     }
 
+    comp.preparePathBlackboard(target_path[0..active_len], target_since_ms[0..active_len], true);
     try comp.applyPathLifecycle(gpa, runtime.active(), target_path[0..active_len]);
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
     @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);

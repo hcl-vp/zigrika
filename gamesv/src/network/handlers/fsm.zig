@@ -69,9 +69,13 @@ pub fn ChangeStateRequest(
     )) {
         .confirmed => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
             try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, now_ms, alloc, txn.receive_data_pack);
         },
-        .accepted => current_state = fsm.currentState(txn.payload.FsmId) orelse current_state,
+        .accepted => {
+            current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
+        },
         .mismatch => |pending_state| {
             current_state = pending_state;
             response_error = try errorResult(alloc.arena, .ErrIEntityFsmActionNotMatchState, &.{
@@ -97,6 +101,7 @@ pub fn ChangeStateRequest(
                 .logic_state = logic_state,
                 .now_ms = now_ms,
             })) |notify| {
+                try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
                 try txn.receive_data_pack.append(alloc.arena, notify);
                 const transition = notify.Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
                 current_state = transition.ToState;
@@ -156,6 +161,7 @@ pub fn ChangeStateConfirmRequest(
     switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa)) {
         .confirmed => {
             response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
             try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, now_ms, alloc, txn.receive_data_pack);
         },
         .mismatch => |pending_state| {
@@ -229,6 +235,7 @@ pub fn FsmConditionPassRequest(
             .logic_state = logic_state,
             .now_ms = now_ms,
         })) |notify| {
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
             try txn.receive_data_pack.append(alloc.arena, notify);
         }
     }
@@ -248,6 +255,12 @@ pub fn FsmStateBehaviorRequest(
         .ErrorCode = .Success,
     });
 }
+
+pub fn FsmPlayMontageRequest(txn: *dispatch.CombatRequestTxn(.FsmPlayMontageRequest)) !void {
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn FsmPlayMontagePush(_: pb.FsmPlayMontagePush) !void {}
 
 pub fn AiHateRequest(
     txn: *dispatch.CombatRequestTxn(.AiHateRequest),
@@ -317,6 +330,7 @@ pub fn FsmConditionPassPush(
             .logic_state = logic_state,
             .now_ms = now_ms,
         })) |notify| {
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
             try receive_data_pack.append(alloc.arena, notify);
         }
     }
@@ -361,7 +375,10 @@ pub fn ChangeStateConfirmPush(
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa)) {
-            .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, buffs, logic_state, now_ms, alloc, receive_data_pack),
+            .confirmed => {
+                try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
+                try appendFollowupTransition(entity, fsm, push.FsmId, attribute, buffs, logic_state, now_ms, alloc, receive_data_pack);
+            },
             .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
         }
     }
@@ -417,6 +434,7 @@ fn appendFollowupTransition(
         .logic_state = logic_state,
         .now_ms = now_ms,
     })) |notify| {
+        try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
         try receive_data_pack.append(alloc.arena, notify);
     }
 }

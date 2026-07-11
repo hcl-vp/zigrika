@@ -299,6 +299,7 @@ pub fn notifyJoinScene(
     motor_comp: *PlayerMotorComponent,
     echo_comp: *PlayerEchoComponent,
     scene: *Scene,
+    io: Io,
 ) !void {
     const log = std.log.scoped(.scene_join);
     try exploreSkillNotify(alloc, scene, conn);
@@ -411,6 +412,8 @@ pub fn notifyJoinScene(
         // Shouldn't happen unless scene instance file is corrupted. Maybe should log it as well?
         return error.PlayerNotFoundInScene;
     }
+    const rtc: Io.Clock = .real;
+    try scene.initFsmRuntimes(alloc.gpa, rtc.now(io).toMilliseconds());
     try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};

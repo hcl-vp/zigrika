@@ -176,6 +176,23 @@ pub const StateMachineBindState = struct {
     BindTag: ?BindTag = null,
 };
 
+pub const TaskRandomMontage = struct {
+    MontageNames: []const []const u8 = &.{},
+    RandomByClient: bool = false,
+};
+
+pub const TaskMoveToTarget = struct {
+    TargetType: i32 = 0,
+};
+
+pub const StateMachineTask = struct {
+    Name: []const u8 = "",
+    Type: ?i32 = null,
+    CanBeInterrupt: bool = false,
+    TaskRandomMontage: ?TaskRandomMontage = null,
+    TaskMoveToTarget: ?TaskMoveToTarget = null,
+};
+
 pub const StateMachineNode = struct {
     ReferenceUuid: ?i32 = null,
     OverrideCommonUuid: ?i32 = null,
@@ -183,6 +200,7 @@ pub const StateMachineNode = struct {
     Name: ?[]const u8 = null,
     Children: ?[]const i32 = null,
     IsAnimStateMachine: ?bool = null,
+    Task: ?StateMachineTask = null,
     Transitions: []const StateMachineTransition = &.{},
     OnEnterActions: []const StateMachineAction = &.{},
     OnExitActions: []const StateMachineAction = &.{},
