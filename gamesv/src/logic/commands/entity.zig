@@ -31,6 +31,8 @@ const BlueprintConfig = Assets.DataTables.BlueprintConfig;
 const TemplateConfig = Assets.DataTables.TemplateConfig;
 const Components = @import("../../data/tables/entity_components/Components.zig");
 const EntityLogic = @FieldType(BlueprintConfig, "EntityLogic");
+const repeat_boss_tag_id = 1639442014;
+const story_boss_tag_id = -1276461747;
 
 const SpawnConfig = struct {
     entity_config: LevelEntityConfig,
@@ -78,6 +80,35 @@ fn findTemplateConfig(assets: *const Assets, blueprint_type: []const u8) ?Templa
 
 fn hasUsableFsm(assets: *const Assets, components: *const Components) bool {
     if (components.AiComponent) |ai_comp| return Entity.FsmComponent.hasUsableAiBaseId(ai_comp.AiId, assets);
+    return false;
+}
+
+fn useRepeatBossStartup(ai_id: ?i32, assets: *const Assets) bool {
+    const id = ai_id orelse return false;
+    const ai_base = assets.tables.ai_base.getDataById(id) orelse return false;
+    const config = assets.tables.ai_state_machine_config.getDataById(ai_base.StateMachine) orelse return false;
+
+    for (config.StateMachineJson.Nodes) |node| {
+        for (node.Transitions) |repeat_transition| {
+            if (!transitionHasTag(repeat_transition, repeat_boss_tag_id)) continue;
+
+            for (node.Transitions) |story_transition| {
+                if (story_transition.From == repeat_transition.From and
+                    transitionHasTag(story_transition, story_boss_tag_id)) return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+fn transitionHasTag(transition: Assets.DataTables.AiStateMachineConfig.StateMachineTransition, tag_id: i32) bool {
+    for (transition.Conditions) |condition| {
+        if (condition.CondTag) |tag| {
+            if (tag.TagId == tag_id) return true;
+        }
+    }
+
     return false;
 }
 
@@ -205,6 +236,7 @@ pub const spawn = struct {
 
         const ai_comp = components_data.AiComponent;
         const ai_id = if (ai_comp) |comp| comp.AiId else null;
+        const repeat_boss_startup = useRepeatBossStartup(ai_id, assets);
         const weapon_id = if (ai_comp) |comp| parseOptionalInt(comp.WeaponId) else 0;
         const final_camp = spawnCamp(base_info, &template_config, spawn_base);
         const use_ai_runtime = useAiRuntime(spawn_base.entity_type);
@@ -312,8 +344,8 @@ pub const spawn = struct {
         try conn.push(pb.JSPatchNotify{
             .Content = try std.fmt.allocPrint(
                 alloc.arena,
-                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d});",
-                .{ entity_id, entity_config.MapId },
+                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s});",
+                .{ entity_id, entity_config.MapId, if (repeat_boss_startup) "true" else "false" },
             ),
         }, alloc.arena);
 
