@@ -23,12 +23,15 @@ const OverrideEntry = struct {
 pub const FsmNode = struct {
     fsm_id: i32,
     active_path: [max_state_depth]i32 = @splat(0),
+    active_since_ms: [max_state_depth]i64 = @splat(0),
     active_len: u8 = 0,
+    previous_path: [max_state_depth]i32 = @splat(0),
+    previous_len: u8 = 0,
     pending_path: [max_state_depth]i32 = @splat(0),
+    pending_since_ms: [max_state_depth]i64 = @splat(0),
     pending_len: u8 = 0,
     pending_from: ?i32 = null,
     pending_to: ?i32 = null,
-    pending_since_ms: i64 = 0,
 
     fn active(node: *const FsmNode) []const i32 {
         return node.active_path[0..node.active_len];
@@ -36,6 +39,10 @@ pub const FsmNode = struct {
 
     fn pending(node: *const FsmNode) []const i32 {
         return node.pending_path[0..node.pending_len];
+    }
+
+    fn previous(node: *const FsmNode) []const i32 {
+        return node.previous_path[0..node.previous_len];
     }
 
     fn leaf(node: *const FsmNode) ?i32 {
@@ -98,9 +105,8 @@ runtime_nodes: []FsmNode = &.{},
 pass_pool: []ConditionKey = &.{},
 tags: []TagCount = &.{},
 in_hate: bool = false,
-last_state: i32 = 0,
 event: ?[]const u8 = null,
-start_time_ms: i64 = 0,
+last_tick_ms: i64 = 0,
 
 pub fn deinit(comp: *Component, gpa: mem.Allocator) void {
     gpa.free(comp.state_list);
@@ -151,6 +157,7 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
         var runtime: FsmNode = .{ .fsm_id = fsm_id };
         const active_len = comp.buildInitialPath(fsm_id, &runtime.active_path) orelse continue;
         runtime.active_len = @intCast(active_len);
+        @memset(runtime.active_since_ms[0..active_len], now_ms);
         try runtime_nodes.append(gpa, runtime);
     }
 
@@ -165,7 +172,38 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
 
     comp.event = null;
     for (comp.runtime_nodes) |runtime| try comp.enterPath(gpa, runtime.active());
-    comp.start_time_ms = now_ms;
+    comp.finishTick(now_ms);
+}
+
+pub fn finishTick(comp: *Component, now_ms: i64) void {
+    for (comp.runtime_nodes) |*runtime| {
+        const active_path = runtime.active();
+        @memcpy(runtime.previous_path[0..active_path.len], active_path);
+        runtime.previous_len = runtime.active_len;
+    }
+    comp.last_tick_ms = now_ms;
+}
+
+pub fn needsServerTick(comp: *const Component) bool {
+    if (comp.in_hate) return true;
+
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.pending_to != null) continue;
+        const active_path = runtime.active();
+        if (active_path.len < 2) continue;
+
+        for (active_path[1..], 1..) |active_state, index| {
+            const parent = comp.findNode(active_path[index - 1]) orelse continue;
+            for (parent.Transitions) |transition| {
+                const resolved = comp.resolveOverrideStates(transition.From, transition.To, false);
+                if (!comp.statesEquivalent(resolved.from, active_state)) continue;
+                const condition = findCondition(transition.Conditions, 0) orelse continue;
+                if (!(condition.IsClient orelse false) and !std.mem.eql(u8, condition.Name, "CondHate")) return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
@@ -212,13 +250,13 @@ pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey,
     return .updated;
 }
 
-pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
+pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator) !ConfirmResult {
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, state)) return .invalid_target;
 
     const pending_state = runtime.pending_to orelse return .no_pending;
     if (comp.statesEquivalent(state, pending_state)) {
-        try comp.commitPending(runtime, gpa, now_ms);
+        try comp.commitPending(runtime, gpa);
         return .confirmed;
     }
 
@@ -246,12 +284,12 @@ pub fn confirmStateRequest(
         const pending_from = runtime.pending_from orelse return .{ .mismatch = comp.clientState(pending_state) };
         if (!comp.statesEquivalent(pending_from, from)) return .{ .mismatch = comp.clientState(pending_state) };
 
-        try comp.commitPending(runtime, gpa, now_ms);
+        try comp.commitPending(runtime, gpa);
         return .confirmed;
     }
 
     if (comp.canFoldPredictedTransition(runtime, from, to)) {
-        try comp.commitPending(runtime, gpa, now_ms);
+        try comp.commitPending(runtime, gpa);
         try comp.changeCurrentState(fsm_id, from, to, gpa, now_ms);
         return .confirmed;
     }
@@ -269,18 +307,18 @@ pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
     return null;
 }
 
-pub fn checkState(
+pub fn appendReadyStateTransitions(
     comp: *Component,
     entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
     ctx: EvalContext,
-) !?pb.CombatReceiveData {
+) !void {
     for (comp.runtime_nodes) |runtime| {
         if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
-            return transitionNotify(entity_id, transition);
+            try output.append(allocator, transitionNotify(entity_id, transition));
         }
     }
-
-    return null;
 }
 
 pub fn checkTransitions(
@@ -304,7 +342,7 @@ pub fn checkAndConfirm(
     ctx: EvalContext,
 ) !?pb.CombatReceiveData {
     const transition = (try comp.findReadyTransition(fsm_id, ctx)) orelse return null;
-    _ = try comp.confirmPending(fsm_id, transition.to, gpa, ctx.now_ms);
+    _ = try comp.confirmPending(fsm_id, transition.to, gpa);
     return transitionNotify(entity_id, transition);
 }
 
@@ -338,7 +376,7 @@ pub fn getInitialFsm(
                 .FsmId = comp.clientState(runtime.fsm_id),
                 .CurrentState = comp.clientState(current_state),
                 .Flag = if (node) |entry| if (entry.IsAnimStateMachine orelse false) 1 else 0 else 0,
-                .StateElapseTime = 0,
+                .StateElapseTime = elapsedTime(comp.last_tick_ms, runtime.active_since_ms[runtime.active_len - 1]),
             });
         }
         return result;
@@ -586,7 +624,7 @@ fn evalConditionRaw(
     }
 
     if (condition.CondTimer) |timer| {
-        return ctx.now_ms - comp.start_time_ms >= timer.MinTime;
+        return comp.timerPasses(fsm_id, transition, condition.Index, timer, ctx.now_ms);
     }
 
     if (condition.CondCheckState) |state| {
@@ -867,45 +905,54 @@ fn setPendingTransition(comp: *const Component, runtime: *FsmNode, from: i32, to
     const pending_len = comp.buildActivePath(runtime.fsm_id, to, &runtime.pending_path) orelse
         return error.InvalidFsmTransitionTarget;
 
+    for (runtime.pending_path[0..pending_len], 0..) |state, index| {
+        runtime.pending_since_ms[index] = if (index < runtime.active_len and runtime.active_path[index] == state)
+            runtime.active_since_ms[index]
+        else
+            now_ms;
+    }
+
     runtime.pending_len = @intCast(pending_len);
     runtime.pending_from = comp.canonicalState(from);
     runtime.pending_to = comp.canonicalState(to);
-    runtime.pending_since_ms = now_ms;
 }
 
-fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator, now_ms: i64) !void {
+fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator) !void {
     const from = runtime.pending_from orelse return;
     const pending_path = runtime.pending();
     if (pending_path.len == 0) return;
 
     try comp.applyPathLifecycle(gpa, runtime.active(), pending_path);
     @memcpy(runtime.active_path[0..pending_path.len], pending_path);
+    @memcpy(runtime.active_since_ms[0..pending_path.len], runtime.pending_since_ms[0..pending_path.len]);
     runtime.active_len = runtime.pending_len;
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
-    runtime.pending_since_ms = 0;
 
     try comp.removePassesFrom(gpa, runtime.fsm_id, from);
-    comp.start_time_ms = now_ms;
-    comp.last_state = from;
 }
 
 fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
     const runtime = comp.runtimeNode(fsm_id) orelse return;
     var target_path: [max_state_depth]i32 = @splat(0);
+    var target_since_ms: [max_state_depth]i64 = @splat(0);
     const active_len = comp.buildActivePath(runtime.fsm_id, to, &target_path) orelse return;
+    for (target_path[0..active_len], 0..) |state, index| {
+        target_since_ms[index] = if (index < runtime.active_len and runtime.active_path[index] == state)
+            runtime.active_since_ms[index]
+        else
+            now_ms;
+    }
 
     try comp.applyPathLifecycle(gpa, runtime.active(), target_path[0..active_len]);
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
+    @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);
     runtime.active_len = @intCast(active_len);
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
-    runtime.pending_since_ms = 0;
     try comp.removePassesFrom(gpa, runtime.fsm_id, from);
-    comp.start_time_ms = now_ms;
-    comp.last_state = comp.canonicalState(from);
 }
 
 fn currentStateMatches(comp: *const Component, state: i32) bool {
@@ -914,6 +961,78 @@ fn currentStateMatches(comp: *const Component, state: i32) bool {
     }
 
     return false;
+}
+
+fn timerPasses(
+    comp: *const Component,
+    fsm_id: i32,
+    transition: AiStateMachineConfig.StateMachineTransition,
+    condition_index: i32,
+    timer: AiStateMachineConfig.ConditionTimer,
+    now_ms: i64,
+) bool {
+    const activated_at = comp.activationTime(fsm_id, transition.From) orelse return false;
+    if (now_ms < activated_at) return false;
+
+    const min_ms = @max(@as(i64, timer.MinTime), 0);
+    const configured_max = @as(i64, timer.MaxTime orelse timer.MinTime);
+    const max_ms = @max(configured_max, min_ms);
+    const delay_ms = timerDelayMs(
+        comp.canonicalState(fsm_id),
+        comp.canonicalState(transition.From),
+        comp.canonicalState(transition.To),
+        condition_index,
+        activated_at,
+        min_ms,
+        max_ms,
+    );
+    return now_ms - activated_at >= delay_ms;
+}
+
+fn activationTime(comp: *const Component, fsm_id: i32, state: i32) ?i64 {
+    const canonical_fsm = comp.canonicalState(fsm_id);
+    const canonical_state = comp.canonicalState(state);
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.fsm_id != canonical_fsm) continue;
+        for (runtime.active(), 0..) |active_state, index| {
+            if (active_state == canonical_state) return runtime.active_since_ms[index];
+        }
+    }
+    return null;
+}
+
+fn timerDelayMs(
+    fsm_id: i32,
+    from: i32,
+    to: i32,
+    condition_index: i32,
+    activated_at: i64,
+    min_ms: i64,
+    max_ms: i64,
+) i64 {
+    if (max_ms <= min_ms) return min_ms;
+
+    var seed: u64 = @bitCast(activated_at);
+    const fsm_bits: u32 = @bitCast(fsm_id);
+    const from_bits: u32 = @bitCast(from);
+    const to_bits: u32 = @bitCast(to);
+    const condition_bits: u32 = @bitCast(condition_index);
+    seed ^= @as(u64, fsm_bits) *% 0x9E3779B185EBCA87;
+    seed ^= @as(u64, from_bits) *% 0xC2B2AE3D27D4EB4F;
+    seed ^= @as(u64, to_bits) *% 0x165667B19E3779F9;
+    seed ^= @as(u64, condition_bits) *% 0x85EBCA77C2B2AE63;
+    seed ^= seed >> 12;
+    seed ^= seed << 25;
+    seed ^= seed >> 27;
+    seed *%= 0x2545F4914F6CDD1D;
+
+    const span: u64 = @intCast(max_ms - min_ms + 1);
+    return min_ms + @as(i64, @intCast(seed % span));
+}
+
+fn elapsedTime(now_ms: i64, activated_at: i64) i32 {
+    if (now_ms <= activated_at) return 0;
+    return @intCast(@min(now_ms - activated_at, std.math.maxInt(i32)));
 }
 
 fn currentStateNameMatches(comp: *const Component, _: i32, name: []const u8) bool {
@@ -930,8 +1049,14 @@ fn currentStateNameMatches(comp: *const Component, _: i32, name: []const u8) boo
 }
 
 fn lastStateNameMatches(comp: *const Component, name: []const u8) bool {
-    const node = comp.findNode(comp.last_state) orelse return false;
-    if (node.Name) |node_name| return std.mem.eql(u8, node_name, name);
+    for (comp.runtime_nodes) |runtime| {
+        for (runtime.previous()) |state| {
+            const node = comp.findNode(state) orelse continue;
+            if (node.Name) |node_name| {
+                if (std.mem.eql(u8, node_name, name)) return true;
+            }
+        }
+    }
     return false;
 }
 

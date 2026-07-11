@@ -54,6 +54,7 @@ pub fn ChangeStateRequest(
     const entity, const fsm, const attribute, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
+    defer fsm.finishTick(now_ms);
 
     var current_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
@@ -145,11 +146,12 @@ pub fn ChangeStateConfirmRequest(
     const entity, const fsm, const attribute, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
+    defer fsm.finishTick(now_ms);
 
     var response_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
 
-    switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
+    switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa)) {
         .confirmed => {
             response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
             try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, logic_state, now_ms, alloc, txn.receive_data_pack);
@@ -209,6 +211,7 @@ pub fn FsmConditionPassRequest(
     const entity, const fsm, const attribute, const logic_state = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
+    defer fsm.finishTick(now_ms);
     const pass_result = try fsm.recordClientPass(alloc.gpa, .{
         .fsm_id = txn.payload.FsmId,
         .from = txn.payload.FromState,
@@ -254,14 +257,13 @@ pub fn AiHateRequest(
             const entity, const fsm, const attribute, const logic_state = item;
             const now_ms = queryNow(io);
             try fsm.initRuntime(alloc.gpa, now_ms);
+            defer fsm.finishTick(now_ms);
             _ = fsm.setHateFromList(txn.payload.HateList.items);
-            if (try fsm.checkState(entity.net_id, .{
+            try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, txn.receive_data_pack, .{
                 .attribute = attribute,
                 .logic_state = logic_state,
                 .now_ms = now_ms,
-            })) |notify| {
-                try txn.receive_data_pack.append(alloc.arena, notify);
-            }
+            });
         }
     }
 
@@ -297,6 +299,7 @@ pub fn FsmConditionPassPush(
         const entity, const fsm, const attribute, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
+        defer fsm.finishTick(now_ms);
         const pass_result = try fsm.recordClientPass(alloc.gpa, .{
             .fsm_id = push.FsmId,
             .from = push.FromState,
@@ -327,14 +330,13 @@ pub fn AiHatePush(
         const entity, const fsm, const attribute, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
+        defer fsm.finishTick(now_ms);
         _ = fsm.setHateFromList(push.HateList.items);
-        if (try fsm.checkState(entity.net_id, .{
+        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,
-        })) |notify| {
-            try receive_data_pack.append(alloc.arena, notify);
-        }
+        });
     }
 }
 
@@ -351,7 +353,8 @@ pub fn ChangeStateConfirmPush(
         const entity, const fsm, const attribute, const logic_state = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
-        switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa, now_ms)) {
+        defer fsm.finishTick(now_ms);
+        switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa)) {
             .confirmed => try appendFollowupTransition(entity, fsm, push.FsmId, attribute, logic_state, now_ms, alloc, receive_data_pack),
             .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
         }
@@ -389,10 +392,6 @@ fn updateLogicState(
         logic_state.direction_state = data.DirectionState;
         logic_state.position_sub_state = data.PositionSubState;
     }
-}
-
-fn ensureRuntime(fsm: *Entity.FsmComponent, io: std.Io, gpa: std.mem.Allocator) !void {
-    try fsm.initRuntime(gpa, queryNow(io));
 }
 
 fn appendFollowupTransition(

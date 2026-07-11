@@ -555,6 +555,7 @@ pub fn afterSceneJoin(
         .last_fsm_tick_time = now_ms,
         .dilation = 1.0,
     };
+    try scene.initFsmRuntimes(alloc.gpa, now_ms);
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,

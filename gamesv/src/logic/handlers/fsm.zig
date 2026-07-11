@@ -31,16 +31,15 @@ pub fn handleFsmTick(
     var it = query.iterator;
     while (it.next()) |item| {
         const entity, const fsm, const attribute, const logic_state = item;
-        if (!fsm.in_hate) continue;
-
         try fsm.initRuntime(alloc.gpa, now_ms);
-        if (try fsm.checkState(entity.net_id, .{
+        defer fsm.finishTick(now_ms);
+        if (!fsm.needsServerTick()) continue;
+
+        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{
             .attribute = attribute,
             .logic_state = logic_state,
             .now_ms = now_ms,
-        })) |notify| {
-            try data.append(alloc.arena, notify);
-        }
+        });
     }
 
     if (data.items.len != 0) {

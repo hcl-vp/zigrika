@@ -234,6 +234,12 @@ pub fn spawnWithNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i6
     return try spawnWithOptionalNetId(scene, gpa, fs, components, net_id);
 }
 
+pub fn initFsmRuntimes(scene: *Scene, gpa: Allocator, now_ms: i64) !void {
+    for (scene.entities.items(.fsm)) |*optional_fsm| {
+        if (optional_fsm.*) |*fsm| try fsm.initRuntime(gpa, now_ms);
+    }
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
@@ -261,6 +267,11 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
     storage.entity_id = .{ .net_id = id };
     if (storage.motor_da_ctx) |*comp| {
         if (comp.context_id == 0) comp.context_id = id;
+    }
+    if (storage.fsm) |*fsm| {
+        if (scene.scene_time.last_packet_time != 0) {
+            try fsm.initRuntime(gpa, scene.scene_time.last_packet_time);
+        }
     }
 
     try scene.net_id_map.put(gpa, id, scene.entities.len);
