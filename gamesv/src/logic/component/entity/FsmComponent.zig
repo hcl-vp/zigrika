@@ -6,6 +6,7 @@ const Assets = @import("../../../data/Assets.zig");
 const AttributeComponent = @import("AttributeComponent.zig");
 const FightBuffComponent = @import("FightBuffComponent.zig");
 const LogicStateComponent = @import("LogicStateComponent.zig");
+const TagComponent = @import("TagComponent.zig");
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 const log = std.log.scoped(.fsm_component);
@@ -73,6 +74,7 @@ pub const EvalContext = struct {
     attribute: ?*const AttributeComponent = null,
     buffs: ?*const FightBuffComponent = null,
     logic_state: ?*const LogicStateComponent = null,
+    tags: ?*const TagComponent = null,
     parts: ?[]const PartState = null,
     dissolve_combined: ?bool = null,
     now_ms: i64,
@@ -89,6 +91,11 @@ pub const Transition = struct {
     fsm_id: i32,
     from: i32,
     to: i32,
+};
+
+pub const LifecycleEffect = union(enum) {
+    add_buff: i64,
+    remove_buff: i64,
 };
 
 pub const ConfirmResult = union(enum) {
@@ -120,6 +127,8 @@ override_mapping: []const OverrideEntry = &.{},
 runtime_nodes: []FsmNode = &.{},
 pass_pool: []ConditionKey = &.{},
 tags: []TagCount = &.{},
+lifecycle_effects: std.ArrayList(LifecycleEffect) = .empty,
+lifecycle_effects_pending: bool = false,
 in_hate: bool = false,
 event: ?[]const u8 = null,
 last_tick_ms: i64 = 0,
@@ -133,6 +142,7 @@ pub fn deinit(comp: *Component, gpa: mem.Allocator) void {
     gpa.free(comp.runtime_nodes);
     gpa.free(comp.pass_pool);
     gpa.free(comp.tags);
+    comp.lifecycle_effects.deinit(gpa);
 }
 
 pub fn toProto(comp: Component, arena: mem.Allocator, assets: *const Assets) !pb.EntityFsmComponentPb {
@@ -185,6 +195,8 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
         comp.runtime_nodes = &.{};
         gpa.free(comp.tags);
         comp.tags = &.{};
+        comp.lifecycle_effects.deinit(gpa);
+        comp.lifecycle_effects = .empty;
         comp.event = null;
     }
 
@@ -199,6 +211,7 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
 }
 
 pub fn finishTick(comp: *Component, now_ms: i64) void {
+    if (comp.lifecycle_effects_pending) return;
     for (comp.runtime_nodes) |*runtime| {
         const active_path = runtime.active();
         @memcpy(runtime.previous_path[0..active_path.len], active_path);
@@ -209,6 +222,8 @@ pub fn finishTick(comp: *Component, now_ms: i64) void {
 }
 
 pub fn needsServerTick(comp: *const Component) bool {
+    if (comp.lifecycle_effects_pending) return true;
+    if (comp.lifecycle_effects.items.len != 0) return true;
     if (comp.in_hate) return true;
 
     for (comp.runtime_nodes) |runtime| {
@@ -230,7 +245,27 @@ pub fn needsServerTick(comp: *const Component) bool {
     return false;
 }
 
+pub fn lifecycleEffects(comp: *const Component) []const LifecycleEffect {
+    return comp.lifecycle_effects.items;
+}
+
+pub fn lifecycleEffectsPending(comp: *const Component) bool {
+    return comp.lifecycle_effects_pending;
+}
+
+pub fn markLifecycleEffectsEnqueued(comp: *Component, gpa: mem.Allocator) void {
+    if (comp.lifecycle_effects.items.len == 0) return;
+    comp.lifecycle_effects.deinit(gpa);
+    comp.lifecycle_effects = .empty;
+    comp.lifecycle_effects_pending = true;
+}
+
+pub fn completeLifecycleEffects(comp: *Component) void {
+    comp.lifecycle_effects_pending = false;
+}
+
 pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
+    if (comp.lifecycle_effects_pending) return false;
     var recovered = false;
     for (comp.runtime_nodes) |*runtime| {
         if (runtime.pending_to == null or runtime.pending_started_ms <= 0) continue;
@@ -290,6 +325,7 @@ pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey,
 pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator) !ConfirmResult {
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, state)) return .invalid_target;
+    if (comp.lifecycle_effects_pending) return .no_pending;
 
     const pending_state = runtime.pending_to orelse return .no_pending;
     if (comp.statesEquivalent(state, pending_state)) {
@@ -311,6 +347,7 @@ pub fn confirmStateRequest(
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, from)) return .invalid_source;
     if (!comp.stateBelongsToFsm(fsm_id, to)) return .invalid_target;
+    if (comp.lifecycle_effects_pending) return .no_pending;
 
     const pending_state = runtime.pending_to orelse {
         if (try comp.acceptPredictedTransition(fsm_id, from, to, gpa, now_ms)) return .accepted;
@@ -630,6 +667,7 @@ fn hasValidInitialRoot(comp: *const Component) bool {
 }
 
 fn findReadyTransition(comp: *Component, fsm_id: i32, ctx: EvalContext) !?Transition {
+    if (comp.lifecycle_effects_pending) return null;
     const runtime = comp.runtimeNode(fsm_id) orelse return null;
     if (runtime.pending_to != null) return null;
 
@@ -768,11 +806,11 @@ fn evalConditionRaw(
         return attrRateInRange(ctx.attribute, attribute.AttributeId, attribute.Denominator, attribute.Min, attribute.Max);
     }
 
-    if (condition.CondTag) |tag| return if (tag.TagId) |tag_id| comp.hasTag(tag_id) else false;
+    if (condition.CondTag) |tag| return if (tag.TagId) |tag_id| comp.hasTag(ctx.tags, tag_id) else false;
 
     if (condition.CondTaskFinish != null or condition.CondMontageTimeRemaining != null) return false;
 
-    if (condition.CondInstStateChange != null) return false;
+    if (condition.CondInstStateChange) |state| return comp.hasTag(ctx.tags, state.TagId);
 
     if (condition.CondBuffStack) |buff| {
         return buffStackInRange(ctx.buffs, buff);
@@ -928,6 +966,9 @@ fn runActions(
             comp.event = event_action.Event;
         }
 
+        if (action.ActionAddBuff) |buff| try comp.appendLifecycleEffect(gpa, .{ .add_buff = buff.BuffId });
+        if (action.ActionRemoveBuff) |buff| try comp.appendLifecycleEffect(gpa, .{ .remove_buff = buff.BuffId });
+
         if (action.ActionAddTagCount) |tag| {
             if (tag.Count > 0) try comp.updateTagCount(gpa, tag.TagId, tag.Count);
         }
@@ -949,10 +990,22 @@ fn updateBindStates(
     delta: i32,
 ) !void {
     for (binds) |bind| {
+        if (bind.BindBuff) |buff| {
+            if (delta > 0) {
+                try comp.appendLifecycleEffect(gpa, .{ .add_buff = buff.BuffId });
+            } else if (delta < 0) {
+                try comp.appendLifecycleEffect(gpa, .{ .remove_buff = buff.BuffId });
+            }
+        }
+
         if (bind.BindTag) |tag| {
             try comp.updateTagCount(gpa, tag.TagId, delta);
         }
     }
+}
+
+fn appendLifecycleEffect(comp: *Component, gpa: mem.Allocator, effect: LifecycleEffect) !void {
+    try comp.lifecycle_effects.append(gpa, effect);
 }
 
 fn updateTagCount(comp: *Component, gpa: mem.Allocator, tag_id: i64, delta: i32) !void {
@@ -983,11 +1036,11 @@ fn clearTag(comp: *Component, tag_id: i64) void {
     }
 }
 
-fn hasTag(comp: *const Component, tag_id: i64) bool {
+fn hasTag(comp: *const Component, tag_component: ?*const TagComponent, tag_id: i64) bool {
     for (comp.tags) |tag| {
-        if (tag.id == tag_id) return tag.count > 0;
+        if (tag.id == tag_id and tag.count > 0) return true;
     }
-    return false;
+    return if (tag_component) |tags| tags.hasTag(tag_id) else false;
 }
 
 fn enterPath(comp: *Component, gpa: mem.Allocator, path: []const i32) !void {

@@ -42,6 +42,11 @@ pub const BuffRemoval = struct {
     handle_ids: []i32,
 };
 
+pub const BuffRemovalById = struct {
+    entity: Entity,
+    buff_id: i64,
+};
+
 pub const BuffAdditionEntry = struct {
     id: i64,
     stack_count: i32 = 0,
@@ -63,6 +68,12 @@ pub const BuffTimerTick = struct {
 
 pub const FsmTimerTick = struct {
     now_ms: i64,
+};
+
+pub const FsmLifecycleComplete = struct {
+    entity: Entity,
+    now_ms: i64,
+    recheck: bool = true,
 };
 
 pub const LevelPlayTimerTick = struct {

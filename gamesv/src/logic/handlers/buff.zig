@@ -9,28 +9,63 @@ const mem = @import("../../mem.zig");
 const Connection = @import("../../network/Connection.zig");
 const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 
+const BuffQuery = Scene.Query(&.{ *Entity.FightBuffComponent, ?*Entity.AttributeComponent });
+
 pub fn removeBuffFromEntity(
     event: EventQueue.Dequeue(.buff_removal),
     conn: *Connection,
     events: *EventQueue,
     alloc: mem.Alloc,
     buff_timers: *BuffTimerScheduler,
-    query: Scene.Query(&.{ *Entity.FightBuffComponent, ?*Entity.AttributeComponent }),
+    query: BuffQuery,
 ) !void {
     const log = std.log.scoped(.buff_removal);
     const item = query.byEntityHandle(event.data.entity) orelse return;
-    const combat_common: pb.CombatCommon = .{ .EntityId = event.data.entity.net_id };
+    try removeBuffHandles(event.data.entity, event.data.handle_ids, item[0], conn, events, alloc, buff_timers);
+
+    log.debug("removed these buffs from {d}: {any}", .{
+        event.data.entity.net_id,
+        event.data.handle_ids,
+    });
+}
+
+pub fn removeBuffFromEntityById(
+    event: EventQueue.Dequeue(.buff_removal_by_id),
+    conn: *Connection,
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    buff_timers: *BuffTimerScheduler,
+    query: BuffQuery,
+) !void {
+    const item = query.byEntityHandle(event.data.entity) orelse return;
+    const buff = item[0].getByBuffId(event.data.buff_id) orelse return;
+    const handles = [_]i32{buff.HandleId};
+    try removeBuffHandles(event.data.entity, &handles, item[0], conn, events, alloc, buff_timers);
+}
+
+fn removeBuffHandles(
+    entity: Entity,
+    handle_ids: []const i32,
+    buffs: *Entity.FightBuffComponent,
+    conn: *Connection,
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    buff_timers: *BuffTimerScheduler,
+) !void {
+    const combat_common: pb.CombatCommon = .{ .EntityId = entity.net_id };
     var notify: pb.CombatReceivePackNotify = .{};
 
-    for (event.data.handle_ids) |handle_id| {
-        item[0].removeByHandleId(alloc.gpa, handle_id);
+    for (handle_ids) |handle_id| {
+        if (buffs.getByHandleId(handle_id) == null) continue;
+        buffs.removeByHandleId(alloc.gpa, handle_id);
+        buff_timers.forgetHandle(entity.net_id, handle_id);
         buff_timers.markDirty();
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = combat_common,
                 .Message = .{
                     .RemoveGameplayEffectNotify = .{
-                        .EntityId = event.data.entity.net_id,
+                        .EntityId = entity.net_id,
                         .Handle = handle_id,
                     },
                 },
@@ -38,14 +73,9 @@ pub fn removeBuffFromEntity(
         } });
     }
 
+    if (notify.Data.items.len == 0) return;
     try conn.push(notify, alloc.arena);
-
-    try events.enqueue(.buff_change, .{ .entity = event.data.entity });
-
-    log.debug("removed these buffs from {d}: {any}", .{
-        event.data.entity.net_id,
-        event.data.handle_ids,
-    });
+    try events.enqueue(.buff_change, .{ .entity = entity });
 }
 
 pub fn addBuffToEntity(
