@@ -12,6 +12,8 @@ const log = std.log.scoped(.fsm_component);
 const max_state_depth = 32;
 const montage_blackboard_key = 1;
 
+pub const transient = true;
+
 const NodeEntry = struct {
     key: i32,
     value: AiStateMachineConfig.StateMachineNode,
