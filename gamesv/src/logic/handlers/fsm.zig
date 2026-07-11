@@ -64,6 +64,7 @@ pub fn handleFsmTick(
 pub fn handleFsmLifecycleComplete(
     event: EventQueue.Dequeue(.fsm_lifecycle_complete),
     conn: *Connection,
+    events: *EventQueue,
     alloc: mem.Alloc,
     query: FsmQuery,
 ) !void {
@@ -72,7 +73,12 @@ pub fn handleFsmLifecycleComplete(
 
     fsm.completeLifecycleEffects();
     defer fsm.finishTick(event.data.now_ms);
-    if (!event.data.recheck) return;
+    const recheck = event.data.recheck or fsm.takeLifecycleRecheckRequest();
+    const lifecycle_deferred = if (recheck)
+        try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, event.data.now_ms)
+    else
+        try FsmLifecycle.enqueueEffectsWithoutRecheck(entity, fsm, events, alloc, event.data.now_ms);
+    if (lifecycle_deferred or !recheck) return;
 
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
     try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{

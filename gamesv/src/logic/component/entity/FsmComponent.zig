@@ -130,6 +130,7 @@ pass_pool: []ConditionKey = &.{},
 tags: []TagCount = &.{},
 lifecycle_effects: std.ArrayList(LifecycleEffect) = .empty,
 lifecycle_effects_pending: bool = false,
+lifecycle_recheck_requested: bool = false,
 in_hate: bool = false,
 event: ?[]const u8 = null,
 last_tick_ms: i64 = 0,
@@ -266,6 +267,16 @@ pub fn completeLifecycleEffects(comp: *Component) void {
     comp.lifecycle_effects_pending = false;
 }
 
+pub fn requestLifecycleRecheck(comp: *Component, requested: bool) void {
+    comp.lifecycle_recheck_requested = comp.lifecycle_recheck_requested or requested;
+}
+
+pub fn takeLifecycleRecheckRequest(comp: *Component) bool {
+    const requested = comp.lifecycle_recheck_requested;
+    comp.lifecycle_recheck_requested = false;
+    return requested;
+}
+
 pub fn setEncounterTarget(comp: *Component, target_id: ?i32) bool {
     return comp.setBlackboardValue(encounter_target_blackboard_key, target_id, true);
 }
@@ -339,7 +350,6 @@ pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey,
 pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator) !ConfirmResult {
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, state)) return .invalid_target;
-    if (comp.lifecycle_effects_pending) return .no_pending;
 
     const pending_state = runtime.pending_to orelse return .no_pending;
     if (comp.statesEquivalent(state, pending_state)) {
@@ -361,7 +371,6 @@ pub fn confirmStateRequest(
     const runtime = comp.runtimeNode(fsm_id) orelse return .machine_not_found;
     if (!comp.stateBelongsToFsm(fsm_id, from)) return .invalid_source;
     if (!comp.stateBelongsToFsm(fsm_id, to)) return .invalid_target;
-    if (comp.lifecycle_effects_pending) return .no_pending;
 
     const pending_state = runtime.pending_to orelse {
         if (try comp.acceptPredictedTransition(fsm_id, from, to, gpa, now_ms)) return .accepted;

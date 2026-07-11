@@ -32,7 +32,10 @@ fn enqueueEffectsWithRecheck(
     now_ms: i64,
     recheck: bool,
 ) !bool {
-    if (fsm.lifecycleEffectsPending()) return true;
+    if (fsm.lifecycleEffectsPending()) {
+        fsm.requestLifecycleRecheck(recheck);
+        return true;
+    }
     const effects = fsm.lifecycleEffects();
     if (effects.len == 0) return false;
 
