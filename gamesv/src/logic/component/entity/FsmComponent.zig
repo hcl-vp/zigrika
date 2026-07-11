@@ -277,16 +277,19 @@ pub fn clearEncounterTargetReference(comp: *Component, target_id: i32) bool {
 
 pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
     if (comp.lifecycle_effects_pending) return false;
-    var recovered = false;
-    for (comp.runtime_nodes) |*runtime| {
+    const expired = for (comp.runtime_nodes) |runtime| {
         if (runtime.pending_to == null or runtime.pending_started_ms <= 0) continue;
         if (now_ms < runtime.pending_started_ms) continue;
         if (now_ms - runtime.pending_started_ms < pending_transition_timeout_ms) continue;
+        break true;
+    } else false;
+    if (!expired) return false;
 
+    for (comp.runtime_nodes) |*runtime| {
+        if (runtime.pending_to == null) continue;
         try comp.commitPending(runtime, gpa);
-        recovered = true;
     }
-    return recovered;
+    return true;
 }
 
 pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
@@ -439,6 +442,13 @@ pub fn appendResetNotify(
     output: *std.ArrayList(pb.CombatReceiveData),
     assets: *const Assets,
 ) !void {
+    const blackboard = try comp.blackboardSnapshotToProto(allocator);
+    try output.append(allocator, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = entity_id },
+            .Message = .{ .FsmBlackboardNotify = .{ .FsmBlackBoards = blackboard } },
+        },
+    } });
     try output.append(allocator, .{ .Message = .{
         .CombatNotifyData = .{
             .CombatCommon = .{ .EntityId = entity_id },
@@ -447,7 +457,7 @@ pub fn appendResetNotify(
                     .Fsms = try comp.getInitialFsm(allocator, assets),
                     .HashCode = comp.hash_code,
                     .CommonHashCode = comp.common_hash_code,
-                    .BlackBoard = try comp.blackboardSnapshotToProto(allocator),
+                    .BlackBoard = blackboard,
                     .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
                 },
             } },
