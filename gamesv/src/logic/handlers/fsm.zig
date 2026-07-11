@@ -1,6 +1,7 @@
 const std = @import("std");
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
+const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Scene = @import("../Scene.zig");
 const Entity = Scene.Entity;
@@ -12,6 +13,7 @@ pub fn handleFsmTick(
     event: EventQueue.Dequeue(.fsm_timer_tick),
     scene: *Scene,
     conn: *Connection,
+    assets: *const Assets,
     alloc: mem.Alloc,
     query: Scene.Query(&.{
         Entity,
@@ -36,6 +38,9 @@ pub fn handleFsmTick(
         defer fsm.finishTick(now_ms);
         if (!fsm.needsServerTick()) continue;
 
+        if (try fsm.recoverExpiredPending(alloc.gpa, now_ms)) {
+            try fsm.appendResetNotify(entity.net_id, alloc.arena, &data, assets);
+        }
         try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{
             .attribute = attribute,
             .buffs = buffs,

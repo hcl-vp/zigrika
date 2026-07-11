@@ -11,6 +11,7 @@ const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 const log = std.log.scoped(.fsm_component);
 const max_state_depth = 32;
 const montage_blackboard_key = 1;
+const pending_transition_timeout_ms = 3000;
 
 pub const transient = true;
 
@@ -36,6 +37,7 @@ pub const FsmNode = struct {
     pending_len: u8 = 0,
     pending_from: ?i32 = null,
     pending_to: ?i32 = null,
+    pending_started_ms: i64 = 0,
 
     fn active(node: *const FsmNode) []const i32 {
         return node.active_path[0..node.active_len];
@@ -209,7 +211,7 @@ pub fn needsServerTick(comp: *const Component) bool {
     if (comp.in_hate) return true;
 
     for (comp.runtime_nodes) |runtime| {
-        if (runtime.pending_to != null) continue;
+        if (runtime.pending_to != null) return true;
         const active_path = runtime.active();
         if (active_path.len < 2) continue;
 
@@ -225,6 +227,19 @@ pub fn needsServerTick(comp: *const Component) bool {
     }
 
     return false;
+}
+
+pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
+    var recovered = false;
+    for (comp.runtime_nodes) |*runtime| {
+        if (runtime.pending_to == null or runtime.pending_started_ms <= 0) continue;
+        if (now_ms < runtime.pending_started_ms) continue;
+        if (now_ms - runtime.pending_started_ms < pending_transition_timeout_ms) continue;
+
+        try comp.commitPending(runtime, gpa);
+        recovered = true;
+    }
+    return recovered;
 }
 
 pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
@@ -368,6 +383,30 @@ pub fn appendBlackboardNotify(
     comp.blackboard_dirty &= ~dirty;
 }
 
+pub fn appendResetNotify(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+    assets: *const Assets,
+) !void {
+    try output.append(allocator, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = entity_id },
+            .Message = .{ .FsmResetNotify = .{
+                .EntityFsmComponentPb = .{
+                    .Fsms = try comp.getInitialFsm(allocator, assets),
+                    .HashCode = comp.hash_code,
+                    .CommonHashCode = comp.common_hash_code,
+                    .BlackBoard = try comp.blackboardSnapshotToProto(allocator),
+                    .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
+                },
+            } },
+        },
+    } });
+    comp.blackboard_dirty = 0;
+}
+
 pub fn checkTransitions(
     comp: *Component,
     entity_id: i64,
@@ -462,6 +501,14 @@ fn blackboardToProto(comp: *const Component, arena: mem.Allocator, dirty: ?u8) !
         if (value) |entry| {
             try result.append(arena, .{ .Key = @intCast(key), .Value = entry });
         }
+    }
+    return result;
+}
+
+fn blackboardSnapshotToProto(comp: *const Component, arena: mem.Allocator) !std.ArrayList(pb.DFsmBlackBoard) {
+    var result: std.ArrayList(pb.DFsmBlackBoard) = .empty;
+    for (comp.blackboard[1..], 1..) |value, key| {
+        try result.append(arena, .{ .Key = @intCast(key), .Value = value orelse 0 });
     }
     return result;
 }
@@ -1045,6 +1092,7 @@ fn setPendingTransition(comp: *Component, runtime: *FsmNode, from: i32, to: i32,
     runtime.pending_len = @intCast(pending_len);
     runtime.pending_from = comp.canonicalState(from);
     runtime.pending_to = comp.canonicalState(to);
+    runtime.pending_started_ms = now_ms;
     comp.preparePathBlackboard(runtime.pending(), runtime.pending_since_ms[0..runtime.pending_len], true);
 }
 
@@ -1060,6 +1108,7 @@ fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator) !void 
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
+    runtime.pending_started_ms = 0;
 
     try comp.removePassesFrom(gpa, runtime.fsm_id, from);
 }
@@ -1084,6 +1133,7 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
+    runtime.pending_started_ms = 0;
     try comp.removePassesFrom(gpa, runtime.fsm_id, from);
 }
 
