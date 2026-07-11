@@ -75,6 +75,7 @@ pub fn ChangeStateRequest(
         .accepted => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
             try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
+            try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, now_ms, alloc, txn.receive_data_pack);
         },
         .mismatch => |pending_state| {
             current_state = pending_state;

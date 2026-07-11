@@ -204,6 +204,7 @@ pub fn finishTick(comp: *Component, now_ms: i64) void {
         @memcpy(runtime.previous_path[0..active_path.len], active_path);
         runtime.previous_len = runtime.active_len;
     }
+    comp.event = null;
     comp.last_tick_ms = now_ms;
 }
 
@@ -994,11 +995,7 @@ fn enterPath(comp: *Component, gpa: mem.Allocator, path: []const i32) !void {
 }
 
 fn applyPathLifecycle(comp: *Component, gpa: mem.Allocator, active_path: []const i32, target_path: []const i32) !void {
-    var common_len: usize = 0;
-    while (common_len < active_path.len and
-        common_len < target_path.len and
-        active_path[common_len] == target_path[common_len]) : (common_len += 1)
-    {}
+    const common_len = commonPathPrefixLen(active_path, target_path);
 
     comp.event = null;
 
@@ -1097,11 +1094,12 @@ fn setPendingTransition(comp: *Component, runtime: *FsmNode, from: i32, to: i32,
 }
 
 fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator) !void {
-    const from = runtime.pending_from orelse return;
+    if (runtime.pending_from == null) return;
     const pending_path = runtime.pending();
     if (pending_path.len == 0) return;
 
     try comp.applyPathLifecycle(gpa, runtime.active(), pending_path);
+    try comp.removePassesForExitedPath(gpa, runtime.fsm_id, runtime.active(), pending_path);
     @memcpy(runtime.active_path[0..pending_path.len], pending_path);
     @memcpy(runtime.active_since_ms[0..pending_path.len], runtime.pending_since_ms[0..pending_path.len]);
     runtime.active_len = runtime.pending_len;
@@ -1109,11 +1107,9 @@ fn commitPending(comp: *Component, runtime: *FsmNode, gpa: mem.Allocator) !void 
     runtime.pending_from = null;
     runtime.pending_to = null;
     runtime.pending_started_ms = 0;
-
-    try comp.removePassesFrom(gpa, runtime.fsm_id, from);
 }
 
-fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
+fn changeCurrentState(comp: *Component, fsm_id: i32, _: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
     const runtime = comp.runtimeNode(fsm_id) orelse return;
     var target_path: [max_state_depth]i32 = @splat(0);
     var target_since_ms: [max_state_depth]i64 = @splat(0);
@@ -1127,6 +1123,7 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
 
     comp.preparePathBlackboard(target_path[0..active_len], target_since_ms[0..active_len], true);
     try comp.applyPathLifecycle(gpa, runtime.active(), target_path[0..active_len]);
+    try comp.removePassesForExitedPath(gpa, runtime.fsm_id, runtime.active(), target_path[0..active_len]);
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
     @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);
     runtime.active_len = @intCast(active_len);
@@ -1134,7 +1131,6 @@ fn changeCurrentState(comp: *Component, fsm_id: i32, from: i32, to: i32, gpa: me
     runtime.pending_from = null;
     runtime.pending_to = null;
     runtime.pending_started_ms = 0;
-    try comp.removePassesFrom(gpa, runtime.fsm_id, from);
 }
 
 fn currentStateMatches(comp: *const Component, state: i32) bool {
@@ -1242,9 +1238,8 @@ fn lastStateNameMatches(comp: *const Component, name: []const u8) bool {
     return false;
 }
 
-fn listenEventPasses(comp: *Component, condition: AiStateMachineConfig.ConditionListenEvent) bool {
+fn listenEventPasses(comp: *const Component, condition: AiStateMachineConfig.ConditionListenEvent) bool {
     const event = comp.event orelse return false;
-    comp.event = null;
     return std.mem.eql(u8, event, condition.Event);
 }
 
@@ -1489,17 +1484,38 @@ fn removePass(comp: *Component, gpa: mem.Allocator, key: ConditionKey) !void {
     comp.pass_pool = try pass_pool.toOwnedSlice(gpa);
 }
 
-fn removePassesFrom(comp: *Component, gpa: mem.Allocator, fsm_id: i32, from: i32) !void {
-    var pass_pool: std.ArrayList(ConditionKey) = .empty;
-    defer pass_pool.deinit(gpa);
+fn removePassesForExitedPath(
+    comp: *Component,
+    gpa: mem.Allocator,
+    fsm_id: i32,
+    active_path: []const i32,
+    target_path: []const i32,
+) !void {
+    const exited_path = active_path[commonPathPrefixLen(active_path, target_path)..];
+    if (exited_path.len == 0 or comp.pass_pool.len == 0) return;
 
+    const canonical_fsm = comp.canonicalState(fsm_id);
+    var retained: usize = 0;
     for (comp.pass_pool) |entry| {
-        if (entry.fsm_id == fsm_id and comp.statesEquivalent(entry.from, from)) continue;
-        try pass_pool.append(gpa, entry);
+        const remove = entry.fsm_id == canonical_fsm and comp.pathContains(exited_path, entry.from);
+        if (remove) continue;
+        comp.pass_pool[retained] = entry;
+        retained += 1;
     }
 
-    gpa.free(comp.pass_pool);
-    comp.pass_pool = try pass_pool.toOwnedSlice(gpa);
+    if (retained == comp.pass_pool.len) return;
+    if (retained == 0) {
+        gpa.free(comp.pass_pool);
+        comp.pass_pool = &.{};
+    } else {
+        comp.pass_pool = try gpa.realloc(comp.pass_pool, retained);
+    }
+}
+
+fn commonPathPrefixLen(a: []const i32, b: []const i32) usize {
+    var len: usize = 0;
+    while (len < a.len and len < b.len and a[len] == b[len]) : (len += 1) {}
+    return len;
 }
 
 fn passPoolContains(comp: *const Component, key: ConditionKey) bool {
