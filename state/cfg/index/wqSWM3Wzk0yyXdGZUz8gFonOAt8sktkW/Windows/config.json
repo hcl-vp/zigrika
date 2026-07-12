@@ -1,0 +1,50 @@
+{
+    "PackageVersion": "3.4.0",
+    "ChangeList": "7567664",
+    "CompatibleChangeLists": [],
+    "ResVersions": {
+        "launcher": {
+            "Name": "launcher",
+            "Version": "3.4.0",
+            "IndexSha1": {}
+        },
+        "resource": {
+            "Name": "resource",
+            "Version": "3.4.3",
+            "IndexSha1": {
+              "3.4.1": "4AD6A9930101D17C002860B624A03BECABF18F67",
+              "3.4.2": "0EDDA0A8C66C92AACDE82508BD085F45905E9D37",
+              "3.4.3": "2477185825424B3A64E3C46C82F32388CCF62E9E"
+            }
+        },
+        "en": {
+            "Name": "en",
+            "Version": "3.4.0",
+            "IndexSha1": {
+                "3.4.0": "885321565BD1075DD2CAC3C279508C5BF2409EF1"
+            }
+        },
+        "ja": {
+            "Name": "ja",
+            "Version": "3.4.0",
+            "IndexSha1": {
+                "3.4.0": "83E07D79ED37E60C5D4039E504C848476F4C222B"
+            }
+        },
+        "ko": {
+            "Name": "ko",
+            "Version": "3.4.0",
+            "IndexSha1": {
+                "3.4.0": "EC5C6C25B0F31C85BB32BD665E6149CD600EC9A5"
+            }
+        },
+        "zh": {
+            "Name": "zh",
+            "Version": "3.4.0",
+            "IndexSha1": {
+                "3.4.0": "BA870B6773BF9AC096FF1551E36529B2F16F9EF8"
+            }
+        }
+    },
+    "UpdateTime": 1780390242
+}

@@ -1503,6 +1503,8 @@ pub const Q4n = enum(i32) {
     ErrFightFormationNameLength = 200700,
     ErrRoleSkillLevel = 200701,
     ErrQuestBranchConfig = 200702,
+    ErrConditionStateRequestParam = 200703,
+    ErrConditionStateRequestModule = 200704,
     ErrMapDefault = 300000,
     ErrMapMarkNumLimit = 300001,
     ErrMapNoFogConfig = 300002,
@@ -3152,6 +3154,11 @@ pub const Q4n = enum(i32) {
     RogueTowerTrialInstBossErr = 1100622,
     NoRogueArchive = 1100623,
     RogueArchiveInvalid = 1100624,
+    KurotatoStepErr1 = 1100625,
+    KurotatoStepErr2 = 1100626,
+    ErrorNewTowerAwardCantGet = 1100627,
+    KurotatoShopProductIsBought = 1100628,
+    KurotatoShopProductAllLock = 1100629,
     ErrChatNotFriendNorOnline = 1200000,
     ErrChatContentFilterFailed = 1200001,
     ErrChatLockState = 1200002,
@@ -3949,6 +3956,8 @@ pub const Q4n = enum(i32) {
     ErrRecallItemBagItemTypeNotSupport = 1900381,
     ErrRecallItemBagFull = 1900382,
     ActivityPlayingCanNotDissolve = 1900383,
+    ErrAdventureSilentCtxNull = 1900385,
+    ErrAdventureSilentId = 1900386,
     ErrDoCommonRewardConfigError = 2000000,
     InstPlayNotSettle = 2000001,
     InstPlayNotFinishExecute = 2000002,
@@ -4766,6 +4775,17 @@ pub const Q4n = enum(i32) {
     RecallConfigNotExist = 2600111,
     QuestNotFinish = 2600112,
     HasInRecallScene = 2600113,
+    EntityConfigNotFound = 2600114,
+    InstConfigNotFound = 2600115,
+    FastReturnPosTypeNotSupport = 2600116,
+    FastReturnPosConfigError = 2600117,
+    TrackCustomBoardIsNull = 2600118,
+    BtNodeConfigNotExist = 2600119,
+    BtNodeObjNotExist = 2600120,
+    LevelPlayNotExist = 2600121,
+    LevelPlayDbDataNotExist = 2600122,
+    NotInRecallInst = 2600123,
+    SpecificRecallInfoNotExist = 2600124,
     ErrorCodeIdCreateRuleChange2 = 2700001,
     RacingBetsActivityIdErr = 2700002,
     RacingBetsActivityDataErr = 2700003,
@@ -5051,6 +5071,7 @@ pub const Q4n = enum(i32) {
     ForoRanchSubInsNotOpen = 2700283,
     ForoRanchVoidToyNotEnough = 2700284,
     ForoRanchToyNotEnough = 2700285,
+    ForoRanchWeeklyCanNotMilestone = 2700308,
     GateUdpPortNotExist = 2800000,
     GateKcpGetConvFail = 2800001,
     ErrScreenActionExecutorNotFind = 2900000,
@@ -5290,6 +5311,8 @@ pub const Q4n = enum(i32) {
     ErrXboxGiftNotFound = 3000197,
     ErrXboxGiftException = 3000198,
     ErrXboxGiftHttpError = 3000199,
+    ErrXboxGiftXstsTokenInvalid = 3000201,
+    ErrXboxGiftXstsTokenMismatch = 3000202,
     PhotoFightLevelNotFound = 3100000,
     PhotoFightActivityNotOpen = 3100001,
     PhotoFightSceneComponentInfoLost = 3100002,
@@ -5304,6 +5327,7 @@ pub const Q4n = enum(i32) {
     PhotoFightRewardInvalidInput = 3100011,
     PhotoFightAlreadyRewarded = 3100012,
     PhotoFightCannotRewarded = 3100081,
+    PhotoFightInvalidInstType = 3100306,
     WuWuKujiQuestNotFound = 3100013,
     WuWuKujiQuestNotOpenDay = 3100014,
     WuWuKujiQuestAllFinished = 3100015,
@@ -7491,6 +7515,7 @@ pub const v4s = enum(i32) {
     InstEntity = 23,
     InstRequestTeleportResetPoint = 24,
     StrongWindField = 25,
+    FastReturn = 26,
 };
 pub const vCs = struct {
     pub const default: @This() = .{};
@@ -7957,6 +7982,7 @@ pub const uks = enum(i32) {
     NewbieAdventureV2 = 109,
     NewbieCourseV2 = 110,
     NewbieMain = 111,
+    PurePreviewActivity = 115,
     PureUIActivity = 200,
 };
 pub const cks = struct {
@@ -9153,6 +9179,7 @@ pub const rY_ = struct {
     Dt1: std.ArrayList(i32) = .empty,
     rAu: i32 = 0,
     ajC: std.ArrayList(i32) = .empty,
+    eRv: i32 = 0,
 };
 pub const oY_ = struct {
     pub const default: @This() = .{};
@@ -10298,6 +10325,21 @@ pub const Bwu = enum(i32) {
     ConditionTaskRunning = 0,
     ConditionTaskFinish = 1,
     ConditionTaskTaken = 2,
+};
+pub const tAv = struct {
+    pub const default: @This() = .{};
+    rAv: i32 = 0,
+    Ghu: std.ArrayList(i32) = .empty,
+};
+pub const iAv = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+    oAv: std.ArrayList(nAv) = .empty,
+};
+pub const nAv = struct {
+    pub const default: @This() = .{};
+    XBd: i32 = 0,
+    qS_: std.ArrayList(i32) = .empty,
 };
 pub const xYs = struct {
     pub const default: @This() = .{};
@@ -16641,18 +16683,18 @@ pub const VYg = struct {
         gJg: ?GJg,
         CJg: ?kJg,
         pJg: ?FJg,
-        xAd: ?cav,
-        UAd: ?dav,
+        xAd: ?ifv,
+        UAd: ?rfv,
     } = null,
     g9n: bool = false,
 };
-pub const nav = struct {
+pub const efv = struct {
     pub const default: @This() = .{};
     aJu: ?union(enum) {
-        UAd: ?dav,
+        UAd: ?rfv,
     } = null,
 };
-pub const sav = struct {
+pub const tfv = struct {
     pub const default: @This() = .{};
     G9n: i32 = 0,
 };
@@ -16666,14 +16708,14 @@ pub const oJg = struct {
     HIC: std.ArrayList(MapEntry(i32, i32)) = .empty,
     s4c: i32 = 0,
 };
-pub const cav = struct {
+pub const ifv = struct {
     pub const default: @This() = .{};
 };
 pub const qJg = struct {
     pub const default: @This() = .{};
     SJg: i32 = 0,
 };
-pub const dav = struct {
+pub const rfv = struct {
     pub const default: @This() = .{};
 };
 pub const OJg = struct {
@@ -16938,6 +16980,7 @@ pub const UEp = struct {
     Q6n: i32 = 0,
     K6n: bool = false,
     wEp: i32 = 0,
+    UPv: i32 = 0,
 };
 pub const kEp = struct {
     pub const default: @This() = .{};
@@ -16954,6 +16997,14 @@ pub const kEp = struct {
 pub const rEp = struct {
     pub const default: @This() = .{};
     pEp: std.ArrayList(AEp) = .empty,
+};
+pub const Uwv = struct {
+    pub const default: @This() = .{};
+    gG_: i32 = 0,
+};
+pub const xwv = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
 };
 pub const oEp = struct {
     pub const default: @This() = .{};
@@ -17033,11 +17084,11 @@ pub const pp0 = struct {
     pub const default: @This() = .{};
     yp0: bool = false,
 };
-pub const aav = struct {
+pub const fEv = struct {
     pub const default: @This() = .{};
-    lav: i32 = 0,
+    pEv: i32 = 0,
 };
-pub const hav = struct {
+pub const CEv = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
 };
@@ -17045,10 +17096,10 @@ pub const vp0 = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
 };
-pub const Nsv = struct {
+pub const zcv = struct {
     pub const default: @This() = .{};
-    Vsv: i32 = 0,
-    Hsv: i32 = 0,
+    Jcv: i32 = 0,
+    Zcv: i32 = 0,
 };
 pub const njp = struct {
     pub const default: @This() = .{};
@@ -17643,113 +17694,113 @@ pub const KXn = struct {
 };
 pub const Ai = struct {
     pub const default: @This() = .{};
-    pub const eNs = struct {
-        pub const default: @This() = .{};
-        F4n: i64 = 0,
-        Z8n: i32 = 0,
-    };
-    pub const tNs = struct {
-        pub const default: @This() = .{};
-        j4n: i32 = 0,
-        W4n: i64 = 0,
-    };
-    pub const iNs = struct {
-        pub const default: @This() = .{};
-        j4n: i32 = 0,
-        W4n: bool = false,
-    };
-    pub const rNs = struct {
-        pub const default: @This() = .{};
-        eVn: std.ArrayList(oNs) = .empty,
-        ISs: std.ArrayList(Ai.eNs) = .empty,
-        TSs: std.ArrayList(Ai.tNs) = .empty,
-    };
-    pub const nNs = struct {
-        pub const default: @This() = .{};
-        F4n: i64 = 0,
-        tVn: ?Ai.rNs = null,
-        W5n: i32 = 0,
-    };
-    pub const J3n = struct {
-        pub const default: @This() = .{};
-        tVn: ?rNs = null,
-    };
-    pub const fe_ = struct {
-        pub const default: @This() = .{};
-        tVn: ?rNs = null,
-    };
-    pub const QXn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const QFn = struct {
-        pub const default: @This() = .{};
-        TSs: std.ArrayList(tNs) = .empty,
-    };
-    pub const i4n = struct {
-        pub const default: @This() = .{};
-        eVn: std.ArrayList(oNs) = .empty,
-    };
-    pub const Ee_ = struct {
-        pub const default: @This() = .{};
-        eVn: std.ArrayList(oNs) = .empty,
-    };
-    pub const XXn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const r4n = struct {
-        pub const default: @This() = .{};
-        K4n: std.ArrayList(Ai.tNs) = .empty,
-        H4n: std.ArrayList(Ai.iNs) = .empty,
-    };
-    pub const Ie_ = struct {
-        pub const default: @This() = .{};
-        K4n: std.ArrayList(Ai.tNs) = .empty,
-        H4n: std.ArrayList(Ai.iNs) = .empty,
-    };
-    pub const YXn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const JFn = struct {
-        pub const default: @This() = .{};
-        LSs: std.ArrayList(i32) = .empty,
-        K4n: std.ArrayList(Ai.tNs) = .empty,
-        H4n: std.ArrayList(Ai.iNs) = .empty,
-    };
-    pub const o4n = struct {
-        pub const default: @This() = .{};
-        ISs: std.ArrayList(eNs) = .empty,
-    };
-    pub const Te_ = struct {
-        pub const default: @This() = .{};
-        ISs: std.ArrayList(eNs) = .empty,
-    };
-    pub const JXn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const a3n = struct {
-        pub const default: @This() = .{};
-        ISs: std.ArrayList(eNs) = .empty,
-    };
-    pub const zXn = struct {
-        pub const default: @This() = .{};
-        F4n: i64 = 0,
-    };
-    pub const ZXn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const eYn = struct {
-        pub const default: @This() = .{};
-        ASs: std.ArrayList(nNs) = .empty,
-    };
-    pub const tYn = struct {
-        pub const default: @This() = .{};
-        PSs: std.ArrayList(i64) = .empty,
-    };
+};
+pub const eNs = struct {
+    pub const default: @This() = .{};
+    F4n: i64 = 0,
+    Z8n: i32 = 0,
+};
+pub const tNs = struct {
+    pub const default: @This() = .{};
+    j4n: i32 = 0,
+    W4n: i64 = 0,
+};
+pub const iNs = struct {
+    pub const default: @This() = .{};
+    j4n: i32 = 0,
+    W4n: bool = false,
+};
+pub const rNs = struct {
+    pub const default: @This() = .{};
+    eVn: std.ArrayList(oNs) = .empty,
+    ISs: std.ArrayList(eNs) = .empty,
+    TSs: std.ArrayList(tNs) = .empty,
+};
+pub const nNs = struct {
+    pub const default: @This() = .{};
+    F4n: i64 = 0,
+    tVn: ?rNs = null,
+    W5n: i32 = 0,
+};
+pub const J3n = struct {
+    pub const default: @This() = .{};
+    tVn: ?rNs = null,
+};
+pub const fe_ = struct {
+    pub const default: @This() = .{};
+    tVn: ?rNs = null,
+};
+pub const QXn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const QFn = struct {
+    pub const default: @This() = .{};
+    TSs: std.ArrayList(tNs) = .empty,
+};
+pub const i4n = struct {
+    pub const default: @This() = .{};
+    eVn: std.ArrayList(oNs) = .empty,
+};
+pub const Ee_ = struct {
+    pub const default: @This() = .{};
+    eVn: std.ArrayList(oNs) = .empty,
+};
+pub const XXn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const r4n = struct {
+    pub const default: @This() = .{};
+    K4n: std.ArrayList(tNs) = .empty,
+    H4n: std.ArrayList(iNs) = .empty,
+};
+pub const Ie_ = struct {
+    pub const default: @This() = .{};
+    K4n: std.ArrayList(tNs) = .empty,
+    H4n: std.ArrayList(iNs) = .empty,
+};
+pub const YXn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const JFn = struct {
+    pub const default: @This() = .{};
+    LSs: std.ArrayList(i32) = .empty,
+    K4n: std.ArrayList(tNs) = .empty,
+    H4n: std.ArrayList(iNs) = .empty,
+};
+pub const o4n = struct {
+    pub const default: @This() = .{};
+    ISs: std.ArrayList(eNs) = .empty,
+};
+pub const Te_ = struct {
+    pub const default: @This() = .{};
+    ISs: std.ArrayList(eNs) = .empty,
+};
+pub const JXn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const a3n = struct {
+    pub const default: @This() = .{};
+    ISs: std.ArrayList(eNs) = .empty,
+};
+pub const zXn = struct {
+    pub const default: @This() = .{};
+    F4n: i64 = 0,
+};
+pub const ZXn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const eYn = struct {
+    pub const default: @This() = .{};
+    ASs: std.ArrayList(nNs) = .empty,
+};
+pub const tYn = struct {
+    pub const default: @This() = .{};
+    PSs: std.ArrayList(i64) = .empty,
 };
 pub const sNs = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -18326,7 +18377,9 @@ pub const Wjg = enum(i32) {
     NormalPayGiftRedDot = 52,
     FirstOpenDailyActivityTab = 53,
     RoleLangCustomRecord = 54,
+    ActivityRecommend = 55,
     WheelTowerSeasonReview = 56,
+    RoleLangCustomFuncClicked = 58,
 };
 pub const KIC = struct {
     pub const default: @This() = .{};
@@ -18501,10 +18554,10 @@ pub const Vf_ = struct {
 };
 pub const BattleDefine = struct {
     pub const default: @This() = .{};
-    pub const ZG1 = struct {
-        pub const default: @This() = .{};
-        JG1: i64 = 0,
-    };
+};
+pub const ZG1 = struct {
+    pub const default: @This() = .{};
+    JG1: i64 = 0,
 };
 pub const ANs = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
@@ -18734,7 +18787,12 @@ pub const VNs = struct {
         vEs: ?KNs,
         pEs: ?QNs,
         MEs: ?XNs,
+        Phv: ?Uhv,
     } = null,
+};
+pub const Uhv = struct {
+    pub const default: @This() = .{};
+    Ahv: i32 = 0,
 };
 pub const XNs = struct {
     pub const default: @This() = .{};
@@ -18774,12 +18832,6 @@ pub const JNs = enum(i32) {
 };
 pub const zNs = struct {
     pub const default: @This() = .{};
-    pub const ENUMS = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        NotCreate = 0,
-        Alive = 1,
-        Death = 2,
-    };
 };
 pub const ZNs = struct {
     pub const default: @This() = .{};
@@ -19262,6 +19314,39 @@ pub const Gkp = struct {
     Hfp: i32 = 0,
     L8n: i32 = 0,
 };
+pub const B_v = struct {
+    pub const default: @This() = .{};
+    d9n: i32 = 0,
+    C9n: i64 = 0,
+    b5n: i32 = 0,
+};
+pub const k_v = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const G_v = struct {
+    pub const default: @This() = .{};
+    _ps: i32 = 0,
+    d9n: i32 = 0,
+    C9n: i64 = 0,
+    b5n: i32 = 0,
+};
+pub const q_v = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const O_v = struct {
+    pub const default: @This() = .{};
+    d9n: i32 = 0,
+    C9n: i64 = 0,
+    b5n: i32 = 0,
+    C5n: std.ArrayList(i32) = .empty,
+    CAv: bool = false,
+};
+pub const F_v = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
 pub const Vjn = enum(i32) {
     pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
     UnDefine = 0,
@@ -19332,7 +19417,7 @@ pub const m3s = struct {
         sys: ?g3s,
         ays: ?f3s,
         hys: ?v3s,
-        lys: ?Summon.p3s,
+        lys: ?p3s,
         _ys: ?BAs,
         uys: ?M3s,
         cys: ?S3s,
@@ -19353,7 +19438,7 @@ pub const m3s = struct {
         Rys: ?Rys,
         Dys: ?Dys,
         Ays: ?Ays,
-        Pys: ?Summon.Pys,
+        Pys: ?Pys,
         Uys: ?Uys,
         wys: ?wys,
         xys: ?xys,
@@ -19368,7 +19453,7 @@ pub const m3s = struct {
         Vys: ?Vys,
         DOLLARys: ?DOLLARys,
         Hys: ?Hys,
-        tI_: ?Summon.tI_,
+        tI_: ?tI_,
         Wys: ?Wys,
         Kys: ?Kys,
         Qys: ?Qys,
@@ -19379,7 +19464,7 @@ pub const m3s = struct {
         iI_: ?iI_,
         rI_: ?rI_,
         oI_: ?oI_,
-        nI_: ?Summon.nI_,
+        nI_: ?nI_,
         sI_: ?sI_,
         aI_: ?aI_,
         hI_: ?hI_,
@@ -20375,13 +20460,6 @@ pub const _10 = struct {
     pub const default: @This() = .{};
     ox0: i64 = 0,
 };
-pub const u10L = struct {
-    pub const default: @This() = .{};
-    Q4n: i32 = 0,
-    d10: i32 = 0,
-    AMs: i32 = 0,
-    c10: i32 = 0,
-};
 pub const T_0 = struct {
     pub const default: @This() = .{};
     ox0: i64 = 0,
@@ -20405,6 +20483,7 @@ pub const A3p = struct {
 pub const QHp = struct {
     pub const default: @This() = .{};
     DOLLARfp: std.ArrayList(i32) = .empty,
+    QSs: std.ArrayList(i32) = .empty,
 };
 pub const P3p = struct {
     pub const default: @This() = .{};
@@ -20414,6 +20493,36 @@ pub const U3p = struct {
     pub const default: @This() = .{};
     Q4n: i32 = 0,
     DOLLARfp: std.ArrayList(i32) = .empty,
+};
+pub const z_v = struct {
+    pub const default: @This() = .{};
+};
+pub const J_v = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+    Z_v: std.ArrayList(auv) = .empty,
+    euv: std.ArrayList(suv) = .empty,
+};
+pub const auv = struct {
+    pub const default: @This() = .{};
+    r6n: i32 = 0,
+    tuv: std.ArrayList(huv) = .empty,
+};
+pub const huv = struct {
+    pub const default: @This() = .{};
+    F4n: i32 = 0,
+    iuv: i32 = 0,
+    c10: i32 = 0,
+};
+pub const suv = struct {
+    pub const default: @This() = .{};
+    r6n: i32 = 0,
+    ruv: std.ArrayList(luv) = .empty,
+};
+pub const luv = struct {
+    pub const default: @This() = .{};
+    ouv: i32 = 0,
+    nuv: std.ArrayList(i32) = .empty,
 };
 pub const rts = struct {
     pub const default: @This() = .{};
@@ -20594,6 +20703,7 @@ pub const jw_ = enum(i32) {
     ExitVehicleTypeNormal = 1,
     ExitVehicleTypeDelayShow = 2,
     ExitVehicleTypeSeatStandUp = 3,
+    ExitVehicleTypeAllRole = 4,
 };
 pub const JC_ = struct {
     pub const default: @This() = .{};
@@ -21133,6 +21243,7 @@ pub const F90 = struct {
 };
 pub const j90 = struct {
     pub const default: @This() = .{};
+    w5n: i64 = 0,
 };
 pub const uUd = struct {
     pub const default: @This() = .{};
@@ -21524,7 +21635,7 @@ pub const Q3n = struct {
     wjn: i32 = 0,
     Bjn: i32 = 0,
     Pjn: bool = false,
-    ZG1: ?BattleDefine.ZG1 = null,
+    ZG1: ?ZG1 = null,
     x9n: []const u8 = "",
 };
 pub const uzn = struct {
@@ -21607,7 +21718,7 @@ pub const ev1 = struct {
     b6n: i64 = 0,
     Bjn: i32 = 0,
     Rjn: i64 = 0,
-    ZG1: ?BattleDefine.ZG1 = null,
+    ZG1: ?ZG1 = null,
 };
 pub const DOLLAR3n = struct {
     pub const default: @This() = .{};
@@ -22057,55 +22168,55 @@ pub const Ev_ = struct {
 };
 pub const Summon = struct {
     pub const default: @This() = .{};
-    pub const x3s = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        ESummonTypeDefault = 0,
-        ESummonTypeConcomitantVision = 1,
-        ESummonTypeConcomitantCustom = 2,
-        ESummonTypeConcomitantPhantomRole = 3,
-        ESummonTypeConcomitantWeakVision = 4,
-        ESummonTypeConcomitantMotorcycle = 5,
-    };
-    pub const p3s = struct {
-        pub const default: @This() = .{};
-        YWn: i64 = 0,
-        dIs: i32 = 0,
-        mIs: i32 = 0,
-        W5n: i32 = 0,
-        h5n: i32 = 0,
-    };
-    pub const Pys = struct {
-        pub const default: @This() = .{};
-        K7n: i32 = 0,
-    };
-    pub const tJs = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        EPlayerFollowerDefault = 0,
-        EPlayerFollowerExploreSkill = 1,
-        EPlayerFollowerAuxiliary = 2,
-        EPlayerFollowerSpecialItem = 3,
-        EPlayerFollowerMotor = 4,
-        EPlayerFollowerMax = 5,
-    };
-    pub const STs = struct {
-        pub const default: @This() = .{};
-        h5n: i32 = 0,
-        F4n: i64 = 0,
-    };
-    pub const nI_ = struct {
-        pub const default: @This() = .{};
-        OI_: std.ArrayList(STs) = .empty,
-    };
-    pub const tI_ = struct {
-        pub const default: @This() = .{};
-        xIs: i64 = 0,
-        UKn: i32 = 0,
-    };
-    pub const eJs = struct {
-        pub const default: @This() = .{};
-        W5n: i32 = 0,
-        OI_: std.ArrayList(Summon.STs) = .empty,
-    };
+};
+pub const x3s = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ESummonTypeDefault = 0,
+    ESummonTypeConcomitantVision = 1,
+    ESummonTypeConcomitantCustom = 2,
+    ESummonTypeConcomitantPhantomRole = 3,
+    ESummonTypeConcomitantWeakVision = 4,
+    ESummonTypeConcomitantMotorcycle = 5,
+};
+pub const p3s = struct {
+    pub const default: @This() = .{};
+    YWn: i64 = 0,
+    dIs: i32 = 0,
+    mIs: i32 = 0,
+    W5n: i32 = 0,
+    h5n: i32 = 0,
+};
+pub const Pys = struct {
+    pub const default: @This() = .{};
+    K7n: i32 = 0,
+};
+pub const tJs = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    EPlayerFollowerDefault = 0,
+    EPlayerFollowerExploreSkill = 1,
+    EPlayerFollowerAuxiliary = 2,
+    EPlayerFollowerSpecialItem = 3,
+    EPlayerFollowerMotor = 4,
+    EPlayerFollowerMax = 5,
+};
+pub const STs = struct {
+    pub const default: @This() = .{};
+    h5n: i32 = 0,
+    F4n: i64 = 0,
+};
+pub const nI_ = struct {
+    pub const default: @This() = .{};
+    OI_: std.ArrayList(STs) = .empty,
+};
+pub const tI_ = struct {
+    pub const default: @This() = .{};
+    xIs: i64 = 0,
+    UKn: i32 = 0,
+};
+pub const eJs = struct {
+    pub const default: @This() = .{};
+    W5n: i32 = 0,
+    OI_: std.ArrayList(STs) = .empty,
 };
 pub const Dql = struct {
     pub const default: @This() = .{};
@@ -22965,369 +23076,369 @@ pub const Vca = struct {
 };
 pub const CombatMessage = struct {
     pub const default: @This() = .{};
-    pub const OFs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            G4n: ?G4n,
-            O4n: ?O4n,
-            N4n: ?N4n,
-            ee_: ?ee_,
-            te_: ?te_,
-            ie_: ?ie_,
-            re_: ?re_,
-            oe_: ?oe_,
-            ne_: ?ne_,
-            se_: ?se_,
-            ae_: ?ae_,
-            he_: ?he_,
-            le_: ?le_,
-            _e_: ?_e_,
-            ce_: ?ce_,
-            ue_: ?ue_,
-            de_: ?de_,
-            me_: ?me_,
-            Ce_: ?Ce_,
-            ge_: ?ge_,
-            pe_: ?pe_,
-            fe_: ?Ai.fe_,
-            ve_: ?ve_,
-            ye_: ?ye_,
-            Se_: ?Se_,
-            Me_: ?Me_,
-            Ee_: ?Ai.Ee_,
-            Ie_: ?Ai.Ie_,
-            Te_: ?Ai.Te_,
-            be_: ?be_,
-            Le_: ?Le_,
-            Ae_: ?Ae_,
-            xe_: ?xe_,
-            Re_: ?Re_,
-            Pe_: ?Pe_,
-            we_: ?we_,
-            Ue_: ?Ue_,
-            De_: ?De_,
-            Be_: ?Be_,
-            qe_: ?qe_,
-            ke_: ?ke_,
-            Oe_: ?Oe_,
-            Ge_: ?Ge_,
-            Fe_: ?Fe_,
-            Ne_: ?Ne_,
-            Ve_: ?Ve_,
-            je_: ?je_,
-            He_: ?He_,
-            We_: ?We_,
-            Qe_: ?Qe_,
-            Ke_: ?Ke_,
-            DOLLARe_: ?DOLLARe_,
-            Xe_: ?Xe_,
-            Su_: ?Su_,
-            Opc: ?Opc,
-            kn1: ?kn1,
-            GG1: ?GG1,
-            k3u: ?k3u,
-            Rpd: ?Rpd,
-            Vzd: ?Vzd,
-            Ddm: ?Ddm,
-            Hag: ?Hag,
-            Pxg: ?Pxg,
-            kqC: ?kqC,
-            aap: ?aap,
-            Xvp: ?Xvp,
-            sr0: ?sr0,
-        } = null,
-        K8n: ?K8n = null,
-    };
-    pub const KLs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            MFn: ?MFn,
-            SFn: ?SFn,
-            EFn: ?EFn,
-            yFn: ?yFn,
-            IFn: ?IFn,
-            TFn: ?TFn,
-            LFn: ?LFn,
-            DFn: ?DFn,
-            AFn: ?AFn,
-            UFn: ?UFn,
-            RFn: ?RFn,
-            xFn: ?xFn,
-            PFn: ?PFn,
-            EJs: ?EJs,
-            BFn: ?BFn,
-            wFn: ?wFn,
-            bFn: ?bFn,
-            qFn: ?qFn,
-            GFn: ?GFn,
-            OFn: ?OFn,
-            NFn: ?NFn,
-            kFn: ?kFn,
-            FFn: ?FFn,
-            VFn: ?VFn,
-            HFn: ?HFn,
-            jFn: ?jFn,
-            WFn: ?WFn,
-            KFn: ?KFn,
-            QFn: ?Ai.QFn,
-            XFn: ?XFn,
-            DOLLARFn: ?DOLLARFn,
-            YFn: ?YFn,
-            JFn: ?Ai.JFn,
-            zFn: ?zFn,
-            ZFn: ?ZFn,
-            e3n: ?e3n,
-            t3n: ?t3n,
-            i3n: ?i3n,
-            r3n: ?r3n,
-            o3n: ?o3n,
-            n3n: ?n3n,
-            s3n: ?Debug.s3n,
-            a3n: ?Ai.a3n,
-            h3n: ?h3n,
-            l3n: ?l3n,
-            d3n: ?d3n,
-            C3n: ?C3n,
-            p3n: ?p3n,
-            v3n: ?v3n,
-            M3n: ?M3n,
-            E3n: ?E3n,
-            y3n: ?y3n,
-            I3n: ?I3n,
-            T3n: ?T3n,
-            L3n: ?L3n,
-            Xsh: ?Xsh,
-            Wul: ?Wul,
-            Jpl: ?Jpl,
-            Zpl: ?Zpl,
-            yvl: ?Debug.yvl,
-            W7l: ?W7l,
-            qus: ?qus,
-            Bn1: ?Bn1,
-            ev1: ?ev1,
-            B9d: ?B9d,
-            Adm: ?Adm,
-            rpm: ?rpm,
-            x9f: ?x9f,
-            wxg: ?wxg,
-            BqC: ?BqC,
-            YXC: ?YXC,
-            oMl: ?CombatMessage.oMl,
-        } = null,
-        K8n: ?K8n = null,
-    };
-    pub const oMl = struct {
-        pub const default: @This() = .{};
-    };
-    pub const NFs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            DOLLARLs: ?DOLLARLs,
-            HLs: ?HLs,
-            hVn: ?hVn,
-            jLs: ?jLs,
-            WLs: ?WLs,
-        } = null,
-    };
-    pub const FFs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            D3n: ?D3n,
-            A3n: ?A3n,
-            U3n: ?U3n,
-            R3n: ?R3n,
-            x3n: ?x3n,
-            P3n: ?P3n,
-            B3n: ?B3n,
-            w3n: ?w3n,
-            b3n: ?b3n,
-            q3n: ?q3n,
-            G3n: ?G3n,
-            O3n: ?O3n,
-            yJs: ?yJs,
-            N3n: ?N3n,
-            k3n: ?k3n,
-            F3n: ?F3n,
-            V3n: ?V3n,
-            H3n: ?H3n,
-            j3n: ?j3n,
-            W3n: ?W3n,
-            K3n: ?K3n,
-            Q3n: ?Q3n,
-            X3n: ?X3n,
-            DOLLAR3n: ?DOLLAR3n,
-            Y3n: ?Y3n,
-            J3n: ?Ai.J3n,
-            z3n: ?z3n,
-            Z3n: ?Z3n,
-            e4n: ?e4n,
-            t4n: ?t4n,
-            i4n: ?Ai.i4n,
-            r4n: ?Ai.r4n,
-            o4n: ?Ai.o4n,
-            n4n: ?n4n,
-            s4n: ?s4n,
-            a4n: ?a4n,
-            h4n: ?h4n,
-            l4n: ?l4n,
-            _4n: ?_4n,
-            u4n: ?u4n,
-            c4n: ?c4n,
-            m4n: ?m4n,
-            d4n: ?d4n,
-            C4n: ?C4n,
-            g4n: ?g4n,
-            f4n: ?f4n,
-            p4n: ?p4n,
-            y4n: ?y4n,
-            I4n: ?I4n,
-            T4n: ?T4n,
-            L4n: ?L4n,
-            D4n: ?D4n,
-            A4n: ?A4n,
-            U4n: ?U4n,
-            R4n: ?R4n,
-            x4n: ?x4n,
-            P4n: ?P4n,
-            B4n: ?B4n,
-            qis: ?qis,
-            G5a: ?G5a,
-            T7a: ?T7a,
-            efl: ?efl,
-            tfl: ?tfl,
-            Trs: ?Trs,
-            DOLLARwC: ?DOLLARwC,
-            w4n: ?CombatMessage.w4n,
-        } = null,
-        K8n: ?K8n = null,
-        W8n: i32 = 0,
-    };
-    pub const QLs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            sis: ?sis,
-            ais: ?ais,
-            lis: ?lis,
-            lzn: ?lzn,
-            _zn: ?_zn,
-            ris: ?ris,
-            ois: ?ois,
-            zts: ?zts,
-            Zts: ?Zts,
-            eis: ?eis,
-            DOLLARhs: ?DOLLARhs,
-            Sms: ?Sms,
-            IJs: ?IJs,
-            Tis: ?Tis,
-            Ris: ?Ris,
-            mes: ?mes,
-            Ces: ?Ces,
-            ycs: ?ycs,
-            Ecs: ?Ecs,
-            his: ?his,
-            Wds: ?Wds,
-            uzn: ?uzn,
-            czn: ?czn,
-            dzn: ?dzn,
-            mzn: ?mzn,
-            QXn: ?Ai.QXn,
-            Ais: ?Ais,
-            Dis: ?Dis,
-            ves: ?ves,
-            DOLLARes: ?DOLLARes,
-            XXn: ?Ai.XXn,
-            YXn: ?Ai.YXn,
-            JXn: ?Ai.JXn,
-            Pis: ?Pis,
-            nis: ?nis,
-            jes: ?jes,
-            zZn: ?zZn,
-            ZZn: ?ZZn,
-            ees: ?ees,
-            fzn: ?fzn,
-            Bis: ?Bis,
-            iis: ?iis,
-            cis: ?cis,
-            dis: ?dis,
-            _is: ?_is,
-            tis: ?tis,
-            mis: ?mis,
-            Lis: ?Lis,
-            Ezn: ?Ezn,
-            r1s: ?r1s,
-            OCs: ?OCs,
-            Kds: ?Kds,
-            Qds: ?Qds,
-            uis: ?uis,
-            kCs: ?kCs,
-            Xfs: ?Xfs,
-            Yfs: ?Yfs,
-            Jfs: ?Jfs,
-            Gis: ?Gis,
-            vf_: ?vf_,
-            yf_: ?yf_,
-            Tg_: ?Tg_,
-            Ag_: ?Ag_,
-            Lrs: ?Lrs,
-            WwC: ?WwC,
-            zI_: ?CombatMessage.zI_,
-        } = null,
-        K8n: ?K8n = null,
-        W8n: i32 = 0,
-    };
-    pub const zI_ = struct {
-        pub const default: @This() = .{};
-    };
-    pub const VFs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            Q8n: ?CombatMessage.OFs,
-            x5n: ?CombatMessage.FFs,
-        } = null,
-    };
-    pub const DOLLARFs = struct {
-        pub const default: @This() = .{};
-        kFs: ?union(enum) {
-            KLs: ?CombatMessage.KLs,
-            QLs: ?CombatMessage.QLs,
-        } = null,
-    };
-    pub const sZn = struct {
-        pub const default: @This() = .{};
-        R5n: std.ArrayList(CombatMessage.VFs) = .empty,
-        ORs: i32 = 0,
-    };
-    pub const aZn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-        XLs: ?CombatMessage.hZn = null,
-    };
-    pub const hZn = struct {
-        pub const default: @This() = .{};
-        R5n: std.ArrayList(DOLLARFs) = .empty,
-    };
-    pub const w4n = struct {
-        pub const default: @This() = .{};
-    };
-    pub const lZn = struct {
-        pub const default: @This() = .{};
-    };
-    pub const Vfs = struct {
-        pub const default: @This() = .{};
-        s5n: []const u8 = "",
-    };
-    pub const DOLLARfs = struct {
-        pub const default: @This() = .{};
-        YLs: []const u8 = "",
-    };
-    pub const Hfs = struct {
-        pub const default: @This() = .{};
-        Ujn: []const u8 = "",
-    };
-    pub const jfs = struct {
-        pub const default: @This() = .{};
-        JLs: []const u8 = "",
-    };
+};
+pub const OFs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        G4n: ?G4n,
+        O4n: ?O4n,
+        N4n: ?N4n,
+        ee_: ?ee_,
+        te_: ?te_,
+        ie_: ?ie_,
+        re_: ?re_,
+        oe_: ?oe_,
+        ne_: ?ne_,
+        se_: ?se_,
+        ae_: ?ae_,
+        he_: ?he_,
+        le_: ?le_,
+        _e_: ?_e_,
+        ce_: ?ce_,
+        ue_: ?ue_,
+        de_: ?de_,
+        me_: ?me_,
+        Ce_: ?Ce_,
+        ge_: ?ge_,
+        pe_: ?pe_,
+        fe_: ?fe_,
+        ve_: ?ve_,
+        ye_: ?ye_,
+        Se_: ?Se_,
+        Me_: ?Me_,
+        Ee_: ?Ee_,
+        Ie_: ?Ie_,
+        Te_: ?Te_,
+        be_: ?be_,
+        Le_: ?Le_,
+        Ae_: ?Ae_,
+        xe_: ?xe_,
+        Re_: ?Re_,
+        Pe_: ?Pe_,
+        we_: ?we_,
+        Ue_: ?Ue_,
+        De_: ?De_,
+        Be_: ?Be_,
+        qe_: ?qe_,
+        ke_: ?ke_,
+        Oe_: ?Oe_,
+        Ge_: ?Ge_,
+        Fe_: ?Fe_,
+        Ne_: ?Ne_,
+        Ve_: ?Ve_,
+        je_: ?je_,
+        He_: ?He_,
+        We_: ?We_,
+        Qe_: ?Qe_,
+        Ke_: ?Ke_,
+        DOLLARe_: ?DOLLARe_,
+        Xe_: ?Xe_,
+        Su_: ?Su_,
+        Opc: ?Opc,
+        kn1: ?kn1,
+        GG1: ?GG1,
+        k3u: ?k3u,
+        Rpd: ?Rpd,
+        Vzd: ?Vzd,
+        Ddm: ?Ddm,
+        Hag: ?Hag,
+        Pxg: ?Pxg,
+        kqC: ?kqC,
+        aap: ?aap,
+        Xvp: ?Xvp,
+        sr0: ?sr0,
+    } = null,
+    K8n: ?K8n = null,
+};
+pub const KLs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        MFn: ?MFn,
+        SFn: ?SFn,
+        EFn: ?EFn,
+        yFn: ?yFn,
+        IFn: ?IFn,
+        TFn: ?TFn,
+        LFn: ?LFn,
+        DFn: ?DFn,
+        AFn: ?AFn,
+        UFn: ?UFn,
+        RFn: ?RFn,
+        xFn: ?xFn,
+        PFn: ?PFn,
+        EJs: ?EJs,
+        BFn: ?BFn,
+        wFn: ?wFn,
+        bFn: ?bFn,
+        qFn: ?qFn,
+        GFn: ?GFn,
+        OFn: ?OFn,
+        NFn: ?NFn,
+        kFn: ?kFn,
+        FFn: ?FFn,
+        VFn: ?VFn,
+        HFn: ?HFn,
+        jFn: ?jFn,
+        WFn: ?WFn,
+        KFn: ?KFn,
+        QFn: ?QFn,
+        XFn: ?XFn,
+        DOLLARFn: ?DOLLARFn,
+        YFn: ?YFn,
+        JFn: ?JFn,
+        zFn: ?zFn,
+        ZFn: ?ZFn,
+        e3n: ?e3n,
+        t3n: ?t3n,
+        i3n: ?i3n,
+        r3n: ?r3n,
+        o3n: ?o3n,
+        n3n: ?n3n,
+        s3n: ?s3n,
+        a3n: ?a3n,
+        h3n: ?h3n,
+        l3n: ?l3n,
+        d3n: ?d3n,
+        C3n: ?C3n,
+        p3n: ?p3n,
+        v3n: ?v3n,
+        M3n: ?M3n,
+        E3n: ?E3n,
+        y3n: ?y3n,
+        I3n: ?I3n,
+        T3n: ?T3n,
+        L3n: ?L3n,
+        Xsh: ?Xsh,
+        Wul: ?Wul,
+        Jpl: ?Jpl,
+        Zpl: ?Zpl,
+        yvl: ?yvl,
+        W7l: ?W7l,
+        qus: ?qus,
+        Bn1: ?Bn1,
+        ev1: ?ev1,
+        B9d: ?B9d,
+        Adm: ?Adm,
+        rpm: ?rpm,
+        x9f: ?x9f,
+        wxg: ?wxg,
+        BqC: ?BqC,
+        YXC: ?YXC,
+        oMl: ?oMl,
+    } = null,
+    K8n: ?K8n = null,
+};
+pub const oMl = struct {
+    pub const default: @This() = .{};
+};
+pub const NFs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        DOLLARLs: ?DOLLARLs,
+        HLs: ?HLs,
+        hVn: ?hVn,
+        jLs: ?jLs,
+        WLs: ?WLs,
+    } = null,
+};
+pub const FFs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        D3n: ?D3n,
+        A3n: ?A3n,
+        U3n: ?U3n,
+        R3n: ?R3n,
+        x3n: ?x3n,
+        P3n: ?P3n,
+        B3n: ?B3n,
+        w3n: ?w3n,
+        b3n: ?b3n,
+        q3n: ?q3n,
+        G3n: ?G3n,
+        O3n: ?O3n,
+        yJs: ?yJs,
+        N3n: ?N3n,
+        k3n: ?k3n,
+        F3n: ?F3n,
+        V3n: ?V3n,
+        H3n: ?H3n,
+        j3n: ?j3n,
+        W3n: ?W3n,
+        K3n: ?K3n,
+        Q3n: ?Q3n,
+        X3n: ?X3n,
+        DOLLAR3n: ?DOLLAR3n,
+        Y3n: ?Y3n,
+        J3n: ?J3n,
+        z3n: ?z3n,
+        Z3n: ?Z3n,
+        e4n: ?e4n,
+        t4n: ?t4n,
+        i4n: ?i4n,
+        r4n: ?r4n,
+        o4n: ?o4n,
+        n4n: ?n4n,
+        s4n: ?s4n,
+        a4n: ?a4n,
+        h4n: ?h4n,
+        l4n: ?l4n,
+        _4n: ?_4n,
+        u4n: ?u4n,
+        c4n: ?c4n,
+        m4n: ?m4n,
+        d4n: ?d4n,
+        C4n: ?C4n,
+        g4n: ?g4n,
+        f4n: ?f4n,
+        p4n: ?p4n,
+        y4n: ?y4n,
+        I4n: ?I4n,
+        T4n: ?T4n,
+        L4n: ?L4n,
+        D4n: ?D4n,
+        A4n: ?A4n,
+        U4n: ?U4n,
+        R4n: ?R4n,
+        x4n: ?x4n,
+        P4n: ?P4n,
+        B4n: ?B4n,
+        qis: ?qis,
+        G5a: ?G5a,
+        T7a: ?T7a,
+        efl: ?efl,
+        tfl: ?tfl,
+        Trs: ?Trs,
+        DOLLARwC: ?DOLLARwC,
+        w4n: ?w4n,
+    } = null,
+    K8n: ?K8n = null,
+    W8n: i32 = 0,
+};
+pub const QLs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        sis: ?sis,
+        ais: ?ais,
+        lis: ?lis,
+        lzn: ?lzn,
+        _zn: ?_zn,
+        ris: ?ris,
+        ois: ?ois,
+        zts: ?zts,
+        Zts: ?Zts,
+        eis: ?eis,
+        DOLLARhs: ?DOLLARhs,
+        Sms: ?Sms,
+        IJs: ?IJs,
+        Tis: ?Tis,
+        Ris: ?Ris,
+        mes: ?mes,
+        Ces: ?Ces,
+        ycs: ?ycs,
+        Ecs: ?Ecs,
+        his: ?his,
+        Wds: ?Wds,
+        uzn: ?uzn,
+        czn: ?czn,
+        dzn: ?dzn,
+        mzn: ?mzn,
+        QXn: ?QXn,
+        Ais: ?Ais,
+        Dis: ?Dis,
+        ves: ?ves,
+        DOLLARes: ?DOLLARes,
+        XXn: ?XXn,
+        YXn: ?YXn,
+        JXn: ?JXn,
+        Pis: ?Pis,
+        nis: ?nis,
+        jes: ?jes,
+        zZn: ?zZn,
+        ZZn: ?ZZn,
+        ees: ?ees,
+        fzn: ?fzn,
+        Bis: ?Bis,
+        iis: ?iis,
+        cis: ?cis,
+        dis: ?dis,
+        _is: ?_is,
+        tis: ?tis,
+        mis: ?mis,
+        Lis: ?Lis,
+        Ezn: ?Ezn,
+        r1s: ?r1s,
+        OCs: ?OCs,
+        Kds: ?Kds,
+        Qds: ?Qds,
+        uis: ?uis,
+        kCs: ?kCs,
+        Xfs: ?Xfs,
+        Yfs: ?Yfs,
+        Jfs: ?Jfs,
+        Gis: ?Gis,
+        vf_: ?vf_,
+        yf_: ?yf_,
+        Tg_: ?Tg_,
+        Ag_: ?Ag_,
+        Lrs: ?Lrs,
+        WwC: ?WwC,
+        zI_: ?zI_,
+    } = null,
+    K8n: ?K8n = null,
+    W8n: i32 = 0,
+};
+pub const zI_ = struct {
+    pub const default: @This() = .{};
+};
+pub const VFs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        Q8n: ?OFs,
+        x5n: ?FFs,
+    } = null,
+};
+pub const DOLLARFs = struct {
+    pub const default: @This() = .{};
+    kFs: ?union(enum) {
+        KLs: ?KLs,
+        QLs: ?QLs,
+    } = null,
+};
+pub const sZn = struct {
+    pub const default: @This() = .{};
+    R5n: std.ArrayList(VFs) = .empty,
+    ORs: i32 = 0,
+};
+pub const aZn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+    XLs: ?hZn = null,
+};
+pub const hZn = struct {
+    pub const default: @This() = .{};
+    R5n: std.ArrayList(DOLLARFs) = .empty,
+};
+pub const w4n = struct {
+    pub const default: @This() = .{};
+};
+pub const lZn = struct {
+    pub const default: @This() = .{};
+};
+pub const Vfs = struct {
+    pub const default: @This() = .{};
+    s5n: []const u8 = "",
+};
+pub const DOLLARfs = struct {
+    pub const default: @This() = .{};
+    YLs: []const u8 = "",
+};
+pub const Hfs = struct {
+    pub const default: @This() = .{};
+    Ujn: []const u8 = "",
+};
+pub const jfs = struct {
+    pub const default: @This() = .{};
+    JLs: []const u8 = "",
 };
 pub const fms = struct {
     pub const default: @This() = .{};
@@ -25574,7 +25685,7 @@ pub const wis = struct {
     GSs: std.ArrayList(DOLLARks) = .empty,
     M6n: std.ArrayList(q4s) = .empty,
     BAs: ?BAs = null,
-    ISs: std.ArrayList(Ai.eNs) = .empty,
+    ISs: std.ArrayList(eNs) = .empty,
     Jys: ?Jys = null,
     qAs: std.ArrayList(bAs) = .empty,
     nT_: []const u8 = "",
@@ -25901,130 +26012,130 @@ pub const r1s = struct {
 };
 pub const Debug = struct {
     pub const default: @This() = .{};
-    pub const F4s = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        ECheatInputDefault = 0,
-        ECheatInputDel = 1,
-        ECheatInputEnd = 2,
-    };
-    pub const BZn = struct {
-        pub const default: @This() = .{};
-        h5n: i32 = 0,
-        OKn: i32 = 0,
-        VAs: std.ArrayList(i64) = .empty,
-    };
-    pub const qZn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const V4s = struct {
-        pub const default: @This() = .{};
-        F4n: i64 = 0,
-        DOLLARAs: std.ArrayList(i64) = .empty,
-        HAs: std.ArrayList(DOLLARks) = .empty,
-        jAs: std.ArrayList(DOLLARks) = .empty,
-    };
-    pub const QKd = struct {
-        pub const default: @This() = .{};
-        GKd: i64 = 0,
-        NKd: f32 = 0,
-        jKd: f32 = 0,
-        HKd: f32 = 0,
-        FJm: i64 = 0,
-        aig: f32 = 0,
-        hig: f32 = 0,
-        VKd: f32 = 0,
-        DOLLARKd: f32 = 0,
-        WKd: f32 = 0,
-        lig: f32 = 0,
-        _ig: f32 = 0,
-        FKd: i64 = 0,
-        Jpg: f32 = 0,
-        ENg: i32 = 0,
-        INg: f32 = 0,
-        TNg: f32 = 0,
-        Iip: f32 = 0,
-    };
-    pub const s3n = struct {
-        pub const default: @This() = .{};
-        WAs: i64 = 0,
-        KAs: i64 = 0,
-        QAs: i32 = 0,
-        r5n: i64 = 0,
-        Wjn: i32 = 0,
-        Mjn: i64 = 0,
-        XAs: i32 = 0,
-        YAs: bool = false,
-        Zjn: ?Debug.V4s = null,
-        JAs: ?Debug.V4s = null,
-        QKd: ?Debug.QKd = null,
-        uig: bool = false,
-    };
-    pub const oR_ = struct {
-        pub const default: @This() = .{};
-        F4n: i64 = 0,
-        v9n: i32 = 0,
-        DOLLARAs: std.ArrayList(i64) = .empty,
-        HAs: std.ArrayList(DOLLARks) = .empty,
-    };
-    pub const yvl = struct {
-        pub const default: @This() = .{};
-        WAs: i64 = 0,
-        gDs: std.ArrayList(Debug.oR_) = .empty,
-    };
-    pub const GZn = struct {
-        pub const default: @This() = .{};
-        tWn: bool = false,
-        Kga: i32 = 0,
-    };
-    pub const OZn = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-    };
-    pub const kZn = struct {
-        pub const default: @This() = .{};
-        zAs: f32 = 0,
-        ZAs: std.ArrayList(Debug.DOLLAR4s) = .empty,
-    };
-    pub const NZn = struct {
-        pub const default: @This() = .{};
-        zAs: f32 = 0,
-        ePs: ?Debug.DOLLAR4s = null,
-        tPs: bool = false,
-    };
-    pub const DOLLAR4s = struct {
-        pub const default: @This() = .{};
-        iPs: f32 = 0,
-        rPs: f32 = 0,
-        oPs: f32 = 0,
-        nPs: f32 = 0,
-    };
-    pub const FZn = struct {
-        pub const default: @This() = .{};
-        GKn: []const u8 = "",
-    };
-    pub const VZn = struct {
-        pub const default: @This() = .{};
-    };
-    pub const Lfs = struct {
-        pub const default: @This() = .{};
-    };
-    pub const Jf_ = struct {
-        pub const default: @This() = .{};
-        HTa: []const u8 = "",
-    };
-    pub const Yfc = struct {
-        pub const default: @This() = .{};
-        Q4n: i32 = 0,
-        GNs: []const u8 = "",
-    };
-    pub const Vw1 = struct {
-        pub const default: @This() = .{};
-        rS_: std.ArrayList(Gks) = .empty,
-        n5n: i32 = 0,
-        jw1: i32 = 0,
-        w7n: i32 = 0,
-    };
+};
+pub const F4s = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    ECheatInputDefault = 0,
+    ECheatInputDel = 1,
+    ECheatInputEnd = 2,
+};
+pub const BZn = struct {
+    pub const default: @This() = .{};
+    h5n: i32 = 0,
+    OKn: i32 = 0,
+    VAs: std.ArrayList(i64) = .empty,
+};
+pub const qZn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const V4s = struct {
+    pub const default: @This() = .{};
+    F4n: i64 = 0,
+    DOLLARAs: std.ArrayList(i64) = .empty,
+    HAs: std.ArrayList(DOLLARks) = .empty,
+    jAs: std.ArrayList(DOLLARks) = .empty,
+};
+pub const QKd = struct {
+    pub const default: @This() = .{};
+    GKd: i64 = 0,
+    NKd: f32 = 0,
+    jKd: f32 = 0,
+    HKd: f32 = 0,
+    FJm: i64 = 0,
+    aig: f32 = 0,
+    hig: f32 = 0,
+    VKd: f32 = 0,
+    DOLLARKd: f32 = 0,
+    WKd: f32 = 0,
+    lig: f32 = 0,
+    _ig: f32 = 0,
+    FKd: i64 = 0,
+    Jpg: f32 = 0,
+    ENg: i32 = 0,
+    INg: f32 = 0,
+    TNg: f32 = 0,
+    Iip: f32 = 0,
+};
+pub const s3n = struct {
+    pub const default: @This() = .{};
+    WAs: i64 = 0,
+    KAs: i64 = 0,
+    QAs: i32 = 0,
+    r5n: i64 = 0,
+    Wjn: i32 = 0,
+    Mjn: i64 = 0,
+    XAs: i32 = 0,
+    YAs: bool = false,
+    Zjn: ?V4s = null,
+    JAs: ?V4s = null,
+    QKd: ?QKd = null,
+    uig: bool = false,
+};
+pub const oR_ = struct {
+    pub const default: @This() = .{};
+    F4n: i64 = 0,
+    v9n: i32 = 0,
+    DOLLARAs: std.ArrayList(i64) = .empty,
+    HAs: std.ArrayList(DOLLARks) = .empty,
+};
+pub const yvl = struct {
+    pub const default: @This() = .{};
+    WAs: i64 = 0,
+    gDs: std.ArrayList(oR_) = .empty,
+};
+pub const GZn = struct {
+    pub const default: @This() = .{};
+    tWn: bool = false,
+    Kga: i32 = 0,
+};
+pub const OZn = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+};
+pub const kZn = struct {
+    pub const default: @This() = .{};
+    zAs: f32 = 0,
+    ZAs: std.ArrayList(DOLLAR4s) = .empty,
+};
+pub const NZn = struct {
+    pub const default: @This() = .{};
+    zAs: f32 = 0,
+    ePs: ?DOLLAR4s = null,
+    tPs: bool = false,
+};
+pub const DOLLAR4s = struct {
+    pub const default: @This() = .{};
+    iPs: f32 = 0,
+    rPs: f32 = 0,
+    oPs: f32 = 0,
+    nPs: f32 = 0,
+};
+pub const FZn = struct {
+    pub const default: @This() = .{};
+    GKn: []const u8 = "",
+};
+pub const VZn = struct {
+    pub const default: @This() = .{};
+};
+pub const Lfs = struct {
+    pub const default: @This() = .{};
+};
+pub const Jf_ = struct {
+    pub const default: @This() = .{};
+    HTa: []const u8 = "",
+};
+pub const Yfc = struct {
+    pub const default: @This() = .{};
+    Q4n: i32 = 0,
+    GNs: []const u8 = "",
+};
+pub const Vw1 = struct {
+    pub const default: @This() = .{};
+    rS_: std.ArrayList(Gks) = .empty,
+    n5n: i32 = 0,
+    jw1: i32 = 0,
+    w7n: i32 = 0,
 };
 pub const GCs = struct {
     pub const default: @This() = .{};
@@ -26237,6 +26348,15 @@ pub const Lrs = struct {
     pub const default: @This() = .{};
     W5n: i32 = 0,
     JHn: i64 = 0,
+    Q4n: i32 = 0,
+};
+pub const dEv = struct {
+    pub const default: @This() = .{};
+};
+pub const mEv = struct {
+    pub const default: @This() = .{};
+    yRs: std.ArrayList(yRs) = .empty,
+    gEv: std.ArrayList(c3s) = .empty,
     Q4n: i32 = 0,
 };
 pub const H4s = struct {
@@ -28005,6 +28125,13 @@ pub const U6s = struct {
     DOLLARUs: i32 = 0,
     HUs: i32 = 0,
 };
+pub const GN0 = struct {
+    pub const default: @This() = .{};
+    DOLLARUs: i32 = 0,
+    PN0: i32 = 0,
+    AN0: i32 = 0,
+    UN0: i32 = 0,
+};
 pub const w6s = struct {
     pub const default: @This() = .{};
     s5n: i32 = 0,
@@ -28034,6 +28161,7 @@ pub const x6s = struct {
     YUs: i32 = 0,
     JUs: []const u8 = "",
     iIp: i32 = 0,
+    DN0: std.ArrayList(GN0) = .empty,
     xN0: bool = false,
     bQ0: bool = false,
     PQ0: std.ArrayList(MapEntry(i32, []const u8)) = .empty,
@@ -28081,6 +28209,11 @@ pub const zrs = struct {
 pub const Zrs = struct {
     pub const default: @This() = .{};
     tws: std.ArrayList(b6s) = .empty,
+};
+pub const bN0 = struct {
+    pub const default: @This() = .{};
+    t9n: i32 = 0,
+    DN0: std.ArrayList(GN0) = .empty,
 };
 pub const eos = struct {
     pub const default: @This() = .{};
@@ -28141,6 +28274,10 @@ pub const _Ip = struct {
     sIp: i32 = 0,
     gRf: std.ArrayList(MapEntry(i32, i32)) = .empty,
     H6n: i32 = 0,
+    BN0: bool = false,
+    IAc: i32 = 0,
+    kN0: i32 = 0,
+    qN0: bool = false,
 };
 pub const QEp = struct {
     pub const default: @This() = .{};
@@ -28998,9 +29135,9 @@ pub const sS0 = struct {
     NId: bool = false,
     ghp: i32 = 0,
 };
-pub const uav = struct {
+pub const G0v = struct {
     pub const default: @This() = .{};
-    _av: i32 = 0,
+    k0v: i32 = 0,
 };
 pub const DOLLARah = struct {
     pub const default: @This() = .{};
@@ -29034,7 +29171,7 @@ pub const DOLLARah = struct {
         mJg: ?mJg,
         d8p: ?d8p,
         sS0: ?sS0,
-        uav: ?uav,
+        G0v: ?G0v,
     } = null,
 };
 pub const Oos = struct {
@@ -29937,6 +30074,7 @@ pub const fss = struct {
     _TC: []const u8 = "",
     uTC: i32 = 0,
     Fz0: []const u8 = "",
+    BAv: []const u8 = "",
 };
 pub const vss = struct {
     pub const default: @This() = .{};
@@ -30198,6 +30336,7 @@ pub const R5s = enum(i32) {
     OnlineMotorSettle = 106,
     EdgeRunnerActivityMailSettle = 107,
     WeeklyFrameScoreRewardReissue = 108,
+    XboxGift = 109,
 };
 pub const kss = struct {
     pub const default: @This() = .{};
@@ -30354,24 +30493,25 @@ pub const N7n = struct {
 };
 pub const w5s = struct {
     pub const default: @This() = .{};
-    pub const ENUMS = enum(i32) {
-        pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
-        None = 0,
-        Custom = 1,
-        aTs = 2,
-        uHc = 3,
-        TemporaryTeleport = 4,
-        SoundBox = 5,
-        O7n = 6,
-        TreasureBoxPoint = 7,
-        CalmingWindBell = 8,
-        EnrichmentArea = 9,
-        EnrichmentAreaChild = 10,
-        HookLockSoundBox = 11,
-        HonamiStory = 12,
-        HonamiStoryChild = 13,
-        LahairoHookLock = 14,
-    };
+};
+pub const ENUMS = enum(i32) {
+    pub const default: @This() = @field(@This(), std.meta.fieldNames(@This())[0]);
+    None = 0,
+    Custom = 1,
+    aTs = 2,
+    uHc = 3,
+    TemporaryTeleport = 4,
+    SoundBox = 5,
+    O7n = 6,
+    TreasureBoxPoint = 7,
+    CalmingWindBell = 8,
+    EnrichmentArea = 9,
+    EnrichmentAreaChild = 10,
+    HookLockSoundBox = 11,
+    HonamiStory = 12,
+    HonamiStoryChild = 13,
+    LahairoHookLock = 14,
+    LiangYuanSoundBox = 15,
 };
 pub const Jss = struct {
     pub const default: @This() = .{};
@@ -32090,6 +32230,11 @@ pub const Xoc = struct {
     rnc: std.ArrayList(onc) = .empty,
     DOLLARoC: std.ArrayList(i32) = .empty,
 };
+pub const Lbv = struct {
+    pub const default: @This() = .{};
+    onc: std.ArrayList(onc) = .empty,
+    WoC: std.ArrayList(KoC) = .empty,
+};
 pub const Yoc = struct {
     pub const default: @This() = .{};
     tnc: i32 = 0,
@@ -33244,7 +33389,6 @@ pub const kEc = struct {
         Yr1: ?Yr1,
         LE1: ?LE1,
         oR1: ?hR1,
-        i4L: ?i4L,
         r41: ?r41,
         Kxu: ?Kxu,
     } = null,
@@ -33438,14 +33582,6 @@ pub const hR1 = struct {
     pub const default: @This() = .{};
     sR1: bool = false,
     F2s: i32 = 0,
-};
-pub const i4L = struct {
-    pub const default: @This() = .{};
-    v9n: i32 = 0,
-    UEc: i32 = 0,
-    DOLLARB1: i32 = 0,
-    WB1: bool = false,
-    jEc: std.ArrayList(i32) = .empty,
 };
 pub const r41 = struct {
     pub const default: @This() = .{};
@@ -33669,9 +33805,6 @@ pub const Lqs = struct {
     pub const default: @This() = .{};
     l8s: ?union(enum) {
         G2s: ?G2s,
-    } = null,
-    DOLLAR8s: ?union(enum) {
-        O2s: bool,
     } = null,
     h5n: i32 = 0,
     c5n: i32 = 0,
@@ -34317,6 +34450,15 @@ pub const fp0 = struct {
 pub const Cp0 = struct {
     pub const default: @This() = .{};
     Ep0: std.ArrayList(Ip0) = .empty,
+};
+pub const Gwv = struct {
+    pub const default: @This() = .{};
+    _ps: i32 = 0,
+    r6n: i32 = 0,
+};
+pub const Bwv = struct {
+    pub const default: @This() = .{};
+    kwv: std.ArrayList(Gwv) = .empty,
 };
 pub const Cms = struct {
     pub const default: @This() = .{};
@@ -37140,6 +37282,8 @@ pub const ErrorCode = enum(i32) {
     ErrFightFormationNameLength = 200700,
     ErrRoleSkillLevel = 200701,
     ErrQuestBranchConfig = 200702,
+    ErrConditionStateRequestParam = 200703,
+    ErrConditionStateRequestModule = 200704,
     ErrMapDefault = 300000,
     ErrMapMarkNumLimit = 300001,
     ErrMapNoFogConfig = 300002,
@@ -38789,6 +38933,11 @@ pub const ErrorCode = enum(i32) {
     RogueTowerTrialInstBossErr = 1100622,
     NoRogueArchive = 1100623,
     RogueArchiveInvalid = 1100624,
+    KurotatoStepErr1 = 1100625,
+    KurotatoStepErr2 = 1100626,
+    ErrorNewTowerAwardCantGet = 1100627,
+    KurotatoShopProductIsBought = 1100628,
+    KurotatoShopProductAllLock = 1100629,
     ErrChatNotFriendNorOnline = 1200000,
     ErrChatContentFilterFailed = 1200001,
     ErrChatLockState = 1200002,
@@ -39586,6 +39735,8 @@ pub const ErrorCode = enum(i32) {
     ErrRecallItemBagItemTypeNotSupport = 1900381,
     ErrRecallItemBagFull = 1900382,
     ActivityPlayingCanNotDissolve = 1900383,
+    ErrAdventureSilentCtxNull = 1900385,
+    ErrAdventureSilentId = 1900386,
     ErrDoCommonRewardConfigError = 2000000,
     InstPlayNotSettle = 2000001,
     InstPlayNotFinishExecute = 2000002,
@@ -40403,6 +40554,17 @@ pub const ErrorCode = enum(i32) {
     RecallConfigNotExist = 2600111,
     QuestNotFinish = 2600112,
     HasInRecallScene = 2600113,
+    EntityConfigNotFound = 2600114,
+    InstConfigNotFound = 2600115,
+    FastReturnPosTypeNotSupport = 2600116,
+    FastReturnPosConfigError = 2600117,
+    TrackCustomBoardIsNull = 2600118,
+    BtNodeConfigNotExist = 2600119,
+    BtNodeObjNotExist = 2600120,
+    LevelPlayNotExist = 2600121,
+    LevelPlayDbDataNotExist = 2600122,
+    NotInRecallInst = 2600123,
+    SpecificRecallInfoNotExist = 2600124,
     ErrorCodeIdCreateRuleChange2 = 2700001,
     RacingBetsActivityIdErr = 2700002,
     RacingBetsActivityDataErr = 2700003,
@@ -40688,6 +40850,7 @@ pub const ErrorCode = enum(i32) {
     ForoRanchSubInsNotOpen = 2700283,
     ForoRanchVoidToyNotEnough = 2700284,
     ForoRanchToyNotEnough = 2700285,
+    ForoRanchWeeklyCanNotMilestone = 2700308,
     GateUdpPortNotExist = 2800000,
     GateKcpGetConvFail = 2800001,
     ErrScreenActionExecutorNotFind = 2900000,
@@ -40927,6 +41090,8 @@ pub const ErrorCode = enum(i32) {
     ErrXboxGiftNotFound = 3000197,
     ErrXboxGiftException = 3000198,
     ErrXboxGiftHttpError = 3000199,
+    ErrXboxGiftXstsTokenInvalid = 3000201,
+    ErrXboxGiftXstsTokenMismatch = 3000202,
     PhotoFightLevelNotFound = 3100000,
     PhotoFightActivityNotOpen = 3100001,
     PhotoFightSceneComponentInfoLost = 3100002,
@@ -40941,6 +41106,7 @@ pub const ErrorCode = enum(i32) {
     PhotoFightRewardInvalidInput = 3100011,
     PhotoFightAlreadyRewarded = 3100012,
     PhotoFightCannotRewarded = 3100081,
+    PhotoFightInvalidInstType = 3100306,
     WuWuKujiQuestNotFound = 3100013,
     WuWuKujiQuestNotOpenDay = 3100014,
     WuWuKujiQuestAllFinished = 3100015,
@@ -42085,7 +42251,7 @@ pub const GameCtxPb = struct {
         BehaviorTree: ?BehaviorTreeCtxPb,
         Entity: ?EntityCtxPb,
         NormalInteract: ?NormalInteractCtxPb,
-        DynamicInteract: ?DynamicInteractCtxPb,
+        DynamicInteract: ?*DynamicInteractCtxPb,
         RandomInteract: ?RandomInteractCtxPb,
         StateChangeAction: ?StateChangeActionCtxPb,
         EntityGroupAction: ?EntityGroupActionCtxPb,
@@ -42167,7 +42333,7 @@ pub const DynamicInteractCtxPb = struct {
     pub const default: @This() = .{};
     EntityCtx: ?EntityCtxPb = null,
     OptionGuid: []const u8 = "",
-    finalOptionCtx: ?*GameCtxPb = null,
+    finalOptionCtx: ?GameCtxPb = null,
 };
 pub const MotorSliderCtxPb = struct {
     pub const default: @This() = .{};
@@ -42549,6 +42715,7 @@ pub const TeleportReason = enum(i32) {
     InstEntity = 23,
     InstRequestTeleportResetPoint = 24,
     StrongWindField = 25,
+    FastReturn = 26,
 };
 pub const TeleportNotify = struct {
     pub const default: @This() = .{};
@@ -42930,6 +43097,7 @@ pub const ActivityType = enum(i32) {
     NewbieAdventureV2 = 109,
     NewbieCourseV2 = 110,
     NewbieMain = 111,
+    PurePreviewActivity = 115,
     PureUIActivity = 200,
 };
 pub const ParkourActivityChallenge = struct {
@@ -43424,6 +43592,7 @@ pub const BabelTowerData = struct {
     MaxPassBuffSelection: std.ArrayList(i32) = .empty,
     MaxPassStar: i32 = 0,
     SkillBranchId: std.ArrayList(i32) = .empty,
+    MaxPassUseTime: i32 = 0,
 };
 pub const BabelDebuff = struct {
     pub const default: @This() = .{};
@@ -45011,6 +45180,7 @@ pub const KurotatoRoleInfo = struct {
     roleId: i32 = 0,
     IsUnlock: bool = false,
     MaxFinishWave: i32 = 0,
+    KillCount: i32 = 0,
 };
 pub const KurotatoInstInfo = struct {
     pub const default: @This() = .{};
@@ -45722,7 +45892,9 @@ pub const EClientStorageSystemIdType = enum(i32) {
     NormalPayGiftRedDot = 52,
     FirstOpenDailyActivityTab = 53,
     RoleLangCustomRecord = 54,
+    ActivityRecommend = 55,
     WheelTowerSeasonReview = 56,
+    RoleLangCustomFuncClicked = 58,
 };
 pub const PlayerXboxBlockListRequest = struct {
     pub const default: @This() = .{};
@@ -45947,7 +46119,12 @@ pub const ChildQuestNodeProgress = struct {
         Interact: ?InteractProgress,
         CompleteInst: ?CompleteInstProgress,
         EntityStateList: ?EntityStateProgress,
+        GpuMonster: ?GpuMonsterProgress,
     } = null,
+};
+pub const GpuMonsterProgress = struct {
+    pub const default: @This() = .{};
+    CurKillNum: i32 = 0,
 };
 pub const EntityStateProgress = struct {
     pub const default: @This() = .{};
@@ -46893,6 +47070,7 @@ pub const ExitVehicleType = enum(i32) {
     ExitVehicleTypeNormal = 1,
     ExitVehicleTypeDelayShow = 2,
     ExitVehicleTypeSeatStandUp = 3,
+    ExitVehicleTypeAllRole = 4,
 };
 pub const VehiclePlayerData = struct {
     pub const default: @This() = .{};
@@ -47195,6 +47373,7 @@ pub const GpuMonsterEntityPbData = struct {
 };
 pub const GpuRoleEntityPbData = struct {
     pub const default: @This() = .{};
+    IncId: i64 = 0,
 };
 pub const CalabashSkinComponentPb = struct {
     pub const default: @This() = .{};
@@ -50769,6 +50948,13 @@ pub const GachaConsume = struct {
     Times: i32 = 0,
     Consume: i32 = 0,
 };
+pub const GachaDiscountInfo = struct {
+    pub const default: @This() = .{};
+    Times: i32 = 0,
+    LimitTimes: i32 = 0,
+    DiscountConsume: i32 = 0,
+    UsedTimes: i32 = 0,
+};
 pub const GachaPoolInfo = struct {
     pub const default: @This() = .{};
     Id: i32 = 0,
@@ -50798,9 +50984,10 @@ pub const GachaInfo = struct {
     TotalLimitTimes: i32 = 0,
     ResourcesId: []const u8 = "",
     GachaAccumulateId: i32 = 0,
-    GachaDiscountInfos: bool = false,
+    GachaDiscountInfos: std.ArrayList(GachaDiscountInfo) = .empty,
     OnlyViewDiscount: bool = false,
-    IsShowProgress: std.ArrayList(MapEntry(i32, []const u8)) = .empty,
+    IsShowProgress: bool = false,
+    DiscountTagDetails: std.ArrayList(MapEntry(i32, []const u8)) = .empty,
 };
 pub const GachaReward = struct {
     pub const default: @This() = .{};
@@ -51340,6 +51527,7 @@ pub const LoginRequest = struct {
     XboxAccountId: []const u8 = "",
     XboxSocialState: i32 = 0,
     UserCollectionsId: []const u8 = "",
+    XstsToken: []const u8 = "",
 };
 pub const LoginResponse = struct {
     pub const default: @This() = .{};
@@ -52853,6 +53041,37 @@ pub const XboxSettingRequest = struct {
 pub const XboxSettingResponse = struct {
     pub const default: @This() = .{};
     MatchXboxUser: bool = false,
+};
+pub const SheriffCriminalInfo = struct {
+    pub const default: @This() = .{};
+    CriminalId: i32 = 0,
+    state: i32 = 0,
+    IdentityId: i32 = 0,
+};
+pub const SheriffAnomalyInfo = struct {
+    pub const default: @This() = .{};
+    AnomalyId: i32 = 0,
+    ClueIds: std.ArrayList(i32) = .empty,
+    ProgressIds: std.ArrayList(i32) = .empty,
+    EndingId: i32 = 0,
+    CompleteTime: i64 = 0,
+    IsActivated: bool = false,
+    IsUnlocked: bool = false,
+};
+pub const SheriffZoneInfo = struct {
+    pub const default: @This() = .{};
+    ZoneId: i32 = 0,
+    AnomalyInfos: std.ArrayList(SheriffAnomalyInfo) = .empty,
+    CriminalInfos: std.ArrayList(SheriffCriminalInfo) = .empty,
+};
+pub const SheriffZoneInfoRequest = struct {
+    pub const default: @This() = .{};
+    ZoneIds: std.ArrayList(i32) = .empty,
+};
+pub const SheriffZoneInfoResponse = struct {
+    pub const default: @This() = .{};
+    errorCode: i32 = 0,
+    ZoneInfos: std.ArrayList(SheriffZoneInfo) = .empty,
 };
 pub const ShortMessageInfo = struct {
     pub const default: @This() = .{};

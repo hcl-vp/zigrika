@@ -3329,6 +3329,7 @@ pub const rY_ = struct {
     pub const Dt1_field_number: u32 = 10;
     pub const rAu_field_number: u32 = 11;
     pub const ajC_field_number: u32 = 12;
+    pub const eRv_field_number: u32 = 13;
 };
 pub const oY_ = struct {
     pub const HX__field_number: u32 = 1;
@@ -4356,6 +4357,20 @@ pub const Dwu = struct {
     pub const lMs_field_number: u32 = 2;
     pub const j6n_field_number: u32 = 3;
     pub const H6n_field_number: u32 = 4;
+};
+pub const tAv = struct {
+    pub const msg_id: u16 = 16543;
+    pub const rAv_field_number: u32 = 15;
+    pub const Ghu_field_number: u32 = 11;
+};
+pub const iAv = struct {
+    pub const msg_id: u16 = 16794;
+    pub const Q4n_field_number: u32 = 7;
+    pub const oAv_field_number: u32 = 6;
+};
+pub const nAv = struct {
+    pub const XBd_field_number: u32 = 1;
+    pub const qS__field_number: u32 = 2;
 };
 pub const xYs = struct {
     pub const nBs_field_number: u32 = 1;
@@ -10008,13 +10023,13 @@ pub const VYg = struct {
     pub const UAd_field_number: u32 = 15;
     pub const g9n_field_number: u32 = 5;
 };
-pub const nav = struct {
+pub const efv = struct {
     pub const msg_id: u16 = 18766;
     aJu: ?union(enum) {
     } = null,
     pub const UAd_field_number: u32 = 3;
 };
-pub const sav = struct {
+pub const tfv = struct {
     pub const msg_id: u16 = 27590;
     pub const G9n_field_number: u32 = 6;
 };
@@ -10028,12 +10043,12 @@ pub const oJg = struct {
     pub const HIC_field_number: u32 = 10;
     pub const s4c_field_number: u32 = 15;
 };
-pub const cav = struct {
+pub const ifv = struct {
 };
 pub const qJg = struct {
     pub const SJg_field_number: u32 = 1;
 };
-pub const dav = struct {
+pub const rfv = struct {
 };
 pub const OJg = struct {
 };
@@ -10272,6 +10287,7 @@ pub const UEp = struct {
     pub const Q6n_field_number: u32 = 1;
     pub const K6n_field_number: u32 = 2;
     pub const wEp_field_number: u32 = 3;
+    pub const UPv_field_number: u32 = 5;
 };
 pub const kEp = struct {
     pub const gG__field_number: u32 = 1;
@@ -10287,6 +10303,14 @@ pub const kEp = struct {
 pub const rEp = struct {
     pub const msg_id: u16 = 16274;
     pub const pEp_field_number: u32 = 14;
+};
+pub const Uwv = struct {
+    pub const msg_id: u16 = 27985;
+    pub const gG__field_number: u32 = 12;
+};
+pub const xwv = struct {
+    pub const msg_id: u16 = 20735;
+    pub const Q4n_field_number: u32 = 15;
 };
 pub const oEp = struct {
     pub const msg_id: u16 = 17103;
@@ -10359,11 +10383,11 @@ pub const pp0 = struct {
     pub const msg_id: u16 = 18264;
     pub const yp0_field_number: u32 = 12;
 };
-pub const aav = struct {
+pub const fEv = struct {
     pub const msg_id: u16 = 27337;
-    pub const lav_field_number: u32 = 11;
+    pub const pEv_field_number: u32 = 11;
 };
-pub const hav = struct {
+pub const CEv = struct {
     pub const msg_id: u16 = 25722;
     pub const Q4n_field_number: u32 = 12;
 };
@@ -10371,10 +10395,10 @@ pub const vp0 = struct {
     pub const msg_id: u16 = 21500;
     pub const Q4n_field_number: u32 = 13;
 };
-pub const Nsv = struct {
+pub const zcv = struct {
     pub const msg_id: u16 = 29784;
-    pub const Vsv_field_number: u32 = 14;
-    pub const Hsv_field_number: u32 = 4;
+    pub const Jcv_field_number: u32 = 14;
+    pub const Zcv_field_number: u32 = 4;
 };
 pub const njp = struct {
     pub const gG__field_number: u32 = 1;
@@ -10898,108 +10922,108 @@ pub const KXn = struct {
     pub const Q4n_field_number: u32 = 15;
 };
 pub const Ai = struct {
-    pub const eNs = struct {
-        pub const F4n_field_number: u32 = 1;
-        pub const Z8n_field_number: u32 = 2;
-    };
-    pub const tNs = struct {
-        pub const j4n_field_number: u32 = 1;
-        pub const W4n_field_number: u32 = 2;
-    };
-    pub const iNs = struct {
-        pub const j4n_field_number: u32 = 1;
-        pub const W4n_field_number: u32 = 2;
-    };
-    pub const rNs = struct {
-        pub const eVn_field_number: u32 = 1;
-        pub const ISs_field_number: u32 = 2;
-        pub const TSs_field_number: u32 = 3;
-    };
-    pub const nNs = struct {
-        pub const F4n_field_number: u32 = 1;
-        pub const tVn_field_number: u32 = 2;
-        pub const W5n_field_number: u32 = 3;
-    };
-    pub const J3n = struct {
-        pub const msg_id: u16 = 15593;
-        pub const tVn_field_number: u32 = 10;
-    };
-    pub const fe_ = struct {
-        pub const msg_id: u16 = 25228;
-        pub const tVn_field_number: u32 = 6;
-    };
-    pub const QXn = struct {
-        pub const msg_id: u16 = 18718;
-        pub const Q4n_field_number: u32 = 1;
-    };
-    pub const QFn = struct {
-        pub const msg_id: u16 = 21566;
-        pub const TSs_field_number: u32 = 12;
-    };
-    pub const i4n = struct {
-        pub const msg_id: u16 = 27817;
-        pub const eVn_field_number: u32 = 9;
-    };
-    pub const Ee_ = struct {
-        pub const msg_id: u16 = 20623;
-        pub const eVn_field_number: u32 = 1;
-    };
-    pub const XXn = struct {
-        pub const msg_id: u16 = 27726;
-        pub const Q4n_field_number: u32 = 4;
-    };
-    pub const r4n = struct {
-        pub const msg_id: u16 = 18036;
-        pub const K4n_field_number: u32 = 15;
-        pub const H4n_field_number: u32 = 5;
-    };
-    pub const Ie_ = struct {
-        pub const msg_id: u16 = 28235;
-        pub const K4n_field_number: u32 = 15;
-        pub const H4n_field_number: u32 = 3;
-    };
-    pub const YXn = struct {
-        pub const msg_id: u16 = 21338;
-        pub const Q4n_field_number: u32 = 7;
-    };
-    pub const JFn = struct {
-        pub const msg_id: u16 = 15417;
-        pub const LSs_field_number: u32 = 7;
-        pub const K4n_field_number: u32 = 4;
-        pub const H4n_field_number: u32 = 2;
-    };
-    pub const o4n = struct {
-        pub const msg_id: u16 = 16922;
-        pub const ISs_field_number: u32 = 11;
-    };
-    pub const Te_ = struct {
-        pub const msg_id: u16 = 21579;
-        pub const ISs_field_number: u32 = 9;
-    };
-    pub const JXn = struct {
-        pub const msg_id: u16 = 27096;
-        pub const Q4n_field_number: u32 = 14;
-    };
-    pub const a3n = struct {
-        pub const msg_id: u16 = 19276;
-        pub const ISs_field_number: u32 = 1;
-    };
-    pub const zXn = struct {
-        pub const msg_id: u16 = 17770;
-        pub const F4n_field_number: u32 = 2;
-    };
-    pub const ZXn = struct {
-        pub const msg_id: u16 = 21692;
-        pub const Q4n_field_number: u32 = 9;
-    };
-    pub const eYn = struct {
-        pub const msg_id: u16 = 15408;
-        pub const ASs_field_number: u32 = 11;
-    };
-    pub const tYn = struct {
-        pub const msg_id: u16 = 22664;
-        pub const PSs_field_number: u32 = 10;
-    };
+};
+pub const eNs = struct {
+    pub const F4n_field_number: u32 = 1;
+    pub const Z8n_field_number: u32 = 2;
+};
+pub const tNs = struct {
+    pub const j4n_field_number: u32 = 1;
+    pub const W4n_field_number: u32 = 2;
+};
+pub const iNs = struct {
+    pub const j4n_field_number: u32 = 1;
+    pub const W4n_field_number: u32 = 2;
+};
+pub const rNs = struct {
+    pub const eVn_field_number: u32 = 1;
+    pub const ISs_field_number: u32 = 2;
+    pub const TSs_field_number: u32 = 3;
+};
+pub const nNs = struct {
+    pub const F4n_field_number: u32 = 1;
+    pub const tVn_field_number: u32 = 2;
+    pub const W5n_field_number: u32 = 3;
+};
+pub const J3n = struct {
+    pub const msg_id: u16 = 15593;
+    pub const tVn_field_number: u32 = 10;
+};
+pub const fe_ = struct {
+    pub const msg_id: u16 = 25228;
+    pub const tVn_field_number: u32 = 6;
+};
+pub const QXn = struct {
+    pub const msg_id: u16 = 18718;
+    pub const Q4n_field_number: u32 = 1;
+};
+pub const QFn = struct {
+    pub const msg_id: u16 = 21566;
+    pub const TSs_field_number: u32 = 12;
+};
+pub const i4n = struct {
+    pub const msg_id: u16 = 27817;
+    pub const eVn_field_number: u32 = 9;
+};
+pub const Ee_ = struct {
+    pub const msg_id: u16 = 20623;
+    pub const eVn_field_number: u32 = 1;
+};
+pub const XXn = struct {
+    pub const msg_id: u16 = 27726;
+    pub const Q4n_field_number: u32 = 4;
+};
+pub const r4n = struct {
+    pub const msg_id: u16 = 18036;
+    pub const K4n_field_number: u32 = 15;
+    pub const H4n_field_number: u32 = 5;
+};
+pub const Ie_ = struct {
+    pub const msg_id: u16 = 28235;
+    pub const K4n_field_number: u32 = 15;
+    pub const H4n_field_number: u32 = 3;
+};
+pub const YXn = struct {
+    pub const msg_id: u16 = 21338;
+    pub const Q4n_field_number: u32 = 7;
+};
+pub const JFn = struct {
+    pub const msg_id: u16 = 15417;
+    pub const LSs_field_number: u32 = 7;
+    pub const K4n_field_number: u32 = 4;
+    pub const H4n_field_number: u32 = 2;
+};
+pub const o4n = struct {
+    pub const msg_id: u16 = 16922;
+    pub const ISs_field_number: u32 = 11;
+};
+pub const Te_ = struct {
+    pub const msg_id: u16 = 21579;
+    pub const ISs_field_number: u32 = 9;
+};
+pub const JXn = struct {
+    pub const msg_id: u16 = 27096;
+    pub const Q4n_field_number: u32 = 14;
+};
+pub const a3n = struct {
+    pub const msg_id: u16 = 19276;
+    pub const ISs_field_number: u32 = 1;
+};
+pub const zXn = struct {
+    pub const msg_id: u16 = 17770;
+    pub const F4n_field_number: u32 = 2;
+};
+pub const ZXn = struct {
+    pub const msg_id: u16 = 21692;
+    pub const Q4n_field_number: u32 = 9;
+};
+pub const eYn = struct {
+    pub const msg_id: u16 = 15408;
+    pub const ASs_field_number: u32 = 11;
+};
+pub const tYn = struct {
+    pub const msg_id: u16 = 22664;
+    pub const PSs_field_number: u32 = 10;
 };
 pub const aNs = struct {
     pub const gKn_field_number: u32 = 1;
@@ -11594,9 +11618,9 @@ pub const Vf_ = struct {
     pub const HE__field_number: u32 = 8;
 };
 pub const BattleDefine = struct {
-    pub const ZG1 = struct {
-        pub const JG1_field_number: u32 = 1;
-    };
+};
+pub const ZG1 = struct {
+    pub const JG1_field_number: u32 = 1;
 };
 pub const UNs = struct {
     pub const F6n_field_number: u32 = 1;
@@ -11749,6 +11773,10 @@ pub const VNs = struct {
     pub const vEs_field_number: u32 = 6;
     pub const pEs_field_number: u32 = 7;
     pub const MEs_field_number: u32 = 8;
+    pub const Phv_field_number: u32 = 9;
+};
+pub const Uhv = struct {
+    pub const Ahv_field_number: u32 = 1;
 };
 pub const XNs = struct {
     pub const F4n_field_number: u32 = 1;
@@ -12180,6 +12208,39 @@ pub const Bkp = struct {
 pub const Gkp = struct {
     pub const Hfp_field_number: u32 = 1;
     pub const L8n_field_number: u32 = 2;
+};
+pub const B_v = struct {
+    pub const msg_id: u16 = 26103;
+    pub const d9n_field_number: u32 = 7;
+    pub const C9n_field_number: u32 = 15;
+    pub const b5n_field_number: u32 = 13;
+};
+pub const k_v = struct {
+    pub const msg_id: u16 = 28101;
+    pub const Q4n_field_number: u32 = 12;
+};
+pub const G_v = struct {
+    pub const msg_id: u16 = 23331;
+    pub const _ps_field_number: u32 = 9;
+    pub const d9n_field_number: u32 = 8;
+    pub const C9n_field_number: u32 = 7;
+    pub const b5n_field_number: u32 = 3;
+};
+pub const q_v = struct {
+    pub const msg_id: u16 = 17261;
+    pub const Q4n_field_number: u32 = 7;
+};
+pub const O_v = struct {
+    pub const msg_id: u16 = 26984;
+    pub const d9n_field_number: u32 = 14;
+    pub const C9n_field_number: u32 = 15;
+    pub const b5n_field_number: u32 = 5;
+    pub const C5n_field_number: u32 = 3;
+    pub const CAv_field_number: u32 = 2;
+};
+pub const F_v = struct {
+    pub const msg_id: u16 = 19604;
+    pub const Q4n_field_number: u32 = 13;
 };
 pub const _3s = struct {
     pub const cVn_field_number: u32 = 1;
@@ -13101,13 +13162,6 @@ pub const _10 = struct {
     pub const msg_id: u16 = 24221;
     pub const ox0_field_number: u32 = 12;
 };
-pub const u10L = struct {
-    pub const msg_id: u16 = 19272;
-    pub const Q4n_field_number: u32 = 6;
-    pub const d10_field_number: u32 = 14;
-    pub const AMs_field_number: u32 = 2;
-    pub const c10_field_number: u32 = 1;
-};
 pub const T_0 = struct {
     pub const msg_id: u16 = 15135;
     pub const ox0_field_number: u32 = 4;
@@ -13130,6 +13184,7 @@ pub const A3p = struct {
 pub const QHp = struct {
     pub const msg_id: u16 = 25396;
     pub const DOLLARfp_field_number: u32 = 7;
+    pub const QSs_field_number: u32 = 14;
 };
 pub const P3p = struct {
     pub const msg_id: u16 = 17521;
@@ -13139,6 +13194,32 @@ pub const U3p = struct {
     pub const msg_id: u16 = 24203;
     pub const Q4n_field_number: u32 = 14;
     pub const DOLLARfp_field_number: u32 = 2;
+};
+pub const z_v = struct {
+    pub const msg_id: u16 = 21104;
+};
+pub const J_v = struct {
+    pub const msg_id: u16 = 26595;
+    pub const Q4n_field_number: u32 = 8;
+    pub const Z_v_field_number: u32 = 15;
+    pub const euv_field_number: u32 = 9;
+};
+pub const auv = struct {
+    pub const r6n_field_number: u32 = 1;
+    pub const tuv_field_number: u32 = 2;
+};
+pub const huv = struct {
+    pub const F4n_field_number: u32 = 1;
+    pub const iuv_field_number: u32 = 2;
+    pub const c10_field_number: u32 = 3;
+};
+pub const suv = struct {
+    pub const r6n_field_number: u32 = 1;
+    pub const ruv_field_number: u32 = 2;
+};
+pub const luv = struct {
+    pub const ouv_field_number: u32 = 1;
+    pub const nuv_field_number: u32 = 2;
 };
 pub const rts = struct {
     pub const msg_id: u16 = 19739;
@@ -13757,6 +13838,7 @@ pub const O90 = struct {
 pub const F90 = struct {
 };
 pub const j90 = struct {
+    pub const w5n_field_number: u32 = 1;
 };
 pub const uUd = struct {
     pub const cUd_field_number: u32 = 1;
@@ -14603,32 +14685,32 @@ pub const Ev_ = struct {
     pub const G9n_field_number: u32 = 1;
 };
 pub const Summon = struct {
-    pub const p3s = struct {
-        pub const YWn_field_number: u32 = 1;
-        pub const dIs_field_number: u32 = 2;
-        pub const mIs_field_number: u32 = 3;
-        pub const W5n_field_number: u32 = 4;
-        pub const h5n_field_number: u32 = 5;
-    };
-    pub const Pys = struct {
-        pub const K7n_field_number: u32 = 1;
-    };
-    pub const STs = struct {
-        pub const h5n_field_number: u32 = 1;
-        pub const F4n_field_number: u32 = 2;
-    };
-    pub const nI_ = struct {
-        pub const OI__field_number: u32 = 1;
-    };
-    pub const tI_ = struct {
-        pub const xIs_field_number: u32 = 1;
-        pub const UKn_field_number: u32 = 2;
-    };
-    pub const eJs = struct {
-        pub const msg_id: u16 = 25249;
-        pub const W5n_field_number: u32 = 3;
-        pub const OI__field_number: u32 = 4;
-    };
+};
+pub const p3s = struct {
+    pub const YWn_field_number: u32 = 1;
+    pub const dIs_field_number: u32 = 2;
+    pub const mIs_field_number: u32 = 3;
+    pub const W5n_field_number: u32 = 4;
+    pub const h5n_field_number: u32 = 5;
+};
+pub const Pys = struct {
+    pub const K7n_field_number: u32 = 1;
+};
+pub const STs = struct {
+    pub const h5n_field_number: u32 = 1;
+    pub const F4n_field_number: u32 = 2;
+};
+pub const nI_ = struct {
+    pub const OI__field_number: u32 = 1;
+};
+pub const tI_ = struct {
+    pub const xIs_field_number: u32 = 1;
+    pub const UKn_field_number: u32 = 2;
+};
+pub const eJs = struct {
+    pub const msg_id: u16 = 25249;
+    pub const W5n_field_number: u32 = 3;
+    pub const OI__field_number: u32 = 4;
 };
 pub const Dql = struct {
     pub const Tql_field_number: u32 = 1;
@@ -15375,361 +15457,361 @@ pub const Vca = struct {
     pub const Q4n_field_number: u32 = 9;
 };
 pub const CombatMessage = struct {
-    pub const OFs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const G4n_field_number: u32 = 4;
-        pub const O4n_field_number: u32 = 5;
-        pub const N4n_field_number: u32 = 6;
-        pub const ee__field_number: u32 = 7;
-        pub const te__field_number: u32 = 8;
-        pub const ie__field_number: u32 = 9;
-        pub const re__field_number: u32 = 10;
-        pub const oe__field_number: u32 = 11;
-        pub const ne__field_number: u32 = 12;
-        pub const se__field_number: u32 = 13;
-        pub const ae__field_number: u32 = 14;
-        pub const he__field_number: u32 = 15;
-        pub const le__field_number: u32 = 16;
-        pub const _e__field_number: u32 = 17;
-        pub const ce__field_number: u32 = 18;
-        pub const ue__field_number: u32 = 19;
-        pub const de__field_number: u32 = 20;
-        pub const me__field_number: u32 = 21;
-        pub const Ce__field_number: u32 = 22;
-        pub const ge__field_number: u32 = 23;
-        pub const pe__field_number: u32 = 24;
-        pub const fe__field_number: u32 = 25;
-        pub const ve__field_number: u32 = 26;
-        pub const ye__field_number: u32 = 27;
-        pub const Se__field_number: u32 = 28;
-        pub const Me__field_number: u32 = 29;
-        pub const Ee__field_number: u32 = 30;
-        pub const Ie__field_number: u32 = 31;
-        pub const Te__field_number: u32 = 32;
-        pub const be__field_number: u32 = 33;
-        pub const Le__field_number: u32 = 34;
-        pub const Ae__field_number: u32 = 35;
-        pub const xe__field_number: u32 = 36;
-        pub const Re__field_number: u32 = 37;
-        pub const Pe__field_number: u32 = 38;
-        pub const we__field_number: u32 = 39;
-        pub const Ue__field_number: u32 = 40;
-        pub const De__field_number: u32 = 41;
-        pub const Be__field_number: u32 = 42;
-        pub const qe__field_number: u32 = 43;
-        pub const ke__field_number: u32 = 44;
-        pub const Oe__field_number: u32 = 45;
-        pub const Ge__field_number: u32 = 46;
-        pub const Fe__field_number: u32 = 47;
-        pub const Ne__field_number: u32 = 48;
-        pub const Ve__field_number: u32 = 49;
-        pub const je__field_number: u32 = 50;
-        pub const He__field_number: u32 = 51;
-        pub const We__field_number: u32 = 52;
-        pub const Qe__field_number: u32 = 53;
-        pub const Ke__field_number: u32 = 54;
-        pub const DOLLARe__field_number: u32 = 55;
-        pub const Xe__field_number: u32 = 56;
-        pub const Su__field_number: u32 = 57;
-        pub const Opc_field_number: u32 = 58;
-        pub const kn1_field_number: u32 = 59;
-        pub const GG1_field_number: u32 = 60;
-        pub const k3u_field_number: u32 = 61;
-        pub const Rpd_field_number: u32 = 62;
-        pub const Vzd_field_number: u32 = 63;
-        pub const Ddm_field_number: u32 = 64;
-        pub const Hag_field_number: u32 = 65;
-        pub const Pxg_field_number: u32 = 66;
-        pub const kqC_field_number: u32 = 67;
-        pub const aap_field_number: u32 = 68;
-        pub const Xvp_field_number: u32 = 69;
-        pub const sr0_field_number: u32 = 70;
-        pub const K8n_field_number: u32 = 1;
-    };
-    pub const KLs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const MFn_field_number: u32 = 2;
-        pub const SFn_field_number: u32 = 3;
-        pub const EFn_field_number: u32 = 4;
-        pub const yFn_field_number: u32 = 5;
-        pub const IFn_field_number: u32 = 6;
-        pub const TFn_field_number: u32 = 7;
-        pub const LFn_field_number: u32 = 8;
-        pub const DFn_field_number: u32 = 9;
-        pub const AFn_field_number: u32 = 10;
-        pub const UFn_field_number: u32 = 11;
-        pub const RFn_field_number: u32 = 12;
-        pub const xFn_field_number: u32 = 14;
-        pub const PFn_field_number: u32 = 15;
-        pub const EJs_field_number: u32 = 16;
-        pub const BFn_field_number: u32 = 17;
-        pub const wFn_field_number: u32 = 18;
-        pub const bFn_field_number: u32 = 19;
-        pub const qFn_field_number: u32 = 20;
-        pub const GFn_field_number: u32 = 21;
-        pub const OFn_field_number: u32 = 22;
-        pub const NFn_field_number: u32 = 23;
-        pub const kFn_field_number: u32 = 24;
-        pub const FFn_field_number: u32 = 25;
-        pub const VFn_field_number: u32 = 26;
-        pub const HFn_field_number: u32 = 27;
-        pub const jFn_field_number: u32 = 28;
-        pub const WFn_field_number: u32 = 29;
-        pub const KFn_field_number: u32 = 30;
-        pub const QFn_field_number: u32 = 31;
-        pub const XFn_field_number: u32 = 32;
-        pub const DOLLARFn_field_number: u32 = 33;
-        pub const YFn_field_number: u32 = 34;
-        pub const JFn_field_number: u32 = 35;
-        pub const zFn_field_number: u32 = 36;
-        pub const ZFn_field_number: u32 = 37;
-        pub const e3n_field_number: u32 = 38;
-        pub const t3n_field_number: u32 = 40;
-        pub const i3n_field_number: u32 = 41;
-        pub const r3n_field_number: u32 = 42;
-        pub const o3n_field_number: u32 = 43;
-        pub const n3n_field_number: u32 = 44;
-        pub const s3n_field_number: u32 = 45;
-        pub const a3n_field_number: u32 = 46;
-        pub const h3n_field_number: u32 = 47;
-        pub const l3n_field_number: u32 = 48;
-        pub const d3n_field_number: u32 = 53;
-        pub const C3n_field_number: u32 = 54;
-        pub const p3n_field_number: u32 = 57;
-        pub const v3n_field_number: u32 = 58;
-        pub const M3n_field_number: u32 = 59;
-        pub const E3n_field_number: u32 = 61;
-        pub const y3n_field_number: u32 = 62;
-        pub const I3n_field_number: u32 = 63;
-        pub const T3n_field_number: u32 = 64;
-        pub const L3n_field_number: u32 = 65;
-        pub const Xsh_field_number: u32 = 66;
-        pub const Wul_field_number: u32 = 69;
-        pub const Jpl_field_number: u32 = 70;
-        pub const Zpl_field_number: u32 = 71;
-        pub const yvl_field_number: u32 = 72;
-        pub const W7l_field_number: u32 = 73;
-        pub const qus_field_number: u32 = 74;
-        pub const Bn1_field_number: u32 = 75;
-        pub const ev1_field_number: u32 = 76;
-        pub const B9d_field_number: u32 = 77;
-        pub const Adm_field_number: u32 = 78;
-        pub const rpm_field_number: u32 = 79;
-        pub const x9f_field_number: u32 = 80;
-        pub const wxg_field_number: u32 = 81;
-        pub const BqC_field_number: u32 = 82;
-        pub const YXC_field_number: u32 = 83;
-        pub const oMl_field_number: u32 = 100;
-        pub const K8n_field_number: u32 = 1;
-    };
-    pub const oMl = struct {
-        pub const msg_id: u16 = 25184;
-    };
-    pub const NFs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const DOLLARLs_field_number: u32 = 1;
-        pub const HLs_field_number: u32 = 2;
-        pub const hVn_field_number: u32 = 3;
-        pub const jLs_field_number: u32 = 4;
-        pub const WLs_field_number: u32 = 5;
-    };
-    pub const FFs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const D3n_field_number: u32 = 3;
-        pub const A3n_field_number: u32 = 4;
-        pub const U3n_field_number: u32 = 5;
-        pub const R3n_field_number: u32 = 6;
-        pub const x3n_field_number: u32 = 7;
-        pub const P3n_field_number: u32 = 8;
-        pub const B3n_field_number: u32 = 9;
-        pub const w3n_field_number: u32 = 10;
-        pub const b3n_field_number: u32 = 11;
-        pub const q3n_field_number: u32 = 12;
-        pub const G3n_field_number: u32 = 13;
-        pub const O3n_field_number: u32 = 14;
-        pub const yJs_field_number: u32 = 15;
-        pub const N3n_field_number: u32 = 16;
-        pub const k3n_field_number: u32 = 17;
-        pub const F3n_field_number: u32 = 18;
-        pub const V3n_field_number: u32 = 19;
-        pub const H3n_field_number: u32 = 20;
-        pub const j3n_field_number: u32 = 21;
-        pub const W3n_field_number: u32 = 22;
-        pub const K3n_field_number: u32 = 23;
-        pub const Q3n_field_number: u32 = 24;
-        pub const X3n_field_number: u32 = 25;
-        pub const DOLLAR3n_field_number: u32 = 26;
-        pub const Y3n_field_number: u32 = 27;
-        pub const J3n_field_number: u32 = 28;
-        pub const z3n_field_number: u32 = 29;
-        pub const Z3n_field_number: u32 = 30;
-        pub const e4n_field_number: u32 = 31;
-        pub const t4n_field_number: u32 = 32;
-        pub const i4n_field_number: u32 = 33;
-        pub const r4n_field_number: u32 = 34;
-        pub const o4n_field_number: u32 = 35;
-        pub const n4n_field_number: u32 = 36;
-        pub const s4n_field_number: u32 = 37;
-        pub const a4n_field_number: u32 = 38;
-        pub const h4n_field_number: u32 = 39;
-        pub const l4n_field_number: u32 = 40;
-        pub const _4n_field_number: u32 = 41;
-        pub const u4n_field_number: u32 = 42;
-        pub const c4n_field_number: u32 = 43;
-        pub const m4n_field_number: u32 = 44;
-        pub const d4n_field_number: u32 = 45;
-        pub const C4n_field_number: u32 = 46;
-        pub const g4n_field_number: u32 = 47;
-        pub const f4n_field_number: u32 = 49;
-        pub const p4n_field_number: u32 = 50;
-        pub const y4n_field_number: u32 = 55;
-        pub const I4n_field_number: u32 = 56;
-        pub const T4n_field_number: u32 = 57;
-        pub const L4n_field_number: u32 = 58;
-        pub const D4n_field_number: u32 = 59;
-        pub const A4n_field_number: u32 = 60;
-        pub const U4n_field_number: u32 = 61;
-        pub const R4n_field_number: u32 = 62;
-        pub const x4n_field_number: u32 = 63;
-        pub const P4n_field_number: u32 = 64;
-        pub const B4n_field_number: u32 = 65;
-        pub const qis_field_number: u32 = 66;
-        pub const G5a_field_number: u32 = 67;
-        pub const T7a_field_number: u32 = 68;
-        pub const efl_field_number: u32 = 69;
-        pub const tfl_field_number: u32 = 70;
-        pub const Trs_field_number: u32 = 71;
-        pub const DOLLARwC_field_number: u32 = 72;
-        pub const w4n_field_number: u32 = 99;
-        pub const K8n_field_number: u32 = 1;
-        pub const W8n_field_number: u32 = 2;
-    };
-    pub const QLs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const sis_field_number: u32 = 3;
-        pub const ais_field_number: u32 = 4;
-        pub const lis_field_number: u32 = 5;
-        pub const lzn_field_number: u32 = 6;
-        pub const _zn_field_number: u32 = 7;
-        pub const ris_field_number: u32 = 8;
-        pub const ois_field_number: u32 = 9;
-        pub const zts_field_number: u32 = 10;
-        pub const Zts_field_number: u32 = 11;
-        pub const eis_field_number: u32 = 12;
-        pub const DOLLARhs_field_number: u32 = 13;
-        pub const Sms_field_number: u32 = 14;
-        pub const IJs_field_number: u32 = 15;
-        pub const Tis_field_number: u32 = 16;
-        pub const Ris_field_number: u32 = 17;
-        pub const mes_field_number: u32 = 18;
-        pub const Ces_field_number: u32 = 19;
-        pub const ycs_field_number: u32 = 20;
-        pub const Ecs_field_number: u32 = 21;
-        pub const his_field_number: u32 = 22;
-        pub const Wds_field_number: u32 = 23;
-        pub const uzn_field_number: u32 = 24;
-        pub const czn_field_number: u32 = 25;
-        pub const dzn_field_number: u32 = 26;
-        pub const mzn_field_number: u32 = 27;
-        pub const QXn_field_number: u32 = 28;
-        pub const Ais_field_number: u32 = 29;
-        pub const Dis_field_number: u32 = 30;
-        pub const ves_field_number: u32 = 31;
-        pub const DOLLARes_field_number: u32 = 32;
-        pub const XXn_field_number: u32 = 33;
-        pub const YXn_field_number: u32 = 34;
-        pub const JXn_field_number: u32 = 35;
-        pub const Pis_field_number: u32 = 36;
-        pub const nis_field_number: u32 = 37;
-        pub const jes_field_number: u32 = 38;
-        pub const zZn_field_number: u32 = 39;
-        pub const ZZn_field_number: u32 = 40;
-        pub const ees_field_number: u32 = 41;
-        pub const fzn_field_number: u32 = 42;
-        pub const Bis_field_number: u32 = 43;
-        pub const iis_field_number: u32 = 44;
-        pub const cis_field_number: u32 = 45;
-        pub const dis_field_number: u32 = 46;
-        pub const _is_field_number: u32 = 47;
-        pub const tis_field_number: u32 = 49;
-        pub const mis_field_number: u32 = 50;
-        pub const Lis_field_number: u32 = 55;
-        pub const Ezn_field_number: u32 = 56;
-        pub const r1s_field_number: u32 = 57;
-        pub const OCs_field_number: u32 = 58;
-        pub const Kds_field_number: u32 = 59;
-        pub const Qds_field_number: u32 = 60;
-        pub const uis_field_number: u32 = 61;
-        pub const kCs_field_number: u32 = 62;
-        pub const Xfs_field_number: u32 = 63;
-        pub const Yfs_field_number: u32 = 64;
-        pub const Jfs_field_number: u32 = 65;
-        pub const Gis_field_number: u32 = 66;
-        pub const vf__field_number: u32 = 67;
-        pub const yf__field_number: u32 = 68;
-        pub const Tg__field_number: u32 = 69;
-        pub const Ag__field_number: u32 = 70;
-        pub const Lrs_field_number: u32 = 71;
-        pub const WwC_field_number: u32 = 72;
-        pub const zI__field_number: u32 = 100;
-        pub const K8n_field_number: u32 = 1;
-        pub const W8n_field_number: u32 = 2;
-    };
-    pub const zI_ = struct {
-    };
-    pub const VFs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const Q8n_field_number: u32 = 2;
-        pub const x5n_field_number: u32 = 3;
-    };
-    pub const DOLLARFs = struct {
-        kFs: ?union(enum) {
-        } = null,
-        pub const KLs_field_number: u32 = 2;
-        pub const QLs_field_number: u32 = 3;
-    };
-    pub const sZn = struct {
-        pub const msg_id: u16 = 28427;
-        pub const R5n_field_number: u32 = 13;
-        pub const ORs_field_number: u32 = 3;
-    };
-    pub const aZn = struct {
-        pub const msg_id: u16 = 20561;
-        pub const Q4n_field_number: u32 = 4;
-        pub const XLs_field_number: u32 = 6;
-    };
-    pub const hZn = struct {
-        pub const msg_id: u16 = 21308;
-        pub const R5n_field_number: u32 = 13;
-    };
-    pub const w4n = struct {
-        pub const msg_id: u16 = 28432;
-    };
-    pub const lZn = struct {
-        pub const msg_id: u16 = 24897;
-    };
-    pub const Vfs = struct {
-        pub const msg_id: u16 = 26459;
-        pub const s5n_field_number: u32 = 6;
-    };
-    pub const DOLLARfs = struct {
-        pub const msg_id: u16 = 20759;
-        pub const YLs_field_number: u32 = 10;
-    };
-    pub const Hfs = struct {
-        pub const msg_id: u16 = 21492;
-        pub const Ujn_field_number: u32 = 2;
-    };
-    pub const jfs = struct {
-        pub const msg_id: u16 = 29987;
-        pub const JLs_field_number: u32 = 1;
-    };
+};
+pub const OFs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const G4n_field_number: u32 = 4;
+    pub const O4n_field_number: u32 = 5;
+    pub const N4n_field_number: u32 = 6;
+    pub const ee__field_number: u32 = 7;
+    pub const te__field_number: u32 = 8;
+    pub const ie__field_number: u32 = 9;
+    pub const re__field_number: u32 = 10;
+    pub const oe__field_number: u32 = 11;
+    pub const ne__field_number: u32 = 12;
+    pub const se__field_number: u32 = 13;
+    pub const ae__field_number: u32 = 14;
+    pub const he__field_number: u32 = 15;
+    pub const le__field_number: u32 = 16;
+    pub const _e__field_number: u32 = 17;
+    pub const ce__field_number: u32 = 18;
+    pub const ue__field_number: u32 = 19;
+    pub const de__field_number: u32 = 20;
+    pub const me__field_number: u32 = 21;
+    pub const Ce__field_number: u32 = 22;
+    pub const ge__field_number: u32 = 23;
+    pub const pe__field_number: u32 = 24;
+    pub const fe__field_number: u32 = 25;
+    pub const ve__field_number: u32 = 26;
+    pub const ye__field_number: u32 = 27;
+    pub const Se__field_number: u32 = 28;
+    pub const Me__field_number: u32 = 29;
+    pub const Ee__field_number: u32 = 30;
+    pub const Ie__field_number: u32 = 31;
+    pub const Te__field_number: u32 = 32;
+    pub const be__field_number: u32 = 33;
+    pub const Le__field_number: u32 = 34;
+    pub const Ae__field_number: u32 = 35;
+    pub const xe__field_number: u32 = 36;
+    pub const Re__field_number: u32 = 37;
+    pub const Pe__field_number: u32 = 38;
+    pub const we__field_number: u32 = 39;
+    pub const Ue__field_number: u32 = 40;
+    pub const De__field_number: u32 = 41;
+    pub const Be__field_number: u32 = 42;
+    pub const qe__field_number: u32 = 43;
+    pub const ke__field_number: u32 = 44;
+    pub const Oe__field_number: u32 = 45;
+    pub const Ge__field_number: u32 = 46;
+    pub const Fe__field_number: u32 = 47;
+    pub const Ne__field_number: u32 = 48;
+    pub const Ve__field_number: u32 = 49;
+    pub const je__field_number: u32 = 50;
+    pub const He__field_number: u32 = 51;
+    pub const We__field_number: u32 = 52;
+    pub const Qe__field_number: u32 = 53;
+    pub const Ke__field_number: u32 = 54;
+    pub const DOLLARe__field_number: u32 = 55;
+    pub const Xe__field_number: u32 = 56;
+    pub const Su__field_number: u32 = 57;
+    pub const Opc_field_number: u32 = 58;
+    pub const kn1_field_number: u32 = 59;
+    pub const GG1_field_number: u32 = 60;
+    pub const k3u_field_number: u32 = 61;
+    pub const Rpd_field_number: u32 = 62;
+    pub const Vzd_field_number: u32 = 63;
+    pub const Ddm_field_number: u32 = 64;
+    pub const Hag_field_number: u32 = 65;
+    pub const Pxg_field_number: u32 = 66;
+    pub const kqC_field_number: u32 = 67;
+    pub const aap_field_number: u32 = 68;
+    pub const Xvp_field_number: u32 = 69;
+    pub const sr0_field_number: u32 = 70;
+    pub const K8n_field_number: u32 = 1;
+};
+pub const KLs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const MFn_field_number: u32 = 2;
+    pub const SFn_field_number: u32 = 3;
+    pub const EFn_field_number: u32 = 4;
+    pub const yFn_field_number: u32 = 5;
+    pub const IFn_field_number: u32 = 6;
+    pub const TFn_field_number: u32 = 7;
+    pub const LFn_field_number: u32 = 8;
+    pub const DFn_field_number: u32 = 9;
+    pub const AFn_field_number: u32 = 10;
+    pub const UFn_field_number: u32 = 11;
+    pub const RFn_field_number: u32 = 12;
+    pub const xFn_field_number: u32 = 14;
+    pub const PFn_field_number: u32 = 15;
+    pub const EJs_field_number: u32 = 16;
+    pub const BFn_field_number: u32 = 17;
+    pub const wFn_field_number: u32 = 18;
+    pub const bFn_field_number: u32 = 19;
+    pub const qFn_field_number: u32 = 20;
+    pub const GFn_field_number: u32 = 21;
+    pub const OFn_field_number: u32 = 22;
+    pub const NFn_field_number: u32 = 23;
+    pub const kFn_field_number: u32 = 24;
+    pub const FFn_field_number: u32 = 25;
+    pub const VFn_field_number: u32 = 26;
+    pub const HFn_field_number: u32 = 27;
+    pub const jFn_field_number: u32 = 28;
+    pub const WFn_field_number: u32 = 29;
+    pub const KFn_field_number: u32 = 30;
+    pub const QFn_field_number: u32 = 31;
+    pub const XFn_field_number: u32 = 32;
+    pub const DOLLARFn_field_number: u32 = 33;
+    pub const YFn_field_number: u32 = 34;
+    pub const JFn_field_number: u32 = 35;
+    pub const zFn_field_number: u32 = 36;
+    pub const ZFn_field_number: u32 = 37;
+    pub const e3n_field_number: u32 = 38;
+    pub const t3n_field_number: u32 = 40;
+    pub const i3n_field_number: u32 = 41;
+    pub const r3n_field_number: u32 = 42;
+    pub const o3n_field_number: u32 = 43;
+    pub const n3n_field_number: u32 = 44;
+    pub const s3n_field_number: u32 = 45;
+    pub const a3n_field_number: u32 = 46;
+    pub const h3n_field_number: u32 = 47;
+    pub const l3n_field_number: u32 = 48;
+    pub const d3n_field_number: u32 = 53;
+    pub const C3n_field_number: u32 = 54;
+    pub const p3n_field_number: u32 = 57;
+    pub const v3n_field_number: u32 = 58;
+    pub const M3n_field_number: u32 = 59;
+    pub const E3n_field_number: u32 = 61;
+    pub const y3n_field_number: u32 = 62;
+    pub const I3n_field_number: u32 = 63;
+    pub const T3n_field_number: u32 = 64;
+    pub const L3n_field_number: u32 = 65;
+    pub const Xsh_field_number: u32 = 66;
+    pub const Wul_field_number: u32 = 69;
+    pub const Jpl_field_number: u32 = 70;
+    pub const Zpl_field_number: u32 = 71;
+    pub const yvl_field_number: u32 = 72;
+    pub const W7l_field_number: u32 = 73;
+    pub const qus_field_number: u32 = 74;
+    pub const Bn1_field_number: u32 = 75;
+    pub const ev1_field_number: u32 = 76;
+    pub const B9d_field_number: u32 = 77;
+    pub const Adm_field_number: u32 = 78;
+    pub const rpm_field_number: u32 = 79;
+    pub const x9f_field_number: u32 = 80;
+    pub const wxg_field_number: u32 = 81;
+    pub const BqC_field_number: u32 = 82;
+    pub const YXC_field_number: u32 = 83;
+    pub const oMl_field_number: u32 = 100;
+    pub const K8n_field_number: u32 = 1;
+};
+pub const oMl = struct {
+    pub const msg_id: u16 = 25184;
+};
+pub const NFs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const DOLLARLs_field_number: u32 = 1;
+    pub const HLs_field_number: u32 = 2;
+    pub const hVn_field_number: u32 = 3;
+    pub const jLs_field_number: u32 = 4;
+    pub const WLs_field_number: u32 = 5;
+};
+pub const FFs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const D3n_field_number: u32 = 3;
+    pub const A3n_field_number: u32 = 4;
+    pub const U3n_field_number: u32 = 5;
+    pub const R3n_field_number: u32 = 6;
+    pub const x3n_field_number: u32 = 7;
+    pub const P3n_field_number: u32 = 8;
+    pub const B3n_field_number: u32 = 9;
+    pub const w3n_field_number: u32 = 10;
+    pub const b3n_field_number: u32 = 11;
+    pub const q3n_field_number: u32 = 12;
+    pub const G3n_field_number: u32 = 13;
+    pub const O3n_field_number: u32 = 14;
+    pub const yJs_field_number: u32 = 15;
+    pub const N3n_field_number: u32 = 16;
+    pub const k3n_field_number: u32 = 17;
+    pub const F3n_field_number: u32 = 18;
+    pub const V3n_field_number: u32 = 19;
+    pub const H3n_field_number: u32 = 20;
+    pub const j3n_field_number: u32 = 21;
+    pub const W3n_field_number: u32 = 22;
+    pub const K3n_field_number: u32 = 23;
+    pub const Q3n_field_number: u32 = 24;
+    pub const X3n_field_number: u32 = 25;
+    pub const DOLLAR3n_field_number: u32 = 26;
+    pub const Y3n_field_number: u32 = 27;
+    pub const J3n_field_number: u32 = 28;
+    pub const z3n_field_number: u32 = 29;
+    pub const Z3n_field_number: u32 = 30;
+    pub const e4n_field_number: u32 = 31;
+    pub const t4n_field_number: u32 = 32;
+    pub const i4n_field_number: u32 = 33;
+    pub const r4n_field_number: u32 = 34;
+    pub const o4n_field_number: u32 = 35;
+    pub const n4n_field_number: u32 = 36;
+    pub const s4n_field_number: u32 = 37;
+    pub const a4n_field_number: u32 = 38;
+    pub const h4n_field_number: u32 = 39;
+    pub const l4n_field_number: u32 = 40;
+    pub const _4n_field_number: u32 = 41;
+    pub const u4n_field_number: u32 = 42;
+    pub const c4n_field_number: u32 = 43;
+    pub const m4n_field_number: u32 = 44;
+    pub const d4n_field_number: u32 = 45;
+    pub const C4n_field_number: u32 = 46;
+    pub const g4n_field_number: u32 = 47;
+    pub const f4n_field_number: u32 = 49;
+    pub const p4n_field_number: u32 = 50;
+    pub const y4n_field_number: u32 = 55;
+    pub const I4n_field_number: u32 = 56;
+    pub const T4n_field_number: u32 = 57;
+    pub const L4n_field_number: u32 = 58;
+    pub const D4n_field_number: u32 = 59;
+    pub const A4n_field_number: u32 = 60;
+    pub const U4n_field_number: u32 = 61;
+    pub const R4n_field_number: u32 = 62;
+    pub const x4n_field_number: u32 = 63;
+    pub const P4n_field_number: u32 = 64;
+    pub const B4n_field_number: u32 = 65;
+    pub const qis_field_number: u32 = 66;
+    pub const G5a_field_number: u32 = 67;
+    pub const T7a_field_number: u32 = 68;
+    pub const efl_field_number: u32 = 69;
+    pub const tfl_field_number: u32 = 70;
+    pub const Trs_field_number: u32 = 71;
+    pub const DOLLARwC_field_number: u32 = 72;
+    pub const w4n_field_number: u32 = 99;
+    pub const K8n_field_number: u32 = 1;
+    pub const W8n_field_number: u32 = 2;
+};
+pub const QLs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const sis_field_number: u32 = 3;
+    pub const ais_field_number: u32 = 4;
+    pub const lis_field_number: u32 = 5;
+    pub const lzn_field_number: u32 = 6;
+    pub const _zn_field_number: u32 = 7;
+    pub const ris_field_number: u32 = 8;
+    pub const ois_field_number: u32 = 9;
+    pub const zts_field_number: u32 = 10;
+    pub const Zts_field_number: u32 = 11;
+    pub const eis_field_number: u32 = 12;
+    pub const DOLLARhs_field_number: u32 = 13;
+    pub const Sms_field_number: u32 = 14;
+    pub const IJs_field_number: u32 = 15;
+    pub const Tis_field_number: u32 = 16;
+    pub const Ris_field_number: u32 = 17;
+    pub const mes_field_number: u32 = 18;
+    pub const Ces_field_number: u32 = 19;
+    pub const ycs_field_number: u32 = 20;
+    pub const Ecs_field_number: u32 = 21;
+    pub const his_field_number: u32 = 22;
+    pub const Wds_field_number: u32 = 23;
+    pub const uzn_field_number: u32 = 24;
+    pub const czn_field_number: u32 = 25;
+    pub const dzn_field_number: u32 = 26;
+    pub const mzn_field_number: u32 = 27;
+    pub const QXn_field_number: u32 = 28;
+    pub const Ais_field_number: u32 = 29;
+    pub const Dis_field_number: u32 = 30;
+    pub const ves_field_number: u32 = 31;
+    pub const DOLLARes_field_number: u32 = 32;
+    pub const XXn_field_number: u32 = 33;
+    pub const YXn_field_number: u32 = 34;
+    pub const JXn_field_number: u32 = 35;
+    pub const Pis_field_number: u32 = 36;
+    pub const nis_field_number: u32 = 37;
+    pub const jes_field_number: u32 = 38;
+    pub const zZn_field_number: u32 = 39;
+    pub const ZZn_field_number: u32 = 40;
+    pub const ees_field_number: u32 = 41;
+    pub const fzn_field_number: u32 = 42;
+    pub const Bis_field_number: u32 = 43;
+    pub const iis_field_number: u32 = 44;
+    pub const cis_field_number: u32 = 45;
+    pub const dis_field_number: u32 = 46;
+    pub const _is_field_number: u32 = 47;
+    pub const tis_field_number: u32 = 49;
+    pub const mis_field_number: u32 = 50;
+    pub const Lis_field_number: u32 = 55;
+    pub const Ezn_field_number: u32 = 56;
+    pub const r1s_field_number: u32 = 57;
+    pub const OCs_field_number: u32 = 58;
+    pub const Kds_field_number: u32 = 59;
+    pub const Qds_field_number: u32 = 60;
+    pub const uis_field_number: u32 = 61;
+    pub const kCs_field_number: u32 = 62;
+    pub const Xfs_field_number: u32 = 63;
+    pub const Yfs_field_number: u32 = 64;
+    pub const Jfs_field_number: u32 = 65;
+    pub const Gis_field_number: u32 = 66;
+    pub const vf__field_number: u32 = 67;
+    pub const yf__field_number: u32 = 68;
+    pub const Tg__field_number: u32 = 69;
+    pub const Ag__field_number: u32 = 70;
+    pub const Lrs_field_number: u32 = 71;
+    pub const WwC_field_number: u32 = 72;
+    pub const zI__field_number: u32 = 100;
+    pub const K8n_field_number: u32 = 1;
+    pub const W8n_field_number: u32 = 2;
+};
+pub const zI_ = struct {
+};
+pub const VFs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const Q8n_field_number: u32 = 2;
+    pub const x5n_field_number: u32 = 3;
+};
+pub const DOLLARFs = struct {
+    kFs: ?union(enum) {
+    } = null,
+    pub const KLs_field_number: u32 = 2;
+    pub const QLs_field_number: u32 = 3;
+};
+pub const sZn = struct {
+    pub const msg_id: u16 = 28427;
+    pub const R5n_field_number: u32 = 13;
+    pub const ORs_field_number: u32 = 3;
+};
+pub const aZn = struct {
+    pub const msg_id: u16 = 20561;
+    pub const Q4n_field_number: u32 = 4;
+    pub const XLs_field_number: u32 = 6;
+};
+pub const hZn = struct {
+    pub const msg_id: u16 = 21308;
+    pub const R5n_field_number: u32 = 13;
+};
+pub const w4n = struct {
+    pub const msg_id: u16 = 28432;
+};
+pub const lZn = struct {
+    pub const msg_id: u16 = 24897;
+};
+pub const Vfs = struct {
+    pub const msg_id: u16 = 26459;
+    pub const s5n_field_number: u32 = 6;
+};
+pub const DOLLARfs = struct {
+    pub const msg_id: u16 = 20759;
+    pub const YLs_field_number: u32 = 10;
+};
+pub const Hfs = struct {
+    pub const msg_id: u16 = 21492;
+    pub const Ujn_field_number: u32 = 2;
+};
+pub const jfs = struct {
+    pub const msg_id: u16 = 29987;
+    pub const JLs_field_number: u32 = 1;
 };
 pub const fms = struct {
     pub const msg_id: u16 = 20368;
@@ -18104,120 +18186,120 @@ pub const r1s = struct {
     pub const Q4n_field_number: u32 = 14;
 };
 pub const Debug = struct {
-    pub const BZn = struct {
-        pub const msg_id: u16 = 18101;
-        pub const h5n_field_number: u32 = 5;
-        pub const OKn_field_number: u32 = 1;
-        pub const VAs_field_number: u32 = 6;
-    };
-    pub const qZn = struct {
-        pub const msg_id: u16 = 28306;
-        pub const Q4n_field_number: u32 = 1;
-    };
-    pub const V4s = struct {
-        pub const F4n_field_number: u32 = 1;
-        pub const DOLLARAs_field_number: u32 = 2;
-        pub const HAs_field_number: u32 = 3;
-        pub const jAs_field_number: u32 = 4;
-    };
-    pub const QKd = struct {
-        pub const GKd_field_number: u32 = 1;
-        pub const NKd_field_number: u32 = 2;
-        pub const jKd_field_number: u32 = 3;
-        pub const HKd_field_number: u32 = 4;
-        pub const FJm_field_number: u32 = 5;
-        pub const aig_field_number: u32 = 6;
-        pub const hig_field_number: u32 = 7;
-        pub const VKd_field_number: u32 = 8;
-        pub const DOLLARKd_field_number: u32 = 9;
-        pub const WKd_field_number: u32 = 10;
-        pub const lig_field_number: u32 = 11;
-        pub const _ig_field_number: u32 = 12;
-        pub const FKd_field_number: u32 = 13;
-        pub const Jpg_field_number: u32 = 14;
-        pub const ENg_field_number: u32 = 15;
-        pub const INg_field_number: u32 = 16;
-        pub const TNg_field_number: u32 = 17;
-        pub const Iip_field_number: u32 = 18;
-    };
-    pub const s3n = struct {
-        pub const msg_id: u16 = 28821;
-        pub const WAs_field_number: u32 = 7;
-        pub const KAs_field_number: u32 = 3;
-        pub const QAs_field_number: u32 = 13;
-        pub const r5n_field_number: u32 = 14;
-        pub const Wjn_field_number: u32 = 12;
-        pub const Mjn_field_number: u32 = 9;
-        pub const XAs_field_number: u32 = 11;
-        pub const YAs_field_number: u32 = 10;
-        pub const Zjn_field_number: u32 = 8;
-        pub const JAs_field_number: u32 = 2;
-        pub const QKd_field_number: u32 = 1;
-        pub const uig_field_number: u32 = 4;
-    };
-    pub const oR_ = struct {
-        pub const F4n_field_number: u32 = 1;
-        pub const v9n_field_number: u32 = 2;
-        pub const DOLLARAs_field_number: u32 = 3;
-        pub const HAs_field_number: u32 = 4;
-    };
-    pub const yvl = struct {
-        pub const msg_id: u16 = 16847;
-        pub const WAs_field_number: u32 = 13;
-        pub const gDs_field_number: u32 = 11;
-    };
-    pub const GZn = struct {
-        pub const msg_id: u16 = 20911;
-        pub const tWn_field_number: u32 = 10;
-        pub const Kga_field_number: u32 = 6;
-    };
-    pub const OZn = struct {
-        pub const msg_id: u16 = 28489;
-        pub const Q4n_field_number: u32 = 13;
-    };
-    pub const kZn = struct {
-        pub const msg_id: u16 = 16817;
-        pub const zAs_field_number: u32 = 12;
-        pub const ZAs_field_number: u32 = 10;
-    };
-    pub const NZn = struct {
-        pub const msg_id: u16 = 24033;
-        pub const zAs_field_number: u32 = 8;
-        pub const ePs_field_number: u32 = 10;
-        pub const tPs_field_number: u32 = 5;
-    };
-    pub const DOLLAR4s = struct {
-        pub const iPs_field_number: u32 = 1;
-        pub const rPs_field_number: u32 = 2;
-        pub const oPs_field_number: u32 = 3;
-        pub const nPs_field_number: u32 = 4;
-    };
-    pub const FZn = struct {
-        pub const msg_id: u16 = 20197;
-        pub const GKn_field_number: u32 = 13;
-    };
-    pub const VZn = struct {
-        pub const msg_id: u16 = 26202;
-    };
-    pub const Lfs = struct {
-        pub const msg_id: u16 = 17142;
-    };
-    pub const Jf_ = struct {
-        pub const msg_id: u16 = 15355;
-        pub const HTa_field_number: u32 = 1;
-    };
-    pub const Yfc = struct {
-        pub const msg_id: u16 = 25844;
-        pub const Q4n_field_number: u32 = 13;
-        pub const GNs_field_number: u32 = 15;
-    };
-    pub const Vw1 = struct {
-        pub const msg_id: u16 = 20699;
-        pub const rS__field_number: u32 = 9;
-        pub const n5n_field_number: u32 = 1;
-        pub const jw1_field_number: u32 = 8;
-        pub const w7n_field_number: u32 = 11;
-    };
+};
+pub const BZn = struct {
+    pub const msg_id: u16 = 18101;
+    pub const h5n_field_number: u32 = 5;
+    pub const OKn_field_number: u32 = 1;
+    pub const VAs_field_number: u32 = 6;
+};
+pub const qZn = struct {
+    pub const msg_id: u16 = 28306;
+    pub const Q4n_field_number: u32 = 1;
+};
+pub const V4s = struct {
+    pub const F4n_field_number: u32 = 1;
+    pub const DOLLARAs_field_number: u32 = 2;
+    pub const HAs_field_number: u32 = 3;
+    pub const jAs_field_number: u32 = 4;
+};
+pub const QKd = struct {
+    pub const GKd_field_number: u32 = 1;
+    pub const NKd_field_number: u32 = 2;
+    pub const jKd_field_number: u32 = 3;
+    pub const HKd_field_number: u32 = 4;
+    pub const FJm_field_number: u32 = 5;
+    pub const aig_field_number: u32 = 6;
+    pub const hig_field_number: u32 = 7;
+    pub const VKd_field_number: u32 = 8;
+    pub const DOLLARKd_field_number: u32 = 9;
+    pub const WKd_field_number: u32 = 10;
+    pub const lig_field_number: u32 = 11;
+    pub const _ig_field_number: u32 = 12;
+    pub const FKd_field_number: u32 = 13;
+    pub const Jpg_field_number: u32 = 14;
+    pub const ENg_field_number: u32 = 15;
+    pub const INg_field_number: u32 = 16;
+    pub const TNg_field_number: u32 = 17;
+    pub const Iip_field_number: u32 = 18;
+};
+pub const s3n = struct {
+    pub const msg_id: u16 = 28821;
+    pub const WAs_field_number: u32 = 7;
+    pub const KAs_field_number: u32 = 3;
+    pub const QAs_field_number: u32 = 13;
+    pub const r5n_field_number: u32 = 14;
+    pub const Wjn_field_number: u32 = 12;
+    pub const Mjn_field_number: u32 = 9;
+    pub const XAs_field_number: u32 = 11;
+    pub const YAs_field_number: u32 = 10;
+    pub const Zjn_field_number: u32 = 8;
+    pub const JAs_field_number: u32 = 2;
+    pub const QKd_field_number: u32 = 1;
+    pub const uig_field_number: u32 = 4;
+};
+pub const oR_ = struct {
+    pub const F4n_field_number: u32 = 1;
+    pub const v9n_field_number: u32 = 2;
+    pub const DOLLARAs_field_number: u32 = 3;
+    pub const HAs_field_number: u32 = 4;
+};
+pub const yvl = struct {
+    pub const msg_id: u16 = 16847;
+    pub const WAs_field_number: u32 = 13;
+    pub const gDs_field_number: u32 = 11;
+};
+pub const GZn = struct {
+    pub const msg_id: u16 = 20911;
+    pub const tWn_field_number: u32 = 10;
+    pub const Kga_field_number: u32 = 6;
+};
+pub const OZn = struct {
+    pub const msg_id: u16 = 28489;
+    pub const Q4n_field_number: u32 = 13;
+};
+pub const kZn = struct {
+    pub const msg_id: u16 = 16817;
+    pub const zAs_field_number: u32 = 12;
+    pub const ZAs_field_number: u32 = 10;
+};
+pub const NZn = struct {
+    pub const msg_id: u16 = 24033;
+    pub const zAs_field_number: u32 = 8;
+    pub const ePs_field_number: u32 = 10;
+    pub const tPs_field_number: u32 = 5;
+};
+pub const DOLLAR4s = struct {
+    pub const iPs_field_number: u32 = 1;
+    pub const rPs_field_number: u32 = 2;
+    pub const oPs_field_number: u32 = 3;
+    pub const nPs_field_number: u32 = 4;
+};
+pub const FZn = struct {
+    pub const msg_id: u16 = 20197;
+    pub const GKn_field_number: u32 = 13;
+};
+pub const VZn = struct {
+    pub const msg_id: u16 = 26202;
+};
+pub const Lfs = struct {
+    pub const msg_id: u16 = 17142;
+};
+pub const Jf_ = struct {
+    pub const msg_id: u16 = 15355;
+    pub const HTa_field_number: u32 = 1;
+};
+pub const Yfc = struct {
+    pub const msg_id: u16 = 25844;
+    pub const Q4n_field_number: u32 = 13;
+    pub const GNs_field_number: u32 = 15;
+};
+pub const Vw1 = struct {
+    pub const msg_id: u16 = 20699;
+    pub const rS__field_number: u32 = 9;
+    pub const n5n_field_number: u32 = 1;
+    pub const jw1_field_number: u32 = 8;
+    pub const w7n_field_number: u32 = 11;
 };
 pub const GCs = struct {
     pub const msg_id: u16 = 16566;
@@ -18421,6 +18503,15 @@ pub const Lrs = struct {
     pub const W5n_field_number: u32 = 1;
     pub const JHn_field_number: u32 = 12;
     pub const Q4n_field_number: u32 = 14;
+};
+pub const dEv = struct {
+    pub const msg_id: u16 = 26912;
+};
+pub const mEv = struct {
+    pub const msg_id: u16 = 23821;
+    pub const yRs_field_number: u32 = 3;
+    pub const gEv_field_number: u32 = 6;
+    pub const Q4n_field_number: u32 = 1;
 };
 pub const H4s = struct {
     DOLLARua: ?union(enum) {
@@ -20032,6 +20123,12 @@ pub const U6s = struct {
     pub const DOLLARUs_field_number: u32 = 1;
     pub const HUs_field_number: u32 = 2;
 };
+pub const GN0 = struct {
+    pub const DOLLARUs_field_number: u32 = 1;
+    pub const PN0_field_number: u32 = 2;
+    pub const AN0_field_number: u32 = 3;
+    pub const UN0_field_number: u32 = 4;
+};
 pub const w6s = struct {
     pub const s5n_field_number: u32 = 1;
     pub const cps_field_number: u32 = 2;
@@ -20059,9 +20156,10 @@ pub const x6s = struct {
     pub const YUs_field_number: u32 = 11;
     pub const JUs_field_number: u32 = 12;
     pub const iIp_field_number: u32 = 13;
-    pub const xN0_field_number: u32 = 14;
-    pub const bQ0_field_number: u32 = 15;
-    pub const PQ0_field_number: u32 = 16;
+    pub const DN0_field_number: u32 = 14;
+    pub const xN0_field_number: u32 = 15;
+    pub const bQ0_field_number: u32 = 16;
+    pub const PQ0_field_number: u32 = 17;
 };
 pub const e9n = struct {
     pub const L8n_field_number: u32 = 1;
@@ -20103,6 +20201,11 @@ pub const zrs = struct {
 pub const Zrs = struct {
     pub const msg_id: u16 = 20983;
     pub const tws_field_number: u32 = 9;
+};
+pub const bN0 = struct {
+    pub const msg_id: u16 = 22991;
+    pub const t9n_field_number: u32 = 2;
+    pub const DN0_field_number: u32 = 11;
 };
 pub const eos = struct {
     pub const msg_id: u16 = 22768;
@@ -20158,6 +20261,10 @@ pub const _Ip = struct {
     pub const sIp_field_number: u32 = 3;
     pub const gRf_field_number: u32 = 4;
     pub const H6n_field_number: u32 = 5;
+    pub const BN0_field_number: u32 = 6;
+    pub const IAc_field_number: u32 = 7;
+    pub const kN0_field_number: u32 = 8;
+    pub const qN0_field_number: u32 = 9;
 };
 pub const QEp = struct {
     pub const msg_id: u16 = 26632;
@@ -20885,8 +20992,8 @@ pub const sS0 = struct {
     pub const NId_field_number: u32 = 1;
     pub const ghp_field_number: u32 = 2;
 };
-pub const uav = struct {
-    pub const _av_field_number: u32 = 1;
+pub const G0v = struct {
+    pub const k0v_field_number: u32 = 1;
 };
 pub const DOLLARah = struct {
     LR: ?union(enum) {
@@ -20920,7 +21027,7 @@ pub const DOLLARah = struct {
     pub const mJg_field_number: u32 = 27;
     pub const d8p_field_number: u32 = 28;
     pub const sS0_field_number: u32 = 29;
-    pub const uav_field_number: u32 = 30;
+    pub const G0v_field_number: u32 = 30;
 };
 pub const Oos = struct {
     pub const msg_id: u16 = 29337;
@@ -21599,6 +21706,7 @@ pub const fss = struct {
     pub const _TC_field_number: u32 = 27;
     pub const uTC_field_number: u32 = 28;
     pub const Fz0_field_number: u32 = 29;
+    pub const BAv_field_number: u32 = 30;
 };
 pub const vss = struct {
     pub const msg_id: u16 = 104;
@@ -23431,6 +23539,11 @@ pub const Xoc = struct {
     pub const rnc_field_number: u32 = 12;
     pub const DOLLARoC_field_number: u32 = 2;
 };
+pub const Lbv = struct {
+    pub const msg_id: u16 = 21829;
+    pub const onc_field_number: u32 = 6;
+    pub const WoC_field_number: u32 = 15;
+};
 pub const Yoc = struct {
     pub const msg_id: u16 = 16595;
     pub const tnc_field_number: u32 = 5;
@@ -24443,7 +24556,6 @@ pub const kEc = struct {
     pub const Yr1_field_number: u32 = 5;
     pub const LE1_field_number: u32 = 6;
     pub const oR1_field_number: u32 = 9;
-    pub const i4L_field_number: u32 = 10;
     pub const r41_field_number: u32 = 11;
     pub const Kxu_field_number: u32 = 12;
     pub const w5n_field_number: u32 = 1000;
@@ -24576,13 +24688,6 @@ pub const LE1 = struct {
 pub const hR1 = struct {
     pub const sR1_field_number: u32 = 1;
     pub const F2s_field_number: u32 = 2;
-};
-pub const i4L = struct {
-    pub const v9n_field_number: u32 = 1;
-    pub const UEc_field_number: u32 = 2;
-    pub const DOLLARB1_field_number: u32 = 3;
-    pub const WB1_field_number: u32 = 4;
-    pub const jEc_field_number: u32 = 5;
 };
 pub const r41 = struct {
     pub const v9n_field_number: u32 = 1;
@@ -24738,10 +24843,7 @@ pub const G2s = struct {
 pub const Lqs = struct {
     l8s: ?union(enum) {
     } = null,
-    DOLLAR8s: ?union(enum) {
-    } = null,
     pub const G2s_field_number: u32 = 6;
-    pub const O2s_field_number: u32 = 7;
     pub const h5n_field_number: u32 = 1;
     pub const c5n_field_number: u32 = 2;
     pub const v9n_field_number: u32 = 3;
@@ -25335,6 +25437,14 @@ pub const fp0 = struct {
 pub const Cp0 = struct {
     pub const msg_id: u16 = 28779;
     pub const Ep0_field_number: u32 = 1;
+};
+pub const Gwv = struct {
+    pub const _ps_field_number: u32 = 1;
+    pub const r6n_field_number: u32 = 2;
+};
+pub const Bwv = struct {
+    pub const msg_id: u16 = 26337;
+    pub const kwv_field_number: u32 = 10;
 };
 pub const Cms = struct {
     pub const msg_id: u16 = 26139;
@@ -28632,6 +28742,7 @@ pub const BabelTowerData = struct {
     pub const MaxPassBuffSelection_field_number: u32 = 10;
     pub const MaxPassStar_field_number: u32 = 11;
     pub const SkillBranchId_field_number: u32 = 12;
+    pub const MaxPassUseTime_field_number: u32 = 13;
 };
 pub const BabelDebuff = struct {
     pub const BuffId_field_number: u32 = 1;
@@ -29897,6 +30008,7 @@ pub const KurotatoRoleInfo = struct {
     pub const roleId_field_number: u32 = 1;
     pub const IsUnlock_field_number: u32 = 2;
     pub const MaxFinishWave_field_number: u32 = 3;
+    pub const KillCount_field_number: u32 = 5;
 };
 pub const KurotatoInstInfo = struct {
     pub const LevelId_field_number: u32 = 1;
@@ -30599,6 +30711,10 @@ pub const ChildQuestNodeProgress = struct {
     pub const Interact_field_number: u32 = 6;
     pub const CompleteInst_field_number: u32 = 7;
     pub const EntityStateList_field_number: u32 = 8;
+    pub const GpuMonster_field_number: u32 = 9;
+};
+pub const GpuMonsterProgress = struct {
+    pub const CurKillNum_field_number: u32 = 1;
 };
 pub const EntityStateProgress = struct {
     pub const EntityId_field_number: u32 = 1;
@@ -31646,6 +31762,7 @@ pub const GpuEntityComponentPb = struct {
 pub const GpuMonsterEntityPbData = struct {
 };
 pub const GpuRoleEntityPbData = struct {
+    pub const IncId_field_number: u32 = 1;
 };
 pub const CalabashSkinComponentPb = struct {
     pub const CalabashSkinId_field_number: u32 = 1;
@@ -34881,6 +34998,12 @@ pub const GachaConsume = struct {
     pub const Times_field_number: u32 = 1;
     pub const Consume_field_number: u32 = 2;
 };
+pub const GachaDiscountInfo = struct {
+    pub const Times_field_number: u32 = 1;
+    pub const LimitTimes_field_number: u32 = 2;
+    pub const DiscountConsume_field_number: u32 = 3;
+    pub const UsedTimes_field_number: u32 = 4;
+};
 pub const GachaPoolInfo = struct {
     pub const Id_field_number: u32 = 1;
     pub const BeginTime_field_number: u32 = 2;
@@ -34911,6 +35034,7 @@ pub const GachaInfo = struct {
     pub const GachaDiscountInfos_field_number: u32 = 14;
     pub const OnlyViewDiscount_field_number: u32 = 15;
     pub const IsShowProgress_field_number: u32 = 16;
+    pub const DiscountTagDetails_field_number: u32 = 17;
 };
 pub const GachaReward = struct {
     pub const ItemId_field_number: u32 = 1;
@@ -35381,6 +35505,7 @@ pub const LoginRequest = struct {
     pub const XboxAccountId_field_number: u32 = 27;
     pub const XboxSocialState_field_number: u32 = 28;
     pub const UserCollectionsId_field_number: u32 = 29;
+    pub const XstsToken_field_number: u32 = 30;
 };
 pub const LoginResponse = struct {
     pub const msg_id: u16 = 104;
@@ -36381,9 +36506,9 @@ pub const PlayerTitleData = struct {
     pub const ActivityServerRewardItemData_field_number: u32 = 5;
 };
 pub const SetDressedPlayerTitleNotify = struct {
-    pub const msg_id: u16 = 16595;
-    pub const PlayerTitleId_field_number: u32 = 5;
-    pub const CurPlayerTitleId_field_number: u32 = 13;
+    pub const msg_id: u16 = 21829;
+    pub const PlayerTitleId_field_number: u32 = 6;
+    pub const CurPlayerTitleId_field_number: u32 = 15;
 };
 pub const PlayerTitleDataRequest = struct {
     pub const msg_id: u16 = 25683;
@@ -36727,6 +36852,34 @@ pub const XboxSettingRequest = struct {
 pub const XboxSettingResponse = struct {
     pub const msg_id: u16 = 23985;
     pub const MatchXboxUser_field_number: u32 = 3;
+};
+pub const SheriffCriminalInfo = struct {
+    pub const CriminalId_field_number: u32 = 1;
+    pub const state_field_number: u32 = 2;
+    pub const IdentityId_field_number: u32 = 3;
+};
+pub const SheriffAnomalyInfo = struct {
+    pub const AnomalyId_field_number: u32 = 1;
+    pub const ClueIds_field_number: u32 = 2;
+    pub const ProgressIds_field_number: u32 = 3;
+    pub const EndingId_field_number: u32 = 4;
+    pub const CompleteTime_field_number: u32 = 5;
+    pub const IsActivated_field_number: u32 = 6;
+    pub const IsUnlocked_field_number: u32 = 7;
+};
+pub const SheriffZoneInfo = struct {
+    pub const ZoneId_field_number: u32 = 1;
+    pub const AnomalyInfos_field_number: u32 = 2;
+    pub const CriminalInfos_field_number: u32 = 3;
+};
+pub const SheriffZoneInfoRequest = struct {
+    pub const msg_id: u16 = 27179;
+    pub const ZoneIds_field_number: u32 = 9;
+};
+pub const SheriffZoneInfoResponse = struct {
+    pub const msg_id: u16 = 24703;
+    pub const errorCode_field_number: u32 = 6;
+    pub const ZoneInfos_field_number: u32 = 4;
 };
 pub const ShortMessageInfo = struct {
     pub const ConfigId_field_number: u32 = 1;
