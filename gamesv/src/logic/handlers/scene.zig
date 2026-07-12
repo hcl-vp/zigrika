@@ -11,7 +11,8 @@ const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
 const SceneInstance = @import("../../fs/SceneInstance.zig");
 const Connection = @import("../../network/Connection.zig");
-const State = @import("../../network/State.zig");
+const Timers = @import("../../network/State.zig").Timers;
+const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
@@ -157,17 +158,20 @@ pub fn onInitialSceneJoin(
     player_id: PlayerID,
     assets: *const Assets,
     scene_comp: *PlayerSceneComponent,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
     cur_scene: *?Scene,
-    state: *State,
+    timers: *Timers,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
 
-    try state.dirty_saves.flush(
+    try dirty_saves.flush(
         alloc.gpa,
         fs,
-        &state.player_components.role,
-        &state.player_components.weapon,
+        role_comp,
+        weapon_comp,
         if (cur_scene.*) |*active_scene| active_scene else null,
     );
 
@@ -273,12 +277,7 @@ pub fn onInitialSceneJoin(
     }
 
     try scene.save(fs, alloc.gpa);
-    state.buff_timers.reset(alloc.gpa);
-    state.fsm_timers.reset(alloc.gpa);
-    state.next_timed_logic_check_ms = 0;
-    state.next_levelplay_timer_tick_ms = 0;
-    state.next_scene_cleanup_tick_ms = 0;
-    state.next_dirty_save_tick_ms = 0;
+    timers.reset(alloc.gpa);
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
     });

@@ -1,10 +1,10 @@
 const FsmTimerScheduler = @This();
 const std = @import("std");
 const pb = @import("proto").pb;
-const Assets = @import("../data/Assets.zig");
-const EventQueue = @import("EventQueue.zig");
-const Scene = @import("Scene.zig");
-const mem = @import("../mem.zig");
+const Assets = @import("../../data/Assets.zig");
+const EventQueue = @import("../EventQueue.zig");
+const Scene = @import("../Scene.zig");
+const mem = @import("../../mem.zig");
 
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;

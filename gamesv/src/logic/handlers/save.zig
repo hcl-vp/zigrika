@@ -1,58 +1,54 @@
 const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
 const EventQueue = @import("../EventQueue.zig");
-const State = @import("../../network/State.zig");
+const Scene = @import("../Scene.zig");
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
+const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
+const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 
 pub fn onRoleInfoModified(
     event: EventQueue.Dequeue(.role_info_modified),
     alloc: mem.Alloc,
-    state: *State,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
-    try state.dirty_saves.markRole(alloc.gpa, event.data.role_id);
+    try dirty_saves.markRole(alloc.gpa, event.data.role_id);
 }
 
 pub fn onWeaponInfoModified(
     event: EventQueue.Dequeue(.weapon_info_modified),
     alloc: mem.Alloc,
-    state: *State,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
-    try state.dirty_saves.markWeapon(alloc.gpa, event.data.incr_id);
+    try dirty_saves.markWeapon(alloc.gpa, event.data.incr_id);
 }
 
 pub fn onEntityMovement(
     event: EventQueue.Dequeue(.entity_movement),
     alloc: mem.Alloc,
-    state: *State,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
-    try state.dirty_saves.markMovement(alloc.gpa, event.data.entity);
+    try dirty_saves.markMovement(alloc.gpa, event.data.entity);
 }
 
 pub fn onBuffChange(
     event: EventQueue.Dequeue(.buff_change),
     alloc: mem.Alloc,
-    state: *State,
+    buff_timers: *BuffTimerScheduler,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
-    state.buff_timers.markDirty();
-    try state.dirty_saves.markBuffChange(alloc.gpa, event.data.entity);
+    buff_timers.markDirty();
+    try dirty_saves.markBuffChange(alloc.gpa, event.data.entity);
 }
 
 pub fn onDirtySaveTick(
     _: EventQueue.Dequeue(.dirty_save_tick),
     alloc: mem.Alloc,
     fs: *FileSystem,
-    state: *State,
+    dirty_saves: *DirtySaveQueue,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
+    scene: *Scene,
 ) !void {
-    try dirty_save.flush(state, alloc.gpa, fs);
+    try dirty_saves.flush(alloc.gpa, fs, role_comp, weapon_comp, scene);
 }
-
-const dirty_save = struct {
-    fn flush(state: *State, gpa: mem.Allocator, fs: *FileSystem) !void {
-        try state.dirty_saves.flush(
-            gpa,
-            fs,
-            &state.player_components.role,
-            &state.player_components.weapon,
-            if (state.scene) |*scene| scene else null,
-        );
-    }
-};

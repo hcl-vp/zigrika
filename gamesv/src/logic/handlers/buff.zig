@@ -7,14 +7,14 @@ const FileSystem = @import("common").FileSystem;
 const Entity = Scene.Entity;
 const mem = @import("../../mem.zig");
 const Connection = @import("../../network/Connection.zig");
-const State = @import("../../network/State.zig");
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 
 pub fn removeBuffFromEntity(
     event: EventQueue.Dequeue(.buff_removal),
     conn: *Connection,
     events: *EventQueue,
     alloc: mem.Alloc,
-    state: *State,
+    buff_timers: *BuffTimerScheduler,
     query: Scene.Query(&.{ *Entity.FightBuffComponent, ?*Entity.AttributeComponent }),
 ) !void {
     const log = std.log.scoped(.buff_removal);
@@ -24,7 +24,7 @@ pub fn removeBuffFromEntity(
 
     for (event.data.handle_ids) |handle_id| {
         item[0].removeByHandleId(alloc.gpa, handle_id);
-        state.buff_timers.markDirty();
+        buff_timers.markDirty();
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = combat_common,
@@ -53,7 +53,7 @@ pub fn addBuffToEntity(
     conn: *Connection,
     events: *EventQueue,
     scene: *Scene,
-    state: *State,
+    buff_timers: *BuffTimerScheduler,
     assets: *const Assets,
     alloc: mem.Alloc,
     query: Scene.Query(&.{ *Entity.FightBuffComponent, ?*Entity.AttributeComponent }),
@@ -68,7 +68,7 @@ pub fn addBuffToEntity(
         const existing = item[0].getByBuffId(entry.id);
         const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
-            state.buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
+            buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
             buff.Level = 1;
             buff.StackCount = stack_count;
             buff.InstigatorId = event.data.instigator.net_id;
@@ -77,7 +77,7 @@ pub fn addBuffToEntity(
             buff.ApplyType = .Common;
             buff.IsActive = entry.is_active;
             buff.MessageId = -1;
-            state.buff_timers.markDirty();
+            buff_timers.markDirty();
         } else {
             scene.*.instance.buff_handle += 1;
             item[0].fight_buff_infos = try alloc.gpa.realloc(item[0].fight_buff_infos, item[0].fight_buff_infos.len + 1);
@@ -91,7 +91,7 @@ pub fn addBuffToEntity(
             item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1].StackCount = stack_count;
             applyBuffDuration(&item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1], &buff_data, entry.duration_seconds);
             const buff = item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1];
-            state.buff_timers.markDirty();
+            buff_timers.markDirty();
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
                     .CombatCommon = combat_common,
@@ -131,7 +131,7 @@ pub fn handleBuffTimerTick(
     event: EventQueue.Dequeue(.buff_timer_tick),
     conn: *Connection,
     events: *EventQueue,
-    state: *State,
+    buff_timers: *BuffTimerScheduler,
     scene: *Scene,
     assets: *const Assets,
     fs: *FileSystem,
@@ -144,7 +144,7 @@ pub fn handleBuffTimerTick(
     }),
 ) !void {
     var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
-    try state.buff_timers.drainDue(
+    try buff_timers.drainDue(
         event,
         events,
         scene,

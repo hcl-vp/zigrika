@@ -14,7 +14,6 @@ const FileSystem = common.FileSystem;
 const Message = @import("Message.zig");
 const Assets = @import("../data/Assets.zig");
 const EventQueue = @import("../logic/EventQueue.zig");
-const TimedLogicScheduler = @import("../logic/TimedLogicScheduler.zig");
 const RawPacket = @import("../network.zig").RawPacket;
 const ConnectionHandle = @import("../network.zig").ConnectionHandle;
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
@@ -139,9 +138,23 @@ fn drainTimedLogicForSession(state: *State, kcp: *Kcp, io: Io, init_time: i64) !
 
     try kcp.update(@intCast(time.toMilliseconds() - init_time));
 
-    const timed_changed = TimedLogicScheduler.drainDue(state) catch |err| failed: {
-        log.err("failed to execute timed logic tick: {t}", .{err});
-        break :failed false;
+    var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
+    const timed_changed = timed_logic: {
+        const did_enqueue = state.timers.timed_logic.drainDue(
+            io,
+            state.scene != null,
+            &event_queue,
+        ) catch |err| {
+            log.err("failed to execute timed logic tick: {t}", .{err});
+            break :timed_logic false;
+        };
+        if (!did_enqueue) break :timed_logic false;
+
+        logic_handlers.drainEventQueue(&event_queue, state) catch |err| {
+            log.err("failed to execute timed logic tick: {t}", .{err});
+            break :timed_logic false;
+        };
+        break :timed_logic true;
     };
     _ = state.arena.reset(.free_all);
 
@@ -181,7 +194,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
     defer if (state) |*s| s.deinit(fs);
 
     // TODO: timeout
-    while (waitSessionWake(handle, if (state) |*s| TimedLogicScheduler.nextWakeDelayMs(s) else null)) |wake| {
+    while (waitSessionWake(handle, if (state) |*s| s.timers.timed_logic.nextWakeDelayMs(s.io, s.scene != null) else null)) |wake| {
         var needs_flush = false;
         var timed_logic_checked = false;
 
@@ -282,7 +295,7 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
 
             if (state) |*s| {
                 const now_ms = clock.now(handle.io).toMilliseconds();
-                if (TimedLogicScheduler.shouldDrain(s, now_ms)) {
+                if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms)) {
                     const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
                         log.err("failed to update kcp state: {t}, disconnecting", .{err});
                         return;

@@ -1,10 +1,10 @@
 const DirtySaveQueue = @This();
 const std = @import("std");
 const FileSystem = @import("common").FileSystem;
-const comp_util = @import("component/comp_util.zig");
-const Scene = @import("Scene.zig");
-const PlayerRoleComponent = @import("component/player/PlayerRoleComponent.zig");
-const PlayerWeaponComponent = @import("component/player/PlayerWeaponComponent.zig");
+const comp_util = @import("../component/comp_util.zig");
+const Scene = @import("../Scene.zig");
+const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
+const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 
 const Allocator = std.mem.Allocator;
 

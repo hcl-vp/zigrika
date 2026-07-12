@@ -5,18 +5,18 @@ const Scene = @import("../Scene.zig");
 const Assets = @import("../../data/Assets.zig");
 const mem = @import("../../mem.zig");
 const Connection = @import("../../network/Connection.zig");
-const State = @import("../../network/State.zig");
+const FsmTimerScheduler = @import("../schedulers/FsmTimerScheduler.zig");
 
 pub fn handleFsmTimerTick(
     event: EventQueue.Dequeue(.fsm_timer_tick),
     conn: *Connection,
-    state: *State,
+    fsm_timers: *FsmTimerScheduler,
     scene: *Scene,
     assets: *const Assets,
     alloc: mem.Alloc,
 ) !void {
     var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
-    try state.fsm_timers.drainDue(
+    try fsm_timers.drainDue(
         event,
         scene,
         assets,

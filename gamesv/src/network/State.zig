@@ -12,11 +12,29 @@ const ArenaAllocator = std.heap.ArenaAllocator;
 const Scene = @import("../logic/Scene.zig");
 const PlayerID = @import("../logic/PlayerID.zig");
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
-const BuffTimerScheduler = @import("../logic/BuffTimerScheduler.zig");
-const FsmTimerScheduler = @import("../logic/FsmTimerScheduler.zig");
-const DirtySaveQueue = @import("../logic/DirtySaveQueue.zig");
+const TimedLogicScheduler = @import("../logic/schedulers/TimedLogicScheduler.zig");
+const BuffTimerScheduler = @import("../logic/schedulers/BuffTimerScheduler.zig");
+const FsmTimerScheduler = @import("../logic/schedulers/FsmTimerScheduler.zig");
+const DirtySaveQueue = @import("../logic/schedulers/DirtySaveQueue.zig");
 
 const log = std.log.scoped(.state);
+
+pub const Timers = struct {
+    timed_logic: TimedLogicScheduler = .{},
+    buffs: BuffTimerScheduler = .{},
+    fsm: FsmTimerScheduler = .{},
+
+    pub fn deinit(timers: *Timers, gpa: Allocator) void {
+        timers.fsm.deinit(gpa);
+        timers.buffs.deinit(gpa);
+    }
+
+    pub fn reset(timers: *Timers, gpa: Allocator) void {
+        timers.timed_logic.reset();
+        timers.buffs.reset(gpa);
+        timers.fsm.reset(gpa);
+    }
+};
 
 io: Io,
 gpa: Allocator,
@@ -27,12 +45,7 @@ arena: ArenaAllocator,
 player_id: PlayerID,
 player_components: PlayerComponentStorage,
 scene: ?Scene,
-next_timed_logic_check_ms: i64,
-next_levelplay_timer_tick_ms: i64,
-next_scene_cleanup_tick_ms: i64,
-next_dirty_save_tick_ms: i64,
-buff_timers: BuffTimerScheduler,
-fsm_timers: FsmTimerScheduler,
+timers: Timers,
 dirty_saves: DirtySaveQueue,
 
 pub fn init(
@@ -54,12 +67,7 @@ pub fn init(
         .player_components = pcs,
         .player_id = .{ .id = player_id },
         .scene = null,
-        .next_timed_logic_check_ms = 0,
-        .next_levelplay_timer_tick_ms = 0,
-        .next_scene_cleanup_tick_ms = 0,
-        .next_dirty_save_tick_ms = 0,
-        .buff_timers = .{},
-        .fsm_timers = .{},
+        .timers = .{},
         .dirty_saves = .{},
     };
 }
@@ -76,8 +84,7 @@ pub fn deinit(s: *State, fs: *FileSystem) void {
     };
 
     s.dirty_saves.deinit(s.gpa);
-    s.fsm_timers.deinit(s.gpa);
-    s.buff_timers.deinit(s.gpa);
+    s.timers.deinit(s.gpa);
     s.arena.deinit();
     s.player_components.deinit(s.gpa);
     if (s.scene) |*scene| scene.deinit(s.gpa, fs);
@@ -96,6 +103,11 @@ pub fn extract(s: *State, comptime T: type) !T {
 
     if (T == *?Scene) return &s.scene;
     if (T == *Scene) return &(s.scene orelse return error.NotInScene);
+    if (T == *Timers) return &s.timers;
+    if (T == *TimedLogicScheduler) return &s.timers.timed_logic;
+    if (T == *BuffTimerScheduler) return &s.timers.buffs;
+    if (T == *FsmTimerScheduler) return &s.timers.fsm;
+    if (T == *DirtySaveQueue) return &s.dirty_saves;
 
     const is_struct = comptime std.meta.activeTag(@typeInfo(T)) == .@"struct";
 

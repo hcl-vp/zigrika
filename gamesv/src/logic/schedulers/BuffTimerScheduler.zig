@@ -1,12 +1,12 @@
 const BuffTimerScheduler = @This();
 const std = @import("std");
 const pb = @import("proto").pb;
-const Assets = @import("../data/Assets.zig");
-const EventQueue = @import("EventQueue.zig");
-const Scene = @import("Scene.zig");
+const Assets = @import("../../data/Assets.zig");
+const EventQueue = @import("../EventQueue.zig");
+const Scene = @import("../Scene.zig");
 const FileSystem = @import("common").FileSystem;
-const mem = @import("../mem.zig");
-const buff_helper = @import("helpers/buff.zig");
+const mem = @import("../../mem.zig");
+const buff_helper = @import("../helpers/buff.zig");
 
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
