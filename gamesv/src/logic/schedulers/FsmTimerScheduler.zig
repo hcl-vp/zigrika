@@ -5,12 +5,18 @@ const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Scene = @import("../Scene.zig");
 const mem = @import("../../mem.zig");
+const ScheduledJob = @import("ScheduledJob.zig");
 
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
 const FsmComponent = Entity.FsmComponent;
 const StateMachineCondition = Assets.DataTables.AiStateMachineConfig.StateMachineCondition;
 const StateMachineTransition = Assets.DataTables.AiStateMachineConfig.StateMachineTransition;
+
+pub const job: ScheduledJob = .{
+    .lane = .ms50,
+    .event_key = .fsm_timer_tick,
+};
 
 entries: std.ArrayListUnmanaged(TimerEntry) = .empty,
 states: std.ArrayListUnmanaged(FsmState) = .empty,

@@ -5,8 +5,14 @@ const comp_util = @import("../component/comp_util.zig");
 const Scene = @import("../Scene.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
+const ScheduledJob = @import("ScheduledJob.zig");
 
 const Allocator = std.mem.Allocator;
+
+pub const job: ScheduledJob = .{
+    .lane = .s30,
+    .event_key = .dirty_save_tick,
+};
 
 role_ids: std.ArrayListUnmanaged(i32) = .empty,
 weapon_ids: std.ArrayListUnmanaged(i32) = .empty,

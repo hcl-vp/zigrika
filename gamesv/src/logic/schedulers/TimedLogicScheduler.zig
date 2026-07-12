@@ -1,15 +1,58 @@
 const TimedLogicScheduler = @This();
 const std = @import("std");
 const EventQueue = @import("../EventQueue.zig");
+const BuffTimerScheduler = @import("BuffTimerScheduler.zig");
+const DirtySaveQueue = @import("DirtySaveQueue.zig");
+const FsmTimerScheduler = @import("FsmTimerScheduler.zig");
+const ScheduledJob = @import("ScheduledJob.zig");
 
-const Lane = enum {
-    fast,
-    level_play,
-    cleanup,
-    dirty_save,
+const Lane = ScheduledJob.Lane;
+const lanes = std.enums.values(Lane);
+const scene_time_job: ScheduledJob = .{
+    .lane = .ms50,
+    .event_key = .tick_time,
+};
+const level_play_job: ScheduledJob = .{
+    .lane = .ms250,
+    .event_key = .level_play_timer_tick,
+};
+const scene_cleanup_job: ScheduledJob = .{
+    .lane = .s1,
+    .event_key = .scene_cleanup_tick,
+};
+const jobs = [_]ScheduledJob{
+    scene_time_job,
+    BuffTimerScheduler.job,
+    FsmTimerScheduler.job,
+    level_play_job,
+    scene_cleanup_job,
+    DirtySaveQueue.job,
 };
 
-const lanes = std.enums.values(Lane);
+comptime {
+    for (lanes) |lane| {
+        var has_job = false;
+        for (jobs) |job| {
+            if (job.lane == lane) has_job = true;
+        }
+        if (!has_job) @compileError("scheduled lane has no jobs: " ++ @tagName(lane));
+    }
+
+    for (jobs, 0..) |job, index| {
+        const Payload = @FieldType(EventQueue.Event, @tagName(job.event_key));
+        if (!@hasField(Payload, "now_ms")) {
+            @compileError("scheduled event has no now_ms field: " ++ @tagName(job.event_key));
+        } else if (@FieldType(Payload, "now_ms") != i64) {
+            @compileError("scheduled event now_ms field is not i64: " ++ @tagName(job.event_key));
+        }
+
+        for (jobs[index + 1 ..]) |other| {
+            if (job.event_key == other.event_key) {
+                @compileError("scheduled event is registered more than once: " ++ @tagName(job.event_key));
+            }
+        }
+    }
+}
 
 next_due_ms: [lanes.len]i64 = [_]i64{0} ** lanes.len,
 
@@ -64,31 +107,17 @@ pub fn drainDue(
 
     inline for (lanes, 0..) |lane, index| {
         if (scheduler.next_due_ms[index] <= now_ms) {
-            scheduler.next_due_ms[index] = now_ms + intervalMs(lane);
-            switch (lane) {
-                .fast => {
-                    try event_queue.enqueue(.tick_time, .{});
-                    try event_queue.enqueue(.buff_timer_tick, .{ .now_ms = now_ms });
-                    try event_queue.enqueue(.fsm_timer_tick, .{ .now_ms = now_ms });
-                },
-                .level_play => try event_queue.enqueue(.level_play_timer_tick, .{ .now_ms = now_ms }),
-                .cleanup => try event_queue.enqueue(.scene_cleanup_tick, .{ .now_ms = now_ms }),
-                .dirty_save => try event_queue.enqueue(.dirty_save_tick, .{ .now_ms = now_ms }),
+            scheduler.next_due_ms[index] = now_ms + @intFromEnum(lane);
+            inline for (jobs) |job| {
+                if (job.lane == lane) {
+                    try event_queue.enqueue(job.event_key, .{ .now_ms = now_ms });
+                }
             }
             did_enqueue = true;
         }
     }
 
     return did_enqueue;
-}
-
-fn intervalMs(lane: Lane) i64 {
-    return switch (lane) {
-        .fast => 50,
-        .level_play => 250,
-        .cleanup => 1_000,
-        .dirty_save => 30_000,
-    };
 }
 
 fn bucketDelayMs(next_ms: i64, now_ms: i64) i64 {
