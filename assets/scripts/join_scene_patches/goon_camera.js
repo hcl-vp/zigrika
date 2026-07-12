@@ -140,8 +140,8 @@ setTimeout(() => {
     ((this.Hte = t.GetComponent(3)),
       (this.cBe = t.GetComponent(44)),
       this.Hte?.IsRoleAndCtrlByMe &&
-        ((this.Nce = t.GetComponent(69)),
-        (e = t.GetComponent(221)),
+        ((this.Nce = t.GetComponent(70)),
+        (e = t.GetComponent(222)),
         (this.SMd = e?.ListenForTagAddOrRemove(1519720150, this.IMd)),
         EventSystem_1.EventSystem.Add(
           EventDefine_1.EEventName.OnChangeRole,
@@ -195,7 +195,7 @@ setTimeout(() => {
     const entity = teamItem.Kpo?.Entity;
     if (!entity?.Valid) continue;
 
-    const specialSkillComp = entity.GetComponent(285);
+    const specialSkillComp = entity.GetComponent(286);
     if (!specialSkillComp) continue;
 
     const specialSkill = specialSkillComp.SpecialSkill;
@@ -673,7 +673,7 @@ setTimeout(() => {
       ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity?.Entity;
     if (!entity?.Valid) return;
 
-    const weapon_comp = entity.GetComponent(88);
+    const weapon_comp = entity.GetComponent(89);
     if (!weapon_comp) return;
 
     for (const w of weapon_comp.QKr.CharacterWeapons) {
@@ -1888,7 +1888,7 @@ setTimeout(() => {
           if (this.GetRoleMainAnimInstanceType() !== 0) {
             break;
           }
-          r.GetComponent(191).MainAnimInstance.设置头部转向状态(1);
+          r.GetComponent(192).MainAnimInstance.设置头部转向状态(1);
           break;
         }
 
