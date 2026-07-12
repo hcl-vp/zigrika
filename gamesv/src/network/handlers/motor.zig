@@ -359,6 +359,30 @@ fn pushEntityAddNotify(
     }
 }
 
+fn pushEntityRefreshNotify(
+    conn: *Connection,
+    alloc: mem.Alloc,
+    scene: *Scene,
+    entity: Scene.Entity,
+    assets: *const Assets,
+) !void {
+    const storage = scene.entities.get(entity.index);
+    var remove_infos: std.ArrayList(pb.EntityRemoveInfo) = .empty;
+
+    if (storage.concomitant) |concomitant| {
+        for (concomitant.custom_entity_ids) |concom_id| {
+            try remove_infos.append(alloc.arena, .{ .EntityId = concom_id });
+        }
+    }
+
+    try remove_infos.append(alloc.arena, .{ .EntityId = entity.net_id });
+    try conn.push(pb.EntityRemoveNotify{
+        .IsRemove = true,
+        .RemoveInfos = remove_infos,
+    }, alloc.arena);
+    try pushEntityAddNotify(conn, alloc, scene, entity, assets);
+}
+
 fn pushEntityRemoveNotify(
     conn: *Connection,
     alloc: mem.Alloc,
@@ -739,6 +763,7 @@ pub fn onMotorUseSkinRequest(
     scene: *Scene,
     assets: *const Assets,
 ) !void {
+    const previous_frame = motor_comp.info.equipped_frame;
     const skin = assets.tables.motor_skin.getDataById(txn.message.SkinId) orelse {
         txn.respond(.{
             .ErrorCode = .MotorOutlookNotOwned,
@@ -778,10 +803,14 @@ pub fn onMotorUseSkinRequest(
         .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
     }, alloc.arena);
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
-        try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
-            .EntityId = entity.net_id,
-            .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-        }, alloc.arena);
+        if (previous_frame != frame) {
+            try pushEntityRefreshNotify(txn.conn, alloc, scene, entity, assets);
+        } else {
+            try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
+                .EntityId = entity.net_id,
+                .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
+            }, alloc.arena);
+        }
     }
     txn.respond(.{
         .ErrorCode = .Success,
@@ -796,6 +825,7 @@ pub fn onMotorChangeOutlookRequest(
     scene: *Scene,
     assets: *const Assets,
 ) !void {
+    const previous_frame = motor_comp.info.equipped_frame;
     const frame = resolveFrame(assets, txn.message.FrameEquipped, motor_comp.info.equipped_frame) catch |err| {
         if (motorOutlookErrorCode(err)) |code| {
             txn.respond(.{ .ErrorCode = code });
@@ -828,10 +858,14 @@ pub fn onMotorChangeOutlookRequest(
         .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
     }, alloc.arena);
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
-        try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
-            .EntityId = entity.net_id,
-            .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-        }, alloc.arena);
+        if (previous_frame != frame) {
+            try pushEntityRefreshNotify(txn.conn, alloc, scene, entity, assets);
+        } else {
+            try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
+                .EntityId = entity.net_id,
+                .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
+            }, alloc.arena);
+        }
     }
     txn.respond(.{
         .ErrorCode = .Success,

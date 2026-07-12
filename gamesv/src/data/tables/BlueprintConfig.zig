@@ -2,7 +2,7 @@ const std = @import("std");
 
 Id: i32,
 BlueprintType: []const u8,
-EntityType: enum(u8) {
+EntityType: enum(u16) {
     AdsorptionFoundation,
     AdviseItem,
     AiAlertNotifier,
@@ -57,6 +57,7 @@ EntityType: enum(u8) {
     DaemonHack,
     DeadeyeHookTrigger,
     Destructible,
+    DestructibleAiMovementGear,
     DestructibleControl,
     DestructibleExploreInteractor,
     DestructibleListenerSceneBullet,
@@ -102,6 +103,7 @@ EntityType: enum(u8) {
     HookLockPoint,
     HookSoundBox,
     HookPullSoundBox,
+    HookPullSoundBoxWithSplineMove,
     HookTreasureBox,
     HookWithRange,
     HorseBettingTuanzi,
@@ -143,6 +145,7 @@ EntityType: enum(u8) {
     MusicStand,
     MusicTriggerListener,
     NoRenderPortal,
+    NoRenderPortalWithInteract,
     Npc,
     Npc2,
     OrientationUnlockStatue,
