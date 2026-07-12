@@ -152,7 +152,7 @@
     "Id": 15,
     "MainId": 15,
     "QuestTypeName": "QuestType_1_QuestTypeName",
-    "IsShowInQuestPanel": true,
+    "IsShowInQuestPanel": false,
     "TypeColor": "f9f2a4",
     "TextColor": "F7D16E",
     "NeedRedDot": true,

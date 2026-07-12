@@ -283,14 +283,14 @@
   },
   {
     "Id": 26,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredice_UI.T_Iconpropertyredice_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyreddark_UI.T_Iconpropertyreddark_UI",
     "Name": "WheelBattle_BUFF26_Name",
     "Desc": "WheelBattle_BUFF26_Desc",
     "DescParam": [
       "25%",
       "30%"
     ],
-    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredice_UI.T_Iconpropertyredice_UI"
+    "SmallIcon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyreddark_UI.T_Iconpropertyreddark_UI"
   },
   {
     "Id": 27,

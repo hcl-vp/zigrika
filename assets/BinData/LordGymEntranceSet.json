@@ -69,7 +69,7 @@
   },
   {
     "Id": 200104,
-    "PreviewRewardId": 9023,
+    "PreviewRewardId": 9034,
     "MarkId": 4028,
     "DungeonId": 3925,
     "LordEntranceList": [
@@ -96,6 +96,6 @@
     "MapNoteUnlockCondition": 13000200,
     "Title": "BossEn1.0_title",
     "Description": "BossEn2.0_detail_01",
-    "HelpId": 628
+    "HelpId": 654
   }
 ]

@@ -32,11 +32,11 @@
   {
     "Id": 1309,
     "Gender": 1,
-    "UnlockCondition": 0
+    "UnlockCondition": 131201483
   },
   {
     "Id": 1310,
     "Gender": 0,
-    "UnlockCondition": 0
+    "UnlockCondition": 131201483
   }
 ]

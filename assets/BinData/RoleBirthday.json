@@ -452,8 +452,8 @@
   {
     "RoleId": 1610,
     "Priority": 100330,
-    "CardTextKey": "FavorWord_161018_Content",
-    "VoiceEvent": "play_vo_luosela_sys_birthcele",
+    "CardTextKey": "FavorWord_161020_Content",
+    "VoiceEvent": "play_vo_yangyang2_sys_birthcele",
     "SceneCameraId": "1098",
     "CardCameraId": "1099",
     "RoleYear": 2025
@@ -461,7 +461,7 @@
   {
     "RoleId": 1110,
     "Priority": 100340,
-    "CardTextKey": "FavorWord_111018_Content",
+    "CardTextKey": "FavorWord_111019_Content",
     "VoiceEvent": "play_vo_suisui_sys_birthcele",
     "SceneCameraId": "1098",
     "CardCameraId": "1099",

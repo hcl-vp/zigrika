@@ -9,14 +9,13 @@
     "WeaponCount": 6,
     "DamageDefenseConst": 20,
     "HarvestingParams": [
-      20,
+      2,
       0.019999999552965164,
-      100,
+      10,
       0.019999999552965164
     ],
     "ConsecutiveKillMaxTimeInterval": 3,
     "ConsecutiveKillHoldDuration": 3000,
-    "ConsecutiveKillStartShowNum": 25,
     "ConsecutiveKillStartShowNumArray": [
       10,
       25,
@@ -34,7 +33,7 @@
       1400,
       1600
     ],
-    "PersonalCardId": 80060000,
+    "PersonalCardId": 80065027,
     "BulletCountMax": {
       "1": 20,
       "2": 30,
@@ -42,7 +41,6 @@
       "1902": 15,
       "1903": 15
     },
-    "ShareId": 9,
     "CameraShakeCd": 0.5,
     "CameraShake": {
       "1": "/Game/Aki/Data/SimpleCombat/3_4Potato/CS_Tudou_Lv3.CS_Tudou_Lv3_C",

@@ -50,7 +50,7 @@
     "ChapterId": 1,
     "DropId": 4605,
     "JumpTo": {
-      "12": "1"
+      "12": "5"
     },
     "TaskType": 1
   },
@@ -90,17 +90,6 @@
   {
     "Id": 10020003,
     "ActivityId": 110900001,
-    "TaskText": "AdventureTask_TaskText_10020003",
-    "ChapterId": 2,
-    "DropId": 4609,
-    "JumpTo": {
-      "11": "1"
-    },
-    "TaskType": 1
-  },
-  {
-    "Id": 10020004,
-    "ActivityId": 110900001,
     "TaskText": "AdventureTask_TaskText_10020004",
     "ChapterId": 2,
     "DropId": 4610,
@@ -110,13 +99,24 @@
     "TaskType": 1
   },
   {
-    "Id": 10020005,
+    "Id": 10020004,
     "ActivityId": 110900001,
     "TaskText": "AdventureTask_TaskText_10020005",
     "ChapterId": 2,
     "DropId": 4611,
     "JumpTo": {
       "5": "CalabashLevelUpTabView"
+    },
+    "TaskType": 1
+  },
+  {
+    "Id": 10020005,
+    "ActivityId": 110900001,
+    "TaskText": "AdventureTask_TaskText_10020003",
+    "ChapterId": 2,
+    "DropId": 4609,
+    "JumpTo": {
+      "11": "1"
     },
     "TaskType": 1
   },
@@ -160,7 +160,7 @@
     "ChapterId": 3,
     "DropId": 4616,
     "JumpTo": {
-      "2": "5021"
+      "13": "919706"
     },
     "TaskType": 1
   },
@@ -237,7 +237,7 @@
     "ChapterId": 4,
     "DropId": 4623,
     "JumpTo": {
-      "2": "380003"
+      "13": "919705"
     },
     "TaskType": 1
   },
@@ -248,7 +248,7 @@
     "ChapterId": 4,
     "DropId": 4624,
     "JumpTo": {
-      "11": "9"
+      "13": "919703"
     },
     "TaskType": 2
   },
@@ -292,7 +292,7 @@
     "ChapterId": 5,
     "DropId": 4628,
     "JumpTo": {
-      "2": "5001"
+      "13": "919704"
     },
     "TaskType": 1
   },
@@ -314,7 +314,7 @@
     "ChapterId": 5,
     "DropId": 4630,
     "JumpTo": {
-      "2": "301203"
+      "13": "919705"
     },
     "TaskType": 2
   },
@@ -358,7 +358,7 @@
     "ChapterId": 6,
     "DropId": 4634,
     "JumpTo": {
-      "2": "380015"
+      "13": "919707"
     },
     "TaskType": 1
   },
@@ -380,7 +380,7 @@
     "ChapterId": 6,
     "DropId": 4636,
     "JumpTo": {
-      "2": "4021"
+      "13": "919703"
     },
     "TaskType": 2
   },
@@ -435,7 +435,7 @@
     "ChapterId": 7,
     "DropId": 4641,
     "JumpTo": {
-      "2": "300401"
+      "4": "RolePhantomTabView"
     },
     "TaskType": 1
   },
@@ -475,11 +475,11 @@
   {
     "Id": 10080002,
     "ActivityId": 110900001,
-    "TaskText": "AdventureTask_TaskText_10080002",
+    "TaskText": "AdventureTask_TaskText_10080005",
     "ChapterId": 8,
-    "DropId": 4644,
+    "DropId": 4647,
     "JumpTo": {
-      "4": "RoleWeaponTabView"
+      "4": "RoleSkillTabView"
     },
     "TaskType": 1
   },
@@ -508,11 +508,11 @@
   {
     "Id": 10080005,
     "ActivityId": 110900001,
-    "TaskText": "AdventureTask_TaskText_10080005",
+    "TaskText": "AdventureTask_TaskText_10080002",
     "ChapterId": 8,
-    "DropId": 4647,
+    "DropId": 4644,
     "JumpTo": {
-      "10": "1"
+      "9": "61"
     },
     "TaskType": 1
   },
@@ -523,7 +523,7 @@
     "ChapterId": 8,
     "DropId": 4648,
     "JumpTo": {
-      "11": "3"
+      "13": "919703"
     },
     "TaskType": 2
   },
@@ -541,11 +541,11 @@
   {
     "Id": 10090002,
     "ActivityId": 110900001,
-    "TaskText": "AdventureTask_TaskText_10090002",
+    "TaskText": "AdventureTask_TaskText_10090005",
     "ChapterId": 9,
-    "DropId": 4650,
+    "DropId": 4653,
     "JumpTo": {
-      "4": "RoleWeaponTabView"
+      "4": "RolePhantomTabView"
     },
     "TaskType": 1
   },
@@ -574,11 +574,11 @@
   {
     "Id": 10090005,
     "ActivityId": 110900001,
-    "TaskText": "AdventureTask_TaskText_10090005",
+    "TaskText": "AdventureTask_TaskText_10090002",
     "ChapterId": 9,
-    "DropId": 4653,
+    "DropId": 4650,
     "JumpTo": {
-      "4": "RolePhantomTabView"
+      "10": "1"
     },
     "TaskType": 1
   },
@@ -589,7 +589,7 @@
     "ChapterId": 9,
     "DropId": 4654,
     "JumpTo": {
-      "2": "300401"
+      "13": "919703"
     },
     "TaskType": 1
   },
@@ -600,7 +600,7 @@
     "ChapterId": 9,
     "DropId": 4655,
     "JumpTo": {
-      "9": "28"
+      "13": "919702"
     },
     "TaskType": 2
   },
@@ -677,7 +677,7 @@
     "ChapterId": 10,
     "DropId": 4662,
     "JumpTo": {
-      "9": "5"
+      "13": "919703"
     },
     "TaskType": 2
   }

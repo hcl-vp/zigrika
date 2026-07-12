@@ -26982,10 +26982,7 @@
     "Coordinate": 1,
     "Condition": [],
     "SkillId": 1005410,
-    "SkillBranchIds": [
-      121101,
-      121102
-    ],
+    "SkillBranchIds": [],
     "SkillBranchDescList": [],
     "PropertyNodeTitle": "",
     "PropertyNodeDescribe": "",
@@ -27484,10 +27481,7 @@
     "Coordinate": 1,
     "Condition": [],
     "SkillId": 1005510,
-    "SkillBranchIds": [
-      121101,
-      121102
-    ],
+    "SkillBranchIds": [],
     "SkillBranchDescList": [],
     "PropertyNodeTitle": "",
     "PropertyNodeDescribe": "",

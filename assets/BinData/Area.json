@@ -39,7 +39,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2,
@@ -72,7 +73,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3,
@@ -105,7 +107,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 4,
@@ -138,7 +141,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 5,
@@ -171,7 +175,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 6,
@@ -204,7 +209,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 7,
@@ -237,7 +243,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 8,
@@ -270,7 +277,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 9,
@@ -303,7 +311,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10,
@@ -336,7 +345,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 11,
@@ -373,7 +383,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 12,
@@ -406,7 +417,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14,
@@ -439,7 +451,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 100,
@@ -472,7 +485,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 101,
@@ -505,7 +519,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 102,
@@ -538,7 +553,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 103,
@@ -571,7 +587,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 107,
@@ -604,7 +621,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 110,
@@ -637,7 +655,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 113,
@@ -670,7 +689,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 124,
@@ -703,7 +723,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 122,
@@ -736,7 +757,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 199,
@@ -769,7 +791,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 301,
@@ -811,7 +834,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 302,
@@ -853,7 +877,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 303,
@@ -895,7 +920,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 401,
@@ -937,7 +963,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 402,
@@ -979,7 +1006,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 403,
@@ -1021,7 +1049,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 404,
@@ -1063,7 +1092,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 405,
@@ -1105,7 +1135,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 406,
@@ -1147,7 +1178,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 407,
@@ -1189,7 +1221,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 408,
@@ -1231,7 +1264,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 708,
@@ -1264,7 +1298,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 601,
@@ -1306,7 +1341,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 602,
@@ -1348,7 +1384,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 603,
@@ -1390,7 +1427,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 606,
@@ -1432,7 +1470,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 607,
@@ -1465,7 +1504,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 608,
@@ -1498,7 +1538,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 609,
@@ -1531,7 +1572,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 202,
@@ -1573,7 +1615,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 203,
@@ -1615,7 +1658,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 204,
@@ -1657,7 +1701,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 501,
@@ -1699,7 +1744,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 502,
@@ -1741,7 +1787,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 503,
@@ -1783,7 +1830,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 504,
@@ -1825,7 +1873,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 508,
@@ -1858,7 +1907,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 802,
@@ -1900,7 +1950,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 803,
@@ -1942,7 +1993,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 805,
@@ -1984,7 +2036,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 807,
@@ -2017,7 +2070,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 702,
@@ -2059,7 +2113,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 703,
@@ -2101,7 +2156,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 704,
@@ -2143,7 +2199,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 705,
@@ -2185,7 +2242,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 706,
@@ -2227,7 +2285,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 709,
@@ -2260,7 +2319,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1201,
@@ -2302,7 +2362,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1202,
@@ -2344,7 +2405,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1203,
@@ -2386,7 +2448,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1204,
@@ -2428,7 +2491,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1001,
@@ -2470,7 +2534,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1002,
@@ -2512,7 +2577,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1003,
@@ -2554,7 +2620,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1004,
@@ -2596,7 +2663,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1005,
@@ -2638,7 +2706,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1006,
@@ -2680,7 +2749,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1007,
@@ -2722,7 +2792,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1301,
@@ -2755,7 +2826,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 119,
@@ -2788,7 +2860,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 120,
@@ -2821,7 +2894,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10001,
@@ -2854,7 +2928,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10002,
@@ -2887,7 +2962,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10003,
@@ -2920,7 +2996,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10004,
@@ -2953,7 +3030,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 10005,
@@ -2986,7 +3064,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 11001,
@@ -3019,7 +3098,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 12001,
@@ -3052,7 +3132,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 12002,
@@ -3085,7 +3166,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 12003,
@@ -3118,7 +3200,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13001,
@@ -3151,7 +3234,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13002,
@@ -3184,7 +3268,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13003,
@@ -3217,7 +3302,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13004,
@@ -3250,7 +3336,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13005,
@@ -3283,7 +3370,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13006,
@@ -3316,7 +3404,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13007,
@@ -3349,7 +3438,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13101,
@@ -3391,7 +3481,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13102,
@@ -3433,7 +3524,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 13105,
@@ -3466,7 +3558,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1500001,
@@ -3499,7 +3592,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1500002,
@@ -3532,7 +3626,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14001,
@@ -3565,7 +3660,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14002,
@@ -3598,7 +3694,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14003,
@@ -3631,7 +3728,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14004,
@@ -3664,7 +3762,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14005,
@@ -3697,7 +3796,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14006,
@@ -3730,7 +3830,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14007,
@@ -3763,7 +3864,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14008,
@@ -3796,7 +3898,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14011,
@@ -3829,7 +3932,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14012,
@@ -3862,7 +3966,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14013,
@@ -3895,7 +4000,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14021,
@@ -3928,7 +4034,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 14022,
@@ -3961,7 +4068,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 123,
@@ -3994,7 +4102,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 125,
@@ -4027,7 +4136,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 51,
@@ -4060,7 +4170,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 804,
@@ -4102,7 +4213,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1101,
@@ -4144,7 +4256,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1102,
@@ -4186,7 +4299,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1103,
@@ -4228,7 +4342,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1601,
@@ -4261,7 +4376,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1602,
@@ -4294,7 +4410,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1603,
@@ -4327,7 +4444,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1611,
@@ -4360,7 +4478,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1612,
@@ -4393,7 +4512,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1613,
@@ -4426,7 +4546,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1614,
@@ -4459,7 +4580,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1615,
@@ -4492,7 +4614,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1616,
@@ -4525,7 +4648,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1617,
@@ -4558,7 +4682,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1631,
@@ -4591,7 +4716,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1632,
@@ -4624,7 +4750,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1633,
@@ -4657,7 +4784,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1641,
@@ -4690,7 +4818,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1642,
@@ -4723,7 +4852,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 15,
@@ -4760,7 +4890,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1501,
@@ -4802,7 +4933,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1502,
@@ -4844,7 +4976,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1504,
@@ -4886,7 +5019,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1505,
@@ -4928,7 +5062,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1506,
@@ -4970,7 +5105,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1507,
@@ -5012,7 +5148,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1561,
@@ -5054,7 +5191,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1562,
@@ -5096,7 +5234,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1571,
@@ -5138,7 +5277,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1572,
@@ -5180,7 +5320,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1511,
@@ -5222,7 +5363,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 52,
@@ -5255,7 +5397,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 16,
@@ -5288,7 +5431,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 17,
@@ -5321,7 +5465,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 18,
@@ -5354,7 +5499,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 19,
@@ -5387,7 +5533,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 20,
@@ -5420,7 +5567,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 21,
@@ -5453,7 +5601,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 22,
@@ -5486,7 +5635,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 23,
@@ -5519,7 +5669,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1701,
@@ -5561,7 +5712,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1801,
@@ -5603,7 +5755,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1802,
@@ -5645,7 +5798,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1803,
@@ -5687,7 +5841,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1804,
@@ -5729,7 +5884,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1901,
@@ -5771,7 +5927,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2001,
@@ -5813,7 +5970,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2002,
@@ -5855,7 +6013,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2004,
@@ -5897,7 +6056,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2102,
@@ -5939,7 +6099,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2201,
@@ -5981,7 +6142,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2202,
@@ -6023,7 +6185,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2203,
@@ -6065,7 +6228,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2301,
@@ -6107,7 +6271,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2302,
@@ -6149,7 +6314,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2303,
@@ -6191,7 +6357,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2304,
@@ -6233,7 +6400,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 24,
@@ -6270,7 +6438,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1805,
@@ -6312,7 +6481,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1902,
@@ -6354,7 +6524,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2005,
@@ -6396,7 +6567,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2006,
@@ -6438,7 +6610,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2204,
@@ -6480,7 +6653,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1692,
@@ -6522,7 +6696,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1693,
@@ -6564,7 +6739,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1694,
@@ -6606,7 +6782,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 1691,
@@ -6648,7 +6825,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2103,
@@ -6690,7 +6868,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25,
@@ -6727,7 +6906,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 26,
@@ -6764,7 +6944,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 27,
@@ -6806,7 +6987,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3101,
@@ -6839,7 +7021,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3102,
@@ -6872,7 +7055,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3103,
@@ -6905,7 +7089,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3104,
@@ -6938,7 +7123,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3105,
@@ -6971,7 +7157,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2101,
@@ -7013,7 +7200,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28,
@@ -7046,7 +7234,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28001,
@@ -7079,7 +7268,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28002,
@@ -7112,7 +7302,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28003,
@@ -7145,7 +7336,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28004,
@@ -7178,7 +7370,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 28005,
@@ -7211,7 +7404,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2507,
@@ -7255,7 +7449,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2508,
@@ -7299,7 +7494,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 2505,
@@ -7343,7 +7539,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 53,
@@ -7376,7 +7573,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3106,
@@ -7409,7 +7607,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3107,
@@ -7442,7 +7641,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3108,
@@ -7475,7 +7675,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3109,
@@ -7508,7 +7709,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3110,
@@ -7541,7 +7743,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3111,
@@ -7574,7 +7777,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3112,
@@ -7607,7 +7811,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3113,
@@ -7640,7 +7845,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 54,
@@ -7673,7 +7879,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3114,
@@ -7708,7 +7915,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3115,
@@ -7743,7 +7951,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3116,
@@ -7776,7 +7985,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3117,
@@ -7809,7 +8019,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3118,
@@ -7842,7 +8053,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 32,
@@ -7879,7 +8091,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3201,
@@ -7916,7 +8129,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25001,
@@ -7949,7 +8163,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25002,
@@ -7982,7 +8197,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25003,
@@ -8015,7 +8231,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25004,
@@ -8048,7 +8265,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25005,
@@ -8081,7 +8299,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25006,
@@ -8114,7 +8333,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25007,
@@ -8147,7 +8367,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25008,
@@ -8180,7 +8401,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25009,
@@ -8213,7 +8435,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 32001,
@@ -8246,7 +8469,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 15000011,
@@ -8279,7 +8503,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 32002,
@@ -8312,7 +8537,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 25010,
@@ -8345,7 +8571,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33,
@@ -8378,7 +8605,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33001,
@@ -8411,7 +8639,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33002,
@@ -8444,7 +8673,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33003,
@@ -8477,7 +8707,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33004,
@@ -8510,7 +8741,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33101,
@@ -8545,7 +8777,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33102,
@@ -8578,7 +8811,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33103,
@@ -8611,7 +8845,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33104,
@@ -8644,7 +8879,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33105,
@@ -8677,7 +8913,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33106,
@@ -8710,7 +8947,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3202,
@@ -8747,7 +8985,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3203,
@@ -8784,7 +9023,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3204,
@@ -8821,7 +9061,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 34,
@@ -8858,7 +9099,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3205,
@@ -8891,7 +9133,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3206,
@@ -8924,7 +9167,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3207,
@@ -8957,7 +9201,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3208,
@@ -8990,7 +9235,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3209,
@@ -9023,7 +9269,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 33107,
@@ -9056,7 +9303,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 35,
@@ -9093,7 +9341,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3210,
@@ -9128,7 +9377,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3211,
@@ -9163,7 +9413,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3212,
@@ -9198,7 +9449,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3213,
@@ -9233,7 +9485,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3214,
@@ -9268,7 +9521,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36,
@@ -9301,7 +9555,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 55,
@@ -9334,7 +9589,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36001,
@@ -9367,7 +9623,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36002,
@@ -9400,7 +9657,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36003,
@@ -9433,7 +9691,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36004,
@@ -9466,7 +9725,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36005,
@@ -9499,7 +9759,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36006,
@@ -9532,7 +9793,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36007,
@@ -9565,7 +9827,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36008,
@@ -9598,7 +9861,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36009,
@@ -9631,7 +9895,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36010,
@@ -9664,7 +9929,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3215,
@@ -9700,7 +9966,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3216,
@@ -9736,7 +10003,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3218,
@@ -9771,7 +10039,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 3217,
@@ -9809,7 +10078,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 37,
@@ -9842,7 +10112,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 38,
@@ -9879,7 +10150,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36011,
@@ -9912,7 +10184,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36012,
@@ -9945,7 +10218,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36013,
@@ -9978,7 +10252,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36014,
@@ -10011,7 +10286,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36015,
@@ -10044,7 +10320,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36016,
@@ -10077,7 +10354,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36017,
@@ -10110,7 +10388,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 56,
@@ -10143,7 +10422,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 57,
@@ -10176,7 +10456,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 39,
@@ -10213,7 +10494,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 40,
@@ -10246,7 +10528,8 @@
     "IsDisableInExplore": true,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36018,
@@ -10279,7 +10562,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36019,
@@ -10312,7 +10596,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36020,
@@ -10345,7 +10630,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36021,
@@ -10378,7 +10664,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36022,
@@ -10411,7 +10698,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36023,
@@ -10444,7 +10732,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36024,
@@ -10477,7 +10766,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": true,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36101,
@@ -10516,7 +10806,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36102,
@@ -10549,7 +10840,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36105,
@@ -10582,7 +10874,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36106,
@@ -10615,7 +10908,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36107,
@@ -10648,7 +10942,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36108,
@@ -10681,7 +10976,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36109,
@@ -10714,7 +11010,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36110,
@@ -10747,7 +11044,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36111,
@@ -10780,7 +11078,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36112,
@@ -10813,7 +11112,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36025,
@@ -10846,7 +11146,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36026,
@@ -10879,7 +11180,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36027,
@@ -10912,7 +11214,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 58,
@@ -10945,7 +11248,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36113,
@@ -10978,7 +11282,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36114,
@@ -11011,7 +11316,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36116,
@@ -11044,7 +11350,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36136,
@@ -11077,7 +11384,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36117,
@@ -11110,7 +11418,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36119,
@@ -11143,7 +11452,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36120,
@@ -11176,7 +11486,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36121,
@@ -11209,7 +11520,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36122,
@@ -11242,7 +11554,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36123,
@@ -11275,7 +11588,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36124,
@@ -11308,7 +11622,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36125,
@@ -11341,7 +11656,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36126,
@@ -11374,7 +11690,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36127,
@@ -11407,7 +11724,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36128,
@@ -11440,7 +11758,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36129,
@@ -11473,7 +11792,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36131,
@@ -11506,7 +11826,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36132,
@@ -11539,7 +11860,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36133,
@@ -11572,7 +11894,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36134,
@@ -11605,7 +11928,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36135,
@@ -11638,7 +11962,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 59,
@@ -11671,7 +11996,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 60,
@@ -11704,7 +12030,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 61,
@@ -11737,7 +12064,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41,
@@ -11774,7 +12102,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36150,
@@ -11807,7 +12136,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36151,
@@ -11840,7 +12170,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36152,
@@ -11873,7 +12204,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36153,
@@ -11906,7 +12238,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36154,
@@ -11939,7 +12272,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36155,
@@ -11972,7 +12306,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36156,
@@ -12005,7 +12340,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36157,
@@ -12038,7 +12374,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36158,
@@ -12071,7 +12408,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36159,
@@ -12104,7 +12442,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36160,
@@ -12137,7 +12476,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36161,
@@ -12170,7 +12510,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36162,
@@ -12203,7 +12544,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36163,
@@ -12236,7 +12578,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36164,
@@ -12269,7 +12612,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36165,
@@ -12302,7 +12646,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36166,
@@ -12335,7 +12680,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36167,
@@ -12368,7 +12714,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36168,
@@ -12401,7 +12748,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36169,
@@ -12434,7 +12782,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36170,
@@ -12467,7 +12816,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36171,
@@ -12500,7 +12850,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 36172,
@@ -12533,7 +12884,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 62,
@@ -12566,7 +12918,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42,
@@ -12607,17 +12960,18 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44,
     "Level": 0,
     "CountryId": 1,
-    "DeliveryMarkId": 3351001,
+    "DeliveryMarkId": 0,
     "AreaName": "MapAreaVolume_MZ",
     "MapConfigId": 8,
     "DungeonId": 8,
-    "Title": "Area_44_Title",
+    "Title": "State_8_Title",
     "Father": 1,
     "Tag": [
       0
@@ -12633,12 +12987,10 @@
     "DeliveryMarkType": 1,
     "SortIndex": 0,
     "EnterAreaTags": {
-      "1151923109": 1,
       "1563006695": 1,
       "-1118575054": 1
     },
     "LeaveAreaTags": {
-      "1151923109": 0,
       "1563006695": 0,
       "-1118575054": 0
     },
@@ -12650,7 +13002,8 @@
     "IsEnableSceneInteractionEffects": 0,
     "FunctionIDs": {
       "750001": 1
-    }
+    },
+    "OutAreaBorderConfigId": 750001
   },
   {
     "AreaId": 41001,
@@ -12683,7 +13036,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41002,
@@ -12716,7 +13070,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41004,
@@ -12749,7 +13104,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41005,
@@ -12782,7 +13138,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41006,
@@ -12815,7 +13172,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41007,
@@ -12848,7 +13206,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41008,
@@ -12881,7 +13240,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41009,
@@ -12914,7 +13274,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41010,
@@ -12947,7 +13308,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41011,
@@ -12980,7 +13342,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41012,
@@ -13013,7 +13376,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41013,
@@ -13046,7 +13410,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41014,
@@ -13079,7 +13444,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41015,
@@ -13112,7 +13478,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41016,
@@ -13145,7 +13512,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41017,
@@ -13178,7 +13546,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41018,
@@ -13211,7 +13580,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41019,
@@ -13244,7 +13614,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41020,
@@ -13277,7 +13648,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41021,
@@ -13310,7 +13682,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41022,
@@ -13343,7 +13716,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41023,
@@ -13376,7 +13750,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41024,
@@ -13409,7 +13784,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 41025,
@@ -13442,7 +13818,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42001,
@@ -13475,7 +13852,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42002,
@@ -13508,7 +13886,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42003,
@@ -13541,7 +13920,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42004,
@@ -13574,7 +13954,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 63,
@@ -13607,7 +13988,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42005,
@@ -13640,7 +14022,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42006,
@@ -13673,7 +14056,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42007,
@@ -13706,7 +14090,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42008,
@@ -13739,7 +14124,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42009,
@@ -13772,7 +14158,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42010,
@@ -13805,7 +14192,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42011,
@@ -13838,7 +14226,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42012,
@@ -13871,7 +14260,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42013,
@@ -13904,7 +14294,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42014,
@@ -13937,7 +14328,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42015,
@@ -13970,7 +14362,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42016,
@@ -14003,7 +14396,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42017,
@@ -14036,7 +14430,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42018,
@@ -14069,7 +14464,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42019,
@@ -14102,7 +14498,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42020,
@@ -14135,7 +14532,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42021,
@@ -14168,7 +14566,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42022,
@@ -14201,7 +14600,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 42023,
@@ -14234,7 +14634,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 1,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 64,
@@ -14267,7 +14668,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44001,
@@ -14300,7 +14702,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44002,
@@ -14333,7 +14736,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44003,
@@ -14366,7 +14770,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44004,
@@ -14399,40 +14804,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
-  },
-  {
-    "AreaId": 44301,
-    "Level": 5,
-    "CountryId": 1,
-    "DeliveryMarkId": 0,
-    "AreaName": "MapFCVolume_MZ_DFC",
-    "MapConfigId": 8,
-    "DungeonId": 8,
-    "Title": "",
-    "Father": 44,
-    "Tag": [
-      0
-    ],
-    "Record": 1,
-    "Tips": 0,
-    "IsInitActived": true,
-    "WorldMonsterLevelMax": {},
-    "WuYinQuID": 0,
-    "StateId": 8,
-    "AtmosphereId": 0,
-    "EdgeWallName": "",
-    "DeliveryMarkType": 1,
-    "SortIndex": 0,
-    "EnterAreaTags": {},
-    "LeaveAreaTags": {},
-    "PhantomFormationId": 0,
-    "PhantomFormationMultiSwitch": false,
-    "SunSpiritAreaCollectMaxNum": 0,
-    "IsDisableInExplore": false,
-    "IsPlayerPosNeedCheck": false,
-    "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44011,
@@ -14465,7 +14838,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44012,
@@ -14498,7 +14872,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44013,
@@ -14531,7 +14906,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44014,
@@ -14564,7 +14940,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44015,
@@ -14597,7 +14974,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44016,
@@ -14630,7 +15008,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44017,
@@ -14663,7 +15042,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44018,
@@ -14696,7 +15076,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44021,
@@ -14729,7 +15110,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44022,
@@ -14762,7 +15144,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44023,
@@ -14795,7 +15178,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44024,
@@ -14828,7 +15212,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44031,
@@ -14861,7 +15246,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44032,
@@ -14894,7 +15280,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44033,
@@ -14927,7 +15314,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44034,
@@ -14960,7 +15348,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44035,
@@ -14993,7 +15382,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44036,
@@ -15026,7 +15416,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44037,
@@ -15059,7 +15450,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44041,
@@ -15092,7 +15484,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44042,
@@ -15125,7 +15518,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44043,
@@ -15158,7 +15552,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44044,
@@ -15191,7 +15586,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44045,
@@ -15226,7 +15622,8 @@
     "IsEnableSceneInteractionEffects": 0,
     "FunctionIDs": {
       "750001": 0
-    }
+    },
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44046,
@@ -15261,7 +15658,8 @@
     "IsEnableSceneInteractionEffects": 0,
     "FunctionIDs": {
       "750001": 0
-    }
+    },
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44047,
@@ -15296,7 +15694,8 @@
     "IsEnableSceneInteractionEffects": 0,
     "FunctionIDs": {
       "750001": 0
-    }
+    },
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44051,
@@ -15329,7 +15728,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44052,
@@ -15362,7 +15762,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44053,
@@ -15395,7 +15796,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44054,
@@ -15428,7 +15830,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44061,
@@ -15461,7 +15864,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44062,
@@ -15494,7 +15898,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44063,
@@ -15527,7 +15932,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44071,
@@ -15560,7 +15966,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44072,
@@ -15593,7 +16000,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44073,
@@ -15626,7 +16034,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44074,
@@ -15659,7 +16068,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44075,
@@ -15692,7 +16102,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44076,
@@ -15725,7 +16136,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44038,
@@ -15758,7 +16170,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 65,
@@ -15775,7 +16188,7 @@
     ],
     "Record": 1,
     "Tips": 0,
-    "IsInitActived": true,
+    "IsInitActived": false,
     "WorldMonsterLevelMax": {},
     "WuYinQuID": 0,
     "StateId": 0,
@@ -15791,18 +16204,19 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44025,
-    "Level": 5,
+    "Level": 4,
     "CountryId": 1,
     "DeliveryMarkId": 0,
     "AreaName": "MapAreaVolume_MZ_A231",
     "MapConfigId": 8,
     "DungeonId": 8,
     "Title": "Area_44022_Title",
-    "Father": 44022,
+    "Father": 44002,
     "Tag": [
       0
     ],
@@ -15824,23 +16238,24 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44026,
-    "Level": 4,
+    "Level": 5,
     "CountryId": 1,
     "DeliveryMarkId": 0,
     "AreaName": "MapAreaVolume_MZ_A241",
     "MapConfigId": 8,
     "DungeonId": 8,
-    "Title": "Area_44023_Title",
+    "Title": "Area_44026_Title",
     "Father": 44023,
     "Tag": [
       0
     ],
     "Record": 1,
-    "Tips": 1,
+    "Tips": 0,
     "IsInitActived": true,
     "WorldMonsterLevelMax": {},
     "WuYinQuID": 0,
@@ -15857,7 +16272,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 44077,
@@ -15890,7 +16306,8 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   },
   {
     "AreaId": 205,
@@ -15932,6 +16349,181 @@
     "IsDisableInExplore": false,
     "IsPlayerPosNeedCheck": false,
     "IsEnableSceneInteractionEffects": 0,
-    "FunctionIDs": {}
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
+  },
+  {
+    "AreaId": 44048,
+    "Level": 4,
+    "CountryId": 1,
+    "DeliveryMarkId": 0,
+    "AreaName": "MapAreaVolume_MZ_A48",
+    "MapConfigId": 8,
+    "DungeonId": 8,
+    "Title": "Area_44048_Title",
+    "Father": 44043,
+    "Tag": [
+      0
+    ],
+    "Record": 1,
+    "Tips": 1,
+    "IsInitActived": true,
+    "WorldMonsterLevelMax": {},
+    "WuYinQuID": 0,
+    "StateId": 8,
+    "AtmosphereId": 0,
+    "EdgeWallName": "",
+    "DeliveryMarkType": 1,
+    "SortIndex": 0,
+    "EnterAreaTags": {},
+    "LeaveAreaTags": {},
+    "PhantomFormationId": 0,
+    "PhantomFormationMultiSwitch": false,
+    "SunSpiritAreaCollectMaxNum": 0,
+    "IsDisableInExplore": false,
+    "IsPlayerPosNeedCheck": false,
+    "IsEnableSceneInteractionEffects": 0,
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
+  },
+  {
+    "AreaId": 44049,
+    "Level": 5,
+    "CountryId": 1,
+    "DeliveryMarkId": 0,
+    "AreaName": "WYQVolume_MZ_A49",
+    "MapConfigId": 8,
+    "DungeonId": 8,
+    "Title": "Area_44004_Title",
+    "Father": 44004,
+    "Tag": [
+      0
+    ],
+    "Record": 1,
+    "Tips": 0,
+    "IsInitActived": true,
+    "WorldMonsterLevelMax": {},
+    "WuYinQuID": 0,
+    "StateId": 8,
+    "AtmosphereId": 0,
+    "EdgeWallName": "",
+    "DeliveryMarkType": 1,
+    "SortIndex": 0,
+    "EnterAreaTags": {},
+    "LeaveAreaTags": {},
+    "PhantomFormationId": 0,
+    "PhantomFormationMultiSwitch": false,
+    "SunSpiritAreaCollectMaxNum": 0,
+    "IsDisableInExplore": false,
+    "IsPlayerPosNeedCheck": false,
+    "IsEnableSceneInteractionEffects": 0,
+    "FunctionIDs": {
+      "750001": 0
+    },
+    "OutAreaBorderConfigId": 0
+  },
+  {
+    "AreaId": 44027,
+    "Level": 5,
+    "CountryId": 1,
+    "DeliveryMarkId": 0,
+    "AreaName": "WYQVolume_MZ_A27",
+    "MapConfigId": 8,
+    "DungeonId": 8,
+    "Title": "Area_44002_Title",
+    "Father": 44002,
+    "Tag": [
+      0
+    ],
+    "Record": 1,
+    "Tips": 0,
+    "IsInitActived": true,
+    "WorldMonsterLevelMax": {},
+    "WuYinQuID": 0,
+    "StateId": 8,
+    "AtmosphereId": 0,
+    "EdgeWallName": "",
+    "DeliveryMarkType": 1,
+    "SortIndex": 0,
+    "EnterAreaTags": {},
+    "LeaveAreaTags": {},
+    "PhantomFormationId": 0,
+    "PhantomFormationMultiSwitch": false,
+    "SunSpiritAreaCollectMaxNum": 0,
+    "IsDisableInExplore": false,
+    "IsPlayerPosNeedCheck": false,
+    "IsEnableSceneInteractionEffects": 0,
+    "FunctionIDs": {
+      "750001": 0
+    },
+    "OutAreaBorderConfigId": 0
+  },
+  {
+    "AreaId": 44019,
+    "Level": 5,
+    "CountryId": 1,
+    "DeliveryMarkId": 0,
+    "AreaName": "MapAreaVolume_MZ_A19",
+    "MapConfigId": 8,
+    "DungeonId": 8,
+    "Title": "MapMark_132006_MarkTitle",
+    "Father": 44017,
+    "Tag": [
+      0
+    ],
+    "Record": 1,
+    "Tips": 0,
+    "IsInitActived": true,
+    "WorldMonsterLevelMax": {},
+    "WuYinQuID": 0,
+    "StateId": 8,
+    "AtmosphereId": 0,
+    "EdgeWallName": "",
+    "DeliveryMarkType": 1,
+    "SortIndex": 0,
+    "EnterAreaTags": {},
+    "LeaveAreaTags": {},
+    "PhantomFormationId": 0,
+    "PhantomFormationMultiSwitch": false,
+    "SunSpiritAreaCollectMaxNum": 0,
+    "IsDisableInExplore": false,
+    "IsPlayerPosNeedCheck": false,
+    "IsEnableSceneInteractionEffects": 0,
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
+  },
+  {
+    "AreaId": 44101,
+    "Level": 5,
+    "CountryId": 1,
+    "DeliveryMarkId": 0,
+    "AreaName": "WeatherAreaVolume_MZ_A421",
+    "MapConfigId": 8,
+    "DungeonId": 8,
+    "Title": "Area_44042_Title",
+    "Father": 44042,
+    "Tag": [
+      0
+    ],
+    "Record": 1,
+    "Tips": 0,
+    "IsInitActived": true,
+    "WorldMonsterLevelMax": {},
+    "WuYinQuID": 0,
+    "StateId": 8,
+    "AtmosphereId": 0,
+    "EdgeWallName": "",
+    "DeliveryMarkType": 1,
+    "SortIndex": 0,
+    "EnterAreaTags": {},
+    "LeaveAreaTags": {},
+    "PhantomFormationId": 0,
+    "PhantomFormationMultiSwitch": false,
+    "SunSpiritAreaCollectMaxNum": 0,
+    "IsDisableInExplore": false,
+    "IsPlayerPosNeedCheck": false,
+    "IsEnableSceneInteractionEffects": 0,
+    "FunctionIDs": {},
+    "OutAreaBorderConfigId": 0
   }
 ]

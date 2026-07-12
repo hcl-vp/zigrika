@@ -1055,7 +1055,9 @@
     "Param2": {
       "ReduceMixNum": "Int"
     },
-    "Param3": {},
+    "Param3": {
+      "AnimalId": "String"
+    },
     "Param4": {},
     "Param5": {},
     "Param6": {},

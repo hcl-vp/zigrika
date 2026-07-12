@@ -1942,14 +1942,6 @@
     "SaveRecord": true
   },
   {
-    "Id": 30306,
-    "LimitParams": {
-      "Id": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30307,
     "LimitParams": {
       "type": "null",
@@ -1963,14 +1955,6 @@
     "LimitParams": {
       "quality": "null",
       "level": "40"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
-    "Id": 30309,
-    "LimitParams": {
-      "Id": "1"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2072,14 +2056,6 @@
     "SaveRecord": true
   },
   {
-    "Id": 30322,
-    "LimitParams": {
-      "Id": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30323,
     "LimitParams": {
       "CustomTypes": "2"
@@ -2090,7 +2066,9 @@
   {
     "Id": 30324,
     "LimitParams": {
-      "Id": "9"
+      "Difficulty": "1",
+      "AreaNum": "1",
+      "Star": "3"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2105,25 +2083,9 @@
     "SaveRecord": true
   },
   {
-    "Id": 30326,
-    "LimitParams": {
-      "Quality": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30327,
     "LimitParams": {
       "Quality": "4"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
-    "Id": 30328,
-    "LimitParams": {
-      "LevelType": "0"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2140,9 +2102,7 @@
   {
     "Id": 30330,
     "LimitParams": {
-      "Difficulty": "1",
-      "AreaNum": "1",
-      "Star": "3"
+      "Id": "5"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2174,14 +2134,6 @@
     "SaveRecord": true
   },
   {
-    "Id": 30335,
-    "LimitParams": {
-      "Id": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30337,
     "LimitParams": {
       "type": "null",
@@ -2200,14 +2152,6 @@
     "SaveRecord": true
   },
   {
-    "Id": 30339,
-    "LimitParams": {
-      "Quality": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30340,
     "LimitParams": {},
     "ProgressNeed": 1,
@@ -2216,8 +2160,8 @@
   {
     "Id": 30341,
     "LimitParams": {
-      "Id": "1|2",
-      "Id2": ""
+      "quality": "5",
+      "level": "20"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2232,15 +2176,6 @@
     "SaveRecord": true
   },
   {
-    "Id": 30344,
-    "LimitParams": {
-      "quality": "null",
-      "level": "60"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30345,
     "LimitParams": {
       "Quality": "5"
@@ -2249,17 +2184,11 @@
     "SaveRecord": true
   },
   {
-    "Id": 30346,
-    "LimitParams": {
-      "Id": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30348,
     "LimitParams": {
-      "Id": "3"
+      "Difficulty": "2",
+      "AreaNum": "2",
+      "Star": "6"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2268,15 +2197,6 @@
     "Id": 30349,
     "LimitParams": {
       "type": "null",
-      "level": "70"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
-    "Id": 30350,
-    "LimitParams": {
-      "quality": "null",
       "level": "70"
     },
     "ProgressNeed": 1,
@@ -2298,18 +2218,11 @@
     "SaveRecord": true
   },
   {
-    "Id": 30353,
-    "LimitParams": {
-      "Quality": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30354,
     "LimitParams": {
-      "Id": "1|2",
-      "Id2": ""
+      "Difficulty": "1",
+      "AreaNum": "1",
+      "Star": "12"
     },
     "ProgressNeed": 1,
     "SaveRecord": true
@@ -2351,19 +2264,36 @@
     "SaveRecord": true
   },
   {
-    "Id": 30360,
-    "LimitParams": {
-      "Id": "1"
-    },
-    "ProgressNeed": 1,
-    "SaveRecord": true
-  },
-  {
     "Id": 30362,
     "LimitParams": {
       "Difficulty": "2",
       "AreaNum": "2",
       "Star": "12"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30333,
+    "LimitParams": {},
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30336,
+    "LimitParams": {
+      "Difficulty": "1",
+      "AreaNum": "1",
+      "Star": "6"
+    },
+    "ProgressNeed": 1,
+    "SaveRecord": true
+  },
+  {
+    "Id": 30347,
+    "LimitParams": {
+      "num": "2",
+      "level": "4"
     },
     "ProgressNeed": 1,
     "SaveRecord": true

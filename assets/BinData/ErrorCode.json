@@ -21501,7 +21501,7 @@
     "Id": 2700177,
     "DebugText": "联机模式不允许开始玩法",
     "Text": "",
-    "IsTip": false
+    "IsTip": true
   },
   {
     "Id": 3000000,
@@ -23480,8 +23480,8 @@
   {
     "Id": 2900027,
     "DebugText": "场景地块切分没有对应地块",
-    "Text": "",
-    "IsTip": false
+    "Text": "ErrSceneBlockSplitNotBlock_Text",
+    "IsTip": true
   },
   {
     "Id": 3200003,
@@ -28694,8 +28694,8 @@
   {
     "Id": 1100594,
     "DebugText": "没有角色数据",
-    "Text": "",
-    "IsTip": false
+    "Text": "Kurotato_Role_Selected_LimitRole",
+    "IsTip": true
   },
   {
     "Id": 1100595,
@@ -28922,31 +28922,31 @@
   {
     "Id": 2500366,
     "DebugText": "找不到配置",
-    "Text": "",
+    "Text": "Sheriff_ErrorCode_1",
     "IsTip": true
   },
   {
     "Id": 2500367,
     "DebugText": "活动未开启",
-    "Text": "",
+    "Text": "Sheriff_ErrorCode_2",
     "IsTip": true
   },
   {
     "Id": 2500368,
     "DebugText": "功能未开启",
-    "Text": "",
+    "Text": "Sheriff_ErrorCode_3",
     "IsTip": true
   },
   {
     "Id": 2500369,
     "DebugText": "线索未解锁",
-    "Text": "",
+    "Text": "Sheriff_ErrorCode_4",
     "IsTip": true
   },
   {
     "Id": 2500370,
     "DebugText": "已完成其他结局",
-    "Text": "",
+    "Text": "Sheriff_ErrorCode_5",
     "IsTip": true
   },
   {
@@ -29552,6 +29552,156 @@
   {
     "Id": 3100287,
     "DebugText": "版本错误无法校验",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2700308,
+    "DebugText": "周常活动不能领取里程碑奖励",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2600114,
+    "DebugText": "实体配置未发现",
+    "Text": "实体配置未发现",
+    "IsTip": false
+  },
+  {
+    "Id": 2600115,
+    "DebugText": "副本配置未发现",
+    "Text": "副本配置未发现",
+    "IsTip": false
+  },
+  {
+    "Id": 2600116,
+    "DebugText": "快速返回类型未支持",
+    "Text": "快速返回类型未支持",
+    "IsTip": false
+  },
+  {
+    "Id": 2600117,
+    "DebugText": "快速返回配置错误",
+    "Text": "快速返回配置错误",
+    "IsTip": false
+  },
+  {
+    "Id": 2600118,
+    "DebugText": "自定义界面追踪不存在",
+    "Text": "自定义界面追踪不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 2600119,
+    "DebugText": "行为树节点配置不存在",
+    "Text": "行为树节点配置不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 2600120,
+    "DebugText": "行为树节点不存在",
+    "Text": "行为树节点不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 2600121,
+    "DebugText": "玩法不存在",
+    "Text": "玩法不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 2600122,
+    "DebugText": "玩法DB数据不存在",
+    "Text": "玩法DB数据不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 3100306,
+    "DebugText": "不匹配的副本类型",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100625,
+    "DebugText": "土豆兄弟阶段错误",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100626,
+    "DebugText": "土豆兄弟阶段错误",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1900385,
+    "DebugText": "无音区副本进入参数空",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1900386,
+    "DebugText": "无音区副本id不匹配",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 2600123,
+    "DebugText": "不在任务回顾副本中",
+    "Text": "不在任务回顾副本中",
+    "IsTip": false
+  },
+  {
+    "Id": 2600124,
+    "DebugText": "回顾信息不存在",
+    "Text": "回顾信息不存在",
+    "IsTip": false
+  },
+  {
+    "Id": 1100627,
+    "DebugText": "赛季奖励不可领取",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100628,
+    "DebugText": "商品已购买",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1100629,
+    "DebugText": "全部商品已锁定",
+    "Text": "ErrorCode_KurotatoShopReflashFail_Text",
+    "IsTip": false
+  },
+  {
+    "Id": 200703,
+    "DebugText": "请求参数错误",
+    "Text": "",
+    "IsTip": true
+  },
+  {
+    "Id": 200704,
+    "DebugText": "请求参数模块id不存在",
+    "Text": "",
+    "IsTip": true
+  },
+  {
+    "Id": 3000201,
+    "DebugText": "XstsToken非法",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 3000202,
+    "DebugText": "XSTS XUID 不匹配",
+    "Text": "",
+    "IsTip": false
+  },
+  {
+    "Id": 1900400,
+    "DebugText": "主角角色语音设置Id错误",
     "Text": "",
     "IsTip": false
   }

@@ -53,7 +53,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907302,
     "InitItemIds": [
       600001
     ],
@@ -112,7 +112,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010016,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907304,
     "InitItemIds": [
       600002
     ],
@@ -182,7 +182,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907320,
     "InitItemIds": [
       600003
     ],
@@ -195,8 +195,8 @@
     "DescParams": [
       "50%",
       "50%",
-      "10",
-      "50%",
+      "100%",
+      "75%",
       "5"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead150/T_IconRoleHead150_26_UI.T_IconRoleHead150_26_UI",
@@ -241,7 +241,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907306,
     "InitItemIds": [
       600004
     ],
@@ -297,7 +297,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907341,
     "InitItemIds": [
       600005
     ],
@@ -348,7 +348,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907305,
     "InitItemIds": [
       600006,
       810006
@@ -361,8 +361,7 @@
     "Desc": "KurotatoCharacter_desc_10007",
     "DescParams": [
       "50%",
-      "1",
-      "1"
+      "30%"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead150/T_IconRoleHead150_27_UI.T_IconRoleHead150_27_UI",
     "RelatedCharacterId": 1505,
@@ -408,7 +407,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907340,
     "InitItemIds": [
       600007
     ],
@@ -423,7 +422,7 @@
       "300%",
       "300%",
       "3",
-      "5"
+      "2"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead150/T_IconRoleHead150_27_UI.T_IconRoleHead150_27_UI",
     "RelatedCharacterId": 1206,
@@ -462,7 +461,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907342,
     "InitItemIds": [
       600008
     ],
@@ -506,7 +505,9 @@
       820010,
       810008,
       830005,
-      510065
+      510065,
+      520022,
+      530011
     ],
     "SimpleCombatSubtypeId": 0,
     "InitBuffs": [
@@ -530,7 +531,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907319,
     "InitItemIds": [
       600009,
       830010
@@ -543,7 +544,7 @@
     "Desc": "KurotatoCharacter_desc_10010",
     "DescParams": [
       "50%",
-      "50%",
+      "75%",
       "50",
       "50%"
     ],
@@ -557,7 +558,9 @@
       "经济角色适配"
     ],
     "ExcludedRecommendWeaponIds": [],
-    "ExcludedRecommendItemIds": [],
+    "ExcludedRecommendItemIds": [
+      530017
+    ],
     "SimpleCombatSubtypeId": 0,
     "InitBuffs": [
       950100201,
@@ -578,7 +581,7 @@
     "ActivityId": 3401,
     "BasicProperty": 95010000,
     "TemplateId": 200000003,
-    "UnlockConditionId": 0,
+    "UnlockConditionId": 12907303,
     "InitItemIds": [
       600010,
       830015

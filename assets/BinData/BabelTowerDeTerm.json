@@ -3009,7 +3009,7 @@
     },
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_017.T_IconLevelBuff_017",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_004.T_IconLevelBuff_004",
     "NameText": "BabelDebuff_11170023_BuffName",
     "DesText": "BabelDebuff_11170023_BuffDesc"
   },
@@ -3022,7 +3022,7 @@
     },
     "Star": 3,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_017.T_IconLevelBuff_017",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_004.T_IconLevelBuff_004",
     "NameText": "BabelDebuff_11170024_BuffName",
     "DesText": "BabelDebuff_11170024_BuffDesc"
   },
@@ -3289,7 +3289,7 @@
     },
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_003.T_IconLevelBuff_003",
     "NameText": "BabelDebuff_11190023_BuffName",
     "DesText": "BabelDebuff_11190023_BuffDesc"
   },
@@ -3302,7 +3302,7 @@
     },
     "Star": 3,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_003.T_IconLevelBuff_003",
     "NameText": "BabelDebuff_11190024_BuffName",
     "DesText": "BabelDebuff_11190024_BuffDesc"
   },
@@ -3343,9 +3343,7 @@
     "Id": 11200015,
     "GroupId": 1120005,
     "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1120": 15
-    },
+    "DifficultPreLevelStar": {},
     "Star": 2,
     "Line": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_041.T_IconLevelBuff_041",
@@ -3429,7 +3427,7 @@
     },
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_003.T_IconLevelBuff_003",
     "NameText": "BabelDebuff_11200023_BuffName",
     "DesText": "BabelDebuff_11200023_BuffDesc"
   },
@@ -3442,7 +3440,7 @@
     },
     "Star": 3,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_008.T_IconLevelBuff_008",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_003.T_IconLevelBuff_003",
     "NameText": "BabelDebuff_11200024_BuffName",
     "DesText": "BabelDebuff_11200024_BuffDesc"
   },
@@ -3640,7 +3638,7 @@
     "DifficultPreLevelStar": {},
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_006.T_IconLevelBuff_006",
     "NameText": "BabelDebuff_11220111_BuffName",
     "DesText": "BabelDebuff_11220111_BuffDesc"
   },
@@ -3717,7 +3715,7 @@
     "DifficultPreLevelStar": {},
     "Star": 1,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_012.T_IconLevelBuff_012",
     "NameText": "BabelDebuff_11240112_BuffName",
     "DesText": "BabelDebuff_11240112_BuffDesc"
   },
@@ -3728,7 +3726,7 @@
     "DifficultPreLevelStar": {},
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_012.T_IconLevelBuff_012",
     "NameText": "BabelDebuff_11240113_BuffName",
     "DesText": "BabelDebuff_11240113_BuffDesc"
   },
@@ -3928,7 +3926,7 @@
     },
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_006.T_IconLevelBuff_006",
     "NameText": "BabelDebuff_11220111_BuffName",
     "DesText": "BabelDebuff_11220111_BuffDesc"
   },
@@ -4014,9 +4012,7 @@
     "Id": 11190027,
     "GroupId": 1119013,
     "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {
-      "1126": 0
-    },
+    "DifficultPreLevelStar": {},
     "Star": 2,
     "Line": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_014.T_IconLevelBuff_014",
@@ -4056,7 +4052,7 @@
     "DifficultPreLevelStar": {},
     "Star": 1,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_012.T_IconLevelBuff_012",
     "NameText": "BabelDebuff_11240112_BuffName",
     "DesText": "BabelDebuff_11240112_BuffDesc"
   },
@@ -4067,7 +4063,7 @@
     "DifficultPreLevelStar": {},
     "Star": 2,
     "Line": 1,
-    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_029.T_IconLevelBuff_029",
+    "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_012.T_IconLevelBuff_012",
     "NameText": "BabelDebuff_11240113_BuffName",
     "DesText": "BabelDebuff_11240113_BuffDesc"
   },

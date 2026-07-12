@@ -47806,17 +47806,6 @@
     "SkillType": 0
   },
   {
-    "Id": 70187003,
-    "SkillWeight": 200,
-    "SkillPreconditionId": 70187003,
-    "SkillId": "70187003",
-    "SkillCdRange": {
-      "Min": 0,
-      "Max": 3000
-    },
-    "SkillType": 0
-  },
-  {
     "Id": 70188001,
     "SkillWeight": 200,
     "SkillPreconditionId": 70186001,
@@ -47865,17 +47854,6 @@
     "SkillWeight": 200,
     "SkillPreconditionId": 70186002,
     "SkillId": "70189002",
-    "SkillCdRange": {
-      "Min": 0,
-      "Max": 3000
-    },
-    "SkillType": 0
-  },
-  {
-    "Id": 70189003,
-    "SkillWeight": 200,
-    "SkillPreconditionId": 70189003,
-    "SkillId": "70189003",
     "SkillCdRange": {
       "Min": 0,
       "Max": 3000
@@ -53013,6 +52991,644 @@
     "SkillWeight": 0,
     "SkillPreconditionId": 2,
     "SkillId": "80041019",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110000,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110000",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110100,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110100",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110200,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110200",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110101,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110101",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110002,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110002",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110003,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110003",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110004,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110004",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110104,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110104",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110204,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110204",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110005,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110005",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110105,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110105",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110205,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110205",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110006,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110006",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110106,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110106",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110206,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110206",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110007,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110007",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110107,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110107",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110008,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110008",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110108,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110108",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110009,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110009",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110109,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110109",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110010,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110010",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110011,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110011",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110111,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110111",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110014,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110014",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110114,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110114",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110015,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110015",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110115,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110115",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110016,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110016",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110017,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110017",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110018,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110018",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110019,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110019",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110020,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110020",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110120,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110120",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110021,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110021",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110022,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110022",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1110023,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1110023",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 80041120,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "80041120",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 100020,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "100020",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 80041020,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "80041020",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 80041021,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "80041021",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 80041022,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "80041022",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402001001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402001001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402002001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402002001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402003001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402003001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402004001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402004001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402006001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402006001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402304001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402304001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402007001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402007001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402100001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402100001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402101001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402101001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402401001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402401001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402402001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402402001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402300001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402300001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402407001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402407001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402408001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402408001",
+    "SkillCdRange": {
+      "Min": 0,
+      "Max": 3000
+    },
+    "SkillType": -1
+  },
+  {
+    "Id": 1402502001,
+    "SkillWeight": 0,
+    "SkillPreconditionId": 2,
+    "SkillId": "1402502001",
     "SkillCdRange": {
       "Min": 0,
       "Max": 3000

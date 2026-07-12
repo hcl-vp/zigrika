@@ -2172,7 +2172,6 @@
       350220102,
       350220103,
       350220104,
-      350230106,
       30010001,
       30010002
     ]
@@ -2292,7 +2291,6 @@
       350220515,
       350220516,
       350220517,
-      350230106,
       30010001,
       30010002
     ]
@@ -2394,7 +2392,6 @@
       350220814,
       350220815,
       350220816,
-      350230106,
       30010001,
       30010002
     ]
@@ -4157,6 +4154,25 @@
     ]
   },
   {
+    "Id": 13504000,
+    "Level": 35040,
+    "Wave": 99,
+    "WaveType": 1,
+    "WaveConditions": [
+      0,
+      1
+    ],
+    "WaveTime": 60,
+    "ConditionSpawnIds": [
+      350400001
+    ],
+    "HasEndlessModeSelection": false,
+    "IsPowerWave": false,
+    "MonsterSpawnGroup": [
+      350400001
+    ]
+  },
+  {
     "Id": 13501104,
     "Level": 35011,
     "Wave": 4,
@@ -4176,28 +4192,6 @@
       350110405,
       350110406,
       350110407
-    ]
-  },
-  {
-    "Id": 13504000,
-    "Level": 35040,
-    "Wave": 99,
-    "WaveType": 1,
-    "WaveConditions": [
-      0,
-      1
-    ],
-    "WaveTime": 60,
-    "ConditionSpawnIds": [
-      350400001
-    ],
-    "HasEndlessModeSelection": false,
-    "IsPowerWave": false,
-    "MonsterSpawnGroup": [
-      30010001,
-      30010002,
-      350400001,
-      350400002
     ]
   }
 ]

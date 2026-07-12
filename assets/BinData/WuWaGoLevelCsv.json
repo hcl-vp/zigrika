@@ -2193,8 +2193,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 0,
+          "X": 299.97,
+          "Y": -0.01,
           "Z": 0
         },
         "Rotation": {
@@ -2210,8 +2210,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 0,
+          "X": 600.01,
+          "Y": 0.01,
           "Z": 300
         },
         "Rotation": {
@@ -2227,8 +2227,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": -600,
+          "X": 599.99,
+          "Y": -600.01,
           "Z": 300
         },
         "Rotation": {
@@ -2244,8 +2244,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": -900,
+          "X": 600.01,
+          "Y": -899.99,
           "Z": 300
         },
         "Rotation": {
@@ -2261,7 +2261,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
+          "X": 599.97,
           "Y": -1200,
           "Z": 300
         },
@@ -2278,7 +2278,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1199.97,
           "Y": -1200,
           "Z": 600
         },
@@ -2329,7 +2329,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1200.02,
           "Y": -900,
           "Z": 600
         },
@@ -2346,8 +2346,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -1500,
+          "X": 1499.97,
+          "Y": -1500.01,
           "Z": 600
         },
         "Rotation": {
@@ -2363,8 +2363,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -900,
+          "X": 1499.99,
+          "Y": -900.01,
           "Z": 600
         },
         "Rotation": {
@@ -2380,7 +2380,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1799.99,
           "Y": -1200,
           "Z": 600
         },
@@ -2398,7 +2398,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1800,
-          "Y": -1500,
+          "Y": -1499.99,
           "Z": 600
         },
         "Rotation": {
@@ -2414,8 +2414,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": -900,
+          "X": 1800.02,
+          "Y": -899.99,
           "Z": 600
         },
         "Rotation": {
@@ -2431,7 +2431,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.99,
           "Y": -1200,
           "Z": 600
         },
@@ -2448,7 +2448,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.97,
           "Y": -900,
           "Z": 600
         },
@@ -2465,7 +2465,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2400.01,
           "Y": -600,
           "Z": 1200
         },
@@ -2482,8 +2482,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": -300,
+          "X": 600.03,
+          "Y": -299.99,
           "Z": 300
         },
         "Rotation": {
@@ -2499,7 +2499,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3000,
+          "X": 3000.02,
           "Y": -600,
           "Z": 1200
         },
@@ -2516,7 +2516,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2699.98,
           "Y": -600,
           "Z": 1200
         },
@@ -2567,8 +2567,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": -300,
+          "X": 2700.03,
+          "Y": -299.99,
           "Z": 1200
         },
         "Rotation": {
@@ -2584,8 +2584,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": -300,
+          "X": 2100.02,
+          "Y": -299.99,
           "Z": 900
         },
         "Rotation": {
@@ -2601,8 +2601,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": -300,
+          "X": 1799.98,
+          "Y": -300.01,
           "Z": 900
         },
         "Rotation": {
@@ -2618,7 +2618,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1499.99,
           "Y": 0,
           "Z": 900
         },
@@ -2635,8 +2635,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 600,
+          "X": 1500.01,
+          "Y": 600.01,
           "Z": 900
         },
         "Rotation": {
@@ -2652,7 +2652,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1199.99,
           "Y": 300,
           "Z": 900
         },
@@ -2669,7 +2669,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1800.01,
           "Y": 300,
           "Z": 900
         },
@@ -2686,9 +2686,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1200.02,
           "Y": 0,
-          "Z": 600
+          "Z": 600.49
         },
         "Rotation": {
           "X": 0,
@@ -2703,8 +2703,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 600,
+          "X": 1199.98,
+          "Y": 599.99,
           "Z": 900
         },
         "Rotation": {
@@ -2720,8 +2720,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 300,
+          "X": 1500.03,
+          "Y": 300.01,
           "Z": 900
         },
         "Rotation": {
@@ -2737,7 +2737,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1799.98,
           "Y": 600,
           "Z": 900
         },
@@ -2754,7 +2754,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1499.99,
           "Y": 900,
           "Z": 900
         },
@@ -2771,8 +2771,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 900,
+          "X": 1200.02,
+          "Y": 900.01,
           "Z": 900
         },
         "Rotation": {
@@ -2788,7 +2788,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1800.03,
           "Y": 900,
           "Z": 900
         },
@@ -2805,8 +2805,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1200,
+          "X": 1500.03,
+          "Y": 1200.01,
           "Z": 900
         },
         "Rotation": {
@@ -2822,51 +2822,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 450,
-          "Y": 0,
-          "Z": 150
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 600,
-          "Y": 0,
-          "Z": 150
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1050,
-          "Y": -1200,
-          "Z": 450
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1200,
-          "Y": -1200,
-          "Z": 450
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2400,
+          "X": 2400.03,
           "Y": -750,
           "Z": 750
         },
@@ -2880,7 +2836,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
+          "X": 2400.03,
           "Y": -600,
           "Z": 750
         }
@@ -2888,7 +2844,51 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2400,
+          "X": 450.02,
+          "Y": 0.01,
+          "Z": 150
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 600.02,
+          "Y": 0.01,
+          "Z": 150
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1049.99,
+          "Y": -1200,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1199.99,
+          "Y": -1200,
+          "Z": 450
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 2400.03,
           "Y": -750,
           "Z": 1050
         },
@@ -2898,11 +2898,11 @@
           "Z": -180
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
+          "X": 2400.03,
           "Y": -600,
           "Z": 1050
         }
@@ -2911,7 +2911,7 @@
         "GridShape": "Vertical",
         "Position": {
           "X": 2250,
-          "Y": -300,
+          "Y": -299.99,
           "Z": 1050
         },
         "Rotation": {
@@ -2925,7 +2925,7 @@
         },
         "AttachedGridCenter": {
           "X": 2400,
-          "Y": -300,
+          "Y": -299.99,
           "Z": 1050
         }
       },
@@ -2986,7 +2986,7 @@
           "Z": 0
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
@@ -2998,8 +2998,8 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 600,
+          "X": 1049.99,
+          "Y": 599.99,
           "Z": 750
         },
         "Rotation": {
@@ -3012,16 +3012,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 600,
+          "X": 1199.99,
+          "Y": 599.99,
           "Z": 750
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
-          "Y": 1350,
+          "X": 1500.02,
+          "Y": 1350.01,
           "Z": 1050
         },
         "Rotation": {
@@ -3034,16 +3034,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1500,
-          "Y": 1500,
+          "X": 1500.02,
+          "Y": 1500.01,
           "Z": 1050
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 0,
+          "X": 1050.03,
+          "Y": 0.01,
           "Z": 450
         },
         "Rotation": {
@@ -3056,16 +3056,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 0,
+          "X": 1200.03,
+          "Y": 0.01,
           "Z": 450
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
-          "Y": 1350,
+          "X": 1500.02,
+          "Y": 1350.01,
           "Z": 1350
         },
         "Rotation": {
@@ -3078,52 +3078,52 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1500,
-          "Y": 1500,
+          "X": 1500.02,
+          "Y": 1500.01,
           "Z": 1350
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 600,
+          "X": 1049.99,
+          "Y": 599.99,
           "Z": 450
         },
         "Rotation": {
-          "X": 0,
+          "X": -90,
           "Y": -90,
-          "Z": -90
+          "Z": 0
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 600,
+          "X": 1199.99,
+          "Y": 599.99,
           "Z": 450
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 300,
+          "X": 1050.01,
+          "Y": 300.01,
           "Z": 450
         },
         "Rotation": {
-          "X": 116.57,
+          "X": 106.7,
           "Y": 90,
-          "Z": 26.57
+          "Z": 16.7
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 300,
+          "X": 1200.01,
+          "Y": 300.01,
           "Z": 450
         }
       }
@@ -3135,184 +3135,152 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2400,
-          "Y": 300,
-          "Z": 600
-        },
-        "Rotation": {}
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 2700,
-          "Y": 300,
-          "Z": 600
+          "X": 3000.02,
+          "Y": 1799.98,
+          "Z": 900
         },
         "Rotation": {
-          "Z": -180
+          "X": 0,
+          "Y": 0,
+          "Z": 90
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1800,
+          "X": 2699.96,
+          "Y": 299.98,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 1799.99,
           "Y": 0,
           "Z": 300
         },
-        "Rotation": {}
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1200,
-          "Y": 1200,
+          "X": 1200.01,
+          "Y": 1199.98,
           "Z": 300
         },
         "Rotation": {
+          "X": 0,
+          "Y": 0,
           "Z": -90
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1800,
-          "Y": 900,
+          "X": 1799.99,
+          "Y": 899.98,
           "Z": 600
         },
         "Rotation": {
-          "Z": -180
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 2399.99,
+          "Y": 299.98,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
           "X": 2700,
-          "Y": 1800,
+          "Y": 1499.98,
           "Z": 900
         },
         "Rotation": {
-          "Z": -90
+          "X": 0,
+          "Y": 0,
+          "Z": 0
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 3000,
-          "Y": 1800,
-          "Z": 900
-        },
-        "Rotation": {
-          "Z": -180
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 2700,
-          "Y": 1500,
-          "Z": 900
-        },
-        "Rotation": {}
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 3000,
+          "X": 2999.98,
           "Y": 1500,
           "Z": 900
         },
         "Rotation": {
-          "Z": -90
+          "X": 0,
+          "Y": 0,
+          "Z": 180
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
           "X": 2100,
-          "Y": 2100,
+          "Y": 2099.98,
           "Z": 900
         },
         "Rotation": {
-          "Z": -180
+          "X": 0,
+          "Y": 0,
+          "Z": 180
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
           "X": 3000,
-          "Y": 2100,
+          "Y": 2099.98,
           "Z": 900
         },
         "Rotation": {
-          "Z": -180
+          "X": 0,
+          "Y": 0,
+          "Z": 180
         }
       },
       {
         "RoleType": "AircraftSoldiers",
         "Position": {
           "X": 0,
-          "Y": 0,
+          "Y": -0.02,
           "Z": 0
         },
-        "Rotation": {}
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
       }
     ],
     "GridDatas": [
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 0,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": -300,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": -600,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
+          "X": 299.98,
           "Y": -900,
           "Z": 0
         },
@@ -3329,7 +3297,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1200.03,
           "Y": -600,
           "Z": 300
         },
@@ -3346,8 +3314,42 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 300,
+          "Y": -300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
           "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300.03,
+          "Y": -600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500.01,
+          "Y": -0.01,
           "Z": 300
         },
         "Rotation": {
@@ -3370,7 +3372,7 @@
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -3381,7 +3383,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2100,
-          "Y": -300,
+          "Y": -299.99,
           "Z": 300
         },
         "Rotation": {
@@ -3397,7 +3399,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3000,
+          "X": 2999.99,
           "Y": -300,
           "Z": 600
         },
@@ -3414,14 +3416,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 300,
+          "X": 2699.97,
+          "Y": 300.01,
           "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -3431,7 +3433,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2699.99,
           "Y": 0,
           "Z": 600
         },
@@ -3448,14 +3450,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2099.97,
           "Y": 900,
           "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
@@ -3482,7 +3484,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1500.01,
           "Y": 900,
           "Z": 600
         },
@@ -3499,7 +3501,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1499.97,
           "Y": 600,
           "Z": 300
         },
@@ -3516,14 +3518,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3000,
+          "X": 2999.97,
           "Y": 0,
           "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -3533,7 +3535,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2700.01,
           "Y": -300,
           "Z": 600
         },
@@ -3550,8 +3552,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 1500,
+          "X": 1800.01,
+          "Y": 1499.99,
           "Z": 900
         },
         "Rotation": {
@@ -3567,7 +3569,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1799.97,
           "Y": 1200,
           "Z": 900
         },
@@ -3584,14 +3586,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1499.97,
           "Y": 1500,
           "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
@@ -3601,7 +3603,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1799.99,
           "Y": 1800,
           "Z": 900
         },
@@ -3618,7 +3620,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1800.03,
           "Y": 2100,
           "Z": 900
         },
@@ -3635,7 +3637,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2099.98,
           "Y": 1500,
           "Z": 900
         },
@@ -3652,7 +3654,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2100.01,
           "Y": 1200,
           "Z": 900
         },
@@ -3669,8 +3671,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": 1800,
+          "X": 2100.03,
+          "Y": 1799.99,
           "Z": 900
         },
         "Rotation": {
@@ -3686,14 +3688,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2100.01,
           "Y": 2100,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "ThreeLinkGrid",
@@ -3703,7 +3705,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2700.01,
           "Y": 1500,
           "Z": 900
         },
@@ -3720,7 +3722,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2700.03,
           "Y": 1200,
           "Z": 900
         },
@@ -3737,7 +3739,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2699.98,
           "Y": 1800,
           "Z": 900
         },
@@ -3754,14 +3756,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2700.03,
           "Y": 2100,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "AllLinkGrid",
@@ -3772,13 +3774,13 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2700,
-          "Y": 2400,
+          "Y": 2399.99,
           "Z": 1200
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -3788,14 +3790,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2099.98,
           "Y": 2400,
           "Z": 1200
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
@@ -3805,7 +3807,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1800.01,
           "Y": 2400,
           "Z": 1200
         },
@@ -3822,7 +3824,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.97,
           "Y": -300,
           "Z": 600
         },
@@ -3839,7 +3841,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.97,
           "Y": 600,
           "Z": 600
         },
@@ -3856,14 +3858,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2400.01,
           "Y": 900,
           "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -3873,14 +3875,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2400.03,
           "Y": 2400,
           "Z": 1200
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
@@ -3890,7 +3892,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2400.03,
           "Y": 1500,
           "Z": 900
         },
@@ -3907,7 +3909,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.98,
           "Y": 1200,
           "Z": 900
         },
@@ -3924,7 +3926,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2400.01,
           "Y": 1800,
           "Z": 900
         },
@@ -3941,14 +3943,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.98,
           "Y": 2100,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "ThreeLinkGrid",
@@ -3956,9 +3958,48 @@
         }
       },
       {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 299.98,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
+          "X": 1800.01,
+          "Y": 2250,
+          "Z": 1050
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1800.01,
+          "Y": 2400,
+          "Z": 1050
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1049.97,
           "Y": -600,
           "Z": 150
         },
@@ -3972,7 +4013,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
+          "X": 1199.97,
           "Y": -600,
           "Z": 150
         }
@@ -3980,7 +4021,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2250,
+          "X": 2249.99,
           "Y": -300,
           "Z": 450
         },
@@ -3994,7 +4035,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
+          "X": 2399.99,
           "Y": -300,
           "Z": 450
         }
@@ -4002,7 +4043,73 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
+          "X": 3149.97,
+          "Y": 1500,
+          "Z": 1050
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 3299.97,
+          "Y": 1500,
+          "Z": 1050
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 2700.01,
+          "Y": 2250,
+          "Z": 1050
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2700.01,
+          "Y": 2400,
+          "Z": 1050
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1650.02,
+          "Y": 1500,
+          "Z": 750
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1800.02,
+          "Y": 1500,
+          "Z": 750
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1500.03,
           "Y": 750,
           "Z": 450
         },
@@ -4016,7 +4123,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1500,
+          "X": 1500.03,
           "Y": 900,
           "Z": 450
         }
@@ -4024,117 +4131,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1650,
-          "Y": 1500,
-          "Z": 450
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1800,
-          "Y": 1500,
-          "Z": 450
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1800,
-          "Y": 2250,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1800,
-          "Y": 2400,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2700,
-          "Y": 2250,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 2700,
-          "Y": 2400,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1650,
-          "Y": 1500,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1800,
-          "Y": 1500,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 3150,
-          "Y": 1500,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 3300,
-          "Y": 1500,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 3150,
+          "X": 3149.97,
           "Y": 1500,
           "Z": 1350
         },
@@ -4148,9 +4145,31 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 3300,
+          "X": 3299.97,
           "Y": 1500,
           "Z": 1350
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1650.02,
+          "Y": 1500,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1800.02,
+          "Y": 1500,
+          "Z": 450
         }
       }
     ]
@@ -4205,24 +4224,24 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 0,
-          "Z": 300
+          "X": 1500.01,
+          "Y": 1200,
+          "Z": 1500
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": -90
         },
         "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 300.02,
           "Y": 300,
           "Z": 300
         },
@@ -4239,8 +4258,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 900,
+          "X": 600.02,
+          "Y": 899.99,
           "Z": 300
         },
         "Rotation": {
@@ -4273,7 +4292,24 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 299.98,
+          "Y": 0.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 899.98,
           "Y": 1200,
           "Z": 300
         },
@@ -4290,8 +4326,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
-          "Y": 1500,
+          "X": 900.02,
+          "Y": 1499.99,
           "Z": 300
         },
         "Rotation": {
@@ -4307,7 +4343,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
+          "X": 599.97,
           "Y": 1500,
           "Z": 300
         },
@@ -4341,7 +4377,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 899.97,
           "Y": 2100,
           "Z": 600
         },
@@ -4358,8 +4394,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 2100,
+          "X": 1200.02,
+          "Y": 2099.99,
           "Z": 1800
         },
         "Rotation": {
@@ -4375,7 +4411,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1199.98,
           "Y": 1800,
           "Z": 1800
         },
@@ -4392,24 +4428,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1800,
-          "Z": 1800
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
+          "X": 1499.99,
           "Y": 1500,
           "Z": 1500
         },
@@ -4426,17 +4445,17 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1200,
-          "Z": 1500
+          "X": 1500.03,
+          "Y": 1799.99,
+          "Z": 1800
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": -180
         },
         "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -4460,8 +4479,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 900,
+          "X": 1499.97,
+          "Y": 900.01,
           "Z": 1500
         },
         "Rotation": {
@@ -4471,23 +4490,6 @@
         },
         "GridLinkData": {
           "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 900,
-          "Z": 1500
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "AllLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -4511,7 +4513,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1500.02,
           "Y": 300,
           "Z": 1500
         },
@@ -4545,7 +4547,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2099.99,
           "Y": 300,
           "Z": 1500
         },
@@ -4562,7 +4564,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
+          "X": 2399.99,
           "Y": 0,
           "Z": 1800
         },
@@ -4596,8 +4598,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": 1200,
+          "X": 2099.98,
+          "Y": 1200.01,
           "Z": 1500
         },
         "Rotation": {
@@ -4613,7 +4615,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 150,
+          "X": 149.99,
           "Y": 0,
           "Z": 150
         },
@@ -4627,7 +4629,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 300,
+          "X": 299.99,
           "Y": 0,
           "Z": 150
         }
@@ -4657,8 +4659,8 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 2100,
+          "X": 1050.03,
+          "Y": 2099.99,
           "Z": 750
         },
         "Rotation": {
@@ -4671,16 +4673,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 2100,
+          "X": 1200.03,
+          "Y": 2099.99,
           "Z": 750
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 2100,
+          "X": 1050.03,
+          "Y": 2099.99,
           "Z": 1050
         },
         "Rotation": {
@@ -4693,15 +4695,15 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 2100,
+          "X": 1200.03,
+          "Y": 2099.99,
           "Z": 1050
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
+          "X": 1500.01,
           "Y": 1650,
           "Z": 1650
         },
@@ -4715,7 +4717,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1500,
+          "X": 1500.01,
           "Y": 1800,
           "Z": 1650
         }
@@ -4723,7 +4725,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2250,
+          "X": 2249.98,
           "Y": 300,
           "Z": 1650
         },
@@ -4737,7 +4739,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
+          "X": 2399.98,
           "Y": 300,
           "Z": 1650
         }
@@ -4811,29 +4813,7 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2850,
-          "Y": 300,
-          "Z": 3450
-        },
-        "Rotation": {
-          "X": -180,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 3000,
-          "Y": 300,
-          "Z": 3450
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2550,
+          "X": 2549.99,
           "Y": 0,
           "Z": 1950
         },
@@ -4847,9 +4827,31 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2700,
+          "X": 2699.99,
           "Y": 0,
           "Z": 1950
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 2850.01,
+          "Y": 300.02,
+          "Z": 3450
+        },
+        "Rotation": {
+          "X": -180,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 3000.01,
+          "Y": 300.02,
+          "Z": 3450
         }
       }
     ]
@@ -4981,7 +4983,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 300.01,
           "Y": 0,
           "Z": 0
         },
@@ -4998,7 +5000,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 299.99,
           "Y": 600,
           "Z": 0
         },
@@ -5015,8 +5017,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -1500,
+          "X": 1499.98,
+          "Y": -1500.01,
           "Z": 600
         },
         "Rotation": {
@@ -5032,7 +5034,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 899.98,
           "Y": 900,
           "Z": 300
         },
@@ -5049,7 +5051,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 300.01,
           "Y": -900,
           "Z": 300
         },
@@ -5083,7 +5085,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1500.02,
           "Y": 900,
           "Z": 300
         },
@@ -5100,7 +5102,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1200.01,
           "Y": 0,
           "Z": 300
         },
@@ -5117,7 +5119,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 899.98,
           "Y": 0,
           "Z": 300
         },
@@ -5134,7 +5136,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
+          "X": 600.01,
           "Y": -300,
           "Z": 300
         },
@@ -5151,7 +5153,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 899.99,
           "Y": -900,
           "Z": 300
         },
@@ -5168,7 +5170,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2999.99,
+          "X": 3000.02,
           "Y": 600,
           "Z": 900
         },
@@ -5185,8 +5187,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2399.99,
-          "Y": 600,
+          "X": 2399.98,
+          "Y": 600.01,
           "Z": 900
         },
         "Rotation": {
@@ -5202,8 +5204,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 300,
+          "X": 2699.98,
+          "Y": 300.01,
           "Z": 900
         },
         "Rotation": {
@@ -5219,7 +5221,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2999.99,
+          "X": 2999.98,
           "Y": 0,
           "Z": 900
         },
@@ -5253,7 +5255,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2699.99,
+          "X": 2700,
           "Y": -300,
           "Z": 900
         },
@@ -5270,7 +5272,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3299.99,
+          "X": 3300,
           "Y": 0,
           "Z": 900
         },
@@ -5287,7 +5289,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2100.01,
           "Y": -1500,
           "Z": 600
         },
@@ -5304,8 +5306,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -900,
+          "X": 1500.02,
+          "Y": -900.01,
           "Z": 600
         },
         "Rotation": {
@@ -5321,7 +5323,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
+          "X": 1499.98,
           "Y": -600,
           "Z": 600
         },
@@ -5338,7 +5340,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
+          "X": 1199.98,
           "Y": -1200,
           "Z": 600
         },
@@ -5355,7 +5357,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
+          "X": 1799.99,
           "Y": -1500,
           "Z": 600
         },
@@ -5389,7 +5391,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 300.02,
           "Y": 900,
           "Z": 0
         },
@@ -5406,8 +5408,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 900,
+          "X": 600.03,
+          "Y": 899.99,
           "Z": 0
         },
         "Rotation": {
@@ -5423,7 +5425,51 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 750,
+          "X": 1950.01,
+          "Y": 300,
+          "Z": 750
+        },
+        "Rotation": {
+          "X": 97.12,
+          "Y": 90,
+          "Z": 7.13
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2100.01,
+          "Y": 300.03,
+          "Z": 750
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1950.02,
+          "Y": -300,
+          "Z": 750
+        },
+        "Rotation": {
+          "X": 75.96,
+          "Y": 90,
+          "Z": -14.04
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2100.02,
+          "Y": -300,
+          "Z": 750
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 749.98,
           "Y": 900,
           "Z": 150
         },
@@ -5437,7 +5483,7 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 900,
+          "X": 899.98,
           "Y": 900,
           "Z": 150
         }
@@ -5446,7 +5492,7 @@
         "GridShape": "Vertical",
         "Position": {
           "X": 1050,
-          "Y": -900,
+          "Y": -900.01,
           "Z": 450
         },
         "Rotation": {
@@ -5460,94 +5506,28 @@
         },
         "AttachedGridCenter": {
           "X": 1200,
-          "Y": -900,
+          "Y": -900.01,
           "Z": 450
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 3450.07,
-          "Y": 0,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": -180,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 3600.07,
-          "Y": 0,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1950,
-          "Y": 300,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": -53.13,
-          "Y": 90,
-          "Z": -143.13
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 2100,
-          "Y": 300,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1950,
-          "Y": -300,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": 104.04,
-          "Y": 90,
-          "Z": 14.04
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 2100,
-          "Y": -300,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1950,
+          "X": 1950.02,
           "Y": 600,
           "Z": 750
         },
         "Rotation": {
-          "X": -90,
+          "X": -63.43,
           "Y": -90,
-          "Z": 0
+          "Z": -26.57
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2100,
+          "X": 2100.02,
           "Y": 600,
           "Z": 750
         }
@@ -5555,21 +5535,21 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1950,
+          "X": 1949.98,
           "Y": 0,
           "Z": 750
         },
         "Rotation": {
-          "X": 82.87,
+          "X": 75.96,
           "Y": 90,
-          "Z": -7.13
+          "Z": -14.04
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2100,
+          "X": 2099.98,
           "Y": 0,
           "Z": 750
         }
@@ -5753,9 +5733,128 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -600,
-          "Z": 300
+          "X": 2700.02,
+          "Y": 1200.02,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2699.99,
+          "Y": -300.01,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2699.98,
+          "Y": -900.02,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2700,
+          "Y": -1200,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3300.01,
+          "Y": -299.99,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3299.98,
+          "Y": -600.02,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3300,
+          "Y": -900,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3300.02,
+          "Y": -1199.98,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -5770,26 +5869,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 900,
-          "Y": -600,
-          "Z": 300
+          "X": 3299.98,
+          "Y": -0.01,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -5804,8 +5886,229 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
-          "Y": -300,
+          "X": 3600.02,
+          "Y": 0.01,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2400.01,
+          "Y": 300,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2699.99,
+          "Y": 300,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3300.01,
+          "Y": 300.01,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "SingleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3600,
+          "Y": -1200,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "SingleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2400.01,
+          "Y": 1500.01,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2099.98,
+          "Y": 1499.98,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2700,
+          "Y": 1500,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2100,
+          "Y": 1200,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1800,
+          "Y": 1500,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1800.01,
+          "Y": 1200.02,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1499.99,
+          "Y": 599.98,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1799.99,
+          "Y": 299.98,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500.04,
+          "Y": 300.06,
           "Z": 300
         },
         "Rotation": {
@@ -5822,7 +6125,177 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1500,
+          "Y": -300,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900.02,
+          "Y": -299.98,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
           "Y": -600,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1200,
+          "Y": -299.98,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1199.99,
+          "Y": -600.02,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2400.01,
+          "Y": 900.02,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500,
+          "Y": 900.01,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2399.99,
+          "Y": 599.98,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300.01,
+          "Y": -300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 299.99,
+          "Y": -0.01,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": -1200.01,
           "Z": 300
         },
         "Rotation": {
@@ -5838,144 +6311,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 600,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 1200,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 1500,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 1200,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 1500,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 1200,
+          "X": 2399.99,
+          "Y": 1199.99,
           "Z": 600
         },
         "Rotation": {
@@ -5991,196 +6328,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": 1500,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 900,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2700,
-          "Y": -300,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2700,
-          "Y": 1200,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2700,
-          "Y": 1500,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2700,
-          "Y": -900,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2700,
-          "Y": -1200,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
+          "X": 599.99,
+          "Y": -900.02,
           "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": -300,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": -600,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": -900,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": -1200,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": 0,
-          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -6188,50 +6338,33 @@
           "Z": -90
         },
         "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
+          "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3600,
-          "Y": 0,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
+          "X": 600.02,
+          "Y": -599.99,
           "Z": 0
         },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 900,
-          "Z": 600
-        },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": 180
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": 300,
-          "Z": 600
+          "X": 600,
+          "Y": -1199.99,
+          "Z": 0
         },
         "Rotation": {
           "X": 0,
@@ -6246,48 +6379,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 300,
-          "Z": 900
+          "X": 2100.01,
+          "Y": 300.02,
+          "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 600,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 3300,
-          "Y": 300,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "SingleLinkGrid",
@@ -6297,59 +6396,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3600,
-          "Y": -1200,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "SingleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": -300,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": 0,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 900,
-          "Y": -1200,
+          "X": 1500.01,
+          "Y": -599.98,
           "Z": 300
         },
         "Rotation": {
@@ -6363,144 +6411,10 @@
         }
       },
       {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": -900,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": -600,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": -1200,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "SingleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
-          "Y": 750,
-          "Z": 450
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1500,
-          "Y": 900,
-          "Z": 450
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 3750,
-          "Y": 0,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 3900,
-          "Y": 0,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2550,
-          "Y": 300,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 2700,
-          "Y": 300,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 750,
-          "Y": -1200,
+          "X": 750.02,
+          "Y": -1199.97,
           "Z": 150
         },
         "Rotation": {
@@ -6513,16 +6427,60 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 900,
-          "Y": -1200,
+          "X": 900.02,
+          "Y": -1199.97,
           "Z": 150
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 3750,
+          "X": 3749.98,
+          "Y": -0.01,
+          "Z": 1050
+        },
+        "Rotation": {
+          "X": 0,
           "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 3899.98,
+          "Y": -0.01,
+          "Z": 1050
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 2550.02,
+          "Y": 300.02,
+          "Z": 750
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2700.02,
+          "Y": 300.02,
+          "Z": 750
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 3749.98,
+          "Y": -0.01,
           "Z": 1350
         },
         "Rotation": {
@@ -6535,9 +6493,31 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 3900,
-          "Y": 0,
+          "X": 3899.98,
+          "Y": -0.01,
           "Z": 1350
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1499.99,
+          "Y": 749.99,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1499.99,
+          "Y": 899.99,
+          "Z": 450
         }
       }
     ]
@@ -6548,9 +6528,9 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2400,
-          "Y": 600,
-          "Z": 1200
+          "X": 1500,
+          "Y": 1800.02,
+          "Z": 2400
         },
         "Rotation": {
           "X": 0,
@@ -6574,8 +6554,8 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2100,
-          "Y": 900,
+          "X": 2099.99,
+          "Y": 900.02,
           "Z": 1500
         },
         "Rotation": {
@@ -6587,8 +6567,8 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2400,
-          "Y": 600,
+          "X": 2399.99,
+          "Y": 600.02,
           "Z": 1500
         },
         "Rotation": {
@@ -6614,7 +6594,7 @@
         "RoleType": "HeatFusionEnemy",
         "Position": {
           "X": 2100,
-          "Y": 2100,
+          "Y": 2099.97,
           "Z": 2400
         },
         "Rotation": {
@@ -6626,8 +6606,21 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2100,
-          "Y": 1800,
+          "X": 2399.99,
+          "Y": 600.02,
+          "Z": 1200
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 2099.99,
+          "Y": 1800.01,
           "Z": 2400
         },
         "Rotation": {
@@ -6639,21 +6632,8 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1500,
-          "Y": 1800,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 1800,
-          "Y": 3000,
+          "X": 1799.99,
+          "Y": 3000.01,
           "Z": 2700
         },
         "Rotation": {
@@ -6663,10 +6643,23 @@
         }
       },
       {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 1200.02,
+          "Y": 2699.93,
+          "Z": 2700
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
         "RoleType": "DiffractionEnemy",
         "Position": {
-          "X": 600,
-          "Y": 300,
+          "X": 599.99,
+          "Y": 300.02,
           "Z": 300
         },
         "Rotation": {
@@ -6678,27 +6671,27 @@
       {
         "RoleType": "DiffractionEnemy",
         "Position": {
-          "X": 1800,
-          "Y": 900,
-          "Z": 1500
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        }
-      },
-      {
-        "RoleType": "DiffractionEnemy",
-        "Position": {
-          "X": 1200,
-          "Y": 3300,
+          "X": 1199.99,
+          "Y": 3299.97,
           "Z": 2700
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
           "Z": 0
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 1800,
+          "Y": 899.99,
+          "Z": 1500
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
         }
       },
       {
@@ -6719,17 +6712,17 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 0,
-          "Y": 300,
-          "Z": 0
+          "X": 2100,
+          "Y": 900.01,
+          "Z": 1500
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": -180
         },
         "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -6753,14 +6746,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 900,
+          "X": 300.04,
+          "Y": 299.99,
           "Z": 0
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 90
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -6788,7 +6781,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 900,
-          "Y": 900,
+          "Y": 900.02,
           "Z": 300
         },
         "Rotation": {
@@ -6805,7 +6798,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1200,
-          "Y": 900,
+          "Y": 899.99,
           "Z": 300
         },
         "Rotation": {
@@ -6822,7 +6815,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1200,
-          "Y": 300,
+          "Y": 300.01,
           "Z": 300
         },
         "Rotation": {
@@ -6839,7 +6832,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 900,
-          "Y": 300,
+          "Y": 299.98,
           "Z": 300
         },
         "Rotation": {
@@ -6856,7 +6849,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 600,
-          "Y": 300,
+          "Y": 300.01,
           "Z": 300
         },
         "Rotation": {
@@ -6873,7 +6866,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 600,
-          "Y": 600,
+          "Y": 599.97,
           "Z": 300
         },
         "Rotation": {
@@ -6890,7 +6883,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 600,
-          "Y": 0,
+          "Y": -0.01,
           "Z": 300
         },
         "Rotation": {
@@ -6906,42 +6899,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 0,
-          "Z": 1200
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 2700,
-          "Z": 2700
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 3300,
+          "X": 1799.99,
+          "Y": 3300.03,
           "Z": 2700
         },
         "Rotation": {
@@ -6975,7 +6934,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1800,
-          "Y": 600,
+          "Y": 600.02,
           "Z": 1500
         },
         "Rotation": {
@@ -6992,7 +6951,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1800,
-          "Y": 900,
+          "Y": 899.98,
           "Z": 1500
         },
         "Rotation": {
@@ -7008,8 +6967,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": 300,
+          "X": 2100.01,
+          "Y": 299.97,
           "Z": 1500
         },
         "Rotation": {
@@ -7026,7 +6985,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2100,
-          "Y": 600,
+          "Y": 599.99,
           "Z": 1500
         },
         "Rotation": {
@@ -7043,7 +7002,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2400,
-          "Y": 900,
+          "Y": 899.98,
           "Z": 1500
         },
         "Rotation": {
@@ -7076,128 +7035,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": 600,
+          "X": 2399.95,
+          "Y": 1200.06,
           "Z": 1500
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 900,
-          "Z": 1500
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 2100,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 2100,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 1800,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 1800,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 2100,
-          "Z": 2400
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1200,
-          "Y": 2400,
-          "Z": 2700
         },
         "Rotation": {
           "X": 0,
@@ -7212,8 +7052,127 @@
       {
         "GridShape": "Horizontal",
         "Position": {
+          "X": 0,
+          "Y": 300.02,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2100.01,
+          "Y": 2099.97,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500.01,
+          "Y": 2099.97,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500,
+          "Y": 1800.01,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2099.99,
+          "Y": 1800.02,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2400,
+          "Y": 2100,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
           "X": 1200,
-          "Y": 2700,
+          "Y": 2400.03,
+          "Z": 2700
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1200,
+          "Y": 2699.98,
           "Z": 2700
         },
         "Rotation": {
@@ -7229,17 +7188,17 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 2400,
-          "Z": 2700
+          "X": 1800.01,
+          "Y": 2100.07,
+          "Z": 2400
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 0
+          "Z": -180
         },
         "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -7247,7 +7206,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1800,
-          "Y": 2400,
+          "Y": 2400.03,
           "Z": 2700
         },
         "Rotation": {
@@ -7264,7 +7223,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1800,
-          "Y": 3000,
+          "Y": 3000.01,
           "Z": 2700
         },
         "Rotation": {
@@ -7298,7 +7257,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2100,
-          "Y": 3000,
+          "Y": 2999.97,
           "Z": 2700
         },
         "Rotation": {
@@ -7331,8 +7290,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 3300,
+          "X": 1199.99,
+          "Y": 3300.02,
           "Z": 2700
         },
         "Rotation": {
@@ -7349,7 +7308,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1200,
-          "Y": 2100,
+          "Y": 2100.01,
           "Z": 2400
         },
         "Rotation": {
@@ -7359,29 +7318,46 @@
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1800.04,
+          "Y": 1800.05,
+          "Z": 2400
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 450,
-          "Y": 900,
-          "Z": 150
+          "X": 1200,
+          "Y": 2250.02,
+          "Z": 2550
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 0
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 600,
-          "Y": 900,
-          "Z": 150
+          "X": 1200,
+          "Y": 2400.02,
+          "Z": 2550
         }
       },
       {
@@ -7409,8 +7385,8 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1200,
-          "Y": 3450,
+          "X": 1200.01,
+          "Y": 3449.98,
           "Z": 2850
         },
         "Rotation": {
@@ -7423,17 +7399,17 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 3600,
+          "X": 1200.01,
+          "Y": 3599.98,
           "Z": 2850
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1200,
-          "Y": 2250,
-          "Z": 2550
+          "X": 300.01,
+          "Y": 749.95,
+          "Z": 150
         },
         "Rotation": {
           "X": 0,
@@ -7445,9 +7421,9 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 2400,
-          "Z": 2550
+          "X": 300.01,
+          "Y": 899.95,
+          "Z": 150
         }
       }
     ]
@@ -7458,84 +7434,119 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2700,
-          "Y": 900,
-          "Z": 1200
+          "X": 1199.94,
+          "Y": -599.9,
+          "Z": 900
         },
         "Rotation": {
-          "Z": -180
+          "X": 0,
+          "Y": 0,
+          "Z": -90
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 600,
+          "X": 599.99,
           "Y": 0,
           "Z": 300
         },
         "Rotation": {
+          "X": 0,
+          "Y": 0,
           "Z": -90
         }
       },
       {
-        "RoleType": "DiffractionEnemy",
+        "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1200,
-          "Y": 300,
+          "X": 2699.99,
+          "Y": 900.02,
+          "Z": 1200
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 1499.92,
+          "Y": 600.12,
           "Z": 900
         },
         "Rotation": {
+          "X": 0,
+          "Y": 0,
           "Z": 90
         }
       },
       {
         "RoleType": "DiffractionEnemy",
         "Position": {
+          "X": 2099.98,
+          "Y": 900,
+          "Z": 1200
+        },
+        "Rotation": {
           "X": 0,
-          "Y": 900,
-          "Z": 300
-        },
-        "Rotation": {}
-      },
-      {
-        "RoleType": "DiffractionEnemy",
-        "Position": {
-          "X": 2100,
           "Y": 0,
-          "Z": 1200
-        },
-        "Rotation": {}
-      },
-      {
-        "RoleType": "DiffractionEnemy",
-        "Position": {
-          "X": 3300,
-          "Y": 0,
-          "Z": 1200
-        },
-        "Rotation": {
-          "Z": -180
-        }
-      },
-      {
-        "RoleType": "DiffractionEnemy",
-        "Position": {
-          "X": 2100,
-          "Y": 900,
-          "Z": 1200
-        },
-        "Rotation": {
           "Z": -90
         }
       },
       {
         "RoleType": "DiffractionEnemy",
         "Position": {
-          "X": 1199.9899999999998,
-          "Y": -900,
+          "X": 1499.96,
+          "Y": 0.04,
           "Z": 900
         },
-        "Rotation": {}
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 3299.99,
+          "Y": 0.01,
+          "Z": 1200
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 2100,
+          "Y": 0,
+          "Z": 1200
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 0,
+          "Y": 900.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
       },
       {
         "RoleType": "AircraftSoldiers",
@@ -7544,100 +7555,19 @@
           "Y": 0,
           "Z": 0
         },
-        "Rotation": {}
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
       }
     ],
     "GridDatas": [
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": -900,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": -300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": 0,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": 300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": 900,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": 900,
+          "X": 300.01,
+          "Y": 899.99,
           "Z": 300
         },
         "Rotation": {
@@ -7654,7 +7584,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 0,
-          "Y": 900,
+          "Y": 900.01,
           "Z": 300
         },
         "Rotation": {
@@ -7670,8 +7600,93 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
+          "X": 299.99,
+          "Y": -899.98,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
           "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 599.99,
+          "Y": -299.98,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 599.99,
+          "Y": 0.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": 299.99,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 599.99,
+          "Y": 900.02,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900.01,
+          "Y": -0.01,
           "Z": 300
         },
         "Rotation": {
@@ -7687,14 +7702,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
-          "Y": 300,
+          "X": 899.99,
+          "Y": 300.02,
           "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -7704,8 +7719,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 900,
-          "Y": 1200,
+          "X": 900.01,
+          "Y": 1199.98,
           "Z": 900
         },
         "Rotation": {
@@ -7721,8 +7736,25 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 600,
+          "X": 1499.97,
+          "Y": 0.05,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1199.99,
+          "Y": 900.02,
           "Z": 900
         },
         "Rotation": {
@@ -7738,25 +7770,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 900,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 600,
+          "X": 1499.99,
+          "Y": 600.02,
           "Z": 900
         },
         "Rotation": {
@@ -7779,7 +7794,7 @@
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "ThreeLinkGrid",
@@ -7789,14 +7804,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 900,
+          "X": 1800.01,
+          "Y": 899.98,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -7806,8 +7821,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 300,
+          "X": 1500.01,
+          "Y": 299.98,
           "Z": 900
         },
         "Rotation": {
@@ -7816,21 +7831,21 @@
           "Z": 90
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 0,
+          "X": 300.01,
+          "Y": -0.02,
           "Z": 0
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -7840,8 +7855,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": -300,
+          "X": 300.01,
+          "Y": -300.01,
           "Z": 0
         },
         "Rotation": {
@@ -7857,14 +7872,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -600,
+          "X": 1499.99,
+          "Y": -599.98,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -7874,8 +7889,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -600,
+          "X": 1200.01,
+          "Y": -600.01,
           "Z": 900
         },
         "Rotation": {
@@ -7891,8 +7906,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -900,
+          "X": 1199.99,
+          "Y": -899.99,
           "Z": 900
         },
         "Rotation": {
@@ -7909,7 +7924,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 1500,
-          "Y": -900,
+          "Y": -900.02,
           "Z": 900
         },
         "Rotation": {
@@ -7925,14 +7940,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
+          "X": 600,
           "Y": -900,
-          "Z": 0
+          "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 0
+          "Z": 90
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -7960,7 +7975,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2700,
-          "Y": 0,
+          "Y": 0.01,
           "Z": 1200
         },
         "Rotation": {
@@ -7977,7 +7992,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2400,
-          "Y": -300,
+          "Y": -300.01,
           "Z": 1200
         },
         "Rotation": {
@@ -7993,8 +8008,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": -300,
+          "X": 2699.99,
+          "Y": -299.98,
           "Z": 1200
         },
         "Rotation": {
@@ -8011,7 +8026,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2100,
-          "Y": 300,
+          "Y": 299.99,
           "Z": 1200
         },
         "Rotation": {
@@ -8028,7 +8043,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 2400,
-          "Y": 300,
+          "Y": 300.02,
           "Z": 1200
         },
         "Rotation": {
@@ -8044,8 +8059,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 300,
+          "X": 2700.01,
+          "Y": 299.99,
           "Z": 1200
         },
         "Rotation": {
@@ -8061,8 +8076,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": 600,
+          "X": 2099.99,
+          "Y": 600.02,
           "Z": 1200
         },
         "Rotation": {
@@ -8078,8 +8093,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 600,
+          "X": 2700.01,
+          "Y": 599.98,
           "Z": 1200
         },
         "Rotation": {
@@ -8095,8 +8110,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": 900,
+          "X": 2099.99,
+          "Y": 900.01,
           "Z": 1200
         },
         "Rotation": {
@@ -8112,8 +8127,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": 900,
+          "X": 2400.01,
+          "Y": 899.99,
           "Z": 1200
         },
         "Rotation": {
@@ -8129,8 +8144,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 900,
+          "X": 2699.99,
+          "Y": 900.02,
           "Z": 1200
         },
         "Rotation": {
@@ -8147,7 +8162,7 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 3000,
-          "Y": 0,
+          "Y": -0.02,
           "Z": 1200
         },
         "Rotation": {
@@ -8164,13 +8179,13 @@
         "GridShape": "Horizontal",
         "Position": {
           "X": 3300,
-          "Y": 0,
+          "Y": 0.02,
           "Z": 1200
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "SingleLinkGrid",
@@ -8197,8 +8212,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": -900,
+          "X": 2399.99,
+          "Y": -899.98,
           "Z": 900
         },
         "Rotation": {
@@ -8214,8 +8229,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": -600,
+          "X": 299.99,
+          "Y": -599.99,
           "Z": 0
         },
         "Rotation": {
@@ -8238,10 +8253,10 @@
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": 0
         },
         "GridLinkData": {
-          "GridLinkType": "SingleLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -8249,7 +8264,7 @@
         "GridShape": "Vertical",
         "Position": {
           "X": 2400,
-          "Y": -750,
+          "Y": -749.98,
           "Z": 1050
         },
         "Rotation": {
@@ -8263,7 +8278,7 @@
         },
         "AttachedGridCenter": {
           "X": 2400,
-          "Y": -600,
+          "Y": -599.98,
           "Z": 1050
         }
       },
@@ -8271,7 +8286,7 @@
         "GridShape": "Vertical",
         "Position": {
           "X": 2700,
-          "Y": 1050,
+          "Y": 1050.01,
           "Z": 1350
         },
         "Rotation": {
@@ -8285,7 +8300,7 @@
         },
         "AttachedGridCenter": {
           "X": 2700,
-          "Y": 1200,
+          "Y": 1200.01,
           "Z": 1350
         }
       },
@@ -8293,7 +8308,7 @@
         "GridShape": "Vertical",
         "Position": {
           "X": 450,
-          "Y": -900,
+          "Y": -900.01,
           "Z": 150
         },
         "Rotation": {
@@ -8307,7 +8322,7 @@
         },
         "AttachedGridCenter": {
           "X": 600,
-          "Y": -900,
+          "Y": -900.01,
           "Z": 150
         }
       }
@@ -8319,21 +8334,21 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 300,
-          "Y": 600,
-          "Z": 0
+          "X": 1499.92,
+          "Y": 899.96,
+          "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": -90
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1800,
-          "Y": 900,
+          "X": 3000.01,
+          "Y": 1800.01,
           "Z": 900
         },
         "Rotation": {
@@ -8345,48 +8360,9 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1500,
-          "Y": 0,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 3000,
-          "Y": 2100,
-          "Z": 1200
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 3000,
-          "Y": 1800,
-          "Z": 1200
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 3000,
+          "X": 2999.96,
           "Y": 1500,
-          "Z": 1200
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -8397,8 +8373,21 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 600,
+          "X": 2399.96,
+          "Y": 2099.97,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
           "Y": 0,
+          "Z": -90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 600.01,
+          "Y": 300.02,
           "Z": 300
         },
         "Rotation": {
@@ -8410,9 +8399,9 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 600,
-          "Y": 300,
-          "Z": 300
+          "X": 1799.96,
+          "Y": 1499.98,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -8438,17 +8427,17 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 0,
-          "Z": 0
+          "X": 2399.97,
+          "Y": 1800,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": -90
         },
         "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
+          "GridLinkType": "ThreeLinkGrid",
           "RotationType": "Front"
         }
       },
@@ -8472,25 +8461,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 600,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 600,
-          "Y": 0,
+          "X": 599.98,
+          "Y": -0.01,
           "Z": 300
         },
         "Rotation": {
@@ -8506,8 +8478,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 900,
+          "X": 599.99,
+          "Y": 600,
           "Z": 300
         },
         "Rotation": {
@@ -8523,8 +8495,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 300,
+          "X": 600.01,
+          "Y": 300.01,
           "Z": 300
         },
         "Rotation": {
@@ -8540,14 +8512,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 600,
-          "Y": 600,
-          "Z": 300
+          "X": 1200.03,
+          "Y": 600.03,
+          "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": -90
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
@@ -8557,31 +8529,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -300,
+          "X": 1199.99,
+          "Y": 300.01,
           "Z": 600
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1200,
-          "Y": 0,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
+          "Z": -90
         },
         "GridLinkData": {
           "GridLinkType": "ThreeLinkGrid",
@@ -8591,9 +8546,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 1200,
-          "Z": 600
+          "X": 1800.08,
+          "Y": 1200.06,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -8608,8 +8563,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 300,
+          "X": 1199.96,
+          "Y": 899.98,
           "Z": 600
         },
         "Rotation": {
@@ -8625,43 +8580,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 0,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1200,
-          "Y": 900,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1500,
-          "Y": 900,
-          "Z": 600
+          "X": 900.01,
+          "Y": -0.02,
+          "Z": 300
         },
         "Rotation": {
           "X": 0,
@@ -8676,42 +8597,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 300,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 1800,
-          "Y": 600,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 2700,
+          "X": 2399.98,
+          "Y": 2699.98,
           "Z": 1200
         },
         "Rotation": {
@@ -8744,8 +8631,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2400,
-          "Y": 3000,
+          "X": 2400.01,
+          "Y": 3000.01,
           "Z": 2700
         },
         "Rotation": {
@@ -8761,8 +8648,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1800,
+          "X": 1800.02,
+          "Y": 1500,
           "Z": 900
         },
         "Rotation": {
@@ -8778,9 +8665,26 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1500,
+          "X": 2100.03,
+          "Y": 1500.02,
           "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300.02,
+          "Y": 0.01,
+          "Z": 0
         },
         "Rotation": {
           "X": 0,
@@ -8795,82 +8699,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 1800,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2100,
-          "Y": 1800,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
           "X": 2400,
-          "Y": 2100,
+          "Y": 1499.99,
           "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
           "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 1500,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 1800,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
         },
         "GridLinkData": {
           "GridLinkType": "AllLinkGrid",
@@ -8880,42 +8716,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 1800,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 900,
-          "Z": 900
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 0
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 2400,
-          "Y": 1200,
+          "X": 2399.91,
+          "Y": 2099.93,
           "Z": 900
         },
         "Rotation": {
@@ -8931,7 +8733,41 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2399.98,
+          "Y": 899.98,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2400.01,
+          "Y": 1200.01,
+          "Z": 900
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2699.99,
           "Y": 900,
           "Z": 900
         },
@@ -8948,14 +8784,14 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 1500,
-          "Z": 600
+          "X": 1800.1,
+          "Y": 900.07,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 90
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -8965,9 +8801,9 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 3000,
-          "Y": 1800,
-          "Z": 1200
+          "X": 2700.01,
+          "Y": 1500.01,
+          "Z": 900
         },
         "Rotation": {
           "X": 0,
@@ -8975,59 +8811,15 @@
           "Z": 90
         },
         "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 450,
-          "Y": 900,
-          "Z": 150
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 600,
-          "Y": 900,
-          "Z": 150
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 1650,
-          "Y": 900,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1800,
-          "Y": 900,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2400,
-          "Y": 2550,
+          "X": 2399.99,
+          "Y": 2549.99,
           "Z": 1050
         },
         "Rotation": {
@@ -9040,16 +8832,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
-          "Y": 2700,
+          "X": 2399.99,
+          "Y": 2699.99,
           "Z": 1050
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1050,
-          "Y": 0,
+          "X": 1049.98,
+          "Y": -0.01,
           "Z": 450
         },
         "Rotation": {
@@ -9062,60 +8854,16 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 0,
+          "X": 1199.98,
+          "Y": -0.01,
           "Z": 450
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1350,
-          "Y": 1500,
-          "Z": 750
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 1500,
-          "Y": 1500,
-          "Z": 750
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2850,
-          "Y": 1800,
-          "Z": 1050
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        },
-        "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
-          "RotationType": "Front"
-        },
-        "AttachedGridCenter": {
-          "X": 3000,
-          "Y": 1800,
-          "Z": 1050
-        }
-      },
-      {
-        "GridShape": "Vertical",
-        "Position": {
-          "X": 2400,
-          "Y": 2850,
+          "X": 2400.02,
+          "Y": 2850.01,
           "Z": 1350
         },
         "Rotation": {
@@ -9128,38 +8876,82 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
-          "Y": 3000,
+          "X": 2400.02,
+          "Y": 3000.01,
           "Z": 1350
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1200,
-          "Y": 2850,
+          "X": 1200.01,
+          "Y": 2850.01,
           "Z": 1650
         },
         "Rotation": {
-          "X": -14.85,
+          "X": -19.47,
           "Y": -90,
-          "Z": 14.85
+          "Z": 19.47
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1200,
-          "Y": 3000,
+          "X": 1200.01,
+          "Y": 3000.01,
           "Z": 1650
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 1500,
-          "Y": 2850,
+          "X": 2400.02,
+          "Y": 2850.01,
+          "Z": 2550
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2400.02,
+          "Y": 3000.01,
+          "Z": 2550
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 450.02,
+          "Y": 600.01,
+          "Z": 150
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 600.02,
+          "Y": 600.01,
+          "Z": 150
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1499.99,
+          "Y": 2849.96,
           "Z": 1950
         },
         "Rotation": {
@@ -9172,17 +8964,17 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 1500,
-          "Y": 3000,
+          "X": 1499.99,
+          "Y": 2999.96,
           "Z": 1950
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2400,
+          "X": 2100.01,
           "Y": 2850,
-          "Z": 2550
+          "Z": 1350
         },
         "Rotation": {
           "X": 0,
@@ -9190,13 +8982,35 @@
           "Z": 0
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
+          "X": 2100.01,
           "Y": 3000,
-          "Z": 2550
+          "Z": 1350
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1800,
+          "Y": 2849.98,
+          "Z": 1350
+        },
+        "Rotation": {
+          "X": -13.26,
+          "Y": -90,
+          "Z": 13.26
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1800,
+          "Y": 2999.98,
+          "Z": 1350
         }
       }
     ]
@@ -9207,35 +9021,9 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1200,
-          "Y": 900,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 1800,
-          "Y": 1200,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
-        }
-      },
-      {
-        "RoleType": "HeatFusionEnemy",
-        "Position": {
-          "X": 1800,
-          "Y": -900,
-          "Z": 300
+          "X": -0.02,
+          "Y": 1200.02,
+          "Z": 0
         },
         "Rotation": {
           "X": 0,
@@ -9246,8 +9034,21 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2100,
-          "Y": -300,
+          "X": 1799.98,
+          "Y": -899.99,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 2099.98,
+          "Y": -299.98,
           "Z": 300
         },
         "Rotation": {
@@ -9272,47 +9073,60 @@
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 1200,
-          "Y": -900,
+          "X": 1199.99,
+          "Y": 900.01,
           "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 0
+          "Z": 180
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 2100,
-          "Y": -600,
+          "X": 1800.02,
+          "Y": 1199.99,
           "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": -90
         }
       },
       {
         "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 0,
-          "Y": 1200,
-          "Z": 0
+          "X": 2100.01,
+          "Y": -600.01,
+          "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 0
+          "Z": 180
         }
       },
       {
-        "RoleType": "DiffractionEnemy",
+        "RoleType": "HeatFusionEnemy",
         "Position": {
-          "X": 3300.01,
+          "X": 2400.06,
+          "Y": 899.93,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
           "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 2700.03,
+          "Y": 599.93,
           "Z": 300
         },
         "Rotation": {
@@ -9324,8 +9138,21 @@
       {
         "RoleType": "DiffractionEnemy",
         "Position": {
-          "X": 1800.01,
+          "X": 1800.02,
           "Y": 300,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 3300.19,
+          "Y": 599.92,
           "Z": 300
         },
         "Rotation": {
@@ -9352,25 +9179,25 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": -600,
-          "Z": 300
+          "X": 300.01,
+          "Y": -0.01,
+          "Z": 0
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 90
         },
         "GridLinkData": {
-          "GridLinkType": "AllLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": 0,
+          "X": 1199.98,
+          "Y": 0.01,
           "Z": 300
         },
         "Rotation": {
@@ -9386,8 +9213,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1500,
-          "Y": 1200,
+          "X": 1500.01,
+          "Y": 1199.99,
           "Z": 600
         },
         "Rotation": {
@@ -9410,7 +9237,7 @@
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -180
+          "Z": 180
         },
         "GridLinkData": {
           "GridLinkType": "RightAngleLinkGrid",
@@ -9420,7 +9247,7 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
+          "X": 2700.01,
           "Y": 600,
           "Z": 300
         },
@@ -9437,8 +9264,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2700,
-          "Y": 300,
+          "X": 2699.98,
+          "Y": 300.01,
           "Z": 300
         },
         "Rotation": {
@@ -9454,8 +9281,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": 300,
+          "X": 1800.02,
+          "Y": 299.99,
           "Z": 300
         },
         "Rotation": {
@@ -9488,8 +9315,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1200,
-          "Y": -900,
+          "X": 1200.03,
+          "Y": -900.02,
           "Z": 300
         },
         "Rotation": {
@@ -9505,8 +9332,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 1800,
-          "Y": -900,
+          "X": 1799.99,
+          "Y": -899.99,
           "Z": 300
         },
         "Rotation": {
@@ -9522,76 +9349,76 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
+          "X": 2100.02,
+          "Y": -600.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 2099.99,
+          "Y": -299.99,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 899.99,
+          "Y": 1800.01,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1500,
           "Y": -600,
           "Z": 300
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": 90
+          "Z": -90
         },
         "GridLinkData": {
-          "GridLinkType": "ThreeLinkGrid",
+          "GridLinkType": "AllLinkGrid",
           "RotationType": "Front"
         }
       },
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 2100,
-          "Y": -300,
-          "Z": 300
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 900,
-          "Y": 1800,
-          "Z": 600
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -180
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": 0,
-          "Z": 0
-        },
-        "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": 90
-        },
-        "GridLinkData": {
-          "GridLinkType": "RightAngleLinkGrid",
-          "RotationType": "Front"
-        }
-      },
-      {
-        "GridShape": "Horizontal",
-        "Position": {
-          "X": 300,
-          "Y": 300,
+          "X": 299.98,
+          "Y": 300.01,
           "Z": 0
         },
         "Rotation": {
@@ -9607,8 +9434,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 0,
-          "Y": 600,
+          "X": -0.01,
+          "Y": 600.01,
           "Z": 0
         },
         "Rotation": {
@@ -9624,8 +9451,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 0,
-          "Y": 900,
+          "X": 0.01,
+          "Y": 899.99,
           "Z": 0
         },
         "Rotation": {
@@ -9641,8 +9468,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 0,
-          "Y": 1200,
+          "X": -0.02,
+          "Y": 1200.02,
           "Z": 0
         },
         "Rotation": {
@@ -9658,8 +9485,8 @@
       {
         "GridShape": "Horizontal",
         "Position": {
-          "X": 300,
-          "Y": 1800,
+          "X": 299.97,
+          "Y": 1800.01,
           "Z": 0
         },
         "Rotation": {
@@ -9690,10 +9517,115 @@
         }
       },
       {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 3299.97,
+          "Y": -0.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
         "GridShape": "Vertical",
         "Position": {
-          "X": 3300,
-          "Y": 1050,
+          "X": 2250.03,
+          "Y": -900.02,
+          "Z": 750
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2400.03,
+          "Y": -900.02,
+          "Z": 750
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 450.01,
+          "Y": 1800,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 600.01,
+          "Y": 1800,
+          "Z": 450
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 450.01,
+          "Y": 1800,
+          "Z": 150
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 600.01,
+          "Y": 1800,
+          "Z": 150
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 2250.03,
+          "Y": -900.02,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 2400.03,
+          "Y": -900.02,
+          "Z": 450
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 3300.02,
+          "Y": 1049.98,
           "Z": 450
         },
         "Rotation": {
@@ -9706,7 +9638,1077 @@
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 3300,
+          "X": 3300.02,
+          "Y": 1199.98,
+          "Z": 450
+        }
+      }
+    ]
+  },
+  {
+    "Key": "FM-ZLara10-01",
+    "RoleList": [
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 0.01,
+          "Y": 1799.99,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 600.01,
+          "Y": 2099.99,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "DiffractionEnemy",
+        "Position": {
+          "X": 300,
+          "Y": 599.99,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        }
+      },
+      {
+        "RoleType": "AircraftSoldiers",
+        "Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      }
+    ],
+    "GridDatas": [
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300.01,
+          "Y": 1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600.01,
+          "Y": 2100,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "SingleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": 300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "SingleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0.01,
+          "Y": 1500,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0.01,
+          "Y": 1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": -150,
+          "Y": 900,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": -300,
+          "Y": 900,
+          "Z": 450
+        }
+      }
+    ]
+  },
+  {
+    "Key": "FM-ZLara10-02",
+    "RoleList": [
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 600.02,
+          "Y": -1500,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 600,
+          "Y": -300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 900,
+          "Y": -600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 300,
+          "Y": -600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 900,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 600,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 0.04,
+          "Y": -1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 300.02,
+          "Y": -1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 0.01,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        }
+      },
+      {
+        "RoleType": "AircraftSoldiers",
+        "Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        }
+      }
+    ],
+    "GridDatas": [
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": -600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": -600,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1200,
+          "Y": -600.01,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": -300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "AllLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300.01,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600.01,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900.01,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 1200.01,
+          "Y": -900.01,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0,
+          "Y": -1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": -1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "AllLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": -1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0.01,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": -1500,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "AllLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 600,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": -1800,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": -299.99,
+          "Y": -900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": -300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": -299.99,
+          "Y": -1050,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": -299.99,
+          "Y": -1200,
+          "Z": 450
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": 1200,
+          "Y": -750.01,
+          "Z": 150
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": 1200,
+          "Y": -900.01,
+          "Z": 150
+        }
+      }
+    ]
+  },
+  {
+    "Key": "FM-ZLara10-03",
+    "RoleList": [
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 0,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 600,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 300,
+          "Y": 1500,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "HeatFusionEnemy",
+        "Position": {
+          "X": 300,
+          "Y": 300,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      },
+      {
+        "RoleType": "AircraftSoldiers",
+        "Position": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        }
+      }
+    ],
+    "GridDatas": [
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": 1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 180
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 600,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 899.99,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": -0.01,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0,
+          "Y": 600,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": 600,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 0,
+          "Y": 1200,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": -300.01,
+          "Y": 900,
+          "Z": 300
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "RightAngleLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": -900,
+          "Y": 1200,
+          "Z": 600
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": -90
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 300,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Horizontal",
+        "Position": {
+          "X": 900,
+          "Y": 0,
+          "Z": 0
+        },
+        "Rotation": {
+          "X": 0,
+          "Y": 0,
+          "Z": 0
+        },
+        "GridLinkData": {
+          "GridLinkType": "ThreeLinkGrid",
+          "RotationType": "Front"
+        }
+      },
+      {
+        "GridShape": "Vertical",
+        "Position": {
+          "X": -600.01,
+          "Y": 1050,
+          "Z": 450
+        },
+        "Rotation": {
+          "X": 13.26,
+          "Y": -90,
+          "Z": -13.26
+        },
+        "GridLinkData": {
+          "GridLinkType": "StraightLinkGrid",
+          "RotationType": "Front"
+        },
+        "AttachedGridCenter": {
+          "X": -600.01,
           "Y": 1200,
           "Z": 450
         }
@@ -9714,89 +10716,89 @@
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2250,
-          "Y": -900,
+          "X": -900.01,
+          "Y": 1050,
           "Z": 450
         },
         "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
+          "X": 13.26,
+          "Y": -90,
+          "Z": -13.26
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
-          "Y": -900,
+          "X": -900.01,
+          "Y": 1200,
           "Z": 450
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 2250,
-          "Y": -900,
+          "X": -900,
+          "Y": 1350,
           "Z": 750
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 0
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 2400,
-          "Y": -900,
+          "X": -900,
+          "Y": 1500,
           "Z": 750
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 450,
-          "Y": 1800,
-          "Z": 450
+          "X": 900,
+          "Y": 450,
+          "Z": 150
         },
         "Rotation": {
           "X": 0,
           "Y": 0,
-          "Z": -90
+          "Z": 0
         },
         "GridLinkData": {
           "GridLinkType": "StraightLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 600,
-          "Y": 1800,
-          "Z": 450
+          "X": 900,
+          "Y": 600,
+          "Z": 150
         }
       },
       {
         "GridShape": "Vertical",
         "Position": {
-          "X": 450,
-          "Y": 1800,
-          "Z": 150
+          "X": -300.01,
+          "Y": 1050,
+          "Z": 450
         },
         "Rotation": {
-          "X": 0,
-          "Y": 0,
-          "Z": -90
+          "X": 13.26,
+          "Y": 90,
+          "Z": 13.26
         },
         "GridLinkData": {
-          "GridLinkType": "StraightLinkGrid",
+          "GridLinkType": "RightAngleLinkGrid",
           "RotationType": "Front"
         },
         "AttachedGridCenter": {
-          "X": 600,
-          "Y": 1800,
-          "Z": 150
+          "X": -300.01,
+          "Y": 1200,
+          "Z": 450
         }
       }
     ]

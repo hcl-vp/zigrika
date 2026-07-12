@@ -165,8 +165,7 @@
               "15",
               "1"
             ],
-            "CaseProgressId": 1010005,
-            "EndingId": 101002
+            "EndingId": 101001
           }
         ]
       }
@@ -197,7 +196,7 @@
             ],
             "ResultDesc": [
               "剧情_真假漂泊者",
-              "22",
+              "38",
               "1"
             ],
             "NextQuestionId": 750049
@@ -218,7 +217,7 @@
             ],
             "ResultDesc": [
               "剧情_真假漂泊者",
-              "25",
+              "39",
               "1"
             ],
             "NextQuestionId": 750050
@@ -239,7 +238,7 @@
             ],
             "ResultDesc": [
               "剧情_真假漂泊者",
-              "28",
+              "40",
               "1"
             ],
             "CaseProgressId": 1040004,
@@ -330,12 +329,11 @@
     "Id": 750006,
     "Remark": "poi任务推理玩法",
     "ClueIds": [
-      10301,
-      10302,
-      10303,
-      10304,
-      10305,
-      10103
+      19901,
+      19902,
+      19903,
+      19905,
+      19906
     ],
     "QuestionConfigs": [
       {
@@ -343,7 +341,7 @@
         "ResultConfigs": [
           {
             "ClueCombination": [
-              10301
+              19901
             ],
             "ReasoningStateId": [
               "剧情_通缉poi主线",
@@ -359,7 +357,7 @@
           },
           {
             "ClueCombination": [
-              10301
+              19906
             ],
             "ReasoningStateId": [
               "剧情_通缉poi主线",
@@ -380,7 +378,23 @@
         "ResultConfigs": [
           {
             "ClueCombination": [
-              10301
+              19905
+            ],
+            "ReasoningStateId": [
+              "剧情_通缉poi主线",
+              "17",
+              "1"
+            ],
+            "ResultDesc": [
+              "剧情_通缉poi主线",
+              "47",
+              "1"
+            ],
+            "NextQuestionId": 750045
+          },
+          {
+            "ClueCombination": [
+              19906
             ],
             "ReasoningStateId": [
               "剧情_通缉poi主线",
@@ -401,7 +415,7 @@
         "ResultConfigs": [
           {
             "ClueCombination": [
-              10301
+              19903
             ],
             "ReasoningStateId": [
               "剧情_通缉poi主线",
@@ -413,7 +427,7 @@
               "48",
               "1"
             ],
-            "EndingId": 103001
+            "EndingId": 199001
           }
         ]
       }
@@ -494,7 +508,58 @@
           },
           {
             "ClueCombination": [
-              10505
+              10504
+            ],
+            "ReasoningStateId": [
+              "剧情_通缉假商人",
+              "28",
+              "1"
+            ],
+            "ResultDesc": [
+              "剧情_通缉假商人",
+              "52",
+              "1"
+            ],
+            "EndingId": 105002,
+            "CaseProgressId": 1050004
+          },
+          {
+            "ClueCombination": [
+              10503
+            ],
+            "ReasoningStateId": [
+              "剧情_通缉假商人",
+              "28",
+              "1"
+            ],
+            "ResultDesc": [
+              "剧情_通缉假商人",
+              "52",
+              "1"
+            ],
+            "EndingId": 105002,
+            "CaseProgressId": 1050004
+          },
+          {
+            "ClueCombination": [
+              10502
+            ],
+            "ReasoningStateId": [
+              "剧情_通缉假商人",
+              "28",
+              "1"
+            ],
+            "ResultDesc": [
+              "剧情_通缉假商人",
+              "52",
+              "1"
+            ],
+            "EndingId": 105002,
+            "CaseProgressId": 1050004
+          },
+          {
+            "ClueCombination": [
+              10501
             ],
             "ReasoningStateId": [
               "剧情_通缉假商人",

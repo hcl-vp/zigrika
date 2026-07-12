@@ -34,6 +34,9 @@
     },
     "MorphModelIdMap": {
       "100038": 100041
+    },
+    "LinkEnergyButtonMap": {
+      "1558": "UiItem_FightLinkMCLightning"
     }
   }
 ]

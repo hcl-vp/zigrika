@@ -750,7 +750,7 @@
     "BodyCameraSettingsNameMap": {},
     "DefaultCameraBlendName": "",
     "UiCameraBlendNameMap": {
-      "VisionEquipmentView": "1001"
+      "VisionEquipmentView": "1100"
     },
     "UiCameraDelayTime": 0
   },
@@ -2708,6 +2708,19 @@
     "Id": 1183,
     "ViewName": "LordGymThird5StartCamera",
     "DefaultUiCameraSettingsName": "1152",
+    "IsCheckSpecialState": false,
+    "SpecialStateCameraSettingName": "1002",
+    "bPlayLoadingCameraAnimation": true,
+    "BodyTargetType": 0,
+    "BodyCameraSettingsNameMap": {},
+    "DefaultCameraBlendName": "",
+    "UiCameraBlendNameMap": {},
+    "UiCameraDelayTime": 0
+  },
+  {
+    "Id": 1184,
+    "ViewName": "DollGrabDeliveryView",
+    "DefaultUiCameraSettingsName": "1159",
     "IsCheckSpecialState": false,
     "SpecialStateCameraSettingName": "1002",
     "bPlayLoadingCameraAnimation": true,

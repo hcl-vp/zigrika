@@ -1,8 +1,6 @@
 [
   {
     "Id": 1,
-    "PartnerId": 1,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_47_UI.T_IconRoleHeadCircle256_47_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_47_UI.T_IconRoleHead175_47_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_47_UI.T_IconRoleHead80_47_UI",
@@ -11,12 +9,14 @@
     "Desc": "",
     "PeopleNum": 4,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2001,
+      2004,
+      2005
+    ]
   },
   {
     "Id": 2,
-    "PartnerId": 2,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_48_UI.T_IconRoleHead175_48_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_48_UI.T_IconRoleHead80_48_UI",
@@ -25,12 +25,12 @@
     "Desc": "SMC_Sign_2",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 3,
-    "PartnerId": 3,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_66_UI.T_IconRoleHeadCircle256_66_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_66_UI.T_IconRoleHead175_66_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_66_UI.T_IconRoleHead80_66_UI",
@@ -39,12 +39,12 @@
     "Desc": "SMC_Sign_3",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 4,
-    "PartnerId": 4,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_7_UI.T_IconRoleHeadCircle256_7_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_7_UI.T_IconRoleHead175_7_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_7_UI.T_IconRoleHead80_7_UI",
@@ -53,12 +53,13 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2005,
+      2001
+    ]
   },
   {
     "Id": 5,
-    "PartnerId": 5,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_30_UI.T_IconRoleHeadCircle256_30_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_30_UI.T_IconRoleHead175_30_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_30_UI.T_IconRoleHead80_30_UI",
@@ -67,12 +68,13 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2005,
+      2001
+    ]
   },
   {
     "Id": 6,
-    "PartnerId": 6,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2027_UI.T_IconRoleHeadCircle256_2027_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2027_UI.T_IconRoleHead175_2027_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2027_UI.T_IconRoleHead80_2027_UI",
@@ -81,12 +83,12 @@
     "Desc": "SMC_Sign_6",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 7,
-    "PartnerId": 7,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_60_UI.T_IconRoleHeadCircle256_60_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_60_UI.T_IconRoleHead175_60_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_60_UI.T_IconRoleHead80_60_UI",
@@ -95,12 +97,12 @@
     "Desc": "SMC_Sign_7",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 8,
-    "PartnerId": 8,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_57_UI.T_IconRoleHeadCircle256_57_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_57_UI.T_IconRoleHead175_57_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_57_UI.T_IconRoleHead80_57_UI",
@@ -109,26 +111,27 @@
     "Desc": "SMC_Sign_8",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2005,
+      2001
+    ]
   },
   {
     "Id": 9,
-    "PartnerId": 9,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2004_UI.T_IconRoleHeadCircle256_2004_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2004_UI.T_IconRoleHead175_2004_UI",
-    "IconSmall": "Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
     "Name": "SMC_Name_9",
     "IsGroupChat": false,
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 10,
-    "PartnerId": 10,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2004_UI.T_IconRoleHeadCircle256_2004_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2004_UI.T_IconRoleHead175_2004_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
@@ -137,12 +140,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 11,
-    "PartnerId": 11,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -151,12 +154,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 13,
-    "PartnerId": 13,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2011_UI.T_IconRoleHeadCircle256_2011_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2011_UI.T_IconRoleHead175_2011_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2011_UI.T_IconRoleHead80_2011_UI",
@@ -165,12 +168,12 @@
     "Desc": "SMC_Sign_13",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 14,
-    "PartnerId": 14,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2017_UI.T_IconRoleHeadCircle256_2017_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2017_UI.T_IconRoleHead175_2017_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2017_UI.T_IconRoleHead80_2017_UI",
@@ -179,12 +182,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 15,
-    "PartnerId": 15,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -193,12 +196,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2001
+    ]
   },
   {
     "Id": 16,
-    "PartnerId": 16,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2031_UI.T_IconRoleHeadCircle256_2031_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
@@ -207,12 +210,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2001
+    ]
   },
   {
     "Id": 18,
-    "PartnerId": 18,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_61_UI.T_IconRoleHeadCircle256_61_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_61_UI.T_IconRoleHead175_61_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_61_UI.T_IconRoleHead80_61_UI",
@@ -221,12 +224,12 @@
     "Desc": "SMC_Sign_18",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 19,
-    "PartnerId": 19,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -235,12 +238,12 @@
     "Desc": "SMC_Sign_19",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 20,
-    "PartnerId": 20,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -249,12 +252,12 @@
     "Desc": "SMC_Sign_20",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 22,
-    "PartnerId": 22,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_1_UI.T_IconRoleHead175_1_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_1_UI.T_IconRoleHead80_1_UI",
@@ -263,12 +266,12 @@
     "Desc": "SMC_Sign_22",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 23,
-    "PartnerId": 23,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2006_UI.T_IconRoleHeadCircle256_2006_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2006_UI.T_IconRoleHead175_2006_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2006_UI.T_IconRoleHead80_2006_UI",
@@ -277,12 +280,12 @@
     "Desc": "SMC_Sign_23",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 24,
-    "PartnerId": 24,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2024_UI.T_IconRoleHeadCircle256_2024_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2024_UI.T_IconRoleHead175_2024_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2024_UI.T_IconRoleHead80_2024_UI",
@@ -291,12 +294,12 @@
     "Desc": "SMC_Sign_24",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 25,
-    "PartnerId": 25,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2021_UI.T_IconRoleHeadCircle256_2021_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2021_UI.T_IconRoleHead175_2021_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2021_UI.T_IconRoleHead80_2021_UI",
@@ -305,12 +308,12 @@
     "Desc": "SMC_Sign_25",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 26,
-    "PartnerId": 26,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2015_UI.T_IconRoleHeadCircle256_2015_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2015_UI.T_IconRoleHead175_2015_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2015_UI.T_IconRoleHead80_2015_UI",
@@ -319,12 +322,12 @@
     "Desc": "SMC_Sign_026",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 27,
-    "PartnerId": 27,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2014_UI.T_IconRoleHeadCircle256_2014_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2014_UI.T_IconRoleHead175_2014_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2014_UI.T_IconRoleHead80_2014_UI",
@@ -333,12 +336,12 @@
     "Desc": "SMC_Sign_27",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 28,
-    "PartnerId": 28,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2019_UI.T_IconRoleHeadCircle256_2019_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2019_UI.T_IconRoleHead175_2019_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2019_UI.T_IconRoleHead80_2019_UI",
@@ -347,12 +350,12 @@
     "Desc": "SMC_Sign_028",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 29,
-    "PartnerId": 29,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2004_UI.T_IconRoleHeadCircle256_2004_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2004_UI.T_IconRoleHead175_2004_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
@@ -361,12 +364,12 @@
     "Desc": "SMC_Sign_26",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 30,
-    "PartnerId": 30,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2030_UI.T_IconRoleHeadCircle256_2030_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2030_UI.T_IconRoleHead175_2030_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2030_UI.T_IconRoleHead80_2030_UI",
@@ -375,12 +378,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 31,
-    "PartnerId": 31,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2001_UI.T_IconRoleHeadCircle256_2001_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2001_UI.T_IconRoleHead175_2001_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2001_UI.T_IconRoleHead80_2001_UI",
@@ -389,12 +392,12 @@
     "Desc": "",
     "PeopleNum": 3,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 32,
-    "PartnerId": 32,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2003_UI.T_IconRoleHeadCircle256_2003_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2003_UI.T_IconRoleHead175_2003_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2003_UI.T_IconRoleHead80_2003_UI",
@@ -403,12 +406,12 @@
     "Desc": "SMC_Sign_28",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 33,
-    "PartnerId": 33,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -417,12 +420,12 @@
     "Desc": "SMC_Sign_33",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 34,
-    "PartnerId": 34,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2030_UI.T_IconRoleHeadCircle256_2030_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2030_UI.T_IconRoleHead175_2030_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2030_UI.T_IconRoleHead80_2030_UI",
@@ -431,12 +434,12 @@
     "Desc": "SMC_Sign_30",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 35,
-    "PartnerId": 35,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2022_UI.T_IconRoleHeadCircle256_2022_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2022_UI.T_IconRoleHead175_2022_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2022_UI.T_IconRoleHead80_2022_UI",
@@ -445,12 +448,12 @@
     "Desc": "SMC_Sign_35",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 36,
-    "PartnerId": 36,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2053_UI.T_IconRoleHeadCircle256_2053_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2053_UI.T_IconRoleHead175_2053_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2053_UI.T_IconRoleHead80_2053_UI",
@@ -459,12 +462,12 @@
     "Desc": "SMC_Sign_36",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2001
+    ]
   },
   {
     "Id": 37,
-    "PartnerId": 37,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2030_UI.T_IconRoleHeadCircle256_2030_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2030_UI.T_IconRoleHead175_2030_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2030_UI.T_IconRoleHead80_2030_UI",
@@ -473,12 +476,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 38,
-    "PartnerId": 38,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2007_UI.T_IconRoleHeadCircle256_2007_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2007_UI.T_IconRoleHead175_2007_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2007_UI.T_IconRoleHead80_2007_UI",
@@ -487,12 +490,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 39,
-    "PartnerId": 39,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2005_UI.T_IconRoleHeadCircle256_2005_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2005_UI.T_IconRoleHead175_2005_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2005_UI.T_IconRoleHead80_2005_UI",
@@ -501,12 +504,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2003
+    ]
   },
   {
     "Id": 40,
-    "PartnerId": 40,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_11_UI.T_IconRoleHeadCircle256_11_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_11_UI.T_IconRoleHead175_11_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_11_UI.T_IconRoleHead80_11_UI",
@@ -515,12 +518,12 @@
     "Desc": "SMC_Sign_40",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 41,
-    "PartnerId": 41,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2001_UI.T_IconRoleHeadCircle256_2001_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2001_UI.T_IconRoleHead175_2001_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2001_UI.T_IconRoleHead80_2001_UI",
@@ -529,12 +532,12 @@
     "Desc": "",
     "PeopleNum": 3,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 42,
-    "PartnerId": 42,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_28_UI.T_IconRoleHeadCircle256_28_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_28_UI.T_IconRoleHead175_28_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_28_UI.T_IconRoleHead80_28_UI",
@@ -543,12 +546,12 @@
     "Desc": "SMC_Sign_42",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2003
+    ]
   },
   {
     "Id": 43,
-    "PartnerId": 43,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2008_UI.T_IconRoleHeadCircle256_2008_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2008_UI.T_IconRoleHead175_2008_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2008_UI.T_IconRoleHead80_2008_UI",
@@ -557,12 +560,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 44,
-    "PartnerId": 44,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2009_UI.T_IconRoleHeadCircle256_2009_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2009_UI.T_IconRoleHead175_2009_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2009_UI.T_IconRoleHead80_2009_UI",
@@ -571,12 +574,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 45,
-    "PartnerId": 45,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_32_UI.T_IconRoleHeadCircle256_32_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_32_UI.T_IconRoleHead175_32_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_32_UI.T_IconRoleHead80_32_UI",
@@ -585,12 +588,12 @@
     "Desc": "SMC_Sign_45",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 46,
-    "PartnerId": 46,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_34_UI.T_IconRoleHeadCircle256_34_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_34_UI.T_IconRoleHead175_34_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_34_UI.T_IconRoleHead80_34_UI",
@@ -599,12 +602,12 @@
     "Desc": "SMC_Sign_46",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 47,
-    "PartnerId": 47,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_40_UI.T_IconRoleHeadCircle256_40_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_40_UI.T_IconRoleHead175_40_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_40_UI.T_IconRoleHead80_40_UI",
@@ -613,12 +616,12 @@
     "Desc": "SMC_Sign_47",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 48,
-    "PartnerId": 48,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_38_UI.T_IconRoleHeadCircle256_38_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_38_UI.T_IconRoleHead175_38_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_38_UI.T_IconRoleHead80_38_UI",
@@ -627,12 +630,12 @@
     "Desc": "SMC_Sign_48",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 49,
-    "PartnerId": 49,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_51_UI.T_IconRoleHeadCircle256_51_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_51_UI.T_IconRoleHead175_51_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_51_UI.T_IconRoleHead80_51_UI",
@@ -641,12 +644,12 @@
     "Desc": "SMC_Sign_49",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 50,
-    "PartnerId": 50,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_55_UI.T_IconRoleHeadCircle256_55_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_55_UI.T_IconRoleHead175_55_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_55_UI.T_IconRoleHead80_55_UI",
@@ -655,12 +658,12 @@
     "Desc": "SMC_Sign_50",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 51,
-    "PartnerId": 51,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2008_UI.T_IconRoleHeadCircle256_2008_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2008_UI.T_IconRoleHead175_2008_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2008_UI.T_IconRoleHead80_2008_UI",
@@ -669,12 +672,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2004
+    "RegionFilterList": [
+      2004
+    ]
   },
   {
     "Id": 52,
-    "PartnerId": 52,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_56_UI.T_IconRoleHeadCircle256_56_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_56_UI.T_IconRoleHead175_56_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_56_UI.T_IconRoleHead80_56_UI",
@@ -683,12 +686,12 @@
     "Desc": "SMC_Sign_52",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 53,
-    "PartnerId": 53,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2030_UI.T_IconRoleHeadCircle256_2030_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2030_UI.T_IconRoleHead175_2030_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2030_UI.T_IconRoleHead80_2030_UI",
@@ -697,12 +700,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 54,
-    "PartnerId": 54,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2028_UI.T_IconRoleHeadCircle256_2028_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2028_UI.T_IconRoleHead175_2028_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2028_UI.T_IconRoleHead80_2028_UI",
@@ -711,12 +714,12 @@
     "Desc": "SMC_Sign_54",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 55,
-    "PartnerId": 55,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_12_UI.T_IconRoleHead175_12_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_12_UI.T_IconRoleHead80_12_UI",
@@ -725,12 +728,12 @@
     "Desc": "SMC_Sign_55",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2003
+    "RegionFilterList": [
+      2003
+    ]
   },
   {
     "Id": 56,
-    "PartnerId": 56,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_30_UI.T_IconRoleHeadCircle256_30_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_30_UI.T_IconRoleHead175_30_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_30_UI.T_IconRoleHead80_30_UI",
@@ -739,12 +742,13 @@
     "Desc": "SMC_Sign_56",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002,
+      2001
+    ]
   },
   {
     "Id": 57,
-    "PartnerId": 57,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2023_UI.T_IconRoleHeadCircle256_2023_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2023_UI.T_IconRoleHead175_2023_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2023_UI.T_IconRoleHead80_2023_UI",
@@ -753,12 +757,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 59,
-    "PartnerId": 59,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2025_UI.T_IconRoleHeadCircle256_2025_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2025_UI.T_IconRoleHead175_2025_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2025_UI.T_IconRoleHead80_2025_UI",
@@ -767,12 +771,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 60,
-    "PartnerId": 60,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2026_UI.T_IconRoleHeadCircle256_2026_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2026_UI.T_IconRoleHead175_2026_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2026_UI.T_IconRoleHead80_2026_UI",
@@ -781,12 +785,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 61,
-    "PartnerId": 61,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_54_UI.T_IconRoleHeadCircle256_54_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_54_UI.T_IconRoleHead175_54_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_54_UI.T_IconRoleHead80_54_UI",
@@ -795,12 +799,12 @@
     "Desc": "SMC_Sign_61",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 62,
-    "PartnerId": 62,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_65_UI.T_IconRoleHeadCircle256_65_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_65_UI.T_IconRoleHead175_65_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_65_UI.T_IconRoleHead80_65_UI",
@@ -809,12 +813,12 @@
     "Desc": "SMC_Sign_62",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 63,
-    "PartnerId": 63,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2031_UI.T_IconRoleHeadCircle256_2031_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
@@ -823,12 +827,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 64,
-    "PartnerId": 64,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2004_UI.T_IconRoleHeadCircle256_2004_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2004_UI.T_IconRoleHead175_2004_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
@@ -837,12 +841,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 65,
-    "PartnerId": 65,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -851,12 +855,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 66,
-    "PartnerId": 66,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2016_UI.T_IconRoleHeadCircle256_2016_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2016_UI.T_IconRoleHead175_2016_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2016_UI.T_IconRoleHead80_2016_UI",
@@ -865,12 +869,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 67,
-    "PartnerId": 67,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2043_UI.T_IconRoleHeadCircle256_2043_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2043_UI.T_IconRoleHead175_2043_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2043_UI.T_IconRoleHead80_2043_UI",
@@ -879,12 +883,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 68,
-    "PartnerId": 68,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2031_UI.T_IconRoleHeadCircle256_2031_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
@@ -893,12 +897,12 @@
     "Desc": "",
     "PeopleNum": 3,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 70,
-    "PartnerId": 70,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2004_UI.T_IconRoleHeadCircle256_2004_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2004_UI.T_IconRoleHead175_2004_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2004_UI.T_IconRoleHead80_2004_UI",
@@ -907,12 +911,12 @@
     "Desc": "",
     "PeopleNum": 31,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 71,
-    "PartnerId": 71,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_67_UI.T_IconRoleHeadCircle256_67_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_67_UI.T_IconRoleHead175_67_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_67_UI.T_IconRoleHead80_67_UI",
@@ -921,12 +925,12 @@
     "Desc": "SMC_Sign_71",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 73,
-    "PartnerId": 73,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2031_UI.T_IconRoleHeadCircle256_2031_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
@@ -935,26 +939,26 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 74,
-    "PartnerId": 74,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_1_UI.T_IconRoleHeadCircle256_1_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_1_UI.T_IconRoleHead175_1_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_1_UI.T_IconRoleHead80_1_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_53_UI.T_IconRoleHeadCircle256_53_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_53_UI.T_IconRoleHead175_53_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_53_UI.T_IconRoleHead80_53_UI",
     "Name": "SMC_Name_84",
     "IsGroupChat": false,
-    "Desc": "",
+    "Desc": "SMC_Sign_74",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 75,
-    "PartnerId": 75,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2039_UI.T_IconRoleHeadCircle256_2039_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2039_UI.T_IconRoleHead175_2039_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2039_UI.T_IconRoleHead80_2039_UI",
@@ -963,12 +967,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 76,
-    "PartnerId": 76,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2040_UI.T_IconRoleHeadCircle256_2040_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2040_UI.T_IconRoleHead175_2040_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2040_UI.T_IconRoleHead80_2040_UI",
@@ -977,12 +981,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 77,
-    "PartnerId": 77,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2033_UI.T_IconRoleHeadCircle256_2033_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2033_UI.T_IconRoleHead175_2033_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2033_UI.T_IconRoleHead80_2033_UI",
@@ -991,12 +995,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 78,
-    "PartnerId": 78,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2042_UI.T_IconRoleHeadCircle256_2042_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2042_UI.T_IconRoleHead175_2042_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2042_UI.T_IconRoleHead80_2042_UI",
@@ -1005,12 +1009,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 79,
-    "PartnerId": 79,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2041_UI.T_IconRoleHeadCircle256_2041_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2041_UI.T_IconRoleHead175_2041_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2041_UI.T_IconRoleHead80_2041_UI",
@@ -1019,26 +1023,28 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 80,
-    "PartnerId": 80,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2031_UI.T_IconRoleHeadCircle256_2031_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2031_UI.T_IconRoleHead175_2031_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2031_UI.T_IconRoleHead80_2031_UI",
     "Name": "SMC_Name_80",
-    "IsGroupChat": false,
+    "IsGroupChat": true,
     "Desc": "",
     "PeopleNum": 3,
     "TypeFilter": 1001,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2005,
+      2001,
+      2003
+    ]
   },
   {
     "Id": 81,
-    "PartnerId": 81,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1047,12 +1053,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2001
+    "RegionFilterList": [
+      2001
+    ]
   },
   {
     "Id": 83,
-    "PartnerId": 83,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2045_UI.T_IconRoleHeadCircle256_2045_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2045_UI.T_IconRoleHead175_2045_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2045_UI.T_IconRoleHead80_2045_UI",
@@ -1061,26 +1067,26 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 84,
-    "PartnerId": 84,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2045_UI.T_IconRoleHeadCircle256_2045_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2045_UI.T_IconRoleHead175_2045_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2045_UI.T_IconRoleHead80_2045_UI",
-    "Name": "SMC_Name_82",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2054_UI.T_IconRoleHeadCircle256_2054_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2054_UI.T_IconRoleHead175_2054_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2054_UI.T_IconRoleHead80_2054_UI",
+    "Name": "SMC_Name_85",
     "IsGroupChat": false,
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 85,
-    "PartnerId": 85,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1089,96 +1095,96 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2005
+    "RegionFilterList": [
+      2005
+    ]
   },
   {
     "Id": 86,
-    "PartnerId": 86,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
-    "Name": "SMC_Name_83",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2061_UI.T_IconRoleHeadCircle256_2061_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2061_UI.T_IconRoleHead175_2061_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2061_UI.T_IconRoleHead80_2061_UI",
+    "Name": "SMC_Name_112",
     "IsGroupChat": false,
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 87,
-    "PartnerId": 87,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2045_UI.T_IconRoleHeadCircle256_2045_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2045_UI.T_IconRoleHead175_2045_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2045_UI.T_IconRoleHead80_2045_UI",
-    "Name": "SMC_Name_82",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2056_UI.T_IconRoleHeadCircle256_2056_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2056_UI.T_IconRoleHead175_2056_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2056_UI.T_IconRoleHead80_2056_UI",
+    "Name": "SMC_Name_87",
     "IsGroupChat": false,
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 89,
-    "PartnerId": 89,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2030_UI.T_IconRoleHeadCircle256_2030_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2030_UI.T_IconRoleHead175_2030_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2030_UI.T_IconRoleHead80_2030_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2056_UI.T_IconRoleHeadCircle256_2056_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2056_UI.T_IconRoleHead175_2056_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2056_UI.T_IconRoleHead80_2056_UI",
     "Name": "SMC_Name_89",
     "IsGroupChat": false,
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 90,
-    "PartnerId": 90,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2039_UI.T_IconRoleHeadCircle256_2039_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2039_UI.T_IconRoleHead175_2039_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2039_UI.T_IconRoleHead80_2039_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2065_UI.T_IconRoleHeadCircle256_2065_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2065_UI.T_IconRoleHead175_2065_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2065_UI.T_IconRoleHead80_2065_UI",
     "Name": "SMC_Name_90",
     "IsGroupChat": false,
     "Desc": "SMC_Sign_90",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 91,
-    "PartnerId": 91,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2039_UI.T_IconRoleHeadCircle256_2039_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2039_UI.T_IconRoleHead175_2039_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2039_UI.T_IconRoleHead80_2039_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2062_UI.T_IconRoleHeadCircle256_2062_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2062_UI.T_IconRoleHead175_2062_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2062_UI.T_IconRoleHead80_2062_UI",
     "Name": "SMC_Name_91",
     "IsGroupChat": false,
     "Desc": "SMC_Sign_91",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 92,
-    "PartnerId": 92,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2007_UI.T_IconRoleHeadCircle256_2007_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2007_UI.T_IconRoleHead175_2007_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2007_UI.T_IconRoleHead80_2007_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2001_UI.T_IconRoleHeadCircle256_2001_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2001_UI.T_IconRoleHead175_2001_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2001_UI.T_IconRoleHead80_2001_UI",
     "Name": "SMC_Name_92",
     "IsGroupChat": true,
     "Desc": "",
     "PeopleNum": 4,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 93,
-    "PartnerId": 93,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_6_UI.T_IconRoleHeadCircle256_6_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_6_UI.T_IconRoleHead175_6_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_6_UI.T_IconRoleHead80_6_UI",
@@ -1187,26 +1193,26 @@
     "Desc": "SMC_Sign_93",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 94,
-    "PartnerId": 94,
-    "ImageId": 0,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2039_UI.T_IconRoleHeadCircle256_2039_UI",
-    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2039_UI.T_IconRoleHead175_2039_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2039_UI.T_IconRoleHead80_2039_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2059_UI.T_IconRoleHeadCircle256_2059_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2059_UI.T_IconRoleHead175_2059_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2059_UI.T_IconRoleHead80_2059_UI",
     "Name": "SMC_Name_94",
     "IsGroupChat": false,
     "Desc": "SMC_Sign_94",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 95,
-    "PartnerId": 95,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1215,12 +1221,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 96,
-    "PartnerId": 96,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_13_UI.T_IconRoleHeadCircle256_13_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_13_UI.T_IconRoleHead175_13_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_13_UI.T_IconRoleHead80_13_UI",
@@ -1229,12 +1235,13 @@
     "Desc": "SMC_Sign_96",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002,
+      2001
+    ]
   },
   {
     "Id": 97,
-    "PartnerId": 97,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1243,12 +1250,12 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 98,
-    "PartnerId": 98,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_10_UI.T_IconRoleHeadCircle256_10_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_10_UI.T_IconRoleHead175_10_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_10_UI.T_IconRoleHead80_10_UI",
@@ -1257,12 +1264,12 @@
     "Desc": "SMC_Sign_98",
     "PeopleNum": 0,
     "TypeFilter": 1001,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 99,
-    "PartnerId": 99,
-    "ImageId": 0,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1271,12 +1278,54 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
   },
   {
     "Id": 100,
-    "PartnerId": 100,
-    "ImageId": 0,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2057_UI.T_IconRoleHeadCircle256_2057_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2057_UI.T_IconRoleHead175_2057_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2057_UI.T_IconRoleHead80_2057_UI",
+    "Name": "SMC_Name_100",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 101,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2007_UI.T_IconRoleHeadCircle256_2007_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2007_UI.T_IconRoleHead175_2007_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2007_UI.T_IconRoleHead80_2007_UI",
+    "Name": "SMC_Name_101",
+    "IsGroupChat": true,
+    "Desc": "",
+    "PeopleNum": 4,
+    "TypeFilter": 1001,
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 102,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2056_UI.T_IconRoleHeadCircle256_2056_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2056_UI.T_IconRoleHead175_2056_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2056_UI.T_IconRoleHead80_2056_UI",
+    "Name": "SMC_Name_102",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 103,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
     "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
     "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
@@ -1285,6 +1334,64 @@
     "Desc": "",
     "PeopleNum": 0,
     "TypeFilter": 1002,
-    "RegionFilter": 2002
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 105,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2002_UI.T_IconRoleHeadCircle256_2002_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2002_UI.T_IconRoleHead175_2002_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2002_UI.T_IconRoleHead80_2002_UI",
+    "Name": "SMC_Name_11",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2001
+    ]
+  },
+  {
+    "Id": 106,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2063_UI.T_IconRoleHeadCircle256_2063_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2063_UI.T_IconRoleHead175_2063_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2063_UI.T_IconRoleHead80_2063_UI",
+    "Name": "SMC_Name_106",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 108,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2067_UI.T_IconRoleHeadCircle256_2067_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2067_UI.T_IconRoleHead175_2067_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2067_UI.T_IconRoleHead80_2067_UI",
+    "Name": "SMC_Name_108",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2002
+    ]
+  },
+  {
+    "Id": 111,
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_2058_UI.T_IconRoleHeadCircle256_2058_UI",
+    "IconMid": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead175/T_IconRoleHead175_2058_UI.T_IconRoleHead175_2058_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHead80/T_IconRoleHead80_2058_UI.T_IconRoleHead80_2058_UI",
+    "Name": "SMC_Name_111",
+    "IsGroupChat": false,
+    "Desc": "",
+    "PeopleNum": 0,
+    "TypeFilter": 1002,
+    "RegionFilterList": [
+      2003
+    ]
   }
 ]

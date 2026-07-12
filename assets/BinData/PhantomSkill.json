@@ -13495,8 +13495,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31090_UI.T_MstSkil_31090_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31090_UI.T_MstSkil_31090_UI"
   },
   {
     "Id": 200136,
@@ -13551,8 +13551,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31091_UI.T_MstSkil_31091_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31091_UI.T_MstSkil_31091_UI"
   },
   {
     "Id": 200137,
@@ -13601,8 +13601,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31092_UI.T_MstSkil_31092_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31092_UI.T_MstSkil_31092_UI"
   },
   {
     "Id": 200138,
@@ -13662,8 +13662,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31093_UI.T_MstSkil_31093_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31093_UI.T_MstSkil_31093_UI"
   },
   {
     "Id": 200139,
@@ -13712,8 +13712,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31094_UI.T_MstSkil_31094_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31094_UI.T_MstSkil_31094_UI"
   },
   {
     "Id": 200140,
@@ -13762,8 +13762,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31095_UI.T_MstSkil_31095_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31095_UI.T_MstSkil_31095_UI"
   },
   {
     "Id": 200141,
@@ -13813,8 +13813,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31096_UI.T_MstSkil_31096_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31096_UI.T_MstSkil_31096_UI"
   },
   {
     "Id": 200142,
@@ -13834,37 +13834,37 @@
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "72.00%",
+          "36.00%",
           "8"
         ]
       },
       {
         "ArrayString": [
-          "86.40%",
+          "43.20%",
           "8"
         ]
       },
       {
         "ArrayString": [
-          "100.80%",
+          "50.40%",
           "8"
         ]
       },
       {
         "ArrayString": [
-          "115.20%",
+          "57.60%",
           "8"
         ]
       },
       {
         "ArrayString": [
-          "129.60%",
+          "64.80%",
           "8"
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31097_UI.T_MstSkil_31097_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31097_UI.T_MstSkil_31097_UI"
   },
   {
     "Id": 200143,
@@ -13913,8 +13913,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31098_UI.T_MstSkil_31098_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31098_UI.T_MstSkil_31098_UI"
   },
   {
     "Id": 200144,
@@ -13969,8 +13969,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31099_UI.T_MstSkil_31099_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31099_UI.T_MstSkil_31099_UI"
   },
   {
     "Id": 200145,
@@ -14019,8 +14019,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31100_UI.T_MstSkil_31100_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31100_UI.T_MstSkil_31100_UI"
   },
   {
     "Id": 200146,
@@ -14069,8 +14069,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31101_UI.T_MstSkil_31101_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31101_UI.T_MstSkil_31101_UI"
   },
   {
     "Id": 200147,
@@ -14119,8 +14119,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31102_UI.T_MstSkil_31102_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_31102_UI.T_MstSkil_31102_UI"
   },
   {
     "Id": 200148,
@@ -14169,8 +14169,8 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_32067_UI.T_MstSkil_32067_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_32067_UI.T_MstSkil_32067_UI"
   },
   {
     "Id": 200149,
@@ -14226,15 +14226,16 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_32068_UI.T_MstSkil_32068_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_32068_UI.T_MstSkil_32068_UI"
   },
   {
     "Id": 280042,
     "PhantomSkillId": 280042,
     "BuffIds": [],
     "SettleIds": [
-      28004201
+      28004201,
+      28004202
     ],
     "BuffEffects": [
       290001002,
@@ -14250,47 +14251,57 @@
     "LevelDescStrArray": [
       {
         "ArrayString": [
-          "2.30%",
+          "5.67%",
+          "0.20%",
           "12.00%",
           "12.00%",
-          "20"
+          "20",
+          "19"
         ]
       },
       {
         "ArrayString": [
-          "2.76%",
+          "6.80%",
+          "0.24%",
           "12.00%",
           "12.00%",
-          "20"
+          "20",
+          "19"
         ]
       },
       {
         "ArrayString": [
-          "3.22%",
+          "7.93%",
+          "0.29%",
           "12.00%",
           "12.00%",
-          "20"
+          "20",
+          "19"
         ]
       },
       {
         "ArrayString": [
-          "3.68%",
+          "9.07%",
+          "0.33%",
           "12.00%",
           "12.00%",
-          "20"
+          "20",
+          "19"
         ]
       },
       {
         "ArrayString": [
-          "4.14%",
+          "10.20%",
+          "0.37%",
           "12.00%",
           "12.00%",
-          "20"
+          "20",
+          "19"
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34030_UI.T_MstSkil_34030_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34030_UI.T_MstSkil_34030_UI"
   },
   {
     "Id": 280043,
@@ -14368,7 +14379,7 @@
         ]
       }
     ],
-    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI",
-    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34020_UI.T_MstSkil_34020_UI"
+    "BattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34031_UI.T_MstSkil_34031_UI",
+    "SpecialBattleViewIcon": "/Game/Aki/UI/UIResources/Common/Image/MstSkill/T_MstSkil_34031_UI.T_MstSkil_34031_UI"
   }
 ]

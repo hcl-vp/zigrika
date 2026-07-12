@@ -5181,16 +5181,16 @@
     "Id": 350000420,
     "Name": "MonsterInfo_350000420_Name",
     "RarityId": 1,
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_SG_31093_UI.T_IconMonsterHead_SG_31093_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_SG_31090_UI.T_IconMonsterHead_SG_31090_UI",
     "BigIcon": "0",
     "Tachine": "/Game/Aki/UI/UIResources/UiSingleTower/Image/T_UiSingleTowerMonster1_UI.T_UiSingleTowerMonster1_UI",
     "ElementIdArray": [
-      4
+      5
     ],
     "MonsterEntityID": "",
     "MonsterPose": "0",
-    "UndiscoveredDes": "MonsterInfo_310000930_UndiscoveredDes",
-    "DiscoveredDes": "MonsterInfo_310000930_DiscoveredDes",
+    "UndiscoveredDes": "MonsterInfo_310000900_UndiscoveredDes",
+    "DiscoveredDes": "MonsterInfo_310000900_DiscoveredDes",
     "PerchId": [
       13
     ]

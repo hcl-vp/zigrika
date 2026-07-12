@@ -9103,8 +9103,7 @@
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
     "BornBuffId": [
-      1610004001,
-      1105001030
+      1610004001
     ],
     "ShareDamage": false,
     "InitVisiable": false,
@@ -9162,7 +9161,7 @@
     "SurvivalTime": 0,
     "InheritLevelType": 0,
     "InheritLevelParam": 0,
-    "AttributeType": 0,
+    "AttributeType": 2,
     "InheritAttributeBaseType": 0,
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
@@ -9246,7 +9245,7 @@
   {
     "Id": 1110001,
     "BlueprintType": "Player053_1",
-    "SurvivalTime": 30,
+    "SurvivalTime": 0,
     "InheritLevelType": 0,
     "InheritLevelParam": 0,
     "AttributeType": 0,
@@ -9254,7 +9253,9 @@
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
-    "BornBuffId": [],
+    "BornBuffId": [
+      1110001038
+    ],
     "ShareDamage": false,
     "InitVisiable": false,
     "BornSelectDamageAttributeTargetBuff": [],
@@ -9390,10 +9391,14 @@
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
-    "BornBuffId": [],
+    "BornBuffId": [
+      8003900001
+    ],
     "ShareDamage": true,
     "InitVisiable": false,
-    "BornSelectDamageAttributeTargetBuff": [],
+    "BornSelectDamageAttributeTargetBuff": [
+      8003900007
+    ],
     "ShowWeaponSubMesh": [],
     "ApplyTriggerRoles": []
   },
@@ -9408,10 +9413,14 @@
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
-    "BornBuffId": [],
+    "BornBuffId": [
+      8003900001
+    ],
     "ShareDamage": true,
     "InitVisiable": false,
-    "BornSelectDamageAttributeTargetBuff": [],
+    "BornSelectDamageAttributeTargetBuff": [
+      8003900007
+    ],
     "ShowWeaponSubMesh": [],
     "ApplyTriggerRoles": []
   },
@@ -9620,7 +9629,7 @@
     "SurvivalTime": 0,
     "InheritLevelType": 0,
     "InheritLevelParam": 0,
-    "AttributeType": 1,
+    "AttributeType": 2,
     "InheritAttributeBaseType": 0,
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
@@ -9907,6 +9916,28 @@
     "ApplyTriggerRoles": []
   },
   {
+    "Id": 280042,
+    "BlueprintType": "VisionBoss044",
+    "SurvivalTime": 15,
+    "InheritLevelType": 2,
+    "InheritLevelParam": 1,
+    "AttributeType": 0,
+    "InheritAttributeBaseType": 0,
+    "InheritSummonerAttribute": {},
+    "UnCalculateBuffAttributes": [],
+    "FollowSummonerAttr": [],
+    "BornBuffId": [
+      1001002004,
+      1101009004,
+      2100000033
+    ],
+    "ShareDamage": false,
+    "InitVisiable": false,
+    "BornSelectDamageAttributeTargetBuff": [],
+    "ShowWeaponSubMesh": [],
+    "ApplyTriggerRoles": []
+  },
+  {
     "Id": 200149,
     "BlueprintType": "Vision200149",
     "SurvivalTime": 15,
@@ -9929,21 +9960,17 @@
     "ApplyTriggerRoles": []
   },
   {
-    "Id": 280042,
-    "BlueprintType": "VisionBoss044",
-    "SurvivalTime": 15,
-    "InheritLevelType": 2,
-    "InheritLevelParam": 1,
+    "Id": 3980067,
+    "BlueprintType": "branch3.5_882_Gameplay16",
+    "SurvivalTime": 0,
+    "InheritLevelType": 0,
+    "InheritLevelParam": 0,
     "AttributeType": 0,
     "InheritAttributeBaseType": 0,
     "InheritSummonerAttribute": {},
     "UnCalculateBuffAttributes": [],
     "FollowSummonerAttr": [],
-    "BornBuffId": [
-      1001002004,
-      1101009004,
-      2100000033
-    ],
+    "BornBuffId": [],
     "ShareDamage": false,
     "InitVisiable": false,
     "BornSelectDamageAttributeTargetBuff": [],
@@ -10031,8 +10058,8 @@
     "ApplyTriggerRoles": []
   },
   {
-    "Id": 3980067,
-    "BlueprintType": "branch3.5_882_Gameplay16",
+    "Id": 3980073,
+    "BlueprintType": "branch3.5_882_Gameplay17",
     "SurvivalTime": 0,
     "InheritLevelType": 0,
     "InheritLevelParam": 0,

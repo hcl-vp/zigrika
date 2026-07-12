@@ -21,7 +21,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 3,
@@ -45,7 +46,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 4,
@@ -76,7 +78,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 5,
@@ -100,7 +103,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 6,
@@ -124,7 +128,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 7,
@@ -154,7 +159,8 @@
     "IsShowRedDot": true,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": true
   },
   {
     "Id": 8,
@@ -178,7 +184,8 @@
     "IsShowRedDot": false,
     "IsLocalStorage": false,
     "Digits": 0,
-    "Unit": "°"
+    "Unit": "°",
+    "IsShowInPS5": true
   },
   {
     "Id": 9,
@@ -202,6 +209,7 @@
     "IsShowRedDot": true,
     "IsLocalStorage": true,
     "Digits": 0,
-    "Unit": ""
+    "Unit": "",
+    "IsShowInPS5": false
   }
 ]

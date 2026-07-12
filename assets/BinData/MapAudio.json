@@ -1666,8 +1666,8 @@
   },
   {
     "Id": 3926,
-    "Name": "2_0_TacticalHorogram",
-    "Event": "map_system_2_0_tacticalhorogram",
+    "Name": "2_0_TacticalHologram",
+    "Event": "map_system_2_0_tacticalhologram",
     "EnterEvent": "",
     "ExitEvent": "",
     "ResetEvent": "",
@@ -1675,8 +1675,80 @@
   },
   {
     "Id": 3927,
-    "Name": "1_0_TacticalHorogram",
-    "Event": "map_system_1_0_tacticalhorogram",
+    "Name": "1_0_TacticalHologram",
+    "Event": "map_system_1_0_tacticalhologram",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 2102,
+    "Name": "InstanceTree_3_4_AdOpen",
+    "Event": "map_system_yadang_fushua",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 2111,
+    "Name": "InstanceTree_TinYuan_Fushua",
+    "Event": "map_main_tinyuan_fushua",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3928,
+    "Name": "3_0_Instance_Hologram_Light",
+    "Event": "",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3929,
+    "Name": "3_0_Instance_Hologram_Light_UI",
+    "Event": "",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3930,
+    "Name": "3_5_Instance_Hologram_Light",
+    "Event": "",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3931,
+    "Name": "3_5_Instance_Hologram_Light_UI",
+    "Event": "",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3932,
+    "Name": "Instance_Mat_Challenge_01_Light",
+    "Event": "",
+    "EnterEvent": "",
+    "ExitEvent": "",
+    "ResetEvent": "",
+    "MusicResetEvent": ""
+  },
+  {
+    "Id": 3933,
+    "Name": "Instance_Mat_Challenge_01_Light_UI",
+    "Event": "",
     "EnterEvent": "",
     "ExitEvent": "",
     "ResetEvent": "",

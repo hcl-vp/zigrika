@@ -7,9 +7,11 @@
     "Icon": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon01.T_CyberSynergyIcon01",
     "TargetType": 0,
     "RamCost": 2,
-    "SelfBuffIds": [],
-    "TargetBuffIds": [
+    "SelfBuffIds": [
       1511500101
+    ],
+    "TargetBuffIds": [
+      1511500111
     ],
     "UsageCount": 1,
     "Duration": 0,
@@ -63,9 +65,11 @@
     "Icon": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon03.T_CyberSynergyIcon03",
     "TargetType": 0,
     "RamCost": 5,
-    "SelfBuffIds": [],
-    "TargetBuffIds": [
+    "SelfBuffIds": [
       1511500104
+    ],
+    "TargetBuffIds": [
+      1511500114
     ],
     "UsageCount": 1,
     "Duration": 0,
@@ -121,7 +125,8 @@
     "SelfBuffIds": [],
     "TargetBuffIds": [
       1511500107,
-      1511500108
+      1511500108,
+      1511500120
     ],
     "UsageCount": 1,
     "Duration": 0,
@@ -244,7 +249,7 @@
   {
     "Id": 15,
     "SkillName": "Skill_10001511_HackSkill04",
-    "SkillDescribe": "Skill_10001511_HackDes04",
+    "SkillDescribe": "Skill_10001511_HackDes15",
     "SkillTag": "QuickHack_SkillType_3",
     "Icon": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon03.T_CyberSynergyIcon03",
     "TargetType": 0,
@@ -299,7 +304,7 @@
   {
     "Id": 18,
     "SkillName": "Skill_10001511_HackSkill04",
-    "SkillDescribe": "Skill_10001511_HackDes04",
+    "SkillDescribe": "Skill_10001511_HackDes15",
     "SkillTag": "QuickHack_SkillType_3",
     "Icon": "/Game/Aki/UI/UIResources/UiLevel/Image/CyberSynergy/CyberSynergyIcon/T_CyberSynergyIcon03.T_CyberSynergyIcon03",
     "TargetType": 0,

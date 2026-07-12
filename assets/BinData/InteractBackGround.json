@@ -493,7 +493,7 @@
   {
     "Id": 10150,
     "ViewName": "ShopView10150",
-    "Title": "NpcSystemBackground_10150_Title",
+    "Title": "ShopInfo_150_ShopName",
     "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconDrug.SP_IconDrug",
     "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconDrug.SP_BlackIconDrug",
     "CostItemList": [
@@ -505,7 +505,7 @@
   {
     "Id": 10151,
     "ViewName": "ShopView10151",
-    "Title": "NpcSystemBackground_10151_Title",
+    "Title": "ShopInfo_151_ShopName",
     "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconShop.SP_IconShop",
     "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconShop.SP_BlackIconShop",
     "CostItemList": [
@@ -517,7 +517,7 @@
   {
     "Id": 10152,
     "ViewName": "ShopView10152",
-    "Title": "NpcSystemBackground_10152_Title",
+    "Title": "ShopInfo_152_ShopName",
     "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconCooking.SP_IconCooking",
     "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconCooking.SP_BlackIconCooking",
     "CostItemList": [
@@ -529,7 +529,7 @@
   {
     "Id": 10153,
     "ViewName": "ShopView10153",
-    "Title": "NpcSystemBackground_10153_Title",
+    "Title": "ShopInfo_153_ShopName",
     "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconWeapon.SP_IconWeapon",
     "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconWeapon.SP_BlackIconWeapon",
     "CostItemList": [
@@ -541,9 +541,9 @@
   {
     "Id": 10155,
     "ViewName": "ShopView10155",
-    "Title": "NpcSystemBackground_10155_Title",
-    "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconLifeShop.SP_IconLifeShop",
-    "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconLifeShop.SP_BlackIconLifeShop",
+    "Title": "ShopInfo_155_ShopName",
+    "TitleSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconFakeShop.SP_IconFakeShop",
+    "ContentSpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_BlackIconFakeShop.SP_BlackIconFakeShop",
     "CostItemList": [
       2
     ],

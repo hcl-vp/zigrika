@@ -2,8 +2,7 @@
   {
     "Id": 1000,
     "BranchComponents": [
-      1101,
-      1102
+      1101
     ],
     "ShownArea": [],
     "UnlockCondition": 0
@@ -14,7 +13,7 @@
       2101
     ],
     "ShownArea": [
-      1
+      4
     ],
     "UnlockCondition": 0
   },
@@ -23,9 +22,7 @@
     "BranchComponents": [
       3101
     ],
-    "ShownArea": [
-      2
-    ],
+    "ShownArea": [],
     "UnlockCondition": 0
   },
   {
@@ -33,9 +30,7 @@
     "BranchComponents": [
       4101
     ],
-    "ShownArea": [
-      4
-    ],
+    "ShownArea": [],
     "UnlockCondition": 0
   },
   {
@@ -43,9 +38,7 @@
     "BranchComponents": [
       5101
     ],
-    "ShownArea": [
-      3
-    ],
+    "ShownArea": [],
     "UnlockCondition": 0
   },
   {
@@ -54,7 +47,7 @@
       6101
     ],
     "ShownArea": [
-      2
+      5
     ],
     "UnlockCondition": 0
   },
@@ -64,8 +57,7 @@
       7101
     ],
     "ShownArea": [
-      3,
-      1
+      5
     ],
     "UnlockCondition": 0
   },
@@ -90,30 +82,35 @@
   {
     "Id": 10000,
     "BranchComponents": [
-      10101,
       10102,
-      10103,
-      10301
+      10301,
+      10101,
+      10103
     ],
-    "ShownArea": [],
+    "ShownArea": [
+      4
+    ],
     "UnlockCondition": 0
   },
   {
     "Id": 11000,
     "BranchComponents": [
-      11101,
-      11301
+      11101
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      4
+    ],
+    "UnlockCondition": 12906622
   },
   {
     "Id": 11001,
     "BranchComponents": [
       11102
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      4
+    ],
+    "UnlockCondition": 12906623
   },
   {
     "Id": 12000,
@@ -121,52 +118,57 @@
       12101,
       12301
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      2
+    ],
+    "UnlockCondition": 12906624
   },
   {
     "Id": 12001,
     "BranchComponents": [
       12102
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      6
+    ],
+    "UnlockCondition": 12906625
   },
   {
     "Id": 13000,
     "BranchComponents": [
       13101,
-      13301,
-      13103
+      13301
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      1
+    ],
+    "UnlockCondition": 12906626
   },
   {
     "Id": 13001,
     "BranchComponents": [
       13102
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      6
+    ],
+    "UnlockCondition": 12906627
   },
   {
     "Id": 14000,
     "BranchComponents": [
       14101,
-      14301,
-      14103
+      14301
     ],
-    "ShownArea": [],
-    "UnlockCondition": 0
+    "ShownArea": [
+      1
+    ],
+    "UnlockCondition": 12906628
   },
   {
     "Id": 15000,
     "BranchComponents": [
-      15101,
-      15102,
-      15103,
-      15301
+      15101
     ],
     "ShownArea": [],
     "UnlockCondition": 0
@@ -179,14 +181,15 @@
       16103,
       16301
     ],
-    "ShownArea": [],
+    "ShownArea": [
+      3
+    ],
     "UnlockCondition": 0
   },
   {
     "Id": 17000,
     "BranchComponents": [
       17101,
-      17102,
       17301
     ],
     "ShownArea": [],
@@ -197,8 +200,7 @@
     "BranchComponents": [
       18101,
       18102,
-      18103,
-      18301
+      18103
     ],
     "ShownArea": [],
     "UnlockCondition": 0
@@ -206,20 +208,20 @@
   {
     "Id": 14001,
     "BranchComponents": [
-      14102
+      14102,
+      14103
     ],
     "ShownArea": [],
-    "UnlockCondition": 0
+    "UnlockCondition": 12906629
   },
   {
     "Id": 19000,
     "BranchComponents": [
       19101,
-      19301,
-      19103
+      19301
     ],
     "ShownArea": [],
-    "UnlockCondition": 0
+    "UnlockCondition": 12906630
   },
   {
     "Id": 19001,
@@ -227,6 +229,128 @@
       19102
     ],
     "ShownArea": [],
+    "UnlockCondition": 12906631
+  },
+  {
+    "Id": 15001,
+    "BranchComponents": [
+      15103
+    ],
+    "ShownArea": [],
     "UnlockCondition": 0
+  },
+  {
+    "Id": 15002,
+    "BranchComponents": [
+      15102
+    ],
+    "ShownArea": [],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 2001,
+    "BranchComponents": [
+      2102,
+      2103
+    ],
+    "ShownArea": [
+      4
+    ],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 3001,
+    "BranchComponents": [
+      3102,
+      3103
+    ],
+    "ShownArea": [],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 4001,
+    "BranchComponents": [
+      4102,
+      4103,
+      4104,
+      4105
+    ],
+    "ShownArea": [],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 5001,
+    "BranchComponents": [
+      5102,
+      5103
+    ],
+    "ShownArea": [],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 6001,
+    "BranchComponents": [
+      6102,
+      6103
+    ],
+    "ShownArea": [
+      5
+    ],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 6002,
+    "BranchComponents": [
+      6104,
+      6105,
+      6106
+    ],
+    "ShownArea": [
+      5
+    ],
+    "UnlockCondition": 0
+  },
+  {
+    "Id": 11002,
+    "BranchComponents": [
+      11103,
+      11104
+    ],
+    "ShownArea": [
+      4
+    ],
+    "UnlockCondition": 12906622
+  },
+  {
+    "Id": 11003,
+    "BranchComponents": [
+      11105,
+      11106
+    ],
+    "ShownArea": [
+      4
+    ],
+    "UnlockCondition": 12906623
+  },
+  {
+    "Id": 13002,
+    "BranchComponents": [
+      13302,
+      13303
+    ],
+    "ShownArea": [
+      1
+    ],
+    "UnlockCondition": 12906626
+  },
+  {
+    "Id": 13003,
+    "BranchComponents": [
+      13103
+    ],
+    "ShownArea": [
+      6
+    ],
+    "UnlockCondition": 12906627
   }
 ]

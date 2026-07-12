@@ -54,5 +54,12 @@
     "SimpleCombatSubtypeId": 0,
     "InitBuffs": [],
     "Prop": 609750016
+  },
+  {
+    "Id": 9,
+    "TemplateId": 609750018,
+    "SimpleCombatSubtypeId": 0,
+    "InitBuffs": [],
+    "Prop": 609750018
   }
 ]

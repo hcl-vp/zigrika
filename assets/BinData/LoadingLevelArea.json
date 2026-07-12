@@ -2756,7 +2756,8 @@
     ],
     "AreaId": [],
     "MapId": [
-      1578
+      1578,
+      2111
     ],
     "ConditionGroup": 0,
     "IsLimitShow": false,
@@ -2920,7 +2921,7 @@
     "MapId": [],
     "ConditionGroup": 0,
     "IsLimitShow": false,
-    "BeginTime": 2118,
+    "BeginTime": 2120,
     "EndTime": 0,
     "ActivityId": 0,
     "Type": 1,
@@ -3138,6 +3139,7 @@
       44016,
       44017,
       44018,
+      44019,
       44031,
       44032,
       44033,
@@ -3149,7 +3151,8 @@
       44041,
       44042,
       44043,
-      44044
+      44044,
+      44048
     ],
     "MapId": [],
     "ConditionGroup": 0,
@@ -3168,7 +3171,14 @@
     ],
     "AreaId": [
       44045,
-      44046
+      44046,
+      44051,
+      44052,
+      44053,
+      44054,
+      44061,
+      44062,
+      44063
     ],
     "MapId": [],
     "ConditionGroup": 0,
@@ -3187,7 +3197,13 @@
     ],
     "AreaId": [
       44047,
-      44048
+      44071,
+      44072,
+      44073,
+      44074,
+      44075,
+      44076,
+      44077
     ],
     "MapId": [],
     "ConditionGroup": 0,
@@ -3207,7 +3223,8 @@
     "AreaId": [
       44021,
       44022,
-      44024
+      44024,
+      44025
     ],
     "MapId": [],
     "ConditionGroup": 0,
@@ -3225,7 +3242,8 @@
       999
     ],
     "AreaId": [
-      44023
+      44023,
+      44026
     ],
     "MapId": [],
     "ConditionGroup": 0,
@@ -3252,6 +3270,22 @@
     "EndTime": 0,
     "ActivityId": 0,
     "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 9245,
+    "LevelRange": [
+      2,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 2,
     "DuringTime": 0
   }
 ]

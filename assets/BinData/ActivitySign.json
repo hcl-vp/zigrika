@@ -889,7 +889,7 @@
       },
       {
         "ItemId": 50002,
-        "Count": 2
+        "Count": 3
       },
       {
         "ItemId": 50000171,
@@ -900,7 +900,7 @@
     "ImportantRewardIcon": "1",
     "ImportantRewardType": 0,
     "PreviewList": [],
-    "FreeDropId": 5006,
+    "FreeDropId": 5101,
     "GrandRewardId": [
       1,
       2,
@@ -910,7 +910,7 @@
   {
     "Id": 100100023,
     "Type": 2,
-    "PrefabResource": "ActivitySignIn_3_3",
+    "PrefabResource": "ActivitySignIn_3_5",
     "SignRewards": [
       {
         "ItemId": 50001,

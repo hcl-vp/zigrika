@@ -19947,10 +19947,10 @@
       1610104020,
       1610104030,
       1610131010,
-      161004101,
-      161004102,
-      161004103,
-      161014101
+      1610041010,
+      1610041020,
+      1610041030,
+      1610141010
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconNorKnife.SP_IconNorKnife",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinC1_UI.T_IconYinlinC1_UI",
@@ -20368,6 +20368,7 @@
       "100",
       "2",
       "3",
+      "1",
       "4",
       "3"
     ],
@@ -20379,6 +20380,7 @@
       "100",
       "2",
       "3",
+      "1",
       "4",
       "3"
     ],
@@ -20620,6 +20622,7 @@
     "SkillResume": "Skill_1005507_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
+      "4",
       "10",
       "20",
       "60",
@@ -20638,6 +20641,7 @@
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005507_SkillDescribe",
     "MultiSkillDetailNum": [
+      "4",
       "10",
       "20",
       "60",

@@ -17,7 +17,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_1_Title_2",
     "Context": "Sheriff_EventProgress_1_Content_2",
-    "Percent": 10
+    "Percent": 30
   },
   {
     "Id": 1010003,
@@ -27,7 +27,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_1_Title_3",
     "Context": "Sheriff_EventProgress_1_Content_3",
-    "Percent": 30
+    "Percent": 60
   },
   {
     "Id": 1010004,
@@ -37,7 +37,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_1_Title_4",
     "Context": "Sheriff_EventProgress_1_Content_4",
-    "Percent": 50
+    "Percent": 80
   },
   {
     "Id": 1010005,
@@ -97,7 +97,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_3_Title_2",
     "Context": "Sheriff_EventProgress_3_Content_2",
-    "Percent": 10
+    "Percent": 30
   },
   {
     "Id": 1030003,
@@ -107,7 +107,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_3_Title_3",
     "Context": "Sheriff_EventProgress_3_Content_3",
-    "Percent": 50
+    "Percent": 60
   },
   {
     "Id": 1030004,
@@ -117,7 +117,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_3_Title_4",
     "Context": "Sheriff_EventProgress_3_Content_4",
-    "Percent": 100
+    "Percent": 80
   },
   {
     "Id": 1040001,
@@ -137,7 +137,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_4_Title_2",
     "Context": "Sheriff_EventProgress_4_Content_2",
-    "Percent": 10
+    "Percent": 40
   },
   {
     "Id": 1040003,
@@ -147,7 +147,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_4_Title_3",
     "Context": "Sheriff_EventProgress_4_Content_3",
-    "Percent": 50
+    "Percent": 70
   },
   {
     "Id": 1040004,
@@ -177,7 +177,7 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_5_Title_2",
     "Context": "Sheriff_EventProgress_5_Content_2",
-    "Percent": 10
+    "Percent": 30
   },
   {
     "Id": 1050003,
@@ -187,17 +187,17 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_5_Title_3",
     "Context": "Sheriff_EventProgress_5_Content_3",
-    "Percent": 50
+    "Percent": 60
   },
   {
     "Id": 1050004,
     "SheriffAnomalyId": 105,
     "ProgressType": 2,
-    "GroupId": 1050004,
-    "GroupPriority": 1,
+    "GroupId": 1050003,
+    "GroupPriority": 2,
     "Title": "Sheriff_EventProgress_5_Title_4",
     "Context": "Sheriff_EventProgress_5_Content_4",
-    "Percent": 100
+    "Percent": 80
   },
   {
     "Id": 1060001,
@@ -227,16 +227,156 @@
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_6_Title_3",
     "Context": "Sheriff_EventProgress_6_Content_3",
-    "Percent": 100
+    "Percent": 80
   },
   {
     "Id": 1990001,
     "SheriffAnomalyId": 199,
     "ProgressType": 1,
-    "GroupId": 1050004,
+    "GroupId": 1990001,
     "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_5_Title_4",
     "Context": "Sheriff_EventProgress_5_Content_4",
+    "Percent": 100
+  },
+  {
+    "Id": 1100001,
+    "SheriffAnomalyId": 110,
+    "ProgressType": 1,
+    "GroupId": 1100001,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_10_Title_1",
+    "Context": "Sheriff_EventProgress_10_Content_1",
+    "Percent": 0
+  },
+  {
+    "Id": 1100002,
+    "SheriffAnomalyId": 110,
+    "ProgressType": 2,
+    "GroupId": 1100002,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_10_Title_2",
+    "Context": "Sheriff_EventProgress_10_Content_2",
+    "Percent": 40
+  },
+  {
+    "Id": 1100003,
+    "SheriffAnomalyId": 110,
+    "ProgressType": 2,
+    "GroupId": 1100003,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_10_Title_3",
+    "Context": "Sheriff_EventProgress_10_Content_3",
+    "Percent": 70
+  },
+  {
+    "Id": 1100004,
+    "SheriffAnomalyId": 110,
+    "ProgressType": 2,
+    "GroupId": 1100004,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_10_Title_4",
+    "Context": "Sheriff_EventProgress_10_Content_4",
+    "Percent": 100
+  },
+  {
+    "Id": 1110001,
+    "SheriffAnomalyId": 111,
+    "ProgressType": 1,
+    "GroupId": 1110001,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_11_Title_1",
+    "Context": "Sheriff_EventProgress_11_Content_1",
+    "Percent": 0
+  },
+  {
+    "Id": 1110002,
+    "SheriffAnomalyId": 111,
+    "ProgressType": 2,
+    "GroupId": 1110002,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_11_Title_2",
+    "Context": "Sheriff_EventProgress_11_Content_2",
+    "Percent": 50
+  },
+  {
+    "Id": 1110003,
+    "SheriffAnomalyId": 111,
+    "ProgressType": 2,
+    "GroupId": 1110003,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_11_Title_3",
+    "Context": "Sheriff_EventProgress_11_Content_3",
+    "Percent": 80
+  },
+  {
+    "Id": 1030005,
+    "SheriffAnomalyId": 103,
+    "ProgressType": 2,
+    "GroupId": 1030005,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_3_Title_5",
+    "Context": "Sheriff_EventProgress_3_Content_5",
+    "Percent": 100
+  },
+  {
+    "Id": 1070001,
+    "SheriffAnomalyId": 107,
+    "ProgressType": 1,
+    "GroupId": 1070001,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_5_Title_4",
+    "Context": "Sheriff_EventProgress_5_Content_4",
+    "Percent": 100
+  },
+  {
+    "Id": 1080001,
+    "SheriffAnomalyId": 108,
+    "ProgressType": 1,
+    "GroupId": 1080001,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_5_Title_4",
+    "Context": "Sheriff_EventProgress_5_Content_4",
+    "Percent": 100
+  },
+  {
+    "Id": 1090001,
+    "SheriffAnomalyId": 109,
+    "ProgressType": 1,
+    "GroupId": 1090001,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_5_Title_4",
+    "Context": "Sheriff_EventProgress_5_Content_4",
+    "Percent": 100
+  },
+  {
+    "Id": 1050005,
+    "SheriffAnomalyId": 105,
+    "ProgressType": 2,
+    "GroupId": 1050004,
+    "GroupPriority": 1,
+    "Title": "Sheriff_EventProgress_5_Title_5",
+    "Context": "Sheriff_EventProgress_5_Content_5",
+    "Percent": 100
+  },
+  {
+    "Id": 1060004,
+    "SheriffAnomalyId": 106,
+    "ProgressType": 2,
+    "GroupId": 1060003,
+    "GroupPriority": 2,
+    "Title": "Sheriff_EventProgress_6_Title_3",
+    "Context": "Sheriff_EventProgress_6_Content_3",
+    "Percent": 100
+  },
+  {
+    "Id": 1110004,
+    "SheriffAnomalyId": 111,
+    "ProgressType": 2,
+    "GroupId": 1110003,
+    "GroupPriority": 2,
+    "Title": "Sheriff_EventProgress_11_Title_3",
+    "Context": "Sheriff_EventProgress_11_Content_3",
     "Percent": 100
   }
 ]

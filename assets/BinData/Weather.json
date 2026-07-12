@@ -390,12 +390,6 @@
     "DAPath": "/Game/Aki/Render/DefaultGI/LevelGIData/Leve_TOD_LaHaiLuo/3_5Mengzhou/Weather/DA_Weather_MengZhou_Cloudy.DA_Weather_MengZhou_Cloudy"
   },
   {
-    "Id": 35002,
-    "WeatherType": 0,
-    "Type": 1,
-    "DAPath": "/Game/Aki/Render/DefaultGI/LevelGIData/Leve_TOD_LaHaiLuo/3_5Mengzhou/Weather/DA_Weather_MengZhou_Windy.DA_Weather_MengZhou_Windy"
-  },
-  {
     "Id": 35003,
     "WeatherType": 0,
     "Type": 1,
@@ -435,7 +429,7 @@
     "Id": 35009,
     "WeatherType": 0,
     "Type": 1,
-    "DAPath": "/Game/Aki/Render/DefaultGI/LevelGIData/Leve_TOD_LaHaiLuo/3_5Mengzhou/Weather/DA_Weather_MengZhou_Thunderstorm.DA_Weather_MengZhou_Thunderstorm"
+    "DAPath": "/Game/Aki/Render/DefaultGI/LevelGIData/Leve_TOD_LaHaiLuo/3_5Mengzhou/Weather/DA_Weather_MengZhou_Snowstorm.DA_Weather_MengZhou_Snowstorm"
   },
   {
     "Id": 35010,

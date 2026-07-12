@@ -178,7 +178,7 @@
   {
     "Id": 15,
     "BasicProperty": 95020015,
-    "Name": "KurotatoMonsterName15",
+    "Name": "KurotatoMonsterName15_1",
     "Desc": "KurotatoMonsterDesc15",
     "DescArgs": [],
     "MonsterType": 15,
@@ -352,7 +352,7 @@
   {
     "Id": 16,
     "BasicProperty": 95020016,
-    "Name": "KurotatoMonsterName16",
+    "Name": "KurotatoMonsterName16_1",
     "Desc": "KurotatoMonsterDesc16",
     "DescArgs": [],
     "MonsterType": 16,
@@ -372,7 +372,7 @@
   {
     "Id": 17,
     "BasicProperty": 95020017,
-    "Name": "KurotatoMonsterName17",
+    "Name": "KurotatoMonsterName17_1",
     "Desc": "KurotatoMonsterDesc17",
     "DescArgs": [],
     "MonsterType": 17,
@@ -393,7 +393,7 @@
   {
     "Id": 18,
     "BasicProperty": 95020018,
-    "Name": "KurotatoMonsterName18",
+    "Name": "KurotatoMonsterName18_1",
     "Desc": "KurotatoMonsterDesc18",
     "DescArgs": [],
     "MonsterType": 18,

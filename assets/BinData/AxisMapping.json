@@ -941,5 +941,53 @@
     "DisplayName": "",
     "KeyboardVersionMap": {},
     "GamepadVersionMap": {}
+  },
+  {
+    "Id": 55,
+    "AxisName": "UiCamRotate",
+    "AxisType": 4,
+    "InputTag": "UiInputRoot.Navigation",
+    "ExclusiveType": 0,
+    "PcKeys": {
+      "Z": -1,
+      "C": 1
+    },
+    "FrancePcKeys": {
+      "W": -1,
+      "C": 1
+    },
+    "ThaiPcKeys": {
+      "Z": -1,
+      "C": 1
+    },
+    "GamepadKeys": {
+      "Gamepad_DPad_Left": -1,
+      "Gamepad_DPad_Right": 1
+    },
+    "DisplayName": "",
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
+  },
+  {
+    "Id": 60,
+    "AxisName": "QTE右摇杆左右",
+    "AxisType": 4,
+    "InputTag": "FightInputRoot.FightInput.ActionInput",
+    "ExclusiveType": 0,
+    "PcKeys": {
+      "LeftMouseButton": 1
+    },
+    "FrancePcKeys": {
+      "LeftMouseButton": 1
+    },
+    "ThaiPcKeys": {
+      "LeftMouseButton": 1
+    },
+    "GamepadKeys": {
+      "Gamepad_RightX": 1
+    },
+    "DisplayName": "",
+    "KeyboardVersionMap": {},
+    "GamepadVersionMap": {}
   }
 ]

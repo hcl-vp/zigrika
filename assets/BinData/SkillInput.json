@@ -3136,15 +3136,6 @@
     "Description": "RoleSkillInput_1110_DescList_2"
   },
   {
-    "Id": 130901,
-    "InputArray": [],
-    "SkillArray": [],
-    "ImageArray": [
-      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeThunderzhu1.T_RoleSkillTreeThunderzhu1"
-    ],
-    "Description": "SkillInput_1309_DescList_1"
-  },
-  {
     "Id": 130902,
     "InputArray": [],
     "SkillArray": [],
@@ -3190,6 +3181,15 @@
     ],
     "ImageArray": [],
     "Description": "RoleSkillInput_1309_DescList_2"
+  },
+  {
+    "Id": 130901,
+    "InputArray": [],
+    "SkillArray": [],
+    "ImageArray": [
+      "/Game/Aki/UI/UIResources/UiRole/Image/T_RoleSkillTreeThunderzhu1.T_RoleSkillTreeThunderzhu1"
+    ],
+    "Description": "SkillInput_1309_DescList_1"
   },
   {
     "Id": 161001,

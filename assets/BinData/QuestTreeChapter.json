@@ -34,14 +34,14 @@
   },
   {
     "Id": 4,
-    "Name": "QuestTree_Chapter_4_Name",
+    "Name": "QuestTree_ChapterName_4",
     "RegionName": "QuestTree_ChapterRegion_4",
     "TitleText": "QuestTree_ChapterInfo_4",
-    "Image": "",
-    "RegionImage": "",
-    "InnerRegionImage": "",
+    "Image": "/Game/Aki/UI/UIResources/UiTask/Image/Chapter004/T_QuestTree_Chapter4_KV_Small.T_QuestTree_Chapter4_KV_Small",
+    "RegionImage": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_Mengzhou.T_Logo_Mengzhou",
+    "InnerRegionImage": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_Mengzhou.T_Logo_Mengzhou",
     "RomanNumberImage": "/Game/Aki/UI/UIResources/UiTask/Image/TaskTreeIcon/T_TaskTreeNum004.T_TaskTreeNum004",
-    "InnerBackgroundImage": ""
+    "InnerBackgroundImage": "/Game/Aki/UI/UIResources/UiTask/Image/Chapter004/T_QuestTree_Chapter4_KV_Large.T_QuestTree_Chapter4_KV_Large"
   },
   {
     "Id": 5,

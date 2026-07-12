@@ -778,5 +778,10 @@
     "DependentDbList": [
       "db_NewPlayerSupportActivityV2.db"
     ]
+  },
+  {
+    "ActivityType": 115,
+    "ActivityTypeString": "MototGiftActivity",
+    "DependentDbList": []
   }
 ]

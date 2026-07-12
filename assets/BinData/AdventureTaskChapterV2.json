@@ -53,13 +53,7 @@
     "Sort": 5,
     "Name": "AdventureTaskChapterV2_Name_05",
     "DropId": 4705,
-    "Roles": [
-      1203,
-      1104,
-      1301,
-      1405,
-      1503
-    ],
+    "Roles": [],
     "LevelUnlockCount": 5,
     "RewardUnlockCount": 5,
     "LockedDesc": "AdventureTaskChapterV2_LockedDesc_05",
@@ -95,7 +89,13 @@
     "Sort": 8,
     "Name": "AdventureTaskChapterV2_Name_08",
     "DropId": 4708,
-    "Roles": [],
+    "Roles": [
+      1203,
+      1104,
+      1301,
+      1405,
+      1503
+    ],
     "LevelUnlockCount": 5,
     "RewardUnlockCount": 5,
     "LockedDesc": "AdventureTaskChapterV2_LockedDesc_08",

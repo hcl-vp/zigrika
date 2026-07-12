@@ -166,5 +166,26 @@
     "GamePlayType": 0,
     "GamePlayId": 107500003,
     "RewardPreview": 0
+  },
+  {
+    "Id": 10,
+    "Country": 4,
+    "Name": "Activity_110600001_Title",
+    "TagName": "Terminal_Area_Tag1",
+    "Desc": "Activity_110600001_Desc",
+    "Icon": "/Game/Aki/UI/UIResources/UiWorldMap/Image/RegionalGameplay/T_RegionalGameplayIcon_10_UI.T_RegionalGameplayIcon_10_UI",
+    "TexBgLock": "/Game/Aki/UI/UIResources/UiWorldMap/Image/RegionalGameplay/T_RegionalGameplayBg_10_0_UI.T_RegionalGameplayBg_10_0_UI",
+    "TexBg": "/Game/Aki/UI/UIResources/UiWorldMap/Image/RegionalGameplay/T_RegionalGameplayBg_10_1_UI.T_RegionalGameplayBg_10_1_UI",
+    "SortId": 1,
+    "GroupId": 4,
+    "Area": [],
+    "AreaForbiddenTips": "",
+    "AreaMapGroup": [
+      4
+    ],
+    "UnlockButtonText": "Terminal_Area_Go",
+    "GamePlayType": 1,
+    "GamePlayId": 10156,
+    "RewardPreview": 0
   }
 ]

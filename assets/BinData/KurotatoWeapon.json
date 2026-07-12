@@ -5,7 +5,7 @@
     "GroupId": 1001,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -14,7 +14,8 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100001
+      950100001,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1001",
     "SortId": 1,
@@ -47,7 +48,7 @@
     "GroupId": 1001,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -57,7 +58,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100001,
-      950100202
+      950100202,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1001",
     "SortId": 2,
@@ -90,7 +92,7 @@
     "GroupId": 1001,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -100,7 +102,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100001,
-      950100203
+      950100203,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1001",
     "SortId": 3,
@@ -133,7 +136,7 @@
     "GroupId": 1001,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -143,7 +146,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100001,
-      950100204
+      950100204,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1001",
     "SortId": 4,
@@ -176,7 +180,7 @@
     "GroupId": 1002,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -185,7 +189,8 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100002
+      950100002,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1002",
     "SortId": 5,
@@ -218,7 +223,7 @@
     "GroupId": 1002,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -228,7 +233,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100002,
-      950100202
+      950100202,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1002",
     "SortId": 6,
@@ -261,7 +267,7 @@
     "GroupId": 1002,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -271,7 +277,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100002,
-      950100203
+      950100203,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1002",
     "SortId": 7,
@@ -304,7 +311,7 @@
     "GroupId": 1002,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -314,7 +321,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100002,
-      950100204
+      950100204,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1002",
     "SortId": 8,
@@ -347,7 +355,7 @@
     "GroupId": 1003,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -356,7 +364,8 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950101103
+      950101103,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1003",
     "SortId": 9,
@@ -375,7 +384,7 @@
     "InheritScale": {},
     "InheritSource": {},
     "AttackSpeedBasic": 2,
-    "Attr136Basic": 800,
+    "Attr136Basic": 600,
     "Attr140Basic": 0,
     "Attr139Basic": 0,
     "Attr151Basic": 0,
@@ -391,7 +400,7 @@
     "GroupId": 1003,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -401,7 +410,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950101103,
-      950100202
+      950100202,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1003",
     "SortId": 10,
@@ -420,7 +430,7 @@
     "InheritScale": {},
     "InheritSource": {},
     "AttackSpeedBasic": 2,
-    "Attr136Basic": 800,
+    "Attr136Basic": 600,
     "Attr140Basic": 0,
     "Attr139Basic": 0,
     "Attr151Basic": 0,
@@ -436,7 +446,7 @@
     "GroupId": 1003,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -482,7 +492,7 @@
     "GroupId": 1003,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -528,7 +538,7 @@
     "GroupId": 1004,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -571,7 +581,7 @@
     "GroupId": 1004,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -615,7 +625,7 @@
     "GroupId": 1004,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -659,7 +669,7 @@
     "GroupId": 1004,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -703,7 +713,7 @@
     "GroupId": 1005,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -750,7 +760,7 @@
     "GroupId": 1005,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -797,7 +807,7 @@
     "GroupId": 1006,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -843,7 +853,7 @@
     "GroupId": 1006,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -889,7 +899,7 @@
     "GroupId": 1007,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -932,7 +942,7 @@
     "GroupId": 1007,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -976,7 +986,7 @@
     "GroupId": 1007,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1020,7 +1030,7 @@
     "GroupId": 1007,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1064,7 +1074,7 @@
     "GroupId": 1008,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1109,7 +1119,7 @@
     "GroupId": 1008,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1155,7 +1165,7 @@
     "GroupId": 1008,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1201,7 +1211,7 @@
     "GroupId": 1008,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1247,7 +1257,7 @@
     "GroupId": 1009,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1291,7 +1301,7 @@
     "GroupId": 1009,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1336,7 +1346,7 @@
     "GroupId": 1009,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1381,7 +1391,7 @@
     "GroupId": 1009,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1426,7 +1436,7 @@
     "GroupId": 1010,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1471,7 +1481,7 @@
     "GroupId": 1010,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1516,7 +1526,7 @@
     "GroupId": 1011,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1562,7 +1572,7 @@
     "GroupId": 1011,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1609,7 +1619,7 @@
     "GroupId": 1011,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1656,7 +1666,7 @@
     "GroupId": 1011,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1703,7 +1713,7 @@
     "GroupId": 1012,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1733,7 +1743,7 @@
     "InheritScale": {},
     "InheritSource": {},
     "AttackSpeedBasic": 5,
-    "Attr136Basic": 600,
+    "Attr136Basic": 400,
     "Attr140Basic": 0,
     "Attr139Basic": 0,
     "Attr151Basic": 0,
@@ -1749,7 +1759,7 @@
     "GroupId": 1012,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1780,7 +1790,7 @@
     "InheritScale": {},
     "InheritSource": {},
     "AttackSpeedBasic": 5,
-    "Attr136Basic": 600,
+    "Attr136Basic": 400,
     "Attr140Basic": 0,
     "Attr139Basic": 0,
     "Attr151Basic": 0,
@@ -1796,7 +1806,7 @@
     "GroupId": 1012,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1843,7 +1853,7 @@
     "GroupId": 1012,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1890,7 +1900,7 @@
     "GroupId": 1013,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1918,7 +1928,7 @@
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
-    "AttackSpeedBasic": 4,
+    "AttackSpeedBasic": 3,
     "Attr136Basic": 1200,
     "Attr140Basic": 3,
     "Attr139Basic": 0,
@@ -1935,7 +1945,7 @@
     "GroupId": 1013,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -1964,7 +1974,7 @@
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
-    "AttackSpeedBasic": 4,
+    "AttackSpeedBasic": 3,
     "Attr136Basic": 1200,
     "Attr140Basic": 3,
     "Attr139Basic": 0,
@@ -1981,7 +1991,7 @@
     "GroupId": 1013,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2010,7 +2020,7 @@
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
-    "AttackSpeedBasic": 4,
+    "AttackSpeedBasic": 3,
     "Attr136Basic": 1200,
     "Attr140Basic": 3,
     "Attr139Basic": 0,
@@ -2027,7 +2037,7 @@
     "GroupId": 1013,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2056,7 +2066,7 @@
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
-    "AttackSpeedBasic": 4,
+    "AttackSpeedBasic": 3,
     "Attr136Basic": 1200,
     "Attr140Basic": 3,
     "Attr139Basic": 0,
@@ -2073,7 +2083,7 @@
     "GroupId": 1014,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2120,7 +2130,7 @@
     "GroupId": 1014,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2167,7 +2177,7 @@
     "GroupId": 1015,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2212,7 +2222,7 @@
     "GroupId": 1015,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2257,7 +2267,7 @@
     "GroupId": 1016,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2301,7 +2311,7 @@
     "GroupId": 1016,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2346,7 +2356,7 @@
     "GroupId": 1016,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2391,7 +2401,7 @@
     "GroupId": 1016,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2436,7 +2446,7 @@
     "GroupId": 1017,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2480,7 +2490,7 @@
     "GroupId": 1017,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2525,7 +2535,7 @@
     "GroupId": 1017,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2570,7 +2580,7 @@
     "GroupId": 1017,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2615,7 +2625,7 @@
     "GroupId": 1018,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2660,7 +2670,7 @@
     "GroupId": 1018,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2706,7 +2716,7 @@
     "GroupId": 1018,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2752,7 +2762,7 @@
     "GroupId": 1018,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2798,7 +2808,7 @@
     "GroupId": 1019,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2843,7 +2853,7 @@
     "GroupId": 1019,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2889,7 +2899,7 @@
     "GroupId": 1019,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2935,7 +2945,7 @@
     "GroupId": 1019,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -2981,7 +2991,7 @@
     "GroupId": 1021,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3025,7 +3035,7 @@
     "GroupId": 1021,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3070,7 +3080,7 @@
     "GroupId": 1021,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3115,7 +3125,7 @@
     "GroupId": 1021,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3160,7 +3170,7 @@
     "GroupId": 1022,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3207,7 +3217,7 @@
     "GroupId": 1022,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3255,7 +3265,7 @@
     "GroupId": 1022,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3303,7 +3313,7 @@
     "GroupId": 1022,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3351,7 +3361,7 @@
     "GroupId": 10001,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3361,7 +3371,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100001,
-      950100215
+      950100215,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1001",
     "SortId": 1,
@@ -3373,7 +3384,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1001",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3384,8 +3395,8 @@
     "Attr151Basic": 15000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10011",
     "AttackDesParam": [
-      "GS1001101",
-      "GS1001102"
+      "GS1001501",
+      "GS1001502"
     ]
   },
   {
@@ -3394,7 +3405,7 @@
     "GroupId": 10002,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3404,7 +3415,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100002,
-      950100220
+      950100220,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1002",
     "SortId": 5,
@@ -3416,7 +3428,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1002",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3427,8 +3439,8 @@
     "Attr151Basic": 20000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10021",
     "AttackDesParam": [
-      "GS1002101",
-      "GS1002102"
+      "GS1002501",
+      "GS1002502"
     ]
   },
   {
@@ -3437,7 +3449,7 @@
     "GroupId": 10003,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3447,7 +3459,8 @@
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
       950100003,
-      950100220
+      950100220,
+      950100212
     ],
     "Name": "KurotatoWeaponGroup_name_1003",
     "SortId": 9,
@@ -3461,7 +3474,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1003",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3472,8 +3485,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10031",
     "AttackDesParam": [
-      "GS1003101",
-      "GS1003102"
+      "GS1003501",
+      "GS1003502"
     ]
   },
   {
@@ -3482,7 +3495,7 @@
     "GroupId": 10004,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3505,7 +3518,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1004",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3516,8 +3529,8 @@
     "Attr151Basic": 15000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10041",
     "AttackDesParam": [
-      "GS1004101",
-      "GS1004102"
+      "GS1004501",
+      "GS1004502"
     ]
   },
   {
@@ -3526,7 +3539,7 @@
     "GroupId": 10005,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3535,7 +3548,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100005,
+      950101205,
       950100212,
       960100011,
       950100220
@@ -3552,7 +3565,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1005",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3563,8 +3576,8 @@
     "Attr151Basic": 8000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10051",
     "AttackDesParam": [
-      "GS1005101",
-      "GS1005102"
+      "GS1005501",
+      "GS1005502"
     ]
   },
   {
@@ -3573,7 +3586,7 @@
     "GroupId": 10006,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3582,7 +3595,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100006,
+      950101206,
       950100212,
       950100220
     ],
@@ -3598,7 +3611,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1006",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3609,8 +3622,8 @@
     "Attr151Basic": 10000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10061",
     "AttackDesParam": [
-      "GS1006101",
-      "GS1006102"
+      "GS1006501",
+      "GS1006502"
     ]
   },
   {
@@ -3619,7 +3632,7 @@
     "GroupId": 10007,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3628,7 +3641,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100007,
+      950101207,
       950100212,
       950100221
     ],
@@ -3642,7 +3655,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1007",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3653,8 +3666,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10071",
     "AttackDesParam": [
-      "GS1007101",
-      "GS1007102"
+      "GS1007501",
+      "GS1007502"
     ]
   },
   {
@@ -3663,7 +3676,7 @@
     "GroupId": 10008,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3674,7 +3687,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100008,
+      950101208,
       950100212,
       950100222
     ],
@@ -3688,7 +3701,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1008",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3699,8 +3712,8 @@
     "Attr151Basic": 8000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10081",
     "AttackDesParam": [
-      "GS1008101",
-      "GS1008102"
+      "GS1008501",
+      "GS1008502"
     ]
   },
   {
@@ -3709,7 +3722,7 @@
     "GroupId": 10009,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3733,7 +3746,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1009",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3744,8 +3757,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10091",
     "AttackDesParam": [
-      "GS1009101",
-      "GS1009102"
+      "GS1009501",
+      "GS1009502"
     ]
   },
   {
@@ -3754,7 +3767,7 @@
     "GroupId": 10010,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3778,7 +3791,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1010",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3789,8 +3802,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10101",
     "AttackDesParam": [
-      "GS1010101",
-      "GS1010102"
+      "GS1010501",
+      "GS1010502"
     ]
   },
   {
@@ -3799,7 +3812,7 @@
     "GroupId": 10011,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3825,7 +3838,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1011",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3836,8 +3849,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10113",
     "AttackDesParam": [
-      "GS1011301",
-      "GS1011302"
+      "GS1011701",
+      "GS1011702"
     ]
   },
   {
@@ -3846,7 +3859,7 @@
     "GroupId": 10012,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3872,7 +3885,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1012",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3883,8 +3896,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10123",
     "AttackDesParam": [
-      "GS1012301",
-      "GS1012302"
+      "GS1012701",
+      "GS1012702"
     ]
   },
   {
@@ -3893,7 +3906,7 @@
     "GroupId": 10013,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3918,19 +3931,19 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1013",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
-    "AttackSpeedBasic": 4,
+    "AttackSpeedBasic": 3,
     "Attr136Basic": 1200,
     "Attr140Basic": 3,
     "Attr139Basic": 0,
     "Attr151Basic": 10000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10133",
     "AttackDesParam": [
-      "GS1013301",
-      "GS1013302"
+      "GS1013701",
+      "GS1013702"
     ]
   },
   {
@@ -3939,7 +3952,7 @@
     "GroupId": 10014,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3949,7 +3962,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100014,
+      950101214,
       950100212,
       950100220
     ],
@@ -3965,7 +3978,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1014",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -3976,8 +3989,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10144",
     "AttackDesParam": [
-      "GS1014401",
-      "GS1014402"
+      "GS1014801",
+      "GS1014802"
     ]
   },
   {
@@ -3986,7 +3999,7 @@
     "GroupId": 10015,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -3996,7 +4009,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100015,
+      950101215,
       950100212,
       950100221
     ],
@@ -4010,7 +4023,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1015",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4021,8 +4034,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10154",
     "AttackDesParam": [
-      "GS1015401",
-      "GS1015402"
+      "GS1015801",
+      "GS1015802"
     ]
   },
   {
@@ -4031,7 +4044,7 @@
     "GroupId": 10016,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4041,7 +4054,7 @@
     "Effect": [],
     "SimpleCombatSubtypeId": 1,
     "InitBuffs": [
-      950100016,
+      950101216,
       950100212,
       950100220
     ],
@@ -4055,7 +4068,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4066,8 +4079,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10164",
     "AttackDesParam": [
-      "GS1016401",
-      "GS1016402"
+      "GS1016801",
+      "GS1016802"
     ]
   },
   {
@@ -4076,7 +4089,7 @@
     "GroupId": 10017,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4100,7 +4113,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4111,8 +4124,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10171",
     "AttackDesParam": [
-      "GS1017101",
-      "GS1017102"
+      "GS1017501",
+      "GS1017502"
     ]
   },
   {
@@ -4121,7 +4134,7 @@
     "GroupId": 10018,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4146,7 +4159,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4157,8 +4170,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10181",
     "AttackDesParam": [
-      "GS1018101",
-      "GS1018102"
+      "GS1018501",
+      "GS1018502"
     ]
   },
   {
@@ -4167,7 +4180,7 @@
     "GroupId": 10019,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4192,7 +4205,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4203,8 +4216,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10191",
     "AttackDesParam": [
-      "GS1019101",
-      "GS1019102"
+      "GS1019501",
+      "GS1019502"
     ]
   },
   {
@@ -4213,7 +4226,7 @@
     "GroupId": 10021,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4237,7 +4250,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4248,8 +4261,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10211",
     "AttackDesParam": [
-      "GS1021101",
-      "GS1021102"
+      "GS1021501",
+      "GS1021502"
     ]
   },
   {
@@ -4258,7 +4271,7 @@
     "GroupId": 10022,
     "ShowProperty": [
       7,
-      8,
+      9,
       220,
       136,
       210,
@@ -4285,7 +4298,7 @@
     "BgDesc": "KurotatoWeaponGroup_Bgdesc_1016",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_21010045_UI.T_IconWeapon160_21010045_UI",
     "Quality": 5,
-    "ShopBasicCost": 199,
+    "ShopBasicCost": 219,
     "ShopSellMutiply": 0.6,
     "InheritScale": {},
     "InheritSource": {},
@@ -4296,8 +4309,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10221",
     "AttackDesParam": [
-      "GS1022101",
-      "GS1022102"
+      "GS1022501",
+      "GS1022502"
     ]
   }
 ]

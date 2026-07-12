@@ -2,25 +2,25 @@
   {
     "Id": 1,
     "ActivityId": 3401,
-    "Score": 200,
-    "DropId": 42222
+    "Score": 250,
+    "DropId": 5233032
   },
   {
     "Id": 2,
     "ActivityId": 3401,
     "Score": 500,
-    "DropId": 42222
+    "DropId": 5233033
   },
   {
     "Id": 3,
     "ActivityId": 3401,
-    "Score": 800,
-    "DropId": 42222
+    "Score": 750,
+    "DropId": 5233034
   },
   {
     "Id": 4,
     "ActivityId": 3401,
-    "Score": 1200,
-    "DropId": 42222
+    "Score": 1000,
+    "DropId": 5233035
   }
 ]

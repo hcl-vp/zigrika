@@ -3064,7 +3064,7 @@
     "DataLayer": "DataLayerRuntime_DLTask_35CXJY04",
     "CnName": "3.5机关宅邸电梯战房间",
     "LevelId": 8,
-    "InitLoad": false,
+    "InitLoad": true,
     "OnlyActor": true,
     "EnableSwitchNavMesh": false
   },
@@ -3082,7 +3082,7 @@
     "DataLayer": "DataLayerRuntime_DLTask_35STG01",
     "CnName": "锁天工房间演出前",
     "LevelId": 8,
-    "InitLoad": false,
+    "InitLoad": true,
     "OnlyActor": true,
     "EnableSwitchNavMesh": false
   },
@@ -3093,6 +3093,78 @@
     "LevelId": 8,
     "InitLoad": false,
     "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750101,
+    "DataLayer": "DataLayerRuntime_DLTask_35JZ04",
+    "CnName": "山门演出用状态",
+    "LevelId": 8,
+    "InitLoad": false,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750102,
+    "DataLayer": "DataLayerRuntime_DLTask_35JD06",
+    "CnName": "机关宅邸内部大厅变形前",
+    "LevelId": 8,
+    "InitLoad": true,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750103,
+    "DataLayer": "DataLayerRuntime_DLTask_35JD07",
+    "CnName": "机关宅邸内部大厅变形后",
+    "LevelId": 8,
+    "InitLoad": true,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750104,
+    "DataLayer": "DataLayerRuntime_DLTask_35JGZD03",
+    "CnName": "机关宅邸外部POI完成前氛围",
+    "LevelId": 8,
+    "InitLoad": true,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750105,
+    "DataLayer": "DataLayerRuntime_DLTask_35JGZD04",
+    "CnName": "机关宅邸外部POI完成后氛围",
+    "LevelId": 8,
+    "InitLoad": false,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750107,
+    "DataLayer": "DataLayerRuntime_DLTask_36ZCYL01",
+    "CnName": "3.6庭院崩塌前",
+    "LevelId": 8,
+    "InitLoad": true,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750108,
+    "DataLayer": "DataLayerRuntime_DLTask_36ZCYL02",
+    "CnName": "3.6庭院崩塌后",
+    "LevelId": 8,
+    "InitLoad": false,
+    "OnlyActor": true,
+    "EnableSwitchNavMesh": false
+  },
+  {
+    "Id": 750109,
+    "DataLayer": "DataLayerRuntime_DLTask_35XLC01",
+    "CnName": "3.5衔翎村废墟",
+    "LevelId": 8,
+    "InitLoad": true,
+    "OnlyActor": false,
     "EnableSwitchNavMesh": false
   }
 ]

@@ -54,7 +54,7 @@
       "Gamepad_RightY": "Gamepad_LeftShoulder"
     },
     "SecondaryKeyScaleMap": {
-      "Gamepad_RightY": 1
+      "Gamepad_RightY": -1
     },
     "MobileIconPath": "",
     "DisplayName": "",

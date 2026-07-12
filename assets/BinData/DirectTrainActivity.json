@@ -35,6 +35,7 @@
       8
     ],
     "LimitInstanceText": "DirectTrainActivity_LockAdvance_Text",
+    "OpenQuestViewOnConfirm": false,
     "VersionTitle": "DirectTrainActivity_Tag02",
     "ShowRecommend": false,
     "EntryPicMale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard20a.T_PlotArriveCard20a",
@@ -118,6 +119,7 @@
       907
     ],
     "LimitInstanceText": "DirectTrainActivity_LockAdvance_Text03",
+    "OpenQuestViewOnConfirm": false,
     "VersionTitle": "DirectTrainActivity_Tag03",
     "ShowRecommend": false,
     "EntryPicMale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard30a.T_PlotArriveCard30a",
@@ -220,8 +222,9 @@
       907
     ],
     "LimitInstanceText": "DirectTrainActivity_LockAdvance_Text03",
+    "OpenQuestViewOnConfirm": false,
     "VersionTitle": "DirectTrainActivity_Tag99",
-    "ShowRecommend": true,
+    "ShowRecommend": false,
     "EntryPicMale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard34.T_PlotArriveCard34",
     "EntryPicFemale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard34.T_PlotArriveCard34",
     "BgPicMale": "UiItem_PlotTrain34",
@@ -238,7 +241,7 @@
     "SkipQuestId": 192000006,
     "IsForceRemind": true,
     "ForceRemindCond": 13000232,
-    "SkipQuestCondition": 0,
+    "SkipQuestCondition": 12005524,
     "PrefabResource": "UiItem_PlotTrainLahailuo",
     "RecommendQuestId": 165000004,
     "RecommendQuestLinkList": [
@@ -302,10 +305,11 @@
       907
     ],
     "LimitInstanceText": "DirectTrainActivity_LockAdvance_Text03",
+    "OpenQuestViewOnConfirm": true,
     "VersionTitle": "DirectTrainActivity_Tag035",
     "ShowRecommend": true,
-    "EntryPicMale": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/ActivityPlotTrain/UiItem_PlotTrainLahailuo.UiItem_PlotTrainLahailuo",
-    "EntryPicFemale": "/Game/Aki/UI/UIResources/UiActivity/Prefabs/ActivityPlotTrain/UiItem_PlotTrainLahailuo.UiItem_PlotTrainLahailuo",
+    "EntryPicMale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard35a.T_PlotArriveCard35a",
+    "EntryPicFemale": "/Game/Aki/UI/UIResources/UiActivity/Image/PlotArriveCard/T_PlotArriveCard35b.T_PlotArriveCard35b",
     "BgPicMale": "UiItem_PlotTrain35",
     "BgPicFemale": "UiItem_PlotTrain35",
     "SubTitle": "DirectTrainActivity_SubTitle035",

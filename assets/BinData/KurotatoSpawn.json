@@ -5190,8 +5190,8 @@
   {
     "Id": 350310203,
     "MonsterIds": [
-      3,
-      3
+      7,
+      7
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5380,11 +5380,11 @@
   {
     "Id": 350310409,
     "MonsterIds": [
-      1,
       2,
-      1,
       2,
-      1
+      6,
+      2,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5617,7 +5617,6 @@
   {
     "Id": 350310706,
     "MonsterIds": [
-      13,
       13
     ],
     "WaypointIds": [],
@@ -5626,7 +5625,6 @@
   {
     "Id": 350310707,
     "MonsterIds": [
-      13,
       13,
       13
     ],
@@ -5710,8 +5708,8 @@
   {
     "Id": 350310806,
     "MonsterIds": [
-      4,
-      4
+      9,
+      9
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5736,12 +5734,12 @@
   {
     "Id": 350310901,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5749,10 +5747,10 @@
   {
     "Id": 350310902,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2
+      1,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5760,14 +5758,14 @@
   {
     "Id": 350310903,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5775,13 +5773,12 @@
   {
     "Id": 350310904,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5789,11 +5786,10 @@
   {
     "Id": 350310905,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1,
-      1
+      6,
+      6,
+      6,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -5801,7 +5797,6 @@
   {
     "Id": 350310906,
     "MonsterIds": [
-      13,
       13,
       13
     ],
@@ -6551,8 +6546,8 @@
   {
     "Id": 350230509,
     "MonsterIds": [
-      3,
-      3
+      1,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -6560,9 +6555,9 @@
   {
     "Id": 350230510,
     "MonsterIds": [
-      6,
-      6,
-      6
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7082,8 +7077,8 @@
   {
     "Id": 350230813,
     "MonsterIds": [
-      4,
-      4
+      1,
+      7
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7091,9 +7086,9 @@
   {
     "Id": 350230814,
     "MonsterIds": [
-      4,
-      4,
-      4
+      2,
+      2,
+      7
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7101,8 +7096,8 @@
   {
     "Id": 350230815,
     "MonsterIds": [
-      4,
-      4
+      2,
+      7
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7414,9 +7409,9 @@
     "Id": 350320501,
     "MonsterIds": [
       1,
-      2,
       1,
-      2,
+      1,
+      6,
       1
     ],
     "WaypointIds": [],
@@ -7426,9 +7421,9 @@
     "Id": 350320502,
     "MonsterIds": [
       1,
-      2,
       1,
-      2
+      1,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7436,10 +7431,10 @@
   {
     "Id": 350320503,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2
+      6,
+      6,
+      6,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7476,7 +7471,6 @@
   {
     "Id": 350320507,
     "MonsterIds": [
-      11,
       11
     ],
     "WaypointIds": [],
@@ -7723,7 +7717,6 @@
   {
     "Id": 350320806,
     "MonsterIds": [
-      14,
       14
     ],
     "WaypointIds": [],
@@ -7788,11 +7781,11 @@
   {
     "Id": 350320904,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1,
-      1
+      6,
+      6,
+      6,
+      6,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7800,10 +7793,10 @@
   {
     "Id": 350320905,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1
+      6,
+      6,
+      6,
+      6
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7838,9 +7831,9 @@
   {
     "Id": 350321001,
     "MonsterIds": [
+      1,
       2,
-      2,
-      6,
+      1,
       2
     ],
     "WaypointIds": [],
@@ -7850,9 +7843,9 @@
     "Id": 350321002,
     "MonsterIds": [
       2,
+      1,
       2,
-      2,
-      6,
+      1,
       2
     ],
     "WaypointIds": [],
@@ -7861,11 +7854,11 @@
   {
     "Id": 350321003,
     "MonsterIds": [
+      1,
       2,
+      1,
       2,
-      6,
-      2,
-      6,
+      1,
       2
     ],
     "WaypointIds": [],
@@ -7875,7 +7868,6 @@
     "Id": 350321004,
     "MonsterIds": [
       7,
-      7,
       7
     ],
     "WaypointIds": [],
@@ -7884,11 +7876,11 @@
   {
     "Id": 350321005,
     "MonsterIds": [
-      6,
-      6,
-      6,
-      6,
-      6
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7896,7 +7888,6 @@
   {
     "Id": 350321006,
     "MonsterIds": [
-      11,
       11
     ],
     "WaypointIds": [],
@@ -7906,7 +7897,6 @@
     "Id": 350321007,
     "MonsterIds": [
       7,
-      7,
       7
     ],
     "WaypointIds": [],
@@ -7915,7 +7905,6 @@
   {
     "Id": 350321008,
     "MonsterIds": [
-      14,
       14
     ],
     "WaypointIds": [],
@@ -7924,7 +7913,6 @@
   {
     "Id": 350321009,
     "MonsterIds": [
-      14,
       14,
       14
     ],
@@ -7968,9 +7956,9 @@
   {
     "Id": 350321104,
     "MonsterIds": [
-      3,
-      3,
-      3
+      4,
+      4,
+      4
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -7978,11 +7966,10 @@
   {
     "Id": 350321105,
     "MonsterIds": [
-      3,
-      3,
-      3,
-      3,
-      3
+      4,
+      4,
+      4,
+      4
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -8013,7 +8000,6 @@
   {
     "Id": 350321108,
     "MonsterIds": [
-      14,
       14
     ],
     "WaypointIds": [],
@@ -8022,7 +8008,6 @@
   {
     "Id": 350321109,
     "MonsterIds": [
-      14,
       14,
       14
     ],
@@ -8045,7 +8030,7 @@
       6,
       1,
       6,
-      1
+      3
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -8058,7 +8043,7 @@
       1,
       6,
       1,
-      6
+      3
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -8071,7 +8056,7 @@
       1,
       6,
       1,
-      6
+      3
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -9451,7 +9436,7 @@
     "Id": 350240707,
     "MonsterIds": [
       11,
-      11
+      4
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -10954,8 +10939,8 @@
   {
     "Id": 350220507,
     "MonsterIds": [
-      3,
-      3
+      4,
+      4
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11406,10 +11391,10 @@
   {
     "Id": 350220801,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1
+      2,
+      2,
+      2,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11417,11 +11402,11 @@
   {
     "Id": 350220802,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2,
-      2
+      1,
+      1,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11448,10 +11433,10 @@
   {
     "Id": 350220805,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1
+      2,
+      2,
+      2,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11487,10 +11472,10 @@
   {
     "Id": 350220809,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1
+      2,
+      2,
+      2,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11498,13 +11483,13 @@
   {
     "Id": 350220810,
     "MonsterIds": [
-      1,
-      1,
-      1,
-      1,
       2,
       2,
-      2
+      2,
+      2,
+      1,
+      1,
+      1
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -11540,21 +11525,12 @@
   {
     "Id": 350220814,
     "MonsterIds": [
-      2,
-      2,
-      2,
-      2,
       1,
       1,
       1,
-      1
-    ],
-    "WaypointIds": [],
-    "WaypointLoop": []
-  },
-  {
-    "Id": 350220815,
-    "MonsterIds": [
+      1,
+      2,
+      2,
       2,
       2
     ],
@@ -11562,11 +11538,20 @@
     "WaypointLoop": []
   },
   {
-    "Id": 350220816,
+    "Id": 350220815,
     "MonsterIds": [
       1,
-      1,
       1
+    ],
+    "WaypointIds": [],
+    "WaypointLoop": []
+  },
+  {
+    "Id": 350220816,
+    "MonsterIds": [
+      2,
+      2,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -16724,7 +16709,7 @@
   {
     "Id": 350404707,
     "MonsterIds": [
-      12,
+      11,
       10
     ],
     "WaypointIds": [],
@@ -17223,9 +17208,9 @@
   {
     "Id": 350230716,
     "MonsterIds": [
-      1,
-      1,
-      1
+      2,
+      2,
+      2
     ],
     "WaypointIds": [],
     "WaypointLoop": []
@@ -17460,15 +17445,6 @@
     "WaypointLoop": []
   },
   {
-    "Id": 350320308,
-    "MonsterIds": [
-      14,
-      14
-    ],
-    "WaypointIds": [],
-    "WaypointLoop": []
-  },
-  {
     "Id": 350400001,
     "MonsterIds": [
       19
@@ -17484,6 +17460,15 @@
       2,
       2,
       2
+    ],
+    "WaypointIds": [],
+    "WaypointLoop": []
+  },
+  {
+    "Id": 350320308,
+    "MonsterIds": [
+      14,
+      14
     ],
     "WaypointIds": [],
     "WaypointLoop": []

@@ -4,18 +4,18 @@
     "Desc": "",
     "Data": {
       "Type": 0,
-      "ExitEffectHeight": -41630,
-      "EffectiveHeight": -41910,
-      "FallTeleportHeight": -45733,
+      "ExitEffectHeight": -39000,
+      "EffectiveHeight": -45000,
+      "FallTeleportHeight": -49000,
       "Motor": {
-        "WindFieldDepth": 1000,
+        "WindFieldDepth": 8000,
         "MaxAdditionalSpeed": 5000,
-        "SpeedCurve": "/Game/Aki/Data/Fight/Curves/CV_MotorSoarWindField.CV_MotorSoarWindField",
+        "SpeedCurve": "/Game/Aki/Data/Fight/Curves/CV_MotorSoarWind35.CV_MotorSoarWind35",
         "SpeedTolerance": 400,
         "Direction": {
           "X": 0,
           "Y": 0,
-          "Z": 0
+          "Z": 1
         },
         "Offset": {
           "X": 0,
@@ -32,7 +32,9 @@
         "Offset": {
           "Z": 2500
         }
-      }
+      },
+      "FallTeleportTransitionConfigId": 750001,
+      "TopTeleportHeight": 22000
     }
   }
 ]

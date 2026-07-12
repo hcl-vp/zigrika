@@ -106,5 +106,11 @@
     "DescText": "3.5庭侯0米感知正常仇恨",
     "AiHateId": 70183,
     "FirstAiSenseId": 178001
+  },
+  {
+    "Id": 750006,
+    "DescText": "万囮牢复刷",
+    "AiHateId": 8004201,
+    "FirstAiSenseId": 8004201
   }
 ]

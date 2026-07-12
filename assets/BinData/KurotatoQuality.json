@@ -70,7 +70,7 @@
     "MediumItemGridQualitySpritePath": "/Game/Aki/UI/UIResources/Common/Atlas/SP_QualityRedA.SP_QualityRedA",
     "SmallItemGridQualityId": 5,
     "QualityName": "Kurotato_Quality_00",
-    "QualityColor": "#FF5D6C",
+    "QualityColor": "#FF96A0",
     "QualityBoxColor": "#FF5D6C",
     "AttrSelectQualityBg": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/Popup/T_SurvivorAttributeBgGold.T_SurvivorAttributeBgGold",
     "AttrSelectCircleLight": "#A6963C",

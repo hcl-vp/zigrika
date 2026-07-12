@@ -63,8 +63,8 @@
     "QuestionDesc": "为什么霁息兽尊会变成如今的“无头兽尊”？",
     "EnterFlowStateId": [
       "剧情_通缉石头狮子",
-      "1",
-      "19"
+      "12",
+      "1"
     ],
     "NeedClueCount": 1,
     "FailResultDesc": [
@@ -82,7 +82,7 @@
     "QuestionDesc": "首沅为什么要偷霁息兽尊的头？",
     "EnterFlowStateId": [
       "剧情_通缉石头狮子",
-      "2",
+      "14",
       "1"
     ],
     "NeedClueCount": 1,
@@ -98,7 +98,7 @@
   },
   {
     "Id": 750037,
-    "QuestionDesc": "这些人绑架“漂泊者”的目的？",
+    "QuestionDesc": "绑架者的目的是……？",
     "EnterFlowStateId": [
       "剧情_真假漂泊者",
       "19",
@@ -107,7 +107,7 @@
     "NeedClueCount": 1,
     "FailResultDesc": [
       "剧情_真假漂泊者",
-      "21",
+      "24",
       "1"
     ],
     "SoftPityCount": 3,
@@ -189,7 +189,7 @@
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [
-      10301
+      10304
     ]
   },
   {
@@ -208,7 +208,7 @@
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [
-      10301
+      10305
     ]
   },
   {
@@ -265,7 +265,7 @@
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [
-      10101
+      10504
     ]
   },
   {
@@ -284,7 +284,7 @@
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [
-      10101
+      10501
     ]
   },
   {
@@ -303,21 +303,21 @@
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [
-      10101
+      10505
     ]
   },
   {
     "Id": 750049,
-    "QuestionDesc": "是什么导致了信息的错位呢？",
+    "QuestionDesc": "绑架者为什么对被绑架者缺乏了解？",
     "EnterFlowStateId": [
-      "剧情_通缉假商人",
-      "1",
-      "0"
+      "剧情_真假漂泊者",
+      "22",
+      "1"
     ],
     "NeedClueCount": 1,
     "FailResultDesc": [
-      "剧情_通缉假商人",
-      "29",
+      "剧情_真假漂泊者",
+      "24",
       "1"
     ],
     "SoftPityCount": 3,
@@ -327,17 +327,17 @@
   },
   {
     "Id": 750050,
-    "QuestionDesc": "他们，或者他们背后的人打算在玄方城里做什么？",
+    "QuestionDesc": "绑架者，或他们背后的人打算做什么？",
     "EnterFlowStateId": [
-      "剧情_通缉假商人",
-      "1",
-      "0"
+      "剧情_真假漂泊者",
+      "25",
+      "1"
     ],
     "NeedClueCount": 1,
     "FailResultDesc": [
-      "剧情_通缉假商人",
-      "1",
-      "0"
+      "剧情_真假漂泊者",
+      "27",
+      "1"
     ],
     "SoftPityCount": 3,
     "SoftPityClueIds": [

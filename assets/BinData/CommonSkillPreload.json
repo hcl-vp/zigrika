@@ -3239,7 +3239,6 @@
     "AnimationBlueprints": [],
     "Others": [
       "/Game/Aki/Effect/DataAsset/Ghost/DA_Fx_Ghost_R2T1MicaiMd10011.DA_Fx_Ghost_R2T1MicaiMd10011",
-      "/Game/Aki/Effect/DataAsset/Ghost/DA_Fx_Ghost_R2T1Windnvzhu10011.DA_Fx_Ghost_R2T1Windnvzhu10011",
       "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Jixianshanbi_Start_02.DA_Fx_Group_Jixianshanbi_Start_02",
       "/Game/Aki/Effect/MaterialController/Common/DA_Fx_TimeFreeze_LimitDodge.DA_Fx_TimeFreeze_LimitDodge"
     ]
@@ -3291,7 +3290,10 @@
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Fight_Born01.DA_Fx_Group_JiBin_MOa_Fight_Born01",
+      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Death_Boom01.DA_Fx_Group_JiBin_MOa_Death_Boom01"
+    ]
   },
   {
     "Id": 230009,
@@ -3374,82 +3376,72 @@
     "Others": []
   },
   {
-    "Id": 800025,
+    "Id": 8000101,
     "IsCommon": true,
     "HasMontagePath": false,
     "ActorClass": [],
-    "Animations": [],
+    "Animations": [
+      "/Game/Aki/Character/Role/FemaleM/BaseAnim/Level/JBGC_Shanbi_02.JBGC_Shanbi_02"
+    ],
     "Effects": [],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Effect/DataAsset/SkeletalMesh/R2T1MicaiMd10011/DA_Fx_Mesh_Team_Stand2.DA_Fx_Mesh_Team_Stand2"
+    ]
+  },
+  {
+    "Id": 800025,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Threat.AM_Threat"
+    ],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ]
   },
   {
     "Id": 800026,
     "IsCommon": true,
     "HasMontagePath": false,
     "ActorClass": [],
-    "Animations": [],
+    "Animations": [
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Eat.AM_Eat"
+    ],
     "Effects": [],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ]
   },
   {
     "Id": 800027,
     "IsCommon": true,
     "HasMontagePath": false,
     "ActorClass": [],
-    "Animations": [],
+    "Animations": [
+      "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Eat.AM_Eat"
+    ],
     "Effects": [],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": []
-  },
-  {
-    "Id": 800028,
-    "IsCommon": true,
-    "HasMontagePath": true,
-    "ActorClass": [],
-    "Animations": [],
-    "Effects": [],
-    "Audios": [],
-    "Meshes": [],
-    "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": []
-  },
-  {
-    "Id": 800032,
-    "IsCommon": true,
-    "HasMontagePath": true,
-    "ActorClass": [],
-    "Animations": [],
-    "Effects": [],
-    "Audios": [],
-    "Meshes": [],
-    "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": []
-  },
-  {
-    "Id": 8000101,
-    "IsCommon": true,
-    "HasMontagePath": false,
-    "ActorClass": [],
-    "Animations": [],
-    "Effects": [],
-    "Audios": [],
-    "Meshes": [],
-    "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": []
+    "Others": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ]
   },
   {
     "Id": 8000102,
@@ -3467,5 +3459,50 @@
     "Others": [
       "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/Abilities/GA/GA_Cancle.GA_Cancle_C"
     ]
+  },
+  {
+    "Id": 800032,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 5045008,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Railslide_Start.AM_Railslide_Start",
+      "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Railslide_Loop.AM_Railslide_Loop"
+    ],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/Abilities/GA/GA_Railslide_Start.GA_Railslide_Start_C",
+      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/3C/DA_Fx_Group_MP1FengTingXieYou_MPa_Jump.DA_Fx_Group_MP1FengTingXieYou_MPa_Jump"
+    ]
+  },
+  {
+    "Id": 800039,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
   }
 ]

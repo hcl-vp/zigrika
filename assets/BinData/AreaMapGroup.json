@@ -61,9 +61,9 @@
     "MapId": 8,
     "BlockBorder": [
       {
-        "XMin": -14,
-        "YMin": -4,
-        "XMax": -3,
+        "XMin": -10,
+        "YMin": 0,
+        "XMax": -6,
         "YMax": 2
       }
     ],

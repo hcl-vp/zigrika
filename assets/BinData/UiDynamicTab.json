@@ -1569,7 +1569,7 @@
     "UiCameraSettingsName": "",
     "UiCameraBlendName": "",
     "BackViewBlendName": "",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SP_IconBreakthroughDetail.SP_IconBreakthroughDetail",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity34/Survivor/Com/SP_IconRogue2.SP_IconRogue2",
     "LightSequence": ""
   },
   {
@@ -1582,7 +1582,7 @@
     "UiCameraSettingsName": "",
     "UiCameraBlendName": "",
     "BackViewBlendName": "",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/TabIcon/SP_IconRole.SP_IconRole",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity34/Survivor/Com/SP_IconRogue3.SP_IconRogue3",
     "LightSequence": ""
   },
   {

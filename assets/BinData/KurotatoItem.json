@@ -1110,6 +1110,7 @@
     "ShopBasicCost": 40,
     "ShopSellMutiply": 0.6,
     "Tags": [
+      "爆炸角色适配",
       "远程角色适配"
     ]
   },
@@ -1121,7 +1122,8 @@
       991081,
       991082,
       991083,
-      991084
+      991084,
+      991085
     ],
     "Name": "KurotatoItem_name_510008",
     "SortId": 49,
@@ -1315,7 +1317,8 @@
     "ShopBasicCost": 45,
     "ShopSellMutiply": 0.6,
     "Tags": [
-      "近战角色适配"
+      "近战角色适配",
+      "生存角色适配"
     ]
   },
   {
@@ -1523,7 +1526,8 @@
       991241,
       991242,
       991243,
-      991244
+      991244,
+      991245
     ],
     "Name": "KurotatoItem_name_510024",
     "SortId": 65,
@@ -3108,7 +3112,8 @@
       992251,
       992252,
       992253,
-      992254
+      992254,
+      992255
     ],
     "Name": "KurotatoItem_name_520025",
     "SortId": 128,
@@ -3926,7 +3931,8 @@
       994142,
       994143,
       994144,
-      994145
+      994145,
+      994146
     ],
     "Name": "KurotatoItem_name_540014",
     "SortId": 160,
@@ -4141,7 +4147,7 @@
     "Type": 3,
     "Desc": "KurotatoCharacter_desc_10006",
     "DescParams": [
-      "5",
+      "1",
       "50%",
       "1",
       "10",
@@ -4171,8 +4177,7 @@
     "Desc": "KurotatoCharacter_desc_10007",
     "DescParams": [
       "50%",
-      "1",
-      "1"
+      "30%"
     ],
     "BgDesc": "KurotatoItem_desc_600006",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_34_UI.T_IconRoleHeadCircle256_34_UI",
@@ -4201,7 +4206,7 @@
       "300%",
       "300%",
       "3",
-      "2"
+      "5"
     ],
     "BgDesc": "KurotatoItem_desc_600007",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_37_UI.T_IconRoleHeadCircle256_37_UI",
@@ -4260,7 +4265,7 @@
     "Desc": "KurotatoCharacter_desc_10010",
     "DescParams": [
       "50%",
-      "50%",
+      "75%",
       "50",
       "50%"
     ],
@@ -6034,7 +6039,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_810005",
     "DescParams": [
-      "10%"
+      "2%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_810005",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_limuguo_UI.T_IconC160_limuguo_UI",
@@ -6055,7 +6060,7 @@
     ],
     "Name": "KurotatoItem_name_810006",
     "SortId": 246,
-    "MaxStackCount": 999,
+    "MaxStackCount": 7,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_810006",
@@ -6081,7 +6086,7 @@
     ],
     "Name": "KurotatoItem_name_810007",
     "SortId": 247,
-    "MaxStackCount": 999,
+    "MaxStackCount": 8,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_810007",
@@ -6089,7 +6094,7 @@
       "250%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_810007",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_31079_UI.T_IconMonsterGoods160_31079_UI",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/IconSurvivorItem160/T_IconSurvivorItem160_03.T_IconSurvivorItem160_03",
     "Tag": "",
     "Quality": 1,
     "ShopBasicCost": 45,
@@ -6108,7 +6113,7 @@
     ],
     "Name": "KurotatoItem_name_810008",
     "SortId": 248,
-    "MaxStackCount": 999,
+    "MaxStackCount": 5,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_810008",
@@ -6116,7 +6121,7 @@
       "8"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_810008",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_31079_UI.T_IconMonsterGoods160_31079_UI",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/IconSurvivorItem160/T_IconSurvivorItem160_01.T_IconSurvivorItem160_01",
     "Tag": "",
     "Quality": 1,
     "ShopBasicCost": 45,
@@ -6156,7 +6161,7 @@
   {
     "Id": 820002,
     "ActivityId": 3401,
-    "UnlockConditionId": 12907308,
+    "UnlockConditionId": 12907327,
     "Effect": [
       972021,
       972022
@@ -6218,7 +6223,7 @@
     ],
     "Name": "KurotatoItem_name_820004",
     "SortId": 252,
-    "MaxStackCount": 999,
+    "MaxStackCount": 2,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820004",
@@ -6244,18 +6249,18 @@
     ],
     "Name": "KurotatoItem_name_820005",
     "SortId": 253,
-    "MaxStackCount": 999,
+    "MaxStackCount": 5,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820005",
     "DescParams": [
-      "3"
+      "1"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820005",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_047_UI.T_IconC160_047_UI",
     "Tag": "",
-    "Quality": 2,
-    "ShopBasicCost": 81,
+    "Quality": 1,
+    "ShopBasicCost": 45,
     "ShopSellMutiply": 0.6,
     "Tags": [
       "经济角色适配"
@@ -6297,7 +6302,7 @@
     ],
     "Name": "KurotatoItem_name_820007",
     "SortId": 255,
-    "MaxStackCount": 999,
+    "MaxStackCount": 2,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820007",
@@ -6323,7 +6328,7 @@
     ],
     "Name": "KurotatoItem_name_820008",
     "SortId": 256,
-    "MaxStackCount": 999,
+    "MaxStackCount": 3,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820008",
@@ -6349,7 +6354,7 @@
     ],
     "Name": "KurotatoItem_name_820009",
     "SortId": 257,
-    "MaxStackCount": 999,
+    "MaxStackCount": 6,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820009",
@@ -6357,7 +6362,7 @@
       "600%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820009",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_31079_UI.T_IconMonsterGoods160_31079_UI",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/IconSurvivorItem160/T_IconSurvivorItem160_04.T_IconSurvivorItem160_04",
     "Tag": "",
     "Quality": 2,
     "ShopBasicCost": 81,
@@ -6376,7 +6381,7 @@
     ],
     "Name": "KurotatoItem_name_820010",
     "SortId": 258,
-    "MaxStackCount": 999,
+    "MaxStackCount": 3,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_820010",
@@ -6385,7 +6390,7 @@
       "60%"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_820010",
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterGoods160/T_IconMonsterGoods160_31079_UI.T_IconMonsterGoods160_31079_UI",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/IconSurvivorItem160/T_IconSurvivorItem160_02.T_IconSurvivorItem160_02",
     "Tag": "",
     "Quality": 2,
     "ShopBasicCost": 81,
@@ -6508,7 +6513,8 @@
     "Effect": [
       972151,
       972152,
-      972153
+      972153,
+      972154
     ],
     "Name": "KurotatoItem_name_820015",
     "SortId": 263,
@@ -6589,7 +6595,9 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      973031
+      973031,
+      973032,
+      973033
     ],
     "Name": "KurotatoItem_name_830003",
     "SortId": 266,
@@ -6598,7 +6606,7 @@
     "Type": 2,
     "Desc": "KurotatoItem_desc_830003",
     "DescParams": [
-      "10%",
+      "5%",
       "1"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_830003",
@@ -6708,7 +6716,7 @@
     ],
     "Name": "KurotatoItem_name_830007",
     "SortId": 270,
-    "MaxStackCount": 999,
+    "MaxStackCount": 2,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_830007",
@@ -6839,7 +6847,7 @@
     ],
     "Name": "KurotatoItem_name_830012",
     "SortId": 275,
-    "MaxStackCount": 999,
+    "MaxStackCount": 4,
     "EffectivePeriod": "Permanent",
     "Type": 2,
     "Desc": "KurotatoItem_desc_830012",
@@ -7027,7 +7035,9 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      974021
+      974021,
+      974022,
+      974023
     ],
     "Name": "KurotatoItem_name_840002",
     "SortId": 282,
@@ -7229,7 +7239,8 @@
     "Desc": "KurotatoItem_desc_840009",
     "DescParams": [
       "50%",
-      "20"
+      "25",
+      "5"
     ],
     "BgDesc": "KurotatoItem_Bgdesc_840009",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRouge160/T_IconRouge160_006_UI.T_IconRouge160_006_UI",
@@ -7436,7 +7447,6 @@
     "ActivityId": 3401,
     "UnlockConditionId": 0,
     "Effect": [
-      973181,
       973182,
       973183
     ],
@@ -7450,8 +7460,8 @@
     "BgDesc": "KurotatoItem_Bgdesc_830018",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconC160/T_IconC160_SM_Gat_27A_UI.T_IconC160_SM_Gat_27A_UI",
     "Tag": "",
-    "Quality": 3,
-    "ShopBasicCost": 108,
+    "Quality": 4,
+    "ShopBasicCost": 216,
     "ShopSellMutiply": 0.6,
     "Tags": [
       "经济角色适配"
@@ -7460,7 +7470,7 @@
   {
     "Id": 830019,
     "ActivityId": 3401,
-    "UnlockConditionId": 12907308,
+    "UnlockConditionId": 12907327,
     "Effect": [
       970200570,
       970200571
@@ -7714,6 +7724,28 @@
     "Tags": [
       "经济角色适配"
     ]
+  },
+  {
+    "Id": 850001,
+    "ActivityId": 3401,
+    "UnlockConditionId": 0,
+    "Effect": [
+      20
+    ],
+    "Name": "KurotatoItem_name_850001",
+    "SortId": 300,
+    "MaxStackCount": 1,
+    "EffectivePeriod": "Permanent",
+    "Type": 2,
+    "Desc": "KurotatoItem_desc_850001",
+    "DescParams": [],
+    "BgDesc": "KurotatoItem_Bgdesc_850001",
+    "Icon": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity34/Survivor/T_IconHeadAbu.T_IconHeadAbu",
+    "Tag": "",
+    "Quality": 5,
+    "ShopBasicCost": 0,
+    "ShopSellMutiply": 0.6,
+    "Tags": []
   },
   {
     "Id": 900001,

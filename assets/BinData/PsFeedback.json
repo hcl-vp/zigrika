@@ -94,5 +94,13 @@
     "FeedbackPath": "/Game/Aki/Character/Role/Common/Data/DualSenseTriggerFeedBack/BasicFeedback/TE_Aim_Attack_2.TE_Aim_Attack_2",
     "ListenTag": "角色.Common.通用过程标识.瞄准蓄力完成",
     "Priority": 11
+  },
+  {
+    "Id": "FirstPersonTurret",
+    "ActionName": "UI键盘C手柄RT",
+    "IsAxis": false,
+    "FeedbackPath": "/Game/Aki/UI/GamePadFeedBack/TE_FirstPersonTurre.TE_FirstPersonTurre",
+    "ListenTag": "",
+    "Priority": 0
   }
 ]

@@ -2423,5 +2423,71 @@
     "MonsterPerformanceId": 0,
     "FixedLocation": false,
     "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 80042006,
+    "RoleMappingId": 0,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 7,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 10070608,
+    "RoleMappingId": 1110,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 7,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 70192,
+    "RoleMappingId": 0,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 3,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 70193,
+    "RoleMappingId": 0,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 2,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 77093,
+    "RoleMappingId": 0,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 4,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
+  },
+  {
+    "Id": 80041004,
+    "RoleMappingId": 0,
+    "ExecutionId": [],
+    "ExecutionRadius": 3,
+    "ForceLockOnCoefficient": 0,
+    "MonsterSizeId": 7,
+    "MonsterPerformanceId": 0,
+    "FixedLocation": false,
+    "WeaknessExploitWeapon": 0
   }
 ]

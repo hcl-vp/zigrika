@@ -4578,8 +4578,8 @@
     "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Xuanling/Portraits_Xuanling.Portraits_Xuanling-atlas",
     "SpineParam": [
       0,
-      -190,
-      0.23999999463558197
+      -130,
+      0.20999999344348907
     ],
     "FormationOffset": {
       "X": 0,
@@ -4642,9 +4642,9 @@
     "FormationSpineSkeletonData": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Suisui/Portraits_Suisui.Portraits_Suisui-data",
     "FormationSpineAtlas": "/Game/Aki/UI/UIResources/Common/Spine/Portraits/Portraits_Suisui/Portraits_Suisui.Portraits_Suisui-atlas",
     "SpineParam": [
-      53,
-      -215,
-      0.2549999952316284
+      0,
+      -130,
+      0.2199999988079071
     ],
     "FormationOffset": {
       "X": 0,

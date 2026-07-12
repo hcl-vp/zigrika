@@ -16,25 +16,11 @@
     "WaveType": 0,
     "WaveCondition": 0,
     "MonsterSpawnGroup": [
-      4
-    ]
-  },
-  {
-    "Id": 3,
-    "InstId": 1558,
-    "WaveType": 0,
-    "WaveCondition": 0,
-    "MonsterSpawnGroup": [
-      4
-    ]
-  },
-  {
-    "Id": 4,
-    "InstId": 1558,
-    "WaveType": 0,
-    "WaveCondition": 0,
-    "MonsterSpawnGroup": [
-      4
+      4,
+      5,
+      6,
+      7,
+      8
     ]
   }
 ]

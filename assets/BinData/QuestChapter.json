@@ -752,8 +752,8 @@
     "SectionNum": "QuestChapter_40_SectionNum",
     "ActName": "QuestChapter_40_ActName",
     "ChapterName": "QuestChapter_40_ChapterName",
-    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_03_UI.T_Logo_03_UI",
-    "PrefabName": "UiView_TaskTips_Prefab"
+    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_Mengzhou.T_Logo_Mengzhou",
+    "PrefabName": "UiView_TasktipsA_Prefab"
   },
   {
     "Id": 41,
@@ -761,8 +761,8 @@
     "SectionNum": "QuestChapter_41_SectionNum",
     "ActName": "QuestChapter_41_ActName",
     "ChapterName": "QuestChapter_41_ChapterName",
-    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_03_UI.T_Logo_03_UI",
-    "PrefabName": "UiView_TaskTips_Prefab"
+    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_Mengzhou.T_Logo_Mengzhou",
+    "PrefabName": "UiView_TasktipsA_Prefab"
   },
   {
     "Id": 42,
@@ -770,8 +770,8 @@
     "SectionNum": "QuestChapter_42_SectionNum",
     "ActName": "QuestChapter_42_ActName",
     "ChapterName": "QuestChapter_42_ChapterName",
-    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_03_UI.T_Logo_03_UI",
-    "PrefabName": "UiView_TaskTips_Prefab"
+    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_Mengzhou.T_Logo_Mengzhou",
+    "PrefabName": "UiView_TasktipsA_Prefab"
   },
   {
     "Id": 3010,
@@ -790,5 +790,14 @@
     "ChapterName": "QuestChapter_3011_ChapterName",
     "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_18_UI.T_Logo_18_UI",
     "PrefabName": "UiView_TasktipsA_Prefab"
+  },
+  {
+    "Id": 3012,
+    "ChapterNum": "QuestChapter_3012_ChapterNum",
+    "SectionNum": "QuestChapter_3012_SectionNum",
+    "ActName": "QuestChapter_3012_ActName",
+    "ChapterName": "QuestChapter_3012_ChapterName",
+    "ChapterIcon": "/Game/Aki/UI/UIResources/Common/Image/IconForceLogo/T_Logo_03_UI.T_Logo_03_UI",
+    "PrefabName": "UiView_TaskTips_Prefab"
   }
 ]

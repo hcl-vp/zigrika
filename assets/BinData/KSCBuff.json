@@ -5893,7 +5893,7 @@
   },
   {
     "Id": 970100213,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/ItemBuff/KSC_DA_Buff_ListenEvent_970100213.KSC_DA_Buff_ListenEvent_970100213"
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/ItemBuff/KSC_DA_Buff_EVentHandler_970100213.KSC_DA_Buff_EVentHandler_970100213"
   },
   {
     "Id": 970100214,
@@ -6152,6 +6152,10 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_5FinalBattle/Player/Buff/Buff_Suoxue.Buff_Suoxue"
   },
   {
+    "Id": 950100217,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_ModifyAttr_950100217.KSC_DA_Buff_ModifyAttr_950100217"
+  },
+  {
     "Id": 950101103,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/Addskill/Ksc_Da_Buff_AddSkill_HuiXuanBiao_0.Ksc_Da_Buff_AddSkill_HuiXuanBiao_0"
   },
@@ -6188,16 +6192,16 @@
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/Addskill/Ksc_Da_Buff_AddSkill_HuoQiu_2.Ksc_Da_Buff_AddSkill_HuoQiu_2"
   },
   {
-    "Id": 950100217,
-    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_ModifyAttr_950100217.KSC_DA_Buff_ModifyAttr_950100217"
-  },
-  {
     "Id": 950100218,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_ModifyAttr_950100218.KSC_DA_Buff_ModifyAttr_950100218"
   },
   {
     "Id": 950100219,
     "AssetPath": "/Game/Aki/Data/SimpleCombat/3_4Potato/Buff/KSC_DA_Buff_Dodge.KSC_DA_Buff_Dodge"
+  },
+  {
+    "Id": 750050002,
+    "AssetPath": "/Game/Aki/Data/SimpleCombat/3_5FinalBattle/Player/Buff/Buff_Shanbai.Buff_Shanbai"
   },
   {
     "Id": 950100220,

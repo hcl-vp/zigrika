@@ -52,7 +52,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301001,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000001,
@@ -107,7 +108,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301002,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000002,
@@ -162,7 +164,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301003,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000003,
@@ -217,7 +220,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301004,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000004,
@@ -272,7 +276,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301005,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000005,
@@ -327,7 +332,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301006,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000006,
@@ -382,7 +388,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301007,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000007,
@@ -437,7 +444,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301008,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000008,
@@ -492,7 +500,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301009,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000009,
@@ -545,9 +554,10 @@
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 0,
+    "DungeonId": 210301020,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 210301020
+    "InstanceDungeonEntranceId": 210301020,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010001,
@@ -563,9 +573,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010001_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010001_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_17.T_IconElementSuit_17",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_17.T_IconElementSuit_17",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14008,
@@ -593,7 +603,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      7,
+      9
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -602,7 +615,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404001,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010009,
@@ -618,9 +632,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010009_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010009_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_08.T_IconElementSuit_08",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_08.T_IconElementSuit_08",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14508,
@@ -648,7 +662,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      1,
+      4
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -657,7 +674,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404002,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010010,
@@ -673,9 +691,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010010_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010010_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_07.T_IconElementSuit_07",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_07.T_IconElementSuit_07",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14408,
@@ -703,7 +721,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      1,
+      3
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -712,7 +733,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404003,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010011,
@@ -728,9 +750,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010011_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010011_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_16.T_IconElementSuit_16",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_16.T_IconElementSuit_16",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14108,
@@ -758,7 +780,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      5,
+      9
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -767,7 +792,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404004,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010012,
@@ -783,9 +809,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010012_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010012_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_05.T_IconElementSuit_05",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_05.T_IconElementSuit_05",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14208,
@@ -813,7 +839,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      2,
+      7
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -822,7 +851,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404005,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010013,
@@ -838,9 +868,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010013_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010013_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_09.T_IconElementSuit_09",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_09.T_IconElementSuit_09",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14608,
@@ -868,7 +898,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      2,
+      3
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -877,7 +910,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404006,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010016,
@@ -893,9 +927,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_14.T_IconElementSuit_14",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_14.T_IconElementSuit_14",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14308,
@@ -923,7 +957,10 @@
     "SortId": 3,
     "NewContent": "",
     "DetectionTabType": 1,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      6,
+      8
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -932,7 +969,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404007,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020001,
@@ -984,8 +1022,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020002,
@@ -1037,8 +1076,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020003,
@@ -1090,8 +1130,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020004,
@@ -1143,8 +1184,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020005,
@@ -1196,8 +1238,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020006,
@@ -1233,7 +1276,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4025,
-    "LockCon": 12005127,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -1249,8 +1292,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 1,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000010,
@@ -1305,7 +1349,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301010,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020007,
@@ -1358,7 +1403,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020008,
@@ -1411,7 +1457,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010017,
@@ -1427,9 +1474,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010017_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010017_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_06.T_IconElementSuit_06",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_06.T_IconElementSuit_06",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14708,
@@ -1457,7 +1504,10 @@
     "SortId": 12,
     "NewContent": "New_corner",
     "DetectionTabType": 2,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      10,
+      11
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -1466,7 +1516,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404008,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010018,
@@ -1482,9 +1533,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010018_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010018_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_02.T_IconElementSuit_02",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_02.T_IconElementSuit_02",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14808,
@@ -1512,7 +1563,10 @@
     "SortId": 11,
     "NewContent": "New_corner",
     "DetectionTabType": 2,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      12,
+      13
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -1521,7 +1575,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404009,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000011,
@@ -1576,7 +1631,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301011,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000012,
@@ -1631,7 +1687,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301012,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000013,
@@ -1686,7 +1743,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301013,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020009,
@@ -1739,7 +1797,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010019,
@@ -1755,9 +1814,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_11.T_IconElementSuit_11",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_11.T_IconElementSuit_11",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 14908,
@@ -1785,7 +1844,10 @@
     "SortId": 13,
     "NewContent": "New_corner",
     "DetectionTabType": 2,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      11,
+      14
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -1794,7 +1856,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404010,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010020,
@@ -1810,9 +1873,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_03.T_IconElementSuit_03",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_03.T_IconElementSuit_03",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 16108,
@@ -1840,7 +1903,10 @@
     "SortId": 14,
     "NewContent": "New_corner",
     "DetectionTabType": 2,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      16,
+      12
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -1849,7 +1915,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404011,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020010,
@@ -1902,7 +1969,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020011,
@@ -1955,7 +2023,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020012,
@@ -2008,7 +2077,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000014,
@@ -2063,7 +2133,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301014,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020013,
@@ -2116,7 +2187,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010021,
@@ -2132,9 +2204,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_01.T_IconElementSuit_01",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_01.T_IconElementSuit_01",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 16208,
@@ -2162,7 +2234,10 @@
     "SortId": 15,
     "NewContent": "New_corner",
     "DetectionTabType": 2,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      17,
+      18
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -2171,7 +2246,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404012,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015001,
@@ -2225,7 +2301,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210403001,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018001,
@@ -2260,7 +2337,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135005,
-    "LockCon": 12400003,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2279,7 +2356,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302001,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018002,
@@ -2314,7 +2392,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135004,
-    "LockCon": 12400007,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2333,7 +2411,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302002,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018003,
@@ -2368,7 +2447,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135003,
-    "LockCon": 12400004,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2387,7 +2466,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302003,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018004,
@@ -2422,7 +2502,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135002,
-    "LockCon": 12400006,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2442,7 +2522,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302004,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018005,
@@ -2477,7 +2558,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135007,
-    "LockCon": 12400002,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2496,7 +2577,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302005,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018006,
@@ -2531,7 +2613,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135001,
-    "LockCon": 12400001,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2550,7 +2632,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302006,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018007,
@@ -2585,7 +2668,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 135006,
-    "LockCon": 12400005,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2604,7 +2687,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302007,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018008,
@@ -2659,7 +2743,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302008,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018009,
@@ -2714,7 +2799,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210302009,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000015,
@@ -2769,7 +2855,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301015,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30018010,
@@ -2804,7 +2891,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 380047,
-    "LockCon": 12400011,
+    "LockCon": 0,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -2821,9 +2908,10 @@
     "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
-    "DungeonId": 210302010,
+    "DungeonId": 9901,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000016,
@@ -2878,7 +2966,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301016,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000017,
@@ -2933,7 +3022,8 @@
     "LeftBgTexture": "",
     "DungeonId": 9902,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015002,
@@ -2987,7 +3077,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210403002,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015003,
@@ -3041,7 +3132,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210403003,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020014,
@@ -3094,7 +3186,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020015,
@@ -3147,7 +3240,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015004,
@@ -3201,7 +3295,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210403004,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015005,
@@ -3255,7 +3350,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210403005,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020016,
@@ -3308,7 +3404,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 1,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010022,
@@ -3324,9 +3421,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_12.T_IconElementSuit_12",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_12.T_IconElementSuit_12",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 16508,
@@ -3354,7 +3451,10 @@
     "SortId": 16,
     "NewContent": "New_corner",
     "DetectionTabType": 5,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      25,
+      26
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -3363,7 +3463,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404013,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010023,
@@ -3379,9 +3480,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_15.T_IconElementSuit_15",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_15.T_IconElementSuit_15",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 16408,
@@ -3409,7 +3510,10 @@
     "SortId": 17,
     "NewContent": "New_corner",
     "DetectionTabType": 5,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      24,
+      26
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -3418,7 +3522,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404014,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020017,
@@ -3454,7 +3559,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4027,
-    "LockCon": 13000231,
+    "LockCon": 13000263,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -3470,8 +3575,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3924,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015006,
@@ -3520,7 +3626,9 @@
       26,
       27,
       28,
-      29
+      29,
+      30,
+      31
     ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
@@ -3530,7 +3638,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015007,
@@ -3579,7 +3688,9 @@
       26,
       27,
       28,
-      29
+      29,
+      30,
+      31
     ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
@@ -3589,7 +3700,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000018,
@@ -3644,7 +3756,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301017,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000019,
@@ -3699,7 +3812,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301018,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000020,
@@ -3754,7 +3868,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210301019,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020018,
@@ -3790,7 +3905,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4027,
-    "LockCon": 13000231,
+    "LockCon": 13000263,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -3806,8 +3921,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3924,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010024,
@@ -3823,9 +3939,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_10.T_IconElementSuit_10",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_10.T_IconElementSuit_10",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 17008,
@@ -3853,7 +3969,10 @@
     "SortId": 18,
     "NewContent": "New_corner",
     "DetectionTabType": 5,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      27,
+      28
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -3862,7 +3981,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404015,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010025,
@@ -3878,9 +3998,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_04.T_IconElementSuit_04",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_04.T_IconElementSuit_04",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 17108,
@@ -3908,7 +4028,10 @@
     "SortId": 19,
     "NewContent": "New_corner",
     "DetectionTabType": 5,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      27,
+      29
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -3917,7 +4040,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404016,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30015008,
@@ -3966,7 +4090,9 @@
       26,
       27,
       28,
-      29
+      29,
+      30,
+      31
     ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
@@ -3976,7 +4102,8 @@
     "LeftBgTexture": "",
     "DungeonId": 0,
     "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020019,
@@ -4012,7 +4139,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4027,
-    "LockCon": 13000231,
+    "LockCon": 13000263,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -4028,8 +4155,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3924,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020020,
@@ -4065,7 +4193,7 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4027,
-    "LockCon": 13000231,
+    "LockCon": 13000263,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
@@ -4081,8 +4209,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3924,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30010026,
@@ -4098,9 +4227,9 @@
     "MatType": 0,
     "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
     "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
-    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_13.T_IconElementSuit_13",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
-    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_shlb_01_UI.T_IconA_shlb_01_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_13.T_IconElementSuit_13",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
     "ShowReward": 17208,
@@ -4128,7 +4257,10 @@
     "SortId": 20,
     "NewContent": "New_corner",
     "DetectionTabType": 5,
-    "PhantomFetterGroup": [],
+    "PhantomFetterGroup": [
+      30,
+      31
+    ],
     "WeaponFetterGroup": [],
     "PeriodicityChallengeType": 0,
     "DetectionTitlePanel": 0,
@@ -4137,7 +4269,8 @@
     "LeftBgTexture": "",
     "DungeonId": 210404017,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020021,
@@ -4173,12 +4306,12 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4027,
-    "LockCon": 13000231,
+    "LockCon": 13000263,
     "MapId": 906,
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 30010,
-    "SortId": 24,
+    "SortId": 25,
     "NewContent": "New_corner",
     "DetectionTabType": 8,
     "PhantomFetterGroup": [],
@@ -4189,8 +4322,9 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
-    "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3924,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30030001,
@@ -4243,7 +4377,8 @@
     "LeftBgTexture": "T_DevelopmentPeriod_QianDao01",
     "DungeonId": 0,
     "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30000021,
@@ -4298,7 +4433,8 @@
     "LeftBgTexture": "",
     "DungeonId": 2100,
     "JumpType": 2,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   },
   {
     "Id": 30020022,
@@ -4319,14 +4455,14 @@
     "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34028_UI.T_IconMonsterHead_34028_UI",
     "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
     "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
-    "ShowReward": 49925,
+    "ShowReward": 49931,
     "ShowRewardMap": {
-      "1": 49925,
-      "2": 49926,
-      "3": 49927,
-      "4": 49928,
-      "5": 49929,
-      "6": 49930
+      "1": 49931,
+      "2": 49932,
+      "3": 49933,
+      "4": 49934,
+      "5": 49935,
+      "6": 49936
     },
     "ShowRewardMapCalabash": {
       "1": 14008
@@ -4334,12 +4470,12 @@
     "BeginTimeStamp": 0,
     "PreOpenId": 0,
     "MarkId": 4028,
-    "LockCon": 13000231,
+    "LockCon": 13000262,
     "MapId": 8,
     "PhantomId": [],
     "FirstDropId": 0,
     "AdditionalId": 31010,
-    "SortId": 25,
+    "SortId": 26,
     "NewContent": "New_corner",
     "DetectionTabType": 10,
     "PhantomFetterGroup": [],
@@ -4350,7 +4486,239 @@
     "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
     "LeftBgTexture": "",
     "DungeonId": 0,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3925,
+    "JumpWithSubDungeonId": 0
+  },
+  {
+    "Id": 30015009,
+    "Name": "MapMark_7013_MarkTitle",
+    "GuideId": 3,
+    "LevelPlayList": [
+      255750037
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_TacetField",
+    "DangerType": 3,
+    "Secondary": 64,
+    "TypeDescription2": 64,
+    "MatType": 0,
+    "AttributesDescriptionLock": "SilentAreaDetection_316700005_AttributesDescriptionLock",
+    "AttributesDescriptionUnlock": "SilentAreaDetection_316700005_AttributesDescriptionUnlock",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_27_UI.T_IconFunctionOpen_27_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_27_UI.T_IconFunctionOpen_27_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_27_UI.T_IconFunctionOpen_27_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMonsterHead_1006_UI.SP_IconMonsterHead_1006_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Atlas/WorldMapIcon/SP_IconMonsterHead_1006_1_UI.SP_IconMonsterHead_1006_1_UI",
+    "ShowReward": 16301,
+    "ShowRewardMap": {
+      "1": 16301
+    },
+    "ShowRewardMapCalabash": {
+      "1": 16341,
+      "5": 16342,
+      "8": 16343,
+      "15": 16344,
+      "21": 16345
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 7013,
+    "LockCon": 0,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 0,
+    "SortId": 21,
+    "NewContent": "New_corner",
+    "DetectionTabType": 13,
+    "PhantomFetterGroup": [
+      33,
+      34,
+      35
+    ],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 0,
     "JumpType": 0,
-    "InstanceDungeonEntranceId": 0
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
+  },
+  {
+    "Id": 30010027,
+    "Name": "MapMark_5018_MarkTitle",
+    "GuideId": 3,
+    "LevelPlayList": [
+      255750038
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_TacetField",
+    "DangerType": 3,
+    "Secondary": 22,
+    "TypeDescription2": 22,
+    "MatType": 0,
+    "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
+    "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_18.T_IconElementSuit_18",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_18.T_IconElementSuit_18",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "ShowReward": 17308,
+    "ShowRewardMap": {
+      "1": 17301,
+      "2": 17302,
+      "3": 17303,
+      "4": 17304,
+      "5": 17305,
+      "6": 17306,
+      "7": 17307,
+      "8": 17308
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 5018,
+    "LockCon": 0,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 0,
+    "SortId": 21,
+    "NewContent": "New_corner",
+    "DetectionTabType": 11,
+    "PhantomFetterGroup": [
+      33,
+      34
+    ],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 210404018,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
+  },
+  {
+    "Id": 30010028,
+    "Name": "MapMark_5019_MarkTitle",
+    "GuideId": 3,
+    "LevelPlayList": [
+      255750039
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_TacetField",
+    "DangerType": 3,
+    "Secondary": 22,
+    "TypeDescription2": 22,
+    "MatType": 0,
+    "AttributesDescriptionLock": "SilentAreaDetection_30010016_AttributesDescriptionLock",
+    "AttributesDescriptionUnlock": "SilentAreaDetection_30010016_AttributesDescriptionUnlock",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_19.T_IconElementSuit_19",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/ImgCopy/T_ImgCopy_004_UI.T_ImgCopy_004_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconElementSuit/T_IconElementSuit_19.T_IconElementSuit_19",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "ShowReward": 17408,
+    "ShowRewardMap": {
+      "1": 17401,
+      "2": 17402,
+      "3": 17403,
+      "4": 17404,
+      "5": 17405,
+      "6": 17406,
+      "7": 17407,
+      "8": 17408
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 5019,
+    "LockCon": 0,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 0,
+    "SortId": 22,
+    "NewContent": "New_corner",
+    "DetectionTabType": 11,
+    "PhantomFetterGroup": [
+      33,
+      35
+    ],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 210404019,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
+  },
+  {
+    "Id": 30000022,
+    "Name": "MonsterInfo_340000300_Name",
+    "GuideId": 3,
+    "LevelPlayList": [
+      180750001
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_empty",
+    "DangerType": 3,
+    "Secondary": 21,
+    "TypeDescription2": 21,
+    "MatType": 0,
+    "AttributesDescriptionLock": "MonsterInfo_340000300_UndiscoveredDes",
+    "AttributesDescriptionUnlock": "MonsterInfo_340000300_DiscoveredDes",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
+    "Icon": "",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconFunctionOpen/T_IconFunctionOpen_13_UI.T_IconFunctionOpen_13_UI",
+    "TemporaryIconlock": "",
+    "ShowReward": 10618,
+    "ShowRewardMap": {
+      "1": 10611,
+      "2": 10612,
+      "3": 10613,
+      "4": 10614,
+      "5": 10615,
+      "6": 10616,
+      "7": 10617,
+      "8": 10618
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 5044,
+    "LockCon": 0,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 0,
+    "SortId": 22,
+    "NewContent": "New_corner",
+    "DetectionTabType": 11,
+    "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 210301028,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 0,
+    "JumpWithSubDungeonId": 0
   }
 ]

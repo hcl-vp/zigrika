@@ -664,5 +664,14 @@
     "SectorRadius": 0,
     "SectorAngle": 0,
     "ToleranceAngle": 22.5
+  },
+  {
+    "Id": 1309004,
+    "Distance": 2500,
+    "UpDistance": 2000,
+    "DownDistance": 1000,
+    "SectorRadius": 0,
+    "SectorAngle": 0,
+    "ToleranceAngle": 22.5
   }
 ]

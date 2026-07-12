@@ -792,10 +792,10 @@
     "Scale": 1.350000023841858
   },
   {
-    "Id": 1110001,
-    "Name": "穗穗强化E可用提示",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
-    "ElementId": 1,
+    "Id": 1309113,
+    "Name": "雷主E派生高亮",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_LeiZhu_Fight_E.NS_Fx_LGUI_LeiZhu_Fight_E",
+    "ElementId": 0,
     "Color": "",
     "Scale": 1
   },
@@ -808,10 +808,10 @@
     "Scale": 1
   },
   {
-    "Id": 1309113,
-    "Name": "雷主E派生高亮",
-    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_LeiZhu_Fight_E.NS_Fx_LGUI_LeiZhu_Fight_E",
-    "ElementId": 0,
+    "Id": 1110001,
+    "Name": "穗穗强化E可用提示",
+    "NiagaraPath": "/Game/Aki/Effect/UI/Niagaras/Common/NS_Fx_LGUI_Fight_E.NS_Fx_LGUI_Fight_E",
+    "ElementId": 1,
     "Color": "",
     "Scale": 1
   }

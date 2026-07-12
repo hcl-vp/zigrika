@@ -6130,7 +6130,7 @@
     "NeedMaskClose": true,
     "UiShowType": 0,
     "NeedClose": true,
-    "TimeDilation": 1
+    "TimeDilation": 0
   },
   {
     "Id": 395,
@@ -6146,7 +6146,7 @@
     "NeedMaskClose": true,
     "UiShowType": 0,
     "NeedClose": true,
-    "TimeDilation": 1
+    "TimeDilation": 0
   },
   {
     "Id": 396,
@@ -7890,13 +7890,13 @@
     "Content": "ConfirmBox_508_Content",
     "SecondaryContent": "",
     "ButtonText": [
-      "ConfirmBox_1_ButtonText_0",
-      "ConfirmBox_1_ButtonText_1"
+      "ConfirmBox_508_ButtonText_0",
+      "ConfirmBox_508_ButtonText_1"
     ],
     "DelayTime": 0,
     "DelayButtonIndex": 0,
     "NeedMaskClose": false,
-    "UiShowType": 5,
+    "UiShowType": 0,
     "NeedClose": true,
     "TimeDilation": 1
   },
@@ -7913,7 +7913,7 @@
     "DelayButtonIndex": 0,
     "NeedMaskClose": false,
     "UiShowType": 6,
-    "NeedClose": true,
+    "NeedClose": false,
     "TimeDilation": 0
   },
   {
@@ -8236,7 +8236,7 @@
   },
   {
     "Id": 530,
-    "Title": "ConfirmBox_530_Title",
+    "Title": "ConfirmBox_1_Title",
     "Content": "ConfirmBox_530_Content",
     "SecondaryContent": "",
     "ButtonText": [
@@ -8270,7 +8270,7 @@
     "Id": 532,
     "Title": "ConfirmBox_1_Title",
     "Content": "ConfirmBox_532_Content",
-    "SecondaryContent": "",
+    "SecondaryContent": "特殊目标失败，即将继续进行正常波次",
     "ButtonText": [
       "ConfirmBox_532_ButtonText_1"
     ],
@@ -8361,6 +8361,22 @@
     "TimeDilation": 1
   },
   {
+    "Id": 539,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_539_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
     "Id": 540,
     "Title": "ConfirmBox_1_Title",
     "Content": "ConfirmBox_503_Content_01",
@@ -8375,5 +8391,84 @@
     "UiShowType": 0,
     "NeedClose": false,
     "TimeDilation": 0
+  },
+  {
+    "Id": 542,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_542_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 543,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_543_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": true,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 544,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_544_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 0
+  },
+  {
+    "Id": 547,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_547_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_0",
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
+  },
+  {
+    "Id": 552,
+    "Title": "ConfirmBox_1_Title",
+    "Content": "ConfirmBox_552_Content",
+    "SecondaryContent": "",
+    "ButtonText": [
+      "ConfirmBox_1_ButtonText_1"
+    ],
+    "DelayTime": 0,
+    "DelayButtonIndex": 0,
+    "NeedMaskClose": false,
+    "UiShowType": 0,
+    "NeedClose": true,
+    "TimeDilation": 1
   }
 ]

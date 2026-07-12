@@ -4302,5 +4302,21 @@
     "PreviewCornerMarker": "0",
     "QualityId": 5,
     "PreviewItemAccess": []
+  },
+  {
+    "Id": 33001,
+    "Name": "ItemInfo_33001_Name",
+    "ShowTypes": [
+      65
+    ],
+    "AttributesDescription": "ItemInfo_33001_AttributesDescription",
+    "BgDescription": "ItemInfo_33001_BgDescription",
+    "IconBig": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon732/T_IconWeapon732_80080006_UI.T_IconWeapon732_80080006_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon/T_IconWeapon80080009_UI.T_IconWeapon80080009_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon160/T_IconWeapon160_80080009_UI.T_IconWeapon160_80080009_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconWeapon80/T_IconWeapon80_80080009_UI.T_IconWeapon80_80080009_UI",
+    "PreviewCornerMarker": "0",
+    "QualityId": 5,
+    "PreviewItemAccess": []
   }
 ]

@@ -4,7 +4,7 @@
     "ActivityId": 110500001,
     "Level": 0,
     "NeedExp": 100,
-    "RewardDropId": 5180301,
+    "RewardDropId": 5235041,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -13,7 +13,7 @@
     "ActivityId": 110500001,
     "Level": 1,
     "NeedExp": 100,
-    "RewardDropId": 5180302,
+    "RewardDropId": 5235042,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -21,8 +21,8 @@
     "Id": 3,
     "ActivityId": 110500001,
     "Level": 2,
-    "NeedExp": 200,
-    "RewardDropId": 5180303,
+    "NeedExp": 100,
+    "RewardDropId": 5235043,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -31,7 +31,7 @@
     "ActivityId": 110500001,
     "Level": 3,
     "NeedExp": 200,
-    "RewardDropId": 5180304,
+    "RewardDropId": 5235044,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -39,8 +39,8 @@
     "Id": 5,
     "ActivityId": 110500001,
     "Level": 4,
-    "NeedExp": 300,
-    "RewardDropId": 5180305,
+    "NeedExp": 200,
+    "RewardDropId": 5235045,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -48,8 +48,8 @@
     "Id": 6,
     "ActivityId": 110500001,
     "Level": 5,
-    "NeedExp": 300,
-    "RewardDropId": 5180306,
+    "NeedExp": 200,
+    "RewardDropId": 5235046,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -57,8 +57,8 @@
     "Id": 7,
     "ActivityId": 110500001,
     "Level": 6,
-    "NeedExp": 500,
-    "RewardDropId": 5180307,
+    "NeedExp": 300,
+    "RewardDropId": 5235047,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -66,8 +66,8 @@
     "Id": 8,
     "ActivityId": 110500001,
     "Level": 7,
-    "NeedExp": 500,
-    "RewardDropId": 5180308,
+    "NeedExp": 300,
+    "RewardDropId": 5235048,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -75,8 +75,8 @@
     "Id": 9,
     "ActivityId": 110500001,
     "Level": 8,
-    "NeedExp": 700,
-    "RewardDropId": 5180309,
+    "NeedExp": 400,
+    "RewardDropId": 5235049,
     "TipsLock": "",
     "TipsDone": ""
   },
@@ -84,8 +84,8 @@
     "Id": 10,
     "ActivityId": 110500001,
     "Level": 9,
-    "NeedExp": 700,
-    "RewardDropId": 5180310,
+    "NeedExp": 500,
+    "RewardDropId": 5235050,
     "TipsLock": "",
     "TipsDone": ""
   },

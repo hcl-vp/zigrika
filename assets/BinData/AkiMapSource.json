@@ -316,7 +316,7 @@
   },
   {
     "MapId": 100,
-    "PakRule": 0,
+    "PakRule": 2,
     "MapPath": "/Game/Aki/Map/WPMapTest/AkiWorld_WPTest",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1576,7 +1576,7 @@
   },
   {
     "MapId": 777,
-    "PakRule": 1,
+    "PakRule": 0,
     "MapPath": "/Game/Aki/Map/CopyPrototypeTest/TestMap/ProtoTest_ZZM/InstanceTree_3_5_Main_jiguanzhaidi",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1912,8 +1912,8 @@
   },
   {
     "MapId": 1578,
-    "PakRule": 0,
-    "MapPath": "/Game/Aki/Map/Level/Main/3_5_Tinyuan/InstanceTree_TinYuan",
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/Main/3_5_TInyuan/InstanceTree_TinYuan",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   },
@@ -1947,14 +1947,14 @@
   },
   {
     "MapId": 913,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/WP/3_5_JGZD/WP_3_5_JGZD",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   },
   {
     "MapId": 1588,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_suisui/InstanceTree_suisui",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -1975,7 +1975,7 @@
   },
   {
     "MapId": 1589,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_Yuancheng/InstanceTree_3_5_Main_Yuancheng",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2010,7 +2010,7 @@
   },
   {
     "MapId": 1592,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_ConsciousnessSpace/InstanceTree_ConsciousnessSpace",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2073,7 +2073,7 @@
   },
   {
     "MapId": 1609,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_YunLingGuHuiYi/Instance_3_5_Main_YunLingGuHuiYi",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2276,7 +2276,7 @@
   },
   {
     "MapId": 2525,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/WorldInstance/3_5_LiangyuHome/3_5_InstanceTree_LiangyuHome",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2360,7 +2360,7 @@
   },
   {
     "MapId": 8731,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Huodong/3_5_Photobattle/InstanceTree_FightPhoto_Re01",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2423,7 +2423,7 @@
   },
   {
     "MapId": 2111,
-    "PakRule": 0,
+    "PakRule": 1,
     "MapPath": "/Game/Aki/Map/Level/Main/3_5_TInyuan/InstanceTree_TinYuan_Fushua",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
@@ -2432,6 +2432,55 @@
     "MapId": 832,
     "PakRule": 1,
     "MapPath": "/Game/Aki/Map/UISceneLevel/UI_Scene/UL_UIMap_ChallengeUI",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 798,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/AkiWorld/WP_ChengXiaoShan",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3928,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/TacticalHologram/3_0_TacticalHologram/Art/3_0_Instance_Hologram_Light",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3929,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/TacticalHologram/3_0_TacticalHologram/Art/3_0_Instance_Hologram_Light_UI",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3930,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/TacticalHologram/3_5_TacticalHologram/Art/3_5_Instance_Hologram_Light",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3931,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/TacticalHologram/3_5_TacticalHologram/Art/3_5_Instance_Hologram_Light_UI",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3932,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/Material_Simple/Material_Challenge/Art/Instance_Mat_Challenge_01_Light",
+    "LoadMapMode": 0,
+    "IgnoreWorldOrigin": 0
+  },
+  {
+    "MapId": 3933,
+    "PakRule": 1,
+    "MapPath": "/Game/Aki/Map/Level/System/Material_Simple/Material_Challenge/Art/Instance_Mat_Challenge_01_Light_UI",
     "LoadMapMode": 0,
     "IgnoreWorldOrigin": 0
   }

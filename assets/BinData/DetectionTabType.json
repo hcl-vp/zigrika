@@ -65,7 +65,7 @@
   {
     "Id": 10,
     "Type": 0,
-    "Icon": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/SP_IconDevelopmentLordGym03.SP_IconDevelopmentLordGym04",
+    "Icon": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/SP_IconDevelopmentLordGym04.SP_IconDevelopmentLordGym04",
     "Text": "MaterialArea_title_10",
     "Order": 4
   },
@@ -82,5 +82,12 @@
     "Icon": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/SP_IconDevelopmentHeihaian.SP_IconDevelopmentHeihaian",
     "Text": "MaterialArea_title_12",
     "Order": 2
+  },
+  {
+    "Id": 13,
+    "Type": 0,
+    "Icon": "",
+    "Text": "MaterialArea_title_13",
+    "Order": 3
   }
 ]

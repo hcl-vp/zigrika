@@ -3544,7 +3544,7 @@
       }
     },
     "RecommendTeamFeature": [
-      11
+      8
     ],
     "DamegaRateShow": 0
   },
@@ -3685,7 +3685,7 @@
       }
     },
     "RecommendTeamFeature": [
-      8
+      11
     ],
     "DamegaRateShow": 0
   },
@@ -3865,7 +3865,7 @@
       }
     },
     "RecommendTeamFeature": [
-      11
+      8
     ],
     "DamegaRateShow": 0
   },
@@ -4006,7 +4006,7 @@
       }
     },
     "RecommendTeamFeature": [
-      8
+      11
     ],
     "DamegaRateShow": 0
   },
@@ -4196,7 +4196,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": true,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
     "DamegaRate": 480,
@@ -4235,7 +4235,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
     "DamegaRate": 480,
@@ -4274,7 +4274,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 90,
     "DamegaRate": 480,
@@ -4313,7 +4313,7 @@
     "Round": 1,
     "Wave": 2,
     "IsShowInView": true,
-    "RecommendId": 1,
+    "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 90,
     "DamegaRate": 1000,
@@ -4436,7 +4436,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": true,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
     "DamegaRate": 400,
@@ -4482,7 +4482,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
     "DamegaRate": 400,
@@ -4528,7 +4528,7 @@
     "Round": 1,
     "Wave": 1,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 100,
     "DamegaRate": 400,
@@ -4574,7 +4574,7 @@
     "Round": 1,
     "Wave": 2,
     "IsShowInView": true,
-    "RecommendId": 1,
+    "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 100,
     "DamegaRate": 834,
@@ -4760,7 +4760,7 @@
     "Round": 2,
     "Wave": 6,
     "IsShowInView": true,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
     "DamegaRate": 460,
@@ -4807,7 +4807,7 @@
     "Round": 2,
     "Wave": 6,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
     "DamegaRate": 460,
@@ -4854,7 +4854,7 @@
     "Round": 2,
     "Wave": 6,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 110,
     "DamegaRate": 460,
@@ -4901,7 +4901,7 @@
     "Round": 2,
     "Wave": 7,
     "IsShowInView": true,
-    "RecommendId": 1,
+    "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 110,
     "DamegaRate": 960,
@@ -5090,7 +5090,7 @@
     "Round": 3,
     "Wave": 11,
     "IsShowInView": true,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
     "DamegaRate": 500,
@@ -5137,7 +5137,7 @@
     "Round": 3,
     "Wave": 11,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
     "DamegaRate": 500,
@@ -5184,7 +5184,7 @@
     "Round": 3,
     "Wave": 11,
     "IsShowInView": false,
-    "RecommendId": 2,
+    "RecommendId": 1,
     "KillScore": 0,
     "MonsterLevel": 120,
     "DamegaRate": 500,
@@ -5231,7 +5231,7 @@
     "Round": 3,
     "Wave": 12,
     "IsShowInView": true,
-    "RecommendId": 1,
+    "RecommendId": 2,
     "KillScore": 0,
     "MonsterLevel": 120,
     "DamegaRate": 1043,
