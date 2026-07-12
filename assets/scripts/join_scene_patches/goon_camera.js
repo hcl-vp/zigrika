@@ -698,32 +698,32 @@ setTimeout(() => {
 
   UiCameraPhotographerStructure.prototype.OnSpawnStructureActor = function () {
     externally_hidden.clear();
-    if (
-      ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.PbDataId ===
-      1110
-    ) {
-      const owner = get_owner_actor(
-        ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity,
-      );
+    // if (
+    //   ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.PbDataId ===
+    //   1110
+    // ) {
+    //   const owner = get_owner_actor(
+    //     ModelManager_1.ModelManager.SceneTeamModel.GetCurrentEntity.Entity,
+    //   );
 
-      const cases = ["OtherCase1", "OtherCase2", "OtherCase3", "OtherCase6"];
-      for (const c of cases) {
-        const mat = owner[c].GetMaterial(4);
-        mat.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
-        mat.SetVectorParameterValue(
-          new UE.FName("Second_Contorl"),
-          new UE.LinearColor(0, 1, 0.25, 0),
-        );
+    //   const cases = ["OtherCase1", "OtherCase2", "OtherCase3", "OtherCase6"];
+    //   for (const c of cases) {
+    //     const mat = owner[c].GetMaterial(4);
+    //     mat.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
+    //     mat.SetVectorParameterValue(
+    //       new UE.FName("Second_Contorl"),
+    //       new UE.LinearColor(0, 1, 0.25, 0),
+    //     );
 
-        const mat2 = owner[c].GetMaterial(1);
-        mat2.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
-        mat2.SetVectorParameterValue(
-          new UE.FName("Second_Contorl"),
-          new UE.LinearColor(0, 1, 0.25, 0),
-        );
-      }
-      owner.OtherCase12.SetHiddenInGame(false, true);
-    }
+    //     const mat2 = owner[c].GetMaterial(1);
+    //     mat2.SetScalarParameterValue(new UE.FName("Base_bAddSecond"), 1);
+    //     mat2.SetVectorParameterValue(
+    //       new UE.FName("Second_Contorl"),
+    //       new UE.LinearColor(0, 1, 0.25, 0),
+    //     );
+    //   }
+    //   owner.OtherCase12.SetHiddenInGame(false, true);
+    // }
     photo_mode_active = true;
     var t = new UE.TransformDouble(
       new UE.Quat(0),
