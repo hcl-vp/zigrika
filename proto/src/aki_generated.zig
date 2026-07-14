@@ -36506,9 +36506,9 @@ pub const PlayerTitleData = struct {
     pub const ActivityServerRewardItemData_field_number: u32 = 5;
 };
 pub const SetDressedPlayerTitleNotify = struct {
-    pub const msg_id: u16 = 21829;
-    pub const PlayerTitleId_field_number: u32 = 6;
-    pub const CurPlayerTitleId_field_number: u32 = 15;
+    pub const msg_id: u16 = 16595;
+    pub const PlayerTitleId_field_number: u32 = 5;
+    pub const CurPlayerTitleId_field_number: u32 = 13;
 };
 pub const PlayerTitleDataRequest = struct {
     pub const msg_id: u16 = 25683;

@@ -54,16 +54,21 @@ const net_namespaces: []const type = &.{
 };
 
 pub fn Transaction(comptime T: type) type {
+    return TransactionWithResponse(T, inferredResponse(T));
+}
+
+fn inferredResponse(comptime T: type) type {
+    const message_name = @typeName(T)[3..];
+    if (!(std.mem.endsWith(u8, message_name, "Request"))) return void;
+    const response_name = message_name[0 .. message_name.len - 7] ++ "Response";
+    if (!@hasDecl(proto.pb, response_name)) return void;
+    return @field(proto.pb, response_name);
+}
+
+pub fn TransactionWithResponse(comptime T: type, comptime R: type) type {
     return struct {
         pub const MessagePB = T;
-
-        pub const Response = blk: {
-            const message_name = @typeName(T)[3..];
-            if (!(std.mem.endsWith(u8, message_name, "Request"))) break :blk void;
-            const response_name = message_name[0 .. message_name.len - 7] ++ "Response";
-            if (!@hasDecl(proto.pb, response_name)) break :blk void;
-            break :blk @field(proto.pb, response_name);
-        };
+        pub const Response = R;
 
         conn: *Connection,
         message: T,
@@ -79,6 +84,7 @@ pub fn Transaction(comptime T: type) type {
 pub const NetEventHandler = struct {
     namespace: type,
     Message: type,
+    Txn: type,
     name: []const u8,
 
     pub inline fn invoke(
@@ -87,7 +93,7 @@ pub const NetEventHandler = struct {
         message: handler.Message,
         rpc_id: u16,
     ) !void {
-        const Txn = Transaction(handler.Message);
+        const Txn = handler.Txn;
         var txn: Txn = .{
             .conn = state.conn,
             .message = message,
@@ -237,6 +243,7 @@ pub inline fn getNetEventHandler(comptime message_id: MessageId) NetEventHandler
                         return .{
                             .namespace = namespace,
                             .Message = MessagePB,
+                            .Txn = Txn,
                             .name = decl.name,
                         };
                     }
