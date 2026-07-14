@@ -37098,3 +37098,12 @@ pub const LobbyListResponse = struct {
     pub const ErrorCode_field_number: u32 = 10;
     pub const ItemList_field_number: u32 = 5;
 };
+pub const DollSmallMapInfoRequest = struct {
+    pub const msg_id: u16 = 21104;
+};
+pub const DollSmallMapInfoResponse = struct {
+    pub const msg_id: u16 = 26595;
+    pub const ErrorCode_field_number: u32 = 8;
+    pub const SceneUnlimitedScoreInfos_field_number: u32 = 15;
+    pub const SceneDollDeliveryInfos_field_number: u32 = 9;
+};

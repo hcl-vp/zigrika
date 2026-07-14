@@ -2,12 +2,13 @@
 const std = @import("std");
 const pb = @import("proto").pb;
 const Transaction = @import("../handlers.zig").Transaction;
-const TransactionWithResponse = @import("../handlers.zig").TransactionWithResponse;
 
 const ph_ba_success_code: pb.ErrorCode = .Success;
 
-pub fn onz_v(txn: *TransactionWithResponse(pb.z_v, pb.J_v)) !void {
-    txn.respond(.{ .Q4n = @intFromEnum(pb.ErrorCode.Success) });
+pub fn onDollSmallMapInfoRequest(
+    txn: *Transaction(pb.DollSmallMapInfoRequest),
+) !void {
+    txn.respond(.{ .ErrorCode = @intFromEnum(pb.ErrorCode.Success) });
 }
 
 pub fn onRoleVisionRecommendDataRequest(

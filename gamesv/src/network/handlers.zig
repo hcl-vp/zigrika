@@ -54,21 +54,16 @@ const net_namespaces: []const type = &.{
 };
 
 pub fn Transaction(comptime T: type) type {
-    return TransactionWithResponse(T, inferredResponse(T));
-}
-
-fn inferredResponse(comptime T: type) type {
-    const message_name = @typeName(T)[3..];
-    if (!(std.mem.endsWith(u8, message_name, "Request"))) return void;
-    const response_name = message_name[0 .. message_name.len - 7] ++ "Response";
-    if (!@hasDecl(proto.pb, response_name)) return void;
-    return @field(proto.pb, response_name);
-}
-
-pub fn TransactionWithResponse(comptime T: type, comptime R: type) type {
     return struct {
         pub const MessagePB = T;
-        pub const Response = R;
+
+        pub const Response = blk: {
+            const message_name = @typeName(T)[3..];
+            if (!(std.mem.endsWith(u8, message_name, "Request"))) break :blk void;
+            const response_name = message_name[0 .. message_name.len - 7] ++ "Response";
+            if (!@hasDecl(proto.pb, response_name)) break :blk void;
+            break :blk @field(proto.pb, response_name);
+        };
 
         conn: *Connection,
         message: T,

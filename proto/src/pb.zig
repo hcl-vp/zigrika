@@ -53304,3 +53304,12 @@ pub const LobbyListResponse = struct {
     ErrorCode: ?ErrorCode = null,
     ItemList: std.ArrayList(PlayerDetails) = .empty,
 };
+pub const DollSmallMapInfoRequest = struct {
+    pub const default: @This() = .{};
+};
+pub const DollSmallMapInfoResponse = struct {
+    pub const default: @This() = .{};
+    ErrorCode: i32 = 0,
+    SceneUnlimitedScoreInfos: std.ArrayList(auv) = .empty,
+    SceneDollDeliveryInfos: std.ArrayList(suv) = .empty,
+};
