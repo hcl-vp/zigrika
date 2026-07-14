@@ -11,6 +11,8 @@ const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
 const SceneInstance = @import("../../fs/SceneInstance.zig");
 const Connection = @import("../../network/Connection.zig");
+const Timers = @import("../../network/State.zig").Timers;
+const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
@@ -156,13 +158,26 @@ pub fn onInitialSceneJoin(
     player_id: PlayerID,
     assets: *const Assets,
     scene_comp: *PlayerSceneComponent,
+    role_comp: *PlayerRoleComponent,
+    weapon_comp: *PlayerWeaponComponent,
     cur_scene: *?Scene,
+    timers: *Timers,
+    dirty_saves: *DirtySaveQueue,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
 
+    try dirty_saves.flush(
+        alloc.gpa,
+        fs,
+        role_comp,
+        weapon_comp,
+        if (cur_scene.*) |*active_scene| active_scene else null,
+    );
+
     if (cur_scene.*) |*scene| {
         scene.deinit(alloc.gpa, fs);
+        cur_scene.* = null;
     }
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
@@ -262,6 +277,7 @@ pub fn onInitialSceneJoin(
     }
 
     try scene.save(fs, alloc.gpa);
+    timers.reset(alloc.gpa);
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
     });

@@ -46,6 +46,7 @@ pub const BuffAdditionEntry = struct {
     id: i64,
     stack_count: i32 = 0,
     is_active: bool,
+    duration_seconds: ?f32 = null,
 };
 
 pub const BuffAddition = struct {
@@ -56,6 +57,26 @@ pub const BuffAddition = struct {
 
 pub const BuffChange = struct { entity: Entity };
 
+pub const BuffTimerTick = struct {
+    now_ms: i64,
+};
+
+pub const FsmTimerTick = struct {
+    now_ms: i64,
+};
+
+pub const LevelPlayTimerTick = struct {
+    now_ms: i64,
+};
+
+pub const SceneCleanupTick = struct {
+    now_ms: i64,
+};
+
+pub const DirtySaveTick = struct {
+    now_ms: i64,
+};
+
 pub const GameplayTagChange = struct {
     entity: Entity,
     add_tag_ids: []i32,
@@ -64,4 +85,6 @@ pub const GameplayTagChange = struct {
 
 pub const ChatCommandResponse = struct { content: []const u8 };
 
-pub const TickTime = struct {};
+pub const TickTime = struct {
+    now_ms: i64,
+};

@@ -37,6 +37,70 @@ pub fn execute_buff_effects(
     }),
     alloc: mem.Alloc,
 ) !void {
+    try executeBuffEffects(
+        .instant,
+        combat_receive_pack,
+        target_id,
+        instigator_id,
+        buff_data,
+        scene,
+        fs,
+        io,
+        query,
+        alloc,
+    );
+}
+
+pub fn execute_periodic_buff_effects(
+    combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
+    target_id: i64,
+    instigator_id: i64,
+    buff_data: *const Assets.DataTables.Buff,
+    scene: *Scene,
+    fs: *FileSystem,
+    io: std.Io,
+    query: Scene.Query(&.{
+        Entity,
+        *Entity.FightBuffComponent,
+        ?*Entity.AttributeComponent,
+    }),
+    alloc: mem.Alloc,
+) !void {
+    try executeBuffEffects(
+        .periodic,
+        combat_receive_pack,
+        target_id,
+        instigator_id,
+        buff_data,
+        scene,
+        fs,
+        io,
+        query,
+        alloc,
+    );
+}
+
+const ExecutionMode = enum {
+    instant,
+    periodic,
+};
+
+fn executeBuffEffects(
+    mode: ExecutionMode,
+    combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
+    target_id: i64,
+    instigator_id: i64,
+    buff_data: *const Assets.DataTables.Buff,
+    scene: *Scene,
+    fs: *FileSystem,
+    io: std.Io,
+    query: Scene.Query(&.{
+        Entity,
+        *Entity.FightBuffComponent,
+        ?*Entity.AttributeComponent,
+    }),
+    alloc: mem.Alloc,
+) !void {
     const log = std.log.scoped(.buff_helper);
     const target_entity: Entity, _, const maybe_target_attr: ?*Entity.AttributeComponent = blk: {
         if (query.byNetId(target_id)) |comps| {
@@ -48,6 +112,11 @@ pub fn execute_buff_effects(
     };
 
     log.debug("buff id {d}", .{buff_data.Id});
+
+    switch (mode) {
+        .instant => if (buff_data.DurationPolicy != .Instant) return,
+        .periodic => if (buff_data.Period <= 0) return,
+    }
 
     if (maybe_target_attr) |target_attr| {
         const calc_policy: CalcutionPolicy = blk: {
@@ -61,29 +130,24 @@ pub fn execute_buff_effects(
             break :blk CalcutionPolicy.AddValue;
         };
 
-        switch (buff_data.DurationPolicy) {
-            .Instant => {
-                const change = try calculate_buff_effects(
-                    target_entity,
-                    target_attr,
-                    instigator_id,
-                    buff_data,
-                    calc_policy,
-                    query,
-                    alloc,
-                );
-                try scene.saveComponents(fs, alloc.gpa, target_entity, &.{Entity.AttributeComponent});
-                try attributes_helper.generate_attr_messages(
-                    combat_receive_pack,
-                    target_entity.net_id,
-                    target_attr,
-                    &change,
-                    alloc,
-                    io,
-                );
-            },
-            else => {},
-        }
+        const change = try calculate_buff_effects(
+            target_entity,
+            target_attr,
+            instigator_id,
+            buff_data,
+            calc_policy,
+            query,
+            alloc,
+        );
+        try scene.saveComponents(fs, alloc.gpa, target_entity, &.{Entity.AttributeComponent});
+        try attributes_helper.generate_attr_messages(
+            combat_receive_pack,
+            target_entity.net_id,
+            target_attr,
+            &change,
+            alloc,
+            io,
+        );
     }
 }
 

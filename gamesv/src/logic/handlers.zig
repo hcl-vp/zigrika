@@ -15,6 +15,7 @@ const logic_namespaces: []const type = &.{
     @import("handlers/tags.zig"),
     @import("handlers/chat.zig"),
     @import("handlers/time.zig"),
+    @import("handlers/fsm.zig"),
 };
 
 pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {
@@ -24,6 +25,8 @@ pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {
 }
 
 fn dispatchLogicEvent(q: *EventQueue, e: EventQueue.Event, state: *State) !void {
+    @setEvalBranchQuota(2_000);
+
     switch (e) {
         inline else => |event, tag| {
             inline for (logic_namespaces) |namespace| {

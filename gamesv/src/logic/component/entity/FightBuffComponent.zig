@@ -41,3 +41,9 @@ pub fn getByBuffId(comp: *Component, buff_id: i64) ?*pb.FightBuffInformation {
         if (info.BuffId == buff_id) return info;
     } else return null;
 }
+
+pub fn getByHandleId(comp: *Component, handle_id: i32) ?*pb.FightBuffInformation {
+    for (comp.fight_buff_infos) |*info| {
+        if (info.HandleId == handle_id) return info;
+    } else return null;
+}
