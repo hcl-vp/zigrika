@@ -14,7 +14,7 @@ const StateMachineCondition = Assets.DataTables.AiStateMachineConfig.StateMachin
 const StateMachineTransition = Assets.DataTables.AiStateMachineConfig.StateMachineTransition;
 
 pub const job: ScheduledJob = .{
-    .lane = .ms50,
+    .interval = .ms50,
     .event_key = .fsm_timer_tick,
 };
 

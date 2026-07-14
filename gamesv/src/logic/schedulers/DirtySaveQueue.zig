@@ -10,7 +10,7 @@ const ScheduledJob = @import("ScheduledJob.zig");
 const Allocator = std.mem.Allocator;
 
 pub const job: ScheduledJob = .{
-    .lane = .s30,
+    .interval = .s30,
     .event_key = .dirty_save_tick,
 };
 

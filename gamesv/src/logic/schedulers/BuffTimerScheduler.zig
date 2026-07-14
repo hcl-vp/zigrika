@@ -13,7 +13,7 @@ const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
 
 pub const job: ScheduledJob = .{
-    .lane = .ms50,
+    .interval = .ms50,
     .event_key = .buff_timer_tick,
 };
 

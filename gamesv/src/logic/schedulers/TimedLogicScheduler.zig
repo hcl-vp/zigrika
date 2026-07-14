@@ -6,18 +6,18 @@ const DirtySaveQueue = @import("DirtySaveQueue.zig");
 const FsmTimerScheduler = @import("FsmTimerScheduler.zig");
 const ScheduledJob = @import("ScheduledJob.zig");
 
-const Lane = ScheduledJob.Lane;
-const lanes = std.enums.values(Lane);
+const Interval = ScheduledJob.Interval;
+const intervals = std.enums.values(Interval);
 const scene_time_job: ScheduledJob = .{
-    .lane = .ms50,
+    .interval = .ms50,
     .event_key = .tick_time,
 };
 const level_play_job: ScheduledJob = .{
-    .lane = .ms250,
+    .interval = .ms250,
     .event_key = .level_play_timer_tick,
 };
 const scene_cleanup_job: ScheduledJob = .{
-    .lane = .s1,
+    .interval = .s1,
     .event_key = .scene_cleanup_tick,
 };
 const jobs = [_]ScheduledJob{
@@ -30,12 +30,12 @@ const jobs = [_]ScheduledJob{
 };
 
 comptime {
-    for (lanes) |lane| {
+    for (intervals) |interval| {
         var has_job = false;
         for (jobs) |job| {
-            if (job.lane == lane) has_job = true;
+            if (job.interval == interval) has_job = true;
         }
-        if (!has_job) @compileError("scheduled lane has no jobs: " ++ @tagName(lane));
+        if (!has_job) @compileError("scheduled interval has no jobs: " ++ @tagName(interval));
     }
 
     for (jobs, 0..) |job, index| {
@@ -54,7 +54,7 @@ comptime {
     }
 }
 
-next_due_ms: [lanes.len]i64 = [_]i64{0} ** lanes.len,
+next_due_ms: [intervals.len]i64 = [_]i64{0} ** intervals.len,
 
 pub fn reset(scheduler: *TimedLogicScheduler) void {
     scheduler.* = .{};
@@ -105,11 +105,11 @@ pub fn drainDue(
 
     var did_enqueue = false;
 
-    inline for (lanes, 0..) |lane, index| {
+    inline for (intervals, 0..) |interval, index| {
         if (scheduler.next_due_ms[index] <= now_ms) {
-            scheduler.next_due_ms[index] = now_ms + @intFromEnum(lane);
+            scheduler.next_due_ms[index] = now_ms + @intFromEnum(interval);
             inline for (jobs) |job| {
-                if (job.lane == lane) {
+                if (job.interval == interval) {
                     try event_queue.enqueue(job.event_key, .{ .now_ms = now_ms });
                 }
             }
