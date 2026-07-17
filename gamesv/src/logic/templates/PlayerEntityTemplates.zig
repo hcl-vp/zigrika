@@ -493,7 +493,7 @@ fn refreshMotorcycleGameplayTags(
     defer remove_tags.deinit(alloc.gpa);
 
     for (desired) |entry| {
-        if (getGameplayTagCount(tag_comp, entry.Id) == 0) {
+        if (tag_comp.gameplayTagCount(entry.Id) == 0) {
             try add_tags.append(alloc.gpa, entry.Id);
         }
     }
@@ -505,10 +505,10 @@ fn refreshMotorcycleGameplayTags(
     }
 
     for (add_tags.items) |tag_id| {
-        try setGameplayTagCount(alloc.gpa, tag_comp, tag_id, 1);
+        try tag_comp.setGameplayTagCount(alloc.gpa, tag_id, 1);
     }
     for (remove_tags.items) |tag_id| {
-        try removeGameplayTag(alloc.gpa, tag_comp, tag_id);
+        try tag_comp.removeGameplayTag(alloc.gpa, tag_id);
     }
 
     if (add_tags.items.len != 0 or remove_tags.items.len != 0) {
@@ -532,56 +532,6 @@ fn isMotorTechGameplayTag(id: i32) bool {
         if (tag_id == id) return true;
     }
     return false;
-}
-
-fn getGameplayTagCount(tag_comp: *const Entity.TagComponent, id: i32) i32 {
-    for (tag_comp.gameplay_tags) |entry| {
-        if (entry.Id == id) return entry.TagCount;
-    }
-    return 0;
-}
-
-fn setGameplayTagCount(
-    gpa: std.mem.Allocator,
-    tag_comp: *Entity.TagComponent,
-    id: i32,
-    count: i32,
-) !void {
-    for (tag_comp.gameplay_tags) |*entry| {
-        if (entry.Id == id) {
-            entry.TagCount = count;
-            return;
-        }
-    }
-
-    tag_comp.gameplay_tags = try gpa.realloc(tag_comp.gameplay_tags, tag_comp.gameplay_tags.len + 1);
-    tag_comp.gameplay_tags[tag_comp.gameplay_tags.len - 1] = .{ .Id = id, .TagCount = count };
-}
-
-fn removeGameplayTag(
-    gpa: std.mem.Allocator,
-    tag_comp: *Entity.TagComponent,
-    id: i32,
-) !void {
-    for (tag_comp.gameplay_tags, 0..) |entry, i| {
-        if (entry.Id != id) continue;
-
-        if (tag_comp.gameplay_tags.len == 1) {
-            gpa.free(tag_comp.gameplay_tags);
-            tag_comp.gameplay_tags = &.{};
-            return;
-        }
-
-        if (i + 1 < tag_comp.gameplay_tags.len) {
-            std.mem.copyForwards(
-                pb.GameplayTagData,
-                tag_comp.gameplay_tags[i .. tag_comp.gameplay_tags.len - 1],
-                tag_comp.gameplay_tags[i + 1 ..],
-            );
-        }
-        tag_comp.gameplay_tags = try gpa.realloc(tag_comp.gameplay_tags, tag_comp.gameplay_tags.len - 1);
-        return;
-    }
 }
 
 pub fn createSceneBattleEntity(

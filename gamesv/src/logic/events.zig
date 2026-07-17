@@ -70,10 +70,11 @@ pub const FsmTimerTick = struct {
     now_ms: i64,
 };
 
-pub const FsmServerActionKind = enum {
+pub const FsmServerActionKind = union(enum) {
     cue_paralysis,
     reset_status,
     set_rage_full,
+    instance_state: i32,
 };
 
 pub const FsmServerAction = struct {

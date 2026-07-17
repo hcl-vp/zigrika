@@ -1,4 +1,5 @@
 const std = @import("std");
+const pb = @import("proto").pb;
 const Assets = @import("../../data/Assets.zig");
 const AttributeComponent = @import("../component/entity/AttributeComponent.zig");
 const FightBuffComponent = @import("../component/entity/FightBuffComponent.zig");
@@ -95,7 +96,7 @@ fn evaluateRaw(
 
     if (condition.CondTaskFinish != null or condition.CondMontageTimeRemaining != null) return false;
 
-    if (condition.CondInstStateChange) |state| return hasTag(comp, ctx.tags, state.TagId);
+    if (condition.CondInstStateChange) |state| return instanceStateMatches(comp, ctx.tags, state.TagId);
 
     if (condition.CondBuffStack) |buff| {
         return buffStackInRange(ctx.buffs, buff);
@@ -285,6 +286,26 @@ fn hasTag(comp: anytype, tag_component: ?*const TagComponent, tag_id: i64) bool 
         if (tag.id == tag_id and tag.count > 0) return true;
     }
     return if (tag_component) |tags| tags.hasTag(tag_id) else false;
+}
+
+fn instanceStateMatches(comp: anytype, tag_component: ?*const TagComponent, tag_id: i64) bool {
+    const expected = std.math.cast(i32, tag_id) orelse return false;
+    if (comp.instance_state_tag) |state_tag| {
+        return state_tag == expected;
+    }
+    return if (tag_component) |tags| tags.hasTag(tag_id) else false;
+}
+
+test "fsm instance state overrides component fallback" {
+    const MockFsm = struct {
+        instance_state_tag: ?i32 = null,
+    };
+    var gameplay_tags = [_]pb.GameplayTagData{.{ .Id = 22, .TagCount = 1 }};
+    const tags: TagComponent = .{ .gameplay_tags = &gameplay_tags };
+
+    try std.testing.expect(instanceStateMatches(MockFsm{}, &tags, 22));
+    try std.testing.expect(instanceStateMatches(MockFsm{ .instance_state_tag = 11 }, &tags, 11));
+    try std.testing.expect(!instanceStateMatches(MockFsm{ .instance_state_tag = 11 }, &tags, 22));
 }
 
 fn clientPasses(comp: anytype, fsm_id: i32, transition: AiStateMachineConfig.StateMachineTransition, index: i32) bool {

@@ -77,7 +77,7 @@ pub fn handleFsmServerAction(
     query: FsmQuery,
 ) !void {
     const item = query.byNetId(event.data.entity.net_id) orelse return;
-    const entity, const fsm, const attribute, const buffs, _, _ = item;
+    const entity, const fsm, const attribute, const buffs, _, const tags = item;
 
     switch (event.data.kind) {
         .cue_paralysis => fsm.paralysis_active = true,
@@ -103,7 +103,41 @@ pub fn handleFsmServerAction(
                 try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
             }
         },
+        .instance_state => |tag_id| try applyInstanceState(entity, fsm, tags, tag_id, events, alloc),
     }
+}
+
+fn applyInstanceState(
+    entity: Entity,
+    fsm: *Entity.FsmComponent,
+    tags: ?*Entity.TagComponent,
+    tag_id: i32,
+    events: *EventQueue,
+    alloc: mem.Alloc,
+) !void {
+    const previous = fsm.instance_state_tag;
+    if (previous) |old_tag| {
+        if (old_tag == tag_id) return;
+    }
+    fsm.instance_state_tag = tag_id;
+
+    if (tags) |tag_comp| {
+        if (previous) |old_tag| try tag_comp.removeGameplayTag(alloc.gpa, old_tag);
+        try tag_comp.setGameplayTagCount(alloc.gpa, tag_id, 1);
+    }
+
+    const add_tags = try alloc.arena.alloc(i32, 1);
+    add_tags[0] = tag_id;
+    const remove_tags: []i32 = if (previous) |old_tag| blk: {
+        const old_tags = try alloc.arena.alloc(i32, 1);
+        old_tags[0] = old_tag;
+        break :blk old_tags;
+    } else try alloc.arena.alloc(i32, 0);
+    try events.enqueue(.gameplay_tag_change, .{
+        .entity = entity,
+        .add_tag_ids = add_tags,
+        .remove_tag_ids = remove_tags,
+    });
 }
 
 fn updateParalysis(

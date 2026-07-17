@@ -92,6 +92,7 @@ pub const LifecycleEffect = union(enum) {
     cue_paralysis,
     reset_status,
     set_rage_full,
+    set_instance_state: i32,
 };
 
 pub const ConfirmResult = union(enum) {

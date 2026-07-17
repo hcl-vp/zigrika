@@ -66,6 +66,10 @@ fn enqueueEffectsWithRecheck(
                 .entity = entity,
                 .kind = .set_rage_full,
             }),
+            .set_instance_state => |tag_id| try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .{ .instance_state = tag_id },
+            }),
         }
     }
 

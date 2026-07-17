@@ -327,6 +327,11 @@ fn runActions(
         }
         if (action.ActionResetStatus != null) try appendLifecycleEffect(comp, gpa, .reset_status);
         if (action.ActionSetRageFullAttribute != null) try appendLifecycleEffect(comp, gpa, .set_rage_full);
+        if (action.ActionInstChangeStateTag) |state| {
+            if (std.math.cast(i32, state.TagId)) |tag_id| {
+                try appendLifecycleEffect(comp, gpa, .{ .set_instance_state = tag_id });
+            }
+        }
 
         if (action.ActionAddTagCount) |tag| {
             if (tag.Count > 0) try updateTagCount(comp, gpa, tag.TagId, tag.Count);
