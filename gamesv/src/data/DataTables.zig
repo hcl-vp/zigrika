@@ -18,6 +18,7 @@ pub const InstanceDungeon = @import("tables/InstanceDungeon.zig");
 pub const Buff = @import("tables/Buff.zig");
 pub const SummonCfg = @import("tables/SummonCfg.zig");
 pub const ModelConfigPreload = @import("tables/ModelConfigPreload.zig");
+pub const CharacterPartConfig = @import("tables/CharacterPartConfig.zig");
 pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
 pub const FlySkinConfig = @import("tables/FlySkinConfig.zig");
@@ -119,6 +120,7 @@ instance_dungeon: Table(InstanceDungeon, "Id"),
 buff: Table(Buff, "Id"),
 summon_cfg: Table(SummonCfg, "Id"),
 model_config_preload: Table(ModelConfigPreload, "Id"),
+character_part_config: Table(CharacterPartConfig, "ModelId"),
 blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
 fly_skin_config: Table(FlySkinConfig, "Id"),

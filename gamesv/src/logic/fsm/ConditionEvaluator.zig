@@ -319,6 +319,36 @@ test "fsm tag conditions observe authoritative gameplay tags" {
     try std.testing.expect(!hasTag(MockFsm{}, &tags, 33));
 }
 
+test "fsm part conditions observe authoritative life and activation" {
+    const parts = [_]Types.PartState{
+        .{
+            .index = 0,
+            .name = "shield",
+            .life = 25,
+            .max_life = 100,
+            .activated = true,
+            .birth_activated = false,
+            .part_tag_id = 11,
+            .active_tag_id = 21,
+        },
+    };
+
+    try std.testing.expect(partLifeInRange(&parts, .{
+        .PartName = "shield",
+        .Min = 20,
+        .Max = 30,
+    }));
+    try std.testing.expect(partLifeInRange(&parts, .{
+        .PartName = "shield",
+        .CheckRate = true,
+        .Min = 2400,
+        .Max = 2600,
+    }));
+    try std.testing.expect(partIsActivated(&parts, "shield"));
+    try std.testing.expect(!partIsActivated(&parts, "missing"));
+    try std.testing.expect(!partLifeInRange(null, .{ .PartName = "shield" }));
+}
+
 fn clientPasses(comp: anytype, fsm_id: i32, transition: AiStateMachineConfig.StateMachineTransition, index: i32) bool {
     const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
     const key: Types.ConditionKey = .{

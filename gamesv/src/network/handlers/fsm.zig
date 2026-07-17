@@ -14,6 +14,7 @@ const FsmQuery = Scene.Query(&.{
     ?*Entity.FightBuffComponent,
     ?*Entity.LogicStateComponent,
     ?*Entity.TagComponent,
+    ?*Entity.PartComponent,
 });
 
 const LogicStateQuery = Scene.Query(&.{
@@ -28,6 +29,7 @@ const GameplayTagQuery = Scene.Query(&.{
     ?*Entity.AttributeComponent,
     ?*Entity.FightBuffComponent,
     ?*Entity.LogicStateComponent,
+    ?*Entity.PartComponent,
 });
 
 pub fn HitRequest(txn: *dispatch.CombatRequestTxn(.HitRequest)) !void {
@@ -57,7 +59,7 @@ pub fn AnimationGameplayTagRequest(
         return;
     };
 
-    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state = item;
+    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state, const parts = item;
     const tags = optional_tags orelse {
         txn.respond(.{ .ErrorCode = .ErrMonsterNotGameplayTagComp });
         return;
@@ -69,6 +71,7 @@ pub fn AnimationGameplayTagRequest(
         attribute,
         buffs,
         logic_state,
+        parts,
         txn.payload.AddTagIds,
         txn.payload.RemoveTagIds,
         events,
@@ -90,7 +93,7 @@ pub fn AnimationGameplayTagPush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     const item = query.byNetId(entity_id) orelse return;
-    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state = item;
+    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state, const parts = item;
     const tags = optional_tags orelse return;
 
     try applyGameplayTagChange(
@@ -100,6 +103,7 @@ pub fn AnimationGameplayTagPush(
         attribute,
         buffs,
         logic_state,
+        parts,
         push.AddTagIds,
         push.RemoveTagIds,
         events,
@@ -133,7 +137,7 @@ pub fn ChangeStateRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -152,14 +156,14 @@ pub fn ChangeStateRequest(
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
             if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
-                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, now_ms, alloc, txn.receive_data_pack);
+                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, txn.receive_data_pack);
             }
         },
         .accepted => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
             if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
-                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, now_ms, alloc, txn.receive_data_pack);
+                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, txn.receive_data_pack);
             }
         },
         .mismatch => |pending_state| {
@@ -186,6 +190,7 @@ pub fn ChangeStateRequest(
                 .buffs = buffs,
                 .logic_state = logic_state,
                 .tags = tags,
+                .parts = if (parts) |part| part.states() else null,
                 .now_ms = now_ms,
             })) |notify| {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
@@ -240,7 +245,7 @@ pub fn ChangeStateConfirmRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -253,7 +258,7 @@ pub fn ChangeStateConfirmRequest(
             response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
             if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
-                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, now_ms, alloc, txn.receive_data_pack);
+                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, txn.receive_data_pack);
             }
         },
         .mismatch => |pending_state| {
@@ -310,7 +315,7 @@ pub fn FsmConditionPassRequest(
         return;
     };
 
-    const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
@@ -329,6 +334,7 @@ pub fn FsmConditionPassRequest(
             .buffs = buffs,
             .logic_state = logic_state,
             .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
             .now_ms = now_ms,
         })) |notify| {
             try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
@@ -368,7 +374,7 @@ pub fn AiHateRequest(
 ) !void {
     if (commonEntityId(txn.common)) |entity_id| {
         if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+            const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
             const now_ms = queryNow(io);
             try fsm.initRuntime(alloc.gpa, now_ms);
             defer fsm.finishTick(now_ms);
@@ -381,6 +387,7 @@ pub fn AiHateRequest(
                     .buffs = buffs,
                     .logic_state = logic_state,
                     .tags = tags,
+                    .parts = if (parts) |part| part.states() else null,
                     .now_ms = now_ms,
                 });
             }
@@ -417,7 +424,7 @@ pub fn FsmConditionPassPush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
@@ -435,6 +442,7 @@ pub fn FsmConditionPassPush(
             .buffs = buffs,
             .logic_state = logic_state,
             .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
             .now_ms = now_ms,
         })) |notify| {
             try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
@@ -455,7 +463,7 @@ pub fn AiHatePush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
@@ -468,6 +476,7 @@ pub fn AiHatePush(
                 .buffs = buffs,
                 .logic_state = logic_state,
                 .tags = tags,
+                .parts = if (parts) |part| part.states() else null,
                 .now_ms = now_ms,
             });
         }
@@ -485,7 +494,7 @@ pub fn ChangeStateConfirmPush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
@@ -493,7 +502,7 @@ pub fn ChangeStateConfirmPush(
             .confirmed => {
                 if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                     try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
-                    try appendFollowupTransition(entity, fsm, push.FsmId, attribute, buffs, logic_state, tags, now_ms, alloc, receive_data_pack);
+                    try appendFollowupTransition(entity, fsm, push.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, receive_data_pack);
                 }
             },
             .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
@@ -543,6 +552,7 @@ fn appendFollowupTransition(
     buffs: ?*Entity.FightBuffComponent,
     logic_state: ?*Entity.LogicStateComponent,
     tags: ?*Entity.TagComponent,
+    parts: ?*Entity.PartComponent,
     now_ms: i64,
     alloc: mem.Alloc,
     receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
@@ -552,6 +562,7 @@ fn appendFollowupTransition(
         .buffs = buffs,
         .logic_state = logic_state,
         .tags = tags,
+        .parts = if (parts) |part| part.states() else null,
         .now_ms = now_ms,
     })) |notify| {
         try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
@@ -566,6 +577,7 @@ fn applyGameplayTagChange(
     attribute: ?*Entity.AttributeComponent,
     buffs: ?*Entity.FightBuffComponent,
     logic_state: ?*Entity.LogicStateComponent,
+    parts: ?*Entity.PartComponent,
     tag_id: i32,
     add: bool,
     events: *EventQueue,
@@ -588,6 +600,7 @@ fn applyGameplayTagChange(
             .buffs = buffs,
             .logic_state = logic_state,
             .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
             .now_ms = now_ms,
         });
     }

@@ -143,6 +143,17 @@ pub const ActionStopMontage = struct {
     BlendOutTime: i32 = 0,
 };
 
+pub const ActionActivatePart = struct {
+    PartName: []const u8 = "",
+    Activate: bool = false,
+};
+
+pub const ActionResetPart = struct {
+    PartName: []const u8 = "",
+    ResetActivate: bool = false,
+    ResetLife: bool = false,
+};
+
 pub const StateMachineAction = struct {
     Name: []const u8 = "",
     Type: ?i32 = null,
@@ -158,6 +169,8 @@ pub const StateMachineAction = struct {
     ActionExitHit: ?struct {} = null,
     ActionResetStatus: ?struct {} = null,
     ActionSetRageFullAttribute: ?struct {} = null,
+    ActionActivatePart: ?ActionActivatePart = null,
+    ActionResetPart: ?ActionResetPart = null,
 };
 
 pub const BindBuff = struct {

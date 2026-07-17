@@ -1,5 +1,6 @@
 const Entity = @import("Scene.zig").Entity;
 const std = @import("std");
+const FsmTypes = @import("fsm/Types.zig");
 
 // shitty solution for a shitty problem...
 pub const PendingFlow = struct {
@@ -75,6 +76,8 @@ pub const FsmServerActionKind = union(enum) {
     reset_status,
     set_rage_full,
     instance_state: i32,
+    activate_part: FsmTypes.PartActivation,
+    reset_part: FsmTypes.PartReset,
 };
 
 pub const FsmServerAction = struct {

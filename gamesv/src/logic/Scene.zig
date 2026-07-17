@@ -43,6 +43,7 @@ pub const Entity = struct {
     pub const DirectControlMarker = @import("component/entity/DirectControlMarker.zig");
     pub const AttributeComponent = @import("component/entity/AttributeComponent.zig");
     pub const TagComponent = @import("component/entity/TagComponent.zig");
+    pub const PartComponent = @import("component/entity/PartComponent.zig");
     pub const FightBuffComponent = @import("component/entity/FightBuffComponent.zig");
     pub const CharacterAttachComponent = @import("component/entity/CharacterAttachComponent.zig");
     pub const ConcomitantComponent = @import("component/entity/ConcomitantComponent.zig");
@@ -367,7 +368,9 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
 
         const is_optional = comptime std.meta.activeTag(@typeInfo(storage_field.type)) == .optional;
         inline for (comptime std.meta.fields(@TypeOf(components)), 0..) |param_field, i| {
-            if ((!is_optional and param_field.type == storage_field.type) or (is_optional and ?param_field.type == storage_field.type)) {
+            if ((!is_optional and param_field.type == storage_field.type) or
+                (is_optional and (param_field.type == storage_field.type or ?param_field.type == storage_field.type)))
+            {
                 @field(storage, storage_field.name) = components[i];
                 break;
             }

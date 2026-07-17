@@ -1,0 +1,1947 @@
+[
+  {
+    "ModelId": 280003,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u524d\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u524d\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 2,
+        "Name": "\u5de6\u540e\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 3,
+        "Name": "\u53f3\u540e\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 4,
+        "Name": "\u5934",
+        "LifeRatio": 0.36,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 5,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      }
+    ]
+  },
+  {
+    "ModelId": 280009,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1774068890
+      },
+      {
+        "Index": 1,
+        "Name": "\u5de6\u5927\u81c2",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1770296728
+      },
+      {
+        "Index": 2,
+        "Name": "\u53f3\u5927\u81c2",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1365102839
+      }
+    ]
+  },
+  {
+    "ModelId": 301003,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u624b",
+        "LifeRatio": 0.02,
+        "BirthActivated": false,
+        "PartTagId": -1314117696,
+        "ActiveTagId": 1947060541
+      }
+    ]
+  },
+  {
+    "ModelId": 301004,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 302001,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390007,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390008,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390009,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390012,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5934\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": 2122659244
+      }
+    ]
+  },
+  {
+    "ModelId": 390014,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390015,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5934\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": 2122659244
+      }
+    ]
+  },
+  {
+    "ModelId": 390016,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390017,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u82b1\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390019,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390020,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390021,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390022,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390023,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u524d\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u524d\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 2,
+        "Name": "\u5de6\u540e\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 3,
+        "Name": "\u53f3\u540e\u811a",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 4,
+        "Name": "\u5934",
+        "LifeRatio": 0.36,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      },
+      {
+        "Index": 5,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": -116352313,
+        "ActiveTagId": -116352313
+      }
+    ]
+  },
+  {
+    "ModelId": 390024,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390025,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      },
+      {
+        "Index": 1,
+        "Name": "\u80f8\u53e3\u661f\u661f\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390026,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390027,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390028,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390029,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390036,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390037,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390038,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390039,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390040,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 0.25,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 39004001,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 0.25,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390046,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      },
+      {
+        "Index": 1,
+        "Name": "\u80f8\u53e3\u661f\u661f\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 2,
+        "Name": "\u76fe\u724c",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": 178895410,
+        "ActiveTagId": -422466412
+      },
+      {
+        "Index": 3,
+        "Name": "\u76fe\u724c-\u722c\u5854",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": -422466412,
+        "ActiveTagId": -422466412
+      }
+    ]
+  },
+  {
+    "ModelId": 390047,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390048,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390049,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": -1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390050,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390073,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390075,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": -1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u94b3\u5b50",
+        "LifeRatio": -1.0,
+        "BirthActivated": false,
+        "PartTagId": -1314117696,
+        "ActiveTagId": 1947060541
+      }
+    ]
+  },
+  {
+    "ModelId": 390079,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390080,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1774068890
+      },
+      {
+        "Index": 1,
+        "Name": "\u5de6\u5927\u81c2",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1770296728
+      },
+      {
+        "Index": 2,
+        "Name": "\u53f3\u5927\u81c2",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": 1533025273,
+        "ActiveTagId": 1365102839
+      }
+    ]
+  },
+  {
+    "ModelId": 390083,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390084,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u7fc5\u8180",
+        "LifeRatio": 0.02,
+        "BirthActivated": false,
+        "PartTagId": -718849041,
+        "ActiveTagId": -1451675770
+      }
+    ]
+  },
+  {
+    "ModelId": 390085,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390088,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5c3e\u90e8",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": 1038835733,
+        "ActiveTagId": 509371775
+      }
+    ]
+  },
+  {
+    "ModelId": 390094,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390095,
+    "Parts": []
+  },
+  {
+    "ModelId": 390096,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390098,
+    "Parts": []
+  },
+  {
+    "ModelId": 390099,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390100,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390124,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390125,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390126,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390127,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u82b1\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390216,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5934\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": 2122659244
+      }
+    ]
+  },
+  {
+    "ModelId": 390239,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      },
+      {
+        "Index": 1,
+        "Name": "\u80f8\u53e3\u661f\u661f\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 2,
+        "Name": "\u76fe\u724c",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": 178895410,
+        "ActiveTagId": -422466412
+      },
+      {
+        "Index": 3,
+        "Name": "\u76fe\u724c-\u722c\u5854",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": -422466412,
+        "ActiveTagId": -422466412
+      }
+    ]
+  },
+  {
+    "ModelId": 400182,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 400183,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420018,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420023,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420024,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420034,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420035,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 420037,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420038,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420040,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420061,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420062,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420063,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420064,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420065,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": -1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420067,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 420068,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 493001,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 493002,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 493003,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 493004,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390256,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": -1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390260,
+    "Parts": []
+  },
+  {
+    "ModelId": 4121028,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 440077,
+    "Parts": []
+  },
+  {
+    "ModelId": 390249,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5408\u4f53\u9aa8\u9abc",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": 52592832,
+        "ActiveTagId": 52592832
+      }
+    ]
+  },
+  {
+    "ModelId": 390252,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390253,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390264,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      },
+      {
+        "Index": 1,
+        "Name": "\u7a7a\u4e2d\u5f31\u70b9",
+        "LifeRatio": 0.0,
+        "BirthActivated": false,
+        "PartTagId": -539941157,
+        "ActiveTagId": 1931065937
+      }
+    ]
+  },
+  {
+    "ModelId": 390268,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 400410,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u82b1\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390254,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390291,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 0.25,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390275,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u7fc5\u8180",
+        "LifeRatio": 0.02,
+        "BirthActivated": false,
+        "PartTagId": -718849041,
+        "ActiveTagId": -1451675770
+      }
+    ]
+  },
+  {
+    "ModelId": 39004904,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 39004905,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      },
+      {
+        "Index": 1,
+        "Name": "\u80f8\u53e3\u661f\u661f\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 39004906,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 39004911,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": -1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390298,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390299,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 3010031,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u624b\u81c2",
+        "LifeRatio": 0.1,
+        "BirthActivated": false,
+        "PartTagId": -1314117696,
+        "ActiveTagId": 1947060541
+      }
+    ]
+  },
+  {
+    "ModelId": 390301,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 391277,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391279,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5408\u4f53\u9aa8\u9abc",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": 52592832,
+        "ActiveTagId": 52592832
+      }
+    ]
+  },
+  {
+    "ModelId": 391301,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 391304,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 391305,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391307,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391308,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391309,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 390309,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u6559\u7687\u672c\u4f53",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391325,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5f31\u70b9",
+        "LifeRatio": 0.15,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 0.25,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 391327,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391337,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u81c2\u5f31\u70b9",
+        "LifeRatio": 0.09,
+        "BirthActivated": false,
+        "PartTagId": 439731911,
+        "ActiveTagId": -1304041668
+      }
+    ]
+  },
+  {
+    "ModelId": 391340,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391341,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      }
+    ]
+  },
+  {
+    "ModelId": 391342,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u901a\u7528\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -316367312
+      },
+      {
+        "Index": 1,
+        "Name": "\u80cc\u90e8\u5f31\u70b9",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": -1447912584,
+        "ActiveTagId": -694271644
+      }
+    ]
+  },
+  {
+    "ModelId": 390145,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 1283195164,
+        "ActiveTagId": -1819102911
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 1283195164,
+        "ActiveTagId": -219449272
+      }
+    ]
+  },
+  {
+    "ModelId": 390146,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": 1474077156
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": -1782978455
+      }
+    ]
+  },
+  {
+    "ModelId": 390147,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": 1474077156
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": -1782978455
+      }
+    ]
+  },
+  {
+    "ModelId": 391355,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u80cc\u5305\u90e8\u4f4d",
+        "LifeRatio": 0.17,
+        "BirthActivated": false,
+        "PartTagId": 924610470,
+        "ActiveTagId": 207705124
+      }
+    ]
+  },
+  {
+    "ModelId": 391356,
+    "Parts": []
+  },
+  {
+    "ModelId": 391357,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u8c61\u7259",
+        "LifeRatio": 0.3,
+        "BirthActivated": true,
+        "PartTagId": 2125318654,
+        "ActiveTagId": 384706632
+      }
+    ]
+  },
+  {
+    "ModelId": 3901451,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 1283195164,
+        "ActiveTagId": -1819102911
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 1283195164,
+        "ActiveTagId": -219449272
+      }
+    ]
+  },
+  {
+    "ModelId": 3901461,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": 1474077156
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": -1782978455
+      }
+    ]
+  },
+  {
+    "ModelId": 3901471,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": 1474077156
+      },
+      {
+        "Index": 1,
+        "Name": "\u53f3\u89d2",
+        "LifeRatio": 0.0,
+        "BirthActivated": true,
+        "PartTagId": 360929203,
+        "ActiveTagId": -1782978455
+      }
+    ]
+  },
+  {
+    "ModelId": 3913561,
+    "Parts": []
+  },
+  {
+    "ModelId": 30100301,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u5de6\u624b",
+        "LifeRatio": 0.02,
+        "BirthActivated": false,
+        "PartTagId": -1314117696,
+        "ActiveTagId": 1947060541
+      }
+    ]
+  },
+  {
+    "ModelId": 390316,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u7fc5\u8180",
+        "LifeRatio": 1.0,
+        "BirthActivated": false,
+        "PartTagId": 1334817451,
+        "ActiveTagId": 1334817451
+      },
+      {
+        "Index": 1,
+        "Name": "\u809a\u5b50",
+        "LifeRatio": 1.0,
+        "BirthActivated": true,
+        "PartTagId": 1334817451,
+        "ActiveTagId": 1334817451
+      }
+    ]
+  },
+  {
+    "ModelId": 3913571,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u8c61\u7259",
+        "LifeRatio": 0.3,
+        "BirthActivated": true,
+        "PartTagId": 2125318654,
+        "ActiveTagId": 384706632
+      }
+    ]
+  },
+  {
+    "ModelId": 390149,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u53f3\u81c2",
+        "LifeRatio": 0.07,
+        "BirthActivated": false,
+        "PartTagId": -905375027,
+        "ActiveTagId": -1342103582
+      },
+      {
+        "Index": 1,
+        "Name": "\u5e95\u90e8\u7532\u7247",
+        "LifeRatio": 0.07,
+        "BirthActivated": false,
+        "PartTagId": -905375027,
+        "ActiveTagId": 1791796478
+      },
+      {
+        "Index": 2,
+        "Name": "\u5934\u90e8\u88c5\u7532",
+        "LifeRatio": 0.02,
+        "BirthActivated": false,
+        "PartTagId": -905375027,
+        "ActiveTagId": 1052207033
+      },
+      {
+        "Index": 3,
+        "Name": "\u673a\u5175\u672c\u4f53",
+        "LifeRatio": 0.0,
+        "BirthActivated": false,
+        "PartTagId": -905375027,
+        "ActiveTagId": -1829114014
+      }
+    ]
+  },
+  {
+    "ModelId": 391587,
+    "Parts": [
+      {
+        "Index": 0,
+        "Name": "\u53f3\u76fe",
+        "LifeRatio": 0.6,
+        "BirthActivated": true,
+        "PartTagId": -1043644895,
+        "ActiveTagId": 192354185
+      },
+      {
+        "Index": 1,
+        "Name": "\u5de6\u76fe",
+        "LifeRatio": 0.8,
+        "BirthActivated": false,
+        "PartTagId": -1043644895,
+        "ActiveTagId": 1645920176
+      }
+    ]
+  },
+  {
+    "ModelId": 39161601,
+    "Parts": []
+  }
+]

@@ -20,6 +20,7 @@ const FsmQuery = Scene.Query(&.{
     ?*Entity.FightBuffComponent,
     ?*Entity.LogicStateComponent,
     ?*Entity.TagComponent,
+    ?*Entity.PartComponent,
 });
 
 pub fn handleFsmTick(
@@ -42,7 +43,7 @@ pub fn handleFsmTick(
 
     var it = query.iterator;
     while (it.next()) |item| {
-        const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+        const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         if (!fsm.needsServerTick()) continue;
@@ -58,6 +59,7 @@ pub fn handleFsmTick(
             .buffs = buffs,
             .logic_state = logic_state,
             .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
             .now_ms = now_ms,
         });
     }
@@ -77,7 +79,7 @@ pub fn handleFsmServerAction(
     query: FsmQuery,
 ) !void {
     const item = query.byNetId(event.data.entity.net_id) orelse return;
-    const entity, const fsm, const attribute, const buffs, _, const tags = item;
+    const entity, const fsm, const attribute, const buffs, _, const tags, const parts = item;
 
     switch (event.data.kind) {
         .cue_paralysis => fsm.paralysis_active = true,
@@ -94,7 +96,42 @@ pub fn handleFsmServerAction(
             try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
         },
         .instance_state => |tag_id| try applyInstanceState(entity, fsm, tags, tag_id, events, alloc),
+        .activate_part => |action| if (parts) |part| {
+            var changed: std.ArrayList(usize) = .empty;
+            defer changed.deinit(alloc.gpa);
+            try part.activate(action.name, action.activate, tags, &changed, alloc.gpa);
+            try pushPartChanges(entity.net_id, part, changed.items, conn, alloc);
+        },
+        .reset_part => |action| if (parts) |part| {
+            var changed: std.ArrayList(usize) = .empty;
+            defer changed.deinit(alloc.gpa);
+            try part.reset(action.name, action.reset_activate, action.reset_life, tags, &changed, alloc.gpa);
+            try pushPartChanges(entity.net_id, part, changed.items, conn, alloc);
+        },
     }
+}
+
+fn pushPartChanges(
+    entity_id: i64,
+    parts: *const Entity.PartComponent,
+    changed: []const usize,
+    conn: *Connection,
+    alloc: mem.Alloc,
+) !void {
+    if (changed.len == 0) return;
+
+    var part_infos: std.ArrayList(pb.PartInformation) = .empty;
+    for (changed) |index| try parts.appendPartInfo(index, &part_infos, alloc.arena);
+
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    try data.append(alloc.arena, .{ .Message = .{ .CombatNotifyData = .{
+        .CombatCommon = .{ .EntityId = entity_id },
+        .Message = .{ .PartUpdateNotify = .{
+            .EntityId = entity_id,
+            .PartInfos = part_infos,
+        } },
+    } } });
+    try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
 }
 
 fn applyInstanceState(
@@ -304,7 +341,7 @@ pub fn handleFsmLifecycleComplete(
     query: FsmQuery,
 ) !void {
     const item = query.byNetId(event.data.entity.net_id) orelse return;
-    const entity, const fsm, const attribute, const buffs, const logic_state, const tags = item;
+    const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
 
     fsm.completeLifecycleEffects();
     defer fsm.finishTick(event.data.now_ms);
@@ -321,6 +358,7 @@ pub fn handleFsmLifecycleComplete(
         .buffs = buffs,
         .logic_state = logic_state,
         .tags = tags,
+        .parts = if (parts) |part| part.states() else null,
         .now_ms = event.data.now_ms,
     });
     if (data.items.len != 0) {

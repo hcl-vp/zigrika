@@ -332,6 +332,19 @@ fn runActions(
                 try appendLifecycleEffect(comp, gpa, .{ .set_instance_state = tag_id });
             }
         }
+        if (action.ActionActivatePart) |part| {
+            try appendLifecycleEffect(comp, gpa, .{ .activate_part = .{
+                .name = part.PartName,
+                .activate = part.Activate,
+            } });
+        }
+        if (action.ActionResetPart) |part| {
+            try appendLifecycleEffect(comp, gpa, .{ .reset_part = .{
+                .name = part.PartName,
+                .reset_activate = part.ResetActivate,
+                .reset_life = part.ResetLife,
+            } });
+        }
 
         if (action.ActionAddTagCount) |tag| {
             if (tag.Count > 0) try updateTagCount(comp, gpa, tag.TagId, tag.Count);
@@ -569,6 +582,7 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
     };
     const enter_actions = [_]AiStateMachineConfig.StateMachineAction{
         .{ .ActionResetStatus = .{} },
+        .{ .ActionActivatePart = .{ .PartName = "shield", .Activate = true } },
     };
     const children = [_]i32{ 2, 3 };
     const nodes = [_]Types.NodeEntry{
@@ -604,9 +618,11 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
     ));
     try std.testing.expectEqual(@as(?i32, null), runtime_nodes[0].pending_to);
     try std.testing.expectEqual(@as(?i32, 3), runtime_nodes[0].leaf());
-    try std.testing.expectEqual(@as(usize, 2), component.lifecycle_effects.items.len);
+    try std.testing.expectEqual(@as(usize, 3), component.lifecycle_effects.items.len);
     try std.testing.expectEqual(Types.LifecycleEffect.set_rage_full, component.lifecycle_effects.items[0]);
     try std.testing.expectEqual(Types.LifecycleEffect.reset_status, component.lifecycle_effects.items[1]);
+    try std.testing.expectEqualStrings("shield", component.lifecycle_effects.items[2].activate_part.name);
+    try std.testing.expect(component.lifecycle_effects.items[2].activate_part.activate);
 }
 
 fn passPoolContains(comp: anytype, key: Types.ConditionKey) bool {

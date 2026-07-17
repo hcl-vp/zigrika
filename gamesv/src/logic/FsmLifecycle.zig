@@ -71,6 +71,14 @@ fn enqueueEffectsWithRecheck(
                 .entity = entity,
                 .kind = .{ .instance_state = tag_id },
             }),
+            .activate_part => |part| try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .{ .activate_part = part },
+            }),
+            .reset_part => |part| try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .{ .reset_part = part },
+            }),
         }
     }
 
@@ -89,6 +97,8 @@ test "fsm lifecycle effects remain FIFO before completion" {
     try fsm.lifecycle_effects.append(std.testing.allocator, .set_rage_full);
     try fsm.lifecycle_effects.append(std.testing.allocator, .reset_status);
     try fsm.lifecycle_effects.append(std.testing.allocator, .{ .set_instance_state = 42 });
+    try fsm.lifecycle_effects.append(std.testing.allocator, .{ .activate_part = .{ .name = "shield", .activate = true } });
+    try fsm.lifecycle_effects.append(std.testing.allocator, .{ .reset_part = .{ .name = "shield", .reset_activate = true, .reset_life = true } });
 
     var queue: EventQueue = .{ .arena = std.testing.allocator };
     defer queue.deque.deinit(std.testing.allocator);
@@ -96,6 +106,8 @@ test "fsm lifecycle effects remain FIFO before completion" {
     try std.testing.expect(try enqueueEffects(.{ .index = 0, .net_id = 7 }, &fsm, &queue, alloc, 100));
 
     const EventTag = std.meta.Tag(EventQueue.Event);
+    try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
+    try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
     try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
     try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
     try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));

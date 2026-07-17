@@ -290,6 +290,24 @@ pub const spawn = struct {
         else
             null;
         errdefer if (tag_component) |*tags| tags.deinit(alloc.gpa);
+        const model_id = if (components_data.ModelComponent) |model| model.ModelType.ModelId else 0;
+        const life_max_index = @intFromEnum(pb.EAttributeType.LifeMax);
+        const life_max = if (attribute_component) |attribute|
+            if (life_max_index < attribute.attributes.len) attribute.attributes[life_max_index].current else 0
+        else
+            0;
+        var part_component: ?Entity.PartComponent = if (use_ai_runtime)
+            if (assets.tables.character_part_config.getDataById(model_id)) |config|
+                try Entity.PartComponent.init(config, life_max, alloc.gpa)
+            else
+                null
+        else
+            null;
+        errdefer if (part_component) |*part| part.deinit(alloc.gpa);
+        if (part_component) |*part| {
+            const tags = if (tag_component) |*component| component else null;
+            try part.syncActiveTags(tags, alloc.gpa);
+        }
         const entity = if (fsm_component) |fsm| try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
@@ -314,6 +332,7 @@ pub const spawn = struct {
                 .combat_message_id = 0,
             },
             tag_component.?,
+            part_component,
             fsm,
         }) else if (use_ai_runtime) try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
@@ -339,6 +358,7 @@ pub const spawn = struct {
                 .combat_message_id = 0,
             },
             tag_component.?,
+            part_component,
         }) else try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
@@ -356,6 +376,7 @@ pub const spawn = struct {
             Entity.FightBuffComponent{},
         });
         tag_component = null;
+        part_component = null;
 
         var buff_ids: std.ArrayList(i64) = .empty;
         defer buff_ids.deinit(alloc.gpa);

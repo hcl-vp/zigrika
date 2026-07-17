@@ -20,6 +20,7 @@ actor_visible: ?@import("ActorVisibleMarker.zig") = null,
 direct_control: ?@import("DirectControlMarker.zig") = null,
 attribute: ?@import("AttributeComponent.zig") = null,
 tag: ?@import("TagComponent.zig") = null,
+part: ?@import("PartComponent.zig") = null,
 buffs: ?@import("FightBuffComponent.zig") = null,
 character_attach: ?@import("CharacterAttachComponent.zig") = null,
 concomitant: ?@import("ConcomitantComponent.zig") = null,
@@ -259,6 +260,12 @@ pub fn entityToProto(
     if (storage.tag) |tag_comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .TagComponent = tag_comp.toProto() },
+        });
+    }
+
+    if (storage.part) |*part_comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .PartComponent = try part_comp.toProto(alloc) },
         });
     }
 

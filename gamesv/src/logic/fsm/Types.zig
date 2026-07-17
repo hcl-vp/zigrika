@@ -74,10 +74,14 @@ pub const EvalContext = struct {
 };
 
 pub const PartState = struct {
+    index: i32,
     name: []const u8,
     life: f32,
     max_life: f32,
     activated: bool,
+    birth_activated: bool,
+    part_tag_id: i32,
+    active_tag_id: i32,
 };
 
 pub const Transition = struct {
@@ -93,6 +97,19 @@ pub const LifecycleEffect = union(enum) {
     reset_status,
     set_rage_full,
     set_instance_state: i32,
+    activate_part: PartActivation,
+    reset_part: PartReset,
+};
+
+pub const PartActivation = struct {
+    name: []const u8,
+    activate: bool,
+};
+
+pub const PartReset = struct {
+    name: []const u8,
+    reset_activate: bool,
+    reset_life: bool,
 };
 
 pub const ConfirmResult = union(enum) {
