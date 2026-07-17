@@ -61,7 +61,11 @@ pub fn recordClientPass(
     const fsm_id = StateHierarchy.canonicalState(comp, key.fsm_id);
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return .machine_not_found;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, key.from)) return .invalid_source;
-    if (!StateHierarchy.pathContains(comp, runtime.active(), key.from)) return .inactive_source;
+    const source_is_active = StateHierarchy.pathContains(comp, runtime.active(), key.from);
+    const source_is_pending = runtime.pending_from != null and
+        runtime.pending_to != null and
+        StateHierarchy.pathContains(comp, runtime.pending(), key.from);
+    if (!source_is_active and !source_is_pending) return .inactive_source;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, key.to)) return .invalid_target;
 
     const resolved = StateHierarchy.resolveOverrideStates(comp, key.from, key.to, false);
@@ -623,6 +627,196 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
     try std.testing.expectEqual(Types.LifecycleEffect.reset_status, component.lifecycle_effects.items[1]);
     try std.testing.expectEqualStrings("shield", component.lifecycle_effects.items[2].activate_part.name);
     try std.testing.expect(component.lifecycle_effects.items[2].activate_part.activate);
+}
+
+test "client pass from pending path drives followup after confirmation" {
+    const TestComponent = struct {
+        hash_code: i32 = 0,
+        common_hash_code: i32 = 0,
+        state_list: []const i32 = &.{},
+        node_list: []const Types.NodeEntry = &.{},
+        override_mapping: []const Types.OverrideEntry = &.{},
+        runtime_nodes: []Types.FsmNode = &.{},
+        pass_pool: []Types.ConditionKey = &.{},
+        tags: []Types.TagCount = &.{},
+        lifecycle_effects: std.ArrayList(Types.LifecycleEffect) = .empty,
+        lifecycle_effects_pending: bool = false,
+        in_hate: bool = false,
+        paralysis_active: bool = false,
+        instance_state_tag: ?i32 = null,
+        event: ?[]const u8 = null,
+        last_tick_ms: i64 = 0,
+        blackboard: [3]?i32 = .{ null, null, null },
+        blackboard_dirty: u8 = 0,
+    };
+
+    const root_conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTrue" },
+    };
+    const client_conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTaskFinish", .IsClient = true },
+    };
+    const root_transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 2, .To = 3, .Conditions = &root_conditions },
+    };
+    const nested_transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 5, .To = 6, .Conditions = &client_conditions, .TransitionPredictionType = 2 },
+    };
+    const root_children = [_]i32{ 2, 3 };
+    const pending_children = [_]i32{ 5, 6 };
+    const nodes = [_]Types.NodeEntry{
+        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &root_children, .Transitions = &root_transitions } },
+        .{ .key = 2, .value = .{ .Uuid = 2 } },
+        .{ .key = 3, .value = .{ .Uuid = 3, .Children = &pending_children, .Transitions = &nested_transitions } },
+        .{ .key = 5, .value = .{ .Uuid = 5 } },
+        .{ .key = 6, .value = .{ .Uuid = 6 } },
+    };
+    var runtime_nodes = [_]Types.FsmNode{.{
+        .fsm_id = 1,
+        .active_path = .{ 1, 2 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+        .active_since_ms = @splat(10),
+        .active_len = 2,
+        .pending_path = .{ 1, 3, 5 } ++ @as([Types.max_state_depth - 3]i32, @splat(0)),
+        .pending_since_ms = @splat(20),
+        .pending_len = 3,
+        .pending_from = 2,
+        .pending_to = 3,
+        .pending_started_ms = 20,
+    }};
+    var component: TestComponent = .{
+        .state_list = &.{1},
+        .node_list = &nodes,
+        .runtime_nodes = &runtime_nodes,
+    };
+    defer {
+        std.testing.allocator.free(component.pass_pool);
+        component.lifecycle_effects.deinit(std.testing.allocator);
+    }
+
+    const key: Types.ConditionKey = .{ .fsm_id = 1, .from = 5, .to = 6, .index = 0 };
+    try std.testing.expectEqual(
+        Types.ClientPassResult.updated,
+        try recordClientPass(&component, std.testing.allocator, key, true),
+    );
+    try std.testing.expect(passPoolContains(&component, key));
+    try std.testing.expect((try findReadyTransition(&component, 1, .{ .now_ms = 25 })) == null);
+
+    try std.testing.expectEqual(
+        Types.ConfirmResult.confirmed,
+        try confirmPending(&component, 1, 3, std.testing.allocator),
+    );
+    const followup = (try findReadyTransition(&component, 1, .{ .now_ms = 30 })) orelse
+        return error.ExpectedFsmTransition;
+    try std.testing.expectEqual(@as(i32, 5), followup.from);
+    try std.testing.expectEqual(@as(i32, 6), followup.to);
+
+    try std.testing.expectEqual(
+        Types.ClientPassResult.updated,
+        try recordClientPass(&component, std.testing.allocator, key, false),
+    );
+    try std.testing.expect(!passPoolContains(&component, key));
+}
+
+test "client pass validation preserves active pending and override boundaries" {
+    const TestComponent = struct {
+        state_list: []const i32 = &.{},
+        node_list: []const Types.NodeEntry = &.{},
+        override_mapping: []const Types.OverrideEntry = &.{},
+        runtime_nodes: []Types.FsmNode = &.{},
+        pass_pool: []Types.ConditionKey = &.{},
+    };
+
+    const client_conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTaskFinish", .Index = 7, .IsClient = true },
+    };
+    const server_conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTrue", .Index = 8 },
+    };
+    const transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 20, .To = 30, .Conditions = &client_conditions },
+        .{ .From = 20, .To = 40, .Conditions = &server_conditions },
+    };
+    const children = [_]i32{ 20, 30, 40, 50 };
+    const other_children = [_]i32{ 70, 80 };
+    const nodes = [_]Types.NodeEntry{
+        .{ .key = 10, .value = .{ .Uuid = 10, .Children = &children, .Transitions = &transitions } },
+        .{ .key = 20, .value = .{ .Uuid = 20 } },
+        .{ .key = 30, .value = .{ .Uuid = 30 } },
+        .{ .key = 40, .value = .{ .Uuid = 40 } },
+        .{ .key = 50, .value = .{ .Uuid = 50 } },
+        .{ .key = 60, .value = .{ .Uuid = 60, .Children = &other_children } },
+        .{ .key = 70, .value = .{ .Uuid = 70 } },
+        .{ .key = 80, .value = .{ .Uuid = 80 } },
+    };
+    const overrides = [_]Types.OverrideEntry{
+        .{ .key = 120, .value = 20 },
+        .{ .key = 130, .value = 30 },
+    };
+    var runtime_nodes = [_]Types.FsmNode{
+        .{
+            .fsm_id = 10,
+            .active_path = .{ 10, 20 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+            .active_len = 2,
+        },
+        .{
+            .fsm_id = 60,
+            .active_path = .{ 60, 70 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+            .active_len = 2,
+            .pending_path = .{ 60, 80 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+            .pending_len = 2,
+            .pending_from = 70,
+            .pending_to = 80,
+        },
+    };
+    var component: TestComponent = .{
+        .state_list = &.{ 10, 60 },
+        .node_list = &nodes,
+        .override_mapping = &overrides,
+        .runtime_nodes = &runtime_nodes,
+    };
+    defer std.testing.allocator.free(component.pass_pool);
+
+    const alias_key: Types.ConditionKey = .{ .fsm_id = 10, .from = 120, .to = 130, .index = 7 };
+    try std.testing.expectEqual(
+        Types.ClientPassResult.updated,
+        try recordClientPass(&component, std.testing.allocator, alias_key, true),
+    );
+    try std.testing.expect(passPoolContains(&component, .{ .fsm_id = 10, .from = 20, .to = 30, .index = 7 }));
+    const original_pool_len = component.pass_pool.len;
+
+    try std.testing.expectEqual(
+        Types.ClientPassResult.inactive_source,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 50, .to = 30, .index = 7 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.inactive_source,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 50, .to = 30, .index = 7 }, false),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.invalid_source,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 80, .to = 70, .index = 7 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.invalid_target,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 20, .to = 999, .index = 7 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.transition_not_found,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 20, .to = 50, .index = 7 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.condition_not_found,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 20, .to = 30, .index = 99 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.condition_not_client,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 10, .from = 20, .to = 40, .index = 8 }, true),
+    );
+    try std.testing.expectEqual(
+        Types.ClientPassResult.machine_not_found,
+        try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 999, .from = 20, .to = 30, .index = 7 }, true),
+    );
+    try std.testing.expectEqual(original_pool_len, component.pass_pool.len);
 }
 
 fn passPoolContains(comp: anytype, key: Types.ConditionKey) bool {
