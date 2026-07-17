@@ -21,6 +21,15 @@ const LogicStateQuery = Scene.Query(&.{
     *Entity.LogicStateComponent,
 });
 
+const GameplayTagQuery = Scene.Query(&.{
+    Entity,
+    ?*Entity.TagComponent,
+    ?*Entity.FsmComponent,
+    ?*Entity.AttributeComponent,
+    ?*Entity.FightBuffComponent,
+    ?*Entity.LogicStateComponent,
+});
+
 pub fn HitRequest(txn: *dispatch.CombatRequestTxn(.HitRequest)) !void {
     txn.respond(.{
         .HitInfo = txn.payload.HitInfo,
@@ -30,6 +39,74 @@ pub fn HitRequest(txn: *dispatch.CombatRequestTxn(.HitRequest)) !void {
 
 pub fn HitEndRequest(txn: *dispatch.CombatRequestTxn(.HitEndRequest)) !void {
     txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn AnimationGameplayTagRequest(
+    txn: *dispatch.CombatRequestTxn(.AnimationGameplayTagRequest),
+    query: GameplayTagQuery,
+    events: *EventQueue,
+    io: std.Io,
+    alloc: mem.Alloc,
+) !void {
+    const entity_id = commonEntityId(txn.common) orelse {
+        txn.respond(.{ .ErrorCode = .ErrEntityNotFound });
+        return;
+    };
+    const item = query.byNetId(entity_id) orelse {
+        txn.respond(.{ .ErrorCode = .ErrEntityNotFound });
+        return;
+    };
+
+    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state = item;
+    const tags = optional_tags orelse {
+        txn.respond(.{ .ErrorCode = .ErrMonsterNotGameplayTagComp });
+        return;
+    };
+    try applyGameplayTagChange(
+        entity,
+        tags,
+        fsm,
+        attribute,
+        buffs,
+        logic_state,
+        txn.payload.AddTagIds,
+        txn.payload.RemoveTagIds,
+        events,
+        io,
+        alloc,
+        txn.receive_data_pack,
+    );
+    txn.respond(.{ .ErrorCode = .Success });
+}
+
+pub fn AnimationGameplayTagPush(
+    push: pb.AnimationGameplayTagPush,
+    common: ?pb.CombatCommon,
+    query: GameplayTagQuery,
+    events: *EventQueue,
+    io: std.Io,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const entity_id = commonEntityId(common) orelse return;
+    const item = query.byNetId(entity_id) orelse return;
+    const entity, const optional_tags, const fsm, const attribute, const buffs, const logic_state = item;
+    const tags = optional_tags orelse return;
+
+    try applyGameplayTagChange(
+        entity,
+        tags,
+        fsm,
+        attribute,
+        buffs,
+        logic_state,
+        push.AddTagIds,
+        push.RemoveTagIds,
+        events,
+        io,
+        alloc,
+        receive_data_pack,
+    );
 }
 
 pub fn ChangeStateRequest(
@@ -479,6 +556,40 @@ fn appendFollowupTransition(
     })) |notify| {
         try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
         try receive_data_pack.append(alloc.arena, notify);
+    }
+}
+
+fn applyGameplayTagChange(
+    entity: Entity,
+    tags: *Entity.TagComponent,
+    optional_fsm: ?*Entity.FsmComponent,
+    attribute: ?*Entity.AttributeComponent,
+    buffs: ?*Entity.FightBuffComponent,
+    logic_state: ?*Entity.LogicStateComponent,
+    tag_id: i32,
+    add: bool,
+    events: *EventQueue,
+    io: std.Io,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    if (tag_id == 0) return;
+    const changed = try tags.adjustGameplayTagCount(alloc.gpa, tag_id, if (add) 1 else -1);
+    if (!changed) return;
+
+    const fsm = optional_fsm orelse return;
+    const now_ms = queryNow(io);
+    try fsm.initRuntime(alloc.gpa, now_ms);
+    defer fsm.finishTick(now_ms);
+
+    if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
+        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
+            .attribute = attribute,
+            .buffs = buffs,
+            .logic_state = logic_state,
+            .tags = tags,
+            .now_ms = now_ms,
+        });
     }
 }
 

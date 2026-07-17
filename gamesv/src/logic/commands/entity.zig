@@ -15,6 +15,7 @@ const PlayerBasicComponent = @import("../../logic/component/player/PlayerBasicCo
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const entity_attributes = @import("../../logic/helpers/entity_attributes.zig");
+const gameplay_tags = @import("../../logic/helpers/gameplay_tags.zig");
 const respond = @import("../commands.zig").respond;
 
 const EntitySpawnBase = struct {
@@ -101,6 +102,22 @@ fn useRepeatBossStartup(ai_id: ?i32, assets: *const Assets) bool {
     }
 
     return false;
+}
+
+fn initialTagComponent(components: *const Components, repeat_boss_startup: bool, gpa: std.mem.Allocator) !Entity.TagComponent {
+    var result: Entity.TagComponent = .{};
+    errdefer result.deinit(gpa);
+
+    const monster = components.MonsterComponent orelse return result;
+    const startup_tags = monster.InitGasTag orelse return result;
+    for (startup_tags) |tag_name| {
+        var tag_id = try gameplay_tags.idFromName(tag_name);
+        if (tag_id == 0) continue;
+        if (repeat_boss_startup and tag_id == story_boss_tag_id) tag_id = repeat_boss_tag_id;
+        _ = try result.adjustGameplayTagCount(gpa, tag_id, 1);
+    }
+
+    return result;
 }
 
 fn transitionHasTag(transition: Assets.DataTables.AiStateMachineConfig.StateMachineTransition, tag_id: i32) bool {
@@ -268,6 +285,11 @@ pub const spawn = struct {
             combat_attributes orelse Entity.AttributeComponent{}
         else
             null;
+        var tag_component: ?Entity.TagComponent = if (use_ai_runtime)
+            try initialTagComponent(&components_data, repeat_boss_startup, alloc.gpa)
+        else
+            null;
+        errdefer if (tag_component) |*tags| tags.deinit(alloc.gpa);
         const entity = if (fsm_component) |fsm| try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
@@ -291,6 +313,7 @@ pub const spawn = struct {
                 .ai_team_init_id = 100,
                 .combat_message_id = 0,
             },
+            tag_component.?,
             fsm,
         }) else if (use_ai_runtime) try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
@@ -315,6 +338,7 @@ pub const spawn = struct {
                 .ai_team_init_id = 100,
                 .combat_message_id = 0,
             },
+            tag_component.?,
         }) else try scene.spawn(alloc.gpa, fs, .{
             Entity.ConfigComponent{
                 .camp = final_camp,
@@ -331,6 +355,7 @@ pub const spawn = struct {
             },
             Entity.FightBuffComponent{},
         });
+        tag_component = null;
 
         var buff_ids: std.ArrayList(i64) = .empty;
         defer buff_ids.deinit(alloc.gpa);
@@ -398,6 +423,32 @@ test "configured startup buffs precede debug buffs" {
     try ids.appendSlice(std.testing.allocator, &.{33});
 
     try std.testing.expectEqualSlices(i64, &.{ 11, 22, 33 }, ids.items);
+}
+
+test "monster startup tags seed authoritative counts" {
+    const components: Components = .{
+        .MonsterComponent = .{ .InitGasTag = &.{
+            "\u{602a}\u{7269}.common.\u{5173}\u{5361}.\u{751f}\u{6001}.\u{901a}\u{7528}.\u{7761}\u{89c9}",
+        } },
+    };
+    var tags = try initialTagComponent(&components, false, std.testing.allocator);
+    defer tags.deinit(std.testing.allocator);
+
+    try std.testing.expectEqual(@as(i32, 1), tags.gameplayTagCount(-1462667236));
+    try std.testing.expect(!tags.init_gameplay_tag);
+}
+
+test "repeat boss startup replaces the story tag" {
+    const components: Components = .{
+        .MonsterComponent = .{ .InitGasTag = &.{
+            "\u{602a}\u{7269}.common.\u{5173}\u{5361}.\u{96be}\u{5ea6}AI\u{5206}\u{7c7b}.\u{5267}\u{60c5}",
+        } },
+    };
+    var tags = try initialTagComponent(&components, true, std.testing.allocator);
+    defer tags.deinit(std.testing.allocator);
+
+    try std.testing.expectEqual(@as(i32, 0), tags.gameplayTagCount(story_boss_tag_id));
+    try std.testing.expectEqual(@as(i32, 1), tags.gameplayTagCount(repeat_boss_tag_id));
 }
 
 fn parseOptionalInt(value: ?std.json.Value) i32 {

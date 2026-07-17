@@ -308,6 +308,17 @@ test "fsm instance state overrides component fallback" {
     try std.testing.expect(!instanceStateMatches(MockFsm{ .instance_state_tag = 11 }, &tags, 22));
 }
 
+test "fsm tag conditions observe authoritative gameplay tags" {
+    const MockFsm = struct {
+        tags: []const Types.TagCount = &.{},
+    };
+    var gameplay_tag_data = [_]pb.GameplayTagData{.{ .Id = 22, .TagCount = 1 }};
+    const tags: TagComponent = .{ .gameplay_tags = &gameplay_tag_data };
+
+    try std.testing.expect(hasTag(MockFsm{}, &tags, 22));
+    try std.testing.expect(!hasTag(MockFsm{}, &tags, 33));
+}
+
 fn clientPasses(comp: anytype, fsm_id: i32, transition: AiStateMachineConfig.StateMachineTransition, index: i32) bool {
     const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
     const key: Types.ConditionKey = .{

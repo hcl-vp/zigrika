@@ -4,6 +4,7 @@ BaseInfoComponent: ?@import("BaseInfo.zig") = null,
 AiComponent: ?@import("Ai.zig") = null,
 AttributeComponent: ?@import("Attribute.zig") = null,
 ModelComponent: ?@import("Model.zig") = null,
+MonsterComponent: ?@import("Monster.zig") = null,
 
 fn mergeComponentField(comptime field_name: []const u8, template: *const @This(), target: *@This()) void {
     if (@field(target, field_name)) |*target_comp| {
@@ -29,4 +30,17 @@ pub fn mergeInto(template: *const @This(), target: *@This()) void {
     mergeComponentField("AiComponent", template, target);
     mergeComponentField("AttributeComponent", template, target);
     mergeComponentField("ModelComponent", template, target);
+    mergeComponentField("MonsterComponent", template, target);
+}
+
+test "monster startup tags merge from template data" {
+    const startup_tags: []const []const u8 = &.{"monster.startup"};
+    const template: @This() = .{
+        .MonsterComponent = .{ .InitGasTag = startup_tags },
+    };
+    var target: @This() = .{ .MonsterComponent = .{} };
+
+    template.mergeInto(&target);
+
+    try std.testing.expectEqualStrings("monster.startup", target.MonsterComponent.?.InitGasTag.?[0]);
 }

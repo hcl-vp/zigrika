@@ -48,6 +48,22 @@ pub fn setGameplayTagCount(comp: *Component, gpa: std.mem.Allocator, id: i32, co
     comp.gameplay_tags[comp.gameplay_tags.len - 1] = .{ .Id = id, .TagCount = count };
 }
 
+pub fn adjustGameplayTagCount(comp: *Component, gpa: std.mem.Allocator, id: i32, delta: i32) !bool {
+    if (delta == 0) return false;
+
+    for (comp.gameplay_tags) |entry| {
+        if (entry.Id != id) continue;
+
+        const count = std.math.add(i32, entry.TagCount, delta) catch return error.GameplayTagCountOverflow;
+        try comp.setGameplayTagCount(gpa, id, count);
+        return true;
+    }
+
+    if (delta < 0) return false;
+    try comp.setGameplayTagCount(gpa, id, delta);
+    return true;
+}
+
 pub fn removeGameplayTag(comp: *Component, gpa: std.mem.Allocator, id: i32) !void {
     for (comp.gameplay_tags, 0..) |entry, index| {
         if (entry.Id != id) continue;
@@ -81,4 +97,19 @@ test "gameplay tag mutation removes replaced state" {
     try comp.removeGameplayTag(std.testing.allocator, 11);
     try std.testing.expectEqual(@as(i32, 0), comp.gameplayTagCount(11));
     try std.testing.expectEqual(@as(usize, 1), comp.gameplay_tags.len);
+}
+
+test "gameplay tag count adjustments add increment and remove" {
+    var comp: Component = .{};
+    defer comp.deinit(std.testing.allocator);
+
+    try std.testing.expect(try comp.adjustGameplayTagCount(std.testing.allocator, 11, 1));
+    try std.testing.expect(try comp.adjustGameplayTagCount(std.testing.allocator, 11, 1));
+    try std.testing.expectEqual(@as(i32, 2), comp.gameplayTagCount(11));
+
+    try std.testing.expect(try comp.adjustGameplayTagCount(std.testing.allocator, 11, -1));
+    try std.testing.expectEqual(@as(i32, 1), comp.gameplayTagCount(11));
+    try std.testing.expect(try comp.adjustGameplayTagCount(std.testing.allocator, 11, -1));
+    try std.testing.expectEqual(@as(i32, 0), comp.gameplayTagCount(11));
+    try std.testing.expect(!try comp.adjustGameplayTagCount(std.testing.allocator, 11, -1));
 }
