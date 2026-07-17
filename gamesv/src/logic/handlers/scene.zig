@@ -106,6 +106,18 @@ fn appendCompletedRoadDataLayers(scene_info: *pb.SceneInformation, assets: *cons
     scene_info.DataLayers = data_layers;
 }
 
+pub fn handleSceneCleanupTick(
+    _: EventQueue.Dequeue(.scene_cleanup_tick),
+    scene: *Scene,
+    conn: *Connection,
+    alloc: mem.Alloc,
+) !void {
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
+        try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    }
+}
+
 pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !void {
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
     defer roulette_info.deinit(alloc.gpa);

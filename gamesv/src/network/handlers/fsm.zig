@@ -283,6 +283,7 @@ pub fn FsmPlayMontagePush(_: pb.FsmPlayMontagePush) !void {}
 
 pub fn AiHateRequest(
     txn: *dispatch.CombatRequestTxn(.AiHateRequest),
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -295,6 +296,8 @@ pub fn AiHateRequest(
             try fsm.initRuntime(alloc.gpa, now_ms);
             defer fsm.finishTick(now_ms);
             _ = fsm.setHateFromList(txn.payload.HateList.items);
+            try scene.setBattleEntityActive(alloc.gpa, entity.net_id, scene.hateTargetsFormation(txn.payload.HateList.items));
+            _ = try scene.appendBattleStateNotify(alloc.arena, txn.receive_data_pack);
             if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                 try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, txn.receive_data_pack, .{
                     .attribute = attribute,
@@ -366,6 +369,7 @@ pub fn FsmConditionPassPush(
 pub fn AiHatePush(
     push: pb.AiHatePush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -379,6 +383,8 @@ pub fn AiHatePush(
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
         _ = fsm.setHateFromList(push.HateList.items);
+        try scene.setBattleEntityActive(alloc.gpa, entity.net_id, scene.hateTargetsFormation(push.HateList.items));
+        _ = try scene.appendBattleStateNotify(alloc.arena, receive_data_pack);
         if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
             try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
                 .attribute = attribute,

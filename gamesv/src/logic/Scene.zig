@@ -22,7 +22,10 @@ explore_tools_info: ExploreToolsInfo,
 entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
+active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
 player_in_battle: bool = false,
+battle_state_notified: bool = false,
+battle_state_dirty: bool = false,
 
 pub const TimeInfo = struct {
     timestamp: i64 = 0,
@@ -218,6 +221,7 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
 
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
+    scene.active_battle_entities.deinit(gpa);
 
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -251,6 +255,75 @@ pub fn setFsmEncounterTarget(scene: *Scene, fsm_entity_id: i64, target_entity_id
     } else null;
 
     return fsm.setEncounterTarget(target);
+}
+
+pub fn hateTargetsFormation(scene: *const Scene, hate_list: []const pb.AiHateEntity) bool {
+    const formation_index = std.math.cast(usize, scene.formation_info.cur_formation) orelse return false;
+    if (formation_index >= scene.formation_info.formations.len) return false;
+    const formation = scene.formation_info.formations[formation_index];
+
+    for (hate_list) |hate| {
+        if (hate.HatredValue < 1) continue;
+        for (formation.roles) |maybe_role| {
+            const role = maybe_role orelse continue;
+            if (role.entity_id == hate.EntityId) return true;
+        }
+    }
+    return false;
+}
+
+pub fn setBattleEntityActive(scene: *Scene, gpa: Allocator, entity_id: i64, active: bool) !void {
+    if (active) {
+        try scene.active_battle_entities.put(gpa, entity_id, {});
+    } else {
+        _ = scene.active_battle_entities.remove(entity_id);
+    }
+    scene.updateBattleState();
+}
+
+pub fn forceBattleState(scene: *Scene, mode: bool) void {
+    scene.active_battle_entities.clearRetainingCapacity();
+    scene.player_in_battle = mode;
+    scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
+}
+
+pub fn appendBattleStateNotify(
+    scene: *Scene,
+    arena: Allocator,
+    data: *std.ArrayList(pb.CombatReceiveData),
+) !bool {
+    if (!scene.battle_state_dirty) return false;
+
+    try data.append(arena, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = scene.currentRoleEntityId() },
+            .Message = .{
+                .PlayerBattleStateChangeNotify = .{
+                    .PlayerId = scene.player_id,
+                    .InBattle = scene.player_in_battle,
+                },
+            },
+        },
+    } });
+    scene.battle_state_notified = scene.player_in_battle;
+    scene.battle_state_dirty = false;
+    return true;
+}
+
+fn currentRoleEntityId(scene: *const Scene) i64 {
+    const formation_index = std.math.cast(usize, scene.formation_info.cur_formation) orelse return -1;
+    if (formation_index >= scene.formation_info.formations.len) return -1;
+    const formation = scene.formation_info.formations[formation_index];
+    for (formation.roles) |maybe_role| {
+        const role = maybe_role orelse continue;
+        if (role.role_id == formation.cur_role) return role.entity_id;
+    }
+    return -1;
+}
+
+fn updateBattleState(scene: *Scene) void {
+    scene.player_in_battle = scene.active_battle_entities.count() != 0;
+    scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
 }
 
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
@@ -327,6 +400,8 @@ pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
     scene.clearFsmEncounterTargetReferences(net_id);
+    _ = scene.active_battle_entities.remove(net_id);
+    scene.updateBattleState();
     var storage = scene.entities.get(index);
     storage.deinit(gpa);
     scene.entities.swapRemove(index);
