@@ -43,7 +43,7 @@ pub fn removeBuffFromEntityById(
     try removeBuffHandles(event.data.entity, &handles, item[0], conn, events, alloc, buff_timers);
 }
 
-fn removeBuffHandles(
+pub fn removeBuffHandles(
     entity: Entity,
     handle_ids: []const i32,
     buffs: *Entity.FightBuffComponent,

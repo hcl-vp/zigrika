@@ -13,6 +13,7 @@ pub fn needsServerTick(comp: anytype) bool {
     if (comp.blackboard_dirty != 0) return true;
     if (comp.lifecycle_effects_pending) return true;
     if (comp.lifecycle_effects.items.len != 0) return true;
+    if (comp.paralysis_active) return true;
     if (comp.in_hate) return true;
 
     for (comp.runtime_nodes) |runtime| {
@@ -319,6 +320,13 @@ fn runActions(
 
         if (action.ActionAddBuff) |buff| try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
         if (action.ActionRemoveBuff) |buff| try appendLifecycleEffect(comp, gpa, .{ .remove_buff = buff.BuffId });
+        if (action.ActionCue) |cue| {
+            if (std.mem.indexOfScalar(i64, cue.CueIds, 1020) != null) {
+                try appendLifecycleEffect(comp, gpa, .cue_paralysis);
+            }
+        }
+        if (action.ActionResetStatus != null) try appendLifecycleEffect(comp, gpa, .reset_status);
+        if (action.ActionSetRageFullAttribute != null) try appendLifecycleEffect(comp, gpa, .set_rage_full);
 
         if (action.ActionAddTagCount) |tag| {
             if (tag.Count > 0) try updateTagCount(comp, gpa, tag.TagId, tag.Count);

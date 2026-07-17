@@ -54,6 +54,18 @@ fn enqueueEffectsWithRecheck(
                 .entity = entity,
                 .buff_id = buff_id,
             }),
+            .cue_paralysis => try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .cue_paralysis,
+            }),
+            .reset_status => try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .reset_status,
+            }),
+            .set_rage_full => try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .set_rage_full,
+            }),
         }
     }
 

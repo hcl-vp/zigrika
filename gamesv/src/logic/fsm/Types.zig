@@ -89,6 +89,9 @@ pub const Transition = struct {
 pub const LifecycleEffect = union(enum) {
     add_buff: i64,
     remove_buff: i64,
+    cue_paralysis,
+    reset_status,
+    set_rage_full,
 };
 
 pub const ConfirmResult = union(enum) {
