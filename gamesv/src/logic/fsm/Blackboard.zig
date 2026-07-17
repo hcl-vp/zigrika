@@ -10,8 +10,8 @@ const montage_blackboard_key = 1;
 pub fn toProto(comp: anytype, arena: mem.Allocator, assets: *const Assets) !pb.EntityFsmComponentPb {
     return .{
         .Fsms = try getInitialFsm(comp, arena, assets),
-        .HashCode = comp.hash_code,
-        .CommonHashCode = comp.common_hash_code,
+        .HashCode = comp.graph.hash_code,
+        .CommonHashCode = comp.graph.common_hash_code,
         .BlackBoard = try blackboardToProto(comp, arena, null),
         .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
     };
@@ -61,8 +61,8 @@ pub fn appendResetNotify(
             .Message = .{ .FsmResetNotify = .{
                 .EntityFsmComponentPb = .{
                     .Fsms = try getInitialFsm(comp, allocator, assets),
-                    .HashCode = comp.hash_code,
-                    .CommonHashCode = comp.common_hash_code,
+                    .HashCode = comp.graph.hash_code,
+                    .CommonHashCode = comp.graph.common_hash_code,
                     .BlackBoard = blackboard,
                     .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
                 },
@@ -97,7 +97,7 @@ pub fn getInitialFsm(
 
     var seen_roots: [Types.max_state_depth]i32 = @splat(0);
     var seen_len: usize = 0;
-    for (comp.state_list) |raw_id| {
+    for (comp.graph.state_list) |raw_id| {
         const id = StateHierarchy.canonicalState(comp, raw_id);
         if (std.mem.indexOfScalar(i32, seen_roots[0..seen_len], id) != null) continue;
         if (seen_len >= seen_roots.len) return error.FsmRootLimitExceeded;
@@ -119,18 +119,7 @@ pub fn getInitialFsm(
 }
 
 pub fn prepareInitial(comp: anytype, now_ms: i64) void {
-    var minimum_montage_count: ?usize = null;
-    for (comp.node_list) |entry| {
-        const task = entry.value.Task orelse continue;
-        const montage = task.TaskRandomMontage orelse continue;
-        if (montage.RandomByClient or montage.MontageNames.len == 0) continue;
-        minimum_montage_count = if (minimum_montage_count) |count|
-            @min(count, montage.MontageNames.len)
-        else
-            montage.MontageNames.len;
-    }
-
-    if (minimum_montage_count) |count| {
+    if (comp.graph.server_montage_count) |count| {
         set(comp, montage_blackboard_key, selectMontageIndex(comp, 0, now_ms, count), false);
     }
 }
@@ -194,7 +183,7 @@ fn blackboardBit(key: usize) u8 {
 fn selectMontageIndex(comp: anytype, state: i32, activated_at: i64, count: usize) i32 {
     var seed: u64 = @bitCast(activated_at);
     const state_bits: u32 = @bitCast(state);
-    const hash_bits: u32 = @bitCast(comp.hash_code);
+    const hash_bits: u32 = @bitCast(comp.graph.hash_code);
     seed ^= @as(u64, state_bits) *% 0x9E3779B185EBCA87;
     seed ^= @as(u64, hash_bits) *% 0xC2B2AE3D27D4EB4F;
     seed ^= seed >> 12;

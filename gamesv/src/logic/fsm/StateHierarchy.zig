@@ -35,29 +35,20 @@ pub fn runtimeNode(comp: anytype, fsm_id: i32) ?*Types.FsmNode {
     return null;
 }
 
-pub fn findNode(comp: anytype, id: i32) ?AiStateMachineConfig.StateMachineNode {
-    const canonical_id = canonicalState(comp, id);
-    if (aliasForResolved(comp, canonical_id)) |alias| {
-        if (findNodeExact(comp, alias)) |node| return node;
-    }
-    return findNodeExact(comp, canonical_id);
+pub fn findNode(comp: anytype, id: i32) ?*const AiStateMachineConfig.StateMachineNode {
+    return comp.graph.findNode(id);
 }
 
-pub fn findNodeExact(comp: anytype, id: i32) ?AiStateMachineConfig.StateMachineNode {
-    for (comp.node_list) |entry| {
-        if (entry.key == id or entry.value.Uuid == id) return entry.value;
-    }
-
-    return null;
+pub fn findNodeExact(comp: anytype, id: i32) ?*const AiStateMachineConfig.StateMachineNode {
+    return comp.graph.findNodeExact(id);
 }
 
 pub fn canonicalState(comp: anytype, state: i32) i32 {
-    return resolvedForAlias(comp, state) orelse state;
+    return comp.graph.canonicalState(state);
 }
 
 pub fn clientState(comp: anytype, state: i32) i32 {
-    const canonical_state = canonicalState(comp, state);
-    return aliasForResolved(comp, canonical_state) orelse canonical_state;
+    return comp.graph.clientState(state);
 }
 
 pub fn pathContains(comp: anytype, path: []const i32, state: i32) bool {
@@ -146,22 +137,6 @@ pub fn resolveOverrideStates(comp: anytype, from: i32, to: i32, reverse: bool) T
         .from = canonicalState(comp, from),
         .to = canonicalState(comp, to),
     };
-}
-
-fn resolvedForAlias(comp: anytype, key: i32) ?i32 {
-    for (comp.override_mapping) |entry| {
-        if (entry.key == key) return entry.value;
-    }
-
-    return null;
-}
-
-fn aliasForResolved(comp: anytype, value: i32) ?i32 {
-    for (comp.override_mapping) |entry| {
-        if (entry.value == value) return entry.key;
-    }
-
-    return null;
 }
 
 pub fn commonPathPrefixLen(a: []const i32, b: []const i32) usize {

@@ -424,7 +424,7 @@ pub fn createRoleEntity(
         ),
         Entity.ConcomitantComponent{},
         Entity.PassiveGaSkillComponent{},
-        try Entity.FsmComponent.fromStateMachineId(be_hit_state_machine, assets, alloc.gpa),
+        try Entity.FsmComponent.fromStateMachineId(be_hit_state_machine, assets),
         Entity.VisionSkillComponent{
             .vision_skills = &.{},
         },

@@ -1,5 +1,6 @@
 const std = @import("std");
 const ConditionEvaluator = @import("logic/fsm/ConditionEvaluator.zig");
+const FsmGraphRegistry = @import("data/FsmGraphRegistry.zig");
 const FsmHandlers = @import("logic/handlers/fsm.zig");
 const FsmLifecycle = @import("logic/FsmLifecycle.zig");
 const GameplayTags = @import("logic/helpers/gameplay_tags.zig");
@@ -12,6 +13,7 @@ const NetworkFsmHandlers = @import("network/handlers/fsm.zig");
 
 test {
     std.testing.refAllDecls(ConditionEvaluator);
+    std.testing.refAllDecls(FsmGraphRegistry);
     std.testing.refAllDecls(FsmHandlers);
     std.testing.refAllDecls(FsmLifecycle);
     std.testing.refAllDecls(GameplayTags);

@@ -7,6 +7,7 @@ const StateHierarchy = @import("StateHierarchy.zig");
 const Types = @import("Types.zig");
 
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
+const FsmGraph = Assets.FsmGraphRegistry.Graph;
 const pending_transition_timeout_ms = 3000;
 
 pub fn needsServerTick(comp: anytype) bool {
@@ -176,7 +177,7 @@ pub fn enterPath(comp: anytype, gpa: mem.Allocator, path: []const i32) !void {
 fn checkTransitionsForState(
     comp: anytype,
     fsm_id: i32,
-    node: AiStateMachineConfig.StateMachineNode,
+    node: *const AiStateMachineConfig.StateMachineNode,
     state_to_check: i32,
     ctx: Types.EvalContext,
 ) !?Types.Transition {
@@ -238,18 +239,9 @@ fn hasPredictedTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {
     const requested = StateHierarchy.resolveOverrideStates(comp, from, to, false);
     const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
     const client_owns_animation = root.IsAnimStateMachine orelse false;
-
-    for (comp.node_list) |entry| {
-        for (entry.value.Transitions) |transition| {
-            const candidate = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
-            if (candidate.from != requested.from or candidate.to != requested.to) continue;
-            if (client_owns_animation) return true;
-            const prediction_type = transition.TransitionPredictionType orelse 0;
-            if (prediction_type == 1 or prediction_type == 2) return true;
-        }
-    }
-
-    return false;
+    const flags = comp.graph.transitionFlags(requested.from, requested.to);
+    if (client_owns_animation) return flags & Assets.FsmGraphRegistry.transition_present != 0;
+    return flags & Assets.FsmGraphRegistry.transition_predicted != 0;
 }
 
 fn clientConditionLookup(comp: anytype, fsm_id: i32, from: i32, to: i32, index: i32) Types.ClientConditionLookup {
@@ -556,11 +548,7 @@ fn removePassesForExitedPath(
 
 test "pending fsm transition defers lifecycle effects until confirmation" {
     const TestComponent = struct {
-        hash_code: i32 = 0,
-        common_hash_code: i32 = 0,
-        state_list: []const i32 = &.{},
-        node_list: []const Types.NodeEntry = &.{},
-        override_mapping: []const Types.OverrideEntry = &.{},
+        graph: *const FsmGraph = &FsmGraph.empty,
         runtime_nodes: []Types.FsmNode = &.{},
         pass_pool: []Types.ConditionKey = &.{},
         tags: []Types.TagCount = &.{},
@@ -589,11 +577,14 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
         .{ .ActionActivatePart = .{ .PartName = "shield", .Activate = true } },
     };
     const children = [_]i32{ 2, 3 };
-    const nodes = [_]Types.NodeEntry{
-        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &children, .Transitions = &transitions } },
-        .{ .key = 2, .value = .{ .Uuid = 2, .OnExitActions = &exit_actions } },
-        .{ .key = 3, .value = .{ .Uuid = 3, .OnEnterActions = &enter_actions } },
+    const nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 1, .Children = &children, .Transitions = &transitions },
+        .{ .Uuid = 2, .OnExitActions = &exit_actions },
+        .{ .Uuid = 3, .OnEnterActions = &enter_actions },
     };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = try buildTestGraph(graph_arena.allocator(), &.{1}, &nodes);
     var runtime_nodes = [_]Types.FsmNode{.{
         .fsm_id = 1,
         .active_path = .{ 1, 2 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
@@ -601,8 +592,7 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
         .active_len = 2,
     }};
     var component: TestComponent = .{
-        .state_list = &.{1},
-        .node_list = &nodes,
+        .graph = &graph,
         .runtime_nodes = &runtime_nodes,
     };
     defer component.lifecycle_effects.deinit(std.testing.allocator);
@@ -631,11 +621,7 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
 
 test "client pass from pending path drives followup after confirmation" {
     const TestComponent = struct {
-        hash_code: i32 = 0,
-        common_hash_code: i32 = 0,
-        state_list: []const i32 = &.{},
-        node_list: []const Types.NodeEntry = &.{},
-        override_mapping: []const Types.OverrideEntry = &.{},
+        graph: *const FsmGraph = &FsmGraph.empty,
         runtime_nodes: []Types.FsmNode = &.{},
         pass_pool: []Types.ConditionKey = &.{},
         tags: []Types.TagCount = &.{},
@@ -664,13 +650,16 @@ test "client pass from pending path drives followup after confirmation" {
     };
     const root_children = [_]i32{ 2, 3 };
     const pending_children = [_]i32{ 5, 6 };
-    const nodes = [_]Types.NodeEntry{
-        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &root_children, .Transitions = &root_transitions } },
-        .{ .key = 2, .value = .{ .Uuid = 2 } },
-        .{ .key = 3, .value = .{ .Uuid = 3, .Children = &pending_children, .Transitions = &nested_transitions } },
-        .{ .key = 5, .value = .{ .Uuid = 5 } },
-        .{ .key = 6, .value = .{ .Uuid = 6 } },
+    const nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 1, .Children = &root_children, .Transitions = &root_transitions },
+        .{ .Uuid = 2 },
+        .{ .Uuid = 3, .Children = &pending_children, .Transitions = &nested_transitions },
+        .{ .Uuid = 5 },
+        .{ .Uuid = 6 },
     };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = try buildTestGraph(graph_arena.allocator(), &.{1}, &nodes);
     var runtime_nodes = [_]Types.FsmNode{.{
         .fsm_id = 1,
         .active_path = .{ 1, 2 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
@@ -684,8 +673,7 @@ test "client pass from pending path drives followup after confirmation" {
         .pending_started_ms = 20,
     }};
     var component: TestComponent = .{
-        .state_list = &.{1},
-        .node_list = &nodes,
+        .graph = &graph,
         .runtime_nodes = &runtime_nodes,
     };
     defer {
@@ -719,9 +707,7 @@ test "client pass from pending path drives followup after confirmation" {
 
 test "client pass validation preserves active pending and override boundaries" {
     const TestComponent = struct {
-        state_list: []const i32 = &.{},
-        node_list: []const Types.NodeEntry = &.{},
-        override_mapping: []const Types.OverrideEntry = &.{},
+        graph: *const FsmGraph = &FsmGraph.empty,
         runtime_nodes: []Types.FsmNode = &.{},
         pass_pool: []Types.ConditionKey = &.{},
     };
@@ -738,20 +724,21 @@ test "client pass validation preserves active pending and override boundaries" {
     };
     const children = [_]i32{ 20, 30, 40, 50 };
     const other_children = [_]i32{ 70, 80 };
-    const nodes = [_]Types.NodeEntry{
-        .{ .key = 10, .value = .{ .Uuid = 10, .Children = &children, .Transitions = &transitions } },
-        .{ .key = 20, .value = .{ .Uuid = 20 } },
-        .{ .key = 30, .value = .{ .Uuid = 30 } },
-        .{ .key = 40, .value = .{ .Uuid = 40 } },
-        .{ .key = 50, .value = .{ .Uuid = 50 } },
-        .{ .key = 60, .value = .{ .Uuid = 60, .Children = &other_children } },
-        .{ .key = 70, .value = .{ .Uuid = 70 } },
-        .{ .key = 80, .value = .{ .Uuid = 80 } },
+    const nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 10, .Children = &children, .Transitions = &transitions },
+        .{ .Uuid = 20 },
+        .{ .Uuid = 30 },
+        .{ .Uuid = 40 },
+        .{ .Uuid = 50 },
+        .{ .Uuid = 60, .Children = &other_children },
+        .{ .Uuid = 70 },
+        .{ .Uuid = 80 },
+        .{ .Uuid = 120, .OverrideCommonUuid = 20 },
+        .{ .Uuid = 130, .OverrideCommonUuid = 30 },
     };
-    const overrides = [_]Types.OverrideEntry{
-        .{ .key = 120, .value = 20 },
-        .{ .key = 130, .value = 30 },
-    };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = try buildTestGraph(graph_arena.allocator(), &.{ 10, 60 }, &nodes);
     var runtime_nodes = [_]Types.FsmNode{
         .{
             .fsm_id = 10,
@@ -769,9 +756,7 @@ test "client pass validation preserves active pending and override boundaries" {
         },
     };
     var component: TestComponent = .{
-        .state_list = &.{ 10, 60 },
-        .node_list = &nodes,
-        .override_mapping = &overrides,
+        .graph = &graph,
         .runtime_nodes = &runtime_nodes,
     };
     defer std.testing.allocator.free(component.pass_pool);
@@ -817,6 +802,18 @@ test "client pass validation preserves active pending and override boundaries" {
         try recordClientPass(&component, std.testing.allocator, .{ .fsm_id = 999, .from = 20, .to = 30, .index = 7 }, true),
     );
     try std.testing.expectEqual(original_pool_len, component.pass_pool.len);
+}
+
+fn buildTestGraph(
+    arena: mem.Allocator,
+    roots: []const i32,
+    nodes: []const AiStateMachineConfig.StateMachineNode,
+) !FsmGraph {
+    return (try Assets.FsmGraphRegistry.buildGraph(
+        arena,
+        .{ .Version = 1, .StateMachines = roots, .Nodes = nodes },
+        .{ .Version = 2, .StateMachines = &.{}, .Nodes = &.{} },
+    )) orelse error.InvalidTestFsmGraph;
 }
 
 fn passPoolContains(comp: anytype, key: Types.ConditionKey) bool {

@@ -278,7 +278,7 @@ pub const spawn = struct {
         const final_camp = spawnCamp(base_info, &template_config, spawn_base);
         const use_ai_runtime = useAiRuntime(spawn_base.entity_type);
         const fsm_component = if (use_ai_runtime)
-            try Entity.FsmComponent.fromAiBaseId(ai_id, assets, alloc.gpa)
+            Entity.FsmComponent.fromAiBaseId(ai_id, assets)
         else
             null;
         const combat_attributes: ?Entity.AttributeComponent = if (use_ai_runtime)

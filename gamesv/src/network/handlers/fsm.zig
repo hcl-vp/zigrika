@@ -718,8 +718,8 @@ test "ai hate handling does not require an fsm component" {
     try std.testing.expectEqual(@as(usize, 2), output.items.len);
     try std.testing.expect(!output.items[1].Message.?.CombatNotifyData.?.Message.?.PlayerBattleStateChangeNotify.?.InBattle);
 
-    const FsmTypes = @import("../../logic/fsm/Types.zig");
-    const AiStateMachineConfig = @import("../../data/Assets.zig").DataTables.AiStateMachineConfig;
+    const TestAssets = @import("../../data/Assets.zig");
+    const AiStateMachineConfig = TestAssets.DataTables.AiStateMachineConfig;
     const hate_conditions = [_]AiStateMachineConfig.StateMachineCondition{
         .{ .Name = "CondHate" },
     };
@@ -727,14 +727,20 @@ test "ai hate handling does not require an fsm component" {
         .{ .From = 2, .To = 3, .Conditions = &hate_conditions },
     };
     const fsm_children = [_]i32{ 2, 3 };
-    const fsm_nodes = [_]FsmTypes.NodeEntry{
-        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &fsm_children, .Transitions = &hate_transitions } },
-        .{ .key = 2, .value = .{ .Uuid = 2 } },
-        .{ .key = 3, .value = .{ .Uuid = 3 } },
+    const fsm_nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 1, .Children = &fsm_children, .Transitions = &hate_transitions },
+        .{ .Uuid = 2 },
+        .{ .Uuid = 3 },
     };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = (try TestAssets.FsmGraphRegistry.buildGraph(
+        graph_arena.allocator(),
+        .{ .Version = 1, .StateMachines = &.{1}, .Nodes = &fsm_nodes },
+        .{ .Version = 2, .StateMachines = &.{}, .Nodes = &.{} },
+    )) orelse return error.InvalidTestFsmGraph;
     var fsm: Entity.FsmComponent = .{
-        .state_list = try std.testing.allocator.dupe(i32, &.{1}),
-        .node_list = try std.testing.allocator.dupe(FsmTypes.NodeEntry, &fsm_nodes),
+        .graph = &graph,
     };
     defer fsm.deinit(std.testing.allocator);
     const fsm_item: AiHateQuery.Item = .{

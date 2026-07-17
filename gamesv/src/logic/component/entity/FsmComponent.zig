@@ -8,14 +8,13 @@ const ConfigLoader = @import("../../fsm/ConfigLoader.zig");
 const FsmTypes = @import("../../fsm/Types.zig");
 const StateHierarchy = @import("../../fsm/StateHierarchy.zig");
 const TransitionEngine = @import("../../fsm/TransitionEngine.zig");
+const FsmGraph = Assets.FsmGraphRegistry.Graph;
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 const encounter_target_blackboard_key = 2;
 
 pub const transient = true;
 
-const NodeEntry = FsmTypes.NodeEntry;
-const OverrideEntry = FsmTypes.OverrideEntry;
 const TagCount = FsmTypes.TagCount;
 pub const FsmNode = FsmTypes.FsmNode;
 pub const ConditionKey = FsmTypes.ConditionKey;
@@ -26,11 +25,7 @@ pub const LifecycleEffect = FsmTypes.LifecycleEffect;
 pub const ConfirmResult = FsmTypes.ConfirmResult;
 pub const ClientPassResult = FsmTypes.ClientPassResult;
 
-hash_code: i32 = 0,
-common_hash_code: i32 = 0,
-state_list: []const i32 = &.{},
-node_list: []const NodeEntry = &.{},
-override_mapping: []const OverrideEntry = &.{},
+graph: *const FsmGraph = &FsmGraph.empty,
 runtime_nodes: []FsmNode = &.{},
 pass_pool: []ConditionKey = &.{},
 tags: []TagCount = &.{},
@@ -46,9 +41,6 @@ blackboard: [3]?i32 = .{ null, null, null },
 blackboard_dirty: u8 = 0,
 
 pub fn deinit(comp: *Component, gpa: mem.Allocator) void {
-    gpa.free(comp.state_list);
-    gpa.free(comp.node_list);
-    gpa.free(comp.override_mapping);
     gpa.free(comp.runtime_nodes);
     gpa.free(comp.pass_pool);
     gpa.free(comp.tags);
@@ -59,16 +51,16 @@ pub fn toProto(comp: Component, arena: mem.Allocator, assets: *const Assets) !pb
     return Blackboard.toProto(comp, arena, assets);
 }
 
-pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets, gpa: mem.Allocator) !?Component {
-    return ConfigLoader.fromAiBaseId(Component, ai_id, assets, gpa);
+pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets) ?Component {
+    return ConfigLoader.fromAiBaseId(Component, ai_id, assets);
 }
 
 pub fn hasUsableAiBaseId(ai_id: ?i32, assets: *const Assets) bool {
     return ConfigLoader.hasUsableAiBaseId(ai_id, assets);
 }
 
-pub fn fromStateMachineId(id: []const u8, assets: *const Assets, gpa: mem.Allocator) !Component {
-    return ConfigLoader.fromStateMachineId(Component, id, assets, gpa);
+pub fn fromStateMachineId(id: []const u8, assets: *const Assets) !Component {
+    return ConfigLoader.fromStateMachineId(Component, id, assets);
 }
 
 pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
@@ -77,7 +69,7 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
     var runtime_nodes: std.ArrayList(FsmNode) = .empty;
     defer runtime_nodes.deinit(gpa);
 
-    for (comp.state_list) |raw_fsm_id| {
+    for (comp.graph.state_list) |raw_fsm_id| {
         const fsm_id = StateHierarchy.canonicalState(comp, raw_fsm_id);
         const already_added = for (runtime_nodes.items) |runtime| {
             if (runtime.fsm_id == fsm_id) break true;
@@ -292,4 +284,31 @@ pub fn getCommonFsm(assets: *const Assets) ?AiStateMachineConfig {
 
 fn findReadyTransition(comp: *Component, fsm_id: i32, ctx: EvalContext) !?Transition {
     return TransitionEngine.findReadyTransition(comp, fsm_id, ctx);
+}
+
+test "components share immutable graph and keep independent runtime state" {
+    const children = [_]i32{2};
+    const nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 1, .Children = &children },
+        .{ .Uuid = 2 },
+    };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = (try Assets.FsmGraphRegistry.buildGraph(
+        graph_arena.allocator(),
+        .{ .Version = 1, .StateMachines = &.{1}, .Nodes = &nodes },
+        .{ .Version = 2, .StateMachines = &.{}, .Nodes = &.{} },
+    )) orelse return error.InvalidTestFsmGraph;
+
+    var first: Component = .{ .graph = &graph };
+    defer first.deinit(std.testing.allocator);
+    var second: Component = .{ .graph = &graph };
+    defer second.deinit(std.testing.allocator);
+
+    try first.initRuntime(std.testing.allocator, 10);
+    try second.initRuntime(std.testing.allocator, 20);
+    try std.testing.expect(first.graph == second.graph);
+    try std.testing.expect(first.runtime_nodes.ptr != second.runtime_nodes.ptr);
+    first.runtime_nodes[0].pending_to = 2;
+    try std.testing.expectEqual(@as(?i32, null), second.runtime_nodes[0].pending_to);
 }

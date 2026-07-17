@@ -9,16 +9,6 @@ const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 pub const max_state_depth = 32;
 
-pub const NodeEntry = struct {
-    key: i32,
-    value: AiStateMachineConfig.StateMachineNode,
-};
-
-pub const OverrideEntry = struct {
-    key: i32,
-    value: i32,
-};
-
 pub const FsmNode = struct {
     fsm_id: i32,
     active_path: [max_state_depth]i32 = @splat(0),
@@ -143,9 +133,4 @@ pub const ClientConditionLookup = enum {
 pub const ResolvedStates = struct {
     from: i32,
     to: i32,
-};
-
-pub const StateMachineConfigs = struct {
-    entity: AiStateMachineConfig.StateMachineJsonData,
-    common: AiStateMachineConfig.StateMachineJsonData,
 };
