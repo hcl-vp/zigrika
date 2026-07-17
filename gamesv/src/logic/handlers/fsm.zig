@@ -159,7 +159,36 @@ fn applyInstanceState(
         .entity = entity,
         .add_tag_ids = add_tags,
         .remove_tag_ids = remove_tags,
+        .remove_before_add = previous != null,
     });
+}
+
+test "fsm instance state replacement requests remove before add" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    var events: EventQueue = .{ .arena = std.testing.allocator };
+    defer events.deque.deinit(std.testing.allocator);
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
+    const entity: Entity = .{ .index = 0, .net_id = 1001 };
+    var fsm: Entity.FsmComponent = undefined;
+
+    fsm.instance_state_tag = 11;
+    try applyInstanceState(entity, &fsm, null, 22, &events, alloc);
+    const replacement = events.deque.popFront().?;
+    try std.testing.expectEqual(@as(std.meta.Tag(EventQueue.Event), .gameplay_tag_change), std.meta.activeTag(replacement));
+    try std.testing.expect(replacement.gameplay_tag_change.remove_before_add);
+    try std.testing.expectEqualSlices(i32, &.{22}, replacement.gameplay_tag_change.add_tag_ids);
+    try std.testing.expectEqualSlices(i32, &.{11}, replacement.gameplay_tag_change.remove_tag_ids);
+
+    fsm.instance_state_tag = null;
+    try applyInstanceState(entity, &fsm, null, 33, &events, alloc);
+    const initial = events.deque.popFront().?;
+    try std.testing.expect(!initial.gameplay_tag_change.remove_before_add);
+    try std.testing.expectEqualSlices(i32, &.{33}, initial.gameplay_tag_change.add_tag_ids);
+    try std.testing.expectEqual(@as(usize, 0), initial.gameplay_tag_change.remove_tag_ids.len);
+
+    try applyInstanceState(entity, &fsm, null, 33, &events, alloc);
+    try std.testing.expect(events.deque.popFront() == null);
 }
 
 fn updateParalysis(

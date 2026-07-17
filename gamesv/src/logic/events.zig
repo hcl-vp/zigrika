@@ -107,6 +107,7 @@ pub const GameplayTagChange = struct {
     entity: Entity,
     add_tag_ids: []i32,
     remove_tag_ids: []i32,
+    remove_before_add: bool = false,
 };
 
 pub const ChatCommandResponse = struct { content: []const u8 };
