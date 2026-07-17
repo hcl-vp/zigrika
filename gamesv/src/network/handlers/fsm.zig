@@ -17,6 +17,17 @@ const FsmQuery = Scene.Query(&.{
     ?*Entity.PartComponent,
 });
 
+const AiHateQuery = Scene.Query(&.{
+    Entity,
+    *Entity.MonsterAiComponent,
+    ?*Entity.FsmComponent,
+    ?*Entity.AttributeComponent,
+    ?*Entity.FightBuffComponent,
+    ?*Entity.LogicStateComponent,
+    ?*Entity.TagComponent,
+    ?*Entity.PartComponent,
+});
+
 const LogicStateQuery = Scene.Query(&.{
     Entity,
     *Entity.LogicStateComponent,
@@ -367,30 +378,14 @@ pub fn FsmPlayMontagePush(_: pb.FsmPlayMontagePush) !void {}
 pub fn AiHateRequest(
     txn: *dispatch.CombatRequestTxn(.AiHateRequest),
     scene: *Scene,
-    query: FsmQuery,
+    query: AiHateQuery,
     events: *EventQueue,
     io: std.Io,
     alloc: mem.Alloc,
 ) !void {
     if (commonEntityId(txn.common)) |entity_id| {
         if (query.byNetId(entity_id)) |item| {
-            const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
-            const now_ms = queryNow(io);
-            try fsm.initRuntime(alloc.gpa, now_ms);
-            defer fsm.finishTick(now_ms);
-            _ = fsm.setHateFromList(txn.payload.HateList.items);
-            try scene.setBattleEntityActive(alloc.gpa, entity.net_id, scene.hateTargetsFormation(txn.payload.HateList.items));
-            _ = try scene.appendBattleStateNotify(alloc.arena, txn.receive_data_pack);
-            if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-                try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, txn.receive_data_pack, .{
-                    .attribute = attribute,
-                    .buffs = buffs,
-                    .logic_state = logic_state,
-                    .tags = tags,
-                    .parts = if (parts) |part| part.states() else null,
-                    .now_ms = now_ms,
-                });
-            }
+            try applyAiHate(scene, item, txn.payload.HateList.items, events, queryNow(io), alloc, txn.receive_data_pack);
         }
     }
 
@@ -455,7 +450,7 @@ pub fn AiHatePush(
     push: pb.AiHatePush,
     common: ?pb.CombatCommon,
     scene: *Scene,
-    query: FsmQuery,
+    query: AiHateQuery,
     events: *EventQueue,
     io: std.Io,
     alloc: mem.Alloc,
@@ -463,23 +458,7 @@ pub fn AiHatePush(
 ) !void {
     const entity_id = commonEntityId(common) orelse return;
     if (query.byNetId(entity_id)) |item| {
-        const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
-        const now_ms = queryNow(io);
-        try fsm.initRuntime(alloc.gpa, now_ms);
-        defer fsm.finishTick(now_ms);
-        _ = fsm.setHateFromList(push.HateList.items);
-        try scene.setBattleEntityActive(alloc.gpa, entity.net_id, scene.hateTargetsFormation(push.HateList.items));
-        _ = try scene.appendBattleStateNotify(alloc.arena, receive_data_pack);
-        if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-            try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
-                .attribute = attribute,
-                .buffs = buffs,
-                .logic_state = logic_state,
-                .tags = tags,
-                .parts = if (parts) |part| part.states() else null,
-                .now_ms = now_ms,
-            });
-        }
+        try applyAiHate(scene, item, push.HateList.items, events, queryNow(io), alloc, receive_data_pack);
     }
 }
 
@@ -570,6 +549,36 @@ fn appendFollowupTransition(
     }
 }
 
+fn applyAiHate(
+    scene: *Scene,
+    item: AiHateQuery.Item,
+    hate_list: []const pb.AiHateEntity,
+    events: *EventQueue,
+    now_ms: i64,
+    alloc: mem.Alloc,
+    receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    const entity, _, const optional_fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
+
+    try scene.updateBattleEntityFromHate(alloc.gpa, entity.net_id, hate_list);
+    _ = try scene.appendBattleStateNotify(alloc.arena, receive_data_pack);
+
+    const fsm = optional_fsm orelse return;
+    try fsm.initRuntime(alloc.gpa, now_ms);
+    defer fsm.finishTick(now_ms);
+    _ = fsm.setHateFromList(hate_list);
+    if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
+        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
+            .attribute = attribute,
+            .buffs = buffs,
+            .logic_state = logic_state,
+            .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
+            .now_ms = now_ms,
+        });
+    }
+}
+
 fn applyGameplayTagChange(
     entity: Entity,
     tags: *Entity.TagComponent,
@@ -655,4 +664,101 @@ fn errorResult(arena: std.mem.Allocator, code: pb.ErrorCode, params: []const i32
         .ErrorCode = code,
         .ErrorParams = error_params,
     };
+}
+
+test "ai hate handling does not require an fsm component" {
+    const FormationInfo = @import("../../fs/FormationInfo.zig");
+    const Role = FormationInfo.Formation.Role;
+    var formations = [_]FormationInfo.Formation{.{
+        .cur_role = 1001,
+        .roles = .{
+            Role{ .role_id = 1001, .entity_id = 11 },
+            null,
+            null,
+        },
+    }};
+    var scene: Scene = undefined;
+    scene.player_id = 1;
+    scene.formation_info = .{ .cur_formation = 0, .formations = &formations };
+    scene.active_battle_entities = .empty;
+    scene.player_in_battle = false;
+    scene.battle_state_notified = false;
+    scene.battle_state_dirty = false;
+    defer scene.active_battle_entities.deinit(std.testing.allocator);
+
+    var monster_ai: Entity.MonsterAiComponent = .{};
+    const item: AiHateQuery.Item = .{
+        .{ .index = 0, .net_id = 101 },
+        &monster_ai,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+    };
+    var events: EventQueue = .{ .arena = std.testing.allocator };
+    defer events.deque.deinit(std.testing.allocator);
+    var output: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer output.deinit(std.testing.allocator);
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = std.testing.allocator };
+
+    const formation_hate = [_]pb.AiHateEntity{.{ .EntityId = 11, .HatredValue = 1 }};
+    try applyAiHate(&scene, item, &formation_hate, &events, 100, alloc, &output);
+    try std.testing.expect(scene.player_in_battle);
+    try std.testing.expectEqual(@as(usize, 1), scene.active_battle_entities.count());
+    try std.testing.expectEqual(@as(usize, 1), output.items.len);
+    try std.testing.expect(output.items[0].Message.?.CombatNotifyData.?.Message.?.PlayerBattleStateChangeNotify.?.InBattle);
+    try std.testing.expect(events.deque.popFront() == null);
+
+    const empty_hate: [0]pb.AiHateEntity = .{};
+    try applyAiHate(&scene, item, &empty_hate, &events, 200, alloc, &output);
+    try std.testing.expect(!scene.player_in_battle);
+    try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
+    try std.testing.expectEqual(@as(usize, 2), output.items.len);
+    try std.testing.expect(!output.items[1].Message.?.CombatNotifyData.?.Message.?.PlayerBattleStateChangeNotify.?.InBattle);
+
+    const FsmTypes = @import("../../logic/fsm/Types.zig");
+    const AiStateMachineConfig = @import("../../data/Assets.zig").DataTables.AiStateMachineConfig;
+    const hate_conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondHate" },
+    };
+    const hate_transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 2, .To = 3, .Conditions = &hate_conditions },
+    };
+    const fsm_children = [_]i32{ 2, 3 };
+    const fsm_nodes = [_]FsmTypes.NodeEntry{
+        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &fsm_children, .Transitions = &hate_transitions } },
+        .{ .key = 2, .value = .{ .Uuid = 2 } },
+        .{ .key = 3, .value = .{ .Uuid = 3 } },
+    };
+    var fsm: Entity.FsmComponent = .{
+        .state_list = try std.testing.allocator.dupe(i32, &.{1}),
+        .node_list = try std.testing.allocator.dupe(FsmTypes.NodeEntry, &fsm_nodes),
+    };
+    defer fsm.deinit(std.testing.allocator);
+    const fsm_item: AiHateQuery.Item = .{
+        .{ .index = 0, .net_id = 101 },
+        &monster_ai,
+        &fsm,
+        null,
+        null,
+        null,
+        null,
+        null,
+    };
+    const non_formation_hate = [_]pb.AiHateEntity{.{ .EntityId = 33, .HatredValue = 1 }};
+    try applyAiHate(&scene, fsm_item, &non_formation_hate, &events, 300, alloc, &output);
+    try std.testing.expect(fsm.in_hate);
+    try std.testing.expect(!scene.player_in_battle);
+    try std.testing.expectEqual(@as(usize, 3), output.items.len);
+    const transition = output.items[2].Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
+    try std.testing.expectEqual(@as(i32, 2), transition.FromState);
+    try std.testing.expectEqual(@as(i32, 3), transition.ToState);
+}
+
+test "ai hate query requires ai and keeps fsm optional" {
+    const fields = @typeInfo(AiHateQuery.Item).@"struct".fields;
+    try std.testing.expect(fields[1].type == *Entity.MonsterAiComponent);
+    try std.testing.expect(fields[2].type == ?*Entity.FsmComponent);
 }

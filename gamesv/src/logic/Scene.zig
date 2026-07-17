@@ -115,6 +115,7 @@ pub fn Query(comptime types: []const type) type {
             }
 
             fn peekCurrent(it: *Iterator, slice: std.MultiArrayList(EntityComponentStorage).Slice) ?Item {
+                @setEvalBranchQuota(2_000);
                 var item: Item = undefined;
 
                 inline for (types, 0..) |Component, i| {
@@ -282,6 +283,15 @@ pub fn setBattleEntityActive(scene: *Scene, gpa: Allocator, entity_id: i64, acti
     scene.updateBattleState();
 }
 
+pub fn updateBattleEntityFromHate(
+    scene: *Scene,
+    gpa: Allocator,
+    entity_id: i64,
+    hate_list: []const pb.AiHateEntity,
+) !void {
+    try scene.setBattleEntityActive(gpa, entity_id, scene.hateTargetsFormation(hate_list));
+}
+
 pub fn forceBattleState(scene: *Scene, mode: bool) void {
     scene.active_battle_entities.clearRetainingCapacity();
     scene.player_in_battle = mode;
@@ -350,11 +360,14 @@ test "battle state filters formation hate and aggregates enemies" {
     try std.testing.expect(scene.hateTargetsFormation(&player_hate));
     try std.testing.expect(!scene.hateTargetsFormation(&other_hate));
 
-    try scene.setBattleEntityActive(std.testing.allocator, 101, true);
-    try scene.setBattleEntityActive(std.testing.allocator, 202, true);
-    try scene.setBattleEntityActive(std.testing.allocator, 101, false);
+    const empty_hate: [0]pb.AiHateEntity = .{};
+    try scene.updateBattleEntityFromHate(std.testing.allocator, 101, &player_hate);
+    try scene.updateBattleEntityFromHate(std.testing.allocator, 202, &other_hate);
+    try std.testing.expectEqual(@as(usize, 1), scene.active_battle_entities.count());
+    try scene.updateBattleEntityFromHate(std.testing.allocator, 202, &player_hate);
+    try scene.updateBattleEntityFromHate(std.testing.allocator, 101, &empty_hate);
     try std.testing.expect(scene.player_in_battle);
-    try scene.setBattleEntityActive(std.testing.allocator, 202, false);
+    try scene.updateBattleEntityFromHate(std.testing.allocator, 202, &empty_hate);
     try std.testing.expect(!scene.player_in_battle);
     try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
 }
