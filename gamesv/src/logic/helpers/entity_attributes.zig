@@ -60,9 +60,34 @@ fn configuredLevel(components: *const Components) i32 {
     return 1;
 }
 
+fn areaMonsterLevel(area_table: anytype, area_id: i32, world_level: i32) ?i32 {
+    var current_area_id = area_id;
+    var remaining = area_table.items.len;
+
+    while (current_area_id > 0 and remaining > 0) : (remaining -= 1) {
+        const area = area_table.getDataById(current_area_id) orelse return null;
+        if (area.WorldMonsterLevelMax.map.get(world_level)) |level| return clampLevel(level);
+        if (area.Father <= 0 or area.Father == current_area_id) return null;
+        current_area_id = area.Father;
+    }
+
+    return null;
+}
+
+fn effectiveLevel(area_table: anytype, components: *const Components, area_id: i32, world_level: i32) i32 {
+    const level = configuredLevel(components);
+    if (level >= 10) return level;
+
+    const attr = components.AttributeComponent orelse return level;
+    const world_bonus = attr.WorldLevelBonusType orelse return level;
+    if ((world_bonus.Type orelse 0) != 1) return level;
+
+    return areaMonsterLevel(area_table, area_id, world_level) orelse level;
+}
+
 fn configuredCurveId(components: *const Components) i32 {
     if (components.AttributeComponent) |attr| {
-        if (attr.MonsterPropExtraRateId) |curve_id| return curve_id;
+        if (attr.MonsterPropGrowthId) |curve_id| if (curve_id > 0) return curve_id;
     }
 
     return 0;
@@ -119,10 +144,12 @@ pub fn createCombatAttributes(
     assets: *const Assets,
     components: *const Components,
     entity_logic: EntityLogic,
+    area_id: i32,
+    world_level: i32,
     alloc: mem.Alloc,
 ) !?Entity.AttributeComponent {
     const prop_id = propertyId(components, entity_logic) orelse return null;
-    const level = configuredLevel(components);
+    const level = effectiveLevel(&assets.tables.area, components, area_id, world_level);
     const props = try assets.tables.getProps(prop_id, alloc.arena);
     if (props.len == 0) return null;
 
@@ -136,4 +163,104 @@ pub fn createCombatAttributes(
         rageModeId(components),
         alloc.gpa,
     );
+}
+
+const TestArea = struct {
+    AreaId: i32,
+    Father: i32,
+    WorldMonsterLevelMax: struct {
+        map: std.array_hash_map.Auto(i32, i32) = .empty,
+    } = .{},
+};
+
+const TestAreaTable = struct {
+    items: []const TestArea,
+
+    fn getDataById(table: @This(), area_id: i32) ?TestArea {
+        for (table.items) |area| {
+            if (area.AreaId == area_id) return area;
+        }
+        return null;
+    }
+};
+
+test "monster growth uses its dedicated curve field" {
+    const components: Components = .{
+        .AttributeComponent = .{
+            .MonsterPropExtraRateId = 3001,
+            .MonsterPropGrowthId = 1001,
+        },
+    };
+
+    try std.testing.expectEqual(@as(i32, 1001), configuredCurveId(&components));
+}
+
+test "monster extra rate is not used as a growth curve" {
+    const components: Components = .{
+        .AttributeComponent = .{ .MonsterPropExtraRateId = 3001 },
+    };
+
+    try std.testing.expectEqual(@as(i32, 0), configuredCurveId(&components));
+}
+
+test "area bonus resolves through parent areas" {
+    var parent_levels: std.array_hash_map.Auto(i32, i32) = .empty;
+    defer parent_levels.deinit(std.testing.allocator);
+    try parent_levels.put(std.testing.allocator, 8, 94);
+
+    const areas = [_]TestArea{
+        .{ .AreaId = 10, .Father = 1 },
+        .{ .AreaId = 1, .Father = 0, .WorldMonsterLevelMax = .{ .map = parent_levels } },
+    };
+    const table = TestAreaTable{ .items = &areas };
+    const components: Components = .{
+        .AttributeComponent = .{
+            .Level = 2,
+            .WorldLevelBonusType = .{ .Type = 1 },
+        },
+    };
+
+    try std.testing.expectEqual(@as(i32, 94), effectiveLevel(table, &components, 10, 8));
+}
+
+test "area bonus preserves configured level without a mapping" {
+    const areas = [_]TestArea{.{ .AreaId = 10, .Father = 0 }};
+    const table = TestAreaTable{ .items = &areas };
+    const components: Components = .{
+        .AttributeComponent = .{
+            .Level = 3,
+            .WorldLevelBonusType = .{ .Type = 1 },
+        },
+    };
+
+    try std.testing.expectEqual(@as(i32, 3), effectiveLevel(table, &components, 10, 8));
+}
+
+test "area bonus preserves explicit monster levels" {
+    var levels: std.array_hash_map.Auto(i32, i32) = .empty;
+    defer levels.deinit(std.testing.allocator);
+    try levels.put(std.testing.allocator, 8, 94);
+
+    const areas = [_]TestArea{.{ .AreaId = 10, .Father = 0, .WorldMonsterLevelMax = .{ .map = levels } }};
+    const table = TestAreaTable{ .items = &areas };
+    const components: Components = .{
+        .AttributeComponent = .{
+            .Level = 45,
+            .WorldLevelBonusType = .{ .Type = 1 },
+        },
+    };
+
+    try std.testing.expectEqual(@as(i32, 45), effectiveLevel(table, &components, 10, 8));
+}
+
+test "world level table mode preserves configured level" {
+    const table = TestAreaTable{ .items = &.{} };
+    const components: Components = .{
+        .AttributeComponent = .{
+            .Level = 4,
+            .WorldLevelBonusType = .{ .Type = 0, .WorldLevelBonusId = 10011 },
+        },
+    };
+
+    try std.testing.expectEqual(@as(i32, 4), effectiveLevel(table, &components, 10, 8));
 }

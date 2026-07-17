@@ -11,6 +11,7 @@ const ConfigComponent = @import("../../logic/component/entity/ConfigComponent.zi
 const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
+const PlayerBasicComponent = @import("../../logic/component/player/PlayerBasicComponent.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const entity_attributes = @import("../../logic/helpers/entity_attributes.zig");
@@ -182,6 +183,12 @@ fn spawnCamp(base_info: anytype, template_config: *const TemplateConfig, spawn_b
     return base_camp orelse tpl_camp orelse 0;
 }
 
+fn appendConfiguredBuffIds(buff_ids: *std.ArrayList(i64), components: *const Components, gpa: std.mem.Allocator) !void {
+    const attr = components.AttributeComponent orelse return;
+    const configured_ids = attr.AppendBuffIds orelse return;
+    try buff_ids.appendSlice(gpa, configured_ids);
+}
+
 pub const spawn = struct {
     pub const alias = "s";
     pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?]";
@@ -191,12 +198,13 @@ pub const spawn = struct {
         fs: *FileSystem,
         assets: *const Assets,
         conn: *Connection,
+        basic_comp: *const PlayerBasicComponent,
         alloc: mem.Alloc,
         entity_id: i64,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
-        try callWithSourceMap(events, scene, fs, assets, conn, alloc, entity_id, is_frozen, is_tune_broken, null);
+        try callWithSourceMap(events, scene, fs, assets, conn, basic_comp, alloc, entity_id, is_frozen, is_tune_broken, null);
     }
 
     fn callWithSourceMap(
@@ -205,6 +213,7 @@ pub const spawn = struct {
         fs: *FileSystem,
         assets: *const Assets,
         conn: *Connection,
+        basic_comp: *const PlayerBasicComponent,
         alloc: mem.Alloc,
         entity_id: i64,
         is_frozen: ?bool,
@@ -249,6 +258,8 @@ pub const spawn = struct {
                 assets,
                 &components_data,
                 blueprint_config.EntityLogic,
+                entity_config.AreaId,
+                basic_comp.info.attributes.cur_world_level,
                 alloc,
             ))
         else
@@ -324,6 +335,7 @@ pub const spawn = struct {
         var buff_ids: std.ArrayList(i64) = .empty;
         defer buff_ids.deinit(alloc.gpa);
 
+        try appendConfiguredBuffIds(&buff_ids, &components_data, alloc.gpa);
         if (is_tune_broken orelse false) try buff_ids.appendSlice(alloc.gpa, TUNE_BROKEN_BUFFS);
         if (is_frozen orelse false) try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
         if (buff_ids.items.len > 0) {
@@ -364,15 +376,29 @@ pub const spawn_map = struct {
         fs: *FileSystem,
         assets: *const Assets,
         conn: *Connection,
+        basic_comp: *const PlayerBasicComponent,
         alloc: mem.Alloc,
         entity_id: i64,
         source_map_id: i32,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
-        try spawn.callWithSourceMap(events, scene, fs, assets, conn, alloc, entity_id, is_frozen, is_tune_broken, source_map_id);
+        try spawn.callWithSourceMap(events, scene, fs, assets, conn, basic_comp, alloc, entity_id, is_frozen, is_tune_broken, source_map_id);
     }
 };
+
+test "configured startup buffs precede debug buffs" {
+    const components: Components = .{
+        .AttributeComponent = .{ .AppendBuffIds = &.{ 11, 22 } },
+    };
+    var ids: std.ArrayList(i64) = .empty;
+    defer ids.deinit(std.testing.allocator);
+
+    try appendConfiguredBuffIds(&ids, &components, std.testing.allocator);
+    try ids.appendSlice(std.testing.allocator, &.{33});
+
+    try std.testing.expectEqualSlices(i64, &.{ 11, 22, 33 }, ids.items);
+}
 
 fn parseOptionalInt(value: ?std.json.Value) i32 {
     const raw = value orelse return 0;
