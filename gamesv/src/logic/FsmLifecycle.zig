@@ -1,3 +1,4 @@
+const std = @import("std");
 const EventQueue = @import("EventQueue.zig");
 const events = @import("events.zig");
 const mem = @import("../mem.zig");
@@ -80,4 +81,24 @@ fn enqueueEffectsWithRecheck(
     });
     fsm.markLifecycleEffectsEnqueued(alloc.gpa);
     return true;
+}
+
+test "fsm lifecycle effects remain FIFO before completion" {
+    var fsm: Entity.FsmComponent = .{};
+    defer fsm.lifecycle_effects.deinit(std.testing.allocator);
+    try fsm.lifecycle_effects.append(std.testing.allocator, .set_rage_full);
+    try fsm.lifecycle_effects.append(std.testing.allocator, .reset_status);
+    try fsm.lifecycle_effects.append(std.testing.allocator, .{ .set_instance_state = 42 });
+
+    var queue: EventQueue = .{ .arena = std.testing.allocator };
+    defer queue.deque.deinit(std.testing.allocator);
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = std.testing.allocator };
+    try std.testing.expect(try enqueueEffects(.{ .index = 0, .net_id = 7 }, &fsm, &queue, alloc, 100));
+
+    const EventTag = std.meta.Tag(EventQueue.Event);
+    try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
+    try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
+    try std.testing.expectEqual(@as(EventTag, .fsm_server_action), std.meta.activeTag(queue.deque.popFront().?));
+    try std.testing.expectEqual(@as(EventTag, .fsm_lifecycle_complete), std.meta.activeTag(queue.deque.popFront().?));
+    try std.testing.expect(queue.deque.popFront() == null);
 }

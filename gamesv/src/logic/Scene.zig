@@ -326,6 +326,38 @@ fn updateBattleState(scene: *Scene) void {
     scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
 }
 
+test "battle state filters formation hate and aggregates enemies" {
+    const Role = FormationInfo.Formation.Role;
+    var formations = [_]FormationInfo.Formation{.{
+        .cur_role = 1001,
+        .roles = .{
+            Role{ .role_id = 1001, .entity_id = 11 },
+            Role{ .role_id = 1002, .entity_id = 22 },
+            null,
+        },
+    }};
+    var scene: Scene = undefined;
+    scene.formation_info = .{ .cur_formation = 0, .formations = &formations };
+    scene.active_battle_entities = .empty;
+    scene.player_in_battle = false;
+    scene.battle_state_notified = false;
+    scene.battle_state_dirty = false;
+    defer scene.active_battle_entities.deinit(std.testing.allocator);
+
+    const player_hate = [_]pb.AiHateEntity{.{ .EntityId = 22, .HatredValue = 1 }};
+    const other_hate = [_]pb.AiHateEntity{.{ .EntityId = 33, .HatredValue = 1 }};
+    try std.testing.expect(scene.hateTargetsFormation(&player_hate));
+    try std.testing.expect(!scene.hateTargetsFormation(&other_hate));
+
+    try scene.setBattleEntityActive(std.testing.allocator, 101, true);
+    try scene.setBattleEntityActive(std.testing.allocator, 202, true);
+    try scene.setBattleEntityActive(std.testing.allocator, 101, false);
+    try std.testing.expect(scene.player_in_battle);
+    try scene.setBattleEntityActive(std.testing.allocator, 202, false);
+    try std.testing.expect(!scene.player_in_battle);
+    try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;

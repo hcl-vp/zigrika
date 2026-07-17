@@ -90,18 +90,8 @@ pub fn handleFsmServerAction(
             }
         },
         .set_rage_full => if (attribute) |attr| {
-            const rage_max_index = @intFromEnum(pb.EAttributeType.RageMax);
-            if (rage_max_index < attr.attributes.len) {
-                const changed = try attributes.change_attr(
-                    attr,
-                    .Rage,
-                    .Override,
-                    .Current,
-                    attr.attributes[@intCast(rage_max_index)].current,
-                    alloc,
-                );
-                try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
-            }
+            const changed = try setRageFullAttributes(attr, alloc);
+            try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
         },
         .instance_state => |tag_id| try applyInstanceState(entity, fsm, tags, tag_id, events, alloc),
     }
@@ -160,6 +150,17 @@ fn updateParalysis(
         return;
     }
 
+    const changed = try advanceParalysisAttributes(fsm, attr, alloc);
+    try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
+}
+
+fn advanceParalysisAttributes(
+    fsm: *Entity.FsmComponent,
+    attr: *Entity.AttributeComponent,
+    alloc: mem.Alloc,
+) !std.ArrayList(pb.EAttributeType) {
+    const time_index = @intFromEnum(pb.EAttributeType.ParalysisTime);
+    const recover_index = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover);
     var changed: std.ArrayList(pb.EAttributeType) = .empty;
     const recover = attr.attributes[@intCast(recover_index)].current;
     const delta_i64 = @divTrunc(@as(i64, recover) * FSM_TICK_MS, 1000);
@@ -179,7 +180,7 @@ fn updateParalysis(
             try changed.appendSlice(alloc.arena, recover_change.items);
         }
     }
-    try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
+    return changed;
 }
 
 fn resetStatusAttributes(
@@ -189,6 +190,14 @@ fn resetStatusAttributes(
     alloc: mem.Alloc,
     io: std.Io,
 ) !void {
+    const changed = try resetStatusAttributeValues(attr, alloc);
+    try pushAttributeChanges(entity_id, attr, &changed, conn, alloc, io);
+}
+
+fn resetStatusAttributeValues(
+    attr: *Entity.AttributeComponent,
+    alloc: mem.Alloc,
+) !std.ArrayList(pb.EAttributeType) {
     var changed: std.ArrayList(pb.EAttributeType) = .empty;
     for (std.enums.values(pb.EAttributeType)) |attr_type| {
         const index = @intFromEnum(attr_type);
@@ -203,7 +212,23 @@ fn resetStatusAttributes(
         const attr_change = try attributes.change_attr(attr, attr_type, .Override, .Current, desired, alloc);
         try changed.appendSlice(alloc.arena, attr_change.items);
     }
-    try pushAttributeChanges(entity_id, attr, &changed, conn, alloc, io);
+    return changed;
+}
+
+fn setRageFullAttributes(
+    attr: *Entity.AttributeComponent,
+    alloc: mem.Alloc,
+) !std.ArrayList(pb.EAttributeType) {
+    const rage_max_index = @intFromEnum(pb.EAttributeType.RageMax);
+    if (rage_max_index >= attr.attributes.len) return .empty;
+    return attributes.change_attr(
+        attr,
+        .Rage,
+        .Override,
+        .Current,
+        attr.attributes[@intCast(rage_max_index)].current,
+        alloc,
+    );
 }
 
 fn pushAttributeChanges(
@@ -218,6 +243,57 @@ fn pushAttributeChanges(
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
     try attributes.generate_attr_messages(&data, entity_id, attr, changed, alloc, io);
     if (data.items.len != 0) try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+}
+
+test "fsm status reset preserves death and restores current attributes" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
+    const attribute_count = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover) + 1;
+    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
+    values[@intFromEnum(pb.EAttributeType.LifeMax)] = .{ .base = 100, .increment = 0, .current = 100 };
+    values[@intFromEnum(pb.EAttributeType.Life)] = .{ .base = 100, .increment = 0, .current = 0 };
+    values[@intFromEnum(pb.EAttributeType.RageMax)] = .{ .base = 100, .increment = 0, .current = 100 };
+    values[@intFromEnum(pb.EAttributeType.Rage)] = .{ .base = 10, .increment = 2, .current = 0 };
+    var attr: Entity.AttributeComponent = .{ .attributes = &values };
+
+    const changed = try resetStatusAttributeValues(&attr, alloc);
+    try std.testing.expect(changed.items.len != 0);
+    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.Life)].current);
+    try std.testing.expectEqual(@as(i32, 12), values[@intFromEnum(pb.EAttributeType.Rage)].current);
+}
+
+test "fsm rage action fills current rage" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
+    const attribute_count = @intFromEnum(pb.EAttributeType.Rage) + 1;
+    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
+    values[@intFromEnum(pb.EAttributeType.RageMax)].current = 75;
+    var attr: Entity.AttributeComponent = .{ .attributes = &values };
+
+    const changed = try setRageFullAttributes(&attr, alloc);
+    try std.testing.expectEqual(@as(usize, 1), changed.items.len);
+    try std.testing.expectEqual(@as(i32, 75), values[@intFromEnum(pb.EAttributeType.Rage)].current);
+}
+
+test "fsm paralysis recovery stops at zero" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
+    const attribute_count = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover) + 1;
+    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
+    values[@intFromEnum(pb.EAttributeType.ParalysisTimeMax)].current = 100;
+    values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current = 100;
+    values[@intFromEnum(pb.EAttributeType.ParalysisTimeRecover)].current = -200;
+    var attr: Entity.AttributeComponent = .{ .attributes = &values };
+    var fsm: Entity.FsmComponent = .{ .paralysis_active = true };
+
+    const changed = try advanceParalysisAttributes(&fsm, &attr, alloc);
+    try std.testing.expect(changed.items.len != 0);
+    try std.testing.expect(!fsm.paralysis_active);
+    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current);
+    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTimeRecover)].current);
 }
 
 pub fn handleFsmLifecycleComplete(

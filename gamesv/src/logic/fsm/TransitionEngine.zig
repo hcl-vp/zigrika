@@ -537,6 +537,78 @@ fn removePassesForExitedPath(
     }
 }
 
+test "pending fsm transition defers lifecycle effects until confirmation" {
+    const TestComponent = struct {
+        hash_code: i32 = 0,
+        common_hash_code: i32 = 0,
+        state_list: []const i32 = &.{},
+        node_list: []const Types.NodeEntry = &.{},
+        override_mapping: []const Types.OverrideEntry = &.{},
+        runtime_nodes: []Types.FsmNode = &.{},
+        pass_pool: []Types.ConditionKey = &.{},
+        tags: []Types.TagCount = &.{},
+        lifecycle_effects: std.ArrayList(Types.LifecycleEffect) = .empty,
+        lifecycle_effects_pending: bool = false,
+        in_hate: bool = false,
+        paralysis_active: bool = false,
+        instance_state_tag: ?i32 = null,
+        event: ?[]const u8 = null,
+        last_tick_ms: i64 = 0,
+        blackboard: [3]?i32 = .{ null, null, null },
+        blackboard_dirty: u8 = 0,
+    };
+
+    const conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTrue" },
+    };
+    const transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 2, .To = 3, .Conditions = &conditions },
+    };
+    const exit_actions = [_]AiStateMachineConfig.StateMachineAction{
+        .{ .ActionSetRageFullAttribute = .{} },
+    };
+    const enter_actions = [_]AiStateMachineConfig.StateMachineAction{
+        .{ .ActionResetStatus = .{} },
+    };
+    const children = [_]i32{ 2, 3 };
+    const nodes = [_]Types.NodeEntry{
+        .{ .key = 1, .value = .{ .Uuid = 1, .Children = &children, .Transitions = &transitions } },
+        .{ .key = 2, .value = .{ .Uuid = 2, .OnExitActions = &exit_actions } },
+        .{ .key = 3, .value = .{ .Uuid = 3, .OnEnterActions = &enter_actions } },
+    };
+    var runtime_nodes = [_]Types.FsmNode{.{
+        .fsm_id = 1,
+        .active_path = .{ 1, 2 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+        .active_since_ms = @splat(10),
+        .active_len = 2,
+    }};
+    var component: TestComponent = .{
+        .state_list = &.{1},
+        .node_list = &nodes,
+        .runtime_nodes = &runtime_nodes,
+    };
+    defer component.lifecycle_effects.deinit(std.testing.allocator);
+
+    const transition = (try findReadyTransition(&component, 1, .{ .now_ms = 100 })) orelse
+        return error.ExpectedFsmTransition;
+    try std.testing.expectEqual(@as(i32, 2), transition.from);
+    try std.testing.expectEqual(@as(i32, 3), transition.to);
+    try std.testing.expectEqual(@as(usize, 0), component.lifecycle_effects.items.len);
+    try std.testing.expectEqual(@as(?i32, 3), runtime_nodes[0].pending_to);
+
+    try std.testing.expectEqual(Types.ConfirmResult.confirmed, try confirmPending(
+        &component,
+        1,
+        3,
+        std.testing.allocator,
+    ));
+    try std.testing.expectEqual(@as(?i32, null), runtime_nodes[0].pending_to);
+    try std.testing.expectEqual(@as(?i32, 3), runtime_nodes[0].leaf());
+    try std.testing.expectEqual(@as(usize, 2), component.lifecycle_effects.items.len);
+    try std.testing.expectEqual(Types.LifecycleEffect.set_rage_full, component.lifecycle_effects.items[0]);
+    try std.testing.expectEqual(Types.LifecycleEffect.reset_status, component.lifecycle_effects.items[1]);
+}
+
 fn passPoolContains(comp: anytype, key: Types.ConditionKey) bool {
     for (comp.pass_pool) |entry| {
         if (conditionKeyEql(entry, key)) return true;
