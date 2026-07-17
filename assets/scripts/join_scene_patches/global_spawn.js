@@ -1,12 +1,49 @@
 const sourceMapByEntityId = globalThis.__zigrikaEntitySourceMap ?? new Map();
 const repeatBossEntityIds =
   globalThis.__zigrikaRepeatBossEntityIds ?? new Set();
+const sourceOwnersByEntityId =
+  globalThis.__zigrikaEntitySourceOwners ?? new Map();
 globalThis.__zigrikaEntitySourceMap = sourceMapByEntityId;
 globalThis.__zigrikaRepeatBossEntityIds = repeatBossEntityIds;
-globalThis.__zigrikaSetEntitySourceMap = (pbDataId, mapId, repeatBoss = false) => {
+globalThis.__zigrikaEntitySourceOwners = sourceOwnersByEntityId;
+
+const clearEntitySourceMap = (pbDataId) => {
+  sourceMapByEntityId.delete(pbDataId);
+  repeatBossEntityIds.delete(pbDataId);
+  sourceOwnersByEntityId.delete(pbDataId);
+};
+const clearEntitySourceMaps = () => {
+  sourceMapByEntityId.clear();
+  repeatBossEntityIds.clear();
+  sourceOwnersByEntityId.clear();
+};
+
+globalThis.__zigrikaClearEntitySourceMap = clearEntitySourceMap;
+globalThis.__zigrikaClearEntitySourceMaps = clearEntitySourceMaps;
+globalThis.__zigrikaSetEntitySourceMap = (
+  pbDataId,
+  mapId,
+  repeatBoss = false,
+  creatureDataId
+) => {
+  const routeChanged =
+    sourceMapByEntityId.has(pbDataId) &&
+    (sourceMapByEntityId.get(pbDataId) !== mapId ||
+      repeatBossEntityIds.has(pbDataId) !== repeatBoss);
+  if (routeChanged) sourceOwnersByEntityId.delete(pbDataId);
+
   sourceMapByEntityId.set(pbDataId, mapId);
   if (repeatBoss) repeatBossEntityIds.add(pbDataId);
   else repeatBossEntityIds.delete(pbDataId);
+
+  if (creatureDataId !== undefined) {
+    let owners = sourceOwnersByEntityId.get(pbDataId);
+    if (!owners) {
+      owners = new Set();
+      sourceOwnersByEntityId.set(pbDataId, owners);
+    }
+    owners.add(creatureDataId);
+  }
 };
 
 setTimeout(() => {
@@ -23,6 +60,8 @@ setTimeout(() => {
   } = require("../Core/Define/ConfigQuery/LevelEntityConfigByMapIdAndEntityId.js");
 
   const getEntityData = CreatureModel.prototype.GetEntityData;
+  const removeEntity = CreatureModel.prototype.RemoveEntity;
+  const onLeaveLevel = CreatureModel.prototype.OnLeaveLevel;
   const getLevelEntityConfig =
     configLevelEntityConfigByMapIdAndEntityId.GetConfig;
   const repeatBossEntityData = new WeakMap();
@@ -90,7 +129,7 @@ setTimeout(() => {
         useCache
       );
       if (cachedConfig) return cachedConfig;
-      sourceMapByEntityId.delete(entityId);
+      clearEntitySourceMap(entityId);
     }
 
     return getLevelEntityConfig.call(this, mapId, entityId, useCache);
@@ -110,7 +149,7 @@ setTimeout(() => {
       if (cachedEntityData) {
         return applyRepeatBossStartup(pbDataId, cachedEntityData);
       }
-      sourceMapByEntityId.delete(pbDataId);
+      clearEntitySourceMap(pbDataId);
     }
 
     if (!sourceMapByEntityId.has(pbDataId)) return entityData;
@@ -126,5 +165,23 @@ setTimeout(() => {
     }
 
     return entityData;
+  };
+
+  CreatureModel.prototype.RemoveEntity = function (creatureDataId, reason) {
+    const entity = this.GetEntity(creatureDataId);
+    const pbDataId = this.GetPbDataIdByEntity(entity);
+    const removed = removeEntity.call(this, creatureDataId, reason);
+    if (removed && sourceMapByEntityId.has(pbDataId)) {
+      const owners = sourceOwnersByEntityId.get(pbDataId);
+      if (owners?.delete(creatureDataId) && owners.size === 0) {
+        clearEntitySourceMap(pbDataId);
+      }
+    }
+    return removed;
+  };
+
+  CreatureModel.prototype.OnLeaveLevel = function (...args) {
+    clearEntitySourceMaps();
+    return onLeaveLevel.apply(this, args);
   };
 }, 200);

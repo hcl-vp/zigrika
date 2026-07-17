@@ -263,6 +263,17 @@ pub const spawn = struct {
         const ai_comp = components_data.AiComponent;
         const ai_id = if (ai_comp) |comp| comp.AiId else null;
         const repeat_boss_startup = useRepeatBossStartup(ai_id, assets);
+        if (scene.debugSpawnRoute(entity_id)) |route| {
+            if (!route.matches(entity_config.MapId, repeat_boss_startup)) {
+                try respond(
+                    events,
+                    alloc.arena,
+                    "{d} couldn't be spawned, active instances use map {d} with repeat_boss={s}",
+                    .{ entity_id, route.source_map_id, if (route.repeat_boss) "true" else "false" },
+                );
+                return;
+            }
+        }
         const weapon_id = if (ai_comp) |comp| parseOptionalInt(comp.WeaponId) else 0;
         const final_camp = spawnCamp(base_info, &template_config, spawn_base);
         const use_ai_runtime = useAiRuntime(spawn_base.entity_type);
@@ -375,6 +386,14 @@ pub const spawn = struct {
             },
             Entity.FightBuffComponent{},
         });
+        try scene.registerDebugSpawnRoute(
+            alloc.gpa,
+            entity.net_id,
+            entity_id,
+            entity_config.MapId,
+            repeat_boss_startup,
+        );
+        errdefer scene.unregisterDebugSpawnRoute(entity.net_id);
         tag_component = null;
         part_component = null;
 
@@ -402,8 +421,8 @@ pub const spawn = struct {
         try conn.push(pb.JSPatchNotify{
             .Content = try std.fmt.allocPrint(
                 alloc.arena,
-                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s});",
-                .{ entity_id, entity_config.MapId, if (repeat_boss_startup) "true" else "false" },
+                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s},{d});",
+                .{ entity_id, entity_config.MapId, if (repeat_boss_startup) "true" else "false", entity.net_id },
             ),
         }, alloc.arena);
 

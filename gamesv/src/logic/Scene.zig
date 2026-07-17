@@ -23,9 +23,21 @@ entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
 active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
+debug_spawn_routes: std.AutoHashMapUnmanaged(i64, DebugSpawnRoute) = .empty,
+debug_spawn_route_owners: std.AutoHashMapUnmanaged(i64, i64) = .empty,
 player_in_battle: bool = false,
 battle_state_notified: bool = false,
 battle_state_dirty: bool = false,
+
+pub const DebugSpawnRoute = struct {
+    source_map_id: i32,
+    repeat_boss: bool,
+    owner_count: usize,
+
+    pub fn matches(route: DebugSpawnRoute, source_map_id: i32, repeat_boss: bool) bool {
+        return route.source_map_id == source_map_id and route.repeat_boss == repeat_boss;
+    }
+};
 
 pub const TimeInfo = struct {
     timestamp: i64 = 0,
@@ -224,6 +236,8 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
     scene.active_battle_entities.deinit(gpa);
+    scene.debug_spawn_routes.deinit(gpa);
+    scene.debug_spawn_route_owners.deinit(gpa);
 
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -296,6 +310,48 @@ pub fn forceBattleState(scene: *Scene, mode: bool) void {
     scene.active_battle_entities.clearRetainingCapacity();
     scene.player_in_battle = mode;
     scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
+}
+
+pub fn debugSpawnRoute(scene: *const Scene, config_id: i64) ?DebugSpawnRoute {
+    return scene.debug_spawn_routes.get(config_id);
+}
+
+pub fn registerDebugSpawnRoute(
+    scene: *Scene,
+    gpa: Allocator,
+    net_id: i64,
+    config_id: i64,
+    source_map_id: i32,
+    repeat_boss: bool,
+) !void {
+    if (scene.debug_spawn_route_owners.contains(net_id)) return error.DebugSpawnRouteOwnerExists;
+
+    if (scene.debug_spawn_routes.getPtr(config_id)) |route| {
+        if (!route.matches(source_map_id, repeat_boss)) return error.DebugSpawnRouteConflict;
+        try scene.debug_spawn_route_owners.put(gpa, net_id, config_id);
+        route.owner_count += 1;
+        return;
+    }
+
+    try scene.debug_spawn_routes.put(gpa, config_id, .{
+        .source_map_id = source_map_id,
+        .repeat_boss = repeat_boss,
+        .owner_count = 1,
+    });
+    errdefer _ = scene.debug_spawn_routes.remove(config_id);
+    try scene.debug_spawn_route_owners.put(gpa, net_id, config_id);
+}
+
+pub fn unregisterDebugSpawnRoute(scene: *Scene, net_id: i64) void {
+    const config_id = scene.debug_spawn_route_owners.get(net_id) orelse return;
+    _ = scene.debug_spawn_route_owners.remove(net_id);
+
+    const route = scene.debug_spawn_routes.getPtr(config_id) orelse return;
+    if (route.owner_count > 1) {
+        route.owner_count -= 1;
+    } else {
+        _ = scene.debug_spawn_routes.remove(config_id);
+    }
 }
 
 pub fn appendBattleStateNotify(
@@ -372,6 +428,36 @@ test "battle state filters formation hate and aggregates enemies" {
     try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
 }
 
+test "debug spawn routes enforce one tuple and track owners" {
+    var scene: Scene = undefined;
+    scene.debug_spawn_routes = .empty;
+    scene.debug_spawn_route_owners = .empty;
+    defer scene.debug_spawn_routes.deinit(std.testing.allocator);
+    defer scene.debug_spawn_route_owners.deinit(std.testing.allocator);
+
+    try scene.registerDebugSpawnRoute(std.testing.allocator, 101, 316850004, 8, true);
+    try scene.registerDebugSpawnRoute(std.testing.allocator, 102, 316850004, 8, true);
+    try scene.registerDebugSpawnRoute(std.testing.allocator, 201, 939850025, 6, false);
+
+    try std.testing.expectEqual(@as(usize, 2), scene.debugSpawnRoute(316850004).?.owner_count);
+    try std.testing.expectEqual(@as(usize, 1), scene.debugSpawnRoute(939850025).?.owner_count);
+    try std.testing.expectError(
+        error.DebugSpawnRouteConflict,
+        scene.registerDebugSpawnRoute(std.testing.allocator, 103, 316850004, 9, true),
+    );
+    try std.testing.expectError(
+        error.DebugSpawnRouteConflict,
+        scene.registerDebugSpawnRoute(std.testing.allocator, 103, 316850004, 8, false),
+    );
+    try std.testing.expect(!scene.debug_spawn_route_owners.contains(103));
+
+    scene.unregisterDebugSpawnRoute(101);
+    try std.testing.expectEqual(@as(usize, 1), scene.debugSpawnRoute(316850004).?.owner_count);
+    scene.unregisterDebugSpawnRoute(102);
+    try std.testing.expect(scene.debugSpawnRoute(316850004) == null);
+    try std.testing.expect(scene.debugSpawnRoute(939850025) != null);
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
@@ -446,6 +532,7 @@ pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
     scene.clearFsmEncounterTargetReferences(net_id);
+    scene.unregisterDebugSpawnRoute(net_id);
     _ = scene.active_battle_entities.remove(net_id);
     scene.updateBattleState();
     var storage = scene.entities.get(index);
