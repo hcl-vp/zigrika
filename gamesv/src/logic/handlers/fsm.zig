@@ -11,8 +11,6 @@ const attributes = @import("../helpers/attributes.zig");
 const buff_handlers = @import("buff.zig");
 const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 
-const FSM_TICK_MS = 500;
-
 const FsmQuery = Scene.Query(&.{
     Entity,
     *Entity.FsmComponent,
@@ -34,10 +32,7 @@ pub fn handleFsmTick(
     query: FsmQuery,
 ) !void {
     const now_ms = event.data.now_ms;
-    if (scene.scene_time.last_fsm_tick_time != 0 and now_ms - scene.scene_time.last_fsm_tick_time < FSM_TICK_MS) {
-        return;
-    }
-    scene.scene_time.last_fsm_tick_time = now_ms;
+    const elapsed_ms = takeFsmElapsedMs(scene, now_ms);
 
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
 
@@ -48,7 +43,7 @@ pub fn handleFsmTick(
         defer fsm.finishTick(now_ms);
         if (!fsm.needsServerTick()) continue;
 
-        try updateParalysis(entity, fsm, attribute, alloc, conn, io);
+        try updateParalysis(entity, fsm, attribute, elapsed_ms, alloc, conn, io);
 
         if (try fsm.recoverExpiredPending(alloc.gpa, now_ms)) {
             try fsm.appendResetNotify(entity.net_id, alloc.arena, &data, assets);
@@ -171,6 +166,7 @@ fn updateParalysis(
     entity: Entity,
     fsm: *Entity.FsmComponent,
     attribute: ?*Entity.AttributeComponent,
+    elapsed_ms: i64,
     alloc: mem.Alloc,
     conn: *Connection,
     io: std.Io,
@@ -187,24 +183,21 @@ fn updateParalysis(
         return;
     }
 
-    const changed = try advanceParalysisAttributes(fsm, attr, alloc);
+    const changed = try advanceParalysisAttributes(fsm, attr, elapsed_ms, alloc);
     try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
 }
 
 fn advanceParalysisAttributes(
     fsm: *Entity.FsmComponent,
     attr: *Entity.AttributeComponent,
+    elapsed_ms: i64,
     alloc: mem.Alloc,
 ) !std.ArrayList(pb.EAttributeType) {
     const time_index = @intFromEnum(pb.EAttributeType.ParalysisTime);
     const recover_index = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover);
     var changed: std.ArrayList(pb.EAttributeType) = .empty;
     const recover = attr.attributes[@intCast(recover_index)].current;
-    const delta_i64 = @divTrunc(@as(i64, recover) * FSM_TICK_MS, 1000);
-    const delta = std.math.cast(i32, delta_i64) orelse if (delta_i64 < 0)
-        @as(i32, std.math.minInt(i32))
-    else
-        @as(i32, std.math.maxInt(i32));
+    const delta = scaledParalysisRecovery(recover, elapsed_ms);
     if (attr.attributes[@intCast(time_index)].current > 0 and delta != 0) {
         const time_change = try attributes.change_attr(attr, .ParalysisTime, .Delta, .Current, delta, alloc);
         try changed.appendSlice(alloc.arena, time_change.items);
@@ -218,6 +211,22 @@ fn advanceParalysisAttributes(
         }
     }
     return changed;
+}
+
+fn takeFsmElapsedMs(scene: *Scene, now_ms: i64) i64 {
+    const previous_ms = scene.scene_time.last_fsm_tick_time;
+    if (now_ms <= previous_ms) return 0;
+    scene.scene_time.last_fsm_tick_time = now_ms;
+    if (previous_ms == 0) return 0;
+    return now_ms - previous_ms;
+}
+
+fn scaledParalysisRecovery(recover: i32, elapsed_ms: i64) i32 {
+    if (elapsed_ms <= 0 or recover == 0) return 0;
+    const delta = @divTrunc(@as(i128, recover) * @as(i128, elapsed_ms), 1000);
+    if (delta < std.math.minInt(i32)) return std.math.minInt(i32);
+    if (delta > std.math.maxInt(i32)) return std.math.maxInt(i32);
+    return @intCast(delta);
 }
 
 fn resetStatusAttributes(
@@ -314,7 +323,18 @@ test "fsm rage action fills current rage" {
     try std.testing.expectEqual(@as(i32, 75), values[@intFromEnum(pb.EAttributeType.Rage)].current);
 }
 
-test "fsm paralysis recovery stops at zero" {
+test "fsm tick elapsed time follows scheduler events" {
+    var scene: Scene = undefined;
+    scene.scene_time.last_fsm_tick_time = 1_000;
+
+    try std.testing.expectEqual(@as(i64, 50), takeFsmElapsedMs(&scene, 1_050));
+    try std.testing.expectEqual(@as(i64, 175), takeFsmElapsedMs(&scene, 1_225));
+    try std.testing.expectEqual(@as(i64, 0), takeFsmElapsedMs(&scene, 1_225));
+    try std.testing.expectEqual(@as(i64, 0), takeFsmElapsedMs(&scene, 1_100));
+    try std.testing.expectEqual(@as(i64, 1_225), scene.scene_time.last_fsm_tick_time);
+}
+
+test "fsm paralysis recovery uses actual elapsed time" {
     var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
     defer arena.deinit();
     const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
@@ -326,11 +346,24 @@ test "fsm paralysis recovery stops at zero" {
     var attr: Entity.AttributeComponent = .{ .attributes = &values };
     var fsm: Entity.FsmComponent = .{ .paralysis_active = true };
 
-    const changed = try advanceParalysisAttributes(&fsm, &attr, alloc);
-    try std.testing.expect(changed.items.len != 0);
+    const first_changed = try advanceParalysisAttributes(&fsm, &attr, 50, alloc);
+    try std.testing.expect(first_changed.items.len != 0);
+    try std.testing.expect(fsm.paralysis_active);
+    try std.testing.expectEqual(@as(i32, 90), values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current);
+
+    const delayed_changed = try advanceParalysisAttributes(&fsm, &attr, 450, alloc);
+    try std.testing.expect(delayed_changed.items.len != 0);
     try std.testing.expect(!fsm.paralysis_active);
     try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current);
     try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTimeRecover)].current);
+}
+
+test "fsm paralysis recovery scaling saturates safely" {
+    try std.testing.expectEqual(@as(i32, -10), scaledParalysisRecovery(-200, 50));
+    try std.testing.expectEqual(@as(i32, -25), scaledParalysisRecovery(-200, 125));
+    try std.testing.expectEqual(@as(i32, 0), scaledParalysisRecovery(-200, 0));
+    try std.testing.expectEqual(std.math.maxInt(i32), scaledParalysisRecovery(std.math.maxInt(i32), std.math.maxInt(i64)));
+    try std.testing.expectEqual(std.math.minInt(i32), scaledParalysisRecovery(std.math.minInt(i32), std.math.maxInt(i64)));
 }
 
 pub fn handleFsmLifecycleComplete(
