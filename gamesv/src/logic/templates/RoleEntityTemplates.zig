@@ -382,6 +382,9 @@ pub fn createRoleEntity(
 
     const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
     const is_cur_role = formation.cur_role == role;
+    const be_hit_state_machine = Assets.DataTables.RoleBeHitMap.stateMachineName(
+        assets.tables.role_be_hit_map.getDataById(role),
+    );
 
     const role_snapshot = try RoleStats.buildSnapshot(alloc.gpa, assets, role_comp, weapon_comp, echo_comp, role);
     defer role_snapshot.deinit(alloc.gpa);
@@ -421,7 +424,7 @@ pub fn createRoleEntity(
         ),
         Entity.ConcomitantComponent{},
         Entity.PassiveGaSkillComponent{},
-        try Entity.FsmComponent.fromStateMachineId("SM_RoleBeHit", assets, alloc.gpa),
+        try Entity.FsmComponent.fromStateMachineId(be_hit_state_machine, assets, alloc.gpa),
         Entity.VisionSkillComponent{
             .vision_skills = &.{},
         },

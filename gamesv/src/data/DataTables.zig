@@ -9,6 +9,7 @@ pub const Config = @import("zon/config.zon");
 const ConcertoExceptions: []const i32 = @import("zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
+pub const RoleBeHitMap = @import("tables/RoleBeHitMap.zig");
 pub const MainRoleConfig = @import("tables/MainRoleConfig.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
 pub const FunctionCondition = @import("tables/FunctionCondition.zig");
@@ -111,6 +112,7 @@ pub const PropValue = @import("tables/PropValue.zig");
 
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
+role_be_hit_map: Table(RoleBeHitMap, "Id"),
 main_role_config: Table(MainRoleConfig, "Id"),
 base_property: Table(BaseProperty, "Id"),
 function_condition: Table(FunctionCondition, "FunctionId"),
