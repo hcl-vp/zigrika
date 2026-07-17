@@ -387,9 +387,7 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
         if (comp.context_id == 0) comp.context_id = id;
     }
     if (storage.fsm) |*fsm| {
-        if (scene.scene_time.last_packet_time != 0) {
-            try fsm.initRuntime(gpa, scene.scene_time.last_packet_time);
-        }
+        try fsm.initRuntime(gpa, std.Io.Clock.awake.now(fs.io).toMilliseconds());
     }
 
     try scene.net_id_map.put(gpa, id, scene.entities.len);

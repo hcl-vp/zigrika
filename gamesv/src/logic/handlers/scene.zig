@@ -424,8 +424,8 @@ pub fn notifyJoinScene(
         // Shouldn't happen unless scene instance file is corrupted. Maybe should log it as well?
         return error.PlayerNotFoundInScene;
     }
-    const rtc: Io.Clock = .real;
-    try scene.initFsmRuntimes(alloc.gpa, rtc.now(io).toMilliseconds());
+    const fsm_clock: Io.Clock = .awake;
+    try scene.initFsmRuntimes(alloc.gpa, fsm_clock.now(io).toMilliseconds());
     try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};
@@ -563,14 +563,16 @@ pub fn afterSceneJoin(
     try notifyInfrastructureRoadData(alloc, conn, assets);
 
     const rtc: Io.Clock = .real;
+    const fsm_clock: Io.Clock = .awake;
     const now_ms = rtc.now(io).toMilliseconds();
+    const fsm_now_ms = fsm_clock.now(io).toMilliseconds();
     scene.scene_time = .{
         .timestamp = now_ms,
         .last_packet_time = now_ms,
-        .last_fsm_tick_time = now_ms,
+        .last_fsm_tick_time = fsm_now_ms,
         .dilation = 1.0,
     };
-    try scene.initFsmRuntimes(alloc.gpa, now_ms);
+    try scene.initFsmRuntimes(alloc.gpa, fsm_now_ms);
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,
