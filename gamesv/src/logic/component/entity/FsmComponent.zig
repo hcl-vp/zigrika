@@ -10,6 +10,7 @@ const StateHierarchy = @import("../../fsm/StateHierarchy.zig");
 const TransitionEngine = @import("../../fsm/TransitionEngine.zig");
 const FsmGraph = Assets.FsmGraphRegistry.Graph;
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
+const GameplayTagParentTable = Assets.DataTables.GameplayTagParentTable;
 
 const encounter_target_blackboard_key = 2;
 
@@ -26,6 +27,7 @@ pub const ConfirmResult = FsmTypes.ConfirmResult;
 pub const ClientPassResult = FsmTypes.ClientPassResult;
 
 graph: *const FsmGraph = &FsmGraph.empty,
+tag_parents: *const GameplayTagParentTable = &GameplayTagParentTable.init,
 runtime_nodes: []FsmNode = &.{},
 pass_pool: []ConditionKey = &.{},
 tags: []TagCount = &.{},

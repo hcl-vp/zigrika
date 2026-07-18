@@ -8,7 +8,10 @@ pub fn fromAiBaseId(
     assets: *const Assets,
 ) ?Component {
     const graph = findAiStateMachineGraph(ai_id, assets) orelse return null;
-    return .{ .graph = graph };
+    return .{
+        .graph = graph,
+        .tag_parents = &assets.tables.gameplay_tag_parent,
+    };
 }
 
 pub fn hasUsableAiBaseId(ai_id: ?i32, assets: *const Assets) bool {
@@ -21,7 +24,10 @@ pub fn fromStateMachineId(
     assets: *const Assets,
 ) !Component {
     const graph = assets.fsm_graphs.get(id) orelse return error.InvalidFsmConfiguration;
-    return .{ .graph = graph };
+    return .{
+        .graph = graph,
+        .tag_parents = &assets.tables.gameplay_tag_parent,
+    };
 }
 
 pub fn getCommonFsm(assets: *const Assets) ?AiStateMachineConfig {

@@ -1,6 +1,8 @@
 const Component = @This();
 const pb = @import("proto").pb;
 const std = @import("std");
+const DataTables = @import("../../../data/DataTables.zig");
+const gameplay_tag_hierarchy = @import("../../helpers/gameplay_tags.zig");
 const sliceToArrayList = @import("EntityComponentStorage.zig").sliceToArrayList;
 
 gameplay_tags: []pb.GameplayTagData = &.{},
@@ -20,10 +22,14 @@ pub fn toProto(comp: Component) pb.TagComponentPb {
     };
 }
 
-pub fn hasTag(comp: *const Component, tag_id: i64) bool {
+pub fn hasTag(
+    comp: *const Component,
+    parents: *const DataTables.GameplayTagParentTable,
+    tag_id: i64,
+) bool {
     const id = std.math.cast(i32, tag_id) orelse return false;
     for (comp.gameplay_tags) |tag| {
-        if (tag.Id == id and tag.TagCount > 0) return true;
+        if (tag.TagCount > 0 and gameplay_tag_hierarchy.contains(parents, tag.Id, id)) return true;
     }
     return std.mem.indexOfScalar(i32, comp.entity_common_tags, id) != null;
 }
@@ -112,4 +118,37 @@ test "gameplay tag count adjustments add increment and remove" {
     try std.testing.expect(try comp.adjustGameplayTagCount(std.testing.allocator, 11, -1));
     try std.testing.expectEqual(@as(i32, 0), comp.gameplayTagCount(11));
     try std.testing.expect(!try comp.adjustGameplayTagCount(std.testing.allocator, 11, -1));
+}
+
+test "gameplay tag queries include parents without storing them" {
+    const entries = [_]DataTables.GameplayTagParent{
+        .{ .Id = 30, .ParentId = 20 },
+        .{ .Id = 20, .ParentId = 10 },
+        .{ .Id = 50, .ParentId = 40 },
+    };
+    var parents: DataTables.GameplayTagParentTable = .init;
+    defer parents.index.deinit(std.testing.allocator);
+    parents.items = &entries;
+    for (entries, 0..) |entry, index| {
+        try parents.index.put(std.testing.allocator, entry.Id, index);
+    }
+
+    var common_tags = [_]i32{50};
+    var comp: Component = .{ .entity_common_tags = &common_tags };
+    defer {
+        comp.entity_common_tags = &.{};
+        comp.deinit(std.testing.allocator);
+    }
+
+    try comp.setGameplayTagCount(std.testing.allocator, 30, 2);
+    try std.testing.expect(comp.hasTag(&parents, 30));
+    try std.testing.expect(comp.hasTag(&parents, 20));
+    try std.testing.expect(comp.hasTag(&parents, 10));
+    try std.testing.expect(!comp.hasTag(&parents, 40));
+    try std.testing.expect(comp.hasTag(&parents, 50));
+    try std.testing.expectEqual(@as(usize, 1), comp.gameplay_tags.len);
+    try std.testing.expectEqual(@as(i32, 0), comp.gameplayTagCount(20));
+
+    try comp.removeGameplayTag(std.testing.allocator, 30);
+    try std.testing.expect(!comp.hasTag(&parents, 20));
 }

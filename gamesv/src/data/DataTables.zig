@@ -20,6 +20,7 @@ pub const Buff = @import("tables/Buff.zig");
 pub const SummonCfg = @import("tables/SummonCfg.zig");
 pub const ModelConfigPreload = @import("tables/ModelConfigPreload.zig");
 pub const CharacterPartConfig = @import("tables/CharacterPartConfig.zig");
+pub const GameplayTagParent = @import("tables/GameplayTagParent.zig");
 pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
 pub const FlySkinConfig = @import("tables/FlySkinConfig.zig");
@@ -110,6 +111,8 @@ pub const CalabashSkin = @import("tables/CalabashSkin.zig");
 pub const DropPackage = @import("tables/DropPackage.zig");
 pub const PropValue = @import("tables/PropValue.zig");
 
+pub const GameplayTagParentTable = Table(GameplayTagParent, "Id");
+
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
 role_be_hit_map: Table(RoleBeHitMap, "Id"),
@@ -123,6 +126,7 @@ buff: Table(Buff, "Id"),
 summon_cfg: Table(SummonCfg, "Id"),
 model_config_preload: Table(ModelConfigPreload, "Id"),
 character_part_config: Table(CharacterPartConfig, "ModelId"),
+gameplay_tag_parent: GameplayTagParentTable,
 blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
 fly_skin_config: Table(FlySkinConfig, "Id"),

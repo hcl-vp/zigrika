@@ -549,6 +549,7 @@ fn removePassesForExitedPath(
 test "pending fsm transition defers lifecycle effects until confirmation" {
     const TestComponent = struct {
         graph: *const FsmGraph = &FsmGraph.empty,
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable = &Assets.DataTables.GameplayTagParentTable.init,
         runtime_nodes: []Types.FsmNode = &.{},
         pass_pool: []Types.ConditionKey = &.{},
         tags: []Types.TagCount = &.{},
@@ -622,6 +623,7 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
 test "client pass from pending path drives followup after confirmation" {
     const TestComponent = struct {
         graph: *const FsmGraph = &FsmGraph.empty,
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable = &Assets.DataTables.GameplayTagParentTable.init,
         runtime_nodes: []Types.FsmNode = &.{},
         pass_pool: []Types.ConditionKey = &.{},
         tags: []Types.TagCount = &.{},

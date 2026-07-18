@@ -4,6 +4,7 @@ const Assets = @import("../../data/Assets.zig");
 const AttributeComponent = @import("../component/entity/AttributeComponent.zig");
 const FightBuffComponent = @import("../component/entity/FightBuffComponent.zig");
 const TagComponent = @import("../component/entity/TagComponent.zig");
+const gameplay_tag_hierarchy = @import("../helpers/gameplay_tags.zig");
 const StateHierarchy = @import("StateHierarchy.zig");
 const Types = @import("Types.zig");
 
@@ -283,21 +284,22 @@ fn attrValue(attribute: ?*const AttributeComponent, attribute_id: i32) ?i32 {
 
 fn hasTag(comp: anytype, tag_component: ?*const TagComponent, tag_id: i64) bool {
     for (comp.tags) |tag| {
-        if (tag.id == tag_id and tag.count > 0) return true;
+        if (tag.count > 0 and gameplay_tag_hierarchy.contains(comp.tag_parents, tag.id, tag_id)) return true;
     }
-    return if (tag_component) |tags| tags.hasTag(tag_id) else false;
+    return if (tag_component) |tags| tags.hasTag(comp.tag_parents, tag_id) else false;
 }
 
 fn instanceStateMatches(comp: anytype, tag_component: ?*const TagComponent, tag_id: i64) bool {
     const expected = std.math.cast(i32, tag_id) orelse return false;
     if (comp.instance_state_tag) |state_tag| {
-        return state_tag == expected;
+        return gameplay_tag_hierarchy.contains(comp.tag_parents, state_tag, expected);
     }
-    return if (tag_component) |tags| tags.hasTag(tag_id) else false;
+    return if (tag_component) |tags| tags.hasTag(comp.tag_parents, tag_id) else false;
 }
 
 test "fsm instance state overrides component fallback" {
     const MockFsm = struct {
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable = &Assets.DataTables.GameplayTagParentTable.init,
         instance_state_tag: ?i32 = null,
     };
     var gameplay_tags = [_]pb.GameplayTagData{.{ .Id = 22, .TagCount = 1 }};
@@ -310,6 +312,7 @@ test "fsm instance state overrides component fallback" {
 
 test "fsm tag conditions observe authoritative gameplay tags" {
     const MockFsm = struct {
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable = &Assets.DataTables.GameplayTagParentTable.init,
         tags: []const Types.TagCount = &.{},
     };
     var gameplay_tag_data = [_]pb.GameplayTagData{.{ .Id = 22, .TagCount = 1 }};
@@ -317,6 +320,39 @@ test "fsm tag conditions observe authoritative gameplay tags" {
 
     try std.testing.expect(hasTag(MockFsm{}, &tags, 22));
     try std.testing.expect(!hasTag(MockFsm{}, &tags, 33));
+}
+
+test "fsm tag conditions match local and authoritative parent tags" {
+    const MockFsm = struct {
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable,
+        tags: []const Types.TagCount = &.{},
+        instance_state_tag: ?i32 = null,
+    };
+    const entries = [_]Assets.DataTables.GameplayTagParent{
+        .{ .Id = 30, .ParentId = 20 },
+        .{ .Id = 20, .ParentId = 10 },
+    };
+    var parents: Assets.DataTables.GameplayTagParentTable = .init;
+    defer parents.index.deinit(std.testing.allocator);
+    parents.items = &entries;
+    for (entries, 0..) |entry, index| {
+        try parents.index.put(std.testing.allocator, entry.Id, index);
+    }
+
+    const local_tags = [_]Types.TagCount{.{ .id = 30, .count = 1 }};
+    const local: MockFsm = .{ .tag_parents = &parents, .tags = &local_tags };
+    try std.testing.expect(hasTag(local, null, 20));
+    try std.testing.expect(hasTag(local, null, 10));
+    try std.testing.expect(!hasTag(local, null, 40));
+
+    var component_tags = [_]pb.GameplayTagData{.{ .Id = 30, .TagCount = 1 }};
+    const authoritative: TagComponent = .{ .gameplay_tags = &component_tags };
+    const authoritative_owner: MockFsm = .{ .tag_parents = &parents };
+    try std.testing.expect(hasTag(authoritative_owner, &authoritative, 10));
+
+    const instance: MockFsm = .{ .tag_parents = &parents, .instance_state_tag = 30 };
+    try std.testing.expect(instanceStateMatches(instance, null, 20));
+    try std.testing.expect(!instanceStateMatches(instance, &authoritative, 40));
 }
 
 test "fsm part conditions observe authoritative life and activation" {
