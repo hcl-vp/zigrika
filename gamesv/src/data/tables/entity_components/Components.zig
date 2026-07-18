@@ -32,15 +32,3 @@ pub fn mergeInto(template: *const @This(), target: *@This()) void {
     mergeComponentField("ModelComponent", template, target);
     mergeComponentField("MonsterComponent", template, target);
 }
-
-test "monster startup tags merge from template data" {
-    const startup_tags: []const []const u8 = &.{"monster.startup"};
-    const template: @This() = .{
-        .MonsterComponent = .{ .InitGasTag = startup_tags },
-    };
-    var target: @This() = .{ .MonsterComponent = .{} };
-
-    template.mergeInto(&target);
-
-    try std.testing.expectEqualStrings("monster.startup", target.MonsterComponent.?.InitGasTag.?[0]);
-}

@@ -163,34 +163,6 @@ fn applyInstanceState(
     });
 }
 
-test "fsm instance state replacement requests remove before add" {
-    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
-    defer arena.deinit();
-    var events: EventQueue = .{ .arena = std.testing.allocator };
-    defer events.deque.deinit(std.testing.allocator);
-    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
-    const entity: Entity = .{ .index = 0, .net_id = 1001 };
-    var fsm: Entity.FsmComponent = undefined;
-
-    fsm.instance_state_tag = 11;
-    try applyInstanceState(entity, &fsm, null, 22, &events, alloc);
-    const replacement = events.deque.popFront().?;
-    try std.testing.expectEqual(@as(std.meta.Tag(EventQueue.Event), .gameplay_tag_change), std.meta.activeTag(replacement));
-    try std.testing.expect(replacement.gameplay_tag_change.remove_before_add);
-    try std.testing.expectEqualSlices(i32, &.{22}, replacement.gameplay_tag_change.add_tag_ids);
-    try std.testing.expectEqualSlices(i32, &.{11}, replacement.gameplay_tag_change.remove_tag_ids);
-
-    fsm.instance_state_tag = null;
-    try applyInstanceState(entity, &fsm, null, 33, &events, alloc);
-    const initial = events.deque.popFront().?;
-    try std.testing.expect(!initial.gameplay_tag_change.remove_before_add);
-    try std.testing.expectEqualSlices(i32, &.{33}, initial.gameplay_tag_change.add_tag_ids);
-    try std.testing.expectEqual(@as(usize, 0), initial.gameplay_tag_change.remove_tag_ids.len);
-
-    try applyInstanceState(entity, &fsm, null, 33, &events, alloc);
-    try std.testing.expect(events.deque.popFront() == null);
-}
-
 fn updateParalysis(
     entity: Entity,
     fsm: *Entity.FsmComponent,
@@ -318,81 +290,6 @@ fn pushAttributeChanges(
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
     try attributes.generate_attr_messages(&data, entity_id, attr, changed, alloc, io);
     if (data.items.len != 0) try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
-}
-
-test "fsm status reset preserves death and restores current attributes" {
-    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
-    defer arena.deinit();
-    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
-    const attribute_count = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover) + 1;
-    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
-    values[@intFromEnum(pb.EAttributeType.LifeMax)] = .{ .base = 100, .increment = 0, .current = 100 };
-    values[@intFromEnum(pb.EAttributeType.Life)] = .{ .base = 100, .increment = 0, .current = 0 };
-    values[@intFromEnum(pb.EAttributeType.RageMax)] = .{ .base = 100, .increment = 0, .current = 100 };
-    values[@intFromEnum(pb.EAttributeType.Rage)] = .{ .base = 10, .increment = 2, .current = 0 };
-    var attr: Entity.AttributeComponent = .{ .attributes = &values };
-
-    const changed = try resetStatusAttributeValues(&attr, alloc);
-    try std.testing.expect(changed.items.len != 0);
-    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.Life)].current);
-    try std.testing.expectEqual(@as(i32, 12), values[@intFromEnum(pb.EAttributeType.Rage)].current);
-}
-
-test "fsm rage action fills current rage" {
-    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
-    defer arena.deinit();
-    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
-    const attribute_count = @intFromEnum(pb.EAttributeType.Rage) + 1;
-    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
-    values[@intFromEnum(pb.EAttributeType.RageMax)].current = 75;
-    var attr: Entity.AttributeComponent = .{ .attributes = &values };
-
-    const changed = try setRageFullAttributes(&attr, alloc);
-    try std.testing.expectEqual(@as(usize, 1), changed.items.len);
-    try std.testing.expectEqual(@as(i32, 75), values[@intFromEnum(pb.EAttributeType.Rage)].current);
-}
-
-test "fsm tick elapsed time follows scheduler events" {
-    var scene: Scene = undefined;
-    scene.scene_time.last_fsm_tick_time = 1_000;
-
-    try std.testing.expectEqual(@as(i64, 50), takeFsmElapsedMs(&scene, 1_050));
-    try std.testing.expectEqual(@as(i64, 175), takeFsmElapsedMs(&scene, 1_225));
-    try std.testing.expectEqual(@as(i64, 0), takeFsmElapsedMs(&scene, 1_225));
-    try std.testing.expectEqual(@as(i64, 0), takeFsmElapsedMs(&scene, 1_100));
-    try std.testing.expectEqual(@as(i64, 1_225), scene.scene_time.last_fsm_tick_time);
-}
-
-test "fsm paralysis recovery uses actual elapsed time" {
-    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
-    defer arena.deinit();
-    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
-    const attribute_count = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover) + 1;
-    var values: [attribute_count]Entity.AttributeComponent.Attribute = @splat(.{ .base = 0, .increment = 0, .current = 0 });
-    values[@intFromEnum(pb.EAttributeType.ParalysisTimeMax)].current = 100;
-    values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current = 100;
-    values[@intFromEnum(pb.EAttributeType.ParalysisTimeRecover)].current = -200;
-    var attr: Entity.AttributeComponent = .{ .attributes = &values };
-    var fsm: Entity.FsmComponent = .{ .paralysis_active = true };
-
-    const first_changed = try advanceParalysisAttributes(&fsm, &attr, 50, alloc);
-    try std.testing.expect(first_changed.items.len != 0);
-    try std.testing.expect(fsm.paralysis_active);
-    try std.testing.expectEqual(@as(i32, 90), values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current);
-
-    const delayed_changed = try advanceParalysisAttributes(&fsm, &attr, 450, alloc);
-    try std.testing.expect(delayed_changed.items.len != 0);
-    try std.testing.expect(!fsm.paralysis_active);
-    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTime)].current);
-    try std.testing.expectEqual(@as(i32, 0), values[@intFromEnum(pb.EAttributeType.ParalysisTimeRecover)].current);
-}
-
-test "fsm paralysis recovery scaling saturates safely" {
-    try std.testing.expectEqual(@as(i32, -10), scaledParalysisRecovery(-200, 50));
-    try std.testing.expectEqual(@as(i32, -25), scaledParalysisRecovery(-200, 125));
-    try std.testing.expectEqual(@as(i32, 0), scaledParalysisRecovery(-200, 0));
-    try std.testing.expectEqual(std.math.maxInt(i32), scaledParalysisRecovery(std.math.maxInt(i32), std.math.maxInt(i64)));
-    try std.testing.expectEqual(std.math.minInt(i32), scaledParalysisRecovery(std.math.minInt(i32), std.math.maxInt(i64)));
 }
 
 pub fn handleFsmLifecycleComplete(

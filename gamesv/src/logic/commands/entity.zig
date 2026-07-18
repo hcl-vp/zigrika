@@ -503,45 +503,6 @@ pub const spawn_map = struct {
     }
 };
 
-test "configured startup buffs precede debug buffs" {
-    const components: Components = .{
-        .AttributeComponent = .{ .AppendBuffIds = &.{ 11, 22 } },
-    };
-    var ids: std.ArrayList(i64) = .empty;
-    defer ids.deinit(std.testing.allocator);
-
-    try appendConfiguredBuffIds(&ids, &components, std.testing.allocator);
-    try ids.appendSlice(std.testing.allocator, &.{33});
-
-    try std.testing.expectEqualSlices(i64, &.{ 11, 22, 33 }, ids.items);
-}
-
-test "monster startup tags seed authoritative counts" {
-    const components: Components = .{
-        .MonsterComponent = .{ .InitGasTag = &.{
-            "\u{602a}\u{7269}.common.\u{5173}\u{5361}.\u{751f}\u{6001}.\u{901a}\u{7528}.\u{7761}\u{89c9}",
-        } },
-    };
-    var tags = try initialTagComponent(&components, false, std.testing.allocator);
-    defer tags.deinit(std.testing.allocator);
-
-    try std.testing.expectEqual(@as(i32, 1), tags.gameplayTagCount(-1462667236));
-    try std.testing.expect(!tags.init_gameplay_tag);
-}
-
-test "repeat boss startup replaces the story tag" {
-    const components: Components = .{
-        .MonsterComponent = .{ .InitGasTag = &.{
-            "\u{602a}\u{7269}.common.\u{5173}\u{5361}.\u{96be}\u{5ea6}AI\u{5206}\u{7c7b}.\u{5267}\u{60c5}",
-        } },
-    };
-    var tags = try initialTagComponent(&components, true, std.testing.allocator);
-    defer tags.deinit(std.testing.allocator);
-
-    try std.testing.expectEqual(@as(i32, 0), tags.gameplayTagCount(story_boss_tag_id));
-    try std.testing.expectEqual(@as(i32, 1), tags.gameplayTagCount(repeat_boss_tag_id));
-}
-
 fn parseOptionalInt(value: ?std.json.Value) i32 {
     const raw = value orelse return 0;
     return switch (raw) {

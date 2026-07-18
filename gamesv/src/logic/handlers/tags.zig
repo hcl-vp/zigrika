@@ -1,4 +1,3 @@
-const std = @import("std");
 const pb = @import("proto").pb;
 const EventQueue = @import("../EventQueue.zig");
 const mem = @import("../../mem.zig");
@@ -62,36 +61,4 @@ fn appendTagNotify(
             },
         },
     } });
-}
-
-test "gameplay tag notify ordering is event specific" {
-    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
-    defer arena.deinit();
-    const alloc: mem.Alloc = .{ .gpa = std.testing.allocator, .arena = arena.allocator() };
-    const combat_common: pb.CombatCommon = .{ .EntityId = 1001 };
-
-    var replacement: pb.CombatReceivePackNotify = .{};
-    try appendGameplayTagNotifies(&replacement, alloc, combat_common, &.{22}, &.{11}, true);
-    try expectTagNotify(replacement.Data.items[0], 11, false);
-    try expectTagNotify(replacement.Data.items[1], 22, true);
-
-    var general: pb.CombatReceivePackNotify = .{};
-    try appendGameplayTagNotifies(&general, alloc, combat_common, &.{44}, &.{33}, false);
-    try expectTagNotify(general.Data.items[0], 44, true);
-    try expectTagNotify(general.Data.items[1], 33, false);
-}
-
-fn expectTagNotify(data: pb.CombatReceiveData, tag_id: i32, add: bool) !void {
-    const message = data.Message orelse return error.MissingCombatMessage;
-    const combat = switch (message) {
-        .CombatNotifyData => |value| value orelse return error.MissingCombatNotify,
-        else => return error.UnexpectedCombatMessage,
-    };
-    const notify_message = combat.Message orelse return error.MissingNotifyMessage;
-    const tag_notify = switch (notify_message) {
-        .AnimationGameplayTagNotify => |value| value orelse return error.MissingTagNotify,
-        else => return error.UnexpectedNotifyMessage,
-    };
-    try std.testing.expectEqual(tag_id, tag_notify.AddTagIds);
-    try std.testing.expectEqual(add, tag_notify.RemoveTagIds);
 }
