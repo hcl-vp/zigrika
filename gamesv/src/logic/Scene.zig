@@ -636,6 +636,87 @@ test "debug spawn routes enforce one tuple and track owners" {
     try std.testing.expect(scene.debugSpawnRoute(939850025) != null);
 }
 
+test "debug spawn route allocation failure leaves no partial owner" {
+    var scene: Scene = undefined;
+    scene.debug_spawn_routes = .empty;
+    scene.debug_spawn_route_owners = .empty;
+    defer scene.debug_spawn_routes.deinit(std.testing.allocator);
+    defer scene.debug_spawn_route_owners.deinit(std.testing.allocator);
+
+    var failing_allocator = std.testing.FailingAllocator.init(std.testing.allocator, .{ .fail_index = 0 });
+    try std.testing.expectError(
+        error.OutOfMemory,
+        scene.registerDebugSpawnRoute(failing_allocator.allocator(), 101, 316850004, 8, true),
+    );
+    try std.testing.expectEqual(@as(usize, 0), scene.debug_spawn_routes.count());
+    try std.testing.expectEqual(@as(usize, 0), scene.debug_spawn_route_owners.count());
+}
+
+test "unpublished spawn cleanup releases owned state and route" {
+    const PartState = @import("fsm/Types.zig").PartState;
+    const gpa = std.testing.allocator;
+    var scene: Scene = undefined;
+    scene.entities = .empty;
+    scene.net_id_map = .empty;
+    scene.active_battle_entities = .empty;
+    scene.combine_relations = .empty;
+    scene.pending_combine_detaches = .empty;
+    scene.debug_spawn_routes = .empty;
+    scene.debug_spawn_route_owners = .empty;
+    scene.player_in_battle = false;
+    scene.battle_state_notified = false;
+    scene.battle_state_dirty = false;
+    defer {
+        for (0..scene.entities.len) |i| {
+            var storage = scene.entities.get(i);
+            storage.deinit(gpa);
+        }
+        scene.entities.deinit(gpa);
+        scene.net_id_map.deinit(gpa);
+        scene.active_battle_entities.deinit(gpa);
+        scene.combine_relations.deinit(gpa);
+        scene.pending_combine_detaches.deinit(gpa);
+        scene.debug_spawn_routes.deinit(gpa);
+        scene.debug_spawn_route_owners.deinit(gpa);
+    }
+
+    const gameplay_tags = try gpa.dupe(pb.GameplayTagData, &.{.{ .Id = 1, .TagCount = 1 }});
+    const parts = try gpa.alloc(PartState, 1);
+    parts[0] = .{
+        .index = 0,
+        .name = "body",
+        .life = 100,
+        .max_life = 100,
+        .activated = true,
+        .birth_activated = true,
+        .part_tag_id = 2,
+        .active_tag_id = 3,
+    };
+    try scene.entities.append(gpa, .{
+        .entity_id = .{ .net_id = 101 },
+        .config = .{
+            .camp = 1,
+            .config_id = 316850004,
+            .config_type = .level,
+            .entity_type = .monster,
+            .state = .born,
+        },
+        .tag = .{ .gameplay_tags = gameplay_tags },
+        .part = .{ .parts = parts },
+    });
+    try scene.net_id_map.put(gpa, 101, 0);
+    try scene.active_battle_entities.put(gpa, 101, {});
+    scene.updateBattleState();
+    try scene.registerDebugSpawnRoute(gpa, 101, 316850004, 8, true);
+
+    try scene.removeEntityState(gpa, 0, 101);
+    try std.testing.expectEqual(@as(usize, 0), scene.entities.len);
+    try std.testing.expectEqual(@as(usize, 0), scene.net_id_map.count());
+    try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
+    try std.testing.expectEqual(@as(usize, 0), scene.debug_spawn_routes.count());
+    try std.testing.expectEqual(@as(usize, 0), scene.debug_spawn_route_owners.count());
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
@@ -709,6 +790,21 @@ pub fn delete(
 pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
+    try scene.removeEntityState(gpa, index, net_id);
+}
+
+pub fn rollbackSpawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
+    const index = scene.net_id_map.get(net_id) orelse return;
+    const delete_error: ?anyerror = blk: {
+        delete(fs, scene.player_id, scene.instance_id, net_id) catch |err| break :blk err;
+        break :blk null;
+    };
+
+    try scene.removeEntityState(gpa, index, net_id);
+    if (delete_error) |err| return err;
+}
+
+fn removeEntityState(scene: *Scene, gpa: Allocator, index: usize, net_id: i64) !void {
     scene.clearFsmEncounterTargetReferences(net_id);
     try scene.removeCombineRelationsForEntity(gpa, net_id);
     scene.unregisterDebugSpawnRoute(net_id);

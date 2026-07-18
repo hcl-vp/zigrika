@@ -17,9 +17,16 @@ const clearEntitySourceMaps = () => {
   repeatBossEntityIds.clear();
   sourceOwnersByEntityId.clear();
 };
+const removeEntitySourceOwner = (pbDataId, creatureDataId) => {
+  const owners = sourceOwnersByEntityId.get(pbDataId);
+  if (!owners?.delete(creatureDataId)) return false;
+  if (owners.size === 0) clearEntitySourceMap(pbDataId);
+  return true;
+};
 
 globalThis.__zigrikaClearEntitySourceMap = clearEntitySourceMap;
 globalThis.__zigrikaClearEntitySourceMaps = clearEntitySourceMaps;
+globalThis.__zigrikaRemoveEntitySourceOwner = removeEntitySourceOwner;
 globalThis.__zigrikaSetEntitySourceMap = (
   pbDataId,
   mapId,
@@ -46,9 +53,18 @@ globalThis.__zigrikaSetEntitySourceMap = (
   }
 };
 
-setTimeout(() => {
-  if (globalThis.__zigrikaGlobalSpawnPatched) return;
-  globalThis.__zigrikaGlobalSpawnPatched = true;
+const patchState =
+  globalThis.__zigrikaGlobalSpawnPatchState ??
+  {
+    installed: globalThis.__zigrikaGlobalSpawnPatched === true,
+    installing: false,
+    retryTimer: undefined,
+    attempts: 0,
+  };
+globalThis.__zigrikaGlobalSpawnPatchState = patchState;
+globalThis.__zigrikaGlobalSpawnPatched = patchState.installed;
+
+const installGlobalSpawnPatch = () => {
 
   const { CreatureModel } = require("../Game/World/Model/CreatureModel.js");
   const { ModelManager } = require("../Game/Manager/ModelManager.js");
@@ -58,6 +74,16 @@ setTimeout(() => {
   const {
     configLevelEntityConfigByMapIdAndEntityId,
   } = require("../Core/Define/ConfigQuery/LevelEntityConfigByMapIdAndEntityId.js");
+
+  if (
+    typeof CreatureModel?.prototype?.GetEntityData !== "function" ||
+    typeof CreatureModel.prototype.RemoveEntity !== "function" ||
+    typeof CreatureModel.prototype.OnLeaveLevel !== "function" ||
+    typeof configAkiMapAll?.GetConfigList !== "function" ||
+    typeof configLevelEntityConfigByMapIdAndEntityId?.GetConfig !== "function"
+  ) {
+    throw new TypeError("global spawn client methods are unavailable");
+  }
 
   const getEntityData = CreatureModel.prototype.GetEntityData;
   const removeEntity = CreatureModel.prototype.RemoveEntity;
@@ -172,10 +198,7 @@ setTimeout(() => {
     const pbDataId = this.GetPbDataIdByEntity(entity);
     const removed = removeEntity.call(this, creatureDataId, reason);
     if (removed && sourceMapByEntityId.has(pbDataId)) {
-      const owners = sourceOwnersByEntityId.get(pbDataId);
-      if (owners?.delete(creatureDataId) && owners.size === 0) {
-        clearEntitySourceMap(pbDataId);
-      }
+      removeEntitySourceOwner(pbDataId, creatureDataId);
     }
     return removed;
   };
@@ -184,4 +207,43 @@ setTimeout(() => {
     clearEntitySourceMaps();
     return onLeaveLevel.apply(this, args);
   };
-}, 200);
+};
+
+const scheduleGlobalSpawnPatch = () => {
+  if (
+    patchState.installed ||
+    patchState.installing ||
+    patchState.retryTimer !== undefined ||
+    patchState.attempts >= 10
+  ) {
+    return;
+  }
+
+  patchState.retryTimer = setTimeout(() => {
+    patchState.retryTimer = undefined;
+    if (patchState.installed) return;
+
+    patchState.installing = true;
+    try {
+      installGlobalSpawnPatch();
+      patchState.installed = true;
+      patchState.attempts = 0;
+      globalThis.__zigrikaGlobalSpawnPatched = true;
+    } catch {
+      patchState.attempts += 1;
+    } finally {
+      patchState.installing = false;
+    }
+
+    if (!patchState.installed) scheduleGlobalSpawnPatch();
+  }, 200);
+};
+
+if (
+  !patchState.installed &&
+  !patchState.installing &&
+  patchState.retryTimer === undefined
+) {
+  patchState.attempts = 0;
+  scheduleGlobalSpawnPatch();
+}

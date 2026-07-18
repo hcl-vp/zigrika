@@ -206,6 +206,74 @@ fn appendConfiguredBuffIds(buff_ids: *std.ArrayList(i64), components: *const Com
     try buff_ids.appendSlice(gpa, configured_ids);
 }
 
+fn publishDebugSpawn(
+    scene: *Scene,
+    fs: *FileSystem,
+    assets: *const Assets,
+    conn: *Connection,
+    alloc: mem.Alloc,
+    entity: Scene.Entity,
+    config_id: i64,
+    source_map_id: i32,
+    repeat_boss: bool,
+    components: *const Components,
+    is_frozen: bool,
+    is_tune_broken: bool,
+    route_patch_sent: *bool,
+) !void {
+    try scene.registerDebugSpawnRoute(
+        alloc.gpa,
+        entity.net_id,
+        config_id,
+        source_map_id,
+        repeat_boss,
+    );
+
+    var buff_ids: std.ArrayList(i64) = .empty;
+    defer buff_ids.deinit(alloc.gpa);
+    try appendConfiguredBuffIds(&buff_ids, components, alloc.gpa);
+    if (is_tune_broken) try buff_ids.appendSlice(alloc.gpa, TUNE_BROKEN_BUFFS);
+    if (is_frozen) try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
+    if (buff_ids.items.len > 0) {
+        var born_buffs = try buffListFromIds(alloc.gpa, buff_ids.items);
+        defer born_buffs.deinit(alloc.gpa);
+        const fight_buff_infos = try scene.buildFightBuffInfos(born_buffs, entity.net_id, alloc.gpa);
+        const slice = scene.entities.slice();
+        slice.items(.buffs)[entity.index].?.fight_buff_infos = fight_buff_infos;
+        try scene.saveEntity(fs, alloc.gpa, entity);
+    }
+
+    var entity_pbs: std.ArrayList(pb.EntityPb) = try .initCapacity(alloc.gpa, 1);
+    defer entity_pbs.deinit(alloc.gpa);
+    const storage = scene.entities.get(entity.index);
+    entity_pbs.appendAssumeCapacity(try storage.entityToProto(entity.net_id, alloc, assets));
+
+    try conn.push(pb.JSPatchNotify{
+        .Content = try std.fmt.allocPrint(
+            alloc.arena,
+            "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s},{d});",
+            .{ config_id, source_map_id, if (repeat_boss) "true" else "false", entity.net_id },
+        ),
+    }, alloc.arena);
+    route_patch_sent.* = true;
+
+    try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
+}
+
+fn removeClientDebugSpawnOwner(
+    conn: *Connection,
+    alloc: mem.Alloc,
+    config_id: i64,
+    net_id: i64,
+) void {
+    const content = std.fmt.allocPrint(
+        alloc.arena,
+        "globalThis.__zigrikaRemoveEntitySourceOwner?.({d},{d});",
+        .{ config_id, net_id },
+    ) catch return;
+    conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena) catch {};
+}
+
 pub const spawn = struct {
     pub const alias = "s";
     pub const description = "spawns an entity.\nusage: spawn [entity_id] [freeze?] [tune_break?]";
@@ -388,47 +456,28 @@ pub const spawn = struct {
             },
             Entity.FightBuffComponent{},
         });
-        try scene.registerDebugSpawnRoute(
-            alloc.gpa,
-            entity.net_id,
+        tag_component = null;
+        part_component = null;
+        var route_patch_sent = false;
+        publishDebugSpawn(
+            scene,
+            fs,
+            assets,
+            conn,
+            alloc,
+            entity,
             entity_id,
             entity_config.MapId,
             repeat_boss_startup,
-        );
-        errdefer scene.unregisterDebugSpawnRoute(entity.net_id);
-        tag_component = null;
-        part_component = null;
-
-        var buff_ids: std.ArrayList(i64) = .empty;
-        defer buff_ids.deinit(alloc.gpa);
-
-        try appendConfiguredBuffIds(&buff_ids, &components_data, alloc.gpa);
-        if (is_tune_broken orelse false) try buff_ids.appendSlice(alloc.gpa, TUNE_BROKEN_BUFFS);
-        if (is_frozen orelse false) try buff_ids.appendSlice(alloc.gpa, FROZEN_BUFFS);
-        if (buff_ids.items.len > 0) {
-            var born_buffs = try buffListFromIds(alloc.gpa, buff_ids.items);
-            defer born_buffs.deinit(alloc.gpa);
-            const fight_buff_infos = try scene.buildFightBuffInfos(born_buffs, entity.net_id, alloc.gpa);
-            const slice = scene.entities.slice();
-            slice.items(.buffs)[entity.index].?.fight_buff_infos = fight_buff_infos;
-            try scene.saveEntity(fs, alloc.gpa, entity);
-        }
-
-        var entity_pbs: std.ArrayList(pb.EntityPb) = try .initCapacity(alloc.gpa, 1);
-        defer entity_pbs.deinit(alloc.gpa);
-        const storage = scene.entities.get(entity.index);
-        const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
-        entity_pbs.appendAssumeCapacity(entity_pb);
-
-        try conn.push(pb.JSPatchNotify{
-            .Content = try std.fmt.allocPrint(
-                alloc.arena,
-                "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s},{d});",
-                .{ entity_id, entity_config.MapId, if (repeat_boss_startup) "true" else "false", entity.net_id },
-            ),
-        }, alloc.arena);
-
-        try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
+            &components_data,
+            is_frozen orelse false,
+            is_tune_broken orelse false,
+            &route_patch_sent,
+        ) catch |publish_err| {
+            if (route_patch_sent) removeClientDebugSpawnOwner(conn, alloc, entity_id, entity.net_id);
+            scene.rollbackSpawn(alloc.gpa, fs, entity.net_id) catch |rollback_err| return rollback_err;
+            return publish_err;
+        };
 
         try respond(events, alloc.arena, "spawned {d}, map: {d}, bp: {s}, camp: {d}, ai_id: {any}", .{ entity_id, entity_config.MapId, entity_config.BlueprintType, final_camp, ai_id });
     }
