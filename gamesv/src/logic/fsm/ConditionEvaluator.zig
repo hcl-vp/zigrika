@@ -111,8 +111,35 @@ fn evaluateRaw(
         return partIsActivated(ctx.parts, part.PartName);
     }
 
-    if (condition.CondCheckDissolveCombine != null) return ctx.dissolve_combined orelse false;
+    if (condition.CondCheckDissolveCombine != null) return comp.dissolve_combine_signal;
 
+    return false;
+}
+
+pub fn transitionUsesDissolveCombine(conditions: []const AiStateMachineConfig.StateMachineCondition) bool {
+    const root = findCondition(conditions, 0) orelse return false;
+    return conditionUsesDissolveCombine(conditions, root, 0);
+}
+
+fn conditionUsesDissolveCombine(
+    conditions: []const AiStateMachineConfig.StateMachineCondition,
+    condition: AiStateMachineConfig.StateMachineCondition,
+    depth: usize,
+) bool {
+    if (depth > 12) return false;
+    if (condition.CondCheckDissolveCombine != null) return true;
+    if (condition.CondAnd) |data| {
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            if (conditionUsesDissolveCombine(conditions, child, depth + 1)) return true;
+        }
+    }
+    if (condition.CondOr) |data| {
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            if (conditionUsesDissolveCombine(conditions, child, depth + 1)) return true;
+        }
+    }
     return false;
 }
 
@@ -366,6 +393,7 @@ test "fsm part conditions observe authoritative life and activation" {
             .birth_activated = false,
             .part_tag_id = 11,
             .active_tag_id = 21,
+            .combine_socket = "",
         },
     };
 
@@ -383,6 +411,57 @@ test "fsm part conditions observe authoritative life and activation" {
     try std.testing.expect(partIsActivated(&parts, "shield"));
     try std.testing.expect(!partIsActivated(&parts, "missing"));
     try std.testing.expect(!partLifeInRange(null, .{ .PartName = "shield" }));
+}
+
+test "dissolve combine detection follows the active condition tree" {
+    const child_indices = [_]i32{1};
+    const conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondOr", .CondOr = .{ .Conditions = &child_indices } },
+        .{ .Index = 1, .Name = "CondCheckDissolveCombine", .CondCheckDissolveCombine = .{} },
+        .{ .Index = 2, .Name = "CondCheckDissolveCombine", .CondCheckDissolveCombine = .{} },
+    };
+    try std.testing.expect(transitionUsesDissolveCombine(&conditions));
+
+    const unrelated = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondTrue" },
+        .{ .Index = 1, .Name = "CondCheckDissolveCombine", .CondCheckDissolveCombine = .{} },
+    };
+    try std.testing.expect(!transitionUsesDissolveCombine(&unrelated));
+}
+
+test "current dissolve combine conditions are reachable from transition roots" {
+    const content = try std.Io.Dir.readFileAlloc(
+        std.Io.Dir.cwd(),
+        std.testing.io,
+        "assets/BinData/AiStateMachineConfig.json",
+        std.testing.allocator,
+        std.Io.Limit.unlimited,
+    );
+    defer std.testing.allocator.free(content);
+
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const configs = try std.json.parseFromSliceLeaky(
+        []const AiStateMachineConfig,
+        arena.allocator(),
+        content,
+        .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+    );
+
+    var count: usize = 0;
+    for (configs) |config| {
+        for (config.StateMachineJson.Nodes) |node| {
+            for (node.Transitions) |transition| {
+                const has_dissolve = for (transition.Conditions) |condition| {
+                    if (condition.CondCheckDissolveCombine != null) break true;
+                } else false;
+                if (!has_dissolve) continue;
+                count += 1;
+                try std.testing.expect(transitionUsesDissolveCombine(transition.Conditions));
+            }
+        }
+    }
+    try std.testing.expectEqual(@as(usize, 9), count);
 }
 
 fn clientPasses(comp: anytype, fsm_id: i32, transition: AiStateMachineConfig.StateMachineTransition, index: i32) bool {

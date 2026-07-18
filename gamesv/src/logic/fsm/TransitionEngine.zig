@@ -15,6 +15,7 @@ pub fn needsServerTick(comp: anytype) bool {
     if (comp.lifecycle_effects_pending) return true;
     if (comp.lifecycle_effects.items.len != 0) return true;
     if (comp.paralysis_active) return true;
+    if (comp.dissolve_combine_signal) return true;
     if (comp.in_hate) return true;
 
     for (comp.runtime_nodes) |runtime| {
@@ -202,6 +203,9 @@ fn checkTransitionsForState(
         const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
         if (!ConditionEvaluator.evaluate(comp, fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
 
+        if (comp.dissolve_combine_signal and ConditionEvaluator.transitionUsesDissolveCombine(transition.Conditions)) {
+            comp.dissolve_combine_signal = false;
+        }
         try setPendingTransition(comp, runtime, canonical_source, target_state, ctx.now_ms);
         return .{
             .fsm_id = StateHierarchy.clientState(comp, runtime.fsm_id),
@@ -557,6 +561,7 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
         lifecycle_effects_pending: bool = false,
         in_hate: bool = false,
         paralysis_active: bool = false,
+        dissolve_combine_signal: bool = false,
         instance_state_tag: ?i32 = null,
         event: ?[]const u8 = null,
         last_tick_ms: i64 = 0,
@@ -620,6 +625,65 @@ test "pending fsm transition defers lifecycle effects until confirmation" {
     try std.testing.expect(component.lifecycle_effects.items[2].activate_part.activate);
 }
 
+test "dissolve combine signal selects one transition and is consumed" {
+    const TestComponent = struct {
+        graph: *const FsmGraph = &FsmGraph.empty,
+        tag_parents: *const Assets.DataTables.GameplayTagParentTable = &Assets.DataTables.GameplayTagParentTable.init,
+        runtime_nodes: []Types.FsmNode = &.{},
+        pass_pool: []Types.ConditionKey = &.{},
+        tags: []Types.TagCount = &.{},
+        lifecycle_effects: std.ArrayList(Types.LifecycleEffect) = .empty,
+        lifecycle_effects_pending: bool = false,
+        in_hate: bool = false,
+        paralysis_active: bool = false,
+        dissolve_combine_signal: bool = false,
+        instance_state_tag: ?i32 = null,
+        event: ?[]const u8 = null,
+        last_tick_ms: i64 = 0,
+        blackboard: [3]?i32 = .{ null, null, null },
+        blackboard_dirty: u8 = 0,
+    };
+
+    const conditions = [_]AiStateMachineConfig.StateMachineCondition{
+        .{ .Name = "CondCheckDissolveCombine", .CondCheckDissolveCombine = .{} },
+    };
+    const transitions = [_]AiStateMachineConfig.StateMachineTransition{
+        .{ .From = 2, .To = 3, .Conditions = &conditions },
+    };
+    const children = [_]i32{ 2, 3 };
+    const nodes = [_]AiStateMachineConfig.StateMachineNode{
+        .{ .Uuid = 1, .Children = &children, .Transitions = &transitions },
+        .{ .Uuid = 2 },
+        .{ .Uuid = 3 },
+    };
+    var graph_arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer graph_arena.deinit();
+    const graph = try buildTestGraph(graph_arena.allocator(), &.{1}, &nodes);
+    var runtime_nodes = [_]Types.FsmNode{.{
+        .fsm_id = 1,
+        .active_path = .{ 1, 2 } ++ @as([Types.max_state_depth - 2]i32, @splat(0)),
+        .active_since_ms = @splat(10),
+        .active_len = 2,
+    }};
+    var component: TestComponent = .{
+        .graph = &graph,
+        .runtime_nodes = &runtime_nodes,
+        .dissolve_combine_signal = true,
+    };
+
+    const transition = (try findReadyTransition(&component, 1, .{ .now_ms = 100 })) orelse
+        return error.ExpectedFsmTransition;
+    try std.testing.expectEqual(@as(i32, 3), transition.to);
+    try std.testing.expect(!component.dissolve_combine_signal);
+    try std.testing.expectEqual(Types.ConfirmResult.confirmed, try confirmPending(
+        &component,
+        1,
+        3,
+        std.testing.allocator,
+    ));
+    try std.testing.expect((try findReadyTransition(&component, 1, .{ .now_ms = 101 })) == null);
+}
+
 test "client pass from pending path drives followup after confirmation" {
     const TestComponent = struct {
         graph: *const FsmGraph = &FsmGraph.empty,
@@ -631,6 +695,7 @@ test "client pass from pending path drives followup after confirmation" {
         lifecycle_effects_pending: bool = false,
         in_hate: bool = false,
         paralysis_active: bool = false,
+        dissolve_combine_signal: bool = false,
         instance_state_tag: ?i32 = null,
         event: ?[]const u8 = null,
         last_tick_ms: i64 = 0,

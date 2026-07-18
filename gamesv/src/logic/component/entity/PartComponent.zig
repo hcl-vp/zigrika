@@ -28,6 +28,7 @@ pub fn init(config: CharacterPartConfig, entity_life_max: i32, gpa: std.mem.Allo
             .birth_activated = part.BirthActivated,
             .part_tag_id = part.PartTagId,
             .active_tag_id = part.ActiveTagId,
+            .combine_socket = part.CombineSocket,
         };
     }
 
@@ -40,6 +41,13 @@ pub fn deinit(comp: *Component, gpa: std.mem.Allocator) void {
 
 pub fn states(comp: *const Component) []const FsmTypes.PartState {
     return comp.parts;
+}
+
+pub fn supportsCombinePart(comp: *const Component, part_index: i32) bool {
+    for (comp.parts) |part| {
+        if (part.index == part_index) return part.combine_socket.len != 0;
+    }
+    return false;
 }
 
 pub fn toProto(comp: *const Component, alloc: mem.Alloc) !pb.PartComponentPb {
@@ -203,4 +211,52 @@ test "empty reset targets all parts and restores birth state" {
     try std.testing.expectEqual(comp.parts[1].max_life, comp.parts[1].life);
     try std.testing.expect(comp.parts[0].activated);
     try std.testing.expect(!comp.parts[1].activated);
+}
+
+test "combine part requires a configured socket" {
+    const config: CharacterPartConfig = .{
+        .ModelId = 1,
+        .Parts = &.{
+            .{ .Index = 0, .Name = "body", .LifeRatio = 1, .BirthActivated = true, .PartTagId = 11, .ActiveTagId = 21 },
+            .{ .Index = 1, .Name = "combine", .LifeRatio = 1, .BirthActivated = true, .PartTagId = 12, .ActiveTagId = 22, .CombineSocket = "Head" },
+        },
+    };
+    var comp = try Component.init(config, 100, std.testing.allocator);
+    defer comp.deinit(std.testing.allocator);
+
+    try std.testing.expect(!comp.supportsCombinePart(0));
+    try std.testing.expect(comp.supportsCombinePart(1));
+    try std.testing.expect(!comp.supportsCombinePart(2));
+}
+
+test "current combine socket data matches the shared client table" {
+    const content = try std.Io.Dir.readFileAlloc(
+        std.Io.Dir.cwd(),
+        std.testing.io,
+        "assets/BinData/CharacterPartConfig.json",
+        std.testing.allocator,
+        std.Io.Limit.unlimited,
+    );
+    defer std.testing.allocator.free(content);
+
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const configs = try std.json.parseFromSliceLeaky(
+        []const CharacterPartConfig,
+        arena.allocator(),
+        content,
+        .{ .ignore_unknown_fields = true, .allocate = .alloc_always },
+    );
+
+    var count: usize = 0;
+    for (configs) |config| {
+        for (config.Parts) |part| {
+            if (part.CombineSocket.len == 0) continue;
+            count += 1;
+            try std.testing.expect(config.ModelId == 390249 or config.ModelId == 391279);
+            try std.testing.expectEqual(@as(i32, 0), part.Index);
+            try std.testing.expectEqualStrings("Bip001Head", part.CombineSocket);
+        }
+    }
+    try std.testing.expectEqual(@as(usize, 2), count);
 }

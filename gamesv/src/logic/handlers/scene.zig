@@ -113,9 +113,14 @@ pub fn handleSceneCleanupTick(
     alloc: mem.Alloc,
 ) !void {
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
-    if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
-        try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
-    }
+    _ = try scene.appendBattleStateNotify(alloc.arena, &data);
+    const combine_detaches = scene.pendingCombineDetaches();
+    for (combine_detaches) |detach| try data.append(alloc.arena, Scene.removeCombineNotify(detach));
+    if (data.items.len == 0) return;
+
+    try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    for (combine_detaches) |detach| scene.signalFsmDissolveCombine(detach.combine_entity_id);
+    scene.clearPendingCombineDetaches();
 }
 
 pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !void {

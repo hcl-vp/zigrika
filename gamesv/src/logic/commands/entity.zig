@@ -342,6 +342,7 @@ pub const spawn = struct {
                 .ai_team_init_id = 100,
                 .combat_message_id = 0,
             },
+            Entity.CharacterAttachComponent{},
             tag_component.?,
             part_component,
             fsm,
@@ -368,6 +369,7 @@ pub const spawn = struct {
                 .ai_team_init_id = 100,
                 .combat_message_id = 0,
             },
+            Entity.CharacterAttachComponent{},
             tag_component.?,
             part_component,
         }) else try scene.spawn(alloc.gpa, fs, .{

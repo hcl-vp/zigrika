@@ -23,6 +23,8 @@ entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
 active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
+combine_relations: std.AutoHashMapUnmanaged(i64, CombineRelation) = .empty,
+pending_combine_detaches: std.ArrayListUnmanaged(CombineDetach) = .empty,
 debug_spawn_routes: std.AutoHashMapUnmanaged(i64, DebugSpawnRoute) = .empty,
 debug_spawn_route_owners: std.AutoHashMapUnmanaged(i64, i64) = .empty,
 player_in_battle: bool = false,
@@ -37,6 +39,30 @@ pub const DebugSpawnRoute = struct {
     pub fn matches(route: DebugSpawnRoute, source_map_id: i32, repeat_boss: bool) bool {
         return route.source_map_id == source_map_id and route.repeat_boss == repeat_boss;
     }
+};
+
+pub const CombineRelation = struct {
+    target_entity_id: i64,
+    part_index: i32,
+    position: pb.Vector,
+    rotation: pb.Rotator,
+
+    pub fn matches(relation: CombineRelation, other: CombineRelation) bool {
+        return relation.target_entity_id == other.target_entity_id and
+            relation.part_index == other.part_index and
+            std.meta.eql(relation.position, other.position) and
+            std.meta.eql(relation.rotation, other.rotation);
+    }
+};
+
+pub const CombineDetach = struct {
+    combine_entity_id: i64,
+    target_entity_id: i64,
+};
+
+pub const CombineRegisterResult = enum {
+    added,
+    existing,
 };
 
 pub const TimeInfo = struct {
@@ -236,6 +262,8 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
     scene.active_battle_entities.deinit(gpa);
+    scene.combine_relations.deinit(gpa);
+    scene.pending_combine_detaches.deinit(gpa);
     scene.debug_spawn_routes.deinit(gpa);
     scene.debug_spawn_route_owners.deinit(gpa);
 
@@ -310,6 +338,85 @@ pub fn forceBattleState(scene: *Scene, mode: bool) void {
     scene.active_battle_entities.clearRetainingCapacity();
     scene.player_in_battle = mode;
     scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
+}
+
+pub fn combineRelation(scene: *const Scene, combine_entity_id: i64) ?CombineRelation {
+    return scene.combine_relations.get(combine_entity_id);
+}
+
+pub fn registerCombineRelation(
+    scene: *Scene,
+    gpa: Allocator,
+    combine_entity_id: i64,
+    relation: CombineRelation,
+) !CombineRegisterResult {
+    if (scene.combine_relations.get(combine_entity_id)) |existing| {
+        if (existing.matches(relation)) return .existing;
+        return error.CombineRelationConflict;
+    }
+
+    try scene.combine_relations.put(gpa, combine_entity_id, relation);
+    return .added;
+}
+
+pub fn detachCombineRelation(
+    scene: *Scene,
+    combine_entity_id: i64,
+    target_entity_id: i64,
+) ?CombineRelation {
+    const relation = scene.combine_relations.get(combine_entity_id) orelse return null;
+    if (relation.target_entity_id != target_entity_id) return null;
+    _ = scene.combine_relations.remove(combine_entity_id);
+    return relation;
+}
+
+pub fn removeCombineRelationsForEntity(scene: *Scene, gpa: Allocator, entity_id: i64) !void {
+    var affected: std.ArrayList(i64) = .empty;
+    defer affected.deinit(gpa);
+
+    var detach_count: usize = 0;
+    var iterator = scene.combine_relations.iterator();
+    while (iterator.next()) |entry| {
+        if (entry.key_ptr.* != entity_id and entry.value_ptr.target_entity_id != entity_id) continue;
+        try affected.append(gpa, entry.key_ptr.*);
+        if (entry.value_ptr.target_entity_id == entity_id and entry.key_ptr.* != entity_id) detach_count += 1;
+    }
+
+    try scene.pending_combine_detaches.ensureUnusedCapacity(gpa, detach_count);
+    for (affected.items) |combine_entity_id| {
+        const relation = scene.combine_relations.get(combine_entity_id) orelse continue;
+        _ = scene.combine_relations.remove(combine_entity_id);
+        if (relation.target_entity_id == entity_id and combine_entity_id != entity_id) {
+            scene.pending_combine_detaches.appendAssumeCapacity(.{
+                .combine_entity_id = combine_entity_id,
+                .target_entity_id = relation.target_entity_id,
+            });
+        }
+    }
+}
+
+pub fn pendingCombineDetaches(scene: *const Scene) []const CombineDetach {
+    return scene.pending_combine_detaches.items;
+}
+
+pub fn clearPendingCombineDetaches(scene: *Scene) void {
+    scene.pending_combine_detaches.clearRetainingCapacity();
+}
+
+pub fn signalFsmDissolveCombine(scene: *Scene, entity_id: i64) void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| fsm.signalDissolveCombine();
+}
+
+pub fn removeCombineNotify(detach: CombineDetach) pb.CombatReceiveData {
+    return .{ .Message = .{ .CombatNotifyData = .{
+        .CombatCommon = .{ .EntityId = detach.combine_entity_id },
+        .Message = .{ .RemoveCombineRelationNotify = .{
+            .CombineEntity = detach.combine_entity_id,
+            .TargetEntity = detach.target_entity_id,
+        } },
+    } } };
 }
 
 pub fn debugSpawnRoute(scene: *const Scene, config_id: i64) ?DebugSpawnRoute {
@@ -428,6 +535,77 @@ test "battle state filters formation hate and aggregates enemies" {
     try std.testing.expectEqual(@as(usize, 0), scene.active_battle_entities.count());
 }
 
+test "combine relations are idempotent and reject conflicting targets" {
+    var scene: Scene = undefined;
+    scene.combine_relations = .empty;
+    scene.pending_combine_detaches = .empty;
+    defer scene.combine_relations.deinit(std.testing.allocator);
+    defer scene.pending_combine_detaches.deinit(std.testing.allocator);
+
+    const relation: CombineRelation = .{
+        .target_entity_id = 200,
+        .part_index = 1,
+        .position = .{ .X = 1, .Y = 2, .Z = 3 },
+        .rotation = .{ .Pitch = 4, .Yaw = 5, .Roll = 6 },
+    };
+    try std.testing.expectEqual(
+        CombineRegisterResult.added,
+        try scene.registerCombineRelation(std.testing.allocator, 100, relation),
+    );
+    try std.testing.expectEqual(
+        CombineRegisterResult.existing,
+        try scene.registerCombineRelation(std.testing.allocator, 100, relation),
+    );
+    try std.testing.expectError(
+        error.CombineRelationConflict,
+        scene.registerCombineRelation(std.testing.allocator, 100, .{
+            .target_entity_id = 300,
+            .part_index = 1,
+            .position = relation.position,
+            .rotation = relation.rotation,
+        }),
+    );
+
+    try std.testing.expect(scene.detachCombineRelation(100, 300) == null);
+    try std.testing.expect(scene.combineRelation(100) != null);
+    try std.testing.expect(scene.detachCombineRelation(100, 200) != null);
+    try std.testing.expect(scene.combineRelation(100) == null);
+    try std.testing.expect(scene.detachCombineRelation(100, 200) == null);
+}
+
+test "target removal queues detach for surviving combine entities" {
+    var scene: Scene = undefined;
+    scene.combine_relations = .empty;
+    scene.pending_combine_detaches = .empty;
+    defer scene.combine_relations.deinit(std.testing.allocator);
+    defer scene.pending_combine_detaches.deinit(std.testing.allocator);
+
+    const relation: CombineRelation = .{
+        .target_entity_id = 200,
+        .part_index = 0,
+        .position = .{},
+        .rotation = .{},
+    };
+    _ = try scene.registerCombineRelation(std.testing.allocator, 100, relation);
+    _ = try scene.registerCombineRelation(std.testing.allocator, 101, relation);
+    _ = try scene.registerCombineRelation(std.testing.allocator, 300, .{
+        .target_entity_id = 400,
+        .part_index = 0,
+        .position = .{},
+        .rotation = .{},
+    });
+
+    try scene.removeCombineRelationsForEntity(std.testing.allocator, 100);
+    try std.testing.expectEqual(@as(usize, 0), scene.pendingCombineDetaches().len);
+    try std.testing.expect(scene.combineRelation(100) == null);
+
+    try scene.removeCombineRelationsForEntity(std.testing.allocator, 200);
+    try std.testing.expectEqual(@as(usize, 1), scene.pendingCombineDetaches().len);
+    try std.testing.expectEqual(@as(i64, 101), scene.pendingCombineDetaches()[0].combine_entity_id);
+    try std.testing.expectEqual(@as(i64, 200), scene.pendingCombineDetaches()[0].target_entity_id);
+    try std.testing.expect(scene.combineRelation(300) != null);
+}
+
 test "debug spawn routes enforce one tuple and track owners" {
     var scene: Scene = undefined;
     scene.debug_spawn_routes = .empty;
@@ -532,6 +710,7 @@ pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
     scene.clearFsmEncounterTargetReferences(net_id);
+    try scene.removeCombineRelationsForEntity(gpa, net_id);
     scene.unregisterDebugSpawnRoute(net_id);
     _ = scene.active_battle_entities.remove(net_id);
     scene.updateBattleState();

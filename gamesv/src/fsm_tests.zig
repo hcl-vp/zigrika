@@ -10,6 +10,7 @@ const TagComponent = @import("logic/component/entity/TagComponent.zig");
 const PartComponent = @import("logic/component/entity/PartComponent.zig");
 const TransitionEngine = @import("logic/fsm/TransitionEngine.zig");
 const NetworkFsmHandlers = @import("network/handlers/fsm.zig");
+const NetworkAttachHandlers = @import("network/handlers/attach.zig");
 
 test {
     std.testing.refAllDecls(ConditionEvaluator);
@@ -23,4 +24,5 @@ test {
     std.testing.refAllDecls(PartComponent);
     std.testing.refAllDecls(TransitionEngine);
     _ = NetworkFsmHandlers.AiHateRequest;
+    _ = NetworkAttachHandlers.CharacterAttachRequest;
 }

@@ -59,7 +59,6 @@ pub const EvalContext = struct {
     logic_state: ?*const LogicStateComponent = null,
     tags: ?*const TagComponent = null,
     parts: ?[]const PartState = null,
-    dissolve_combined: ?bool = null,
     now_ms: i64,
 };
 
@@ -72,6 +71,7 @@ pub const PartState = struct {
     birth_activated: bool,
     part_tag_id: i32,
     active_tag_id: i32,
+    combine_socket: []const u8 = "",
 };
 
 pub const Transition = struct {

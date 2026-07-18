@@ -1204,7 +1204,8 @@
         "LifeRatio": 1.0,
         "BirthActivated": true,
         "PartTagId": 52592832,
-        "ActiveTagId": 52592832
+        "ActiveTagId": 52592832,
+        "CombineSocket": "Bip001Head"
       }
     ]
   },
@@ -1470,7 +1471,8 @@
         "LifeRatio": 1.0,
         "BirthActivated": true,
         "PartTagId": 52592832,
-        "ActiveTagId": 52592832
+        "ActiveTagId": 52592832,
+        "CombineSocket": "Bip001Head"
       }
     ]
   },

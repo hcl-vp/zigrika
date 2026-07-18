@@ -10,4 +10,5 @@ pub const Part = struct {
     BirthActivated: bool,
     PartTagId: i32,
     ActiveTagId: i32,
+    CombineSocket: []const u8 = "",
 };

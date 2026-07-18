@@ -36,6 +36,7 @@ lifecycle_effects_pending: bool = false,
 lifecycle_recheck_requested: bool = false,
 in_hate: bool = false,
 paralysis_active: bool = false,
+dissolve_combine_signal: bool = false,
 instance_state_tag: ?i32 = null,
 event: ?[]const u8 = null,
 last_tick_ms: i64 = 0,
@@ -176,6 +177,10 @@ pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) boo
     return old_in_hate != comp.in_hate;
 }
 
+pub fn signalDissolveCombine(comp: *Component) void {
+    comp.dissolve_combine_signal = true;
+}
+
 pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !ClientPassResult {
     return TransitionEngine.recordClientPass(comp, gpa, key, value);
 }
@@ -213,6 +218,7 @@ pub fn appendReadyStateTransitions(
             try output.append(allocator, transitionNotify(entity_id, transition));
         }
     }
+    if (comp.canDiscardDissolveCombineSignal()) comp.dissolve_combine_signal = false;
 }
 
 pub fn appendBlackboardNotify(
@@ -288,6 +294,14 @@ fn findReadyTransition(comp: *Component, fsm_id: i32, ctx: EvalContext) !?Transi
     return TransitionEngine.findReadyTransition(comp, fsm_id, ctx);
 }
 
+fn canDiscardDissolveCombineSignal(comp: *const Component) bool {
+    if (!comp.dissolve_combine_signal or comp.lifecycle_effects_pending or comp.lifecycle_effects.items.len != 0) return false;
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.pending_to != null) return false;
+    }
+    return true;
+}
+
 test "components share immutable graph and keep independent runtime state" {
     const children = [_]i32{2};
     const nodes = [_]AiStateMachineConfig.StateMachineNode{
@@ -313,4 +327,30 @@ test "components share immutable graph and keep independent runtime state" {
     try std.testing.expect(first.runtime_nodes.ptr != second.runtime_nodes.ptr);
     first.runtime_nodes[0].pending_to = 2;
     try std.testing.expectEqual(@as(?i32, null), second.runtime_nodes[0].pending_to);
+}
+
+test "dissolve combine signal waits for pending and lifecycle work" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    var output: std.ArrayList(pb.CombatReceiveData) = .empty;
+    var runtime_nodes = [_]FsmNode{.{
+        .fsm_id = 1,
+        .pending_to = 2,
+    }};
+    var component: Component = .{
+        .runtime_nodes = &runtime_nodes,
+        .dissolve_combine_signal = true,
+    };
+
+    try component.appendReadyStateTransitions(100, arena.allocator(), &output, .{ .now_ms = 10 });
+    try std.testing.expect(component.dissolve_combine_signal);
+
+    runtime_nodes[0].pending_to = null;
+    component.lifecycle_effects_pending = true;
+    try component.appendReadyStateTransitions(100, arena.allocator(), &output, .{ .now_ms = 11 });
+    try std.testing.expect(component.dissolve_combine_signal);
+
+    component.lifecycle_effects_pending = false;
+    try component.appendReadyStateTransitions(100, arena.allocator(), &output, .{ .now_ms = 12 });
+    try std.testing.expect(!component.dissolve_combine_signal);
 }
