@@ -366,21 +366,27 @@ fn runActions(
     }
 }
 
-fn updateBindStates(
+fn updateActivationBindStates(
     comp: anytype,
     gpa: mem.Allocator,
     binds: []const AiStateMachineConfig.StateMachineBindState,
     delta: i32,
 ) !void {
     for (binds) |bind| {
-        if (bind.BindBuff) |buff| {
-            if (delta > 0) {
-                try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
-            }
-        }
-
         if (bind.BindTag) |tag| {
             try updateTagCount(comp, gpa, tag.TagId, delta);
+        }
+    }
+}
+
+fn enterBindStates(
+    comp: anytype,
+    gpa: mem.Allocator,
+    binds: []const AiStateMachineConfig.StateMachineBindState,
+) !void {
+    for (binds) |bind| {
+        if (bind.BindBuff) |buff| {
+            try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
         }
     }
 }
@@ -417,10 +423,17 @@ fn clearTag(comp: anytype, tag_id: i64) void {
     }
 }
 
-fn applyPathLifecycle(comp: anytype, gpa: mem.Allocator, active_path: []const i32, target_path: []const i32) !void {
+fn applyPathLifecycle(
+    comp: anytype,
+    gpa: mem.Allocator,
+    fsm_id: i32,
+    active_path: []const i32,
+    target_path: []const i32,
+) !void {
     const common_len = StateHierarchy.commonPathPrefixLen(active_path, target_path);
 
     comp.event = null;
+    try removePassesForExitedPath(comp, gpa, fsm_id, active_path, target_path);
 
     var exit_index = active_path.len;
     while (exit_index > common_len) {
@@ -433,14 +446,15 @@ fn applyPathLifecycle(comp: anytype, gpa: mem.Allocator, active_path: []const i3
 
 fn enterNode(comp: anytype, gpa: mem.Allocator, state: i32) !void {
     const node = StateHierarchy.findNode(comp, state) orelse return;
+    try updateActivationBindStates(comp, gpa, node.BindStates, 1);
     try runActions(comp, gpa, node.OnEnterActions);
-    try updateBindStates(comp, gpa, node.BindStates, 1);
+    try enterBindStates(comp, gpa, node.BindStates);
 }
 
 fn exitNode(comp: anytype, gpa: mem.Allocator, state: i32) !void {
     const node = StateHierarchy.findNode(comp, state) orelse return;
+    try updateActivationBindStates(comp, gpa, node.BindStates, -1);
     try runActions(comp, gpa, node.OnExitActions);
-    try updateBindStates(comp, gpa, node.BindStates, -1);
 }
 
 fn setPendingTransition(comp: anytype, runtime: *Types.FsmNode, from: i32, to: i32, now_ms: i64) !void {
@@ -466,8 +480,7 @@ fn commitPending(comp: anytype, runtime: *Types.FsmNode, gpa: mem.Allocator) !vo
     const pending_path = runtime.pending();
     if (pending_path.len == 0) return;
 
-    try applyPathLifecycle(comp, gpa, runtime.active(), pending_path);
-    try removePassesForExitedPath(comp, gpa, runtime.fsm_id, runtime.active(), pending_path);
+    try applyPathLifecycle(comp, gpa, runtime.fsm_id, runtime.active(), pending_path);
     @memcpy(runtime.active_path[0..pending_path.len], pending_path);
     @memcpy(runtime.active_since_ms[0..pending_path.len], runtime.pending_since_ms[0..pending_path.len]);
     runtime.active_len = runtime.pending_len;
@@ -490,8 +503,7 @@ fn changeCurrentState(comp: anytype, fsm_id: i32, to: i32, gpa: mem.Allocator, n
     }
 
     Blackboard.preparePath(comp, target_path[0..active_len], target_since_ms[0..active_len], true);
-    try applyPathLifecycle(comp, gpa, runtime.active(), target_path[0..active_len]);
-    try removePassesForExitedPath(comp, gpa, runtime.fsm_id, runtime.active(), target_path[0..active_len]);
+    try applyPathLifecycle(comp, gpa, runtime.fsm_id, runtime.active(), target_path[0..active_len]);
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
     @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);
     runtime.active_len = @intCast(active_len);
