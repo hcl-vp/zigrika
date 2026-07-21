@@ -104,14 +104,19 @@ fn useRepeatBossStartup(ai_id: ?i32, assets: *const Assets) bool {
     return false;
 }
 
-fn initialTagComponent(components: *const Components, repeat_boss_startup: bool, gpa: std.mem.Allocator) !Entity.TagComponent {
+fn initialTagComponent(
+    components: *const Components,
+    tag_remaps: *const Assets.DataTables.GameplayTagRemapTable,
+    repeat_boss_startup: bool,
+    gpa: std.mem.Allocator,
+) !Entity.TagComponent {
     var result: Entity.TagComponent = .{};
     errdefer result.deinit(gpa);
 
     const monster = components.MonsterComponent orelse return result;
     const startup_tags = monster.InitGasTag orelse return result;
     for (startup_tags) |tag_name| {
-        var tag_id = try gameplay_tags.idFromName(tag_name);
+        var tag_id = try gameplay_tags.idFromName(tag_remaps, tag_name);
         if (tag_id == 0) continue;
         if (repeat_boss_startup and tag_id == story_boss_tag_id) tag_id = repeat_boss_tag_id;
         _ = try result.adjustGameplayTagCount(gpa, tag_id, 1);
@@ -365,7 +370,12 @@ pub const spawn = struct {
         else
             null;
         var tag_component: ?Entity.TagComponent = if (use_ai_runtime)
-            try initialTagComponent(&components_data, repeat_boss_startup, alloc.gpa)
+            try initialTagComponent(
+                &components_data,
+                &assets.tables.gameplay_tag_remap,
+                repeat_boss_startup,
+                alloc.gpa,
+            )
         else
             null;
         errdefer if (tag_component) |*tags| tags.deinit(alloc.gpa);

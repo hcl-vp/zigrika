@@ -25,7 +25,7 @@ pub fn contains(
     return false;
 }
 
-pub fn idFromName(name: []const u8) !i32 {
+pub fn idFromName(remaps: *const DataTables.GameplayTagRemapTable, name: []const u8) !i32 {
     const view = try std.unicode.Utf8View.init(name);
     var iterator = view.iterator();
     var hash: u32 = 0;
@@ -41,7 +41,8 @@ pub fn idFromName(name: []const u8) !i32 {
         mixCodeUnit(&hash, @intCast(0xDC00 + (value & 0x3FF)));
     }
 
-    return @bitCast(hash);
+    const raw_id: i32 = @bitCast(hash);
+    return if (remaps.getDataById(raw_id)) |entry| entry.CanonicalId else raw_id;
 }
 
 fn mixCodeUnit(hash: *u32, code_unit: u16) void {
