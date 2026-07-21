@@ -9,31 +9,100 @@ const Types = @import("Types.zig");
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 const pending_transition_timeout_ms = 3000;
 
-pub fn needsServerTick(comp: anytype) bool {
-    if (comp.blackboard_dirty != 0) return true;
-    if (comp.lifecycle_effects_pending) return true;
-    if (comp.lifecycle_effects.items.len != 0) return true;
-    if (comp.paralysis_active) return true;
-    if (comp.dissolve_combine_signal) return true;
-    if (comp.in_hate) return true;
+pub fn refreshWakeRequirements(comp: anytype, now_ms: i64) void {
+    for (comp.runtime_nodes) |*runtime| refreshRootWakeRequirements(comp, runtime, now_ms, true);
+}
 
+pub fn refreshRootTimer(comp: anytype, fsm_id: i32, now_ms: i64) void {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return;
+    refreshRootWakeRequirements(comp, runtime, now_ms, false);
+}
+
+pub fn markDirty(comp: anytype, reason: Types.WakeMask) bool {
+    var marked = false;
+    for (comp.runtime_nodes) |*runtime| {
+        const relevant = if (reason & Types.WakeReason.initial != 0)
+            reason
+        else
+            reason & runtime.wake_dependencies;
+        if (relevant == 0) continue;
+        runtime.dirty_reasons |= relevant;
+        marked = true;
+    }
+    return marked;
+}
+
+pub fn markRootDirty(comp: anytype, fsm_id: i32, reason: Types.WakeMask) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    const relevant = if (reason & Types.WakeReason.initial != 0)
+        reason
+    else
+        reason & runtime.wake_dependencies;
+    if (relevant == 0) return false;
+    runtime.dirty_reasons |= relevant;
+    return true;
+}
+
+pub fn pendingDeadline(comp: anytype) ?i64 {
+    var deadline: ?i64 = null;
     for (comp.runtime_nodes) |runtime| {
-        if (runtime.pending_to != null) return true;
-        const active_path = runtime.active();
-        if (active_path.len < 2) continue;
+        if (runtime.pending_to == null or runtime.pending_started_ms <= 0) continue;
+        const candidate = runtime.pending_started_ms + pending_transition_timeout_ms;
+        deadline = if (deadline) |current| @min(current, candidate) else candidate;
+    }
+    return deadline;
+}
 
-        for (active_path[1..], 1..) |active_state, index| {
-            const parent = StateHierarchy.findNode(comp, active_path[index - 1]) orelse continue;
-            for (parent.Transitions) |transition| {
-                const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
-                if (!StateHierarchy.statesEquivalent(comp, resolved.from, active_state)) continue;
-                const condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
-                if (!(condition.IsClient orelse false) and !std.mem.eql(u8, condition.Name, "CondHate")) return true;
+fn refreshRootWakeRequirements(
+    comp: anytype,
+    runtime: *Types.FsmNode,
+    now_ms: i64,
+    refresh_dependencies: bool,
+) void {
+    if (refresh_dependencies) runtime.wake_dependencies = 0;
+    runtime.next_timer_due_ms = null;
+
+    const active_path = runtime.active();
+    if (active_path.len < 2) return;
+
+    for (active_path[1..], 1..) |active_state, index| {
+        const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse continue;
+        const children = parent_node.Children orelse continue;
+        const canonical_source = StateHierarchy.canonicalState(comp, active_state);
+
+        for (parent_node.Transitions) |transition| {
+            const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
+            if (resolved.from != canonical_source or resolved.from == resolved.to) continue;
+            const target_is_child = for (children) |child| {
+                if (StateHierarchy.statesEquivalent(comp, child, resolved.to)) break true;
+            } else false;
+            if (!target_is_child) continue;
+
+            const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
+            if (refresh_dependencies) {
+                runtime.wake_dependencies |= ConditionEvaluator.dependencyMask(
+                    transition.Conditions,
+                    top_condition,
+                    0,
+                );
+            }
+            if (runtime.pending_to != null) continue;
+            if (ConditionEvaluator.nextTimerDeadline(
+                comp,
+                runtime.fsm_id,
+                transition,
+                transition.Conditions,
+                top_condition,
+                now_ms,
+                0,
+            )) |candidate| {
+                runtime.next_timer_due_ms = if (runtime.next_timer_due_ms) |current|
+                    @min(current, candidate)
+                else
+                    candidate;
             }
         }
     }
-
-    return false;
 }
 
 pub fn recoverExpiredPending(comp: anytype, gpa: mem.Allocator, now_ms: i64) !bool {
@@ -472,6 +541,7 @@ fn setPendingTransition(comp: anytype, runtime: *Types.FsmNode, from: i32, to: i
     runtime.pending_from = StateHierarchy.canonicalState(comp, from);
     runtime.pending_to = StateHierarchy.canonicalState(comp, to);
     runtime.pending_started_ms = now_ms;
+    runtime.next_timer_due_ms = null;
     Blackboard.preparePath(comp, runtime.pending(), runtime.pending_since_ms[0..runtime.pending_len], true);
 }
 

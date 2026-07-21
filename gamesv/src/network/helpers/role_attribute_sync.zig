@@ -28,6 +28,7 @@ pub fn refreshRole(
         if (config.config_id != role_id) continue;
 
         try RoleStats.refreshAttributeComponent(alloc.gpa, assets, role_comp, role_id, weapon_comp, echo_comp, attr_comp);
+        try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.attribute);
         try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.AttributeComponent});
         try pushAttributeChange(txn, alloc, entity.net_id, attr_comp);
         break;

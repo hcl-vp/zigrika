@@ -109,7 +109,10 @@ pub fn extract(s: *State, comptime T: type) !T {
     if (is_struct and @hasDecl(T, "scene_query_types")) {
         if (s.scene) |*scene| {
             return .{
-                .iterator = .{ .entities = &scene.entities },
+                .iterator = .{
+                    .entities = &scene.entities,
+                    .net_id_map = &scene.net_id_map,
+                },
             };
         } else {
             return error.NotInScene;

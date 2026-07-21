@@ -32,31 +32,45 @@ pub fn handleFsmTick(
     query: FsmQuery,
 ) !void {
     const now_ms = event.data.now_ms;
-    const elapsed_ms = takeFsmElapsedMs(scene, now_ms);
-
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
 
-    var it = query.iterator;
-    while (it.next()) |item| {
+    while (scene.fsm_wakes.popDue(now_ms)) |due| {
+        switch (due.kind) {
+            .root_timer => try scene.markFsmRootDirty(
+                alloc.gpa,
+                due.entity_id,
+                due.fsm_id,
+                Entity.FsmComponent.WakeReason.timer,
+            ),
+            .pending_timeout, .paralysis => try scene.queueFsmSync(alloc.gpa, due.entity_id),
+        }
+    }
+
+    while (scene.fsm_wakes.popDirty()) |entity_id| {
+        const item = query.byNetId(entity_id) orelse continue;
         const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
         try fsm.initRuntime(alloc.gpa, now_ms);
-        defer fsm.finishTick(now_ms);
-        if (!fsm.needsServerTick()) continue;
 
-        try updateParalysis(entity, fsm, attribute, elapsed_ms, alloc, conn, io);
+        if (fsm.paralysis_active and fsm.paralysis_next_ms != null and fsm.paralysis_next_ms.? <= now_ms) {
+            try updateParalysis(entity, fsm, attribute, now_ms, alloc, conn, io);
+        }
 
         if (try fsm.recoverExpiredPending(alloc.gpa, now_ms)) {
             try fsm.appendResetNotify(entity.net_id, alloc.arena, &data, assets);
         }
-        if (try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) continue;
-        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{
-            .attribute = attribute,
-            .buffs = buffs,
-            .logic_state = logic_state,
-            .tags = tags,
-            .parts = if (parts) |part| part.states() else null,
-            .now_ms = now_ms,
-        });
+        const lifecycle_deferred = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+        if (!lifecycle_deferred) {
+            try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, &data, .{
+                .attribute = attribute,
+                .buffs = buffs,
+                .logic_state = logic_state,
+                .tags = tags,
+                .parts = if (parts) |part| part.states() else null,
+                .now_ms = now_ms,
+            });
+            fsm.finishTick(now_ms);
+        }
+        try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
     }
 
     if (data.items.len != 0) {
@@ -66,6 +80,7 @@ pub fn handleFsmTick(
 
 pub fn handleFsmServerAction(
     event: EventQueue.Dequeue(.fsm_server_action),
+    scene: *Scene,
     conn: *Connection,
     events: *EventQueue,
     buff_timers: *BuffTimerScheduler,
@@ -77,7 +92,11 @@ pub fn handleFsmServerAction(
     const entity, const fsm, const attribute, const buffs, _, const tags, const parts = item;
 
     switch (event.data.kind) {
-        .cue_paralysis => fsm.paralysis_active = true,
+        .cue_paralysis => {
+            const now_ms = std.Io.Clock.awake.now(io).toMilliseconds();
+            fsm.activateParalysis(now_ms);
+            try scene.queueFsmSync(alloc.gpa, entity.net_id);
+        },
         .reset_status => {
             if (attribute) |attr| try resetStatusAttributes(entity.net_id, attr, conn, alloc, io);
             if (buffs) |buff_comp| {
@@ -85,25 +104,70 @@ pub fn handleFsmServerAction(
                 for (buff_comp.fight_buff_infos, 0..) |buff, index| handles[index] = buff.HandleId;
                 try buff_handlers.removeBuffHandles(entity, handles, buff_comp, conn, events, alloc, buff_timers);
             }
+            try scene.markFsmDirty(
+                alloc.gpa,
+                entity.net_id,
+                Entity.FsmComponent.WakeReason.attribute | Entity.FsmComponent.WakeReason.buff,
+            );
         },
         .set_rage_full => if (attribute) |attr| {
             const changed = try setRageFullAttributes(attr, alloc);
             try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
+            if (changed.items.len != 0) {
+                try scene.markFsmDirty(alloc.gpa, entity.net_id, Entity.FsmComponent.WakeReason.attribute);
+            }
         },
-        .instance_state => |tag_id| try applyInstanceState(entity, fsm, tags, tag_id, events, alloc),
+        .instance_state => |tag_id| {
+            try applyInstanceState(entity, fsm, tags, tag_id, events, alloc);
+            try scene.markFsmDirty(alloc.gpa, entity.net_id, Entity.FsmComponent.WakeReason.tag);
+        },
         .activate_part => |action| if (parts) |part| {
             var changed: std.ArrayList(usize) = .empty;
             defer changed.deinit(alloc.gpa);
             try part.activate(action.name, action.activate, tags, &changed, alloc.gpa);
             try pushPartChanges(entity.net_id, part, changed.items, conn, alloc);
+            if (changed.items.len != 0) {
+                try scene.markFsmDirty(
+                    alloc.gpa,
+                    entity.net_id,
+                    Entity.FsmComponent.WakeReason.part | Entity.FsmComponent.WakeReason.tag,
+                );
+            }
         },
         .reset_part => |action| if (parts) |part| {
             var changed: std.ArrayList(usize) = .empty;
             defer changed.deinit(alloc.gpa);
             try part.reset(action.name, action.reset_activate, action.reset_life, tags, &changed, alloc.gpa);
             try pushPartChanges(entity.net_id, part, changed.items, conn, alloc);
+            if (changed.items.len != 0) {
+                try scene.markFsmDirty(
+                    alloc.gpa,
+                    entity.net_id,
+                    Entity.FsmComponent.WakeReason.part | Entity.FsmComponent.WakeReason.tag,
+                );
+            }
         },
     }
+}
+
+pub fn handleFsmBuffChange(
+    event: EventQueue.Dequeue(.buff_change),
+    scene: *Scene,
+    alloc: mem.Alloc,
+) !void {
+    try scene.markFsmDirty(
+        alloc.gpa,
+        event.data.entity.net_id,
+        Entity.FsmComponent.WakeReason.buff | Entity.FsmComponent.WakeReason.attribute,
+    );
+}
+
+pub fn handleFsmGameplayTagChange(
+    event: EventQueue.Dequeue(.gameplay_tag_change),
+    scene: *Scene,
+    alloc: mem.Alloc,
+) !void {
+    try scene.markFsmDirty(alloc.gpa, event.data.entity.net_id, Entity.FsmComponent.WakeReason.tag);
 }
 
 fn pushPartChanges(
@@ -167,7 +231,7 @@ fn updateParalysis(
     entity: Entity,
     fsm: *Entity.FsmComponent,
     attribute: ?*Entity.AttributeComponent,
-    elapsed_ms: i64,
+    now_ms: i64,
     alloc: mem.Alloc,
     conn: *Connection,
     io: std.Io,
@@ -175,17 +239,23 @@ fn updateParalysis(
     if (!fsm.paralysis_active) return;
     const attr = attribute orelse {
         fsm.paralysis_active = false;
+        fsm.paralysis_next_ms = null;
         return;
     };
     const time_index = @intFromEnum(pb.EAttributeType.ParalysisTime);
     const recover_index = @intFromEnum(pb.EAttributeType.ParalysisTimeRecover);
     if (time_index >= attr.attributes.len or recover_index >= attr.attributes.len) {
         fsm.paralysis_active = false;
+        fsm.paralysis_next_ms = null;
         return;
     }
 
+    const elapsed_ms = @max(now_ms - fsm.paralysis_last_ms, 0);
     const changed = try advanceParalysisAttributes(fsm, attr, elapsed_ms, alloc);
     try pushAttributeChanges(entity.net_id, attr, &changed, conn, alloc, io);
+    if (changed.items.len != 0) _ = fsm.markDirty(Entity.FsmComponent.WakeReason.attribute);
+    fsm.paralysis_last_ms = @max(fsm.paralysis_last_ms, now_ms);
+    fsm.paralysis_next_ms = if (fsm.paralysis_active) now_ms + 50 else null;
 }
 
 fn advanceParalysisAttributes(
@@ -212,14 +282,6 @@ fn advanceParalysisAttributes(
         }
     }
     return changed;
-}
-
-fn takeFsmElapsedMs(scene: *Scene, now_ms: i64) i64 {
-    const previous_ms = scene.scene_time.last_fsm_tick_time;
-    if (now_ms <= previous_ms) return 0;
-    scene.scene_time.last_fsm_tick_time = now_ms;
-    if (previous_ms == 0) return 0;
-    return now_ms - previous_ms;
 }
 
 fn scaledParalysisRecovery(recover: i32, elapsed_ms: i64) i32 {
@@ -294,6 +356,7 @@ fn pushAttributeChanges(
 
 pub fn handleFsmLifecycleComplete(
     event: EventQueue.Dequeue(.fsm_lifecycle_complete),
+    scene: *Scene,
     conn: *Connection,
     events: *EventQueue,
     alloc: mem.Alloc,
@@ -303,24 +366,31 @@ pub fn handleFsmLifecycleComplete(
     const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
 
     fsm.completeLifecycleEffects();
-    defer fsm.finishTick(event.data.now_ms);
     const recheck = event.data.recheck or fsm.takeLifecycleRecheckRequest();
     const lifecycle_deferred = if (recheck)
         try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, event.data.now_ms)
     else
         try FsmLifecycle.enqueueEffectsWithoutRecheck(entity, fsm, events, alloc, event.data.now_ms);
-    if (lifecycle_deferred or !recheck) return;
-
-    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
-    try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, .{
-        .attribute = attribute,
-        .buffs = buffs,
-        .logic_state = logic_state,
-        .tags = tags,
-        .parts = if (parts) |part| part.states() else null,
-        .now_ms = event.data.now_ms,
-    });
-    if (data.items.len != 0) {
-        try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    if (!lifecycle_deferred) {
+        var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+        const ctx: Entity.FsmComponent.EvalContext = .{
+            .attribute = attribute,
+            .buffs = buffs,
+            .logic_state = logic_state,
+            .tags = tags,
+            .parts = if (parts) |part| part.states() else null,
+            .now_ms = event.data.now_ms,
+        };
+        if (recheck) {
+            try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, &data, ctx);
+        } else {
+            fsm.clearDirtyReason(Entity.FsmComponent.WakeReason.initial);
+            try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, &data, ctx);
+        }
+        if (data.items.len != 0) {
+            try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+        }
     }
+    fsm.finishTick(event.data.now_ms);
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 }

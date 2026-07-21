@@ -121,6 +121,113 @@ pub fn transitionUsesDissolveCombine(conditions: []const AiStateMachineConfig.St
     return conditionUsesDissolveCombine(conditions, root, 0);
 }
 
+pub fn dependencyMask(
+    conditions: []const AiStateMachineConfig.StateMachineCondition,
+    condition: AiStateMachineConfig.StateMachineCondition,
+    depth: usize,
+) Types.WakeMask {
+    if (depth > 12) return 0;
+    if (condition.IsClient orelse false) return Types.WakeReason.client_pass;
+
+    if (condition.CondAnd) |data| {
+        var mask: Types.WakeMask = 0;
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            mask |= dependencyMask(conditions, child, depth + 1);
+        }
+        return mask;
+    }
+    if (condition.CondOr) |data| {
+        var mask: Types.WakeMask = 0;
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            mask |= dependencyMask(conditions, child, depth + 1);
+        }
+        return mask;
+    }
+
+    if (condition.CondTimer != null) return Types.WakeReason.timer;
+    if (std.mem.eql(u8, condition.Name, "CondHate")) return Types.WakeReason.hate;
+    if (std.mem.eql(u8, condition.Name, "CondTrue") or
+        condition.CondCheckState != null or
+        condition.CondCheckStateByName != null or
+        condition.CondCheckLastState != null) return Types.WakeReason.state;
+    if (condition.CondListenEvent != null) return Types.WakeReason.event;
+    if (condition.CondCheckPositionState != null) return Types.WakeReason.position;
+    if (condition.CondAttribute != null or condition.CondAttributeRate != null) return Types.WakeReason.attribute;
+    if (condition.CondTag != null or condition.CondInstStateChange != null) return Types.WakeReason.tag;
+    if (condition.CondBuffStack != null) return Types.WakeReason.buff;
+    if (condition.CondPartLife != null or condition.CondCheckPartActivated != null) return Types.WakeReason.part;
+    if (condition.CondCheckDissolveCombine != null) return Types.WakeReason.dissolve;
+    return 0;
+}
+
+pub fn nextTimerDeadline(
+    comp: anytype,
+    fsm_id: i32,
+    transition: AiStateMachineConfig.StateMachineTransition,
+    conditions: []const AiStateMachineConfig.StateMachineCondition,
+    condition: AiStateMachineConfig.StateMachineCondition,
+    now_ms: i64,
+    depth: usize,
+) ?i64 {
+    if (depth > 12 or (condition.IsClient orelse false)) return null;
+
+    if (condition.CondAnd) |data| {
+        var next: ?i64 = null;
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            next = earlierDeadline(next, nextTimerDeadline(
+                comp,
+                fsm_id,
+                transition,
+                conditions,
+                child,
+                now_ms,
+                depth + 1,
+            ));
+        }
+        return next;
+    }
+    if (condition.CondOr) |data| {
+        var next: ?i64 = null;
+        for (data.Conditions) |index| {
+            const child = findCondition(conditions, index) orelse continue;
+            next = earlierDeadline(next, nextTimerDeadline(
+                comp,
+                fsm_id,
+                transition,
+                conditions,
+                child,
+                now_ms,
+                depth + 1,
+            ));
+        }
+        return next;
+    }
+
+    const timer = condition.CondTimer orelse return null;
+    const activated_at = activationTime(comp, fsm_id, transition.From) orelse return null;
+    const min_ms = @max(@as(i64, timer.MinTime), 0);
+    const configured_max = @as(i64, timer.MaxTime orelse timer.MinTime);
+    const max_ms = @max(configured_max, min_ms);
+    const deadline = activated_at + timerDelayMs(
+        StateHierarchy.canonicalState(comp, fsm_id),
+        StateHierarchy.canonicalState(comp, transition.From),
+        StateHierarchy.canonicalState(comp, transition.To),
+        condition.Index,
+        activated_at,
+        min_ms,
+        max_ms,
+    );
+    return if (deadline > now_ms) deadline else null;
+}
+
+fn earlierDeadline(a: ?i64, b: ?i64) ?i64 {
+    if (a) |left| return if (b) |right| @min(left, right) else left;
+    return b;
+}
+
 fn conditionUsesDissolveCombine(
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,

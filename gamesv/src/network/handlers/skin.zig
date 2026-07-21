@@ -271,7 +271,10 @@ fn refreshRoleOrnamentEntity(
             .OrnamentComponentPb = try ornament_comp.toProto(),
         }, alloc.arena);
 
-        if (combat_notify.Data.items.len != 0) try txn.conn.push(combat_notify, alloc.arena);
+        if (combat_notify.Data.items.len != 0) {
+            try txn.conn.push(combat_notify, alloc.arena);
+            try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.buff);
+        }
         return;
     }
 }

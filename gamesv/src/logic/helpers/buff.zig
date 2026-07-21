@@ -139,6 +139,9 @@ fn executeBuffEffects(
             query,
             alloc,
         );
+        if (change.items.len != 0) {
+            try scene.markFsmDirty(alloc.gpa, target_entity.net_id, Entity.FsmComponent.WakeReason.attribute);
+        }
         try scene.saveComponents(fs, alloc.gpa, target_entity, &.{Entity.AttributeComponent});
         try attributes_helper.generate_attr_messages(
             combat_receive_pack,

@@ -25,6 +25,8 @@ pub const Transition = FsmTypes.Transition;
 pub const LifecycleEffect = FsmTypes.LifecycleEffect;
 pub const ConfirmResult = FsmTypes.ConfirmResult;
 pub const ClientPassResult = FsmTypes.ClientPassResult;
+pub const WakeMask = FsmTypes.WakeMask;
+pub const WakeReason = FsmTypes.WakeReason;
 
 graph: *const FsmGraph = &FsmGraph.empty,
 tag_parents: *const GameplayTagParentTable = &GameplayTagParentTable.init,
@@ -36,6 +38,8 @@ lifecycle_effects_pending: bool = false,
 lifecycle_recheck_requested: bool = false,
 in_hate: bool = false,
 paralysis_active: bool = false,
+paralysis_last_ms: i64 = 0,
+paralysis_next_ms: ?i64 = null,
 dissolve_combine_signal: bool = false,
 instance_state_tag: ?i32 = null,
 event: ?[]const u8 = null,
@@ -103,6 +107,8 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
         Blackboard.preparePath(comp, runtime.active(), runtime.active_since_ms[0..runtime.active_len], false);
         try TransitionEngine.enterPath(comp, gpa, runtime.active());
     }
+    TransitionEngine.refreshWakeRequirements(comp, now_ms);
+    _ = TransitionEngine.markDirty(comp, WakeReason.initial);
     comp.blackboard_dirty = 0;
     comp.finishTick(now_ms);
 }
@@ -118,8 +124,26 @@ pub fn finishTick(comp: *Component, now_ms: i64) void {
     comp.last_tick_ms = now_ms;
 }
 
-pub fn needsServerTick(comp: *const Component) bool {
-    return TransitionEngine.needsServerTick(comp);
+pub fn markDirty(comp: *Component, reason: WakeMask) bool {
+    return TransitionEngine.markDirty(comp, reason);
+}
+
+pub fn markRootDirty(comp: *Component, fsm_id: i32, reason: WakeMask) bool {
+    return TransitionEngine.markRootDirty(comp, fsm_id, reason);
+}
+
+pub fn clearDirtyReason(comp: *Component, reason: WakeMask) void {
+    for (comp.runtime_nodes) |*runtime| runtime.dirty_reasons &= ~reason;
+}
+
+pub fn pendingDeadline(comp: *const Component) ?i64 {
+    return TransitionEngine.pendingDeadline(comp);
+}
+
+pub fn activateParalysis(comp: *Component, now_ms: i64) void {
+    comp.paralysis_active = true;
+    comp.paralysis_last_ms = now_ms;
+    comp.paralysis_next_ms = now_ms + 50;
 }
 
 pub fn lifecycleEffects(comp: *const Component) []const LifecycleEffect {
@@ -161,7 +185,12 @@ pub fn clearEncounterTargetReference(comp: *Component, target_id: i32) bool {
 }
 
 pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
-    return TransitionEngine.recoverExpiredPending(comp, gpa, now_ms);
+    const recovered = try TransitionEngine.recoverExpiredPending(comp, gpa, now_ms);
+    if (recovered) {
+        TransitionEngine.refreshWakeRequirements(comp, now_ms);
+        _ = TransitionEngine.markDirty(comp, WakeReason.initial);
+    }
+    return recovered;
 }
 
 pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
@@ -185,8 +214,16 @@ pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey,
     return TransitionEngine.recordClientPass(comp, gpa, key, value);
 }
 
-pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator) !ConfirmResult {
-    return TransitionEngine.confirmPending(comp, fsm_id, state, gpa);
+pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
+    const result = try TransitionEngine.confirmPending(comp, fsm_id, state, gpa);
+    switch (result) {
+        .confirmed, .accepted => {
+            TransitionEngine.refreshWakeRequirements(comp, now_ms);
+            _ = TransitionEngine.markRootDirty(comp, fsm_id, WakeReason.initial);
+        },
+        else => {},
+    }
+    return result;
 }
 
 pub fn confirmStateRequest(
@@ -197,7 +234,15 @@ pub fn confirmStateRequest(
     gpa: mem.Allocator,
     now_ms: i64,
 ) !ConfirmResult {
-    return TransitionEngine.confirmStateRequest(comp, fsm_id, from, to, gpa, now_ms);
+    const result = try TransitionEngine.confirmStateRequest(comp, fsm_id, from, to, gpa, now_ms);
+    switch (result) {
+        .confirmed, .accepted => {
+            TransitionEngine.refreshWakeRequirements(comp, now_ms);
+            _ = TransitionEngine.markRootDirty(comp, fsm_id, WakeReason.initial);
+        },
+        else => {},
+    }
+    return result;
 }
 
 pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
@@ -212,10 +257,36 @@ pub fn appendReadyStateTransitions(
     ctx: EvalContext,
 ) !void {
     try comp.appendBlackboardNotify(entity_id, allocator, output);
-    for (comp.runtime_nodes) |runtime| {
+    for (comp.runtime_nodes, 0..) |runtime, index| {
+        if (runtime.pending_to != null) continue;
         if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
             try comp.appendBlackboardNotify(entity_id, allocator, output);
             try output.append(allocator, transitionNotify(entity_id, transition));
+        }
+        comp.runtime_nodes[index].dirty_reasons = 0;
+    }
+    TransitionEngine.refreshWakeRequirements(comp, ctx.now_ms);
+    if (comp.canDiscardDissolveCombineSignal()) comp.dissolve_combine_signal = false;
+}
+
+pub fn appendDirtyStateTransitions(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+    ctx: EvalContext,
+) !void {
+    try comp.appendBlackboardNotify(entity_id, allocator, output);
+    for (comp.runtime_nodes, 0..) |runtime, index| {
+        if (runtime.dirty_reasons == 0 or runtime.pending_to != null) continue;
+        const dirty_reasons = runtime.dirty_reasons;
+        if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
+            try comp.appendBlackboardNotify(entity_id, allocator, output);
+            try output.append(allocator, transitionNotify(entity_id, transition));
+        }
+        comp.runtime_nodes[index].dirty_reasons = 0;
+        if (dirty_reasons & WakeReason.timer != 0) {
+            TransitionEngine.refreshRootTimer(comp, runtime.fsm_id, ctx.now_ms);
         }
     }
     if (comp.canDiscardDissolveCombineSignal()) comp.dissolve_combine_signal = false;
@@ -246,9 +317,15 @@ pub fn checkTransitions(
     fsm_id: i32,
     ctx: EvalContext,
 ) !?pb.CombatReceiveData {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id);
+    if (runtime) |node| {
+        if (node.pending_to != null) return null;
+    }
     if (try comp.findReadyTransition(fsm_id, ctx)) |transition| {
+        if (runtime) |node| node.dirty_reasons = 0;
         return transitionNotify(entity_id, transition);
     }
+    if (runtime) |node| node.dirty_reasons = 0;
 
     return null;
 }
@@ -261,7 +338,7 @@ pub fn checkAndConfirm(
     ctx: EvalContext,
 ) !?pb.CombatReceiveData {
     const transition = (try comp.findReadyTransition(fsm_id, ctx)) orelse return null;
-    _ = try comp.confirmPending(fsm_id, transition.to, gpa);
+    _ = try comp.confirmPending(fsm_id, transition.to, gpa, ctx.now_ms);
     return transitionNotify(entity_id, transition);
 }
 

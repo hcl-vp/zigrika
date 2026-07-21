@@ -85,6 +85,7 @@ fn syncWeaponPassiveBuffs(
 
     if (notify.Data.items.len == 0) return false;
     try txn.conn.push(notify, alloc.arena);
+    try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.buff);
     return true;
 }
 

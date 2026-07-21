@@ -119,7 +119,7 @@ pub fn handleSceneCleanupTick(
     if (data.items.len == 0) return;
 
     try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
-    for (combine_detaches) |detach| scene.signalFsmDissolveCombine(detach.combine_entity_id);
+    for (combine_detaches) |detach| try scene.signalFsmDissolveCombine(alloc.gpa, detach.combine_entity_id);
     scene.clearPendingCombineDetaches();
 }
 
@@ -574,7 +574,6 @@ pub fn afterSceneJoin(
     scene.scene_time = .{
         .timestamp = now_ms,
         .last_packet_time = now_ms,
-        .last_fsm_tick_time = fsm_now_ms,
         .dilation = 1.0,
     };
     try scene.initFsmRuntimes(alloc.gpa, fsm_now_ms);

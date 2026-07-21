@@ -56,6 +56,7 @@ pub fn HitEndRequest(txn: *dispatch.CombatRequestTxn(.HitEndRequest)) !void {
 
 pub fn AnimationGameplayTagRequest(
     txn: *dispatch.CombatRequestTxn(.AnimationGameplayTagRequest),
+    scene: *Scene,
     query: GameplayTagQuery,
     events: *EventQueue,
     io: std.Io,
@@ -76,6 +77,7 @@ pub fn AnimationGameplayTagRequest(
         return;
     };
     try applyGameplayTagChange(
+        scene,
         entity,
         tags,
         fsm,
@@ -96,6 +98,7 @@ pub fn AnimationGameplayTagRequest(
 pub fn AnimationGameplayTagPush(
     push: pb.AnimationGameplayTagPush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: GameplayTagQuery,
     events: *EventQueue,
     io: std.Io,
@@ -108,6 +111,7 @@ pub fn AnimationGameplayTagPush(
     const tags = optional_tags orelse return;
 
     try applyGameplayTagChange(
+        scene,
         entity,
         tags,
         fsm,
@@ -126,6 +130,7 @@ pub fn AnimationGameplayTagPush(
 
 pub fn ChangeStateRequest(
     txn: *dispatch.CombatRequestTxn(.ChangeStateRequest),
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -206,7 +211,9 @@ pub fn ChangeStateRequest(
             })) |notify| {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
                 try txn.receive_data_pack.append(alloc.arena, notify);
-                _ = try FsmLifecycle.enqueueEffectsWithoutRecheck(entity, fsm, events, alloc, now_ms);
+                if (!try FsmLifecycle.enqueueEffectsWithoutRecheck(entity, fsm, events, alloc, now_ms)) {
+                    fsm.clearDirtyReason(Entity.FsmComponent.WakeReason.initial);
+                }
                 const transition = notify.Message.?.CombatNotifyData.?.Message.?.ChangeStateNotify.?;
                 current_state = transition.ToState;
                 response_error = try errorResult(alloc.arena, .ErrIEntityFsmConfirmNotWait, &.{
@@ -224,6 +231,7 @@ pub fn ChangeStateRequest(
         },
     }
     _ = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
@@ -234,6 +242,7 @@ pub fn ChangeStateRequest(
 
 pub fn ChangeStateConfirmRequest(
     txn: *dispatch.CombatRequestTxn(.ChangeStateConfirmRequest),
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -264,7 +273,7 @@ pub fn ChangeStateConfirmRequest(
     var response_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
 
-    switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa)) {
+    switch (try fsm.confirmPending(txn.payload.FsmId, txn.payload.State, alloc.gpa, now_ms)) {
         .confirmed => {
             response_state = fsm.currentState(txn.payload.FsmId) orelse response_state;
             if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
@@ -296,6 +305,7 @@ pub fn ChangeStateConfirmRequest(
         }),
     }
     _ = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
@@ -306,6 +316,7 @@ pub fn ChangeStateConfirmRequest(
 
 pub fn FsmConditionPassRequest(
     txn: *dispatch.CombatRequestTxn(.FsmConditionPassRequest),
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -337,6 +348,9 @@ pub fn FsmConditionPassRequest(
         .index = txn.payload.ConditionIndex,
     }, txn.payload.Value);
     const response_error = try clientPassError(alloc.arena, pass_result, txn.payload);
+    if (pass_result == .updated) {
+        _ = fsm.markRootDirty(txn.payload.FsmId, Entity.FsmComponent.WakeReason.client_pass);
+    }
     const lifecycle_deferred = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
 
     if (pass_result == .updated and !lifecycle_deferred) {
@@ -352,6 +366,7 @@ pub fn FsmConditionPassRequest(
             try txn.receive_data_pack.append(alloc.arena, notify);
         }
     }
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
@@ -394,23 +409,28 @@ pub fn AiHateRequest(
 
 pub fn LogicStateInitRequest(
     txn: *dispatch.CombatRequestTxn(.LogicStateInitRequest),
+    scene: *Scene,
     query: LogicStateQuery,
+    alloc: mem.Alloc,
 ) !void {
-    updateLogicState(query, txn.payload.EntityId, txn.payload.CombatCommon, txn.payload.InitData);
+    try updateLogicState(scene, query, txn.payload.EntityId, txn.payload.CombatCommon, txn.payload.InitData, alloc);
     txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn SwitchLogicStateRequest(
     txn: *dispatch.CombatRequestTxn(.SwitchLogicStateRequest),
+    scene: *Scene,
     query: LogicStateQuery,
+    alloc: mem.Alloc,
 ) !void {
-    updateLogicState(query, 0, txn.common, txn.payload.States);
+    try updateLogicState(scene, query, 0, txn.common, txn.payload.States, alloc);
     txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn FsmConditionPassPush(
     push: pb.FsmConditionPassPush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -429,20 +449,24 @@ pub fn FsmConditionPassPush(
             .to = push.ToState,
             .index = push.ConditionIndex,
         }, push.Value);
-        const lifecycle_deferred = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
-        if (pass_result != .updated) return;
-        if (lifecycle_deferred) return;
-        if (try fsm.checkTransitions(entity.net_id, push.FsmId, .{
-            .attribute = attribute,
-            .buffs = buffs,
-            .logic_state = logic_state,
-            .tags = tags,
-            .parts = if (parts) |part| part.states() else null,
-            .now_ms = now_ms,
-        })) |notify| {
-            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
-            try receive_data_pack.append(alloc.arena, notify);
+        if (pass_result == .updated) {
+            _ = fsm.markRootDirty(push.FsmId, Entity.FsmComponent.WakeReason.client_pass);
         }
+        const lifecycle_deferred = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+        if (pass_result == .updated and !lifecycle_deferred) {
+            if (try fsm.checkTransitions(entity.net_id, push.FsmId, .{
+                .attribute = attribute,
+                .buffs = buffs,
+                .logic_state = logic_state,
+                .tags = tags,
+                .parts = if (parts) |part| part.states() else null,
+                .now_ms = now_ms,
+            })) |notify| {
+                try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
+                try receive_data_pack.append(alloc.arena, notify);
+            }
+        }
+        try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
     }
 }
 
@@ -465,6 +489,7 @@ pub fn AiHatePush(
 pub fn ChangeStateConfirmPush(
     push: pb.ChangeStateConfirmPush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: FsmQuery,
     events: *EventQueue,
     io: std.Io,
@@ -477,7 +502,7 @@ pub fn ChangeStateConfirmPush(
         const now_ms = queryNow(io);
         try fsm.initRuntime(alloc.gpa, now_ms);
         defer fsm.finishTick(now_ms);
-        switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa)) {
+        switch (try fsm.confirmPending(push.FsmId, push.State, alloc.gpa, now_ms)) {
             .confirmed => {
                 if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
                     try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, receive_data_pack);
@@ -487,39 +512,51 @@ pub fn ChangeStateConfirmPush(
             .accepted, .machine_not_found, .invalid_source, .invalid_target, .mismatch, .no_pending => {},
         }
         _ = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+        try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
     }
 }
 
 pub fn LogicStateInitPush(
     push: pb.LogicStateInitPush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: LogicStateQuery,
+    alloc: mem.Alloc,
 ) !void {
-    updateLogicState(query, push.EntityId, push.CombatCommon orelse common, push.InitData);
+    try updateLogicState(scene, query, push.EntityId, push.CombatCommon orelse common, push.InitData, alloc);
 }
 
 pub fn SwitchLogicStatePush(
     push: pb.SwitchLogicStatePush,
     common: ?pb.CombatCommon,
+    scene: *Scene,
     query: LogicStateQuery,
+    alloc: mem.Alloc,
 ) !void {
-    updateLogicState(query, 0, common, push.States);
+    try updateLogicState(scene, query, 0, common, push.States, alloc);
 }
 
 fn updateLogicState(
+    scene: *Scene,
     query: LogicStateQuery,
     entity_id: i64,
     common: ?pb.CombatCommon,
     state_data: ?pb.LogicStateComponentPb,
-) void {
+    alloc: mem.Alloc,
+) !void {
     const target_id = if (entity_id != 0) entity_id else commonEntityId(common) orelse return;
     const data = state_data orelse return;
     if (query.byNetId(target_id)) |item| {
         _, const logic_state = item;
+        const changed = logic_state.position_state != data.PositionState or
+            logic_state.move_state != data.MoveState or
+            logic_state.direction_state != data.DirectionState or
+            logic_state.position_sub_state != data.PositionSubState;
         logic_state.position_state = data.PositionState;
         logic_state.move_state = data.MoveState;
         logic_state.direction_state = data.DirectionState;
         logic_state.position_sub_state = data.PositionSubState;
+        if (changed) try scene.markFsmDirty(alloc.gpa, target_id, Entity.FsmComponent.WakeReason.position);
     }
 }
 
@@ -566,9 +603,11 @@ fn applyAiHate(
     const fsm = optional_fsm orelse return;
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
-    _ = fsm.setHateFromList(hate_list);
+    if (fsm.setHateFromList(hate_list)) {
+        _ = fsm.markDirty(Entity.FsmComponent.WakeReason.hate);
+    }
     if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
+        try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
             .attribute = attribute,
             .buffs = buffs,
             .logic_state = logic_state,
@@ -577,9 +616,11 @@ fn applyAiHate(
             .now_ms = now_ms,
         });
     }
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 }
 
 fn applyGameplayTagChange(
+    scene: *Scene,
     entity: Entity,
     tags: *Entity.TagComponent,
     optional_fsm: ?*Entity.FsmComponent,
@@ -602,9 +643,10 @@ fn applyGameplayTagChange(
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
+    _ = fsm.markDirty(Entity.FsmComponent.WakeReason.tag);
 
     if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-        try fsm.appendReadyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
+        try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
             .attribute = attribute,
             .buffs = buffs,
             .logic_state = logic_state,
@@ -613,6 +655,7 @@ fn applyGameplayTagChange(
             .now_ms = now_ms,
         });
     }
+    try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
 }
 
 fn queryNow(io: std.Io) i64 {

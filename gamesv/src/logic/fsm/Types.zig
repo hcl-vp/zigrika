@@ -9,6 +9,24 @@ const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 pub const max_state_depth = 32;
 
+pub const WakeMask = u16;
+
+pub const WakeReason = struct {
+    pub const initial: WakeMask = 1 << 0;
+    pub const state: WakeMask = 1 << 1;
+    pub const timer: WakeMask = 1 << 2;
+    pub const tag: WakeMask = 1 << 3;
+    pub const attribute: WakeMask = 1 << 4;
+    pub const buff: WakeMask = 1 << 5;
+    pub const hate: WakeMask = 1 << 6;
+    pub const position: WakeMask = 1 << 7;
+    pub const part: WakeMask = 1 << 8;
+    pub const dissolve: WakeMask = 1 << 9;
+    pub const client_pass: WakeMask = 1 << 10;
+    pub const event: WakeMask = 1 << 11;
+    pub const all: WakeMask = std.math.maxInt(WakeMask);
+};
+
 pub const FsmNode = struct {
     fsm_id: i32,
     active_path: [max_state_depth]i32 = @splat(0),
@@ -22,6 +40,9 @@ pub const FsmNode = struct {
     pending_from: ?i32 = null,
     pending_to: ?i32 = null,
     pending_started_ms: i64 = 0,
+    wake_dependencies: WakeMask = 0,
+    dirty_reasons: WakeMask = 0,
+    next_timer_due_ms: ?i64 = null,
 
     pub fn active(node: *const FsmNode) []const i32 {
         return node.active_path[0..node.active_len];

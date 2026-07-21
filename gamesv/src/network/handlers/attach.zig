@@ -110,7 +110,7 @@ pub fn CharacterDetachRequest(
         .target_entity_id = txn.payload.EntityB,
     };
     txn.receive_data_pack.appendAssumeCapacity(Scene.removeCombineNotify(detach));
-    scene.signalFsmDissolveCombine(combine_entity_id);
+    try scene.signalFsmDissolveCombine(alloc.gpa, combine_entity_id);
     txn.respond(.{ .ErrorCode = .Success });
 }
 

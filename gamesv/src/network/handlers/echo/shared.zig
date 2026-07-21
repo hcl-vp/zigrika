@@ -282,6 +282,12 @@ pub fn refreshRoleEntities(
         const buff_changed = try syncEchoBuffEffects(txn, alloc, scene, assets, entity.net_id, config.config_id, echo_comp, buff_comp);
 
         if (!vision_state.changed and !vision_skill_changed and !attribute_changed and !buff_changed) continue;
+        if (attribute_changed or buff_changed) {
+            var wake_reason: Entity.FsmComponent.WakeMask = 0;
+            if (attribute_changed) wake_reason |= Entity.FsmComponent.WakeReason.attribute;
+            if (buff_changed) wake_reason |= Entity.FsmComponent.WakeReason.buff;
+            try scene.markFsmDirty(alloc.gpa, entity.net_id, wake_reason);
+        }
         try scene.saveComponents(fs, alloc.gpa, entity, &.{
             Entity.VisionSkillComponent,
             Entity.ConcomitantComponent,
