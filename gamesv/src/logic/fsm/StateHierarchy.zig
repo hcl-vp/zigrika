@@ -43,6 +43,11 @@ pub fn findNodeExact(comp: anytype, id: i32) ?*const AiStateMachineConfig.StateM
     return comp.graph.findNodeExact(id);
 }
 
+pub fn isConduitState(comp: anytype, state: i32) bool {
+    const node = findNode(comp, state) orelse return false;
+    return node.IsConduitNode;
+}
+
 pub fn canonicalState(comp: anytype, state: i32) i32 {
     return comp.graph.canonicalState(state);
 }

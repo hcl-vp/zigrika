@@ -213,6 +213,7 @@ pub const StateMachineNode = struct {
     Name: ?[]const u8 = null,
     Children: ?[]const i32 = null,
     IsAnimStateMachine: ?bool = null,
+    IsConduitNode: bool = false,
     Task: ?StateMachineTask = null,
     Transitions: []const StateMachineTransition = &.{},
     OnEnterActions: []const StateMachineAction = &.{},

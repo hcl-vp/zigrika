@@ -133,7 +133,7 @@ pub fn confirmStateRequest(
         return .confirmed;
     }
 
-    if (canFoldPredictedTransition(comp, runtime, from, to)) {
+    if (canApplyNestedTransition(comp, runtime, from, to)) {
         try commitPending(comp, runtime, gpa);
         try changeCurrentState(comp, fsm_id, to, gpa, now_ms);
         return .confirmed;
@@ -226,25 +226,32 @@ fn acceptPredictedTransition(
 ) !bool {
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
     if (!StateHierarchy.pathContains(comp, runtime.active(), from)) return false;
-    if (!hasPredictedTransition(comp, runtime.fsm_id, from, to)) return false;
+    if (!canClientTransition(comp, runtime.fsm_id, from, to)) return false;
 
     try changeCurrentState(comp, fsm_id, to, gpa, now_ms);
     return true;
 }
 
-fn canFoldPredictedTransition(comp: anytype, runtime: *const Types.FsmNode, from: i32, to: i32) bool {
+fn canApplyNestedTransition(comp: anytype, runtime: *const Types.FsmNode, from: i32, to: i32) bool {
     if (!StateHierarchy.pathContains(comp, runtime.pending(), from)) return false;
     if (!StateHierarchy.stateBelongsToFsm(comp, runtime.fsm_id, to)) return false;
-    return hasPredictedTransition(comp, runtime.fsm_id, from, to);
+    if (!allowsNestedTransition(comp, runtime.fsm_id, from)) return false;
+    return canClientTransition(comp, runtime.fsm_id, from, to);
 }
 
-fn hasPredictedTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {
+fn canClientTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {
     const requested = StateHierarchy.resolveOverrideStates(comp, from, to, false);
     const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
     const client_owns_animation = root.IsAnimStateMachine orelse false;
     const flags = comp.graph.transitionFlags(requested.from, requested.to);
-    if (client_owns_animation) return flags & Assets.FsmGraphRegistry.transition_present != 0;
+    if (flags & Assets.FsmGraphRegistry.transition_present == 0) return false;
+    if (client_owns_animation or StateHierarchy.isConduitState(comp, requested.from)) return true;
     return flags & Assets.FsmGraphRegistry.transition_predicted != 0;
+}
+
+fn allowsNestedTransition(comp: anytype, fsm_id: i32, from: i32) bool {
+    const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
+    return (root.IsAnimStateMachine orelse false) or StateHierarchy.isConduitState(comp, from);
 }
 
 fn clientConditionLookup(comp: anytype, fsm_id: i32, from: i32, to: i32, index: i32) Types.ClientConditionLookup {
