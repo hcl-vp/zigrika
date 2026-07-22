@@ -25,6 +25,7 @@ pub const Transition = FsmTypes.Transition;
 pub const LifecycleEffect = FsmTypes.LifecycleEffect;
 pub const ConfirmResult = FsmTypes.ConfirmResult;
 pub const ClientPassResult = FsmTypes.ClientPassResult;
+pub const BehaviorValidation = FsmTypes.BehaviorValidation;
 pub const WakeMask = FsmTypes.WakeMask;
 pub const WakeReason = FsmTypes.WakeReason;
 
@@ -102,7 +103,6 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
     }
 
     comp.event = null;
-    Blackboard.prepareInitial(comp, now_ms);
     for (comp.runtime_nodes) |runtime| {
         Blackboard.preparePath(comp, runtime.active(), runtime.active_since_ms[0..runtime.active_len], false);
         try TransitionEngine.enterPath(comp, gpa, runtime.active());
@@ -247,6 +247,16 @@ pub fn confirmStateRequest(
 
 pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
     return TransitionEngine.currentState(comp, fsm_id);
+}
+
+pub fn validateBehavior(
+    comp: *const Component,
+    fsm_id: i32,
+    state: i32,
+    index: i32,
+    behavior_type: i32,
+) BehaviorValidation {
+    return StateHierarchy.validateBehavior(comp, fsm_id, state, index, behavior_type);
 }
 
 pub fn appendReadyStateTransitions(

@@ -142,13 +142,31 @@ pub const ClientPassResult = enum {
     transition_not_found,
     condition_not_found,
     condition_not_client,
+    condition_context_invalid,
 };
 
-pub const ClientConditionLookup = enum {
-    valid,
+pub const ClientConditionRequirement = enum {
+    none,
+    task,
+    montage,
+    group_patrol,
+    group_perform,
+};
+
+pub const ClientConditionLookup = union(enum) {
+    valid: ClientConditionRequirement,
     transition_not_found,
     condition_not_found,
     condition_not_client,
+    condition_invalid,
+};
+
+pub const BehaviorValidation = enum {
+    valid,
+    machine_not_found,
+    invalid_state,
+    inactive_state,
+    invalid_behavior,
 };
 
 pub const ResolvedStates = struct {

@@ -48,6 +48,63 @@ pub fn isConduitState(comp: anytype, state: i32) bool {
     return node.IsConduitNode;
 }
 
+pub fn validateBehavior(
+    comp: anytype,
+    fsm_id: i32,
+    state: i32,
+    index: i32,
+    behavior_type: i32,
+) Types.BehaviorValidation {
+    const runtime = runtimeNode(comp, fsm_id) orelse return .machine_not_found;
+    if (!stateBelongsToFsm(comp, runtime.fsm_id, state)) return .invalid_state;
+
+    const path_matches = switch (behavior_type) {
+        0, 2, 4 => pathContains(comp, runtime.active(), state) or pathContains(comp, runtime.pending(), state),
+        1, 3 => pathContains(comp, runtime.previous(), state),
+        else => return .invalid_behavior,
+    };
+    if (!path_matches) return .inactive_state;
+    if (index < 0) return .invalid_behavior;
+
+    const node = findNode(comp, state) orelse return .invalid_state;
+    const metadata = comp.graph.findMetadata(state) orelse return .invalid_state;
+    const behavior_index: usize = @intCast(index);
+    return switch (behavior_type) {
+        0 => if (behavior_index < metadata.enter_action_count and
+            Assets.FsmGraphRegistry.actionPayloadMatches(node.OnEnterActions[behavior_index])) .valid else .invalid_behavior,
+        1 => if (behavior_index < metadata.exit_action_count and
+            Assets.FsmGraphRegistry.actionPayloadMatches(node.OnExitActions[behavior_index])) .valid else .invalid_behavior,
+        2, 3 => if (behavior_index < metadata.bind_count and
+            Assets.FsmGraphRegistry.bindPayloadMatches(node.BindStates[behavior_index])) .valid else .invalid_behavior,
+        4 => if (behavior_index == 0 and metadata.task_kind != .none and
+            metadata.task_kind != .unknown and metadata.task_kind != .invalid) .valid else .invalid_behavior,
+        else => .invalid_behavior,
+    };
+}
+
+pub fn clientTaskRequirementSatisfied(
+    comp: anytype,
+    path: []const i32,
+    from_state: i32,
+    to_state: i32,
+    requirement: Types.ClientConditionRequirement,
+) bool {
+    if (requirement == .none) return true;
+    if (path.len == 0) return false;
+    return switch (requirement) {
+        .none => true,
+        .task => taskKindIsUsable(comp, path[path.len - 1]),
+        .montage => (comp.graph.findMetadata(from_state) orelse return false).task_kind.isMontage(),
+        .group_patrol => (comp.graph.findMetadata(to_state) orelse return false).task_kind == .group_patrol,
+        .group_perform => (comp.graph.findMetadata(to_state) orelse return false).task_kind == .group_perform,
+    };
+}
+
+fn taskKindIsUsable(comp: anytype, state: i32) bool {
+    const kind = (comp.graph.findMetadata(state) orelse return false).task_kind;
+    return kind != .none and kind != .unknown and kind != .invalid;
+}
+
 pub fn canonicalState(comp: anytype, state: i32) i32 {
     return comp.graph.canonicalState(state);
 }

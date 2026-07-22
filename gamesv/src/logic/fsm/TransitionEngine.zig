@@ -140,10 +140,21 @@ pub fn recordClientPass(
 
     const resolved = StateHierarchy.resolveOverrideStates(comp, key.from, key.to, false);
     switch (clientConditionLookup(comp, fsm_id, resolved.from, resolved.to, key.index)) {
-        .valid => {},
+        .valid => |requirement| {
+            const path = if (source_is_pending) runtime.pending() else runtime.active();
+            if (!StateHierarchy.clientTaskRequirementSatisfied(
+                comp,
+                path,
+                resolved.from,
+                resolved.to,
+                requirement,
+            ))
+                return .condition_context_invalid;
+        },
         .transition_not_found => return .transition_not_found,
         .condition_not_found => return .condition_not_found,
         .condition_not_client => return .condition_not_client,
+        .condition_invalid => return .condition_context_invalid,
     }
 
     const resolved_key: Types.ConditionKey = .{
@@ -326,6 +337,8 @@ fn allowsNestedTransition(comp: anytype, fsm_id: i32, from: i32) bool {
 fn clientConditionLookup(comp: anytype, fsm_id: i32, from: i32, to: i32, index: i32) Types.ClientConditionLookup {
     var found_transition = false;
     var found_condition = false;
+    var invalid_condition = false;
+    var requirement: Types.ClientConditionRequirement = .none;
     if (findClientConditionRecursive(
         comp,
         StateHierarchy.canonicalState(comp, fsm_id),
@@ -334,11 +347,14 @@ fn clientConditionLookup(comp: anytype, fsm_id: i32, from: i32, to: i32, index: 
         index,
         &found_transition,
         &found_condition,
+        &invalid_condition,
+        &requirement,
         0,
-    )) return .valid;
+    )) return .{ .valid = requirement };
 
     if (!found_transition) return .transition_not_found;
     if (!found_condition) return .condition_not_found;
+    if (invalid_condition) return .condition_invalid;
     return .condition_not_client;
 }
 
@@ -350,6 +366,8 @@ fn findClientConditionRecursive(
     index: i32,
     found_transition: *bool,
     found_condition: *bool,
+    invalid_condition: *bool,
+    requirement: *Types.ClientConditionRequirement,
     depth: usize,
 ) bool {
     if (depth >= Types.max_state_depth) return false;
@@ -362,7 +380,13 @@ fn findClientConditionRecursive(
         found_transition.* = true;
         const condition = ConditionEvaluator.findCondition(transition.Conditions, index) orelse continue;
         found_condition.* = true;
-        if (condition.IsClient orelse false) return true;
+        if (!(condition.IsClient orelse false)) continue;
+        if (!Assets.FsmGraphRegistry.conditionPayloadMatches(condition)) {
+            invalid_condition.* = true;
+            continue;
+        }
+        requirement.* = clientConditionRequirement(condition);
+        return true;
     }
 
     if (node.Children) |children| {
@@ -375,12 +399,24 @@ fn findClientConditionRecursive(
                 index,
                 found_transition,
                 found_condition,
+                invalid_condition,
+                requirement,
                 depth + 1,
             )) return true;
         }
     }
 
     return false;
+}
+
+fn clientConditionRequirement(
+    condition: AiStateMachineConfig.StateMachineCondition,
+) Types.ClientConditionRequirement {
+    if (condition.CondTaskFinish != null) return .task;
+    if (condition.CondMontageTimeRemaining != null or condition.CondMontageTimeElapsing != null) return .montage;
+    if (condition.CondCheckGroupPatrol != null) return .group_patrol;
+    if (condition.CondCheckGroupPerform != null) return .group_perform;
+    return .none;
 }
 
 fn runActions(

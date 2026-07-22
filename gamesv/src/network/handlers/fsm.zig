@@ -17,6 +17,11 @@ const FsmQuery = Scene.Query(&.{
     ?*Entity.PartComponent,
 });
 
+const FsmBehaviorQuery = Scene.Query(&.{
+    Entity,
+    ?*Entity.FsmComponent,
+});
+
 const AiHateQuery = Scene.Query(&.{
     Entity,
     *Entity.MonsterAiComponent,
@@ -376,11 +381,63 @@ pub fn FsmConditionPassRequest(
 
 pub fn FsmStateBehaviorRequest(
     txn: *dispatch.CombatRequestTxn(.FsmStateBehaviorRequest),
+    query: FsmBehaviorQuery,
+    io: std.Io,
+    alloc: mem.Alloc,
 ) !void {
+    const entity_id = commonEntityId(txn.common) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = 0,
+            .ErrorCode = .ErrEntityNotFound,
+        });
+        return;
+    };
+    const item = query.byNetId(entity_id) orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = 0,
+            .ErrorCode = .ErrEntityNotFound,
+        });
+        return;
+    };
+    const optional_fsm = item[1];
+    const fsm = optional_fsm orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = 0,
+            .ErrorCode = .ErrEntityFsmMachineNotExist,
+        });
+        return;
+    };
+
+    const now_ms = queryNow(io);
+    try fsm.initRuntime(alloc.gpa, now_ms);
+    const current_state = fsm.currentState(txn.payload.FsmId) orelse 0;
+    const behavior_type = txn.payload.Type orelse {
+        txn.respond(.{
+            .FsmId = txn.payload.FsmId,
+            .State = current_state,
+            .ErrorCode = .ErrNotStateMachineBehavior,
+        });
+        return;
+    };
+    const validation = fsm.validateBehavior(
+        txn.payload.FsmId,
+        txn.payload.State,
+        txn.payload.Index,
+        @intFromEnum(behavior_type),
+    );
+    const error_code: pb.ErrorCode = switch (validation) {
+        .valid => .Success,
+        .machine_not_found => .ErrEntityFsmMachineNotExist,
+        .invalid_state, .inactive_state => .ErrEntityFsmStateIncorrect,
+        .invalid_behavior => .ErrNotStateMachineBehavior,
+    };
     txn.respond(.{
         .FsmId = txn.payload.FsmId,
-        .State = txn.payload.State,
-        .ErrorCode = .Success,
+        .State = if (validation == .valid) txn.payload.State else current_state,
+        .ErrorCode = error_code,
     });
 }
 
@@ -689,7 +746,12 @@ fn clientPassError(
             payload.FsmId,
             payload.ToState,
         }),
-        .inactive_source, .transition_not_found, .condition_not_found, .condition_not_client => try errorResult(
+        .inactive_source,
+        .transition_not_found,
+        .condition_not_found,
+        .condition_not_client,
+        .condition_context_invalid,
+        => try errorResult(
             arena,
             .ErrIEntityFsmActionNotMatchState,
             &.{ payload.FsmId, payload.FromState, payload.ToState, payload.ConditionIndex },

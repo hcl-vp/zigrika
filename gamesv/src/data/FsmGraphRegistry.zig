@@ -10,6 +10,35 @@ pub const transition_present: u8 = 1 << 0;
 pub const transition_predicted: u8 = 1 << 1;
 const max_state_depth = 32;
 
+pub const TaskKind = enum {
+    none,
+    skill,
+    skill_by_name,
+    random_montage,
+    leave_fight,
+    montage,
+    move_to_target,
+    patrol,
+    be_hit_montage,
+    group_patrol,
+    group_perform,
+    unknown,
+    invalid,
+
+    pub fn isMontage(kind: TaskKind) bool {
+        return kind == .random_montage or kind == .montage or kind == .be_hit_montage;
+    }
+};
+
+pub const NodeMetadata = struct {
+    task_kind: TaskKind = .none,
+    blackboard_mask: u8 = 0,
+    enter_action_count: usize = 0,
+    exit_action_count: usize = 0,
+    bind_count: usize = 0,
+    take_control_type: i32 = 0,
+};
+
 pub const GraphNode = struct {
     key: i32,
     value: *const Node,
@@ -23,10 +52,10 @@ pub const Graph = struct {
     state_list: []const i32 = &.{},
     nodes: []const GraphNode = &.{},
     exact_nodes: std.AutoHashMapUnmanaged(i32, *const Node) = .empty,
+    node_metadata: std.AutoHashMapUnmanaged(i32, NodeMetadata) = .empty,
     alias_to_resolved: std.AutoHashMapUnmanaged(i32, i32) = .empty,
     resolved_to_alias: std.AutoHashMapUnmanaged(i32, i32) = .empty,
     transition_flags: std.AutoHashMapUnmanaged(u64, u8) = .empty,
-    server_montage_count: ?usize = null,
 
     pub fn findNodeExact(graph: *const Graph, id: i32) ?*const Node {
         return graph.exact_nodes.get(id);
@@ -47,6 +76,14 @@ pub const Graph = struct {
             if (graph.findNodeExact(alias)) |node| return node;
         }
         return graph.findNodeExact(canonical);
+    }
+
+    pub fn findMetadata(graph: *const Graph, id: i32) ?NodeMetadata {
+        const canonical = graph.canonicalState(id);
+        if (graph.resolved_to_alias.get(canonical)) |alias| {
+            if (graph.node_metadata.get(alias)) |metadata| return metadata;
+        }
+        return graph.node_metadata.get(canonical);
     }
 
     pub fn transitionFlags(graph: *const Graph, from: i32, to: i32) u8 {
@@ -139,17 +176,7 @@ pub fn buildGraph(
     for (nodes.items) |entry| {
         try putFirst(*const Node, &graph.exact_nodes, arena, entry.key, entry.value);
         try putFirst(*const Node, &graph.exact_nodes, arena, entry.value.Uuid, entry.value);
-
-        if (entry.value.Task) |task| {
-            if (task.TaskRandomMontage) |montage| {
-                if (!montage.RandomByClient and montage.MontageNames.len != 0) {
-                    graph.server_montage_count = if (graph.server_montage_count) |count|
-                        @min(count, montage.MontageNames.len)
-                    else
-                        montage.MontageNames.len;
-                }
-            }
-        }
+        try putFirst(NodeMetadata, &graph.node_metadata, arena, entry.key, nodeMetadata(entry.value));
     }
 
     for (nodes.items) |entry| {
@@ -165,6 +192,129 @@ pub fn buildGraph(
 
     if (!hasValidInitialRoot(&graph)) return null;
     return graph;
+}
+
+pub fn taskKind(task: AiStateMachineConfig.StateMachineTask) TaskKind {
+    return switch (task.Type orelse return .invalid) {
+        1 => if (task.TaskSkill != null) .skill else .invalid,
+        2 => if (task.TaskSkillByName != null) .skill_by_name else .invalid,
+        3 => if (task.TaskRandomMontage != null) .random_montage else .invalid,
+        101 => if (task.TaskLeaveFight != null) .leave_fight else .invalid,
+        102 => if (task.TaskMontage != null) .montage else .invalid,
+        103 => if (task.TaskMoveToTarget != null) .move_to_target else .invalid,
+        104 => if (task.TaskPatrol != null) .patrol else .invalid,
+        105 => if (task.TaskBeHitMontage != null) .be_hit_montage else .invalid,
+        106 => if (task.TaskGroupPatrol != null) .group_patrol else .invalid,
+        107 => if (task.TaskGroupPerform != null) .group_perform else .invalid,
+        else => .unknown,
+    };
+}
+
+pub fn actionPayloadMatches(action: AiStateMachineConfig.StateMachineAction) bool {
+    return switch (action.Type orelse return false) {
+        1 => action.ActionAddBuff != null,
+        2 => action.ActionRemoveBuff != null,
+        3 => action.ActionCastSkill != null,
+        4 => action.ActionCancelSkill != null,
+        7 => action.ActionResetStatus != null,
+        8 => action.ActionEnterFight != null,
+        9 => action.ActionCastSkillByName != null,
+        10 => action.ActionCancelSkillByName != null,
+        11 => action.ActionInstChangeStateTag != null,
+        12 => action.ActionResetPart != null,
+        13 => action.ActionActivatePart != null,
+        14 => action.ActionActivateSkillGroup != null,
+        15 => action.ActionDispatchEvent != null,
+        19 => action.ActionSetRageFullAttribute != null,
+        20 => action.ActionAddTagCount != null,
+        21 => action.ActionRemoveTagCount != null,
+        22 => action.ActionDispatchGameEvent != null,
+        101 => action.ActionCue != null,
+        102 => action.ActionStopMontage != null,
+        103 => action.ActionExitHit != null,
+        104 => action.ActionSendGameplayEvent != null,
+        105 => action.ActionCameraLockOn != null,
+        else => false,
+    };
+}
+
+pub fn bindPayloadMatches(bind: AiStateMachineConfig.StateMachineBindState) bool {
+    return switch (bind.Type orelse return false) {
+        1 => bind.BindBuff != null,
+        2 => bind.BindSkill != null,
+        3 => bind.BindTag != null,
+        4 => bind.BindSkillByName != null,
+        6 => bind.BindSkillCounter != null,
+        7 => bind.BindDelaySuicide != null,
+        102 => bind.BindAiHateConfig != null,
+        103 => bind.BindAiSenseEnable != null,
+        104 => bind.BindCue != null,
+        105 => bind.BindDisableActor != null,
+        108 => bind.BindBoneVisible != null,
+        109 => bind.BindMeshVisible != null,
+        110 => bind.BindBoneCollision != null,
+        111 => bind.BindPartPanelVisible != null,
+        112 => bind.BindDeathMontage != null,
+        113 => bind.BindPalsy != null,
+        114 => bind.BindCollisionChannel != null,
+        115 => bind.BindDisableCollision != null,
+        116 => bind.BindDeathMontageByTag != null,
+        else => false,
+    };
+}
+
+pub fn conditionPayloadMatches(condition: AiStateMachineConfig.StateMachineCondition) bool {
+    return switch (condition.Type orelse return false) {
+        1 => condition.CondAnd != null,
+        2 => condition.CondOr != null,
+        4 => true,
+        11 => condition.CondHpLessThan != null,
+        13 => true,
+        14 => condition.CondTag != null,
+        15 => condition.CondBBValueCompare != null,
+        16 => condition.CondAttrCompare != null,
+        17 => condition.CondAttribute != null,
+        18 => condition.CondAttributeRate != null,
+        19 => condition.CondCheckState != null,
+        20 => true,
+        22 => condition.CondTimer != null,
+        23 => true,
+        24 => condition.CondCheckStateByName != null,
+        25 => condition.CondInstStateChange != null,
+        26 => condition.CondBuffStack != null,
+        27 => condition.CondPartLife != null,
+        28 => condition.CondCheckPartActivated != null,
+        29 => condition.CondListenEvent != null,
+        31 => condition.CondCheckLastState != null,
+        32 => condition.CondCheckDissolveCombine != null,
+        101 => condition.CondTaskFinish != null,
+        102 => condition.CondMontageTimeRemaining != null,
+        103 => condition.CondListenBeHit != null,
+        104 => condition.CondHasMoveInput != null,
+        105 => condition.CondMontageTimeElapsing != null,
+        106 => condition.CondCheckGroupPatrol != null,
+        108 => condition.CondCheckPositionState != null,
+        109 => condition.CondCheckGroupPerform != null,
+        else => false,
+    };
+}
+
+fn nodeMetadata(node: *const Node) NodeMetadata {
+    var metadata: NodeMetadata = .{
+        .enter_action_count = node.OnEnterActions.len,
+        .exit_action_count = node.OnExitActions.len,
+        .bind_count = node.BindStates.len,
+        .take_control_type = node.TakeControlType,
+    };
+    const task = node.Task orelse return metadata;
+    metadata.task_kind = taskKind(task);
+    if (task.TaskRandomMontage) |montage| {
+        if (!montage.RandomByClient and montage.MontageNames.len != 0) metadata.blackboard_mask |= 1 << 1;
+    }
+    if (task.TaskMoveToTarget) |move| {
+        if (move.TargetType == 0) metadata.blackboard_mask |= 1 << 2;
+    }
+    return metadata;
 }
 
 fn hasDeclaredRoot(

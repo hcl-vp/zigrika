@@ -208,8 +208,8 @@ pub fn nextTimerDeadline(
 
     const timer = condition.CondTimer orelse return null;
     const activated_at = activationTime(comp, fsm_id, transition.From) orelse return null;
-    const min_ms = @max(@as(i64, timer.MinTime), 0);
-    const configured_max = @as(i64, timer.MaxTime orelse timer.MinTime);
+    const min_ms = durationMs(timer.MinTime);
+    const configured_max = durationMs(timer.MaxTime orelse timer.MinTime);
     const max_ms = @max(configured_max, min_ms);
     const deadline = activated_at + timerDelayMs(
         StateHierarchy.canonicalState(comp, fsm_id),
@@ -280,8 +280,8 @@ fn timerPasses(
     const activated_at = activationTime(comp, fsm_id, transition.From) orelse return false;
     if (now_ms < activated_at) return false;
 
-    const min_ms = @max(@as(i64, timer.MinTime), 0);
-    const configured_max = @as(i64, timer.MaxTime orelse timer.MinTime);
+    const min_ms = durationMs(timer.MinTime);
+    const configured_max = durationMs(timer.MaxTime orelse timer.MinTime);
     const max_ms = @max(configured_max, min_ms);
     const delay_ms = timerDelayMs(
         StateHierarchy.canonicalState(comp, fsm_id),
@@ -384,7 +384,7 @@ fn partLifeInRange(parts: ?[]const Types.PartState, condition: AiStateMachineCon
         if (part.max_life <= 0) return false;
         break :blk @as(f64, part.life) * 10000.0 / @as(f64, part.max_life);
     } else part.life;
-    return value >= @as(f64, @floatFromInt(condition.Min)) and value <= @as(f64, @floatFromInt(condition.Max));
+    return value >= @as(f64, condition.Min) and value <= @as(f64, condition.Max);
 }
 
 fn partIsActivated(parts: ?[]const Types.PartState, name: []const u8) bool {
@@ -395,17 +395,34 @@ fn partIsActivated(parts: ?[]const Types.PartState, name: []const u8) bool {
     return false;
 }
 
-fn attrInRange(attribute: ?*const AttributeComponent, attribute_id: i32, min: i32, max: i32) bool {
+fn attrInRange(attribute: ?*const AttributeComponent, attribute_id: i32, min: f32, max: f32) bool {
     const attr = attrValue(attribute, attribute_id) orelse return false;
-    return attr >= min and attr <= max;
+    const value: f64 = @floatFromInt(attr);
+    return value >= @as(f64, min) and value <= @as(f64, max);
 }
 
-fn attrRateInRange(attribute: ?*const AttributeComponent, attribute_id: i32, denominator_id: i32, min: i32, max: i32) bool {
+fn attrRateInRange(attribute: ?*const AttributeComponent, attribute_id: i32, denominator: f32, min: f32, max: f32) bool {
+    const denominator_id = attributeIdFromNumber(denominator) orelse return false;
     const numerator = attrValue(attribute, attribute_id) orelse return false;
-    const denominator = attrValue(attribute, denominator_id) orelse return false;
-    if (denominator == 0) return false;
-    const rate = @divTrunc(@as(i64, numerator) * 10000, @as(i64, denominator));
-    return rate >= @as(i64, min) and rate <= @as(i64, max);
+    const denominator_value = attrValue(attribute, denominator_id) orelse return false;
+    if (denominator_value == 0) return false;
+    const rate = @as(f64, @floatFromInt(numerator)) * 10000.0 / @as(f64, @floatFromInt(denominator_value));
+    return rate >= @as(f64, min) and rate <= @as(f64, max);
+}
+
+fn attributeIdFromNumber(value: f32) ?i32 {
+    if (!std.math.isFinite(value) or @trunc(value) != value) return null;
+    if (value < @as(f32, @floatFromInt(std.math.minInt(i32))) or
+        value > @as(f32, @floatFromInt(std.math.maxInt(i32)))) return null;
+    return @intFromFloat(value);
+}
+
+fn durationMs(value: f32) i64 {
+    if (!std.math.isFinite(value) or value <= 0) return 0;
+    const wide: f64 = value;
+    const max: f64 = @floatFromInt(std.math.maxInt(i64));
+    if (wide >= max) return std.math.maxInt(i64);
+    return @intFromFloat(@ceil(wide));
 }
 
 fn attrValue(attribute: ?*const AttributeComponent, attribute_id: i32) ?i32 {

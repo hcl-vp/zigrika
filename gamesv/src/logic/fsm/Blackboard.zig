@@ -118,12 +118,6 @@ pub fn getInitialFsm(
     return result;
 }
 
-pub fn prepareInitial(comp: anytype, now_ms: i64) void {
-    if (comp.graph.server_montage_count) |count| {
-        set(comp, montage_blackboard_key, selectMontageIndex(comp, 0, now_ms, count), false);
-    }
-}
-
 pub fn preparePath(comp: anytype, path: []const i32, activated_at: []const i64, mark_dirty: bool) void {
     for (path, 0..) |state, index| {
         const node = StateHierarchy.findNode(comp, state) orelse continue;
