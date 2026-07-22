@@ -21,6 +21,7 @@ pub fn refreshRootTimer(comp: anytype, fsm_id: i32, now_ms: i64) void {
 pub fn markDirty(comp: anytype, reason: Types.WakeMask) bool {
     var marked = false;
     for (comp.runtime_nodes) |*runtime| {
+        if (!serverEvaluatesRoot(comp, runtime.fsm_id)) continue;
         const relevant = if (reason & Types.WakeReason.initial != 0)
             reason
         else
@@ -34,6 +35,7 @@ pub fn markDirty(comp: anytype, reason: Types.WakeMask) bool {
 
 pub fn markRootDirty(comp: anytype, fsm_id: i32, reason: Types.WakeMask) bool {
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    if (!serverEvaluatesRoot(comp, runtime.fsm_id)) return false;
     const relevant = if (reason & Types.WakeReason.initial != 0)
         reason
     else
@@ -61,6 +63,10 @@ fn refreshRootWakeRequirements(
 ) void {
     if (refresh_dependencies) runtime.wake_dependencies = 0;
     runtime.next_timer_due_ms = null;
+    if (!serverEvaluatesRoot(comp, runtime.fsm_id)) {
+        runtime.dirty_reasons = 0;
+        return;
+    }
 
     const active_path = runtime.active();
     if (active_path.len < 2) return;
@@ -235,6 +241,7 @@ pub fn currentState(comp: anytype, fsm_id: i32) ?i32 {
 pub fn findReadyTransition(comp: anytype, fsm_id: i32, ctx: Types.EvalContext) !?Types.Transition {
     if (comp.lifecycle_effects_pending) return null;
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return null;
+    if (!serverEvaluatesRoot(comp, runtime.fsm_id)) return null;
     if (runtime.pending_to != null) return null;
 
     const active_path = runtime.active();
@@ -332,6 +339,11 @@ fn canClientTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {
 fn allowsNestedTransition(comp: anytype, fsm_id: i32, from: i32) bool {
     const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
     return (root.IsAnimStateMachine orelse false) or StateHierarchy.isConduitState(comp, from);
+}
+
+fn serverEvaluatesRoot(comp: anytype, fsm_id: i32) bool {
+    const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
+    return !(root.IsAnimStateMachine orelse false);
 }
 
 fn clientConditionLookup(comp: anytype, fsm_id: i32, from: i32, to: i32, index: i32) Types.ClientConditionLookup {

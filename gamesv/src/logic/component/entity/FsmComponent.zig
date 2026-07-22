@@ -114,13 +114,21 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
 }
 
 pub fn finishTick(comp: *Component, now_ms: i64) void {
+    comp.finishTickInternal(now_ms, true);
+}
+
+pub fn finishTickPreservingEvent(comp: *Component, now_ms: i64) void {
+    comp.finishTickInternal(now_ms, false);
+}
+
+fn finishTickInternal(comp: *Component, now_ms: i64, clear_event: bool) void {
     if (comp.lifecycle_effects_pending) return;
     for (comp.runtime_nodes) |*runtime| {
         const active_path = runtime.active();
         @memcpy(runtime.previous_path[0..active_path.len], active_path);
         runtime.previous_len = runtime.active_len;
     }
-    comp.event = null;
+    if (clear_event) comp.event = null;
     comp.last_tick_ms = now_ms;
 }
 
@@ -130,6 +138,14 @@ pub fn markDirty(comp: *Component, reason: WakeMask) bool {
 
 pub fn markRootDirty(comp: *Component, fsm_id: i32, reason: WakeMask) bool {
     return TransitionEngine.markRootDirty(comp, fsm_id, reason);
+}
+
+pub fn rootIsDirty(comp: *const Component, fsm_id: i32) bool {
+    const canonical_fsm_id = StateHierarchy.canonicalState(comp, fsm_id);
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.fsm_id == canonical_fsm_id) return runtime.dirty_reasons != 0;
+    }
+    return false;
 }
 
 pub fn clearDirtyReason(comp: *Component, reason: WakeMask) void {

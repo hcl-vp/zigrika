@@ -161,7 +161,11 @@ pub fn ChangeStateRequest(
     const entity, const fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
     const now_ms = queryNow(io);
     try fsm.initRuntime(alloc.gpa, now_ms);
-    defer fsm.finishTick(now_ms);
+    var preserve_event_for_followup = false;
+    defer if (preserve_event_for_followup)
+        fsm.finishTickPreservingEvent(now_ms)
+    else
+        fsm.finishTick(now_ms);
 
     var current_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
@@ -173,18 +177,13 @@ pub fn ChangeStateRequest(
         alloc.gpa,
         now_ms,
     )) {
-        .confirmed => {
+        .confirmed, .accepted => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
-            if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-                try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
-                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, txn.receive_data_pack);
-            }
-        },
-        .accepted => {
-            current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
-            if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
-                try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
-                try appendFollowupTransition(entity, fsm, txn.payload.FsmId, attribute, buffs, logic_state, tags, parts, now_ms, alloc, txn.receive_data_pack);
+            const lifecycle_deferred = try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms);
+            try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
+            if (!lifecycle_deferred and fsm.rootIsDirty(txn.payload.FsmId)) {
+                try scene.queueFsmSync(alloc.gpa, entity.net_id);
+                preserve_event_for_followup = true;
             }
         },
         .mismatch => |pending_state| {
