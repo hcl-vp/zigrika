@@ -48,11 +48,17 @@ pub const BuffRemovalById = struct {
     buff_id: i64,
 };
 
+pub const BuffRemovalByFsmBind = struct {
+    entity: Entity,
+    source: FsmTypes.FsmBindBuffSource,
+};
+
 pub const BuffAdditionEntry = struct {
     id: i64,
     stack_count: i32 = 0,
     is_active: bool,
     duration_seconds: ?f32 = null,
+    fsm_bind_source: ?FsmTypes.FsmBindBuffSource = null,
 };
 
 pub const BuffAddition = struct {

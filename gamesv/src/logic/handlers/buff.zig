@@ -43,6 +43,29 @@ pub fn removeBuffFromEntityById(
     try removeBuffHandles(event.data.entity, &handles, item[0], conn, events, alloc, buff_timers);
 }
 
+pub fn removeBuffFromEntityByFsmBind(
+    event: EventQueue.Dequeue(.buff_removal_by_fsm_bind),
+    conn: *Connection,
+    events: *EventQueue,
+    alloc: mem.Alloc,
+    buff_timers: *BuffTimerScheduler,
+    query: BuffQuery,
+) !void {
+    const item = query.byEntityHandle(event.data.entity) orelse return;
+    const release = item[0].releaseFsmBindLease(alloc.gpa, event.data.source) orelse return;
+    switch (release) {
+        .preserve => try events.enqueue(.buff_change, .{ .entity = event.data.entity }),
+        .remove => |handle_id| {
+            if (item[0].getByHandleId(handle_id) != null) {
+                const handles = [_]i32{handle_id};
+                try removeBuffHandles(event.data.entity, &handles, item[0], conn, events, alloc, buff_timers);
+            } else {
+                try events.enqueue(.buff_change, .{ .entity = event.data.entity });
+            }
+        },
+    }
+}
+
 pub fn removeBuffHandles(
     entity: Entity,
     handle_ids: []const i32,
@@ -95,9 +118,17 @@ pub fn addBuffToEntity(
 
     for (event.data.buffs) |entry| {
         const buff_data = assets.tables.buff.getDataById(entry.id) orelse continue;
+        if (entry.fsm_bind_source) |source| {
+            if (!item[0].prepareFsmBindAcquire(alloc.gpa, source)) continue;
+        }
         const existing = item[0].getByBuffId(entry.id);
         const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
+            if (entry.fsm_bind_source) |source| {
+                try item[0].addFsmBindLease(alloc.gpa, source, buff.HandleId, false);
+            } else {
+                item[0].markFsmBindHandleExternal(alloc.gpa, buff.HandleId);
+            }
             buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
             buff.Level = 1;
             buff.StackCount = stack_count;
@@ -121,6 +152,12 @@ pub fn addBuffToEntity(
             item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1].StackCount = stack_count;
             applyBuffDuration(&item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1], &buff_data, entry.duration_seconds);
             const buff = item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1];
+            if (entry.fsm_bind_source) |source| {
+                item[0].addFsmBindLease(alloc.gpa, source, buff.HandleId, true) catch |err| {
+                    item[0].removeByHandleId(alloc.gpa, buff.HandleId);
+                    return err;
+                };
+            }
             buff_timers.markDirty();
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{

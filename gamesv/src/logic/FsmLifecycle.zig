@@ -58,6 +58,23 @@ fn enqueueEffectsWithRecheck(
                 .entity = entity,
                 .buff_id = buff_id,
             }),
+            .bind_buff_add => |addition| {
+                const buffs = try alloc.arena.alloc(events.BuffAdditionEntry, 1);
+                buffs[0] = .{
+                    .id = addition.buff_id,
+                    .is_active = true,
+                    .fsm_bind_source = addition.source,
+                };
+                try event_queue.enqueue(.buff_addition, .{
+                    .target = entity,
+                    .instigator = entity,
+                    .buffs = buffs,
+                });
+            },
+            .bind_buff_remove => |source| try event_queue.enqueue(.buff_removal_by_fsm_bind, .{
+                .entity = entity,
+                .source = source,
+            }),
             .cue_paralysis => try event_queue.enqueue(.fsm_server_action, .{
                 .entity = entity,
                 .kind = .cue_paralysis,

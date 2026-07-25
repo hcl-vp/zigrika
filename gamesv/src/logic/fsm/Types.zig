@@ -8,6 +8,7 @@ const TagComponent = @import("../component/entity/TagComponent.zig");
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
 
 pub const max_state_depth = 32;
+pub const FsmBindBuffSource = FightBuffComponent.FsmBindBuffSource;
 
 pub const WakeMask = u16;
 
@@ -115,12 +116,19 @@ pub const LifecycleEffect = union(enum) {
     enter_fight,
     add_buff: i64,
     remove_buff: i64,
+    bind_buff_add: BindBuffAddition,
+    bind_buff_remove: FsmBindBuffSource,
     cue_paralysis,
     reset_status,
     set_rage_full,
     set_instance_state: i32,
     activate_part: PartActivation,
     reset_part: PartReset,
+};
+
+pub const BindBuffAddition = struct {
+    source: FsmBindBuffSource,
+    buff_id: i64,
 };
 
 pub const PartActivation = struct {

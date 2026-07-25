@@ -698,9 +698,12 @@ fn enterBindStates(
     binds: []const AiStateMachineConfig.StateMachineBindState,
 ) !void {
     var delayed_suicide: ?AiStateMachineConfig.BindDelaySuicide = null;
-    for (binds) |bind| {
+    for (binds, 0..) |bind, index| {
         if (bind.BindBuff) |buff| {
-            try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
+            try appendLifecycleEffect(comp, gpa, .{ .bind_buff_add = .{
+                .source = try bindBuffSource(comp, fsm_id, state, index),
+                .buff_id = buff.BuffId,
+            } });
         }
         if (bind.BindDelaySuicide) |delayed| delayed_suicide = delayed;
     }
@@ -708,6 +711,34 @@ fn enterBindStates(
     if (delayed_suicide) |delayed| {
         scheduleDelayedSuicide(comp, fsm_id, state, activation_ms, delayed);
     }
+}
+
+fn exitBindStates(
+    comp: anytype,
+    gpa: mem.Allocator,
+    fsm_id: i32,
+    state: i32,
+    binds: []const AiStateMachineConfig.StateMachineBindState,
+) !void {
+    for (binds, 0..) |bind, index| {
+        if (bind.BindBuff == null) continue;
+        try appendLifecycleEffect(comp, gpa, .{
+            .bind_buff_remove = try bindBuffSource(comp, fsm_id, state, index),
+        });
+    }
+}
+
+fn bindBuffSource(
+    comp: anytype,
+    fsm_id: i32,
+    state: i32,
+    index: usize,
+) !Types.FsmBindBuffSource {
+    return .{
+        .fsm_id = StateHierarchy.canonicalState(comp, fsm_id),
+        .state = StateHierarchy.canonicalState(comp, state),
+        .bind_index = std.math.cast(i32, index) orelse return error.FsmBindIndexOverflow,
+    };
 }
 
 fn scheduleDelayedSuicide(
@@ -808,6 +839,7 @@ fn exitNode(comp: anytype, gpa: mem.Allocator, fsm_id: i32, state: i32) !void {
     const node = StateHierarchy.findNode(comp, state) orelse return;
     try updateActivationBindStates(comp, gpa, node.BindStates, -1);
     try runActions(comp, gpa, node.OnExitActions, false);
+    try exitBindStates(comp, gpa, fsm_id, state, node.BindStates);
     exitDelayedSuicideBind(comp, fsm_id, state);
 }
 
