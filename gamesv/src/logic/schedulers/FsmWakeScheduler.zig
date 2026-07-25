@@ -7,6 +7,8 @@ pub const Kind = enum(u8) {
     root_timer,
     pending_timeout,
     paralysis,
+    delayed_suicide,
+    delayed_destroy,
 };
 
 pub const Entry = struct {
@@ -163,6 +165,8 @@ fn swapEntries(scheduler: *FsmWakeScheduler, a: usize, b: usize) void {
 fn lessThan(a: Entry, b: Entry) bool {
     if (a.due_ms != b.due_ms) return a.due_ms < b.due_ms;
     if (a.entity_id != b.entity_id) return a.entity_id < b.entity_id;
+    if (a.kind == .delayed_suicide and b.kind == .delayed_destroy) return true;
+    if (a.kind == .delayed_destroy and b.kind == .delayed_suicide) return false;
     if (a.fsm_id != b.fsm_id) return a.fsm_id < b.fsm_id;
     return @intFromEnum(a.kind) < @intFromEnum(b.kind);
 }

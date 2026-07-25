@@ -49,6 +49,10 @@ pub const FsmNode = struct {
     wake_dependencies: WakeMask = 0,
     dirty_reasons: WakeMask = 0,
     next_timer_due_ms: ?i64 = null,
+    delayed_suicide_state: ?i32 = null,
+    delayed_suicide_due_ms: ?i64 = null,
+    delayed_destroy_due_ms: ?i64 = null,
+    delayed_suicide_fired: bool = false,
 
     pub fn active(node: *const FsmNode) []const i32 {
         return node.active_path[0..node.active_len];
@@ -108,6 +112,7 @@ pub const Transition = struct {
 };
 
 pub const LifecycleEffect = union(enum) {
+    enter_fight,
     add_buff: i64,
     remove_buff: i64,
     cue_paralysis,

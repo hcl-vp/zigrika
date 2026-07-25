@@ -105,7 +105,13 @@ pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
     comp.event = null;
     for (comp.runtime_nodes) |runtime| {
         Blackboard.preparePath(comp, runtime.active(), runtime.active_since_ms[0..runtime.active_len], false);
-        try TransitionEngine.enterPath(comp, gpa, runtime.active());
+        try TransitionEngine.enterPath(
+            comp,
+            gpa,
+            runtime.fsm_id,
+            runtime.active(),
+            runtime.active_since_ms[0..runtime.active_len],
+        );
     }
     TransitionEngine.refreshWakeRequirements(comp, now_ms);
     _ = TransitionEngine.markDirty(comp, WakeReason.initial);
@@ -160,6 +166,24 @@ pub fn activateParalysis(comp: *Component, now_ms: i64) void {
     comp.paralysis_active = true;
     comp.paralysis_last_ms = now_ms;
     comp.paralysis_next_ms = now_ms + 50;
+}
+
+pub fn consumeDelayedSuicide(comp: *Component, fsm_id: i32, due_ms: i64) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    if (runtime.delayed_suicide_due_ms != due_ms or runtime.delayed_suicide_fired) return false;
+    const bound_state = runtime.delayed_suicide_state orelse return false;
+    if (!StateHierarchy.pathContains(comp, runtime.active(), bound_state)) return false;
+
+    runtime.delayed_suicide_due_ms = null;
+    runtime.delayed_suicide_fired = true;
+    return true;
+}
+
+pub fn delayedDestroyIsDue(comp: *Component, fsm_id: i32, due_ms: i64) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    if (runtime.delayed_destroy_due_ms != due_ms or !runtime.delayed_suicide_fired) return false;
+    const bound_state = runtime.delayed_suicide_state orelse return false;
+    return StateHierarchy.stateBelongsToFsm(comp, runtime.fsm_id, bound_state);
 }
 
 pub fn lifecycleEffects(comp: *const Component) []const LifecycleEffect {

@@ -1,4 +1,5 @@
 const std = @import("std");
+const FileSystem = @import("common").FileSystem;
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
 const Assets = @import("../../data/Assets.zig");
@@ -29,6 +30,7 @@ pub fn handleFsmTick(
     events: *EventQueue,
     alloc: mem.Alloc,
     io: std.Io,
+    fs: *FileSystem,
     query: FsmQuery,
 ) !void {
     const now_ms = event.data.now_ms;
@@ -43,6 +45,39 @@ pub fn handleFsmTick(
                 Entity.FsmComponent.WakeReason.timer,
             ),
             .pending_timeout, .paralysis => try scene.queueFsmSync(alloc.gpa, due.entity_id),
+            .delayed_suicide => {
+                const item = query.byNetId(due.entity_id) orelse continue;
+                const entity, const fsm, _, _, _, _, _ = item;
+                try fsm.initRuntime(alloc.gpa, now_ms);
+                if (!fsm.consumeDelayedSuicide(due.fsm_id, due.due_ms)) continue;
+
+                var death_data: std.ArrayList(pb.CombatReceiveData) = .empty;
+                try death_data.append(alloc.arena, .{ .Message = .{ .CombatNotifyData = .{
+                    .CombatCommon = .{ .EntityId = entity.net_id },
+                    .Message = .{ .EntityLivingStatusNotify = .{
+                        .Id = entity.net_id,
+                        .LivingStatus = .Dead,
+                    } },
+                } } });
+                try scene.setBattleEntityActive(alloc.gpa, entity.net_id, false);
+                _ = try scene.appendBattleStateNotify(alloc.arena, &death_data);
+                try conn.push(pb.CombatReceivePackNotify{ .Data = death_data }, alloc.arena);
+                try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
+            },
+            .delayed_destroy => {
+                const item = query.byNetId(due.entity_id) orelse continue;
+                const entity, const fsm, _, _, _, _, _ = item;
+                try fsm.initRuntime(alloc.gpa, now_ms);
+                if (!fsm.delayedDestroyIsDue(due.fsm_id, due.due_ms)) continue;
+
+                try scene.remove(alloc.gpa, fs, entity.net_id);
+                var remove_infos: std.ArrayList(pb.EntityRemoveInfo) = .empty;
+                try remove_infos.append(alloc.arena, .{ .EntityId = entity.net_id });
+                try conn.push(pb.EntityRemoveNotify{
+                    .IsRemove = true,
+                    .RemoveInfos = remove_infos,
+                }, alloc.arena);
+            },
         }
     }
 
@@ -92,6 +127,13 @@ pub fn handleFsmServerAction(
     const entity, const fsm, const attribute, const buffs, _, const tags, const parts = item;
 
     switch (event.data.kind) {
+        .enter_fight => {
+            try scene.setBattleEntityActive(alloc.gpa, entity.net_id, true);
+            var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+            if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
+                try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+            }
+        },
         .cue_paralysis => {
             const now_ms = std.Io.Clock.awake.now(io).toMilliseconds();
             fsm.activateParalysis(now_ms);

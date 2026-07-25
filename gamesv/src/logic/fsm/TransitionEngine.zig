@@ -317,8 +317,16 @@ pub fn findReadyTransition(comp: anytype, fsm_id: i32, ctx: Types.EvalContext) !
     return null;
 }
 
-pub fn enterPath(comp: anytype, gpa: mem.Allocator, path: []const i32) !void {
-    for (path) |state| try enterNode(comp, gpa, state);
+pub fn enterPath(
+    comp: anytype,
+    gpa: mem.Allocator,
+    fsm_id: i32,
+    path: []const i32,
+    active_since_ms: []const i64,
+) !void {
+    for (path, 0..) |state, index| {
+        try enterNode(comp, gpa, fsm_id, state, active_since_ms[index]);
+    }
 }
 
 fn checkTransitionsForState(
@@ -618,12 +626,14 @@ fn runActions(
     comp: anytype,
     gpa: mem.Allocator,
     actions: []const AiStateMachineConfig.StateMachineAction,
+    state_entry: bool,
 ) !void {
     for (actions) |action| {
         if (action.ActionDispatchEvent) |event_action| {
             comp.event = event_action.Event;
         }
 
+        if (state_entry and action.ActionEnterFight != null) try appendLifecycleEffect(comp, gpa, .enter_fight);
         if (action.ActionAddBuff) |buff| try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
         if (action.ActionRemoveBuff) |buff| try appendLifecycleEffect(comp, gpa, .{ .remove_buff = buff.BuffId });
         if (action.ActionCue) |cue| {
@@ -682,13 +692,53 @@ fn updateActivationBindStates(
 fn enterBindStates(
     comp: anytype,
     gpa: mem.Allocator,
+    fsm_id: i32,
+    state: i32,
+    activation_ms: i64,
     binds: []const AiStateMachineConfig.StateMachineBindState,
 ) !void {
+    var delayed_suicide: ?AiStateMachineConfig.BindDelaySuicide = null;
     for (binds) |bind| {
         if (bind.BindBuff) |buff| {
             try appendLifecycleEffect(comp, gpa, .{ .add_buff = buff.BuffId });
         }
+        if (bind.BindDelaySuicide) |delayed| delayed_suicide = delayed;
     }
+
+    if (delayed_suicide) |delayed| {
+        scheduleDelayedSuicide(comp, fsm_id, state, activation_ms, delayed);
+    }
+}
+
+fn scheduleDelayedSuicide(
+    comp: anytype,
+    fsm_id: i32,
+    state: i32,
+    activation_ms: i64,
+    delayed: AiStateMachineConfig.BindDelaySuicide,
+) void {
+    if (!std.math.isFinite(delayed.SuicideDelay) or
+        !std.math.isFinite(delayed.DestroyDelay) or
+        delayed.SuicideDelay < 0 or
+        delayed.DestroyDelay < delayed.SuicideDelay) return;
+
+    const suicide_due_ms = delayedDeadline(activation_ms, delayed.SuicideDelay) orelse return;
+    const destroy_due_ms = delayedDeadline(activation_ms, delayed.DestroyDelay) orelse return;
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return;
+    if (runtime.delayed_suicide_fired and runtime.delayed_destroy_due_ms != null) return;
+
+    runtime.delayed_suicide_state = StateHierarchy.canonicalState(comp, state);
+    runtime.delayed_suicide_due_ms = suicide_due_ms;
+    runtime.delayed_destroy_due_ms = destroy_due_ms;
+    runtime.delayed_suicide_fired = false;
+}
+
+fn delayedDeadline(activation_ms: i64, delay_ms: f32) ?i64 {
+    const wide_delay: f64 = delay_ms;
+    const max_i64: f64 = @floatFromInt(std.math.maxInt(i64));
+    if (wide_delay >= max_i64) return null;
+    const rounded_delay: i64 = @intFromFloat(@ceil(wide_delay));
+    return std.math.add(i64, activation_ms, rounded_delay) catch null;
 }
 
 fn appendLifecycleEffect(comp: anytype, gpa: mem.Allocator, effect: Types.LifecycleEffect) !void {
@@ -729,6 +779,7 @@ fn applyPathLifecycle(
     fsm_id: i32,
     active_path: []const i32,
     target_path: []const i32,
+    target_since_ms: []const i64,
 ) !void {
     const common_len = StateHierarchy.commonPathPrefixLen(active_path, target_path);
 
@@ -738,23 +789,37 @@ fn applyPathLifecycle(
     var exit_index = active_path.len;
     while (exit_index > common_len) {
         exit_index -= 1;
-        try exitNode(comp, gpa, active_path[exit_index]);
+        try exitNode(comp, gpa, fsm_id, active_path[exit_index]);
     }
 
-    for (target_path[common_len..]) |state| try enterNode(comp, gpa, state);
+    for (target_path[common_len..], common_len..) |state, index| {
+        try enterNode(comp, gpa, fsm_id, state, target_since_ms[index]);
+    }
 }
 
-fn enterNode(comp: anytype, gpa: mem.Allocator, state: i32) !void {
+fn enterNode(comp: anytype, gpa: mem.Allocator, fsm_id: i32, state: i32, activation_ms: i64) !void {
     const node = StateHierarchy.findNode(comp, state) orelse return;
     try updateActivationBindStates(comp, gpa, node.BindStates, 1);
-    try runActions(comp, gpa, node.OnEnterActions);
-    try enterBindStates(comp, gpa, node.BindStates);
+    try runActions(comp, gpa, node.OnEnterActions, true);
+    try enterBindStates(comp, gpa, fsm_id, state, activation_ms, node.BindStates);
 }
 
-fn exitNode(comp: anytype, gpa: mem.Allocator, state: i32) !void {
+fn exitNode(comp: anytype, gpa: mem.Allocator, fsm_id: i32, state: i32) !void {
     const node = StateHierarchy.findNode(comp, state) orelse return;
     try updateActivationBindStates(comp, gpa, node.BindStates, -1);
-    try runActions(comp, gpa, node.OnExitActions);
+    try runActions(comp, gpa, node.OnExitActions, false);
+    exitDelayedSuicideBind(comp, fsm_id, state);
+}
+
+fn exitDelayedSuicideBind(comp: anytype, fsm_id: i32, state: i32) void {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return;
+    const bound_state = runtime.delayed_suicide_state orelse return;
+    if (!StateHierarchy.statesEquivalent(comp, bound_state, state)) return;
+
+    runtime.delayed_suicide_due_ms = null;
+    if (runtime.delayed_suicide_fired) return;
+    runtime.delayed_suicide_state = null;
+    runtime.delayed_destroy_due_ms = null;
 }
 
 fn setPendingTransition(comp: anytype, runtime: *Types.FsmNode, from: i32, to: i32, now_ms: i64) !void {
@@ -785,7 +850,14 @@ fn commitPending(comp: anytype, runtime: *Types.FsmNode, gpa: mem.Allocator) !vo
     const pending_path = runtime.pending();
     if (pending_path.len == 0) return;
 
-    try applyPathLifecycle(comp, gpa, runtime.fsm_id, runtime.active(), pending_path);
+    try applyPathLifecycle(
+        comp,
+        gpa,
+        runtime.fsm_id,
+        runtime.active(),
+        pending_path,
+        runtime.pending_since_ms[0..runtime.pending_len],
+    );
     @memcpy(runtime.active_path[0..pending_path.len], pending_path);
     @memcpy(runtime.active_since_ms[0..pending_path.len], runtime.pending_since_ms[0..pending_path.len]);
     runtime.active_len = runtime.pending_len;
@@ -814,7 +886,14 @@ fn changeCurrentState(comp: anytype, fsm_id: i32, to: i32, gpa: mem.Allocator, n
     }
 
     Blackboard.preparePath(comp, target_path[0..active_len], target_since_ms[0..active_len], true);
-    try applyPathLifecycle(comp, gpa, runtime.fsm_id, runtime.active(), target_path[0..active_len]);
+    try applyPathLifecycle(
+        comp,
+        gpa,
+        runtime.fsm_id,
+        runtime.active(),
+        target_path[0..active_len],
+        target_since_ms[0..active_len],
+    );
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
     @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);
     runtime.active_len = @intCast(active_len);

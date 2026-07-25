@@ -41,6 +41,10 @@ fn enqueueEffectsWithRecheck(
 
     for (effects) |effect| {
         switch (effect) {
+            .enter_fight => try event_queue.enqueue(.fsm_server_action, .{
+                .entity = entity,
+                .kind = .enter_fight,
+            }),
             .add_buff => |buff_id| {
                 const buffs = try alloc.arena.alloc(events.BuffAdditionEntry, 1);
                 buffs[0] = .{ .id = buff_id, .is_active = true };

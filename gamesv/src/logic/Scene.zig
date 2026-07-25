@@ -364,6 +364,28 @@ pub fn syncFsmDeadlines(
         } else {
             scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .root_timer);
         }
+
+        if (runtime.delayed_suicide_due_ms) |due_ms| {
+            try scene.fsm_wakes.upsert(gpa, .{
+                .entity_id = entity_id,
+                .fsm_id = runtime.fsm_id,
+                .kind = .delayed_suicide,
+                .due_ms = due_ms,
+            });
+        } else {
+            scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .delayed_suicide);
+        }
+
+        if (runtime.delayed_destroy_due_ms) |due_ms| {
+            try scene.fsm_wakes.upsert(gpa, .{
+                .entity_id = entity_id,
+                .fsm_id = runtime.fsm_id,
+                .kind = .delayed_destroy,
+                .due_ms = due_ms,
+            });
+        } else {
+            scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .delayed_destroy);
+        }
     }
 
     if (fsm.pendingDeadline()) |due_ms| {

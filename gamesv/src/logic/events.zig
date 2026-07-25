@@ -72,6 +72,7 @@ pub const FsmTimerTick = struct {
 };
 
 pub const FsmServerActionKind = union(enum) {
+    enter_fight,
     cue_paralysis,
     reset_status,
     set_rage_full,
