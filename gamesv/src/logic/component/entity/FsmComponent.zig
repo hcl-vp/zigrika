@@ -248,12 +248,12 @@ pub fn confirmStateRequest(
     from: i32,
     to: i32,
     gpa: mem.Allocator,
-    now_ms: i64,
+    ctx: EvalContext,
 ) !ConfirmResult {
-    const result = try TransitionEngine.confirmStateRequest(comp, fsm_id, from, to, gpa, now_ms);
+    const result = try TransitionEngine.confirmStateRequest(comp, fsm_id, from, to, gpa, ctx);
     switch (result) {
         .confirmed, .accepted => {
-            TransitionEngine.refreshWakeRequirements(comp, now_ms);
+            TransitionEngine.refreshWakeRequirements(comp, ctx.now_ms);
             _ = TransitionEngine.markRootDirty(comp, fsm_id, WakeReason.initial);
         },
         else => {},

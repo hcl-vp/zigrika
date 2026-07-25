@@ -122,7 +122,9 @@ pub fn recoverExpiredPending(comp: anytype, gpa: mem.Allocator, now_ms: i64) !bo
     if (!expired) return false;
 
     for (comp.runtime_nodes) |*runtime| {
-        if (runtime.pending_to == null) continue;
+        if (runtime.pending_to == null or runtime.pending_started_ms <= 0) continue;
+        if (now_ms < runtime.pending_started_ms) continue;
+        if (now_ms - runtime.pending_started_ms < pending_transition_timeout_ms) continue;
         try commitPending(comp, runtime, gpa);
     }
     return true;
@@ -198,14 +200,14 @@ pub fn confirmStateRequest(
     from: i32,
     to: i32,
     gpa: mem.Allocator,
-    now_ms: i64,
+    ctx: Types.EvalContext,
 ) !Types.ConfirmResult {
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return .machine_not_found;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, from)) return .invalid_source;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, to)) return .invalid_target;
 
     const pending_state = runtime.pending_to orelse {
-        if (try acceptPredictedTransition(comp, fsm_id, from, to, gpa, now_ms)) return .accepted;
+        if (try acceptPredictedTransition(comp, fsm_id, from, to, gpa, ctx)) return .accepted;
         return .no_pending;
     };
 
@@ -221,7 +223,7 @@ pub fn confirmStateRequest(
 
     if (canApplyNestedTransition(comp, runtime, from, to)) {
         try commitPending(comp, runtime, gpa);
-        try changeCurrentState(comp, fsm_id, to, gpa, now_ms);
+        try changeCurrentState(comp, fsm_id, to, gpa, ctx.now_ms);
         return .confirmed;
     }
 
@@ -249,7 +251,7 @@ pub fn findReadyTransition(comp: anytype, fsm_id: i32, ctx: Types.EvalContext) !
 
     for (active_path[1..], 1..) |active_state, index| {
         const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse continue;
-        if (try checkTransitionsForState(comp, runtime.fsm_id, parent_node, active_state, ctx)) |transition| {
+        if (try checkTransitionsForState(comp, runtime.fsm_id, parent_node, active_state, null, false, ctx)) |transition| {
             return transition;
         }
     }
@@ -266,6 +268,8 @@ fn checkTransitionsForState(
     fsm_id: i32,
     node: *const AiStateMachineConfig.StateMachineNode,
     state_to_check: i32,
+    requested_target: ?i32,
+    client_request: bool,
     ctx: Types.EvalContext,
 ) !?Types.Transition {
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return null;
@@ -280,11 +284,15 @@ fn checkTransitionsForState(
 
         const target_state = resolved_transition.to;
         if (canonical_source == target_state) continue;
+        if (requested_target) |target| {
+            if (!StateHierarchy.statesEquivalent(comp, target_state, target)) continue;
+        }
 
         const target_is_child = for (children) |child| {
             if (StateHierarchy.statesEquivalent(comp, child, target_state)) break true;
         } else false;
         if (!target_is_child) continue;
+        if (client_request and !clientMayTakeTransition(comp, runtime.fsm_id, canonical_source, transition)) continue;
 
         const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
         if (!ConditionEvaluator.evaluate(comp, fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
@@ -309,14 +317,34 @@ fn acceptPredictedTransition(
     from: i32,
     to: i32,
     gpa: mem.Allocator,
-    now_ms: i64,
+    ctx: Types.EvalContext,
 ) !bool {
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
     if (!StateHierarchy.pathContains(comp, runtime.active(), from)) return false;
-    if (!canClientTransition(comp, runtime.fsm_id, from, to)) return false;
+    if (!serverEvaluatesRoot(comp, runtime.fsm_id)) {
+        if (!canClientTransition(comp, runtime.fsm_id, from, to)) return false;
+        try changeCurrentState(comp, fsm_id, to, gpa, ctx.now_ms);
+        return true;
+    }
 
-    try changeCurrentState(comp, fsm_id, to, gpa, now_ms);
-    return true;
+    const active_path = runtime.active();
+    if (active_path.len < 2) return false;
+    for (active_path[1..], 1..) |active_state, index| {
+        if (!StateHierarchy.statesEquivalent(comp, active_state, from)) continue;
+        const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse return false;
+        _ = (try checkTransitionsForState(
+            comp,
+            runtime.fsm_id,
+            parent_node,
+            active_state,
+            to,
+            true,
+            ctx,
+        )) orelse return false;
+        try commitPending(comp, runtime, gpa);
+        return true;
+    }
+    return false;
 }
 
 fn canApplyNestedTransition(comp: anytype, runtime: *const Types.FsmNode, from: i32, to: i32) bool {
@@ -334,6 +362,18 @@ fn canClientTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {
     if (flags & Assets.FsmGraphRegistry.transition_present == 0) return false;
     if (client_owns_animation or StateHierarchy.isConduitState(comp, requested.from)) return true;
     return flags & Assets.FsmGraphRegistry.transition_predicted != 0;
+}
+
+fn clientMayTakeTransition(
+    comp: anytype,
+    fsm_id: i32,
+    from: i32,
+    transition: AiStateMachineConfig.StateMachineTransition,
+) bool {
+    const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
+    if ((root.IsAnimStateMachine orelse false) or StateHierarchy.isConduitState(comp, from)) return true;
+    const prediction_type = transition.TransitionPredictionType orelse return false;
+    return prediction_type == 1 or prediction_type == 2;
 }
 
 fn allowsNestedTransition(comp: anytype, fsm_id: i32, from: i32) bool {

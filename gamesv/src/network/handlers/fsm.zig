@@ -169,13 +169,21 @@ pub fn ChangeStateRequest(
 
     var current_state = fsm.currentState(txn.payload.FsmId) orelse 0;
     var response_error: pb.DErrorResult = successResult();
+    const ctx: Entity.FsmComponent.EvalContext = .{
+        .attribute = attribute,
+        .buffs = buffs,
+        .logic_state = logic_state,
+        .tags = tags,
+        .parts = if (parts) |part| part.states() else null,
+        .now_ms = now_ms,
+    };
 
     switch (try fsm.confirmStateRequest(
         txn.payload.FsmId,
         txn.payload.FromState,
         txn.payload.ToState,
         alloc.gpa,
-        now_ms,
+        ctx,
     )) {
         .confirmed, .accepted => {
             current_state = fsm.currentState(txn.payload.FsmId) orelse current_state;
@@ -205,14 +213,7 @@ pub fn ChangeStateRequest(
             txn.payload.ToState,
         }),
         .no_pending => {
-            if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, .{
-                .attribute = attribute,
-                .buffs = buffs,
-                .logic_state = logic_state,
-                .tags = tags,
-                .parts = if (parts) |part| part.states() else null,
-                .now_ms = now_ms,
-            })) |notify| {
+            if (try fsm.checkAndConfirm(entity.net_id, txn.payload.FsmId, alloc.gpa, ctx)) |notify| {
                 try fsm.appendBlackboardNotify(entity.net_id, alloc.arena, txn.receive_data_pack);
                 try txn.receive_data_pack.append(alloc.arena, notify);
                 if (!try FsmLifecycle.enqueueEffectsWithoutRecheck(entity, fsm, events, alloc, now_ms)) {
