@@ -314,7 +314,10 @@ pub fn setFsmEncounterTarget(scene: *Scene, gpa: Allocator, fsm_entity_id: i64, 
     } else null;
 
     const changed = fsm.setEncounterTarget(target);
-    if (changed) try scene.fsm_wakes.markDirty(gpa, fsm_entity_id);
+    if (changed) {
+        _ = fsm.markDirty(Entity.FsmComponent.WakeReason.blackboard);
+        try scene.fsm_wakes.markDirty(gpa, fsm_entity_id);
+    }
     return changed;
 }
 
@@ -493,6 +496,24 @@ pub fn signalFsmDissolveCombine(scene: *Scene, gpa: Allocator, entity_id: i64) !
         fsm.signalDissolveCombine();
         _ = fsm.markDirty(Entity.FsmComponent.WakeReason.dissolve);
         try scene.fsm_wakes.markDirty(gpa, entity_id);
+    }
+}
+
+pub fn noteFsmSkillStart(scene: *Scene, gpa: Allocator, entity_id: i64, skill_id: i32, now_ms: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| {
+        try fsm.initRuntime(gpa, now_ms);
+        fsm.noteSkillStart(skill_id);
+    }
+}
+
+pub fn signalFsmSkillEnd(scene: *Scene, gpa: Allocator, entity_id: i64, skill_id: i32, now_ms: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| {
+        try fsm.initRuntime(gpa, now_ms);
+        if (fsm.signalSkillEnd(skill_id)) try scene.fsm_wakes.markDirty(gpa, entity_id);
     }
 }
 
@@ -699,6 +720,7 @@ fn clearFsmEncounterTargetReferences(scene: *Scene, gpa: Allocator, target_entit
     for (slice.items(.entity_id), slice.items(.fsm)) |entity_id, *optional_fsm| {
         if (optional_fsm.*) |*fsm| {
             if (fsm.clearEncounterTargetReference(target_id)) {
+                _ = fsm.markDirty(Entity.FsmComponent.WakeReason.blackboard);
                 try scene.fsm_wakes.markDirty(gpa, entity_id.net_id);
             }
         }

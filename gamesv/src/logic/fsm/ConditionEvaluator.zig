@@ -59,6 +59,24 @@ fn evaluateRaw(
         return false;
     }
 
+    if (condition.CondHpLessThan) |hp| {
+        return hpLessThan(ctx.attribute, hp.HpRatio);
+    }
+
+    if (condition.CondSkillEnd != null) {
+        return skillEnded(comp, fsm_id, transition.From);
+    }
+
+    if (condition.CondBBValueCompare) |blackboard| {
+        return blackboardValuesCompare(comp, blackboard);
+    }
+
+    if (condition.CondAttrCompare) |attribute| {
+        return attributeValuesCompare(ctx.attribute, attribute);
+    }
+
+    if (condition.CondWaitClient != null) return true;
+
     if (condition.CondTimer) |timer| {
         return timerPasses(comp, fsm_id, transition, activation_state, condition.Index, timer, ctx.now_ms);
     }
@@ -156,11 +174,17 @@ pub fn dependencyMask(
         condition.CondCheckLastState != null) return Types.WakeReason.state;
     if (condition.CondListenEvent != null) return Types.WakeReason.event;
     if (condition.CondCheckPositionState != null) return Types.WakeReason.position;
-    if (condition.CondAttribute != null or condition.CondAttributeRate != null) return Types.WakeReason.attribute;
+    if (condition.CondHpLessThan != null or
+        condition.CondAttribute != null or
+        condition.CondAttributeRate != null or
+        condition.CondAttrCompare != null) return Types.WakeReason.attribute;
     if (condition.CondTag != null or condition.CondInstStateChange != null) return Types.WakeReason.tag;
     if (condition.CondBuffStack != null) return Types.WakeReason.buff;
     if (condition.CondPartLife != null or condition.CondCheckPartActivated != null) return Types.WakeReason.part;
     if (condition.CondCheckDissolveCombine != null) return Types.WakeReason.dissolve;
+    if (condition.CondBBValueCompare != null) return Types.WakeReason.blackboard;
+    if (condition.CondSkillEnd != null) return Types.WakeReason.skill_end;
+    if (condition.CondWaitClient != null) return Types.WakeReason.state;
     return 0;
 }
 
@@ -399,6 +423,58 @@ fn partIsActivated(parts: ?[]const Types.PartState, name: []const u8) bool {
         if (std.mem.eql(u8, part.name, name)) return part.activated;
     }
     return false;
+}
+
+fn hpLessThan(attribute: ?*const AttributeComponent, hp_ratio: f32) bool {
+    if (!std.math.isFinite(hp_ratio)) return false;
+    const life = attrValue(attribute, @intFromEnum(pb.EAttributeType.Life)) orelse return false;
+    const life_max = attrValue(attribute, @intFromEnum(pb.EAttributeType.LifeMax)) orelse return false;
+    if (life_max <= 0) return false;
+    return @as(f64, @floatFromInt(life)) * 10000.0 <
+        @as(f64, @floatFromInt(life_max)) * @as(f64, hp_ratio);
+}
+
+fn skillEnded(comp: anytype, fsm_id: i32, transition_source: i32) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    const leaf = runtime.leaf() orelse return false;
+    return runtime.active_skill_ended and StateHierarchy.statesEquivalent(comp, leaf, transition_source);
+}
+
+fn blackboardValuesCompare(
+    comp: anytype,
+    condition: AiStateMachineConfig.ConditionBlackboardValueCompare,
+) bool {
+    const left = blackboardValue(comp, condition.Key1) orelse return false;
+    const right = blackboardValue(comp, condition.Key2) orelse return false;
+    return compareValues(left, right, condition.Compare);
+}
+
+fn blackboardValue(comp: anytype, key: i32) ?i32 {
+    if (key < 0) return null;
+    const index: usize = @intCast(key);
+    if (index >= comp.blackboard.len) return null;
+    return comp.blackboard[index];
+}
+
+fn attributeValuesCompare(
+    attribute: ?*const AttributeComponent,
+    condition: AiStateMachineConfig.ConditionAttributeCompare,
+) bool {
+    const left = attrValue(attribute, condition.Attr1) orelse return false;
+    const right = attrValue(attribute, condition.Attr2) orelse return false;
+    return compareValues(left, right, condition.Compare);
+}
+
+fn compareValues(left: i32, right: i32, comparison: i32) bool {
+    return switch (comparison) {
+        0 => left == right,
+        1 => left != right,
+        2 => left < right,
+        3 => left <= right,
+        4 => left > right,
+        5 => left >= right,
+        else => false,
+    };
 }
 
 fn attrInRange(attribute: ?*const AttributeComponent, attribute_id: i32, min: f32, max: f32) bool {

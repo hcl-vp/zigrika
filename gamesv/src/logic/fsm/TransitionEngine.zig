@@ -760,6 +760,8 @@ fn exitNode(comp: anytype, gpa: mem.Allocator, state: i32) !void {
 fn setPendingTransition(comp: anytype, runtime: *Types.FsmNode, from: i32, to: i32, now_ms: i64) !void {
     const pending_len = StateHierarchy.buildActivePath(comp, runtime.fsm_id, to, &runtime.pending_path) orelse
         return error.InvalidFsmTransitionTarget;
+    const preserves_skill = runtime.active_len != 0 and pending_len != 0 and
+        runtime.active_path[runtime.active_len - 1] == runtime.pending_path[pending_len - 1];
 
     for (runtime.pending_path[0..pending_len], 0..) |state, index| {
         runtime.pending_since_ms[index] = if (index < runtime.active_len and runtime.active_path[index] == state)
@@ -772,6 +774,8 @@ fn setPendingTransition(comp: anytype, runtime: *Types.FsmNode, from: i32, to: i
     runtime.pending_from = StateHierarchy.canonicalState(comp, from);
     runtime.pending_to = StateHierarchy.canonicalState(comp, to);
     runtime.pending_started_ms = now_ms;
+    runtime.pending_skill_id = if (preserves_skill) runtime.active_skill_id else null;
+    runtime.pending_skill_ended = preserves_skill and runtime.active_skill_ended;
     runtime.next_timer_due_ms = null;
     Blackboard.preparePath(comp, runtime.pending(), runtime.pending_since_ms[0..runtime.pending_len], true);
 }
@@ -785,10 +789,14 @@ fn commitPending(comp: anytype, runtime: *Types.FsmNode, gpa: mem.Allocator) !vo
     @memcpy(runtime.active_path[0..pending_path.len], pending_path);
     @memcpy(runtime.active_since_ms[0..pending_path.len], runtime.pending_since_ms[0..pending_path.len]);
     runtime.active_len = runtime.pending_len;
+    runtime.active_skill_id = runtime.pending_skill_id;
+    runtime.active_skill_ended = runtime.pending_skill_ended;
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
     runtime.pending_started_ms = 0;
+    runtime.pending_skill_id = null;
+    runtime.pending_skill_ended = false;
 }
 
 fn changeCurrentState(comp: anytype, fsm_id: i32, to: i32, gpa: mem.Allocator, now_ms: i64) !void {
@@ -796,6 +804,8 @@ fn changeCurrentState(comp: anytype, fsm_id: i32, to: i32, gpa: mem.Allocator, n
     var target_path: [Types.max_state_depth]i32 = @splat(0);
     var target_since_ms: [Types.max_state_depth]i64 = @splat(0);
     const active_len = StateHierarchy.buildActivePath(comp, runtime.fsm_id, to, &target_path) orelse return;
+    const preserves_skill = runtime.active_len != 0 and active_len != 0 and
+        runtime.active_path[runtime.active_len - 1] == target_path[active_len - 1];
     for (target_path[0..active_len], 0..) |state, index| {
         target_since_ms[index] = if (index < runtime.active_len and runtime.active_path[index] == state)
             runtime.active_since_ms[index]
@@ -808,10 +818,16 @@ fn changeCurrentState(comp: anytype, fsm_id: i32, to: i32, gpa: mem.Allocator, n
     @memcpy(runtime.active_path[0..active_len], target_path[0..active_len]);
     @memcpy(runtime.active_since_ms[0..active_len], target_since_ms[0..active_len]);
     runtime.active_len = @intCast(active_len);
+    if (!preserves_skill) {
+        runtime.active_skill_id = null;
+        runtime.active_skill_ended = false;
+    }
     runtime.pending_len = 0;
     runtime.pending_from = null;
     runtime.pending_to = null;
     runtime.pending_started_ms = 0;
+    runtime.pending_skill_id = null;
+    runtime.pending_skill_ended = false;
 }
 
 fn appendPass(comp: anytype, gpa: mem.Allocator, key: Types.ConditionKey) !void {

@@ -24,6 +24,8 @@ pub const WakeReason = struct {
     pub const dissolve: WakeMask = 1 << 9;
     pub const client_pass: WakeMask = 1 << 10;
     pub const event: WakeMask = 1 << 11;
+    pub const blackboard: WakeMask = 1 << 12;
+    pub const skill_end: WakeMask = 1 << 13;
     pub const all: WakeMask = std.math.maxInt(WakeMask);
 };
 
@@ -40,6 +42,10 @@ pub const FsmNode = struct {
     pending_from: ?i32 = null,
     pending_to: ?i32 = null,
     pending_started_ms: i64 = 0,
+    active_skill_id: ?i32 = null,
+    active_skill_ended: bool = false,
+    pending_skill_id: ?i32 = null,
+    pending_skill_ended: bool = false,
     wake_dependencies: WakeMask = 0,
     dirty_reasons: WakeMask = 0,
     next_timer_due_ms: ?i64 = null,

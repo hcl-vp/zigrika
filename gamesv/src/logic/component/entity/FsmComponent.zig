@@ -226,6 +226,39 @@ pub fn signalDissolveCombine(comp: *Component) void {
     comp.dissolve_combine_signal = true;
 }
 
+pub fn noteSkillStart(comp: *Component, skill_id: i32) void {
+    if (skill_id <= 0) return;
+    for (comp.runtime_nodes) |*runtime| {
+        if (!serverEvaluatesRoot(comp, runtime.fsm_id)) continue;
+        const use_pending = runtime.pending_len != 0;
+        const path = if (use_pending) runtime.pending() else runtime.active();
+        if (!taskAcceptsSkillStart(comp, path, skill_id)) continue;
+
+        const observed_id = if (use_pending) &runtime.pending_skill_id else &runtime.active_skill_id;
+        if (observed_id.* == null) observed_id.* = skill_id;
+    }
+}
+
+pub fn signalSkillEnd(comp: *Component, skill_id: i32) bool {
+    if (skill_id <= 0) return false;
+    var wake = false;
+    for (comp.runtime_nodes) |*runtime| {
+        if (!serverEvaluatesRoot(comp, runtime.fsm_id)) continue;
+        const use_pending = runtime.pending_len != 0;
+        const path = if (use_pending) runtime.pending() else runtime.active();
+        const observed_id = if (use_pending) runtime.pending_skill_id else runtime.active_skill_id;
+        if (!taskSkillMatches(comp, path, observed_id, skill_id)) continue;
+
+        if (use_pending) {
+            runtime.pending_skill_ended = true;
+        } else {
+            runtime.active_skill_ended = true;
+        }
+        wake = TransitionEngine.markRootDirty(comp, runtime.fsm_id, WakeReason.skill_end) or wake;
+    }
+    return wake;
+}
+
 pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !ClientPassResult {
     return TransitionEngine.recordClientPass(comp, gpa, key, value);
 }
@@ -403,4 +436,29 @@ fn canDiscardDissolveCombineSignal(comp: *const Component) bool {
         if (runtime.pending_to != null) return false;
     }
     return true;
+}
+
+fn serverEvaluatesRoot(comp: *const Component, fsm_id: i32) bool {
+    const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
+    return !(root.IsAnimStateMachine orelse false);
+}
+
+fn taskAcceptsSkillStart(comp: *const Component, path: []const i32, skill_id: i32) bool {
+    if (path.len == 0) return false;
+    const node = StateHierarchy.findNode(comp, path[path.len - 1]) orelse return false;
+    const task = node.Task orelse return false;
+    if (task.TaskSkillByName != null) return true;
+    const skill = task.TaskSkill orelse return false;
+    if (skill.ConfigReplaceTagId != 0 or skill.ConfigReplaceTagName.len != 0) return true;
+    return skill.SkillId == skill_id;
+}
+
+fn taskSkillMatches(comp: *const Component, path: []const i32, observed_id: ?i32, skill_id: i32) bool {
+    if (path.len == 0) return false;
+    const node = StateHierarchy.findNode(comp, path[path.len - 1]) orelse return false;
+    const task = node.Task orelse return false;
+    if (observed_id) |id| return id == skill_id;
+    const skill = task.TaskSkill orelse return false;
+    if (skill.ConfigReplaceTagId != 0 or skill.ConfigReplaceTagName.len != 0) return false;
+    return skill.SkillId == skill_id;
 }
