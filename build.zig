@@ -82,6 +82,52 @@ pub fn build(b: *std.Build) void {
         "run the game server",
     ).dependOn(&run_gamesv.step);
 
+    const serve_all_exe = b.addExecutable(.{
+        .name = "serve-all",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("build/serve-all.zig"),
+            .target = target,
+            .optimize = optimize,
+        }),
+    });
+
+    const serve_all = b.addRunArtifact(serve_all_exe);
+    serve_all.addFileArg(cfgsv.getEmittedBin());
+    serve_all.addFileArg(loginsv.getEmittedBin());
+    serve_all.addFileArg(gamesv.getEmittedBin());
+    serve_all.step.dependOn(&update_src.step);
+
+    b.step(
+        "serve-all",
+        "start cfgsv, loginsv, gamesv at once",
+    ).dependOn(&serve_all.step);
+
+    const clear_state_exe = b.addExecutable(.{
+        .name = "clear-state",
+        .root_module = b.createModule(.{
+            .root_source_file = b.path("build/clear-state.zig"),
+            .target = target,
+            .optimize = optimize,
+        }),
+    });
+
+    const clear_state = b.addRunArtifact(clear_state_exe);
+    clear_state.addArg("state/account");
+    clear_state.addArg("state/player");
+
+    const clear_all = b.addRunArtifact(serve_all_exe);
+    clear_all.addFileArg(cfgsv.getEmittedBin());
+    clear_all.addFileArg(loginsv.getEmittedBin());
+    clear_all.addFileArg(gamesv.getEmittedBin());
+    clear_all.step.dependOn(&update_src.step);
+    clear_all.step.dependOn(&clear_state.step);
+
+    b.step(
+        "clear-all",
+        "clear account and player state, then start all servers",
+    ).dependOn(&clear_all.step);
+
     b.installArtifact(cfgsv);
+    b.installArtifact(loginsv);
     b.installArtifact(gamesv);
 }
