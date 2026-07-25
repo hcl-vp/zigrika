@@ -72,41 +72,71 @@ fn refreshRootWakeRequirements(
     if (active_path.len < 2) return;
 
     for (active_path[1..], 1..) |active_state, index| {
-        const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse continue;
-        const children = parent_node.Children orelse continue;
-        const canonical_source = StateHierarchy.canonicalState(comp, active_state);
-
-        for (parent_node.Transitions) |transition| {
-            const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
-            if (resolved.from != canonical_source or resolved.from == resolved.to) continue;
-            const target_is_child = for (children) |child| {
-                if (StateHierarchy.statesEquivalent(comp, child, resolved.to)) break true;
-            } else false;
-            if (!target_is_child) continue;
-
-            const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
-            if (refresh_dependencies) {
-                runtime.wake_dependencies |= ConditionEvaluator.dependencyMask(
-                    transition.Conditions,
-                    top_condition,
-                    0,
-                );
-            }
-            if (runtime.pending_to != null) continue;
-            if (ConditionEvaluator.nextTimerDeadline(
+        const parent_state = active_path[index - 1];
+        const parent_node = StateHierarchy.findNode(comp, parent_state) orelse continue;
+        if (anyStateChild(comp, parent_node)) |any_state| {
+            refreshSourceWakeRequirements(
                 comp,
-                runtime.fsm_id,
-                transition,
+                runtime,
+                parent_node,
+                any_state,
+                parent_state,
+                now_ms,
+                refresh_dependencies,
+            );
+        }
+        refreshSourceWakeRequirements(
+            comp,
+            runtime,
+            parent_node,
+            active_state,
+            active_state,
+            now_ms,
+            refresh_dependencies,
+        );
+    }
+}
+
+fn refreshSourceWakeRequirements(
+    comp: anytype,
+    runtime: *Types.FsmNode,
+    parent_node: *const AiStateMachineConfig.StateMachineNode,
+    configured_source: i32,
+    activation_state: i32,
+    now_ms: i64,
+    refresh_dependencies: bool,
+) void {
+    const children = parent_node.Children orelse return;
+    const canonical_source = StateHierarchy.canonicalState(comp, configured_source);
+
+    for (parent_node.Transitions) |transition| {
+        const resolved = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
+        if (resolved.from != canonical_source or resolved.from == resolved.to) continue;
+        if (!targetIsChild(comp, children, resolved.to)) continue;
+
+        const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
+        if (refresh_dependencies) {
+            runtime.wake_dependencies |= ConditionEvaluator.dependencyMask(
                 transition.Conditions,
                 top_condition,
-                now_ms,
                 0,
-            )) |candidate| {
-                runtime.next_timer_due_ms = if (runtime.next_timer_due_ms) |current|
-                    @min(current, candidate)
-                else
-                    candidate;
-            }
+            );
+        }
+        if (runtime.pending_to != null) continue;
+        if (ConditionEvaluator.nextTimerDeadline(
+            comp,
+            runtime.fsm_id,
+            transition,
+            transition.Conditions,
+            top_condition,
+            now_ms,
+            activation_state,
+            0,
+        )) |candidate| {
+            runtime.next_timer_due_ms = if (runtime.next_timer_due_ms) |current|
+                @min(current, candidate)
+            else
+                candidate;
         }
     }
 }
@@ -139,10 +169,12 @@ pub fn recordClientPass(
     const fsm_id = StateHierarchy.canonicalState(comp, key.fsm_id);
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return .machine_not_found;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, key.from)) return .invalid_source;
-    const source_is_active = StateHierarchy.pathContains(comp, runtime.active(), key.from);
+    const source_is_active = StateHierarchy.pathContains(comp, runtime.active(), key.from) or
+        pathContainsEligibleAnyState(comp, runtime.active(), key.from);
     const source_is_pending = runtime.pending_from != null and
         runtime.pending_to != null and
-        StateHierarchy.pathContains(comp, runtime.pending(), key.from);
+        (StateHierarchy.pathContains(comp, runtime.pending(), key.from) or
+            pathContainsEligibleAnyState(comp, runtime.pending(), key.from));
     if (!source_is_active and !source_is_pending) return .inactive_source;
     if (!StateHierarchy.stateBelongsToFsm(comp, fsm_id, key.to)) return .invalid_target;
 
@@ -250,8 +282,34 @@ pub fn findReadyTransition(comp: anytype, fsm_id: i32, ctx: Types.EvalContext) !
     if (active_path.len < 2) return null;
 
     for (active_path[1..], 1..) |active_state, index| {
-        const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse continue;
-        if (try checkTransitionsForState(comp, runtime.fsm_id, parent_node, active_state, null, false, ctx)) |transition| {
+        const parent_state = active_path[index - 1];
+        const parent_node = StateHierarchy.findNode(comp, parent_state) orelse continue;
+        if (anyStateChild(comp, parent_node)) |any_state| {
+            if (try checkTransitionsForState(
+                comp,
+                runtime.fsm_id,
+                parent_node,
+                any_state,
+                active_state,
+                parent_state,
+                null,
+                false,
+                ctx,
+            )) |transition| {
+                return transition;
+            }
+        }
+        if (try checkTransitionsForState(
+            comp,
+            runtime.fsm_id,
+            parent_node,
+            active_state,
+            active_state,
+            active_state,
+            null,
+            false,
+            ctx,
+        )) |transition| {
             return transition;
         }
     }
@@ -267,7 +325,9 @@ fn checkTransitionsForState(
     comp: anytype,
     fsm_id: i32,
     node: *const AiStateMachineConfig.StateMachineNode,
-    state_to_check: i32,
+    configured_source: i32,
+    runtime_source: i32,
+    activation_state: i32,
     requested_target: ?i32,
     client_request: bool,
     ctx: Types.EvalContext,
@@ -276,7 +336,8 @@ fn checkTransitionsForState(
     if (runtime.pending_to != null) return null;
 
     const children = node.Children orelse return null;
-    const canonical_source = StateHierarchy.canonicalState(comp, state_to_check);
+    const canonical_source = StateHierarchy.canonicalState(comp, configured_source);
+    const canonical_runtime_source = StateHierarchy.canonicalState(comp, runtime_source);
 
     for (node.Transitions) |transition| {
         const resolved_transition = StateHierarchy.resolveOverrideStates(comp, transition.From, transition.To, false);
@@ -288,22 +349,28 @@ fn checkTransitionsForState(
             if (!StateHierarchy.statesEquivalent(comp, target_state, target)) continue;
         }
 
-        const target_is_child = for (children) |child| {
-            if (StateHierarchy.statesEquivalent(comp, child, target_state)) break true;
-        } else false;
-        if (!target_is_child) continue;
+        if (!targetIsChild(comp, children, target_state)) continue;
         if (client_request and !clientMayTakeTransition(comp, runtime.fsm_id, canonical_source, transition)) continue;
 
         const top_condition = ConditionEvaluator.findCondition(transition.Conditions, 0) orelse continue;
-        if (!ConditionEvaluator.evaluate(comp, fsm_id, transition, transition.Conditions, top_condition, ctx, 0)) continue;
+        if (!ConditionEvaluator.evaluate(
+            comp,
+            fsm_id,
+            transition,
+            transition.Conditions,
+            top_condition,
+            ctx,
+            activation_state,
+            0,
+        )) continue;
 
         if (comp.dissolve_combine_signal and ConditionEvaluator.transitionUsesDissolveCombine(transition.Conditions)) {
             comp.dissolve_combine_signal = false;
         }
-        try setPendingTransition(comp, runtime, canonical_source, target_state, ctx.now_ms);
+        try setPendingTransition(comp, runtime, canonical_runtime_source, target_state, ctx.now_ms);
         return .{
             .fsm_id = StateHierarchy.clientState(comp, runtime.fsm_id),
-            .from = StateHierarchy.clientState(comp, canonical_source),
+            .from = StateHierarchy.clientState(comp, canonical_runtime_source),
             .to = StateHierarchy.clientState(comp, target_state),
         };
     }
@@ -322,7 +389,8 @@ fn acceptPredictedTransition(
     const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
     if (!StateHierarchy.pathContains(comp, runtime.active(), from)) return false;
     if (!serverEvaluatesRoot(comp, runtime.fsm_id)) {
-        if (!canClientTransition(comp, runtime.fsm_id, from, to)) return false;
+        if (!canClientTransition(comp, runtime.fsm_id, from, to) and
+            !canClientAnyStateTransition(comp, runtime.fsm_id, runtime.active(), from, to)) return false;
         try changeCurrentState(comp, fsm_id, to, gpa, ctx.now_ms);
         return true;
     }
@@ -331,11 +399,28 @@ fn acceptPredictedTransition(
     if (active_path.len < 2) return false;
     for (active_path[1..], 1..) |active_state, index| {
         if (!StateHierarchy.statesEquivalent(comp, active_state, from)) continue;
-        const parent_node = StateHierarchy.findNode(comp, active_path[index - 1]) orelse return false;
-        _ = (try checkTransitionsForState(
+        const parent_state = active_path[index - 1];
+        const parent_node = StateHierarchy.findNode(comp, parent_state) orelse return false;
+        const accepted = if (anyStateChild(comp, parent_node)) |any_state|
+            try checkTransitionsForState(
+                comp,
+                runtime.fsm_id,
+                parent_node,
+                any_state,
+                active_state,
+                parent_state,
+                to,
+                true,
+                ctx,
+            )
+        else
+            null;
+        _ = accepted orelse (try checkTransitionsForState(
             comp,
             runtime.fsm_id,
             parent_node,
+            active_state,
+            active_state,
             active_state,
             to,
             true,
@@ -350,8 +435,66 @@ fn acceptPredictedTransition(
 fn canApplyNestedTransition(comp: anytype, runtime: *const Types.FsmNode, from: i32, to: i32) bool {
     if (!StateHierarchy.pathContains(comp, runtime.pending(), from)) return false;
     if (!StateHierarchy.stateBelongsToFsm(comp, runtime.fsm_id, to)) return false;
-    if (!allowsNestedTransition(comp, runtime.fsm_id, from)) return false;
-    return canClientTransition(comp, runtime.fsm_id, from, to);
+    const any_state = anyStateSourceForActiveState(comp, runtime.pending(), from);
+    if (!allowsNestedTransition(comp, runtime.fsm_id, from) and
+        (any_state == null or !allowsNestedTransition(comp, runtime.fsm_id, any_state.?))) return false;
+    return canClientTransition(comp, runtime.fsm_id, from, to) or
+        canClientAnyStateTransition(comp, runtime.fsm_id, runtime.pending(), from, to);
+}
+
+const AnyStateContext = struct {
+    source: i32,
+    parent_node: *const AiStateMachineConfig.StateMachineNode,
+};
+
+fn anyStateContextForActiveState(comp: anytype, path: []const i32, active_source: i32) ?AnyStateContext {
+    if (path.len < 2) return null;
+    for (path[1..], 1..) |active_state, index| {
+        if (!StateHierarchy.statesEquivalent(comp, active_state, active_source)) continue;
+        const parent_node = StateHierarchy.findNode(comp, path[index - 1]) orelse return null;
+        const source = anyStateChild(comp, parent_node) orelse return null;
+        return .{ .source = source, .parent_node = parent_node };
+    }
+    return null;
+}
+
+fn anyStateSourceForActiveState(comp: anytype, path: []const i32, active_source: i32) ?i32 {
+    const context = anyStateContextForActiveState(comp, path, active_source) orelse return null;
+    return context.source;
+}
+
+fn pathContainsEligibleAnyState(comp: anytype, path: []const i32, source: i32) bool {
+    if (path.len < 2) return false;
+    for (path[1..], 1..) |_, index| {
+        const parent_node = StateHierarchy.findNode(comp, path[index - 1]) orelse continue;
+        const any_state = anyStateChild(comp, parent_node) orelse continue;
+        if (StateHierarchy.statesEquivalent(comp, any_state, source)) return true;
+    }
+    return false;
+}
+
+fn anyStateChild(comp: anytype, parent_node: *const AiStateMachineConfig.StateMachineNode) ?i32 {
+    const children = parent_node.Children orelse return null;
+    var any_state: ?i32 = null;
+    for (children) |child| {
+        const child_node = StateHierarchy.findNode(comp, child) orelse continue;
+        if (child_node.IsAnyState) any_state = StateHierarchy.canonicalState(comp, child);
+    }
+    return any_state;
+}
+
+fn targetIsChild(comp: anytype, children: []const i32, target: i32) bool {
+    for (children) |child| {
+        if (StateHierarchy.statesEquivalent(comp, child, target)) return true;
+    }
+    return false;
+}
+
+fn canClientAnyStateTransition(comp: anytype, fsm_id: i32, path: []const i32, from: i32, to: i32) bool {
+    const context = anyStateContextForActiveState(comp, path, from) orelse return false;
+    const children = context.parent_node.Children orelse return false;
+    if (!targetIsChild(comp, children, to)) return false;
+    return canClientTransition(comp, fsm_id, context.source, to);
 }
 
 fn canClientTransition(comp: anytype, fsm_id: i32, from: i32, to: i32) bool {

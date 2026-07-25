@@ -17,6 +17,7 @@ pub fn evaluate(
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
     ctx: Types.EvalContext,
+    activation_state: i32,
     depth: usize,
 ) bool {
     if (depth > 12) return false;
@@ -24,7 +25,7 @@ pub fn evaluate(
         return clientPasses(comp, fsm_id, transition, condition.Index);
     }
 
-    var result = evaluateRaw(comp, fsm_id, transition, conditions, condition, ctx, depth);
+    var result = evaluateRaw(comp, fsm_id, transition, conditions, condition, ctx, activation_state, depth);
     if (condition.Reverse) result = !result;
     return result;
 }
@@ -36,6 +37,7 @@ fn evaluateRaw(
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
     ctx: Types.EvalContext,
+    activation_state: i32,
     depth: usize,
 ) bool {
     if (std.mem.eql(u8, condition.Name, "CondTrue")) return true;
@@ -44,7 +46,7 @@ fn evaluateRaw(
     if (condition.CondAnd) |data| {
         for (data.Conditions) |index| {
             const child = findCondition(conditions, index) orelse continue;
-            if (!evaluate(comp, fsm_id, transition, conditions, child, ctx, depth + 1)) return false;
+            if (!evaluate(comp, fsm_id, transition, conditions, child, ctx, activation_state, depth + 1)) return false;
         }
         return true;
     }
@@ -52,13 +54,13 @@ fn evaluateRaw(
     if (condition.CondOr) |data| {
         for (data.Conditions) |index| {
             const child = findCondition(conditions, index) orelse continue;
-            if (evaluate(comp, fsm_id, transition, conditions, child, ctx, depth + 1)) return true;
+            if (evaluate(comp, fsm_id, transition, conditions, child, ctx, activation_state, depth + 1)) return true;
         }
         return false;
     }
 
     if (condition.CondTimer) |timer| {
-        return timerPasses(comp, fsm_id, transition, condition.Index, timer, ctx.now_ms);
+        return timerPasses(comp, fsm_id, transition, activation_state, condition.Index, timer, ctx.now_ms);
     }
 
     if (condition.CondCheckState) |state| {
@@ -169,6 +171,7 @@ pub fn nextTimerDeadline(
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
     now_ms: i64,
+    activation_state: i32,
     depth: usize,
 ) ?i64 {
     if (depth > 12 or (condition.IsClient orelse false)) return null;
@@ -184,6 +187,7 @@ pub fn nextTimerDeadline(
                 conditions,
                 child,
                 now_ms,
+                activation_state,
                 depth + 1,
             ));
         }
@@ -200,6 +204,7 @@ pub fn nextTimerDeadline(
                 conditions,
                 child,
                 now_ms,
+                activation_state,
                 depth + 1,
             ));
         }
@@ -207,7 +212,7 @@ pub fn nextTimerDeadline(
     }
 
     const timer = condition.CondTimer orelse return null;
-    const activated_at = activationTime(comp, fsm_id, transition.From) orelse return null;
+    const activated_at = activationTime(comp, fsm_id, activation_state) orelse return null;
     const min_ms = durationMs(timer.MinTime);
     const configured_max = durationMs(timer.MaxTime orelse timer.MinTime);
     const max_ms = @max(configured_max, min_ms);
@@ -273,11 +278,12 @@ fn timerPasses(
     comp: anytype,
     fsm_id: i32,
     transition: AiStateMachineConfig.StateMachineTransition,
+    activation_state: i32,
     condition_index: i32,
     timer: AiStateMachineConfig.ConditionTimer,
     now_ms: i64,
 ) bool {
-    const activated_at = activationTime(comp, fsm_id, transition.From) orelse return false;
+    const activated_at = activationTime(comp, fsm_id, activation_state) orelse return false;
     if (now_ms < activated_at) return false;
 
     const min_ms = durationMs(timer.MinTime);
