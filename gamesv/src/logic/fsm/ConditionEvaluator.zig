@@ -9,6 +9,8 @@ const StateHierarchy = @import("StateHierarchy.zig");
 const Types = @import("Types.zig");
 
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
+const condition_true_type = 4;
+const condition_hate_type = 20;
 
 pub fn evaluate(
     comp: anytype,
@@ -16,16 +18,27 @@ pub fn evaluate(
     transition: AiStateMachineConfig.StateMachineTransition,
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
+    condition_index: i32,
     ctx: Types.EvalContext,
     activation_state: i32,
     depth: usize,
 ) bool {
     if (depth > 12) return false;
     if (condition.IsClient orelse false) {
-        return clientPasses(comp, fsm_id, transition, condition.Index);
+        return clientPasses(comp, fsm_id, transition, condition_index);
     }
 
-    var result = evaluateRaw(comp, fsm_id, transition, conditions, condition, ctx, activation_state, depth);
+    var result = evaluateRaw(
+        comp,
+        fsm_id,
+        transition,
+        conditions,
+        condition,
+        condition_index,
+        ctx,
+        activation_state,
+        depth,
+    );
     if (condition.Reverse) result = !result;
     return result;
 }
@@ -36,25 +49,46 @@ fn evaluateRaw(
     transition: AiStateMachineConfig.StateMachineTransition,
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
+    condition_index: i32,
     ctx: Types.EvalContext,
     activation_state: i32,
     depth: usize,
 ) bool {
-    if (std.mem.eql(u8, condition.Name, "CondTrue")) return true;
-    if (std.mem.eql(u8, condition.Name, "CondHate")) return comp.in_hate;
+    if (condition.Type == condition_true_type) return true;
+    if (condition.Type == condition_hate_type) return comp.in_hate;
 
     if (condition.CondAnd) |data| {
         for (data.Conditions) |index| {
-            const child = findCondition(conditions, index) orelse continue;
-            if (!evaluate(comp, fsm_id, transition, conditions, child, ctx, activation_state, depth + 1)) return false;
+            const child = findCondition(conditions, index) orelse return false;
+            if (!evaluate(
+                comp,
+                fsm_id,
+                transition,
+                conditions,
+                child,
+                index,
+                ctx,
+                activation_state,
+                depth + 1,
+            )) return false;
         }
         return true;
     }
 
     if (condition.CondOr) |data| {
         for (data.Conditions) |index| {
-            const child = findCondition(conditions, index) orelse continue;
-            if (evaluate(comp, fsm_id, transition, conditions, child, ctx, activation_state, depth + 1)) return true;
+            const child = findCondition(conditions, index) orelse return false;
+            if (evaluate(
+                comp,
+                fsm_id,
+                transition,
+                conditions,
+                child,
+                index,
+                ctx,
+                activation_state,
+                depth + 1,
+            )) return true;
         }
         return false;
     }
@@ -78,7 +112,7 @@ fn evaluateRaw(
     if (condition.CondWaitClient != null) return true;
 
     if (condition.CondTimer) |timer| {
-        return timerPasses(comp, fsm_id, transition, activation_state, condition.Index, timer, ctx.now_ms);
+        return timerPasses(comp, fsm_id, transition, activation_state, condition_index, timer, ctx.now_ms);
     }
 
     if (condition.CondCheckState) |state| {
@@ -167,8 +201,8 @@ pub fn dependencyMask(
     }
 
     if (condition.CondTimer != null) return Types.WakeReason.timer;
-    if (std.mem.eql(u8, condition.Name, "CondHate")) return Types.WakeReason.hate;
-    if (std.mem.eql(u8, condition.Name, "CondTrue") or
+    if (condition.Type == condition_hate_type) return Types.WakeReason.hate;
+    if (condition.Type == condition_true_type or
         condition.CondCheckState != null or
         condition.CondCheckStateByName != null or
         condition.CondCheckLastState != null) return Types.WakeReason.state;
@@ -194,6 +228,7 @@ pub fn nextTimerDeadline(
     transition: AiStateMachineConfig.StateMachineTransition,
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     condition: AiStateMachineConfig.StateMachineCondition,
+    condition_index: i32,
     now_ms: i64,
     activation_state: i32,
     depth: usize,
@@ -210,6 +245,7 @@ pub fn nextTimerDeadline(
                 transition,
                 conditions,
                 child,
+                index,
                 now_ms,
                 activation_state,
                 depth + 1,
@@ -227,6 +263,7 @@ pub fn nextTimerDeadline(
                 transition,
                 conditions,
                 child,
+                index,
                 now_ms,
                 activation_state,
                 depth + 1,
@@ -244,7 +281,7 @@ pub fn nextTimerDeadline(
         StateHierarchy.canonicalState(comp, fsm_id),
         StateHierarchy.canonicalState(comp, transition.From),
         StateHierarchy.canonicalState(comp, transition.To),
-        condition.Index,
+        condition_index,
         activated_at,
         min_ms,
         max_ms,
@@ -283,11 +320,9 @@ pub fn findCondition(
     conditions: []const AiStateMachineConfig.StateMachineCondition,
     index: i32,
 ) ?AiStateMachineConfig.StateMachineCondition {
-    for (conditions) |condition| {
-        if (condition.Index == index) return condition;
-    }
-
-    return null;
+    if (index < 0) return null;
+    const position: usize = @intCast(index);
+    return if (position < conditions.len) conditions[position] else null;
 }
 
 fn currentStateMatches(comp: anytype, state: i32) bool {
