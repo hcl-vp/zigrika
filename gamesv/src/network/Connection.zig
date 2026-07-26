@@ -16,11 +16,15 @@ const Assets = @import("../data/Assets.zig");
 const EventQueue = @import("../logic/EventQueue.zig");
 const RawPacket = @import("../network.zig").RawPacket;
 const ConnectionHandle = @import("../network.zig").ConnectionHandle;
+const SessionManager = @import("../network.zig").SessionManager;
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
 
 kcp: *Kcp,
 session_key: ?[32]u8 = null,
 seq: u32 = 0,
+
+const session_idle_timeout_ms = 60_000;
+const send_failure_limit = 3;
 
 const request_response_table = blk: {
     @setEvalBranchQuota(100_000);
@@ -131,37 +135,63 @@ fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake 
     return if (wake.closed) null else wake;
 }
 
-fn drainTimedLogicForSession(state: *State, kcp: *Kcp, io: Io, init_time: i64) !bool {
-    const log = std.log.scoped(.connection);
-    const clock: Io.Clock = .awake;
-    const time = clock.now(io);
-
-    try kcp.update(@intCast(time.toMilliseconds() - init_time));
-
+fn drainTimedLogicForSession(state: *State) bool {
     var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
-    const timed_changed = timed_logic: {
-        const did_enqueue = state.timers.timed_logic.drainDue(
-            io,
-            state.scene != null,
-            &event_queue,
-        ) catch |err| {
-            log.err("failed to execute timed logic tick: {t}", .{err});
-            break :timed_logic false;
-        };
-        if (!did_enqueue) break :timed_logic false;
-
-        logic_handlers.drainEventQueue(&event_queue, state) catch |err| {
-            log.err("failed to execute timed logic tick: {t}", .{err});
-            break :timed_logic false;
-        };
-        break :timed_logic true;
+    const timed_changed = state.timers.timed_logic.drainDue(
+        state.io,
+        state.scene != null,
+        &event_queue,
+    ) catch |err| failed: {
+        std.log.scoped(.connection).err("failed to schedule timed logic tick: {t}", .{err});
+        break :failed false;
     };
+    if (timed_changed) logic_handlers.drainEventQueueBestEffort(&event_queue, state);
     _ = state.arena.reset(.free_all);
 
     return timed_changed;
 }
 
-pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, assets: *const Assets) void {
+fn nextSessionWakeDelayMs(
+    handle: *ConnectionHandle,
+    kcp: *const Kcp,
+    state: ?*const State,
+    init_time_ms: i64,
+    last_receive_time_ms: i64,
+) i64 {
+    const now_ms = Io.Clock.awake.now(handle.io).toMilliseconds();
+    const idle_delay_ms = @max(session_idle_timeout_ms - (now_ms - last_receive_time_ms), 0);
+    const elapsed_ms: u32 = @intCast(now_ms - init_time_ms);
+    var delay_ms: i64 = kcp.nextUpdateDelay(elapsed_ms);
+    delay_ms = @min(delay_ms, idle_delay_ms);
+
+    if (state) |s| {
+        if (s.timers.timed_logic.nextWakeDelayMs(s.io, s.scene != null)) |timed_delay_ms| {
+            delay_ms = @min(delay_ms, timed_delay_ms);
+        }
+    }
+
+    return delay_ms;
+}
+
+fn updateKcpForSession(handle: *ConnectionHandle, kcp: *Kcp, elapsed_ms: u32) !void {
+    try kcp.update(elapsed_ms);
+    if (kcp.isDead()) return error.KcpDeadLink;
+    if (handle.consecutive_send_failures >= send_failure_limit) return error.SendFailed;
+}
+
+fn flushKcpForSession(handle: *ConnectionHandle, kcp: *Kcp) !void {
+    try kcp.flush();
+    if (kcp.isDead()) return error.KcpDeadLink;
+    if (handle.consecutive_send_failures >= send_failure_limit) return error.SendFailed;
+}
+
+pub fn process(
+    handle: *ConnectionHandle,
+    session_manager: *SessionManager,
+    gpa: Allocator,
+    fs: *FileSystem,
+    assets: *const Assets,
+) void {
     const log = std.log.scoped(.connection);
 
     const clock: Io.Clock = .awake;
@@ -190,27 +220,40 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
 
     var player_id: ?i32 = null;
     var enter: bool = false;
+    var claimed_player_id: ?i32 = null;
+    defer if (claimed_player_id) |id| session_manager.release(handle, id);
+
     var state: ?State = null;
     defer if (state) |*s| s.deinit(fs);
 
-    // TODO: timeout
-    while (waitSessionWake(handle, if (state) |*s| s.timers.timed_logic.nextWakeDelayMs(s.io, s.scene != null) else null)) |wake| {
+    var last_receive_time_ms = init_time;
+
+    while (true) {
+        const state_ptr: ?*const State = if (state) |*s| s else null;
+        const wake = waitSessionWake(
+            handle,
+            nextSessionWakeDelayMs(handle, &kcp, state_ptr, init_time, last_receive_time_ms),
+        ) orelse break;
+
         var needs_flush = false;
-        var timed_logic_checked = false;
+        var kcp_updated = false;
 
         if (wake.packet) |packet| {
             const time = clock.now(handle.io);
+            const elapsed_ms: u32 = @intCast(time.toMilliseconds() - init_time);
             needs_flush = true;
 
             _ = kcp.input(packet.buf[0..packet.len]) catch |err| {
                 log.err("failed to input data into kcp state: {t}, disconnecting", .{err});
                 return;
             };
+            last_receive_time_ms = time.toMilliseconds();
 
-            kcp.update(@intCast(time.toMilliseconds() - init_time)) catch |err| {
+            updateKcpForSession(handle, &kcp, elapsed_ms) catch |err| {
                 log.err("failed to update kcp state: {t}, disconnecting", .{err});
                 return;
             };
+            kcp_updated = true;
 
             while (kcp.peekSize()) |size| {
                 if (size > read_buffer.len) {
@@ -271,6 +314,12 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
                         };
 
                         if (enter) if (player_id) |id| { // Auth step finished. Initialize the state.
+                            session_manager.acquire(gpa, handle, id) catch |err| {
+                                log.err("failed to acquire player session: {t}, disconnecting", .{err});
+                                return;
+                            };
+                            claimed_player_id = id;
+
                             const player_components = PlayerComponentStorage.init(gpa, fs, assets, id) catch |err| {
                                 log.err("failed to init player component storage: {t}, disconnecting", .{err});
                                 return;
@@ -292,33 +341,33 @@ pub fn process(handle: *ConnectionHandle, gpa: Allocator, fs: *FileSystem, asset
                     }
                 }
             } else |_| {} // EAGAIN behavior
+        }
 
-            if (state) |*s| {
-                const now_ms = clock.now(handle.io).toMilliseconds();
-                if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms)) {
-                    const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
-                        log.err("failed to update kcp state: {t}, disconnecting", .{err});
-                        return;
-                    };
-                    needs_flush = timed_changed or needs_flush;
-                    timed_logic_checked = true;
-                }
+        const now_ms = clock.now(handle.io).toMilliseconds();
+        if (now_ms - last_receive_time_ms >= session_idle_timeout_ms) {
+            log.info("session timed out after {d} ms without input", .{session_idle_timeout_ms});
+            return;
+        }
+
+        if (wake.tick and !kcp_updated) {
+            updateKcpForSession(handle, &kcp, @intCast(now_ms - init_time)) catch |err| {
+                log.err("failed to update kcp state: {t}, disconnecting", .{err});
+                return;
+            };
+        }
+
+        if (state) |*s| {
+            if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms)) {
+                needs_flush = drainTimedLogicForSession(s) or needs_flush;
             }
         }
 
-        if (wake.tick and !timed_logic_checked) {
-            needs_flush = true;
-
-            if (state) |*s| {
-                const timed_changed = drainTimedLogicForSession(s, &kcp, handle.io, init_time) catch |err| {
-                    log.err("failed to update kcp state: {t}, disconnecting", .{err});
-                    return;
-                };
-                needs_flush = timed_changed or needs_flush;
-            }
+        if (needs_flush) {
+            flushKcpForSession(handle, &kcp) catch |err| {
+                log.err("failed to flush kcp state: {t}, disconnecting", .{err});
+                return;
+            };
         }
-
-        if (needs_flush) kcp.flush() catch {};
     }
 }
 
@@ -346,7 +395,11 @@ pub fn push(conn: *Connection, message: anytype, arena: Allocator) !void {
 
 fn kcpOutput(buf: []const u8, kcp: *Kcp, user: ?usize) usize {
     const handle: *ConnectionHandle = @ptrFromInt(user.?);
-    if (handle.socket.send(handle.io, &handle.address, buf)) return buf.len else |err| {
+    if (handle.socket.send(handle.io, &handle.address, buf)) {
+        handle.consecutive_send_failures = 0;
+        return buf.len;
+    } else |err| {
+        handle.consecutive_send_failures +|= 1;
         std.log.debug(
             "send failed, conv: {d}, end_point: {f}, data_len: {d}, error: {t}",
             .{ kcp.conv, handle.address, buf.len, err },

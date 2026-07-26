@@ -65,14 +65,6 @@ pub const FsmTimerTick = struct {
     now_ms: i64,
 };
 
-pub const LevelPlayTimerTick = struct {
-    now_ms: i64,
-};
-
-pub const SceneCleanupTick = struct {
-    now_ms: i64,
-};
-
 pub const DirtySaveTick = struct {
     now_ms: i64,
 };

@@ -1161,7 +1161,7 @@ pub const Kcp = struct {
         var ts_flush = kcp.ts_flush;
         var tm_flush: i32 = 0x7fffffff;
         var tm_packet: i32 = 0x7fffffff;
-        var minimal: u32 = 0;
+        var minimal: i32 = 0;
         var p: *LoopQueue = undefined;
 
         if (kcp.updated == 0) {
@@ -1191,9 +1191,19 @@ pub const Kcp = struct {
         }
 
         minimal = if (tm_packet < tm_flush) tm_packet else tm_flush;
-        if (minimal >= kcp.interval) minimal = kcp.interval;
+        const interval: i32 = @intCast(kcp.interval);
+        if (minimal >= interval) minimal = interval;
 
-        return current + minimal;
+        return current + @as(u32, @intCast(minimal));
+    }
+
+    pub fn nextUpdateDelay(kcp: *const Kcp, current: u32) u32 {
+        const delay = _itimediff(kcp.check(current), current);
+        return if (delay <= 0) 0 else @intCast(delay);
+    }
+
+    pub fn isDead(kcp: *const Kcp) bool {
+        return kcp.state != 0;
     }
 
     pub fn setMTU(kcp: *Kcp, mtu: usize) !usize {

@@ -12,20 +12,10 @@ const scene_time_job: ScheduledJob = .{
     .interval = .ms50,
     .event_key = .tick_time,
 };
-const level_play_job: ScheduledJob = .{
-    .interval = .ms250,
-    .event_key = .level_play_timer_tick,
-};
-const scene_cleanup_job: ScheduledJob = .{
-    .interval = .s1,
-    .event_key = .scene_cleanup_tick,
-};
 const jobs = [_]ScheduledJob{
     scene_time_job,
     BuffTimerScheduler.job,
     FsmTimerScheduler.job,
-    level_play_job,
-    scene_cleanup_job,
     DirtySaveQueue.job,
 };
 
@@ -107,12 +97,12 @@ pub fn drainDue(
 
     inline for (intervals, 0..) |interval, index| {
         if (scheduler.next_due_ms[index] <= now_ms) {
-            scheduler.next_due_ms[index] = now_ms + @intFromEnum(interval);
             inline for (jobs) |job| {
                 if (job.interval == interval) {
                     try event_queue.enqueue(job.event_key, .{ .now_ms = now_ms });
                 }
             }
+            scheduler.next_due_ms[index] = now_ms + @intFromEnum(interval);
             did_enqueue = true;
         }
     }
