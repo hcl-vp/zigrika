@@ -61,10 +61,6 @@ pub const BuffTimerTick = struct {
     now_ms: i64,
 };
 
-pub const FsmTimerTick = struct {
-    now_ms: i64,
-};
-
 pub const DirtySaveTick = struct {
     now_ms: i64,
 };

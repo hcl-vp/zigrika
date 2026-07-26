@@ -3,7 +3,6 @@ const std = @import("std");
 const EventQueue = @import("../EventQueue.zig");
 const BuffTimerScheduler = @import("BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("DirtySaveQueue.zig");
-const FsmTimerScheduler = @import("FsmTimerScheduler.zig");
 const ScheduledJob = @import("ScheduledJob.zig");
 
 const Interval = ScheduledJob.Interval;
@@ -15,7 +14,6 @@ const scene_time_job: ScheduledJob = .{
 const jobs = [_]ScheduledJob{
     scene_time_job,
     BuffTimerScheduler.job,
-    FsmTimerScheduler.job,
     DirtySaveQueue.job,
 };
 

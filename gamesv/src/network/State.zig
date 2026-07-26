@@ -14,7 +14,6 @@ const PlayerID = @import("../logic/PlayerID.zig");
 const PlayerComponentStorage = @import("../logic/component/player/PlayerComponentStorage.zig");
 const TimedLogicScheduler = @import("../logic/schedulers/TimedLogicScheduler.zig");
 const BuffTimerScheduler = @import("../logic/schedulers/BuffTimerScheduler.zig");
-const FsmTimerScheduler = @import("../logic/schedulers/FsmTimerScheduler.zig");
 const DirtySaveQueue = @import("../logic/schedulers/DirtySaveQueue.zig");
 
 const log = std.log.scoped(.state);
@@ -22,17 +21,14 @@ const log = std.log.scoped(.state);
 pub const Timers = struct {
     timed_logic: TimedLogicScheduler = .{},
     buffs: BuffTimerScheduler = .{},
-    fsm: FsmTimerScheduler = .{},
 
     pub fn deinit(timers: *Timers, gpa: Allocator) void {
-        timers.fsm.deinit(gpa);
         timers.buffs.deinit(gpa);
     }
 
     pub fn reset(timers: *Timers, gpa: Allocator) void {
         timers.timed_logic.reset();
         timers.buffs.reset(gpa);
-        timers.fsm.reset(gpa);
     }
 };
 
@@ -106,7 +102,6 @@ pub fn extract(s: *State, comptime T: type) !T {
     if (T == *Timers) return &s.timers;
     if (T == *TimedLogicScheduler) return &s.timers.timed_logic;
     if (T == *BuffTimerScheduler) return &s.timers.buffs;
-    if (T == *FsmTimerScheduler) return &s.timers.fsm;
     if (T == *DirtySaveQueue) return &s.dirty_saves;
 
     const is_struct = comptime std.meta.activeTag(@typeInfo(T)) == .@"struct";
