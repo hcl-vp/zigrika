@@ -72,7 +72,3 @@ pub const GameplayTagChange = struct {
 };
 
 pub const ChatCommandResponse = struct { content: []const u8 };
-
-pub const TickTime = struct {
-    now_ms: i64,
-};

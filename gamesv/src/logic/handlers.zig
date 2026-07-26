@@ -14,7 +14,6 @@ const logic_namespaces: []const type = &.{
     @import("handlers/buff.zig"),
     @import("handlers/tags.zig"),
     @import("handlers/chat.zig"),
-    @import("handlers/time.zig"),
 };
 
 pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {

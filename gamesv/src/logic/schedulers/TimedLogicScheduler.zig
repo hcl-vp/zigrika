@@ -7,12 +7,7 @@ const ScheduledJob = @import("ScheduledJob.zig");
 
 const Interval = ScheduledJob.Interval;
 const intervals = std.enums.values(Interval);
-const scene_time_job: ScheduledJob = .{
-    .interval = .ms50,
-    .event_key = .tick_time,
-};
 const jobs = [_]ScheduledJob{
-    scene_time_job,
     BuffTimerScheduler.job,
     DirtySaveQueue.job,
 };

@@ -23,11 +23,7 @@ entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
 
-pub const TimeInfo = struct {
-    timestamp: i64 = 0,
-    last_packet_time: i64 = 0,
-    dilation: f64 = 0.0,
-};
+pub const TimeInfo = @import("SceneTime.zig");
 
 pub const Entity = struct {
     pub const ConfigComponent = @import("component/entity/ConfigComponent.zig");

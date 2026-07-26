@@ -548,18 +548,16 @@ pub fn afterSceneJoin(
     try notifyInfrastructureRoadData(alloc, conn, assets);
 
     const rtc: Io.Clock = .real;
+    const monotonic_clock: Io.Clock = .awake;
     const now_ms = rtc.now(io).toMilliseconds();
-    scene.scene_time = .{
-        .timestamp = now_ms,
-        .last_packet_time = now_ms,
-        .dilation = 1.0,
-    };
+    const monotonic_now = monotonic_clock.now(io).toMilliseconds();
+    scene.scene_time.reset(now_ms, monotonic_now);
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,
         .ServerCombatTime = now_ms,
         .ServerStopTime = now_ms,
-        .ServerFlowTimestamp = scene.scene_time.timestamp,
+        .ServerFlowTimestamp = scene.scene_time.currentFlowTimestamp(monotonic_now),
     }, alloc.arena);
     try events.enqueue(.update_formations, .{});
 
