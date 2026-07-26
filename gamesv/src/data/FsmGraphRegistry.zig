@@ -133,17 +133,12 @@ pub fn buildGraph(
     state_machine_config: AiStateMachineConfig.StateMachineJsonData,
     common_state_machine: AiStateMachineConfig.StateMachineJsonData,
 ) !?Graph {
-    if (!hasDeclaredRoot(state_machine_config, common_state_machine)) return null;
-
-    var state_list: std.ArrayList(i32) = .empty;
-    try state_list.appendSlice(arena, state_machine_config.StateMachines);
-
-    var nodes: std.ArrayList(GraphNode) = .empty;
-    var common_nodes: std.AutoHashMapUnmanaged(i32, *const Node) = .empty;
-    var common_custom_nodes: std.AutoHashMapUnmanaged(i32, *const Node) = .empty;
+    var unified_nodes: std.AutoHashMapUnmanaged(i32, *const Node) = .empty;
     for (common_state_machine.Nodes) |*node| {
-        try putFirst(*const Node, &common_nodes, arena, node.Uuid, node);
-        if (node.kind() == .custom) try putFirst(*const Node, &common_custom_nodes, arena, node.Uuid, node);
+        try unified_nodes.put(arena, node.Uuid, node);
+    }
+    for (state_machine_config.Nodes) |*node| {
+        try unified_nodes.put(arena, node.Uuid, node);
     }
 
     var graph: Graph = .{
@@ -151,24 +146,45 @@ pub fn buildGraph(
         .common_hash_code = common_state_machine.Version,
     };
 
-    for (state_machine_config.Nodes) |*node| {
-        switch (node.kind()) {
-            .reference => {
-                const ref_uuid = node.ReferenceUuid.?;
-                const reference = common_custom_nodes.get(ref_uuid) orelse continue;
-
-                if (std.mem.indexOfScalar(i32, state_list.items, node.Uuid) != null) {
-                    try state_list.append(arena, ref_uuid);
-                }
-                try insertWithDescendants(ref_uuid, reference, &common_nodes, &nodes, arena);
-            },
-            .override => {
-                try putFirst(i32, &graph.alias_to_resolved, arena, node.Uuid, node.OverrideCommonUuid.?);
-                try putFirst(i32, &graph.resolved_to_alias, arena, node.OverrideCommonUuid.?, node.Uuid);
-                try nodes.append(arena, .{ .key = node.Uuid, .value = node });
-            },
-            .custom => try nodes.append(arena, .{ .key = node.Uuid, .value = node }),
+    var reference_targets: std.AutoHashMapUnmanaged(i32, i32) = .empty;
+    var reference_order: std.ArrayList(i32) = .empty;
+    for (common_state_machine.Nodes) |node| {
+        if (node.ReferenceUuid) |target_id| {
+            try putReference(&reference_targets, &reference_order, arena, node.Uuid, target_id);
         }
+    }
+    for (state_machine_config.Nodes) |*node| {
+        if (node.OverrideCommonUuid) |common_id| {
+            try graph.alias_to_resolved.put(arena, node.Uuid, common_id);
+            try graph.resolved_to_alias.put(arena, common_id, node.Uuid);
+        }
+        if (node.ReferenceUuid) |target_id| {
+            try putReference(&reference_targets, &reference_order, arena, node.Uuid, target_id);
+        }
+    }
+
+    var state_list: std.ArrayList(i32) = .empty;
+    for (state_machine_config.StateMachines) |root_id| {
+        const effective_id = graph.resolved_to_alias.get(root_id) orelse root_id;
+        if (!unified_nodes.contains(effective_id)) continue;
+        if (!reference_targets.contains(effective_id)) try appendUnique(&state_list, arena, root_id);
+    }
+    for (reference_order.items) |alias_id| {
+        const target_id = reference_targets.get(alias_id).?;
+        if (!validateReferenceChain(target_id, &unified_nodes, &reference_targets, &graph)) return null;
+        try appendUnique(&state_list, arena, target_id);
+    }
+
+    var nodes: std.ArrayList(GraphNode) = .empty;
+    for (state_list.items) |root_id| {
+        try insertWithDescendants(
+            root_id,
+            &unified_nodes,
+            &graph.resolved_to_alias,
+            &reference_targets,
+            &nodes,
+            arena,
+        );
     }
 
     graph.state_list = try state_list.toOwnedSlice(arena);
@@ -176,10 +192,12 @@ pub fn buildGraph(
     for (nodes.items) |entry| {
         try putFirst(*const Node, &graph.exact_nodes, arena, entry.key, entry.value);
         try putFirst(*const Node, &graph.exact_nodes, arena, entry.value.Uuid, entry.value);
-        try putFirst(NodeMetadata, &graph.node_metadata, arena, entry.key, nodeMetadata(entry.value));
+        const metadata = if (reference_targets.contains(entry.key)) NodeMetadata{} else nodeMetadata(entry.value);
+        try putFirst(NodeMetadata, &graph.node_metadata, arena, entry.key, metadata);
     }
 
     for (nodes.items) |entry| {
+        if (reference_targets.contains(entry.key)) continue;
         for (entry.value.Transitions) |transition| {
             const key = edgeKey(graph.canonicalState(transition.From), graph.canonicalState(transition.To));
             const gop = try graph.transition_flags.getOrPut(arena, key);
@@ -317,41 +335,86 @@ fn nodeMetadata(node: *const Node) NodeMetadata {
     return metadata;
 }
 
-fn hasDeclaredRoot(
-    entity: AiStateMachineConfig.StateMachineJsonData,
-    common: AiStateMachineConfig.StateMachineJsonData,
-) bool {
-    for (entity.StateMachines) |root_id| {
-        for (entity.Nodes) |node| {
-            if (node.Uuid != root_id) continue;
-            const effective_id = node.ReferenceUuid orelse node.Uuid;
-            const nodes = if (node.ReferenceUuid != null) common.Nodes else entity.Nodes;
-            for (nodes) |candidate| {
-                if (candidate.Uuid == effective_id) return true;
-            }
-        }
-    }
-
-    return false;
-}
-
 fn insertWithDescendants(
     node_id: i32,
-    node: *const Node,
     source: *const std.AutoHashMapUnmanaged(i32, *const Node),
+    overrides: *const std.AutoHashMapUnmanaged(i32, i32),
+    references: *const std.AutoHashMapUnmanaged(i32, i32),
     target: *std.ArrayList(GraphNode),
     arena: Allocator,
 ) !void {
+    const effective_id = overrides.get(node_id) orelse node_id;
+    const node = source.get(effective_id) orelse return;
     for (target.items) |entry| {
-        if (entry.key == node_id) return;
+        if (entry.key == effective_id) return;
     }
 
-    try target.append(arena, .{ .key = node_id, .value = node });
+    if (references.contains(effective_id)) {
+        const reference_node = try arena.create(Node);
+        reference_node.* = .{
+            .Uuid = node.Uuid,
+            .Name = node.Name,
+        };
+        _ = try appendNode(effective_id, reference_node, target, arena);
+        return;
+    }
+
+    _ = try appendNode(effective_id, node, target, arena);
     if (node.Children) |children| {
         for (children) |child_id| {
-            const child = source.get(child_id) orelse continue;
-            try insertWithDescendants(child_id, child, source, target, arena);
+            try insertWithDescendants(child_id, source, overrides, references, target, arena);
         }
+    }
+}
+
+fn appendNode(
+    key: i32,
+    node: *const Node,
+    nodes: *std.ArrayList(GraphNode),
+    arena: Allocator,
+) !bool {
+    for (nodes.items) |entry| {
+        if (entry.key == key) return false;
+    }
+    try nodes.append(arena, .{ .key = key, .value = node });
+    return true;
+}
+
+fn appendUnique(list: *std.ArrayList(i32), arena: Allocator, value: i32) !void {
+    if (std.mem.indexOfScalar(i32, list.items, value) == null) try list.append(arena, value);
+}
+
+fn putReference(
+    targets: *std.AutoHashMapUnmanaged(i32, i32),
+    order: *std.ArrayList(i32),
+    arena: Allocator,
+    alias_id: i32,
+    target_id: i32,
+) !void {
+    const gop = try targets.getOrPut(arena, alias_id);
+    if (!gop.found_existing) try order.append(arena, alias_id);
+    gop.value_ptr.* = target_id;
+}
+
+fn validateReferenceChain(
+    start_id: i32,
+    nodes: *const std.AutoHashMapUnmanaged(i32, *const Node),
+    references: *const std.AutoHashMapUnmanaged(i32, i32),
+    graph: *const Graph,
+) bool {
+    var path: [max_state_depth]i32 = @splat(0);
+    var len: usize = 0;
+    var current = start_id;
+
+    while (true) {
+        const effective_id = graph.resolved_to_alias.get(current) orelse current;
+        if (len >= path.len or std.mem.indexOfScalar(i32, path[0..len], effective_id) != null) return false;
+        path[len] = effective_id;
+        len += 1;
+
+        if (!nodes.contains(effective_id)) return false;
+        const target_id = references.get(effective_id) orelse return true;
+        current = target_id;
     }
 }
 
