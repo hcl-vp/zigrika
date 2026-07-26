@@ -4575,5 +4575,74 @@
     "LockCon": 0,
     "MonsterInfoId": 340000310,
     "NightMareDetectionId": 0
+  },
+  {
+    "Id": 310001030,
+    "BlueprintType": "branch3.5_247_Animal_V3_11",
+    "MarkId": 6091,
+    "Name": "MonsterInfo_310001030_Name",
+    "ShowReward": 6103,
+    "BlueprintTypeList": [
+      "branch3.5_247_Animal_V3_11"
+    ],
+    "EntityConfigId": 0,
+    "DangerType": 0,
+    "TypeDescription2": 16,
+    "AttributesDescriptionLock": "MonsterInfo_310001030_UndiscoveredDes",
+    "AttributesDescriptionUnlock": "MonsterInfo_310001030_DiscoveredDes",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31103_UI.T_IconMonsterHead_31103_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31103_UI.T_IconMonsterHead_31103_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31103_UI.T_IconMonsterHead_31103_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_31103_UI.T_IconMonsterHead_31103_UI",
+    "BeginTimeStamp": 300,
+    "LockCon": 0,
+    "MonsterInfoId": 310001030,
+    "NightMareDetectionId": 0
+  },
+  {
+    "Id": 320000690,
+    "BlueprintType": "branch3.5_247_Animal_V3_6",
+    "MarkId": 6564,
+    "Name": "MonsterInfo_320000690_Name",
+    "ShowReward": 6102,
+    "BlueprintTypeList": [
+      "branch3.5_247_Animal_V3_6"
+    ],
+    "EntityConfigId": 0,
+    "DangerType": 1,
+    "TypeDescription2": 16,
+    "AttributesDescriptionLock": "MonsterInfo_320000690_UndiscoveredDes",
+    "AttributesDescriptionUnlock": "MonsterInfo_320000690_DiscoveredDes",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32069_UI.T_IconMonsterHead_32069_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32069_UI.T_IconMonsterHead_32069_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32069_UI.T_IconMonsterHead_32069_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_32069_UI.T_IconMonsterHead_32069_UI",
+    "BeginTimeStamp": 300,
+    "LockCon": 0,
+    "MonsterInfoId": 320000690,
+    "NightMareDetectionId": 0
+  },
+  {
+    "Id": 340000320,
+    "BlueprintType": "branch3.5_247_Animal_V3_9",
+    "MarkId": 5042,
+    "Name": "MonsterInfo_340000320_Name",
+    "ShowReward": 7132,
+    "BlueprintTypeList": [
+      "branch3.5_247_Animal_V3_9"
+    ],
+    "EntityConfigId": 0,
+    "DangerType": 2,
+    "TypeDescription2": 20,
+    "AttributesDescriptionLock": "MonsterInfo_340000320_UndiscoveredDes",
+    "AttributesDescriptionUnlock": "MonsterInfo_340000320_DiscoveredDes",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34032_UI.T_IconMonsterHead_34032_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34032_UI.T_IconMonsterHead_34032_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34032_UI.T_IconMonsterHead_34032_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34032_UI.T_IconMonsterHead_34032_UI",
+    "BeginTimeStamp": 300,
+    "LockCon": 0,
+    "MonsterInfoId": 340000320,
+    "NightMareDetectionId": 0
   }
 ]

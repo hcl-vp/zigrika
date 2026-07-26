@@ -41,6 +41,7 @@
       "1902": 15,
       "1903": 15
     },
+    "ShareId": 9,
     "CameraShakeCd": 0.5,
     "CameraShake": {
       "1": "/Game/Aki/Data/SimpleCombat/3_4Potato/CS_Tudou_Lv3.CS_Tudou_Lv3_C",

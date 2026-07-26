@@ -3287,5 +3287,159 @@
     "ActivityId": 0,
     "Type": 2,
     "DuringTime": 0
+  },
+  {
+    "Id": 6132,
+    "LevelRange": [
+      1,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [
+      1618
+    ],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 6133,
+    "LevelRange": [
+      1,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [
+      2527
+    ],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 6134,
+    "LevelRange": [
+      1,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [
+      1601
+    ],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 6135,
+    "LevelRange": [
+      1,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [
+      911
+    ],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 6136,
+    "LevelRange": [
+      1,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [
+      1598
+    ],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 0,
+    "DuringTime": 0
+  },
+  {
+    "Id": 9013,
+    "LevelRange": [
+      2,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 2119,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 1,
+    "DuringTime": 0
+  },
+  {
+    "Id": 9246,
+    "LevelRange": [
+      2,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 2,
+    "DuringTime": 0
+  },
+  {
+    "Id": 9247,
+    "LevelRange": [
+      2,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 2,
+    "DuringTime": 0
+  },
+  {
+    "Id": 9248,
+    "LevelRange": [
+      2,
+      999
+    ],
+    "AreaId": [],
+    "MapId": [],
+    "ConditionGroup": 0,
+    "IsLimitShow": false,
+    "BeginTime": 0,
+    "EndTime": 0,
+    "ActivityId": 0,
+    "Type": 2,
+    "DuringTime": 0
   }
 ]

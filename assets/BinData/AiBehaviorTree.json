@@ -124,5 +124,47 @@
     "Description": "3_2西格莉卡暗面2样条向导",
     "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_2/Xigelika/BT_GuideWithSpline_AnMian2.BT_GuideWithSpline_AnMian2",
     "BtType": "Npc"
+  },
+  {
+    "Id": 800019,
+    "Description": "3_6景燃战斗+跟随",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/JingRan/BT_BattleFollowing_JingRan.BT_BattleFollowing_JingRan",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800020,
+    "Description": "3_6景燃战斗+样条引导",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/JingRan/BT_BattleFollowingSpline_JingRan.BT_BattleFollowingSpline_JingRan",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800021,
+    "Description": "3_6清宵仅战斗",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/Qingxiao/BT_BattleOnly_QX.BT_BattleOnly_QX",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800022,
+    "Description": "3_6清宵仅跟随",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/Qingxiao/BT_FollowingOnly_QX.BT_FollowingOnly_QX",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800023,
+    "Description": "3_6清宵战斗+跟随",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/Qingxiao/BT_BattleFollowing_QX.BT_BattleFollowing_QX",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800024,
+    "Description": "3_6清宵战斗+样条引导",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/Qingxiao/BT_BattleFollowingSpline_QX.BT_BattleFollowingSpline_QX",
+    "BtType": "Monster"
+  },
+  {
+    "Id": 800025,
+    "Description": "3_6清宵注视测试",
+    "BtPath": "/Game/Aki/AI/AINPC/LevelAiBT/Others/3_6/Qingxiao/BT_LookAt_Test.BT_LookAt_Test",
+    "BtType": "Monster"
   }
 ]

@@ -4720,5 +4720,59 @@
     "JumpType": 2,
     "InstanceDungeonEntranceId": 0,
     "JumpWithSubDungeonId": 0
+  },
+  {
+    "Id": 30020023,
+    "Name": "LordGymInfo_Text17",
+    "GuideId": 2,
+    "LevelPlayList": [
+      244800002
+    ],
+    "InstanceSubTypeDescription": "InpuBoxText_empty",
+    "DangerType": 3,
+    "Secondary": 61,
+    "TypeDescription2": 61,
+    "MatType": 0,
+    "AttributesDescriptionLock": "LordGymInfo_Text17",
+    "AttributesDescriptionUnlock": "LordGymInfo_Text17",
+    "BigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34018_UI.T_IconMonsterHead_QX_34018_UI",
+    "LockBigIcon": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_34030_UI.T_IconMonsterHead_34030_UI",
+    "TemporaryIconUnLock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
+    "TemporaryIconlock": "/Game/Aki/UI/UIResources/Common/Image/IconMonsterHead/T_IconMonsterHead_QX_34011_UI.T_IconMonsterHead_QX_34011_UI",
+    "ShowReward": 49931,
+    "ShowRewardMap": {
+      "1": 49931,
+      "2": 49932,
+      "3": 49933,
+      "4": 49934,
+      "5": 49935,
+      "6": 49936
+    },
+    "ShowRewardMapCalabash": {
+      "1": 14008
+    },
+    "BeginTimeStamp": 0,
+    "PreOpenId": 0,
+    "MarkId": 4028,
+    "LockCon": 13000262,
+    "MapId": 8,
+    "PhantomId": [],
+    "FirstDropId": 0,
+    "AdditionalId": 32010,
+    "SortId": 27,
+    "NewContent": "New_corner",
+    "DetectionTabType": 10,
+    "PhantomFetterGroup": [],
+    "WeaponFetterGroup": [],
+    "PeriodicityChallengeType": 0,
+    "DetectionTitlePanel": 0,
+    "LeftBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ01.SP_DevelopmentPeriodFSJQ01",
+    "RightBgSprite": "/Game/Aki/UI/UIResources/UiDevelopmentGuide/Atlas/Period/SP_DevelopmentPeriodFSJQ02.SP_DevelopmentPeriodFSJQ02",
+    "LeftBgTexture": "",
+    "DungeonId": 0,
+    "JumpType": 2,
+    "InstanceDungeonEntranceId": 3925,
+    "JumpWithSubDungeonId": 0
   }
 ]

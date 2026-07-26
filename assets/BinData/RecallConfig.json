@@ -25,7 +25,16 @@
     },
     "EntryTags": [
       "关卡.decfe9c6"
-    ]
+    ],
+    "FunctionIds": [
+      1,
+      2,
+      3
+    ],
+    "QuestName": "",
+    "ChapterName": "",
+    "SmallChapterName": "",
+    "AreaTexture": ""
   },
   {
     "RecallId": 100201,
@@ -102,7 +111,16 @@
     },
     "EntryTags": [
       "关卡.decfe9c6"
-    ]
+    ],
+    "FunctionIds": [
+      1,
+      2,
+      3
+    ],
+    "QuestName": "",
+    "ChapterName": "",
+    "SmallChapterName": "",
+    "AreaTexture": ""
   },
   {
     "RecallId": 1,
@@ -122,6 +140,73 @@
     },
     "EntryTags": [
       "关卡.decfe9c6"
-    ]
+    ],
+    "FunctionIds": [
+      1,
+      2,
+      3
+    ],
+    "QuestName": "",
+    "ChapterName": "",
+    "SmallChapterName": "",
+    "AreaTexture": ""
+  },
+  {
+    "RecallId": 100101,
+    "NeedFinishQuestIds": [],
+    "QuestIds": [
+      121800007,
+      121800000,
+      121800001,
+      121800002,
+      121800003,
+      121800004,
+      121800005,
+      121800006
+    ],
+    "DungeonEntranceId": 308000,
+    "DungeonIds": [
+      20110008,
+      20111507,
+      20110068
+    ],
+    "LevelPlayIds": [
+      121800001,
+      131000055,
+      131000061,
+      131000062,
+      141900002,
+      141900005,
+      133900021,
+      146000055,
+      146000053,
+      146900000,
+      146900007,
+      146900008,
+      146900009,
+      131900003
+    ],
+    "RecallQuests": {
+      "121800000": 125000120,
+      "121800001": 125000121,
+      "121800002": 133000009,
+      "121800003": 125000122,
+      "121800004": 146000002,
+      "121800005": 125000123,
+      "121800006": 125000124,
+      "121800007": 880000013
+    },
+    "EntryTags": [
+      "关卡.decfe9c6"
+    ],
+    "FunctionIds": [
+      1,
+      2,
+      3
+    ],
+    "QuestName": "",
+    "ChapterName": "",
+    "SmallChapterName": "",
+    "AreaTexture": ""
   }
 ]

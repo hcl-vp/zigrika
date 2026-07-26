@@ -363,8 +363,8 @@
     "Id": 1060004,
     "SheriffAnomalyId": 106,
     "ProgressType": 2,
-    "GroupId": 1060003,
-    "GroupPriority": 2,
+    "GroupId": 1060004,
+    "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_6_Title_3",
     "Context": "Sheriff_EventProgress_6_Content_3",
     "Percent": 100
@@ -373,8 +373,8 @@
     "Id": 1110004,
     "SheriffAnomalyId": 111,
     "ProgressType": 2,
-    "GroupId": 1110003,
-    "GroupPriority": 2,
+    "GroupId": 1110004,
+    "GroupPriority": 1,
     "Title": "Sheriff_EventProgress_11_Title_3",
     "Context": "Sheriff_EventProgress_11_Content_3",
     "Percent": 100

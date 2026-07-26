@@ -63,8 +63,8 @@
     "QuestionDesc": "为什么霁息兽尊会变成如今的“无头兽尊”？",
     "EnterFlowStateId": [
       "剧情_通缉石头狮子",
-      "12",
-      "1"
+      "1",
+      "19"
     ],
     "NeedClueCount": 1,
     "FailResultDesc": [
@@ -82,7 +82,7 @@
     "QuestionDesc": "首沅为什么要偷霁息兽尊的头？",
     "EnterFlowStateId": [
       "剧情_通缉石头狮子",
-      "14",
+      "2",
       "1"
     ],
     "NeedClueCount": 1,

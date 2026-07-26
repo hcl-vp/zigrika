@@ -12967,11 +12967,11 @@
     "AreaId": 44,
     "Level": 0,
     "CountryId": 1,
-    "DeliveryMarkId": 0,
+    "DeliveryMarkId": 3351001,
     "AreaName": "MapAreaVolume_MZ",
     "MapConfigId": 8,
     "DungeonId": 8,
-    "Title": "State_8_Title",
+    "Title": "Area_44_Title",
     "Father": 1,
     "Tag": [
       0

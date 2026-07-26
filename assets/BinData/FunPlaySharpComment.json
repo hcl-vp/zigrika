@@ -1,6 +1,8 @@
 [
   {
     "CommentId": 1,
+    "VarName": "2_6找bug活动第一天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal11.T_InterestAbnormal11",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -10,6 +12,8 @@
   },
   {
     "CommentId": 2,
+    "VarName": "2_6找bug活动第一天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor11.T_InterestNor11",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -19,6 +23,8 @@
   },
   {
     "CommentId": 3,
+    "VarName": "2_6找bug活动第一天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal12.T_InterestAbnormal12",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -28,6 +34,8 @@
   },
   {
     "CommentId": 4,
+    "VarName": "2_6找bug活动第一天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor12.T_InterestNor12",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -37,6 +45,8 @@
   },
   {
     "CommentId": 5,
+    "VarName": "2_6找bug活动第一天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal13.T_InterestAbnormal13",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -46,6 +56,8 @@
   },
   {
     "CommentId": 6,
+    "VarName": "2_6找bug活动第一天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor13.T_InterestNor13",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -55,6 +67,8 @@
   },
   {
     "CommentId": 7,
+    "VarName": "2_6找bug活动第二天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal22.T_InterestAbnormal22",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -64,6 +78,8 @@
   },
   {
     "CommentId": 8,
+    "VarName": "2_6找bug活动第二天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor22.T_InterestNor22",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -73,6 +89,8 @@
   },
   {
     "CommentId": 9,
+    "VarName": "2_6找bug活动第二天变量1",
+    "VarState": 3,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestEgg1.T_InterestEgg1",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -82,6 +100,8 @@
   },
   {
     "CommentId": 10,
+    "VarName": "2_6找bug活动第二天变量1",
+    "VarState": 2,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestEgg2.T_InterestEgg2",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -91,6 +111,8 @@
   },
   {
     "CommentId": 11,
+    "VarName": "2_6找bug活动第二天变量1",
+    "VarState": 4,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestEgg3.T_InterestEgg3",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -100,6 +122,8 @@
   },
   {
     "CommentId": 12,
+    "VarName": "2_6找bug活动第二天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal23.T_InterestAbnormal23",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -109,6 +133,8 @@
   },
   {
     "CommentId": 13,
+    "VarName": "2_6找bug活动第二天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor23.T_InterestNor23",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -118,6 +144,8 @@
   },
   {
     "CommentId": 14,
+    "VarName": "2_6找bug活动第二天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal21.T_InterestAbnormal21",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -127,6 +155,8 @@
   },
   {
     "CommentId": 15,
+    "VarName": "2_6找bug活动第二天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor21.T_InterestNor21",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -136,6 +166,8 @@
   },
   {
     "CommentId": 16,
+    "VarName": "2_6找bug活动第三天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal31.T_InterestAbnormal31",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -145,6 +177,8 @@
   },
   {
     "CommentId": 17,
+    "VarName": "2_6找bug活动第三天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor31.T_InterestNor31",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -154,6 +188,8 @@
   },
   {
     "CommentId": 18,
+    "VarName": "2_6找bug活动第三天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal33.T_InterestAbnormal33",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -163,6 +199,8 @@
   },
   {
     "CommentId": 19,
+    "VarName": "2_6找bug活动第三天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor33.T_InterestNor33",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -172,6 +210,8 @@
   },
   {
     "CommentId": 20,
+    "VarName": "2_6找bug活动第三天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal32.T_InterestAbnormal32",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -181,6 +221,8 @@
   },
   {
     "CommentId": 21,
+    "VarName": "2_6找bug活动第三天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor32.T_InterestNor32",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -190,6 +232,8 @@
   },
   {
     "CommentId": 22,
+    "VarName": "2_6找bug活动第四天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal41.T_InterestAbnormal41",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -199,6 +243,8 @@
   },
   {
     "CommentId": 23,
+    "VarName": "2_6找bug活动第四天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor41.T_InterestNor41",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -208,6 +254,8 @@
   },
   {
     "CommentId": 24,
+    "VarName": "2_6找bug活动第四天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal42.T_InterestAbnormal42",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -217,6 +265,8 @@
   },
   {
     "CommentId": 25,
+    "VarName": "2_6找bug活动第四天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor42.T_InterestNor42",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -226,6 +276,8 @@
   },
   {
     "CommentId": 26,
+    "VarName": "2_6找bug活动第四天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor43.T_InterestNor43",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -235,6 +287,8 @@
   },
   {
     "CommentId": 27,
+    "VarName": "2_6找bug活动第四天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestEgg43.T_InterestEgg43",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -244,6 +298,8 @@
   },
   {
     "CommentId": 28,
+    "VarName": "2_6找bug活动第四天变量3",
+    "VarState": 2,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal43.T_InterestAbnormal43",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -253,6 +309,8 @@
   },
   {
     "CommentId": 29,
+    "VarName": "2_6找bug活动第五天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal51.T_InterestAbnormal51",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -262,6 +320,8 @@
   },
   {
     "CommentId": 30,
+    "VarName": "2_6找bug活动第五天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor51.T_InterestNor51",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -271,6 +331,8 @@
   },
   {
     "CommentId": 31,
+    "VarName": "2_6找bug活动第五天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal53.T_InterestAbnormal53",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -280,6 +342,8 @@
   },
   {
     "CommentId": 32,
+    "VarName": "2_6找bug活动第五天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor53.T_InterestNor53",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -289,6 +353,8 @@
   },
   {
     "CommentId": 33,
+    "VarName": "2_6找bug活动第五天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal52.T_InterestAbnormal52",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -298,6 +364,8 @@
   },
   {
     "CommentId": 34,
+    "VarName": "2_6找bug活动第五天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor52.T_InterestNor52",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -307,6 +375,8 @@
   },
   {
     "CommentId": 35,
+    "VarName": "2_6找bug活动第六天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal62.T_InterestAbnormal62",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -316,6 +386,8 @@
   },
   {
     "CommentId": 36,
+    "VarName": "2_6找bug活动第六天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor62.T_InterestNor62",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -325,6 +397,8 @@
   },
   {
     "CommentId": 37,
+    "VarName": "2_6找bug活动第六天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal63.T_InterestAbnormal63",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -334,6 +408,8 @@
   },
   {
     "CommentId": 38,
+    "VarName": "2_6找bug活动第六天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor63.T_InterestNor63",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -343,6 +419,8 @@
   },
   {
     "CommentId": 39,
+    "VarName": "2_6找bug活动第六天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal61.T_InterestAbnormal61",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -352,6 +430,8 @@
   },
   {
     "CommentId": 40,
+    "VarName": "2_6找bug活动第六天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor61.T_InterestNor61",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -361,6 +441,8 @@
   },
   {
     "CommentId": 41,
+    "VarName": "2_6找bug活动第七天变量1",
+    "VarState": 1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal71.T_InterestAbnormal71",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -370,6 +452,8 @@
   },
   {
     "CommentId": 42,
+    "VarName": "2_6找bug活动第七天变量1",
+    "VarState": -1,
     "VarPriority": 1,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor71.T_InterestNor71",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -379,6 +463,8 @@
   },
   {
     "CommentId": 43,
+    "VarName": "2_6找bug活动第七天变量2",
+    "VarState": 1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal72.T_InterestAbnormal72",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -388,6 +474,8 @@
   },
   {
     "CommentId": 44,
+    "VarName": "2_6找bug活动第七天变量2",
+    "VarState": -1,
     "VarPriority": 2,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor72.T_InterestNor72",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -397,6 +485,8 @@
   },
   {
     "CommentId": 45,
+    "VarName": "2_6找bug活动第七天变量3",
+    "VarState": 1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestAbnormal73.T_InterestAbnormal73",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",
@@ -406,6 +496,8 @@
   },
   {
     "CommentId": 46,
+    "VarName": "2_6找bug活动第七天变量3",
+    "VarState": -1,
     "VarPriority": 3,
     "PhotoPath": "/Game/Aki/UI/UIResources/UiActivity/Image/Activity26/Interest/Photograph/T_InterestNor73.T_InterestNor73",
     "RoleHeadPath": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_12_UI.T_IconRoleHeadCircle256_12_UI",

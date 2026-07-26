@@ -851,7 +851,7 @@
     "AdventureGuide": 20010404,
     "DungeonDetection": 0,
     "Type": 1,
-    "DungeonEntranceId": 1102111,
+    "DungeonEntranceId": 2111,
     "LevelPlayParam": 36
   },
   {
@@ -878,7 +878,7 @@
     "AdventureGuide": 20010404,
     "DungeonDetection": 0,
     "Type": 1,
-    "DungeonEntranceId": 1102111,
+    "DungeonEntranceId": 2111,
     "LevelPlayParam": 36
   },
   {

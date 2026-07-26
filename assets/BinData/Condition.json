@@ -119718,6 +119718,16 @@
     "AccessId": 0
   },
   {
+    "Id": 31204022,
+    "Type": "WeeklyFrameTotalScore",
+    "NeedNum": 4000,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
     "Id": 101101429,
     "Type": "NewQuestStepState",
     "NeedNum": 1,
@@ -119728,16 +119738,6 @@
     },
     "LimitParamsOpe": {},
     "IsClient": true,
-    "Description": "",
-    "AccessId": 0
-  },
-  {
-    "Id": 31204022,
-    "Type": "WeeklyFrameTotalScore",
-    "NeedNum": 4000,
-    "LimitParams": {},
-    "LimitParamsOpe": {},
-    "IsClient": false,
     "Description": "",
     "AccessId": 0
   },
@@ -120670,40 +120670,14 @@
     "AccessId": 0
   },
   {
-    "Id": 12906999,
-    "Type": "NewQuestStepState",
+    "Id": 131201413,
+    "Type": "CheckUIOpenDone",
     "NeedNum": 1,
     "LimitParams": {
-      "NewQuestId": "915000001",
-      "State": "3",
-      "QuestNodeId": "120"
+      "UIName": "MultiMotorChoseLevelView"
     },
     "LimitParamsOpe": {},
-    "IsClient": false,
-    "Description": "Condition_12906028_Description",
-    "AccessId": 870001
-  },
-  {
-    "Id": 12906998,
-    "Type": "CheckLevel",
-    "NeedNum": 1,
-    "LimitParams": {
-      "Level": "14"
-    },
-    "LimitParamsOpe": {},
-    "IsClient": false,
-    "Description": "Condition_12906029_Description",
-    "AccessId": 0
-  },
-  {
-    "Id": 12906997,
-    "Type": "CheckLevel",
-    "NeedNum": 1,
-    "LimitParams": {
-      "Level": "8"
-    },
-    "LimitParamsOpe": {},
-    "IsClient": false,
+    "IsClient": true,
     "Description": "",
     "AccessId": 0
   },
@@ -120934,14 +120908,40 @@
     "AccessId": 0
   },
   {
-    "Id": 131201413,
-    "Type": "CheckUIOpenDone",
+    "Id": 12906999,
+    "Type": "NewQuestStepState",
     "NeedNum": 1,
     "LimitParams": {
-      "UIName": "MultiMotorChoseLevelView"
+      "NewQuestId": "915000001",
+      "State": "3",
+      "QuestNodeId": "120"
     },
     "LimitParamsOpe": {},
-    "IsClient": true,
+    "IsClient": false,
+    "Description": "Condition_12906028_Description",
+    "AccessId": 870001
+  },
+  {
+    "Id": 12906998,
+    "Type": "CheckLevel",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Level": "14"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "Condition_12906029_Description",
+    "AccessId": 0
+  },
+  {
+    "Id": 12906997,
+    "Type": "CheckLevel",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Level": "8"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
     "Description": "",
     "AccessId": 0
   },
@@ -122205,10 +122205,10 @@
     "LimitParams": {
       "Id": "2",
       "Difficulty": "1",
-      "RoleId": "1404-1302-1304-1205-1305-1105-1603-1606-1107-1206-1506-1607-1508"
+      "RoleId": "1404-1302-1304-1205-1305-1105-1603-1606-1107-1206-1506-1607-1211"
     },
     "LimitParamsOpe": {},
-    "IsClient": false,
+    "IsClient": true,
     "Description": "",
     "AccessId": 0
   },
@@ -124760,7 +124760,7 @@
     "LimitParams": {
       "NewQuestId": "192000006",
       "State": "3",
-      "QuestNodeId": "55"
+      "QuestNodeId": "54"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -124887,6 +124887,32 @@
     "AccessId": 919806
   },
   {
+    "Id": 12907601,
+    "Type": "NewQuestStepState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "NewQuestId": "192000006",
+      "State": "2",
+      "QuestNodeId": "55"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "Condition_12907601_Description",
+    "AccessId": 919301
+  },
+  {
+    "Id": 12907602,
+    "Type": "CheckLevel",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Level": "8"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "Condition_12907602_Description",
+    "AccessId": 0
+  },
+  {
     "Id": 100045192,
     "Type": "OnSkillEnable",
     "NeedNum": 100,
@@ -124962,7 +124988,7 @@
       "TargetType": "0",
       "CalculateType": "0",
       "CountType": "1",
-      "CalculateID": "13091130100-\n13091140100-\n13091150100-\n13091160100-\n13091170100-\n13091170200-\n13091170300-\n13091180100-\n13091180200-\n13091190100-\n13091190200-\n13091200100-\n13091200200-\n13091210010-\n13091210020-\n13091210030-\n13091210040-\n13091210050-\n13091210060-\n13091220010-\n13091230010-\n13091240010-\n13091240020-\n13091240030-\n13091250010-\n13091260010-\n13091260020-\n13091130101-\n13091140101-\n13091150101-\n13091160101-\n13091170101-\n13091170201-\n13091170301-\n13091180101-\n13091180201-\n13091190101-\n13091190201-\n13091200101-\n13091200201-\n13091210011-\n13091210021-\n13091210031-\n13091210041-\n13091210051-\n13091210061-\n13091220011-\n13091230011-\n13091240011-\n13091240021-\n13091240031-\n13091250011-\n13091260011-\n13091260021"
+      "CalculateID": "1309113010-1309114010-1309115010-1309116010-1309117010-1309118010-1309119010-1309120010-1309121010-1309122010-1309123010-1309124010-1309125010-13091130100-13091140100-13091150100-13091160100-13091170100-13091180100-13091190100-13091200100-13091210100-13091220100-13091230100-13091240100-13091250100-13091130101-13091140101-13091150101-13091160101-13091170101-13091180101-13091190101-13091200101-13091210101-13091220101-13091230101-13091240101-13091250101"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -125024,32 +125050,6 @@
     "LimitParamsOpe": {},
     "IsClient": true,
     "Description": "",
-    "AccessId": 0
-  },
-  {
-    "Id": 12907601,
-    "Type": "NewQuestStepState",
-    "NeedNum": 1,
-    "LimitParams": {
-      "NewQuestId": "192000006",
-      "State": "2",
-      "QuestNodeId": "55"
-    },
-    "LimitParamsOpe": {},
-    "IsClient": false,
-    "Description": "Condition_12907601_Description",
-    "AccessId": 919301
-  },
-  {
-    "Id": 12907602,
-    "Type": "CheckLevel",
-    "NeedNum": 1,
-    "LimitParams": {
-      "Level": "8"
-    },
-    "LimitParamsOpe": {},
-    "IsClient": false,
-    "Description": "Condition_12907602_Description",
     "AccessId": 0
   },
   {
@@ -126664,8 +126664,8 @@
     "Type": "CheckUiItemShow",
     "NeedNum": 1,
     "LimitParams": {
-      "ViewName": "KurotatoRoleSelectView",
-      "MarkName": "tudou_3.5_16"
+      "ViewName": "SheriffMainView",
+      "MarkName": "tianyan_3.5_01"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -126690,7 +126690,7 @@
     "NeedNum": 1,
     "LimitParams": {
       "ViewName": "BattleView",
-      "MarkName": "xiazai_3.5_01_mobile"
+      "MarkName": "xiazai_3.5_01"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -126808,10 +126808,12 @@
   },
   {
     "Id": 12907604,
-    "Type": "LevelPlayComplete",
+    "Type": "LevelPlayNodeStatus",
     "NeedNum": 1,
     "LimitParams": {
-      "LevelPlayId": "150750023"
+      "LevelPlayId": "150750023",
+      "State": "3",
+      "NodeId": "2"
     },
     "LimitParamsOpe": {},
     "IsClient": false,
@@ -127107,6 +127109,33 @@
     "AccessId": 0
   },
   {
+    "Id": 13000270,
+    "Type": "NewQuestState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "NewQuestId": "119000000",
+      "State": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 13000271,
+    "Type": "NewQuestStepState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "NewQuestId": "244750000",
+      "QuestNodeId": "2",
+      "State": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
     "Id": 131201480,
     "Type": "FloroRanchActivityID",
     "NeedNum": 1,
@@ -127281,7 +127310,7 @@
     "NeedNum": 1,
     "LimitParams": {
       "NewQuestId": "192000006",
-      "QuestNodeId": "36",
+      "QuestNodeId": "95",
       "State": "3"
     },
     "LimitParamsOpe": {},
@@ -128023,6 +128052,97 @@
     "AccessId": 0
   },
   {
+    "Id": 12907701,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9860"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907702,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9861"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907703,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9862"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907704,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9863"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907705,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9864"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907706,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9865"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907707,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9866"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
     "Id": 12907800,
     "Type": "NewQuestState",
     "NeedNum": 1,
@@ -128060,7 +128180,7 @@
     },
     "IsClient": true,
     "Description": "ConditionGroup_1002000_HintText",
-    "AccessId": 0
+    "AccessId": 920002
   },
   {
     "Id": 242917098,
@@ -128107,6 +128227,120 @@
     },
     "LimitParamsOpe": {},
     "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031824,
+    "Type": "NewQuestState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "NewQuestId": "192750000",
+      "State": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031825,
+    "Type": "NewQuestState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "NewQuestId": "192750000",
+      "State": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031826,
+    "Type": "PassLordGymDifficulty",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Id": "3204"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031827,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 5000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031828,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9865"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031829,
+    "Type": "TowerDefenceScore",
+    "NeedNum": 10000,
+    "LimitParams": {
+      "ActivityId": "101900004"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031830,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "9626",
+      "RoleId": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1013011151,
+    "Type": "PassLordGymDifficulty",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Id": "3201"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1013011161,
+    "Type": "PassLordGymDifficulty",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Id": "3206"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
     "Description": "",
     "AccessId": 0
   },
@@ -128432,6 +128666,18 @@
     "AccessId": 0
   },
   {
+    "Id": 1011351271,
+    "Type": "LevelPlayComplete",
+    "NeedNum": 1,
+    "LimitParams": {
+      "LevelPlayId": "688750034-688750035-188750000-188750001-188750002-188750003-188750004-188750005"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
     "Id": 2127,
     "Type": "NewQuestState",
     "NeedNum": 1,
@@ -128459,11 +128705,104 @@
     "AccessId": 0
   },
   {
-    "Id": 1011351271,
-    "Type": "LevelPlayComplete",
+    "Id": 1002100,
+    "Type": "CheckTrialRole",
+    "NeedNum": 1,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002101,
+    "Type": "CheckPhantomTeam",
+    "NeedNum": 1,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002102,
+    "Type": "CheckOperationRestrict",
+    "NeedNum": 1,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002103,
+    "Type": "CheckCameraMode",
     "NeedNum": 1,
     "LimitParams": {
-      "LevelPlayId": "688750034-688750035-188750000-188750001-188750002-188750003-188750004-188750005"
+      "Mode": "[0]"
+    },
+    "LimitParamsOpe": {
+      "Mode": "!="
+    },
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002104,
+    "Type": "CheckGameplayClosedSegment",
+    "NeedNum": 1,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002105,
+    "Type": "CheckCharacterTagsRestrict",
+    "NeedNum": 1,
+    "LimitParams": {
+      "BanTags": "[战斗状态.技能限制,战斗状态.行为限制]"
+    },
+    "LimitParamsOpe": {
+      "Mode": "="
+    },
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002106,
+    "Type": "CheckQuestClosedSegment",
+    "NeedNum": 1,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002107,
+    "Type": "CheckCharacterMotionState",
+    "NeedNum": 1,
+    "LimitParams": {
+      "MotionState": "[Ground]"
+    },
+    "LimitParamsOpe": {
+      "Mode": "!="
+    },
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200669,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "24"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -128471,18 +128810,1087 @@
     "AccessId": 0
   },
   {
-    "Id": 12907341,
-    "Type": "KurotatoPropValue",
+    "Id": 101200670,
+    "Type": "VarDefineInt",
     "NeedNum": 1,
     "LimitParams": {
-      "Id": "123",
-      "Num": "10"
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "25"
     },
-    "LimitParamsOpe": {
-      "Num": ">="
-    },
+    "LimitParamsOpe": {},
     "IsClient": true,
-    "Description": "Condition_12907341_HintText",
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200671,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "26"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200672,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "27"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200673,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "28"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200674,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "29"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200675,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "30"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200676,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "31"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200677,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "32"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200678,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "33"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200679,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "34"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200680,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "35"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200681,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "36"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200370,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "37"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200371,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "38"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200372,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "39"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200373,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "40"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200374,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "41"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200375,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "42"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200376,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "43"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200758,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "44"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200759,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "45"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200760,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "46"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200761,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "47"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200762,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "48"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 101200763,
+    "Type": "VarDefineInt",
+    "NeedNum": 1,
+    "LimitParams": {
+      "VDName": "3_2成功调查遗留物",
+      "VDValueInt": "49"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031831,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20016",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031832,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20024",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031833,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031834,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031835,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031836,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031837,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20016",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031838,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20024",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031839,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031840,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031841,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031842,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031843,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1210"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031844,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1210"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031845,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1210"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031846,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1210"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031847,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1510"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031848,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1510"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031849,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1510"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031850,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1510"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031851,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1412"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031852,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1412"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031853,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1412"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031854,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1412"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031855,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031856,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031857,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031858,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031859,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20017",
+      "RoleId": "1610"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031860,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20018",
+      "RoleId": "1610"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031861,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20019",
+      "RoleId": "1610"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031862,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "20020",
+      "RoleId": "1610"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031863,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031864,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031865,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1210"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031866,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1510"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031867,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1412"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031868,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1608"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031869,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031870,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1511"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031871,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1610"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031872,
+    "Type": "PassInst",
+    "NeedNum": 1,
+    "LimitParams": {
+      "InstanceId": "40250-40251-40262-40263-40274-40275",
+      "RoleId": "1409"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031873,
+    "Type": "NewTowerTeamChallengingFinish",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "RoleId": "1413",
+      "Difficulty": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031874,
+    "Type": "NewTowerTeamChallengingFinish",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "RoleId": "1413",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031875,
+    "Type": "NewTowerTeamChallengingFinish",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "RoleId": "1212",
+      "Difficulty": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031876,
+    "Type": "NewTowerTeamChallengingFinish",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "RoleId": "1212",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031877,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Num": "6",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031878,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Num": "9",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031879,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 58000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Num": "-1",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031880,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 126000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Num": "-1",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031881,
+    "Type": "EntityDie",
+    "NeedNum": 2,
+    "LimitParams": {
+      "EntityConfigId": "316800045",
+      "InstanceId": "81701",
+      "Online": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031882,
+    "Type": "EntityDie",
+    "NeedNum": 2,
+    "LimitParams": {
+      "EntityConfigId": "316800041",
+      "InstanceId": "81701",
+      "Online": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031883,
+    "Type": "PassLordGymDifficulty",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Id": "3204"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031884,
+    "Type": "PassLordGymDifficulty",
+    "NeedNum": 1,
+    "LimitParams": {
+      "Id": "3206"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031885,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9865"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12031886,
+    "Type": "ZitherPlayCounter",
+    "NeedNum": 5,
+    "LimitParams": {},
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 13030090,
+    "Type": "RoleResonance",
+    "NeedNum": 1,
+    "LimitParams": {
+      "GroupIndex": "6",
+      "RoleId": "1413"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 13030091,
+    "Type": "RoleResonance",
+    "NeedNum": 1,
+    "LimitParams": {
+      "GroupIndex": "6",
+      "RoleId": "1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": true,
+    "Description": "",
     "AccessId": 0
   },
   {
@@ -128624,11 +130032,1391 @@
     "AccessId": 919816
   },
   {
-    "Id": 131201524,
-    "Type": "OnGuideTriggerEvent",
+    "Id": 12907341,
+    "Type": "KurotatoPropValue",
     "NeedNum": 1,
     "LimitParams": {
-      "Name": "DollGrabShowcaseInspectView"
+      "Id": "123",
+      "Num": "10"
+    },
+    "LimitParamsOpe": {
+      "Num": ">="
+    },
+    "IsClient": true,
+    "Description": "Condition_12907341_HintText",
+    "AccessId": 0
+  },
+  {
+    "Id": 1002108,
+    "Type": "CheckInteractiveItemsFunctionEnable",
+    "NeedNum": 1,
+    "LimitParams": {
+      "CheckValue": "FALSE"
+    },
+    "LimitParamsOpe": {
+      "Mode": "="
+    },
+    "IsClient": true,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907711,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "101"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907712,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "102"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907713,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "103"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907714,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "104"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907715,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "105"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907716,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "106"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907717,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "107"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907718,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "108"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907719,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "109"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907720,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "110"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907721,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "111"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907722,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "112"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907723,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "113"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907724,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "114"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907725,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "115"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907726,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "116"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907727,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "117"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907728,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "118"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907729,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "119"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907730,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "120"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907731,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "121"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907732,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "122"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907733,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "123"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907734,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "124"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907735,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "125"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907736,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "126"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907737,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "127"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907738,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "128"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907739,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "129"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907740,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "130"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907741,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "131"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907742,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "132"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907743,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "133"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907744,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "134"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907745,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "135"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907746,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "136"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907747,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "137"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907748,
+    "Type": "RoverRogueTalentUnlock",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "TalentId": "138"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907751,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9860"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907752,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9861"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907753,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9863"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907754,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9864"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907755,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9865"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907756,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9866"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907757,
+    "Type": "RoverRogueLootGet",
+    "NeedNum": 5,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "5"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907758,
+    "Type": "RoverRogueLootGet",
+    "NeedNum": 12,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "12"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907759,
+    "Type": "RoverRogueLootGet",
+    "NeedNum": 25,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "25"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907760,
+    "Type": "RoverRogueForgeGet",
+    "NeedNum": 6,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Id": "1",
+      "Number": "6"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907761,
+    "Type": "RoverRogueForgeGet",
+    "NeedNum": 12,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Id": "2",
+      "Number": "12"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907762,
+    "Type": "RoverRogueElitePass",
+    "NeedNum": 15,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "15"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907763,
+    "Type": "RoverRogueBossPass",
+    "NeedNum": 20,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "20"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907764,
+    "Type": "RoverRogueStageClearCheckHp",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "HpRate": "9900",
+      "CheckType": "2",
+      "ClearStage": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907771,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "1",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907772,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "2",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907773,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "3",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907774,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "4",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907775,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "5",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907776,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "6",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907777,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "7",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907778,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "8",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907779,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "9",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907780,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "10",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907781,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "11",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907782,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "12",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907783,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "13",
+      "Number": "1",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907784,
+    "Type": "RoverRogueBlessingGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "BlessRoleId": "4",
+      "Number": "1",
+      "ClearStage": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907785,
+    "Type": "RoverRogueBossPass",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "12"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907786,
+    "Type": "RoverRogueStageClearCheckHp",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "HpRate": "5000",
+      "CheckType": "3",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907787,
+    "Type": "RoverRogueStageClearCheckHp",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "HpRate": "8000",
+      "CheckType": "2",
+      "ClearStage": "3"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907788,
+    "Type": "RoverRogueBlessingTypeGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Type": "5",
+      "Number": "5"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907789,
+    "Type": "RoverRogueStageClearCheckHp",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "HpRate": "9900",
+      "CheckType": "2",
+      "ClearStage": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907790,
+    "Type": "RoverRogueBlessingTypeGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Type": "6",
+      "Number": "5"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907791,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9865"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907792,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9861"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907793,
+    "Type": "RoverRogueStageClearCheckHp",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "HpRate": "9900",
+      "CheckType": "2",
+      "ClearStage": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907794,
+    "Type": "RoverRogueCondition",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "InsId": "9863"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12907795,
+    "Type": "RoverRogueItemGet",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ActivityId": "111200001",
+      "Number": "5"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904731,
+    "Type": "NewTowerKillBossInSeason",
+    "NeedNum": 1,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "MonsterId": "401800000"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904732,
+    "Type": "NewTowerKillWaveInSeason",
+    "NeedNum": 8,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904733,
+    "Type": "NewTowerLimitCondPassWave",
+    "NeedNum": 2,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Round": "2",
+      "Num": "2"
+    },
+    "LimitParamsOpe": {
+      "Round": ">=",
+      "Num": ">="
+    },
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904734,
+    "Type": "NewTowerGetScoreWithRole",
+    "NeedNum": 15000,
+    "LimitParams": {
+      "Id": "2",
+      "Difficulty": "1",
+      "RoleId": "1413-1212"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904735,
+    "Type": "NewTowerGetScoreNoInjury",
+    "NeedNum": 4000,
+    "LimitParams": {
+      "Id": "2",
+      "SeasonId": "0",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12904736,
+    "Type": "NewTowerAllTeamScore",
+    "NeedNum": 10,
+    "LimitParams": {
+      "Id": "2",
+      "Difficulty": "1",
+      "Num": "3500"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905131,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 4800,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905132,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 7200,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905133,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 10000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905134,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 12000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905135,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 16000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905136,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 21000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905137,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 37000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905138,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 58000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905139,
+    "Type": "NewTowerAllTeamScore",
+    "NeedNum": 3,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "5000"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905140,
+    "Type": "NewTowerAllTeamScore",
+    "NeedNum": 4,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "5000"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905141,
+    "Type": "NewTowerAllTeamScore",
+    "NeedNum": 6,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "5000"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905142,
+    "Type": "NewTowerKillWaveInSeason",
+    "NeedNum": 4,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "ConditionGroup_12905112_HintText",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905143,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 58000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905149,
+    "Type": "NewTowerCycleHistoryScore",
+    "NeedNum": 2147483647,
+    "LimitParams": {
+      "CycleId": "7",
+      "Difficulty": "1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905150,
+    "Type": "NewTowerTotalScore",
+    "NeedNum": 58000,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "1",
+      "Num": "-1"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "",
+    "AccessId": 0
+  },
+  {
+    "Id": 12905151,
+    "Type": "NewTowerKillWaveInSeason",
+    "NeedNum": 4,
+    "LimitParams": {
+      "SeasonId": "7",
+      "Difficulty": "0"
+    },
+    "LimitParamsOpe": {},
+    "IsClient": false,
+    "Description": "ConditionGroup_12905112_HintText",
+    "AccessId": 0
+  },
+  {
+    "Id": 12008062,
+    "Type": "ItemCheck",
+    "NeedNum": 1,
+    "LimitParams": {
+      "ItemID": "1413"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -128636,11 +131424,11 @@
     "AccessId": 0
   },
   {
-    "Id": 131201525,
-    "Type": "OnGuideTriggerEvent",
+    "Id": 12008063,
+    "Type": "ItemCheck",
     "NeedNum": 1,
     "LimitParams": {
-      "Name": "DollGrabEndlessStartView"
+      "ItemID": "1212"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -128648,11 +131436,12 @@
     "AccessId": 0
   },
   {
-    "Id": 131201526,
-    "Type": "CheckUIOpenDone",
+    "Id": 12401026,
+    "Type": "CheckTeleportStatus",
     "NeedNum": 1,
     "LimitParams": {
-      "UIName": "RogueBattleTeamRoleSelectView"
+      "TeleportId": "5044",
+      "State": "1"
     },
     "LimitParamsOpe": {},
     "IsClient": true,
@@ -128660,28 +131449,14 @@
     "AccessId": 0
   },
   {
-    "Id": 131201527,
-    "Type": "CheckItemWithOperator",
+    "Id": 12800119,
+    "Type": "GetItem",
     "NeedNum": 1,
     "LimitParams": {
-      "ItemID": "89200001",
-      "Count": "1",
-      "Op": "Ge"
+      "ItemID": "80131014"
     },
     "LimitParamsOpe": {},
-    "IsClient": true,
-    "Description": "",
-    "AccessId": 0
-  },
-  {
-    "Id": 131201528,
-    "Type": "CheckFightPhotoLevelFinished",
-    "NeedNum": 1,
-    "LimitParams": {
-      "LevelId": "100010"
-    },
-    "LimitParamsOpe": {},
-    "IsClient": true,
+    "IsClient": false,
     "Description": "",
     "AccessId": 0
   }

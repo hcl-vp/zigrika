@@ -166,5 +166,26 @@
     "Name": "Sheriff_Clue_25",
     "Desc": "Sheriff_ClueDesc_25",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_051_UI.T_IconTask_Task_051_UI"
+  },
+  {
+    "Id": 20101,
+    "SheriffAnomalyId": 201,
+    "Name": "Sheriff_Clue_26",
+    "Desc": "Sheriff_ClueDesc_26",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_033_UI.T_IconTask_Task_033_UI"
+  },
+  {
+    "Id": 20102,
+    "SheriffAnomalyId": 201,
+    "Name": "Sheriff_Clue_27",
+    "Desc": "Sheriff_ClueDesc_27",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_033_UI.T_IconTask_Task_033_UI"
+  },
+  {
+    "Id": 20103,
+    "SheriffAnomalyId": 201,
+    "Name": "Sheriff_Clue_28",
+    "Desc": "Sheriff_ClueDesc_28",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_033_UI.T_IconTask_Task_033_UI"
   }
 ]

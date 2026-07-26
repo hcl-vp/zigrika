@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 800001,
+    "InstrumentType": 0,
+    "Description": "",
+    "QteSequence": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "PreludeAsset": "/Game/Aki/WwiseAudio/Events/play_ui_fx_com_page_open_1.play_ui_fx_com_page_open_1"
+  }
+]

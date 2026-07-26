@@ -27,7 +27,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -58,7 +57,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -91,7 +89,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -122,7 +119,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -153,7 +149,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -186,7 +181,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -217,7 +211,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -248,7 +241,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -281,7 +273,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -312,7 +303,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -343,7 +333,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -376,7 +365,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -407,7 +395,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -438,7 +425,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -471,7 +457,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -532,7 +517,6 @@
     "HideLongPressTags": [
       1759169559
     ],
-    "CustomHandleId": 602001,
     "CustomHandleIds": [
       602001,
       602002
@@ -571,7 +555,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -607,7 +590,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -651,7 +633,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -687,7 +668,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -725,7 +705,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -816,7 +795,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -849,7 +827,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -907,7 +884,6 @@
     "HideLongPressTags": [
       1759169559
     ],
-    "CustomHandleId": 602001,
     "CustomHandleIds": [
       602001,
       602002
@@ -945,7 +921,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -980,7 +955,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1021,7 +995,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1057,7 +1030,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1095,7 +1067,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1178,7 +1149,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1211,7 +1181,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1249,7 +1218,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1280,7 +1248,6 @@
     "ShowLongPress": true,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1315,7 +1282,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1350,7 +1316,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1391,7 +1356,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1422,7 +1386,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1457,7 +1420,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1538,7 +1500,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1571,7 +1532,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1611,7 +1571,6 @@
       193259486,
       1759169559
     ],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1651,7 +1610,6 @@
       193259486,
       1759169559
     ],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1691,7 +1649,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1727,7 +1684,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1763,7 +1719,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1794,7 +1749,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1825,7 +1779,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1860,7 +1813,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1942,7 +1894,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -1975,7 +1926,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   },
   {
@@ -2006,7 +1956,6 @@
     "ShowLongPress": false,
     "ShowLongPressTags": [],
     "HideLongPressTags": [],
-    "CustomHandleId": 0,
     "CustomHandleIds": []
   }
 ]

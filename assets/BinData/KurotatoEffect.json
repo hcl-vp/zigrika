@@ -8112,42 +8112,6 @@
     "Param5": ""
   },
   {
-    "Id": 973032,
-    "Type": "AddBuff",
-    "DisableShow": 0,
-    "Desc": "",
-    "DescArgs": [],
-    "Param1": "BuffIds:[970100213]",
-    "Param2": "Target:Weapon",
-    "Param3": "",
-    "Param4": "",
-    "Param5": ""
-  },
-  {
-    "Id": 973033,
-    "Type": "AddBuff",
-    "DisableShow": 0,
-    "Desc": "",
-    "DescArgs": [],
-    "Param1": "BuffIds:[970100213]",
-    "Param2": "Target:Structure",
-    "Param3": "",
-    "Param4": "",
-    "Param5": ""
-  },
-  {
-    "Id": 972154,
-    "Type": "ModifyProp",
-    "DisableShow": 1,
-    "Desc": "",
-    "DescArgs": [],
-    "Param1": "Prop:生命值",
-    "Param2": "Amount:100",
-    "Param3": "AmountType:BasePercentage",
-    "Param4": "Target:Monster",
-    "Param5": ""
-  },
-  {
     "Id": 992255,
     "Type": "ModifyProp",
     "DisableShow": 1,
@@ -8193,6 +8157,42 @@
     "Param2": "Amount:-15",
     "Param3": "AmountType:BasePercentage",
     "Param4": "Target:Monster",
+    "Param5": ""
+  },
+  {
+    "Id": 972154,
+    "Type": "ModifyProp",
+    "DisableShow": 1,
+    "Desc": "",
+    "DescArgs": [],
+    "Param1": "Prop:生命值",
+    "Param2": "Amount:100",
+    "Param3": "AmountType:BasePercentage",
+    "Param4": "Target:Monster",
+    "Param5": ""
+  },
+  {
+    "Id": 973032,
+    "Type": "AddBuff",
+    "DisableShow": 0,
+    "Desc": "",
+    "DescArgs": [],
+    "Param1": "BuffIds:[970100213]",
+    "Param2": "Target:Weapon",
+    "Param3": "",
+    "Param4": "",
+    "Param5": ""
+  },
+  {
+    "Id": 973033,
+    "Type": "AddBuff",
+    "DisableShow": 0,
+    "Desc": "",
+    "DescArgs": [],
+    "Param1": "BuffIds:[970100213]",
+    "Param2": "Target:Structure",
+    "Param3": "",
+    "Param4": "",
     "Param5": ""
   }
 ]

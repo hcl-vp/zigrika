@@ -4012,7 +4012,9 @@
     "Id": 11190027,
     "GroupId": 1119013,
     "DifficultPreLevel": [],
-    "DifficultPreLevelStar": {},
+    "DifficultPreLevelStar": {
+      "1126": 0
+    },
     "Star": 2,
     "Line": 1,
     "Texture": "/Game/Aki/UI/UIResources/Common/Image/IconLevelBuff/T_IconLevelBuff_014.T_IconLevelBuff_014",

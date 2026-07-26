@@ -6,7 +6,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100011_PhantomTitle",
     "Description": "TowerDefence_100011_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 10002,
@@ -18,7 +19,8 @@
     ],
     "Title": "TowerDefence_100013_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 10003,
@@ -30,7 +32,8 @@
     ],
     "Title": "TowerDefence_100012_PhantomTitle",
     "Description": "TowerDefence_100012_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 10004,
@@ -42,7 +45,8 @@
     ],
     "Title": "TowerDefence_100014_PhantomTitle",
     "Description": "TowerDefence_100013_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 10005,
@@ -54,7 +58,8 @@
     ],
     "Title": "TowerDefence_100015_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 20001,
@@ -63,7 +68,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100021_PhantomTitle",
     "Description": "TowerDefence_100021_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 20002,
@@ -75,7 +81,8 @@
     ],
     "Title": "TowerDefence_100023_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 20003,
@@ -87,7 +94,8 @@
     ],
     "Title": "TowerDefence_100022_PhantomTitle",
     "Description": "TowerDefence_100022_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 20004,
@@ -99,7 +107,8 @@
     ],
     "Title": "TowerDefence_100024_PhantomTitle",
     "Description": "TowerDefence_100023_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 20005,
@@ -111,7 +120,8 @@
     ],
     "Title": "TowerDefence_100025_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 30001,
@@ -120,7 +130,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100031_PhantomTitle",
     "Description": "TowerDefence_100031_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 30002,
@@ -132,7 +143,8 @@
     ],
     "Title": "TowerDefence_100033_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 30003,
@@ -144,7 +156,8 @@
     ],
     "Title": "TowerDefence_100032_PhantomTitle",
     "Description": "TowerDefence_100032_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 30004,
@@ -156,7 +169,8 @@
     ],
     "Title": "TowerDefence_100034_PhantomTitle",
     "Description": "TowerDefence_100033_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 30005,
@@ -168,7 +182,8 @@
     ],
     "Title": "TowerDefence_100035_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 40001,
@@ -177,7 +192,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100041_PhantomTitle",
     "Description": "TowerDefence_100041_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 40002,
@@ -189,7 +205,8 @@
     ],
     "Title": "TowerDefence_100043_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 40003,
@@ -201,7 +218,8 @@
     ],
     "Title": "TowerDefence_100042_PhantomTitle",
     "Description": "TowerDefence_100042_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 40004,
@@ -213,7 +231,8 @@
     ],
     "Title": "TowerDefence_100044_PhantomTitle",
     "Description": "TowerDefence_100043_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 40005,
@@ -225,7 +244,8 @@
     ],
     "Title": "TowerDefence_100045_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 50001,
@@ -234,7 +254,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100051_PhantomTitle",
     "Description": "TowerDefence_100051_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 50002,
@@ -246,7 +267,8 @@
     ],
     "Title": "TowerDefence_100053_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 50003,
@@ -259,7 +281,8 @@
     ],
     "Title": "TowerDefence_100052_PhantomTitle",
     "Description": "TowerDefence_100052_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 50004,
@@ -271,7 +294,8 @@
     ],
     "Title": "TowerDefence_100054_PhantomTitle",
     "Description": "TowerDefence_100053_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 50005,
@@ -283,7 +307,8 @@
     ],
     "Title": "TowerDefence_100055_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 60001,
@@ -292,7 +317,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100061_PhantomTitle",
     "Description": "TowerDefence_100061_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 60002,
@@ -304,7 +330,8 @@
     ],
     "Title": "TowerDefence_100063_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 60003,
@@ -316,7 +343,8 @@
     ],
     "Title": "TowerDefence_100062_PhantomTitle",
     "Description": "TowerDefence_100062_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 60004,
@@ -328,7 +356,8 @@
     ],
     "Title": "TowerDefence_100064_PhantomTitle",
     "Description": "TowerDefence_100063_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 60005,
@@ -340,7 +369,8 @@
     ],
     "Title": "TowerDefence_100065_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 70001,
@@ -349,7 +379,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100071_PhantomTitle",
     "Description": "TowerDefence_100071_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 70002,
@@ -361,7 +392,8 @@
     ],
     "Title": "TowerDefence_100073_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 70003,
@@ -373,7 +405,8 @@
     ],
     "Title": "TowerDefence_100072_PhantomTitle",
     "Description": "TowerDefence_100072_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 70004,
@@ -385,7 +418,8 @@
     ],
     "Title": "TowerDefence_100074_PhantomTitle",
     "Description": "TowerDefence_100073_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 70005,
@@ -397,7 +431,8 @@
     ],
     "Title": "TowerDefence_100075_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 80001,
@@ -406,7 +441,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100081_PhantomTitle",
     "Description": "TowerDefence_100081_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 80002,
@@ -418,7 +454,8 @@
     ],
     "Title": "TowerDefence_100083_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 80003,
@@ -430,7 +467,8 @@
     ],
     "Title": "TowerDefence_100084_PhantomTitle",
     "Description": "TowerDefence_100083_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 80004,
@@ -442,7 +480,8 @@
     ],
     "Title": "TowerDefence_100082_PhantomTitle",
     "Description": "TowerDefence_100082_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 80005,
@@ -454,7 +493,8 @@
     ],
     "Title": "TowerDefence_100085_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 90001,
@@ -463,7 +503,8 @@
     "SkillId": [],
     "Title": "TowerDefence_100091_PhantomTitle",
     "Description": "TowerDefence_100091_PhantomDesc",
-    "ExpLevel": 10
+    "ExpLevel": 10,
+    "UnlockDescription": ""
   },
   {
     "Id": 90002,
@@ -475,7 +516,8 @@
     ],
     "Title": "TowerDefence_100093_PhantomTitle",
     "Description": "TowerDefence_100100_PhantomDesc",
-    "ExpLevel": 14
+    "ExpLevel": 14,
+    "UnlockDescription": ""
   },
   {
     "Id": 90003,
@@ -487,7 +529,8 @@
     ],
     "Title": "TowerDefence_100092_PhantomTitle",
     "Description": "TowerDefence_100092_PhantomDesc",
-    "ExpLevel": 18
+    "ExpLevel": 18,
+    "UnlockDescription": ""
   },
   {
     "Id": 90004,
@@ -499,7 +542,8 @@
     ],
     "Title": "TowerDefence_100094_PhantomTitle",
     "Description": "TowerDefence_100093_PhantomDesc",
-    "ExpLevel": 26
+    "ExpLevel": 26,
+    "UnlockDescription": ""
   },
   {
     "Id": 90005,
@@ -511,7 +555,8 @@
     ],
     "Title": "TowerDefence_100095_PhantomTitle",
     "Description": "TowerDefence_100101_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 11001,
@@ -520,7 +565,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100111_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 12001,
@@ -529,7 +575,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100121_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 13001,
@@ -541,7 +588,8 @@
     ],
     "Title": "",
     "Description": "TowerDefence_100191_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 14001,
@@ -550,7 +598,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100141_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 15001,
@@ -559,7 +608,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100151_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 16001,
@@ -568,7 +618,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100161_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 17001,
@@ -577,7 +628,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100171_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 18001,
@@ -586,7 +638,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100181_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 19001,
@@ -595,7 +648,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_100131_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 100001,
@@ -604,7 +658,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300011_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100002,
@@ -616,7 +671,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300120_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100003,
@@ -628,7 +684,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300012_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100004,
@@ -640,7 +697,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100005,
@@ -652,7 +710,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100006,
@@ -664,7 +723,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300013_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100007,
@@ -676,7 +736,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300170_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 100008,
@@ -688,7 +749,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 110001,
@@ -697,7 +759,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300021_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110002,
@@ -709,7 +772,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300120_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110003,
@@ -721,7 +785,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300022_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110004,
@@ -733,7 +798,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110005,
@@ -745,7 +811,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110006,
@@ -757,7 +824,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300023_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110007,
@@ -769,7 +837,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300170_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 110008,
@@ -781,7 +850,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 120001,
@@ -790,7 +860,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300031_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120002,
@@ -802,7 +873,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300120_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120003,
@@ -814,7 +886,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300032_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120004,
@@ -826,7 +899,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120005,
@@ -838,7 +912,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120006,
@@ -850,7 +925,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300033_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120007,
@@ -862,7 +938,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300170_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 120008,
@@ -874,7 +951,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 130001,
@@ -883,7 +961,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300041_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130002,
@@ -895,7 +974,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300190_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130003,
@@ -907,7 +987,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300042_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130004,
@@ -919,7 +1000,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130005,
@@ -931,7 +1013,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130006,
@@ -943,7 +1026,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300043_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130007,
@@ -955,7 +1039,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300200_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 130008,
@@ -967,7 +1052,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 140001,
@@ -976,7 +1062,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300051_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140002,
@@ -988,7 +1075,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300190_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140003,
@@ -1000,7 +1088,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300052_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140004,
@@ -1012,7 +1101,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140005,
@@ -1024,7 +1114,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140006,
@@ -1036,7 +1127,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300053_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140007,
@@ -1048,7 +1140,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300200_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 140008,
@@ -1060,7 +1153,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 150001,
@@ -1069,7 +1163,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300061_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150002,
@@ -1081,7 +1176,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300190_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150003,
@@ -1093,7 +1189,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300062_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150004,
@@ -1105,7 +1202,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150005,
@@ -1117,7 +1215,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150006,
@@ -1129,7 +1228,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300063_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150007,
@@ -1141,7 +1241,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300200_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 150008,
@@ -1153,7 +1254,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 160001,
@@ -1162,7 +1264,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300071_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160002,
@@ -1174,7 +1277,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300190_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160003,
@@ -1186,7 +1290,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300072_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160004,
@@ -1198,7 +1303,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160005,
@@ -1210,7 +1316,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160006,
@@ -1222,7 +1329,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300073_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160007,
@@ -1234,7 +1342,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300200_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 160008,
@@ -1246,7 +1355,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 170001,
@@ -1255,7 +1365,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300081_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170002,
@@ -1267,7 +1378,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300120_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170003,
@@ -1279,7 +1391,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300082_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170004,
@@ -1291,7 +1404,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170005,
@@ -1303,7 +1417,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170006,
@@ -1315,7 +1430,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300083_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170007,
@@ -1327,7 +1443,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300170_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 170008,
@@ -1339,7 +1456,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 180001,
@@ -1348,7 +1466,8 @@
     "SkillId": [],
     "Title": "TowerDefence_300110_PhantomTitle",
     "Description": "TowerDefence_300091_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180002,
@@ -1360,7 +1479,8 @@
     ],
     "Title": "TowerDefence_300120_PhantomTitle",
     "Description": "TowerDefence_300120_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180003,
@@ -1372,7 +1492,8 @@
     ],
     "Title": "TowerDefence_300130_PhantomTitle",
     "Description": "TowerDefence_300092_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180004,
@@ -1384,7 +1505,8 @@
     ],
     "Title": "TowerDefence_300140_PhantomTitle",
     "Description": "TowerDefence_300140_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180005,
@@ -1396,7 +1518,8 @@
     ],
     "Title": "TowerDefence_300150_PhantomTitle",
     "Description": "TowerDefence_300150_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180006,
@@ -1408,7 +1531,8 @@
     ],
     "Title": "TowerDefence_300160_PhantomTitle",
     "Description": "TowerDefence_300093_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180007,
@@ -1420,7 +1544,8 @@
     ],
     "Title": "TowerDefence_300170_PhantomTitle",
     "Description": "TowerDefence_300170_PhantomDesc",
-    "ExpLevel": 1
+    "ExpLevel": 1,
+    "UnlockDescription": ""
   },
   {
     "Id": 180008,
@@ -1432,7 +1557,8 @@
     ],
     "Title": "TowerDefence_300180_PhantomTitle",
     "Description": "TowerDefence_300180_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200001,
@@ -1441,7 +1567,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400010_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200002,
@@ -1450,7 +1577,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400020_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200003,
@@ -1459,7 +1587,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400030_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200004,
@@ -1468,7 +1597,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400040_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200005,
@@ -1477,7 +1607,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400050_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200006,
@@ -1486,7 +1617,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400060_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200007,
@@ -1495,7 +1627,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400070_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200008,
@@ -1504,7 +1637,8 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400080_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   },
   {
     "Id": 200009,
@@ -1513,6 +1647,199 @@
     "SkillId": [],
     "Title": "",
     "Description": "TowerDefence_400090_PhantomDesc",
-    "ExpLevel": 0
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210001,
+    "GroupId": 38,
+    "Level": 1,
+    "SkillId": [
+      633000003,
+      200082210
+    ],
+    "Title": "TowerDefence_100023_PhantomTitle",
+    "Description": "TowerDefence_100100_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210002,
+    "GroupId": 38,
+    "Level": 2,
+    "SkillId": [
+      200082021,
+      633000003
+    ],
+    "Title": "TowerDefence_100022_PhantomTitle",
+    "Description": "TowerDefence_100022_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210011,
+    "GroupId": 39,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400020_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210012,
+    "GroupId": 39,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400020_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210021,
+    "GroupId": 40,
+    "Level": 1,
+    "SkillId": [
+      633000003,
+      200082210
+    ],
+    "Title": "TowerDefence_100023_PhantomTitle",
+    "Description": "TowerDefence_100100_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210022,
+    "GroupId": 40,
+    "Level": 2,
+    "SkillId": [
+      200082021,
+      633000003
+    ],
+    "Title": "TowerDefence_100022_PhantomTitle",
+    "Description": "TowerDefence_100022_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210031,
+    "GroupId": 41,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400040_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210032,
+    "GroupId": 41,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400040_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210041,
+    "GroupId": 42,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400050_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210042,
+    "GroupId": 42,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400050_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210051,
+    "GroupId": 43,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400060_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210052,
+    "GroupId": 43,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400060_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210061,
+    "GroupId": 44,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400070_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210062,
+    "GroupId": 44,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400070_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210071,
+    "GroupId": 45,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400080_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210072,
+    "GroupId": 45,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400080_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210081,
+    "GroupId": 46,
+    "Level": 1,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400090_PhantomDesc",
+    "ExpLevel": 1,
+    "UnlockDescription": ""
+  },
+  {
+    "Id": 210082,
+    "GroupId": 46,
+    "Level": 2,
+    "SkillId": [],
+    "Title": "",
+    "Description": "TowerDefence_400090_PhantomDesc",
+    "ExpLevel": 0,
+    "UnlockDescription": ""
   }
 ]

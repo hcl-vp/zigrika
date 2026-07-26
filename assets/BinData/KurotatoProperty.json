@@ -627,7 +627,9 @@
     ],
     "Priority": 1000,
     "Desc": "KurotatoProperty_desc_9",
-    "DescParams": [],
+    "DescParams": [
+      "1"
+    ],
     "BasicValue": 0,
     "Min": -2147483648,
     "Max": 2147483647,
@@ -646,9 +648,7 @@
     "WeaponPropertyDescParam": [],
     "Priority": 1,
     "Desc": "KurotatoProperty_desc_2",
-    "DescParams": [
-      "1"
-    ],
+    "DescParams": [],
     "BasicValue": 0,
     "Min": 1,
     "Max": 2147483647,
@@ -786,11 +786,10 @@
     "Priority": 8,
     "Desc": "KurotatoProperty_desc_190",
     "DescParams": [
-      "300%",
-      "10%"
+      "300%"
     ],
     "BasicValue": 0,
-    "Min": 10,
+    "Min": -2147483648,
     "Max": 300,
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconAttribute/T_Iconpropertyredwqe_UI.T_Iconpropertyredwqe_UI",
     "RoleType": 1,

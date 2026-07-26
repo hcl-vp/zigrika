@@ -866,7 +866,7 @@
   {
     "FunctionId": 10060,
     "Name": "个性化系统",
-    "IsOn": true,
+    "IsOn": false,
     "OpenConditionId": 0,
     "ShowUIType": 0,
     "Delay": 101,

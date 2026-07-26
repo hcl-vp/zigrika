@@ -104197,9 +104197,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c5043ab7f9d54ad1bc0dfddb063dc260",
@@ -104258,9 +104256,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8679c2c837704520ab6b4b7edf590ca7",
@@ -104595,9 +104591,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1673a3f1a00c453fbf4fd46f2324106e",
@@ -104623,9 +104617,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4c3cdcf31d3e4f79a42d9e973f6ef380",
@@ -104665,9 +104657,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ca7435c1d3194e3a82926e94676ec5ff",
@@ -104686,9 +104676,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4ddeff4890074cbfb188241480727539",
@@ -104707,9 +104695,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "294c752eeb2249959e8584d064a77703",
@@ -105958,9 +105944,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2402c2cb6cf24009849a18e3d1f6c1f7",
@@ -105979,9 +105963,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "36b928bab9aa46fbaecb6c5a7e6210da",
@@ -106000,9 +105982,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8df5c32fb8b94561a3d7b784718a1221",
@@ -108735,9 +108715,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "73235819883c4130afae1c67f1b80efc",
@@ -108752,9 +108730,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "929919ca42dd4150baeb9a22e575d654",
@@ -108773,9 +108749,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e9223956d6f44c5781edcfaece085716",
@@ -116529,9 +116503,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "21df3d6f9a214660824a9c7af3fb068b",
@@ -116550,9 +116522,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "25138ca80bd9417fa384d6ee16cb1010",
@@ -116563,8 +116533,8 @@
           "Name": "PlayerMoveToPoint",
           "Params": {
             "Pos": {
-              "X": -647195.94,
-              "Y": 30351.16,
+              "X": -647185.62,
+              "Y": 30350,
               "Z": -27875.06
             },
             "MoveType": 1
@@ -116600,9 +116570,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "479feef5ffad4deba4fc7367a5a84399",
@@ -116628,9 +116596,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "58c19b3b111d4fbfbc7c71e44ff26f4e",
@@ -116650,9 +116616,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b050594f174949469e8adb0ce96f5f50",
@@ -116701,9 +116665,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c793019dc2c84bfd91784024e0a14773",
@@ -116746,9 +116708,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d05dc8594bde43b2909df19886f7fa90",
@@ -116768,9 +116728,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "fb44b0a9b3c345798b85ceae3da5a659",
@@ -116797,9 +116755,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ffe49f0dac8f458eada8ad3d1420b648",
@@ -116825,9 +116781,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "259df286fbcb4902be74d88d962de334",
@@ -118255,9 +118209,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d2f8cdd5de6c48ffb5cd12c339fe0fc5",
@@ -118312,9 +118264,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7058a20cc97d440d97a3bd4e12be9de3",
@@ -119596,9 +119546,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "94f1dd806ae34692ba31d048461f1b09",
@@ -121158,9 +121106,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4b0516612db041128b0af677701e175b",
@@ -121433,9 +121379,7 @@
     "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c58343cd403745638d990d264c6d68e2",
@@ -121546,9 +121490,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a3014351ef3544a8bb008105cb80986a",
@@ -121575,9 +121517,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e780c821454248eb9042cb30e7a79bc8",
@@ -121592,9 +121532,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "105f35625702473da33afa8b64f00eaf",
@@ -122106,6 +122044,30 @@
     "UniquenessTest": "",
     "DoIntactType": "Direct",
     "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "4dea7254b36049f685514cd7f3682795",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "TeleportDungeon",
+          "Params": {
+            "DungeonId": 20301568,
+            "IsRegroup": false
+          },
+          "ActionId": 3000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_915700000_InteractContent_915_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 600,
     "Duration": "",
     "OptionLockTypeList": ""
   },
@@ -122850,30 +122812,6 @@
     ]
   },
   {
-    "Guid": "4dea7254b36049f685514cd7f3682795",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "TeleportDungeon",
-          "Params": {
-            "DungeonId": 20301568,
-            "IsRegroup": false
-          },
-          "ActionId": 3000004
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "Quest_915700000_InteractContent_915_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 600,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
     "Guid": "116e3b0a133c478abeb3b1cb4bbd3e47",
     "Type": {
       "Type": "Flow",
@@ -122911,9 +122849,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f0d912acd0b74aac98ae253690a0324d",
@@ -122960,9 +122896,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f3a2b0c7b5f848658881d6d1c2a39695",
@@ -123178,9 +123112,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "501038933cd74e13a22862bffc72e236",
@@ -125874,9 +125806,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4870e6350a2a4d7a8a6fd03d190824b2",
@@ -125895,9 +125825,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9b937a6d9d8c444a8b5965fd3bc460f2",
@@ -126188,7 +126116,19 @@
     "Guid": "497fca53833f44a2a2879f1c07b20479",
     "Type": {
       "Type": "Actions",
-      "Actions": []
+      "Actions": [
+        {
+          "Name": "PostAkEvent",
+          "Params": {
+            "EventConfig": {
+              "Type": "Global",
+              "AkEvent": "/Game/Aki/WwiseAudio/Events/play_sfx_gp_yangyang_attack_cage.play_sfx_gp_yangyang_attack_cage"
+            }
+          },
+          "ActionGuid": "f849a2c4f7484c4c99210f4d957ddf58",
+          "ActionId": 4000083
+        }
+      ]
     },
     "Icon": "",
     "TidContent": "LevelPlay_317000000_InteractContent_317_1",
@@ -126558,9 +126498,7 @@
     "DoIntactType": "Auto",
     "Range": 500,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9b5f4224527a451395a07acb1aa39049",
@@ -126904,9 +126842,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bebe7db6e0374fb39f990ba06bbc64c6",
@@ -127263,9 +127199,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5dd011b00c1340e2b72007634c293e6c",
@@ -127284,9 +127218,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9f73772eea864738af2ba13e1c03333d",
@@ -127365,9 +127297,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a451fe64268b4e4c85c9fa30f8f406d7",
@@ -127474,9 +127404,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "57c00571be8946b69032f7fe053af700",
@@ -127667,9 +127595,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "cfb59e1114984924933b5f57e476d43a",
@@ -127694,9 +127620,120 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "07420cdba1dd4ee68c1c00ea1b1a84ce",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_园林区",
+        "FlowId": 2,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_320750009_InteractContent_320_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "092655a1e4564cd3976b7694b2c6c2ea",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_星火艺术",
+        "FlowId": 4,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2408611739a141978761e5ecaed404ef",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OpenSystemBoard",
+          "Params": {
+            "SystemType": "InformationView",
+            "BoardId": 33011017
+          },
+          "ActionGuid": "65da0b25b1c940ee829ccfcbc3926af1",
+          "ActionId": 4000160
+        },
+        {
+          "Name": "PostAkEvent",
+          "Params": {
+            "EventConfig": {
+              "Type": "Target",
+              "EntityId": 687700186,
+              "AkEvent": "/Game/Aki/WwiseAudio/Events/play_sfx_gp_lsl_photo_pickup.play_sfx_gp_lsl_photo_pickup"
+            }
+          },
+          "ActionGuid": "404307a7f04446c1af887272be14c480",
+          "ActionId": 4000316
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_687000000_InteractContent_687_16",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2a9912837400427191288b0204f68cbb",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_园林区",
+        "FlowId": 15,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "562259aa524540f69b7f2a5ec7dbe641",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_星火艺术",
+        "FlowId": 3,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9428d7338bec46ed88dae08f749bff92",
@@ -127741,67 +127778,30 @@
     ]
   },
   {
-    "Guid": "e13c912774194fdeb27bdf1ee7fd5910",
+    "Guid": "9aab187768424e329fe7e5ea929bbffa",
     "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
-        "FlowId": 3,
-        "StateId": 1
-      }
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "ChangeEntityState",
+          "Params": {
+            "Type": "Directly",
+            "EntityId": 687700249,
+            "State": "关卡.Common.状态.激活"
+          },
+          "ActionGuid": "be5e0577dbd34532aac6fef85124a95a",
+          "ActionId": 4000031
+        }
+      ]
     },
     "Icon": "",
-    "TidContent": "",
+    "TidContent": "LevelPlay_687000000_InteractContent_687_17",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "092655a1e4564cd3976b7694b2c6c2ea",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_星火艺术",
-        "FlowId": 4,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "562259aa524540f69b7f2a5ec7dbe641",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_星火艺术",
-        "FlowId": 3,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a7d12cf472aa4cada76cd3bdae5dae06",
@@ -127820,51 +127820,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "07420cdba1dd4ee68c1c00ea1b1a84ce",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.5玄方_园林区",
-        "FlowId": 2,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_320750009_InteractContent_320_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "2a9912837400427191288b0204f68cbb",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.5玄方_园林区",
-        "FlowId": 15,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "af3c78bc0280459fb1afdbc97b24d536",
@@ -127883,52 +127839,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "d41166ee3b2d4af7b8320efc01ad2898",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.5玄方_园林区",
-        "FlowId": 11,
-        "StateId": 1,
-        "FlowGuid": "f402058b7ed845088c73dd58df778f55"
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_320750010_InteractContent_320_4",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "e9378aa1784e483d8a1eef52328f8702",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3.5玄方_园林区",
-        "FlowId": 7,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_320750010_InteractContent_320_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bd8a12cd1ed54ee4949973dc09a1f058",
@@ -127988,35 +127899,18 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "2408611739a141978761e5ecaed404ef",
+    "Guid": "d41166ee3b2d4af7b8320efc01ad2898",
     "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OpenSystemBoard",
-          "Params": {
-            "SystemType": "InformationView",
-            "BoardId": 33011017
-          },
-          "ActionGuid": "65da0b25b1c940ee829ccfcbc3926af1",
-          "ActionId": 4000160
-        },
-        {
-          "Name": "PostAkEvent",
-          "Params": {
-            "EventConfig": {
-              "Type": "Target",
-              "EntityId": 687700186,
-              "AkEvent": "/Game/Aki/WwiseAudio/Events/play_sfx_gp_lsl_photo_pickup.play_sfx_gp_lsl_photo_pickup"
-            }
-          },
-          "ActionGuid": "404307a7f04446c1af887272be14c480",
-          "ActionId": 4000316
-        }
-      ]
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_园林区",
+        "FlowId": 11,
+        "StateId": 1,
+        "FlowGuid": "f402058b7ed845088c73dd58df778f55"
+      }
     },
     "Icon": "",
-    "TidContent": "LevelPlay_687000000_InteractContent_687_16",
+    "TidContent": "Quest_320750010_InteractContent_320_4",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -128025,24 +127919,38 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "9aab187768424e329fe7e5ea929bbffa",
+    "Guid": "e13c912774194fdeb27bdf1ee7fd5910",
     "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "ChangeEntityState",
-          "Params": {
-            "Type": "Directly",
-            "EntityId": 687700249,
-            "State": "关卡.Common.状态.激活"
-          },
-          "ActionGuid": "be5e0577dbd34532aac6fef85124a95a",
-          "ActionId": 4000031
-        }
-      ]
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
+        "FlowId": 3,
+        "StateId": 1
+      }
     },
     "Icon": "",
-    "TidContent": "LevelPlay_687000000_InteractContent_687_17",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "e9378aa1784e483d8a1eef52328f8702",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_园林区",
+        "FlowId": 7,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_320750010_InteractContent_320_1",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -128068,9 +127976,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "04d1211265d547fca0537baf3ae707ff",
@@ -128089,9 +127995,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "06ae27540ecd482ebcab33c0c84cad99",
@@ -128110,9 +128014,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "06e6668d14a34f3f94496b2a3a913081",
@@ -128131,9 +128033,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9a2b22a3e2b4401d8eaa9b340ca8e806",
@@ -128148,9 +128048,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a8e251d64aaa491eb48fab808e2a41ae",
@@ -128169,9 +128067,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b6acf629b7ef4ba084bcd8f71f3d7388",
@@ -128208,9 +128104,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b84606380ef0490a8d9a069fbd39d89a",
@@ -128236,9 +128130,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b912000551b642f4bbc39ba9e3196e5b",
@@ -128296,9 +128188,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bfafa2029829469bb54c9bd1a4294d28",
@@ -128317,9 +128207,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d62847a052404b06af857d24799469c6",
@@ -128338,9 +128226,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e541b578aa004eaca6c7b4e12db0b18f",
@@ -128355,9 +128241,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "eaf8489f24db4000809c832a2183493d",
@@ -128376,9 +128260,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "365abe6afa474ac9b9b07bc03999e4de",
@@ -128542,9 +128424,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2191dd4372ea4405a12e19b3881025d2",
@@ -128564,9 +128444,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3cf9f58b7f6d42299baaa6e5eff6ef15",
@@ -128585,9 +128463,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "60ae09f3bc88489daa37b0177e3ae82c",
@@ -128694,9 +128570,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ea29a85f7f9b4e3a9c084de0457e25c5",
@@ -128715,9 +128589,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "60d5bfd0b8bd454b8075faea6df9d6de",
@@ -128743,9 +128615,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d3f4dec3bc0945b1bbb232a6f5a99883",
@@ -128788,9 +128658,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9e2c1b60c46546a7a898aaa7618f09c5",
@@ -128810,9 +128678,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "27cf6e2dacc547b591fd048231dd94e7",
@@ -128867,9 +128733,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3809711f39df46b991074c81cac56bee",
@@ -128954,9 +128818,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1d27029f7ea345aba92b7302132103a9",
@@ -128981,9 +128843,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6dde8496d0244a788ef07c4ab91e842e",
@@ -129027,9 +128887,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "76e13ce67dc94ed99234f2ad37137eac",
@@ -129048,9 +128906,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d44f050213df4f0d98a5defb4fa447e3",
@@ -129109,6 +128965,16 @@
       "Type": "Actions",
       "Actions": [
         {
+          "Name": "GuideTrigger",
+          "Params": {
+            "Type": "BeginnerGuide",
+            "Conditions": [],
+            "GuideId": 34293
+          },
+          "ActionGuid": "0316bdd8dbbe4f9dbfa459fc428cb404",
+          "ActionId": 4000210
+        },
+        {
           "Name": "ToggleDragActorPlay",
           "Params": {
             "Config": {
@@ -129157,9 +129023,7 @@
     "DoIntactType": "Direct",
     "Range": 200,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "22776427abc845dc84396a8bb39727f9",
@@ -129458,7 +129322,7 @@
           "ActionId": 4000003
         },
         {
-          "Name": "SetEntityVisible",
+          "Name": "SetEntityClientVisible",
           "Params": {
             "Visible": false,
             "EntityIds": [
@@ -129466,7 +129330,7 @@
               169750208
             ]
           },
-          "ActionGuid": "e732845462594fc393e933c4b4b86e62",
+          "ActionGuid": "ab7d7b7d5845400b8f90d3514f1dd745",
           "ActionId": 4000005
         },
         {
@@ -129510,9 +129374,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c770ff1f9270435e83158e1eab7c2098",
@@ -129610,9 +129472,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "484b08d7a2e849d2b54030bd0721f810",
@@ -130104,27 +129964,6 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "9ae68a39022a4880bb262bee20424162",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_通缉撒谎比赛",
-        "FlowId": 4,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "e9f83a562ea747f890485d8add2abb54",
     "Type": {
       "Type": "Flow",
@@ -130141,9 +129980,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "37320d26291242da8dbb8665ebc6dfeb",
@@ -130286,6 +130123,25 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "9ae68a39022a4880bb262bee20424162",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_通缉撒谎比赛",
+        "FlowId": 4,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "c51e4a68420648f1b60fe2d80917069e",
     "Type": {
       "Type": "Flow",
@@ -130403,9 +130259,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "28a88de5bca24143a5bb24607ca6f59e",
@@ -130442,9 +130296,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "34eca60eb76e4c74b0c01ef9d9519909",
@@ -130463,9 +130315,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "39d62e35f7bd4f31b0a3924ce33f47be",
@@ -130484,9 +130334,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3a80e315ce06489cbe5d4225ecb5dce1",
@@ -130505,9 +130353,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5b12b78dc99f4f64a6efac727c3e1bc6",
@@ -130526,9 +130372,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "675c8c08e6424dde8e31d5ae2cca3d6c",
@@ -130547,9 +130391,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a3145f222c514b6796a8847fecc32f2f",
@@ -130568,9 +130410,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "fcba93aeec8b44a68cb733238e546eb3",
@@ -130610,9 +130450,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4c8ad7991cb44824b3cac0273b950fd7",
@@ -130631,9 +130469,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5386b33e19d54208befeeac3dc2e0b10",
@@ -130652,9 +130488,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5d6e15fdfd4e49cea35c764b5cb53f10",
@@ -130673,9 +130507,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "644dd5d6ce284e8dacae8bb5d474b2ac",
@@ -130694,9 +130526,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "648521063b8d402a9156a5a621549398",
@@ -130715,9 +130545,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "83b702dff1cb46bba9ba89dd080f27af",
@@ -130736,9 +130564,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "88c4ab4fe83940df89ac9ca9cc0cdb05",
@@ -130757,9 +130583,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ac8a3acdc8df4c908fc8b26badd5bfac",
@@ -130778,9 +130602,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f38496558481446a8465a9d28b198a87",
@@ -130799,9 +130621,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6fbc7873d24344569a2ba36fc9744a77",
@@ -130888,9 +130708,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "71b8f273dc1a4092b6dcde50574c11b5",
@@ -130909,9 +130727,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "350aa9a4c4b04b0997a6e4df493d6d94",
@@ -131013,9 +130829,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "40dbc39048b44aeb8a67f787ff48fbaf",
@@ -131034,9 +130848,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4b84d665833c4a5ea35200b5103a4d43",
@@ -131055,9 +130867,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6d36931104b748e795dfe426539993ab",
@@ -131076,9 +130886,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "756984e606d34999b43a464f5228196d",
@@ -131097,9 +130905,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7a8dc6fbc7b842ff93b38b9a4e02dbc9",
@@ -131118,9 +130924,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "861f4e6fae7242b2a4d59172cf184303",
@@ -131139,9 +130943,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bc9bcf58c3d84802a97e9ce376dde073",
@@ -131160,9 +130962,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "be8dfb50b9c24557be891dc64bcf644b",
@@ -131196,9 +130996,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ce085b97abaf4dad933c855d4b7d23a6",
@@ -131217,9 +131015,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "185c8a9b45844db182cc7e2470b1d99b",
@@ -131259,9 +131055,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7f761e3475564fe392305392b9835456",
@@ -131426,9 +131220,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "858e7e8df0e34cb594cc226478b6a085",
@@ -131469,9 +131261,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e8c60d45ce4745d68bd96e2e2ad09168",
@@ -131552,9 +131342,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "971e3814453047cb89bfd7571f256514",
@@ -131573,9 +131361,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "919a3208d93140efbabcc12165e44ed1",
@@ -131805,9 +131591,26 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "f796188125a74bdcbf52d92ac8b4679d",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 57,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Auto",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "24e317023f7d425caeb4bdb4360687b0",
@@ -131826,9 +131629,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a545fef32dde4b7983f087ac24156b25",
@@ -131843,9 +131644,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c7f37711042841dcaf44a73491e0bf92",
@@ -131864,9 +131663,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0c4020931b944c89a6729667005444d6",
@@ -131885,9 +131682,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8632b71aa71747228b7c55e97755cf1a",
@@ -132014,9 +131809,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "505269eb94674134b7aa914a7d7aa871",
@@ -132052,9 +131845,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "53022253b2aa4211ab443527142738e4",
@@ -132069,9 +131860,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "56bc6a8698b0497982a135ff3c0d7c3a",
@@ -132086,9 +131875,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9e5c403075434c1caf6131430a389dee",
@@ -132103,45 +131890,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "177df218ee4541769a22b77bec99fd6c",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "Quest_30750009_InteractContent_30_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
     "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "320de21e63cc42cabc506bbc97f2fc3b",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_金兽起舞，八方来财",
-        "FlowId": 4,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_686000000_InteractContent_686_3",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Auto",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
   },
   {
     "Guid": "91663156283f437cae9ff696f6e33e07",
@@ -132173,6 +131922,21 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "177df218ee4541769a22b77bec99fd6c",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "Quest_30750009_InteractContent_30_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "dd3f35155e3141499a769f2c14d359e2",
     "Type": {
       "Type": "Actions",
@@ -132183,6 +131947,25 @@
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "320de21e63cc42cabc506bbc97f2fc3b",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_金兽起舞，八方来财",
+        "FlowId": 4,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_686000000_InteractContent_686_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
@@ -132204,9 +131987,7 @@
     "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "26e71b2a521743f098f0318b8039af0e",
@@ -132225,9 +132006,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "381952f571b44381bb04abc368298440",
@@ -132246,9 +132025,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4190d0eeae85458099abfe9cfe023d58",
@@ -132267,9 +132044,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5b9bc0538a844765900cd7ca033b70f7",
@@ -132303,9 +132078,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "752ad4b48f5d41f4b30faab39f01b24a",
@@ -132354,9 +132127,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "aadd624a6dd94ac4a1fb095ec50293da",
@@ -132375,9 +132146,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b11131bfff6c4d4c9981e00638910b7c",
@@ -132396,9 +132165,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e272ca4f1aac42c2915cfd604be3595b",
@@ -132417,9 +132184,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b79a5b3a70ab4da4b849985c2b9c3cef",
@@ -132608,9 +132373,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "54c59b7b4d93408cae3e24e2c7a7e7d9",
@@ -132661,9 +132424,7 @@
     "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9657caca27a0480f8053127bc1c34e50",
@@ -132721,9 +132482,7 @@
     "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4b8394fcc474403fa8514b503ff62bb1",
@@ -132827,9 +132586,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0f575b6f47644fac99477f2984b0ee39",
@@ -132848,9 +132605,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "185110f676694b1a9d9d3792735315ac",
@@ -132869,9 +132624,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "50692b00d4d647c187e274511da65ea4",
@@ -132890,9 +132643,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bdad982f1b4f4041881f31d633c5ef75",
@@ -132911,9 +132662,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d3b3bec20db3437d976ceb4f98b4076e",
@@ -132932,9 +132681,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "29860d85cd1f424c98f6c5a99a66e38a",
@@ -132963,6 +132710,21 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "4cc31394ba2441a6959c8508d9051d61",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "8a97fc7d7d704d3d87c8aafc30b06040",
     "Type": {
       "Type": "Flow",
@@ -132979,9 +132741,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "25a725b08b624eb7bb15daebba3e88c3",
@@ -133094,9 +132854,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e788f707059f43d59776bdd0d99df26c",
@@ -133116,9 +132874,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f47eb7be12854da1bce8cf7535baa812",
@@ -133137,9 +132893,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "05197592bc0546128bc00bcb54f259c2",
@@ -133158,9 +132912,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0f305c029bdd432f9dd0e99a2d6e2754",
@@ -133179,9 +132931,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "436729ca8a7a4a2fa506217e1271c1e7",
@@ -133196,9 +132946,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "65d744feb19f448d87b2292ca491f8e0",
@@ -133224,6 +132972,21 @@
         "FlowId": 29,
         "StateId": 1
       }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "bf7b9f7619a64ab1bcd3501e6ea75591",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
     },
     "Icon": "",
     "TidContent": "",
@@ -133266,21 +133029,30 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "bf7b9f7619a64ab1bcd3501e6ea75591",
+    "Guid": "6646c19b4ccd4c148a1504d7fb275a8b",
     "Type": {
       "Type": "Actions",
-      "Actions": []
+      "Actions": [
+        {
+          "Name": "ChangeEntityState",
+          "Params": {
+            "Type": "Directly",
+            "EntityId": 692750174,
+            "State": "关卡.Common.状态.激活"
+          },
+          "ActionGuid": "f9dc3985766246b5b3a8698d60db955f",
+          "ActionId": 4000178
+        }
+      ]
     },
     "Icon": "",
-    "TidContent": "",
+    "TidContent": "LevelPlay_692750002_InteractContent_692_1",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
-    "Range": 0,
+    "Range": 600,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0230f860189f406cb90607c4ebb5037e",
@@ -133326,32 +133098,6 @@
     "UniquenessTest": "",
     "DoIntactType": "Direct",
     "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "6646c19b4ccd4c148a1504d7fb275a8b",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "ChangeEntityState",
-          "Params": {
-            "Type": "Directly",
-            "EntityId": 692750174,
-            "State": "关卡.Common.状态.激活"
-          },
-          "ActionGuid": "f9dc3985766246b5b3a8698d60db955f",
-          "ActionId": 4000178
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_692750002_InteractContent_692_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 600,
     "Duration": "",
     "OptionLockTypeList": ""
   },
@@ -133406,59 +133152,6 @@
     },
     "Icon": "",
     "TidContent": "",
-    "Condition": {
-      "Type": 0,
-      "Conditions": [
-        {
-          "Type": "CheckInCombat",
-          "InCombat": false,
-          "OnlinePlayerConditionTargetOption": {
-            "Type": "Host"
-          }
-        }
-      ]
-    },
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "0f889e703203461cbe500f23ebc4daa7",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
-        "FlowId": 18,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "7d74e48f32854374a793588e6b3e268f",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
-        "FlowId": 22,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -133480,48 +133173,6 @@
     },
     "Icon": "",
     "TidContent": "Quest_686000001_InteractContent_686_4",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "81ad2750bff24f2aacbbbe74bdc8e0e1",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
-        "FlowId": 34,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "b61c2dff224c48e09df028a246b771f4",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
-        "FlowId": 21,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -133565,9 +133216,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0ecb9dd2fb7245c6b839f4864497171e",
@@ -133603,9 +133252,83 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "0f889e703203461cbe500f23ebc4daa7",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
+        "FlowId": 18,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "7d74e48f32854374a793588e6b3e268f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
+        "FlowId": 22,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "81ad2750bff24f2aacbbbe74bdc8e0e1",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
+        "FlowId": 34,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "b61c2dff224c48e09df028a246b771f4",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_历程记忆手册_不改旧时影",
+        "FlowId": 21,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f26010ef877c47ccabb29c50487e27cd",
@@ -133639,9 +133362,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "39dea966d2794a4b86f6e3775d8efe4d",
@@ -133766,9 +133487,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f8f4200103ef4573b74e2ab05cc7a3dc",
@@ -133787,9 +133506,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a7d7f1b7aa1442d7bbf41fb9ab221ae1",
@@ -133860,9 +133577,7 @@
     "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7f33ea1855bc4d3389ed33fbecb9747e",
@@ -133881,9 +133596,7 @@
     "DoIntactType": "Auto",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a71b153ef39f46e3b5d86027edd19ee3",
@@ -133940,9 +133653,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bc31e67e82574c7f8512395d6fc0a84e",
@@ -133961,9 +133672,7 @@
     "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0194aa963aa94426a8b21933c71902cb",
@@ -133990,9 +133699,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "77ac828008d041e1b26bfdfc2bb90ef9",
@@ -134019,9 +133726,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "85817865773d44019719e55fabe1e1ec",
@@ -134048,9 +133753,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "aabba23787c94f2ebad1321ed61e4536",
@@ -134086,9 +133789,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "d34a6cf078704f59a42eadf0dc700398",
@@ -134124,9 +133825,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e895f74c5caf4ef3813da0d7c82aef3e",
@@ -134145,9 +133844,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0fc2d507d8e14c28a4edada42add9a02",
@@ -134157,6 +133854,25 @@
     },
     "Icon": "",
     "TidContent": "LevelPlay_686750034_InteractContent_183_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "9a101abfa27f41aabb4d4b1b36f65f3c",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_正是河豚跃上时",
+        "FlowId": 5,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_686750004_InteractContent_686_2",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -134201,27 +133917,6 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "9a101abfa27f41aabb4d4b1b36f65f3c",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_正是河豚跃上时",
-        "FlowId": 5,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_686750004_InteractContent_686_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "335ed4db885d41e790afcd6088253b2d",
     "Type": {
       "Type": "Flow",
@@ -134259,9 +133954,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "cc02476d69684bc0b92546ef52049f59",
@@ -134468,9 +134161,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "93077abf68eb4923aa8140c0ab95e0aa",
@@ -134489,9 +134180,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "19145bf51bee468f87f21b02c88c2a6b",
@@ -134664,9 +134353,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "82d094819cac49d3873b1ef34e17c441",
@@ -134692,9 +134379,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9e3303234580422fbe088ad401b62036",
@@ -134709,9 +134394,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a1cc8d2a71214afb8dfe2cc22c5a504d",
@@ -134814,9 +134497,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "dbc5899260064d34a9b54dafc9b4ba6d",
@@ -134842,9 +134523,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f8c377fb32894aa4912d298da0ef04ae",
@@ -134896,9 +134575,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0a45098270fc45ada4f84012eda9b9b1",
@@ -135262,9 +134939,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bc1087a8a3094fa4ba762d1cc3ed07f7",
@@ -135283,9 +134958,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b40858a783fa4ffea89dad0361e1135e",
@@ -135304,9 +134977,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "48a9bc8b6f3e440f9e0f2821a29e7464",
@@ -135348,6 +135019,26 @@
     },
     "Icon": "",
     "TidContent": "LevelPlay_687000000_InteractContent_687_5",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "d7183807ac074290a6f510b900ef69b8",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_Default",
+        "FlowId": 8,
+        "StateId": 1,
+        "FlowGuid": "eaa68c9a151d4603bf10aa6463184226"
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_40800002_InteractContent_40_1",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -135690,9 +135381,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1ae512b09dfa4397acda9a55582e891c",
@@ -135766,9 +135455,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6785724ace8a4b5491ae1390b45ea09d",
@@ -135823,9 +135510,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9f340de1bb1b4730a5ea12ead2b4052b",
@@ -135844,9 +135529,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9f68e8ce3dfc49c3b98da592f65ea205",
@@ -135865,9 +135548,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b19b7ab206dd484186e64d6153210e40",
@@ -135886,9 +135567,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b839c7d94bd34644b9b8af387e6de8c1",
@@ -135907,9 +135586,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "cb8600e820d449dca353795a4f307885",
@@ -136033,9 +135710,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "5d6dfc5147064e2d82dd48bbb7d29758",
@@ -136054,9 +135729,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "1dae2de35f1c475aa1b6945e4ae8a79b",
@@ -136075,9 +135748,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "200eeda50d5845f4acd89414e9bc3402",
@@ -136096,9 +135767,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3f1d4d22f7a6431bab30e7d3f6cc463a",
@@ -136117,9 +135786,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "6f755be14b8a4844914b99040d54b099",
@@ -136138,9 +135805,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7706388e0e9f44199098ea65ac5d3347",
@@ -136159,9 +135824,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7a3a37c03741405ebd21c8d4884095fc",
@@ -136180,9 +135843,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7c8999fe359b4457aef14a858b35fd27",
@@ -136201,9 +135862,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7e028fdac80e40df8fa389a880cf1237",
@@ -136222,9 +135881,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "866c6c7bd90f48d6974719acab7f1e6c",
@@ -136243,9 +135900,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "896f200465ad462eb68e4d91d63d442e",
@@ -136264,9 +135919,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8e1aa9efe8784311860078a5b337835c",
@@ -136285,9 +135938,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ac35b0f2927841be9291e2c28fd2649b",
@@ -136306,9 +135957,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "bd696841d10e4999ba664943e2bdc9e2",
@@ -136327,9 +135976,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c2ea932c4cce491eb4e21d73cbc58180",
@@ -136348,9 +135995,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e8cabf4b42b64c0a9d4d27ac5dcc02f6",
@@ -136369,9 +136014,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f74eefbfeb534c7d839999f88b754e33",
@@ -136390,9 +136033,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "fbccf9bcfd444408976b89d45dc00a0a",
@@ -136411,9 +136052,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ffa80c4efdae40c08dcbc573df69865d",
@@ -136428,9 +136067,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2644e7c291394165923254e7b93573e0",
@@ -136488,9 +136125,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "0f9ddffeb2f14f81a8eb5fc1931c63fc",
@@ -136665,9 +136300,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "21c423272a2f4b25bc1159c915e06342",
@@ -136686,9 +136319,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "3e1d2e9edea347668ab5e8d36f30c30e",
@@ -136707,9 +136338,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8430b937136c41b5a79afc9ffe42dc39",
@@ -136728,9 +136357,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8bbbe6545f3d499cad914034e7f3d10c",
@@ -136749,9 +136376,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "8c76e78de5dd45b084fa294cda12483b",
@@ -136770,9 +136395,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b6734e53996a48fd8e5da1ad874f8c4e",
@@ -136791,9 +136414,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c3cc4fd87c9848bbb8b7b9c6d55b0008",
@@ -136812,9 +136433,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e20f4fd9668a455a8d2aff09ff591075",
@@ -136833,9 +136452,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e76c7d37c6c04928baef025c2610c705",
@@ -136854,9 +136471,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f8dc6a1b4bfc45d583e9d659b808a844",
@@ -136896,9 +136511,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "de26d90bed7041b7a0b3dcb2b18db5dd",
@@ -136974,9 +136587,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2419afbe273f4e4498b38361fdc4a50e",
@@ -136991,9 +136602,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a992e09d473d452581a7b6e7f231ea08",
@@ -137008,9 +136617,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c0d213f1f7f443bcac4bce20005504f0",
@@ -137025,9 +136632,228 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "1234527d435744a59250e43aaa25f69b",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 3,
+        "StateId": 6
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2423ccc8b3174b79a6c4253f96fdcc28",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_1_1_乘宵山主线",
+            "FlowId": 2,
+            "StateId": 6
+          },
+          "ActionGuid": "04f8ef4c673e4225b0ff81c6ab675ca5",
+          "ActionId": 3000070
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "2795c7c22b2f49f9b3dd5cb6e55c33d1",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 15,
+        "StateId": 2
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "3b004ef4f47f4003a1a7ea31153cee8d",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "55a8ba9008814099b3f658076974bacb",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "SetPlayerPos",
+          "Params": {
+            "TelePortConfig": {
+              "Type": 0,
+              "TargetPos": {
+                "X": 238958.73,
+                "Y": 303079.16,
+                "Z": -5288,
+                "A": 120.08587646484375
+              }
+            }
+          },
+          "ActionGuid": "943625dbc8e94f5a957f637213915650",
+          "ActionId": 3000199
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "70f1be59a01b41de86ab2987ff112afd",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 15,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "7d535dd031bb491699f7203925d7157f",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "Quest_146000002_InteractContent_146_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "dfee8e8384814cb5a96b903e8206c296",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 15,
+        "StateId": 4
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "e1e8858295874a4d9efe5038616af537",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 15,
+        "StateId": 3
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "e6cb8148b6814509b930ee52584c7d40",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 2,
+        "StateId": 13
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_125000121_InteractContent_0_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "f60902c253ac466baf3364cb2091b55f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_乘宵山主线",
+        "FlowId": 10,
+        "StateId": 3
+      }
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "65372e1042e34f079874f3ba7c74da56",
@@ -137054,9 +136880,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a3a1e51c046d4e55a86995170753d374",
@@ -137075,9 +136899,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c5a3919b003a484a927d33bb3efdcb3c",
@@ -137126,23 +136948,175 @@
     "Guid": "6816b468bcff42e9a53e37ca2248565a",
     "Type": {
       "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "1fe14c09a2c349ef87044e78e8fc6941",
+    "Type": {
+      "Type": "Actions",
       "Actions": [
         {
-          "Name": "OpenSystemBoard",
+          "Name": "SetNpcGroupPerform",
           "Params": {
-            "SystemType": "InformationView",
-            "BoardId": 35000003
+            "Key": "chanfu",
+            "PerformType": {
+              "Type": 6,
+              "Initiator": {
+                "Type": "Player"
+              },
+              "Target": 915800014
+            },
+            "IsWaitActionFinish": true
           },
-          "ActionGuid": "762925590b5a4fb0b1d5a878040b7330",
-          "ActionId": 3000239
+          "ActionGuid": "8fcf935a515848f29529f96f20742066",
+          "ActionId": 3000002
         }
       ]
     },
     "Icon": "",
-    "TidContent": "Quest_317750002_InteractContent_317_1",
+    "TidContent": "Quest_915800000_InteractContent_915_5",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "3dcd45a5d4d84f6b9061728e9380a501",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "SetNpcGroupPerform",
+          "Params": {
+            "Key": "chanfu",
+            "PerformType": {
+              "Type": 6,
+              "Initiator": {
+                "Type": "Player"
+              },
+              "Target": 915800014
+            },
+            "IsWaitActionFinish": true
+          },
+          "ActionGuid": "6e89faae451144c9b21a716ba48eef98",
+          "ActionId": 3000005
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_915800000_InteractContent_915_9",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "6f7ed590b56a4d35b0acd1a08bbf6569",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "8fbb24dcaf6e4d9c834a24670fb9ded8",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "FadeInScreen",
+          "Params": {
+            "Ease": {
+              "Type": 2,
+              "Duration": 1
+            },
+            "ScreenType": "Black"
+          },
+          "ActionGuid": "867dbfd6c6984254a4c4b75ba44458e7",
+          "ActionId": 3000018
+        },
+        {
+          "Name": "SetPlayerPos",
+          "Params": {
+            "TelePortConfig": {
+              "Type": 0,
+              "TargetPos": {
+                "X": 105711.73,
+                "Y": -98225.03,
+                "Z": 15,
+                "A": 90
+              }
+            },
+            "DisableAutoFadeInScreen": true
+          },
+          "ActionGuid": "bb7f367eb0dc40ecb9c4b312f8c59934",
+          "EdNote": "重设玩家位置",
+          "ActionId": 3000019
+        },
+        {
+          "Name": "SetNpcGroupPerform",
+          "Params": {
+            "Key": "chanfu",
+            "PerformType": {
+              "Type": 6,
+              "Initiator": {
+                "Type": "Player"
+              },
+              "Target": 915800014
+            }
+          },
+          "ActionGuid": "c175342e52ab4495a505a5f716e43c87",
+          "ActionId": 3000020
+        },
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_LYZ_TEST_3.6",
+            "FlowId": 1,
+            "StateId": 1,
+            "FlowGuid": "67c0b1589ef64375a0ee027ce5b7b584"
+          },
+          "ActionGuid": "c34bcbc2be8345d9a32d99abed804ac2",
+          "ActionId": 3000021
+        },
+        {
+          "Name": "FadeOutScreen",
+          "Params": {
+            "Ease": {
+              "Type": 2,
+              "Duration": 1
+            }
+          },
+          "ActionGuid": "f8bb6a307cc14490b19e44a8318d925b",
+          "ActionId": 3000003
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Option",
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
@@ -137454,9 +137428,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "136a946b13794aa0841d46f177e8ee1a",
@@ -137718,20 +137690,10 @@
     "Guid": "0ef866534cb540838140197c6f55ae98",
     "Type": {
       "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "OpenSystemBoard",
-          "Params": {
-            "SystemType": "InformationView",
-            "BoardId": 350000035
-          },
-          "ActionGuid": "711575ca60eb4862a45378ffa02011d3",
-          "ActionId": 3000318
-        }
-      ]
+      "Actions": []
     },
     "Icon": "",
-    "TidContent": "Quest_317750002_InteractContent_317_2",
+    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -137774,9 +137736,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "4bee0f61d7e74fe8bfcfed285138f7d8",
@@ -137795,9 +137755,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "45d9270c52a94e52bdd0ab4fc82a37f1",
@@ -137848,9 +137806,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "2ca06a68244140ccbe861f47e6b74745",
@@ -137865,9 +137821,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "357aaa2e3af648afabf6bc09ee1c6723",
@@ -137911,9 +137865,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "71e624383c374109bc84a4a08085348d",
@@ -137932,9 +137884,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "7302ce20c4f74df98fd15c20cb46c9ec",
@@ -138015,9 +137965,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "80ae807ebd7f46e1ad68751598527f1e",
@@ -138036,9 +137984,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "9d1744c3ecbf4fb6a6ef47051bdc37fd",
@@ -138057,9 +138003,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "a57c104d22e34162ae54032bb204c781",
@@ -138104,9 +138048,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b297bb7605ae40a9b0e4af88a0201566",
@@ -138151,9 +138093,7 @@
     "DoIntactType": "",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "b52dcaf2fe2b4c8886317bd842790f8e",
@@ -138208,9 +138148,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "e8230299928e47e7a63bbba426694f9c",
@@ -138265,9 +138203,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "ef9d57a5780e4f87a17e7267728293ec",
@@ -138798,6 +138734,141 @@
     "OptionLockTypeList": ""
   },
   {
+    "Guid": "4977a469e932433e9ae89a8f367782f3",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A3",
+            "EntityIds": [
+              915800024
+            ],
+            "BehaviorTree": 800023
+          },
+          "ActionGuid": "07786b322b32423b8ad39e56aaac5db4",
+          "ActionId": 3000026
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "A3已切换为【战斗跟随】",
+              "TidMainText": "Quest_915800001_GeneralFloatingTipMainText_915_4",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "e5ac4db8b5e14922abd8c52ad4913ee3",
+          "Timeout": 10,
+          "ActionId": 3000027
+        },
+        {
+          "Name": "AwakeEntity",
+          "Params": {
+            "EntityIds": [
+              915800019,
+              915800020,
+              915800023
+            ]
+          },
+          "ActionGuid": "b59eb1e66fb54509ab1319229ae6708e",
+          "ActionId": 3000028
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_915800001_InteractContent_915_4",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "5c7e15ce7adc48d484a4b26392d94f3d",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A1",
+            "EntityIds": [
+              915800024
+            ],
+            "BehaviorTree": 800021
+          },
+          "ActionGuid": "0535931cea9a49bd8e82e445f190c4f7",
+          "ActionId": 3000015
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "AI已切换为【仅战斗】",
+              "TidMainText": "Quest_915800001_GeneralFloatingTipMainText_915_2",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "2eef369a03fa43d39ed3c4a760d6df83",
+          "Timeout": 10,
+          "ActionId": 3000016
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_915800001_InteractContent_915_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "cb113eec377c4dcd8901b33c5e467dac",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "OverrideAiBehaviorTree",
+          "Params": {
+            "Key": "A2",
+            "EntityIds": [
+              915800024
+            ],
+            "BehaviorTree": 800022
+          },
+          "ActionGuid": "976e4a1a1adb4126bde82a26e1a9cfda",
+          "ActionId": 3000023
+        },
+        {
+          "Name": "CommonTip",
+          "Params": {
+            "TipOption": {
+              "EdTidMainText": "A2已切换为【仅跟随】",
+              "TidMainText": "Quest_915800001_GeneralFloatingTipMainText_915_3",
+              "Type": 9
+            }
+          },
+          "ActionGuid": "07a8a1dbedb047c9bc2ea01a30f094d4",
+          "Timeout": 10,
+          "ActionId": 3000024
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_915800001_InteractContent_915_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "a54b3d58589e4896960aafb2783a173a",
     "Type": {
       "Type": "Actions",
@@ -138966,9 +139037,7 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "f564302ccd954e399dfd2c72552b07d9",
@@ -139015,9 +139084,62 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "81ce74fe399b47e396e29df135fc06b7",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 8,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_180000000_InteractContent_180_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "93ae9595263541219342332da8f01dc8",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "",
+    "Range": 0,
+    "Duration": "",
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "b9071e24a01c4abbb68fa99896a9f32f",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 8,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_180000000_InteractContent_180_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "c60377f4038a4918816260b800f03de0",
@@ -139069,8 +139191,7 @@
               "TidSubText": "LevelPlay_147000037_DragActorPlaySubText_147_1",
               "KeepDialog": true,
               "EdTidHintText": "沿着箭头轨迹拖动",
-              "TidHintText": "LevelPlay_147000037_DragActorPlayHintText_147_1",
-              "DisableExit": true
+              "TidHintText": "LevelPlay_147000037_DragActorPlayHintText_147_1"
             }
           },
           "ActionGuid": "976bb204e0e24254a690c32d065cf192",
@@ -139127,149 +139248,17 @@
     ]
   },
   {
-    "Guid": "93ae9595263541219342332da8f01dc8",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "81ce74fe399b47e396e29df135fc06b7",
+    "Guid": "0a330cc345f04bb89dde6af3b001812a",
     "Type": {
       "Type": "Flow",
       "Flow": {
-        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
-        "FlowId": 8,
+        "FlowListName": "剧情_3_5_支线_悠然一日",
+        "FlowId": 25,
         "StateId": 1
       }
     },
     "Icon": "",
-    "TidContent": "Quest_180000000_InteractContent_180_2",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "b9071e24a01c4abbb68fa99896a9f32f",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
-        "FlowId": 8,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_180000000_InteractContent_180_3",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
-    "Guid": "47a9820beaaa42b9acd752c822c42f03",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "PlayFlow",
-          "Params": {
-            "FlowListName": "剧情_3_5_支线_机兵挑战",
-            "FlowId": 13,
-            "StateId": 1
-          },
-          "ActionGuid": "f2d3f7fd80ec4bfcaee6517fd500947e",
-          "ActionId": 3000021
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "Quest_686750002_InteractContent_183_5",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "6083abe015d2460e96763a0369254ce0",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_机兵挑战",
-        "FlowId": 17,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_686750002_InteractContent_180_4",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "687706da1ae64818b43ad5bdec1d03c2",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "PlayFlow",
-          "Params": {
-            "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
-            "FlowId": 4,
-            "StateId": 1
-          },
-          "ActionGuid": "23c8770dd9934f7e946989dcce183b89",
-          "ActionId": 3000004
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "Quest_686750005_InteractContent_183_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "3c0a5578317d4ac8a223b84ed981c480",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
-        "FlowId": 2,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "LevelPlay_102750000_InteractContent_686_1",
+    "TidContent": "Quest_164750000_InteractContent_164_3",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -139296,144 +139285,31 @@
     "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
+    "OptionLockTypeList": ""
   },
   {
-    "Guid": "903976ddba1940e9a84ad02a426559dd",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
-        "FlowId": 38,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_180000000_InteractContent_180_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "af1b917f758b452482a048c57d5e6bf4",
+    "Guid": "12af1211a42c45b890af36f38c65c6b0",
     "Type": {
       "Type": "Actions",
       "Actions": []
     },
     "Icon": "",
-    "TidContent": "Quest_180000000_InteractContent_180_4",
+    "TidContent": "Quest_688750006_InteractContent_688_16",
     "Condition": "",
     "UniquenessTest": "",
-    "DoIntactType": "",
+    "DoIntactType": "Direct",
     "Range": 0,
     "Duration": "",
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "604058a8ce26449b870ad485e236933c",
+    "Guid": "143673589d16424998079318987b8384",
     "Type": {
       "Type": "Actions",
       "Actions": []
     },
     "Icon": "",
-    "TidContent": "Quest_688750007_InteractContent_688_1",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "9c8cd7518b6943f3b386b581296064dc",
-    "Type": {
-      "Type": "Actions",
-      "Actions": [
-        {
-          "Name": "EntityTurnTo",
-          "Params": {
-            "EntityId": 199751762,
-            "Target": {
-              "Type": 4
-            }
-          },
-          "ActionGuid": "b51e3d7395f9486d899fbbd53924afb4",
-          "Timeout": 5,
-          "Async": true,
-          "ActionId": 3000025
-        },
-        {
-          "Name": "PlayRegisteredMontage",
-          "Params": {
-            "EntityId": 199751762,
-            "MontageId": 155,
-            "IsAbpMontage": false,
-            "RepeatTimes": -1
-          },
-          "ActionGuid": "00132f1ceeae4600ae04f5a5da1dd54b",
-          "Async": true,
-          "EdNote": "此处会补充表情，待配置",
-          "ActionId": 3000028
-        },
-        {
-          "Name": "PlayFlow",
-          "Params": {
-            "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
-            "FlowId": 87,
-            "StateId": 1,
-            "FlowGuid": "9ef293e5d48945ddb20c90b87a030ff2"
-          },
-          "ActionGuid": "796afc44498247d790f7e8e5e69d364d",
-          "ActionId": 3000029
-        },
-        {
-          "Name": "SetPlayerOperationRestriction",
-          "Params": {
-            "Type": "DisableAll",
-            "DisplayMode": "ShowUi"
-          },
-          "ActionGuid": "cf28fee834d14e09a8add15cfd17cfc4",
-          "ActionId": 3000030
-        },
-        {
-          "Name": "AddBuffToPlayer",
-          "Params": {
-            "BuffIds": [
-              640033141
-            ]
-          },
-          "ActionGuid": "670c4769d8d34bccb7f56851a81c4d0c",
-          "ActionId": 3000032
-        },
-        {
-          "Name": "SetPlayerOperationRestriction",
-          "Params": {
-            "Type": "EnableAll"
-          },
-          "ActionGuid": "29a81ae4f5de4ebcb3ad7d7d0559c315",
-          "ActionId": 3000036
-        },
-        {
-          "Name": "Wait",
-          "Params": {
-            "Time": 2
-          },
-          "ActionGuid": "47790aec531f41c5ae2eee7f08e22ef5",
-          "ActionId": 3000040
-        }
-      ]
-    },
-    "Icon": "",
-    "TidContent": "",
+    "TidContent": "Quest_164750000_InteractContent_164_9",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -139540,44 +139416,6 @@
     ]
   },
   {
-    "Guid": "0a330cc345f04bb89dde6af3b001812a",
-    "Type": {
-      "Type": "Flow",
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_悠然一日",
-        "FlowId": 25,
-        "StateId": 1
-      }
-    },
-    "Icon": "",
-    "TidContent": "Quest_164750000_InteractContent_164_3",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
-    "Guid": "143673589d16424998079318987b8384",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "Quest_164750000_InteractContent_164_9",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": [
-      "OnMotor"
-    ]
-  },
-  {
     "Guid": "2d056372535b4f8798935c071e0631f9",
     "Type": {
       "Type": "Flow",
@@ -139601,8 +139439,12 @@
   {
     "Guid": "2ea53f123a5b412ca21be484bec44f1f",
     "Type": {
-      "Type": "Actions",
-      "Actions": []
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_悠然一日",
+        "FlowId": 11,
+        "StateId": 1
+      }
     },
     "Icon": "",
     "TidContent": "Quest_164750000_InteractContent_164_4",
@@ -139614,6 +139456,125 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "2f30ab39e83845338f718f365f7356ac",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "38950a0f9e3c494ab3f9615be27bc3d8",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_1_1_阿布引入间章剧情",
+        "FlowId": 1,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_880000013_InteractContent_880_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "3c0a5578317d4ac8a223b84ed981c480",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
+        "FlowId": 2,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_102750000_InteractContent_686_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "3e74db4772264b9cbab35dfbbe632634",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "AdjustPlayerCamera",
+          "Params": {
+            "Option": {
+              "Type": "关卡.Common.镜头.锁轴镜头",
+              "Priority": 100,
+              "FadeInTime": 0.5,
+              "FadeOutTime": 0.5,
+              "ArmLength": 600,
+              "MinumArmLength": 600,
+              "MaxiumArmLength": 600,
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+              },
+              "Fov": 75,
+              "IsDisableResetFocus": true,
+              "AxisRotate": {
+                "X": 0,
+                "Y": -90,
+                "Z": 0
+              },
+              "ScreenConfig": {
+                "TriggerAngle": 90,
+                "FadeInTime": 0.5,
+                "FadeOutTime": 0.5
+              },
+              "HidePlayer": true
+            }
+          },
+          "ActionGuid": "907362691f3a45c680d0caec8dd9590c",
+          "Timeout": 0.5,
+          "ActionId": 4000010
+        },
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_Default",
+            "FlowId": 8,
+            "StateId": 1,
+            "FlowGuid": "3d698a9ef8304934b76b61a02b712a01"
+          },
+          "ActionGuid": "61f5dcf0f3294ff78a8862e54d8f445d",
+          "ActionId": 4000011
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_40800003_InteractContent_40_3",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   },
   {
     "Guid": "465d0884a0114887820e62b3692d5a3f",
@@ -139644,6 +139605,32 @@
     ]
   },
   {
+    "Guid": "47a9820beaaa42b9acd752c822c42f03",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_3_5_支线_机兵挑战",
+            "FlowId": 13,
+            "StateId": 1
+          },
+          "ActionGuid": "f2d3f7fd80ec4bfcaee6517fd500947e",
+          "ActionId": 3000021
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_686750002_InteractContent_183_5",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
     "Guid": "4dbf66ecc65d47d590de90dcf9f2b489",
     "Type": {
       "Type": "Flow",
@@ -139655,6 +139642,44 @@
     },
     "Icon": "",
     "TidContent": "Quest_164750000_InteractContent_164_7",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "604058a8ce26449b870ad485e236933c",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "Quest_688750007_InteractContent_688_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "6083abe015d2460e96763a0369254ce0",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_机兵挑战",
+        "FlowId": 17,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_686750002_InteractContent_180_4",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -139686,6 +139711,51 @@
     ]
   },
   {
+    "Guid": "67bd683b321d46bcbbb09ae537241850",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
+    "Guid": "687706da1ae64818b43ad5bdec1d03c2",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_3_5_支线_反残象动能投射装置",
+            "FlowId": 4,
+            "StateId": 1
+          },
+          "ActionGuid": "23c8770dd9934f7e946989dcce183b89",
+          "ActionId": 3000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "Quest_686750005_InteractContent_183_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": [
+      "OnMotor"
+    ]
+  },
+  {
     "Guid": "7188d898ca204f8a85600f69d1ae1da0",
     "Type": {
       "Type": "Flow",
@@ -139707,13 +139777,172 @@
     ]
   },
   {
-    "Guid": "12af1211a42c45b890af36f38c65c6b0",
+    "Guid": "8192ccab6e3048c79578f6a6ec7cb2e6",
     "Type": {
       "Type": "Actions",
       "Actions": []
     },
     "Icon": "",
-    "TidContent": "Quest_688750006_InteractContent_688_16",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "8213d3a59f6f466cac3237caec858c2e",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "AdjustPlayerCamera",
+          "Params": {
+            "Option": {
+              "Type": "关卡.Common.镜头调整",
+              "Priority": 100,
+              "FadeInTime": 0.5,
+              "FadeOutTime": 0.5,
+              "ArmLength": 600,
+              "MinumArmLength": 600,
+              "MaxiumArmLength": 600,
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+              },
+              "Fov": 75,
+              "OverlayArmLength": 0,
+              "HidePlayer": true
+            }
+          },
+          "ActionGuid": "94adf0809109434f8885e1a862f1f1b8",
+          "Timeout": 0.5,
+          "ActionId": 4000003
+        },
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_Default",
+            "FlowId": 8,
+            "StateId": 1,
+            "FlowGuid": "3d698a9ef8304934b76b61a02b712a01"
+          },
+          "ActionGuid": "985c0704dddb4fcda4868eee3af922ea",
+          "ActionId": 4000004
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_40800003_InteractContent_40_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "903976ddba1940e9a84ad02a426559dd",
+    "Type": {
+      "Type": "Flow",
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 38,
+        "StateId": 1
+      }
+    },
+    "Icon": "",
+    "TidContent": "Quest_180000000_InteractContent_180_1",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "9c8cd7518b6943f3b386b581296064dc",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "EntityTurnTo",
+          "Params": {
+            "EntityId": 199751762,
+            "Target": {
+              "Type": 4
+            }
+          },
+          "ActionGuid": "b51e3d7395f9486d899fbbd53924afb4",
+          "Timeout": 5,
+          "Async": true,
+          "ActionId": 3000025
+        },
+        {
+          "Name": "PlayRegisteredMontage",
+          "Params": {
+            "EntityId": 199751762,
+            "MontageId": 155,
+            "IsAbpMontage": false,
+            "RepeatTimes": -1
+          },
+          "ActionGuid": "00132f1ceeae4600ae04f5a5da1dd54b",
+          "Async": true,
+          "EdNote": "此处会补充表情，待配置",
+          "ActionId": 3000028
+        },
+        {
+          "Name": "PlayFlow",
+          "Params": {
+            "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+            "FlowId": 87,
+            "StateId": 1,
+            "FlowGuid": "9ef293e5d48945ddb20c90b87a030ff2"
+          },
+          "ActionGuid": "796afc44498247d790f7e8e5e69d364d",
+          "ActionId": 3000029
+        },
+        {
+          "Name": "SetPlayerOperationRestriction",
+          "Params": {
+            "Type": "DisableAll",
+            "DisplayMode": "ShowUi"
+          },
+          "ActionGuid": "cf28fee834d14e09a8add15cfd17cfc4",
+          "ActionId": 3000030
+        },
+        {
+          "Name": "AddBuffToPlayer",
+          "Params": {
+            "BuffIds": [
+              640033141
+            ]
+          },
+          "ActionGuid": "670c4769d8d34bccb7f56851a81c4d0c",
+          "ActionId": 3000032
+        },
+        {
+          "Name": "SetPlayerOperationRestriction",
+          "Params": {
+            "Type": "EnableAll"
+          },
+          "ActionGuid": "29a81ae4f5de4ebcb3ad7d7d0559c315",
+          "ActionId": 3000036
+        },
+        {
+          "Name": "Wait",
+          "Params": {
+            "Time": 2
+          },
+          "ActionGuid": "47790aec531f41c5ae2eee7f08e22ef5",
+          "ActionId": 3000040
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",
@@ -139722,5 +139951,114 @@
     "OptionLockTypeList": [
       "OnMotor"
     ]
+  },
+  {
+    "Guid": "a33418689eaf4fba81b48e7cbfeb812a",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "af1b917f758b452482a048c57d5e6bf4",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "Quest_180000000_InteractContent_180_4",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "c396723697664a4382eee273a917c7c7",
+    "Type": {
+      "Type": "Actions",
+      "Actions": [
+        {
+          "Name": "AdjustPlayerCamera",
+          "Params": {
+            "Option": {
+              "Type": "关卡.Common.镜头.固定镜头",
+              "Priority": 100,
+              "FadeInTime": 0.5,
+              "FadeOutTime": 0.5,
+              "ArmLength": 0,
+              "MinumArmLength": 0,
+              "MaxiumArmLength": 0,
+              "Offset": {
+                "X": 0,
+                "Y": 0,
+                "Z": 0
+              },
+              "Fov": 75,
+              "CenterPos": {
+                "X": 170700,
+                "Y": -83100,
+                "Z": 150
+              },
+              "CenterRot": {},
+              "HidePlayer": true
+            }
+          },
+          "ActionGuid": "de78684657224959a3805b208a3cd0ec",
+          "Timeout": 0.5,
+          "ActionId": 4000007
+        },
+        {
+          "Name": "SetPlayerOperationRestriction",
+          "Params": {
+            "Type": "DisableModule",
+            "MoveOption": {
+              "Type": "Disable",
+              "Forward": false,
+              "Back": false,
+              "Left": false,
+              "Right": false
+            },
+            "SkillOption": {
+              "Type": "DisableSection",
+              "DisplayMode": "Disable",
+              "DisableBattleSkill": {
+                "IsDisableCharacterSectionalSkill": {
+                  "DisableJump": true
+                }
+              }
+            },
+            "CameraOption": {
+              "Type": "Disable"
+            },
+            "UiOption": {
+              "Type": "Disable"
+            },
+            "SceneInteractionOption": {
+              "Type": "Disable"
+            }
+          },
+          "ActionGuid": "a919da2a229a4d66b554fed5b5dadf16",
+          "ActionId": 4000008
+        }
+      ]
+    },
+    "Icon": "",
+    "TidContent": "LevelPlay_40800003_InteractContent_40_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
   }
 ]

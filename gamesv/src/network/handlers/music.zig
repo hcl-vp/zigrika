@@ -34,18 +34,15 @@ fn appendFavoriteMusicIds(arena: std.mem.Allocator, source: []const i32, valid_i
 
 pub fn onGetMusicInfoRequest(
     txn: *Transaction(pb.GetMusicInfoRequest),
-    music_comp: *PlayerMusicComponent,
     assets: *const Assets,
     alloc: mem.Alloc,
 ) !void {
     const music_ids = try appendUnlockedMusicIds(assets, alloc.arena);
-    const favorites = try appendFavoriteMusicIds(alloc.arena, music_comp.info.favorite_music_ids, music_ids.items);
 
     txn.respond(.{
         .ErrorCode = .Success,
-        .MusicIds = music_ids,
-        .CurMusicId = 0,
-        .FavoriteMusicList = favorites,
+        .TotalMusicIds = music_ids,
+        .CollectMusicIds = music_ids,
     });
 }
 

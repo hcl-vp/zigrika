@@ -7,6 +7,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 1,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -17,6 +18,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 2,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -27,6 +29,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 3,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -37,6 +40,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 4,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -47,6 +51,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 5,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -57,6 +62,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 6,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -67,6 +73,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 7,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -77,6 +84,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 8,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -87,6 +95,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 9,
+    "BuffApplyPlan": 0,
     "ActivityId": 100105523
   },
   {
@@ -97,6 +106,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 11,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -107,6 +117,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 12,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -117,6 +128,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 13,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -127,6 +139,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 14,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -137,6 +150,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 15,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -147,6 +161,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 16,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -157,6 +172,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 17,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -167,6 +183,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 18,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -177,6 +194,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 19,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900001
   },
   {
@@ -187,6 +205,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 20,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -197,6 +216,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 21,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -207,6 +227,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 22,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -217,6 +238,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 23,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -227,6 +249,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 24,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -237,6 +260,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 25,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -247,6 +271,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 26,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -257,6 +282,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 27,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -267,6 +293,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 28,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900002
   },
   {
@@ -277,6 +304,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 29,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -287,6 +315,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 30,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -297,6 +326,7 @@
     "TypeIcon": "SP_TagYellow",
     "MarkHex": "SP_ItemBVisionPoint1",
     "SkillGroup": 31,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -307,6 +337,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 32,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -317,6 +348,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 33,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -327,6 +359,7 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 34,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -337,6 +370,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 35,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -347,6 +381,7 @@
     "TypeIcon": "SP_TagRed",
     "MarkHex": "SP_ItemBVisionPoint2",
     "SkillGroup": 36,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
   },
   {
@@ -357,6 +392,106 @@
     "TypeIcon": "SP_TagGreen",
     "MarkHex": "SP_ItemBVisionPoint",
     "SkillGroup": 37,
+    "BuffApplyPlan": 0,
     "ActivityId": 101900003
+  },
+  {
+    "Id": 38,
+    "PhantomItemId": 60200701,
+    "PhantomName": "MonsterInfo_340000151_Name",
+    "TypeTextId": "TowerDefence_5",
+    "TypeIcon": "SP_TagGreen",
+    "MarkHex": "SP_ItemBVisionPoint",
+    "SkillGroup": 38,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 39,
+    "PhantomItemId": 60200702,
+    "PhantomName": "MonsterInfo_310000830_Name",
+    "TypeTextId": "TowerDefence_1",
+    "TypeIcon": "SP_TagRed",
+    "MarkHex": "SP_ItemBVisionPoint2",
+    "SkillGroup": 39,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 40,
+    "PhantomItemId": 60200703,
+    "PhantomName": "MonsterInfo_310000440_Name",
+    "TypeTextId": "TowerDefence_4",
+    "TypeIcon": "SP_TagGreen",
+    "MarkHex": "SP_ItemBVisionPoint",
+    "SkillGroup": 40,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 41,
+    "PhantomItemId": 60200704,
+    "PhantomName": "MonsterInfo_320000530_Name",
+    "TypeTextId": "TowerDefence_5",
+    "TypeIcon": "SP_TagGreen",
+    "MarkHex": "SP_ItemBVisionPoint",
+    "SkillGroup": 41,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 42,
+    "PhantomItemId": 60200705,
+    "PhantomName": "MonsterInfo_320000550_Name",
+    "TypeTextId": "TowerDefence_1",
+    "TypeIcon": "SP_TagRed",
+    "MarkHex": "SP_ItemBVisionPoint2",
+    "SkillGroup": 42,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 43,
+    "PhantomItemId": 60200706,
+    "PhantomName": "MonsterInfo_310000540_Name",
+    "TypeTextId": "TowerDefence_4",
+    "TypeIcon": "SP_TagGreen",
+    "MarkHex": "SP_ItemBVisionPoint",
+    "SkillGroup": 43,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 44,
+    "PhantomItemId": 60200707,
+    "PhantomName": "MonsterInfo_330000040_Name",
+    "TypeTextId": "TowerDefence_2",
+    "TypeIcon": "SP_TagYellow",
+    "MarkHex": "SP_ItemBVisionPoint1",
+    "SkillGroup": 44,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 45,
+    "PhantomItemId": 60200708,
+    "PhantomName": "MonsterInfo_320000490_Name",
+    "TypeTextId": "TowerDefence_1",
+    "TypeIcon": "SP_TagRed",
+    "MarkHex": "SP_ItemBVisionPoint2",
+    "SkillGroup": 45,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
+  },
+  {
+    "Id": 46,
+    "PhantomItemId": 60200709,
+    "PhantomName": "MonsterInfo_320000340_Name",
+    "TypeTextId": "TowerDefence_2",
+    "TypeIcon": "SP_TagYellow",
+    "MarkHex": "SP_ItemBVisionPoint1",
+    "SkillGroup": 46,
+    "BuffApplyPlan": 1,
+    "ActivityId": 101900004
   }
 ]

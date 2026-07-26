@@ -370,6 +370,7 @@ pub fn getRoleAutoBuffs(
     weapon: WeaponItem,
     gpa: Allocator,
 ) !std.ArrayListUnmanaged(BuffAdditionEntry) {
+    const logger = std.log.scoped(.autobuff);
     const role_info = tables.role_info.getDataById(role_id) orelse return error.RoleNotFound;
     const reson_conf = tables.getWeaponReson((tables.weapon_conf.getDataById(weapon.id) orelse unreachable).ResonId, weapon.reson_level) orelse unreachable;
     const additional_buffs = [_]i64{
@@ -399,6 +400,9 @@ pub fn getRoleAutoBuffs(
         "20b04084", // lynae roguelike
         "8c658780", // mornye roguelik
         "9296f07f", // amy roguelike
+        "c79fde44", // qingxiao
+        "fbcbee28",
+        "功能.功能制作.禁止体力恢复", // qingxiao2
     };
 
     const maybe_init_info = tables.char_init_info.getDataById(role_id);
@@ -585,6 +589,7 @@ pub fn getRoleAutoBuffs(
             }
         }
     }
+    logger.info("autobuff results for: {d}, {any}", .{ role_id, results.items });
 
     return results;
 }

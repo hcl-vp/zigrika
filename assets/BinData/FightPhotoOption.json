@@ -62,7 +62,7 @@
   {
     "Id": 7,
     "Name": "CameraFliterColdstyle",
-    "Picture": "/Game/Aki/UI/UIResources/UiPhotograph/Image/BattlePhotoFilter/T_BattlePhotoFilterCool.T_BattlePhotoFilterCool",
+    "Picture": "/Game/Aki/UI/UIResources/UiPhotograph/Image/Filter/T_FilterJpstyle.T_FilterJpstyle",
     "FilterIndex": 6,
     "FilterParamX": 0.5,
     "FilterParamY": 0.5,

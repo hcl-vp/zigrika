@@ -973,15 +973,16 @@
     "HasMontagePath": false,
     "ActorClass": [],
     "Animations": [],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/MB1SuiguangMd00501/DA_Fx_Group_MBs21_Canying.DA_Fx_Group_MBs21_Canying"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
       "/Game/Aki/Character/Role/Common/Abilities/GA/GA_Role_Suiguang_FixHook.GA_Role_Suiguang_FixHook_C",
-      "/Game/Aki/Effect/MaterialController/DA_Lord/MB1Suiguang/DA_Fx_Group_Boss_Suiguang_Shunyi.DA_Fx_Group_Boss_Suiguang_Shunyi",
-      "/Game/Aki/Effect/EffectGroup/MB1SuiguangMd00501/DA_Fx_Group_MBs21_Canying.DA_Fx_Group_MBs21_Canying"
+      "/Game/Aki/Effect/MaterialController/DA_Lord/MB1Suiguang/DA_Fx_Group_Boss_Suiguang_Shunyi.DA_Fx_Group_Boss_Suiguang_Shunyi"
     ]
   },
   {
@@ -2936,14 +2937,15 @@
     "HasMontagePath": false,
     "ActorClass": [],
     "Animations": [],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/BigWorld/3_2Xueyuan/DA_Fx_Group_Sl2_XY_Fuwen_Burst.DA_Fx_Group_Sl2_XY_Fuwen_Burst"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
-      "/Game/Aki/Character/Role/Common/Abilities/GA/GA_SwitchBlackHoleState.GA_SwitchBlackHoleState_C",
-      "/Game/Aki/Effect/EffectGroup/BigWorld/3_2Xueyuan/DA_Fx_Group_Sl2_XY_Fuwen_Burst.DA_Fx_Group_Sl2_XY_Fuwen_Burst"
+      "/Game/Aki/Character/Role/Common/Abilities/GA/GA_SwitchBlackHoleState.GA_SwitchBlackHoleState_C"
     ]
   },
   {
@@ -2971,6 +2973,26 @@
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": []
+  },
+  {
+    "Id": 800010,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/Role/FemaleM/BaseAnim/Level/JBGC_Shanbi_00.JBGC_Shanbi_00"
+    ],
+    "Effects": [
+      "/Game/Aki/Effect/DataAsset/Ghost/DA_Fx_Ghost_R2T1MicaiMd10011.DA_Fx_Ghost_R2T1MicaiMd10011",
+      "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Jixianshanbi_Start_02.DA_Fx_Group_Jixianshanbi_Start_02"
+    ],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Effect/MaterialController/Common/DA_Fx_TimeFreeze_LimitDodge.DA_Fx_TimeFreeze_LimitDodge"
+    ]
   },
   {
     "Id": 210045,
@@ -3003,6 +3025,27 @@
     "Others": [
       "/Game/Aki/Character/Role/Common/Abilities/GA/GA_OverShoulder_TurnAround.GA_OverShoulder_TurnAround_C"
     ]
+  },
+  {
+    "Id": 800012,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/ControlMonster/NPC/NA065FuWeiHu/CommonAnim/BeHit_NA065.BeHit_NA065"
+    ],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zhedang_loop.DA_Fx_Group_NPC_zhedang_loop",
+      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_Start.DA_Fx_Group_NPC_zuanxue_Start",
+      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_loop.DA_Fx_Group_NPC_zuanxue_loop",
+      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_end.DA_Fx_Group_NPC_zuanxue_end",
+      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_douxue.DA_Fx_Group_NPC_douxue"
+    ],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
   },
   {
     "Id": 230007,
@@ -3201,15 +3244,15 @@
     "Animations": [
       "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleM/Suisui/Body/suisui_01_Montage.suisui_01_Montage"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_R1a01_Shalou02.DA_Fx_Group_R1a01_Shalou02",
+      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_R1a01_Shalou03.DA_Fx_Group_R1a01_Shalou03"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_R1a01_Shalou02.DA_Fx_Group_R1a01_Shalou02",
-      "/Game/Aki/Effect/EffectGroup/R2T1SuisuiMd10011/DA_Fx_Group_R1a01_Shalou03.DA_Fx_Group_R1a01_Shalou03"
-    ]
+    "Others": []
   },
   {
     "Id": 800019,
@@ -3223,46 +3266,6 @@
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": []
-  },
-  {
-    "Id": 800010,
-    "IsCommon": true,
-    "HasMontagePath": false,
-    "ActorClass": [],
-    "Animations": [
-      "/Game/Aki/Character/Role/FemaleM/BaseAnim/Level/JBGC_Shanbi_00.JBGC_Shanbi_00"
-    ],
-    "Effects": [],
-    "Audios": [],
-    "Meshes": [],
-    "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/DataAsset/Ghost/DA_Fx_Ghost_R2T1MicaiMd10011.DA_Fx_Ghost_R2T1MicaiMd10011",
-      "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Jixianshanbi_Start_02.DA_Fx_Group_Jixianshanbi_Start_02",
-      "/Game/Aki/Effect/MaterialController/Common/DA_Fx_TimeFreeze_LimitDodge.DA_Fx_TimeFreeze_LimitDodge"
-    ]
-  },
-  {
-    "Id": 800012,
-    "IsCommon": true,
-    "HasMontagePath": false,
-    "ActorClass": [],
-    "Animations": [
-      "/Game/Aki/Character/ControlMonster/NPC/NA065FuWeiHu/CommonAnim/BeHit_NA065.BeHit_NA065"
-    ],
-    "Effects": [],
-    "Audios": [],
-    "Meshes": [],
-    "Materials": [],
-    "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zhedang_loop.DA_Fx_Group_NPC_zhedang_loop",
-      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_Start.DA_Fx_Group_NPC_zuanxue_Start",
-      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_loop.DA_Fx_Group_NPC_zuanxue_loop",
-      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_zuanxue_end.DA_Fx_Group_NPC_zuanxue_end",
-      "/Game/Aki/Effect/EffectGroup/NI_NPC_NA065/DA_Fx_Group_NPC_douxue.DA_Fx_Group_NPC_douxue"
-    ]
   },
   {
     "Id": 800020,
@@ -3285,15 +3288,15 @@
     "Animations": [
       "/Game/Aki/Character/Monster/Ordinary/MO1JiBinMd00101/CommonAnim/AM_PatrolToFight2.AM_PatrolToFight2"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Fight_Born01.DA_Fx_Group_JiBin_MOa_Fight_Born01",
+      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Death_Boom01.DA_Fx_Group_JiBin_MOa_Death_Boom01"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Fight_Born01.DA_Fx_Group_JiBin_MOa_Fight_Born01",
-      "/Game/Aki/Effect/EffectGroup/MO1JiBinMd00001/DA_Fx_Group_JiBin_MOa_Death_Boom01.DA_Fx_Group_JiBin_MOa_Death_Boom01"
-    ]
+    "Others": []
   },
   {
     "Id": 230009,
@@ -3308,6 +3311,36 @@
     "AnimationBlueprints": [],
     "Others": [
       "/Game/Aki/Character/Vision/VM_Boss/VM_MB1ChongLou/Md00601/Abilities/GA_ChongLou_Vision.GA_ChongLou_Vision_C"
+    ]
+  },
+  {
+    "Id": 210046,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Role/Common/Abilities/GA/GA_AimAttackSword_Passive.GA_AimAttackSword_Passive_C"
+    ]
+  },
+  {
+    "Id": 210047,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Role/Common/Abilities/GA/GA_Sword_TotalAttack.GA_Sword_TotalAttack_C"
     ]
   },
   {
@@ -3383,14 +3416,14 @@
     "Animations": [
       "/Game/Aki/Character/Role/FemaleM/BaseAnim/Level/JBGC_Shanbi_02.JBGC_Shanbi_02"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/DataAsset/SkeletalMesh/R2T1MicaiMd10011/DA_Fx_Mesh_Team_Stand2.DA_Fx_Mesh_Team_Stand2"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/DataAsset/SkeletalMesh/R2T1MicaiMd10011/DA_Fx_Mesh_Team_Stand2.DA_Fx_Mesh_Team_Stand2"
-    ]
+    "Others": []
   },
   {
     "Id": 800025,
@@ -3400,14 +3433,14 @@
     "Animations": [
       "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Threat.AM_Threat"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
-    ]
+    "Others": []
   },
   {
     "Id": 800026,
@@ -3417,14 +3450,14 @@
     "Animations": [
       "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Eat.AM_Eat"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
-    "Others": [
-      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
-    ]
+    "Others": []
   },
   {
     "Id": 800027,
@@ -3434,13 +3467,56 @@
     "Animations": [
       "/Game/Aki/Character/ControlMonster/NPC/SC1_HuoLuDing/CommonAnim/AM_Eat.AM_Eat"
     ],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+    ],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 210048,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 210049,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
     "Effects": [],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
-      "/Game/Aki/Effect/EffectGroup/SC1HuoLuDing/DA_Fx_Group_HuoLuDing_Stone_Burst.DA_Fx_Group_HuoLuDing_Stone_Burst"
+      "/Game/Aki/Character/Role/FemaleXL/Qingxiao/Abilities/GA/GA_AttackLevel_QingXiao.GA_AttackLevel_QingXiao_C"
+    ]
+  },
+  {
+    "Id": 210050,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Role/FemaleXL/Qingxiao/Abilities/GA/GA_AttackLevel_QingXiao.GA_AttackLevel_QingXiao_C"
     ]
   },
   {
@@ -3461,7 +3537,93 @@
     ]
   },
   {
+    "Id": 800028,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/NPC/RoleNPC/MaleM/JingRan/BaseAnim/Montage/AM_KaiGuiMen_Montage.AM_KaiGuiMen_Montage"
+    ],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 800029,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [
+      "/Game/Aki/Character/NPC/RoleNPC/MaleM/JingRan/BaseAnim/Montage/Stand_Squat02_Montage.Stand_Squat02_Montage"
+    ],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 800030,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Role/Common/Abilities/GA/GA_Role_Guqin.GA_Role_Guqin_C"
+    ]
+  },
+  {
+    "Id": 800031,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 210051,
+    "IsCommon": true,
+    "HasMontagePath": false,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": [
+      "/Game/Aki/Character/Role/FemaleXL/Qingxiao/Abilities/GA/GA_SwordFlyTrigger.GA_SwordFlyTrigger_C"
+    ]
+  },
+  {
     "Id": 800032,
+    "IsCommon": true,
+    "HasMontagePath": true,
+    "ActorClass": [],
+    "Animations": [],
+    "Effects": [],
+    "Audios": [],
+    "Meshes": [],
+    "Materials": [],
+    "AnimationBlueprints": [],
+    "Others": []
+  },
+  {
+    "Id": 800039,
     "IsCommon": true,
     "HasMontagePath": true,
     "ActorClass": [],
@@ -3482,20 +3644,21 @@
       "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Railslide_Start.AM_Railslide_Start",
       "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/CommonAnim/AM_Railslide_Loop.AM_Railslide_Loop"
     ],
-    "Effects": [],
+    "Effects": [
+      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/3C/DA_Fx_Group_MP1FengTingXieYou_MPa_Jump.DA_Fx_Group_MP1FengTingXieYou_MPa_Jump"
+    ],
     "Audios": [],
     "Meshes": [],
     "Materials": [],
     "AnimationBlueprints": [],
     "Others": [
-      "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/Abilities/GA/GA_Railslide_Start.GA_Railslide_Start_C",
-      "/Game/Aki/Effect/EffectGroup/MP1FengTingXieYou00201/3C/DA_Fx_Group_MP1FengTingXieYou_MPa_Jump.DA_Fx_Group_MP1FengTingXieYou_MPa_Jump"
+      "/Game/Aki/Character/ControlMonster/ElitePro/MP1FengTingXieYou00201/Abilities/GA/GA_Railslide_Start.GA_Railslide_Start_C"
     ]
   },
   {
-    "Id": 800039,
+    "Id": 800040,
     "IsCommon": true,
-    "HasMontagePath": true,
+    "HasMontagePath": false,
     "ActorClass": [],
     "Animations": [],
     "Effects": [],

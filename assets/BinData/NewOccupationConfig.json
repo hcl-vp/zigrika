@@ -815,6 +815,12 @@
     "OccupationNameStringKey": ""
   },
   {
+    "Id": "清宵",
+    "OccupationType": "Npc",
+    "OccupationData": "",
+    "OccupationNameStringKey": ""
+  },
+  {
     "Id": "教室",
     "OccupationType": "Area",
     "OccupationData": "",
@@ -823,6 +829,12 @@
   {
     "Id": "教室2",
     "OccupationType": "Area",
+    "OccupationData": "",
+    "OccupationNameStringKey": ""
+  },
+  {
+    "Id": "景燃",
+    "OccupationType": "Npc",
     "OccupationData": "",
     "OccupationNameStringKey": ""
   },
@@ -871,12 +883,6 @@
   {
     "Id": "jibinggongchang",
     "OccupationType": "Area",
-    "OccupationData": "",
-    "OccupationNameStringKey": "OccupationConfig_suisui_Name"
-  },
-  {
-    "Id": "jiadawang",
-    "OccupationType": "Npc",
     "OccupationData": "",
     "OccupationNameStringKey": "OccupationConfig_suisui_Name"
   }

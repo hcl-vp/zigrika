@@ -1787,6 +1787,16 @@
     "ReachableUmaps": []
   },
   {
+    "DungeonId": 911,
+    "Umap": "Aki/Map/Level/WP/3_6_SGHJ/WP_3_6_SGHJ",
+    "OwnerBlockIds": [],
+    "BlockPakName": "",
+    "ReachableBlockIds": [
+      13
+    ],
+    "ReachableUmaps": []
+  },
+  {
     "DungeonId": 40,
     "Umap": "Aki/Map/Level/Main/Longzhujusuo/InstanceTree_longzhujusuo-02",
     "OwnerBlockIds": [
@@ -2236,9 +2246,7 @@
       13
     ],
     "BlockPakName": "Pack_MZ",
-    "ReachableBlockIds": [
-      13
-    ],
+    "ReachableBlockIds": [],
     "ReachableUmaps": []
   },
   {

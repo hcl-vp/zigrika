@@ -3395,8 +3395,8 @@
     "Attr151Basic": 15000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10011",
     "AttackDesParam": [
-      "GS1001501",
-      "GS1001502"
+      "GS1001101",
+      "GS1001102"
     ]
   },
   {
@@ -3439,8 +3439,8 @@
     "Attr151Basic": 20000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10021",
     "AttackDesParam": [
-      "GS1002501",
-      "GS1002502"
+      "GS1002101",
+      "GS1002102"
     ]
   },
   {
@@ -3485,8 +3485,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10031",
     "AttackDesParam": [
-      "GS1003501",
-      "GS1003502"
+      "GS1003101",
+      "GS1003102"
     ]
   },
   {
@@ -3529,8 +3529,8 @@
     "Attr151Basic": 15000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10041",
     "AttackDesParam": [
-      "GS1004501",
-      "GS1004502"
+      "GS1004101",
+      "GS1004102"
     ]
   },
   {
@@ -3576,8 +3576,8 @@
     "Attr151Basic": 8000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10051",
     "AttackDesParam": [
-      "GS1005501",
-      "GS1005502"
+      "GS1005101",
+      "GS1005102"
     ]
   },
   {
@@ -3622,8 +3622,8 @@
     "Attr151Basic": 10000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10061",
     "AttackDesParam": [
-      "GS1006501",
-      "GS1006502"
+      "GS1006101",
+      "GS1006102"
     ]
   },
   {
@@ -3666,8 +3666,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10071",
     "AttackDesParam": [
-      "GS1007501",
-      "GS1007502"
+      "GS1007101",
+      "GS1007102"
     ]
   },
   {
@@ -3712,8 +3712,8 @@
     "Attr151Basic": 8000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10081",
     "AttackDesParam": [
-      "GS1008501",
-      "GS1008502"
+      "GS1008101",
+      "GS1008102"
     ]
   },
   {
@@ -3757,8 +3757,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10091",
     "AttackDesParam": [
-      "GS1009501",
-      "GS1009502"
+      "GS1009101",
+      "GS1009102"
     ]
   },
   {
@@ -3802,8 +3802,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10101",
     "AttackDesParam": [
-      "GS1010501",
-      "GS1010502"
+      "GS1010101",
+      "GS1010102"
     ]
   },
   {
@@ -3849,8 +3849,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10113",
     "AttackDesParam": [
-      "GS1011701",
-      "GS1011702"
+      "GS1011301",
+      "GS1011302"
     ]
   },
   {
@@ -3896,8 +3896,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10123",
     "AttackDesParam": [
-      "GS1012701",
-      "GS1012702"
+      "GS1012301",
+      "GS1012302"
     ]
   },
   {
@@ -3942,8 +3942,8 @@
     "Attr151Basic": 10000,
     "AttackDes": "KurotatoWeapon_AtkDesc_10133",
     "AttackDesParam": [
-      "GS1013701",
-      "GS1013702"
+      "GS1013301",
+      "GS1013302"
     ]
   },
   {
@@ -3989,8 +3989,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10144",
     "AttackDesParam": [
-      "GS1014801",
-      "GS1014802"
+      "GS1014401",
+      "GS1014402"
     ]
   },
   {
@@ -4034,8 +4034,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10154",
     "AttackDesParam": [
-      "GS1015801",
-      "GS1015802"
+      "GS1015401",
+      "GS1015402"
     ]
   },
   {
@@ -4079,8 +4079,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10164",
     "AttackDesParam": [
-      "GS1016801",
-      "GS1016802"
+      "GS1016401",
+      "GS1016402"
     ]
   },
   {
@@ -4124,8 +4124,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10171",
     "AttackDesParam": [
-      "GS1017501",
-      "GS1017502"
+      "GS1017101",
+      "GS1017102"
     ]
   },
   {
@@ -4170,8 +4170,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10181",
     "AttackDesParam": [
-      "GS1018501",
-      "GS1018502"
+      "GS1018101",
+      "GS1018102"
     ]
   },
   {
@@ -4216,8 +4216,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10191",
     "AttackDesParam": [
-      "GS1019501",
-      "GS1019502"
+      "GS1019101",
+      "GS1019102"
     ]
   },
   {
@@ -4261,8 +4261,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10211",
     "AttackDesParam": [
-      "GS1021501",
-      "GS1021502"
+      "GS1021101",
+      "GS1021102"
     ]
   },
   {
@@ -4309,8 +4309,8 @@
     "Attr151Basic": 0,
     "AttackDes": "KurotatoWeapon_AtkDesc_10221",
     "AttackDesParam": [
-      "GS1022501",
-      "GS1022502"
+      "GS1022101",
+      "GS1022102"
     ]
   }
 ]

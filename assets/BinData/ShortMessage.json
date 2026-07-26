@@ -2072,6 +2072,34 @@
     "QuestId": 0
   },
   {
+    "Id": 36000,
+    "WhichChat": 22,
+    "FlowParam": [
+      "剧情_LHY_短信剧本测试",
+      "1",
+      "8"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 36001,
+    "WhichChat": 69,
+    "FlowParam": [
+      "剧情_LHY_短信剧本测试",
+      "1",
+      "8"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 6,
+    "DropId": 50300,
+    "QuestId": 0
+  },
+  {
     "Id": 32138,
     "WhichChat": 18,
     "FlowParam": [
@@ -2416,6 +2444,20 @@
       "34"
     ],
     "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 36002,
+    "WhichChat": 72,
+    "FlowParam": [
+      "剧情_LHY_短信剧本测试",
+      "1",
+      "8"
+    ],
+    "TipType": 1,
     "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
@@ -3501,7 +3543,7 @@
   },
   {
     "Id": 35051,
-    "WhichChat": 103,
+    "WhichChat": 102,
     "FlowParam": [
       "剧情_3_5_支线_机关宅邸危行支线",
       "1",
@@ -3522,6 +3564,48 @@
       "3"
     ],
     "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 35053,
+    "WhichChat": 53,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 35054,
+    "WhichChat": 104,
+    "FlowParam": [
+      "剧情_3_0_全图_解锁摩托",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 36003,
+    "WhichChat": 94,
+    "FlowParam": [
+      "剧情_短信信息展示附件测试_3_6",
+      "1",
+      "1"
+    ],
+    "TipType": 1,
     "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,
@@ -3550,6 +3634,34 @@
       "1"
     ],
     "TipType": 1,
+    "ListenQuestId": 0,
+    "FinallPopType": 0,
+    "DropId": 0,
+    "QuestId": 0
+  },
+  {
+    "Id": 37005,
+    "WhichChat": 112,
+    "FlowParam": [
+      "剧情_3_6_支线_玄元境越狱",
+      "1",
+      "1"
+    ],
+    "TipType": 3,
+    "ListenQuestId": 0,
+    "FinallPopType": 4,
+    "DropId": 0,
+    "QuestId": 268800001
+  },
+  {
+    "Id": 36004,
+    "WhichChat": 113,
+    "FlowParam": [
+      "剧情_LHY_短信剧本测试",
+      "1",
+      "8"
+    ],
+    "TipType": 4,
     "ListenQuestId": 0,
     "FinallPopType": 0,
     "DropId": 0,

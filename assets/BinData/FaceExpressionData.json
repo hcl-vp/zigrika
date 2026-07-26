@@ -25497,6 +25497,78 @@
     "CloseAutoBlink": false
   },
   {
+    "Id": 800134,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Qingxiao/Expression/beishang.beishang"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 800135,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Qingxiao/Expression/jingya.jingya"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 800136,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Qingxiao/Expression/shengqi.shengqi"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 800137,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Qingxiao/Expression/weixiao.weixiao"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": false
+  },
+  {
+    "Id": 800138,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/FemaleXL/Qingxiao/Expression/yanshenduoshan.yanshenduoshan"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 800139,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/MaleM/Jingran/Expression/xiao.xiao"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 800140,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/MaleM/Jingran/Expression/shengqi.shengqi"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
+    "Id": 800141,
+    "FaceExpression": {
+      "Type": "AnimSequence",
+      "Path": "/Game/Aki/Sequence/SequenceAnim/DialogAnim/MaleM/Jingran/Expression/beishang.beishang"
+    },
+    "MaleVariant": "",
+    "CloseAutoBlink": true
+  },
+  {
     "Id": 750519,
     "FaceExpression": {
       "Type": "AnimSequence",

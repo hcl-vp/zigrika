@@ -317,5 +317,16 @@
     "AttachmentPathMaleVariant": "",
     "InformationViewId": 35000015,
     "InformationViewIdMaleVariant": 0
+  },
+  {
+    "Id": 800002,
+    "Name": "测试用例-信息展示附件",
+    "Type": "InformationView",
+    "Thumbnail": "",
+    "ThumbnailMaleVariant": "",
+    "AttachmentPath": "",
+    "AttachmentPathMaleVariant": "",
+    "InformationViewId": 250204,
+    "InformationViewIdMaleVariant": 250203
   }
 ]

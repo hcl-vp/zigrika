@@ -3142,5 +3142,77 @@
     "Weight": 10,
     "Title": "LoadingTipsText_201406_Title",
     "TipsText": "LoadingTipsText_201406_TipsText"
+  },
+  {
+    "Id": 613201,
+    "LevelAreaId": 6132,
+    "ImageId": 613201,
+    "Weight": 10,
+    "Title": "LoadingTipsText_613201_Title",
+    "TipsText": "LoadingTipsText_613201_TipsText"
+  },
+  {
+    "Id": 613301,
+    "LevelAreaId": 6133,
+    "ImageId": 613301,
+    "Weight": 10,
+    "Title": "LoadingTipsText_613301_Title",
+    "TipsText": "LoadingTipsText_613301_TipsText"
+  },
+  {
+    "Id": 613401,
+    "LevelAreaId": 6134,
+    "ImageId": 613401,
+    "Weight": 10,
+    "Title": "LoadingTipsText_613401_Title",
+    "TipsText": "LoadingTipsText_613401_TipsText"
+  },
+  {
+    "Id": 613501,
+    "LevelAreaId": 6135,
+    "ImageId": 613501,
+    "Weight": 10,
+    "Title": "LoadingTipsText_613501_Title",
+    "TipsText": "LoadingTipsText_613501_TipsText"
+  },
+  {
+    "Id": 613601,
+    "LevelAreaId": 6136,
+    "ImageId": 613601,
+    "Weight": 10,
+    "Title": "LoadingTipsText_613601_Title",
+    "TipsText": "LoadingTipsText_613601_TipsText"
+  },
+  {
+    "Id": 901301,
+    "LevelAreaId": 9013,
+    "ImageId": 901301,
+    "Weight": 10,
+    "Title": "LoadingTipsText_901301_Title",
+    "TipsText": "LoadingTipsText_901301_TipsText"
+  },
+  {
+    "Id": 924601,
+    "LevelAreaId": 9246,
+    "ImageId": 924601,
+    "Weight": 10,
+    "Title": "LoadingTipsText_924601_Title",
+    "TipsText": "LoadingTipsText_924601_TipsText"
+  },
+  {
+    "Id": 924701,
+    "LevelAreaId": 9247,
+    "ImageId": 924701,
+    "Weight": 10,
+    "Title": "LoadingTipsText_924701_Title",
+    "TipsText": "LoadingTipsText_924701_TipsText"
+  },
+  {
+    "Id": 924801,
+    "LevelAreaId": 9248,
+    "ImageId": 924801,
+    "Weight": 10,
+    "Title": "LoadingTipsText_924801_Title",
+    "TipsText": "LoadingTipsText_924801_TipsText"
   }
 ]

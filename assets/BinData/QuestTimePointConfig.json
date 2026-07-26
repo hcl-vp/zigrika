@@ -5,7 +5,7 @@
     "NameBottom": "QuestBranch_Node1_SubName",
     "UnlockCondition": 12906601,
     "QuestId": 192000006,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 0,
     "ComponentGroup": [
       1000
@@ -21,7 +21,7 @@
     "NameBottom": "QuestBranch_Node2_SubName",
     "UnlockCondition": 12906601,
     "QuestId": 192000006,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 0,
     "ComponentGroup": [
       2000,
@@ -55,7 +55,7 @@
     "NameBottom": "QuestBranch_Node4_SubName",
     "UnlockCondition": 12906603,
     "QuestId": 189000005,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 0,
     "ComponentGroup": [
       4000,
@@ -123,7 +123,7 @@
     "NameBottom": "QuestBranch_Node8_SubName",
     "UnlockCondition": 12906607,
     "QuestId": 189000005,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 0,
     "ComponentGroup": [
       8000
@@ -171,7 +171,7 @@
     "NameBottom": "QuestBranch_Node11_SubName",
     "UnlockCondition": 12906610,
     "QuestId": 189000005,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 1000,
     "ComponentGroup": [
       11000,
@@ -293,7 +293,7 @@
     "NameBottom": "QuestBranch_Node18_SubName",
     "UnlockCondition": 12906621,
     "QuestId": 189000006,
-    "ScreenEffect": "",
+    "ScreenEffect": "/Game/Aki/Effect/Niagara/NI_Screen/Bigworld/NS_Fx_Rouge_Score.NS_Fx_Rouge_Score",
     "BranchPage": 0,
     "ComponentGroup": [
       18000

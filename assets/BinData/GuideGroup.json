@@ -20839,7 +20839,10 @@
       20814,
       20815,
       20816,
-      20817
+      20817,
+      20818,
+      20819,
+      20820
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131200490,
@@ -46573,7 +46576,7 @@
       22980
     ],
     "MultiPlatformStep": [],
-    "OpenLimitCondition": 131201393,
+    "OpenLimitCondition": 131200998,
     "AutoOpenCondition": 131200996,
     "LimitRepeat": [
       -1
@@ -47092,15 +47095,7 @@
       -1
     ],
     "DungeonId": [
-      1578,
-      2111,
-      2112,
-      2113,
-      2114,
-      2115,
-      2116,
-      2117,
-      2118
+      1578
     ],
     "DungeonSets": [],
     "DungeonTypes": [],
@@ -47123,15 +47118,7 @@
       -1
     ],
     "DungeonId": [
-      1578,
-      2111,
-      2112,
-      2113,
-      2114,
-      2115,
-      2116,
-      2117,
-      2118
+      1578
     ],
     "DungeonSets": [],
     "DungeonTypes": [],
@@ -47700,7 +47687,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 0,
-    "AutoOpenCondition": 131201390,
+    "AutoOpenCondition": 131201375,
     "LimitRepeat": [
       -1
     ],
@@ -48370,7 +48357,7 @@
     ],
     "MultiPlatformStep": [],
     "OpenLimitCondition": 131201364,
-    "AutoOpenCondition": 131201054,
+    "AutoOpenCondition": 131201363,
     "LimitRepeat": [
       -1
     ],
@@ -48385,7 +48372,7 @@
     "DungeonTypes": [],
     "ResetInDungeon": false,
     "OnlineMode": 1,
-    "Priority": -100,
+    "Priority": 0,
     "PriorityBreakExclude": [
       -1
     ]
@@ -48409,7 +48396,7 @@
       8
     ],
     "DungeonSets": [
-      "NewTower"
+      "BigWorld"
     ],
     "DungeonTypes": [],
     "ResetInDungeon": false,

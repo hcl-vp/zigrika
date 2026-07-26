@@ -16689,9 +16689,7 @@
       "ComboTeaching_13090201_IconText_0",
       "ComboTeaching_13090201_IconText_1"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090201_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090201_DescriptionContent",
     "CommandID": [
@@ -16719,9 +16717,7 @@
       "ComboTeaching_13090201_IconText_0",
       "ComboTeaching_13090301_IconText_1"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090301_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090301_DescriptionContent",
     "CommandID": [
@@ -16770,24 +16766,20 @@
     "Id": 13090501,
     "NextRoleGuideID": 0,
     "KeyID": [
-      "技能;1309011",
-      "攻击;1309001"
+      "技能;1309011"
     ],
     "IconText": [
-      "ComboTeaching_13090501_IconText_0",
-      "ComboTeaching_13090501_IconText_1"
+      "ComboTeaching_13090501_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090501_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090501_DescriptionContent",
     "CommandID": [
-      13090501,
-      13090502
+      13090501
     ],
     "guideID": [],
     "InputEnums": [
-      "技能",
-      "普攻"
+      "技能"
     ],
     "AddBuffID": [
       621310221,
@@ -16829,9 +16821,7 @@
     "IconText": [
       "ComboTeaching_13090701_IconText_0"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090701_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090701_DescriptionContent",
     "CommandID": [
@@ -16877,8 +16867,7 @@
     ],
     "AddBuffID": [
       621310221,
-      621310222,
-      1110001040
+      621310222
     ]
   },
   {
@@ -16906,8 +16895,7 @@
     ],
     "AddBuffID": [
       621310221,
-      621310222,
-      1110001040
+      621310222
     ]
   },
   {
@@ -16932,8 +16920,7 @@
     ],
     "AddBuffID": [
       621310221,
-      621310222,
-      1110001040
+      621310222
     ]
   },
   {
@@ -16958,8 +16945,7 @@
     "AddBuffID": [
       621310221,
       621310222,
-      621310211,
-      1110001040
+      621310211
     ]
   },
   {
@@ -16992,8 +16978,7 @@
     ],
     "AddBuffID": [
       621310221,
-      621310222,
-      1110001019
+      621310222
     ]
   },
   {
@@ -17053,19 +17038,16 @@
     "Id": 11100801,
     "NextRoleGuideID": 0,
     "KeyID": [
-      "攻击;1110006",
       "闪避;1110100"
     ],
     "IconText": [
-      "ComboTeaching_99990011_IconText_0",
       "ComboTeaching_11100801_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_11100801_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_11100801_DescriptionContent",
     "CommandID": [
-      11100801,
-      11100802
+      11100801
     ],
     "guideID": [],
     "InputEnums": [
@@ -17150,9 +17132,7 @@
       "ComboTeaching_13090201_IconText_0",
       "ComboTeaching_13090201_IconText_1"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090201_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090201_DescriptionContent",
     "CommandID": [
@@ -17180,9 +17160,7 @@
       "ComboTeaching_13090201_IconText_0",
       "ComboTeaching_13090301_IconText_1"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090301_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090301_DescriptionContent",
     "CommandID": [
@@ -17231,24 +17209,20 @@
     "Id": 13100501,
     "NextRoleGuideID": 0,
     "KeyID": [
-      "技能;1310011",
-      "攻击;1310001"
+      "技能;1310011"
     ],
     "IconText": [
-      "ComboTeaching_13090501_IconText_0",
-      "ComboTeaching_13090501_IconText_1"
+      "ComboTeaching_13090501_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090501_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090501_DescriptionContent",
     "CommandID": [
-      13100501,
-      13100502
+      13100501
     ],
     "guideID": [],
     "InputEnums": [
-      "技能",
-      "普攻"
+      "技能"
     ],
     "AddBuffID": [
       621310221,
@@ -17290,9 +17264,7 @@
     "IconText": [
       "ComboTeaching_13090701_IconText_0"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090701_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090701_DescriptionContent",
     "CommandID": [
@@ -17364,10 +17336,11 @@
     ],
     "guideID": [],
     "InputEnums": [
-      "普攻"
+      "普攻",
+      "技能"
     ],
     "AddBuffID": [
-      1610005002
+      1610002000
     ]
   },
   {
@@ -17393,10 +17366,7 @@
       "跳跃",
       "普攻"
     ],
-    "AddBuffID": [
-      1610005002,
-      1610003000
-    ]
+    "AddBuffID": []
   },
   {
     "Id": 16100401,
@@ -17406,8 +17376,8 @@
       "技能;1610151"
     ],
     "IconText": [
-      "ComboTeaching_16100201_IconText_0",
-      "ComboTeaching_16100501_IconText_0"
+      "ComboTeaching_16100101_IconText_0",
+      "ComboTeaching_16100401_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_16100104_DescriptionTitle",
@@ -17435,8 +17405,8 @@
       "技能;1610051"
     ],
     "IconText": [
-      "ComboTeaching_16100101_IconText_0",
-      "ComboTeaching_16100401_IconText_0"
+      "ComboTeaching_16100201_IconText_0",
+      "ComboTeaching_16100501_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_16100105_DescriptionTitle",
@@ -17462,7 +17432,7 @@
       "技能;1610152"
     ],
     "IconText": [
-      "ComboTeaching_16100801_IconText_0"
+      "ComboTeaching_16100601_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_16100106_DescriptionTitle",
@@ -17470,9 +17440,7 @@
     "CommandID": [
       16100601
     ],
-    "guideID": [
-      2429312
-    ],
+    "guideID": [],
     "InputEnums": [
       "技能"
     ],
@@ -17497,15 +17465,12 @@
     "CommandID": [
       16100701
     ],
-    "guideID": [
-      2429313
-    ],
+    "guideID": [],
     "InputEnums": [
       "普攻"
     ],
     "AddBuffID": [
-      1610003300,
-      1610003300,
+      1610003999,
       1610004010
     ]
   },
@@ -17516,7 +17481,7 @@
       "技能;1610052"
     ],
     "IconText": [
-      "ComboTeaching_16100601_IconText_0"
+      "ComboTeaching_16100801_IconText_0"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_16100108_DescriptionTitle",
@@ -17604,30 +17569,24 @@
       "技能;1309113",
       "技能;1309113",
       "技能;1309113",
-      "技能;1309113",
-      "技能;1309113",
       "技能;1309113"
     ],
     "IconText": [
-      "ComboTeaching_13090801_IconText_0",
       "ComboTeaching_13090801_IconText_1",
       "ComboTeaching_13090801_IconText_2",
       "ComboTeaching_13090801_IconText_3",
       "ComboTeaching_13090801_IconText_4",
-      "ComboTeaching_13090801_IconText_5",
-      "ComboTeaching_13090801_IconText_6"
+      "ComboTeaching_13090801_IconText_5"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090801_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090801_DescriptionContent",
     "CommandID": [
-      13090801,
       13090802,
       13090803,
       13090804,
       13090805,
-      13090806,
-      13090807
+      13090806
     ],
     "guideID": [],
     "InputEnums": [
@@ -17648,9 +17607,7 @@
     "IconText": [
       "ComboTeaching_13090901_IconText_0"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090901_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090901_DescriptionContent",
     "CommandID": [
@@ -17676,7 +17633,6 @@
       "技能;1309113",
       "技能;1309113",
       "技能;1309113",
-      "技能;1309113",
       "技能;1309113"
     ],
     "IconText": [
@@ -17686,8 +17642,7 @@
       "ComboTeaching_13091001_IconText_2",
       "ComboTeaching_13091001_IconText_3",
       "ComboTeaching_13091001_IconText_4",
-      "ComboTeaching_13091001_IconText_5",
-      "ComboTeaching_13090801_IconText_6"
+      "ComboTeaching_13091001_IconText_5"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13091001_DescriptionTitle",
@@ -17699,8 +17654,7 @@
       13091004,
       13091005,
       13091006,
-      13091007,
-      13090807
+      13091007
     ],
     "guideID": [],
     "InputEnums": [
@@ -17724,10 +17678,7 @@
       "ComboTeaching_99990004_IconText_0",
       "ComboTeaching_13091101_IconText_0"
     ],
-    "IconTagText": [
-      "",
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13091101_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13091101_DescriptionContent",
     "CommandID": [
@@ -17779,30 +17730,24 @@
       "技能;1310113",
       "技能;1310113",
       "技能;1310113",
-      "技能;1310113",
-      "技能;1310113",
       "技能;1310113"
     ],
     "IconText": [
-      "ComboTeaching_13090801_IconText_0",
       "ComboTeaching_13090801_IconText_1",
       "ComboTeaching_13090801_IconText_2",
       "ComboTeaching_13090801_IconText_3",
       "ComboTeaching_13090801_IconText_4",
-      "ComboTeaching_13090801_IconText_5",
-      "ComboTeaching_13090801_IconText_6"
+      "ComboTeaching_13090801_IconText_5"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090801_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090801_DescriptionContent",
     "CommandID": [
-      13100801,
       13100802,
       13100803,
       13100804,
       13100805,
-      13100806,
-      13100807
+      13100806
     ],
     "guideID": [],
     "InputEnums": [
@@ -17823,9 +17768,7 @@
     "IconText": [
       "ComboTeaching_13090901_IconText_0"
     ],
-    "IconTagText": [
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13090901_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13090901_DescriptionContent",
     "CommandID": [
@@ -17851,7 +17794,6 @@
       "技能;1310113",
       "技能;1310113",
       "技能;1310113",
-      "技能;1310113",
       "技能;1310113"
     ],
     "IconText": [
@@ -17861,8 +17803,7 @@
       "ComboTeaching_13091001_IconText_2",
       "ComboTeaching_13091001_IconText_3",
       "ComboTeaching_13091001_IconText_4",
-      "ComboTeaching_13091001_IconText_5",
-      "ComboTeaching_13090801_IconText_6"
+      "ComboTeaching_13091001_IconText_5"
     ],
     "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13091001_DescriptionTitle",
@@ -17874,8 +17815,7 @@
       13101004,
       13101005,
       13101006,
-      13101007,
-      13100807
+      13101007
     ],
     "guideID": [],
     "InputEnums": [
@@ -17899,10 +17839,7 @@
       "ComboTeaching_99990004_IconText_0",
       "ComboTeaching_13091101_IconText_0"
     ],
-    "IconTagText": [
-      "",
-      "ComboTeaching_99990001_IconTagText_0"
-    ],
+    "IconTagText": [],
     "DescriptionTitle": "ComboTeaching_13091101_DescriptionTitle",
     "DescriptionContent": "ComboTeaching_13091101_DescriptionContent",
     "CommandID": [

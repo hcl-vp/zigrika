@@ -2076,6 +2076,17 @@
     "ShareDis": 0
   },
   {
+    "Id": 80043,
+    "LoseDelay": {
+      "Min": 0,
+      "Max": 0
+    },
+    "AiSenseIds": [
+      80043
+    ],
+    "ShareDis": 0
+  },
+  {
     "Id": 70183,
     "LoseDelay": {
       "Min": 2000,
@@ -2241,6 +2252,28 @@
     "ShareDis": 0
   },
   {
+    "Id": 70196,
+    "LoseDelay": {
+      "Min": 2000,
+      "Max": 3000
+    },
+    "AiSenseIds": [
+      70196
+    ],
+    "ShareDis": 0
+  },
+  {
+    "Id": 77091,
+    "LoseDelay": {
+      "Min": 2000,
+      "Max": 3000
+    },
+    "AiSenseIds": [
+      77091
+    ],
+    "ShareDis": 0
+  },
+  {
     "Id": 8800901,
     "LoseDelay": {
       "Min": 5000,
@@ -2248,28 +2281,6 @@
     },
     "AiSenseIds": [
       8800901
-    ],
-    "ShareDis": 0
-  },
-  {
-    "Id": 7708201,
-    "LoseDelay": {
-      "Min": 2000,
-      "Max": 3000
-    },
-    "AiSenseIds": [
-      7708201
-    ],
-    "ShareDis": 0
-  },
-  {
-    "Id": 8004201,
-    "LoseDelay": {
-      "Min": 0,
-      "Max": 0
-    },
-    "AiSenseIds": [
-      8004201
     ],
     "ShareDis": 0
   }

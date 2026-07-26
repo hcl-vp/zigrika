@@ -1488,7 +1488,7 @@
       {
         "ArrayInt": [
           4,
-          2
+          1
         ]
       }
     ],
@@ -1514,7 +1514,7 @@
       {
         "ArrayInt": [
           4,
-          2
+          1
         ]
       }
     ],
@@ -1540,7 +1540,7 @@
       {
         "ArrayInt": [
           4,
-          2
+          1
         ]
       }
     ],
@@ -1566,7 +1566,59 @@
       {
         "ArrayInt": [
           4,
-          2
+          1
+        ]
+      }
+    ],
+    "KeyProperty": 0,
+    "PropertyValue": []
+  },
+  {
+    "RoleId": 1413,
+    "ProjectGroup": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "WeaponType": 7,
+    "RecommandWeapon": [
+      21020106,
+      21020016,
+      21020084
+    ],
+    "SkillItemJumpType": [
+      {
+        "ArrayInt": [
+          4,
+          1
+        ]
+      }
+    ],
+    "KeyProperty": 0,
+    "PropertyValue": []
+  },
+  {
+    "RoleId": 1312,
+    "ProjectGroup": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005
+    ],
+    "WeaponType": 6,
+    "RecommandWeapon": [
+      21010076,
+      21020016,
+      21020084
+    ],
+    "SkillItemJumpType": [
+      {
+        "ArrayInt": [
+          4,
+          1
         ]
       }
     ],

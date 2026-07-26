@@ -6710,13 +6710,30 @@
     "ActionId": 4000026
   },
   {
+    "ActionGuid": "071f831b54f64f72af4cab2974432cb8",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        180750194
+      ],
+      "EnterRadius": 500,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 2,
+        "StateId": 2
+      }
+    },
+    "ActionId": 3000085
+  },
+  {
     "ActionGuid": "1ab5b5a18850463796a8d79cef64f5ca",
     "Name": "AddPlayBubble",
     "Async": false,
     "Params": {
       "EntityIds": [
-        180750195,
-        180750194
+        180750195
       ],
       "EnterRadius": 500,
       "LeaveRadius": 1500,
@@ -6745,6 +6762,24 @@
       }
     },
     "ActionId": 3000019
+  },
+  {
+    "ActionGuid": "65104fa3f910417ba1d7f69e5f8ff524",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        180750194
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
+        "FlowId": 7,
+        "StateId": 1
+      }
+    },
+    "ActionId": 3000017
   },
   {
     "ActionGuid": "5a86390d5b824dcda57ed9691a236ca7",
@@ -7240,7 +7275,6 @@
     "Async": false,
     "Params": {
       "EntityIds": [
-        180750195,
         180750194
       ],
       "EnterRadius": 800,
@@ -7291,6 +7325,153 @@
     "ActionId": 3000006
   },
   {
+    "ActionGuid": "3e39278584c843939190ce2f397b13cf",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751140
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_华胥天工商业街配音",
+        "FlowId": 56,
+        "StateId": 1
+      }
+    },
+    "ActionId": 4000104
+  },
+  {
+    "ActionGuid": "4cbac4e1f35b4a2ba6c7f71676fa46a5",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751140
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_华胥天工商业街配音",
+        "FlowId": 55,
+        "StateId": 1
+      }
+    },
+    "ActionId": 4000101
+  },
+  {
+    "ActionGuid": "5116bb80dff04ad2aa252c99b8d4f8f5",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751140
+      ]
+    },
+    "ActionId": 4000105
+  },
+  {
+    "ActionGuid": "92525c570062423091a92e9e0e83d4c6",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751140
+      ]
+    },
+    "ActionId": 4000108
+  },
+  {
+    "ActionGuid": "00ec0c48d35a4b44a95a0c71ac71aca0",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_华胥天工商业街配音",
+        "FlowId": 53,
+        "StateId": 1
+      }
+    },
+    "ActionId": 4000138
+  },
+  {
+    "ActionGuid": "1701aa50ced34a5c9d644f379a80917c",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_华胥天工商业街配音",
+        "FlowId": 52,
+        "StateId": 1
+      },
+      "WaitTime": 20
+    },
+    "ActionId": 4000136
+  },
+  {
+    "ActionGuid": "2ec71e2cf3664fa9b7ddab7c8f38a449",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ]
+    },
+    "ActionId": 4000022
+  },
+  {
+    "ActionGuid": "328cf614465f47308534044f82fdfb43",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ]
+    },
+    "ActionId": 4000139
+  },
+  {
+    "ActionGuid": "4d47bd256d7c452db77910504c872fc3",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751140
+      ]
+    },
+    "ActionId": 4000040
+  },
+  {
+    "ActionGuid": "596931f20b6c4e3c98f76361bf890adb",
+    "Name": "AddPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ],
+      "EnterRadius": 800,
+      "LeaveRadius": 1500,
+      "Flow": {
+        "FlowListName": "剧情_3.5玄方_华胥天工商业街配音",
+        "FlowId": 54,
+        "StateId": 1
+      },
+      "WaitTime": 30
+    },
+    "ActionId": 4000133
+  },
+  {
     "ActionGuid": "87367e018b85447cac2ff091ea3753e7",
     "Name": "ClearPlayBubble",
     "Async": false,
@@ -7303,38 +7484,18 @@
     "ActionId": 3000237
   },
   {
-    "ActionGuid": "e88a7047185b49c0930695c2c5aeb0e4",
+    "ActionGuid": "87b063ec864c4600960b18a937c7c877",
     "Name": "ClearPlayBubble",
     "Async": false,
     "Params": {
       "EntityIds": [
-        180750194,
-        180750195
+        176751067
       ]
     },
-    "ActionId": 3000238
+    "ActionId": 4000137
   },
   {
-    "ActionGuid": "619121523d504f55ac261302cf438d7f",
-    "Name": "AddPlayBubble",
-    "Async": false,
-    "Params": {
-      "EntityIds": [
-        180750195,
-        180750194
-      ],
-      "EnterRadius": 800,
-      "LeaveRadius": 1500,
-      "Flow": {
-        "FlowListName": "剧情_3_5_支线_危构悬天问丹心",
-        "FlowId": 7,
-        "StateId": 1
-      }
-    },
-    "ActionId": 3000017
-  },
-  {
-    "ActionGuid": "0460515810114977991390a42edfdccd",
+    "ActionGuid": "c9e374c35c4742fa9d6086dd231cd536",
     "Name": "AddPlayBubble",
     "Async": false,
     "Params": {
@@ -7349,6 +7510,29 @@
         "StateId": 1
       }
     },
-    "ActionId": 3000111
+    "ActionId": 3000043
+  },
+  {
+    "ActionGuid": "d4fcd62de140478bab248a4c68a25410",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        176751067
+      ]
+    },
+    "ActionId": 4000132
+  },
+  {
+    "ActionGuid": "e88a7047185b49c0930695c2c5aeb0e4",
+    "Name": "ClearPlayBubble",
+    "Async": false,
+    "Params": {
+      "EntityIds": [
+        180750194,
+        180750195
+      ]
+    },
+    "ActionId": 3000238
   }
 ]

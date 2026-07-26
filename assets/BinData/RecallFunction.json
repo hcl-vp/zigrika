@@ -1,0 +1,23 @@
+[
+  {
+    "Id": 1,
+    "FunctionId": 10018,
+    "NeedFinishQuestIds": [
+      32750003
+    ]
+  },
+  {
+    "Id": 2,
+    "FunctionId": 10007,
+    "NeedFinishQuestIds": [
+      32750004
+    ]
+  },
+  {
+    "Id": 3,
+    "FunctionId": 10004,
+    "NeedFinishQuestIds": [
+      32750005
+    ]
+  }
+]

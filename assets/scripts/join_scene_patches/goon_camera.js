@@ -547,7 +547,7 @@ setTimeout(() => {
     LogReportController_1.LogReportController.LogReport(_);
 
     UiManager_1.UiManager.OpenView("PhotoSaveView", t, () => {
-      dilate_time(PhotographModel.GetPhotographOption(MAX_ID + 4));
+      dilate_time(0);
       EventSystem_1.EventSystem.Emit(EventDefine_1.EEventName.OnScreenShotDone);
 
       if (this.CameraCaptureType === 1) {
@@ -565,6 +565,15 @@ setTimeout(() => {
       }
     });
   };
+
+  PhotoSaveView.prototype.OnDestroy = function () {
+    const freeze_time = PhotographModel.GetPhotographOption(MAX_ID + 3);
+    if (freeze_time === 1 || freeze_time == true) {
+      dilate_time(0)
+    } else {
+      dilate_time(PhotographModel.GetPhotographOption(MAX_ID + 4));
+    }
+  }
 
   // reattach
   UiCameraPhotographerStructure.prototype.OnDestroy = function () {

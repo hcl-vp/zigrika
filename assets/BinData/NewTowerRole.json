@@ -523,14 +523,8 @@
     "Id": 1508,
     "AddBuffs": [],
     "TemplateRoleId": 1508990000,
-    "EnhanceSkillDesc": {
-      "6": "WheelBattle_EnhanceSkillDesc9"
-    },
-    "EnhanceSkillDescParam": {
-      "6": {
-        "ArrayString": []
-      }
-    },
+    "EnhanceSkillDesc": {},
+    "EnhanceSkillDescParam": {},
     "TemplateDesc": "WheelBattle_TemplateDesc"
   },
   {
@@ -609,8 +603,14 @@
     "Id": 1211,
     "AddBuffs": [],
     "TemplateRoleId": 1211990000,
-    "EnhanceSkillDesc": {},
-    "EnhanceSkillDescParam": {},
+    "EnhanceSkillDesc": {
+      "6": "WheelBattle_EnhanceSkillDesc9"
+    },
+    "EnhanceSkillDescParam": {
+      "6": {
+        "ArrayString": []
+      }
+    },
     "TemplateDesc": "WheelBattle_TemplateDesc"
   },
   {

@@ -8582,13 +8582,17 @@
       "MenuConfig_200271_OptionsName_0",
       "MenuConfig_200271_OptionsName_1",
       "MenuConfig_200271_OptionsName_2",
-      "MenuConfig_200271_OptionsName_3"
+      "MenuConfig_200271_OptionsName_3",
+      "MenuConfig_200271_OptionsName_4",
+      "MenuConfig_200271_OptionsName_5"
     ],
     "OptionsValue": [
       0,
       1,
       2,
-      3
+      3,
+      4,
+      5
     ],
     "KeyMap": "",
     "ButtonText": "",
@@ -8599,7 +8603,9 @@
     "DisableValue": [
       1,
       2,
-      3
+      3,
+      4,
+      5
     ],
     "DisableFunction": [
       11
@@ -9902,9 +9908,9 @@
     "DetailPop": 0,
     "CanDisableDetailShow": false,
     "ConditionGroup": 0,
-    "Ps5Hide": 0,
+    "Ps5Hide": 1,
     "CanShowInLogin": false,
-    "XboxHide": 0,
+    "XboxHide": 1,
     "WinGDKHide": 0
   },
   {

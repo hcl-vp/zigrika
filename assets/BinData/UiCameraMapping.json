@@ -2729,5 +2729,31 @@
     "DefaultCameraBlendName": "",
     "UiCameraBlendNameMap": {},
     "UiCameraDelayTime": 0
+  },
+  {
+    "Id": 1185,
+    "ViewName": "VisionNewRecommendView",
+    "DefaultUiCameraSettingsName": "1012_Female154",
+    "IsCheckSpecialState": false,
+    "SpecialStateCameraSettingName": "1002",
+    "bPlayLoadingCameraAnimation": true,
+    "BodyTargetType": 0,
+    "BodyCameraSettingsNameMap": {},
+    "DefaultCameraBlendName": "",
+    "UiCameraBlendNameMap": {},
+    "UiCameraDelayTime": 0
+  },
+  {
+    "Id": 1186,
+    "ViewName": "VisionNewRecommendPreviewView",
+    "DefaultUiCameraSettingsName": "1012_Female154",
+    "IsCheckSpecialState": false,
+    "SpecialStateCameraSettingName": "1002",
+    "bPlayLoadingCameraAnimation": true,
+    "BodyTargetType": 0,
+    "BodyCameraSettingsNameMap": {},
+    "DefaultCameraBlendName": "",
+    "UiCameraBlendNameMap": {},
+    "UiCameraDelayTime": 0
   }
 ]

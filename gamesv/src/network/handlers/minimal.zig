@@ -8,7 +8,7 @@ const ph_ba_success_code: pb.ErrorCode = .Success;
 pub fn onDollSmallMapInfoRequest(
     txn: *Transaction(pb.DollSmallMapInfoRequest),
 ) !void {
-    txn.respond(.{ .ErrorCode = @intFromEnum(pb.ErrorCode.Success) });
+    txn.respond(.{ .ErrorCode = .Success });
 }
 
 pub fn onRoleVisionRecommendDataRequest(
