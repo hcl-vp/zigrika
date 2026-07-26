@@ -24,6 +24,7 @@ entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
 active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
+fsm_hate_states: std.AutoHashMapUnmanaged(i64, bool) = .empty,
 combine_relations: std.AutoHashMapUnmanaged(i64, CombineRelation) = .empty,
 pending_combine_detaches: std.ArrayListUnmanaged(CombineDetach) = .empty,
 debug_spawn_routes: std.AutoHashMapUnmanaged(i64, DebugSpawnRoute) = .empty,
@@ -272,6 +273,7 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
     scene.active_battle_entities.deinit(gpa);
+    scene.fsm_hate_states.deinit(gpa);
     scene.combine_relations.deinit(gpa);
     scene.pending_combine_detaches.deinit(gpa);
     scene.debug_spawn_routes.deinit(gpa);
@@ -326,6 +328,46 @@ pub fn markFsmDirty(scene: *Scene, gpa: Allocator, entity_id: i64, reason: Entit
     const fsm_slot = &scene.entities.items(.fsm)[index];
     const fsm = if (fsm_slot.*) |*component| component else return;
     if (fsm.markDirty(reason)) try scene.fsm_wakes.markDirty(gpa, entity_id);
+}
+
+pub fn updateFsmHateTarget(scene: *Scene, gpa: Allocator, entity_id: i64, has_target: bool) !bool {
+    const index = scene.net_id_map.get(entity_id) orelse return false;
+    const previous = scene.fsm_hate_states.get(entity_id);
+    try scene.fsm_hate_states.put(gpa, entity_id, has_target);
+    if (previous != null and previous.? == has_target) return false;
+
+    const entity_changed = try scene.refreshFsmHateAtIndex(gpa, index, false);
+    try scene.refreshSummonedFsmHate(gpa, entity_id);
+    return entity_changed;
+}
+
+fn refreshFsmHateAtIndex(scene: *Scene, gpa: Allocator, index: usize, enqueue: bool) !bool {
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    const fsm = if (fsm_slot.*) |*component| component else return false;
+    const entity_id = scene.entities.items(.entity_id)[index].net_id;
+    var in_hate = scene.fsm_hate_states.get(entity_id) orelse false;
+
+    if (in_hate) {
+        if (scene.entities.items(.summoner)[index]) |summoner| {
+            if (scene.net_id_map.contains(summoner.summoner_id)) {
+                in_hate = scene.fsm_hate_states.get(summoner.summoner_id) orelse false;
+            }
+        }
+    }
+
+    if (!fsm.setInHate(in_hate)) return false;
+    const should_wake = fsm.markDirty(Entity.FsmComponent.WakeReason.hate);
+    if (enqueue and should_wake) try scene.fsm_wakes.markDirty(gpa, entity_id);
+    return true;
+}
+
+fn refreshSummonedFsmHate(scene: *Scene, gpa: Allocator, summoner_id: i64) !void {
+    const slice = scene.entities.slice();
+    for (slice.items(.summoner), 0..) |optional_summoner, index| {
+        const summoner = optional_summoner orelse continue;
+        if (summoner.summoner_id != summoner_id) continue;
+        _ = try scene.refreshFsmHateAtIndex(gpa, index, true);
+    }
 }
 
 pub fn markFsmRootDirty(
@@ -666,6 +708,8 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
 
     try scene.net_id_map.put(gpa, id, scene.entities.len);
     try scene.entities.append(gpa, storage);
+    _ = try scene.refreshFsmHateAtIndex(gpa, scene.entities.len - 1, false);
+    try scene.refreshSummonedFsmHate(gpa, id);
 
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -730,10 +774,12 @@ fn removeEntityState(scene: *Scene, gpa: Allocator, index: usize, net_id: i64) !
     storage.deinit(gpa);
     scene.entities.swapRemove(index);
     _ = scene.net_id_map.swapRemove(net_id);
+    _ = scene.fsm_hate_states.remove(net_id);
     if (index < scene.entities.len) {
         const swapped_id = scene.entities.items(.entity_id)[index].net_id;
         try scene.net_id_map.put(gpa, swapped_id, index);
     }
+    try scene.refreshSummonedFsmHate(gpa, net_id);
 }
 
 fn clearFsmEncounterTargetReferences(scene: *Scene, gpa: Allocator, target_entity_id: i64) !void {

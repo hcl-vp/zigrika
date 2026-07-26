@@ -24,7 +24,6 @@ const FsmBehaviorQuery = Scene.Query(&.{
 
 const AiHateQuery = Scene.Query(&.{
     Entity,
-    *Entity.MonsterAiComponent,
     ?*Entity.FsmComponent,
     ?*Entity.AttributeComponent,
     ?*Entity.FightBuffComponent,
@@ -652,17 +651,23 @@ fn applyAiHate(
     alloc: mem.Alloc,
     receive_data_pack: *std.ArrayList(pb.CombatReceiveData),
 ) !void {
-    const entity, _, const optional_fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
+    const entity, const optional_fsm, const attribute, const buffs, const logic_state, const tags, const parts = item;
 
     try scene.updateBattleEntityFromHate(alloc.gpa, entity.net_id, hate_list);
     _ = try scene.appendBattleStateNotify(alloc.arena, receive_data_pack);
 
+    var has_target = false;
+    for (hate_list) |entry| {
+        if (entry.HatredValue >= 1) {
+            has_target = true;
+            break;
+        }
+    }
+    _ = try scene.updateFsmHateTarget(alloc.gpa, entity.net_id, has_target);
+
     const fsm = optional_fsm orelse return;
     try fsm.initRuntime(alloc.gpa, now_ms);
     defer fsm.finishTick(now_ms);
-    if (fsm.setHateFromList(hate_list)) {
-        _ = fsm.markDirty(Entity.FsmComponent.WakeReason.hate);
-    }
     if (!try FsmLifecycle.enqueueEffects(entity, fsm, events, alloc, now_ms)) {
         try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, receive_data_pack, .{
             .attribute = attribute,

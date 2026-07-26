@@ -233,16 +233,9 @@ pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) 
     return recovered;
 }
 
-pub fn setHateFromList(comp: *Component, hate_list: []const pb.AiHateEntity) bool {
+pub fn setInHate(comp: *Component, in_hate: bool) bool {
     const old_in_hate = comp.in_hate;
-    comp.in_hate = false;
-    for (hate_list) |entry| {
-        if (entry.HatredValue >= 1) {
-            comp.in_hate = true;
-            break;
-        }
-    }
-
+    comp.in_hate = in_hate;
     return old_in_hate != comp.in_hate;
 }
 
