@@ -2,7 +2,6 @@ const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
 const EventQueue = @import("../EventQueue.zig");
 const Scene = @import("../Scene.zig");
-const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
@@ -34,10 +33,8 @@ pub fn onEntityMovement(
 pub fn onBuffChange(
     event: EventQueue.Dequeue(.buff_change),
     alloc: mem.Alloc,
-    buff_timers: *BuffTimerScheduler,
     dirty_saves: *DirtySaveQueue,
 ) !void {
-    buff_timers.markDirty();
     try dirty_saves.markBuffChange(alloc.gpa, event.data.entity);
 }
 

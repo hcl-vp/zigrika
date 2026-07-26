@@ -23,8 +23,8 @@ pub fn removeBuffFromEntity(
     var notify: pb.CombatReceivePackNotify = .{};
 
     for (event.data.handle_ids) |handle_id| {
+        buff_timers.cancelHandle(event.data.entity.net_id, handle_id);
         item[0].removeByHandleId(alloc.gpa, handle_id);
-        buff_timers.markDirty();
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = combat_common,
@@ -55,6 +55,7 @@ pub fn addBuffToEntity(
     scene: *Scene,
     buff_timers: *BuffTimerScheduler,
     assets: *const Assets,
+    io: std.Io,
     alloc: mem.Alloc,
     query: Scene.Query(&.{ *Entity.FightBuffComponent, ?*Entity.AttributeComponent }),
 ) !void {
@@ -62,13 +63,14 @@ pub fn addBuffToEntity(
     const item = query.byEntityHandle(event.data.target) orelse return;
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.target.net_id };
     var notify: pb.CombatReceivePackNotify = .{};
+    const clock: std.Io.Clock = .awake;
+    const now_ms = clock.now(io).toMilliseconds();
 
     for (event.data.buffs) |entry| {
         const buff_data = assets.tables.buff.getDataById(entry.id) orelse continue;
         const existing = item[0].getByBuffId(entry.id);
         const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
-            buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
             buff.Level = 1;
             buff.StackCount = stack_count;
             buff.InstigatorId = event.data.instigator.net_id;
@@ -77,7 +79,13 @@ pub fn addBuffToEntity(
             buff.ApplyType = .Common;
             buff.IsActive = entry.is_active;
             buff.MessageId = -1;
-            buff_timers.markDirty();
+            try buff_timers.syncBuff(
+                alloc.gpa,
+                assets,
+                buff.*,
+                event.data.target.net_id,
+                now_ms,
+            );
         } else {
             scene.*.instance.buff_handle += 1;
             item[0].fight_buff_infos = try alloc.gpa.realloc(item[0].fight_buff_infos, item[0].fight_buff_infos.len + 1);
@@ -91,7 +99,13 @@ pub fn addBuffToEntity(
             item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1].StackCount = stack_count;
             applyBuffDuration(&item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1], &buff_data, entry.duration_seconds);
             const buff = item[0].fight_buff_infos[item[0].fight_buff_infos.len - 1];
-            buff_timers.markDirty();
+            try buff_timers.syncBuff(
+                alloc.gpa,
+                assets,
+                buff,
+                event.data.target.net_id,
+                now_ms,
+            );
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
                     .CombatCommon = combat_common,
