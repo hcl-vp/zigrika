@@ -7,7 +7,7 @@ const Assets = @import("data/Assets.zig");
 const Io = std.Io;
 const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
-const Connection = @import("network/Connection.zig");
+const SessionSupervisor = @import("network/SessionSupervisor.zig");
 
 const mtu: usize = 1000;
 const krkcp_syn: u8 = 0xED;
@@ -215,7 +215,7 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
                     assets: *const Assets,
 
                     fn run(ctx: @This()) *ConnectionHandle {
-                        Connection.process(ctx.handle, ctx.session_manager, ctx.gpa, ctx.fs, ctx.assets);
+                        SessionSupervisor.run(ctx.handle, ctx.session_manager, ctx.gpa, ctx.fs, ctx.assets);
                         return ctx.handle;
                     }
                 };

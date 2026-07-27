@@ -7,7 +7,6 @@ const net_handlers = @import("handlers.zig");
 const logic_handlers = @import("../logic/handlers.zig");
 
 const Io = std.Io;
-const KcpTransport = @import("KcpTransport.zig");
 const State = @import("State.zig");
 const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
@@ -25,6 +24,22 @@ gpa: Allocator,
 outbound: *Io.Queue(OwnedFrame),
 session_key: ?[32]u8 = null,
 seq: u32 = 0,
+
+pub const GameplayState = struct {
+    connection: Connection,
+    state: ?State = null,
+    claimed_player_id: ?i32 = null,
+
+    pub fn init(handle: *ConnectionHandle, gpa: Allocator) GameplayState {
+        return .{
+            .connection = .{
+                .io = handle.io,
+                .gpa = gpa,
+                .outbound = &handle.outbound,
+            },
+        };
+    }
+};
 
 const gameplay_event_limit = 64;
 const gameplay_time_limit_ns = 2 * std.time.ns_per_ms;
@@ -270,52 +285,23 @@ fn gameplayWakeDelayMs(timed_delay_ms: ?i64, dirty_delay_ms: ?i64, overdue_buffs
     return timed_delay_ms;
 }
 
-pub fn process(
+pub fn runGameplay(
     handle: *ConnectionHandle,
     session_manager: *SessionManager,
     gpa: Allocator,
     fs: *FileSystem,
     assets: *const Assets,
-) void {
-    const gameplay_args = .{ handle, session_manager, gpa, fs, assets };
-    var gameplay = handle.io.concurrent(gameplayLoop, gameplay_args) catch
-        handle.io.async(gameplayLoop, gameplay_args);
-
-    KcpTransport.run(handle, gpa);
-    handle.close();
-    gameplay.await(handle.io);
-    drainOwnedMessages(gpa, handle.io, &handle.inbound);
-    drainOwnedFrames(gpa, handle.io, &handle.outbound);
-}
-
-fn gameplayLoop(
-    handle: *ConnectionHandle,
-    session_manager: *SessionManager,
-    gpa: Allocator,
-    fs: *FileSystem,
-    assets: *const Assets,
+    gameplay: *GameplayState,
 ) void {
     const log = std.log.scoped(.connection);
-    defer handle.close();
-
-    var connection: Connection = .{
-        .io = handle.io,
-        .gpa = gpa,
-        .outbound = &handle.outbound,
-    };
 
     var player_id: ?i32 = null;
     var enter: bool = false;
     var pending_reconnect: ?auth.PendingReconnect = null;
-    var claimed_player_id: ?i32 = null;
-    defer if (claimed_player_id) |id| session_manager.release(handle, id);
-
-    var state: ?State = null;
-    defer if (state) |*s| s.deinit(fs);
 
     while (true) {
         const wait_now_ms = (Io.Clock.awake).now(handle.io).toMilliseconds();
-        const state_ptr: ?*const State = if (state) |*s| s else null;
+        const state_ptr: ?*const State = if (gameplay.state) |*s| s else null;
         const wake = waitGameplayWake(
             handle,
             nextGameplayWakeDelayMs(state_ptr, wait_now_ms),
@@ -334,14 +320,14 @@ fn gameplayLoop(
                 log.err("failed to decode application message: {t}, disconnecting", .{err});
                 return;
             };
-            if (connection.session_key) |key| ready_message.decrypt(key);
+            if (gameplay.connection.session_key) |key| ready_message.decrypt(key);
 
-            if (state) |*s| {
+            if (gameplay.state) |*s| {
                 net_handlers.dispatchMessage(s, ready_message) catch |err| switch (err) {
                     error.HandlerNotFound => {
                         if (std.meta.activeTag(ready_message.header) == .request) {
                             if (request_response_table[ready_message.header.getMessageId()]) |response_id| {
-                                connection.respondWithMessageId(
+                                gameplay.connection.respondWithMessageId(
                                     ready_message.header.request.rpc_id,
                                     response_id,
                                     proto.pb.HeartbeatResponse{},
@@ -369,7 +355,7 @@ fn gameplayLoop(
             } else {
                 auth.handleAuthGroupRequest(
                     ready_message,
-                    &connection,
+                    &gameplay.connection,
                     fs,
                     gpa,
                     &player_id,
@@ -385,10 +371,10 @@ fn gameplayLoop(
                         log.err("failed to acquire player session: {t}, disconnecting", .{err});
                         return;
                     };
-                    claimed_player_id = id;
+                    gameplay.claimed_player_id = id;
 
                     if (pending_reconnect) |reconnect| {
-                        connection.respond(reconnect.rpc_id, proto.pb.ReconnectResponse{
+                        gameplay.connection.respond(reconnect.rpc_id, proto.pb.ReconnectResponse{
                             .ErrorCode = .Success,
                             .LastRecvSeqNo = reconnect.last_server_seq_no,
                             .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
@@ -404,46 +390,36 @@ fn gameplayLoop(
                         return;
                     };
 
-                    state = .init(gpa, handle.io, fs, &connection, assets, player_components, id);
+                    gameplay.state = .init(
+                        gpa,
+                        handle.io,
+                        fs,
+                        &gameplay.connection,
+                        assets,
+                        player_components,
+                        id,
+                    );
 
-                    var event_queue: EventQueue = .{ .arena = state.?.arena.allocator() };
+                    var event_queue: EventQueue = .{ .arena = gameplay.state.?.arena.allocator() };
                     event_queue.enqueue(.enter_game, .{}) catch |err| {
                         log.err("failed to enqueue enter game event: {t}, disconnecting", .{err});
                         return;
                     };
 
-                    logic_handlers.drainEventQueue(&event_queue, &state.?) catch |err| {
+                    logic_handlers.drainEventQueue(&event_queue, &gameplay.state.?) catch |err| {
                         log.err("failed to execute initial event chain: {t}, disconnecting", .{err});
                         return;
                     };
-                    _ = state.?.arena.reset(.free_all);
+                    _ = gameplay.state.?.arena.reset(.free_all);
                 };
             }
         }
 
         if (wake.gameplay_deadline) {
-            if (state) |*s| {
+            if (gameplay.state) |*s| {
                 _ = drainScheduledLogicForSession(s, (Io.Clock.awake).now(handle.io).toMilliseconds());
             }
         }
-    }
-}
-
-fn drainOwnedFrames(gpa: Allocator, io: Io, queue: *Io.Queue(OwnedFrame)) void {
-    var frames: [32]OwnedFrame = undefined;
-    while (true) {
-        const count = queue.get(io, &frames, 0) catch return;
-        if (count == 0) return;
-        for (frames[0..count]) |frame| gpa.free(frame.bytes);
-    }
-}
-
-fn drainOwnedMessages(gpa: Allocator, io: Io, queue: *Io.Queue(OwnedMessage)) void {
-    var messages: [32]OwnedMessage = undefined;
-    while (true) {
-        const count = queue.get(io, &messages, 0) catch return;
-        if (count == 0) return;
-        for (messages[0..count]) |message| gpa.free(message.bytes);
     }
 }
 
@@ -612,24 +588,6 @@ test "closing a full outbound queue wakes and releases its producer" {
     const queued = try outbound.getOne(std.testing.io);
     std.testing.allocator.free(queued.bytes);
     try std.testing.expectError(error.Closed, outbound.getOne(std.testing.io));
-}
-
-test "closed session queues drain owned inbound and outbound storage" {
-    var inbound_buffer: [2]OwnedMessage = undefined;
-    var inbound = Io.Queue(OwnedMessage).init(&inbound_buffer);
-    try inbound.putOne(std.testing.io, .{
-        .bytes = try std.testing.allocator.dupe(u8, "inbound"),
-    });
-    inbound.close(std.testing.io);
-    drainOwnedMessages(std.testing.allocator, std.testing.io, &inbound);
-
-    var outbound_buffer: [2]OwnedFrame = undefined;
-    var outbound = Io.Queue(OwnedFrame).init(&outbound_buffer);
-    try outbound.putOne(std.testing.io, .{
-        .bytes = try std.testing.allocator.dupe(u8, "outbound"),
-    });
-    outbound.close(std.testing.io);
-    drainOwnedFrames(std.testing.allocator, std.testing.io, &outbound);
 }
 
 test "gameplay wake preserves simultaneous completions" {
