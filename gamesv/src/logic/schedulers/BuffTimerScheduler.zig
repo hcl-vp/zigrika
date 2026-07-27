@@ -247,7 +247,7 @@ pub fn syncAllLeftDurations(
     }
 }
 
-pub fn drainDue(
+pub fn drainOneDue(
     scheduler: *BuffTimerScheduler,
     event: EventQueue.Dequeue(.buff_timer_tick),
     events: *EventQueue,
@@ -266,55 +266,54 @@ pub fn drainDue(
     const now_ms = event.data.now_ms;
     try scheduler.ensureInitialized(alloc.gpa, scene, assets, now_ms);
 
-    while (scheduler.popDue(now_ms)) |entry| {
-        switch (entry.kind) {
-            .expiry => {
-                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                syncLeftDuration(lookup[1], entry.due_ms, now_ms);
-                const handle_ids = try alloc.arena.alloc(i32, 1);
-                handle_ids[0] = entry.handle_id;
+    const entry = scheduler.popDue(now_ms) orelse return;
+    switch (entry.kind) {
+        .expiry => {
+            const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
                 scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                try events.enqueue(.buff_removal, .{
-                    .entity = lookup[0],
-                    .handle_ids = handle_ids,
-                });
-            },
-            .periodic_pulse => {
-                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                const buff_info = lookup[1];
-                const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                try buff_helper.execute_periodic_buff_effects(
-                    combat_receive_pack,
-                    entry.entity_id,
-                    buff_info.InstigatorId,
-                    &buff_data,
-                    scene,
-                    fs,
-                    io,
-                    query,
-                    alloc,
-                );
-                scheduler.upsert(alloc.gpa, .{
-                    .kind = .periodic_pulse,
-                    .entity_id = entry.entity_id,
-                    .handle_id = entry.handle_id,
-                    .due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
-                    .interval_ms = entry.interval_ms,
-                }) catch |err| {
-                    scheduler.invalidate();
-                    return err;
-                };
-            },
-        }
+                return;
+            };
+            syncLeftDuration(lookup[1], entry.due_ms, now_ms);
+            const handle_ids = try alloc.arena.alloc(i32, 1);
+            handle_ids[0] = entry.handle_id;
+            scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+            try events.enqueue(.buff_removal, .{
+                .entity = lookup[0],
+                .handle_ids = handle_ids,
+            });
+        },
+        .periodic_pulse => {
+            const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
+                scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                return;
+            };
+            const buff_info = lookup[1];
+            const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse {
+                scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                return;
+            };
+            try buff_helper.execute_periodic_buff_effects(
+                combat_receive_pack,
+                entry.entity_id,
+                buff_info.InstigatorId,
+                &buff_data,
+                scene,
+                fs,
+                io,
+                query,
+                alloc,
+            );
+            scheduler.upsert(alloc.gpa, .{
+                .kind = .periodic_pulse,
+                .entity_id = entry.entity_id,
+                .handle_id = entry.handle_id,
+                .due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
+                .interval_ms = entry.interval_ms,
+            }) catch |err| {
+                scheduler.invalidate();
+                return err;
+            };
+        },
     }
 }
 

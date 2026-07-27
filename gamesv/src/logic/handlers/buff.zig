@@ -177,7 +177,7 @@ pub fn handleBuffTimerTick(
     }),
 ) !void {
     var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
-    try buff_timers.drainDue(
+    try buff_timers.drainOneDue(
         event,
         events,
         scene,
