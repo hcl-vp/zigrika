@@ -158,6 +158,6 @@ fn apply_attr_change(
                 },
             },
         } });
-        try scene.saveEntity(fs, alloc.gpa, entity);
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.AttributeComponent});
     }
 }

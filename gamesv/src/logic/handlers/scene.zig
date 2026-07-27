@@ -163,9 +163,22 @@ pub fn onInitialSceneJoin(
     cur_scene: *?Scene,
     timers: *Timers,
     dirty_saves: *DirtySaveQueue,
+    io: Io,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
+    const now_ms = (Io.Clock.awake).now(io).toMilliseconds();
+
+    if (cur_scene.*) |*active_scene| {
+        try DirtySaveQueue.saveAllBuffs(
+            alloc.gpa,
+            fs,
+            active_scene,
+            &timers.buffs,
+            assets,
+            now_ms,
+        );
+    }
 
     try dirty_saves.flush(
         alloc.gpa,
@@ -173,12 +186,16 @@ pub fn onInitialSceneJoin(
         role_comp,
         weapon_comp,
         if (cur_scene.*) |*active_scene| active_scene else null,
+        &timers.buffs,
+        assets,
+        now_ms,
     );
 
     if (cur_scene.*) |*scene| {
         scene.deinit(alloc.gpa, fs);
         cur_scene.* = null;
     }
+    timers.reset(alloc.gpa);
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
         // TODO: fallback to default instance id?
@@ -276,8 +293,10 @@ pub fn onInitialSceneJoin(
         }
     }
 
+    const new_scene_now_ms = (Io.Clock.awake).now(io).toMilliseconds();
+    try timers.buffs.ensureAllRegistered(alloc.gpa, &scene, assets, new_scene_now_ms);
+    timers.buffs.syncAllLeftDurations(&scene, new_scene_now_ms);
     try scene.save(fs, alloc.gpa);
-    timers.reset(alloc.gpa);
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
     });
@@ -299,6 +318,8 @@ pub fn notifyJoinScene(
     motor_comp: *PlayerMotorComponent,
     echo_comp: *PlayerEchoComponent,
     scene: *Scene,
+    timers: *Timers,
+    io: Io,
 ) !void {
     const log = std.log.scoped(.scene_join);
     try exploreSkillNotify(alloc, scene, conn);
@@ -411,6 +432,9 @@ pub fn notifyJoinScene(
         // Shouldn't happen unless scene instance file is corrupted. Maybe should log it as well?
         return error.PlayerNotFoundInScene;
     }
+    const now_ms = (Io.Clock.awake).now(io).toMilliseconds();
+    try timers.buffs.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+    timers.buffs.syncAllLeftDurations(scene, now_ms);
     try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};

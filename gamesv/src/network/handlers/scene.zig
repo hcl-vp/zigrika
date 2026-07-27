@@ -8,6 +8,8 @@ const EventQueue = @import("../../logic/EventQueue.zig");
 const PositionComponent = @import("../../logic/component/entity/PositionComponent.zig");
 const FileSystem = @import("common").FileSystem;
 const Assets = @import("../../data/Assets.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("../../logic/helpers/entity_proto.zig");
 
 pub fn onSceneTraceRequest(txn: *Transaction(pb.SceneTraceRequest)) !void {
     const log = std.log.scoped(.scene_trace);
@@ -26,6 +28,8 @@ pub fn onEntityActiveRequest(
     scene: *Scene,
     alloc: mem.Alloc,
     assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
     const log = std.log.scoped(.entity_active);
     log.debug("request id: {d}", .{txn.message.EntityId});
@@ -33,7 +37,15 @@ pub fn onEntityActiveRequest(
     const entity = entities.byNetId(txn.message.EntityId) orelse return error.EntityNotFound;
     const scene_entity: Scene.Entity = entity[0];
 
-    const entity_pb = try scene.entities.get(scene_entity.index).entityToProto(scene_entity.net_id, alloc, assets);
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
+    const entity_pb = try entity_proto.build(
+        alloc,
+        assets,
+        scene,
+        buff_timers,
+        scene_entity.net_id,
+        now_ms,
+    );
 
     txn.respond(.{
         .IsVisible = entity_pb.IsVisible,

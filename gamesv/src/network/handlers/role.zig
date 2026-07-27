@@ -20,6 +20,7 @@ const RoleAttributeSync = @import("../helpers/role_attribute_sync.zig");
 const RoleStats = @import("../../logic/helpers/role_stats.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const EchoShared = @import("echo/shared.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
 
 fn pushWeaponEquipNotify(txn: anytype, alloc: mem.Alloc, role_id: i32, weapon_id: i32) !void {
     if (weapon_id == 0) return;
@@ -116,7 +117,10 @@ pub fn onRoleSexChangeRequest(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const target_gender = txn.message.Sex;
     const current_gender = basic_comp.info.attributes.sex;
 
@@ -180,7 +184,11 @@ pub fn onRoleSexChangeRequest(
             txn.conn,
             alloc,
             &.{target_role_id},
+            buff_timers,
+            now_ms,
         );
+        try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+        buff_timers.syncAllLeftDurations(scene, now_ms);
         try scene.save(fs, alloc.gpa);
         try events.enqueue(.update_formations, .{});
     }
@@ -230,7 +238,10 @@ pub fn onRoleElementChangeRequest(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const gender = basic_comp.info.attributes.sex;
     const target_role_id = RoleHelper.mainRoleIdForElement(assets, gender, txn.message.ElementType) orelse {
         txn.respond(.{ .ErrorCode = .ErrRoleChangeElementFunc });
@@ -265,7 +276,11 @@ pub fn onRoleElementChangeRequest(
             txn.conn,
             alloc,
             &.{target_role_id},
+            buff_timers,
+            now_ms,
         );
+        try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+        buff_timers.syncAllLeftDurations(scene, now_ms);
         try scene.save(fs, alloc.gpa);
         try events.enqueue(.update_formations, .{});
     }
@@ -299,7 +314,11 @@ pub fn SwitchRoleRequest(
     scene: *Scene,
     fs: *FileSystem,
     alloc: mem.Alloc,
+    assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const request: pb.SwitchRoleRequest = txn.payload;
     const formation = &scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
     const previous_role = formation.cur_role;
@@ -314,6 +333,8 @@ pub fn SwitchRoleRequest(
         }
     }
 
+    try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+    buff_timers.syncAllLeftDurations(scene, now_ms);
     try scene.save(fs, alloc.gpa);
     txn.respond(.{ .ErrorCode = .Success, .RoleId = request.RoleId });
 }

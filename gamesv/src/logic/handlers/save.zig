@@ -5,6 +5,9 @@ const Scene = @import("../Scene.zig");
 const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
+const Assets = @import("../../data/Assets.zig");
+const std = @import("std");
 
 pub fn onRoleInfoModified(
     event: EventQueue.Dequeue(.role_info_modified),
@@ -46,6 +49,19 @@ pub fn onDirtySaveTick(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     scene: *Scene,
+    buff_timers: *BuffTimerScheduler,
+    assets: *const Assets,
+    io: std.Io,
 ) !void {
-    try dirty_saves.flush(alloc.gpa, fs, role_comp, weapon_comp, scene);
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
+    try dirty_saves.flush(
+        alloc.gpa,
+        fs,
+        role_comp,
+        weapon_comp,
+        scene,
+        buff_timers,
+        assets,
+        now_ms,
+    );
 }

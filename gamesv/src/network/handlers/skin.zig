@@ -13,6 +13,7 @@ const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComp
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const std = @import("std");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
 
 fn buildFlyEquipData(role_comp: *PlayerRoleComponent, arena: std.mem.Allocator, skin_id: i32) !std.ArrayList(pb.EquipFlySkinData) {
     var list: std.ArrayList(pb.EquipFlySkinData) = .empty;
@@ -185,6 +186,8 @@ fn refreshRoleOrnamentEntity(
     role_id: i32,
     role: anytype,
     stale_ornament_ids: []const i32,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !void {
     _ = events;
     const slice = scene.entities.slice();
@@ -208,6 +211,13 @@ fn refreshRoleOrnamentEntity(
             .index = i,
             .net_id = slice.items(.entity_id)[i].net_id,
         };
+        try buff_timers.ensureEntityRegistered(
+            alloc.gpa,
+            scene,
+            assets,
+            entity.net_id,
+            now_ms,
+        );
         const combat_common: pb.CombatCommon = .{ .EntityId = entity.net_id };
         var combat_notify: pb.CombatReceivePackNotify = .{};
 
@@ -215,6 +225,7 @@ fn refreshRoleOrnamentEntity(
             for (stale_ornament_buffs.items) |entry| {
                 if (buffs.getByBuffId(entry.id)) |buff| {
                     const handle_id = buff.HandleId;
+                    buff_timers.cancelHandle(entity.net_id, handle_id);
                     buffs.removeByHandleId(alloc.gpa, handle_id);
                     try combat_notify.Data.append(alloc.arena, .{ .Message = .{
                         .CombatNotifyData = .{
@@ -240,6 +251,13 @@ fn refreshRoleOrnamentEntity(
                     .EntityId = entity.net_id,
                     .IsActive = entry.is_active,
                 };
+                try buff_timers.syncBuff(
+                    alloc.gpa,
+                    assets,
+                    buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1],
+                    entity.net_id,
+                    now_ms,
+                );
                 try combat_notify.Data.append(alloc.arena, .{ .Message = .{
                     .CombatNotifyData = .{
                         .CombatCommon = combat_common,
@@ -261,6 +279,7 @@ fn refreshRoleOrnamentEntity(
             buffs.born_message_id = if (ornament_born_buff_ids.len == 0) 0 else slice.items(.entity_id)[i].net_id;
         }
 
+        buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
         try scene.saveComponents(fs, alloc.gpa, entity, &.{ Scene.Entity.OrnamentComponent, Scene.Entity.FightBuffComponent });
 
         var entity_ornament_ids: std.ArrayList(i32) = .empty;
@@ -541,7 +560,10 @@ pub fn onRoleSkinChangeRequest(
     cosmetic_comp: *PlayerCosmeticComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const request = txn.message;
     const role = role_comp.role_map.getPtr(request.RoleId) orelse {
         txn.respond(.{ .ErrorCode = .RequestParamError });
@@ -587,11 +609,13 @@ pub fn onRoleSkinChangeRequest(
         txn.conn,
         alloc,
         &.{request.RoleId},
+        buff_timers,
+        now_ms,
     );
 
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
     try events.enqueue(.update_formations, .{});
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_ids);
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_ids, buff_timers, now_ms);
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -605,7 +629,10 @@ pub fn onChangeOrnamentRequest(
     scene: *Scene,
     role_comp: *PlayerRoleComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const role_skin_id = txn.message.RoleSkinId;
     const ornament_id = txn.message.OrnamentId;
     const role_id = roleIdForSkin(assets, role_skin_id) orelse {
@@ -632,7 +659,7 @@ pub fn onChangeOrnamentRequest(
     if (changed) {
         try events.enqueue(.role_info_modified, .{ .role_id = role_id });
         try events.enqueue(.update_formations, .{});
-        try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_ids);
+        try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_ids, buff_timers, now_ms);
     }
 
     txn.respond(.{ .ErrorCode = .Success });

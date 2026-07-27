@@ -69,12 +69,29 @@ pub fn init(
 }
 
 pub fn deinit(s: *State, fs: *FileSystem) void {
+    const now_ms = (Io.Clock.awake).now(s.io).toMilliseconds();
+    if (s.scene) |*scene| {
+        DirtySaveQueue.saveAllBuffs(
+            s.gpa,
+            fs,
+            scene,
+            &s.timers.buffs,
+            s.assets,
+            now_ms,
+        ) catch |err| {
+            log.err("failed to save buff durations during session cleanup: {t}", .{err});
+        };
+    }
+
     s.dirty_saves.flush(
         s.gpa,
         fs,
         &s.player_components.role,
         &s.player_components.weapon,
         if (s.scene) |*scene| scene else null,
+        &s.timers.buffs,
+        s.assets,
+        now_ms,
     ) catch |err| {
         log.err("failed to flush dirty saves during session cleanup: {t}", .{err});
     };

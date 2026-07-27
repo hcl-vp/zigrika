@@ -11,6 +11,7 @@ const PlayerWeaponComponent = @import("../../../logic/component/player/PlayerWea
 const PlayerInventoryComponent = @import("../../../logic/component/player/PlayerInventoryComponent.zig");
 const EchoInfo = @import("../../../fs/EchoInfo.zig");
 const Entity = Scene.Entity;
+const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
 const shared = @import("shared.zig");
 
 const addConsume = shared.addConsume;
@@ -40,7 +41,10 @@ pub fn onPhantomLevelUpRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const item = echo_comp.echo_map.getPtr(txn.message.IncId) orelse {
         txn.respond(.{ .ErrorCode = .ErrPhantomItemNotExist });
         return;
@@ -153,7 +157,7 @@ pub fn onPhantomLevelUpRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
     }
 
     txn.respond(.{
@@ -180,7 +184,10 @@ pub fn onPhantomIdentifyRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     if (txn.message.Count <= 0) {
         txn.respond(.{ .ErrorCode = .ErrPhantomConsumeItemCount });
         return;
@@ -241,7 +248,7 @@ pub fn onPhantomIdentifyRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
     }
 
     txn.respond(.{
@@ -267,7 +274,10 @@ pub fn onPhantomPolishRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const item = echo_comp.echo_map.getPtr(txn.message.IncrId) orelse {
         txn.respond(.{ .ErrorCode = .ErrPhantomItemNotExist });
         return;
@@ -287,7 +297,7 @@ pub fn onPhantomPolishRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
     }
 
     txn.respond(.{
@@ -313,7 +323,10 @@ pub fn onPhantomBatchPolishRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     if (txn.message.IncrIds.items.len == 0) {
         txn.respond(.{ .ErrorCode = .ErrPhantomBatchPolishCount });
         return;
@@ -353,7 +366,7 @@ pub fn onPhantomBatchPolishRequest(
 
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
     }
 
     txn.respond(.{
@@ -440,7 +453,10 @@ pub fn onPhantomVicePolishAckRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const item = echo_comp.echo_map.getPtr(txn.message.IncrId) orelse {
         txn.respond(.{ .ErrorCode = .ErrPhantomItemNotExist });
         return;
@@ -466,7 +482,7 @@ pub fn onPhantomVicePolishAckRequest(
         defer changed_roles.deinit(alloc.gpa);
         if (changed_roles.count() != 0) {
             try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-            try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+            try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
         }
     }
 

@@ -14,6 +14,8 @@ const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComp
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const EntityComponentStorage = @import("../../logic/component/entity/EntityComponentStorage.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("../../logic/helpers/entity_proto.zig");
 
 fn build_fight_formations(
     alloc: mem.Alloc,
@@ -75,8 +77,11 @@ pub fn onUpdateFormationRequest(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
     const log = std.log.scoped(.formation_update);
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
 
     for (txn.message.Formations.items) |fight_formation| {
         const formation_id = fight_formation.FormationId - 1;
@@ -204,20 +209,39 @@ pub fn onUpdateFormationRequest(
                     }
                 }
                 const storage = scene.entities.get(entity.index);
-                const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
+                const entity_pb = try entity_proto.build(
+                    alloc,
+                    assets,
+                    scene,
+                    buff_timers,
+                    entity.net_id,
+                    now_ms,
+                );
                 try role_entity_pbs.append(alloc.gpa, entity_pb);
 
                 if (storage.concomitant) |concomitant| {
                     for (concomitant.vision_entity_id) |concom_id| {
-                        const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-                        const concom_storage = scene.entities.get(concom_index);
-                        const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+                        if (!scene.net_id_map.contains(concom_id)) continue;
+                        const concom_pb = try entity_proto.build(
+                            alloc,
+                            assets,
+                            scene,
+                            buff_timers,
+                            concom_id,
+                            now_ms,
+                        );
                         try concom_entity_pbs.append(alloc.gpa, concom_pb);
                     }
                     for (concomitant.custom_entity_ids) |concom_id| {
-                        const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-                        const concom_storage = scene.entities.get(concom_index);
-                        const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+                        if (!scene.net_id_map.contains(concom_id)) continue;
+                        const concom_pb = try entity_proto.build(
+                            alloc,
+                            assets,
+                            scene,
+                            buff_timers,
+                            concom_id,
+                            now_ms,
+                        );
                         try concom_entity_pbs.append(alloc.gpa, concom_pb);
                     }
                 }
@@ -302,6 +326,8 @@ pub fn onUpdateFormationRequest(
         }
     }
 
+    try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+    buff_timers.syncAllLeftDurations(scene, now_ms);
     try scene.save(fs, alloc.gpa);
     try events.enqueue(.update_formations, .{});
     txn.respond(.{});

@@ -17,6 +17,8 @@ const Attributes = @import("../../../logic/helpers/attributes.zig");
 const RoleAttributeSync = @import("../../helpers/role_attribute_sync.zig");
 const sliceToArrayList = @import("../../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Entity = Scene.Entity;
+const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("../../../logic/helpers/entity_proto.zig");
 pub fn phantomItemList(echo_comp: *PlayerEchoComponent, arena: std.mem.Allocator) !std.ArrayList(pb.PhantomItem) {
     var list: std.ArrayList(pb.PhantomItem) = .empty;
     try list.ensureTotalCapacity(arena, echo_comp.echo_map.count());
@@ -231,6 +233,8 @@ pub fn refreshRoleEntities(
         *Entity.FightBuffComponent,
     }),
     changed_roles: std.array_hash_map.Auto(i32, void),
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !void {
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
 
@@ -265,6 +269,8 @@ pub fn refreshRoleEntities(
             entity.net_id,
             desired,
             concomitant_comp,
+            buff_timers,
+            now_ms,
         );
         const vision_skill_changed = try syncVisionSkills(
             txn,
@@ -279,9 +285,28 @@ pub fn refreshRoleEntities(
             vision_skill_comp,
         );
         const attribute_changed = try syncEchoAttributes(txn, alloc, assets, role_comp, config.config_id, weapon_comp, echo_comp, entity.net_id, attr_comp);
-        const buff_changed = try syncEchoBuffEffects(txn, alloc, scene, assets, entity.net_id, config.config_id, echo_comp, buff_comp);
+        const buff_changed = try syncEchoBuffEffects(
+            txn,
+            alloc,
+            scene,
+            assets,
+            entity.net_id,
+            config.config_id,
+            echo_comp,
+            buff_comp,
+            buff_timers,
+            now_ms,
+        );
 
         if (!vision_state.changed and !vision_skill_changed and !attribute_changed and !buff_changed) continue;
+        try buff_timers.ensureEntityRegistered(
+            alloc.gpa,
+            scene,
+            assets,
+            entity.net_id,
+            now_ms,
+        );
+        buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
         try scene.saveComponents(fs, alloc.gpa, entity, &.{
             Entity.VisionSkillComponent,
             Entity.ConcomitantComponent,
@@ -301,6 +326,8 @@ pub fn refreshRoleEntities(
             txn.conn,
             alloc,
             reset_roles.keys(),
+            buff_timers,
+            now_ms,
         );
     }
 
@@ -348,6 +375,8 @@ fn syncVisionEntities(
     role_entity_id: i64,
     desired: DesiredVisionState,
     concomitant_comp: *Entity.ConcomitantComponent,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !SyncedVisionState {
     const desired_summons = [_]i32{ desired.main_summon_id, desired.combo_summon_id };
     var desired_entities = [_]i64{ 0, 0 };
@@ -386,8 +415,17 @@ fn syncVisionEntities(
             role_entity_id,
         )) |vision_entity| {
             desired_entities[desired_index] = vision_entity.net_id;
-            const storage = scene.entities.get(vision_entity.index);
-            try add_pbs.append(alloc.arena, try storage.entityToProto(vision_entity.net_id, alloc, assets));
+            try add_pbs.append(
+                alloc.arena,
+                try entity_proto.build(
+                    alloc,
+                    assets,
+                    scene,
+                    buff_timers,
+                    vision_entity.net_id,
+                    now_ms,
+                ),
+            );
         }
     }
 
@@ -603,7 +641,16 @@ fn syncEchoBuffEffects(
     role_id: i32,
     echo_comp: *PlayerEchoComponent,
     buff_comp: *Entity.FightBuffComponent,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !bool {
+    try buff_timers.ensureEntityRegistered(
+        alloc.gpa,
+        scene,
+        assets,
+        entity_id,
+        now_ms,
+    );
     var notify: pb.CombatReceivePackNotify = .{};
     const expected = try echo_comp.activeEchoBuffEffects(alloc.gpa, assets, role_id);
     defer alloc.gpa.free(expected);
@@ -615,6 +662,7 @@ fn syncEchoBuffEffects(
             std.mem.indexOfScalar(i64, expected, buff.BuffId) == null)
         {
             const handle_id = buff.HandleId;
+            buff_timers.cancelHandle(entity_id, handle_id);
             buff_comp.removeByHandleId(alloc.gpa, handle_id);
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
@@ -640,6 +688,7 @@ fn syncEchoBuffEffects(
         buff_comp.fight_buff_infos = try alloc.gpa.realloc(buff_comp.fight_buff_infos, buff_comp.fight_buff_infos.len + 1);
         const buff_info = Assets.DataTables.createBuffInformation(scene.instance.buff_handle, buff_id, entity_id, entity_id, true);
         buff_comp.fight_buff_infos[buff_comp.fight_buff_infos.len - 1] = buff_info;
+        try buff_timers.syncBuff(alloc.gpa, assets, buff_info, entity_id, now_ms);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entity_id },

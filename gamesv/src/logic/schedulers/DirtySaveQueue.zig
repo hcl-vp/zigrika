@@ -6,6 +6,8 @@ const Scene = @import("../Scene.zig");
 const PlayerRoleComponent = @import("../component/player/PlayerRoleComponent.zig");
 const PlayerWeaponComponent = @import("../component/player/PlayerWeaponComponent.zig");
 const ScheduledJob = @import("ScheduledJob.zig");
+const BuffTimerScheduler = @import("BuffTimerScheduler.zig");
+const Assets = @import("../../data/Assets.zig");
 
 const Allocator = std.mem.Allocator;
 
@@ -52,6 +54,9 @@ pub fn flush(
     role_comp: *const PlayerRoleComponent,
     weapon_comp: *const PlayerWeaponComponent,
     scene: ?*Scene,
+    buff_timers: *BuffTimerScheduler,
+    assets: *const Assets,
+    now_ms: i64,
 ) !void {
     if (!queue.hasPending()) return;
 
@@ -86,8 +91,20 @@ pub fn flush(
             );
         }
 
+        if (queue.buff_entity_ids.items.len != 0) {
+            for (queue.buff_entity_ids.items) |entity_id| {
+                try buff_timers.ensureEntityRegistered(
+                    gpa,
+                    scene_ref,
+                    assets,
+                    entity_id,
+                    now_ms,
+                );
+            }
+        }
         for (queue.buff_entity_ids.items) |entity_id| {
             const entity = entityByNetId(scene_ref, entity_id) orelse continue;
+            buff_timers.syncEntityLeftDurations(scene_ref, entity_id, now_ms);
             try scene_ref.saveComponents(
                 fs,
                 gpa,
@@ -98,6 +115,29 @@ pub fn flush(
     }
 
     queue.clearRetainingCapacity();
+}
+
+pub fn saveAllBuffs(
+    gpa: Allocator,
+    fs: *FileSystem,
+    scene: *Scene,
+    buff_timers: *BuffTimerScheduler,
+    assets: *const Assets,
+    now_ms: i64,
+) !void {
+    try buff_timers.ensureAllRegistered(gpa, scene, assets, now_ms);
+    buff_timers.syncAllLeftDurations(scene, now_ms);
+
+    const slice = scene.entities.slice();
+    for (slice.items(.entity_id), slice.items(.buffs), 0..) |entity_id, maybe_buffs, index| {
+        if (maybe_buffs == null) continue;
+        try scene.saveComponents(
+            fs,
+            gpa,
+            .{ .index = index, .net_id = entity_id.net_id },
+            &.{Scene.Entity.FightBuffComponent},
+        );
+    }
 }
 
 fn hasPending(queue: *const DirtySaveQueue) bool {

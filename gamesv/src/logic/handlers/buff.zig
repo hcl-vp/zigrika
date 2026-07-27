@@ -65,6 +65,13 @@ pub fn addBuffToEntity(
     var notify: pb.CombatReceivePackNotify = .{};
     const clock: std.Io.Clock = .awake;
     const now_ms = clock.now(io).toMilliseconds();
+    try buff_timers.ensureEntityRegistered(
+        alloc.gpa,
+        scene,
+        assets,
+        event.data.target.net_id,
+        now_ms,
+    );
 
     for (event.data.buffs) |entry| {
         const buff_data = assets.tables.buff.getDataById(entry.id) orelse continue;
@@ -86,6 +93,12 @@ pub fn addBuffToEntity(
                 event.data.target.net_id,
                 now_ms,
             );
+            buff_timers.syncHandleLeftDuration(
+                scene,
+                event.data.target.net_id,
+                buff.HandleId,
+                now_ms,
+            );
         } else {
             scene.*.instance.buff_handle += 1;
             item[0].fight_buff_infos = try alloc.gpa.realloc(item[0].fight_buff_infos, item[0].fight_buff_infos.len + 1);
@@ -104,6 +117,12 @@ pub fn addBuffToEntity(
                 assets,
                 buff,
                 event.data.target.net_id,
+                now_ms,
+            );
+            buff_timers.syncHandleLeftDuration(
+                scene,
+                event.data.target.net_id,
+                buff.HandleId,
                 now_ms,
             );
             try notify.Data.append(alloc.arena, .{ .Message = .{

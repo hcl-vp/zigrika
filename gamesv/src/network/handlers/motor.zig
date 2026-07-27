@@ -12,6 +12,8 @@ const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const PlayerID = @import("../../logic/PlayerID.zig");
 const PlayerEntityTemplates = @import("../../logic/templates/PlayerEntityTemplates.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("../../logic/helpers/entity_proto.zig");
 
 fn intList(arena: std.mem.Allocator, items: []const i32) !std.ArrayList(i32) {
     var list: std.ArrayList(i32) = .empty;
@@ -330,6 +332,8 @@ fn pushEntityAddNotify(
     scene: *Scene,
     entity: Scene.Entity,
     assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !void {
     var role_entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
     defer role_entity_pbs.deinit(alloc.gpa);
@@ -337,13 +341,22 @@ fn pushEntityAddNotify(
     defer concom_entity_pbs.deinit(alloc.gpa);
 
     const storage = scene.entities.get(entity.index);
-    try role_entity_pbs.append(alloc.gpa, try storage.entityToProto(entity.net_id, alloc, assets));
+    try role_entity_pbs.append(
+        alloc.gpa,
+        try entity_proto.build(alloc, assets, scene, buff_timers, entity.net_id, now_ms),
+    );
 
     if (storage.concomitant) |concomitant| {
         for (concomitant.custom_entity_ids) |concom_id| {
-            const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-            const concom_storage = scene.entities.get(concom_index);
-            const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+            if (!scene.net_id_map.contains(concom_id)) continue;
+            const concom_pb = try entity_proto.build(
+                alloc,
+                assets,
+                scene,
+                buff_timers,
+                concom_id,
+                now_ms,
+            );
             try concom_entity_pbs.append(alloc.gpa, concom_pb);
         }
     }
@@ -365,6 +378,8 @@ fn pushEntityRefreshNotify(
     scene: *Scene,
     entity: Scene.Entity,
     assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !void {
     const storage = scene.entities.get(entity.index);
     var remove_infos: std.ArrayList(pb.EntityRemoveInfo) = .empty;
@@ -380,7 +395,7 @@ fn pushEntityRefreshNotify(
         .IsRemove = true,
         .RemoveInfos = remove_infos,
     }, alloc.arena);
-    try pushEntityAddNotify(conn, alloc, scene, entity, assets);
+    try pushEntityAddNotify(conn, alloc, scene, entity, assets, buff_timers, now_ms);
 }
 
 fn pushEntityRemoveNotify(
@@ -558,8 +573,11 @@ pub fn onChangeVehicleRideSharingRequest(
     scene: *Scene,
     assets: *const Assets,
     role_comp: *PlayerRoleComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
     const passenger_seat = 1;
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
 
     if (txn.message.RoleId <= 0) {
         txn.respond(.{ .ErrorCode = .RequestParamError });
@@ -588,7 +606,15 @@ pub fn onChangeVehicleRideSharingRequest(
         player_scene_entity,
     );
     if (companion.created) {
-        try pushEntityAddNotify(txn.conn, alloc, scene, companion.entity, assets);
+        try pushEntityAddNotify(
+            txn.conn,
+            alloc,
+            scene,
+            companion.entity,
+            assets,
+            buff_timers,
+            now_ms,
+        );
     }
 
     if (PlayerEntityTemplates.findMotorcyclePassengerEntity(scene, assets)) |old_passenger| {
@@ -612,7 +638,15 @@ pub fn onChangeVehicleRideSharingRequest(
         },
         else => return err,
     };
-    try pushEntityAddNotify(txn.conn, alloc, scene, passenger_entity, assets);
+    try pushEntityAddNotify(
+        txn.conn,
+        alloc,
+        scene,
+        passenger_entity,
+        assets,
+        buff_timers,
+        now_ms,
+    );
 
     try txn.conn.push(pb.UpdateVehicleRideSharingNotify{
         .PlayerId = player_id.id,
@@ -762,8 +796,11 @@ pub fn onMotorUseSkinRequest(
     motor_comp: *PlayerMotorComponent,
     scene: *Scene,
     assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
     const previous_frame = motor_comp.info.equipped_frame;
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const skin = assets.tables.motor_skin.getDataById(txn.message.SkinId) orelse {
         txn.respond(.{
             .ErrorCode = .MotorOutlookNotOwned,
@@ -804,7 +841,15 @@ pub fn onMotorUseSkinRequest(
     }, alloc.arena);
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
         if (previous_frame != frame) {
-            try pushEntityRefreshNotify(txn.conn, alloc, scene, entity, assets);
+            try pushEntityRefreshNotify(
+                txn.conn,
+                alloc,
+                scene,
+                entity,
+                assets,
+                buff_timers,
+                now_ms,
+            );
         } else {
             try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
                 .EntityId = entity.net_id,
@@ -824,8 +869,11 @@ pub fn onMotorChangeOutlookRequest(
     motor_comp: *PlayerMotorComponent,
     scene: *Scene,
     assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
     const previous_frame = motor_comp.info.equipped_frame;
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const frame = resolveFrame(assets, txn.message.FrameEquipped, motor_comp.info.equipped_frame) catch |err| {
         if (motorOutlookErrorCode(err)) |code| {
             txn.respond(.{ .ErrorCode = code });
@@ -859,7 +907,15 @@ pub fn onMotorChangeOutlookRequest(
     }, alloc.arena);
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
         if (previous_frame != frame) {
-            try pushEntityRefreshNotify(txn.conn, alloc, scene, entity, assets);
+            try pushEntityRefreshNotify(
+                txn.conn,
+                alloc,
+                scene,
+                entity,
+                assets,
+                buff_timers,
+                now_ms,
+            );
         } else {
             try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
                 .EntityId = entity.net_id,

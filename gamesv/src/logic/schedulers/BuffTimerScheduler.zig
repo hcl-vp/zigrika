@@ -124,82 +124,7 @@ pub fn syncBuff(
     };
 }
 
-pub fn drainDue(
-    scheduler: *BuffTimerScheduler,
-    event: EventQueue.Dequeue(.buff_timer_tick),
-    events: *EventQueue,
-    scene: *Scene,
-    assets: *const Assets,
-    fs: *FileSystem,
-    io: std.Io,
-    query: Scene.Query(&.{
-        Entity,
-        *Entity.FightBuffComponent,
-        ?*Entity.AttributeComponent,
-    }),
-    combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
-    alloc: mem.Alloc,
-) !void {
-    const now_ms = event.data.now_ms;
-    try scheduler.initialize(alloc.gpa, scene, assets, now_ms);
-
-    while (scheduler.popDue(now_ms)) |entry| {
-        switch (entry.kind) {
-            .expiry => {
-                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                syncLeftDuration(lookup[1], entry.due_ms, now_ms);
-
-                const handle_ids = try alloc.arena.alloc(i32, 1);
-                handle_ids[0] = entry.handle_id;
-                scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                try events.enqueue(.buff_removal, .{
-                    .entity = lookup[0],
-                    .handle_ids = handle_ids,
-                });
-            },
-            .periodic_pulse => {
-                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                const buff_info = lookup[1];
-                const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse {
-                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-                    continue;
-                };
-                if (scheduler.deadline(entry.entity_id, entry.handle_id, .expiry)) |expiry_ms| {
-                    syncLeftDuration(buff_info, expiry_ms, now_ms);
-                }
-                try buff_helper.execute_periodic_buff_effects(
-                    combat_receive_pack,
-                    entry.entity_id,
-                    buff_info.InstigatorId,
-                    &buff_data,
-                    scene,
-                    fs,
-                    io,
-                    query,
-                    alloc,
-                );
-                scheduler.upsert(alloc.gpa, .{
-                    .kind = .periodic_pulse,
-                    .entity_id = entry.entity_id,
-                    .handle_id = entry.handle_id,
-                    .due_ms = now_ms + @max(entry.interval_ms, 1),
-                    .interval_ms = entry.interval_ms,
-                }) catch |err| {
-                    scheduler.invalidate();
-                    return err;
-                };
-            },
-        }
-    }
-}
-
-fn initialize(
+pub fn ensureInitialized(
     scheduler: *BuffTimerScheduler,
     gpa: Allocator,
     scene: *Scene,
@@ -226,6 +151,158 @@ fn initialize(
     }
 
     scheduler.initialized = true;
+}
+
+pub fn ensureEntityRegistered(
+    scheduler: *BuffTimerScheduler,
+    gpa: Allocator,
+    scene: *Scene,
+    assets: *const Assets,
+    entity_id: i64,
+    now_ms: i64,
+) !void {
+    try scheduler.ensureInitialized(gpa, scene, assets, now_ms);
+
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const slice = scene.entities.slice();
+    const buffs = slice.items(.buffs)[index] orelse return;
+    for (buffs.fight_buff_infos) |buff_info| {
+        try scheduler.registerMissingBuff(gpa, assets, buff_info, entity_id, now_ms);
+    }
+}
+
+pub fn ensureAllRegistered(
+    scheduler: *BuffTimerScheduler,
+    gpa: Allocator,
+    scene: *Scene,
+    assets: *const Assets,
+    now_ms: i64,
+) !void {
+    try scheduler.ensureInitialized(gpa, scene, assets, now_ms);
+
+    const slice = scene.entities.slice();
+    for (slice.items(.entity_id), slice.items(.buffs)) |entity_id, maybe_buffs| {
+        const buffs = maybe_buffs orelse continue;
+        for (buffs.fight_buff_infos) |buff_info| {
+            try scheduler.registerMissingBuff(
+                gpa,
+                assets,
+                buff_info,
+                entity_id.net_id,
+                now_ms,
+            );
+        }
+    }
+}
+
+pub fn syncHandleLeftDuration(
+    scheduler: *const BuffTimerScheduler,
+    scene: *Scene,
+    entity_id: i64,
+    handle_id: i32,
+    now_ms: i64,
+) void {
+    const lookup = scheduler.findEntityBuff(scene, entity_id, handle_id) orelse return;
+    scheduler.syncBuffLeftDuration(lookup[1], entity_id, now_ms);
+}
+
+pub fn syncEntityLeftDurations(
+    scheduler: *const BuffTimerScheduler,
+    scene: *Scene,
+    entity_id: i64,
+    now_ms: i64,
+) void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const slice = scene.entities.slice();
+    const buffs = if (slice.items(.buffs)[index]) |*component| component else return;
+    for (buffs.fight_buff_infos) |*buff_info| {
+        scheduler.syncBuffLeftDuration(buff_info, entity_id, now_ms);
+    }
+}
+
+pub fn syncAllLeftDurations(
+    scheduler: *const BuffTimerScheduler,
+    scene: *Scene,
+    now_ms: i64,
+) void {
+    const slice = scene.entities.slice();
+    for (slice.items(.entity_id), slice.items(.buffs)) |entity_id, maybe_buffs| {
+        const buffs = if (maybe_buffs) |*component| component else continue;
+        for (buffs.fight_buff_infos) |*buff_info| {
+            scheduler.syncBuffLeftDuration(buff_info, entity_id.net_id, now_ms);
+        }
+    }
+}
+
+pub fn drainDue(
+    scheduler: *BuffTimerScheduler,
+    event: EventQueue.Dequeue(.buff_timer_tick),
+    events: *EventQueue,
+    scene: *Scene,
+    assets: *const Assets,
+    fs: *FileSystem,
+    io: std.Io,
+    query: Scene.Query(&.{
+        Entity,
+        *Entity.FightBuffComponent,
+        ?*Entity.AttributeComponent,
+    }),
+    combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
+    alloc: mem.Alloc,
+) !void {
+    const now_ms = event.data.now_ms;
+    try scheduler.ensureInitialized(alloc.gpa, scene, assets, now_ms);
+
+    while (scheduler.popDue(now_ms)) |entry| {
+        switch (entry.kind) {
+            .expiry => {
+                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
+                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                    continue;
+                };
+                syncLeftDuration(lookup[1], entry.due_ms, now_ms);
+                const handle_ids = try alloc.arena.alloc(i32, 1);
+                handle_ids[0] = entry.handle_id;
+                scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                try events.enqueue(.buff_removal, .{
+                    .entity = lookup[0],
+                    .handle_ids = handle_ids,
+                });
+            },
+            .periodic_pulse => {
+                const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
+                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                    continue;
+                };
+                const buff_info = lookup[1];
+                const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse {
+                    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                    continue;
+                };
+                try buff_helper.execute_periodic_buff_effects(
+                    combat_receive_pack,
+                    entry.entity_id,
+                    buff_info.InstigatorId,
+                    &buff_data,
+                    scene,
+                    fs,
+                    io,
+                    query,
+                    alloc,
+                );
+                scheduler.upsert(alloc.gpa, .{
+                    .kind = .periodic_pulse,
+                    .entity_id = entry.entity_id,
+                    .handle_id = entry.handle_id,
+                    .due_ms = now_ms + @max(entry.interval_ms, 1),
+                    .interval_ms = entry.interval_ms,
+                }) catch |err| {
+                    scheduler.invalidate();
+                    return err;
+                };
+            },
+        }
+    }
 }
 
 fn registerBuff(
@@ -259,8 +336,44 @@ fn registerBuff(
     }
 }
 
-fn findEntityBuff(
+fn registerMissingBuff(
     scheduler: *BuffTimerScheduler,
+    gpa: Allocator,
+    assets: *const Assets,
+    buff_info: pb.FightBuffInformation,
+    entity_id: i64,
+    now_ms: i64,
+) !void {
+    const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse return;
+
+    if (buff_data.DurationPolicy == .HasDuration and
+        buff_info.LeftDuration > 0 and
+        scheduler.deadline(entity_id, buff_info.HandleId, .expiry) == null)
+    {
+        try scheduler.upsert(gpa, .{
+            .kind = .expiry,
+            .entity_id = entity_id,
+            .handle_id = buff_info.HandleId,
+            .due_ms = now_ms + secondsToMs(buff_info.LeftDuration),
+        });
+    }
+
+    if (buff_data.Period > 0 and
+        scheduler.deadline(entity_id, buff_info.HandleId, .periodic_pulse) == null)
+    {
+        const interval_ms = secondsToMs(buff_data.Period);
+        try scheduler.upsert(gpa, .{
+            .kind = .periodic_pulse,
+            .entity_id = entity_id,
+            .handle_id = buff_info.HandleId,
+            .due_ms = now_ms + interval_ms,
+            .interval_ms = interval_ms,
+        });
+    }
+}
+
+fn findEntityBuff(
+    scheduler: *const BuffTimerScheduler,
     scene: *Scene,
     entity_id: i64,
     handle_id: i32,
@@ -384,6 +497,16 @@ fn syncLeftDuration(
     }
 
     buff_info.LeftDuration = remaining_seconds;
+}
+
+fn syncBuffLeftDuration(
+    scheduler: *const BuffTimerScheduler,
+    buff_info: *pb.FightBuffInformation,
+    entity_id: i64,
+    now_ms: i64,
+) void {
+    const due_ms = scheduler.deadline(entity_id, buff_info.HandleId, .expiry) orelse return;
+    syncLeftDuration(buff_info, due_ms, now_ms);
 }
 
 fn secondsToMs(seconds: f32) i64 {
