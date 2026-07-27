@@ -15,6 +15,9 @@ const krkcp_ack: u8 = 0xEE;
 const kcp_overhead = @import("network/kcp.zig").overhead;
 
 pub const RawPacket = mem.FixedBuffer(mtu);
+pub const OwnedMessage = struct {
+    bytes: []u8,
+};
 pub const OwnedFrame = struct {
     bytes: []u8,
 };
@@ -37,11 +40,10 @@ pub const ConnectionHandle = struct {
     io: Io,
     socket: *const Io.net.Socket,
     address: Io.net.IpAddress,
-    consecutive_send_failures: u8,
     queue_buf: [16]RawPacket,
     queue: Io.Queue(RawPacket),
-    inbound_buf: [128]OwnedFrame,
-    inbound: Io.Queue(OwnedFrame),
+    inbound_buf: [128]OwnedMessage,
+    inbound: Io.Queue(OwnedMessage),
     outbound_buf: [512]OwnedFrame,
     outbound: Io.Queue(OwnedFrame),
     closed_event: Io.Event,
@@ -51,9 +53,8 @@ pub const ConnectionHandle = struct {
         handle.socket = socket;
         handle.address = address;
         handle.conv_id = conv_id;
-        handle.consecutive_send_failures = 0;
         handle.queue = Io.Queue(RawPacket).init(handle.queue_buf[0..]);
-        handle.inbound = Io.Queue(OwnedFrame).init(handle.inbound_buf[0..]);
+        handle.inbound = Io.Queue(OwnedMessage).init(handle.inbound_buf[0..]);
         handle.outbound = Io.Queue(OwnedFrame).init(handle.outbound_buf[0..]);
         handle.closed_event = .unset;
     }
@@ -244,10 +245,11 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
                 if (conv_id > connections.items.len) continue;
                 const handle = connections.items[conv_id - 1] orelse continue;
 
-                handle.queue.putOne(io, .{
+                const packet: RawPacket = .{
                     .buf = recv_buffer,
                     .len = message.data.len,
-                }) catch continue;
+                };
+                _ = handle.queue.put(io, &.{packet}, 0) catch continue;
             }
         },
         .client => |handle| {
