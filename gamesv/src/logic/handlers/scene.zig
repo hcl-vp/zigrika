@@ -27,6 +27,33 @@ const Entity = Scene.Entity;
 const Io = std.Io;
 const lahai_roi_dungeon_id = 906;
 const roulette_slot_count = 8;
+const default_formation_roles = [_]i32{ 1211, 1108, 1506 };
+
+fn ensureValidFormation(gpa: std.mem.Allocator, formation_info: *FormationInfo) !void {
+    if (formation_info.formations.len == 0) {
+        formation_info.formations = try gpa.alloc(FormationInfo.Formation, 1);
+        formation_info.formations[0] = .{
+            .cur_role = default_formation_roles[0],
+            .roles = undefined,
+        };
+        formation_info.cur_formation = 0;
+
+        for (default_formation_roles, 0..) |role_id, i| {
+            formation_info.formations[0].roles[i] = .{
+                .role_id = role_id,
+                .entity_id = -1,
+                .on_stage_without_control = false,
+            };
+        }
+        return;
+    }
+
+    if (formation_info.cur_formation < 0 or
+        @as(usize, @intCast(formation_info.cur_formation)) >= formation_info.formations.len)
+    {
+        formation_info.cur_formation = 0;
+    }
+}
 
 fn rouletteSkillIds(arena: std.mem.Allocator, ids: []const i32) !std.ArrayList(i32) {
     const items = try arena.alloc(i32, roulette_slot_count);
@@ -274,24 +301,9 @@ pub fn onInitialSceneJoin(
         scene.explore_tools_info.active_function_skill = 0;
         scene.explore_tools_info.motorcycle_roulette = try alloc.gpa.dupe(i32, &[_]i32{ 6001, 6003, 6007, 6011, 6012, 6020, 0, 0 });
         scene.explore_tools_info.active_motorcycle_skill = 6001;
-
-        const roles = [_]i32{ 1211, 1108, 1506 };
-
-        scene.formation_info.formations = try alloc.gpa.alloc(FormationInfo.Formation, 1);
-        scene.formation_info.formations[0] = .{
-            .cur_role = roles[0],
-            .roles = undefined,
-        };
-        scene.formation_info.cur_formation = 0;
-
-        for (roles, 0..) |role, i| {
-            scene.formation_info.formations[0].roles[i] = .{
-                .role_id = role,
-                .entity_id = -1,
-                .on_stage_without_control = false,
-            };
-        }
     }
+
+    try ensureValidFormation(alloc.gpa, &scene.formation_info);
 
     const new_scene_now_ms = (Io.Clock.awake).now(io).toMilliseconds();
     try timers.buffs.ensureAllRegistered(alloc.gpa, &scene, assets, new_scene_now_ms);
