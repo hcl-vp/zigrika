@@ -212,7 +212,7 @@ pub fn pushRolePropUpdate(
 ) !void {
     try txn.conn.push(pb.RolePhantomPropUpdateNotify{
         .PropInfo = try changedRolePropInfoList(assets, role_comp, echo_comp, weapon_comp, changed_roles, alloc.gpa, alloc.arena),
-    }, alloc.arena);
+    });
 }
 
 pub fn refreshRoleEntities(
@@ -446,13 +446,13 @@ fn syncVisionEntities(
         try txn.conn.push(pb.EntityRemoveNotify{
             .IsRemove = true,
             .RemoveInfos = remove_infos,
-        }, alloc.arena);
+        });
     }
     if (add_pbs.items.len != 0) {
         try txn.conn.push(pb.EntityAddNotify{
             .RemoveTagIds = false,
             .EntityPbs = add_pbs,
-        }, alloc.arena);
+        });
     }
 
     return .{
@@ -515,7 +515,7 @@ fn syncVisionSkills(
     try txn.conn.push(pb.VisionSkillChangeNotify{
         .EntityId = role_entity_id,
         .VisionSkillInfos = sliceToArrayList(pb.VisionSkillInformation, vision_skill_comp.vision_skills),
-    }, alloc.arena);
+    });
     return true;
 }
 
@@ -629,7 +629,7 @@ fn pushChangedAttributes(
         } });
     }
 
-    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data });
 }
 
 fn syncEchoBuffEffects(
@@ -709,7 +709,7 @@ fn syncEchoBuffEffects(
     }
 
     if (notify.Data.items.len != 0) {
-        try txn.conn.push(notify, alloc.arena);
+        try txn.conn.push(notify);
         return true;
     }
     return false;

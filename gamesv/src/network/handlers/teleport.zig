@@ -56,13 +56,13 @@ pub fn onTeleportTransferRequest(
         try txn.conn.push(pb.TeleportNotify{
             .MapId = teleporter.MapId,
             .Pos = .{ .X = x, .Y = y, .Z = z },
-        }, alloc.arena);
+        });
     } else {
         try txn.conn.push(pb.LeaveSceneNotify{
             .PlayerId = scene_comp.player_id,
             .SceneId = "",
             .TransitionOption = .{},
-        }, alloc.arena);
+        });
         scene_comp.last_scene_info.instance_id = teleporter.MapId;
         try scene.saveLastScene(scene_comp, fs, alloc.gpa);
         try events.enqueue(.initial_scene_join, .{ .location = .{ x, y, z } });

@@ -85,22 +85,8 @@ fn AuthContext(comptime R: type) type {
         player_id: *?i32,
         enter: *bool,
 
-        pub fn respond(ac: @This(), response: anytype, arena: Allocator) !void {
-            const name = @typeName(@TypeOf(response))[3..];
-            if (!@hasDecl(proto.pb_desc, name)) return;
-
-            const header: Message.Header.Response = .{
-                .rpc_id = ac.rpc_id,
-                .seq_no = ac.conn.nextSeqNo(),
-                .msg_id = @field(proto.pb_desc, name).msg_id,
-            };
-
-            _ = try ac.conn.kcp.send(try Message.encodeAlloc(
-                .{ .response = header },
-                response,
-                arena,
-                ac.conn.session_key,
-            ));
+        pub fn respond(ac: @This(), response: anytype) !void {
+            try ac.conn.respond(ac.rpc_id, response);
         }
     };
 }
@@ -120,7 +106,7 @@ pub fn handleProtoKeyRequest(ac: AuthContext(pb.ProtoKeyRequest), arena: Allocat
     try ac.respond(pb.ProtoKeyResponse{
         .Type = proto_key_type,
         .Key = encrypted_key[0..],
-    }, arena);
+    });
 
     ac.conn.session_key = session_key;
 }
@@ -134,7 +120,7 @@ pub fn handleLoginRequest(ac: AuthContext(pb.LoginRequest), arena: Allocator, fs
 
     try ac.respond(pb.LoginResponse{
         .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
-    }, arena);
+    });
 }
 
 pub fn handleReconnectRequest(ac: AuthContext(pb.ReconnectRequest), arena: Allocator, fs: *FileSystem) !void {
@@ -146,7 +132,7 @@ pub fn handleReconnectRequest(ac: AuthContext(pb.ReconnectRequest), arena: Alloc
             .ErrorCode = .ErrReconnectGWGetGatePlayerFailed,
             .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
             .IsPermittedSilentLogin = true,
-        }, arena);
+        });
         return;
     }
 
@@ -156,7 +142,7 @@ pub fn handleReconnectRequest(ac: AuthContext(pb.ReconnectRequest), arena: Alloc
             .ErrorCode = .ErrReconnectGWGetGatePlayerFailed,
             .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
             .IsPermittedSilentLogin = true,
-        }, arena);
+        });
         return;
     }
 
@@ -166,14 +152,14 @@ pub fn handleReconnectRequest(ac: AuthContext(pb.ReconnectRequest), arena: Alloc
         .ErrorCode = .Success,
         .LastRecvSeqNo = ac.request.LastSvrSeqNo,
         .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
-    }, arena);
+    });
 }
 
-pub fn handleEnterGameRequest(ac: AuthContext(pb.EnterGameRequest), arena: Allocator, fs: *FileSystem) !void {
+pub fn handleEnterGameRequest(ac: AuthContext(pb.EnterGameRequest), _: Allocator, fs: *FileSystem) !void {
     const log = std.log.scoped(.enter_game);
     log.debug("request: {}", .{ac.request});
 
     _ = fs;
     ac.enter.* = true; // switch state
-    try ac.respond(pb.EnterGameResponse{}, arena);
+    try ac.respond(pb.EnterGameResponse{});
 }

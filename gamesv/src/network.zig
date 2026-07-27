@@ -15,6 +15,9 @@ const krkcp_ack: u8 = 0xEE;
 const kcp_overhead = @import("network/kcp.zig").overhead;
 
 pub const RawPacket = mem.FixedBuffer(mtu);
+pub const OwnedFrame = struct {
+    bytes: []u8,
+};
 
 pub fn bind(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, address: Io.net.IpAddress) !Io.Future(void) {
     const log = std.log.scoped(.net_bind);
@@ -37,6 +40,10 @@ pub const ConnectionHandle = struct {
     consecutive_send_failures: u8,
     queue_buf: [16]RawPacket,
     queue: Io.Queue(RawPacket),
+    inbound_buf: [128]OwnedFrame,
+    inbound: Io.Queue(OwnedFrame),
+    outbound_buf: [512]OwnedFrame,
+    outbound: Io.Queue(OwnedFrame),
     closed_event: Io.Event,
 
     pub fn init(handle: *ConnectionHandle, io: Io, socket: *const Io.net.Socket, address: Io.net.IpAddress, conv_id: u32) void {
@@ -46,12 +53,16 @@ pub const ConnectionHandle = struct {
         handle.conv_id = conv_id;
         handle.consecutive_send_failures = 0;
         handle.queue = Io.Queue(RawPacket).init(handle.queue_buf[0..]);
+        handle.inbound = Io.Queue(OwnedFrame).init(handle.inbound_buf[0..]);
+        handle.outbound = Io.Queue(OwnedFrame).init(handle.outbound_buf[0..]);
         handle.closed_event = .unset;
     }
 
     pub fn close(handle: *ConnectionHandle) void {
         handle.closed_event.set(handle.io);
         handle.queue.close(handle.io);
+        handle.inbound.close(handle.io);
+        handle.outbound.close(handle.io);
     }
 };
 

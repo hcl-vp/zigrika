@@ -555,7 +555,7 @@ pub fn resetRoles(
         try remove_infos.append(alloc.gpa, .{ .EntityId = entity_id });
     }
     remove_notify.RemoveInfos = remove_infos;
-    try conn.push(remove_notify, alloc.arena);
+    try conn.push(remove_notify);
 
     var role_entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
     defer role_entity_pbs.deinit(alloc.gpa);
@@ -623,10 +623,10 @@ pub fn resetRoles(
 
     var role_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
     role_entity_add_notify.EntityPbs = role_entity_pbs;
-    try conn.push(role_entity_add_notify, alloc.arena);
+    try conn.push(role_entity_add_notify);
     var concom_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
     concom_entity_add_notify.EntityPbs = concom_entity_pbs;
-    try conn.push(concom_entity_add_notify, alloc.arena);
+    try conn.push(concom_entity_add_notify);
 
     var fight_role_infos: std.ArrayList(pb.FightRoleInfo) = .empty;
     defer fight_role_infos.deinit(alloc.gpa);
@@ -659,5 +659,5 @@ pub fn resetRoles(
 
     try conn.push(pb.UpdateGroupFormationNotify{
         .GroupFormation = group_formations,
-    }, alloc.arena);
+    });
 }

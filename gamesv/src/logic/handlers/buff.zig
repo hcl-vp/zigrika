@@ -38,7 +38,7 @@ pub fn removeBuffFromEntity(
         } });
     }
 
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
 
     try events.enqueue(.buff_change, .{ .entity = event.data.entity });
 
@@ -149,7 +149,7 @@ pub fn addBuffToEntity(
         }
     }
 
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
 
     try events.enqueue(.buff_change, .{ .entity = event.data.target });
 
@@ -190,7 +190,7 @@ pub fn handleBuffTimerTick(
     );
 
     if (combat_receive_pack.items.len != 0) {
-        try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+        try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack });
     }
 }
 

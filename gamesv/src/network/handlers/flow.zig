@@ -16,7 +16,7 @@ pub fn onFlowEndRequest(
     defer alloc.gpa.free(js);
     try conn.push(pb.JSPatchNotify{
         .Content = js,
-    }, alloc.arena);
+    });
 
     txn.respond(.{});
 }

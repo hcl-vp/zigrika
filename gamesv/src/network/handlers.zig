@@ -116,21 +116,7 @@ pub const NetEventHandler = struct {
 
         if (Txn.Response != void) {
             if (txn.response) |response| {
-                const name = @typeName(@TypeOf(response))[3..];
-                if (!@hasDecl(proto.pb_desc, name)) return;
-
-                const header: Message.Header.Response = .{
-                    .rpc_id = rpc_id,
-                    .seq_no = txn.conn.nextSeqNo(),
-                    .msg_id = @field(proto.pb_desc, name).msg_id,
-                };
-
-                _ = try txn.conn.kcp.send(try Message.encodeAlloc(
-                    .{ .response = header },
-                    response,
-                    state.arena.allocator(),
-                    txn.conn.session_key,
-                ));
+                try txn.conn.respond(rpc_id, response);
             } else log.err("response of type {s} is not set", .{@typeName(Txn.Response)});
         }
     }
@@ -191,9 +177,12 @@ pub fn dispatchMessage(
                 return;
             };
 
-            handler.invoke(state, msg, rpc_id) catch |err| {
-                log.err("failed to handle message of type {s}: {}", .{ @typeName(handler.Message), err });
-                return;
+            handler.invoke(state, msg, rpc_id) catch |err| switch (err) {
+                error.Closed, error.Canceled => return err,
+                else => {
+                    log.err("failed to handle message of type {s}: {}", .{ @typeName(handler.Message), err });
+                    return;
+                },
             };
 
             log.debug("handled message of type {s}", .{@typeName(handler.Message)});

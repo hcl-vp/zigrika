@@ -126,20 +126,20 @@ pub fn pushData(
     try conn.push(pb.NormalItemUpdateNotify{
         .NormalItemList = try inventory_comp.info.normalItemList(alloc.arena),
         .NoTips = true,
-    }, alloc.arena);
+    });
 
     try conn.push(pb.UnlockSkinDataNotify{
         .PhantomSkinList = try CosmeticInfo.intList(cosmetic_comp.info.phantom_skins, alloc.arena),
         .IsLogin = true,
-    }, alloc.arena);
+    });
 
     try conn.push(pb.FlyEquipAddNotify{
         .UnlockFlySkinIds = try CosmeticInfo.intList(cosmetic_comp.info.fly_skins, alloc.arena),
-    }, alloc.arena);
+    });
 
     try conn.push(pb.RoleFlyEquipNotify{
         .FlySkinEquipData = try buildFlyEquipData(role_comp, cosmetic_comp.info, alloc.arena),
-    }, alloc.arena);
+    });
 
     try conn.push(pb.OrnamentInfoNotify{
         .OrnamentInfo = .{
@@ -147,7 +147,7 @@ pub fn pushData(
             .OrnamentDressInfos = try CosmeticsHelper.buildOrnamentEquipMap(role_comp, alloc.arena),
             .RedPointOrnamentIds = try CosmeticInfo.intList(cosmetic_comp.info.viewed_ornaments, alloc.arena),
         },
-    }, alloc.arena);
+    });
 
     var storage_info_notify: pb.StorageInfoNotify = .default;
     try storage_info_notify.Infos.ensureTotalCapacity(alloc.arena, 6);
@@ -157,7 +157,7 @@ pub fn pushData(
     storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.CalabashSkinRedDot, alloc.arena));
     storage_info_notify.Infos.appendAssumeCapacity(try buildIntStorageRecord(.Ornament, cosmetic_comp.info.viewed_ornaments, alloc.arena));
     storage_info_notify.Infos.appendAssumeCapacity(try buildEmptyStorageRecord(.GetOrnament, alloc.arena));
-    try conn.push(storage_info_notify, alloc.arena);
+    try conn.push(storage_info_notify);
 
     const selected_main_role = RoleHelper.selectedMainRoleId(
         assets,
@@ -167,7 +167,7 @@ pub fn pushData(
     );
     try conn.push(pb.RoleChangeUnlockNotify{
         .UnlockRoleIds = try RoleHelper.mainRoleUnlockList(assets, basic_comp.info.attributes.sex, alloc.arena),
-    }, alloc.arena);
+    });
 
     var notify: pb.PbGetRoleListNotify = .default;
 
@@ -191,7 +191,7 @@ pub fn pushData(
         ));
     }
 
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
     try pushFavorList(conn, alloc, assets, role_comp);
     try pushMotionList(conn, alloc, assets, role_comp);
 }
@@ -246,7 +246,7 @@ fn pushFavorList(
 
     try conn.push(pb.RoleFavorListNotify{
         .FavorList = favor_list,
-    }, alloc.arena);
+    });
 }
 
 fn pushMotionList(
@@ -281,5 +281,5 @@ fn pushMotionList(
 
     try conn.push(pb.RoleMotionListNotify{
         .MotionList = motion_list,
-    }, alloc.arena);
+    });
 }

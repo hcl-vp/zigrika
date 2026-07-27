@@ -33,7 +33,7 @@ fn pushWeaponEquipNotify(txn: anytype, alloc: mem.Alloc, role_id: i32, weapon_id
         .EquipIncId = weapon_id,
     });
 
-    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list }, alloc.arena);
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list });
 }
 
 fn pushPhantomEquipNotify(
@@ -52,7 +52,7 @@ fn pushPhantomEquipNotify(
     try EchoShared.pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
     try txn.conn.push(pb.PhantomPutOnNotify{
         .EquipInfoList = try EchoShared.changedEquipInfoList(echo_comp, changed_roles, alloc.arena),
-    }, alloc.arena);
+    });
 }
 
 pub fn onRoleFavorListRequest(
@@ -213,10 +213,10 @@ pub fn onRoleSexChangeRequest(
             weapon_comp,
             echo_comp,
         ),
-    }, alloc.arena);
+    });
     try txn.conn.push(pb.RoleChangeUnlockNotify{
         .UnlockRoleIds = try RoleHelper.mainRoleUnlockList(assets, target_gender, alloc.arena),
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -224,7 +224,7 @@ pub fn onRoleSexChangeRequest(
     });
     try txn.conn.push(pb.LogoutNotify{
         .ErrorCode = .ErrSexChangeLogout,
-    }, alloc.arena);
+    });
 }
 
 pub fn onRoleElementChangeRequest(
@@ -303,7 +303,7 @@ pub fn onRoleElementChangeRequest(
             weapon_comp,
             echo_comp,
         ),
-    }, alloc.arena);
+    });
     try pushPhantomEquipNotify(txn, alloc, assets, role_comp, weapon_comp, echo_comp, target_role_id);
 
     txn.respond(.{ .ErrorCode = .Success });
@@ -565,7 +565,7 @@ pub fn onRoleActivateSkillRequest(
     try txn.conn.push(pb.RoleSkillNodeNotify{
         .RoleId = request.RoleId,
         .SkillNodeState = node_states,
-    }, alloc.arena);
+    });
     try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, request.RoleId);
 
     txn.respond(.{
@@ -790,7 +790,7 @@ pub fn onResonantChainUnlockRequest(
     try txn.conn.push(pb.NormalItemUpdateNotify{
         .NormalItemList = updated_items,
         .NoTips = true,
-    }, alloc.arena);
+    });
     try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, request.RoleId);
 
     txn.respond(.{

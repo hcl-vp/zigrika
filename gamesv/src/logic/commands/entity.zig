@@ -154,9 +154,9 @@ pub const spawn = struct {
                 "globalThis.__zigrikaSetEntitySourceMap?.({d},{d});",
                 .{ entity_id, entity_config.MapId },
             ),
-        }, alloc.arena);
+        });
 
-        try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
+        try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs });
 
         try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, ai_id: {any}", .{ entity_id, is_frozen, is_tune_broken, ai_id });
     }

@@ -363,12 +363,12 @@ fn pushEntityAddNotify(
 
     var role_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
     role_entity_add_notify.EntityPbs = role_entity_pbs;
-    try conn.push(role_entity_add_notify, alloc.arena);
+    try conn.push(role_entity_add_notify);
 
     if (concom_entity_pbs.items.len != 0) {
         var concom_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
         concom_entity_add_notify.EntityPbs = concom_entity_pbs;
-        try conn.push(concom_entity_add_notify, alloc.arena);
+        try conn.push(concom_entity_add_notify);
     }
 }
 
@@ -394,7 +394,7 @@ fn pushEntityRefreshNotify(
     try conn.push(pb.EntityRemoveNotify{
         .IsRemove = true,
         .RemoveInfos = remove_infos,
-    }, alloc.arena);
+    });
     try pushEntityAddNotify(conn, alloc, scene, entity, assets, buff_timers, now_ms);
 }
 
@@ -423,12 +423,11 @@ fn pushEntityRemoveNotify(
 
     var remove_notify: pb.EntityRemoveNotify = .{ .IsRemove = true };
     remove_notify.RemoveInfos = remove_infos;
-    try conn.push(remove_notify, alloc.arena);
+    try conn.push(remove_notify);
 }
 
 fn pushRideSharingSeatNotify(
     conn: *Connection,
-    alloc: mem.Alloc,
     role_entity_id: i64,
     motor_entity_id: i64,
     seat: i32,
@@ -440,7 +439,7 @@ fn pushRideSharingSeatNotify(
         .Seat = seat,
         .IsEntering = occupied,
         .ExitType = .ExitVehicleTypeSeatStandUp,
-    }, alloc.arena);
+    });
 }
 
 fn updateMotorOutlookEntity(
@@ -538,7 +537,7 @@ pub fn onMotorDiyInfoRequest(
             .MotorDecoration = try timedIdList(alloc.arena, motor_comp.info.owned_decorations),
             .MotorFrame = try timedIdList(alloc.arena, motor_comp.info.owned_frames),
         },
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -552,7 +551,6 @@ pub fn onMotorCreateRequest(txn: *Transaction(pb.MotorCreateRequest)) !void {
 
 pub fn onSendMovieModeRideSharingRequest(
     txn: *Transaction(pb.SendMovieModeRideSharingRequest),
-    alloc: mem.Alloc,
     player_id: PlayerID,
 ) !void {
     try txn.conn.push(pb.VehicleShareNotify{
@@ -560,7 +558,7 @@ pub fn onSendMovieModeRideSharingRequest(
         .ShareRideMode = txn.message.ShareRideMode,
         .IsInMovieRideSharingMode = txn.message.IsInMovieRideSharingMode,
         .Reason = .ClientRequest,
-    }, alloc.arena);
+    });
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -618,7 +616,7 @@ pub fn onChangeVehicleRideSharingRequest(
     }
 
     if (PlayerEntityTemplates.findMotorcyclePassengerEntity(scene, assets)) |old_passenger| {
-        try pushRideSharingSeatNotify(txn.conn, alloc, old_passenger.net_id, motor_entity.net_id, passenger_seat, false);
+        try pushRideSharingSeatNotify(txn.conn, old_passenger.net_id, motor_entity.net_id, passenger_seat, false);
         try pushEntityRemoveNotify(txn.conn, alloc, fs, scene, old_passenger);
     }
 
@@ -653,8 +651,8 @@ pub fn onChangeVehicleRideSharingRequest(
         .RoleId = txn.message.RoleId,
         .Seat = passenger_seat,
         .EntityId = passenger_entity.net_id,
-    }, alloc.arena);
-    try pushRideSharingSeatNotify(txn.conn, alloc, passenger_entity.net_id, motor_entity.net_id, passenger_seat, true);
+    });
+    try pushRideSharingSeatNotify(txn.conn, passenger_entity.net_id, motor_entity.net_id, passenger_seat, true);
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -671,7 +669,7 @@ pub fn RemoveRideSharingPassengerRequest(
 
     if (PlayerEntityTemplates.findMotorcyclePassengerEntity(scene, assets)) |entity| {
         if (findMotorEntity(scene, assets)) |motor_entity| {
-            try pushRideSharingSeatNotify(txn.conn, alloc, entity.net_id, motor_entity.net_id, passenger_seat, false);
+            try pushRideSharingSeatNotify(txn.conn, entity.net_id, motor_entity.net_id, passenger_seat, false);
         }
 
         try txn.conn.push(pb.UpdateVehicleRideSharingNotify{
@@ -679,7 +677,7 @@ pub fn RemoveRideSharingPassengerRequest(
             .RoleId = 0,
             .Seat = passenger_seat,
             .EntityId = entity.net_id,
-        }, alloc.arena);
+        });
 
         try pushEntityRemoveNotify(txn.conn, alloc, fs, scene, entity);
     }
@@ -711,7 +709,7 @@ pub fn onMotorTechLevelUpRequest(
         try txn.conn.push(pb.MotorLockedTechUpdateNotify{
             .TreeId = node.tree_type,
             .Tech = tree.Tech,
-        }, alloc.arena);
+        });
         txn.respond(.{
             .ErrorCode = .Success,
             .Tree = tree,
@@ -781,7 +779,7 @@ pub fn onMotorTaskOneKeyRewardRequest(
         try motor_comp.save(fs, alloc.arena);
         try txn.conn.push(pb.MotorTaskUpdateNotify{
             .Task = try buildMotorTaskListData(motor_comp, alloc, tree_id),
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{
@@ -838,7 +836,7 @@ pub fn onMotorUseSkinRequest(
     try motor_comp.save(fs, alloc.arena);
     try txn.conn.push(pb.MotorOutlookEquippedChangeNotify{
         .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-    }, alloc.arena);
+    });
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
         if (previous_frame != frame) {
             try pushEntityRefreshNotify(
@@ -854,7 +852,7 @@ pub fn onMotorUseSkinRequest(
             try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
                 .EntityId = entity.net_id,
                 .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-            }, alloc.arena);
+            });
         }
     }
     txn.respond(.{
@@ -904,7 +902,7 @@ pub fn onMotorChangeOutlookRequest(
     try motor_comp.save(fs, alloc.arena);
     try txn.conn.push(pb.MotorOutlookEquippedChangeNotify{
         .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-    }, alloc.arena);
+    });
     if (try updateMotorOutlookEntity(alloc, fs, scene, assets, motor_comp)) |entity| {
         if (previous_frame != frame) {
             try pushEntityRefreshNotify(
@@ -920,7 +918,7 @@ pub fn onMotorChangeOutlookRequest(
             try txn.conn.push(pb.EntityMotorOutlookChangeNotify{
                 .EntityId = entity.net_id,
                 .MotorDiyEquipped = try buildEquippedOutlook(motor_comp, alloc),
-            }, alloc.arena);
+            });
         }
     }
     txn.respond(.{

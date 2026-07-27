@@ -73,7 +73,7 @@ pub fn onVisionExploreSkillSetRequest(
         try txn.conn.push(pb.VisionSkillChangeNotify{
             .EntityId = entity.net_id,
             .VisionSkillInfos = sliceToArrayList(pb.VisionSkillInformation, vision_skill_comp.vision_skills),
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .SkillId = txn.message.SkillId });
@@ -142,7 +142,7 @@ pub fn onExploreSkillRouletteSetRequest(
 
     try txn.conn.push(pb.ExploreSkillRouletteUpdateNotify{
         .RouletteInfo = roulette_info,
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -226,7 +226,7 @@ pub fn onSummon3Request(
     );
     try txn.conn.push(pb.EntityAddNotify{
         .EntityPbs = entity_pbs,
-    }, alloc.arena);
+    });
     txn.respond(.{ .ErrorCode = .Success });
 }
 
@@ -252,7 +252,7 @@ pub fn onRemoveSummonEntityRequest(
         try txn.conn.push(pb.EntityRemoveNotify{
             .IsRemove = true,
             .RemoveInfos = remove_infos,
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .ErrorCode = .Success });

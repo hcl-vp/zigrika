@@ -56,7 +56,7 @@ fn build_fight_formations(
 //                         .Duration = txn.message.Duration,
 //                         .FormationAttrs = txn.message.FormationAttrs,
 //                     };
-//                     try txn.conn.push(formation_attr_notify, alloc.arena);
+//                     try txn.conn.push(formation_attr_notify);
 //                 }
 //             }
 //             break;
@@ -178,7 +178,7 @@ pub fn onUpdateFormationRequest(
                 try remove_infos.append(alloc.gpa, .{ .EntityId = entity_id });
             }
             remove_notify.RemoveInfos = remove_infos;
-            try txn.conn.push(remove_notify, alloc.arena);
+            try txn.conn.push(remove_notify);
 
             const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse
                 return error.InstanceDungeonNotFound;
@@ -249,10 +249,10 @@ pub fn onUpdateFormationRequest(
 
             var role_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
             role_entity_add_notify.EntityPbs = role_entity_pbs;
-            try txn.conn.push(role_entity_add_notify, alloc.arena);
+            try txn.conn.push(role_entity_add_notify);
             var concom_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
             concom_entity_add_notify.EntityPbs = concom_entity_pbs;
-            try txn.conn.push(concom_entity_add_notify, alloc.arena);
+            try txn.conn.push(concom_entity_add_notify);
 
             current_formation.*.cur_role = blk: {
                 for (current_formation.roles) |maybe_cf_role| {
@@ -309,7 +309,7 @@ pub fn onUpdateFormationRequest(
 
             try txn.conn.push(pb.UpdateGroupFormationNotify{
                 .GroupFormation = group_formations,
-            }, alloc.arena);
+            });
         } else {
             var roles: [3]?FormationInfo.Formation.Role = .{ null, null, null };
             for (fight_formation.RoleIds.items, 0..) |role_id, i| {

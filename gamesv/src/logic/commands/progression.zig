@@ -77,12 +77,12 @@ pub const resonance_item = struct {
             try conn.push(pb.NormalItemAddNotify{
                 .NormalItemList = updated_items,
                 .NoTips = true,
-            }, alloc.arena);
+            });
         } else {
             try conn.push(pb.NormalItemUpdateNotify{
                 .NormalItemList = updated_items,
                 .NoTips = true,
-            }, alloc.arena);
+            });
         }
 
         try respond(events, alloc.arena, "granted {d} wavebands for {s} ({d}, total {d})", .{
@@ -138,7 +138,7 @@ pub const weapon_item = struct {
 
         var added: std.ArrayList(pb.WeaponItem) = .empty;
         try addWeaponCopies(alloc, fs, assets, weapon_comp, weapon_id, count, &added);
-        try pushWeaponAdds(conn, alloc, added);
+        try pushWeaponAdds(conn, added);
         try respond(events, alloc.arena, "granted {d} copies of weapon {d}", .{ count, weapon_id });
     }
 };
@@ -191,7 +191,6 @@ fn addWeaponCopies(
 
 fn pushWeaponAdds(
     conn: *Connection,
-    alloc: mem.Alloc,
     added: std.ArrayList(pb.WeaponItem),
 ) !void {
     if (added.items.len == 0) return;
@@ -199,7 +198,7 @@ fn pushWeaponAdds(
         .WeaponItemList = added,
         .AddFromRole = false,
         .Reason = 0,
-    }, alloc.arena);
+    });
 }
 
 fn currentWeaponId(
@@ -312,9 +311,9 @@ fn clearWeaponCopies(
     }
 
     if (removed_ids.items.len != 0) {
-        try conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids }, alloc.arena);
+        try conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids });
     }
-    try pushWeaponAdds(conn, alloc, updated_items);
+    try pushWeaponAdds(conn, updated_items);
     try respond(events, alloc.arena, "cleared weapon {d}", .{weapon_id});
 }
 
@@ -383,7 +382,7 @@ fn clearWavebands(
                 weapon_comp,
                 echo_comp,
             ));
-            try conn.push(pb.PbGetRoleListNotify{ .RoleList = role_list }, alloc.arena);
+            try conn.push(pb.PbGetRoleListNotify{ .RoleList = role_list });
         }
     }
 
@@ -391,7 +390,7 @@ fn clearWavebands(
     try conn.push(pb.NormalItemUpdateNotify{
         .NormalItemList = updated_items,
         .NoTips = true,
-    }, alloc.arena);
+    });
     try respond(events, alloc.arena, "cleared wavebands for {s}", .{token});
 }
 

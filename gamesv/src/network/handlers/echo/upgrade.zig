@@ -150,7 +150,7 @@ pub fn onPhantomLevelUpRequest(
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
 
     if (normal_updates.items.len != 0) {
-        try txn.conn.push(pb.NormalItemUpdateNotify{ .NormalItemList = normal_updates }, alloc.arena);
+        try txn.conn.push(pb.NormalItemUpdateNotify{ .NormalItemList = normal_updates });
     }
 
     var changed_roles = try rolesEquippingEcho(echo_comp, alloc.gpa, txn.message.IncId);
@@ -242,7 +242,7 @@ pub fn onPhantomIdentifyRequest(
             .ExpireTime = 0,
         });
         break :blk list;
-    } }, alloc.arena);
+    } });
 
     var changed_roles = try rolesEquippingEcho(echo_comp, alloc.gpa, txn.message.IncrId);
     defer changed_roles.deinit(alloc.gpa);

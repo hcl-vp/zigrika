@@ -20,7 +20,7 @@ pub const sequence_patch = struct {
 
         try conn.push(pb.JSPatchNotify{
             .Content = js,
-        }, alloc.arena);
+        });
 
         try events.enqueue(.chat_command_response, .{ .content = "successfully applied sequence patch mode." });
     }
@@ -37,7 +37,7 @@ pub const reset_cd = struct {
     ) !void {
         try conn.push(pb.JSPatchNotify{
             .Content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), io, "assets/scripts/misc_patches/cd_ender.js", alloc.arena, Io.Limit.unlimited),
-        }, alloc.arena);
+        });
 
         try events.enqueue(.chat_command_response, .{ .content = "successfully reset cooldown." });
     }
@@ -59,7 +59,7 @@ pub const weather = struct {
 
         try conn.push(pb.JSPatchNotify{
             .Content = js,
-        }, alloc.arena);
+        });
         try events.enqueue(.chat_command_response, .{ .content = "set weather successfully" });
     }
 };
@@ -80,7 +80,7 @@ pub const team_cd_controller = struct {
 
         try conn.push(pb.JSPatchNotify{
             .Content = js,
-        }, alloc.arena);
+        });
         try events.enqueue(.chat_command_response, .{ .content = "changed controller successfully" });
     }
 };
@@ -96,7 +96,7 @@ pub const timer_bind = struct {
     ) !void {
         try conn.push(pb.JSPatchNotify{
             .Content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), io, "assets/scripts/misc_patches/timer_bind.js", alloc.arena, Io.Limit.unlimited),
-        }, alloc.arena);
+        });
 
         try events.enqueue(.chat_command_response, .{ .content = "successfully binded." });
     }

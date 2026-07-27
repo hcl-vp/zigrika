@@ -120,7 +120,7 @@ fn pushEntityFlySkinChange(
 
         try txn.conn.push(pb.SoarWingOrParaglidingSkinChangeNotify{
             .FlySkinData = fly_skin_data,
-        }, alloc.arena);
+        });
         return;
     }
 }
@@ -153,7 +153,7 @@ fn pushEntityWeaponSkinChange(
         try txn.conn.push(pb.EntityEquipSkinChangeNotify{
             .EntityId = entity.net_id,
             .WeaponSkinComponentPb = .{ .WeaponSkinId = skin_id },
-        }, alloc.arena);
+        });
 
         return;
     }
@@ -167,7 +167,7 @@ fn pushWeaponSkinEquipTakeOnNotify(txn: anytype, alloc: mem.Alloc, role_id: i32,
         .EquipIncId = skin_id,
     });
 
-    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list }, alloc.arena);
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = data_list });
 }
 
 fn buildSingleWeaponSkinEquipList(alloc: mem.Alloc, role_id: i32, skin_id: i32) !std.ArrayList(pb.LoadEquipData) {
@@ -288,9 +288,9 @@ fn refreshRoleOrnamentEntity(
         try txn.conn.push(pb.EntityDressOrnamentChangeNotify{
             .EntityId = entity.net_id,
             .OrnamentComponentPb = try ornament_comp.toProto(),
-        }, alloc.arena);
+        });
 
-        if (combat_notify.Data.items.len != 0) try txn.conn.push(combat_notify, alloc.arena);
+        if (combat_notify.Data.items.len != 0) try txn.conn.push(combat_notify);
         return;
     }
 }
@@ -298,7 +298,7 @@ fn refreshRoleOrnamentEntity(
 fn pushOrnamentEquipMap(txn: anytype, alloc: mem.Alloc, role_comp: *PlayerRoleComponent) !void {
     try txn.conn.push(pb.OrnamentDressInfoUpdateNotify{
         .OrnamentDressInfos = try CosmeticsHelper.buildOrnamentEquipMap(role_comp, alloc.arena),
-    }, alloc.arena);
+    });
 }
 
 fn equippedCalabashSkinId(assets: *const Assets, role_comp: *PlayerRoleComponent) i32 {
@@ -349,7 +349,7 @@ fn pushEntityCalabashSkinChange(
         try txn.conn.push(pb.EntityCalabashSkinChangeNotify{
             .EntityId = entity.net_id,
             .CalabashSkinCoponent = .{ .CalabashSkinId = skin_id },
-        }, alloc.arena);
+        });
     }
 }
 
@@ -545,7 +545,7 @@ pub fn onSendEquipSkinRequest(
     try txn.conn.push(pb.WeaponSkinDeleteNotify{
         .RoleId = request.RoleId,
         .SkinId = 0,
-    }, alloc.arena);
+    });
     txn.respond(.{ .ErrorCode = .Success });
 }
 
