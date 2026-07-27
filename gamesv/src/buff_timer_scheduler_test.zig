@@ -1,6 +1,7 @@
 const std = @import("std");
 const BuffTimerScheduler = @import("logic/schedulers/BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("logic/schedulers/DirtySaveQueue.zig");
+const SessionConnection = @import("network/Connection.zig");
 const Scene = @import("logic/Scene.zig");
 const EntityComponentStorage = @import("logic/component/entity/EntityComponentStorage.zig");
 const pb = @import("proto").pb;
@@ -11,6 +12,10 @@ const testing = std.testing;
 
 test "include dirty save queue tests" {
     _ = DirtySaveQueue;
+}
+
+test "include session connection tests" {
+    _ = SessionConnection;
 }
 
 fn entry(entity_id: i64, handle_id: i32, kind: Kind, due_ms: i64) Entry {

@@ -37,6 +37,7 @@ pub const ConnectionHandle = struct {
     consecutive_send_failures: u8,
     queue_buf: [16]RawPacket,
     queue: Io.Queue(RawPacket),
+    closed_event: Io.Event,
 
     pub fn init(handle: *ConnectionHandle, io: Io, socket: *const Io.net.Socket, address: Io.net.IpAddress, conv_id: u32) void {
         handle.io = io;
@@ -45,6 +46,12 @@ pub const ConnectionHandle = struct {
         handle.conv_id = conv_id;
         handle.consecutive_send_failures = 0;
         handle.queue = Io.Queue(RawPacket).init(handle.queue_buf[0..]);
+        handle.closed_event = .unset;
+    }
+
+    pub fn close(handle: *ConnectionHandle) void {
+        handle.closed_event.set(handle.io);
+        handle.queue.close(handle.io);
     }
 };
 
@@ -79,7 +86,7 @@ pub const SessionManager = struct {
                 }
 
                 if (replacement_requested != existing) {
-                    existing.queue.close(existing.io);
+                    existing.close();
                     replacement_requested = existing;
                 }
                 manager.mutex.unlock(handle.io);

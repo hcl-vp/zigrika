@@ -63,29 +63,38 @@ const msg_id_name_table = blk: {
 };
 
 const SessionWake = struct {
-    packet: ?RawPacket = null,
-    tick: bool = false,
+    packet_ready: ?RawPacket = null,
+    kcp_deadline: bool = false,
+    gameplay_deadline: bool = false,
+    idle_timeout: bool = false,
     closed: bool = false,
 };
 
 const SessionSelectResult = union(enum) {
-    packet: anyerror!RawPacket,
-    tick: anyerror!void,
+    packet_ready: anyerror!RawPacket,
+    kcp_deadline: anyerror!void,
+    gameplay_deadline: anyerror!void,
+    idle_timeout: anyerror!void,
+    closed: anyerror!void,
 };
 
 fn waitForPacket(handle: *ConnectionHandle) anyerror!RawPacket {
     return handle.queue.getOne(handle.io);
 }
 
-fn waitForTimedTick(io: Io, delay_ms: i64) anyerror!void {
+fn waitForDeadline(io: Io, delay_ms: i64) anyerror!void {
     const sleep_ms = if (delay_ms > 0) delay_ms else 0;
     try io.sleep(.fromMilliseconds(sleep_ms), .awake);
 }
 
+fn waitForClosed(handle: *ConnectionHandle) anyerror!void {
+    try handle.closed_event.wait(handle.io);
+}
+
 fn applySessionSelectResult(wake: *SessionWake, result: SessionSelectResult) void {
     switch (result) {
-        .packet => |packet_result| {
-            wake.packet = packet_result catch |err| switch (err) {
+        .packet_ready => |packet_result| {
+            wake.packet_ready = packet_result catch |err| switch (err) {
                 error.Canceled => return,
                 error.Closed => {
                     wake.closed = true;
@@ -97,29 +106,65 @@ fn applySessionSelectResult(wake: *SessionWake, result: SessionSelectResult) voi
                 },
             };
         },
-        .tick => |tick_result| {
-            tick_result catch |err| switch (err) {
+        .kcp_deadline => |deadline_result| {
+            deadline_result catch |err| switch (err) {
                 error.Canceled => return,
                 else => {
                     wake.closed = true;
                     return;
                 },
             };
-            wake.tick = true;
+            wake.kcp_deadline = true;
+        },
+        .gameplay_deadline => |deadline_result| {
+            deadline_result catch |err| switch (err) {
+                error.Canceled => return,
+                else => {
+                    wake.closed = true;
+                    return;
+                },
+            };
+            wake.gameplay_deadline = true;
+        },
+        .idle_timeout => |timeout_result| {
+            timeout_result catch |err| switch (err) {
+                error.Canceled => return,
+                else => {
+                    wake.closed = true;
+                    return;
+                },
+            };
+            wake.idle_timeout = true;
+        },
+        .closed => |closed_result| {
+            closed_result catch |err| switch (err) {
+                error.Canceled => return,
+                else => {
+                    wake.closed = true;
+                    return;
+                },
+            };
+            wake.closed = true;
         },
     }
 }
 
-fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake {
-    const delay_ms = tick_delay_ms orelse {
-        return .{ .packet = handle.queue.getOne(handle.io) catch return null };
-    };
-
-    var buffer: [2]SessionSelectResult = undefined;
+fn waitSessionWake(
+    handle: *ConnectionHandle,
+    kcp_delay_ms: i64,
+    gameplay_delay_ms: ?i64,
+    idle_delay_ms: i64,
+) ?SessionWake {
+    var buffer: [5]SessionSelectResult = undefined;
     var select: Io.Select(SessionSelectResult) = .init(handle.io, &buffer);
 
-    select.async(.packet, waitForPacket, .{handle});
-    select.async(.tick, waitForTimedTick, .{ handle.io, delay_ms });
+    select.async(.packet_ready, waitForPacket, .{handle});
+    select.async(.kcp_deadline, waitForDeadline, .{ handle.io, kcp_delay_ms });
+    if (gameplay_delay_ms) |delay_ms| {
+        select.async(.gameplay_deadline, waitForDeadline, .{ handle.io, delay_ms });
+    }
+    select.async(.idle_timeout, waitForDeadline, .{ handle.io, idle_delay_ms });
+    select.async(.closed, waitForClosed, .{handle});
 
     const first = select.await() catch {
         select.cancelDiscard();
@@ -132,7 +177,7 @@ fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake 
         applySessionSelectResult(&wake, extra);
     }
 
-    return if (wake.closed) null else wake;
+    return wake;
 }
 
 fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
@@ -157,28 +202,25 @@ fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
     return scheduled_changed;
 }
 
-fn nextSessionWakeDelayMs(
-    handle: *ConnectionHandle,
-    kcp: *const Kcp,
-    state: ?*const State,
-    init_time_ms: i64,
-    last_receive_time_ms: i64,
-) i64 {
-    const now_ms = Io.Clock.awake.now(handle.io).toMilliseconds();
-    const idle_delay_ms = @max(session_idle_timeout_ms - (now_ms - last_receive_time_ms), 0);
-    const elapsed_ms: u32 = @intCast(now_ms - init_time_ms);
-    var delay_ms: i64 = kcp.nextUpdateDelay(elapsed_ms);
-    delay_ms = @min(delay_ms, idle_delay_ms);
-
-    if (state) |s| {
-        if (s.timers.timed_logic.nextWakeDelayMs(now_ms, s.scene != null)) |timed_delay_ms| {
-            delay_ms = @min(delay_ms, timed_delay_ms);
-        }
-        if (s.dirty_saves.nextWakeDelayMs(now_ms)) |dirty_delay_ms|
-            delay_ms = @min(delay_ms, dirty_delay_ms);
+fn nextGameplayWakeDelayMs(state: ?*const State, now_ms: i64) ?i64 {
+    const s = state orelse return null;
+    var delay_ms = s.timers.timed_logic.nextWakeDelayMs(now_ms, s.scene != null);
+    if (s.dirty_saves.nextWakeDelayMs(now_ms)) |dirty_delay_ms| {
+        delay_ms = if (delay_ms) |current| @min(current, dirty_delay_ms) else dirty_delay_ms;
     }
-
     return delay_ms;
+}
+
+fn idleWakeDelayMs(now_ms: i64, last_receive_time_ms: i64) i64 {
+    return @max(session_idle_timeout_ms - (now_ms - last_receive_time_ms), 0);
+}
+
+fn idleExpired(now_ms: i64, last_receive_time_ms: i64) bool {
+    return now_ms - last_receive_time_ms >= session_idle_timeout_ms;
+}
+
+fn needsFinalKcpFlush(packet_output: bool, kcp_updated: bool, gameplay_output: bool) bool {
+    return gameplay_output or (packet_output and !kcp_updated);
 }
 
 fn updateKcpForSession(handle: *ConnectionHandle, kcp: *Kcp, elapsed_ms: u32) !void {
@@ -237,31 +279,31 @@ pub fn process(
     var last_receive_time_ms = init_time;
 
     while (true) {
+        const wait_now_ms = clock.now(handle.io).toMilliseconds();
+        const elapsed_ms: u32 = @intCast(wait_now_ms - init_time);
         const state_ptr: ?*const State = if (state) |*s| s else null;
         const wake = waitSessionWake(
             handle,
-            nextSessionWakeDelayMs(handle, &kcp, state_ptr, init_time, last_receive_time_ms),
+            kcp.nextUpdateDelay(elapsed_ms),
+            nextGameplayWakeDelayMs(state_ptr, wait_now_ms),
+            idleWakeDelayMs(wait_now_ms, last_receive_time_ms),
         ) orelse break;
 
-        var needs_flush = false;
-        var kcp_updated = false;
+        if (wake.closed) return;
 
-        if (wake.packet) |packet| {
+        var packet_output = false;
+        var kcp_updated = false;
+        var gameplay_output = false;
+
+        if (wake.packet_ready) |packet| {
             const time = clock.now(handle.io);
-            const elapsed_ms: u32 = @intCast(time.toMilliseconds() - init_time);
-            needs_flush = true;
+            packet_output = true;
 
             _ = kcp.input(packet.buf[0..packet.len]) catch |err| {
                 log.err("failed to input data into kcp state: {t}, disconnecting", .{err});
                 return;
             };
             last_receive_time_ms = time.toMilliseconds();
-
-            updateKcpForSession(handle, &kcp, elapsed_ms) catch |err| {
-                log.err("failed to update kcp state: {t}, disconnecting", .{err});
-                return;
-            };
-            kcp_updated = true;
 
             while (kcp.peekSize()) |size| {
                 if (size > read_buffer.len) {
@@ -352,27 +394,26 @@ pub fn process(
         }
 
         const now_ms = clock.now(handle.io).toMilliseconds();
-        if (now_ms - last_receive_time_ms >= session_idle_timeout_ms) {
+        if (wake.idle_timeout and idleExpired(now_ms, last_receive_time_ms)) {
             log.info("session timed out after {d} ms without input", .{session_idle_timeout_ms});
             return;
         }
 
-        if (wake.tick and !kcp_updated) {
+        if (wake.kcp_deadline) {
             updateKcpForSession(handle, &kcp, @intCast(now_ms - init_time)) catch |err| {
                 log.err("failed to update kcp state: {t}, disconnecting", .{err});
                 return;
             };
+            kcp_updated = true;
         }
 
-        if (state) |*s| {
-            if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms) or
-                s.dirty_saves.isDue(now_ms))
-            {
-                needs_flush = drainScheduledLogicForSession(s, now_ms) or needs_flush;
+        if (wake.gameplay_deadline) {
+            if (state) |*s| {
+                gameplay_output = drainScheduledLogicForSession(s, now_ms);
             }
         }
 
-        if (needs_flush) {
+        if (needsFinalKcpFlush(packet_output, kcp_updated, gameplay_output)) {
             flushKcpForSession(handle, &kcp) catch |err| {
                 log.err("failed to flush kcp state: {t}, disconnecting", .{err});
                 return;
@@ -416,4 +457,69 @@ fn kcpOutput(buf: []const u8, kcp: *Kcp, user: ?usize) usize {
         );
         return 0;
     }
+}
+
+test "session wake reasons preserve simultaneous completions" {
+    var wake: SessionWake = .{};
+    const packet: RawPacket = .{ .buf = undefined, .len = 0 };
+
+    applySessionSelectResult(&wake, .{ .packet_ready = packet });
+    applySessionSelectResult(&wake, .{ .kcp_deadline = {} });
+    applySessionSelectResult(&wake, .{ .gameplay_deadline = {} });
+    applySessionSelectResult(&wake, .{ .idle_timeout = {} });
+
+    try std.testing.expect(wake.packet_ready != null);
+    try std.testing.expect(wake.kcp_deadline);
+    try std.testing.expect(wake.gameplay_deadline);
+    try std.testing.expect(wake.idle_timeout);
+    try std.testing.expect(!wake.closed);
+}
+
+test "canceled waits do not become wake reasons" {
+    var wake: SessionWake = .{};
+
+    applySessionSelectResult(&wake, .{ .packet_ready = error.Canceled });
+    applySessionSelectResult(&wake, .{ .kcp_deadline = error.Canceled });
+    applySessionSelectResult(&wake, .{ .gameplay_deadline = error.Canceled });
+    applySessionSelectResult(&wake, .{ .idle_timeout = error.Canceled });
+    applySessionSelectResult(&wake, .{ .closed = error.Canceled });
+
+    try std.testing.expect(wake.packet_ready == null);
+    try std.testing.expect(!wake.kcp_deadline);
+    try std.testing.expect(!wake.gameplay_deadline);
+    try std.testing.expect(!wake.idle_timeout);
+    try std.testing.expect(!wake.closed);
+}
+
+test "queue and explicit closure produce the terminal wake reason" {
+    var queue_closed: SessionWake = .{};
+    applySessionSelectResult(&queue_closed, .{ .packet_ready = error.Closed });
+    try std.testing.expect(queue_closed.closed);
+
+    var event_closed: SessionWake = .{};
+    applySessionSelectResult(&event_closed, .{ .closed = {} });
+    try std.testing.expect(event_closed.closed);
+}
+
+test "wake lanes keep KCP and gameplay work independent" {
+    var gameplay_only: SessionWake = .{};
+    applySessionSelectResult(&gameplay_only, .{ .gameplay_deadline = {} });
+    try std.testing.expect(gameplay_only.gameplay_deadline);
+    try std.testing.expect(!gameplay_only.kcp_deadline);
+
+    var kcp_only: SessionWake = .{};
+    applySessionSelectResult(&kcp_only, .{ .kcp_deadline = {} });
+    try std.testing.expect(kcp_only.kcp_deadline);
+    try std.testing.expect(!kcp_only.gameplay_deadline);
+
+    try std.testing.expect(needsFinalKcpFlush(true, false, false));
+    try std.testing.expect(!needsFinalKcpFlush(true, true, false));
+    try std.testing.expect(needsFinalKcpFlush(true, true, true));
+}
+
+test "idle retirement rechecks the latest valid input" {
+    const timeout_ms = session_idle_timeout_ms;
+    try std.testing.expect(idleExpired(timeout_ms, 0));
+    try std.testing.expect(!idleExpired(timeout_ms, timeout_ms - 1));
+    try std.testing.expectEqual(timeout_ms - 1, idleWakeDelayMs(timeout_ms, timeout_ms - 1));
 }

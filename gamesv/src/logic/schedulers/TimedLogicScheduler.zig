@@ -56,20 +56,6 @@ pub fn nextWakeDelayMs(
     return delay_ms;
 }
 
-pub fn shouldDrain(
-    scheduler: *const TimedLogicScheduler,
-    scene_active: bool,
-    now_ms: i64,
-) bool {
-    if (!scene_active) return false;
-
-    for (scheduler.next_due_ms) |next_ms| {
-        if (isDue(next_ms, now_ms)) return true;
-    }
-
-    return false;
-}
-
 pub fn drainDue(
     scheduler: *TimedLogicScheduler,
     now_ms: i64,
@@ -102,8 +88,4 @@ pub fn drainDue(
 fn bucketDelayMs(next_ms: i64, now_ms: i64) i64 {
     if (next_ms == 0 or next_ms <= now_ms) return 0;
     return next_ms - now_ms;
-}
-
-fn isDue(next_ms: i64, now_ms: i64) bool {
-    return next_ms == 0 or next_ms <= now_ms;
 }
