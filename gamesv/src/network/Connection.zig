@@ -634,6 +634,7 @@ fn gameplayLoop(
 
     var player_id: ?i32 = null;
     var enter: bool = false;
+    var pending_reconnect: ?auth.PendingReconnect = null;
     var claimed_player_id: ?i32 = null;
     defer if (claimed_player_id) |id| session_manager.release(handle, id);
 
@@ -701,7 +702,15 @@ fn gameplayLoop(
                     };
                     _ = s.arena.reset(.free_all);
                 } else {
-                    auth.handleAuthGroupRequest(ready_message.*, &connection, fs, gpa, &player_id, &enter) catch |err| {
+                    auth.handleAuthGroupRequest(
+                        ready_message.*,
+                        &connection,
+                        fs,
+                        gpa,
+                        &player_id,
+                        &enter,
+                        &pending_reconnect,
+                    ) catch |err| {
                         log.err("failed to handle auth request: {t}, disconnecting", .{err});
                         return;
                     };
@@ -712,6 +721,18 @@ fn gameplayLoop(
                             return;
                         };
                         claimed_player_id = id;
+
+                        if (pending_reconnect) |reconnect| {
+                            connection.respond(reconnect.rpc_id, proto.pb.ReconnectResponse{
+                                .ErrorCode = .Success,
+                                .LastRecvSeqNo = reconnect.last_server_seq_no,
+                                .Timestamp = Io.Clock.real.now(fs.io).toMilliseconds(),
+                            }) catch |err| {
+                                log.err("failed to send reconnect response: {t}, disconnecting", .{err});
+                                return;
+                            };
+                            pending_reconnect = null;
+                        }
 
                         const player_components = PlayerComponentStorage.init(gpa, fs, assets, id) catch |err| {
                             log.err("failed to init player component storage: {t}, disconnecting", .{err});
