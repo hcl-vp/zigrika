@@ -1,5 +1,6 @@
 const std = @import("std");
 const BuffTimerScheduler = @import("logic/schedulers/BuffTimerScheduler.zig");
+const DirtySaveQueue = @import("logic/schedulers/DirtySaveQueue.zig");
 const Scene = @import("logic/Scene.zig");
 const EntityComponentStorage = @import("logic/component/entity/EntityComponentStorage.zig");
 const pb = @import("proto").pb;
@@ -7,6 +8,10 @@ const pb = @import("proto").pb;
 const Entry = BuffTimerScheduler.Entry;
 const Kind = BuffTimerScheduler.Kind;
 const testing = std.testing;
+
+test "include dirty save queue tests" {
+    _ = DirtySaveQueue;
+}
 
 fn entry(entity_id: i64, handle_id: i32, kind: Kind, due_ms: i64) Entry {
     return .{

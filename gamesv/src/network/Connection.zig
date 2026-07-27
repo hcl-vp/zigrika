@@ -135,20 +135,26 @@ fn waitSessionWake(handle: *ConnectionHandle, tick_delay_ms: ?i64) ?SessionWake 
     return if (wake.closed) null else wake;
 }
 
-fn drainTimedLogicForSession(state: *State) bool {
+fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
     var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
-    const timed_changed = state.timers.timed_logic.drainDue(
-        state.io,
+    var scheduled_changed = state.timers.timed_logic.drainDue(
+        now_ms,
         state.scene != null,
         &event_queue,
     ) catch |err| failed: {
         std.log.scoped(.connection).err("failed to schedule timed logic tick: {t}", .{err});
         break :failed false;
     };
-    if (timed_changed) logic_handlers.drainEventQueueBestEffort(&event_queue, state);
+    if (state.dirty_saves.enqueueDue(&event_queue, now_ms)) |dirty_due| {
+        scheduled_changed = dirty_due or scheduled_changed;
+    } else |err| {
+        std.log.scoped(.connection).err("failed to schedule dirty save: {t}", .{err});
+    }
+
+    if (scheduled_changed) logic_handlers.drainEventQueueBestEffort(&event_queue, state);
     _ = state.arena.reset(.free_all);
 
-    return timed_changed;
+    return scheduled_changed;
 }
 
 fn nextSessionWakeDelayMs(
@@ -165,9 +171,11 @@ fn nextSessionWakeDelayMs(
     delay_ms = @min(delay_ms, idle_delay_ms);
 
     if (state) |s| {
-        if (s.timers.timed_logic.nextWakeDelayMs(s.io, s.scene != null)) |timed_delay_ms| {
+        if (s.timers.timed_logic.nextWakeDelayMs(now_ms, s.scene != null)) |timed_delay_ms| {
             delay_ms = @min(delay_ms, timed_delay_ms);
         }
+        if (s.dirty_saves.nextWakeDelayMs(now_ms)) |dirty_delay_ms|
+            delay_ms = @min(delay_ms, dirty_delay_ms);
     }
 
     return delay_ms;
@@ -357,8 +365,10 @@ pub fn process(
         }
 
         if (state) |*s| {
-            if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms)) {
-                needs_flush = drainTimedLogicForSession(s) or needs_flush;
+            if (s.timers.timed_logic.shouldDrain(s.scene != null, now_ms) or
+                s.dirty_saves.isDue(now_ms))
+            {
+                needs_flush = drainScheduledLogicForSession(s, now_ms) or needs_flush;
             }
         }
 

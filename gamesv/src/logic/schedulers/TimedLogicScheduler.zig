@@ -2,14 +2,12 @@ const TimedLogicScheduler = @This();
 const std = @import("std");
 const EventQueue = @import("../EventQueue.zig");
 const BuffTimerScheduler = @import("BuffTimerScheduler.zig");
-const DirtySaveQueue = @import("DirtySaveQueue.zig");
 const ScheduledJob = @import("ScheduledJob.zig");
 
 const Interval = ScheduledJob.Interval;
 const intervals = std.enums.values(Interval);
 const jobs = [_]ScheduledJob{
     BuffTimerScheduler.job,
-    DirtySaveQueue.job,
 };
 
 comptime {
@@ -45,12 +43,11 @@ pub fn reset(scheduler: *TimedLogicScheduler) void {
 
 pub fn nextWakeDelayMs(
     scheduler: *const TimedLogicScheduler,
-    io: std.Io,
+    now_ms: i64,
     scene_active: bool,
 ) ?i64 {
     if (!scene_active) return null;
 
-    const now_ms = nowMs(io);
     var delay_ms: i64 = std.math.maxInt(i64);
     for (scheduler.next_due_ms) |next_ms| {
         delay_ms = @min(delay_ms, bucketDelayMs(next_ms, now_ms));
@@ -75,13 +72,12 @@ pub fn shouldDrain(
 
 pub fn drainDue(
     scheduler: *TimedLogicScheduler,
-    io: std.Io,
+    now_ms: i64,
     scene_active: bool,
     event_queue: *EventQueue,
 ) !bool {
     if (!scene_active) return false;
 
-    const now_ms = nowMs(io);
     for (&scheduler.next_due_ms) |*next_ms| {
         if (next_ms.* == 0) next_ms.* = now_ms;
     }
@@ -110,9 +106,4 @@ fn bucketDelayMs(next_ms: i64, now_ms: i64) i64 {
 
 fn isDue(next_ms: i64, now_ms: i64) bool {
     return next_ms == 0 or next_ms <= now_ms;
-}
-
-fn nowMs(io: std.Io) i64 {
-    const clock: std.Io.Clock = .awake;
-    return clock.now(io).toMilliseconds();
 }
