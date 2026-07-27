@@ -107,6 +107,19 @@ pub fn popDue(scheduler: *BuffTimerScheduler, now_ms: i64) ?Entry {
     return scheduler.removeAt(0);
 }
 
+fn nextPeriodicDueMs(previous_due_ms: i64, now_ms: i64, stored_interval_ms: i64) i64 {
+    if (previous_due_ms > now_ms) return previous_due_ms;
+
+    const interval_ms = @max(stored_interval_ms, 1);
+    const previous_due: i128 = previous_due_ms;
+    const now: i128 = now_ms;
+    const interval: i128 = interval_ms;
+    const elapsed_periods = @divFloor(now - previous_due, interval) + 1;
+    const next_due = previous_due + elapsed_periods * interval;
+
+    return @intCast(@min(next_due, std.math.maxInt(i64)));
+}
+
 pub fn syncBuff(
     scheduler: *BuffTimerScheduler,
     gpa: Allocator,
@@ -294,7 +307,7 @@ pub fn drainDue(
                     .kind = .periodic_pulse,
                     .entity_id = entry.entity_id,
                     .handle_id = entry.handle_id,
-                    .due_ms = now_ms + @max(entry.interval_ms, 1),
+                    .due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
                     .interval_ms = entry.interval_ms,
                 }) catch |err| {
                     scheduler.invalidate();
@@ -511,4 +524,31 @@ fn syncBuffLeftDuration(
 
 fn secondsToMs(seconds: f32) i64 {
     return @max(1, @as(i64, @intFromFloat(@ceil(seconds * 1000.0))));
+}
+
+test "periodic deadlines preserve phase while skipping missed pulses" {
+    try std.testing.expectEqual(@as(i64, 1_100), nextPeriodicDueMs(1_000, 1_000, 100));
+    try std.testing.expectEqual(@as(i64, 1_100), nextPeriodicDueMs(1_000, 1_025, 100));
+    try std.testing.expectEqual(@as(i64, 1_400), nextPeriodicDueMs(1_000, 1_350, 100));
+    try std.testing.expectEqual(@as(i64, 1_200), nextPeriodicDueMs(1_000, 1_100, 100));
+}
+
+test "periodic deadlines do not accumulate delayed-wake drift" {
+    const first = nextPeriodicDueMs(1_000, 1_025, 100);
+    const second = nextPeriodicDueMs(first, 1_235, 100);
+    const third = nextPeriodicDueMs(second, 1_460, 100);
+
+    try std.testing.expectEqual(@as(i64, 1_100), first);
+    try std.testing.expectEqual(@as(i64, 1_300), second);
+    try std.testing.expectEqual(@as(i64, 1_500), third);
+}
+
+test "periodic deadlines floor invalid intervals and cannot wrap" {
+    try std.testing.expectEqual(@as(i64, 101), nextPeriodicDueMs(100, 100, 0));
+    try std.testing.expectEqual(@as(i64, 101), nextPeriodicDueMs(100, 100, -10));
+    try std.testing.expectEqual(
+        std.math.maxInt(i64),
+        nextPeriodicDueMs(std.math.maxInt(i64) - 1, std.math.maxInt(i64), 1),
+    );
+    try std.testing.expectEqual(@as(i64, 200), nextPeriodicDueMs(200, 100, 50));
 }
