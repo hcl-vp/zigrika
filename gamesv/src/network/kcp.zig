@@ -151,7 +151,7 @@ pub inline fn _itimediff(later: u32, earlier: u32) i32 {
 test "1itimediff" {
     const expect = std.testing.expect;
     const d = _itimediff(1, 2);
-    try expect(d == -2);
+    try expect(d == -1);
 }
 //---------------------------------------------------------------------
 // manage segment

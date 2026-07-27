@@ -8,20 +8,7 @@ const FileSystem = common.FileSystem;
 const network = @import("../network.zig");
 const Connection = @import("Connection.zig");
 const ConnectionHandle = network.ConnectionHandle;
-const KcpTransport = @import("KcpTransport.zig");
-const OwnedFrame = network.OwnedFrame;
-const OwnedMessage = network.OwnedMessage;
 const SessionManager = network.SessionManager;
-
-const OwnerContext = struct {
-    handle: *ConnectionHandle,
-    session_manager: *SessionManager,
-    gpa: Allocator,
-    fs: *FileSystem,
-    assets: *const Assets,
-    gameplay: *Connection.GameplayState,
-    owner_stopped: *Io.Event,
-};
 
 pub fn run(
     handle: *ConnectionHandle,
@@ -29,57 +16,22 @@ pub fn run(
     gpa: Allocator,
     fs: *FileSystem,
     assets: *const Assets,
-) void {
-    var gameplay_state = Connection.GameplayState.init(handle, gpa);
-    var owner_stopped: Io.Event = .unset;
-    const context: OwnerContext = .{
-        .handle = handle,
-        .session_manager = session_manager,
-        .gpa = gpa,
-        .fs = fs,
-        .assets = assets,
-        .gameplay = &gameplay_state,
-        .owner_stopped = &owner_stopped,
-    };
-
-    const transport_args = .{context};
-    var transport = handle.io.concurrent(runTransport, transport_args) catch
-        handle.io.async(runTransport, transport_args);
-
-    const gameplay_args = .{context};
-    var gameplay = handle.io.concurrent(runGameplay, gameplay_args) catch
-        handle.io.async(runGameplay, gameplay_args);
-
-    stopOnOwnerExit(handle, &owner_stopped);
-
-    gameplay.await(handle.io);
-    cleanupGameplay(&gameplay_state, session_manager, handle, fs);
-
-    transport.await(handle.io);
-    drainOwnedMessages(gpa, handle.io, &handle.inbound);
-    drainOwnedFrames(gpa, handle.io, &handle.outbound);
-}
-
-fn stopOnOwnerExit(handle: *ConnectionHandle, owner_stopped: *Io.Event) void {
-    owner_stopped.wait(handle.io) catch {};
-    handle.close();
-}
-
-fn runTransport(context: OwnerContext) void {
-    defer context.owner_stopped.set(context.handle.io);
-    KcpTransport.run(context.handle, context.gpa);
-}
-
-fn runGameplay(context: OwnerContext) void {
-    defer context.owner_stopped.set(context.handle.io);
+) *ConnectionHandle {
+    var gameplay = Connection.GameplayState.init(handle, gpa);
     Connection.runGameplay(
-        context.handle,
-        context.session_manager,
-        context.gpa,
-        context.fs,
-        context.assets,
-        context.gameplay,
+        handle,
+        session_manager,
+        gpa,
+        fs,
+        assets,
+        &gameplay,
     );
+
+    handle.close(.gameplay_exit);
+    cleanupGameplay(&gameplay, session_manager, handle, fs);
+    handle.gameplay_completions.putOneUncancelable(handle.io, handle) catch unreachable;
+    handle.signalTransportWork();
+    return handle;
 }
 
 fn cleanupGameplay(
@@ -99,56 +51,39 @@ fn cleanupGameplay(
     }
 }
 
-fn drainOwnedFrames(gpa: Allocator, io: Io, queue: *Io.Queue(OwnedFrame)) void {
-    var frames: [32]OwnedFrame = undefined;
-    while (true) {
-        const count = queue.get(io, &frames, 0) catch return;
-        if (count == 0) return;
-        for (frames[0..count]) |frame| gpa.free(frame.bytes);
-    }
-}
+const TestHandleContext = struct {
+    work: Io.Event = .unset,
+    completions_buf: [2]*ConnectionHandle = undefined,
+    completions: Io.Queue(*ConnectionHandle),
 
-fn drainOwnedMessages(gpa: Allocator, io: Io, queue: *Io.Queue(OwnedMessage)) void {
-    var messages: [32]OwnedMessage = undefined;
-    while (true) {
-        const count = queue.get(io, &messages, 0) catch return;
-        if (count == 0) return;
-        for (messages[0..count]) |message| gpa.free(message.bytes);
+    fn init(context: *TestHandleContext) void {
+        context.work = .unset;
+        context.completions = Io.Queue(*ConnectionHandle).init(&context.completions_buf);
     }
-}
+};
 
-fn initTestHandle(handle: *ConnectionHandle) void {
+fn initTestHandle(handle: *ConnectionHandle, context: *TestHandleContext) void {
+    context.init();
     handle.io = std.testing.io;
-    handle.queue = Io.Queue(network.RawPacket).init(&handle.queue_buf);
-    handle.inbound = Io.Queue(OwnedMessage).init(&handle.inbound_buf);
-    handle.outbound = Io.Queue(OwnedFrame).init(&handle.outbound_buf);
+    handle.inbound = Io.Queue(network.OwnedMessage).init(&handle.inbound_buf);
+    handle.outbound = Io.Queue(network.OwnedFrame).init(&handle.outbound_buf);
     handle.closed_event = .unset;
-}
-
-test "closed session queues drain owned inbound and outbound storage" {
-    var handle: ConnectionHandle = undefined;
-    initTestHandle(&handle);
-
-    try handle.inbound.putOne(std.testing.io, .{
-        .bytes = try std.testing.allocator.dupe(u8, "inbound"),
-    });
-    try handle.outbound.putOne(std.testing.io, .{
-        .bytes = try std.testing.allocator.dupe(u8, "outbound"),
-    });
-
-    handle.close();
-    drainOwnedMessages(std.testing.allocator, std.testing.io, &handle.inbound);
-    drainOwnedFrames(std.testing.allocator, std.testing.io, &handle.outbound);
+    handle.transport_work = &context.work;
+    handle.gameplay_completions = &context.completions;
+    handle.close_reason = .init(.active);
+    handle.authenticated = .init(false);
 }
 
 test "same-player replacement waits for the old claim to be released" {
     var manager: SessionManager = .{};
     defer manager.deinit(std.testing.allocator);
 
+    var old_context: TestHandleContext = undefined;
     var old_handle: ConnectionHandle = undefined;
-    initTestHandle(&old_handle);
+    initTestHandle(&old_handle, &old_context);
+    var replacement_context: TestHandleContext = undefined;
     var replacement_handle: ConnectionHandle = undefined;
-    initTestHandle(&replacement_handle);
+    initTestHandle(&replacement_handle, &replacement_context);
 
     try manager.acquire(std.testing.allocator, &old_handle, 1);
 
@@ -165,6 +100,7 @@ test "same-player replacement waits for the old claim to be released" {
         std.testing.io.async(AcquireContext.run, args);
 
     try old_handle.closed_event.wait(std.testing.io);
+    try std.testing.expectEqual(network.CloseReason.replaced, old_handle.closeReason());
     try std.testing.expect(manager.sessions.get(1) == &old_handle);
 
     manager.release(&old_handle, 1);
@@ -178,8 +114,9 @@ test "missing player claims require no cleanup release" {
     var manager: SessionManager = .{};
     defer manager.deinit(std.testing.allocator);
 
+    var context: TestHandleContext = undefined;
     var handle: ConnectionHandle = undefined;
-    initTestHandle(&handle);
+    initTestHandle(&handle, &context);
     var gameplay = Connection.GameplayState.init(&handle, std.testing.allocator);
 
     cleanupGameplay(&gameplay, &manager, &handle, undefined);
@@ -190,8 +127,9 @@ test "acquired player claims are released during supervisor cleanup" {
     var manager: SessionManager = .{};
     defer manager.deinit(std.testing.allocator);
 
+    var context: TestHandleContext = undefined;
     var handle: ConnectionHandle = undefined;
-    initTestHandle(&handle);
+    initTestHandle(&handle, &context);
     try manager.acquire(std.testing.allocator, &handle, 1);
 
     var gameplay = Connection.GameplayState.init(&handle, std.testing.allocator);
@@ -202,48 +140,12 @@ test "acquired player claims are released during supervisor cleanup" {
     try std.testing.expect(gameplay.claimed_player_id == null);
 }
 
-fn waitForInbound(handle: *ConnectionHandle) !void {
-    _ = try handle.inbound.getOne(handle.io);
-}
-
-fn waitForPacket(handle: *ConnectionHandle) !void {
-    _ = try handle.queue.getOne(handle.io);
-}
-
-fn signalOwnerStopped(event: *Io.Event, io: Io) void {
-    event.set(io);
-}
-
-test "transport-first shutdown closes and joins the gameplay lane" {
+test "session closure retains the first terminal reason" {
+    var context: TestHandleContext = undefined;
     var handle: ConnectionHandle = undefined;
-    initTestHandle(&handle);
-    var owner_stopped: Io.Event = .unset;
+    initTestHandle(&handle, &context);
 
-    const gameplay_args = .{&handle};
-    var gameplay = std.testing.io.concurrent(waitForInbound, gameplay_args) catch
-        std.testing.io.async(waitForInbound, gameplay_args);
-    const transport_args = .{ &owner_stopped, std.testing.io };
-    var transport = std.testing.io.concurrent(signalOwnerStopped, transport_args) catch
-        std.testing.io.async(signalOwnerStopped, transport_args);
-
-    stopOnOwnerExit(&handle, &owner_stopped);
-    transport.await(std.testing.io);
-    try std.testing.expectError(error.Closed, gameplay.await(std.testing.io));
-}
-
-test "gameplay-first shutdown closes and joins the transport lane" {
-    var handle: ConnectionHandle = undefined;
-    initTestHandle(&handle);
-    var owner_stopped: Io.Event = .unset;
-
-    const transport_args = .{&handle};
-    var transport = std.testing.io.concurrent(waitForPacket, transport_args) catch
-        std.testing.io.async(waitForPacket, transport_args);
-    const gameplay_args = .{ &owner_stopped, std.testing.io };
-    var gameplay = std.testing.io.concurrent(signalOwnerStopped, gameplay_args) catch
-        std.testing.io.async(signalOwnerStopped, gameplay_args);
-
-    stopOnOwnerExit(&handle, &owner_stopped);
-    gameplay.await(std.testing.io);
-    try std.testing.expectError(error.Closed, transport.await(std.testing.io));
+    handle.close(.kcp_dead_link);
+    handle.close(.gameplay_exit);
+    try std.testing.expectEqual(network.CloseReason.kcp_dead_link, handle.closeReason());
 }

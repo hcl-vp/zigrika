@@ -22,6 +22,7 @@ const PlayerComponentStorage = @import("../logic/component/player/PlayerComponen
 io: Io,
 gpa: Allocator,
 outbound: *Io.Queue(OwnedFrame),
+transport_work: *Io.Event,
 session_key: ?[32]u8 = null,
 seq: u32 = 0,
 
@@ -36,6 +37,7 @@ pub const GameplayState = struct {
                 .io = handle.io,
                 .gpa = gpa,
                 .outbound = &handle.outbound,
+                .transport_work = handle.transport_work,
             },
         };
     }
@@ -112,7 +114,9 @@ const GameplayBudget = struct {
 };
 
 fn waitForInbound(handle: *ConnectionHandle) anyerror!OwnedMessage {
-    return handle.inbound.getOne(handle.io);
+    const message = try handle.inbound.getOne(handle.io);
+    handle.signalTransportWork();
+    return message;
 }
 
 fn waitForDeadline(io: Io, delay_ms: i64) anyerror!void {
@@ -372,6 +376,7 @@ pub fn runGameplay(
                         return;
                     };
                     gameplay.claimed_player_id = id;
+                    handle.markAuthenticated();
 
                     if (pending_reconnect) |reconnect| {
                         gameplay.connection.respond(reconnect.rpc_id, proto.pb.ReconnectResponse{
@@ -432,6 +437,7 @@ fn enqueue(conn: *Connection, header: Message.Header, message: anytype) !void {
     const bytes = try Message.encodeAlloc(header, message, conn.gpa, conn.session_key);
     errdefer conn.gpa.free(bytes);
     try conn.outbound.putOne(conn.io, .{ .bytes = bytes });
+    conn.transport_work.set(conn.io);
 }
 
 pub fn push(conn: *Connection, message: anytype) !void {
@@ -471,10 +477,12 @@ fn decodeOwnedFrame(frame: OwnedFrame, key: ?[32]u8) !Message {
 test "connection queues owned push and response frames in sequence order" {
     var outbound_buffer: [4]OwnedFrame = undefined;
     var outbound = Io.Queue(OwnedFrame).init(&outbound_buffer);
+    var transport_work: Io.Event = .unset;
     var conn: Connection = .{
         .io = std.testing.io,
         .gpa = std.testing.allocator,
         .outbound = &outbound,
+        .transport_work = &transport_work,
     };
 
     var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
@@ -517,10 +525,12 @@ test "connection queues owned push and response frames in sequence order" {
 test "queued proto key response retains the old key boundary" {
     var outbound_buffer: [2]OwnedFrame = undefined;
     var outbound = Io.Queue(OwnedFrame).init(&outbound_buffer);
+    var transport_work: Io.Event = .unset;
     var conn: Connection = .{
         .io = std.testing.io,
         .gpa = std.testing.allocator,
         .outbound = &outbound,
+        .transport_work = &transport_work,
     };
 
     try conn.respond(9, proto.pb.ProtoKeyResponse{
@@ -566,10 +576,12 @@ test "queued proto key response retains the old key boundary" {
 test "closing a full outbound queue wakes and releases its producer" {
     var outbound_buffer: [1]OwnedFrame = undefined;
     var outbound = Io.Queue(OwnedFrame).init(&outbound_buffer);
+    var transport_work: Io.Event = .unset;
     var conn: Connection = .{
         .io = std.testing.io,
         .gpa = std.testing.allocator,
         .outbound = &outbound,
+        .transport_work = &transport_work,
     };
     try conn.push(proto.pb.JSPatchNotify{ .Content = "queued" });
 
