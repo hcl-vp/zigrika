@@ -37,16 +37,21 @@ pub const EntityMovement = struct {
     entity: Entity,
 };
 
-pub const BuffRemoval = struct {
-    entity: Entity,
-    handle_ids: []i32,
-};
-
 pub const BuffAdditionEntry = struct {
     id: i64,
     stack_count: i32 = 0,
     is_active: bool,
     duration_seconds: ?f32 = null,
+};
+
+pub const BuffRemoval = struct {
+    entity: Entity,
+    handle_ids: []i32,
+    natural_expiration: ?struct {
+        now_ms: i64,
+        instigator: Entity,
+        follow_up_buffs: []BuffAdditionEntry,
+    } = null,
 };
 
 pub const BuffAddition = struct {

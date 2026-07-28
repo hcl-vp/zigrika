@@ -9,6 +9,10 @@ const FileSystem = @import("common").FileSystem;
 const Transaction = @import("../handlers.zig").Transaction;
 const attributes_helper = @import("../../logic/helpers/attributes.zig");
 
+pub fn configured_duration_seconds(buff_data: *const Assets.DataTables.Buff) f32 {
+    return if (buff_data.DurationMagnitude.len > 0) buff_data.DurationMagnitude[0] else 0;
+}
+
 pub const CalcutionPolicy = enum(i5) {
     AdvancedMultiplyMagnitude1 = -1,
     AddValue = 0,

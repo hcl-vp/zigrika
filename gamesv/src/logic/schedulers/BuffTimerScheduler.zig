@@ -3,6 +3,7 @@ const std = @import("std");
 const pb = @import("proto").pb;
 const Assets = @import("../../data/Assets.zig");
 const EventQueue = @import("../EventQueue.zig");
+const Events = @import("../events.zig");
 const Scene = @import("../Scene.zig");
 const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
@@ -156,6 +157,18 @@ const PeriodicDisposition = struct {
     next_due_ms: i64,
 };
 
+const ExpirationDisposition = union(enum) {
+    remove,
+    retain: i32,
+};
+
+fn expirationDisposition(stack_count: i32, remove_number: u8) ExpirationDisposition {
+    if (stack_count <= 0 or remove_number == 0 or remove_number >= stack_count) {
+        return .remove;
+    }
+    return .{ .retain = stack_count - remove_number };
+}
+
 fn periodicDisposition(entry: Entry, now_ms: i64, is_active: bool) PeriodicDisposition {
     return .{
         .execute_effect = is_active,
@@ -199,14 +212,19 @@ fn deferExpiryRetry(scheduler: *BuffTimerScheduler, entry: Entry, now_ms: i64) v
     }
 }
 
-fn completeExpiry(
+pub fn deferExpirationRetry(
     scheduler: *BuffTimerScheduler,
-    buff_info: *pb.FightBuffInformation,
-    entry: Entry,
+    entity_id: i64,
+    handle_id: i32,
     now_ms: i64,
 ) void {
-    syncLeftDuration(buff_info, entry.due_ms, now_ms);
-    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+    const due_ms = scheduler.deadline(entity_id, handle_id, .expiry) orelse return;
+    scheduler.deferExpiryRetry(.{
+        .kind = .expiry,
+        .entity_id = entity_id,
+        .handle_id = handle_id,
+        .due_ms = due_ms,
+    }, now_ms);
 }
 
 pub fn syncBuff(
@@ -363,19 +381,64 @@ pub fn drainOneDue(
                 scheduler.cancelHandle(entry.entity_id, entry.handle_id);
                 return;
             };
+            const buff_info = lookup[1];
+            const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse {
+                scheduler.cancelHandle(entry.entity_id, entry.handle_id);
+                return;
+            };
+            switch (expirationDisposition(
+                buff_info.StackCount,
+                buff_data.StackExpirationRemoveNumber,
+            )) {
+                .retain => |new_stack_count| {
+                    scheduler.completePartialExpiration(
+                        entry,
+                        lookup[0],
+                        buff_info,
+                        &buff_data,
+                        new_stack_count,
+                        now_ms,
+                        events,
+                        combat_receive_pack,
+                        alloc,
+                    ) catch |err| {
+                        scheduler.deferExpiryRetry(entry, now_ms);
+                        return err;
+                    };
+                    return;
+                },
+                .remove => {},
+            }
+
             const handle_ids = alloc.arena.alloc(i32, 1) catch |err| {
                 scheduler.deferExpiryRetry(entry, now_ms);
                 return err;
             };
             handle_ids[0] = entry.handle_id;
+            const follow_up_buffs = routineExpirationEntries(
+                alloc.arena,
+                assets,
+                buff_data.RoutineExpirationEffects,
+            ) catch |err| {
+                scheduler.deferExpiryRetry(entry, now_ms);
+                return err;
+            };
+            const instigator = if (scene.net_id_map.get(buff_info.InstigatorId)) |index|
+                Entity{ .index = index, .net_id = buff_info.InstigatorId }
+            else
+                lookup[0];
             events.enqueue(.buff_removal, .{
                 .entity = lookup[0],
                 .handle_ids = handle_ids,
+                .natural_expiration = .{
+                    .now_ms = now_ms,
+                    .instigator = instigator,
+                    .follow_up_buffs = follow_up_buffs,
+                },
             }) catch |err| {
                 scheduler.deferExpiryRetry(entry, now_ms);
                 return err;
             };
-            scheduler.completeExpiry(lookup[1], entry, now_ms);
         },
         .periodic_pulse => {
             const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
@@ -406,6 +469,98 @@ pub fn drainOneDue(
             }
         },
     }
+}
+
+fn completePartialExpiration(
+    scheduler: *BuffTimerScheduler,
+    entry: Entry,
+    entity: Entity,
+    buff_info: *pb.FightBuffInformation,
+    buff_data: *const Assets.DataTables.Buff,
+    new_stack_count: i32,
+    now_ms: i64,
+    events: *EventQueue,
+    combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
+    alloc: mem.Alloc,
+) !void {
+    const configured_duration = buff_helper.configured_duration_seconds(buff_data);
+    const duration = if (configured_duration > 0) configured_duration else -1;
+    var stack_notify: pb.BuffStackCountNotify = .{
+        .HandleId = entry.handle_id,
+        .NewStackCount = new_stack_count,
+        .InstigatorId = buff_info.InstigatorId,
+        .Time = .{ .Duration = duration },
+    };
+    if (duration > 0) {
+        stack_notify.gFs = .{ .LeftDuration = duration };
+    }
+
+    try combat_receive_pack.append(alloc.arena, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = entry.entity_id },
+            .Message = .{ .BuffStackCountNotify = stack_notify },
+        },
+    } });
+    try events.enqueue(.buff_change, .{ .entity = entity });
+
+    const reset_period = buff_data.Period > 0 and
+        buff_data.StackPeriodResetPolicy == .Refresh;
+    const periodic_due_ms = if (reset_period)
+        deadlineAfterMs(now_ms, secondsToMs(buff_data.Period))
+    else
+        0;
+    if (reset_period and
+        scheduler.deadline(entry.entity_id, entry.handle_id, .periodic_pulse) == null)
+    {
+        const interval_ms = secondsToMs(buff_data.Period);
+        try scheduler.upsert(alloc.gpa, .{
+            .kind = .periodic_pulse,
+            .entity_id = entry.entity_id,
+            .handle_id = entry.handle_id,
+            .due_ms = periodic_due_ms,
+            .interval_ms = interval_ms,
+        });
+    }
+
+    if (duration > 0) {
+        const expiry_rescheduled = scheduler.rescheduleExisting(
+            entry.entity_id,
+            entry.handle_id,
+            .expiry,
+            deadlineAfterMs(now_ms, secondsToMs(duration)),
+        );
+        std.debug.assert(expiry_rescheduled);
+    } else {
+        scheduler.cancel(entry.entity_id, entry.handle_id, .expiry);
+    }
+    if (reset_period) {
+        const period_rescheduled = scheduler.rescheduleExisting(
+            entry.entity_id,
+            entry.handle_id,
+            .periodic_pulse,
+            periodic_due_ms,
+        );
+        std.debug.assert(period_rescheduled);
+    }
+
+    buff_info.StackCount = new_stack_count;
+    buff_info.Duration = duration;
+    buff_info.LeftDuration = duration;
+}
+
+fn routineExpirationEntries(
+    arena: Allocator,
+    assets: *const Assets,
+    ids: []const i64,
+) ![]Events.BuffAdditionEntry {
+    const entries = try arena.alloc(Events.BuffAdditionEntry, ids.len);
+    var count: usize = 0;
+    for (ids) |id| {
+        if (assets.tables.buff.getDataById(id) == null) continue;
+        entries[count] = .{ .id = id, .is_active = true };
+        count += 1;
+    }
+    return entries[0..count];
 }
 
 fn registerBuff(
@@ -805,34 +960,186 @@ test "peeking a due entry retains it until completion" {
     try std.testing.expectEqual(@as(usize, 1), scheduler.positions.count());
 }
 
-test "completed expiry removes every timer for its handle" {
+test "expiration disposition removes or retains configured stacks" {
+    try std.testing.expect(expirationDisposition(0, 1) == .remove);
+    try std.testing.expect(expirationDisposition(-1, 1) == .remove);
+    try std.testing.expect(expirationDisposition(3, 0) == .remove);
+    try std.testing.expect(expirationDisposition(3, 3) == .remove);
+    try std.testing.expect(expirationDisposition(3, 4) == .remove);
+
+    const retained = expirationDisposition(3, 1);
+    try std.testing.expect(retained == .retain);
+    try std.testing.expectEqual(@as(i32, 2), retained.retain);
+}
+
+test "partial expiration rearms duration and refreshes periodic cadence" {
     var scheduler: BuffTimerScheduler = .{};
     defer scheduler.deinit(std.testing.allocator);
 
     const expiry: Entry = .{
         .kind = .expiry,
-        .entity_id = 1,
-        .handle_id = 1,
+        .entity_id = 10,
+        .handle_id = 20,
         .due_ms = 100,
     };
     try scheduler.upsert(std.testing.allocator, expiry);
     try scheduler.upsert(std.testing.allocator, .{
         .kind = .periodic_pulse,
-        .entity_id = 1,
-        .handle_id = 1,
+        .entity_id = 10,
+        .handle_id = 20,
         .due_ms = 100,
-        .interval_ms = 100,
+        .interval_ms = 500,
     });
+
     var buff_info: pb.FightBuffInformation = .{
-        .Duration = 1,
-        .LeftDuration = 1,
+        .HandleId = 20,
+        .StackCount = 3,
+        .InstigatorId = 30,
+        .Duration = 2,
+        .LeftDuration = 0,
     };
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationMagnitude = &.{2};
+    buff_data.Period = 0.5;
+    buff_data.StackPeriodResetPolicy = .Refresh;
+    var events: EventQueue = .{ .arena = std.testing.allocator };
+    defer events.deque.deinit(std.testing.allocator);
+    var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer combat_receive_pack.deinit(std.testing.allocator);
 
-    scheduler.completeExpiry(&buff_info, expiry, 100);
+    try scheduler.completePartialExpiration(
+        expiry,
+        .{ .index = 0, .net_id = 10 },
+        &buff_info,
+        &buff_data,
+        2,
+        100,
+        &events,
+        &combat_receive_pack,
+        .{
+            .gpa = std.testing.allocator,
+            .arena = std.testing.allocator,
+        },
+    );
 
-    try std.testing.expectEqual(@as(f32, 0), buff_info.LeftDuration);
-    try std.testing.expect(scheduler.deadline(1, 1, .expiry) == null);
-    try std.testing.expect(scheduler.deadline(1, 1, .periodic_pulse) == null);
+    try std.testing.expectEqual(@as(i32, 2), buff_info.StackCount);
+    try std.testing.expectEqual(@as(f32, 2), buff_info.Duration);
+    try std.testing.expectEqual(@as(f32, 2), buff_info.LeftDuration);
+    try std.testing.expectEqual(@as(?i64, 2_100), scheduler.deadline(10, 20, .expiry));
+    try std.testing.expectEqual(@as(?i64, 600), scheduler.deadline(10, 20, .periodic_pulse));
+    try std.testing.expectEqual(@as(usize, 1), combat_receive_pack.items.len);
+    const combat_notify = combat_receive_pack.items[0].Message.?.CombatNotifyData.?;
+    const stack_notify = combat_notify.Message.?.BuffStackCountNotify.?;
+    try std.testing.expectEqual(@as(i32, 20), stack_notify.HandleId);
+    try std.testing.expectEqual(@as(i32, 2), stack_notify.NewStackCount);
+    try std.testing.expectEqual(@as(f32, 2), stack_notify.Time.?.Duration);
+    try std.testing.expectEqual(@as(f32, 2), stack_notify.gFs.?.LeftDuration);
+    try std.testing.expectEqual(
+        .buff_change,
+        std.meta.activeTag(events.deque.popFront().?),
+    );
+}
+
+test "partial expiration preserves periodic phase when configured" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    const expiry: Entry = .{
+        .kind = .expiry,
+        .entity_id = 10,
+        .handle_id = 20,
+        .due_ms = 100,
+    };
+    try scheduler.upsert(std.testing.allocator, expiry);
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 10,
+        .handle_id = 20,
+        .due_ms = 350,
+        .interval_ms = 500,
+    });
+
+    var buff_info: pb.FightBuffInformation = .{
+        .HandleId = 20,
+        .StackCount = 3,
+    };
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationMagnitude = &.{2};
+    buff_data.Period = 0.5;
+    buff_data.StackPeriodResetPolicy = .NoRefresh;
+    var events: EventQueue = .{ .arena = std.testing.allocator };
+    defer events.deque.deinit(std.testing.allocator);
+    var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer combat_receive_pack.deinit(std.testing.allocator);
+
+    try scheduler.completePartialExpiration(
+        expiry,
+        .{ .index = 0, .net_id = 10 },
+        &buff_info,
+        &buff_data,
+        2,
+        100,
+        &events,
+        &combat_receive_pack,
+        .{
+            .gpa = std.testing.allocator,
+            .arena = std.testing.allocator,
+        },
+    );
+
+    try std.testing.expectEqual(@as(?i64, 350), scheduler.deadline(10, 20, .periodic_pulse));
+}
+
+test "partial expiration cancels non-positive configured duration" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    const expiry: Entry = .{
+        .kind = .expiry,
+        .entity_id = 10,
+        .handle_id = 20,
+        .due_ms = 100,
+    };
+    try scheduler.upsert(std.testing.allocator, expiry);
+
+    var buff_info: pb.FightBuffInformation = .{
+        .HandleId = 20,
+        .StackCount = 2,
+        .Duration = 1,
+        .LeftDuration = 0,
+    };
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationMagnitude = &.{-1};
+    buff_data.Period = 0;
+    buff_data.StackPeriodResetPolicy = .NoRefresh;
+    var events: EventQueue = .{ .arena = std.testing.allocator };
+    defer events.deque.deinit(std.testing.allocator);
+    var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer combat_receive_pack.deinit(std.testing.allocator);
+
+    try scheduler.completePartialExpiration(
+        expiry,
+        .{ .index = 0, .net_id = 10 },
+        &buff_info,
+        &buff_data,
+        1,
+        100,
+        &events,
+        &combat_receive_pack,
+        .{
+            .gpa = std.testing.allocator,
+            .arena = std.testing.allocator,
+        },
+    );
+
+    try std.testing.expectEqual(@as(i32, 1), buff_info.StackCount);
+    try std.testing.expectEqual(@as(f32, -1), buff_info.Duration);
+    try std.testing.expectEqual(@as(f32, -1), buff_info.LeftDuration);
+    try std.testing.expect(scheduler.deadline(10, 20, .expiry) == null);
+    const combat_notify = combat_receive_pack.items[0].Message.?.CombatNotifyData.?;
+    const stack_notify = combat_notify.Message.?.BuffStackCountNotify.?;
+    try std.testing.expectEqual(@as(f32, -1), stack_notify.Time.?.Duration);
+    try std.testing.expect(stack_notify.gFs == null);
 }
 
 test "failed expiry preparation defers its handle without blocking others" {
