@@ -10,7 +10,7 @@ const buff_helper = @import("../helpers/buff.zig");
 
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
-const rebuild_retry_delay_ms = 50;
+const failure_retry_delay_ms = 50;
 
 pub const Kind = enum(u1) {
     expiry,
@@ -105,9 +105,37 @@ pub fn nextWakeDelayMs(scheduler: *const BuffTimerScheduler, now_ms: i64) ?i64 {
     return deadlineDelayMs(scheduler.peekDueMs() orelse return null, now_ms);
 }
 
-pub fn popDue(scheduler: *BuffTimerScheduler, now_ms: i64) ?Entry {
+fn peekDueEntry(scheduler: *const BuffTimerScheduler, now_ms: i64) ?Entry {
     if (scheduler.heap.items.len == 0 or scheduler.heap.items[0].due_ms > now_ms) return null;
+    return scheduler.heap.items[0];
+}
+
+pub fn popDue(scheduler: *BuffTimerScheduler, now_ms: i64) ?Entry {
+    _ = scheduler.peekDueEntry(now_ms) orelse return null;
     return scheduler.removeAt(0);
+}
+
+fn rescheduleExisting(
+    scheduler: *BuffTimerScheduler,
+    entity_id: i64,
+    handle_id: i32,
+    kind: Kind,
+    due_ms: i64,
+) bool {
+    const index = scheduler.positions.get(key(entity_id, handle_id, kind)) orelse return false;
+    const previous_due_ms = scheduler.heap.items[index].due_ms;
+    scheduler.heap.items[index].due_ms = due_ms;
+    if (due_ms < previous_due_ms) {
+        scheduler.siftUp(index);
+    } else if (due_ms > previous_due_ms) {
+        scheduler.siftDown(index);
+    }
+    return true;
+}
+
+fn failureRetryDueMs(now_ms: i64) i64 {
+    const due_ms: i128 = @as(i128, now_ms) + failure_retry_delay_ms;
+    return @intCast(@min(due_ms, std.math.maxInt(i64)));
 }
 
 fn nextPeriodicDueMs(previous_due_ms: i64, now_ms: i64, stored_interval_ms: i64) i64 {
@@ -133,6 +161,52 @@ fn periodicDisposition(entry: Entry, now_ms: i64, is_active: bool) PeriodicDispo
         .execute_effect = is_active,
         .next_due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
     };
+}
+
+fn preparePeriodic(
+    scheduler: *BuffTimerScheduler,
+    entry: Entry,
+    now_ms: i64,
+    is_active: bool,
+) ?PeriodicDisposition {
+    const disposition = periodicDisposition(entry, now_ms, is_active);
+    if (!scheduler.rescheduleExisting(
+        entry.entity_id,
+        entry.handle_id,
+        .periodic_pulse,
+        disposition.next_due_ms,
+    )) return null;
+    return disposition;
+}
+
+fn deferExpiryRetry(scheduler: *BuffTimerScheduler, entry: Entry, now_ms: i64) void {
+    const retry_due_ms = failureRetryDueMs(now_ms);
+    _ = scheduler.rescheduleExisting(
+        entry.entity_id,
+        entry.handle_id,
+        .expiry,
+        retry_due_ms,
+    );
+    if (scheduler.deadline(entry.entity_id, entry.handle_id, .periodic_pulse)) |periodic_due_ms| {
+        if (periodic_due_ms <= retry_due_ms) {
+            _ = scheduler.rescheduleExisting(
+                entry.entity_id,
+                entry.handle_id,
+                .periodic_pulse,
+                retry_due_ms,
+            );
+        }
+    }
+}
+
+fn completeExpiry(
+    scheduler: *BuffTimerScheduler,
+    buff_info: *pb.FightBuffInformation,
+    entry: Entry,
+    now_ms: i64,
+) void {
+    syncLeftDuration(buff_info, entry.due_ms, now_ms);
+    scheduler.cancelHandle(entry.entity_id, entry.handle_id);
 }
 
 pub fn syncBuff(
@@ -282,21 +356,26 @@ pub fn drainOneDue(
     const now_ms = event.data.now_ms;
     try scheduler.ensureInitialized(alloc.gpa, scene, assets, now_ms);
 
-    const entry = scheduler.popDue(now_ms) orelse return;
+    const entry = scheduler.peekDueEntry(now_ms) orelse return;
     switch (entry.kind) {
         .expiry => {
             const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
                 scheduler.cancelHandle(entry.entity_id, entry.handle_id);
                 return;
             };
-            syncLeftDuration(lookup[1], entry.due_ms, now_ms);
-            const handle_ids = try alloc.arena.alloc(i32, 1);
+            const handle_ids = alloc.arena.alloc(i32, 1) catch |err| {
+                scheduler.deferExpiryRetry(entry, now_ms);
+                return err;
+            };
             handle_ids[0] = entry.handle_id;
-            scheduler.cancelHandle(entry.entity_id, entry.handle_id);
-            try events.enqueue(.buff_removal, .{
+            events.enqueue(.buff_removal, .{
                 .entity = lookup[0],
                 .handle_ids = handle_ids,
-            });
+            }) catch |err| {
+                scheduler.deferExpiryRetry(entry, now_ms);
+                return err;
+            };
+            scheduler.completeExpiry(lookup[1], entry, now_ms);
         },
         .periodic_pulse => {
             const lookup = scheduler.findEntityBuff(scene, entry.entity_id, entry.handle_id) orelse {
@@ -308,7 +387,10 @@ pub fn drainOneDue(
                 scheduler.cancelHandle(entry.entity_id, entry.handle_id);
                 return;
             };
-            const disposition = periodicDisposition(entry, now_ms, buff_info.IsActive);
+            const disposition = scheduler.preparePeriodic(entry, now_ms, buff_info.IsActive) orelse {
+                scheduler.scheduleRebuild(now_ms);
+                return error.MissingTimerEntry;
+            };
             if (disposition.execute_effect) {
                 try buff_helper.execute_periodic_buff_effects(
                     combat_receive_pack,
@@ -322,16 +404,6 @@ pub fn drainOneDue(
                     alloc,
                 );
             }
-            scheduler.upsert(alloc.gpa, .{
-                .kind = .periodic_pulse,
-                .entity_id = entry.entity_id,
-                .handle_id = entry.handle_id,
-                .due_ms = disposition.next_due_ms,
-                .interval_ms = entry.interval_ms,
-            }) catch |err| {
-                scheduler.scheduleRebuild(now_ms);
-                return err;
-            };
         },
     }
 }
@@ -439,8 +511,7 @@ fn clear(scheduler: *BuffTimerScheduler) void {
 
 fn scheduleRebuild(scheduler: *BuffTimerScheduler, now_ms: i64) void {
     scheduler.clear();
-    const rebuild_deadline: i128 = @as(i128, now_ms) + rebuild_retry_delay_ms;
-    scheduler.rebuild_due_ms = @intCast(@min(rebuild_deadline, std.math.maxInt(i64)));
+    scheduler.rebuild_due_ms = failureRetryDueMs(now_ms);
 }
 
 fn deadlineDelayMs(due_ms: i64, now_ms: i64) i64 {
@@ -697,4 +768,116 @@ test "periodic activation changes execution without changing cadence" {
     try std.testing.expect(!inactive.execute_effect);
     try std.testing.expect(active.execute_effect);
     try std.testing.expectEqual(inactive.next_due_ms, active.next_due_ms);
+}
+
+test "peeking a due entry retains it until completion" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    const entry: Entry = .{
+        .kind = .expiry,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 100,
+    };
+    try scheduler.upsert(std.testing.allocator, entry);
+
+    try std.testing.expectEqual(entry, scheduler.peekDueEntry(100).?);
+    try std.testing.expectEqual(@as(?i64, 100), scheduler.peekDueMs());
+    try std.testing.expectEqual(@as(usize, 1), scheduler.heap.items.len);
+    try std.testing.expectEqual(@as(usize, 1), scheduler.positions.count());
+}
+
+test "completed expiry removes every timer for its handle" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    const expiry: Entry = .{
+        .kind = .expiry,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 100,
+    };
+    try scheduler.upsert(std.testing.allocator, expiry);
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 100,
+        .interval_ms = 100,
+    });
+    var buff_info: pb.FightBuffInformation = .{
+        .Duration = 1,
+        .LeftDuration = 1,
+    };
+
+    scheduler.completeExpiry(&buff_info, expiry, 100);
+
+    try std.testing.expectEqual(@as(f32, 0), buff_info.LeftDuration);
+    try std.testing.expect(scheduler.deadline(1, 1, .expiry) == null);
+    try std.testing.expect(scheduler.deadline(1, 1, .periodic_pulse) == null);
+}
+
+test "failed expiry preparation defers its handle without blocking others" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    const expiry: Entry = .{
+        .kind = .expiry,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 100,
+    };
+    try scheduler.upsert(std.testing.allocator, expiry);
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 125,
+        .interval_ms = 100,
+    });
+    const unrelated: Entry = .{
+        .kind = .expiry,
+        .entity_id = 2,
+        .handle_id = 1,
+        .due_ms = 110,
+    };
+    try scheduler.upsert(std.testing.allocator, unrelated);
+
+    scheduler.deferExpiryRetry(expiry, 100);
+
+    try std.testing.expectEqual(@as(?i64, 150), scheduler.deadline(1, 1, .expiry));
+    try std.testing.expectEqual(@as(?i64, 150), scheduler.deadline(1, 1, .periodic_pulse));
+    try std.testing.expectEqual(unrelated, scheduler.popDue(110).?);
+    try std.testing.expectEqual(expiry.kind, scheduler.popDue(150).?.kind);
+    try std.testing.expectEqual(Kind.periodic_pulse, scheduler.popDue(150).?.kind);
+}
+
+test "periodic failure retains the next aligned deadline" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 100,
+        .interval_ms = 100,
+    });
+
+    const first = scheduler.peekDueEntry(125).?;
+    const first_disposition = scheduler.preparePeriodic(first, 125, true).?;
+    try std.testing.expect(first_disposition.execute_effect);
+    try std.testing.expectEqual(@as(?i64, 200), scheduler.deadline(1, 1, .periodic_pulse));
+
+    const second = scheduler.peekDueEntry(250).?;
+    _ = scheduler.preparePeriodic(second, 250, true).?;
+    try std.testing.expectEqual(@as(?i64, 300), scheduler.deadline(1, 1, .periodic_pulse));
+    try std.testing.expectEqual(@as(usize, 1), scheduler.heap.items.len);
+    try std.testing.expectEqual(@as(usize, 1), scheduler.positions.count());
+}
+
+test "failure retry deadlines clamp without wrapping" {
+    try std.testing.expectEqual(@as(i64, 1_050), failureRetryDueMs(1_000));
+    try std.testing.expectEqual(std.math.maxInt(i64), failureRetryDueMs(std.math.maxInt(i64)));
 }
