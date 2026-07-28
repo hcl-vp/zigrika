@@ -18,6 +18,7 @@ const RoleAttributeSync = @import("../../helpers/role_attribute_sync.zig");
 const sliceToArrayList = @import("../../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Entity = Scene.Entity;
 const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
+const buff_helper = @import("../../../logic/helpers/buff.zig");
 const entity_proto = @import("../../../logic/helpers/entity_proto.zig");
 pub fn phantomItemList(echo_comp: *PlayerEchoComponent, arena: std.mem.Allocator) !std.ArrayList(pb.PhantomItem) {
     var list: std.ArrayList(pb.PhantomItem) = .empty;
@@ -234,6 +235,7 @@ pub fn refreshRoleEntities(
     }),
     changed_roles: std.array_hash_map.Auto(i32, void),
     buff_timers: *BuffTimerScheduler,
+    io: std.Io,
     now_ms: i64,
 ) !void {
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
@@ -288,6 +290,7 @@ pub fn refreshRoleEntities(
         const buff_changed = try syncEchoBuffEffects(
             txn,
             alloc,
+            fs,
             scene,
             assets,
             entity.net_id,
@@ -295,6 +298,7 @@ pub fn refreshRoleEntities(
             echo_comp,
             buff_comp,
             buff_timers,
+            io,
             now_ms,
         );
 
@@ -635,6 +639,7 @@ fn pushChangedAttributes(
 fn syncEchoBuffEffects(
     txn: anytype,
     alloc: mem.Alloc,
+    fs: *FileSystem,
     scene: *Scene,
     assets: *const Assets,
     entity_id: i64,
@@ -642,6 +647,7 @@ fn syncEchoBuffEffects(
     echo_comp: *PlayerEchoComponent,
     buff_comp: *Entity.FightBuffComponent,
     buff_timers: *BuffTimerScheduler,
+    io: std.Io,
     now_ms: i64,
 ) !bool {
     try buff_timers.ensureEntityRegistered(
@@ -684,11 +690,12 @@ fn syncEchoBuffEffects(
 
     for (expected) |buff_id| {
         if (buff_comp.getByBuffId(buff_id) != null) continue;
+        const buff_data = assets.tables.buff.getDataById(buff_id) orelse continue;
         scene.*.instance.buff_handle += 1;
         buff_comp.fight_buff_infos = try alloc.gpa.realloc(buff_comp.fight_buff_infos, buff_comp.fight_buff_infos.len + 1);
         const buff_info = Assets.DataTables.createBuffInformation(scene.instance.buff_handle, buff_id, entity_id, entity_id, true);
         buff_comp.fight_buff_infos[buff_comp.fight_buff_infos.len - 1] = buff_info;
-        try buff_timers.syncBuff(alloc.gpa, assets, buff_info, entity_id, now_ms);
+        try buff_timers.scheduleNewBuff(alloc.gpa, buff_info, &buff_data, entity_id, now_ms);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entity_id },
@@ -706,6 +713,28 @@ fn syncEchoBuffEffects(
                 },
             },
         } });
+        const disposition = BuffTimerScheduler.applicationDisposition(&buff_data, true, false, true);
+        if (disposition.execute_periodic_now) {
+            const index = scene.net_id_map.get(entity_id) orelse continue;
+            const entity: Entity = .{ .index = index, .net_id = entity_id };
+            try scene.saveComponents(fs, alloc.gpa, entity, &.{Entity.FightBuffComponent});
+            const effect_query: Scene.Query(&.{
+                Entity,
+                *Entity.FightBuffComponent,
+                ?*Entity.AttributeComponent,
+            }) = .{ .iterator = .{ .entities = &scene.entities } };
+            try buff_helper.execute_periodic_buff_effects(
+                &notify.Data,
+                entity_id,
+                entity_id,
+                &buff_data,
+                scene,
+                fs,
+                io,
+                effect_query,
+                alloc,
+            );
+        }
     }
 
     if (notify.Data.items.len != 0) {

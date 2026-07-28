@@ -13,6 +13,7 @@ const FightBuffComponent = @import("../../logic/component/entity/FightBuffCompon
 const EventQueue = @import("../../logic/EventQueue.zig");
 const RoleAttributeSync = @import("../helpers/role_attribute_sync.zig");
 const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
+const buff_helper = @import("../../logic/helpers/buff.zig");
 
 fn appendEquipTakeOnData(
     list: *std.ArrayList(pb.RoleLoadEquipData),
@@ -33,7 +34,9 @@ fn syncWeaponPassiveBuffs(
     alloc: mem.Alloc,
     scene: *Scene,
     assets: *const Assets,
+    fs: *FileSystem,
     buff_timers: *BuffTimerScheduler,
+    io: std.Io,
     now_ms: i64,
     entity: Scene.Entity,
     buffs: *FightBuffComponent,
@@ -72,11 +75,12 @@ fn syncWeaponPassiveBuffs(
 
     for (add_ids) |buff_id| {
         if (buffs.getByBuffId(buff_id) != null) continue;
+        const buff_data = assets.tables.buff.getDataById(buff_id) orelse continue;
         scene.instance.buff_handle += 1;
         buffs.fight_buff_infos = try alloc.gpa.realloc(buffs.fight_buff_infos, buffs.fight_buff_infos.len + 1);
         const buff_info = Assets.DataTables.createBuffInformation(scene.instance.buff_handle, buff_id, entity.net_id, entity.net_id, true);
         buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1] = buff_info;
-        try buff_timers.syncBuff(alloc.gpa, assets, buff_info, entity.net_id, now_ms);
+        try buff_timers.scheduleNewBuff(alloc.gpa, buff_info, &buff_data, entity.net_id, now_ms);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entity.net_id },
@@ -94,6 +98,26 @@ fn syncWeaponPassiveBuffs(
                 },
             },
         } });
+        const disposition = BuffTimerScheduler.applicationDisposition(&buff_data, true, false, true);
+        if (disposition.execute_periodic_now) {
+            try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.FightBuffComponent});
+            const effect_query: Scene.Query(&.{
+                Scene.Entity,
+                *Scene.Entity.FightBuffComponent,
+                ?*Scene.Entity.AttributeComponent,
+            }) = .{ .iterator = .{ .entities = &scene.entities } };
+            try buff_helper.execute_periodic_buff_effects(
+                &notify.Data,
+                entity.net_id,
+                entity.net_id,
+                &buff_data,
+                scene,
+                fs,
+                io,
+                effect_query,
+                alloc,
+            );
+        }
     }
 
     if (notify.Data.items.len == 0) return false;
@@ -349,7 +373,9 @@ pub fn onWeaponResonUpRequest(
                 alloc,
                 scene,
                 assets,
+                fs,
                 buff_timers,
+                io,
                 now_ms,
                 entity,
                 buffs,
@@ -427,7 +453,9 @@ pub fn onEquipTakeOnRequest(
                     alloc,
                     scene,
                     assets,
+                    fs,
                     buff_timers,
+                    io,
                     now_ms,
                     entity,
                     buffs,
@@ -481,7 +509,9 @@ pub fn onEquipTakeOnRequest(
                 alloc,
                 scene,
                 assets,
+                fs,
                 buff_timers,
+                io,
                 now_ms,
                 entity,
                 buffs,

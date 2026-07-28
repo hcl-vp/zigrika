@@ -116,7 +116,7 @@ pub fn onPhantomSkinChangeRequest(
             *Entity.AttributeComponent,
             *Entity.FightBuffComponent,
         }) = .{ .iterator = .{ .entities = &scene.entities } };
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -189,7 +189,7 @@ pub fn onPhantomPutOnRequest(
 
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
     try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -258,7 +258,7 @@ pub fn onPhantomAutoPutRequest(
 
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
     try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
 
     txn.respond(.{
         .ErrorCode = .Success,

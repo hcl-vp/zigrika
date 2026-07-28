@@ -157,7 +157,7 @@ pub fn onPhantomLevelUpRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
 
     txn.respond(.{
@@ -248,7 +248,7 @@ pub fn onPhantomIdentifyRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
 
     txn.respond(.{
@@ -297,7 +297,7 @@ pub fn onPhantomPolishRequest(
     defer changed_roles.deinit(alloc.gpa);
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
 
     txn.respond(.{
@@ -366,7 +366,7 @@ pub fn onPhantomBatchPolishRequest(
 
     if (changed_roles.count() != 0) {
         try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
 
     txn.respond(.{
@@ -482,7 +482,7 @@ pub fn onPhantomVicePolishAckRequest(
         defer changed_roles.deinit(alloc.gpa);
         if (changed_roles.count() != 0) {
             try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-            try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, now_ms);
+            try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
         }
     }
 

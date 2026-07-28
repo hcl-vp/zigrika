@@ -162,6 +162,52 @@ const ExpirationDisposition = union(enum) {
     retain: i32,
 };
 
+pub const ApplicationDisposition = struct {
+    refresh_duration: bool,
+    reset_period: bool,
+    execute_periodic_now: bool,
+};
+
+pub fn applicationDisposition(
+    buff_data: *const Assets.DataTables.Buff,
+    is_new: bool,
+    was_active: bool,
+    is_active: bool,
+) ApplicationDisposition {
+    if (is_new) {
+        return .{
+            .refresh_duration = true,
+            .reset_period = buff_data.Period > 0,
+            .execute_periodic_now = is_active and
+                buff_data.Period > 0 and
+                buff_data.bExecutePeriodicEffectOnApplication,
+        };
+    }
+
+    var disposition: ApplicationDisposition = .{
+        .refresh_duration = buff_data.StackDurationRefreshPolicy == .Refresh,
+        .reset_period = buff_data.Period > 0 and
+            buff_data.StackPeriodResetPolicy == .Refresh,
+        .execute_periodic_now = is_active and
+            buff_data.Period > 0 and
+            buff_data.bExecutePeriodicEffectOnApplication,
+    };
+    if (was_active == is_active) return disposition;
+
+    disposition.reset_period = false;
+    if (!is_active or buff_data.Period <= 0) return disposition;
+
+    switch (buff_data.PeriodicInhibitionPolicy) {
+        .None => {},
+        .Reset => disposition.reset_period = true,
+        .ResetAndExecute => {
+            disposition.reset_period = true;
+            disposition.execute_periodic_now = true;
+        },
+    }
+    return disposition;
+}
+
 fn expirationDisposition(stack_count: i32, remove_number: u8) ExpirationDisposition {
     if (stack_count <= 0 or remove_number == 0 or remove_number >= stack_count) {
         return .remove;
@@ -227,21 +273,81 @@ pub fn deferExpirationRetry(
     }, now_ms);
 }
 
-pub fn syncBuff(
+pub fn scheduleNewBuff(
     scheduler: *BuffTimerScheduler,
     gpa: Allocator,
-    assets: *const Assets,
     buff_info: pb.FightBuffInformation,
+    buff_data: *const Assets.DataTables.Buff,
     entity_id: i64,
     now_ms: i64,
 ) !void {
     if (!scheduler.initialized) return;
 
-    scheduler.cancelHandle(entity_id, buff_info.HandleId);
-    scheduler.registerBuff(gpa, assets, buff_info, entity_id, now_ms) catch |err| {
+    scheduler.registerBuffData(gpa, buff_info, buff_data, entity_id, now_ms) catch |err| {
         scheduler.scheduleRebuild(now_ms);
         return err;
     };
+}
+
+pub fn refreshBuff(
+    scheduler: *BuffTimerScheduler,
+    gpa: Allocator,
+    buff_info: pb.FightBuffInformation,
+    buff_data: *const Assets.DataTables.Buff,
+    entity_id: i64,
+    now_ms: i64,
+    disposition: ApplicationDisposition,
+) !void {
+    if (!scheduler.initialized) return;
+
+    if (disposition.refresh_duration) {
+        if (buff_data.DurationPolicy == .HasDuration and buff_info.LeftDuration > 0) {
+            scheduler.upsert(gpa, .{
+                .kind = .expiry,
+                .entity_id = entity_id,
+                .handle_id = buff_info.HandleId,
+                .due_ms = deadlineAfterMs(now_ms, secondsToMs(buff_info.LeftDuration)),
+            }) catch |err| {
+                scheduler.scheduleRebuild(now_ms);
+                return err;
+            };
+        } else {
+            scheduler.cancel(entity_id, buff_info.HandleId, .expiry);
+        }
+    } else if (buff_data.DurationPolicy == .HasDuration and
+        buff_info.LeftDuration > 0 and
+        scheduler.deadline(entity_id, buff_info.HandleId, .expiry) == null)
+    {
+        scheduler.upsert(gpa, .{
+            .kind = .expiry,
+            .entity_id = entity_id,
+            .handle_id = buff_info.HandleId,
+            .due_ms = deadlineAfterMs(now_ms, secondsToMs(buff_info.LeftDuration)),
+        }) catch |err| {
+            scheduler.scheduleRebuild(now_ms);
+            return err;
+        };
+    }
+
+    if (buff_data.Period <= 0) {
+        scheduler.cancel(entity_id, buff_info.HandleId, .periodic_pulse);
+        return;
+    }
+    if (disposition.reset_period or
+        scheduler.deadline(entity_id, buff_info.HandleId, .periodic_pulse) == null)
+    {
+        const interval_ms = secondsToMs(buff_data.Period);
+        scheduler.upsert(gpa, .{
+            .kind = .periodic_pulse,
+            .entity_id = entity_id,
+            .handle_id = buff_info.HandleId,
+            .due_ms = deadlineAfterMs(now_ms, interval_ms),
+            .interval_ms = interval_ms,
+        }) catch |err| {
+            scheduler.scheduleRebuild(now_ms);
+            return err;
+        };
+    }
 }
 
 pub fn ensureInitialized(
@@ -572,7 +678,17 @@ fn registerBuff(
     now_ms: i64,
 ) !void {
     const buff_data = assets.tables.buff.getDataById(buff_info.BuffId) orelse return;
+    try scheduler.registerBuffData(gpa, buff_info, &buff_data, entity_id, now_ms);
+}
 
+fn registerBuffData(
+    scheduler: *BuffTimerScheduler,
+    gpa: Allocator,
+    buff_info: pb.FightBuffInformation,
+    buff_data: *const Assets.DataTables.Buff,
+    entity_id: i64,
+    now_ms: i64,
+) !void {
     if (buff_data.DurationPolicy == .HasDuration and buff_info.LeftDuration > 0) {
         try scheduler.upsert(gpa, .{
             .kind = .expiry,
@@ -940,6 +1056,163 @@ test "periodic activation changes execution without changing cadence" {
     try std.testing.expect(!inactive.execute_effect);
     try std.testing.expect(active.execute_effect);
     try std.testing.expectEqual(inactive.next_due_ms, active.next_due_ms);
+}
+
+test "application disposition honors refresh and inhibition policies" {
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.Period = 0.5;
+    buff_data.bExecutePeriodicEffectOnApplication = true;
+    buff_data.StackDurationRefreshPolicy = .Refresh;
+    buff_data.StackPeriodResetPolicy = .Refresh;
+    buff_data.PeriodicInhibitionPolicy = .None;
+
+    const new_active = applicationDisposition(&buff_data, true, false, true);
+    try std.testing.expect(new_active.refresh_duration);
+    try std.testing.expect(new_active.reset_period);
+    try std.testing.expect(new_active.execute_periodic_now);
+
+    const new_inactive = applicationDisposition(&buff_data, true, false, false);
+    try std.testing.expect(!new_inactive.execute_periodic_now);
+
+    buff_data.StackDurationRefreshPolicy = .NoRefresh;
+    buff_data.StackPeriodResetPolicy = .NoRefresh;
+    const unchanged = applicationDisposition(&buff_data, false, true, true);
+    try std.testing.expect(!unchanged.refresh_duration);
+    try std.testing.expect(!unchanged.reset_period);
+    try std.testing.expect(unchanged.execute_periodic_now);
+
+    buff_data.StackPeriodResetPolicy = .Refresh;
+    const deactivated = applicationDisposition(&buff_data, false, true, false);
+    try std.testing.expect(!deactivated.reset_period);
+    try std.testing.expect(!deactivated.execute_periodic_now);
+
+    buff_data.bExecutePeriodicEffectOnApplication = false;
+    buff_data.PeriodicInhibitionPolicy = .None;
+    const activated_preserving = applicationDisposition(&buff_data, false, false, true);
+    try std.testing.expect(!activated_preserving.reset_period);
+    try std.testing.expect(!activated_preserving.execute_periodic_now);
+
+    buff_data.PeriodicInhibitionPolicy = .Reset;
+    const activated_reset = applicationDisposition(&buff_data, false, false, true);
+    try std.testing.expect(activated_reset.reset_period);
+    try std.testing.expect(!activated_reset.execute_periodic_now);
+
+    buff_data.PeriodicInhibitionPolicy = .ResetAndExecute;
+    const activated_executing = applicationDisposition(&buff_data, false, false, true);
+    try std.testing.expect(activated_executing.reset_period);
+    try std.testing.expect(activated_executing.execute_periodic_now);
+
+    buff_data.bExecutePeriodicEffectOnApplication = true;
+    const overlapping_execution = applicationDisposition(&buff_data, false, false, true);
+    try std.testing.expect(overlapping_execution.reset_period);
+    try std.testing.expect(overlapping_execution.execute_periodic_now);
+}
+
+test "refresh policies preserve or replace independent deadlines" {
+    var scheduler: BuffTimerScheduler = .{ .initialized = true };
+    defer scheduler.deinit(std.testing.allocator);
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .expiry,
+        .entity_id = 10,
+        .handle_id = 20,
+        .due_ms = 500,
+    });
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 10,
+        .handle_id = 20,
+        .due_ms = 400,
+        .interval_ms = 500,
+    });
+
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationPolicy = .HasDuration;
+    buff_data.Period = 0.5;
+    const buff_info: pb.FightBuffInformation = .{
+        .HandleId = 20,
+        .LeftDuration = 2,
+    };
+    try scheduler.refreshBuff(
+        std.testing.allocator,
+        buff_info,
+        &buff_data,
+        10,
+        100,
+        .{
+            .refresh_duration = false,
+            .reset_period = false,
+            .execute_periodic_now = false,
+        },
+    );
+    try std.testing.expectEqual(@as(?i64, 500), scheduler.deadline(10, 20, .expiry));
+    try std.testing.expectEqual(@as(?i64, 400), scheduler.deadline(10, 20, .periodic_pulse));
+
+    try scheduler.refreshBuff(
+        std.testing.allocator,
+        buff_info,
+        &buff_data,
+        10,
+        100,
+        .{
+            .refresh_duration = true,
+            .reset_period = true,
+            .execute_periodic_now = false,
+        },
+    );
+    try std.testing.expectEqual(@as(?i64, 2_100), scheduler.deadline(10, 20, .expiry));
+    try std.testing.expectEqual(@as(?i64, 600), scheduler.deadline(10, 20, .periodic_pulse));
+}
+
+test "preserved missing deadlines are reconstructed without application execution" {
+    var scheduler: BuffTimerScheduler = .{ .initialized = true };
+    defer scheduler.deinit(std.testing.allocator);
+
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationPolicy = .HasDuration;
+    buff_data.Period = 0.5;
+    const buff_info: pb.FightBuffInformation = .{
+        .HandleId = 20,
+        .LeftDuration = 2,
+    };
+    try scheduler.refreshBuff(
+        std.testing.allocator,
+        buff_info,
+        &buff_data,
+        10,
+        100,
+        .{
+            .refresh_duration = false,
+            .reset_period = false,
+            .execute_periodic_now = false,
+        },
+    );
+
+    try std.testing.expectEqual(@as(?i64, 2_100), scheduler.deadline(10, 20, .expiry));
+    try std.testing.expectEqual(@as(?i64, 600), scheduler.deadline(10, 20, .periodic_pulse));
+}
+
+test "new buff scheduling installs future deadlines only" {
+    var scheduler: BuffTimerScheduler = .{ .initialized = true };
+    defer scheduler.deinit(std.testing.allocator);
+
+    var buff_data: Assets.DataTables.Buff = undefined;
+    buff_data.DurationPolicy = .HasDuration;
+    buff_data.Period = 0.5;
+    const buff_info: pb.FightBuffInformation = .{
+        .HandleId = 20,
+        .LeftDuration = 2,
+    };
+    try scheduler.scheduleNewBuff(
+        std.testing.allocator,
+        buff_info,
+        &buff_data,
+        10,
+        100,
+    );
+
+    try std.testing.expectEqual(@as(?i64, 2_100), scheduler.deadline(10, 20, .expiry));
+    try std.testing.expectEqual(@as(?i64, 600), scheduler.deadline(10, 20, .periodic_pulse));
 }
 
 test "peeking a due entry retains it until completion" {

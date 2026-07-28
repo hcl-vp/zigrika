@@ -3,6 +3,7 @@ const BuffTimerScheduler = @import("logic/schedulers/BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("logic/schedulers/DirtySaveQueue.zig");
 const SessionConnection = @import("network/Connection.zig");
 const BuffHandler = @import("network/handlers/buff.zig");
+const LogicBuffHandler = @import("logic/handlers/buff.zig");
 const Scene = @import("logic/Scene.zig");
 const EntityComponentStorage = @import("logic/component/entity/EntityComponentStorage.zig");
 const pb = @import("proto").pb;
@@ -21,6 +22,10 @@ test "include session connection tests" {
 
 test "include buff handler tests" {
     _ = BuffHandler;
+}
+
+test "include logic buff handler tests" {
+    _ = LogicBuffHandler;
 }
 
 fn entry(entity_id: i64, handle_id: i32, kind: Kind, due_ms: i64) Entry {

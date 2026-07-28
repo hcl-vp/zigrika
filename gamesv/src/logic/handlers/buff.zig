@@ -100,7 +100,7 @@ pub fn addBuffToEntity(
     const buff_component = item[1];
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.target.net_id };
     var notify: pb.CombatReceivePackNotify = .{};
-    var persisted_buff_changed = false;
+    var buff_change_enqueued = false;
     const clock: std.Io.Clock = .awake;
     const now_ms = clock.now(io).toMilliseconds();
     try buff_timers.ensureEntityRegistered(
@@ -144,90 +144,214 @@ pub fn addBuffToEntity(
         const existing = buff_component.getByBuffId(entry.id);
         const stack_count = if (entry.stack_count > 0) entry.stack_count else 1;
         if (existing) |buff| { // no dupes
-            buff.Level = 1;
-            buff.StackCount = stack_count;
-            buff.InstigatorId = event.data.instigator.net_id;
-            buff.EntityId = event.data.target.net_id;
-            applyBuffDuration(buff, &buff_data, entry.duration_seconds);
-            buff.ApplyType = .Common;
-            buff.IsActive = entry.is_active;
-            buff.MessageId = -1;
-            try buff_timers.syncBuff(
-                alloc.gpa,
-                assets,
-                buff.*,
-                event.data.target.net_id,
-                now_ms,
-            );
             buff_timers.syncHandleLeftDuration(
                 scene,
                 event.data.target.net_id,
                 buff.HandleId,
                 now_ms,
             );
-            persisted_buff_changed = true;
+            const was_active = buff.IsActive;
+            const disposition = BuffTimerScheduler.applicationDisposition(
+                &buff_data,
+                false,
+                was_active,
+                entry.is_active,
+            );
+            var next_buff = buff.*;
+            next_buff.Level = 1;
+            next_buff.StackCount = stack_count;
+            next_buff.InstigatorId = event.data.instigator.net_id;
+            next_buff.EntityId = event.data.target.net_id;
+            if (disposition.refresh_duration) {
+                applyBuffDuration(&next_buff, &buff_data, entry.duration_seconds);
+            }
+            next_buff.ApplyType = .Common;
+            next_buff.IsActive = entry.is_active;
+            next_buff.MessageId = -1;
+
+            try appendStackCountNotify(
+                &notify.Data,
+                combat_common,
+                next_buff,
+                disposition,
+                alloc.arena,
+            );
+            if (was_active != next_buff.IsActive) {
+                try appendActivateBuffNotify(
+                    &notify.Data,
+                    combat_common,
+                    next_buff.HandleId,
+                    next_buff.IsActive,
+                    alloc.arena,
+                );
+            }
+            try enqueueBuffChangeOnce(
+                events,
+                event.data.target,
+                &buff_change_enqueued,
+            );
+            try buff_timers.refreshBuff(
+                alloc.gpa,
+                next_buff,
+                &buff_data,
+                event.data.target.net_id,
+                now_ms,
+                disposition,
+            );
+            buff.* = next_buff;
+
+            if (disposition.execute_periodic_now) {
+                try buff_helper.execute_periodic_buff_effects(
+                    &notify.Data,
+                    event.data.target.net_id,
+                    next_buff.InstigatorId,
+                    &buff_data,
+                    scene,
+                    fs,
+                    io,
+                    query,
+                    alloc,
+                );
+            }
         } else {
-            scene.*.instance.buff_handle += 1;
-            buff_component.fight_buff_infos = try alloc.gpa.realloc(buff_component.fight_buff_infos, buff_component.fight_buff_infos.len + 1);
-            buff_component.fight_buff_infos[buff_component.fight_buff_infos.len - 1] = Assets.DataTables.createBuffInformation(
-                scene.instance.buff_handle,
+            const handle_id = scene.instance.buff_handle + 1;
+            var new_buff = Assets.DataTables.createBuffInformation(
+                handle_id,
                 entry.id,
                 event.data.instigator.net_id,
                 event.data.target.net_id,
                 entry.is_active,
             );
-            buff_component.fight_buff_infos[buff_component.fight_buff_infos.len - 1].StackCount = stack_count;
-            applyBuffDuration(&buff_component.fight_buff_infos[buff_component.fight_buff_infos.len - 1], &buff_data, entry.duration_seconds);
-            const buff = buff_component.fight_buff_infos[buff_component.fight_buff_infos.len - 1];
-            try buff_timers.syncBuff(
-                alloc.gpa,
-                assets,
-                buff,
-                event.data.target.net_id,
-                now_ms,
-            );
-            buff_timers.syncHandleLeftDuration(
-                scene,
-                event.data.target.net_id,
-                buff.HandleId,
-                now_ms,
+            new_buff.StackCount = stack_count;
+            applyBuffDuration(&new_buff, &buff_data, entry.duration_seconds);
+            const disposition = BuffTimerScheduler.applicationDisposition(
+                &buff_data,
+                true,
+                false,
+                entry.is_active,
             );
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
                     .CombatCommon = combat_common,
                     .Message = .{
                         .ApplyGameplayEffectNotify = .{
-                            .Handle = buff.HandleId,
-                            .Id = buff.BuffId,
-                            .Level = buff.Level,
-                            .EntityId = buff.EntityId,
-                            .InstigatorId = buff.InstigatorId,
-                            .ApplyType = if (buff.ApplyType) |apply_type| @intFromEnum(apply_type) else 0,
-                            .IsActive = buff.IsActive,
-                            .ServerId = buff.ServerId,
-                            .StackCount = buff.StackCount,
-                            .CRoundAction = .{ .Duration = buff.Duration },
-                            .Time = .{ .LeftDuration = buff.LeftDuration },
-                            .ConfBuffId = buff.ConfBuffId,
+                            .Handle = new_buff.HandleId,
+                            .Id = new_buff.BuffId,
+                            .Level = new_buff.Level,
+                            .EntityId = new_buff.EntityId,
+                            .InstigatorId = new_buff.InstigatorId,
+                            .ApplyType = if (new_buff.ApplyType) |apply_type| @intFromEnum(apply_type) else 0,
+                            .IsActive = new_buff.IsActive,
+                            .ServerId = new_buff.ServerId,
+                            .StackCount = new_buff.StackCount,
+                            .CRoundAction = .{ .Duration = new_buff.Duration },
+                            .Time = .{ .LeftDuration = new_buff.LeftDuration },
+                            .ConfBuffId = new_buff.ConfBuffId,
                         },
                     },
                 },
             } });
-            persisted_buff_changed = true;
+            try enqueueBuffChangeOnce(
+                events,
+                event.data.target,
+                &buff_change_enqueued,
+            );
+            try buff_timers.scheduleNewBuff(
+                alloc.gpa,
+                new_buff,
+                &buff_data,
+                event.data.target.net_id,
+                now_ms,
+            );
+            buff_component.fight_buff_infos = alloc.gpa.realloc(
+                buff_component.fight_buff_infos,
+                buff_component.fight_buff_infos.len + 1,
+            ) catch |err| {
+                buff_timers.cancelHandle(event.data.target.net_id, handle_id);
+                return err;
+            };
+            buff_component.fight_buff_infos[buff_component.fight_buff_infos.len - 1] = new_buff;
+            scene.instance.buff_handle = handle_id;
+
+            if (disposition.execute_periodic_now) {
+                try buff_helper.execute_periodic_buff_effects(
+                    &notify.Data,
+                    event.data.target.net_id,
+                    new_buff.InstigatorId,
+                    &buff_data,
+                    scene,
+                    fs,
+                    io,
+                    query,
+                    alloc,
+                );
+            }
         }
     }
 
     try conn.push(notify);
-
-    if (persisted_buff_changed) {
-        try events.enqueue(.buff_change, .{ .entity = event.data.target });
-    }
 
     log.debug("eid {d}: added these buffs to {d}: {any}", .{
         event.data.instigator.net_id,
         event.data.target.net_id,
         event.data.buffs,
     });
+}
+
+fn appendStackCountNotify(
+    data: *std.ArrayList(pb.CombatReceiveData),
+    combat_common: pb.CombatCommon,
+    buff: pb.FightBuffInformation,
+    disposition: BuffTimerScheduler.ApplicationDisposition,
+    arena: std.mem.Allocator,
+) !void {
+    var stack_notify: pb.BuffStackCountNotify = .{
+        .HandleId = buff.HandleId,
+        .NewStackCount = buff.StackCount,
+        .InstigatorId = buff.InstigatorId,
+        .NotRefreshDuration = !disposition.refresh_duration,
+        .NotRefreshPeriod = !disposition.reset_period,
+    };
+    if (disposition.refresh_duration) {
+        stack_notify.Time = .{ .Duration = buff.Duration };
+        if (buff.LeftDuration > 0) {
+            stack_notify.gFs = .{ .LeftDuration = buff.LeftDuration };
+        }
+    }
+    try data.append(arena, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = combat_common,
+            .Message = .{ .BuffStackCountNotify = stack_notify },
+        },
+    } });
+}
+
+fn appendActivateBuffNotify(
+    data: *std.ArrayList(pb.CombatReceiveData),
+    combat_common: pb.CombatCommon,
+    handle_id: i32,
+    is_active: bool,
+    arena: std.mem.Allocator,
+) !void {
+    try data.append(arena, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = combat_common,
+            .Message = .{ .ActivateBuffNotify = .{
+                .Handle = handle_id,
+                .On = is_active,
+            } },
+        },
+    } });
+}
+
+fn enqueueBuffChangeOnce(
+    events: *EventQueue,
+    entity: Entity,
+    enqueued: *bool,
+) !void {
+    if (enqueued.*) return;
+    try events.enqueue(.buff_change, .{ .entity = entity });
+    enqueued.* = true;
 }
 
 pub fn handleBuffTimerTick(
@@ -290,4 +414,82 @@ fn applyBuffDuration(
             }
         },
     }
+}
+
+test "stack refresh notify omits preserved duration" {
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer data.deinit(std.testing.allocator);
+
+    try appendStackCountNotify(
+        &data,
+        .{ .EntityId = 10 },
+        .{
+            .HandleId = 20,
+            .StackCount = 3,
+            .InstigatorId = 30,
+            .Duration = 2,
+            .LeftDuration = 1,
+        },
+        .{
+            .refresh_duration = false,
+            .reset_period = false,
+            .execute_periodic_now = false,
+        },
+        std.testing.allocator,
+    );
+
+    const notify = data.items[0].Message.?.CombatNotifyData.?
+        .Message.?.BuffStackCountNotify.?;
+    try std.testing.expect(notify.NotRefreshDuration);
+    try std.testing.expect(notify.NotRefreshPeriod);
+    try std.testing.expect(notify.Time == null);
+    try std.testing.expect(notify.gFs == null);
+}
+
+test "stack refresh notify includes refreshed duration" {
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer data.deinit(std.testing.allocator);
+
+    try appendStackCountNotify(
+        &data,
+        .{ .EntityId = 10 },
+        .{
+            .HandleId = 20,
+            .StackCount = 3,
+            .InstigatorId = 30,
+            .Duration = 2,
+            .LeftDuration = 2,
+        },
+        .{
+            .refresh_duration = true,
+            .reset_period = true,
+            .execute_periodic_now = false,
+        },
+        std.testing.allocator,
+    );
+
+    const notify = data.items[0].Message.?.CombatNotifyData.?
+        .Message.?.BuffStackCountNotify.?;
+    try std.testing.expect(!notify.NotRefreshDuration);
+    try std.testing.expect(!notify.NotRefreshPeriod);
+    try std.testing.expectEqual(@as(f32, 2), notify.Time.?.Duration);
+    try std.testing.expectEqual(@as(f32, 2), notify.gFs.?.LeftDuration);
+}
+
+test "activation notify carries the changed active state" {
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    defer data.deinit(std.testing.allocator);
+
+    try appendActivateBuffNotify(
+        &data,
+        .{ .EntityId = 10 },
+        20,
+        true,
+        std.testing.allocator,
+    );
+
+    const notify = data.items[0].Message.?.CombatNotifyData.?
+        .Message.?.ActivateBuffNotify.?;
+    try std.testing.expectEqual(@as(i32, 20), notify.Handle);
+    try std.testing.expect(notify.On);
 }

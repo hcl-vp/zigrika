@@ -14,6 +14,7 @@ const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const std = @import("std");
 const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
+const buff_helper = @import("../../logic/helpers/buff.zig");
 
 fn buildFlyEquipData(role_comp: *PlayerRoleComponent, arena: std.mem.Allocator, skin_id: i32) !std.ArrayList(pb.EquipFlySkinData) {
     var list: std.ArrayList(pb.EquipFlySkinData) = .empty;
@@ -187,6 +188,7 @@ fn refreshRoleOrnamentEntity(
     role: anytype,
     stale_ornament_ids: []const i32,
     buff_timers: *BuffTimerScheduler,
+    io: std.Io,
     now_ms: i64,
 ) !void {
     _ = events;
@@ -241,6 +243,7 @@ fn refreshRoleOrnamentEntity(
                 }
             }
             for (ornament_buffs.items) |entry| {
+                const buff_data = assets.tables.buff.getDataById(entry.id) orelse continue;
                 scene.*.instance.buff_handle += 1;
                 buffs.fight_buff_infos = try alloc.gpa.realloc(buffs.fight_buff_infos, buffs.fight_buff_infos.len + 1);
                 buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1] = .{
@@ -251,10 +254,10 @@ fn refreshRoleOrnamentEntity(
                     .EntityId = entity.net_id,
                     .IsActive = entry.is_active,
                 };
-                try buff_timers.syncBuff(
+                try buff_timers.scheduleNewBuff(
                     alloc.gpa,
-                    assets,
                     buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1],
+                    &buff_data,
                     entity.net_id,
                     now_ms,
                 );
@@ -273,6 +276,31 @@ fn refreshRoleOrnamentEntity(
                         },
                     },
                 } });
+                const disposition = BuffTimerScheduler.applicationDisposition(
+                    &buff_data,
+                    true,
+                    false,
+                    entry.is_active,
+                );
+                if (disposition.execute_periodic_now) {
+                    try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.FightBuffComponent});
+                    const effect_query: Scene.Query(&.{
+                        Scene.Entity,
+                        *Scene.Entity.FightBuffComponent,
+                        ?*Scene.Entity.AttributeComponent,
+                    }) = .{ .iterator = .{ .entities = &scene.entities } };
+                    try buff_helper.execute_periodic_buff_effects(
+                        &combat_notify.Data,
+                        entity.net_id,
+                        entity.net_id,
+                        &buff_data,
+                        scene,
+                        fs,
+                        io,
+                        effect_query,
+                        alloc,
+                    );
+                }
             }
             if (buffs.born_buff_ids.len != 0) alloc.gpa.free(buffs.born_buff_ids);
             buffs.born_buff_ids = ornament_born_buff_ids;
@@ -615,7 +643,7 @@ pub fn onRoleSkinChangeRequest(
 
     try events.enqueue(.role_info_modified, .{ .role_id = request.RoleId });
     try events.enqueue(.update_formations, .{});
-    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_ids, buff_timers, now_ms);
+    try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, request.RoleId, role, stale_ornament_ids, buff_timers, io, now_ms);
 
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -659,7 +687,7 @@ pub fn onChangeOrnamentRequest(
     if (changed) {
         try events.enqueue(.role_info_modified, .{ .role_id = role_id });
         try events.enqueue(.update_formations, .{});
-        try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_ids, buff_timers, now_ms);
+        try refreshRoleOrnamentEntity(txn, events, alloc, assets, fs, scene, role_id, role, stale_ornament_ids, buff_timers, io, now_ms);
     }
 
     txn.respond(.{ .ErrorCode = .Success });
