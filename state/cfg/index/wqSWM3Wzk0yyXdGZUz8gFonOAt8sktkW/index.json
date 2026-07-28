@@ -3,11 +3,7 @@
     "CdnUrl": [
       {
         "url": "http://127.0.0.1:5500/",
-        "weight": "1000"
-      },
-      {
-          "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
-          "weight": "0"
+        "weight": "0"
       }
     ],
     "SecondaryUrl": [],
