@@ -1,50 +1,59 @@
 {
-    "PackageVersion": "3.4.0",
-    "ChangeList": "7567664",
+    "PackageVersion": "3.6.0",
+    "ChangeList": "8229339",
     "CompatibleChangeLists": [],
     "ResVersions": {
         "launcher": {
             "Name": "launcher",
-            "Version": "3.4.0",
-            "IndexSha1": {}
+            "Version": "3.6.2",
+            "IndexSha1": {
+                "3.6.1": "8EE4325862CBD666BD7DDFDEB249842816BFFDE2",
+                "3.6.2": "4851EF0FA46FF17B06F230D74C08274ECB0B2864"
+            }
         },
         "resource": {
             "Name": "resource",
-            "Version": "3.4.3",
+            "Version": "3.6.2",
             "IndexSha1": {
-              "3.4.1": "4AD6A9930101D17C002860B624A03BECABF18F67",
-              "3.4.2": "0EDDA0A8C66C92AACDE82508BD085F45905E9D37",
-              "3.4.3": "2477185825424B3A64E3C46C82F32388CCF62E9E"
+                "3.6.1": "D21BCC534A468E43429F88BF80EE80A29D6F115E",
+                "3.6.2": "A32ACE659B06C6C6DE8FC51F157ACB945D2BA8CA"
             }
         },
         "en": {
             "Name": "en",
-            "Version": "3.4.0",
+            "Version": "3.6.0",
             "IndexSha1": {
-                "3.4.0": "885321565BD1075DD2CAC3C279508C5BF2409EF1"
+                "3.6.0": "E8B5949E5D6B53C83F79E92F29B21FB7F5B44F14"
             }
         },
         "ja": {
             "Name": "ja",
-            "Version": "3.4.0",
+            "Version": "3.6.0",
             "IndexSha1": {
-                "3.4.0": "83E07D79ED37E60C5D4039E504C848476F4C222B"
+                "3.6.0": "16A95793E78090EA1378A7BA9A73067A490CBA43"
             }
         },
         "ko": {
             "Name": "ko",
-            "Version": "3.4.0",
+            "Version": "3.6.0",
             "IndexSha1": {
-                "3.4.0": "EC5C6C25B0F31C85BB32BD665E6149CD600EC9A5"
+                "3.6.0": "89C345300C5AC36B5E94A89928F4791DA6473800"
             }
         },
         "zh": {
             "Name": "zh",
-            "Version": "3.4.0",
+            "Version": "3.6.0",
             "IndexSha1": {
-                "3.4.0": "BA870B6773BF9AC096FF1551E36529B2F16F9EF8"
+                "3.6.0": "0990188C23B0BA07CE919C3FE2CEEF29BADD19A7"
+            }
+        },
+        "ManifestAggregated": {
+            "Name": "ManifestAggregated",
+            "Version": "3.6.0",
+            "IndexSha1": {
+                "3.6.0": "5F51D9C8FDDF5AC54184070A6CD99DA2FCF93A28"
             }
         }
     },
-    "UpdateTime": 1780390242
+    "UpdateTime": 1785136823
 }
