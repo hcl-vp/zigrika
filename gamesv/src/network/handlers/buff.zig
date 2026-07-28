@@ -12,6 +12,9 @@ const buff_helper = @import("../../logic/helpers/buff.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const Events = @import("../../logic/events.zig");
 
+const max_duration_seconds: f64 =
+    @as(f64, @floatFromInt(std.math.maxInt(i64))) / 1000.0;
+
 pub fn OrderApplyBuffRequest(
     txn: *dispatch.CombatRequestTxn(.OrderApplyBuffRequest),
     events: *EventQueue,
@@ -28,6 +31,10 @@ pub fn OrderApplyBuffRequest(
 ) !void {
     const request: pb.OrderApplyBuffRequest = txn.payload;
     const buff_data = assets.tables.buff.getDataById(request.Id) orelse {
+        txn.respond(.{ .ErrorCode = .ErrOrderApplyBuffFailed });
+        return;
+    };
+    const duration_seconds = requestDuration(request.Time) catch {
         txn.respond(.{ .ErrorCode = .ErrOrderApplyBuffFailed });
         return;
     };
@@ -77,7 +84,7 @@ pub fn OrderApplyBuffRequest(
                 .id = request.Id,
                 .stack_count = request.StackCount,
                 .is_active = true,
-                .duration_seconds = requestDuration(request.Time),
+                .duration_seconds = duration_seconds,
             };
             try events.enqueue(.buff_addition, .{
                 .target = target,
@@ -94,10 +101,17 @@ pub fn OrderApplyBuffRequest(
     });
 }
 
-fn requestDuration(time: @FieldType(pb.OrderApplyBuffRequest, "Time")) ?f32 {
-    return if (time) |value| switch (value) {
+fn requestDuration(time: @FieldType(pb.OrderApplyBuffRequest, "Time")) !?f32 {
+    const duration = if (time) |value| switch (value) {
         .Duration => |duration| duration,
-    } else null;
+    } else return null;
+
+    if (!std.math.isFinite(duration) or
+        (duration > 0 and @as(f64, duration) > max_duration_seconds))
+    {
+        return error.InvalidBuffDuration;
+    }
+    return duration;
 }
 
 pub fn ApplyGameplayEffectPush(
@@ -133,4 +147,28 @@ pub fn ApplyGameplayEffectPush(
         alloc,
     );
     try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack });
+}
+
+test "requested buff duration validates explicit client values" {
+    try std.testing.expectEqual(@as(?f32, null), try requestDuration(null));
+    try std.testing.expectEqual(@as(?f32, 1.5), try requestDuration(.{ .Duration = 1.5 }));
+    try std.testing.expectEqual(@as(?f32, 0), try requestDuration(.{ .Duration = 0 }));
+    try std.testing.expectEqual(@as(?f32, -1), try requestDuration(.{ .Duration = -1 }));
+
+    try std.testing.expectError(
+        error.InvalidBuffDuration,
+        requestDuration(.{ .Duration = std.math.nan(f32) }),
+    );
+    try std.testing.expectError(
+        error.InvalidBuffDuration,
+        requestDuration(.{ .Duration = std.math.inf(f32) }),
+    );
+    try std.testing.expectError(
+        error.InvalidBuffDuration,
+        requestDuration(.{ .Duration = -std.math.inf(f32) }),
+    );
+    try std.testing.expectError(
+        error.InvalidBuffDuration,
+        requestDuration(.{ .Duration = std.math.floatMax(f32) }),
+    );
 }

@@ -423,7 +423,7 @@ fn registerBuff(
             .kind = .expiry,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + secondsToMs(buff_info.LeftDuration),
+            .due_ms = deadlineAfterMs(now_ms, secondsToMs(buff_info.LeftDuration)),
         });
     }
 
@@ -433,7 +433,7 @@ fn registerBuff(
             .kind = .periodic_pulse,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + interval_ms,
+            .due_ms = deadlineAfterMs(now_ms, interval_ms),
             .interval_ms = interval_ms,
         });
     }
@@ -457,7 +457,7 @@ fn registerMissingBuff(
             .kind = .expiry,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + secondsToMs(buff_info.LeftDuration),
+            .due_ms = deadlineAfterMs(now_ms, secondsToMs(buff_info.LeftDuration)),
         });
     }
 
@@ -469,7 +469,7 @@ fn registerMissingBuff(
             .kind = .periodic_pulse,
             .entity_id = entity_id,
             .handle_id = buff_info.HandleId,
-            .due_ms = now_ms + interval_ms,
+            .due_ms = deadlineAfterMs(now_ms, interval_ms),
             .interval_ms = interval_ms,
         });
     }
@@ -605,7 +605,10 @@ fn syncLeftDuration(
     due_ms: i64,
     now_ms: i64,
 ) void {
-    const remaining_ms = @max(due_ms - now_ms, 0);
+    const remaining_ms: i128 = @max(
+        @as(i128, due_ms) - @as(i128, now_ms),
+        0,
+    );
     var remaining_seconds = @as(f32, @floatFromInt(remaining_ms)) / 1000.0;
     if (buff_info.Duration > 0 and remaining_seconds > buff_info.Duration) {
         remaining_seconds = buff_info.Duration;
@@ -625,7 +628,21 @@ fn syncBuffLeftDuration(
 }
 
 fn secondsToMs(seconds: f32) i64 {
-    return @max(1, @as(i64, @intFromFloat(@ceil(seconds * 1000.0))));
+    const milliseconds = @as(f64, seconds) * 1000.0;
+    if (std.math.isNan(milliseconds) or milliseconds <= 1.0) return 1;
+
+    const max_ms: f64 = @floatFromInt(std.math.maxInt(i64));
+    if (milliseconds >= max_ms) return std.math.maxInt(i64);
+    return @intFromFloat(@ceil(milliseconds));
+}
+
+fn deadlineAfterMs(now_ms: i64, delay_ms: i64) i64 {
+    const deadline_value: i128 = @as(i128, now_ms) + @as(i128, delay_ms);
+    return @intCast(std.math.clamp(
+        deadline_value,
+        std.math.minInt(i64),
+        std.math.maxInt(i64),
+    ));
 }
 
 test "buff wake delays follow the exact earliest deadline" {
@@ -880,4 +897,40 @@ test "periodic failure retains the next aligned deadline" {
 test "failure retry deadlines clamp without wrapping" {
     try std.testing.expectEqual(@as(i64, 1_050), failureRetryDueMs(1_000));
     try std.testing.expectEqual(std.math.maxInt(i64), failureRetryDueMs(std.math.maxInt(i64)));
+}
+
+test "buff seconds convert to milliseconds with flooring and saturation" {
+    try std.testing.expectEqual(@as(i64, 1), secondsToMs(0));
+    try std.testing.expectEqual(@as(i64, 1), secondsToMs(-1));
+    try std.testing.expectEqual(@as(i64, 1), secondsToMs(0.0001));
+    try std.testing.expectEqual(@as(i64, 1_500), secondsToMs(1.5));
+    try std.testing.expectEqual(std.math.maxInt(i64), secondsToMs(std.math.floatMax(f32)));
+    try std.testing.expectEqual(std.math.maxInt(i64), secondsToMs(std.math.inf(f32)));
+    try std.testing.expectEqual(@as(i64, 1), secondsToMs(std.math.nan(f32)));
+}
+
+test "buff deadlines saturate without wrapping" {
+    try std.testing.expectEqual(@as(i64, 1_500), deadlineAfterMs(1_000, 500));
+    try std.testing.expectEqual(
+        std.math.maxInt(i64),
+        deadlineAfterMs(std.math.maxInt(i64), 1),
+    );
+    try std.testing.expectEqual(
+        std.math.minInt(i64),
+        deadlineAfterMs(std.math.minInt(i64), -1),
+    );
+}
+
+test "remaining buff duration handles integer timestamp limits" {
+    var buff_info: pb.FightBuffInformation = .{
+        .Duration = std.math.floatMax(f32),
+        .LeftDuration = std.math.floatMax(f32),
+    };
+
+    syncLeftDuration(&buff_info, std.math.maxInt(i64), std.math.minInt(i64));
+    try std.testing.expect(std.math.isFinite(buff_info.LeftDuration));
+    try std.testing.expect(buff_info.LeftDuration > 0);
+
+    syncLeftDuration(&buff_info, std.math.minInt(i64), std.math.maxInt(i64));
+    try std.testing.expectEqual(@as(f32, 0), buff_info.LeftDuration);
 }
