@@ -123,6 +123,18 @@ fn nextPeriodicDueMs(previous_due_ms: i64, now_ms: i64, stored_interval_ms: i64)
     return @intCast(@min(next_due, std.math.maxInt(i64)));
 }
 
+const PeriodicDisposition = struct {
+    execute_effect: bool,
+    next_due_ms: i64,
+};
+
+fn periodicDisposition(entry: Entry, now_ms: i64, is_active: bool) PeriodicDisposition {
+    return .{
+        .execute_effect = is_active,
+        .next_due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
+    };
+}
+
 pub fn syncBuff(
     scheduler: *BuffTimerScheduler,
     gpa: Allocator,
@@ -296,22 +308,25 @@ pub fn drainOneDue(
                 scheduler.cancelHandle(entry.entity_id, entry.handle_id);
                 return;
             };
-            try buff_helper.execute_periodic_buff_effects(
-                combat_receive_pack,
-                entry.entity_id,
-                buff_info.InstigatorId,
-                &buff_data,
-                scene,
-                fs,
-                io,
-                query,
-                alloc,
-            );
+            const disposition = periodicDisposition(entry, now_ms, buff_info.IsActive);
+            if (disposition.execute_effect) {
+                try buff_helper.execute_periodic_buff_effects(
+                    combat_receive_pack,
+                    entry.entity_id,
+                    buff_info.InstigatorId,
+                    &buff_data,
+                    scene,
+                    fs,
+                    io,
+                    query,
+                    alloc,
+                );
+            }
             scheduler.upsert(alloc.gpa, .{
                 .kind = .periodic_pulse,
                 .entity_id = entry.entity_id,
                 .handle_id = entry.handle_id,
-                .due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
+                .due_ms = disposition.next_due_ms,
                 .interval_ms = entry.interval_ms,
             }) catch |err| {
                 scheduler.scheduleRebuild(now_ms);
@@ -647,4 +662,39 @@ test "periodic deadlines floor invalid intervals and cannot wrap" {
         nextPeriodicDueMs(std.math.maxInt(i64) - 1, std.math.maxInt(i64), 1),
     );
     try std.testing.expectEqual(@as(i64, 200), nextPeriodicDueMs(200, 100, 50));
+}
+
+test "inactive periodic buffs skip effects while retaining cadence" {
+    const entry: Entry = .{
+        .kind = .periodic_pulse,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 1_000,
+        .interval_ms = 100,
+    };
+
+    const inactive = periodicDisposition(entry, 1_025, false);
+    try std.testing.expect(!inactive.execute_effect);
+    try std.testing.expectEqual(@as(i64, 1_100), inactive.next_due_ms);
+
+    const delayed = periodicDisposition(entry, 1_350, false);
+    try std.testing.expect(!delayed.execute_effect);
+    try std.testing.expectEqual(@as(i64, 1_400), delayed.next_due_ms);
+}
+
+test "periodic activation changes execution without changing cadence" {
+    const entry: Entry = .{
+        .kind = .periodic_pulse,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 1_000,
+        .interval_ms = 100,
+    };
+
+    const inactive = periodicDisposition(entry, 1_025, false);
+    const active = periodicDisposition(entry, 1_025, true);
+
+    try std.testing.expect(!inactive.execute_effect);
+    try std.testing.expect(active.execute_effect);
+    try std.testing.expectEqual(inactive.next_due_ms, active.next_due_ms);
 }
