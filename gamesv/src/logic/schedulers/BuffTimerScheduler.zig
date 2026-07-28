@@ -7,15 +7,10 @@ const Scene = @import("../Scene.zig");
 const FileSystem = @import("common").FileSystem;
 const mem = @import("../../mem.zig");
 const buff_helper = @import("../helpers/buff.zig");
-const ScheduledJob = @import("ScheduledJob.zig");
 
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
-
-pub const job: ScheduledJob = .{
-    .interval = .ms50,
-    .event_key = .buff_timer_tick,
-};
+const rebuild_retry_delay_ms = 50;
 
 pub const Kind = enum(u1) {
     expiry,
@@ -33,6 +28,7 @@ pub const Entry = struct {
 heap: std.ArrayListUnmanaged(Entry) = .empty,
 positions: std.AutoHashMapUnmanaged(u128, usize) = .empty,
 initialized: bool = false,
+rebuild_due_ms: ?i64 = null,
 
 pub fn deinit(scheduler: *BuffTimerScheduler, gpa: Allocator) void {
     scheduler.heap.deinit(gpa);
@@ -102,6 +98,13 @@ pub fn peekDueMs(scheduler: *const BuffTimerScheduler) ?i64 {
     return if (scheduler.heap.items.len == 0) null else scheduler.heap.items[0].due_ms;
 }
 
+pub fn nextWakeDelayMs(scheduler: *const BuffTimerScheduler, now_ms: i64) ?i64 {
+    if (!scheduler.initialized) {
+        return deadlineDelayMs(scheduler.rebuild_due_ms orelse return 0, now_ms);
+    }
+    return deadlineDelayMs(scheduler.peekDueMs() orelse return null, now_ms);
+}
+
 pub fn popDue(scheduler: *BuffTimerScheduler, now_ms: i64) ?Entry {
     if (scheduler.heap.items.len == 0 or scheduler.heap.items[0].due_ms > now_ms) return null;
     return scheduler.removeAt(0);
@@ -132,7 +135,7 @@ pub fn syncBuff(
 
     scheduler.cancelHandle(entity_id, buff_info.HandleId);
     scheduler.registerBuff(gpa, assets, buff_info, entity_id, now_ms) catch |err| {
-        scheduler.invalidate();
+        scheduler.scheduleRebuild(now_ms);
         return err;
     };
 }
@@ -146,8 +149,8 @@ pub fn ensureInitialized(
 ) !void {
     if (scheduler.initialized) return;
 
-    scheduler.invalidate();
-    errdefer scheduler.invalidate();
+    scheduler.clear();
+    errdefer scheduler.scheduleRebuild(now_ms);
 
     const slice = scene.entities.slice();
     for (slice.items(.entity_id), slice.items(.buffs)) |entity_id, maybe_buffs| {
@@ -164,6 +167,7 @@ pub fn ensureInitialized(
     }
 
     scheduler.initialized = true;
+    scheduler.rebuild_due_ms = null;
 }
 
 pub fn ensureEntityRegistered(
@@ -310,7 +314,7 @@ pub fn drainOneDue(
                 .due_ms = nextPeriodicDueMs(entry.due_ms, now_ms, entry.interval_ms),
                 .interval_ms = entry.interval_ms,
             }) catch |err| {
-                scheduler.invalidate();
+                scheduler.scheduleRebuild(now_ms);
                 return err;
             };
         },
@@ -411,10 +415,23 @@ fn deadline(
     return scheduler.heap.items[index].due_ms;
 }
 
-fn invalidate(scheduler: *BuffTimerScheduler) void {
+fn clear(scheduler: *BuffTimerScheduler) void {
     scheduler.heap.clearRetainingCapacity();
     scheduler.positions.clearRetainingCapacity();
     scheduler.initialized = false;
+    scheduler.rebuild_due_ms = null;
+}
+
+fn scheduleRebuild(scheduler: *BuffTimerScheduler, now_ms: i64) void {
+    scheduler.clear();
+    const rebuild_deadline: i128 = @as(i128, now_ms) + rebuild_retry_delay_ms;
+    scheduler.rebuild_due_ms = @intCast(@min(rebuild_deadline, std.math.maxInt(i64)));
+}
+
+fn deadlineDelayMs(due_ms: i64, now_ms: i64) i64 {
+    if (due_ms <= now_ms) return 0;
+    const delay: i128 = @as(i128, due_ms) - now_ms;
+    return @intCast(@min(delay, std.math.maxInt(i64)));
 }
 
 fn removeAt(scheduler: *BuffTimerScheduler, index: usize) Entry {
@@ -523,6 +540,86 @@ fn syncBuffLeftDuration(
 
 fn secondsToMs(seconds: f32) i64 {
     return @max(1, @as(i64, @intFromFloat(@ceil(seconds * 1000.0))));
+}
+
+test "buff wake delays follow the exact earliest deadline" {
+    var scheduler: BuffTimerScheduler = .{};
+    defer scheduler.deinit(std.testing.allocator);
+
+    try std.testing.expectEqual(@as(?i64, 0), scheduler.nextWakeDelayMs(1_000));
+    scheduler.initialized = true;
+    try std.testing.expect(scheduler.nextWakeDelayMs(1_000) == null);
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .expiry,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 2_000,
+    });
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 2,
+        .handle_id = 1,
+        .due_ms = 3_000,
+    });
+    try std.testing.expectEqual(@as(?i64, 1_000), scheduler.nextWakeDelayMs(1_000));
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 2,
+        .handle_id = 1,
+        .due_ms = 1_500,
+    });
+    try std.testing.expectEqual(@as(?i64, 500), scheduler.nextWakeDelayMs(1_000));
+    try std.testing.expectEqual(@as(?i64, 0), scheduler.nextWakeDelayMs(1_500));
+    try std.testing.expectEqual(@as(?i64, 0), scheduler.nextWakeDelayMs(1_501));
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .periodic_pulse,
+        .entity_id = 2,
+        .handle_id = 1,
+        .due_ms = 4_000,
+    });
+    try std.testing.expectEqual(@as(?i64, 1_000), scheduler.nextWakeDelayMs(1_000));
+    scheduler.cancel(1, 1, .expiry);
+    try std.testing.expectEqual(@as(?i64, 3_000), scheduler.nextWakeDelayMs(1_000));
+
+    scheduler.cancel(2, 1, .periodic_pulse);
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .expiry,
+        .entity_id = 3,
+        .handle_id = 1,
+        .due_ms = std.math.maxInt(i64),
+    });
+    try std.testing.expectEqual(
+        @as(?i64, std.math.maxInt(i64)),
+        scheduler.nextWakeDelayMs(std.math.minInt(i64)),
+    );
+}
+
+test "invalidated buff timers use only a bounded rebuild backoff" {
+    var scheduler: BuffTimerScheduler = .{ .initialized = true };
+    defer scheduler.deinit(std.testing.allocator);
+
+    try scheduler.upsert(std.testing.allocator, .{
+        .kind = .expiry,
+        .entity_id = 1,
+        .handle_id = 1,
+        .due_ms = 2_000,
+    });
+    scheduler.scheduleRebuild(1_000);
+
+    try std.testing.expect(!scheduler.initialized);
+    try std.testing.expect(scheduler.peekDueMs() == null);
+    try std.testing.expectEqual(@as(?i64, 50), scheduler.nextWakeDelayMs(1_000));
+    try std.testing.expectEqual(@as(?i64, 1), scheduler.nextWakeDelayMs(1_049));
+    try std.testing.expectEqual(@as(?i64, 0), scheduler.nextWakeDelayMs(1_050));
+
+    scheduler.scheduleRebuild(std.math.maxInt(i64));
+    try std.testing.expectEqual(
+        @as(?i64, 0),
+        scheduler.nextWakeDelayMs(std.math.maxInt(i64)),
+    );
 }
 
 test "periodic deadlines preserve phase while skipping missed pulses" {

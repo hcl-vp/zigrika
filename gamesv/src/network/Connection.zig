@@ -193,7 +193,7 @@ fn waitGameplayWake(
     return wake;
 }
 
-fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
+fn drainGameplayDeadlines(state: *State, now_ms: i64) bool {
     const clock: Io.Clock = .awake;
     var budget = GameplayBudget.init(clock.now(state.io).toNanoseconds());
     var scheduled_changed = false;
@@ -215,7 +215,7 @@ fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
     if (state.scene) |*scene| {
         if (!budget.canStart(clock.now(state.io).toNanoseconds())) return scheduled_changed;
 
-        state.timers.buffs.ensureInitialized(
+        state.buff_timers.ensureInitialized(
             state.gpa,
             scene,
             state.assets,
@@ -225,27 +225,8 @@ fn drainScheduledLogicForSession(state: *State, now_ms: i64) bool {
             return scheduled_changed;
         };
 
-        if (budget.canStart(clock.now(state.io).toNanoseconds())) {
-            var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
-            const timed_due = state.timers.timed_logic.drainDue(
-                now_ms,
-                true,
-                &event_queue,
-            ) catch |err| failed: {
-                std.log.scoped(.connection).err("failed to schedule timed logic tick: {t}", .{err});
-                break :failed false;
-            };
-            if (timed_due) {
-                drainEventChain(state, &event_queue);
-                budget.complete();
-                scheduled_changed = true;
-            } else {
-                _ = state.arena.reset(.free_all);
-            }
-        }
-
         while (budget.canStart(clock.now(state.io).toNanoseconds()) and
-            buffDeadlineDue(&state.timers.buffs, now_ms))
+            buffDeadlineDue(&state.buff_timers, now_ms))
         {
             var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
             event_queue.enqueue(.buff_timer_tick, .{ .now_ms = now_ms }) catch |err| {
@@ -275,18 +256,16 @@ fn buffDeadlineDue(scheduler: *const @import("../logic/schedulers/BuffTimerSched
 fn nextGameplayWakeDelayMs(state: ?*const State, now_ms: i64) ?i64 {
     const s = state orelse return null;
     return gameplayWakeDelayMs(
-        s.timers.timed_logic.nextWakeDelayMs(now_ms, s.scene != null),
+        if (s.scene != null) s.buff_timers.nextWakeDelayMs(now_ms) else null,
         s.dirty_saves.nextWakeDelayMs(now_ms),
-        s.scene != null and buffDeadlineDue(&s.timers.buffs, now_ms),
     );
 }
 
-fn gameplayWakeDelayMs(timed_delay_ms: ?i64, dirty_delay_ms: ?i64, overdue_buffs: bool) ?i64 {
-    if (overdue_buffs) return 0;
+fn gameplayWakeDelayMs(buff_delay_ms: ?i64, dirty_delay_ms: ?i64) ?i64 {
     if (dirty_delay_ms) |dirty_delay| {
-        return if (timed_delay_ms) |timed_delay| @min(timed_delay, dirty_delay) else dirty_delay;
+        return if (buff_delay_ms) |buff_delay| @min(buff_delay, dirty_delay) else dirty_delay;
     }
-    return timed_delay_ms;
+    return buff_delay_ms;
 }
 
 pub fn runGameplay(
@@ -422,7 +401,7 @@ pub fn runGameplay(
 
         if (wake.gameplay_deadline) {
             if (gameplay.state) |*s| {
-                _ = drainScheduledLogicForSession(s, (Io.Clock.awake).now(handle.io).toMilliseconds());
+                _ = drainGameplayDeadlines(s, (Io.Clock.awake).now(handle.io).toMilliseconds());
             }
         }
     }
@@ -649,9 +628,10 @@ test "gameplay budget always starts one chain and then enforces both limits" {
     try std.testing.expect(!counted.canStart(0));
 }
 
-test "overdue gameplay schedules an immediate continuation" {
-    try std.testing.expectEqual(@as(?i64, 0), gameplayWakeDelayMs(50, 30_000, true));
-    try std.testing.expectEqual(@as(?i64, 25), gameplayWakeDelayMs(50, 25, false));
-    try std.testing.expectEqual(@as(?i64, 50), gameplayWakeDelayMs(50, null, false));
-    try std.testing.expect(gameplayWakeDelayMs(null, null, false) == null);
+test "gameplay wake selects the earliest exact deadline" {
+    try std.testing.expectEqual(@as(?i64, 0), gameplayWakeDelayMs(0, 30_000));
+    try std.testing.expectEqual(@as(?i64, 25), gameplayWakeDelayMs(50, 25));
+    try std.testing.expectEqual(@as(?i64, 50), gameplayWakeDelayMs(50, null));
+    try std.testing.expectEqual(@as(?i64, 30_000), gameplayWakeDelayMs(null, 30_000));
+    try std.testing.expect(gameplayWakeDelayMs(null, null) == null);
 }

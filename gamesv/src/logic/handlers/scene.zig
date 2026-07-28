@@ -11,7 +11,7 @@ const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
 const SceneInstance = @import("../../fs/SceneInstance.zig");
 const Connection = @import("../../network/Connection.zig");
-const Timers = @import("../../network/State.zig").Timers;
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
@@ -188,7 +188,7 @@ pub fn onInitialSceneJoin(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     cur_scene: *?Scene,
-    timers: *Timers,
+    buff_timers: *BuffTimerScheduler,
     dirty_saves: *DirtySaveQueue,
     io: Io,
 ) !void {
@@ -201,7 +201,7 @@ pub fn onInitialSceneJoin(
             alloc.gpa,
             fs,
             active_scene,
-            &timers.buffs,
+            buff_timers,
             assets,
             now_ms,
         );
@@ -213,7 +213,7 @@ pub fn onInitialSceneJoin(
         role_comp,
         weapon_comp,
         if (cur_scene.*) |*active_scene| active_scene else null,
-        &timers.buffs,
+        buff_timers,
         assets,
         now_ms,
     );
@@ -222,7 +222,7 @@ pub fn onInitialSceneJoin(
         scene.deinit(alloc.gpa, fs);
         cur_scene.* = null;
     }
-    timers.reset(alloc.gpa);
+    buff_timers.reset(alloc.gpa);
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
         // TODO: fallback to default instance id?
@@ -306,8 +306,8 @@ pub fn onInitialSceneJoin(
     try ensureValidFormation(alloc.gpa, &scene.formation_info);
 
     const new_scene_now_ms = (Io.Clock.awake).now(io).toMilliseconds();
-    try timers.buffs.ensureAllRegistered(alloc.gpa, &scene, assets, new_scene_now_ms);
-    timers.buffs.syncAllLeftDurations(&scene, new_scene_now_ms);
+    try buff_timers.ensureAllRegistered(alloc.gpa, &scene, assets, new_scene_now_ms);
+    buff_timers.syncAllLeftDurations(&scene, new_scene_now_ms);
     try scene.save(fs, alloc.gpa);
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
@@ -330,7 +330,7 @@ pub fn notifyJoinScene(
     motor_comp: *PlayerMotorComponent,
     echo_comp: *PlayerEchoComponent,
     scene: *Scene,
-    timers: *Timers,
+    buff_timers: *BuffTimerScheduler,
     io: Io,
 ) !void {
     const log = std.log.scoped(.scene_join);
@@ -445,8 +445,8 @@ pub fn notifyJoinScene(
         return error.PlayerNotFoundInScene;
     }
     const now_ms = (Io.Clock.awake).now(io).toMilliseconds();
-    try timers.buffs.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
-    timers.buffs.syncAllLeftDurations(scene, now_ms);
+    try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+    buff_timers.syncAllLeftDurations(scene, now_ms);
     try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};

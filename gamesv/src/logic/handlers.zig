@@ -23,7 +23,7 @@ pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {
 }
 
 pub fn drainEventQueueBestEffort(event_queue: *EventQueue, state: *State) void {
-    const log = std.log.scoped(.timed_logic);
+    const log = std.log.scoped(.gameplay_deadline);
 
     while (event_queue.deque.popFront()) |event| {
         dispatchLogicEvent(event_queue, event, state) catch |err| {
