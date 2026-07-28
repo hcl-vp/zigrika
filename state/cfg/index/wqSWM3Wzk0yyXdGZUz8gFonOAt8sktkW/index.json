@@ -43,6 +43,16 @@
     "NoticeUrl": "http://127.0.0.1:10001/notice",
     "MixUri": "wqSWM3Wzk0yyXdGZUz8gFonOAt8sktkW",
     "ResUri": "wqSWM3Wzk0yyXdGZUz8gFonOAt8sktkW",
+    "GrayBox": {
+        "Items": [
+            {
+                "Name": "GrayBoxCSharpEnvironment",
+                "Divisor": 100000,
+                "Left": 0,
+                "Right": 100000
+            }
+        ]
+    },
     "LoginServers": [
       {
         "id": "76402e5b20be2c39f095a152090afddc",
