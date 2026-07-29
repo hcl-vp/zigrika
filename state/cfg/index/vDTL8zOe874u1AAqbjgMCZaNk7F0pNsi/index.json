@@ -3,7 +3,11 @@
     "CdnUrl": [
       {
         "url": "http://127.0.0.1:5500/",
-        "weight": "0"
+        "weight": "1000"
+      },
+      {
+          "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
+          "weight": "0"
       }
     ],
     "SecondaryUrl": [],
@@ -44,14 +48,7 @@
     "MixUri": "vDTL8zOe874u1AAqbjgMCZaNk7F0pNsi",
     "ResUri": "vDTL8zOe874u1AAqbjgMCZaNk7F0pNsi",
     "GrayBox": {
-        "Items": [
-            {
-                "Name": "GrayBoxCSharpEnvironment",
-                "Divisor": 100000,
-                "Left": 0,
-                "Right": 100000
-            }
-        ]
+        "Items": []
     },
     "LoginServers": [
       {
