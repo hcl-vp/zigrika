@@ -433,12 +433,12 @@ setTimeout(() => {
       text_id: "High_Definition_Quality_2",
       params: ["2"],
     }),
-    // build_dropdown_entry({
-    //   id: 3,
-    //   setup_type: MAX_ID - 1,
-    //   text_id: "CUSTOM_Very High (3x)",
-    //   params: ["3"],
-    // }),
+    build_dropdown_entry({
+      id: 3,
+      setup_type: MAX_ID - 1,
+      text_id: "CUSTOM_Very High (3x)",
+      params: ["3"],
+    }),
   ];
 
   const DROPDOWN_OVERRIDES = new Map([
