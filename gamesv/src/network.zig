@@ -134,25 +134,20 @@ pub const SessionManager = struct {
 
         while (true) {
             try manager.mutex.lock(handle.io);
+            {
+                defer manager.mutex.unlock(handle.io);
 
-            if (manager.sessions.get(player_id)) |existing| {
-                if (existing == handle) {
-                    manager.mutex.unlock(handle.io);
+                if (manager.sessions.get(player_id)) |existing| {
+                    if (existing == handle) return;
+
+                    if (replacement_requested != existing) {
+                        existing.close(.replaced);
+                        replacement_requested = existing;
+                    }
+                } else {
+                    try manager.sessions.put(gpa, player_id, handle);
                     return;
                 }
-
-                if (replacement_requested != existing) {
-                    existing.close(.replaced);
-                    replacement_requested = existing;
-                }
-                manager.mutex.unlock(handle.io);
-            } else {
-                manager.sessions.put(gpa, player_id, handle) catch |err| {
-                    manager.mutex.unlock(handle.io);
-                    return err;
-                };
-                manager.mutex.unlock(handle.io);
-                return;
             }
 
             if (clock.now(handle.io).toMilliseconds() >= deadline_ms) {
@@ -175,23 +170,27 @@ pub const SessionManager = struct {
 const Wake = struct {
     packet: ?Io.net.Socket.ReceiveError!Io.net.IncomingMessage = null,
     gameplay_done: ?*ConnectionHandle = null,
-    transport_work: bool = false,
-    deadline: bool = false,
+    transport_ready: bool = false,
 };
 
 const SelectResult = union(enum) {
     packet: Io.net.Socket.ReceiveError!Io.net.IncomingMessage,
-    gameplay_done: anyerror!*ConnectionHandle,
-    transport_work: anyerror!void,
-    deadline: anyerror!void,
+    gameplay_done: (Io.QueueClosedError || Io.Cancelable)!*ConnectionHandle,
+    transport_ready: Io.Cancelable!void,
 };
 
-fn waitForTransportWork(event: *Io.Event, io: Io) anyerror!void {
+fn waitForTransportWork(event: *Io.Event, io: Io, deadline_delay_ms: ?i64) Io.Cancelable!void {
+    if (deadline_delay_ms) |delay_ms| {
+        event.waitTimeout(io, .{ .duration = .{
+            .clock = .awake,
+            .raw = .fromMilliseconds(@max(delay_ms, 0)),
+        } }) catch |err| switch (err) {
+            error.Timeout => return,
+            error.Canceled => |e| return e,
+        };
+        return;
+    }
     try event.wait(io);
-}
-
-fn waitForDeadline(io: Io, delay_ms: i64) anyerror!void {
-    try io.sleep(.fromMilliseconds(@max(delay_ms, 0)), .awake);
 }
 
 fn applySelectResult(wake: *Wake, result: SelectResult) void {
@@ -204,21 +203,12 @@ fn applySelectResult(wake: *Wake, result: SelectResult) void {
         },
         .gameplay_done => |done| wake.gameplay_done = done catch |err| switch (err) {
             error.Canceled, error.Closed => return,
-            else => return,
         },
-        .transport_work => |work| {
+        .transport_ready => |work| {
             work catch |err| switch (err) {
                 error.Canceled => return,
-                else => return,
             };
-            wake.transport_work = true;
-        },
-        .deadline => |deadline| {
-            deadline catch |err| switch (err) {
-                error.Canceled => return,
-                else => return,
-            };
-            wake.deadline = true;
+            wake.transport_ready = true;
         },
     }
 }
@@ -230,21 +220,16 @@ fn waitForWake(
     transport_work: *Io.Event,
     gameplay_completions: *Io.Queue(*ConnectionHandle),
     deadline_delay_ms: ?i64,
-) ?Wake {
-    var results: [4]SelectResult = undefined;
+) (Io.ConcurrentError || Io.Cancelable)!Wake {
+    var results: [3]SelectResult = undefined;
     var select: Io.Select(SelectResult) = .init(io, &results);
+    errdefer select.cancelDiscard();
 
-    select.async(.packet, Io.net.Socket.receive, .{ socket, io, recv_buffer });
-    select.async(.gameplay_done, Io.Queue(*ConnectionHandle).getOne, .{ gameplay_completions, io });
-    select.async(.transport_work, waitForTransportWork, .{ transport_work, io });
-    if (deadline_delay_ms) |delay_ms| {
-        select.async(.deadline, waitForDeadline, .{ io, delay_ms });
-    }
+    try select.concurrent(.packet, Io.net.Socket.receive, .{ socket, io, recv_buffer });
+    try select.concurrent(.gameplay_done, Io.Queue(*ConnectionHandle).getOne, .{ gameplay_completions, io });
+    try select.concurrent(.transport_ready, waitForTransportWork, .{ transport_work, io, deadline_delay_ms });
 
-    const first = select.await() catch {
-        select.cancelDiscard();
-        return null;
-    };
+    const first = try select.await();
 
     var wake: Wake = .{};
     applySelectResult(&wake, first);
@@ -309,7 +294,10 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
             &transport_work,
             &gameplay_completions,
             registry.nextWakeDelayMs(before_wait_ms),
-        ) orelse break;
+        ) catch |err| {
+            log.err("failed to wait for transport work: {t}", .{err});
+            break;
+        };
 
         const now_ms = Io.Clock.awake.now(io).toMilliseconds();
         if (wake.packet) |packet_result| {
@@ -364,7 +352,9 @@ fn receiveLoop(io: Io, gpa: Allocator, fs: *FileSystem, assets: *const Assets, s
 
     registry.closeAll(.shutdown);
     while (registry.sessionCount() != 0) {
-        const handle = gameplay_completions.getOne(io) catch break;
+        const handle = gameplay_completions.getOneUncancelable(io) catch |err| switch (err) {
+            error.Closed => break,
+        };
         _ = handle.gameplay_future.await(io);
         registry.finalize(handle, Io.Clock.awake.now(io).toMilliseconds());
         gpa.destroy(handle);
@@ -391,24 +381,30 @@ test "central wake preserves simultaneous completions" {
 
     applySelectResult(&wake, .{ .packet = packet });
     applySelectResult(&wake, .{ .gameplay_done = &handle });
-    applySelectResult(&wake, .{ .transport_work = {} });
-    applySelectResult(&wake, .{ .deadline = {} });
+    applySelectResult(&wake, .{ .transport_ready = {} });
 
     try std.testing.expect(wake.packet != null);
     try std.testing.expect(wake.gameplay_done == &handle);
-    try std.testing.expect(wake.transport_work);
-    try std.testing.expect(wake.deadline);
+    try std.testing.expect(wake.transport_ready);
 }
 
 test "canceled central waits do not become wake reasons" {
     var wake: Wake = .{};
     applySelectResult(&wake, .{ .packet = error.Canceled });
     applySelectResult(&wake, .{ .gameplay_done = error.Canceled });
-    applySelectResult(&wake, .{ .transport_work = error.Canceled });
-    applySelectResult(&wake, .{ .deadline = error.Canceled });
+    applySelectResult(&wake, .{ .transport_ready = error.Canceled });
 
     try std.testing.expect(wake.packet == null);
     try std.testing.expect(wake.gameplay_done == null);
-    try std.testing.expect(!wake.transport_work);
-    try std.testing.expect(!wake.deadline);
+    try std.testing.expect(!wake.transport_ready);
+}
+
+test "transport work waits for either an event or its deadline" {
+    var event: Io.Event = .unset;
+
+    event.set(std.testing.io);
+    try waitForTransportWork(&event, std.testing.io, null);
+
+    event.reset();
+    try waitForTransportWork(&event, std.testing.io, 0);
 }

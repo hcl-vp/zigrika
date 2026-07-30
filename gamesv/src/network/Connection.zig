@@ -89,9 +89,9 @@ const GameplayWake = struct {
 };
 
 const GameplaySelectResult = union(enum) {
-    inbound_ready: anyerror!OwnedMessage,
-    gameplay_deadline: anyerror!void,
-    closed: anyerror!void,
+    inbound_ready: (Io.QueueClosedError || Io.Cancelable)!OwnedMessage,
+    gameplay_deadline: Io.Cancelable!void,
+    closed: Io.Cancelable!void,
 };
 
 const GameplayBudget = struct {
@@ -113,18 +113,18 @@ const GameplayBudget = struct {
     }
 };
 
-fn waitForInbound(handle: *ConnectionHandle) anyerror!OwnedMessage {
+fn waitForInbound(handle: *ConnectionHandle) (Io.QueueClosedError || Io.Cancelable)!OwnedMessage {
     const message = try handle.inbound.getOne(handle.io);
     handle.signalTransportWork();
     return message;
 }
 
-fn waitForDeadline(io: Io, delay_ms: i64) anyerror!void {
+fn waitForDeadline(io: Io, delay_ms: i64) Io.Cancelable!void {
     const sleep_ms = if (delay_ms > 0) delay_ms else 0;
     try io.sleep(.fromMilliseconds(sleep_ms), .awake);
 }
 
-fn waitForClosed(handle: *ConnectionHandle) anyerror!void {
+fn waitForClosed(handle: *ConnectionHandle) Io.Cancelable!void {
     try handle.closed_event.wait(handle.io);
 }
 
@@ -137,29 +137,17 @@ fn applyGameplaySelectResult(wake: *GameplayWake, result: GameplaySelectResult) 
                     wake.closed = true;
                     return;
                 },
-                else => {
-                    wake.closed = true;
-                    return;
-                },
             };
         },
         .gameplay_deadline => |deadline_result| {
             deadline_result catch |err| switch (err) {
                 error.Canceled => return,
-                else => {
-                    wake.closed = true;
-                    return;
-                },
             };
             wake.gameplay_deadline = true;
         },
         .closed => |closed_result| {
             closed_result catch |err| switch (err) {
                 error.Canceled => return,
-                else => {
-                    wake.closed = true;
-                    return;
-                },
             };
             wake.closed = true;
         },
@@ -168,21 +156,31 @@ fn applyGameplaySelectResult(wake: *GameplayWake, result: GameplaySelectResult) 
 
 fn waitGameplayWake(
     handle: *ConnectionHandle,
+    gpa: Allocator,
     gameplay_delay_ms: ?i64,
-) ?GameplayWake {
+) (Io.ConcurrentError || Io.Cancelable)!GameplayWake {
     var buffer: [3]GameplaySelectResult = undefined;
     var select: Io.Select(GameplaySelectResult) = .init(handle.io, &buffer);
-
-    select.async(.inbound_ready, waitForInbound, .{handle});
-    if (gameplay_delay_ms) |delay_ms| {
-        select.async(.gameplay_deadline, waitForDeadline, .{ handle.io, delay_ms });
+    errdefer {
+        while (select.cancel()) |result| {
+            switch (result) {
+                .inbound_ready => |message_result| {
+                    if (message_result) |message| {
+                        gpa.free(message.bytes);
+                    } else |_| {}
+                },
+                .gameplay_deadline, .closed => {},
+            }
+        }
     }
-    select.async(.closed, waitForClosed, .{handle});
 
-    const first = select.await() catch {
-        select.cancelDiscard();
-        return null;
-    };
+    try select.concurrent(.inbound_ready, waitForInbound, .{handle});
+    if (gameplay_delay_ms) |delay_ms| {
+        try select.concurrent(.gameplay_deadline, waitForDeadline, .{ handle.io, delay_ms });
+    }
+    try select.concurrent(.closed, waitForClosed, .{handle});
+
+    const first = try select.await();
 
     var wake: GameplayWake = .{};
     applyGameplaySelectResult(&wake, first);
@@ -287,8 +285,12 @@ pub fn runGameplay(
         const state_ptr: ?*const State = if (gameplay.state) |*s| s else null;
         const wake = waitGameplayWake(
             handle,
+            gpa,
             nextGameplayWakeDelayMs(state_ptr, wait_now_ms),
-        ) orelse break;
+        ) catch |err| {
+            log.err("failed to wait for gameplay work: {t}", .{err});
+            break;
+        };
 
         if (wake.closed) {
             if (wake.inbound_ready) |message| gpa.free(message.bytes);
