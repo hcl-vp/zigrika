@@ -13,6 +13,8 @@ const Assets = @import("../../data/Assets.zig");
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const phantom_projector = @import("../../logic/helpers/phantom_projector.zig");
+const entity_proto = @import("../../logic/helpers/entity_proto.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
 const roulette_slot_count = 8;
 
 fn ownedRouletteSkillIds(gpa: std.mem.Allocator, ids: []const i32) ![]i32 {
@@ -36,11 +38,15 @@ pub fn onVisionExploreSkillSetRequest(
     scene: *Scene,
     alloc: mem.Alloc,
     fs: *FileSystem,
+    assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
     query: Scene.Query(&.{
         Entity,
         *Entity.VisionSkillComponent,
     }),
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const old_skill = scene.explore_tools_info.active_explore_skill;
     scene.explore_tools_info.active_explore_skill = txn.message.SkillId;
 
@@ -55,11 +61,19 @@ pub fn onVisionExploreSkillSetRequest(
             }
         }
 
+        try buff_timers.ensureEntityRegistered(
+            alloc.gpa,
+            scene,
+            assets,
+            entity.net_id,
+            now_ms,
+        );
+        buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
         try scene.saveEntity(fs, alloc.gpa, entity);
         try txn.conn.push(pb.VisionSkillChangeNotify{
             .EntityId = entity.net_id,
             .VisionSkillInfos = sliceToArrayList(pb.VisionSkillInformation, vision_skill_comp.vision_skills),
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .SkillId = txn.message.SkillId });
@@ -70,7 +84,11 @@ pub fn onExploreSkillRouletteSetRequest(
     scene: *Scene,
     alloc: mem.Alloc,
     fs: *FileSystem,
+    assets: *const Assets,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const roulette_type = txn.message.RouletteType orelse .Explore;
     const selected_roulette: ?pb.ExploreSkillRoulette = txn.message.SkillRoulette orelse if (txn.message.SkillRoulettes.items.len != 0)
         txn.message.SkillRoulettes.items[0]
@@ -99,6 +117,8 @@ pub fn onExploreSkillRouletteSetRequest(
             },
             .TrapDefense => {},
         }
+        try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
+        buff_timers.syncAllLeftDurations(scene, now_ms);
         try scene.save(fs, alloc.gpa);
     }
 
@@ -122,7 +142,7 @@ pub fn onExploreSkillRouletteSetRequest(
 
     try txn.conn.push(pb.ExploreSkillRouletteUpdateNotify{
         .RouletteInfo = roulette_info,
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -139,7 +159,10 @@ pub fn onSummon3Request(
     fs: *FileSystem,
     assets: *const Assets,
     echo_comp: *PlayerEchoComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const info = txn.message.SummonInfo orelse {
         txn.respond(.{ .ErrorCode = .RequestParamError });
         return;
@@ -189,10 +212,21 @@ pub fn onSummon3Request(
         return;
     };
 
-    const storage = scene.entities.get(entity.index);
+    var entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
+    try entity_pbs.append(
+        alloc.arena,
+        try entity_proto.build(
+            alloc,
+            assets,
+            scene,
+            buff_timers,
+            entity.net_id,
+            now_ms,
+        ),
+    );
     try txn.conn.push(pb.EntityAddNotify{
-        .EntityPbs = try singleEntityPb(alloc, assets, storage, entity.net_id),
-    }, alloc.arena);
+        .EntityPbs = entity_pbs,
+    });
     txn.respond(.{ .ErrorCode = .Success });
 }
 
@@ -218,19 +252,8 @@ pub fn onRemoveSummonEntityRequest(
         try txn.conn.push(pb.EntityRemoveNotify{
             .IsRemove = true,
             .RemoveInfos = remove_infos,
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .ErrorCode = .Success });
-}
-
-fn singleEntityPb(
-    alloc: mem.Alloc,
-    assets: *const Assets,
-    storage: EntityComponentStorage,
-    entity_id: i64,
-) !std.ArrayList(pb.EntityPb) {
-    var entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
-    try entity_pbs.append(alloc.arena, try storage.entityToProto(entity_id, alloc, assets));
-    return entity_pbs;
 }

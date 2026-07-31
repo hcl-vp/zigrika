@@ -14,7 +14,6 @@ const logic_namespaces: []const type = &.{
     @import("handlers/buff.zig"),
     @import("handlers/tags.zig"),
     @import("handlers/chat.zig"),
-    @import("handlers/time.zig"),
 };
 
 pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {
@@ -23,7 +22,19 @@ pub fn drainEventQueue(event_queue: *EventQueue, state: *State) !void {
     }
 }
 
+pub fn drainEventQueueBestEffort(event_queue: *EventQueue, state: *State) void {
+    const log = std.log.scoped(.gameplay_deadline);
+
+    while (event_queue.deque.popFront()) |event| {
+        dispatchLogicEvent(event_queue, event, state) catch |err| {
+            log.err("failed to handle {s}: {t}", .{ @tagName(std.meta.activeTag(event)), err });
+        };
+    }
+}
+
 fn dispatchLogicEvent(q: *EventQueue, e: EventQueue.Event, state: *State) !void {
+    @setEvalBranchQuota(2_000);
+
     switch (e) {
         inline else => |event, tag| {
             inline for (logic_namespaces) |namespace| {

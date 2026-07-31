@@ -25,7 +25,7 @@ pub fn onCalabashLevelRewardRequest(
     try PlayerEchoComponent.saveCalabash(alloc.gpa, fs, echo_comp.player_id, echo_comp.calabash_info);
 
     const rewarded_levels = try intList(echo_comp.calabash_info.rewarded_levels, alloc.arena);
-    try txn.conn.push(pb.CalabashLevelsRewardNotify{ .RewardedLevels = rewarded_levels }, alloc.arena);
+    try txn.conn.push(pb.CalabashLevelsRewardNotify{ .RewardedLevels = rewarded_levels });
     txn.respond(.{ .ErrorCode = .Success });
 }
 

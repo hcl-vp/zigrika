@@ -19,7 +19,7 @@ pub fn updateGameplayTags(
     }
 
     if (notify.Data.items.len != 0) {
-        try conn.push(notify, alloc.arena);
+        try conn.push(notify);
     }
 }
 

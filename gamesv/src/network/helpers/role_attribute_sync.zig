@@ -75,7 +75,7 @@ pub fn pushRoleInfoNotifyForRoles(
     }
 
     if (role_list.items.len != 0) {
-        try txn.conn.push(pb.PbGetRoleListNotify{ .RoleList = role_list }, alloc.arena);
+        try txn.conn.push(pb.PbGetRoleListNotify{ .RoleList = role_list });
     }
 }
 
@@ -103,5 +103,5 @@ fn pushAttributeChange(
             },
         } });
         break :blk data;
-    } }, alloc.arena);
+    } });
 }

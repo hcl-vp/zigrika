@@ -29,7 +29,7 @@ pub const max_attribute = struct {
             try apply_attr_change(&notify, scene, fs, query, alloc, config_id, attr, .max, 0);
         }
 
-        try conn.push(notify, alloc.arena);
+        try conn.push(notify);
         try events.enqueue(.chat_command_response, .{ .content = "maxxed out stat" });
     }
 };
@@ -55,7 +55,7 @@ pub const empty_attribute = struct {
             try apply_attr_change(&notify, scene, fs, query, alloc, config_id, attr, .empty, 0);
         }
 
-        try conn.push(notify, alloc.arena);
+        try conn.push(notify);
         try events.enqueue(.chat_command_response, .{ .content = "emptied out stat" });
     }
 };
@@ -82,7 +82,7 @@ pub const set_attribute = struct {
             try apply_attr_change(&notify, scene, fs, query, alloc, config_id, attr, .set, value);
         }
 
-        try conn.push(notify, alloc.arena);
+        try conn.push(notify);
         try events.enqueue(.chat_command_response, .{ .content = "set stat to inputted value" });
     }
 };
@@ -158,6 +158,6 @@ fn apply_attr_change(
                 },
             },
         } });
-        try scene.saveEntity(fs, alloc.gpa, entity);
+        try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.AttributeComponent});
     }
 }

@@ -29,12 +29,12 @@ pub fn pushData(
     notify.LastModifyNameTime = basic_comp.info.last_modify_name_time;
     notify.ModifyNameTime = "";
 
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
     if (basic_comp.info.cur_player_title_id > 0) {
         try conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = basic_comp.info.cur_player_title_id,
             .CurPlayerTitleId = 1, // PlayerTitleExtraParam
-        }, alloc.arena);
+        });
     }
 }
 

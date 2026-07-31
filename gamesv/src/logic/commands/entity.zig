@@ -14,6 +14,8 @@ const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComp
 const RoleHelper = @import("../../logic/helpers/role.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
 const respond = @import("../commands.zig").respond;
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("../helpers/entity_proto.zig");
 
 const EntitySpawnBase = struct {
     config_type: ConfigComponent.ConfigType,
@@ -35,10 +37,13 @@ pub const spawn = struct {
         assets: *const Assets,
         conn: *Connection,
         alloc: mem.Alloc,
+        buff_timers: *BuffTimerScheduler,
+        io: std.Io,
         entity_id: i64,
         is_frozen: ?bool,
         is_tune_broken: ?bool,
     ) !void {
+        const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
         var entity_config = (assets.tables.level_entity_config.getDataById(entity_id) orelse {
             try respond(events, alloc.arena, "{d} couldn't be spawned, couldn't find it in LevelEntityConfig", .{entity_id});
             return;
@@ -120,13 +125,27 @@ pub const spawn = struct {
             const fight_buff_infos = try scene.buildFightBuffInfos(born_buffs, entity.net_id, alloc.gpa);
             const slice = scene.entities.slice();
             slice.items(.buffs)[entity.index].?.fight_buff_infos = fight_buff_infos;
+            try buff_timers.ensureEntityRegistered(
+                alloc.gpa,
+                scene,
+                assets,
+                entity.net_id,
+                now_ms,
+            );
+            buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
             try scene.saveEntity(fs, alloc.gpa, entity);
         }
 
         var entity_pbs: std.ArrayList(pb.EntityPb) = try .initCapacity(alloc.gpa, 1);
         defer entity_pbs.deinit(alloc.gpa);
-        const storage = scene.entities.get(entity.index);
-        const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
+        const entity_pb = try entity_proto.build(
+            alloc,
+            assets,
+            scene,
+            buff_timers,
+            entity.net_id,
+            now_ms,
+        );
         entity_pbs.appendAssumeCapacity(entity_pb);
 
         try conn.push(pb.JSPatchNotify{
@@ -135,9 +154,9 @@ pub const spawn = struct {
                 "globalThis.__zigrikaSetEntitySourceMap?.({d},{d});",
                 .{ entity_id, entity_config.MapId },
             ),
-        }, alloc.arena);
+        });
 
-        try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
+        try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs });
 
         try respond(events, alloc.arena, "spawned {d}, frozen: {any}, tune broken: {any}, ai_id: {any}", .{ entity_id, is_frozen, is_tune_broken, ai_id });
     }
@@ -156,7 +175,10 @@ pub const reset_formation = struct {
         echo_comp: *PlayerEchoComponent,
         conn: *Connection,
         alloc: mem.Alloc,
+        buff_timers: *BuffTimerScheduler,
+        io: std.Io,
     ) !void {
+        const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
         try RoleHelper.resetRoles(
             scene,
             fs,
@@ -167,6 +189,8 @@ pub const reset_formation = struct {
             conn,
             alloc,
             null,
+            buff_timers,
+            now_ms,
         );
         try respond(events, alloc.arena, "reset formation successfully", .{});
     }

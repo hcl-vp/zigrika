@@ -1,7 +1,24 @@
 const std = @import("std");
 const pb = @import("proto").pb;
+const dispatch = @import("combat.zig");
 
-pub fn FsmConditionPassPush(push: pb.FsmConditionPassPush) !void {
+pub fn ChangeStateRequest(
+    txn: *dispatch.CombatRequestTxn(.ChangeStateRequest),
+) !void {
+    const request = txn.payload;
+
+    txn.respond(.{
+        .FsmId = request.FsmId,
+        .CurrentState = request.ToState,
+        .Error = pb.DErrorResult{ .ErrorCode = .Success },
+    });
+}
+
+pub fn ChangeStateConfirmPush(_: pb.ChangeStateConfirmPush) !void {}
+
+pub fn FsmConditionPassPush(
+    push: pb.FsmConditionPassPush,
+) !void {
     const log = std.log.scoped(.fsm_condition);
 
     log.debug("FsmId: {d}, FromState: {d}, ToState: {d}, ConditionIndex: {d}, Value: {}", .{
@@ -11,8 +28,6 @@ pub fn FsmConditionPassPush(push: pb.FsmConditionPassPush) !void {
         push.ConditionIndex,
         push.Value,
     });
-
-    // TODO
 }
 
 pub fn AiHatePush(push: pb.AiHatePush) !void {
@@ -23,4 +38,15 @@ pub fn AiHatePush(push: pb.AiHatePush) !void {
     }
 
     // TODO
+}
+
+pub fn FsmStateBehaviorRequest(
+    txn: *dispatch.CombatRequestTxn(.FsmStateBehaviorRequest),
+) !void {
+    const request = txn.payload;
+    txn.respond(.{
+        .FsmId = request.FsmId,
+        .State = request.State,
+        .ErrorCode = .Success,
+    });
 }

@@ -12,6 +12,7 @@ const PlayerCosmeticComponent = @import("../../logic/component/player/PlayerCosm
 const CosmeticInfo = @import("../../fs/CosmeticInfo.zig");
 const Entity = Scene.Entity;
 const shared = @import("echo/shared.zig");
+const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
 
 const phantomItemList = shared.phantomItemList;
 const equipInfoList = shared.equipInfoList;
@@ -62,7 +63,10 @@ pub fn onPhantomSkinChangeRequest(
     echo_comp: *PlayerEchoComponent,
     weapon_comp: *PlayerWeaponComponent,
     cosmetic_comp: *PlayerCosmeticComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const echo = echo_comp.echo_map.getPtr(txn.message.IncrId) orelse {
         txn.respond(.{ .ErrorCode = .ErrPhantomItemNotExist });
         return;
@@ -112,7 +116,7 @@ pub fn onPhantomSkinChangeRequest(
             *Entity.AttributeComponent,
             *Entity.FightBuffComponent,
         }) = .{ .iterator = .{ .entities = &scene.entities } };
-        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+        try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
     }
     txn.respond(.{ .ErrorCode = .Success });
 }
@@ -134,7 +138,10 @@ pub fn onPhantomPutOnRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     if (txn.message.Pos < 0 or txn.message.Pos >= 5) {
         txn.respond(.{ .ErrorCode = .RequestParamError });
         return;
@@ -182,7 +189,7 @@ pub fn onPhantomPutOnRequest(
 
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
     try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -207,7 +214,10 @@ pub fn onPhantomAutoPutRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     try changed_roles.put(alloc.gpa, txn.message.RoleId, {});
@@ -248,7 +258,7 @@ pub fn onPhantomAutoPutRequest(
 
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
     try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
 
     txn.respond(.{
         .ErrorCode = .Success,

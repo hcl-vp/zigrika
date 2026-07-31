@@ -98,7 +98,7 @@ pub fn onChangePlayerTitleRequest(
         try txn.conn.push(pb.SetDressedPlayerTitleNotify{
             .PlayerTitleId = txn.message.PlayerTitleId,
             .CurPlayerTitleId = if (txn.message.PlayerTitleId == 0) 0 else 1, // PlayerTitleExtraParam
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .ErrorCode = .Success });
@@ -122,7 +122,7 @@ pub fn onModifyNameRequest(
     try txn.conn.push(pb.PlayerNameUpdateNotify{
         .Name = basic_comp.info.attributes.name,
         .LastModifyNameTime = last_modify_name_time,
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .Name = basic_comp.info.attributes.name,
@@ -173,7 +173,7 @@ pub fn onBirthdayInitRequest(
         try txn.conn.push(pb.BirthdayInfoUpdateNotify{
             .BirthDayReset = true,
             .RecentRewardTime = @divTrunc(basic_comp.info.birthday, 10000),
-        }, alloc.arena);
+        });
     }
 
     txn.respond(.{ .ErrorCode = .Success });

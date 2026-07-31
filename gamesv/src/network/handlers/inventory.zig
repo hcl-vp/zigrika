@@ -46,7 +46,7 @@ pub fn onItemLockRequest(
         try txn.conn.push(pb.ItemFuncValueUpdateNotify{
             .IncrId = txn.message.IncrId,
             .FuncValue = item.func_value,
-        }, alloc.arena);
+        });
         txn.respond(.{ .ErrorCode = .Success });
         return;
     }
@@ -61,7 +61,7 @@ pub fn onItemLockRequest(
     try txn.conn.push(pb.ItemFuncValueUpdateNotify{
         .IncrId = txn.message.IncrId,
         .FuncValue = item.func_value,
-    }, alloc.arena);
+    });
 
     txn.respond(.{ .ErrorCode = .Success });
 }

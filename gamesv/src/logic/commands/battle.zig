@@ -39,7 +39,7 @@ pub const battle = struct {
                 },
             },
         } });
-        try conn.push(notify, alloc.arena);
+        try conn.push(notify);
         try events.enqueue(.chat_command_response, .{ .content = "changed battle state" });
     }
 };

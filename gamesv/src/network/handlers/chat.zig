@@ -31,13 +31,12 @@ pub fn onPrivateChatDataRequest(
         .HistoryIsEnd = false,
         .TotalNums = 1,
     });
-    try txn.conn.push(pb.PrivateChatHistoryNotify{ .AllChats = chat_history }, alloc.arena);
+    try txn.conn.push(pb.PrivateChatHistoryNotify{ .AllChats = chat_history });
     txn.respond(.{ .LoadSucc = true });
 }
 
 pub fn onPrivateChatHistoryRequest(
     txn: *Transaction(pb.PrivateChatHistoryRequest),
-    alloc: mem.Alloc,
 ) !void {
     if (txn.message.TargetUid == chat_bot_uid) {
         try txn.conn.push(pb.PrivateMessageNotify{ .ChatContent = .{
@@ -46,7 +45,7 @@ pub fn onPrivateChatHistoryRequest(
             .Content = starter_bot_msg,
             .OfflineMsg = false,
             .UtcTime = 0,
-        } }, alloc.arena);
+        } });
     }
     txn.respond(.{});
 }

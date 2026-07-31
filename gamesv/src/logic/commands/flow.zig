@@ -31,7 +31,7 @@ pub const flow = struct {
             .PlayerId = scene_comp.player_id,
             .SceneId = "",
             .TransitionOption = .{},
-        }, alloc.arena);
+        });
         scene_comp.last_scene_info.instance_id = flow_inst.DungeonId;
         try scene.saveLastScene(scene_comp, fs, alloc.gpa);
 

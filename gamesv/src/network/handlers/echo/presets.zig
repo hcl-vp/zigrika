@@ -12,6 +12,7 @@ const EchoInfo = @import("../../../fs/EchoInfo.zig");
 const special_item_incr = @import("../../../fs/special_item_incr.zig");
 const Entity = Scene.Entity;
 const shared = @import("shared.zig");
+const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
 
 const visionEquipGroupList = shared.visionEquipGroupList;
 const changedEquipInfoList = shared.changedEquipInfoList;
@@ -73,7 +74,10 @@ pub fn onApplyVisionGroupRequest(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
 ) !void {
+    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     if (txn.message.Index < 0 or txn.message.Index >= echo_comp.preset_info.groups.len) {
         txn.respond(.{ .ErrorCode = .ErrVisionSkillSlotNotFound });
         return;
@@ -115,7 +119,7 @@ pub fn onApplyVisionGroupRequest(
 
     try PlayerEchoComponent.saveAll(alloc.gpa, fs, echo_comp.player_id, echo_comp.echo_map);
     try pushRolePropUpdate(txn, alloc, assets, role_comp, echo_comp, weapon_comp, changed_roles);
-    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles);
+    try refreshRoleEntities(txn, alloc, fs, assets, scene, role_comp, echo_comp, weapon_comp, query, changed_roles, buff_timers, io, now_ms);
 
     txn.respond(.{
         .ErrorCode = .Success,

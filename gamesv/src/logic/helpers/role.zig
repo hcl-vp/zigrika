@@ -14,6 +14,8 @@ const PlayerRoleComponent = @import("../../logic/component/player/PlayerRoleComp
 const PlayerWeaponComponent = @import("../../logic/component/player/PlayerWeaponComponent.zig");
 const PlayerEchoComponent = @import("../../logic/component/player/PlayerEchoComponent.zig");
 const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.zig");
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
+const entity_proto = @import("entity_proto.zig");
 
 pub const MainRoleTransferResult = struct {
     formation_changed: bool = false,
@@ -506,6 +508,8 @@ pub fn resetRoles(
     conn: *Connection,
     alloc: mem.Alloc,
     role_ids: ?[]const i32,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !void {
     const log = std.log.scoped(.reset_formation);
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse {
@@ -551,7 +555,7 @@ pub fn resetRoles(
         try remove_infos.append(alloc.gpa, .{ .EntityId = entity_id });
     }
     remove_notify.RemoveInfos = remove_infos;
-    try conn.push(remove_notify, alloc.arena);
+    try conn.push(remove_notify);
 
     var role_entity_pbs: std.ArrayList(pb.EntityPb) = .empty;
     defer role_entity_pbs.deinit(alloc.gpa);
@@ -579,20 +583,39 @@ pub fn resetRoles(
         );
         role.entity_id = entity.net_id;
         const storage = scene.entities.get(entity.index);
-        const entity_pb = try storage.entityToProto(entity.net_id, alloc, assets);
+        const entity_pb = try entity_proto.build(
+            alloc,
+            assets,
+            scene,
+            buff_timers,
+            entity.net_id,
+            now_ms,
+        );
         try role_entity_pbs.append(alloc.gpa, entity_pb);
 
         if (storage.concomitant) |concomitant| {
             for (concomitant.vision_entity_id) |concom_id| {
-                const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-                const concom_storage = scene.entities.get(concom_index);
-                const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+                if (!scene.net_id_map.contains(concom_id)) continue;
+                const concom_pb = try entity_proto.build(
+                    alloc,
+                    assets,
+                    scene,
+                    buff_timers,
+                    concom_id,
+                    now_ms,
+                );
                 try concom_entity_pbs.append(alloc.gpa, concom_pb);
             }
             for (concomitant.custom_entity_ids) |concom_id| {
-                const concom_index = scene.net_id_map.get(concom_id) orelse continue;
-                const concom_storage = scene.entities.get(concom_index);
-                const concom_pb = try concom_storage.entityToProto(concom_id, alloc, assets);
+                if (!scene.net_id_map.contains(concom_id)) continue;
+                const concom_pb = try entity_proto.build(
+                    alloc,
+                    assets,
+                    scene,
+                    buff_timers,
+                    concom_id,
+                    now_ms,
+                );
                 try concom_entity_pbs.append(alloc.gpa, concom_pb);
             }
         }
@@ -600,10 +623,10 @@ pub fn resetRoles(
 
     var role_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
     role_entity_add_notify.EntityPbs = role_entity_pbs;
-    try conn.push(role_entity_add_notify, alloc.arena);
+    try conn.push(role_entity_add_notify);
     var concom_entity_add_notify: pb.EntityAddNotify = .{ .RemoveTagIds = false };
     concom_entity_add_notify.EntityPbs = concom_entity_pbs;
-    try conn.push(concom_entity_add_notify, alloc.arena);
+    try conn.push(concom_entity_add_notify);
 
     var fight_role_infos: std.ArrayList(pb.FightRoleInfo) = .empty;
     defer fight_role_infos.deinit(alloc.gpa);
@@ -636,5 +659,5 @@ pub fn resetRoles(
 
     try conn.push(pb.UpdateGroupFormationNotify{
         .GroupFormation = group_formations,
-    }, alloc.arena);
+    });
 }

@@ -134,7 +134,7 @@ pub fn onMapTraceInfoRequest(
 ) !void {
     const marks = try appendCustomMarks(alloc.arena, map_comp);
     if (marks.items.len != 0) {
-        try txn.conn.push(pb.MapMarkInfoNotify{ .InfoList = marks }, alloc.arena);
+        try txn.conn.push(pb.MapMarkInfoNotify{ .InfoList = marks });
     }
 
     txn.respond(.{
@@ -159,7 +159,7 @@ pub fn onMapMarkRequest(
 
     const mark = saved_mark.toPb();
 
-    try txn.conn.push(pb.MapMarkAddNotify{ .Info = mark }, alloc.arena);
+    try txn.conn.push(pb.MapMarkAddNotify{ .Info = mark });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -178,7 +178,7 @@ pub fn onRemoveMapMarkRequest(
 
     try txn.conn.push(pb.MapMarkInfoNotify{
         .InfoList = try appendCustomMarks(alloc.arena, map_comp),
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -210,7 +210,7 @@ pub fn onMapUnlockFieldInfoRequest(
     try txn.conn.push(pb.MapUnlockDataNotify{
         .UnlockMultiMapIds = multi_maps,
         .UnlockMapBlockIds = map_blocks,
-    }, alloc.arena);
+    });
 
     txn.respond(.{
         .ErrorCode = .Success,
@@ -225,11 +225,11 @@ pub fn onExploreProgressRequest(
 ) !void {
     try txn.conn.push(pb.ExploreLevelNotify{
         .CountryExploreLevel = try appendMaxExploreLevelEntries(alloc.arena, assets, null),
-    }, alloc.arena);
+    });
 
     try txn.conn.push(pb.ExploreProgressRewardIdsNotify{
         .AreaStageRewardDataList = try appendExploreProgressRewardIds(alloc.arena, assets),
-    }, alloc.arena);
+    });
 
     var area_progress: std.ArrayList(pb.AreaExploreInfo) = .empty;
 
@@ -264,7 +264,7 @@ pub fn onCountryExploreScoreInfoRequest(
     const score_data = try buildCountryExploreScoreData(alloc.arena, assets, country_id);
     const levels = try appendMaxExploreLevelEntries(alloc.arena, assets, country_id);
 
-    try txn.conn.push(pb.ExploreLevelNotify{ .CountryExploreLevel = levels }, alloc.arena);
+    try txn.conn.push(pb.ExploreLevelNotify{ .CountryExploreLevel = levels });
     txn.respond(.{
         .ExploreScore = score_data.score,
         .CountryExploreScoreReceived = score_data.received,

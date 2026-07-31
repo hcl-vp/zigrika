@@ -17,6 +17,9 @@ const Attributes = @import("../../../logic/helpers/attributes.zig");
 const RoleAttributeSync = @import("../../helpers/role_attribute_sync.zig");
 const sliceToArrayList = @import("../../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Entity = Scene.Entity;
+const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
+const buff_helper = @import("../../../logic/helpers/buff.zig");
+const entity_proto = @import("../../../logic/helpers/entity_proto.zig");
 pub fn phantomItemList(echo_comp: *PlayerEchoComponent, arena: std.mem.Allocator) !std.ArrayList(pb.PhantomItem) {
     var list: std.ArrayList(pb.PhantomItem) = .empty;
     try list.ensureTotalCapacity(arena, echo_comp.echo_map.count());
@@ -210,7 +213,7 @@ pub fn pushRolePropUpdate(
 ) !void {
     try txn.conn.push(pb.RolePhantomPropUpdateNotify{
         .PropInfo = try changedRolePropInfoList(assets, role_comp, echo_comp, weapon_comp, changed_roles, alloc.gpa, alloc.arena),
-    }, alloc.arena);
+    });
 }
 
 pub fn refreshRoleEntities(
@@ -231,6 +234,9 @@ pub fn refreshRoleEntities(
         *Entity.FightBuffComponent,
     }),
     changed_roles: std.array_hash_map.Auto(i32, void),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
+    now_ms: i64,
 ) !void {
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
 
@@ -265,6 +271,8 @@ pub fn refreshRoleEntities(
             entity.net_id,
             desired,
             concomitant_comp,
+            buff_timers,
+            now_ms,
         );
         const vision_skill_changed = try syncVisionSkills(
             txn,
@@ -279,9 +287,30 @@ pub fn refreshRoleEntities(
             vision_skill_comp,
         );
         const attribute_changed = try syncEchoAttributes(txn, alloc, assets, role_comp, config.config_id, weapon_comp, echo_comp, entity.net_id, attr_comp);
-        const buff_changed = try syncEchoBuffEffects(txn, alloc, scene, assets, entity.net_id, config.config_id, echo_comp, buff_comp);
+        const buff_changed = try syncEchoBuffEffects(
+            txn,
+            alloc,
+            fs,
+            scene,
+            assets,
+            entity.net_id,
+            config.config_id,
+            echo_comp,
+            buff_comp,
+            buff_timers,
+            io,
+            now_ms,
+        );
 
         if (!vision_state.changed and !vision_skill_changed and !attribute_changed and !buff_changed) continue;
+        try buff_timers.ensureEntityRegistered(
+            alloc.gpa,
+            scene,
+            assets,
+            entity.net_id,
+            now_ms,
+        );
+        buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
         try scene.saveComponents(fs, alloc.gpa, entity, &.{
             Entity.VisionSkillComponent,
             Entity.ConcomitantComponent,
@@ -301,6 +330,8 @@ pub fn refreshRoleEntities(
             txn.conn,
             alloc,
             reset_roles.keys(),
+            buff_timers,
+            now_ms,
         );
     }
 
@@ -348,6 +379,8 @@ fn syncVisionEntities(
     role_entity_id: i64,
     desired: DesiredVisionState,
     concomitant_comp: *Entity.ConcomitantComponent,
+    buff_timers: *BuffTimerScheduler,
+    now_ms: i64,
 ) !SyncedVisionState {
     const desired_summons = [_]i32{ desired.main_summon_id, desired.combo_summon_id };
     var desired_entities = [_]i64{ 0, 0 };
@@ -386,8 +419,17 @@ fn syncVisionEntities(
             role_entity_id,
         )) |vision_entity| {
             desired_entities[desired_index] = vision_entity.net_id;
-            const storage = scene.entities.get(vision_entity.index);
-            try add_pbs.append(alloc.arena, try storage.entityToProto(vision_entity.net_id, alloc, assets));
+            try add_pbs.append(
+                alloc.arena,
+                try entity_proto.build(
+                    alloc,
+                    assets,
+                    scene,
+                    buff_timers,
+                    vision_entity.net_id,
+                    now_ms,
+                ),
+            );
         }
     }
 
@@ -408,13 +450,13 @@ fn syncVisionEntities(
         try txn.conn.push(pb.EntityRemoveNotify{
             .IsRemove = true,
             .RemoveInfos = remove_infos,
-        }, alloc.arena);
+        });
     }
     if (add_pbs.items.len != 0) {
         try txn.conn.push(pb.EntityAddNotify{
             .RemoveTagIds = false,
             .EntityPbs = add_pbs,
-        }, alloc.arena);
+        });
     }
 
     return .{
@@ -477,7 +519,7 @@ fn syncVisionSkills(
     try txn.conn.push(pb.VisionSkillChangeNotify{
         .EntityId = role_entity_id,
         .VisionSkillInfos = sliceToArrayList(pb.VisionSkillInformation, vision_skill_comp.vision_skills),
-    }, alloc.arena);
+    });
     return true;
 }
 
@@ -591,19 +633,30 @@ fn pushChangedAttributes(
         } });
     }
 
-    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data });
 }
 
 fn syncEchoBuffEffects(
     txn: anytype,
     alloc: mem.Alloc,
+    fs: *FileSystem,
     scene: *Scene,
     assets: *const Assets,
     entity_id: i64,
     role_id: i32,
     echo_comp: *PlayerEchoComponent,
     buff_comp: *Entity.FightBuffComponent,
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
+    now_ms: i64,
 ) !bool {
+    try buff_timers.ensureEntityRegistered(
+        alloc.gpa,
+        scene,
+        assets,
+        entity_id,
+        now_ms,
+    );
     var notify: pb.CombatReceivePackNotify = .{};
     const expected = try echo_comp.activeEchoBuffEffects(alloc.gpa, assets, role_id);
     defer alloc.gpa.free(expected);
@@ -615,6 +668,7 @@ fn syncEchoBuffEffects(
             std.mem.indexOfScalar(i64, expected, buff.BuffId) == null)
         {
             const handle_id = buff.HandleId;
+            buff_timers.cancelHandle(entity_id, handle_id);
             buff_comp.removeByHandleId(alloc.gpa, handle_id);
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
@@ -636,10 +690,12 @@ fn syncEchoBuffEffects(
 
     for (expected) |buff_id| {
         if (buff_comp.getByBuffId(buff_id) != null) continue;
+        const buff_data = assets.tables.buff.getDataById(buff_id) orelse continue;
         scene.*.instance.buff_handle += 1;
         buff_comp.fight_buff_infos = try alloc.gpa.realloc(buff_comp.fight_buff_infos, buff_comp.fight_buff_infos.len + 1);
         const buff_info = Assets.DataTables.createBuffInformation(scene.instance.buff_handle, buff_id, entity_id, entity_id, true);
         buff_comp.fight_buff_infos[buff_comp.fight_buff_infos.len - 1] = buff_info;
+        try buff_timers.scheduleNewBuff(alloc.gpa, buff_info, &buff_data, entity_id, now_ms);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entity_id },
@@ -657,10 +713,32 @@ fn syncEchoBuffEffects(
                 },
             },
         } });
+        const disposition = BuffTimerScheduler.applicationDisposition(&buff_data, true, false, true);
+        if (disposition.execute_periodic_now) {
+            const index = scene.net_id_map.get(entity_id) orelse continue;
+            const entity: Entity = .{ .index = index, .net_id = entity_id };
+            try scene.saveComponents(fs, alloc.gpa, entity, &.{Entity.FightBuffComponent});
+            const effect_query: Scene.Query(&.{
+                Entity,
+                *Entity.FightBuffComponent,
+                ?*Entity.AttributeComponent,
+            }) = .{ .iterator = .{ .entities = &scene.entities } };
+            try buff_helper.execute_periodic_buff_effects(
+                &notify.Data,
+                entity_id,
+                entity_id,
+                &buff_data,
+                scene,
+                fs,
+                io,
+                effect_query,
+                alloc,
+            );
+        }
     }
 
     if (notify.Data.items.len != 0) {
-        try txn.conn.push(notify, alloc.arena);
+        try txn.conn.push(notify);
         return true;
     }
     return false;

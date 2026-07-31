@@ -151,7 +151,7 @@ pub const echo = struct {
 
         var list: std.ArrayList(pb.PhantomItem) = .empty;
         try list.append(alloc.arena, try new_echo.toProto(incr_id, alloc.arena));
-        try conn.push(pb.PhantomItemAddNotify{ .PhantomItemList = list }, alloc.arena);
+        try conn.push(pb.PhantomItemAddNotify{ .PhantomItemList = list });
 
         try respond(events, alloc.arena, "created Echo {d} with incr id {d}", .{ echo_item_id, incr_id });
     }
