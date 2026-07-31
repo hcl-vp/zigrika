@@ -24,6 +24,7 @@ pub fn enqueue(
 }
 
 pub const Event = blk: {
+    @setEvalBranchQuota(2_000);
     const events = @import("events.zig");
     var type_names: []const []const u8 = &.{};
 

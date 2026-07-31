@@ -11,15 +11,34 @@ pub fn updateGameplayTags(
     const combat_common: pb.CombatCommon = .{ .EntityId = event.data.entity.net_id };
     var notify: pb.CombatReceivePackNotify = .{};
 
-    for (event.data.add_tag_ids) |tag_id| {
-        try appendTagNotify(&notify, alloc, combat_common, tag_id, true);
-    }
-    for (event.data.remove_tag_ids) |tag_id| {
-        try appendTagNotify(&notify, alloc, combat_common, tag_id, false);
-    }
+    try appendGameplayTagNotifies(
+        &notify,
+        alloc,
+        combat_common,
+        event.data.add_tag_ids,
+        event.data.remove_tag_ids,
+        event.data.remove_before_add,
+    );
 
     if (notify.Data.items.len != 0) {
         try conn.push(notify);
+    }
+}
+
+fn appendGameplayTagNotifies(
+    notify: *pb.CombatReceivePackNotify,
+    alloc: mem.Alloc,
+    combat_common: pb.CombatCommon,
+    add_tag_ids: []const i32,
+    remove_tag_ids: []const i32,
+    remove_before_add: bool,
+) !void {
+    if (remove_before_add) {
+        for (remove_tag_ids) |tag_id| try appendTagNotify(notify, alloc, combat_common, tag_id, false);
+        for (add_tag_ids) |tag_id| try appendTagNotify(notify, alloc, combat_common, tag_id, true);
+    } else {
+        for (add_tag_ids) |tag_id| try appendTagNotify(notify, alloc, combat_common, tag_id, true);
+        for (remove_tag_ids) |tag_id| try appendTagNotify(notify, alloc, combat_common, tag_id, false);
     }
 }
 

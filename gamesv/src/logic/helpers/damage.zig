@@ -73,6 +73,13 @@ pub fn damageEntity(
         10000000,
         alloc,
     );
+    if (change.items.len != 0 or e_change.items.len != 0) {
+        try scene.markFsmDirty(
+            alloc.gpa,
+            attacker_entity.net_id,
+            Entity.FsmComponent.WakeReason.attribute,
+        );
+    }
     try scene.saveComponents(fs, alloc.gpa, attacker_entity, &.{Entity.AttributeComponent});
 
     try attributes_helper.generate_attr_messages(

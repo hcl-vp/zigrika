@@ -10,6 +10,7 @@ const file_util = @import("../fs/file_util.zig");
 const comp_util = @import("component/comp_util.zig");
 const EntityComponentStorage = @import("component/entity/EntityComponentStorage.zig");
 const PlayerSceneComponent = @import("component/player/PlayerSceneComponent.zig");
+const FsmWakeScheduler = @import("schedulers/FsmWakeScheduler.zig");
 const incr = @import("../fs/incr.zig");
 
 const Allocator = std.mem.Allocator;
@@ -22,6 +23,50 @@ explore_tools_info: ExploreToolsInfo,
 entities: std.MultiArrayList(EntityComponentStorage) = .empty,
 net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
+active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
+fsm_hate_states: std.AutoHashMapUnmanaged(i64, bool) = .empty,
+combine_relations: std.AutoHashMapUnmanaged(i64, CombineRelation) = .empty,
+pending_combine_detaches: std.ArrayListUnmanaged(CombineDetach) = .empty,
+debug_spawn_routes: std.AutoHashMapUnmanaged(i64, DebugSpawnRoute) = .empty,
+debug_spawn_route_owners: std.AutoHashMapUnmanaged(i64, i64) = .empty,
+fsm_wakes: FsmWakeScheduler = .{},
+player_in_battle: bool = false,
+battle_state_notified: bool = false,
+battle_state_dirty: bool = false,
+
+pub const DebugSpawnRoute = struct {
+    source_map_id: i32,
+    repeat_boss: bool,
+    owner_count: usize,
+
+    pub fn matches(route: DebugSpawnRoute, source_map_id: i32, repeat_boss: bool) bool {
+        return route.source_map_id == source_map_id and route.repeat_boss == repeat_boss;
+    }
+};
+
+pub const CombineRelation = struct {
+    target_entity_id: i64,
+    part_index: i32,
+    position: pb.Vector,
+    rotation: pb.Rotator,
+
+    pub fn matches(relation: CombineRelation, other: CombineRelation) bool {
+        return relation.target_entity_id == other.target_entity_id and
+            relation.part_index == other.part_index and
+            std.meta.eql(relation.position, other.position) and
+            std.meta.eql(relation.rotation, other.rotation);
+    }
+};
+
+pub const CombineDetach = struct {
+    combine_entity_id: i64,
+    target_entity_id: i64,
+};
+
+pub const CombineRegisterResult = enum {
+    added,
+    existing,
+};
 
 pub const TimeInfo = @import("SceneTime.zig");
 
@@ -34,6 +79,7 @@ pub const Entity = struct {
     pub const DirectControlMarker = @import("component/entity/DirectControlMarker.zig");
     pub const AttributeComponent = @import("component/entity/AttributeComponent.zig");
     pub const TagComponent = @import("component/entity/TagComponent.zig");
+    pub const PartComponent = @import("component/entity/PartComponent.zig");
     pub const FightBuffComponent = @import("component/entity/FightBuffComponent.zig");
     pub const CharacterAttachComponent = @import("component/entity/CharacterAttachComponent.zig");
     pub const ConcomitantComponent = @import("component/entity/ConcomitantComponent.zig");
@@ -70,14 +116,22 @@ pub fn Query(comptime types: []const type) type {
         iterator: Iterator,
 
         pub fn byNetId(query: Q, net_id: i64) ?Item {
-            const entity_id_index = inline for (types, 0..) |ty, i| {
-                if (ty == Entity) break i;
+            inline for (types) |ty| {
+                if (ty == Entity) break;
             } else @compileError("can't extract components by net_id when the identifier is not queried");
+
+            if (query.iterator.net_id_map) |map| {
+                const index = map.get(net_id) orelse return null;
+                var it = query.iterator;
+                it.index = index;
+                return it.peekCurrent(it.entities.slice());
+            }
 
             var it = query.iterator;
             while (it.next()) |item| {
-                if (item[entity_id_index].net_id == net_id)
-                    return item;
+                inline for (types, 0..) |ty, i| {
+                    if (ty == Entity and item[i].net_id == net_id) return item;
+                }
             } else return null;
         }
 
@@ -90,6 +144,7 @@ pub fn Query(comptime types: []const type) type {
 
         pub const Iterator = struct {
             entities: *std.MultiArrayList(EntityComponentStorage),
+            net_id_map: ?*const std.array_hash_map.Auto(i64, usize) = null,
             index: usize = 0,
 
             pub fn next(it: *Iterator) ?Item {
@@ -105,6 +160,7 @@ pub fn Query(comptime types: []const type) type {
             }
 
             fn peekCurrent(it: *Iterator, slice: std.MultiArrayList(EntityComponentStorage).Slice) ?Item {
+                @setEvalBranchQuota(2_000);
                 var item: Item = undefined;
 
                 inline for (types, 0..) |Component, i| {
@@ -212,6 +268,13 @@ pub fn deinit(scene: *Scene, gpa: Allocator, fs: *FileSystem) void {
 
     scene.entities.deinit(gpa);
     scene.net_id_map.deinit(gpa);
+    scene.active_battle_entities.deinit(gpa);
+    scene.fsm_hate_states.deinit(gpa);
+    scene.combine_relations.deinit(gpa);
+    scene.pending_combine_detaches.deinit(gpa);
+    scene.debug_spawn_routes.deinit(gpa);
+    scene.debug_spawn_route_owners.deinit(gpa);
+    scene.fsm_wakes.deinit(gpa);
 
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -228,6 +291,383 @@ pub fn spawnWithNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i6
     return try spawnWithOptionalNetId(scene, gpa, fs, components, net_id);
 }
 
+pub fn initFsmRuntimes(scene: *Scene, gpa: Allocator, now_ms: i64) !void {
+    const slice = scene.entities.slice();
+    for (slice.items(.entity_id), slice.items(.fsm)) |entity_id, *optional_fsm| {
+        if (optional_fsm.*) |*fsm| {
+            try fsm.initRuntime(gpa, now_ms);
+            try scene.fsm_wakes.markDirty(gpa, entity_id.net_id);
+        }
+    }
+}
+
+pub fn setFsmEncounterTarget(scene: *Scene, gpa: Allocator, fsm_entity_id: i64, target_entity_id: ?i64) !bool {
+    const fsm_index = scene.net_id_map.get(fsm_entity_id) orelse return error.EntityNotFound;
+    const fsm_slot = &scene.entities.items(.fsm)[fsm_index];
+    const fsm = if (fsm_slot.*) |*component| component else return error.EntityFsmNotFound;
+
+    const target = if (target_entity_id) |target_id| blk: {
+        if (!scene.net_id_map.contains(target_id)) return error.TargetEntityNotFound;
+        break :blk std.math.cast(i32, target_id) orelse return error.FsmBlackboardTargetOutOfRange;
+    } else null;
+
+    const changed = fsm.setEncounterTarget(target);
+    if (changed) {
+        _ = fsm.markDirty(Entity.FsmComponent.WakeReason.blackboard);
+        try scene.fsm_wakes.markDirty(gpa, fsm_entity_id);
+    }
+    return changed;
+}
+
+pub fn markFsmDirty(scene: *Scene, gpa: Allocator, entity_id: i64, reason: Entity.FsmComponent.WakeMask) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    const fsm = if (fsm_slot.*) |*component| component else return;
+    if (fsm.markDirty(reason)) try scene.fsm_wakes.markDirty(gpa, entity_id);
+}
+
+pub fn updateFsmHateTarget(scene: *Scene, gpa: Allocator, entity_id: i64, has_target: bool) !bool {
+    const index = scene.net_id_map.get(entity_id) orelse return false;
+    const previous = scene.fsm_hate_states.get(entity_id);
+    try scene.fsm_hate_states.put(gpa, entity_id, has_target);
+    if (previous != null and previous.? == has_target) return false;
+
+    const entity_changed = try scene.refreshFsmHateAtIndex(gpa, index, false);
+    try scene.refreshSummonedFsmHate(gpa, entity_id);
+    return entity_changed;
+}
+
+fn refreshFsmHateAtIndex(scene: *Scene, gpa: Allocator, index: usize, enqueue: bool) !bool {
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    const fsm = if (fsm_slot.*) |*component| component else return false;
+    const entity_id = scene.entities.items(.entity_id)[index].net_id;
+    var in_hate = scene.fsm_hate_states.get(entity_id) orelse false;
+
+    if (in_hate) {
+        if (scene.entities.items(.summoner)[index]) |summoner| {
+            if (scene.net_id_map.contains(summoner.summoner_id)) {
+                in_hate = scene.fsm_hate_states.get(summoner.summoner_id) orelse false;
+            }
+        }
+    }
+
+    if (!fsm.setInHate(in_hate)) return false;
+    const should_wake = fsm.markDirty(Entity.FsmComponent.WakeReason.hate);
+    if (enqueue and should_wake) try scene.fsm_wakes.markDirty(gpa, entity_id);
+    return true;
+}
+
+fn refreshSummonedFsmHate(scene: *Scene, gpa: Allocator, summoner_id: i64) !void {
+    const slice = scene.entities.slice();
+    for (slice.items(.summoner), 0..) |optional_summoner, index| {
+        const summoner = optional_summoner orelse continue;
+        if (summoner.summoner_id != summoner_id) continue;
+        _ = try scene.refreshFsmHateAtIndex(gpa, index, true);
+    }
+}
+
+pub fn markFsmRootDirty(
+    scene: *Scene,
+    gpa: Allocator,
+    entity_id: i64,
+    fsm_id: i32,
+    reason: Entity.FsmComponent.WakeMask,
+) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    const fsm = if (fsm_slot.*) |*component| component else return;
+    if (fsm.markRootDirty(fsm_id, reason)) try scene.fsm_wakes.markDirty(gpa, entity_id);
+}
+
+pub fn queueFsmSync(scene: *Scene, gpa: Allocator, entity_id: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    if (scene.entities.items(.fsm)[index] == null) return;
+    try scene.fsm_wakes.markDirty(gpa, entity_id);
+}
+
+pub fn syncFsmDeadlines(
+    scene: *Scene,
+    gpa: Allocator,
+    entity_id: i64,
+    fsm: *Entity.FsmComponent,
+) !void {
+    for (fsm.runtime_nodes) |runtime| {
+        if (runtime.next_timer_due_ms) |due_ms| {
+            try scene.fsm_wakes.upsert(gpa, .{
+                .entity_id = entity_id,
+                .fsm_id = runtime.fsm_id,
+                .kind = .root_timer,
+                .due_ms = due_ms,
+            });
+        } else {
+            scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .root_timer);
+        }
+
+        if (runtime.delayed_suicide_due_ms) |due_ms| {
+            try scene.fsm_wakes.upsert(gpa, .{
+                .entity_id = entity_id,
+                .fsm_id = runtime.fsm_id,
+                .kind = .delayed_suicide,
+                .due_ms = due_ms,
+            });
+        } else {
+            scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .delayed_suicide);
+        }
+
+        if (runtime.delayed_destroy_due_ms) |due_ms| {
+            try scene.fsm_wakes.upsert(gpa, .{
+                .entity_id = entity_id,
+                .fsm_id = runtime.fsm_id,
+                .kind = .delayed_destroy,
+                .due_ms = due_ms,
+            });
+        } else {
+            scene.fsm_wakes.cancel(entity_id, runtime.fsm_id, .delayed_destroy);
+        }
+    }
+
+    if (fsm.pendingDeadline()) |due_ms| {
+        try scene.fsm_wakes.upsert(gpa, .{
+            .entity_id = entity_id,
+            .kind = .pending_timeout,
+            .due_ms = due_ms,
+        });
+    } else {
+        scene.fsm_wakes.cancel(entity_id, 0, .pending_timeout);
+    }
+
+    if (fsm.paralysis_active and fsm.paralysis_next_ms != null) {
+        try scene.fsm_wakes.upsert(gpa, .{
+            .entity_id = entity_id,
+            .kind = .paralysis,
+            .due_ms = fsm.paralysis_next_ms.?,
+        });
+    } else {
+        scene.fsm_wakes.cancel(entity_id, 0, .paralysis);
+    }
+}
+
+pub fn hateTargetsFormation(scene: *const Scene, hate_list: []const pb.AiHateEntity) bool {
+    const formation_index = std.math.cast(usize, scene.formation_info.cur_formation) orelse return false;
+    if (formation_index >= scene.formation_info.formations.len) return false;
+    const formation = scene.formation_info.formations[formation_index];
+
+    for (hate_list) |hate| {
+        if (hate.HatredValue < 1) continue;
+        for (formation.roles) |maybe_role| {
+            const role = maybe_role orelse continue;
+            if (role.entity_id == hate.EntityId) return true;
+        }
+    }
+    return false;
+}
+
+pub fn setBattleEntityActive(scene: *Scene, gpa: Allocator, entity_id: i64, active: bool) !void {
+    if (active) {
+        try scene.active_battle_entities.put(gpa, entity_id, {});
+    } else {
+        _ = scene.active_battle_entities.remove(entity_id);
+    }
+    scene.updateBattleState();
+}
+
+pub fn updateBattleEntityFromHate(
+    scene: *Scene,
+    gpa: Allocator,
+    entity_id: i64,
+    hate_list: []const pb.AiHateEntity,
+) !void {
+    try scene.setBattleEntityActive(gpa, entity_id, scene.hateTargetsFormation(hate_list));
+}
+
+pub fn forceBattleState(scene: *Scene, mode: bool) void {
+    scene.active_battle_entities.clearRetainingCapacity();
+    scene.player_in_battle = mode;
+    scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
+}
+
+pub fn combineRelation(scene: *const Scene, combine_entity_id: i64) ?CombineRelation {
+    return scene.combine_relations.get(combine_entity_id);
+}
+
+pub fn registerCombineRelation(
+    scene: *Scene,
+    gpa: Allocator,
+    combine_entity_id: i64,
+    relation: CombineRelation,
+) !CombineRegisterResult {
+    if (scene.combine_relations.get(combine_entity_id)) |existing| {
+        if (existing.matches(relation)) return .existing;
+        return error.CombineRelationConflict;
+    }
+
+    try scene.combine_relations.put(gpa, combine_entity_id, relation);
+    return .added;
+}
+
+pub fn detachCombineRelation(
+    scene: *Scene,
+    combine_entity_id: i64,
+    target_entity_id: i64,
+) ?CombineRelation {
+    const relation = scene.combine_relations.get(combine_entity_id) orelse return null;
+    if (relation.target_entity_id != target_entity_id) return null;
+    _ = scene.combine_relations.remove(combine_entity_id);
+    return relation;
+}
+
+pub fn removeCombineRelationsForEntity(scene: *Scene, gpa: Allocator, entity_id: i64) !void {
+    var affected: std.ArrayList(i64) = .empty;
+    defer affected.deinit(gpa);
+
+    var detach_count: usize = 0;
+    var iterator = scene.combine_relations.iterator();
+    while (iterator.next()) |entry| {
+        if (entry.key_ptr.* != entity_id and entry.value_ptr.target_entity_id != entity_id) continue;
+        try affected.append(gpa, entry.key_ptr.*);
+        if (entry.value_ptr.target_entity_id == entity_id and entry.key_ptr.* != entity_id) detach_count += 1;
+    }
+
+    try scene.pending_combine_detaches.ensureUnusedCapacity(gpa, detach_count);
+    for (affected.items) |combine_entity_id| {
+        const relation = scene.combine_relations.get(combine_entity_id) orelse continue;
+        _ = scene.combine_relations.remove(combine_entity_id);
+        if (relation.target_entity_id == entity_id and combine_entity_id != entity_id) {
+            scene.pending_combine_detaches.appendAssumeCapacity(.{
+                .combine_entity_id = combine_entity_id,
+                .target_entity_id = relation.target_entity_id,
+            });
+        }
+    }
+}
+
+pub fn pendingCombineDetaches(scene: *const Scene) []const CombineDetach {
+    return scene.pending_combine_detaches.items;
+}
+
+pub fn clearPendingCombineDetaches(scene: *Scene) void {
+    scene.pending_combine_detaches.clearRetainingCapacity();
+}
+
+pub fn signalFsmDissolveCombine(scene: *Scene, gpa: Allocator, entity_id: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| {
+        fsm.signalDissolveCombine();
+        _ = fsm.markDirty(Entity.FsmComponent.WakeReason.dissolve);
+        try scene.fsm_wakes.markDirty(gpa, entity_id);
+    }
+}
+
+pub fn noteFsmSkillStart(scene: *Scene, gpa: Allocator, entity_id: i64, skill_id: i32, now_ms: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| {
+        try fsm.initRuntime(gpa, now_ms);
+        fsm.noteSkillStart(skill_id);
+    }
+}
+
+pub fn signalFsmSkillEnd(scene: *Scene, gpa: Allocator, entity_id: i64, skill_id: i32, now_ms: i64) !void {
+    const index = scene.net_id_map.get(entity_id) orelse return;
+    const fsm_slot = &scene.entities.items(.fsm)[index];
+    if (fsm_slot.*) |*fsm| {
+        try fsm.initRuntime(gpa, now_ms);
+        if (fsm.signalSkillEnd(skill_id)) try scene.fsm_wakes.markDirty(gpa, entity_id);
+    }
+}
+
+pub fn removeCombineNotify(detach: CombineDetach) pb.CombatReceiveData {
+    return .{ .Message = .{ .CombatNotifyData = .{
+        .CombatCommon = .{ .EntityId = detach.combine_entity_id },
+        .Message = .{ .RemoveCombineRelationNotify = .{
+            .CombineEntity = detach.combine_entity_id,
+            .TargetEntity = detach.target_entity_id,
+        } },
+    } } };
+}
+
+pub fn debugSpawnRoute(scene: *const Scene, config_id: i64) ?DebugSpawnRoute {
+    return scene.debug_spawn_routes.get(config_id);
+}
+
+pub fn registerDebugSpawnRoute(
+    scene: *Scene,
+    gpa: Allocator,
+    net_id: i64,
+    config_id: i64,
+    source_map_id: i32,
+    repeat_boss: bool,
+) !void {
+    if (scene.debug_spawn_route_owners.contains(net_id)) return error.DebugSpawnRouteOwnerExists;
+
+    if (scene.debug_spawn_routes.getPtr(config_id)) |route| {
+        if (!route.matches(source_map_id, repeat_boss)) return error.DebugSpawnRouteConflict;
+        try scene.debug_spawn_route_owners.put(gpa, net_id, config_id);
+        route.owner_count += 1;
+        return;
+    }
+
+    try scene.debug_spawn_routes.put(gpa, config_id, .{
+        .source_map_id = source_map_id,
+        .repeat_boss = repeat_boss,
+        .owner_count = 1,
+    });
+    errdefer _ = scene.debug_spawn_routes.remove(config_id);
+    try scene.debug_spawn_route_owners.put(gpa, net_id, config_id);
+}
+
+pub fn unregisterDebugSpawnRoute(scene: *Scene, net_id: i64) void {
+    const config_id = scene.debug_spawn_route_owners.get(net_id) orelse return;
+    _ = scene.debug_spawn_route_owners.remove(net_id);
+
+    const route = scene.debug_spawn_routes.getPtr(config_id) orelse return;
+    if (route.owner_count > 1) {
+        route.owner_count -= 1;
+    } else {
+        _ = scene.debug_spawn_routes.remove(config_id);
+    }
+}
+
+pub fn appendBattleStateNotify(
+    scene: *Scene,
+    arena: Allocator,
+    data: *std.ArrayList(pb.CombatReceiveData),
+) !bool {
+    if (!scene.battle_state_dirty) return false;
+
+    try data.append(arena, .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = scene.currentRoleEntityId() },
+            .Message = .{
+                .PlayerBattleStateChangeNotify = .{
+                    .PlayerId = scene.player_id,
+                    .InBattle = scene.player_in_battle,
+                },
+            },
+        },
+    } });
+    scene.battle_state_notified = scene.player_in_battle;
+    scene.battle_state_dirty = false;
+    return true;
+}
+
+fn currentRoleEntityId(scene: *const Scene) i64 {
+    const formation_index = std.math.cast(usize, scene.formation_info.cur_formation) orelse return -1;
+    if (formation_index >= scene.formation_info.formations.len) return -1;
+    const formation = scene.formation_info.formations[formation_index];
+    for (formation.roles) |maybe_role| {
+        const role = maybe_role orelse continue;
+        if (role.role_id == formation.cur_role) return role.entity_id;
+    }
+    return -1;
+}
+
+fn updateBattleState(scene: *Scene) void {
+    scene.player_in_battle = scene.active_battle_entities.count() != 0;
+    scene.battle_state_dirty = scene.player_in_battle != scene.battle_state_notified;
+}
+
 fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, components: anytype, requested_net_id: ?i64) !Entity {
     const log = std.log.scoped(.entity_spawn);
     var storage: EntityComponentStorage = undefined;
@@ -237,7 +677,9 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
 
         const is_optional = comptime std.meta.activeTag(@typeInfo(storage_field.type)) == .optional;
         inline for (comptime std.meta.fields(@TypeOf(components)), 0..) |param_field, i| {
-            if ((!is_optional and param_field.type == storage_field.type) or (is_optional and ?param_field.type == storage_field.type)) {
+            if ((!is_optional and param_field.type == storage_field.type) or
+                (is_optional and (param_field.type == storage_field.type or ?param_field.type == storage_field.type)))
+            {
                 @field(storage, storage_field.name) = components[i];
                 break;
             }
@@ -256,14 +698,21 @@ fn spawnWithOptionalNetId(scene: *Scene, gpa: Allocator, fs: *FileSystem, compon
     if (storage.motor_da_ctx) |*comp| {
         if (comp.context_id == 0) comp.context_id = id;
     }
+    if (storage.fsm) |*fsm| {
+        try fsm.initRuntime(gpa, std.Io.Clock.awake.now(fs.io).toMilliseconds());
+    }
 
     try scene.net_id_map.put(gpa, id, scene.entities.len);
     try scene.entities.append(gpa, storage);
+    _ = try scene.refreshFsmHateAtIndex(gpa, scene.entities.len - 1, false);
+    try scene.refreshSummonedFsmHate(gpa, id);
 
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
 
     try storage.save(arena.allocator(), fs, scene.player_id, scene.instance_id);
+
+    if (storage.fsm != null) try scene.fsm_wakes.markDirty(gpa, id);
 
     return .{ .index = scene.entities.len - 1, .net_id = id };
 }
@@ -296,13 +745,49 @@ pub fn delete(
 pub fn remove(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
     const index = scene.net_id_map.get(net_id) orelse return;
     try delete(fs, scene.player_id, scene.instance_id, net_id);
+    try scene.removeEntityState(gpa, index, net_id);
+}
+
+pub fn rollbackSpawn(scene: *Scene, gpa: Allocator, fs: *FileSystem, net_id: i64) !void {
+    const index = scene.net_id_map.get(net_id) orelse return;
+    const delete_error: ?anyerror = blk: {
+        delete(fs, scene.player_id, scene.instance_id, net_id) catch |err| break :blk err;
+        break :blk null;
+    };
+
+    try scene.removeEntityState(gpa, index, net_id);
+    if (delete_error) |err| return err;
+}
+
+fn removeEntityState(scene: *Scene, gpa: Allocator, index: usize, net_id: i64) !void {
+    try scene.clearFsmEncounterTargetReferences(gpa, net_id);
+    try scene.removeCombineRelationsForEntity(gpa, net_id);
+    scene.fsm_wakes.cancelEntity(net_id);
+    scene.unregisterDebugSpawnRoute(net_id);
+    _ = scene.active_battle_entities.remove(net_id);
+    scene.updateBattleState();
     var storage = scene.entities.get(index);
     storage.deinit(gpa);
     scene.entities.swapRemove(index);
     _ = scene.net_id_map.swapRemove(net_id);
+    _ = scene.fsm_hate_states.remove(net_id);
     if (index < scene.entities.len) {
         const swapped_id = scene.entities.items(.entity_id)[index].net_id;
         try scene.net_id_map.put(gpa, swapped_id, index);
+    }
+    try scene.refreshSummonedFsmHate(gpa, net_id);
+}
+
+fn clearFsmEncounterTargetReferences(scene: *Scene, gpa: Allocator, target_entity_id: i64) !void {
+    const target_id = std.math.cast(i32, target_entity_id) orelse return;
+    const slice = scene.entities.slice();
+    for (slice.items(.entity_id), slice.items(.fsm)) |entity_id, *optional_fsm| {
+        if (optional_fsm.*) |*fsm| {
+            if (fsm.clearEncounterTargetReference(target_id)) {
+                _ = fsm.markDirty(Entity.FsmComponent.WakeReason.blackboard);
+                try scene.fsm_wakes.markDirty(gpa, entity_id.net_id);
+            }
+        }
     }
 }
 

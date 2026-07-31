@@ -1,5 +1,6 @@
 const Entity = @import("Scene.zig").Entity;
 const std = @import("std");
+const FsmTypes = @import("fsm/Types.zig");
 
 // shitty solution for a shitty problem...
 pub const PendingFlow = struct {
@@ -37,21 +38,27 @@ pub const EntityMovement = struct {
     entity: Entity,
 };
 
+pub const BuffRemoval = struct {
+    entity: Entity,
+    handle_ids: []i32,
+};
+
+pub const BuffRemovalById = struct {
+    entity: Entity,
+    buff_id: i64,
+};
+
+pub const BuffRemovalByFsmBind = struct {
+    entity: Entity,
+    source: FsmTypes.FsmBindBuffSource,
+};
+
 pub const BuffAdditionEntry = struct {
     id: i64,
     stack_count: i32 = 0,
     is_active: bool,
     duration_seconds: ?f32 = null,
-};
-
-pub const BuffRemoval = struct {
-    entity: Entity,
-    handle_ids: []i32,
-    natural_expiration: ?struct {
-        now_ms: i64,
-        instigator: Entity,
-        follow_up_buffs: []BuffAdditionEntry,
-    } = null,
+    fsm_bind_source: ?FsmTypes.FsmBindBuffSource = null,
 };
 
 pub const BuffAddition = struct {
@@ -66,6 +73,39 @@ pub const BuffTimerTick = struct {
     now_ms: i64,
 };
 
+pub const FsmTimerTick = struct {
+    now_ms: i64,
+};
+
+pub const FsmServerActionKind = union(enum) {
+    enter_fight,
+    cue_paralysis,
+    reset_status,
+    set_rage_full,
+    instance_state: i32,
+    activate_part: FsmTypes.PartActivation,
+    reset_part: FsmTypes.PartReset,
+};
+
+pub const FsmServerAction = struct {
+    entity: Entity,
+    kind: FsmServerActionKind,
+};
+
+pub const FsmLifecycleComplete = struct {
+    entity: Entity,
+    now_ms: i64,
+    recheck: bool = true,
+};
+
+pub const LevelPlayTimerTick = struct {
+    now_ms: i64,
+};
+
+pub const SceneCleanupTick = struct {
+    now_ms: i64,
+};
+
 pub const DirtySaveTick = struct {
     now_ms: i64,
 };
@@ -74,6 +114,11 @@ pub const GameplayTagChange = struct {
     entity: Entity,
     add_tag_ids: []i32,
     remove_tag_ids: []i32,
+    remove_before_add: bool = false,
 };
 
 pub const ChatCommandResponse = struct { content: []const u8 };
+
+pub const TickTime = struct {
+    now_ms: i64,
+};

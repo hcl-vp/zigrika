@@ -9,14 +9,19 @@ pub const Config = @import("zon/config.zon");
 const ConcertoExceptions: []const i32 = @import("zon/concerto_exceptions.zon");
 
 pub const RoleInfo = @import("tables/RoleInfo.zig");
+pub const RoleBeHitMap = @import("tables/RoleBeHitMap.zig");
 pub const MainRoleConfig = @import("tables/MainRoleConfig.zig");
 pub const BaseProperty = @import("tables/BaseProperty.zig");
 pub const FunctionCondition = @import("tables/FunctionCondition.zig");
 pub const RolePropertyGrowth = @import("tables/RolePropertyGrowth.zig");
+pub const MonsterPropertyGrowth = @import("tables/MonsterPropertyGrowth.zig");
 pub const InstanceDungeon = @import("tables/InstanceDungeon.zig");
 pub const Buff = @import("tables/Buff.zig");
 pub const SummonCfg = @import("tables/SummonCfg.zig");
 pub const ModelConfigPreload = @import("tables/ModelConfigPreload.zig");
+pub const CharacterPartConfig = @import("tables/CharacterPartConfig.zig");
+pub const GameplayTagParent = @import("tables/GameplayTagParent.zig");
+pub const GameplayTagRemap = @import("tables/GameplayTagRemap.zig");
 pub const BlueprintConfig = @import("tables/BlueprintConfig.zig");
 pub const RoleSkin = @import("tables/RoleSkin.zig");
 pub const FlySkinConfig = @import("tables/FlySkinConfig.zig");
@@ -107,16 +112,24 @@ pub const CalabashSkin = @import("tables/CalabashSkin.zig");
 pub const DropPackage = @import("tables/DropPackage.zig");
 pub const PropValue = @import("tables/PropValue.zig");
 
+pub const GameplayTagParentTable = Table(GameplayTagParent, "Id");
+pub const GameplayTagRemapTable = Table(GameplayTagRemap, "RawId");
+
 arena: ArenaAllocator,
 role_info: Table(RoleInfo, "Id"),
+role_be_hit_map: Table(RoleBeHitMap, "Id"),
 main_role_config: Table(MainRoleConfig, "Id"),
 base_property: Table(BaseProperty, "Id"),
 function_condition: Table(FunctionCondition, "FunctionId"),
 role_property_growth: Table(RolePropertyGrowth, "Id"),
+monster_property_growth: Table(MonsterPropertyGrowth, "Id"),
 instance_dungeon: Table(InstanceDungeon, "Id"),
 buff: Table(Buff, "Id"),
 summon_cfg: Table(SummonCfg, "Id"),
 model_config_preload: Table(ModelConfigPreload, "Id"),
+character_part_config: Table(CharacterPartConfig, "ModelId"),
+gameplay_tag_parent: GameplayTagParentTable,
+gameplay_tag_remap: GameplayTagRemapTable,
 blueprint_config: Table(BlueprintConfig, "Id"),
 role_skin: Table(RoleSkin, "Id"),
 fly_skin_config: Table(FlySkinConfig, "Id"),
@@ -321,6 +334,13 @@ pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
 pub fn getRolePropertyGrowth(tables: *const DataTables, level: i32, breach: i32) ?*const RolePropertyGrowth {
     for (tables.role_property_growth.items) |*config| {
         if (config.Level == level and config.BreachLevel == breach)
+            return config;
+    } else return null;
+}
+
+pub fn getMonsterPropertyGrowth(tables: *const DataTables, level: i32, curve_id: i32) ?*const MonsterPropertyGrowth {
+    for (tables.monster_property_growth.items) |*config| {
+        if (config.Level == level and config.CurveId == curve_id)
             return config;
     } else return null;
 }

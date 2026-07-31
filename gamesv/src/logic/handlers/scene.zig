@@ -11,7 +11,7 @@ const PlayerID = @import("../PlayerID.zig");
 const Scene = @import("../Scene.zig");
 const SceneInstance = @import("../../fs/SceneInstance.zig");
 const Connection = @import("../../network/Connection.zig");
-const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
+const Timers = @import("../../network/State.zig").Timers;
 const DirtySaveQueue = @import("../schedulers/DirtySaveQueue.zig");
 const PlayerBasicComponent = @import("../component/player/PlayerBasicComponent.zig");
 const PlayerSceneComponent = @import("../component/player/PlayerSceneComponent.zig");
@@ -27,33 +27,6 @@ const Entity = Scene.Entity;
 const Io = std.Io;
 const lahai_roi_dungeon_id = 906;
 const roulette_slot_count = 8;
-const default_formation_roles = [_]i32{ 1211, 1108, 1506 };
-
-fn ensureValidFormation(gpa: std.mem.Allocator, formation_info: *FormationInfo) !void {
-    if (formation_info.formations.len == 0) {
-        formation_info.formations = try gpa.alloc(FormationInfo.Formation, 1);
-        formation_info.formations[0] = .{
-            .cur_role = default_formation_roles[0],
-            .roles = undefined,
-        };
-        formation_info.cur_formation = 0;
-
-        for (default_formation_roles, 0..) |role_id, i| {
-            formation_info.formations[0].roles[i] = .{
-                .role_id = role_id,
-                .entity_id = -1,
-                .on_stage_without_control = false,
-            };
-        }
-        return;
-    }
-
-    if (formation_info.cur_formation < 0 or
-        @as(usize, @intCast(formation_info.cur_formation)) >= formation_info.formations.len)
-    {
-        formation_info.cur_formation = 0;
-    }
-}
 
 fn rouletteSkillIds(arena: std.mem.Allocator, ids: []const i32) !std.ArrayList(i32) {
     const items = try arena.alloc(i32, roulette_slot_count);
@@ -71,7 +44,7 @@ fn notifyTransportRoadways(fs: *FileSystem, alloc: mem.Alloc, scene: *Scene, con
     try conn.push(pb.SceneRoadSyncNotify{
         .InstanceId = scene.instance_id,
         .EnabledRoads = roads,
-    });
+    }, alloc.arena);
 }
 
 fn notifyInfrastructureRoadData(alloc: mem.Alloc, conn: *Connection, assets: *const Assets) !void {
@@ -90,7 +63,7 @@ fn notifyInfrastructureRoadData(alloc: mem.Alloc, conn: *Connection, assets: *co
 
     try conn.push(pb.InfrRoadUpdateNotify{
         .RoadInfo = .{ .Roads = roads },
-    });
+    }, alloc.arena);
 }
 
 fn containsI32(items: []const i32, value: i32) bool {
@@ -133,6 +106,23 @@ fn appendCompletedRoadDataLayers(scene_info: *pb.SceneInformation, assets: *cons
     scene_info.DataLayers = data_layers;
 }
 
+pub fn handleSceneCleanupTick(
+    _: EventQueue.Dequeue(.scene_cleanup_tick),
+    scene: *Scene,
+    conn: *Connection,
+    alloc: mem.Alloc,
+) !void {
+    var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+    _ = try scene.appendBattleStateNotify(alloc.arena, &data);
+    const combine_detaches = scene.pendingCombineDetaches();
+    for (combine_detaches) |detach| try data.append(alloc.arena, Scene.removeCombineNotify(detach));
+    if (data.items.len == 0) return;
+
+    try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    for (combine_detaches) |detach| try scene.signalFsmDissolveCombine(alloc.gpa, detach.combine_entity_id);
+    scene.clearPendingCombineDetaches();
+}
+
 pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !void {
     var roulette_info: std.ArrayList(pb.ExploreSkillRoulette) = .empty;
     defer roulette_info.deinit(alloc.gpa);
@@ -159,11 +149,11 @@ pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !v
     try conn.push(pb.ExploreToolAllNotify{
         .ExploreSkill = scene.explore_tools_info.active_explore_skill,
         .SkillList = sliceToArrayList(i32, scene.explore_tools_info.unlocked_explore_skills),
-    });
+    }, alloc.arena);
     try conn.push(pb.ExploreSkillRouletteUpdateNotify{
         .RouletteInfo = roulette_info,
-    });
-    try conn.push(vision_explore_notify);
+    }, alloc.arena);
+    try conn.push(vision_explore_notify, alloc.arena);
 }
 
 fn has_scene_data(fs: *FileSystem, arena: std.mem.Allocator, player_id: i32) bool {
@@ -188,24 +178,11 @@ pub fn onInitialSceneJoin(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     cur_scene: *?Scene,
-    buff_timers: *BuffTimerScheduler,
+    timers: *Timers,
     dirty_saves: *DirtySaveQueue,
-    io: Io,
 ) !void {
     const log = std.log.scoped(.initial_scene_join);
     const no_scene_data = !has_scene_data(fs, alloc.arena, scene_comp.player_id);
-    const now_ms = (Io.Clock.awake).now(io).toMilliseconds();
-
-    if (cur_scene.*) |*active_scene| {
-        try DirtySaveQueue.saveAllBuffs(
-            alloc.gpa,
-            fs,
-            active_scene,
-            buff_timers,
-            assets,
-            now_ms,
-        );
-    }
 
     try dirty_saves.flush(
         alloc.gpa,
@@ -213,16 +190,12 @@ pub fn onInitialSceneJoin(
         role_comp,
         weapon_comp,
         if (cur_scene.*) |*active_scene| active_scene else null,
-        buff_timers,
-        assets,
-        now_ms,
     );
 
     if (cur_scene.*) |*scene| {
         scene.deinit(alloc.gpa, fs);
         cur_scene.* = null;
     }
-    buff_timers.reset(alloc.gpa);
 
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene_comp.last_scene_info.instance_id) orelse {
         // TODO: fallback to default instance id?
@@ -301,14 +274,27 @@ pub fn onInitialSceneJoin(
         scene.explore_tools_info.active_function_skill = 0;
         scene.explore_tools_info.motorcycle_roulette = try alloc.gpa.dupe(i32, &[_]i32{ 6001, 6003, 6007, 6011, 6012, 6020, 0, 0 });
         scene.explore_tools_info.active_motorcycle_skill = 6001;
+
+        const roles = [_]i32{ 1211, 1108, 1506 };
+
+        scene.formation_info.formations = try alloc.gpa.alloc(FormationInfo.Formation, 1);
+        scene.formation_info.formations[0] = .{
+            .cur_role = roles[0],
+            .roles = undefined,
+        };
+        scene.formation_info.cur_formation = 0;
+
+        for (roles, 0..) |role, i| {
+            scene.formation_info.formations[0].roles[i] = .{
+                .role_id = role,
+                .entity_id = -1,
+                .on_stage_without_control = false,
+            };
+        }
     }
 
-    try ensureValidFormation(alloc.gpa, &scene.formation_info);
-
-    const new_scene_now_ms = (Io.Clock.awake).now(io).toMilliseconds();
-    try buff_timers.ensureAllRegistered(alloc.gpa, &scene, assets, new_scene_now_ms);
-    buff_timers.syncAllLeftDurations(&scene, new_scene_now_ms);
     try scene.save(fs, alloc.gpa);
+    timers.reset(alloc.gpa);
     try events.enqueue(.scene_switch, .{
         .pending_flow = event.data.pending_flow,
     });
@@ -330,7 +316,6 @@ pub fn notifyJoinScene(
     motor_comp: *PlayerMotorComponent,
     echo_comp: *PlayerEchoComponent,
     scene: *Scene,
-    buff_timers: *BuffTimerScheduler,
     io: Io,
 ) !void {
     const log = std.log.scoped(.scene_join);
@@ -444,9 +429,8 @@ pub fn notifyJoinScene(
         // Shouldn't happen unless scene instance file is corrupted. Maybe should log it as well?
         return error.PlayerNotFoundInScene;
     }
-    const now_ms = (Io.Clock.awake).now(io).toMilliseconds();
-    try buff_timers.ensureAllRegistered(alloc.gpa, scene, assets, now_ms);
-    buff_timers.syncAllLeftDurations(scene, now_ms);
+    const fsm_clock: Io.Clock = .awake;
+    try scene.initFsmRuntimes(alloc.gpa, fsm_clock.now(io).toMilliseconds());
     try scene.save(fs, alloc.gpa);
 
     var aoi: pb.PlayerSceneAoiData = .{};
@@ -464,7 +448,7 @@ pub fn notifyJoinScene(
         .MaxEntityId = 0,
         .SceneInfo = scene_info,
         .TransitionOption = .{},
-    });
+    }, alloc.arena);
 
     try events.enqueue(.after_scene_join, .{
         .pending_flow = event.data.pending_flow,
@@ -564,7 +548,7 @@ pub fn formationUpdateNotify(
         }
     }
 
-    try conn.push(update_formation_notify);
+    try conn.push(update_formation_notify, alloc.arena);
 }
 
 pub fn afterSceneJoin(
@@ -578,23 +562,28 @@ pub fn afterSceneJoin(
     player_id: PlayerID,
     alloc: mem.Alloc,
 ) !void {
-    try conn.push(pb.AfterJoinSceneNotify{});
-    try conn.push(pb.SwitchBattleModeNotify{});
+    try conn.push(pb.AfterJoinSceneNotify{}, alloc.arena);
+    try conn.push(pb.SwitchBattleModeNotify{}, alloc.arena);
     try notifyTransportRoadways(fs, alloc, scene, conn, assets);
     try notifyInfrastructureRoadData(alloc, conn, assets);
 
     const rtc: Io.Clock = .real;
-    const monotonic_clock: Io.Clock = .awake;
+    const fsm_clock: Io.Clock = .awake;
     const now_ms = rtc.now(io).toMilliseconds();
-    const monotonic_now = monotonic_clock.now(io).toMilliseconds();
-    scene.scene_time.reset(now_ms, monotonic_now);
+    const fsm_now_ms = fsm_clock.now(io).toMilliseconds();
+    scene.scene_time = .{
+        .timestamp = now_ms,
+        .last_packet_time = now_ms,
+        .dilation = 1.0,
+    };
+    try scene.initFsmRuntimes(alloc.gpa, fsm_now_ms);
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,
         .ServerCombatTime = now_ms,
         .ServerStopTime = now_ms,
-        .ServerFlowTimestamp = scene.scene_time.currentFlowTimestamp(monotonic_now),
-    });
+        .ServerFlowTimestamp = scene.scene_time.timestamp,
+    }, alloc.arena);
     try events.enqueue(.update_formations, .{});
 
     var formation_attrs: std.ArrayList(pb.FormationAttr) = .empty;
@@ -607,7 +596,7 @@ pub fn afterSceneJoin(
         .Duration = 1534854458,
         .FormationAttrs = formation_attrs,
     };
-    try conn.push(formation_attr_notify);
+    try conn.push(formation_attr_notify, alloc.arena);
 
     const no_uid_watermark = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, "assets/scripts/join_scene_patches/uid_watermark.js", alloc.gpa, Io.Limit.unlimited);
     defer alloc.gpa.free(no_uid_watermark);
@@ -617,7 +606,7 @@ pub fn afterSceneJoin(
 
     const watermark_js = try std.mem.replaceOwned(u8, alloc.gpa, no_uid_watermark, "{PLR_UID}", uid_str);
     defer alloc.gpa.free(watermark_js);
-    try conn.push(pb.JSPatchNotify{ .Content = watermark_js });
+    try conn.push(pb.JSPatchNotify{ .Content = watermark_js }, alloc.arena);
 
     const patch_files = [_][]const u8{
         "assets/scripts/join_scene_patches/goon_camera.js",
@@ -635,7 +624,7 @@ pub fn afterSceneJoin(
     for (patch_files) |path| {
         const content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, path, alloc.gpa, Io.Limit.unlimited);
         defer alloc.gpa.free(content);
-        try conn.push(pb.JSPatchNotify{ .Content = content });
+        try conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena);
     }
 
     // shitty solution for a shitty problem...
@@ -645,6 +634,6 @@ pub fn afterSceneJoin(
             .FlowListName = flow.namespace,
             .FlowId = flow.id,
             .StateId = flow.state,
-        });
+        }, alloc.arena);
     }
 }

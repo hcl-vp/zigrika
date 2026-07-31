@@ -146,6 +146,7 @@ fn apply_attr_change(
         };
 
         _ = try attributes_helper.change_attr(attr_comp, attr_type, .Override, .Current, effective_value, alloc);
+        try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.attribute);
         try attrs_for_notify.append(alloc.arena, .{ .CurrentValue = attr_comp.attributes[@intCast(attr)].current, .AttributeType = attr_type });
 
         try notify.Data.append(alloc.arena, .{ .Message = .{

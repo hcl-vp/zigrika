@@ -20,6 +20,7 @@ actor_visible: ?@import("ActorVisibleMarker.zig") = null,
 direct_control: ?@import("DirectControlMarker.zig") = null,
 attribute: ?@import("AttributeComponent.zig") = null,
 tag: ?@import("TagComponent.zig") = null,
+part: ?@import("PartComponent.zig") = null,
 buffs: ?@import("FightBuffComponent.zig") = null,
 character_attach: ?@import("CharacterAttachComponent.zig") = null,
 concomitant: ?@import("ConcomitantComponent.zig") = null,
@@ -82,9 +83,16 @@ pub fn load(gpa: Allocator, fs: *FileSystem, player_id: i32, scene_id: i32, enti
     inline for (comptime std.meta.fields(EntityComponentStorage)) |field| {
         if (comptime std.mem.eql(u8, field.name, "entity_id")) continue;
         const is_optional = comptime std.meta.activeTag(@typeInfo(field.type)) == .optional;
+        const ComponentType = comptime if (is_optional) std.meta.Child(field.type) else field.type;
+
+        if (comptime isTransientComponent(ComponentType)) {
+            if (!is_optional) @compileError("transient entity components must be optional");
+            @field(storage, field.name) = null;
+            continue;
+        }
 
         const component = try file_util.loadZon(
-            comptime if (is_optional) std.meta.Child(field.type) else field.type,
+            ComponentType,
             gpa,
             arena.allocator(),
             fs,
@@ -122,6 +130,11 @@ pub fn save(
 
     inline for (comptime std.meta.fields(EntityComponentStorage)) |field| {
         if (comptime std.mem.eql(u8, field.name, "entity_id")) continue;
+        const ComponentType = comptime if (std.meta.activeTag(@typeInfo(field.type)) == .optional)
+            std.meta.Child(field.type)
+        else
+            field.type;
+        if (comptime isTransientComponent(ComponentType)) continue;
 
         const path = try std.fmt.bufPrint(
             path_buf[0..],
@@ -144,6 +157,7 @@ pub fn savePartial(
     var path_buf: [512]u8 = undefined;
 
     inline for (components) |Component| {
+        if (comptime isTransientComponent(Component)) continue;
         const field, _ = comptime fieldByType(*Component);
 
         const path = try std.fmt.bufPrint(
@@ -163,6 +177,8 @@ pub fn saveComponent(
     path: []const u8,
 ) !void {
     const is_optional = comptime std.meta.activeTag(@typeInfo(@TypeOf(component))) == .optional;
+    const ComponentType = comptime if (is_optional) std.meta.Child(@TypeOf(component)) else @TypeOf(component);
+    if (comptime isTransientComponent(ComponentType)) return;
 
     if (is_optional) {
         if (component) |comp| {
@@ -171,6 +187,11 @@ pub fn saveComponent(
     } else {
         try comp_util.saveStruct(fs, component, path, arena);
     }
+}
+
+fn isTransientComponent(comptime Component: type) bool {
+    if (!@hasDecl(Component, "transient")) return false;
+    return Component.transient;
 }
 
 pub fn deinit(storage: *EntityComponentStorage, gpa: Allocator) void {
@@ -239,6 +260,12 @@ pub fn entityToProto(
     if (storage.tag) |tag_comp| {
         try entity.ComponentPbs.append(alloc.arena, .{
             .ComponentPb = .{ .TagComponent = tag_comp.toProto() },
+        });
+    }
+
+    if (storage.part) |*part_comp| {
+        try entity.ComponentPbs.append(alloc.arena, .{
+            .ComponentPb = .{ .PartComponent = try part_comp.toProto(alloc) },
         });
     }
 

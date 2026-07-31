@@ -2,209 +2,433 @@ const Component = @This();
 const pb = @import("proto").pb;
 const mem = @import("../../../mem.zig");
 const std = @import("std");
-const sliceToArrayList = @import("EntityComponentStorage.zig").sliceToArrayList;
 const Assets = @import("../../../data/Assets.zig");
+const Blackboard = @import("../../fsm/Blackboard.zig");
+const ConfigLoader = @import("../../fsm/ConfigLoader.zig");
+const FsmTypes = @import("../../fsm/Types.zig");
+const StateHierarchy = @import("../../fsm/StateHierarchy.zig");
+const TransitionEngine = @import("../../fsm/TransitionEngine.zig");
+const FsmGraph = Assets.FsmGraphRegistry.Graph;
 const AiStateMachineConfig = Assets.DataTables.AiStateMachineConfig;
+const GameplayTagParentTable = Assets.DataTables.GameplayTagParentTable;
 
-const log = std.log.scoped(.fsm_component);
+const encounter_target_blackboard_key = 2;
 
-const NodeEntry = struct {
-    key: i32,
-    value: AiStateMachineConfig.StateMachineNode,
-};
+pub const transient = true;
 
-const OverrideEntry = struct {
-    key: i32,
-    value: i32,
-};
+const TagCount = FsmTypes.TagCount;
+pub const FsmNode = FsmTypes.FsmNode;
+pub const ConditionKey = FsmTypes.ConditionKey;
+pub const EvalContext = FsmTypes.EvalContext;
+pub const PartState = FsmTypes.PartState;
+pub const Transition = FsmTypes.Transition;
+pub const LifecycleEffect = FsmTypes.LifecycleEffect;
+pub const ConfirmResult = FsmTypes.ConfirmResult;
+pub const ClientPassResult = FsmTypes.ClientPassResult;
+pub const BehaviorValidation = FsmTypes.BehaviorValidation;
+pub const WakeMask = FsmTypes.WakeMask;
+pub const WakeReason = FsmTypes.WakeReason;
 
-hash_code: i32 = 0,
-common_hash_code: i32 = 0,
-state_list: []const i32 = &.{},
-node_list: []const NodeEntry = &.{},
-override_mapping: []const OverrideEntry = &.{},
+graph: *const FsmGraph = &FsmGraph.empty,
+tag_parents: *const GameplayTagParentTable = &GameplayTagParentTable.init,
+runtime_nodes: []FsmNode = &.{},
+pass_pool: []ConditionKey = &.{},
+tags: []TagCount = &.{},
+lifecycle_effects: std.ArrayList(LifecycleEffect) = .empty,
+lifecycle_effects_pending: bool = false,
+lifecycle_recheck_requested: bool = false,
+in_hate: bool = false,
+paralysis_active: bool = false,
+paralysis_last_ms: i64 = 0,
+paralysis_next_ms: ?i64 = null,
+dissolve_combine_signal: bool = false,
+instance_state_tag: ?i32 = null,
+event: ?[]const u8 = null,
+last_tick_ms: i64 = 0,
+blackboard: [3]?i32 = .{ null, null, null },
+blackboard_dirty: u8 = 0,
 
 pub fn deinit(comp: *Component, gpa: mem.Allocator) void {
-    gpa.free(comp.state_list);
-    gpa.free(comp.node_list);
-    gpa.free(comp.override_mapping);
+    gpa.free(comp.runtime_nodes);
+    gpa.free(comp.pass_pool);
+    gpa.free(comp.tags);
+    comp.lifecycle_effects.deinit(gpa);
 }
 
 pub fn toProto(comp: Component, arena: mem.Allocator, assets: *const Assets) !pb.EntityFsmComponentPb {
-    return .{
-        .Fsms = try comp.getInitialFsm(arena, assets),
-        .HashCode = comp.hash_code,
-        .CommonHashCode = comp.common_hash_code,
-        .BlackBoard = .empty,
-        .FsmCustomBlackboardDatas = .{ .BlackboardIntValues = .empty },
-    };
+    return Blackboard.toProto(comp, arena, assets);
 }
 
-pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets, gpa: mem.Allocator) !Component {
-    const common_fsm = getCommonFsm(assets) orelse {
-        log.warn("Common state machine missing", .{});
-        return .{};
-    };
-
-    const ai_base = assets.tables.ai_base.getDataById(ai_id orelse {
-        return .{};
-    }) orelse {
-        log.warn("Ai base with id {?} not found", .{ai_id});
-        return .{};
-    };
-
-    const entry = assets.tables.ai_state_machine_config.getDataById(ai_base.StateMachine) orelse {
-        log.warn("Requested state machine with id {s} not found in config", .{ai_base.StateMachine});
-        return .{};
-    };
-
-    const state_machine_config = entry.StateMachineJson;
-    const common_state_machine = common_fsm.StateMachineJson;
-
-    var state_list: std.ArrayList(i32) = try .initCapacity(gpa, 1);
-    defer state_list.deinit(gpa);
-    try state_list.appendSlice(gpa, state_machine_config.StateMachines);
-
-    var fsm_tree: std.ArrayList(NodeEntry) = try .initCapacity(gpa, 1);
-    defer fsm_tree.deinit(gpa);
-
-    var override_mapping: std.ArrayList(OverrideEntry) = try .initCapacity(gpa, 1);
-    defer override_mapping.deinit(gpa);
-
-    for (state_machine_config.StateMachines) |_| {
-        for (state_machine_config.Nodes) |node| {
-            switch (node.kind()) {
-                .reference => {
-                    const ref_uuid = node.ReferenceUuid.?;
-
-                    const reference = for (common_state_machine.Nodes) |common_node| {
-                        if (common_node.kind() == .custom and common_node.Uuid == ref_uuid)
-                            break common_node;
-                    } else null;
-
-                    if (reference) |ref_node| {
-                        const in_state_list = for (state_list.items) |sid| {
-                            if (sid == node.Uuid) break true;
-                        } else false;
-
-                        if (in_state_list) {
-                            try state_list.append(gpa, ref_uuid);
-                        }
-
-                        try insertWithDescendants(
-                            ref_node.Uuid,
-                            ref_node,
-                            common_state_machine,
-                            &fsm_tree,
-                            gpa,
-                        );
-                    }
-                },
-                .override => {
-                    try override_mapping.append(gpa, .{
-                        .key = node.Uuid,
-                        .value = node.OverrideCommonUuid.?,
-                    });
-                    try fsm_tree.append(gpa, .{
-                        .key = node.Uuid,
-                        .value = node,
-                    });
-                },
-                .custom => {
-                    try fsm_tree.append(gpa, .{
-                        .key = node.Uuid,
-                        .value = node,
-                    });
-                },
-            }
-        }
-    }
-
-    return .{
-        .hash_code = state_machine_config.Version,
-        .common_hash_code = common_state_machine.Version,
-        .state_list = try state_list.toOwnedSlice(gpa),
-        .node_list = try fsm_tree.toOwnedSlice(gpa),
-        .override_mapping = try override_mapping.toOwnedSlice(gpa),
-    };
+pub fn fromAiBaseId(ai_id: ?i32, assets: *const Assets) ?Component {
+    return ConfigLoader.fromAiBaseId(Component, ai_id, assets);
 }
 
-pub fn fromStateMachineId(id: []const u8, assets: *const Assets, gpa: mem.Allocator) !Component {
-    const common_fsm = getCommonFsm(assets) orelse {
-        log.warn("Common state machine missing", .{});
-        return .{};
-    };
+pub fn hasUsableAiBaseId(ai_id: ?i32, assets: *const Assets) bool {
+    return ConfigLoader.hasUsableAiBaseId(ai_id, assets);
+}
 
-    const entry = assets.tables.ai_state_machine_config.getDataById(id) orelse {
-        log.warn("Requested state machine with id {s} not found in config", .{id});
-        return .{};
-    };
+pub fn fromStateMachineId(id: []const u8, assets: *const Assets) !Component {
+    return ConfigLoader.fromStateMachineId(Component, id, assets);
+}
 
-    const state_machine_config = entry.StateMachineJson;
-    const common_state_machine = common_fsm.StateMachineJson;
+pub fn initRuntime(comp: *Component, gpa: mem.Allocator, now_ms: i64) !void {
+    if (comp.runtime_nodes.len != 0) return;
 
-    var state_list: std.ArrayList(i32) = try .initCapacity(gpa, 1);
-    defer state_list.deinit(gpa);
-    try state_list.appendSlice(gpa, state_machine_config.StateMachines);
+    var runtime_nodes: std.ArrayList(FsmNode) = .empty;
+    defer runtime_nodes.deinit(gpa);
 
-    var fsm_tree: std.ArrayList(NodeEntry) = try .initCapacity(gpa, 1);
-    defer fsm_tree.deinit(gpa);
+    for (comp.graph.state_list) |raw_fsm_id| {
+        const fsm_id = StateHierarchy.canonicalState(comp, raw_fsm_id);
+        const already_added = for (runtime_nodes.items) |runtime| {
+            if (runtime.fsm_id == fsm_id) break true;
+        } else false;
+        if (already_added) continue;
 
-    var override_mapping: std.ArrayList(OverrideEntry) = try .initCapacity(gpa, 1);
-    defer override_mapping.deinit(gpa);
-
-    for (state_machine_config.StateMachines) |_| {
-        for (state_machine_config.Nodes) |node| {
-            switch (node.kind()) {
-                .reference => {
-                    const ref_uuid = node.ReferenceUuid.?;
-
-                    const reference = for (common_state_machine.Nodes) |common_node| {
-                        if (common_node.kind() == .custom and common_node.Uuid == ref_uuid)
-                            break common_node;
-                    } else null;
-
-                    if (reference) |ref_node| {
-                        const in_state_list = for (state_list.items) |sid| {
-                            if (sid == node.Uuid) break true;
-                        } else false;
-
-                        if (in_state_list) {
-                            try state_list.append(gpa, ref_uuid);
-                        }
-
-                        try insertWithDescendants(
-                            ref_node.Uuid,
-                            ref_node,
-                            common_state_machine,
-                            &fsm_tree,
-                            gpa,
-                        );
-                    }
-                },
-                .override => {
-                    try override_mapping.append(gpa, .{
-                        .key = node.Uuid,
-                        .value = node.OverrideCommonUuid.?,
-                    });
-                },
-                .custom => {
-                    try fsm_tree.append(gpa, .{
-                        .key = node.Uuid,
-                        .value = node,
-                    });
-                },
-            }
-        }
+        var runtime: FsmNode = .{ .fsm_id = fsm_id };
+        const active_len = StateHierarchy.buildInitialPath(comp, fsm_id, &runtime.active_path) orelse continue;
+        runtime.active_len = @intCast(active_len);
+        @memset(runtime.active_since_ms[0..active_len], now_ms);
+        try runtime_nodes.append(gpa, runtime);
     }
 
-    return .{
-        .hash_code = state_machine_config.Version,
-        .common_hash_code = common_state_machine.Version,
-        .state_list = try state_list.toOwnedSlice(gpa),
-        .node_list = try fsm_tree.toOwnedSlice(gpa),
-        .override_mapping = try override_mapping.toOwnedSlice(gpa),
-    };
+    comp.runtime_nodes = try runtime_nodes.toOwnedSlice(gpa);
+    errdefer {
+        gpa.free(comp.runtime_nodes);
+        comp.runtime_nodes = &.{};
+        gpa.free(comp.tags);
+        comp.tags = &.{};
+        comp.lifecycle_effects.deinit(gpa);
+        comp.lifecycle_effects = .empty;
+        comp.event = null;
+    }
+
+    comp.event = null;
+    for (comp.runtime_nodes) |runtime| {
+        Blackboard.preparePath(comp, runtime.active(), runtime.active_since_ms[0..runtime.active_len], false);
+        try TransitionEngine.enterPath(
+            comp,
+            gpa,
+            runtime.fsm_id,
+            runtime.active(),
+            runtime.active_since_ms[0..runtime.active_len],
+        );
+    }
+    TransitionEngine.refreshWakeRequirements(comp, now_ms);
+    _ = TransitionEngine.markDirty(comp, WakeReason.initial);
+    comp.blackboard_dirty = 0;
+    comp.finishTick(now_ms);
+}
+
+pub fn finishTick(comp: *Component, now_ms: i64) void {
+    comp.finishTickInternal(now_ms, true);
+}
+
+pub fn finishTickPreservingEvent(comp: *Component, now_ms: i64) void {
+    comp.finishTickInternal(now_ms, false);
+}
+
+fn finishTickInternal(comp: *Component, now_ms: i64, clear_event: bool) void {
+    if (comp.lifecycle_effects_pending) return;
+    for (comp.runtime_nodes) |*runtime| {
+        const active_path = runtime.active();
+        @memcpy(runtime.previous_path[0..active_path.len], active_path);
+        runtime.previous_len = runtime.active_len;
+    }
+    if (clear_event) comp.event = null;
+    comp.last_tick_ms = now_ms;
+}
+
+pub fn markDirty(comp: *Component, reason: WakeMask) bool {
+    return TransitionEngine.markDirty(comp, reason);
+}
+
+pub fn markRootDirty(comp: *Component, fsm_id: i32, reason: WakeMask) bool {
+    return TransitionEngine.markRootDirty(comp, fsm_id, reason);
+}
+
+pub fn rootIsDirty(comp: *const Component, fsm_id: i32) bool {
+    const canonical_fsm_id = StateHierarchy.canonicalState(comp, fsm_id);
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.fsm_id == canonical_fsm_id) return runtime.dirty_reasons != 0;
+    }
+    return false;
+}
+
+pub fn clearDirtyReason(comp: *Component, reason: WakeMask) void {
+    for (comp.runtime_nodes) |*runtime| runtime.dirty_reasons &= ~reason;
+}
+
+pub fn pendingDeadline(comp: *const Component) ?i64 {
+    return TransitionEngine.pendingDeadline(comp);
+}
+
+pub fn activateParalysis(comp: *Component, now_ms: i64) void {
+    comp.paralysis_active = true;
+    comp.paralysis_last_ms = now_ms;
+    comp.paralysis_next_ms = now_ms + 50;
+}
+
+pub fn consumeDelayedSuicide(comp: *Component, fsm_id: i32, due_ms: i64) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    if (runtime.delayed_suicide_due_ms != due_ms or runtime.delayed_suicide_fired) return false;
+    const bound_state = runtime.delayed_suicide_state orelse return false;
+    if (!StateHierarchy.pathContains(comp, runtime.active(), bound_state)) return false;
+
+    runtime.delayed_suicide_due_ms = null;
+    runtime.delayed_suicide_fired = true;
+    return true;
+}
+
+pub fn delayedDestroyIsDue(comp: *Component, fsm_id: i32, due_ms: i64) bool {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id) orelse return false;
+    if (runtime.delayed_destroy_due_ms != due_ms or !runtime.delayed_suicide_fired) return false;
+    const bound_state = runtime.delayed_suicide_state orelse return false;
+    return StateHierarchy.stateBelongsToFsm(comp, runtime.fsm_id, bound_state);
+}
+
+pub fn lifecycleEffects(comp: *const Component) []const LifecycleEffect {
+    return comp.lifecycle_effects.items;
+}
+
+pub fn lifecycleEffectsPending(comp: *const Component) bool {
+    return comp.lifecycle_effects_pending;
+}
+
+pub fn markLifecycleEffectsEnqueued(comp: *Component, gpa: mem.Allocator) void {
+    if (comp.lifecycle_effects.items.len == 0) return;
+    comp.lifecycle_effects.deinit(gpa);
+    comp.lifecycle_effects = .empty;
+    comp.lifecycle_effects_pending = true;
+}
+
+pub fn completeLifecycleEffects(comp: *Component) void {
+    comp.lifecycle_effects_pending = false;
+}
+
+pub fn requestLifecycleRecheck(comp: *Component, requested: bool) void {
+    comp.lifecycle_recheck_requested = comp.lifecycle_recheck_requested or requested;
+}
+
+pub fn takeLifecycleRecheckRequest(comp: *Component) bool {
+    const requested = comp.lifecycle_recheck_requested;
+    comp.lifecycle_recheck_requested = false;
+    return requested;
+}
+
+pub fn setEncounterTarget(comp: *Component, target_id: ?i32) bool {
+    return Blackboard.setValue(comp, encounter_target_blackboard_key, target_id, true);
+}
+
+pub fn clearEncounterTargetReference(comp: *Component, target_id: i32) bool {
+    if (comp.blackboard[encounter_target_blackboard_key] != target_id) return false;
+    return comp.setEncounterTarget(null);
+}
+
+pub fn recoverExpiredPending(comp: *Component, gpa: mem.Allocator, now_ms: i64) !bool {
+    const recovered = try TransitionEngine.recoverExpiredPending(comp, gpa, now_ms);
+    if (recovered) {
+        TransitionEngine.refreshWakeRequirements(comp, now_ms);
+        _ = TransitionEngine.markDirty(comp, WakeReason.initial);
+    }
+    return recovered;
+}
+
+pub fn setInHate(comp: *Component, in_hate: bool) bool {
+    const old_in_hate = comp.in_hate;
+    comp.in_hate = in_hate;
+    return old_in_hate != comp.in_hate;
+}
+
+pub fn signalDissolveCombine(comp: *Component) void {
+    comp.dissolve_combine_signal = true;
+}
+
+pub fn noteSkillStart(comp: *Component, skill_id: i32) void {
+    if (skill_id <= 0) return;
+    for (comp.runtime_nodes) |*runtime| {
+        if (!serverEvaluatesRoot(comp, runtime.fsm_id)) continue;
+        const use_pending = runtime.pending_len != 0;
+        const path = if (use_pending) runtime.pending() else runtime.active();
+        if (!taskAcceptsSkillStart(comp, path, skill_id)) continue;
+
+        const observed_id = if (use_pending) &runtime.pending_skill_id else &runtime.active_skill_id;
+        if (observed_id.* == null) observed_id.* = skill_id;
+    }
+}
+
+pub fn signalSkillEnd(comp: *Component, skill_id: i32) bool {
+    if (skill_id <= 0) return false;
+    var wake = false;
+    for (comp.runtime_nodes) |*runtime| {
+        if (!serverEvaluatesRoot(comp, runtime.fsm_id)) continue;
+        const use_pending = runtime.pending_len != 0;
+        const path = if (use_pending) runtime.pending() else runtime.active();
+        const observed_id = if (use_pending) runtime.pending_skill_id else runtime.active_skill_id;
+        if (!taskSkillMatches(comp, path, observed_id, skill_id)) continue;
+
+        if (use_pending) {
+            runtime.pending_skill_ended = true;
+        } else {
+            runtime.active_skill_ended = true;
+        }
+        wake = TransitionEngine.markRootDirty(comp, runtime.fsm_id, WakeReason.skill_end) or wake;
+    }
+    return wake;
+}
+
+pub fn recordClientPass(comp: *Component, gpa: mem.Allocator, key: ConditionKey, value: bool) !ClientPassResult {
+    return TransitionEngine.recordClientPass(comp, gpa, key, value);
+}
+
+pub fn confirmPending(comp: *Component, fsm_id: i32, state: i32, gpa: mem.Allocator, now_ms: i64) !ConfirmResult {
+    const result = try TransitionEngine.confirmPending(comp, fsm_id, state, gpa);
+    switch (result) {
+        .confirmed, .accepted => {
+            TransitionEngine.refreshWakeRequirements(comp, now_ms);
+            _ = TransitionEngine.markRootDirty(comp, fsm_id, WakeReason.initial);
+        },
+        else => {},
+    }
+    return result;
+}
+
+pub fn confirmStateRequest(
+    comp: *Component,
+    fsm_id: i32,
+    from: i32,
+    to: i32,
+    gpa: mem.Allocator,
+    ctx: EvalContext,
+) !ConfirmResult {
+    const result = try TransitionEngine.confirmStateRequest(comp, fsm_id, from, to, gpa, ctx);
+    switch (result) {
+        .confirmed, .accepted => {
+            TransitionEngine.refreshWakeRequirements(comp, ctx.now_ms);
+            _ = TransitionEngine.markRootDirty(comp, fsm_id, WakeReason.initial);
+        },
+        else => {},
+    }
+    return result;
+}
+
+pub fn currentState(comp: *const Component, fsm_id: i32) ?i32 {
+    return TransitionEngine.currentState(comp, fsm_id);
+}
+
+pub fn validateBehavior(
+    comp: *const Component,
+    fsm_id: i32,
+    state: i32,
+    index: i32,
+    behavior_type: i32,
+) BehaviorValidation {
+    return StateHierarchy.validateBehavior(comp, fsm_id, state, index, behavior_type);
+}
+
+pub fn appendReadyStateTransitions(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+    ctx: EvalContext,
+) !void {
+    try comp.appendBlackboardNotify(entity_id, allocator, output);
+    for (comp.runtime_nodes, 0..) |runtime, index| {
+        if (runtime.pending_to != null) continue;
+        if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
+            try comp.appendBlackboardNotify(entity_id, allocator, output);
+            try output.append(allocator, transitionNotify(entity_id, transition));
+        }
+        comp.runtime_nodes[index].dirty_reasons = 0;
+    }
+    TransitionEngine.refreshWakeRequirements(comp, ctx.now_ms);
+    if (comp.canDiscardDissolveCombineSignal()) comp.dissolve_combine_signal = false;
+}
+
+pub fn appendDirtyStateTransitions(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+    ctx: EvalContext,
+) !void {
+    try comp.appendBlackboardNotify(entity_id, allocator, output);
+    for (comp.runtime_nodes, 0..) |runtime, index| {
+        if (runtime.dirty_reasons == 0 or runtime.pending_to != null) continue;
+        const dirty_reasons = runtime.dirty_reasons;
+        if (try comp.findReadyTransition(runtime.fsm_id, ctx)) |transition| {
+            try comp.appendBlackboardNotify(entity_id, allocator, output);
+            try output.append(allocator, transitionNotify(entity_id, transition));
+        }
+        comp.runtime_nodes[index].dirty_reasons = 0;
+        if (dirty_reasons & WakeReason.timer != 0) {
+            TransitionEngine.refreshRootTimer(comp, runtime.fsm_id, ctx.now_ms);
+        }
+    }
+    if (comp.canDiscardDissolveCombineSignal()) comp.dissolve_combine_signal = false;
+}
+
+pub fn appendBlackboardNotify(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+) !void {
+    return Blackboard.appendBlackboardNotify(comp, entity_id, allocator, output);
+}
+
+pub fn appendResetNotify(
+    comp: *Component,
+    entity_id: i64,
+    allocator: mem.Allocator,
+    output: *std.ArrayList(pb.CombatReceiveData),
+    assets: *const Assets,
+) !void {
+    return Blackboard.appendResetNotify(comp, entity_id, allocator, output, assets);
+}
+
+pub fn checkTransitions(
+    comp: *Component,
+    entity_id: i64,
+    fsm_id: i32,
+    ctx: EvalContext,
+) !?pb.CombatReceiveData {
+    const runtime = StateHierarchy.runtimeNode(comp, fsm_id);
+    if (runtime) |node| {
+        if (node.pending_to != null) return null;
+    }
+    if (try comp.findReadyTransition(fsm_id, ctx)) |transition| {
+        if (runtime) |node| node.dirty_reasons = 0;
+        return transitionNotify(entity_id, transition);
+    }
+    if (runtime) |node| node.dirty_reasons = 0;
+
+    return null;
+}
+
+pub fn checkAndConfirm(
+    comp: *Component,
+    entity_id: i64,
+    fsm_id: i32,
+    gpa: mem.Allocator,
+    ctx: EvalContext,
+) !?pb.CombatReceiveData {
+    const transition = (try comp.findReadyTransition(fsm_id, ctx)) orelse return null;
+    _ = try comp.confirmPending(fsm_id, transition.to, gpa, ctx.now_ms);
+    return transitionNotify(entity_id, transition);
+}
+
+pub fn transitionNotify(entity_id: i64, transition: Transition) pb.CombatReceiveData {
+    return .{ .Message = .{
+        .CombatNotifyData = .{
+            .CombatCommon = .{ .EntityId = entity_id },
+            .Message = .{ .ChangeStateNotify = .{
+                .FsmId = transition.fsm_id,
+                .FromState = transition.from,
+                .ToState = transition.to,
+            } },
+        },
+    } };
 }
 
 pub fn getInitialFsm(
@@ -212,89 +436,46 @@ pub fn getInitialFsm(
     arena: mem.Allocator,
     assets: *const Assets,
 ) !std.ArrayList(pb.DFsm) {
-    var result: std.ArrayList(pb.DFsm) = try .initCapacity(arena, 1);
-
-    for (comp.node_list) |entry| {
-        const id = entry.key;
-        const node = entry.value;
-
-        const is_state_list = for (comp.state_list) |state_id| {
-            if (state_id == id) break true;
-        } else false;
-
-        if (!is_state_list) continue;
-
-        const common_fsm = getCommonFsm(assets) orelse {
-            log.warn("Common state machine missing", .{});
-            return .empty;
-        };
-
-        try result.append(arena, .{
-            .FsmId = id,
-            .CurrentState = getDeepestChild(node, common_fsm.StateMachineJson),
-            .Flag = if (node.IsAnimStateMachine orelse false) 1 else 0,
-            .StateElapseTime = 0,
-        });
-    }
-
-    return result;
+    return Blackboard.getInitialFsm(comp, arena, assets);
 }
 
 pub fn getCommonFsm(assets: *const Assets) ?AiStateMachineConfig {
-    return assets.tables.ai_state_machine_config.getDataById("SM_Common");
+    return ConfigLoader.getCommonFsm(assets);
 }
 
-fn getDeepestChild(
-    node: AiStateMachineConfig.StateMachineNode,
-    source: AiStateMachineConfig.StateMachineJsonData,
-) i32 {
-    if (node.Children) |children| {
-        if (children.len > 0) {
-            const first_child_id = children[0];
-
-            const child_node = for (source.Nodes) |source_node| {
-                if (source_node.Uuid == first_child_id) {
-                    switch (source_node.kind()) {
-                        .custom, .reference, .override => break source_node,
-                    }
-                }
-            } else null;
-
-            if (child_node) |child| {
-                return getDeepestChild(child, source);
-            }
-        }
-    }
-
-    return node.Uuid;
+fn findReadyTransition(comp: *Component, fsm_id: i32, ctx: EvalContext) !?Transition {
+    return TransitionEngine.findReadyTransition(comp, fsm_id, ctx);
 }
 
-fn insertWithDescendants(
-    node_id: i32,
-    node: AiStateMachineConfig.StateMachineNode,
-    source: AiStateMachineConfig.StateMachineJsonData,
-    target: *std.ArrayList(NodeEntry),
-    gpa: mem.Allocator,
-) !void {
-    const already_exists = for (target.items) |entry| {
-        if (entry.key == node_id) break true;
-    } else false;
-
-    if (already_exists) return;
-
-    try target.append(gpa, .{ .key = node_id, .value = node });
-
-    if (node.Children) |children| {
-        for (children) |child_id| {
-            const child_node = for (source.Nodes) |source_node| {
-                if (source_node.Uuid == child_id) break source_node;
-            } else null;
-
-            if (child_node) |child| {
-                try insertWithDescendants(child_id, child, source, target, gpa);
-            } else {
-                log.warn("Child node {} of parent {} not found in source_nodes", .{ child_id, node_id });
-            }
-        }
+fn canDiscardDissolveCombineSignal(comp: *const Component) bool {
+    if (!comp.dissolve_combine_signal or comp.lifecycle_effects_pending or comp.lifecycle_effects.items.len != 0) return false;
+    for (comp.runtime_nodes) |runtime| {
+        if (runtime.pending_to != null) return false;
     }
+    return true;
+}
+
+fn serverEvaluatesRoot(comp: *const Component, fsm_id: i32) bool {
+    const root = StateHierarchy.findNode(comp, fsm_id) orelse return false;
+    return !(root.IsAnimStateMachine orelse false);
+}
+
+fn taskAcceptsSkillStart(comp: *const Component, path: []const i32, skill_id: i32) bool {
+    if (path.len == 0) return false;
+    const node = StateHierarchy.findNode(comp, path[path.len - 1]) orelse return false;
+    const task = node.Task orelse return false;
+    if (task.TaskSkillByName != null) return true;
+    const skill = task.TaskSkill orelse return false;
+    if (skill.ConfigReplaceTagId != 0 or skill.ConfigReplaceTagName.len != 0) return true;
+    return skill.SkillId == skill_id;
+}
+
+fn taskSkillMatches(comp: *const Component, path: []const i32, observed_id: ?i32, skill_id: i32) bool {
+    if (path.len == 0) return false;
+    const node = StateHierarchy.findNode(comp, path[path.len - 1]) orelse return false;
+    const task = node.Task orelse return false;
+    if (observed_id) |id| return id == skill_id;
+    const skill = task.TaskSkill orelse return false;
+    if (skill.ConfigReplaceTagId != 0 or skill.ConfigReplaceTagName.len != 0) return false;
+    return skill.SkillId == skill_id;
 }

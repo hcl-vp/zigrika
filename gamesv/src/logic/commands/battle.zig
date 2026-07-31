@@ -15,31 +15,11 @@ pub const battle = struct {
         alloc: mem.Alloc,
         mode: bool,
     ) !void {
-        const formation = scene.formation_info.formations[@intCast(scene.formation_info.cur_formation)];
-        const cur_role_entity_id = blk: {
-            for (formation.roles) |maybe_role| {
-                if (maybe_role) |role| {
-                    if (role.role_id == formation.cur_role) {
-                        break :blk role.entity_id;
-                    }
-                }
-            }
-            break :blk -1;
-        };
-
-        var notify: pb.CombatReceivePackNotify = .{};
-        try notify.Data.append(alloc.arena, .{ .Message = .{
-            .CombatNotifyData = .{
-                .CombatCommon = .{ .EntityId = cur_role_entity_id },
-                .Message = .{
-                    .PlayerBattleStateChangeNotify = .{
-                        .PlayerId = scene.player_id,
-                        .InBattle = mode,
-                    },
-                },
-            },
-        } });
-        try conn.push(notify);
+        scene.forceBattleState(mode);
+        var data: std.ArrayList(pb.CombatReceiveData) = .empty;
+        if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
+            try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+        }
         try events.enqueue(.chat_command_response, .{ .content = "changed battle state" });
     }
 };

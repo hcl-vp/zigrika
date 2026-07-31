@@ -12,8 +12,6 @@ const PlayerInventoryComponent = @import("../../logic/component/player/PlayerInv
 const FightBuffComponent = @import("../../logic/component/entity/FightBuffComponent.zig");
 const EventQueue = @import("../../logic/EventQueue.zig");
 const RoleAttributeSync = @import("../helpers/role_attribute_sync.zig");
-const BuffTimerScheduler = @import("../../logic/schedulers/BuffTimerScheduler.zig");
-const buff_helper = @import("../../logic/helpers/buff.zig");
 
 fn appendEquipTakeOnData(
     list: *std.ArrayList(pb.RoleLoadEquipData),
@@ -33,30 +31,17 @@ fn syncWeaponPassiveBuffs(
     txn: anytype,
     alloc: mem.Alloc,
     scene: *Scene,
-    assets: *const Assets,
-    fs: *FileSystem,
-    buff_timers: *BuffTimerScheduler,
-    io: std.Io,
-    now_ms: i64,
     entity: Scene.Entity,
     buffs: *FightBuffComponent,
     remove_ids: []const i64,
     add_ids: []const i64,
 ) !bool {
-    try buff_timers.ensureEntityRegistered(
-        alloc.gpa,
-        scene,
-        assets,
-        entity.net_id,
-        now_ms,
-    );
     var notify: pb.CombatReceivePackNotify = .{};
 
     for (remove_ids) |buff_id| {
         const buff = buffs.getByBuffId(buff_id) orelse continue;
         const handle_id = buff.HandleId;
         const stack_count = buff.StackCount;
-        buff_timers.cancelHandle(entity.net_id, handle_id);
         buffs.removeByHandleId(alloc.gpa, handle_id);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
@@ -75,12 +60,10 @@ fn syncWeaponPassiveBuffs(
 
     for (add_ids) |buff_id| {
         if (buffs.getByBuffId(buff_id) != null) continue;
-        const buff_data = assets.tables.buff.getDataById(buff_id) orelse continue;
         scene.instance.buff_handle += 1;
         buffs.fight_buff_infos = try alloc.gpa.realloc(buffs.fight_buff_infos, buffs.fight_buff_infos.len + 1);
         const buff_info = Assets.DataTables.createBuffInformation(scene.instance.buff_handle, buff_id, entity.net_id, entity.net_id, true);
         buffs.fight_buff_infos[buffs.fight_buff_infos.len - 1] = buff_info;
-        try buff_timers.scheduleNewBuff(alloc.gpa, buff_info, &buff_data, entity.net_id, now_ms);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = .{ .EntityId = entity.net_id },
@@ -98,30 +81,11 @@ fn syncWeaponPassiveBuffs(
                 },
             },
         } });
-        const disposition = BuffTimerScheduler.applicationDisposition(&buff_data, true, false, true);
-        if (disposition.execute_periodic_now) {
-            try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.FightBuffComponent});
-            const effect_query: Scene.Query(&.{
-                Scene.Entity,
-                *Scene.Entity.FightBuffComponent,
-                ?*Scene.Entity.AttributeComponent,
-            }) = .{ .iterator = .{ .entities = &scene.entities } };
-            try buff_helper.execute_periodic_buff_effects(
-                &notify.Data,
-                entity.net_id,
-                entity.net_id,
-                &buff_data,
-                scene,
-                fs,
-                io,
-                effect_query,
-                alloc,
-            );
-        }
     }
 
     if (notify.Data.items.len == 0) return false;
-    try txn.conn.push(notify);
+    try txn.conn.push(notify, alloc.arena);
+    try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.buff);
     return true;
 }
 
@@ -280,7 +244,7 @@ pub fn onWeaponBreachRequest(
         try txn.conn.push(pb.EntityEquipChangeNotify{
             .EntityId = entity.net_id,
             .EquipComponent = try equip.toProto(),
-        });
+        }, alloc.arena);
         try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, config_item.config_id);
         break;
     }
@@ -306,10 +270,7 @@ pub fn onWeaponResonUpRequest(
     }),
     assets: *const Assets,
     weapon_comp: *PlayerWeaponComponent,
-    buff_timers: *BuffTimerScheduler,
-    io: std.Io,
 ) !void {
-    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const request = txn.message;
     const weapon = weapon_comp.weapon_map.getPtr(request.IncId) orelse {
         txn.respond(.{ .ErrorCode = .ErrWeaponConsumeItemNotFound });
@@ -357,7 +318,7 @@ pub fn onWeaponResonUpRequest(
     };
     target_weapon.reson_level += 1;
     try events.enqueue(.weapon_info_modified, .{ .incr_id = request.IncId });
-    try txn.conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids });
+    try txn.conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids }, alloc.arena);
 
     if (target_weapon.role_id) |role_id| {
         const old_reson = assets.tables.getWeaponReson(config.ResonId, target_weapon.reson_level - 1);
@@ -372,18 +333,12 @@ pub fn onWeaponResonUpRequest(
                 txn,
                 alloc,
                 scene,
-                assets,
-                fs,
-                buff_timers,
-                io,
-                now_ms,
                 entity,
                 buffs,
                 if (old_reson) |old| old.Effect else &.{},
                 if (new_reson) |new| new.Effect else &.{},
             );
             if (changed) {
-                buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
                 try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.FightBuffComponent});
             }
             break;
@@ -419,10 +374,7 @@ pub fn onEquipTakeOnRequest(
     role_comp: *PlayerRoleComponent,
     weapon_comp: *PlayerWeaponComponent,
     echo_comp: *PlayerEchoComponent,
-    buff_timers: *BuffTimerScheduler,
-    io: std.Io,
 ) !void {
-    const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
     const data = txn.message.Data orelse return;
 
     var send_data: std.ArrayList(pb.RoleLoadEquipData) = .empty;
@@ -452,11 +404,6 @@ pub fn onEquipTakeOnRequest(
                     txn,
                     alloc,
                     scene,
-                    assets,
-                    fs,
-                    buff_timers,
-                    io,
-                    now_ms,
                     entity,
                     buffs,
                     current_weapon_reson.Effect,
@@ -466,7 +413,6 @@ pub fn onEquipTakeOnRequest(
                 equip.weapon_id = old_weapon.id;
                 equip.weapon_breach_level = old_weapon.breach;
                 if (buff_changed) {
-                    buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
                     try scene.saveComponents(fs, alloc.gpa, entity, &.{ Scene.Entity.EquipComponent, Scene.Entity.FightBuffComponent });
                 } else {
                     try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.EquipComponent});
@@ -475,17 +421,9 @@ pub fn onEquipTakeOnRequest(
                 try txn.conn.push(pb.EntityEquipChangeNotify{
                     .EntityId = entity.net_id,
                     .EquipComponent = try equip.toProto(),
-                });
+                }, alloc.arena);
                 break;
             }
-            try buff_timers.ensureEntityRegistered(
-                alloc.gpa,
-                scene,
-                assets,
-                entity.net_id,
-                now_ms,
-            );
-            buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
             try scene.saveEntity(fs, alloc.gpa, entity);
         }
         try events.enqueue(.weapon_info_modified, .{ .incr_id = current_role.weapon });
@@ -508,11 +446,6 @@ pub fn onEquipTakeOnRequest(
                 txn,
                 alloc,
                 scene,
-                assets,
-                fs,
-                buff_timers,
-                io,
-                now_ms,
                 entity,
                 buffs,
                 old_weapon_reson.Effect,
@@ -522,7 +455,6 @@ pub fn onEquipTakeOnRequest(
             equip.weapon_id = weapon.id;
             equip.weapon_breach_level = weapon.breach;
             if (buff_changed) {
-                buff_timers.syncEntityLeftDurations(scene, entity.net_id, now_ms);
                 try scene.saveComponents(fs, alloc.gpa, entity, &.{ Scene.Entity.EquipComponent, Scene.Entity.FightBuffComponent });
             } else {
                 try scene.saveComponents(fs, alloc.gpa, entity, &.{Scene.Entity.EquipComponent});
@@ -531,7 +463,7 @@ pub fn onEquipTakeOnRequest(
             try txn.conn.push(pb.EntityEquipChangeNotify{
                 .EntityId = entity.net_id,
                 .EquipComponent = try equip.toProto(),
-            });
+            }, alloc.arena);
             break;
         }
     }
@@ -543,6 +475,6 @@ pub fn onEquipTakeOnRequest(
         try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, old_role_id);
     }
     try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, data.RoleId);
-    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data });
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data }, alloc.arena);
     txn.respond(.{ .ErrorCode = .Success, .DataList = send_data });
 }
