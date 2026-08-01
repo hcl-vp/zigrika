@@ -483,9 +483,9 @@
     "ActivityId": 111200001,
     "Classify": 1,
     "Repeated": false,
-    "Type": "",
+    "Type": "RoverRogue_ShopEnhanceType",
     "Quality": 5,
-    "Name": "RoverRogueFakeItem_SpecialName_01",
+    "Name": "RoverRogueFakeItem_SpecialItemName_01",
     "Desc": "RoverRogueFakeItem_SpecialDesc_01",
     "DescParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_YJ_038_UI.T_IconCook160_YJ_038_UI",
@@ -497,9 +497,9 @@
     "ActivityId": 111200001,
     "Classify": 1,
     "Repeated": false,
-    "Type": "RoverRogue_ShopEnhanceType",
+    "Type": "RoverRogueFakeItem_SpecialName_01",
     "Quality": 5,
-    "Name": "RoverRogueFakeItem_SpecialName_02",
+    "Name": "RoverRogueFakeItem_SpecialItemName_02",
     "Desc": "RoverRogueFakeItem_SpecialDesc_02",
     "DescParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_YJ_031_UI.T_IconCook160_YJ_031_UI",
@@ -511,14 +511,14 @@
     "ActivityId": 111200001,
     "Classify": 1,
     "Repeated": false,
-    "Type": "",
+    "Type": "RoverRogueFakeItem_SpecialName_03",
     "Quality": 5,
-    "Name": "RoverRogueFakeItem_SpecialName_03",
+    "Name": "RoverRogueFakeItem_SpecialItemName_03",
     "Desc": "RoverRogueFakeItem_SpecialDesc_03",
     "DescParams": [
       "25"
     ],
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconTask/T_IconTask_Task_200_UI.T_IconTask_Task_200_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_SP_17_UI.T_IconCook160_SP_17_UI",
     "RoomPassedRequired": 0,
     "ShowObtain": true
   },
@@ -576,7 +576,7 @@
     "Classify": 2,
     "Repeated": false,
     "Type": "RoverRogue_ShopItemType",
-    "Quality": 3,
+    "Quality": 4,
     "Name": "RoverRogueItem_Name_24",
     "Desc": "RoverRogueItem_Desc_24",
     "DescParams": [
@@ -743,7 +743,7 @@
     "Name": "RoverRogueEventItem_Name_09",
     "Desc": "RoverRogueEventItem_Desc_09",
     "DescParams": [
-      "30%"
+      "20%"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_012_UI.T_IconCook160_012_UI",
     "RoomPassedRequired": 99,
@@ -839,7 +839,7 @@
     "Name": "RoverRogueEventItem_Name_11",
     "Desc": "RoverRogueEventItem_Desc_11",
     "DescParams": [
-      "30%"
+      "20%"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconCook160/T_IconCook160_026_UI.T_IconCook160_026_UI",
     "RoomPassedRequired": 99,

@@ -82323,7 +82323,7 @@
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_SkillInfo.DT_SkillInfo",
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/GodRogue/DT_SkillInfo_God_Rogue.DT_SkillInfo_God_Rogue",
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_ReBulletDataMain.DT_ReBulletDataMain",
-      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/GodRogue/DT_ReBulletDataMain_God_Rogue.DT_ReBulletDataMain_God_Rogue",
+      "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/GodRogue/DT_ReBulletDataMain_truerogue.DT_ReBulletDataMain_truerogue",
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DT_HitEffect.DT_HitEffect",
       "/Game/Aki/Character/Monster/ElitePro/MP1FengTingXieYou00201/Data/DA_PartHitEffect.DA_PartHitEffect"
     ]
@@ -83174,6 +83174,7 @@
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_trail_02.DA_Fx_Group_StandChange_trail_02",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_Dis.DA_Fx_Group_StandChange_Dis",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_R1a_HandTrail4.DA_Fx_Group_R1a_HandTrail4",
+      "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Suduxian.DA_Fx_Group_3C_Suduxian",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_Qingxiao_Chongci_Loop2.DA_Fx_Group_Qingxiao_Chongci_Loop2",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi_Ruo.DA_Fx_Group_3C_Danqi_Ruo",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi1.DA_Fx_Group_3C_Danqi1",
@@ -84115,6 +84116,7 @@
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_trail_02.DA_Fx_Group_StandChange_trail_02",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_Dis.DA_Fx_Group_StandChange_Dis",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_R1a_HandTrail4.DA_Fx_Group_R1a_HandTrail4",
+      "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Suduxian.DA_Fx_Group_3C_Suduxian",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_Qingxiao_Chongci_Loop2.DA_Fx_Group_Qingxiao_Chongci_Loop2",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi_Ruo.DA_Fx_Group_3C_Danqi_Ruo",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi1.DA_Fx_Group_3C_Danqi1",
@@ -86435,6 +86437,7 @@
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_trail_02.DA_Fx_Group_StandChange_trail_02",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_StandChange_Dis.DA_Fx_Group_StandChange_Dis",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_R1a_HandTrail4.DA_Fx_Group_R1a_HandTrail4",
+      "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Suduxian.DA_Fx_Group_3C_Suduxian",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_Qingxiao_Chongci_Loop2.DA_Fx_Group_Qingxiao_Chongci_Loop2",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi_Ruo.DA_Fx_Group_3C_Danqi_Ruo",
       "/Game/Aki/Effect/EffectGroup/R2T1QingxiaoMd10011/DA_Fx_Group_3C_Danqi1.DA_Fx_Group_3C_Danqi1",
@@ -86525,6 +86528,8 @@
       "/Game/Aki/Character/Role/MaleM/Nanzhu_PiaoRouge/BP_Nanzhu_PiaoRouge.BP_Nanzhu_PiaoRouge_C"
     ],
     "Animations": [
+      "/Game/Aki/Character/Role/MaleM/Nanzhu_PiaoRouge/CommonAnim/AM_Death.AM_Death",
+      "/Game/Aki/Character/Role/MaleM/Nanzhu_PiaoRouge/CommonAnim/AM_Death_InWater.AM_Death_InWater",
       "/Game/Aki/Character/Role/MaleM/BaseAnim/AM_Captured.AM_Captured",
       "/Game/Aki/Character/Role/MaleM/BaseAnim/AM_Behit_B_R.AM_Behit_B_R",
       "/Game/Aki/Character/Role/MaleM/BaseAnim/AM_Behit_B_L.AM_Behit_B_L",

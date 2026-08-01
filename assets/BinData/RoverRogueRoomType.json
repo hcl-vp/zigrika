@@ -2,7 +2,7 @@
   {
     "Id": 1,
     "EnterEntityId": 229800000,
-    "RoomType": "Fight1",
+    "RoomType": "Fight11",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -13,7 +13,7 @@
   {
     "Id": 2,
     "EnterEntityId": 229800000,
-    "RoomType": "FightH1",
+    "RoomType": "FightH11",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -134,7 +134,7 @@
   {
     "Id": 13,
     "EnterEntityId": 229800000,
-    "RoomType": "Fight2",
+    "RoomType": "Fight21",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -145,7 +145,7 @@
   {
     "Id": 14,
     "EnterEntityId": 229800000,
-    "RoomType": "FightH2",
+    "RoomType": "FightH21",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -266,7 +266,7 @@
   {
     "Id": 25,
     "EnterEntityId": 229800000,
-    "RoomType": "Fight3",
+    "RoomType": "Fight31",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -277,7 +277,7 @@
   {
     "Id": 26,
     "EnterEntityId": 229800000,
-    "RoomType": "FightH3",
+    "RoomType": "FightH31",
     "EnableRoomReward": true,
     "EnableLootChange": false,
     "EnableBlessGroupe": true,
@@ -349,7 +349,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_Boss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage3_endboss"
+    "MusicState": "stage4_dangerous"
   },
   {
     "Id": 33,
@@ -360,7 +360,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_LastBoss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage3_endboss"
+    "MusicState": "stage4_dangerous"
   },
   {
     "Id": 34,
@@ -404,7 +404,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_Boss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage3_endboss"
+    "MusicState": "stage1_endboss"
   },
   {
     "Id": 38,
@@ -415,7 +415,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_Boss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage3_endboss"
+    "MusicState": "stage2_endboss"
   },
   {
     "Id": 39,
@@ -525,7 +525,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_Boss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage1_endboss"
+    "MusicState": "stage4_dangerous"
   },
   {
     "Id": 49,
@@ -536,7 +536,7 @@
     "EnableBlessGroupe": true,
     "Name": "RoverRogueRoomType_Boss",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
-    "MusicState": "stage3_endboss"
+    "MusicState": "stage4_dangerous"
   },
   {
     "Id": 50,
@@ -559,5 +559,71 @@
     "Name": "RoverRogueRoomType_Event",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
     "MusicState": "stage1_safe"
+  },
+  {
+    "Id": 52,
+    "EnterEntityId": 229800000,
+    "RoomType": "Fight12",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Weak",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage1_dangerous"
+  },
+  {
+    "Id": 53,
+    "EnterEntityId": 229800000,
+    "RoomType": "FightH12",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Strong",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage1_dangerous"
+  },
+  {
+    "Id": 54,
+    "EnterEntityId": 229800000,
+    "RoomType": "Fight22",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Weak",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage2_dangerous"
+  },
+  {
+    "Id": 55,
+    "EnterEntityId": 229800000,
+    "RoomType": "FightH22",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Strong",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage2_dangerous"
+  },
+  {
+    "Id": 56,
+    "EnterEntityId": 229800000,
+    "RoomType": "Fight32",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Weak",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage3_dangerous"
+  },
+  {
+    "Id": 57,
+    "EnterEntityId": 229800000,
+    "RoomType": "FightH32",
+    "EnableRoomReward": true,
+    "EnableLootChange": false,
+    "EnableBlessGroupe": true,
+    "Name": "RoverRogueRoomType_NormalFight_Strong",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRoleHeadCircle256/T_IconRoleHeadCircle256_48_UI.T_IconRoleHeadCircle256_48_UI",
+    "MusicState": "stage3_dangerous"
   }
 ]

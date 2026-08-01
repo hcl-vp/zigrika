@@ -311,20 +311,10 @@
     "BriefDescParams": []
   },
   {
-    "Id": 3003,
-    "Desc": "RoverRogue_EventChoice_2018",
-    "Params": [
-      "1"
-    ],
-    "BriefDesc": "",
-    "BriefDescParams": []
-  },
-  {
     "Id": 3004,
     "Desc": "RoverRogue_EventChoice_2019",
     "Params": [
-      "2",
-      "2"
+      "1"
     ],
     "BriefDesc": "",
     "BriefDescParams": []
@@ -354,18 +344,6 @@
       "10%",
       "1",
       "90%",
-      "1"
-    ],
-    "BriefDesc": "",
-    "BriefDescParams": []
-  },
-  {
-    "Id": 3008,
-    "Desc": "RoverRogue_EventChoice_2023",
-    "Params": [
-      "25%",
-      "3",
-      "75%",
       "1"
     ],
     "BriefDesc": "",

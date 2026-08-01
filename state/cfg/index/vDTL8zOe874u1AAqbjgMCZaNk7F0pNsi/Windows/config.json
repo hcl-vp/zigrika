@@ -1,22 +1,19 @@
 {
   "PackageVersion": "3.6.0",
-  "ChangeList": "8229339",
+  "ChangeList": "8306470",
   "CompatibleChangeLists": [],
   "ResVersions": {
     "launcher": {
       "Name": "launcher",
-      "Version": "3.6.2",
-      "IndexSha1": {
-        "3.6.1": "8EE4325862CBD666BD7DDFDEB249842816BFFDE2",
-        "3.6.2": "4851EF0FA46FF17B06F230D74C08274ECB0B2864"
-      }
+      "Version": "3.6.0",
+      "IndexSha1": {}
     },
     "resource": {
       "Name": "resource",
       "Version": "3.6.2",
       "IndexSha1": {
-        "3.6.1": "D21BCC534A468E43429F88BF80EE80A29D6F115E",
-        "3.6.2": "A32ACE659B06C6C6DE8FC51F157ACB945D2BA8CA"
+        "3.6.1": "B2D927A906464D6023658405008ED963DB954BFC",
+        "3.6.2": "A1BD87608DE3C05C9755705D9D634A3486978578"
       }
     },
     "en": {

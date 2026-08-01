@@ -129767,7 +129767,7 @@
   {
     "Id": 12031879,
     "Type": "NewTowerTotalScore",
-    "NeedNum": 58000,
+    "NeedNum": 76450,
     "LimitParams": {
       "SeasonId": "7",
       "Num": "-1",
@@ -129781,7 +129781,7 @@
   {
     "Id": 12031880,
     "Type": "NewTowerTotalScore",
-    "NeedNum": 126000,
+    "NeedNum": 180536,
     "LimitParams": {
       "SeasonId": "7",
       "Num": "-1",

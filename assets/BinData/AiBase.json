@@ -12234,7 +12234,7 @@
     "Id": 7030005,
     "StateMachine": "SM_MO1JTQiShiMd00001",
     "AiController": "/Game/Aki/AI/AIMonster/Ordinary/AIMO1JTQiShiMd00001/AIC_MO1JTQiShiMd00001.AIC_MO1JTQiShiMd00001",
-    "BehaviorTree": "/Game/Aki/AI/AIMonster/Ordinary/AIMO1JTQiShiMd00001/BT_MO1JTQiShiMd00001.BT_MO1JTQiShiMd00001",
+    "BehaviorTree": "/Game/Aki/AI/AIMonster/Ordinary/AIMO1JTQiShiMd00001/BT_MO1JTQiShiMd00001_GodRogue.BT_MO1JTQiShiMd00001_GodRogue",
     "SubBehaviorConfigs": {
       "AiSense": "70138",
       "AiHate": "70138",
@@ -12691,32 +12691,6 @@
     "MonsterType": 4
   },
   {
-    "Id": 130901,
-    "StateMachine": "SM_Paotai110",
-    "AiController": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai110/AIC_Paotai110.AIC_Paotai110",
-    "BehaviorTree": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai110/BT_Paotai110.BT_Paotai110",
-    "SubBehaviorConfigs": {
-      "AiSense": "1",
-      "AiHate": "130801",
-      "AiBaseSkill": "130901"
-    },
-    "Team": true,
-    "MonsterType": 4
-  },
-  {
-    "Id": 130902,
-    "StateMachine": "SM_Paotai109",
-    "AiController": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai109/AIC_Paotai109.AIC_Paotai109",
-    "BehaviorTree": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai109/BT_Paotai109.BT_Paotai109",
-    "SubBehaviorConfigs": {
-      "AiSense": "1",
-      "AiHate": "130801",
-      "AiBaseSkill": "130902"
-    },
-    "Team": true,
-    "MonsterType": 4
-  },
-  {
     "Id": 2101803,
     "StateMachine": "",
     "AiController": "/Game/Aki/AI/AINPC/Animal/NA018/AIC_NA018.AIC_NA018",
@@ -12851,5 +12825,27 @@
     },
     "Team": false,
     "MonsterType": 1
+  },
+  {
+    "Id": 90006,
+    "StateMachine": "SM_Paotai110",
+    "AiController": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai110/AIC_Paotai110.AIC_Paotai110",
+    "BehaviorTree": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai110/BT_Paotai110.BT_Paotai110",
+    "SubBehaviorConfigs": {
+      "AiBaseSkill": "90006"
+    },
+    "Team": true,
+    "MonsterType": 4
+  },
+  {
+    "Id": 90005,
+    "StateMachine": "SM_Paotai109",
+    "AiController": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai109/AIC_Paotai109.AIC_Paotai109",
+    "BehaviorTree": "/Game/Aki/AI/AIMonster/Interaction/3_6/Paotai109/BT_Paotai109.BT_Paotai109",
+    "SubBehaviorConfigs": {
+      "AiBaseSkill": "90005"
+    },
+    "Team": true,
+    "MonsterType": 4
   }
 ]

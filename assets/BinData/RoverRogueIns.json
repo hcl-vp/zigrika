@@ -56,7 +56,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      20
+      16
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
@@ -91,7 +91,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      30
+      24
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
@@ -126,7 +126,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      30
+      24
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
@@ -161,7 +161,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      30
+      24
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
@@ -206,7 +206,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      32
+      26
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
@@ -251,7 +251,7 @@
     "LevelDesc": "",
     "LevelRoomNumDesc": "RoverRogueStage_DifficultyDescRoomNum",
     "LevelRoomNumParam": [
-      32
+      26
     ],
     "LevelMonsterRateDesc": "RoverRogueStage_DifficultyDescEnemyStatus",
     "LevelMonsterRateParam": [
