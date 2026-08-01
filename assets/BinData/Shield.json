@@ -4141,10 +4141,10 @@
     "FormationPropValueType": 0,
     "RefrenceTarget": 0,
     "AttributeRate": [
-      0.03200000151991844
+      0.00800000037997961
     ],
     "Value": [
-      1400
+      350
     ]
   },
   {
@@ -4169,7 +4169,7 @@
     "FormationPropValueType": 0,
     "RefrenceTarget": 0,
     "AttributeRate": [
-      0.10000000149011612
+      0.15000000596046448
     ],
     "Value": [
       0

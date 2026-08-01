@@ -12528,7 +12528,7 @@
     "IsTrial": false,
     "Name": "RoleInfo_1413_Name",
     "NickName": "RoleInfo_1504_NickName",
-    "Introduction": "FavorRoleInfo_1504_Info",
+    "Introduction": "FavorRoleInfo_1413_Info",
     "Tag": [
       2,
       36
@@ -12603,7 +12603,7 @@
     "CharacterVoice": "RoleInfo_1402_CharacterVoice",
     "TrialRole": 100362,
     "IsAim": false,
-    "RoleGuide": 5045,
+    "RoleGuide": 0,
     "RedDotDisableRule": 0,
     "SkinDamage": [
       "/Game/Aki/Character/DA/DA_Qingxiao_BattleTex_Revert.DA_Qingxiao_BattleTex_Revert",
@@ -12768,7 +12768,7 @@
     "LockOnLookOnId": 2,
     "SkillEffectDA": "RoleSkillTabEffectFire",
     "FootStepState": "FS_Boots",
-    "PartyId": 7,
+    "PartyId": 1,
     "AttributesDescription": "",
     "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconRup/T_IconRup_1402_UI.T_IconRup_1402_UI",
     "ItemQualityId": 5,
@@ -12784,7 +12784,7 @@
     "CharacterVoice": "RoleInfo_1402_CharacterVoice",
     "TrialRole": 100363,
     "IsAim": false,
-    "RoleGuide": 5031,
+    "RoleGuide": 0,
     "RedDotDisableRule": 0,
     "SkinDamage": [
       "/Game/Aki/Character/DA/DA_Jingran_BattleTex_Revert.DA_Jingran_BattleTex_Revert",
@@ -12923,7 +12923,7 @@
     "SpilloverItem": {},
     "MeshId": 10000600,
     "UiMeshId": 10000600,
-    "RoleBody": "FemaleXL",
+    "RoleBody": "FemaleM",
     "BreachModel": 730100,
     "SpecialEnergyBarId": 0,
     "CameraConfig": "10000",
@@ -13708,7 +13708,7 @@
     "SpilloverItem": {},
     "MeshId": 10000400,
     "UiMeshId": 10000400,
-    "RoleBody": "FemaleXL",
+    "RoleBody": "MaleM",
     "BreachModel": 730100,
     "SpecialEnergyBarId": 0,
     "CameraConfig": "10000",

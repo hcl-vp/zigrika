@@ -19,7 +19,8 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "KeyboardVersionMap": {},
-    "GamepadVersionMap": {}
+    "GamepadVersionMap": {},
+    "BlockInput": []
   },
   {
     "Id": 2,
@@ -41,7 +42,8 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "KeyboardVersionMap": {},
-    "GamepadVersionMap": {}
+    "GamepadVersionMap": {},
+    "BlockInput": []
   },
   {
     "Id": 3,
@@ -59,6 +61,9 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "KeyboardVersionMap": {},
-    "GamepadVersionMap": {}
+    "GamepadVersionMap": {},
+    "BlockInput": [
+      "Gamepad_RightX"
+    ]
   }
 ]

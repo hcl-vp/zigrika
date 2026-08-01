@@ -78,7 +78,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeixue/SP_IconFeixue2D2.SP_IconFeixue2D2",
     "NextBlessId": 1000107422,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -111,7 +111,7 @@
     "Desc": "RoverRogueBless_EffectDesc_Feixue_SkillQ_Lv2",
     "Params": [
       "3",
-      "100",
+      "150",
       "10",
       "925",
       "3",
@@ -179,7 +179,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeixue/SP_IconFeixue2D2.SP_IconFeixue2D2",
     "NextBlessId": 1000107523,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -433,7 +433,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaC3.SP_IconKatixiyaC3",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": "RoverRogueBless_TriggerRoleInfo_03_01"
   },
   {
@@ -873,7 +873,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranT.SP_IconJingranT",
     "NextBlessId": 1000705602,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -911,7 +911,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranY.SP_IconJingranY",
     "NextBlessId": 1000707412,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1032,7 +1032,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranT.SP_IconJingranT",
     "NextBlessId": 1000705703,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1070,7 +1070,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranY.SP_IconJingranY",
     "NextBlessId": 1000707513,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1088,7 +1088,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranY.SP_IconJingranY",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1167,7 +1167,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingB3.SP_IconXuanLingB3",
     "NextBlessId": 1000802602,
-    "IsRecommend": true,
+    "IsRecommend": false,
     "TriggerRoleInfo": ""
   },
   {
@@ -1242,7 +1242,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingT.SP_IconXuanLingT",
     "NextBlessId": 1000807412,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1395,7 +1395,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingT.SP_IconXuanLingT",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1704,7 +1704,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoA3.SP_IconQingxiaoA3",
     "NextBlessId": 1001003602,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1781,7 +1781,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoD2.SP_IconQingxiaoD2",
     "NextBlessId": 1001007422,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1799,7 +1799,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoT.SP_IconQingxiaoT",
     "NextBlessId": 1001007432,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1858,7 +1858,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoA3.SP_IconQingxiaoA3",
     "NextBlessId": 1001003703,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1879,7 +1879,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoE1.SP_IconQingxiaoE1",
     "NextBlessId": 0,
-    "IsRecommend": true,
+    "IsRecommend": false,
     "TriggerRoleInfo": ""
   },
   {
@@ -1898,7 +1898,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoC1.SP_IconQingxiaoC1",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": "RoverRogueBless_TriggerRoleInfo_10_01"
   },
   {
@@ -1954,7 +1954,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoD2.SP_IconQingxiaoD2",
     "NextBlessId": 1001007523,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1972,7 +1972,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoD2.SP_IconQingxiaoD2",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -1990,7 +1990,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoT.SP_IconQingxiaoT",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2008,7 +2008,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity36/Activity36Rogue/BlessingIcon/SP_IconDevice_SuisuiM3_UI.SP_IconDevice_SuisuiM3_UI",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2024,8 +2024,10 @@
       "30",
       "12.5",
       "1",
-      "40",
-      "15"
+      "10",
+      "8",
+      "50",
+      "0.5"
     ],
     "AdditionText": "RoverRogue_SystemShow_CoreBlessing",
     "AdditionParams": [],
@@ -2047,8 +2049,10 @@
       "40",
       "12.5",
       "1",
-      "40",
-      "15"
+      "10",
+      "8",
+      "50",
+      "0.5"
     ],
     "AdditionText": "RoverRogue_SystemShow_CoreBlessing",
     "AdditionParams": [],
@@ -2286,7 +2290,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranC1.SP_IconJingranC1",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": "RoverRogueBless_TriggerRoleInfo_07_02"
   },
   {
@@ -2573,7 +2577,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFeixue/SP_IconFeixueA3.SP_IconFeixueA3",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2593,7 +2597,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity36/Activity36Rogue/BlessingIcon/SP_IconDevice_FeibiM4_UI.SP_IconDevice_FeibiM4_UI",
     "NextBlessId": 1000201502,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2692,7 +2696,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/UiActivity/Atlas/Activity36/Activity36Rogue/BlessingIcon/SP_IconDevice_FeibiM4_UI.SP_IconDevice_FeibiM4_UI",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2851,7 +2855,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaA1.SP_IconKatixiyaA1",
     "NextBlessId": 1000307522,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -2870,7 +2874,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaQTE.SP_IconKatixiyaQTE",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -3045,7 +3049,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaA1.SP_IconKatixiyaA1",
     "NextBlessId": 1000307623,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -3066,7 +3070,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconKatixiya/SP_IconKatixiyaA1.SP_IconKatixiyaA1",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -4042,7 +4046,7 @@
     "Name": "RoverRogueBless_EffectName_Suisui_Beidong03_Lv1",
     "Desc": "RoverRogueBless_EffectDesc_Suisui_Beidong03_Lv1",
     "Params": [
-      "1",
+      "100",
       "40"
     ],
     "AdditionText": "RoverRogue_SystemShow_NormalBlessing",
@@ -4176,7 +4180,7 @@
     "Name": "RoverRogueBless_EffectName_Suisui_Beidong03_Lv2",
     "Desc": "RoverRogueBless_EffectDesc_Suisui_Beidong03_Lv2",
     "Params": [
-      "1"
+      "100"
     ],
     "AdditionText": "RoverRogue_SystemShow_NormalBlessing",
     "AdditionParams": [],
@@ -4257,7 +4261,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFuluoluo/SP_IconFuluoluoT.SP_IconFuluoluoT",
     "NextBlessId": 1001207512,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -4390,7 +4394,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconFuluoluo/SP_IconFuluoluoT.SP_IconFuluoluoT",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -4651,7 +4655,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAogusita/SP_IconAogusitaA2.SP_IconAogusitaA2",
     "NextBlessId": 1000404402,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -4689,7 +4693,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAogusita/SP_IconAogusitaA2.SP_IconAogusitaA2",
     "NextBlessId": 1000404503,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -4707,7 +4711,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconAogusita/SP_IconAogusitaA2.SP_IconAogusitaA2",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5075,7 +5079,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconJingran/SP_IconJingranT.SP_IconJingranT",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5094,7 +5098,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingB2.SP_IconXuanLingB2",
     "NextBlessId": 1000804602,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5169,7 +5173,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconXuanLing/SP_IconXuanLingB2.SP_IconXuanLingB2",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5262,7 +5266,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoB2.SP_IconQingxiaoB2",
     "NextBlessId": 1001004602,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5302,7 +5306,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoA3.SP_IconQingxiaoA3",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5322,7 +5326,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoB2.SP_IconQingxiaoB2",
     "NextBlessId": 1001004703,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5342,7 +5346,7 @@
     "AdditionParams": [],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconQingxiao/SP_IconQingxiaoB2.SP_IconQingxiaoB2",
     "NextBlessId": 0,
-    "IsRecommend": false,
+    "IsRecommend": true,
     "TriggerRoleInfo": ""
   },
   {
@@ -5377,7 +5381,7 @@
     "Params": [
       "6",
       "12",
-      "30",
+      "25",
       "2"
     ],
     "AdditionText": "RoverRogue_SystemShow_CoreBlessing",

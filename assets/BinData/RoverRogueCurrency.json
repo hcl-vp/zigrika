@@ -3,9 +3,9 @@
     "Id": 89000001,
     "QualityId": 4,
     "ItemAccess": [],
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity36/Activity36Rogue/T_IconA_Activity36Rogue01_UI.T_IconA_Activity36Rogue01_UI",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA160/Activity/Activity36/Activity36Rogue/T_IconA160_Activity36Rogue01_UI.T_IconA160_Activity36Rogue01_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/Activity/Activity36/Activity36Rogue/T_IconA80_Activity36Rogue01_UI.T_IconA80_Activity36Rogue01_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_80400001_UI.T_IconA_80400001_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA160/T_IconA160_80400001_UI.T_IconA160_80400001_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_80400001_UI.T_IconA80_80400001_UI",
     "ShowTypes": [
       10
     ],
@@ -35,9 +35,9 @@
     "Id": 89000003,
     "QualityId": 4,
     "ItemAccess": [],
-    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/T_IconA_80400002_UI.T_IconA_80400002_UI",
-    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA160/T_IconA160_80400002_UI.T_IconA160_80400002_UI",
-    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/T_IconA80_80400002_UI.T_IconA80_80400002_UI",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Image/IconA/Activity/Activity36/Activity36Rogue/T_IconA_Activity36Rogue01_UI.T_IconA_Activity36Rogue01_UI",
+    "IconMiddle": "/Game/Aki/UI/UIResources/Common/Image/IconA160/Activity/Activity36/Activity36Rogue/T_IconA160_Activity36Rogue01_UI.T_IconA160_Activity36Rogue01_UI",
+    "IconSmall": "/Game/Aki/UI/UIResources/Common/Image/IconA80/Activity/Activity36/Activity36Rogue/T_IconA80_Activity36Rogue01_UI.T_IconA80_Activity36Rogue01_UI",
     "ShowTypes": [
       10
     ],

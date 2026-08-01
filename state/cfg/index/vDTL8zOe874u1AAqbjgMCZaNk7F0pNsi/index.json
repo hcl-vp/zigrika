@@ -1,13 +1,25 @@
 {
   "default": {
+    "CdnEvalCfg": {
+      "Broadband": {
+        "Shuffle": false,
+        "EvalTime": 3,
+        "SkipSize": 180
+      },
+      "Cellular": {
+        "Shuffle": false,
+        "EvalTime": 3,
+        "SkipSize": 90
+      }
+    },
     "CdnUrl": [
       {
         "url": "http://127.0.0.1:5500/",
         "weight": "100"
       },
       {
-          "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
-          "weight": "0"
+        "url": "https://cdn-aws-hw-mc.aki-game.net/prod/client/",
+        "weight": "0"
       }
     ],
     "SecondaryUrl": [],
@@ -48,7 +60,7 @@
     "MixUri": "vDTL8zOe874u1AAqbjgMCZaNk7F0pNsi",
     "ResUri": "vDTL8zOe874u1AAqbjgMCZaNk7F0pNsi",
     "GrayBox": {
-        "Items": []
+      "Items": []
     },
     "LoginServers": [
       {
@@ -66,5 +78,5 @@
   "p1": {
     "IosAuditFirstDownloadTip": false
   },
-  "ModifyTime": 1768652976
+  "ModifyTime": 1785594916
 }

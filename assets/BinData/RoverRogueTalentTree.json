@@ -124,8 +124,8 @@
     "Name": "RoverRogueTalentTree_Name_107",
     "Desc": "RoverRogueTalentTree_Desc_107",
     "Params": [
-      "50",
-      "1"
+      "1",
+      "50"
     ],
     "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconRogue/SP_RogueSkill_Buff6.SP_RogueSkill_Buff6"
   },

@@ -5,6 +5,7 @@
     "TalentPointItemId": 89000002,
     "TokenItemId": 89000003,
     "ShopId": 227,
+    "ShopTokenMax": 10000,
     "ShopRedDotPrice": 100,
     "BlessRepeatSortId": 7,
     "BaseRefreshBless": 0,
@@ -18,12 +19,18 @@
       100
     ],
     "RoomTypeMonster": [
-      "Fight1",
-      "Fight2",
-      "Fight3",
-      "FightH1",
-      "FightH2",
-      "FightH3",
+      "Fight11",
+      "Fight12",
+      "Fight21",
+      "Fight22",
+      "Fight31",
+      "Fight32",
+      "FightH11",
+      "FightH12",
+      "FightH21",
+      "FightH22",
+      "FightH31",
+      "FightH32",
       "FightE1",
       "FightE2",
       "FightE3",
@@ -105,7 +112,8 @@
     "TaskCoreReward": 110009,
     "ReviveBuffIds": [
       1502050034,
-      1502050035
+      1502050035,
+      150205123001
     ]
   }
 ]

@@ -21120,7 +21120,7 @@
     "SkillInfoList": [],
     "BuffList": [],
     "DamageList": [],
-    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakFist.SP_IconWeakPointBreakFist",
+    "Icon": "/Game/Aki/UI/UIResources/Common/Atlas/SkillIcon/SkillIconNor/SP_IconWeakPointBreakMagic.SP_IconWeakPointBreakMagic",
     "EffectSkillPath": "/Game/Aki/Effect/Texture/Icon/IconSkill/T_IconYinlinQTE_UI.T_IconYinlinQTE_UI",
     "SortIndex": 4,
     "SkillDescribe": "Skill_1000001_SkillDescribe",
@@ -21219,14 +21219,14 @@
     "SkillResume": "Skill_1005802_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
-      "30"
+      "45"
     ],
     "SkillResumeNum": [
-      "30"
+      "45"
     ],
     "MultiSkillDescribe": "Skill_1005802_SkillDescribe",
     "MultiSkillDetailNum": [
-      "30"
+      "45"
     ],
     "SkillShowTagType": 0
   },
@@ -21281,10 +21281,14 @@
     "SkillDetailNum": [
       "1",
       "1",
+      "1",
+      "1",
       "15",
       "30"
     ],
     "SkillResumeNum": [
+      "1",
+      "1",
       "1",
       "1",
       "15",
@@ -21292,6 +21296,8 @@
     ],
     "MultiSkillDescribe": "Skill_1005804_SkillDescribe",
     "MultiSkillDetailNum": [
+      "1",
+      "1",
       "1",
       "1",
       "15",
@@ -21438,7 +21444,7 @@
       "2%",
       "7",
       "5%",
-      "2",
+      "3",
       "100%",
       "1",
       "1",
@@ -21456,7 +21462,7 @@
       "2%",
       "7",
       "5%",
-      "2",
+      "3",
       "100%",
       "1",
       "1",
@@ -21475,7 +21481,7 @@
       "2%",
       "7",
       "5%",
-      "2",
+      "3",
       "100%",
       "1",
       "1",
@@ -21719,36 +21725,30 @@
     "SkillResume": "Skill_1005903_SkillResume",
     "SkillTagList": [],
     "SkillDetailNum": [
-      "75%",
+      "100",
+      "50%",
+      "50%",
       "200",
       "3",
-      "100",
       "15",
       "3",
       "200",
       "1",
-      "15",
-      "0",
-      "1000",
-      "35000",
-      "25"
+      "15"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005903_SkillDescribe",
     "MultiSkillDetailNum": [
-      "75%",
+      "100",
+      "50%",
+      "50%",
       "200",
       "3",
-      "100",
       "15",
       "3",
       "200",
       "1",
-      "15",
-      "0",
-      "1000",
-      "35000",
-      "25"
+      "15"
     ],
     "SkillShowTagType": 0
   },
@@ -21777,8 +21777,10 @@
       "700",
       "5",
       "0.5",
-      "2.4%",
-      "1050"
+      "0.8%",
+      "350",
+      "5",
+      "0.5"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005904_SkillDescribe",
@@ -21788,8 +21790,10 @@
       "700",
       "5",
       "0.5",
-      "2.4%",
-      "1050"
+      "0.8%",
+      "350",
+      "5",
+      "0.5"
     ],
     "SkillShowTagType": 0
   },
@@ -21815,14 +21819,16 @@
     "SkillDetailNum": [
       "2",
       "0.5",
-      "10"
+      "4",
+      "15"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005905_SkillDescribe",
     "MultiSkillDetailNum": [
       "2",
       "0.5",
-      "10"
+      "4",
+      "15"
     ],
     "SkillShowTagType": 0
   },
@@ -21851,8 +21857,8 @@
       "100",
       "50",
       "1000",
-      "0.08%",
-      "2.8%",
+      "0.05%",
+      "2.5%",
       "15",
       "50",
       "1",
@@ -21864,8 +21870,8 @@
       "100",
       "50",
       "1000",
-      "0.08%",
-      "2.8%",
+      "0.05%",
+      "2.5%",
       "15",
       "50",
       "1",
@@ -21930,13 +21936,23 @@
       "50",
       "100",
       "200",
+      "100",
+      "100",
+      "0",
+      "25",
+      "25000",
+      "1000",
+      "25000",
       "0",
       "1000",
-      "6%",
-      "210%",
+      "6.2%",
+      "310%",
       "1000",
-      "52",
-      "1820"
+      "1.5%",
+      "75%",
+      "1000",
+      "36",
+      "1800"
     ],
     "SkillResumeNum": [],
     "MultiSkillDescribe": "Skill_1005907_SkillDescribe",
@@ -21949,13 +21965,23 @@
       "50",
       "100",
       "200",
+      "100",
+      "100",
+      "0",
+      "25",
+      "25000",
+      "1000",
+      "25000",
       "0",
       "1000",
-      "6%",
-      "210%",
+      "6.2%",
+      "310%",
       "1000",
-      "52",
-      "1820"
+      "1.5%",
+      "75%",
+      "1000",
+      "36",
+      "1800"
     ],
     "SkillShowTagType": 2
   },

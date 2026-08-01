@@ -104962,8 +104962,8 @@
   {
     "UnitId": 1502050,
     "GroupId": 1502050,
-    "MinNum": 3,
-    "MaxNum": 8,
+    "MinNum": 8,
+    "MaxNum": 12,
     "Interval": 0,
     "DropShowPlan": 1
   },

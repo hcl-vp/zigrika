@@ -7550,7 +7550,8 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1413701101,
-      1413701102
+      1413701102,
+      1413701605
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7559,7 +7560,12 @@
     "AttributesDescriptionParams": [
       "16%",
       "2",
-      "1"
+      "1",
+      "25",
+      "500%",
+      "4%",
+      "1",
+      "25"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QingxiaoM1_UI.T_IconDevice_QingxiaoM1_UI"
   },
@@ -7573,7 +7579,10 @@
     "AttributesDescription": "ResonantChain_332_AttributesDescription",
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
-      1413701201
+      1413701201,
+      1413701302,
+      1413701304,
+      1413701305
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7581,8 +7590,9 @@
     },
     "AttributesDescriptionParams": [
       "40%",
-      "5",
-      "3%"
+      "25",
+      "25",
+      "6"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QingxiaoM2_UI.T_IconDevice_QingxiaoM2_UI"
   },
@@ -7596,10 +7606,7 @@
     "AttributesDescription": "ResonantChain_333_AttributesDescription",
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
-      1413701301,
-      1413701302,
-      1413701304,
-      1413701305
+      1413701301
     ],
     "AddProp": [],
     "ActivateConsume": {
@@ -7607,11 +7614,8 @@
     },
     "AttributesDescriptionParams": [
       "100%",
-      "25",
-      "2",
-      "1",
-      "25",
-      "30"
+      "3%",
+      "2"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QingxiaoM3_UI.T_IconDevice_QingxiaoM3_UI"
   },
@@ -7671,22 +7675,15 @@
     "BgDescription": "PrefabTextItem_Empty_Text",
     "BuffIds": [
       1413701601,
-      1413701602,
-      1413701605
+      1413701602
     ],
     "AddProp": [],
     "ActivateConsume": {
       "10001413": 1
     },
     "AttributesDescriptionParams": [
-      "30%",
-      "60%",
-      "10",
-      "400%",
-      "50",
-      "10",
-      "50",
-      "7"
+      "40%",
+      "40%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_QingxiaoM6_UI.T_IconDevice_QingxiaoM6_UI"
   },
@@ -7836,7 +7833,7 @@
       "10001212": 1
     },
     "AttributesDescriptionParams": [
-      "60%"
+      "80%"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JingranM1_UI.T_IconDevice_JingranM1_UI"
   },
@@ -7859,8 +7856,9 @@
       "10001212": 1
     },
     "AttributesDescriptionParams": [
-      "45%",
-      "45%",
+      "40%",
+      "40%",
+      "4",
       "300",
       "25",
       "25",
@@ -7889,8 +7887,8 @@
     "AttributesDescriptionParams": [
       "5",
       "1000",
-      "72",
-      "2520"
+      "50",
+      "2500"
     ],
     "NodeIcon": "/Game/Aki/UI/UIResources/Common/Image/IconDevice/T_IconDevice_JingranM3_UI.T_IconDevice_JingranM3_UI"
   },
