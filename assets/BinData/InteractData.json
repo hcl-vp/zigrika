@@ -132710,21 +132710,6 @@
     "OptionLockTypeList": ""
   },
   {
-    "Guid": "4cc31394ba2441a6959c8508d9051d61",
-    "Type": {
-      "Type": "Actions",
-      "Actions": []
-    },
-    "Icon": "",
-    "TidContent": "",
-    "Condition": "",
-    "UniquenessTest": "",
-    "DoIntactType": "Direct",
-    "Range": 0,
-    "Duration": "",
-    "OptionLockTypeList": ""
-  },
-  {
     "Guid": "8a97fc7d7d704d3d87c8aafc30b06040",
     "Type": {
       "Type": "Flow",
@@ -140054,6 +140039,21 @@
     },
     "Icon": "",
     "TidContent": "LevelPlay_40800003_InteractContent_40_2",
+    "Condition": "",
+    "UniquenessTest": "",
+    "DoIntactType": "Direct",
+    "Range": 0,
+    "Duration": "",
+    "OptionLockTypeList": ""
+  },
+  {
+    "Guid": "38d153f56d934712ad0bfbdcdd64e9e8",
+    "Type": {
+      "Type": "Actions",
+      "Actions": []
+    },
+    "Icon": "",
+    "TidContent": "",
     "Condition": "",
     "UniquenessTest": "",
     "DoIntactType": "Direct",

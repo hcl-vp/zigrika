@@ -65135,8 +65135,8 @@
     "SkillAction": "AddBuff",
     "SkillActionParams": [
       "1413700412",
-      "1413701608",
-      "1413701610"
+      "1413701610",
+      "1413700502"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -65170,7 +65170,7 @@
   },
   {
     "Id": 1413700504,
-    "SkillDesc": "清宵-固有技能1【挂载】-赋予敌人",
+    "SkillDesc": "清宵-固有技能1【集谐挂载】-赋予敌人",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -65195,7 +65195,7 @@
     "SkillAction": "Customize",
     "SkillActionParams": [],
     "ActionScriptParams": {},
-    "SkillActionScript": "AddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,1413700407,GetBuffStack(Owner,1413700502),Owner)\nAND\nAddBuff2(Victim,1413700505,1,Owner)",
+    "SkillActionScript": "AddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,1413700505,1,Owner)",
     "ActionExecuteFlag": 1,
     "CDType": "Owner"
   },
@@ -65503,7 +65503,10 @@
     "SkillActionParams": [
       "150205051002",
       "150205051102",
-      "150205051202"
+      "150205051202",
+      "150205051003",
+      "150205051103",
+      "150205051203"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -65534,7 +65537,10 @@
     "SkillActionParams": [
       "150205051002",
       "150205051102",
-      "150205051202"
+      "150205051202",
+      "150205051003",
+      "150205051103",
+      "150205051203"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -65565,7 +65571,10 @@
     "SkillActionParams": [
       "150205051002",
       "150205051102",
-      "150205051202"
+      "150205051202",
+      "150205051003",
+      "150205051103",
+      "150205051203"
     ],
     "ActionScriptParams": {},
     "SkillActionScript": "FALSE",
@@ -65744,12 +65753,14 @@
     "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "150205117102"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
+    "SkillAction": "Customize",
+    "SkillActionParams": [],
+    "ActionScriptParams": {
+      "HitCase": [
+        "HitCase"
+      ]
+    },
+    "SkillActionScript": "AddCustomBullet(Attacker,Victim,1502050152,HitCase,0)",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   },
@@ -65773,12 +65784,14 @@
     "TriggerFormula": "TRUE",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
-    "SkillActionParams": [
-      "150205117202"
-    ],
-    "ActionScriptParams": {},
-    "SkillActionScript": "FALSE",
+    "SkillAction": "Customize",
+    "SkillActionParams": [],
+    "ActionScriptParams": {
+      "HitCase": [
+        "HitCase"
+      ]
+    },
+    "SkillActionScript": "AddCustomBullet(Attacker,Victim,1502050152,HitCase,0)",
     "ActionExecuteFlag": 0,
     "CDType": "Owner"
   },
@@ -65933,7 +65946,7 @@
   {
     "Id": 1212900102,
     "SkillDesc": "监听入战1共",
-    "CDTime": 0,
+    "CDTime": 4,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -65964,7 +65977,7 @@
   {
     "Id": 1212900204,
     "SkillDesc": "监听入战2共",
-    "CDTime": 0,
+    "CDTime": 4,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -66581,7 +66594,7 @@
   {
     "Id": 1212900813,
     "SkillDesc": "监听入战-添加固有2被动",
-    "CDTime": 0,
+    "CDTime": 4,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -67741,7 +67754,7 @@
   {
     "Id": 150205103201,
     "SkillDesc": "监听自身是否获得[剑舞]buff-1",
-    "CDTime": 1,
+    "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -67770,7 +67783,7 @@
   {
     "Id": 150205103301,
     "SkillDesc": "监听自身是否获得[剑舞]buff-2",
-    "CDTime": 1,
+    "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
     "MaxCount": 1,
@@ -67926,7 +67939,7 @@
     "TriggerFormula": "Attacker!=Owner",
     "SubSkillAction": [],
     "InstigatorType": "Owner",
-    "SkillAction": "AddBuff",
+    "SkillAction": "RemoveBuff",
     "SkillActionParams": [
       "1502092000"
     ],
@@ -68615,7 +68628,7 @@
   },
   {
     "Id": 1413700514,
-    "SkillDesc": "3链-清宵-固有技能1【挂载】-赋予敌人",
+    "SkillDesc": "3链-清宵-固有技能1【集谐挂载】-赋予敌人",
     "CDTime": 0,
     "CdThreshold": -1,
     "ShareGroupId": 0,
@@ -68640,7 +68653,7 @@
     "SkillAction": "Customize",
     "SkillActionParams": [],
     "ActionScriptParams": {},
-    "SkillActionScript": "AddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,1413700407,GetBuffStack(Owner,1413700502),Owner)\nAND\nAddBuff2(Victim,1413700505,1,Owner)",
+    "SkillActionScript": "AddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,3170,1,Owner)\nAND\nAddBuff2(Victim,1413700505,1,Owner)",
     "ActionExecuteFlag": 1,
     "CDType": "Owner"
   },
@@ -69058,6 +69071,62 @@
     "SkillActionParams": [],
     "ActionScriptParams": {},
     "SkillActionScript": "AddBuff2(Victim,3170,1,Attacker)",
+    "ActionExecuteFlag": 1,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1413700012,
+    "SkillDesc": "清宵-复活回满御剑能量",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "TagTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "行为状态.逻辑状态.濒死",
+      "1",
+      "0",
+      "0"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "TRUE",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "AddBuff",
+    "SkillActionParams": [
+      "1413700013"
+    ],
+    "ActionScriptParams": {},
+    "SkillActionScript": "FALSE",
+    "ActionExecuteFlag": 0,
+    "CDType": "Owner"
+  },
+  {
+    "Id": 1413700507,
+    "SkillDesc": "清宵-固有技能1【印记挂载】-赋予敌人",
+    "CDTime": 0,
+    "CdThreshold": -1,
+    "ShareGroupId": 0,
+    "MaxCount": 1,
+    "IsShareAllCdSkill": false,
+    "IsDefaultActivated": true,
+    "TriggerType": "DamageTrigger",
+    "ExecuteType": 0,
+    "TriggerPreset": [
+      "1",
+      "0"
+    ],
+    "TriggerParams": {},
+    "TriggerFormula": "GetBuffStack(Victim,1413700506)==0\nAND\nGetBuffStack(Owner,1413700502)>0\nAND\nDamageValue>=1",
+    "SubSkillAction": [],
+    "InstigatorType": "Owner",
+    "SkillAction": "Customize",
+    "SkillActionParams": [],
+    "ActionScriptParams": {},
+    "SkillActionScript": "AddBuff2(Victim,1413700407,GetBuffStack(Owner,1413700502),Owner)\nAND\nAddBuff2(Victim,1413700506,1,Owner)",
     "ActionExecuteFlag": 1,
     "CDType": "Owner"
   }

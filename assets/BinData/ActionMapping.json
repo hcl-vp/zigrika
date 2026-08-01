@@ -1300,16 +1300,13 @@
     "InputTag": "UiInputRoot.Navigation",
     "ExclusiveType": 0,
     "PcKeys": [
-      "Escape",
-      "RightMouseButton"
+      "Escape"
     ],
     "FrancePcKeys": [
-      "Escape",
-      "RightMouseButton"
+      "Escape"
     ],
     "ThaiPcKeys": [
-      "Escape",
-      "RightMouseButton"
+      "Escape"
     ],
     "GamepadKeys": [
       "Gamepad_FaceButton_Right",
@@ -1318,10 +1315,7 @@
     "MobileIconPath": "",
     "DisplayName": "",
     "IsIdleAction": false,
-    "KeyboardVersionMap": {
-      "0": 1,
-      "2": 1
-    },
+    "KeyboardVersionMap": {},
     "GamepadVersionMap": {}
   },
   {

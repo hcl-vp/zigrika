@@ -6,7 +6,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907751,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000001",
     "Desc": "RoverRogueLoot_Desc_1000000001",
@@ -28,7 +28,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907752,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000002",
     "Desc": "RoverRogueLoot_Desc_1000000002",
@@ -50,7 +50,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907753,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000003",
     "Desc": "RoverRogueLoot_Desc_1000000003",
@@ -72,7 +72,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907754,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000004",
     "Desc": "RoverRogueLoot_Desc_1000000004",
@@ -94,7 +94,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907755,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000005",
     "Desc": "RoverRogueLoot_Desc_1000000005",
@@ -116,7 +116,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907756,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000006",
     "Desc": "RoverRogueLoot_Desc_1000000006",
@@ -138,7 +138,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907757,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000007",
     "Desc": "RoverRogueLoot_Desc_1000000007",
@@ -160,7 +160,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907758,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000008",
     "Desc": "RoverRogueLoot_Desc_1000000008",
@@ -182,7 +182,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907759,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000009",
     "Desc": "RoverRogueLoot_Desc_1000000009",
@@ -204,7 +204,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907760,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000010",
     "Desc": "RoverRogueLoot_Desc_1000000010",
@@ -226,7 +226,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907761,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000011",
     "Desc": "RoverRogueLoot_Desc_1000000011",
@@ -248,7 +248,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907762,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000012",
     "Desc": "RoverRogueLoot_Desc_1000000012",
@@ -270,7 +270,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907763,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000013",
     "Desc": "RoverRogueLoot_Desc_1000000013",
@@ -292,7 +292,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907764,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000014",
     "Desc": "RoverRogueLoot_Desc_1000000014",
@@ -327,7 +327,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907764,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000015",
     "Desc": "RoverRogueLoot_Desc_1000000015",
@@ -362,7 +362,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907766,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000016",
     "Desc": "RoverRogueLoot_Desc_1000000016",
@@ -397,7 +397,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907767,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000017",
     "Desc": "RoverRogueLoot_Desc_1000000017",
@@ -432,7 +432,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907768,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000018",
     "Desc": "RoverRogueLoot_Desc_1000000018",
@@ -470,7 +470,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907769,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000019",
     "Desc": "RoverRogueLoot_Desc_1000000019",
@@ -509,7 +509,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907770,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000020",
     "Desc": "RoverRogueLoot_Desc_1000000020",
@@ -544,7 +544,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907771,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000021",
     "Desc": "RoverRogueLoot_Desc_1000000021",
@@ -582,7 +582,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907764,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000022",
     "Desc": "RoverRogueLoot_Desc_1000000022",
@@ -617,7 +617,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907773,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000023",
     "Desc": "RoverRogueLoot_Desc_1000000023",
@@ -652,7 +652,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907775,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000025",
     "Desc": "RoverRogueLoot_Desc_1000000025",
@@ -687,7 +687,7 @@
     "EffectTrigger": 0,
     "OutGameUnlockConditionId": 12907774,
     "RoomPassedRequired": [
-      20
+      16
     ],
     "Name": "RoverRogueLoot_Name_1000000024",
     "Desc": "RoverRogueLoot_Desc_1000000024",
