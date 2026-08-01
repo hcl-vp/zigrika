@@ -528,7 +528,7 @@ pub fn createRoleEntity(
 
     var concomitants: std.ArrayList(Entity) = .empty;
     defer concomitants.deinit(alloc.gpa);
-    var concomitant_buff_ids: std.array_hash_map.Auto(i64, void) = .empty;
+    var concomitant_buff_ids: std.AutoArrayHashMapUnmanaged(i64, void) = .empty;
     defer concomitant_buff_ids.deinit(alloc.gpa);
     outer: for (blueprint_configs.items) |bp_config| {
         const summon_cfg = blk: {

@@ -19,7 +19,7 @@ pub fn DamageExecuteRequest(
     query: Scene.Query(&.{
         Entity,
         *Entity.FightBuffComponent,
-        *Entity.AttributeComponent,
+        ?*Entity.AttributeComponent,
     }),
     io: std.Io,
     alloc: mem.Alloc,
@@ -48,6 +48,8 @@ pub fn DamageExecuteRequest(
         .ErrorCode = .Success,
         .Damage = execute_data.Damage,
         .ElementType = execute_data.ElementType,
+        .TargetEntityId = request.TargetEntityId,
+        .ChangeLife = execute_data.ChangeLife,
     });
 }
 

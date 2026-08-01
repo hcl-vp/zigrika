@@ -87,7 +87,7 @@ pub fn onPhantomSkinChangeRequest(
         }
     }
 
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     try appendRolesWithMainEcho(echo_comp, alloc.gpa, txn.message.IncrId, &changed_roles);
 
@@ -152,7 +152,7 @@ pub fn onPhantomPutOnRequest(
         return;
     }
 
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     try changed_roles.put(alloc.gpa, txn.message.RoleId, {});
 
@@ -218,7 +218,7 @@ pub fn onPhantomAutoPutRequest(
     io: std.Io,
 ) !void {
     const now_ms = (std.Io.Clock.awake).now(io).toMilliseconds();
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     try changed_roles.put(alloc.gpa, txn.message.RoleId, {});
 

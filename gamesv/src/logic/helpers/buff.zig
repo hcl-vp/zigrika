@@ -265,7 +265,7 @@ fn calculate_buff_effects(
                 buff_data.GameAttributeID,
                 .Delta,
                 .Current,
-                @as(i32, @trunc(@min(calculated, max_value))),
+                @as(i32, @intFromFloat(@trunc(@min(calculated, max_value)))),
                 alloc,
             );
         },

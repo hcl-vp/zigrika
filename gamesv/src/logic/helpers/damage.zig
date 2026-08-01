@@ -9,7 +9,6 @@ const FileSystem = @import("common").FileSystem;
 const Transaction = @import("../handlers.zig").Transaction;
 const attributes_helper = @import("../../logic/helpers/attributes.zig");
 
-// TODO: revamp this in its respective branch :)
 pub fn damageEntity(
     combat_receive_pack: *std.ArrayList(pb.CombatReceiveData),
     request: pb.DamageExecuteRequest,
@@ -20,16 +19,18 @@ pub fn damageEntity(
     query: Scene.Query(&.{
         Entity,
         *Entity.FightBuffComponent,
-        *Entity.AttributeComponent,
+        ?*Entity.AttributeComponent,
     }),
     alloc: mem.Alloc,
 ) !pb.DamageExecuteNotify {
     const log = std.log.scoped(.damage_math);
-    const attacker_entity: Entity, _, const attacker_attr: *Entity.AttributeComponent = blk: {
+
+    // --- attacker lookup ---
+    const attacker_entity: Entity, _, const attacker_attr: ?*Entity.AttributeComponent = blk: {
         if (query.byNetId(request.AttackerEntityId)) |comps| {
             break :blk comps;
         } else {
-            log.debug("couldnt find entity stuff", .{});
+            log.debug("couldnt find attacker entity {}", .{request.AttackerEntityId});
             return pb.DamageExecuteNotify{
                 .Damage = 1,
                 .ElementType = damage.Element,
@@ -37,62 +38,178 @@ pub fn damageEntity(
         }
     };
 
-    const concerto: i32 = blk: {
-        const base = if (damage.ElementPower.len > 0) damage.ElementPower[0] else break :blk 0;
-        const eff_idx = @intFromEnum(pb.EAttributeType.ElementEfficiency);
-        if (attacker_attr.attributes.len > eff_idx) {
-            const concerto_eff = attacker_attr.attributes[eff_idx].current;
-            break :blk @divTrunc(base * concerto_eff, 10000);
+    // --- target lookup ---
+    const target_entity: Entity, _, const target_attr: ?*Entity.AttributeComponent = blk: {
+        if (query.byNetId(request.TargetEntityId)) |comps| {
+            break :blk comps;
+        } else {
+            log.debug("couldnt find target entity {}", .{request.TargetEntityId});
+            return pb.DamageExecuteNotify{
+                .Damage = 1,
+                .ElementType = damage.Element,
+            };
         }
-        break :blk 0;
     };
 
-    const change = try attributes_helper.change_attr(
-        attacker_attr,
-        .ElementEnergy,
-        .Delta,
-        .Current,
-        concerto,
-        alloc,
-    );
+    // --- concerto energy calculation ---
+    if (attacker_attr) |attr| {
+        const concerto: i32 = blk: {
+            const base = if (damage.ElementPower.len > 0) damage.ElementPower[0] else break :blk 0;
+            const eff_idx = @intFromEnum(pb.EAttributeType.ElementEfficiency);
+            if (attr.attributes.len > eff_idx) {
+                const concerto_eff = attr.attributes[eff_idx].current;
+                break :blk @divTrunc(base * concerto_eff, 10000);
+            }
+            break :blk 0;
+        };
 
-    try attributes_helper.generate_attr_messages(
-        combat_receive_pack,
-        request.AttackerEntityId,
-        attacker_attr,
-        &change,
-        alloc,
-        io,
-    );
+        const change = try attributes_helper.change_attr(
+            attr,
+            .ElementEnergy,
+            .Delta,
+            .Current,
+            concerto,
+            alloc,
+        );
 
-    const e_change = try attributes_helper.change_attr(
-        attacker_attr,
-        .Energy,
-        .Delta,
-        .Current,
-        10000000,
-        alloc,
-    );
-    if (change.items.len != 0 or e_change.items.len != 0) {
-        try scene.markFsmDirty(
-            alloc.gpa,
-            attacker_entity.net_id,
-            Entity.FsmComponent.WakeReason.attribute,
+        try attributes_helper.generate_attr_messages(
+            combat_receive_pack,
+            request.AttackerEntityId,
+            attr,
+            &change,
+            alloc,
+            io,
+        );
+
+        const e_change = try attributes_helper.change_attr(
+            attr,
+            .Energy,
+            .Delta,
+            .Current,
+            10000000,
+            alloc,
+        );
+        if (change.items.len != 0 or e_change.items.len != 0) {
+            try scene.markFsmDirty(
+                alloc.gpa,
+                attacker_entity.net_id,
+                Entity.FsmComponent.WakeReason.attribute,
+            );
+        }
+
+        try attributes_helper.generate_attr_messages(
+            combat_receive_pack,
+            request.AttackerEntityId,
+            attr,
+            &e_change,
+            alloc,
+            io,
         );
     }
     try scene.saveComponents(fs, alloc.gpa, attacker_entity, &.{Entity.AttributeComponent});
 
-    try attributes_helper.generate_attr_messages(
-        combat_receive_pack,
-        request.AttackerEntityId,
-        attacker_attr,
-        &e_change,
-        alloc,
-        io,
-    );
+    // --- damage calculation ---
+    // Get the related attribute (typically ATK=7, but config may use others)
+    const related_idx: usize = if (damage.RelatedProperty > 0)
+        @intCast(damage.RelatedProperty)
+    else
+        @intFromEnum(pb.EAttributeType.Atk); // fallback to ATK
+    const related_value: i32 = if (attacker_attr) |attr| blk: {
+        if (related_idx < attr.attributes.len) {
+            break :blk attr.attributes[related_idx].current;
+        }
+        break :blk 0;
+    } else 0;
+
+    // Rate multiplier from skill level
+    const skill_lv: usize = @intCast(@max(request.SkillLevel, 1));
+    const rate: i32 = if (damage.RateLv.len > 0 and damage.RateLv[@min(skill_lv - 1, damage.RateLv.len - 1)] > 0)
+        damage.RateLv[@min(skill_lv - 1, damage.RateLv.len - 1)]
+    else
+        10000;
+
+    // Formula damage multiplier
+    const formula_mul: i32 = if (damage.FormulaParam1.len > 0 and damage.FormulaParam1[0] > 0)
+        damage.FormulaParam1[0]
+    else
+        10000;
+
+    log.debug("dmg calc: related_idx={d} related_val={d} rate={d} formula={d}", .{ related_idx, related_value, rate, formula_mul });
+
+    // Calculate base damage: ATK * Rate / 10000 * Formula / 10000
+    const scaled: i64 = @divTrunc(@as(i64, related_value) * @as(i64, rate), 10000);
+    const base: i64 = @divTrunc(scaled * @as(i64, formula_mul), 10000);
+
+    // DEF reduction: damage * 10000 / (10000 + DEF)
+    const def_value: i32 = if (target_attr) |attr| blk: {
+        const def_idx = @intFromEnum(pb.EAttributeType.Def);
+        break :blk if (attr.attributes.len > def_idx) attr.attributes[def_idx].current else 0;
+    } else 0;
+    const def_factor_num: i64 = 10000;
+    const def_factor_den: i64 = 10000 + @as(i64, def_value);
+    const after_def: i64 = @divTrunc(base * def_factor_num, def_factor_den);
+
+    // Fluctuation: ±FluctuationUpper[0] / 10000 of base damage
+    const fluct_ratio: i32 = if (damage.FluctuationUpper.len > 0) damage.FluctuationUpper[0] else 0;
+    const variance: i64 = @divTrunc(after_def * @as(i64, fluct_ratio), 10000 * 2);
+
+    // Fallback: if formula gives 0, use simple ATK-based damage
+    const damage_amount: i32 = if (after_def > 0)
+        @intCast(@max(after_def - variance, 1))
+    else fallback: {
+        // Simple fallback: ATK * 0.5 - DEF * 0.3, minimum 1
+        const atk_idx2 = @intFromEnum(pb.EAttributeType.Atk);
+        const def_idx2 = @intFromEnum(pb.EAttributeType.Def);
+        const atk2: i32 = if (attacker_attr) |attr| inner: {
+            break :inner if (attr.attributes.len > atk_idx2) attr.attributes[atk_idx2].current else 10;
+        } else 10;
+        const def2: i32 = if (target_attr) |attr| inner: {
+            break :inner if (attr.attributes.len > def_idx2) attr.attributes[def_idx2].current else 0;
+        } else 0;
+        break :fallback @max(@divTrunc(atk2, 2) - @divTrunc(def2, 4), 1);
+    };
+
+    log.debug("dmg result: base={d} def={d} after_def={d} variance={d} final={d}", .{ base, def_value, after_def, variance, damage_amount });
+
+    // --- determine heal vs damage: same camp = heal, different camp = damage ---
+    const attacker_camp = scene.entities.items(.config)[attacker_entity.index].camp;
+    const target_camp = scene.entities.items(.config)[target_entity.index].camp;
+    const is_heal = attacker_camp == target_camp;
+    const life_delta: i32 = if (is_heal) damage_amount else -damage_amount;
+
+    // --- apply HP change to target ---
+    if (target_attr) |attr| {
+        const life_change = try attributes_helper.change_attr(
+            attr,
+            .Life,
+            .Delta,
+            .Current,
+            life_delta,
+            alloc,
+        );
+
+        try attributes_helper.generate_attr_messages(
+            combat_receive_pack,
+            request.TargetEntityId,
+            attr,
+            &life_change,
+            alloc,
+            io,
+        );
+
+        if (life_change.items.len != 0) {
+            try scene.markFsmDirty(
+                alloc.gpa,
+                target_entity.net_id,
+                Entity.FsmComponent.WakeReason.attribute,
+            );
+        }
+    }
+    try scene.saveComponents(fs, alloc.gpa, target_entity, &.{Entity.AttributeComponent});
 
     return pb.DamageExecuteNotify{
-        .Damage = 1,
+        .Damage = damage_amount,
         .ElementType = damage.Element,
+        .ChangeLife = life_delta,
     };
 }

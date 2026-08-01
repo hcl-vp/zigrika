@@ -12,6 +12,12 @@ const buff_helper = @import("../helpers/buff.zig");
 const Allocator = std.mem.Allocator;
 const Entity = Scene.Entity;
 const failure_retry_delay_ms = 50;
+const ScheduledJob = @import("ScheduledJob.zig");
+
+pub const job: ScheduledJob = .{
+    .interval = .ms50,
+    .event_key = .buff_timer_tick,
+};
 
 pub const Kind = enum(u1) {
     expiry,

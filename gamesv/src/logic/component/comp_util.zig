@@ -34,8 +34,8 @@ pub fn loadItems(
         by_data_id,
         by_incr_id,
     },
-) !std.array_hash_map.Auto(i32, Item) {
-    var map: std.array_hash_map.Auto(i32, Item) = .empty;
+) !std.AutoArrayHashMapUnmanaged(i32, Item) {
+    var map: std.AutoArrayHashMapUnmanaged(i32, Item) = .empty;
     errdefer freeMap(gpa, &map);
 
     var temp_allocator = ArenaAllocator.init(gpa);

@@ -81,8 +81,7 @@ pub fn removeBuffHandles(
     for (handle_ids) |handle_id| {
         if (buffs.getByHandleId(handle_id) == null) continue;
         buffs.removeByHandleId(alloc.gpa, handle_id);
-        buff_timers.forgetHandle(entity.net_id, handle_id);
-        buff_timers.markDirty();
+        buff_timers.cancelHandle(entity.net_id, handle_id);
         try notify.Data.append(alloc.arena, .{ .Message = .{
             .CombatNotifyData = .{
                 .CombatCommon = combat_common,
@@ -97,7 +96,7 @@ pub fn removeBuffHandles(
     }
 
     if (notify.Data.items.len == 0) return;
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
     try events.enqueue(.buff_change, .{ .entity = entity });
 }
 
@@ -129,7 +128,7 @@ pub fn addBuffToEntity(
             } else {
                 item[0].markFsmBindHandleExternal(alloc.gpa, buff.HandleId);
             }
-            buff_timers.forgetHandle(event.data.target.net_id, buff.HandleId);
+            buff_timers.cancelHandle(event.data.target.net_id, buff.HandleId);
             buff.Level = 1;
             buff.StackCount = stack_count;
             buff.InstigatorId = event.data.instigator.net_id;
@@ -138,7 +137,6 @@ pub fn addBuffToEntity(
             buff.ApplyType = .Common;
             buff.IsActive = entry.is_active;
             buff.MessageId = -1;
-            buff_timers.markDirty();
         } else {
             scene.*.instance.buff_handle += 1;
             item[0].fight_buff_infos = try alloc.gpa.realloc(item[0].fight_buff_infos, item[0].fight_buff_infos.len + 1);
@@ -158,7 +156,6 @@ pub fn addBuffToEntity(
                     return err;
                 };
             }
-            buff_timers.markDirty();
             try notify.Data.append(alloc.arena, .{ .Message = .{
                 .CombatNotifyData = .{
                     .CombatCommon = combat_common,
@@ -183,7 +180,7 @@ pub fn addBuffToEntity(
         }
     }
 
-    try conn.push(notify, alloc.arena);
+    try conn.push(notify);
 
     try events.enqueue(.buff_change, .{ .entity = event.data.target });
 
@@ -211,20 +208,28 @@ pub fn handleBuffTimerTick(
     }),
 ) !void {
     var combat_receive_pack: std.ArrayList(pb.CombatReceiveData) = .empty;
-    try buff_timers.drainDue(
-        event,
-        events,
-        scene,
-        assets,
-        fs,
-        io,
-        query,
-        &combat_receive_pack,
-        alloc,
-    );
+    const max_iterations = 1000;
+    for (0..max_iterations) |_| {
+        const before = combat_receive_pack.items.len;
+        const peek_due = buff_timers.peekDueMs();
+        try buff_timers.drainOneDue(
+            event,
+            events,
+            scene,
+            assets,
+            fs,
+            io,
+            query,
+            &combat_receive_pack,
+            alloc,
+        );
+        // If nothing was processed, stop
+        if (combat_receive_pack.items.len == before and
+            (buff_timers.peekDueMs() == peek_due or buff_timers.peekDueMs() == null)) break;
+    }
 
     if (combat_receive_pack.items.len != 0) {
-        try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack }, alloc.arena);
+        try conn.push(pb.CombatReceivePackNotify{ .Data = combat_receive_pack });
     }
 }
 

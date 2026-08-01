@@ -18,7 +18,7 @@ pub const battle = struct {
         scene.forceBattleState(mode);
         var data: std.ArrayList(pb.CombatReceiveData) = .empty;
         if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
-            try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+            try conn.push(pb.CombatReceivePackNotify{ .Data = data });
         }
         try events.enqueue(.chat_command_response, .{ .content = "changed battle state" });
     }

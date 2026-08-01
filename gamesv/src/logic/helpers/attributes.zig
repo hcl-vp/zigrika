@@ -216,7 +216,7 @@ pub fn change_attr(
     if (hp_ratio_before) |ratio| {
         if (life_max_idx < attr_comp.attributes.len and life_idx < attr_comp.attributes.len) {
             const new_max = attr_comp.attributes[life_max_idx].current;
-            const new_hp: i32 = @as(i32, @round(@as(f32, @floatFromInt(new_max)) * ratio));
+            const new_hp: i32 = @intFromFloat(@round(@as(f32, @floatFromInt(new_max)) * ratio));
             const clamped = std.math.clamp(new_hp, 0, new_max);
             attr_comp.attributes[life_idx].base = clamped;
             attr_comp.attributes[life_idx].current = clamped;

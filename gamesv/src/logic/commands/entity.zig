@@ -17,6 +17,7 @@ const RoleEntityTemplates = @import("../../logic/templates/RoleEntityTemplates.z
 const entity_attributes = @import("../../logic/helpers/entity_attributes.zig");
 const gameplay_tags = @import("../../logic/helpers/gameplay_tags.zig");
 const respond = @import("../commands.zig").respond;
+const BuffTimerScheduler = @import("../schedulers/BuffTimerScheduler.zig");
 
 const EntitySpawnBase = struct {
     config_type: ConfigComponent.ConfigType,
@@ -259,10 +260,10 @@ fn publishDebugSpawn(
             "globalThis.__zigrikaSetEntitySourceMap?.({d},{d},{s},{d});",
             .{ config_id, source_map_id, if (repeat_boss) "true" else "false", entity.net_id },
         ),
-    }, alloc.arena);
+    });
     route_patch_sent.* = true;
 
-    try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs }, alloc.arena);
+    try conn.push(pb.EntityAddNotify{ .EntityPbs = entity_pbs });
 }
 
 fn removeClientDebugSpawnOwner(
@@ -276,7 +277,7 @@ fn removeClientDebugSpawnOwner(
         "globalThis.__zigrikaRemoveEntitySourceOwner?.({d},{d});",
         .{ config_id, net_id },
     ) catch return;
-    conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena) catch {};
+    conn.push(pb.JSPatchNotify{ .Content = content }) catch {};
 }
 
 pub const spawn = struct {
@@ -366,7 +367,18 @@ pub const spawn = struct {
         else
             null;
         const attribute_component: ?Entity.AttributeComponent = if (use_ai_runtime)
-            combat_attributes orelse Entity.AttributeComponent{}
+            combat_attributes orelse blk: {
+                // fallback: create minimal monster attributes
+                const attr_count = @intFromEnum(pb.EAttributeType.ElementEnergy) + 1;
+                const props = try alloc.gpa.alloc(Entity.AttributeComponent.Attribute, attr_count);
+                @memset(props, .{ .base = 0, .increment = 0, .current = 0 });
+                props[@intFromEnum(pb.EAttributeType.Lv)] = .{ .base = 1, .increment = 0, .current = 1 };
+                props[@intFromEnum(pb.EAttributeType.LifeMax)] = .{ .base = 1000, .increment = 0, .current = 1000 };
+                props[@intFromEnum(pb.EAttributeType.Life)] = .{ .base = 1000, .increment = 0, .current = 1000 };
+                props[@intFromEnum(pb.EAttributeType.Atk)] = .{ .base = 50, .increment = 0, .current = 50 };
+                props[@intFromEnum(pb.EAttributeType.Def)] = .{ .base = 20, .increment = 0, .current = 20 };
+                break :blk Entity.AttributeComponent{ .attributes = props };
+            }
         else
             null;
         var tag_component: ?Entity.TagComponent = if (use_ai_runtime)
@@ -537,7 +549,11 @@ pub const reset_formation = struct {
         echo_comp: *PlayerEchoComponent,
         conn: *Connection,
         alloc: mem.Alloc,
+        buff_timers: *BuffTimerScheduler,
+        io: std.Io,
     ) !void {
+        const clock: std.Io.Clock = .awake;
+        const now_ms = clock.now(io).toMilliseconds();
         try RoleHelper.resetRoles(
             scene,
             fs,
@@ -548,6 +564,8 @@ pub const reset_formation = struct {
             conn,
             alloc,
             null,
+            buff_timers,
+            now_ms,
         );
         try respond(events, alloc.arena, "reset formation successfully", .{});
     }

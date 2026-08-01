@@ -44,7 +44,7 @@ fn notifyTransportRoadways(fs: *FileSystem, alloc: mem.Alloc, scene: *Scene, con
     try conn.push(pb.SceneRoadSyncNotify{
         .InstanceId = scene.instance_id,
         .EnabledRoads = roads,
-    }, alloc.arena);
+    });
 }
 
 fn notifyInfrastructureRoadData(alloc: mem.Alloc, conn: *Connection, assets: *const Assets) !void {
@@ -63,7 +63,7 @@ fn notifyInfrastructureRoadData(alloc: mem.Alloc, conn: *Connection, assets: *co
 
     try conn.push(pb.InfrRoadUpdateNotify{
         .RoadInfo = .{ .Roads = roads },
-    }, alloc.arena);
+    });
 }
 
 fn containsI32(items: []const i32, value: i32) bool {
@@ -118,7 +118,7 @@ pub fn handleSceneCleanupTick(
     for (combine_detaches) |detach| try data.append(alloc.arena, Scene.removeCombineNotify(detach));
     if (data.items.len == 0) return;
 
-    try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    try conn.push(pb.CombatReceivePackNotify{ .Data = data });
     for (combine_detaches) |detach| try scene.signalFsmDissolveCombine(alloc.gpa, detach.combine_entity_id);
     scene.clearPendingCombineDetaches();
 }
@@ -149,11 +149,11 @@ pub fn exploreSkillNotify(alloc: mem.Alloc, scene: *Scene, conn: *Connection) !v
     try conn.push(pb.ExploreToolAllNotify{
         .ExploreSkill = scene.explore_tools_info.active_explore_skill,
         .SkillList = sliceToArrayList(i32, scene.explore_tools_info.unlocked_explore_skills),
-    }, alloc.arena);
+    });
     try conn.push(pb.ExploreSkillRouletteUpdateNotify{
         .RouletteInfo = roulette_info,
-    }, alloc.arena);
-    try conn.push(vision_explore_notify, alloc.arena);
+    });
+    try conn.push(vision_explore_notify);
 }
 
 fn has_scene_data(fs: *FileSystem, arena: std.mem.Allocator, player_id: i32) bool {
@@ -190,6 +190,9 @@ pub fn onInitialSceneJoin(
         role_comp,
         weapon_comp,
         if (cur_scene.*) |*active_scene| active_scene else null,
+        &timers.buffs,
+        assets,
+        0,
     );
 
     if (cur_scene.*) |*scene| {
@@ -448,7 +451,7 @@ pub fn notifyJoinScene(
         .MaxEntityId = 0,
         .SceneInfo = scene_info,
         .TransitionOption = .{},
-    }, alloc.arena);
+    });
 
     try events.enqueue(.after_scene_join, .{
         .pending_flow = event.data.pending_flow,
@@ -548,7 +551,7 @@ pub fn formationUpdateNotify(
         }
     }
 
-    try conn.push(update_formation_notify, alloc.arena);
+    try conn.push(update_formation_notify);
 }
 
 pub fn afterSceneJoin(
@@ -562,8 +565,8 @@ pub fn afterSceneJoin(
     player_id: PlayerID,
     alloc: mem.Alloc,
 ) !void {
-    try conn.push(pb.AfterJoinSceneNotify{}, alloc.arena);
-    try conn.push(pb.SwitchBattleModeNotify{}, alloc.arena);
+    try conn.push(pb.AfterJoinSceneNotify{});
+    try conn.push(pb.SwitchBattleModeNotify{});
     try notifyTransportRoadways(fs, alloc, scene, conn, assets);
     try notifyInfrastructureRoadData(alloc, conn, assets);
 
@@ -571,19 +574,15 @@ pub fn afterSceneJoin(
     const fsm_clock: Io.Clock = .awake;
     const now_ms = rtc.now(io).toMilliseconds();
     const fsm_now_ms = fsm_clock.now(io).toMilliseconds();
-    scene.scene_time = .{
-        .timestamp = now_ms,
-        .last_packet_time = now_ms,
-        .dilation = 1.0,
-    };
+    scene.scene_time.reset(now_ms, fsm_now_ms);
     try scene.initFsmRuntimes(alloc.gpa, fsm_now_ms);
     try conn.push(pb.TimeCheckNotify{
         .ClientTime = 0,
         .ServerTime = now_ms,
         .ServerCombatTime = now_ms,
         .ServerStopTime = now_ms,
-        .ServerFlowTimestamp = scene.scene_time.timestamp,
-    }, alloc.arena);
+        .ServerFlowTimestamp = scene.scene_time.currentFlowTimestamp(fsm_now_ms),
+    });
     try events.enqueue(.update_formations, .{});
 
     var formation_attrs: std.ArrayList(pb.FormationAttr) = .empty;
@@ -596,7 +595,7 @@ pub fn afterSceneJoin(
         .Duration = 1534854458,
         .FormationAttrs = formation_attrs,
     };
-    try conn.push(formation_attr_notify, alloc.arena);
+    try conn.push(formation_attr_notify);
 
     const no_uid_watermark = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, "assets/scripts/join_scene_patches/uid_watermark.js", alloc.gpa, Io.Limit.unlimited);
     defer alloc.gpa.free(no_uid_watermark);
@@ -606,7 +605,7 @@ pub fn afterSceneJoin(
 
     const watermark_js = try std.mem.replaceOwned(u8, alloc.gpa, no_uid_watermark, "{PLR_UID}", uid_str);
     defer alloc.gpa.free(watermark_js);
-    try conn.push(pb.JSPatchNotify{ .Content = watermark_js }, alloc.arena);
+    try conn.push(pb.JSPatchNotify{ .Content = watermark_js });
 
     const patch_files = [_][]const u8{
         "assets/scripts/join_scene_patches/goon_camera.js",
@@ -624,7 +623,7 @@ pub fn afterSceneJoin(
     for (patch_files) |path| {
         const content = try Io.Dir.readFileAlloc(Io.Dir.cwd(), fs.io, path, alloc.gpa, Io.Limit.unlimited);
         defer alloc.gpa.free(content);
-        try conn.push(pb.JSPatchNotify{ .Content = content }, alloc.arena);
+        try conn.push(pb.JSPatchNotify{ .Content = content });
     }
 
     // shitty solution for a shitty problem...
@@ -634,6 +633,6 @@ pub fn afterSceneJoin(
             .FlowListName = flow.namespace,
             .FlowId = flow.id,
             .StateId = flow.state,
-        }, alloc.arena);
+        });
     }
 }

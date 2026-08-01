@@ -133,7 +133,7 @@ pub fn presetToProto(group: VisionGroup, arena: Allocator) !pb.RefreshVisionEqui
 pub fn addDefaults(
     gpa: Allocator,
     assets: *const Assets,
-    echo_map: *std.array_hash_map.Auto(i32, EchoInfo),
+    echo_map: *std.AutoArrayHashMapUnmanaged(i32, EchoInfo),
     start_incr_id: i32,
 ) !void {
     var next_incr_id = start_incr_id;

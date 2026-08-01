@@ -11,6 +11,12 @@ const Assets = @import("../../data/Assets.zig");
 
 const Allocator = std.mem.Allocator;
 const flush_delay_ms = 30_000;
+const ScheduledJob = @import("ScheduledJob.zig");
+
+pub const job: ScheduledJob = .{
+    .interval = .s1,
+    .event_key = .dirty_save_tick,
+};
 
 role_ids: std.ArrayListUnmanaged(i32) = .empty,
 weapon_ids: std.ArrayListUnmanaged(i32) = .empty,

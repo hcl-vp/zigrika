@@ -38,9 +38,16 @@ pub const EntityMovement = struct {
     entity: Entity,
 };
 
+pub const NaturalExpirationInfo = struct {
+    now_ms: i64,
+    instigator: Entity,
+    follow_up_buffs: []BuffAdditionEntry,
+};
+
 pub const BuffRemoval = struct {
     entity: Entity,
     handle_ids: []i32,
+    natural_expiration: ?NaturalExpirationInfo = null,
 };
 
 pub const BuffRemovalById = struct {

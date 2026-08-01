@@ -33,7 +33,7 @@ pub fn defaultFuncValue(assets: *const Assets, item_id: i32) i32 {
     return if (isGold(assets, item_id)) 0 else 1;
 }
 
-pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.array_hash_map.Auto(i32, WeaponItem)) !void {
+pub fn addDefaults(gpa: Allocator, assets: *const Assets, map: *std.AutoArrayHashMapUnmanaged(i32, WeaponItem)) !void {
     for (assets.tables.weapon_conf.items) |info| {
         try map.put(gpa, @intCast(map.entries.len + 1), .{
             .id = info.ItemId,

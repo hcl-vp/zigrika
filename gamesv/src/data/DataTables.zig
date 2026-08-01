@@ -309,7 +309,7 @@ pub fn deinit(tables: *DataTables) void {
 pub fn Table(comptime T: type, comptime key_field: [:0]const u8) type {
     const KeyType = @FieldType(T, key_field);
     const IndexMap = switch (@typeInfo(KeyType)) {
-        .int, .comptime_int => std.array_hash_map.Auto(KeyType, usize),
+        .int, .comptime_int => std.AutoArrayHashMapUnmanaged(KeyType, usize),
         .pointer => std.StringArrayHashMapUnmanaged(usize),
         else => @compileError("unsupported key type: " ++ @typeName(KeyType)),
     };

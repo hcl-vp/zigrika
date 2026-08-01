@@ -13,8 +13,8 @@ const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
 
 player_id: i32,
-role_map: std.array_hash_map.Auto(i32, RoleInfo),
-equipment_map: std.array_hash_map.Auto(i32, RoleEquipment),
+role_map: std.AutoArrayHashMapUnmanaged(i32, RoleInfo),
+equipment_map: std.AutoArrayHashMapUnmanaged(i32, RoleEquipment),
 
 pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i32) !PlayerRoleComponent {
     var arena = std.heap.ArenaAllocator.init(gpa);

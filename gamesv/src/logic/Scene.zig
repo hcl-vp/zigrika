@@ -21,7 +21,7 @@ instance: SceneInstance,
 formation_info: FormationInfo,
 explore_tools_info: ExploreToolsInfo,
 entities: std.MultiArrayList(EntityComponentStorage) = .empty,
-net_id_map: std.array_hash_map.Auto(i64, usize) = .empty,
+net_id_map: std.AutoArrayHashMapUnmanaged(i64, usize) = .empty,
 scene_time: TimeInfo = .{},
 active_battle_entities: std.AutoHashMapUnmanaged(i64, void) = .empty,
 fsm_hate_states: std.AutoHashMapUnmanaged(i64, bool) = .empty,
@@ -144,7 +144,7 @@ pub fn Query(comptime types: []const type) type {
 
         pub const Iterator = struct {
             entities: *std.MultiArrayList(EntityComponentStorage),
-            net_id_map: ?*const std.array_hash_map.Auto(i64, usize) = null,
+            net_id_map: ?*const std.AutoArrayHashMapUnmanaged(i64, usize) = null,
             index: usize = 0,
 
             pub fn next(it: *Iterator) ?Item {

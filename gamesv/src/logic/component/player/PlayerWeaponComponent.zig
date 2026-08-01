@@ -11,7 +11,7 @@ const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
 
 player_id: i32,
-weapon_map: std.array_hash_map.Auto(i32, WeaponItem),
+weapon_map: std.AutoArrayHashMapUnmanaged(i32, WeaponItem),
 
 pub fn init(gpa: Allocator, fs: *FileSystem, assets: *const Assets, player_id: i32) !PlayerWeaponComponent {
     var weapon_map = try comp_util.loadItems(WeaponItem, gpa, fs, assets, player_id, .by_incr_id);
@@ -33,7 +33,7 @@ pub fn saveAll(
     gpa: Allocator,
     fs: *FileSystem,
     player_id: i32,
-    weapon_map: std.array_hash_map.Auto(i32, WeaponItem),
+    weapon_map: std.AutoArrayHashMapUnmanaged(i32, WeaponItem),
 ) !void {
     var arena_state = std.heap.ArenaAllocator.init(gpa);
     defer arena_state.deinit();

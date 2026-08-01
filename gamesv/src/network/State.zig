@@ -69,12 +69,16 @@ pub fn init(
 }
 
 pub fn deinit(s: *State, fs: *FileSystem) void {
+    const now_ms = s.timers.timed_logic.next_due_ms[0];
     s.dirty_saves.flush(
         s.gpa,
         fs,
         &s.player_components.role,
         &s.player_components.weapon,
         if (s.scene) |*scene| scene else null,
+        &s.timers.buffs,
+        s.assets,
+        if (now_ms == 0) 0 else now_ms,
     ) catch |err| {
         log.err("failed to flush dirty saves during session cleanup: {t}", .{err});
     };

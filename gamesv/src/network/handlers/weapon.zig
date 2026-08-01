@@ -84,7 +84,7 @@ fn syncWeaponPassiveBuffs(
     }
 
     if (notify.Data.items.len == 0) return false;
-    try txn.conn.push(notify, alloc.arena);
+    try txn.conn.push(notify);
     try scene.markFsmDirty(alloc.gpa, entity.net_id, Scene.Entity.FsmComponent.WakeReason.buff);
     return true;
 }
@@ -244,7 +244,7 @@ pub fn onWeaponBreachRequest(
         try txn.conn.push(pb.EntityEquipChangeNotify{
             .EntityId = entity.net_id,
             .EquipComponent = try equip.toProto(),
-        }, alloc.arena);
+        });
         try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, config_item.config_id);
         break;
     }
@@ -318,7 +318,7 @@ pub fn onWeaponResonUpRequest(
     };
     target_weapon.reson_level += 1;
     try events.enqueue(.weapon_info_modified, .{ .incr_id = request.IncId });
-    try txn.conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids }, alloc.arena);
+    try txn.conn.push(pb.WeaponItemRemoveNotify{ .WeaponItemIncrIdList = removed_ids });
 
     if (target_weapon.role_id) |role_id| {
         const old_reson = assets.tables.getWeaponReson(config.ResonId, target_weapon.reson_level - 1);
@@ -421,7 +421,7 @@ pub fn onEquipTakeOnRequest(
                 try txn.conn.push(pb.EntityEquipChangeNotify{
                     .EntityId = entity.net_id,
                     .EquipComponent = try equip.toProto(),
-                }, alloc.arena);
+                });
                 break;
             }
             try scene.saveEntity(fs, alloc.gpa, entity);
@@ -463,7 +463,7 @@ pub fn onEquipTakeOnRequest(
             try txn.conn.push(pb.EntityEquipChangeNotify{
                 .EntityId = entity.net_id,
                 .EquipComponent = try equip.toProto(),
-            }, alloc.arena);
+            });
             break;
         }
     }
@@ -475,6 +475,6 @@ pub fn onEquipTakeOnRequest(
         try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, old_role_id);
     }
     try RoleAttributeSync.refreshRole(txn, alloc, fs, scene, assets, role_comp, weapon_comp, echo_comp, stat_query, data.RoleId);
-    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data }, alloc.arena);
+    try txn.conn.push(pb.EquipTakeOnNotify{ .DataList = send_data });
     txn.respond(.{ .ErrorCode = .Success, .DataList = send_data });
 }

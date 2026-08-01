@@ -12,7 +12,7 @@ const Allocator = std.mem.Allocator;
 const FileSystem = common.FileSystem;
 
 player_id: i32,
-echo_map: std.array_hash_map.Auto(i32, EchoInfo),
+echo_map: std.AutoArrayHashMapUnmanaged(i32, EchoInfo),
 preset_info: EchoInfo.PresetInfo,
 calabash_info: EchoInfo.CalabashInfo,
 
@@ -22,7 +22,7 @@ pub fn init(
     assets: *const Assets,
     player_id: i32,
 ) !PlayerEchoComponent {
-    var echo_map: std.array_hash_map.Auto(i32, EchoInfo) = .empty;
+    var echo_map: std.AutoArrayHashMapUnmanaged(i32, EchoInfo) = .empty;
     errdefer comp_util.freeMap(gpa, &echo_map);
 
     var arena_state = std.heap.ArenaAllocator.init(gpa);
@@ -106,7 +106,7 @@ pub fn saveAll(
     gpa: Allocator,
     fs: *FileSystem,
     player_id: i32,
-    echo_map: std.array_hash_map.Auto(i32, EchoInfo),
+    echo_map: std.AutoArrayHashMapUnmanaged(i32, EchoInfo),
 ) !void {
     var arena_state = std.heap.ArenaAllocator.init(gpa);
     defer arena_state.deinit();
@@ -364,7 +364,7 @@ pub fn activeFetterIds(comp: *PlayerEchoComponent, gpa: Allocator, assets: *cons
 
     const equip = comp.roleEquip(role_id);
 
-    var counts: std.array_hash_map.Auto(i32, i32) = .empty;
+    var counts: std.AutoArrayHashMapUnmanaged(i32, i32) = .empty;
     defer counts.deinit(gpa);
     var seen: std.hash_map.AutoHashMapUnmanaged(i64, void) = .empty;
     defer seen.deinit(gpa);

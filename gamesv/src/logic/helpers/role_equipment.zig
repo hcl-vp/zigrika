@@ -46,8 +46,8 @@ pub const Snapshot = struct {
 };
 
 pub const DisplayProps = struct {
-    base_props: std.array_hash_map.Auto(i32, i32),
-    add_props: std.array_hash_map.Auto(i32, i32),
+    base_props: std.AutoArrayHashMapUnmanaged(i32, i32),
+    add_props: std.AutoArrayHashMapUnmanaged(i32, i32),
 
     pub fn deinit(display: *DisplayProps, gpa: Allocator) void {
         display.base_props.deinit(gpa);
@@ -58,7 +58,7 @@ pub const DisplayProps = struct {
 original_base_values: []i32 = &.{},
 base_props: []i32 = &.{},
 add_props: []i32 = &.{},
-equipment_contributions: std.array_hash_map.Auto(SourceKey, []Contribution) = .empty,
+equipment_contributions: std.AutoArrayHashMapUnmanaged(SourceKey, []Contribution) = .empty,
 
 pub fn build(
     gpa: Allocator,
@@ -349,7 +349,7 @@ fn contributionFromPropValue(prop_id: i32, value: f64, is_ratio: bool, display_m
     return .{
         .attr_index = attr_index,
         .is_ratio = is_ratio,
-        .value = if (is_ratio) 0 else @as(i32, @round(value)),
+        .value = if (is_ratio) 0 else @as(i32, @intFromFloat(@round(value))),
         .ratio = if (is_ratio) value else 0,
         .display_mode = if (is_ratio) .add else display_mode,
     };
@@ -382,7 +382,7 @@ fn contributionFromBuff(buff: Assets.DataTables.Buff, display_mode: DisplayMode)
 fn valueForBase(contribution: Contribution, base_props: []const i32) i32 {
     if (!contribution.is_ratio) return contribution.value;
     if (contribution.attr_index >= base_props.len) return 0;
-    return @as(i32, @round(@as(f64, @floatFromInt(base_props[contribution.attr_index])) * contribution.ratio));
+    return @as(i32, @intFromFloat(@round(@as(f64, @floatFromInt(base_props[contribution.attr_index])) * contribution.ratio)));
 }
 
 fn addBaseValue(equipment: *RoleEquipment, attr_index: usize, value: i32) void {
@@ -403,7 +403,7 @@ fn addIncrementValue(equipment: *RoleEquipment, attr_index: usize, value: i32) v
     }
 }
 
-fn addDisplayProp(gpa: Allocator, map: *std.array_hash_map.Auto(i32, i32), key: i32, value: i32) !void {
+fn addDisplayProp(gpa: Allocator, map: *std.AutoArrayHashMapUnmanaged(i32, i32), key: i32, value: i32) !void {
     const current = map.get(key) orelse 0;
     try map.put(gpa, key, current + value);
 }

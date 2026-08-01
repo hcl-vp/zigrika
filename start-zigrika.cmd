@@ -13,14 +13,18 @@ set "ZIG_ZIP=%DIRENV_DIR%\%ZIG_DIST%.zip"
 set "ZIG_URL=https://ziglang.org/download/%ZIG_VERSION%/%ZIG_DIST%.zip"
 
 for /f "delims=" %%V in ('zig version 2^>nul') do set "PATH_ZIG_VERSION=%%V"
-if /i "!PATH_ZIG_VERSION!"=="%ZIG_VERSION%" goto :run_commands
+if defined PATH_ZIG_VERSION (
+    echo !PATH_ZIG_VERSION! | findstr /b /c:"%ZIG_VERSION%" >nul && goto :run_commands
+)
 
 if exist "%ZIG_EXE%" (
     set "LOCAL_ZIG_VERSION="
     for /f "delims=" %%V in ('"%ZIG_EXE%" version 2^>nul') do set "LOCAL_ZIG_VERSION=%%V"
-    if /i "!LOCAL_ZIG_VERSION!"=="%ZIG_VERSION%" (
-        set "PATH=%ZIG_DIR%;%PATH%"
-        goto :run_commands
+    if defined LOCAL_ZIG_VERSION (
+        echo !LOCAL_ZIG_VERSION! | findstr /b /c:"%ZIG_VERSION%" >nul && (
+            set "PATH=%ZIG_DIR%;%PATH%"
+            goto :run_commands
+        )
     )
 )
 

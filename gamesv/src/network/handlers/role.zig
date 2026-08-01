@@ -45,7 +45,7 @@ fn pushPhantomEquipNotify(
     echo_comp: *PlayerEchoComponent,
     role_id: i32,
 ) !void {
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     try changed_roles.put(alloc.gpa, role_id, {});
 

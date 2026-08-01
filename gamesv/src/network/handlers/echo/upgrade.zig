@@ -77,7 +77,7 @@ pub fn onPhantomLevelUpRequest(
         return;
     }
 
-    var consumes: std.array_hash_map.Auto(i32, i32) = .empty;
+    var consumes: std.AutoArrayHashMapUnmanaged(i32, i32) = .empty;
     defer consumes.deinit(alloc.gpa);
 
     var exp_total: i32 = 0;
@@ -334,7 +334,7 @@ pub fn onPhantomBatchPolishRequest(
 
     var seen: std.hash_map.AutoHashMapUnmanaged(i32, void) = .empty;
     defer seen.deinit(alloc.gpa);
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer changed_roles.deinit(alloc.gpa);
     var update_infos: std.ArrayList(pb.PhantomItem) = .empty;
 
@@ -550,8 +550,8 @@ fn validatedLockPropIndexes(
     gpa: std.mem.Allocator,
     prop_count: usize,
     indexes: []const i32,
-) !std.array_hash_map.Auto(usize, void) {
-    var lock_indices: std.array_hash_map.Auto(usize, void) = .empty;
+) !std.AutoArrayHashMapUnmanaged(usize, void) {
+    var lock_indices: std.AutoArrayHashMapUnmanaged(usize, void) = .empty;
     errdefer lock_indices.deinit(gpa);
 
     for (indexes) |index| {
@@ -575,7 +575,7 @@ fn buildVicePolishProps(
     assets: *const Assets,
     item: EchoInfo,
     item_config: Assets.DataTables.PhantomItem,
-    lock_indices: std.array_hash_map.Auto(usize, void),
+    lock_indices: std.AutoArrayHashMapUnmanaged(usize, void),
     random_seed: u64,
 ) ![]EchoInfo.Prop {
     var prng = std.Random.DefaultPrng.init(random_seed);

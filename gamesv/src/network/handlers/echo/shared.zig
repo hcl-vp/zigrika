@@ -17,6 +17,7 @@ const Attributes = @import("../../../logic/helpers/attributes.zig");
 const RoleAttributeSync = @import("../../helpers/role_attribute_sync.zig");
 const sliceToArrayList = @import("../../../logic/component/entity/EntityComponentStorage.zig").sliceToArrayList;
 const Entity = Scene.Entity;
+const BuffTimerScheduler = @import("../../../logic/schedulers/BuffTimerScheduler.zig");
 pub fn phantomItemList(echo_comp: *PlayerEchoComponent, arena: std.mem.Allocator) !std.ArrayList(pb.PhantomItem) {
     var list: std.ArrayList(pb.PhantomItem) = .empty;
     try list.ensureTotalCapacity(arena, echo_comp.echo_map.count());
@@ -74,7 +75,7 @@ pub fn changedRolePropInfoList(
     role_comp: *PlayerRoleComponent,
     echo_comp: *PlayerEchoComponent,
     weapon_comp: *PlayerWeaponComponent,
-    changed_roles: std.array_hash_map.Auto(i32, void),
+    changed_roles: std.AutoArrayHashMapUnmanaged(i32, void),
     gpa: std.mem.Allocator,
     arena: std.mem.Allocator,
 ) !std.ArrayList(pb.RolePhantomPropInfo) {
@@ -106,7 +107,7 @@ fn rolePropInfo(
     };
 }
 
-fn propMapToList(map: std.array_hash_map.Auto(i32, i32), arena: std.mem.Allocator) !std.ArrayList(pb.ArrayIntInt) {
+fn propMapToList(map: std.AutoArrayHashMapUnmanaged(i32, i32), arena: std.mem.Allocator) !std.ArrayList(pb.ArrayIntInt) {
     var list: std.ArrayList(pb.ArrayIntInt) = .empty;
     try list.ensureTotalCapacity(arena, map.count());
     for (map.keys(), map.values()) |key, value| {
@@ -117,7 +118,7 @@ fn propMapToList(map: std.array_hash_map.Auto(i32, i32), arena: std.mem.Allocato
 
 pub fn changedEquipInfoList(
     echo_comp: *PlayerEchoComponent,
-    changed_roles: std.array_hash_map.Auto(i32, void),
+    changed_roles: std.AutoArrayHashMapUnmanaged(i32, void),
     arena: std.mem.Allocator,
 ) !std.ArrayList(pb.RolePhantomEquipInfo) {
     var list: std.ArrayList(pb.RolePhantomEquipInfo) = .empty;
@@ -131,7 +132,7 @@ pub fn changedEquipInfoList(
 
 pub fn addConsume(
     gpa: std.mem.Allocator,
-    consumes: *std.array_hash_map.Auto(i32, i32),
+    consumes: *std.AutoArrayHashMapUnmanaged(i32, i32),
     item_id: i32,
     count: i32,
 ) !void {
@@ -171,8 +172,8 @@ pub fn rolesEquippingEcho(
     echo_comp: *PlayerEchoComponent,
     gpa: std.mem.Allocator,
     inc_id: i32,
-) !std.array_hash_map.Auto(i32, void) {
-    var changed_roles: std.array_hash_map.Auto(i32, void) = .empty;
+) !std.AutoArrayHashMapUnmanaged(i32, void) {
+    var changed_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     try appendRolesEquippingEcho(echo_comp, gpa, inc_id, &changed_roles);
     return changed_roles;
 }
@@ -181,7 +182,7 @@ pub fn appendRolesEquippingEcho(
     echo_comp: *PlayerEchoComponent,
     gpa: std.mem.Allocator,
     inc_id: i32,
-    changed_roles: *std.array_hash_map.Auto(i32, void),
+    changed_roles: *std.AutoArrayHashMapUnmanaged(i32, void),
 ) !void {
     if (echo_comp.equippedEchoByIncrId(inc_id)) |equip| {
         try changed_roles.put(gpa, equip.role_id, {});
@@ -192,7 +193,7 @@ pub fn appendRolesWithMainEcho(
     echo_comp: *PlayerEchoComponent,
     gpa: std.mem.Allocator,
     inc_id: i32,
-    changed_roles: *std.array_hash_map.Auto(i32, void),
+    changed_roles: *std.AutoArrayHashMapUnmanaged(i32, void),
 ) !void {
     if (echo_comp.equippedEchoByIncrId(inc_id)) |equip| {
         if (equip.pos == 0) try changed_roles.put(gpa, equip.role_id, {});
@@ -206,11 +207,11 @@ pub fn pushRolePropUpdate(
     role_comp: *PlayerRoleComponent,
     echo_comp: *PlayerEchoComponent,
     weapon_comp: *PlayerWeaponComponent,
-    changed_roles: std.array_hash_map.Auto(i32, void),
+    changed_roles: std.AutoArrayHashMapUnmanaged(i32, void),
 ) !void {
     try txn.conn.push(pb.RolePhantomPropUpdateNotify{
         .PropInfo = try changedRolePropInfoList(assets, role_comp, echo_comp, weapon_comp, changed_roles, alloc.gpa, alloc.arena),
-    }, alloc.arena);
+    });
 }
 
 pub fn refreshRoleEntities(
@@ -230,11 +231,15 @@ pub fn refreshRoleEntities(
         *Entity.AttributeComponent,
         *Entity.FightBuffComponent,
     }),
-    changed_roles: std.array_hash_map.Auto(i32, void),
+    changed_roles: std.AutoArrayHashMapUnmanaged(i32, void),
+    buff_timers: *BuffTimerScheduler,
+    io: std.Io,
+    now_ms: i64,
 ) !void {
+    _ = io;
     const instance_dungeon = assets.tables.instance_dungeon.getDataById(scene.instance_id) orelse return;
 
-    var reset_roles: std.array_hash_map.Auto(i32, void) = .empty;
+    var reset_roles: std.AutoArrayHashMapUnmanaged(i32, void) = .empty;
     defer reset_roles.deinit(alloc.gpa);
 
     var it = query.iterator;
@@ -307,6 +312,8 @@ pub fn refreshRoleEntities(
             txn.conn,
             alloc,
             reset_roles.keys(),
+            buff_timers,
+            now_ms,
         );
     }
 
@@ -414,13 +421,13 @@ fn syncVisionEntities(
         try txn.conn.push(pb.EntityRemoveNotify{
             .IsRemove = true,
             .RemoveInfos = remove_infos,
-        }, alloc.arena);
+        });
     }
     if (add_pbs.items.len != 0) {
         try txn.conn.push(pb.EntityAddNotify{
             .RemoveTagIds = false,
             .EntityPbs = add_pbs,
-        }, alloc.arena);
+        });
     }
 
     return .{
@@ -483,7 +490,7 @@ fn syncVisionSkills(
     try txn.conn.push(pb.VisionSkillChangeNotify{
         .EntityId = role_entity_id,
         .VisionSkillInfos = sliceToArrayList(pb.VisionSkillInformation, vision_skill_comp.vision_skills),
-    }, alloc.arena);
+    });
     return true;
 }
 
@@ -597,7 +604,7 @@ fn pushChangedAttributes(
         } });
     }
 
-    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    try txn.conn.push(pb.CombatReceivePackNotify{ .Data = data });
 }
 
 fn syncEchoBuffEffects(
@@ -666,7 +673,7 @@ fn syncEchoBuffEffects(
     }
 
     if (notify.Data.items.len != 0) {
-        try txn.conn.push(notify, alloc.arena);
+        try txn.conn.push(notify);
         return true;
     }
     return false;

@@ -213,7 +213,7 @@ fn drainGameplayDeadlines(state: *State, now_ms: i64) bool {
     if (state.scene) |*scene| {
         if (!budget.canStart(clock.now(state.io).toNanoseconds())) return scheduled_changed;
 
-        state.buff_timers.ensureInitialized(
+        state.timers.buffs.ensureInitialized(
             state.gpa,
             scene,
             state.assets,
@@ -224,7 +224,7 @@ fn drainGameplayDeadlines(state: *State, now_ms: i64) bool {
         };
 
         while (budget.canStart(clock.now(state.io).toNanoseconds()) and
-            buffDeadlineDue(&state.buff_timers, now_ms))
+            buffDeadlineDue(&state.timers.buffs, now_ms))
         {
             var event_queue: EventQueue = .{ .arena = state.arena.allocator() };
             event_queue.enqueue(.buff_timer_tick, .{ .now_ms = now_ms }) catch |err| {
@@ -254,7 +254,7 @@ fn buffDeadlineDue(scheduler: *const @import("../logic/schedulers/BuffTimerSched
 fn nextGameplayWakeDelayMs(state: ?*const State, now_ms: i64) ?i64 {
     const s = state orelse return null;
     return gameplayWakeDelayMs(
-        if (s.scene != null) s.buff_timers.nextWakeDelayMs(now_ms) else null,
+        if (s.scene != null) s.timers.buffs.nextWakeDelayMs(now_ms) else null,
         s.dirty_saves.nextWakeDelayMs(now_ms),
     );
 }

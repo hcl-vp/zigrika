@@ -61,7 +61,7 @@ pub fn handleFsmTick(
                 } } });
                 try scene.setBattleEntityActive(alloc.gpa, entity.net_id, false);
                 _ = try scene.appendBattleStateNotify(alloc.arena, &death_data);
-                try conn.push(pb.CombatReceivePackNotify{ .Data = death_data }, alloc.arena);
+                try conn.push(pb.CombatReceivePackNotify{ .Data = death_data });
                 try scene.syncFsmDeadlines(alloc.gpa, entity.net_id, fsm);
             },
             .delayed_destroy => {
@@ -76,7 +76,7 @@ pub fn handleFsmTick(
                 try conn.push(pb.EntityRemoveNotify{
                     .IsRemove = true,
                     .RemoveInfos = remove_infos,
-                }, alloc.arena);
+                });
             },
         }
     }
@@ -109,7 +109,7 @@ pub fn handleFsmTick(
     }
 
     if (data.items.len != 0) {
-        try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+        try conn.push(pb.CombatReceivePackNotify{ .Data = data });
     }
 }
 
@@ -131,7 +131,7 @@ pub fn handleFsmServerAction(
             try scene.setBattleEntityActive(alloc.gpa, entity.net_id, true);
             var data: std.ArrayList(pb.CombatReceiveData) = .empty;
             if (try scene.appendBattleStateNotify(alloc.arena, &data)) {
-                try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+                try conn.push(pb.CombatReceivePackNotify{ .Data = data });
             }
         },
         .cue_paralysis => {
@@ -232,7 +232,7 @@ fn pushPartChanges(
             .PartInfos = part_infos,
         } },
     } } });
-    try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    try conn.push(pb.CombatReceivePackNotify{ .Data = data });
 }
 
 fn applyInstanceState(
@@ -393,7 +393,7 @@ fn pushAttributeChanges(
     if (changed.items.len == 0) return;
     var data: std.ArrayList(pb.CombatReceiveData) = .empty;
     try attributes.generate_attr_messages(&data, entity_id, attr, changed, alloc, io);
-    if (data.items.len != 0) try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+    if (data.items.len != 0) try conn.push(pb.CombatReceivePackNotify{ .Data = data });
 }
 
 pub fn handleFsmLifecycleComplete(
@@ -430,7 +430,7 @@ pub fn handleFsmLifecycleComplete(
             try fsm.appendDirtyStateTransitions(entity.net_id, alloc.arena, &data, ctx);
         }
         if (data.items.len != 0) {
-            try conn.push(pb.CombatReceivePackNotify{ .Data = data }, alloc.arena);
+            try conn.push(pb.CombatReceivePackNotify{ .Data = data });
         }
     }
     fsm.finishTick(event.data.now_ms);
