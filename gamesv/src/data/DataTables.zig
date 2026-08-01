@@ -421,7 +421,8 @@ pub fn getRoleAutoBuffs(
         "8c658780", // mornye roguelik
         "9296f07f", // amy roguelike
         "c79fde44", // qingxiao
-        "fbcbee28",
+        "fbcbee28", // qingxiao main fix
+        "ed839a56", // jingran fix
         "功能.功能制作.禁止体力恢复", // qingxiao2
     };
 
