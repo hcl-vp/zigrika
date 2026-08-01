@@ -400,9 +400,10 @@ pub fn getRoleAutoBuffs(
         "20b04084", // lynae roguelike
         "8c658780", // mornye roguelik
         "9296f07f", // amy roguelike
-        "c79fde44", // qingxiao
-        "fbcbee28",
-        "功能.功能制作.禁止体力恢复", // qingxiao2
+        // "c79fde44", // qingxiao
+        "fbcbee28", // qingxiao main fix
+        "84b517d3", // jingran fix
+        // "功能.功能制作.禁止体力恢复", // qingxiao2
     };
 
     const maybe_init_info = tables.char_init_info.getDataById(role_id);
