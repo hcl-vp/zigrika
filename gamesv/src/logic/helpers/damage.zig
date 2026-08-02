@@ -81,12 +81,24 @@ pub fn damageEntity(
             io,
         );
 
+        // Ultimate (resonance liberation) energy regen based on the damage table,
+        // accelerated so the bar fills in a few seconds like on the official server.
+        const energy_regen: i32 = blk: {
+            const base = if (damage.Energy.len > 0) damage.Energy[0] else 0;
+            const eff_idx = @intFromEnum(pb.EAttributeType.EnergyEfficiency);
+            const energy_eff: i32 = if (attr.attributes.len > eff_idx) attr.attributes[eff_idx].current else 10000;
+            const scaled = @divTrunc(@max(base, 0) * energy_eff, 10000);
+            // Accelerate: base table values are small (50-400 vs EnergyMax=10000),
+            // so charge ~900-2000 per hit to fill in a few seconds of combat.
+            break :blk if (scaled > 0) scaled * 3 + 800 else 800;
+        };
+
         const e_change = try attributes_helper.change_attr(
             attr,
             .Energy,
             .Delta,
             .Current,
-            10000000,
+            energy_regen,
             alloc,
         );
         if (change.items.len != 0 or e_change.items.len != 0) {
@@ -205,7 +217,110 @@ pub fn damageEntity(
             );
         }
     }
+
+    // --- toughness (Tune Break) damage: consume target Tough/Hardness on non-heal hits ---
+    if (!is_heal) {
+        if (target_attr) |attr| {
+            const tough_idx = @intFromEnum(pb.EAttributeType.Tough);
+            const tough_max_idx = @intFromEnum(pb.EAttributeType.ToughMax);
+            const hardness_idx = @intFromEnum(pb.EAttributeType.Hardness);
+            const hardness_max_idx = @intFromEnum(pb.EAttributeType.HardnessMax);
+
+            // Toughness damage from the damage record (index by skill level, clamped).
+            const tough_damage: i32 = if (damage.ToughLv.len > 0)
+                damage.ToughLv[@min(skill_lv - 1, damage.ToughLv.len - 1)]
+            else
+                0;
+            const hardness_damage: i32 = if (damage.HardnessLv.len > 0)
+                damage.HardnessLv[@min(skill_lv - 1, damage.HardnessLv.len - 1)]
+            else
+                0;
+
+            var toughness_changes: std.ArrayList(pb.EAttributeType) = .empty;
+
+            if (tough_damage != 0 and tough_idx < attr.attributes.len) {
+                const tough_change = try attributes_helper.change_attr(
+                    attr,
+                    .Tough,
+                    .Delta,
+                    .Current,
+                    -tough_damage,
+                    alloc,
+                );
+                try toughness_changes.appendSlice(alloc.arena, tough_change.items);
+            }
+            if (hardness_damage != 0 and hardness_idx < attr.attributes.len) {
+                const hardness_change = try attributes_helper.change_attr(
+                    attr,
+                    .Hardness,
+                    .Delta,
+                    .Current,
+                    -hardness_damage,
+                    alloc,
+                );
+                try toughness_changes.appendSlice(alloc.arena, hardness_change.items);
+            }
+
+            if (toughness_changes.items.len != 0) {
+                try attributes_helper.generate_attr_messages(
+                    combat_receive_pack,
+                    request.TargetEntityId,
+                    attr,
+                    &toughness_changes,
+                    alloc,
+                    io,
+                );
+                try scene.markFsmDirty(
+                    alloc.gpa,
+                    target_entity.net_id,
+                    Entity.FsmComponent.WakeReason.attribute,
+                );
+            }
+
+            // --- Tune Break: when Tough (or Hardness) is fully depleted, notify paralysis/down state ---
+            const tough_zero = tough_idx < attr.attributes.len and
+                tough_max_idx < attr.attributes.len and
+                attr.attributes[tough_max_idx].current > 0 and
+                attr.attributes[tough_idx].current <= 0;
+            const hardness_zero = hardness_idx < attr.attributes.len and
+                hardness_max_idx < attr.attributes.len and
+                attr.attributes[hardness_max_idx].current > 0 and
+                attr.attributes[hardness_idx].current <= 0;
+            if (tough_zero or hardness_zero) {
+                try combat_receive_pack.append(alloc.arena, .{
+                    .Message = .{ .CombatNotifyData = .{
+                        .CombatCommon = .{ .EntityId = target_entity.net_id },
+                        .Message = .{ .ExecuteQteNotify = .{
+                            .DownEntityId = target_entity.net_id,
+                            .UpEntityId = request.AttackerEntityId,
+                            .FnvHash = 0,
+                        } },
+                    } },
+                });
+            }
+        }
+    }
     try scene.saveComponents(fs, alloc.gpa, target_entity, &.{Entity.AttributeComponent});
+
+    // --- monster death handling: when a monster's HP reaches zero, notify the client ---
+    if (!is_heal) {
+        const life_idx = @intFromEnum(pb.EAttributeType.Life);
+        const is_dead = if (target_attr) |attr|
+            life_idx < attr.attributes.len and attr.attributes[life_idx].current <= 0
+        else
+            false;
+        if (is_dead and scene.entities.items(.config)[target_entity.index].entity_type == .monster) {
+            try combat_receive_pack.append(alloc.arena, .{
+                .Message = .{ .CombatNotifyData = .{
+                    .CombatCommon = .{ .EntityId = target_entity.net_id },
+                    .Message = .{ .EntityLivingStatusNotify = .{
+                        .Id = target_entity.net_id,
+                        .LivingStatus = .Dead,
+                    } },
+                } },
+            });
+        }
+    }
 
     return pb.DamageExecuteNotify{
         .Damage = damage_amount,

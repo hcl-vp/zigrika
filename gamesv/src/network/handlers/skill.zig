@@ -2,7 +2,10 @@ const std = @import("std");
 const pb = @import("proto").pb;
 const mem = @import("../../mem.zig");
 const Scene = @import("../../logic/Scene.zig");
+const Entity = @import("../../logic/Scene.zig").Entity;
 const dispatch = @import("combat.zig");
+const attributes_helper = @import("../../logic/helpers/attributes.zig");
+const Assets = @import("../../data/Assets.zig");
 
 pub fn SkillRequest(txn: *dispatch.CombatRequestTxn(.SkillRequest)) !void {
     txn.respond(.{ .ErrorCode = .Success });
@@ -11,6 +14,11 @@ pub fn SkillRequest(txn: *dispatch.CombatRequestTxn(.SkillRequest)) !void {
 pub fn UseSkillRequest(
     txn: *dispatch.CombatRequestTxn(.UseSkillRequest),
     scene: *Scene,
+    assets: *const Assets,
+    query: Scene.Query(&.{
+        Entity,
+        ?*Entity.AttributeComponent,
+    }),
     io: std.Io,
     alloc: mem.Alloc,
 ) !void {
@@ -18,6 +26,40 @@ pub fn UseSkillRequest(
     if (commonEntityId(txn.common)) |entity_id| {
         if (skillId(request.UseSkillInfo)) |skill_id| {
             try scene.noteFsmSkillStart(alloc.gpa, entity_id, skill_id, queryNow(io));
+
+            // Resonance liberation (ultimate) skill: consume the caster's energy.
+            if (assets.tables.skill.getDataById(skill_id)) |skill| {
+                if (skill.SkillShowTagType == 2) {
+                    if (query.byNetId(entity_id)) |target| {
+                        const entity, const attr = target;
+                        _ = entity;
+                        if (attr) |attribute| {
+                            var receive: std.ArrayList(pb.CombatReceiveData) = .empty;
+                            defer receive.deinit(alloc.gpa);
+
+                            const e_change = try attributes_helper.change_attr(
+                                attribute,
+                                .Energy,
+                                .Override,
+                                .Current,
+                                0,
+                                alloc,
+                            );
+                            try attributes_helper.generate_attr_messages(
+                                &receive,
+                                entity_id,
+                                attribute,
+                                &e_change,
+                                alloc,
+                                io,
+                            );
+                            if (receive.items.len != 0) {
+                                try txn.receive_data_pack.appendSlice(alloc.arena, receive.items);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     txn.respond(.{
