@@ -366,10 +366,13 @@ pub const spawn = struct {
             ))
         else
             null;
-        const attribute_component: ?Entity.AttributeComponent = if (use_ai_runtime)
+        const attribute_component_initial: ?Entity.AttributeComponent = if (use_ai_runtime)
             combat_attributes orelse blk: {
-                // fallback: create minimal monster attributes
-                const attr_count = @intFromEnum(pb.EAttributeType.ElementEnergy) + 1;
+                // fallback: create minimal monster attributes. Use the full
+                // EAttributeType.MAX length so Tough/ToughMax/Hardness indices
+                // exist; otherwise the client shows no toughness bar and the
+                // Tune-Break (tough/hardness) logic in damage.zig silently no-ops.
+                const attr_count = @intFromEnum(pb.EAttributeType.MAX);
                 const props = try alloc.gpa.alloc(Entity.AttributeComponent.Attribute, attr_count);
                 @memset(props, .{ .base = 0, .increment = 0, .current = 0 });
                 props[@intFromEnum(pb.EAttributeType.Lv)] = .{ .base = 1, .increment = 0, .current = 1 };
@@ -377,10 +380,28 @@ pub const spawn = struct {
                 props[@intFromEnum(pb.EAttributeType.Life)] = .{ .base = 1000, .increment = 0, .current = 1000 };
                 props[@intFromEnum(pb.EAttributeType.Atk)] = .{ .base = 50, .increment = 0, .current = 50 };
                 props[@intFromEnum(pb.EAttributeType.Def)] = .{ .base = 20, .increment = 0, .current = 20 };
+                // Toughness (match BaseProperty id=2 default: 6000). Hardness/Rage stay 0.
+                props[@intFromEnum(pb.EAttributeType.ToughMax)] = .{ .base = 6000, .increment = 0, .current = 6000 };
+                props[@intFromEnum(pb.EAttributeType.Tough)] = .{ .base = 6000, .increment = 0, .current = 6000 };
+                props[@intFromEnum(pb.EAttributeType.ToughRecover)] = .{ .base = 500, .increment = 0, .current = 500 };
                 break :blk Entity.AttributeComponent{ .attributes = props };
             }
         else
             null;
+        var attribute_component = attribute_component_initial;
+        // Force a low toughness bar on debug-spawned monsters so Tune-Break is
+        // actually testable (BaseProperty often yields ToughMax=200000, making
+        // the stagger bar barely move per hit).
+        if (attribute_component) |*attr| {
+            const tough_max_idx = @intFromEnum(pb.EAttributeType.ToughMax);
+            const tough_idx = @intFromEnum(pb.EAttributeType.Tough);
+            if (tough_max_idx < attr.attributes.len) {
+                attr.attributes[tough_max_idx] = .{ .base = 3000, .increment = 0, .current = 3000 };
+            }
+            if (tough_idx < attr.attributes.len) {
+                attr.attributes[tough_idx] = .{ .base = 3000, .increment = 0, .current = 3000 };
+            }
+        }
         var tag_component: ?Entity.TagComponent = if (use_ai_runtime)
             try initialTagComponent(
                 &components_data,
@@ -500,6 +521,14 @@ pub const spawn = struct {
             scene.rollbackSpawn(alloc.gpa, fs, entity.net_id) catch |rollback_err| return rollback_err;
             return publish_err;
         };
+
+        // Debug spawns never receive client AiHate data (unlike scene-native
+        // monsters whose hate is pushed by the client), so fsm_hate_states stays
+        // false and their FSM never leaves the idle/stand states. Force the hate
+        // flag so hate-gated transitions can engage the player.
+        if (use_ai_runtime) {
+            _ = try scene.updateFsmHateTarget(alloc.gpa, entity.net_id, true);
+        }
 
         try respond(events, alloc.arena, "spawned {d}, map: {d}, bp: {s}, camp: {d}, ai_id: {any}", .{ entity_id, entity_config.MapId, entity_config.BlueprintType, final_camp, ai_id });
     }

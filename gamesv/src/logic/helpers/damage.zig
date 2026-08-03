@@ -186,8 +186,11 @@ pub fn damageEntity(
     // --- determine heal vs damage: same camp = heal, different camp = damage ---
     const attacker_camp = scene.entities.items(.config)[attacker_entity.index].camp;
     const target_camp = scene.entities.items(.config)[target_entity.index].camp;
-    const is_heal = attacker_camp == target_camp;
-    const life_delta: i32 = if (is_heal) damage_amount else -damage_amount;
+    const is_heal = attacker_camp == target_camp;    std.log.info("damage: dmg_id={d} attacker={d}(camp {d}) target={d}(camp {d}) skill_lv={d} is_heal={} tough_attr_len={d}", .{
+        damage.Id, request.AttackerEntityId, attacker_camp, request.TargetEntityId, target_camp,
+        request.SkillLevel, is_heal,
+        if (target_attr) |attr| attr.attributes.len else 0,
+    });    const life_delta: i32 = if (is_heal) damage_amount else -damage_amount;
 
     // --- apply HP change to target ---
     if (target_attr) |attr| {
@@ -238,6 +241,20 @@ pub fn damageEntity(
 
             var toughness_changes: std.ArrayList(pb.EAttributeType) = .empty;
 
+            // Snapshot pre-change values so tune-break only fires when a bar
+            // actually crossed from > 0 to ≤ 0 (not when it was already 0).
+            const pre_tough: i32 = if (tough_idx < attr.attributes.len) attr.attributes[tough_idx].current else 0;
+            const pre_hardness: i32 = if (hardness_idx < attr.attributes.len) attr.attributes[hardness_idx].current else 0;
+
+            std.log.info("tune: target={d} tough={d}/{d} tough_dmg={d} hard={d}/{d} hard_dmg={d}", .{
+                target_entity.net_id,
+                if (tough_idx < attr.attributes.len) attr.attributes[tough_idx].current else -1,
+                if (tough_max_idx < attr.attributes.len) attr.attributes[tough_max_idx].current else -1,
+                tough_damage,
+                if (hardness_idx < attr.attributes.len) attr.attributes[hardness_idx].current else -1,
+                if (hardness_max_idx < attr.attributes.len) attr.attributes[hardness_max_idx].current else -1,
+                hardness_damage,
+            });
             if (tough_damage != 0 and tough_idx < attr.attributes.len) {
                 const tough_change = try attributes_helper.change_attr(
                     attr,
@@ -281,12 +298,15 @@ pub fn damageEntity(
             const tough_zero = tough_idx < attr.attributes.len and
                 tough_max_idx < attr.attributes.len and
                 attr.attributes[tough_max_idx].current > 0 and
-                attr.attributes[tough_idx].current <= 0;
+                attr.attributes[tough_idx].current <= 0 and
+                pre_tough > 0;
             const hardness_zero = hardness_idx < attr.attributes.len and
                 hardness_max_idx < attr.attributes.len and
                 attr.attributes[hardness_max_idx].current > 0 and
-                attr.attributes[hardness_idx].current <= 0;
+                attr.attributes[hardness_idx].current <= 0 and
+                pre_hardness > 0;
             if (tough_zero or hardness_zero) {
+                std.log.info("qte: tune-break triggered on target={d} tough_zero={} hardness_zero={}", .{ target_entity.net_id, tough_zero, hardness_zero });
                 try combat_receive_pack.append(alloc.arena, .{
                     .Message = .{ .CombatNotifyData = .{
                         .CombatCommon = .{ .EntityId = target_entity.net_id },

@@ -11,3 +11,6 @@ state/player/
 # Runtime logs
 *.log
 gamesv_stderr.log
+
+# Temporary analysis files
+tmp_*.txt
